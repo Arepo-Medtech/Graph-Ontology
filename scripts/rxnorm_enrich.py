@@ -48,7 +48,20 @@ def find_ingredient(name: str) -> dict | None:
     return None
 
 
+def resolve_one(item):
+    sctid, names = item
+    tried, hit = [], None
+    # FSN-sans-tag and AU preferred term first, then the shortest synonyms; at most 3 names
+    for n in list(dict.fromkeys(sorted(set(names), key=len)))[:3]:
+        tried.append(n)
+        hit = find_ingredient(n)
+        if hit:
+            break
+    return sctid, {"names_tried": tried, **(hit or {"rxcui": None, "name": None, "tty": None})}
+
+
 def main() -> int:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     con = duckdb.connect()
     con.execute(f"""
     CREATE VIEW dsc AS SELECT * FROM read_csv('{RF2}/Terminology/sct2_Description_Snapshot-en-au_AU1000036_{REL}.txt', delim='\t', header=true, quote='', all_varchar=true);
@@ -59,20 +72,16 @@ def main() -> int:
       SELECT u.id, list(DISTINCT CASE WHEN d.typeId='900000000000003001' THEN regexp_replace(d.term, ' \\([^()]+\\)$', '') ELSE d.term END) AS names
       FROM used u JOIN dsc d ON d.conceptId=u.id AND d.active='1' GROUP BY 1""").fetchall()
     done = json.load(open(OUT)) if OUT.exists() else {}
-    print(f"substances used as ingredients: {len(subs):,}; already resolved/attempted: {len(done):,}", flush=True)
-    for i, (sctid, names) in enumerate(subs, 1):
-        if sctid in done:
-            continue
-        hit, tried = None, []
-        for n in sorted(set(names), key=len)[:6]:
-            tried.append(n)
-            hit = find_ingredient(n)
-            time.sleep(0.06)
-            if hit:
-                break
-        done[sctid] = {"names_tried": tried, **(hit or {"rxcui": None, "name": None, "tty": None})}
-        if i % 200 == 0:
-            OUT.write_text(json.dumps(done)); print(f"  {i:,}/{len(subs):,}  resolved so far: {sum(1 for v in done.values() if v['rxcui']):,}", flush=True)
+    todo = [(sid, names) for sid, names in subs if sid not in done]
+    print(f"substances used as ingredients: {len(subs):,}; already attempted: {len(done):,}; to do: {len(todo):,}", flush=True)
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futures = [ex.submit(resolve_one, item) for item in todo]
+        for i, f in enumerate(as_completed(futures), 1):
+            sctid, rec = f.result()
+            done[sctid] = rec
+            if i % 250 == 0:
+                OUT.write_text(json.dumps(done))
+                print(f"  {len(done):,}/{len(subs):,}  resolved so far: {sum(1 for v in done.values() if v['rxcui']):,}", flush=True)
     OUT.write_text(json.dumps(done))
     print(f"done: {sum(1 for v in done.values() if v['rxcui']):,} of {len(done):,} substances have an RxNorm ingredient", flush=True)
     return 0
