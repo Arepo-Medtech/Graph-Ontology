@@ -197,6 +197,26 @@ LEFT JOIN unnest(t.pbs_brands) AS u1(pb) ON true LEFT JOIN unnest(t.pbs_codes) A
 WHERE b.level='BRAND' GROUP BY 1,2,3;
 """)
 
+# --- brand alias: PBS brand strings -> AMT brand concept, best method wins ------------------------
+con.execute("""
+CREATE TABLE brand_alias AS
+WITH pb AS (SELECT DISTINCT pbs_brand FROM pbs WHERE pbs_brand IS NOT NULL),
+     bc AS (SELECT brand_id, brand, lower(brand) AS b, regexp_replace(lower(brand), '[^a-z0-9]', '', 'g') AS bn FROM brand),
+     via_code AS (SELECT DISTINCT pt.pbs_brand, bo.brand_id, 'amt_code' AS method
+                  FROM pbs_tpuu pt JOIN brand_of bo ON bo.product_id=pt.tpuu_id WHERE pt.pbs_brand IS NOT NULL),
+     exact AS (SELECT pb.pbs_brand, bc.brand_id, 'exact_name' AS method FROM pb JOIN bc ON lower(pb.pbs_brand)=bc.b),
+     norm AS (SELECT pb.pbs_brand, bc.brand_id, 'normalised_name' AS method FROM pb JOIN bc
+              ON regexp_replace(lower(pb.pbs_brand), '[^a-z0-9]', '', 'g')=bc.bn),
+     prefix AS (SELECT pb.pbs_brand, bc.brand_id, 'prefix_name' AS method FROM pb JOIN bc ON lower(pb.pbs_brand) LIKE bc.b || ' %'),
+     allm AS (SELECT * FROM via_code UNION ALL SELECT * FROM exact UNION ALL SELECT * FROM norm UNION ALL SELECT * FROM prefix),
+     ranked AS (SELECT *, row_number() OVER (PARTITION BY pbs_brand, brand_id ORDER BY
+                  CASE method WHEN 'amt_code' THEN 1 WHEN 'exact_name' THEN 2 WHEN 'normalised_name' THEN 3 ELSE 4 END) AS rn FROM allm)
+SELECT r.pbs_brand, r.brand_id, bc.brand AS amt_brand, r.method FROM ranked r JOIN bc USING (brand_id) WHERE rn=1;
+""")
+print("brand_alias:", con.sql("""SELECT method, count(DISTINCT pbs_brand) AS pbs_brands FROM brand_alias GROUP BY 1 ORDER BY 2 DESC""").df().to_string(index=False), flush=True)
+print("PBS brand strings linked:", con.sql("SELECT count(DISTINCT pbs_brand) FROM brand_alias").fetchone()[0], "of",
+      con.sql("SELECT count(DISTINCT pbs_brand) FROM pbs WHERE pbs_brand IS NOT NULL").fetchone()[0], flush=True)
+
 # --- substance table ---------------------------------------------------------------------------
 con.execute("""
 CREATE TABLE substance AS
@@ -213,9 +233,9 @@ WHERE s.tag IN ('substance','AU substance');
 """)
 
 # --- exports -----------------------------------------------------------------------------------
-for t in ["transcode", "brand", "substance", "product", "pbs", "pbs_tpuu", "rxnorm", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
+for t in ["transcode", "brand", "brand_alias", "substance", "product", "pbs", "pbs_tpuu", "rxnorm", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
     con.execute(f"COPY {t} TO 'out/{t}.parquet' (FORMAT PARQUET)")
-for t in ["transcode", "brand", "substance"]:
+for t in ["transcode", "brand", "brand_alias", "substance"]:
     con.execute(f"COPY (SELECT * FROM {t}) TO 'out/{t}.csv' (HEADER)")
 
 print("\n=== compendium summary ===")
