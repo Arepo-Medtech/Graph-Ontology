@@ -8,11 +8,13 @@ Sources
           containerized branded clinical drug package (CTPP)  clinical drug (MPUU)
           clinical drug package (MPP)  medicinal product form (MPF)  medicinal product (MP)
           product name (BRAND)
-  PBS   Public API v3 latest schedule: amt-items (PBS line item -> AMT codes per level) + items (brand, form)
+  PBS   Public API v3 latest schedule: items, AMT links, ATC codes and item-to-ATC relationships
+  AMH   Curated, paraphrased clinical evidence metadata with direct links to the July 2026 edition
   RxNorm cache/rxcui_to_sctid.json (RxNav bridge) and cache/rxnorm_substances.json (rxnorm_enrich.py)
 
 Output (out/, gitignored): compendium.duckdb plus parquet/CSV of the main tables.
 Licence: SNOMED/AMT terms stay local (NCTS licence). PBS is CC BY (copyright notice retained).
+AMH monograph text is not reproduced; records contain concise classifications and source links.
 RxNorm is US public domain.
 """
 from __future__ import annotations
@@ -108,10 +110,25 @@ CREATE TABLE mpuu_mp AS           -- MPUU -> MP via is-a closure limited to MPF/
 """)
 
 # --- PBS --------------------------------------------------------------------------------------
-ai = json.load(open("cache/pbs/amt-items.json")); it = json.load(open("cache/pbs/items.json"))
-(OUT / "_pbs_amt.json").write_text(json.dumps(ai["rows"])); (OUT / "_pbs_item.json").write_text(json.dumps(it["rows"]))
+pbs_sources = {
+    name: json.load(open(f"cache/pbs/{name}.json"))
+    for name in ("amt-items", "items", "atc-codes", "item-atc-relationships")
+}
+pbs_schedules = {name: source.get("schedule_code") for name, source in pbs_sources.items()}
+if any(schedule is None for schedule in pbs_schedules.values()) or len(set(pbs_schedules.values())) != 1:
+    raise RuntimeError(f"PBS cache contains mixed schedules: {pbs_schedules}")
+ai = pbs_sources["amt-items"]
+it = pbs_sources["items"]
+atc = pbs_sources["atc-codes"]
+item_atc = pbs_sources["item-atc-relationships"]
+(OUT / "_pbs_amt.json").write_text(json.dumps(ai["rows"]))
+(OUT / "_pbs_item.json").write_text(json.dumps(it["rows"]))
+(OUT / "_pbs_atc.json").write_text(json.dumps(atc["rows"]))
+(OUT / "_pbs_item_atc.json").write_text(json.dumps(item_atc["rows"]))
 con.execute("CREATE TABLE pbs_amt AS SELECT * FROM read_json_auto('out/_pbs_amt.json')")
 con.execute("CREATE TABLE pbs_item AS SELECT * FROM read_json_auto('out/_pbs_item.json', maximum_object_size=100000000)")
+con.execute("CREATE TABLE pbs_atc_code AS SELECT * FROM read_json_auto('out/_pbs_atc.json')")
+con.execute("CREATE TABLE pbs_item_atc AS SELECT * FROM read_json_auto('out/_pbs_item_atc.json')")
 con.execute("""
 CREATE TABLE pbs AS
 SELECT a.li_item_id, i.pbs_code, i.li_drug_name AS pbs_ingredient, i.brand_name AS pbs_brand, i.li_form AS pbs_form,
@@ -127,6 +144,81 @@ FROM pbs p JOIN product t ON t.id=p.amt_code AND t.level='TPUU'
 UNION
 SELECT DISTINCT c.unit_id, p.pbs_code, p.pbs_brand, p.pbs_ingredient, p.li_item_id, p.pbs_level
 FROM pbs p JOIN contains c ON c.package_id=p.amt_code JOIN product t ON t.id=c.unit_id AND t.level='TPUU';
+""")
+
+# PBS ATC classification is a therapeutic listing signal, not a complete Australian supplement
+# registry and not proof of the purpose for which a patient uses a product.
+con.execute("""
+CREATE TABLE supplement_listing AS
+WITH amt AS (
+  SELECT li_item_id, schedule_code,
+         list(DISTINCT concept_type_code ORDER BY concept_type_code) AS amt_levels,
+         list(DISTINCT CAST(amt_code AS VARCHAR) ORDER BY CAST(amt_code AS VARCHAR)) AS amt_codes,
+         list(DISTINCT preferred_term ORDER BY preferred_term) AS amt_terms
+  FROM pbs_amt
+  GROUP BY 1,2
+), classified AS (
+  SELECT DISTINCT
+         i.schedule_code, i.pbs_code, i.li_item_id,
+         i.brand_name, i.drug_name, i.li_drug_name, i.li_form, i.schedule_form,
+         i.manner_of_administration, i.moa_preferred_term,
+         i.benefit_type_code, i.program_code, i.first_listed_date, i.non_effective_date,
+         r.atc_code, a.atc_description, a.atc_level, a.atc_parent_code,
+         r.atc_priority_pct,
+         CASE
+           WHEN r.atc_code LIKE 'A11%' THEN 'vitamin'
+           WHEN r.atc_code LIKE 'A12%' THEN 'mineral_supplement'
+           WHEN r.atc_code LIKE 'B03A%' THEN 'iron_preparation'
+         END AS supplement_family
+  FROM pbs_item i
+  JOIN pbs_item_atc r USING (pbs_code, schedule_code)
+  JOIN pbs_atc_code a USING (atc_code, schedule_code)
+  WHERE r.atc_code LIKE 'A11%' OR r.atc_code LIKE 'A12%' OR r.atc_code LIKE 'B03A%'
+)
+SELECT c.*, amt.amt_levels, amt.amt_codes, amt.amt_terms,
+       'PBS ATC classification' AS classification_basis,
+       'PBS-subsidised listings; absence does not establish that a product is unavailable in Australia' AS source_scope,
+       'https://www.pbs.gov.au/medicine/item/' || c.pbs_code AS source_url
+FROM classified c
+LEFT JOIN amt USING (li_item_id, schedule_code);
+""")
+
+# --- curated clinical evidence ---------------------------------------------------------------
+# Keep this layer separate from terminology and PBS classification. Its dimensions prevent a
+# substance name from becoming an unconditional rule when route, timing, dose or role changes the
+# conclusion. Entries are concise paraphrases; the licensed source remains authoritative.
+evidence_path = Path("reference/amh_clinical_evidence.json")
+evidence_rows = json.loads(evidence_path.read_text())
+required_evidence_fields = {
+    "evidence_id", "domain", "subject", "subject_kind", "route_scope", "pregnancy_window",
+    "dose_context", "evidence_category", "recommendation", "summary", "source_title",
+    "source_url", "source_edition", "accessed_date",
+}
+if not evidence_rows:
+    raise RuntimeError(f"No clinical evidence records in {evidence_path}")
+for row_number, row in enumerate(evidence_rows, start=1):
+    missing = required_evidence_fields - row.keys()
+    if missing:
+        raise RuntimeError(f"Clinical evidence row {row_number} is missing {sorted(missing)}")
+    if row["domain"] not in {"pregnancy_safety", "supplement_role", "therapeutic_role"}:
+        raise RuntimeError(f"Unsupported clinical evidence domain: {row['domain']}")
+    if not row["source_url"].startswith("https://amhonline.amh.net.au/"):
+        raise RuntimeError(f"Clinical evidence row {row_number} has a non-AMH source URL")
+evidence_ids = [row["evidence_id"] for row in evidence_rows]
+if len(evidence_ids) != len(set(evidence_ids)):
+    raise RuntimeError("Clinical evidence IDs must be unique")
+(OUT / "_amh_clinical_evidence.json").write_text(json.dumps(evidence_rows))
+con.execute("""
+CREATE TABLE clinical_evidence AS
+SELECT *,
+       'Curated paraphrase; consult the linked licensed AMH monograph before clinical use' AS provenance_note
+FROM read_json_auto('out/_amh_clinical_evidence.json');
+CREATE TABLE pregnancy_safety_evidence AS
+SELECT * FROM clinical_evidence WHERE domain='pregnancy_safety';
+CREATE TABLE supplement_role_evidence AS
+SELECT * FROM clinical_evidence WHERE domain='supplement_role';
+CREATE TABLE therapeutic_role_evidence AS
+SELECT * FROM clinical_evidence WHERE domain='therapeutic_role';
 """)
 
 # --- RxNorm -----------------------------------------------------------------------------------
@@ -233,9 +325,9 @@ WHERE s.tag IN ('substance','AU substance');
 """)
 
 # --- exports -----------------------------------------------------------------------------------
-for t in ["transcode", "brand", "brand_alias", "substance", "product", "pbs", "pbs_tpuu", "rxnorm", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
+for t in ["transcode", "brand", "brand_alias", "substance", "product", "pbs", "pbs_tpuu", "pbs_atc_code", "pbs_item_atc", "supplement_listing", "clinical_evidence", "pregnancy_safety_evidence", "supplement_role_evidence", "therapeutic_role_evidence", "rxnorm", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
     con.execute(f"COPY {t} TO 'out/{t}.parquet' (FORMAT PARQUET)")
-for t in ["transcode", "brand", "brand_alias", "substance"]:
+for t in ["transcode", "brand", "brand_alias", "substance", "supplement_listing", "clinical_evidence", "pregnancy_safety_evidence", "supplement_role_evidence", "therapeutic_role_evidence"]:
     con.execute(f"COPY (SELECT * FROM {t}) TO 'out/{t}.csv' (HEADER)")
 
 print("\n=== compendium summary ===")
@@ -250,9 +342,14 @@ print(con.sql("""SELECT
   (SELECT count(*) FROM brand WHERE n_tpuu>0) AS brands_with_products,
   (SELECT count(*) FROM brand WHERE pbs_codes IS NOT NULL AND len(pbs_codes)>0) AS brands_on_pbs,
   (SELECT count(*) FROM substance) AS substances_used,
-  (SELECT count(*) FROM substance WHERE rxcuis IS NOT NULL) AS substances_with_rxnorm
+  (SELECT count(*) FROM substance WHERE rxcuis IS NOT NULL) AS substances_with_rxnorm,
+  (SELECT count(*) FROM supplement_listing) AS supplement_listings,
+  (SELECT count(DISTINCT pbs_code) FROM supplement_listing) AS supplement_pbs_codes,
+  (SELECT count(*) FROM pregnancy_safety_evidence) AS pregnancy_evidence_rows,
+  (SELECT count(*) FROM supplement_role_evidence) AS supplement_role_evidence_rows,
+  (SELECT count(*) FROM therapeutic_role_evidence) AS therapeutic_role_evidence_rows
 """).df().T.to_string(header=False))
 print("\nsample transcode rows:")
 print(con.sql("SELECT tpuu_pt, brand, generic_mpuu, ingredients, dose_form, pbs_codes, rxnorm_names FROM transcode WHERE pbs_codes IS NOT NULL AND rxcuis IS NOT NULL USING SAMPLE 5").df().to_string(index=False, max_colwidth=45))
 con.close()
-print(f"\nwritten: {DB} + out/*.parquet + transcode/brand/substance CSV")
+print(f"\nwritten: {DB} + out/*.parquet + selected tables as CSV")
