@@ -162,3 +162,35 @@ source. PBS does not carry one for unrestricted items — that is what the
 unrestricted benefit means. The options are the TGA Product Information
 (indications per registered product, free, no bulk API) or a commercial
 indication feed from AMH or Therapeutic Guidelines. Neither is a scraping job.
+
+
+## Candidate review queue
+
+`enrich_candidates.mjs` builds `reference/snomed_candidates_review.json` from the
+binder's `candidate_unconfirmed` rows. Everything the queue needs is in that one
+script — hierarchy, triage, quarantine, sort order — so a rebuild reproduces it
+exactly. An earlier version computed only the hierarchy and had its flags applied
+by hand afterwards, so every rebuild silently reverted to a naive queue.
+
+**The signals are lexical triage, not verdicts.** Of 16 quarantined pregnancy
+candidates reviewed by hand, all 16 were wrong and **6 carried no signal at
+all** — "Diarrhoea of greater than 2 weeks duration" scored *plausible* against
+*Gestation greater than 20 weeks* on shared words. The `plausible` tier means
+"nothing lexical fired", never "safe".
+
+| Signal | Meaning |
+|---|---|
+| `quarantine` | pregnancy or reproductive. Manual review regardless of signal |
+| `intervention` | PBS wording names a procedure; the hit was searched in the wrong hierarchy |
+| `off_domain` | neither hit nor any parent shares a stem with the condition |
+| `parents_unrelated` | hit looks related but its ancestry is not. *Wounds* → *Damaging own wounds*, whose parent is *Deliberate self-harm* |
+| `parent_better` | a parent matches better than the hit — usually bind the parent |
+| `narrower` | the hit is a sub-type of the condition |
+
+Stems, not whole words: exact-token comparison read `infections`/`infection` and
+`anaemias`/`anaemia` as unrelated and flagged 41 correct bindings as rejects.
+
+Human decisions go in `reference/binding_corrections.json` and are re-applied by
+`scripts/apply_corrections.py` after every binder run. A binder run rewrites the
+bindings wholesale, so without that step improving the binder discards the
+review work and resets the queue.
