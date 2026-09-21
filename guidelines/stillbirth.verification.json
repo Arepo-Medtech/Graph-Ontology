@@ -1,0 +1,261 @@
+{
+  "guideline": "guidelines/stillbirth.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ACSQHC Stillbirth Clinical Care Standard, including the ten quality statements, the for-clinicians sections and the indicator list. Table 1 (risk factors), the Decreased Fetal Movement and Fetal Growth Restriction Care Pathways, and the PSANZ classification system are referenced by the Standard and were not retrieved; they are recorded as input_unavailable and their content is not asserted. Some retrieved text contains extraction artefacts where double-n collapsed ('pla ed' for planned, 'ma er' for manner, 'pe' for people); source_text is preserved verbatim and the guideline renders the evident word.",
+  "claims": [
+    {
+      "claim": "Quality statement 1 states that a woman intending pregnancy is offered pre-conception care that supports her to identify and manage stillbirth risks and improve her chance of giving birth to a healthy live-born baby",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A woman intending pregnancy is offered pre-conception care that supports her to identify and manage stillbirth risks and improve her chance of giving birth to a healthy live-born baby."
+    },
+    {
+      "claim": "Many women may not actively seek pre-conception care even for a planned pregnancy, and when providing care for women of reproductive age clinicians should consider opportunities to assess intentions about pregnancy, for example using a simple question such as would you like to become pregnant in the next year to encourage pre-conception care discussions",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Many women may not actively seek pre-conception care, even for a pla ed pregnancy. When providing care for women of reproductive age, consider opportunities to assess intentions about pregnancy. For example, the use of a simple question such as 'Would you like to become pregnant in the next year?' can encourage pre-conception care discussions."
+    },
+    {
+      "claim": "If a woman is intending to become pregnant clinicians should discuss the importance of pre-conception health and provide information and support to optimise her health in preparation for pregnancy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a woman is intending to become pregnant, discuss the importance of pre-conception health, and provide information and support, to optimise her health in preparation for pregnancy."
+    },
+    {
+      "claim": "Quality statement 2 states that a woman's risk factors for stillbirth are identified early, monitored and managed with evidence-based care throughout her pregnancy, and that she is offered the most appropriate available model of maternity care for her clinical, personal and cultural needs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A woman's risk factors for stillbirth are identified early, monitored and managed with evidence-based care throughout her pregnancy. She is offered the most appropriate available model of maternity care for her clinical, personal and cultural needs."
+    },
+    {
+      "claim": "Clinicians should assess the likelihood of risk factors for stillbirth as early as possible in the woman's pregnancy and at each subsequent antenatal visit",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assess the likelihood of risk factors for stillbirth as early as possible in the woman's pregnancy, and at each subsequent antenatal visit."
+    },
+    {
+      "claim": "Fetal growth restriction is a key contributor to stillbirth, the risk of fetal growth restriction should be assessed as early as possible and at each subsequent antenatal visit, and care provided as described in the Fetal Growth Restriction Care Pathway",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Fetal growth restriction is a key contributor to stillbirth. Assess the risk of fetal growth restriction as early as possible, and at each subsequent antenatal visit. Provide care as described in the Fetal Growth Restriction (FGR) Care Pathway."
+    },
+    {
+      "claim": "Quality statement 3 states that early in pregnancy a woman is informed about stillbirth as a potential outcome and that throughout the pregnancy she is supported to adopt strategies that may reduce her risk of stillbirth including smoking cessation, using a side going-to-sleep position from 28 weeks gestation and being aware of fetal movements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Early in pregnancy, a woman is informed about stillbirth as a potential outcome. Throughout the pregnancy, she is supported to adopt strategies that may reduce her risk of stillbirth, including smoking cessation, using a side going-to-sleep position from 28 weeks gestation and being aware of fetal movements."
+    },
+    {
+      "claim": "Using careful and sensitive language clinicians should inform the woman about stillbirth as a possible pregnancy outcome and explain that although not every stillbirth can be prevented there are strategies that may reduce the risk of stillbirth including late-gestation losses after 28 weeks gestation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Using careful and sensitive language, inform the woman about stillbirth as a possible pregnancy outcome. Explain that, although not every stillbirth can be prevented, there are strategies that may reduce the risk of stillbirth, including late-gestation losses (that is, after 28 weeks gestation)."
+    },
+    {
+      "claim": "Quality statement 4 states that a woman is offered high-quality ultrasound during pregnancy to assess fetal growth and morphology and identify stillbirth risks, with ultrasound performance and reporting and communication of outcomes to the woman in line with current best-practice guidelines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A woman is offered high-quality ultrasound during pregnancy to assess fetal growth and morphology, and identify stillbirth risks. Ultrasound performance and reporting, and communication of outcomes to the woman, are in line with current best-practice guidelines."
+    },
+    {
+      "claim": "Optimally timed high-quality ultrasound can help identify factors that may affect a woman's stillbirth risk including the presence of a multiple pregnancy, chorionicity, the likelihood of fetal or chromosomal anomalies, and fetal growth restriction",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Optimally timed, high-quality ultrasound can help identify factors that may affect a woman's stillbirth risk, including the presence of a multiple pregnancy, chorionicity, the likelihood of fetal or chromosomal anomalies, and fetal growth restriction."
+    },
+    {
+      "claim": "Quality statement 5 states that a woman who contacts her clinician or health service with concerns about a change in the frequency, strength or pattern of her baby's movements is offered timely assessment and care according to the Decreased Fetal Movement Care Pathway developed by the Centre of Research Excellence in Stillbirth and the Perinatal Society of Australia and New Zealand, or a locally approved alternative",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A woman who contacts her clinician or health service with concerns about a change in the frequency, strength or pattern of her baby's movements is offered timely assessment and care according to the Decreased Fetal Movement Care Pathway developed by the Centre of Research Excellence in Stillbirth and the Perinatal Society of Australia and New Zealand, or a locally approved alternative."
+    },
+    {
+      "claim": "Clinicians should support the woman to become familiar with her fetal movements and let her know she should seek clinical advice immediately if she notices any changes in the frequency, strength or pattern of fetal movements, particularly decreases in movement",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During pregnancy, support the woman to become familiar with her fetal movements. Let her know that she should seek clinical advice immediately if she notices any changes in the frequency, strength or pattern of fetal movements, particularly decreases in movement."
+    },
+    {
+      "claim": "Advice to attempt to stimulate the baby's movements for example by having something to eat or drink is not correct",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "advice to attempt to stimulate the baby's movements (for example, by having something to eat or drink) is not correct."
+    },
+    {
+      "claim": "Clinicians should emphasise that the woman should seek assistance without delay and that it is best to contact a clinician about any concerns even if subsequent assessment confirms the baby's health and wellbeing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Emphasise that she should seek assistance without delay and that it is best to contact a clinician about any concerns, even if subsequent assessment confirms the baby's health and wellbeing."
+    },
+    {
+      "claim": "Clinicians should provide clear advice on how and where to present for further evaluation if required including contact phone numbers, and consider options that will allow appropriate and timely assessment especially for women in rural and remote areas who may have limited access to care, discussing these options in advance",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Provide her with clear advice on how and where to present for further evaluation if required, including contact phone numbers. Consider options that will allow appropriate and timely assessment, especially for women in rural and remote areas who may have limited access to care. Discuss these options with the woman in advance, so that she is aware of how and when to seek assistance, if required."
+    },
+    {
+      "claim": "When a woman presents with concerns about fetal movements clinicians should discuss her concerns and immediately assess the presence of fetal heart tones",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When a woman presents with concerns about fetal movements, discuss her concerns and immediately assess the presence of fetal heart tones."
+    },
+    {
+      "claim": "All women should be offered access to professional interpreting services when required to support discussions about their assessment and care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All women should be offered access to professional interpreting services, when required, to support discussions about their assessment and care."
+    },
+    {
+      "claim": "A woman's concern about fetal movements is an important indicator and should always be taken seriously",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Note that a woman's concern about fetal movements is an important indicator, and should always be taken seriously."
+    },
+    {
+      "claim": "Quality statement 6 states that a woman is provided with information that enables her to make informed decisions about timing of birth in line with her individual risks and preferences, and that whenever a planned birth is being considered including when there are concerns about maternal or fetal health the potential benefits and harms are discussed with the woman and documented appropriately",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A woman is provided with information that enables her to make informed decisions about timing of birth, in line with her individual risks and preferences. Whenever a pla ed birth is being considered, including when there are concerns about maternal or fetal health, the potential benefits and harms are discussed with the woman and documented appropriately."
+    },
+    {
+      "claim": "While spontaneous onset of labour is generally preferred a planned birth through induction or caesarean section may be considered if there are concerns about maternal or fetal health including the risk of stillbirth, and unless clinically indicated meaning there is an identified increased risk to the health or wellbeing of the mother or fetus, birth should not be planned before 39 weeks gestation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "While spontaneous onset of labour is generally preferred, a pla ed birth through induction or caesarean section may be considered if there are concerns about maternal or fetal health, including the risk of stillbirth. Unless clinically indicated (that is, there is an identified increased risk to the health or wellbeing of the mother or fetus), birth should not be pla ed before 39 weeks gestation."
+    },
+    {
+      "claim": "Quality statement 7 states that when a stillbirth is diagnosed the availability, timing and anticipated value of clinical investigations including autopsy are discussed with the parents, that the parents are supported to share their views about factors they perceive may have contributed to the stillbirth including aspects of the woman's clinical care, and that this information is documented and considered alongside the agreed clinical investigations and as part of local perinatal mortality audit or incident investigation processes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When a stillbirth is diagnosed, the availability, timing and anticipated value of clinical investigations, including autopsy, are discussed with the parents. The parents are supported to share their views about factors they perceive may have contributed to the stillbirth, including aspects of the woman's clinical care. This information is documented and considered alongside the agreed clinical investigations, and as part of local perinatal mortality audit or incident investigation processes."
+    },
+    {
+      "claim": "Clinicians should recognise that the discussion about investigations is likely to occur at an acute time of loss and emotional distress for the parents and their support people",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recognise that this discussion is likely to occur at an acute time of loss and emotional distress for the parents and their support pe"
+    },
+    {
+      "claim": "Quality statement 8 states that the results of stillbirth investigations are reported in a timely manner, documented appropriately and discussed with the parents along with any information they have provided about perceived contributing factors, and that the stillbirth is reviewed as part of a local perinatal mortality audit process, classified according to the Perinatal Society of Australia and New Zealand classification system, with outcomes used to inform local improvements in care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The results of stillbirth investigations are reported in a timely ma er, documented appropriately and discussed with the parents, along with any information they have provided about perceived contributing factors. The stillbirth is reviewed as part of a local perinatal mortality audit process, classified according to the Perinatal Society of Australia and New Zealand classification system, and outcomes are used to inform local improvements in care."
+    },
+    {
+      "claim": "Clinicians should arrange a time with the parents to discuss clinical investigation results as soon as these are available, inform the parents that the results of some investigations may become available before others and that more than one meeting may be required to discuss all results, and the discussion should be led by a senior clinician",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Arrange a time with the parents to discuss clinical investigation results as soon as these are available. Inform the parents that the results of some investigations may become available before others, and that more than one meeting may be required to discuss all results. The discussion should be led by a senior clin"
+    },
+    {
+      "claim": "Quality statement 9 states that after a perinatal loss parents and their support people are provided with compassionate, respectful and culturally safe bereavement care that recognises their specific needs and preferences and ensures that follow-up support is available after discharge",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "After a perinatal loss, parents and their support people are provided with compassionate, respectful and culturally safe bereavement care that recognises their specific needs and preferences, and ensures that follow-up support is available after discharge."
+    },
+    {
+      "claim": "The death of a baby is a traumatic experience for parents, their families and support people, and the clinicians involved in their care, regardless of when the death occurs or the reasons for the loss",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The death of a baby is a traumatic experience for parents, their families and support people, and the clinicians involved in their care. This is regardless of when the death occurs or the reasons for the loss."
+    },
+    {
+      "claim": "Following diagnosis of an intrauterine fetal death or when a perinatal loss occurs clinicians should provide respectful, culturally safe and evidence-based bereavement care in line with the recommendations in the Clinical Practice Guideline for Care Around Stillbirth and Neonatal Death and Sands Australian Principles",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Following diagnosis of an intrauterine fetal death or when a perinatal loss occurs, provide respectful, culturally safe and evidence-based bereavement care, in line with the recommendations in the Clinical Practice Guideline for Care Around Stillbirth and Neonatal Death and Sands Australian Principl"
+    },
+    {
+      "claim": "Quality statement 10 states that during a subsequent pregnancy after a perinatal loss a woman receives antenatal care that recognises factors that may have contributed to the previous loss and ensures that she has access to appropriate clinical expertise and psychosocial support as required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During a subsequent pregnancy after a perinatal loss, a woman receives antenatal care that recognises factors that may have contributed to the previous loss, and ensures that she has access to appropriate clinical expertise and psychosocial support, as required."
+    },
+    {
+      "claim": "Women who have experienced a perinatal loss may be at increased risk of adverse outcomes during a subsequent pregnancy, and for women planning a pregnancy after a perinatal loss pre-conception care should be provided as described in Quality statement 1",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Women who have experienced a perinatal loss may be at increased risk of adverse outcomes during a subsequent pregnancy. For women pla ing a pregnancy after a perinatal loss, provide pre-conception care as described in Quality statement 1."
+    },
+    {
+      "claim": "During a subsequent pregnancy clinicians should provide sensitive and informed antenatal care delivered by an experienced clinician or multidisciplinary team, and the benefits of continuity of carer should be considered and discussed with the parents",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During a subsequent pregnancy, provide sensitive and informed antenatal care, delivered by an experienced clinician or multidisciplinary team. The benefits of continuity of carer should be considered and discussed with the parents."
+    },
+    {
+      "claim": "Indicator 2a is the proportion of women assessed for clinical risk factors for fetal growth restriction at their first antenatal appointment at the hospital with the outcomes of the risk assessment documented in their medical record",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 2a | Proportion of women assessed for clinical risk factors for fetal growth restriction at their first antenatal appointment at the hospital and the outcomes of the risk assessment documented in their medical record"
+    },
+    {
+      "claim": "Indicator 3a is the proportion of pregnant women who reported smoking who were provided with advice on smoking cessation, offered a referral to a smoking cessation service such as Quitline, and/or nicotine replacement therapy if clinically indicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 3a | Proportion of pregnant women who reported smoking who were provided with advice on smoking cessation, offered a referral to a smoking cessation service (for example, Quitline), and/or nicotine replacement therapy if clinically indicated"
+    },
+    {
+      "claim": "Indicator 3b is the proportion of women who gave birth who demonstrated their understanding of safe maternal going-to-sleep position at an antenatal visit from 28 weeks gestation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 3b | Proportion of women who gave birth who demonstrated their understanding of safe maternal going-to-sleep position at an antenatal visit from 28 weeks gestation"
+    },
+    {
+      "claim": "Indicator 3c is the proportion of women who gave birth who reported from 28 weeks gestation that they knew how to monitor their fetal movements and what to do if they were concerned about a change in their fetal movements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 3c | Proportion of women who gave birth who reported from 28 weeks gestation that they knew how to monitor their fetal movements and what to do if they were concerned about a change in their fetal movements"
+    },
+    {
+      "claim": "Indicator 5a is evidence of local arrangements to enable timely assessment and appropriate care for women presenting with concerns about changes in fetal movements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 5a | Evidence of local arrangements to enable timely assessment and appropriate care for women presenting with concerns about changes in fetal movements"
+    },
+    {
+      "claim": "Indicator 5b is the median time from when women report that they first noticed a change in fetal movements to when they contacted a clinician or healthcare service",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 5b | Median time from when women report that they first noticed a change in fetal movements to when they contacted a clinician or healthcare service"
+    },
+    {
+      "claim": "Indicator 6a is the proportion of women who had a planned birth who received written and verbal information on the potential benefits and harms of planned birth including the timing of intervention",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 6a | Proportion of women who had a pla ed birth who received written and verbal information on the potential benefits and harms of pla ed birth, including the timing of intervention"
+    },
+    {
+      "claim": "Indicator 6b is the proportion of women who had a planned birth before 39 weeks gestation whose medical record documents the reasons for intervention, and indicator 6c is the proportion of women with singleton pregnancies who had a planned birth before 39 weeks gestation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 6b | Proportion of women who had a pla ed birth before 39 weeks gestation whose medical record documents the reason(s) for intervention | Indicator 6c | Proportion of women with singleton pregnancies who had a pla ed birth before 39 weeks gestation"
+    },
+    {
+      "claim": "Indicator 7a is the proportion of clinicians who provide bereavement care to parents who have experienced a stillbirth who have completed an evidence-based bereavement care professional development program",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 7a | Proportion of clinicians who provide bereavement care to parents who have experienced a stillbirth who have completed an evidence-based bereavement care professional development program"
+    },
+    {
+      "claim": "Indicator 8a is the proportion of stillbirths reviewed by the healthcare service for potential contributing factors and classified according to the Perinatal Society of Australia and New Zealand classification system",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 8a | Proportion of stillbirths reviewed by the healthcare service for potential contributing factors and classified according to the Perinatal Society of Australia and New Zealand classification system"
+    },
+    {
+      "claim": "During pregnancy antenatal care should be provided in line with the principles outlined in the Clinical Practice Guidelines: Pregnancy Care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During pregnancy, provide antenatal care in line with the principles outlined in the Clinical Practice Guidelines: Pregnancy Care."
+    }
+  ],
+  "summary": {
+    "total": 41,
+    "pass": 41,
+    "fail": 0
+  }
+}
