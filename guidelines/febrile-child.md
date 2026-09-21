@@ -131,6 +131,44 @@ guideline defines as *complex*. The two documents share a vocabulary.
 images and were not retrieved — see *Unresolved*. This guideline cannot be used to triage infants over 28
 days.**
 
+## ⚠️ The two triage algorithms, transcribed from the flowchart images
+
+**Verification basis differs** — read off diagrams, verdict **`pass_image_transcription`**, not machine
+re-checkable. ⚠️ **Re-check doses against the image before clinical use.**
+
+**Both charts start at "Temperature >38.0 °C" and fork on *unwell features* then on *clinically obvious
+focus*** — the two-axis structure the text describes but never draws [S2].
+
+### Infants 29 days to 3 months
+
+| | **Clinically obvious focus** | **No clinically obvious focus** |
+|---|---|---|
+| **No unwell features** | **Investigate and manage as per specific focus. If discharged, arrange follow-up within 12–24 h** | **Urine MCS (SPA or catheter specimen). Consider FBE, CRP, blood culture** → **consider admission for observation and review by senior doctor**; **if remains well and investigations normal, discharge and arrange follow up within 12–24 h**; **if urine positive see UTI** |
+| **Unwell** *(if signs of septic shock, manage as per Sepsis)* | **Investigate and manage as per specific focus. Consider further investigations for co-infections or complications** → **admit, treat as clinically indicated** | ⚠️ **FBE · BSL · Lactate · CRP as baseline · Blood culture · Urine MCS · LP unless contraindicated · ± CXR** → **admit** |
+
+### Children over 3 months
+
+| | **Clinically obvious focus** | **No clinically obvious focus** |
+|---|---|---|
+| **No unwell features** | **Investigate and manage as per specific focus** | ⚠️ **If fever <24 h, consider no investigations.** **If previous UTI or age <12 months and fever for >24 h, consider urine MCS.** **If fever >48 h, consider urine MCS in all ages and discuss further investigations with a senior doctor** → **discharge with follow-up within 24 h** |
+| **Unwell** *(assess promptly and discuss with a senior doctor; if signs of septic shock, manage as per Sepsis)* | **Investigate and manage as clinically indicated** | **FBE · BSL · Lactate · CRP as baseline · Blood culture · Urine MCS · ± LP · ± CXR** → **admit** |
+
+⚠️ **The lumbar puncture changes from "unless contraindicated" to "±" at three months.** In the younger band
+it is the default and must be argued out of; in the older band it is optional. **That single character is the
+whole difference in meningitis posture between the two age groups, and it was inside a picture.**
+
+**Empiric antibiotic treatment, both charts** [S2]:
+
+> **Ceftriaxone (or Cefazolin + Gentamicin if normal CSF or meningitis excluded).** See **local antimicrobial
+> guidelines**
+
+**The narrower option is unlocked by excluding meningitis** — a stewardship step conditional on the LP result,
+which is why the LP posture above matters twice.
+
+⚠️ **Fever <24 h in a well child over 3 months with no focus: consider no investigations.** The text's
+statement that a **simple febrile seizure needs nothing beyond the fever workup** has a floor, and the floor
+is *nothing*.
+
 ## ⚠️ The lumbar puncture guidance the febrile seizure guideline lacked
 
 > - **When indicated, LP should be performed without delay and, ideally, before the administration of
@@ -214,8 +252,9 @@ anyone can bring them back.
 
 | Point | Kind | Detail |
 |---|---|---|
-| **The two flowcharts** | **input_unavailable** | **the algorithms for 29 days–3 months and >3 months are images.** Only the ≤28-day tier is written in prose. **This guideline cannot be used to triage infants and children over 28 days** |
-| **Empiric antibiotic choice and dose** | **input_unavailable** | deferred by the source to **local antimicrobial guidelines**, explicitly because susceptibility varies; **no agent or dose is stated or reconstructed** |
+| **The two flowcharts** | ⚠️ **observation** | **resolved 2026-09-22** — downloaded and transcribed above under **`pass_image_transcription`**; not machine re-checkable |
+| ⚠️ **LP posture differs by age** | **observation** | **"LP unless contraindicated"** at 29 days–3 months versus **"± LP"** over 3 months — recovered from the diagrams; **the text describes neither** |
+| **Empiric antibiotic choice** | ⚠️ **partly resolved** | the diagrams give **ceftriaxone, or cefazolin + gentamicin if normal CSF or meningitis excluded**. ⚠️ **Doses are still not stated anywhere** and remain deferred to local antimicrobial guidelines |
 | **Aboriginal, Torres Strait Islander, Pacific Islander or Maori origin as a risk factor** | **input_unavailable** | listed without a stated basis, magnitude or accompanying guidance on culturally safe application. **The ACSQHC standards elsewhere in this set pair such statements with cultural safety recommendations; this does not** |
 | **Stated currency predates its own figures** | ⚠️ **time_sensitive** | the page reads **"Last update September 2022"**, but **both flowcharts are filenamed `Feb2025`** and the newest reference is 2021. **The document's stated date and its contents disagree** |
 | **Definition of "corrected age"** | **input_unavailable** | the whole tier structure keys to it; **not defined in the retrieved text** |
@@ -228,3 +267,4 @@ anyone can bring them back.
 | id | citation | type |
 |---|---|---|
 | S1 | The Royal Children's Hospital Melbourne. *Clinical Practice Guidelines: Febrile child.* PIC Endorsed | paediatric clinical practice guideline (AU) |
+| S2 | *ibid.*, the **29-day-plus** and **3-month-plus** flowcharts — **read from the images** | diagrams, transcribed by eye |

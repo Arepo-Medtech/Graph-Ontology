@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Febrile child' (PIC endorsed), including key points, background, history, examination and the unwell-child feature table, management, the infants-28-days-or-less section, consultation, transfer, discharge, additional notes on temperature measurement, lumbar puncture, urine collection and blood culture, the blood culture volume table, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The management algorithms for infants 29 days to 3 months and children over 3 months are flowchart IMAGES and were not retrieved: they are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to triage those age groups. Empiric antibiotic choice and dose are deferred by the source to local antimicrobial guidelines and are not stated or reconstructed. The page states 'Last update September 2022' while both flowcharts are filenamed Feb2025; this discrepancy is recorded as time_sensitive rather than resolved.",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Febrile child' (PIC endorsed), including key points, background, history, examination and the unwell-child feature table, management, the infants-28-days-or-less section, consultation, transfer, discharge, additional notes on temperature measurement, lumbar puncture, urine collection and blood culture, the blood culture volume table, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The management algorithms for infants 29 days to 3 months and children over 3 months are flowchart IMAGES and were not retrieved: they are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to triage those age groups. Empiric antibiotic choice and dose are deferred by the source to local antimicrobial guidelines and are not stated or reconstructed. The page states 'Last update September 2022' while both flowcharts are filenamed Feb2025; this discrepancy is recorded as time_sensitive rather than resolved. ADDENDUM 2026-09-22: both triage flowcharts were downloaded as PNG images and read visually. Nine further claims carry verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py. The diagrams supply the empiric antibiotic agents, which the text omitted, and reveal that lumbar puncture is 'unless contraindicated' at 29 days to 3 months but only '+/-' over 3 months. Doses are still not stated anywhere in either the text or the diagrams and remain deferred to local antimicrobial guidelines.",
   "claims": [
     {
       "claim": "Key point 1 is that febrile neonates 28 days or less of corrected age require investigations being FBE, CRP, blood, urine and CSF cultures plus or minus CXR, and empiric IV antibiotic therapy",
@@ -329,11 +329,66 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "Dodd SR, Lancaster GA, Craig JV, Smyth RL, Williamson PR. In a systematic review, infrared ear thermometry for fever diagnosis in children finds poor sensitivity. \u2026 Gomez B, Mintegi S, Bressan S, Da Dalt L, Gervaix A, Lacroix L, et al. Validation of the \"Step-by-Step\" Approach in the Management of Young Febrile Infants. 2016."
+    },
+    {
+      "claim": "Both febrile child flowcharts begin at a temperature above 38.0 degrees Celsius and fork first on the presence of unwell features and then on whether there is a clinically obvious focus",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Temperature >38.0 C / No unwell features / Unwell / Clinically obvious focus / No clinically obvious focus"
+    },
+    {
+      "claim": "For infants 29 days to 3 months with no unwell features and a clinically obvious focus, investigate and manage as per the specific focus, and if discharged arrange follow-up within 12 to 24 hours",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "No unwell features / Clinically obvious focus / Investigate and manage as per specific focus / If discharged, arrange follow-up within 12 - 24h"
+    },
+    {
+      "claim": "For infants 29 days to 3 months with no unwell features and no clinically obvious focus, take urine MCS by suprapubic aspirate or catheter specimen and consider FBE, CRP and blood culture, then consider admission for observation and review by a senior doctor; if the infant remains well and investigations are normal, discharge and arrange follow up within 12 to 24 hours, and if urine is positive see the UTI guideline",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Urine MCS (SPA or catheter specimen) / Consider FBE, CRP, Blood culture / Consider admission for observation and review by senior doctor / If remains well and investigations normal, discharge and arrange follow up within 12-24 h / If urine positive see UTI"
+    },
+    {
+      "claim": "For an unwell infant, if there are signs of septic shock manage as per the Sepsis guideline",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Unwell / If signs of septic shock, manage as per Sepsis"
+    },
+    {
+      "claim": "For an unwell infant 29 days to 3 months with a clinically obvious focus, investigate and manage as per the specific focus, consider further investigations for co-infections or complications, and admit and treat as clinically indicated",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Investigate and manage as per specific focus / Consider further investigations for co-infections or complications / Admit / Treat as clinically indicated"
+    },
+    {
+      "claim": "For an unwell infant 29 days to 3 months with no clinically obvious focus the investigations are FBE, BSL, lactate, CRP as baseline, blood culture, urine MCS, lumbar puncture unless contraindicated, and plus or minus chest x-ray, followed by admission",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "FBE / BSL / Lactate / CRP as baseline / Blood culture / Urine MCS / LP unless contraindicated / CXR / Admit"
+    },
+    {
+      "claim": "For a child over 3 months with no unwell features and no clinically obvious focus, if fever is less than 24 hours consider no investigations; if there is previous UTI or age under 12 months and fever for more than 24 hours consider urine MCS; and if fever is more than 48 hours consider urine MCS in all ages and discuss further investigations with a senior doctor, then discharge with follow-up within 24 hours",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "If fever <24h, consider no investigations / If previous UTI or age <12 months and fever for >24 h, consider urine MCS / If fever >48h, consider urine MCS in all ages and discuss further investigations with a senior doctor / Discharge with follow-up within 24 h"
+    },
+    {
+      "claim": "For an unwell child over 3 months with no clinically obvious focus the investigations are FBE, BSL, lactate, CRP as baseline, blood culture, urine MCS, plus or minus lumbar puncture and plus or minus chest x-ray, followed by admission",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "FBE / BSL / Lactate / CRP as baseline / Blood culture / Urine MCS / LP / CXR / Admit"
+    },
+    {
+      "claim": "Empiric antibiotic treatment on both flowcharts is ceftriaxone, or cefazolin plus gentamicin if the CSF is normal or meningitis is excluded, with reference to local antimicrobial guidelines",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Empiric antibiotic treatment: / Ceftriaxone (or Cefazolin + Gentamicin if normal CSF or meningitis excluded) / See local antimicrobial guidelines"
     }
   ],
   "summary": {
-    "total": 54,
+    "total": 63,
     "pass": 54,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 9
   }
 }

@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Seizures - acute management' (last updated June 2025, PIC endorsed), including key points, background, assessment, history, examination, red flags, differential diagnosis, active seizure flowchart notes, the medications table, post seizure care, investigations, consultation and transfer triggers, discharge criteria, follow-up and reference list. Doses are transcribed verbatim from the source's own table, which states them in full; this is the first source in this compendium to do so. The active seizure flowchart is a diagram image and was NOT retrieved: the sequence of agents and the intervals between doses are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to sequence therapy. Febrile seizure, neonatal seizures and ongoing paediatric epilepsy treatment are separate documents and are marked out_of_scope. The AMH Children's dosing companion is cited by the source as reference 1 and is licensed content, cited by reference only and not reproduced. The source contains one typographical slip ('Most seizures well self-terminate' for 'will'); source_text is preserved verbatim and the guideline renders the evident word.",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Seizures - acute management' (last updated June 2025, PIC endorsed), including key points, background, assessment, history, examination, red flags, differential diagnosis, active seizure flowchart notes, the medications table, post seizure care, investigations, consultation and transfer triggers, discharge criteria, follow-up and reference list. Doses are transcribed verbatim from the source's own table, which states them in full; this is the first source in this compendium to do so. The active seizure flowchart is a diagram image and was NOT retrieved: the sequence of agents and the intervals between doses are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to sequence therapy. Febrile seizure, neonatal seizures and ongoing paediatric epilepsy treatment are separate documents and are marked out_of_scope. The AMH Children's dosing companion is cited by the source as reference 1 and is licensed content, cited by reference only and not reproduced. The source contains one typographical slip ('Most seizures well self-terminate' for 'will'); source_text is preserved verbatim and the guideline renders the evident word. ADDENDUM 2026-09-22: the active seizure management flowchart was downloaded as a PNG image and read visually. Eight further claims carry verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py. The diagram supplies the agent sequence and the five-minute gating that the text omitted, including that reassessment is timed from COMPLETION of the second-line infusion rather than from its start.",
   "claims": [
     {
       "claim": "The guideline's key points are to aim to identify reversible causes and manage accordingly, that most seizures will resolve within 5 minutes and do not require medications, to commence pharmacological management if total seizure duration is at least 5 minutes or unknown, to include pre-hospital doses of benzodiazepines in active management, and to ensure parental education regarding safety and future seizures",
@@ -269,11 +269,60 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "AMH Children's dosing companion. \u2026 Queensland Paediatric Emergency Care (QPEC) Queensland Paediatric Clinical Guidelines (QPCG). Status Epilepticus -- Emergency Management in Children. \u2026 SA Health. South Australian Paediatric Clinical Practice Guidelines. Seizures in children. \u2026 Smith eds. _Advanced Paediatric Life Support7th Edition_, Wiley Blackwell, 2024. \u2026 Specchio N, et al. \"International League Against Epilepsy classification and definition of epilepsy syndromes with onset in childhood: Position paper by the ILAE Task Force on Nosology and Definitions.\" _Epilepsia_ 63.6 (2022):\n       1398-1442. \u2026 Spooner C, et al. Starship Child Health. Seizures -- status epilepticus. \u2026 The Sydney Children's Hospitals Network. Guideline No 2014-9103 v2, Guideline: Seizures and status epilepticus management. \u2026 NICE guideline \\[NG217\\]. Epilepsies in children, young people and adults. Published: 27 April 2022. \u2026 Western Australia Child and Adolescent Health Service & Perth Children's Hospital. Status epilepticus."
+    },
+    {
+      "claim": "The active seizure flowchart entry point is suspected causative pathology with a check of blood glucose level, cardio-respiratory compromise, or duration of seizure more than 5 minutes or unknown; if no, ensure airway patency, keep safe and observe, and if the seizure is ongoing at 5 minutes commence active treatment",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Suspected causative pathology / Check BGL / Cardio-respiratory compromise / Duration of seizure >5 minutes or unknown / Ensure airway patency Keep safe & observe / Seizure ongoing at 5 minutes"
+    },
+    {
+      "claim": "Active treatment comprises continuous monitoring and oxygen, obtaining venous access, checking VBG, giving a benzodiazepine, and addressing any causative pathology",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Commence active treatment / Continuous monitoring, oxygen / Obtain venous access / Check VBG / Give benzodiazepine / Address any causative pathology"
+    },
+    {
+      "claim": "If IV access is difficult, IM, buccal or intranasal midazolam should be used",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "If IV access difficult, use IM/buccal/IN midazolam"
+    },
+    {
+      "claim": "If still seizing 5 minutes later, repeat the dose of benzodiazepine and involve senior staff",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "5 minutes still seizing / Repeat dose of benzodiazepine / Involve senior staff"
+    },
+    {
+      "claim": "If still seizing 5 minutes after the repeat benzodiazepine, give a second line agent being either levetiracetam or phenytoin",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "5 minutes still seizing / Give 2nd line agent: / Levetiracetam OR Phenytoin"
+    },
+    {
+      "claim": "Reassessment is 5 minutes after the infusion is completed, and if the seizure is ongoing give the alternative second line agent not already administered, using phenobarbitone if the child is already on phenytoin, and consider intubation",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Reassess 5 minutes after infusion completed - ongoing seizure? / Give alternative 2nd line agent / Levetiracetam OR Phenytoin (agent not already administered) / Phenobarbitone if already on Phenytoin / Consider intubation"
+    },
+    {
+      "claim": "If the seizure is still ongoing 5 minutes after that infusion is completed, seek help from senior staff for further seizure management with or without airway management",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Reassess 5 minutes after infusion completed - ongoing seizure? / Seek help from senior staff for further seizure management +/- airway management"
+    },
+    {
+      "claim": "When the seizure is terminated, post seizure care comprises revisiting history and examination and investigations as required",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Seizure terminated / Post seizure care / Revisit history and examination / Investigations as required"
     }
   ],
   "summary": {
-    "total": 44,
+    "total": 52,
     "pass": 44,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 8
   }
 }

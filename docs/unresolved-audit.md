@@ -1,9 +1,10 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,324 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 58 guidelines · 2,341 claims · 236 `Unresolved` rows**
 
-*Revised the same day: the **paediatric sepsis**, **anaphylaxis** and **acute asthma** algorithms were recovered
-from their images — see Finding 1. **67 claims now carry `pass_image_transcription`.***
+*Revised the same day: **all eleven RCH paediatric algorithm images have been recovered** — sepsis,
+anaphylaxis, acute asthma, febrile child and acute seizures. See Finding 1. **84 claims now carry
+`pass_image_transcription`**, and Finding 1 is closed except for the two Austroads decision trees.*
 
 Every guideline ends with an `Unresolved` table. This is the audit of those tables read as a set — the
 things this compendium records that it cannot answer, grouped so they can be acted on rather than
@@ -34,13 +35,14 @@ algorithm was not.
 |---|---|---|
 | ~~**Acute asthma (children)**~~ | ~~4~~ | ✅ **RESOLVED 2026-09-22** — and it surfaced a **contradiction with the guideline's own key point 4** (see below) |
 | ~~**Anaphylaxis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — recovered the **IM site (lateral mid-thigh)**, the **mg/kg rule behind the dose chart**, and the **5-minute repeat interval** |
-| **Febrile child** | **2** | the entire triage for **29 days–3 months** and **>3 months** |
+| ~~**Febrile child**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — and it recovered the **empiric antibiotic agents**, absent from the text |
 | ~~**Sepsis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — images downloaded and read; algorithm transcribed into the guideline under verdict `pass_image_transcription` |
-| **Seizures — acute management (children)** | **1** | the **sequence of agents and intervals between doses** |
+| ~~**Seizures — acute management (children)**~~ | ~~1~~ | ✅ **RESOLVED 2026-09-22** — the five-minute gating, and that reassessment runs from **completion** of the infusion |
 | **Fitness to drive — seizures** | **2** | Figures 13 and 14, the decision trees summarising the whole chapter |
 
-**Five of the six RCH paediatric guidelines in this compendium have their treatment algorithm in an image.**
-The exception is **febrile seizure**, which has no algorithm to lose.
+**Five of the six RCH paediatric guidelines in this compendium had their treatment algorithm in an image.**
+The exception is **febrile seizure**, which has no algorithm to lose. ✅ **All five have now been recovered.**
+**Only the two Austroads decision trees remain.**
 
 **Consequence, stated in each file:** those guidelines carry doses where the source gives them in text
 (paediatric seizures, anaphylaxis, magnesium in asthma) but **cannot be used to sequence therapy**. Each says
@@ -53,7 +55,7 @@ it is fixable by retrieval rather than by judgement.
 ### ✅ Method established, 2026-09-22
 
 **The paediatric sepsis flowcharts have now been downloaded and read**, and the algorithm is transcribed into
-that guideline. **Five images across three guidelines remain.**
+that guideline. ✅ **All eleven RCH paediatric images are recovered. Two Austroads decision trees remain.**
 
 What it recovered, none of which existed in the retrieved text: the **time-banded structure (5 / 15 / 30 /
 60 minutes)**; **fluid as 20 then 10 then 10 mL/kg to a 40 mL/kg ceiling**; **four antibiotic regimens in the
@@ -86,6 +88,13 @@ against the image by eye.** They count toward `total` and **not** toward `pass`.
 - **Aminophylline is a live second-line IV agent** in two asthma algorithms and **appears nowhere in that
   guideline's text**. It also carries a line-compatibility warning found only in the picture: **aminophylline
   and magnesium are not compatible in one IV line**
+- ⚠️ **Lumbar puncture is "unless contraindicated" for infants 29 days–3 months and only "±" over 3
+  months** in the febrile child charts. **One character carries the entire difference in meningitis posture
+  between the two age bands**, and it existed only in the diagrams
+- **Febrile child's empiric antibiotics — ceftriaxone, or cefazolin + gentamicin once meningitis is
+  excluded — were in the pictures, not the text.** ⚠️ **The doses are in neither**
+- **Paediatric seizure reassessment is timed from *completion* of the second-line infusion, not its start** —
+  which, with phenytoin infusing at 1 mg/kg/min, materially changes when the next agent is due
 
 ## ⚠️ Finding 2 — documents whose stated currency is wrong or expired
 
@@ -149,7 +158,7 @@ the sharpest are worth naming:
 
 ## Priority, if this list is to be worked
 
-1. **Retrieve the five remaining algorithm images** and transcribe them — the method is established and the
+1. **Retrieve the two remaining Austroads decision trees (Figures 13 and 14)** and transcribe them — the method is established and the
    sepsis one is done. Largest clinical gap, and purely mechanical. **Each transcription adds
    `pass_image_transcription` claims that a person should check against the image.**
 2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be

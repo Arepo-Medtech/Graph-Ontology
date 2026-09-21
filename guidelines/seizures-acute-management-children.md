@@ -86,6 +86,40 @@ emergency guideline and the national drug bulletin agree without citing each oth
 condition — the assessment section flags it separately: **age: treatable cause is more likely in children <6
 months — consider pyridoxine dependent seizures** [S1].
 
+## ⚠️ The active seizure algorithm, transcribed from the flowchart image
+
+**Verification basis differs** — read off the diagram, verdict **`pass_image_transcription`**, not machine
+re-checkable [S2].
+
+**Entry**: **suspected causative pathology — check BGL · cardio-respiratory compromise · duration of seizure
+>5 minutes or unknown**. **No** → **ensure airway patency, keep safe & observe**; **seizure ongoing at 5
+minutes** → enter active treatment. **No** → **post seizure care** [S2].
+
+**Commence active treatment** [S2]:
+
+> - **Continuous monitoring, oxygen**
+> - **Obtain venous access**
+> - **Check VBG**
+> - ⚠️ **Give benzodiazepine** — **if IV access difficult, use IM/buccal/IN midazolam**
+> - **Address any causative pathology**
+
+Then, **each step gated at five minutes** [S2]:
+
+| Still seizing after | Do |
+|---|---|
+| **5 minutes** | **Repeat dose of benzodiazepine. Involve senior staff** |
+| **5 minutes** | **Give 2nd line agent: Levetiracetam OR Phenytoin** |
+| ⚠️ **Reassess 5 minutes *after infusion completed*** | **Give alternative 2nd line agent** (the one not already administered). **Phenobarbitone if already on Phenytoin. Consider intubation** |
+| **Reassess 5 minutes after infusion completed** | **Seek help from senior staff for further seizure management +/- airway management** |
+
+**"Reassess 5 minutes after infusion completed" — not after starting it.** Levetiracetam infuses over
+5 minutes and phenytoin over considerably longer at 1 mg/kg/min; **the clock starts at the end of the
+infusion, which materially changes when the next agent is due.** The text gave neither the sequence nor this
+distinction.
+
+**At any point, seizure terminated** → **post seizure care: revisit history and examination, investigations as
+required** [S2].
+
 ## Assessment
 
 > **Assessment and management should occur concurrently if the child is seizing** [S1].
@@ -212,7 +246,7 @@ other source in this compendium does that.
 
 | Point | Kind | Detail |
 |---|---|---|
-| **The active seizure flowchart** | **input_unavailable** | **the sequence of agents, and the intervals between doses, are in a diagram image.** The dose table is transcribed; **the timing algorithm is not reconstructed here and this guideline cannot be used to sequence therapy** |
+| **The active seizure flowchart** | ⚠️ **observation** | **resolved 2026-09-22** — downloaded and transcribed above under **`pass_image_transcription`**; not machine re-checkable. **The dose table and the sequence can now be read together** |
 | **Febrile seizure** | **out_of_scope** | a separate RCH guideline, not retrieved; it is the commonest childhood seizure presentation |
 | **Neonatal seizures** | **out_of_scope** | referred to an external Victorian guideline |
 | **Ongoing epilepsy treatment in children** | **out_of_scope** | this covers the acute event and first presentation only; **maintenance antiseizure therapy in children remains uncovered in this compendium** |
@@ -226,3 +260,4 @@ other source in this compendium does that.
 | id | citation | type |
 |---|---|---|
 | S1 | The Royal Children's Hospital Melbourne. *Clinical Practice Guidelines: Seizures — acute management.* Last updated June 2025. PIC Endorsed | paediatric clinical practice guideline (AU) |
+| S2 | *ibid.*, the **active seizure management flowchart** — **read from the image** | diagram, transcribed by eye |
