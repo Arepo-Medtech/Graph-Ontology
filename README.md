@@ -9,6 +9,7 @@ sources; nothing is fuzzy-matched and every link carries its method.
 | SNOMED CT-AU RF2 snapshot (NCTS) | AMT concepts at every level, `Has product name` (brand), `is a` (generic), active / precise ingredient, basis of strength, dose form, `Contains clinical drug` (pack → unit), AU preferred terms | Licensed. Read from disk (`AU_RF2_SNAPSHOT`), never committed. Concept activeness comes from a Concept snapshot, else the Concept *Full* file at the release root collapsed to its latest row, else the OWL axiom refset — see [Concept status](#concept-status) |
 | PBS Public API v3 | `items`, `amt-items`, `atc-codes`, and `item-atc-relationships`; selected `item-overview` evidence on demand | Commonwealth CC BY; copyright notice and source schedule retained in `cache/pbs/*.json` |
 | AMH Medicines, July 2026 | Curated pregnancy-safety and supplement-role distinctions, including route, gestational window and dose context | Subscriber source; only concise paraphrased metadata, edition, access date and direct URLs are committed |
+| OMOP vocabulary via OMOPHub (Athena 2026.2) | AMT products (TPUU/MPUU/MP) → OMOP `AMT` concepts → standard drug concepts (`Maps to`, RxNorm Extension / RxNorm); SNOMED substances → RxNorm ingredients as a second route — see [OMOP bridge](#omop-bridge) | Athena vocabularies under their own terms; only concept ids, codes and names are cached (`cache/`, git-ignored). Needs `OMOPHUB_API_KEY` |
 | RxNorm via RxNav (NLM) | Ingredient identity (RxCUI, IN/PIN/MIN) for SNOMED substances: RxNorm's own SNOMED CT id map first, then SNOMED ancestor (salts/hydrates), then name equality — see [RxNorm resolution](#rxnorm-resolution) | US public domain |
 
 ## Levels (from FSN semantic tags)
@@ -73,6 +74,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/pbs_pull.py        # public tier: 1 request / 20 s
 .venv/bin/python scripts/rxnorm_enrich.py   # optional, ~1–2 h; first pass, by name via RxNav
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
+.venv/bin/python scripts/omophub_bridge.py vocab && .venv/bin/python scripts/omophub_bridge.py map tpuu && .venv/bin/python scripts/omophub_bridge.py substances   # optional, hours (120 req/min); needs OMOPHUB_API_KEY
 .venv/bin/python scripts/build_compendium.py
 ```
 
@@ -88,6 +90,23 @@ assembled item response on demand:
 `cache/rxcui_to_sctid.json` seeds RxNorm links from the Synthea AU bridge built in
 `Arepo-Medtech/data-golf-2026`; `rxnorm_enrich.py` extends them to every AMT ingredient and
 `rxnorm_resolve.py` re-grades every link with auditable methods.
+
+## OMOP bridge
+
+`scripts/omophub_bridge.py` (needs `OMOPHUB_API_KEY`; the key lives in `~/code/spine/.env`) pages OMOP's own
+copy of the Australian Medicines Terminology (vocabulary `AMT`, 136,850 concepts, version v20210630) and then
+asks for each compendium product's `Maps to` target — the standard drug concept OHDSI analytics run on. Two
+tables result:
+
+| table | grain | columns |
+|---|---|---|
+| `omop_drug` | one row per AMT product × standard target | `product_id`, `level`, `amt_concept_id`, `amt_concept_class`, `standard_concept_id`, `standard_name`, `standard_vocabulary`, `standard_code`, `in_omop` |
+| `omop_substance` | one row per ingredient substance | `omop_concept_id`, `omop_vocabulary`, `omop_rxcui` (RxNorm ingredient via OMOP), `rxnav_rxcui` (RxNav route), `agreement` = agree / disagree / omop-only / rxnav-only / neither |
+
+`transcode` gains `omop_amt_concept_id`, `omop_drug_concept_id`, `omop_drug_name`, `omop_drug_vocabulary`.
+OMOP's AMT snapshot is from 2021, so products released since are `in_omop=false`; the RxNav route stays
+the source for those. `out/omop_bridge_report.md` summarises coverage and lists where the two RxNorm routes
+disagree. Rate limit is 120 requests/min, so the first full run takes a few hours; caches make re-runs incremental.
 
 ## RxNorm resolution
 

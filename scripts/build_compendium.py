@@ -261,6 +261,41 @@ if p.exists():
 (OUT / "_rx.json").write_text(json.dumps(rx_rows or [{"substance_id": None, "rxcui_ingredient": None, "rxnorm_name": None, "rxnorm_tty": None, "source": None}]))
 con.execute("CREATE TABLE rxnorm AS SELECT DISTINCT * FROM read_json_auto('out/_rx.json')")
 
+# --- OMOP (OMOPHub bridge: cache/omophub_*.json from scripts/omophub_bridge.py) ------------------------------
+# omop_drug: AMT product -> OMOP AMT concept -> standard drug concept (`Maps to`, RxNorm Extension / RxNorm)
+# omop_substance: SNOMED substance -> OMOP concept -> RxNorm ingredient, plus agreement with the RxNav route
+drug_rows, subst_rows = [], []
+pm = Path("cache/omophub_amt_maps.json")
+if pm.exists():
+    for code, m in json.load(open(pm)).items():
+        if not m.get("in_omop"):
+            drug_rows.append({"product_id": code, "level": m.get("level", "").upper(), "amt_concept_id": None, "amt_concept_class": None,
+                              "standard_concept_id": None, "standard_name": None, "standard_vocabulary": None, "standard_code": None, "in_omop": False})
+            continue
+        targets = m.get("targets") or []
+        if m.get("self_standard"):
+            targets = [{"target_concept_id": m["concept_id"], "target_name": None, "target_vocabulary": "AMT", "target_code": code}]
+        for t in (targets or [None]):
+            drug_rows.append({"product_id": code, "level": m.get("level", "").upper(), "amt_concept_id": m.get("concept_id"), "amt_concept_class": m.get("concept_class"),
+                              "standard_concept_id": t["target_concept_id"] if t else None, "standard_name": t.get("target_name") if t else None,
+                              "standard_vocabulary": t.get("target_vocabulary") if t else None, "standard_code": t.get("target_code") if t else None, "in_omop": True})
+ps = Path("cache/omophub_substances.json")
+if ps.exists():
+    rxn = json.load(open(Path("cache/rxnorm_substances.json"))) if Path("cache/rxnorm_substances.json").exists() else {}
+    for sid, rec in json.load(open(ps)).items():
+        o = rec.get("omop") or {}
+        rx_targets = [t for t in rec.get("targets") or [] if t.get("target_vocabulary") == "RxNorm"]
+        rxnav = (rxn.get(sid) or {}).get("rxcui")
+        omop_rxcuis = {str(t["target_code"]) for t in rx_targets}
+        agreement = ("agree" if rxnav in omop_rxcuis else "disagree") if (rxnav and omop_rxcuis) else ("omop-only" if omop_rxcuis else ("rxnav-only" if rxnav else "neither"))
+        subst_rows.append({"substance_id": sid, "omop_concept_id": o.get("concept_id"), "omop_vocabulary": o.get("vocabulary_id"), "omop_concept_class": o.get("concept_class_id"),
+                           "omop_rxcui": ",".join(sorted(omop_rxcuis)) or None, "omop_rxnorm_name": (rx_targets[0].get("target_name") if rx_targets else None),
+                           "rxnav_rxcui": rxnav, "agreement": agreement})
+(OUT / "_omop_drug.json").write_text(json.dumps(drug_rows or [{"product_id": None, "level": None, "amt_concept_id": None, "amt_concept_class": None, "standard_concept_id": None, "standard_name": None, "standard_vocabulary": None, "standard_code": None, "in_omop": None}]))
+(OUT / "_omop_substance.json").write_text(json.dumps(subst_rows or [{"substance_id": None, "omop_concept_id": None, "omop_vocabulary": None, "omop_concept_class": None, "omop_rxcui": None, "omop_rxnorm_name": None, "rxnav_rxcui": None, "agreement": None}]))
+con.execute("CREATE TABLE omop_drug AS SELECT * FROM read_json_auto('out/_omop_drug.json')")
+con.execute("CREATE TABLE omop_substance AS SELECT * FROM read_json_auto('out/_omop_substance.json')")
+
 # --- the wide transcode table: one row per TPUU ---------------------------------------------
 con.execute("""
 CREATE TABLE transcode AS
@@ -278,7 +313,10 @@ pbsu AS (SELECT tpuu_id, list(DISTINCT pbs_code) FILTER (WHERE pbs_code IS NOT N
                 list(DISTINCT pbs_brand) FILTER (WHERE pbs_brand IS NOT NULL) AS pbs_brands FROM pbs_tpuu GROUP BY 1),
 gmp AS (SELECT mm.mpuu_id, list(DISTINCT mp.pt) AS generic_mp FROM mpuu_mp mm JOIN concept mp ON mp.id=mm.mp_id GROUP BY 1),
 rx AS (SELECT i.product_id, list(DISTINCT r.rxcui_ingredient) AS rxcuis, string_agg(DISTINCT r.rxnorm_name, ' + ') AS rxnorm_names
-       FROM ingredient i JOIN rxnorm r ON r.substance_id=coalesce(i.active_substance_id, i.precise_substance_id) GROUP BY 1)
+       FROM ingredient i JOIN rxnorm r ON r.substance_id=coalesce(i.active_substance_id, i.precise_substance_id) GROUP BY 1),
+omop AS (SELECT product_id, any_value(amt_concept_id) AS omop_amt_concept_id, any_value(standard_concept_id) AS omop_drug_concept_id,
+                any_value(standard_name) AS omop_drug_name, any_value(standard_vocabulary) AS omop_drug_vocabulary
+         FROM omop_drug WHERE standard_concept_id IS NOT NULL GROUP BY 1)
 SELECT t.id AS tpuu_id, t.pt AS tpuu_pt, t.fsn AS tpuu_fsn,
        bo.brand_id, bc.pt AS brand,
        ug.mpuu_id, mu.pt AS generic_mpuu,
@@ -288,6 +326,7 @@ SELECT t.id AS tpuu_id, t.pt AS tpuu_pt, t.fsn AS tpuu_fsn,
        packs.tpp_ids, ctpps.ctpp_ids,
        pbsu.pbs_codes, pbsu.pbs_brands,
        rx.rxcuis, rx.rxnorm_names,
+       omop.omop_amt_concept_id, omop.omop_drug_concept_id, omop.omop_drug_name, omop.omop_drug_vocabulary,
        t.au_authored
 FROM product t
 LEFT JOIN brand_of bo ON bo.product_id=t.id LEFT JOIN concept bc ON bc.id=bo.brand_id
@@ -297,6 +336,7 @@ LEFT JOIN (SELECT product_id, any_value(dose_form_id) AS dose_form_id FROM dose_
 LEFT JOIN packs ON packs.tpuu_id=t.id LEFT JOIN ctpps ON ctpps.tpuu_id=t.id
 LEFT JOIN pbsu ON pbsu.tpuu_id=t.id LEFT JOIN gmp ON gmp.mpuu_id=ug.mpuu_id
 LEFT JOIN rx ON rx.product_id=t.id
+LEFT JOIN omop ON omop.product_id=t.id
 WHERE t.level='TPUU';
 """)
 
@@ -350,7 +390,7 @@ WHERE s.tag IN ('substance','AU substance');
 """)
 
 # --- exports -----------------------------------------------------------------------------------
-for t in ["transcode", "brand", "brand_alias", "substance", "product", "pbs", "pbs_tpuu", "pbs_atc_code", "pbs_item_atc", "supplement_listing", "clinical_evidence", "pregnancy_safety_evidence", "supplement_role_evidence", "therapeutic_role_evidence", "rxnorm", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
+for t in ["transcode", "brand", "brand_alias", "substance", "product", "pbs", "pbs_tpuu", "pbs_atc_code", "pbs_item_atc", "supplement_listing", "clinical_evidence", "pregnancy_safety_evidence", "supplement_role_evidence", "therapeutic_role_evidence", "rxnorm", "omop_drug", "omop_substance", "unit_generic", "pack_generic", "ctpp_tpp", "mpuu_mp", "ingredient", "contains", "brand_of"]:
     con.execute(f"COPY {t} TO 'out/{t}.parquet' (FORMAT PARQUET)")
 for t in ["transcode", "brand", "brand_alias", "substance", "supplement_listing", "clinical_evidence", "pregnancy_safety_evidence", "supplement_role_evidence", "therapeutic_role_evidence"]:
     con.execute(f"COPY (SELECT * FROM {t}) TO 'out/{t}.csv' (HEADER)")
@@ -363,11 +403,15 @@ print(con.sql("""SELECT
   (SELECT count(*) FROM transcode WHERE ingredients IS NOT NULL) AS with_ingredients,
   (SELECT count(*) FROM transcode WHERE pbs_codes IS NOT NULL) AS with_pbs,
   (SELECT count(*) FROM transcode WHERE rxcuis IS NOT NULL) AS with_rxnorm,
+  (SELECT count(*) FROM transcode WHERE omop_drug_concept_id IS NOT NULL) AS with_omop_drug,
   (SELECT count(*) FROM brand) AS brands,
   (SELECT count(*) FROM brand WHERE n_tpuu>0) AS brands_with_products,
   (SELECT count(*) FROM brand WHERE pbs_codes IS NOT NULL AND len(pbs_codes)>0) AS brands_on_pbs,
   (SELECT count(*) FROM substance) AS substances_used,
   (SELECT count(*) FROM substance WHERE rxcuis IS NOT NULL) AS substances_with_rxnorm,
+  (SELECT count(*) FROM omop_substance WHERE omop_rxcui IS NOT NULL) AS substances_with_omop_rxnorm,
+  (SELECT count(*) FROM omop_substance WHERE agreement='agree') AS substances_routes_agree,
+  (SELECT count(*) FROM omop_substance WHERE agreement='disagree') AS substances_routes_disagree,
   (SELECT count(*) FROM supplement_listing) AS supplement_listings,
   (SELECT count(DISTINCT pbs_code) FROM supplement_listing) AS supplement_pbs_codes,
   (SELECT count(*) FROM pregnancy_safety_evidence) AS pregnancy_evidence_rows,
