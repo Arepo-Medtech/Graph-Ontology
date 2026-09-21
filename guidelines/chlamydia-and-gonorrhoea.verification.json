@@ -1,0 +1,202 @@
+{
+  "guideline": "guidelines/chlamydia-and-gonorrhoea.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM chlamydia and gonorrhoea pages. DOSES compared character by character \u2014 this is the first guideline in the set to state doses, so transcription accuracy is the primary risk.",
+  "source_coverage": "Chlamydia and gonorrhoea topic pages retrieved in full. Syndromic pages, other STIs and population pages NOT retrieved.",
+  "claims": [
+    {
+      "claim": "Chlamydia is the most reported communicable disease in Australia; <30 greatest risk; 85-90% no symptoms; no immunity from previous infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Chlamydia is the most reported communicable disease in Australia. Those < 30 years are at greatest risk. Frequently asymptomatic. ... Immunity to new infection is not provided by previous infection. ... 85%-90% have no symptoms"
+    },
+    {
+      "claim": "NAATs are the only recommended test for chlamydia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "NAATs are highly sensitive, can be used in non-clinical settings and are the only recommended test for chlamydia."
+    },
+    {
+      "claim": "Self-collected vaginal swab best if no speculum exam; clinician-collected endocervical best if examined; FPU less sensitive than self-collected vaginal swab",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Self-collected vaginal swab | NAAT | Best test if no speculum examination ... Clinician-collected endocervical swab | NAAT | Best test if examined ... Less sensitive than self-collected vaginal swab"
+    },
+    {
+      "claim": "Concurrent gonorrhoea testing should accompany chlamydia testing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Concurrent gonorrhoea testing should accompany chlamydia testing."
+    },
+    {
+      "claim": "Chlamydia uncomplicated genital or pharyngeal: doxycycline 100 mg PO BD 7 days; alternative azithromycin 1 g PO stat where adherence likely poor",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Uncomplicated genital or pharyngeal infection | Doxycycline 100 mg PO, BD 7 days | Azithromycin 1 g PO, stat. Consider where adherence to daily treatment likely to be poor especially where anorectal infection is less likely."
+    },
+    {
+      "claim": "Chlamydia anorectal: doxycycline 100 mg PO BD 7 days if asymptomatic, 21 days if symptomatic; alternative azithromycin 1 g stat and repeat in 12-24 hours",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Anorectal infection | Doxycycline 100 mg PO, BD for 7 days if asymptomatic, but 21 days if symptomatic ... | Azithromycin 1 g PO, stat. and repeat in 12-24 hours"
+    },
+    {
+      "claim": "Chlamydia in pregnancy: azithromycin 1 g PO stat",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnant people | Azithromycin 1 g PO, stat."
+    },
+    {
+      "claim": "Immediate treatment is NOT recommended for all sexual contacts of chlamydia; offer testing of exposed sites and await results",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Immediate treatment is not recommended for all sexual contacts of chlamydia but offer testing of exposed anatomical sites and await results."
+    },
+    {
+      "claim": "Chlamydia: no sexual contact for 7 days after treatment commenced, or until course completed and symptoms resolved, whichever later",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sexual contact for 7 days after treatment is commenced, or until the course is completed and symptoms resolved, whichever is later."
+    },
+    {
+      "claim": "Chlamydia: no sex with partners from the last 6 months until partners tested and treated; contact tracing back 6 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sex with partners from the last 6 months until the partners have been tested and treated if necessary. ... All partners should be traced back for 6 months."
+    },
+    {
+      "claim": "Chlamydia test of cure not routine except pregnancy and anorectal treated with azithromycin; no earlier than 4 weeks after treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Test of cure Not routinely recommended, except for: Pregnant people; Anorectal infection treated with Azithromycin ... should be performed no earlier than 4 weeks after treatment is completed to prevent false positive result due to persistent chlamydia DNA."
+    },
+    {
+      "claim": "Chlamydia retesting at 3 months recommended to detect re-infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Re-infection is common. Retesting at 3 months is recommended to detect re-infection."
+    },
+    {
+      "claim": "Chlamydia auditable outcome: 100% treated with an appropriate antibiotic regimen",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of patients diagnosed with chlamydia are treated with an appropriate antibiotic regimen."
+    },
+    {
+      "claim": "Gonorrhoea: increasing prevalence in general population, especially women of reproductive age; reduced susceptibility to first-line treatment emerging in urban Australia",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Increasing prevalence in general population, especially in women of reproductive age. ... Reduced susceptibility to first-line treatment is emerging in urban Australia and is being monitored closely."
+    },
+    {
+      "claim": "Anal and pharyngeal gonorrhoea asymptomatic in most; vaginal often asymptomatic (80%); penile urethral almost always symptomatic (85-90%)",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Anal and pharyngeal gonorrhoea infections are asymptomatic in most people, vaginal gonorrhoea is often asymptomatic (in 80% of cases), and penile urethral gonorrhoea is almost always symptomatic (in 85-90% of cases)."
+    },
+    {
+      "claim": "ALWAYS collect gonococcal culture before treating, but do not delay treatment for results",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "ALWAYS collect samples for gonococcal culture before treating gonorrhoea, to determine antimicrobial sensitivity and contribute to antimicrobial resistance surveillance. However, do not delay treatment to wait for these culture results."
+    },
+    {
+      "claim": "Clinicians must specifically request 'gonococcal culture' rather than general 'culture'; samples should reach the laboratory within 24 hours",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Clinicians must specifically request 'gonococcal culture' rather than general 'culture', as gonococci require specific culture conditions. ... should reach the laboratory within 24 hours."
+    },
+    {
+      "claim": "Gonorrhoea uncomplicated genital and anorectal: ceftriaxone 500 mg IMI stat in 2 mL 1% lignocaine PLUS azithromycin 1 g PO stat",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Uncomplicated genital and anorectal infection | Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 1 g PO, stat."
+    },
+    {
+      "claim": "Gonorrhoea pharyngeal: ceftriaxone 500 mg IMI PLUS azithromycin 2 g PO stat",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Uncomplicated pharyngeal infection | Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 2 g PO, stat."
+    },
+    {
+      "claim": "Adult gonococcal conjunctivitis: ceftriaxone 1 g IMI PLUS azithromycin 1 g PO stat",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Adult gonococcal conjunctivitis | Ceftriaxone 1 g IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 1 g PO, stat."
+    },
+    {
+      "claim": "Pharynx most likely site of treatment failure due to resistance gene sharing and reduced drug penetration",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Sharing of antimicrobial resistance genetic material between bacteria and reduced drug penetration to pharyngeal mucosa makes it the most likely site of treatment failure."
+    },
+    {
+      "claim": "Dual antibiotic treatment recommended to create a pharmacological barrier to development of more widespread resistance",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Dual antibiotic treatment is recommended to create a pharmacological barrier to the development of more widespread resistance to treatment."
+    },
+    {
+      "claim": "Ceftriaxone monotherapy should not be used outside specialist centres monitoring culture-based susceptibility",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Ceftriaxone monotherapy should not be used outside specialist centres monitoring culture-based antibiotic susceptibility."
+    },
+    {
+      "claim": "Ciprofloxacin 500 mg orally can be used only if susceptibility confirmed on NAAT or culture, and should not delay treatment",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Ciprofloxacin 500 mg orally immediately can be used to treat gonorrhoea, but only if susceptibility has been confirmed on NAAT or culture, and this should not delay treatment."
+    },
+    {
+      "claim": "Remote penicillin-susceptible regimen: amoxicillin 3 g PO stat PLUS probenecid 1 g PO stat PLUS azithromycin 1 g PO stat when chlamydia not excluded",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Amoxicillin 3 g PO, stat. PLUS Probenecid 1 g PO, stat. PLUS Azithromycin 1 g PO, stat. (when chlamydia not excluded)."
+    },
+    {
+      "claim": "Gonorrhoea contact tracing back a minimum of 2 months; no sex with partners from last 2 months until tested and treated",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "All partners should be traced back for a minimum of 2 months. ... Advise no sex with partners from the last 2 months until the partners have been tested and treated if necessary."
+    },
+    {
+      "claim": "Gonorrhoea test of cure by NAAT 2 weeks after treatment for each site of infection",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "For each site of infection (pharyngeal, anal or cervical), TOC by NAAT should be performed 2 weeks after treatment is completed"
+    },
+    {
+      "claim": "Consider HIV pre-exposure prophylaxis for anyone diagnosed with gonorrhoea",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Consider human immunodeficiency virus (HIV) pre-exposure prophylaxis (PrEP) for anyone diagnosed with gonorrhoea."
+    },
+    {
+      "claim": "Rectal co-infection: ceftriaxone 500 mg IMI in 2 mL 1% lignocaine PLUS doxycycline 100 mg BD 7 days asymptomatic / 21 days symptomatic",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "For rectal co-infection with chlamydia, treatment should be given for gonorrhoea AND chlamydia i.e. Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Doxycycline 100 mg PO, BD 7 days if asymptomatic, but 21 days if symptomatic"
+    },
+    {
+      "claim": "Gonorrhoea auditable outcomes: 100% appropriate regimen, 100% advised no sexual contact 7 days, 100% recalled for repeat testing after 3 months",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "100% of patients diagnosed with gonorrhoea are treated with an appropriate antibiotic regimen. 100% of patients are advised to avoid sexual contact for 7 days after treatment is administered. 100% of patients diagnosed with gonorrhoea are recalled for repeat testing after 3 months."
+    },
+    {
+      "claim": "Both are notifiable to the state or territory health department",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Notify the state or territory health department."
+    }
+  ],
+  "summary": {
+    "total": 31,
+    "pass": 31,
+    "fail": 0
+  }
+}
