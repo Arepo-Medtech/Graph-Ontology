@@ -60,3 +60,67 @@ python scripts/bind_conditions.py
 Both scripts carry `--demo` self-checks. `bind_conditions.py --demo` verifies the
 match methods and the transitive closure against RF2-shaped fixtures and needs no
 snapshot; the binding has **not** been run against a real AU release yet.
+
+## Binding over the wire (NCTS Ontoserver)
+
+`bind_conditions.py` above needs `sct2_Description` and `sct2_Relationship` from
+an RF2 release. **Both SNOMED releases available at time of writing ship
+neither** — the AU 20260731 and International 20260701 bundles both contain
+Concept, Identifier, RelationshipConcreteValues and TextDefinition only, and the
+AU `Full/Refset/Language` directory is empty. With no Description file there are
+no terms to match against, so the offline binder cannot run. It is kept for when
+a complete release is available.
+
+`bind_ontoserver.mjs` binds over the wire instead, against the same pinned AU
+edition (20260731) via the NCTS terminology server:
+
+```bash
+NCTS_CLIENT_PATH=/path/to/ncts-client.mjs \
+node --env-file=/path/to/.env scripts/bind_ontoserver.mjs \
+     out/conditions.json out/snomed_bindings.json
+```
+
+Credentials come from the client's `.env` via `node --env-file`; nothing reads
+or stores them.
+
+### Method discipline
+
+Unchanged from the offline binder — nothing is fuzzy-matched:
+
+| Method | Binding? |
+|---|---|
+| `exact_display` / `exact_synonym` | yes |
+| `normalised_display` / `normalised_synonym` | yes |
+| `candidate_unconfirmed` | **no** — top 3 hits recorded for human confirmation |
+| `unmatched` | no concept found |
+| `unvalidated_retry` | server/auth failure. **Never** recorded as absence |
+
+A ranked search hit is not a binding. `$expand` orders by text relevance and
+will return a near-miss for a term with no concept, so *Bone metastases* →
+*Metastatic malignant neoplasm to bone* is a candidate for a human, not a link.
+
+The `unvalidated_retry` row follows the NCTS client's fail-safe contract: a null
+response means UNVALIDATED, never "no such concept".
+
+### Results, 639 conditions
+
+| | n | % |
+|---|---|---|
+| Bound | 259 | 40.5 |
+| Candidate (confirmation queue) | 349 | 54.6 |
+| Unmatched | 31 | 4.9 |
+| Unvalidated | 0 | 0 |
+
+By method: 189 `exact_display`, 64 `exact_synonym`, 3 + 3 normalised.
+
+Three matcher defects were found and fixed by checking a bad number, and are
+worth knowing before changing this code:
+
+1. **Synonyms carry the match.** SNOMED records "Breast cancer" only as a
+   synonym of 254837009 *Malignant neoplasm of breast*. Matching preferred
+   display alone missed 67 bindings (30.0% → 40.5%).
+2. **Possessives.** "Crohn's disease" normalised to `crohn s disease`, which
+   never equals `crohn disease`. Stripped before punctuation.
+3. **`filter` is a conjunctive word-PREFIX search.** Inflections miss —
+   "metastases" does not prefix "metastatic". A stemmed retry tier recovers
+   them (unmatched 46 → 31).
