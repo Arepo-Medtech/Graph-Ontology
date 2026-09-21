@@ -6,8 +6,11 @@
 > **Australian primary source.** The Royal Children's Hospital Melbourne. ***Clinical Practice Guidelines:
 > Acute asthma***. **Last updated July 2023. PIC Endorsed** [S1].
 
-**Asthma had been absent from this compendium entirely** — named as a gap by the paediatric anaphylaxis
-guideline, whose discharge checklist step 8 is *optimise asthma management*.
+**The acute paediatric complement to the adult asthma guideline already in this set**, which is drawn from
+the *Australian Asthma Handbook* v3.0 (2025) and scopes itself to **adults and adolescents ≥12 years, stable
+disease**, stating that **children and acute asthma are separate topics**. This is that separate topic. It is
+also the gap named by the paediatric **anaphylaxis** guideline, whose discharge checklist step 8 is *optimise
+asthma management*.
 
 ## ⚠️ Asthma and anaphylaxis interlock at four separate points
 
@@ -177,6 +180,7 @@ management** [S1].
 | Guideline here | Connection |
 |---|---|
 | **Anaphylaxis in children** | ⚠️ **mutually referential at four points** — treat for anaphylaxis if unsure, anaphylaxis signs inside the severity table, IM adrenaline in life-threatening asthma, and anaphylaxis mortality rising with poor asthma control |
+| **Asthma** (adults and adolescents ≥12) | the **Australian Asthma Handbook** guideline here covers **stable disease in ≥12s** and explicitly excludes children and acute asthma; ⚠️ note the two disagree in emphasis — the adult guideline states **treatment solely with as-needed SABA is not recommended**, while this one makes **SABA crucial** in the acute exacerbation and **switches adolescents off budesonide/formoterol to salbutamol** in hospital |
 | **Smoking cessation** | **passive smoking** is a listed trigger |
 | **Febrile child, febrile seizure** | the same reasoning about procedures that harm — **blood gases cause deterioration**, as **blood tests and neuroimaging** risk **unnecessary painful procedure** |
 | **Sepsis in children** | **exacerbations often precipitated by a respiratory viral infection**; the shared problem of distinguishing severity from treatment effect |
