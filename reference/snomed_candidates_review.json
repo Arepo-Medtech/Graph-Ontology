@@ -1,984 +1,10 @@
 {
   "note": "Review queue. Hierarchy-enriched, triaged, quarantined items first. Nothing auto-bound.",
   "warning": "Signals are LEXICAL triage, not verdicts. The 'plausible' tier is NOT safe: of 16 quarantined pregnancy candidates reviewed by hand, 6 carried no flag at all and every one was wrong.",
-  "count": 345,
-  "quarantined": 15,
-  "wrong_hierarchy": 7,
+  "count": 330,
+  "quarantined": 0,
+  "wrong_hierarchy": 6,
   "candidates": [
-    {
-      "condition": "Contraception",
-      "top_hit": {
-        "code": "308419002",
-        "display": "Contraception call",
-        "synonyms": [
-          "Contraception call",
-          "Contraception call (procedure)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "308397003",
-          "display": "Patient call procedure"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "call"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "389095005",
-          "display": "Contraception care",
-          "synonyms": [
-            "Contraception care",
-            "Family planning care: contraception",
-            "Family planning treatments and procedures",
-            "Contraception care (regime/therapy)",
-            "Family planning: contraception"
-          ]
-        },
-        {
-          "code": "398780007",
-          "display": "Contraception education",
-          "synonyms": [
-            "Contraception education",
-            "Health education - contraception",
-            "Advice about contraception",
-            "Contraception education (procedure)"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Diarrhoea of greater than 2 weeks duration",
-      "top_hit": {
-        "code": "429715006",
-        "display": "Gestation greater than 20 weeks",
-        "synonyms": [
-          "Gestation greater than 20 weeks (finding)",
-          "Gestation greater than 20 weeks"
-        ]
-      },
-      "parents": [
-        {
-          "code": "366323009",
-          "display": "Finding of length of gestation"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Gestation"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "313180007",
-          "display": "Gestation greater than 24 weeks",
-          "synonyms": [
-            "Gestation greater than 24 weeks (finding)",
-            "Gestation greater than 24 weeks",
-            "Gestation >24 weeks"
-          ]
-        },
-        {
-          "code": "428566005",
-          "display": "Gestation less than 20 weeks",
-          "synonyms": [
-            "Gestation less than 20 weeks (finding)",
-            "Gestation less than 20 weeks"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Facial lipoatrophy",
-      "top_hit": {
-        "code": "773331001",
-        "display": "Nestor Guillermo progeria syndrome",
-        "synonyms": [
-          "Nestor-Guillermo progeria syndrome is a rare, genetic, progeroid syndrome characterized by a prematurely aged appearance associated with severe osteolysis (notably on mandible, clavicles, ribs, distal phalanges, and long bones), osteoporosis, generalized lipoatrophy and absence of cardiovascular, atherosclerotic and metabolic complications, presenting a relatively long survival. Additional characteristics include growth retardation, joint stiffness (mainly of fingers, hands, knees, and elbows), wide cranial sutures, dysmorphic facial features (prominent eyes, convex nasal ridge, malocclusion, dental crowding, thin lip vermillion, microretrognathia) and persistent eyebrows, eyelashes and scalp hair.",
-          "Nestor Guillermo progeria syndrome",
-          "NGPS - Nestor Guillermo progeria syndrome",
-          "Nestor-Guillermo progeria syndrome is a rare, genetic, progeroid syndrome characterised by a prematurely aged appearance associated with severe osteolysis (notably on mandible, clavicles, ribs, distal phalanges, and long bones), osteoporosis, generalised lipoatrophy and absence of cardiovascular, atherosclerotic and metabolic complications, presenting a relatively long survival. Additional characteristics include growth retardation, joint stiffness (mainly of fingers, hands, knees, and elbows), wide cranial sutures, dysmorphic facial features (prominent eyes, convex nasal ridge, malocclusion, dental crowding, thin lip vermillion, microretrognathia) and persistent eyebrows, eyelashes and scalp hair.",
-          "Nestor Guillermo progeria syndrome (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "85995004",
-          "display": "Autosomal recessive hereditary disorder"
-        },
-        {
-          "code": "111474003",
-          "display": "Fetal and/or neonatal disorder of integument"
-        },
-        {
-          "code": "363212003",
-          "display": "Hereditary disorder of musculoskeletal system"
-        },
-        {
-          "code": "50279003",
-          "display": "Metabolic bone disease"
-        },
-        {
-          "code": "203522001",
-          "display": "Osteolysis"
-        },
-        {
-          "code": "399959003",
-          "display": "Premature ageing syndrome"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Nestor",
-          "Guillermo",
-          "progeria",
-          "syndrome"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": []
-    },
-    {
-      "condition": "Maternal hyperphenylalaninaemia due to phenylketonuria",
-      "top_hit": {
-        "code": "713187004",
-        "display": "Polyhydramnios due to maternal disease",
-        "synonyms": [
-          "Polyhydramnios due to maternal disease",
-          "Polyhydramnios due to maternal disease (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "86203003",
-          "display": "Polyhydramnios"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Polyhydramnios",
-          "due",
-          "disease"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "1263691008",
-          "display": "Fetal disorder due to maternal death",
-          "synonyms": [
-            "Fetal disorder due to maternal death (disorder)",
-            "Fetal disorder due to maternal death",
-            "Foetal disorder due to maternal death"
-          ]
-        },
-        {
-          "code": "1003728008",
-          "display": "Fetal disorder due to maternal hypertension",
-          "synonyms": [
-            "Fetal disorder due to maternal hypertension (disorder)",
-            "Foetal disorder due to maternal hypertension",
-            "Fetal disorder due to maternal hypertension"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Mixed episodes",
-      "top_hit": {
-        "code": "774084003",
-        "display": "Neonatal antiphospholipid syndrome",
-        "synonyms": [
-          "Neonatal antiphospholipid syndrome is a rare, secondary, neonatal autoimmune disease characterised by single or recurrent episodes of venous, arterial or mixed thrombosis in a neonate whose mother does not have antiphospholipid syndrome manifestations. Patients present positive antiphospholipid antibodies and may have additional abnormalities associated (e.g. cardiac valve disease, livedo reticularis, thrombocytopenia, nephropathy, neurological manifestations).",
-          "Neonatal antiphospholipid syndrome is a rare, secondary, neonatal autoimmune disease characterized by single or recurrent episodes of venous, arterial or mixed thrombosis in a neonate whose mother does not have antiphospholipid syndrome manifestations. Patients present positive antiphospholipid antibodies and may have additional abnormalities associated (e.g. cardiac valve disease, livedo reticularis, thrombocytopenia, nephropathy, neurological manifestations).",
-          "Neonatal Hughes syndrome",
-          "Neonatal antiphospholipid syndrome (disorder)",
-          "Neonatal antiphospholipid syndrome",
-          "Neonatal antiphospholipid antibody syndrome"
-        ]
-      },
-      "parents": [
-        {
-          "code": "26843008",
-          "display": "Antiphospholipid syndrome"
-        },
-        {
-          "code": "22925008",
-          "display": "Neonatal disorder"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Neonatal",
-          "antiphospholipid",
-          "syndrome"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": []
-    },
-    {
-      "condition": "Preterm birth",
-      "top_hit": {
-        "code": "773691007",
-        "display": "Congenital erosive and vesicular dermatosis",
-        "synonyms": [
-          "Congenital erosive and vesicular dermatosis with reticulated supple scarring",
-          "Congenital erosive and vesicular dermatosis (disorder)",
-          "CEVD - congenital erosive and vesicular dermatosis",
-          "Congenital erosive and vesicular dermatosis",
-          "A rare, idiopathic skin disease characterised by widespread, congenital, superficial erosions and vesicles (often involving more than 75% of the body) which heal leaving scars with a supple, symmetrical, reticulated pattern, frequently resulting in cicatricial alopecia and hyperthermia and/or hypohidrosis. Nail anomalies, neurodevelopmental and ophthalmologic abnormalities, tongue atrophy and preterm birth, with or without history of chorioamnionitis, are commonly associated.",
-          "A rare, idiopathic skin disease characterized by widespread, congenital, superficial erosions and vesicles (often involving more than 75% of the body) which heal leaving scars with a supple, symmetrical, reticulated pattern, frequently resulting in cicatricial alopecia and hyperthermia and/or hypohidrosis. Nail anomalies, neurodevelopmental and ophthalmologic abnormalities, tongue atrophy and preterm birth, with or without history of chorioamnionitis, are commonly associated."
-        ]
-      },
-      "parents": [
-        {
-          "code": "199879009",
-          "display": "Congenital anomaly of skin"
-        },
-        {
-          "code": "41969006",
-          "display": "Idiopathic disease"
-        },
-        {
-          "code": "703938007",
-          "display": "Inflammatory dermatosis"
-        },
-        {
-          "code": "46742003",
-          "display": "Skin ulcer"
-        },
-        {
-          "code": "827008005",
-          "display": "Vesicle of skin"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Congenital",
-          "erosive",
-          "and",
-          "vesicular",
-          "dermatosis"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "1340042007",
-          "display": "Chronic intervillositis of unknown aetiology",
-          "synonyms": [
-            "A rare disorder related to pregnancy with characteristics of placental inflammatory process with clusters of histiocytes and associated fibrin in intervillous spaces, resulting in adverse pregnancy outcomes including intrauterine growth restriction, preterm birth, and pregnancy loss. Higher grading according to the proportion of involved intervillous space has been associated with poorer outcomes. There is a significant risk of recurrence in subsequent pregnancies.",
-            "CIUE - chronic intervillositis of unknown aetiology",
-            "Chronic intervillositis of unknown etiology",
-            "CIUE - chronic intervillositis of unknown etiology",
-            "Chronic intervillositis of unknown etiology (disorder)",
-            "Chronic intervillositis of unknown aetiology"
-          ]
-        },
-        {
-          "code": "715430001",
-          "display": "Indomethacin embryofetopathy",
-          "synonyms": [
-            "Indomethacin embryofetopathy refers to the manifestations that may be observed in a fetus or newborn when the mother has taken indomethacin, a potent prostaglandin inhibitor and tocolytic agent that can cross placenta, during pregnancy. Reported adverse fetal/neonatal effects include decreased renal function resulting in oligohydramnios, closure of the ductus arteriosus, and delayed cardiovascular adaptation at birth. These effects are usually transient and reversible. Indomethacin may also be a risk factor for cerebral injury (periventricular leucomalacia) and necrotising enterocolitis in preterm infants.",
-            "Indomethacin embryofetopathy",
-            "Foetal indomethacin syndrome",
-            "Indomethacin embryofetopathy refers to the manifestations that may be observed in a fetus or newborn when the mother has taken indomethacin, a potent prostaglandin inhibitor and tocolytic agent that can cross placenta, during pregnancy. Reported adverse fetal/neonatal effects include decreased renal function resulting in oligohydramnios, closure of the ductus arteriosus, and delayed cardiovascular adaptation at birth. These effects are usually transient and reversible. Indomethacin may also be a risk factor for cerebral injury (periventricular leukomalacia) and necrotizing enterocolitis in preterm infants.",
-            "Embryofetopathy caused by indomethacin (disorder)",
-            "Embryofetopathy caused by indomethacin",
-            "Fetal indomethacin syndrome"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Septicaemia",
-      "top_hit": {
-        "code": "137701000119106",
-        "display": "Antepartum septicaemia",
-        "synonyms": [
-          "Antepartum septicemia (disorder)",
-          "Antepartum septicemia",
-          "Antepartum septicaemia"
-        ]
-      },
-      "parents": [
-        {
-          "code": "609496007",
-          "display": "Complication occurring during pregnancy"
-        },
-        {
-          "code": "91302008",
-          "display": "Sepsis"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Antepartum"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "10001005",
-          "display": "Bacterial sepsis",
-          "synonyms": [
-            "Bacterial septicemia",
-            "Bacterial sepsis (disorder)",
-            "Bacterial sepsis",
-            "Bacterial septicaemia"
-          ]
-        },
-        {
-          "code": "2858002",
-          "display": "Puerperal sepsis",
-          "synonyms": [
-            "Puerperal sepsis (disorder)",
-            "Puerperal septicemia",
-            "Puerperal sepsis",
-            "Puerperal septicaemia",
-            "Puerperal fever",
-            "Postpartum sepsis",
-            "Childbed fever"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Termination of an intra-uterine pregnancy",
-      "top_hit": {
-        "code": "18302006",
-        "display": "Hysterotomy and termination of pregnancy",
-        "synonyms": [
-          "Therapeutic abortion by hysterotomy (procedure)",
-          "Incision of uterus for termination of pregnancy",
-          "Hysterotomy and termination of pregnancy",
-          "Therapeutic abortion by hysterotomy",
-          "Obstetrical hysterotomy for termination of pregnancy"
-        ]
-      },
-      "parents": [
-        {
-          "code": "84275009",
-          "display": "Obstetrical hysterotomy"
-        },
-        {
-          "code": "177118006",
-          "display": "Operation on gravid uterus"
-        },
-        {
-          "code": "386641000",
-          "display": "Therapeutic termination of pregnancy procedure"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Hysterotomy",
-          "and"
-        ]
-      },
-      "intervention": true,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "699240001",
-          "display": "Combined intrauterine and ovarian pregnancy",
-          "synonyms": [
-            "Combined intrauterine and ovarian pregnancy",
-            "Combined intrauterine and ovarian pregnancy (disorder)"
-          ]
-        },
-        {
-          "code": "442478007",
-          "display": "Combined tubal and intrauterine pregnancy",
-          "synonyms": [
-            "Combined tubal and intrauterine pregnancy",
-            "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy (disorder)",
-            "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "The onset of lactation",
-      "top_hit": {
-        "code": "1172841001",
-        "display": "Combined oxidative phosphorylation defect type 30",
-        "synonyms": [
-          "Combined oxidative phosphorylation defect type 30 (disorder)",
-          "COXPD30 - combined oxidative phosphorylation defect type 30",
-          "A rare mitochondrial oxidative phosphorylation disorder characterised by neonatal onset of hypotonia, feeding difficulties, deafness, and early fatal respiratory failure. Cardiac and liver involvement has been reported. Serum lactate is increased, and metabolic studies show decreased activity of mitochondrial respiratory complexes I and IV in skeletal muscle.",
-          "Combined oxidative phosphorylation defect type 30",
-          "A rare mitochondrial oxidative phosphorylation disorder characterized by neonatal onset of hypotonia, feeding difficulties, deafness, and early fatal respiratory failure. Cardiac and liver involvement has been reported. Serum lactate is increased, and metabolic studies show decreased activity of mitochondrial respiratory complexes I and IV in skeletal muscle."
-        ]
-      },
-      "parents": [
-        {
-          "code": "85995004",
-          "display": "Autosomal recessive hereditary disorder"
-        },
-        {
-          "code": "75047002",
-          "display": "Disorder of skeletal muscle"
-        },
-        {
-          "code": "363212003",
-          "display": "Hereditary disorder of musculoskeletal system"
-        },
-        {
-          "code": "128190004",
-          "display": "Inherited metabolic disorder of nervous system"
-        },
-        {
-          "code": "240096000",
-          "display": "Mitochondrial cytopathy"
-        },
-        {
-          "code": "237986005",
-          "display": "Mitochondrial respiratory chain complexes disorder"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parents_unrelated": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Combined",
-          "oxidative",
-          "phosphorylation",
-          "defect",
-          "type"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "764456001",
-          "display": "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-          "synonyms": [
-            "A rare, hereditary inborn error of metabolism characterised by an acute onset of encephalopathy in infancy or early childhood. Apart from these episodic acute events, the disorder shows a relatively benign course. Multiple metabolic abnormalities are present, including metabolic acidosis, respiratory alkalosis, hypoglycaemia, increased serum lactate and alanine.",
-            "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-            "CA5A related hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-            "CA-VA (carbonic anhydrase VA) deficiency",
-            "Carbonic anhydrase VA deficiency",
-            "A rare, hereditary inborn error of metabolism characterized by an acute onset of encephalopathy in infancy or early childhood. Apart from these episodic acute events, the disorder shows a relatively benign course. Multiple metabolic abnormalities are present, including metabolic acidosis, respiratory alkalosis, hypoglycemia, increased serum lactate and alanine.",
-            "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency (disorder)",
-            "Carbonic anhydrase 5A related hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency"
-          ]
-        },
-        {
-          "code": "763688008",
-          "display": "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome",
-          "synonyms": [
-            "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome",
-            "Hearing loss, encephaloneuropathy, obesity, valvulopathy syndrome",
-            "Deafness-encephaloneuropathy-obesity-valvulopathy syndrome is a rare mitochondrial disease with marked clinical variability typically characterised by encephalomyopathy, kidney disease (nephrotic syndrome), optic atrophy, early-onset deafness, pancytopenia, obesity, and cardiac disease (valvulopathy). Additionally, macrocephaly, intellectual disability, hyperlactataemia, elevated lactate/pyruvate ratio, insulin-dependent diabetes, livedo reticularis, liver dysfunction and seizures have also been associated.",
-            "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome (disorder)",
-            "Deafness-encephaloneuropathy-obesity-valvulopathy syndrome is a rare mitochondrial disease with marked clinical variability typically characterized by encephalomyopathy, kidney disease (nephrotic syndrome), optic atrophy, early-onset deafness, pancytopenia, obesity, and cardiac disease (valvulopathy). Additionally, macrocephaly, intellectual disability, hyperlactatemia, elevated lactate/pyruvate ratio, insulin-dependent diabetes, livedo reticularis, liver dysfunction and seizures have also been associated."
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Secondarily infected traumatic skin lesions",
-      "top_hit": {
-        "code": "715223009",
-        "display": "Fetal varicella syndrome",
-        "synonyms": [
-          "Fetal varicella syndrome (disorder)",
-          "Fetal varicella syndrome",
-          "A rare acquired developmental anomaly syndrome characterized by skin, neurological, ocular, limbs and growth defects secondary to maternal Varicella-Zoster Virus (VZV) infection.",
-          "A rare acquired developmental anomaly syndrome characterised by skin, neurological, ocular, limbs and growth defects secondary to maternal Varicella-Zoster Virus (VZV) infection.",
-          "Foetal varicella syndrome"
-        ]
-      },
-      "parents": [
-        {
-          "code": "897505006",
-          "display": "Embryofetopathy due to infection"
-        },
-        {
-          "code": "309465005",
-          "display": "Varicella-zoster virus infection"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": true,
-        "narrower": false,
-        "adds_words": [
-          "Fetal",
-          "varicella",
-          "syndrome"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "774080007",
-          "display": "Neonatal scleroderma",
-          "synonyms": [
-            "Neonatal scleroderma",
-            "A rare secondary neonatal autoimmune disease characterized by neonatal onset of erythematous skin lesions with a linear appearance that gradually become indurated and hyperpigmented and progressively present skin atrophy. Positive serum antibodies (in particular antinuclear antibodies and/or rheumatoid factor) may be associated.",
-            "Neonatal scleroderma (disorder)",
-            "A rare secondary neonatal autoimmune disease characterised by neonatal onset of erythematous skin lesions with a linear appearance that gradually become indurated and hyperpigmented and progressively present skin atrophy. Positive serum antibodies (in particular antinuclear antibodies and/or rheumatoid factor) may be associated."
-          ]
-        },
-        {
-          "code": "778004006",
-          "display": "Autoinflammation-PLCG2-associated antibody deficiency-immune dysregulation",
-          "synonyms": [
-            "Autoinflammation-PLCG2-associated antibody deficiency-immune dysregulation",
-            "A rare, mixed autoinflammatory and autoimmune syndrome disorder characterized by recurrent neutrophilic blistering skin lesions, arthralgia, ocular inflammation, inflammatory bowel disease, absence of autoantibodies, and mild immunodeficiency manifested by recurrent sinopulmonary infections and deficiency of circulating antibodies. Inflammatory phenotype is not provoked by cold temperatures.",
-            "A rare, mixed autoinflammatory and autoimmune syndrome disorder characterised by recurrent neutrophilic blistering skin lesions, arthralgia, ocular inflammation, inflammatory bowel disease, absence of autoantibodies, and mild immunodeficiency manifested by recurrent sinopulmonary infections and deficiency of circulating antibodies. Inflammatory phenotype is not provoked by cold temperatures.",
-            "Autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation",
-            "APLAID - autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation",
-            "Autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation (disorder)"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Upper and lower respiratory tract infections",
-      "top_hit": {
-        "code": "763532008",
-        "display": "Familial nasal acilia",
-        "synonyms": [
-          "Familial nasal acilia is a rare genetic otorhinolaryngologic disease characterized by respiratory morbidity due to lack of cilia on the respiratory tract epithelial cells. The disease manifests from birth with respiratory distress, neonatal pneumonia, dyspnea, lobar atelectasis and bronchiectasis. Recurrent infections of the upper and lower respiratory tract, chronic humid coughing, and chronic sinusitis, otitis and rhinitis are typical lifelong presenting conditions.",
-          "Familial nasal acilia is a rare genetic otorhinolaryngologic disease characterised by respiratory morbidity due to lack of cilia on the respiratory tract epithelial cells. The disease manifests from birth with respiratory distress, neonatal pneumonia, dyspnoea, lobar atelectasis and bronchiectasis. Recurrent infections of the upper and lower respiratory tract, chronic humid coughing, and chronic sinusitis, otitis and rhinitis are typical lifelong presenting conditions.",
-          "Familial nasal acilia (disorder)",
-          "Familial nasal acilia"
-        ]
-      },
-      "parents": [
-        {
-          "code": "66091009",
-          "display": "Congenital disease"
-        },
-        {
-          "code": "111941005",
-          "display": "Familial disease"
-        },
-        {
-          "code": "17849001",
-          "display": "Fetal and/or neonatal respiratory disorder"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": true,
-        "narrower": false,
-        "adds_words": [
-          "Familial",
-          "nasal",
-          "acilia"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "771479000",
-          "display": "Combined immunodeficiency due to STK4 deficiency",
-          "synonyms": [
-            "A rare, genetic, combined T and B cell immunodeficiency characterized by T- and B-cell lymphopenia, hypergammaglobulinemia and intermittent neutropenia. It presents with recurrent opportunistic viral, bacterial and fungal infections involving skin (cutaneous papillomatosis, molluscum contagiosum, skin abscesses, mucocutaneous candidiasis), upper and lower respiratory tract or septicemia. Other clinical features include autoimmune manifestations (autoimmune hemolytic anemia) and congenital heart defects (atrial septal defects, patent foramen ovale, mitral, tricuspid and pulmonary valve insufficiency).",
-            "A rare, genetic, combined T and B cell immunodeficiency characterised by T- and B-cell lymphopenia, hypergammaglobulinaemia and intermittent neutropenia. It presents with recurrent opportunistic viral, bacterial and fungal infections involving skin (cutaneous papillomatosis, molluscum contagiosum, skin abscesses, mucocutaneous candidiasis), upper and lower respiratory tract or septicaemia. Other clinical features include autoimmune manifestations (autoimmune haemolytic anaemia) and congenital heart defects (atrial septal defects, patent foramen ovale, mitral, tricuspid and pulmonary valve insufficiency).",
-            "Combined immunodeficiency due to serine/threonine kinase 4 deficiency (disorder)",
-            "Combined immunodeficiency due to serine/threonine kinase 4 deficiency",
-            "Combined immunodeficiency due to STK4 deficiency",
-            "Combined immunodeficiency due to STK4 (serine/threonine kinase 4) deficiency"
-          ]
-        },
-        {
-          "code": "771443008",
-          "display": "Complement component 3 deficiency",
-          "synonyms": [
-            "Complement component 3 deficiency",
-            "Complement component 3 deficiency (disorder)",
-            "C3 deficiency",
-            "Complement component 3 deficiency is a rare, genetic, primary immunodeficiency characterised by susceptibility to infection (mainly by gram negative bacteria) due to extremely low C3 plasma levels. Patients typically present recurrent episodes of sinusitis, tonsillitis, and/or otitis, as well as upper and lower respiratory tract infections (including pneumonia) and skin infections, such as erythema multiforme. Autoimmune disease resembling systemic lupus erythematosus and mesangiocapillary or membranoproliferative glomerulonephritis may develop, resulting in renal failure.",
-            "Complement component 3 deficiency is a rare, genetic, primary immunodeficiency characterized by susceptibility to infection (mainly by gram negative bacteria) due to extremely low C3 plasma levels. Patients typically present recurrent episodes of sinusitis, tonsillitis, and/or otitis, as well as upper and lower respiratory tract infections (including pneumonia) and skin infections, such as erythema multiforme. Autoimmune disease resembling systemic lupus erythematosus and mesangiocapillary or membranoproliferative glomerulonephritis may develop, resulting in renal failure."
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Complicated urinary tract infection",
-      "top_hit": {
-        "code": "609491002",
-        "display": "Induced termination of pregnancy complicated by urinary tract infection",
-        "synonyms": [
-          "Induced termination of pregnancy complicated by urinary tract infection (disorder)",
-          "Termination of pregnancy complicated by urinary tract infection",
-          "Induced termination of pregnancy complicated by urinary tract infection"
-        ]
-      },
-      "parents": [
-        {
-          "code": "40609001",
-          "display": "Infectious disease in mother complicating pregnancy, childbirth AND/OR puerperium"
-        },
-        {
-          "code": "127325009",
-          "display": "Procedure related finding"
-        },
-        {
-          "code": "57797005",
-          "display": "Termination of pregnancy"
-        },
-        {
-          "code": "68566005",
-          "display": "Urinary tract infection"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Induced",
-          "termination",
-          "pregnancy"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": []
-    },
-    {
-      "condition": "Anaemia associated with intrinsic renal disease",
-      "top_hit": {
-        "code": "472326004",
-        "display": "Fetal hypertrophic cardiomyopathy associated with renal disease",
-        "synonyms": [
-          "Fetal hypertrophic cardiomyopathy associated with renal disease",
-          "Fetal hypertrophic cardiomyopathy associated with renal disease (disorder)",
-          "Foetal hypertrophic cardiomyopathy associated with renal disease"
-        ]
-      },
-      "parents": [
-        {
-          "code": "195029002",
-          "display": "Cardiomyopathy associated with another disorder"
-        },
-        {
-          "code": "472324001",
-          "display": "Fetal hypertrophic cardiomyopathy"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Fetal",
-          "hypertrophic",
-          "cardiomyopathy",
-          "with",
-          "disease"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "363287001",
-          "display": "Renal failure associated with renal vascular disease",
-          "synonyms": [
-            "Renal failure associated with renal vascular disease (disorder)",
-            "Renal failure associated with renal vascular disease"
-          ]
-        },
-        {
-          "code": "420543008",
-          "display": "Anaemia associated with AIDS",
-          "synonyms": [
-            "Anemia associated with AIDS",
-            "Anaemia associated with AIDS",
-            "Anaemia associated with acquired immunodeficiency syndrome",
-            "Anemia associated with acquired immunodeficiency syndrome",
-            "Anemia associated with acquired immunodeficiency syndrome (disorder)"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Patients undergoing in-vitro fertilisation",
-      "top_hit": {
-        "code": "52637005",
-        "display": "In vitro fertilisation",
-        "synonyms": [
-          "Test tube ovum fertilization (procedure)",
-          "In vitro fertilisation",
-          "In vitro fertilisation procedure",
-          "IVF - in vitro fertilisation",
-          "In vitro fertilization",
-          "Test tube ovum fertilization",
-          "Test tube ovum fertilisation",
-          "In vitro fertilization procedure",
-          "IVF - in vitro fertilization",
-          "Test tube baby technique"
-        ]
-      },
-      "parents": [
-        {
-          "code": "63487001",
-          "display": "Assisted fertilisation"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": []
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "10231000132102",
-          "display": "IVF pregnancy",
-          "synonyms": [
-            "IVF - in-vitro fertilisation pregnancy",
-            "IVF pregnancy",
-            "In-vitro fertilisation pregnancy",
-            "IVF - in-vitro fertilization pregnancy",
-            "In-vitro fertilization pregnancy",
-            "In-vitro fertilization pregnancy (finding)"
-          ]
-        },
-        {
-          "code": "711544002",
-          "display": "In vitro fertilisation with surrogacy",
-          "synonyms": [
-            "In vitro fertilisation with surrogacy",
-            "IVF with surrogacy",
-            "In vitro fertilization with subsequent transfer to an unrelated surrogate.",
-            "In vitro fertilization with surrogacy (procedure)",
-            "In vitro fertilisation with subsequent transfer to an unrelated surrogate.",
-            "In vitro fertilization with surrogacy"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
-      "top_hit": {
-        "code": "1231283007",
-        "display": "Congenital isolated adrenocorticotropic hormone deficiency",
-        "synonyms": [
-          "Congenital isolated adrenocorticotropic hormone deficiency (disorder)",
-          "Congenital isolated adrenocorticotropic hormone deficiency",
-          "A rare endocrine disease characterised by neonatal hypoglycaemia, prolonged cholestatic jaundice, and seizures. Typical are low plasma ACTH and cortisol levels in the absence of structural pituitary defects, and sometimes low partial growth hormone deficiency is associated.",
-          "Congenital isolated ACTH (adrenocorticotropic hormone) deficiency",
-          "A rare endocrine disease characterized by neonatal hypoglycemia, prolonged cholestatic jaundice, and seizures. Typical are low plasma ACTH and cortisol levels in the absence of structural pituitary defects, and sometimes low partial growth hormone deficiency is associated."
-        ]
-      },
-      "parents": [
-        {
-          "code": "85995004",
-          "display": "Autosomal recessive hereditary disorder"
-        },
-        {
-          "code": "66091009",
-          "display": "Congenital disease"
-        },
-        {
-          "code": "363104002",
-          "display": "Hereditary disorder of endocrine system"
-        },
-        {
-          "code": "363235000",
-          "display": "Hereditary disorder of nervous system"
-        },
-        {
-          "code": "80599001",
-          "display": "Isolated corticotropin deficiency"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Congenital",
-          "isolated",
-          "adrenocorticotropic"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": true,
-      "suggested_action": "QUARANTINE — manual review required regardless of signal",
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "requires_manual_review": true,
-        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches a pregnancy-safety record to the wrong clinical object."
-      },
-      "other_hits": [
-        {
-          "code": "783098009",
-          "display": "Short stature due to partial growth hormone receptor deficiency",
-          "synonyms": [
-            "Short stature due to partial GHR deficiency is a rare, genetic, endocrine disease characterized by idiopathic short stature due to diminished GHR function (decreased ligand binding or reduced availability of receptor), thus resulting in partial insensitivity to growth hormone.",
-            "Short stature due to partial growth hormone receptor deficiency (disorder)",
-            "Short stature due to partial GHR deficiency is a rare, genetic, endocrine disease characterised by idiopathic short stature due to diminished GHR function (decreased ligand binding or reduced availability of receptor), thus resulting in partial insensitivity to growth hormone.",
-            "Short stature due to partial growth hormone receptor deficiency",
-            "Short stature due to partial GHR (growth hormone receptor) deficiency"
-          ]
-        },
-        {
-          "code": "1340175001",
-          "display": "CPE-related Prader-Willi-like syndrome",
-          "synonyms": [
-            "Blakemore Durmaz Vasileiou syndrome",
-            "Carboxypeptidase E-related Prader-Willi-like syndrome (disorder)",
-            "BDV syndrome",
-            "Carboxypeptidase E-related Prader-Willi-like syndrome",
-            "CPE-related Prader-Willi-like syndrome",
-            "BDV (Blakemore Durmaz Vasileiou) syndrome",
-            "A rare Prader-Willi-like syndrome with characteristics of intellectual disability, morbid obesity, hypogonadotrophic hypogonadism, hyperphagia and developmental delay. Endocrine disorders including hypothyroidism and insulin resistance can be observed. Unlike Prader-Willi syndrome, profound muscular hypotonia, feeding difficulties in neonates, short stature and growth hormone deficiency are not observed."
-          ]
-        }
-      ]
-    },
     {
       "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
       "top_hit": {
@@ -1009,7 +35,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": []
     },
     {
@@ -1052,7 +78,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "711433008",
@@ -1125,7 +151,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": []
     },
     {
@@ -1173,7 +199,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "700463002",
@@ -1236,7 +262,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -1270,7 +296,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "4733001",
@@ -1320,7 +346,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "294773004",
@@ -1373,7 +399,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": [
         {
@@ -1431,7 +457,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": [
         {
@@ -1486,7 +512,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "782743001",
@@ -1569,7 +595,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1231283007",
@@ -1604,9 +630,9 @@
         "synonyms": [
           "Idiopathic CD4 lymphocytopenia (disorder)",
           "Idiopathic CD4 lymphocytopenia",
-          "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterised by persistent CD4 T-cell lymphopenia (less than 300 cells/µL on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leucoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed.",
+          "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterised by persistent CD4 T-cell lymphopenia (less than 300 cells/\u00b5L on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leucoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed.",
           "ICL - idiopathic CD4 lymphocytopenia",
-          "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterized by persistent CD4 T-cell lymphopenia (less than 300 cells/µL on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leukoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed."
+          "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterized by persistent CD4 T-cell lymphopenia (less than 300 cells/\u00b5L on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leukoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed."
         ]
       },
       "parents": [
@@ -1636,7 +662,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1172892009",
@@ -1711,7 +737,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "771272007",
@@ -1774,7 +800,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "118599009",
@@ -1830,7 +856,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "865951006",
@@ -1904,7 +930,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "717827000",
@@ -1951,7 +977,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "724176001",
@@ -2001,7 +1027,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "782555009",
@@ -2051,7 +1077,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "444260001",
@@ -2117,7 +1143,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -2152,7 +1178,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "609373006",
@@ -2206,7 +1232,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": []
     },
@@ -2252,7 +1278,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -2282,7 +1308,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "7772007",
@@ -2336,7 +1362,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "700467001",
@@ -2394,7 +1420,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "23697004",
@@ -2468,7 +1494,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1196879002",
@@ -2518,7 +1544,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "122214008",
@@ -2569,7 +1595,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "404113004",
@@ -2630,7 +1656,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1373754008",
@@ -2688,7 +1714,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1197732001",
@@ -2743,7 +1769,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "230381009",
@@ -2808,7 +1834,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "782751003",
@@ -2861,7 +1887,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "733051000",
@@ -2909,7 +1935,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "443138004",
@@ -2969,7 +1995,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "403661001",
@@ -3029,7 +2055,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "709410003",
@@ -3079,7 +2105,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "427685000",
@@ -3135,7 +2161,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "254837009",
@@ -3201,7 +2227,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "707858008",
@@ -3246,7 +2272,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -3287,7 +2313,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": []
     },
     {
@@ -3324,7 +2350,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "128191000",
@@ -3401,13 +2427,13 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "715984007",
-          "display": "Boucher Neuhäuser syndrome",
+          "display": "Boucher Neuh\u00e4user syndrome",
           "synonyms": [
-            "Boucher Neuhäuser syndrome",
+            "Boucher Neuh\u00e4user syndrome",
             "A very rare autosomal recessive, slowly progressive neurodegenerative disorder characterised by the triad of cerebellar ataxia (that generally manifests at adolescence or early adulthood), chorioretinal dystrophy, which may have a later onset (up to the fifth-sixth decade) leading to variable degrees of visual impairment, and hypogonadotropic hypogonadism (delayed puberty and lack of secondary sex characteristics). Ataxia-hypogonadism-choroidal dystrophy syndrome belongs to a clinical continuum of neurodegenerative disorders along with the clinically overlapping cerebellar ataxia-hypogonadism syndrome.",
             "A very rare autosomal recessive, slowly progressive neurodegenerative disorder characterized by the triad of cerebellar ataxia (that generally manifests at adolescence or early adulthood), chorioretinal dystrophy, which may have a later onset (up to the fifth-sixth decade) leading to variable degrees of visual impairment, and hypogonadotropic hypogonadism (delayed puberty and lack of secondary sex characteristics). Ataxia-hypogonadism-choroidal dystrophy syndrome belongs to a clinical continuum of neurodegenerative disorders along with the clinically overlapping cerebellar ataxia-hypogonadism syndrome.",
             "Cerebellar ataxia with hypogonadism and choroidal dystrophy syndrome",
@@ -3480,7 +2506,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": []
     },
     {
@@ -3543,7 +2569,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "770678005",
@@ -3601,7 +2627,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "770438007",
@@ -3652,7 +2678,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "41969006",
@@ -3705,7 +2731,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "86095007",
@@ -3762,7 +2788,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "778063003",
@@ -3822,7 +2848,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1363252009",
@@ -3851,15 +2877,15 @@
       "condition": "Infection where positive bacteriological evidence confirms that this antibiotic is an appropriate therapeutic agent",
       "top_hit": {
         "code": "1149448005",
-        "display": "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
+        "display": "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
         "synonyms": [
-          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C (disorder)",
+          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C (disorder)",
           "At least 30% of the sites on teeth exhibit periodontitis, and interdental attachment loss is at least 5 millimetres with radiographic evidence of bone loss extending to at least the middle third of the root, loss of at least 5 teeth due to periodontitis and no more than 10 opposing pairs of remaining teeth with a need for complex rehabilitation due to masticatory dysfunction, occlusal trauma resulting in tooth mobility, alveolar ridge defects and teeth that have moved from original positions. There is radiographic evidence of clinical attachment or bone loss with a minimum of 2 millimetres over the last 5 years, disease progression exceeds expectations related to biofilm deposits and bacterial control therapies, patient smokes at least 10 cigarettes daily and may be diabetic but exhibits HbA1c levels of at least 7%.",
           "At least 30% of the sites on teeth exhibit periodontitis, and interdental attachment loss is at least 5 millimeters with radiographic evidence of bone loss extending to at least the middle third of the root, loss of at least 5 teeth due to periodontitis and no more than 10 opposing pairs of remaining teeth with a need for complex rehabilitation due to masticatory dysfunction, occlusal trauma resulting in tooth mobility, alveolar ridge defects and teeth that have moved from original positions. There is radiographic evidence of clinical attachment or bone loss with a minimum of 2 millimeters over the last 5 years, disease progression exceeds expectations related to biofilm deposits and bacterial control therapies, patient smokes at least 10 cigarettes daily and may be diabetic but exhibits HbA1c levels of at least 7%.",
-          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
-          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
-          "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
-          "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C"
+          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
+          "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
+          "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
+          "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C"
         ]
       },
       "parents": [
@@ -3893,7 +2919,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -3929,7 +2955,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "725028009",
@@ -3991,7 +3017,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "725028009",
@@ -4051,7 +3077,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "716682000",
@@ -4108,7 +3134,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "314429009",
@@ -4189,7 +3215,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -4245,7 +3271,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1360080002",
@@ -4312,7 +3338,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1771000032100",
@@ -4390,7 +3416,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -4427,7 +3453,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "719593009",
@@ -4489,7 +3515,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "705061009",
@@ -4550,7 +3576,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "705061009",
@@ -4598,7 +3624,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "386490009",
@@ -4662,7 +3688,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1197758001",
@@ -4718,7 +3744,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1385901000168100",
@@ -4769,7 +3795,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "421961002",
@@ -4844,7 +3870,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1365891008",
@@ -4853,10 +3879,10 @@
             "Porto sinusoidal vascular disease (disorder)",
             "Porto sinusoidal vascular disease",
             "Portosinusoidal vascular disease",
-            "A rare vascular liver disease characterised by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric oesophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/µl, increased spleen size ≥13 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, haematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported.",
+            "A rare vascular liver disease characterised by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric oesophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/\u00b5l, increased spleen size \u226513 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, haematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported.",
             "PSVD - porto sinusoidal vascular disease",
             "Porto-sinusoidal vascular disease",
-            "A rare vascular liver disease characterized by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric esophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/µl, increased spleen size ≥13 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, hematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported."
+            "A rare vascular liver disease characterized by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric esophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/\u00b5l, increased spleen size \u226513 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, hematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported."
           ]
         }
       ]
@@ -4902,7 +3928,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": []
     },
@@ -4938,7 +3964,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": [
         {
@@ -4996,7 +4022,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -5031,7 +4057,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "286680009",
@@ -5082,7 +4108,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -5114,7 +4140,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "414256007",
@@ -5171,7 +4197,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "722963007",
@@ -5228,7 +4254,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1396337001",
@@ -5278,7 +4304,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "6111000179101",
@@ -5330,7 +4356,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "25443007",
@@ -5380,7 +4406,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1366362005",
@@ -5411,9 +4437,9 @@
         "synonyms": [
           "Lennox-Gastaut syndrome (disorder)",
           "Lennox-Gastaut syndrome",
-          "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalized tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behavior disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying etiology. The EEG has diffuse background slowing. Interictal generalized slow spike-and-wave (≤2.5 Hz) and generalized paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria.",
+          "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalized tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behavior disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying etiology. The EEG has diffuse background slowing. Interictal generalized slow spike-and-wave (\u22642.5 Hz) and generalized paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria.",
           "LGS - Lennox-Gastaut syndrome",
-          "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalised tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behaviour disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying aetiology. The EEG has diffuse background slowing. Interictal generalised slow spike-and-wave (≤2.5 Hz) and generalised paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria."
+          "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalised tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behaviour disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying aetiology. The EEG has diffuse background slowing. Interictal generalised slow spike-and-wave (\u22642.5 Hz) and generalised paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria."
         ]
       },
       "parents": [
@@ -5433,7 +4459,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1187250005",
@@ -5506,7 +4532,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "765187004",
@@ -5557,7 +4583,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1259808003",
@@ -5607,7 +4633,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "716859000",
@@ -5650,7 +4676,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1142101002",
@@ -5725,7 +4751,7 @@
       },
       "intervention": true,
       "pregnancy": false,
-      "suggested_action": "REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording; re-search under <<71388002 Procedure",
       "structural_note": "PBS wording names an INTERVENTION, not a clinical finding. The hit shown was searched in the wrong hierarchy.",
       "other_hits": [
         {
@@ -5777,7 +4803,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "405632004",
@@ -5851,7 +4877,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -5886,7 +4912,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "187151009",
@@ -5960,7 +4986,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "233718008",
@@ -6032,7 +5058,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "415764005",
@@ -6092,7 +5118,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
           "code": "1208745002",
@@ -6140,7 +5166,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "440422002",
@@ -6191,7 +5217,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "8481000",
@@ -6239,7 +5265,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "1259709004",
@@ -6299,7 +5325,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "708252004",
@@ -6344,7 +5370,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "764961009",
@@ -6352,8 +5378,8 @@
           "synonyms": [
             "Hereditary primary clear cell renal cell carcinoma (disorder)",
             "Hereditary primary clear cell renal cell carcinoma",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
             "Hereditary primary clear cell renal cell adenocarcinoma"
           ]
         }
@@ -6395,7 +5421,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — neither hit nor any parent shares a concept with the condition",
+      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": []
     },
     {
@@ -6435,7 +5461,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "36402006",
@@ -6492,7 +5518,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "REJECT — hit looks related but its parents share nothing with the condition",
+      "suggested_action": "REJECT \u2014 hit looks related but its parents share nothing with the condition",
       "other_hits": [
         {
           "code": "34541000087107",
@@ -7367,7 +6393,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "5820008",
@@ -7419,7 +6445,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "277571004",
@@ -7483,7 +6509,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "725034002",
@@ -7530,7 +6556,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "110004001",
@@ -7591,7 +6617,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "716655008",
@@ -7650,7 +6676,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "735452003",
@@ -7705,7 +6731,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "423451008",
@@ -7755,7 +6781,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "402525008",
@@ -7812,7 +6838,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "298350001",
@@ -7865,7 +6891,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1251470000",
@@ -7925,7 +6951,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "315073006",
@@ -7976,7 +7002,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "413742003",
@@ -8028,7 +7054,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "314002005",
@@ -8083,7 +7109,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -8113,7 +7139,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "236814005",
@@ -8167,7 +7193,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "10692761000119107",
@@ -8221,7 +7247,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "190829000",
@@ -8275,7 +7301,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "235865005",
@@ -8335,7 +7361,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "735451005",
@@ -8395,7 +7421,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "751000119104",
@@ -8453,7 +7479,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "234576008",
@@ -8503,7 +7529,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "402308005",
@@ -8557,7 +7583,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -8594,7 +7620,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "27624003",
@@ -8649,7 +7675,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -8684,7 +7710,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "123526007",
@@ -8741,7 +7767,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -8777,7 +7803,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "314552006",
@@ -8824,7 +7850,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "404647000",
@@ -8881,7 +7907,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -8914,7 +7940,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1426351000168106",
@@ -8973,7 +7999,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1186719000",
@@ -9022,7 +8048,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "249807007",
@@ -9078,7 +8104,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -9110,7 +8136,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1366370000",
@@ -9165,7 +8191,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "254632001",
@@ -9224,7 +8250,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "788946007",
@@ -9272,7 +8298,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "237143006",
@@ -9320,7 +8346,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "303062005",
@@ -9373,7 +8399,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "109970006",
@@ -9434,7 +8460,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "254627002",
@@ -9492,7 +8518,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "359707007",
@@ -9545,7 +8571,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "402894005",
@@ -9600,7 +8626,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1144907001",
@@ -9666,7 +8692,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "715655000",
@@ -9708,7 +8734,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "47200007",
@@ -9758,7 +8784,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "118601006",
@@ -9814,7 +8840,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "254900004",
@@ -9875,7 +8901,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "82236004",
@@ -9956,7 +8982,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "389094009",
@@ -10007,7 +9033,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "230388003",
@@ -10072,7 +9098,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -10106,7 +9132,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "254993006",
@@ -10160,7 +9186,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "308121000",
@@ -10218,7 +9244,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "16823941000119108",
@@ -10271,7 +9297,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1367660004",
@@ -10320,7 +9346,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1010256005",
@@ -10382,7 +9408,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "447596005",
@@ -10435,7 +9461,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "230422001",
@@ -10486,7 +9512,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "870199008",
@@ -10537,7 +9563,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -10579,7 +9605,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "235056002",
@@ -10640,7 +9666,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "235055003",
@@ -10696,7 +9722,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "428960009",
@@ -10751,7 +9777,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -10781,7 +9807,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "10677551000119108",
@@ -10830,7 +9856,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -10869,7 +9895,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "399874002",
@@ -10928,7 +9954,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "402932005",
@@ -10981,7 +10007,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "236570004",
@@ -11037,7 +10063,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "880529761000119102",
@@ -11097,7 +10123,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "429362002",
@@ -11153,7 +10179,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -11189,7 +10215,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "425148008",
@@ -11244,7 +10270,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "698182002",
@@ -11309,7 +10335,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "724761004",
@@ -11374,7 +10400,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "915141931000119109",
@@ -11452,7 +10478,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1231273008",
@@ -11505,7 +10531,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "171400006",
@@ -11559,7 +10585,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "405283007",
@@ -11615,7 +10641,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "82385007",
@@ -11669,7 +10695,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1367660004",
@@ -11743,7 +10769,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": []
     },
     {
@@ -11778,7 +10804,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "765057007",
@@ -11836,7 +10862,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "443749004",
@@ -11888,7 +10914,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "1332170002",
@@ -11946,7 +10972,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
           "code": "237683004",
@@ -12007,7 +11033,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "268302006",
@@ -12060,7 +11086,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "238492005",
@@ -12112,7 +11138,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "99031000119107",
@@ -12169,7 +11195,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "770596007",
@@ -12231,7 +11257,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "14311001",
@@ -12293,7 +11319,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "427421001",
@@ -12347,7 +11373,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1651000119109",
@@ -12409,7 +11435,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "427421001",
@@ -12473,7 +11499,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "268547008",
@@ -12530,7 +11556,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1251493006",
@@ -12594,7 +11620,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "47583008",
@@ -12654,7 +11680,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "722191003",
@@ -12721,7 +11747,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "301469002",
@@ -12782,7 +11808,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -12815,7 +11841,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "717910009",
@@ -12879,7 +11905,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -12919,7 +11945,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1237181009",
@@ -12996,7 +12022,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "16907601000119106",
@@ -13045,7 +12071,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "55051001",
@@ -13097,7 +12123,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "763477007",
@@ -13158,7 +12184,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -13192,7 +12218,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1259388006",
@@ -13245,7 +12271,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "427492003",
@@ -13300,7 +12326,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "427492003",
@@ -13354,7 +12380,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "254900004",
@@ -13409,7 +12435,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "128875000",
@@ -13455,7 +12481,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "128875000",
@@ -13510,7 +12536,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "738770003",
@@ -13566,7 +12592,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "167741009",
@@ -13628,7 +12654,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "39847004",
@@ -13683,7 +12709,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "277613000",
@@ -13732,7 +12758,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "84801008",
@@ -13788,7 +12814,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "234423001",
@@ -13841,7 +12867,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "277549009",
@@ -13896,7 +12922,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1142071000",
@@ -13954,7 +12980,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "44553005",
@@ -14022,7 +13048,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1162918009",
@@ -14075,7 +13101,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "240742009",
@@ -14120,7 +13146,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "76948002",
@@ -14196,7 +13222,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "716775009",
@@ -14245,7 +13271,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "402307000",
@@ -14313,7 +13339,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "234620006",
@@ -14378,7 +13404,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "734015000",
@@ -14426,7 +13452,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "230372003",
@@ -14484,7 +13510,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "763203009",
@@ -14566,7 +13592,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1231141008",
@@ -14632,7 +13658,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "717185008",
@@ -14683,7 +13709,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "783146009",
@@ -14745,7 +13771,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "399937000",
@@ -14796,7 +13822,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "240743004",
@@ -14844,7 +13870,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "448178009",
@@ -14897,7 +13923,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "445004006",
@@ -14948,7 +13974,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "56661000",
@@ -14993,7 +14019,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "410502007",
@@ -15051,7 +14077,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "783138008",
@@ -15105,7 +14131,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "15743005",
@@ -15154,7 +14180,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "767133009",
@@ -15228,7 +14254,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "773397000",
@@ -15300,7 +14326,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "301007008",
@@ -15372,7 +14398,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "363402007",
@@ -15428,7 +14454,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1156452003",
@@ -15494,7 +14520,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "724176001",
@@ -15554,7 +14580,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "247103004",
@@ -15616,7 +14642,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "427421001",
@@ -15660,7 +14686,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "878807001",
@@ -15726,7 +14752,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "234619000",
@@ -15792,7 +14818,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1229871006",
@@ -15861,7 +14887,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "734015000",
@@ -15924,7 +14950,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1251399006",
@@ -15978,7 +15004,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "36803009",
@@ -16039,7 +15065,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "94348003",
@@ -16076,8 +15102,8 @@
         "synonyms": [
           "Hereditary primary clear cell renal cell carcinoma (disorder)",
           "Hereditary primary clear cell renal cell carcinoma",
-          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
-          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
+          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
           "Hereditary primary clear cell renal cell adenocarcinoma"
         ]
       },
@@ -16103,7 +15129,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "734015000",
@@ -16117,10 +15143,10 @@
         },
         {
           "code": "1263460007",
-          "display": "Birt Hogg Dubé syndrome",
+          "display": "Birt Hogg Dub\u00e9 syndrome",
           "synonyms": [
-            "Birt Hogg Dubé syndrome (disorder)",
-            "Birt Hogg Dubé syndrome",
+            "Birt Hogg Dub\u00e9 syndrome (disorder)",
+            "Birt Hogg Dub\u00e9 syndrome",
             "Hornstein Knickenberg syndrome",
             "A rare inherited cancer-predisposing syndrome characterized by skin lesions, kidney tumors, and pulmonary cysts that may be associated with pneumothorax. The kidney tumors range from benign oncocytomas to malignant renal cell carcinomas including chromophobe, clear cell or papillary subtypes. Fibrofolliculomas are characterized by a circumscribed proliferation of collagen and fibroblasts surrounding distorted hair follicles from which basaloid cells protrude into the surrounding fibromucinous stroma. Other characteristic skin anomalies are trichodiscomas and acrochordons. Dermatological manifestations usually develop in the third and fourth decades of life and persist indefinitely. The syndrome is transmitted in an autosomal dominant fashion.",
             "Fibrofolliculomas with trichodiscomas and acrochordons",
@@ -16164,7 +15190,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1144913005",
@@ -16225,7 +15251,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "235724004",
@@ -16274,7 +15300,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "238664008",
@@ -16333,7 +15359,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "254637007",
@@ -16390,7 +15416,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -16425,7 +15451,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "124699005",
@@ -16475,7 +15501,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "66344007",
@@ -16536,7 +15562,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "255032005",
@@ -16590,7 +15616,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "82430007",
@@ -16642,7 +15668,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -16678,7 +15704,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "238078005",
@@ -16738,7 +15764,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1186735007",
@@ -16791,7 +15817,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -16825,7 +15851,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "195020003",
@@ -16886,7 +15912,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "266154004",
@@ -16951,7 +15977,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": []
     },
     {
@@ -16983,7 +16009,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "399611001",
@@ -17036,7 +16062,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1237341006",
@@ -17078,7 +16104,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "408803000",
@@ -17135,7 +16161,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "45855004",
@@ -17187,7 +16213,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "238067002",
@@ -17241,7 +16267,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "192611004",
@@ -17292,7 +16318,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "312681000",
@@ -17346,7 +16372,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1259705005",
@@ -17402,7 +16428,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "878806005",
@@ -17454,7 +16480,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1163476002",
@@ -17513,7 +16539,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1295482007",
@@ -17565,7 +16591,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "838351000000107",
@@ -17615,7 +16641,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "716665002",
@@ -17675,7 +16701,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1153358006",
@@ -17721,7 +16747,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1259727001",
@@ -17788,7 +16814,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "773397000",
@@ -17843,7 +16869,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1259727001",
@@ -17893,7 +16919,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "765756007",
@@ -17952,7 +16978,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "718717004",
@@ -18031,7 +17057,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "766817004",
@@ -18093,7 +17119,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "429362002",
@@ -18159,7 +17185,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1153392009",
@@ -18208,7 +17234,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "447951009",
@@ -18287,7 +17313,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "290931000119108",
@@ -18342,7 +17368,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1172590009",
@@ -18403,7 +17429,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "23123006",
@@ -18461,7 +17487,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "425148008",
@@ -18518,7 +17544,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "405822008",
@@ -18571,7 +17597,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1260024007",
@@ -18622,7 +17648,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "698182002",
@@ -18677,7 +17703,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "733345003",
@@ -18724,7 +17750,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1259727001",
@@ -18789,7 +17815,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "915141931000119109",
@@ -18847,7 +17873,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "186791009",
@@ -18906,7 +17932,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1179293006",
@@ -18960,7 +17986,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "54280009",
@@ -19031,7 +18057,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "254051008",
@@ -19083,7 +18109,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "54280009",
@@ -19146,7 +18172,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1287661008",
@@ -19201,7 +18227,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "718904006",
@@ -19280,7 +18306,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "766883006",
@@ -19343,7 +18369,7 @@
       },
       "intervention": false,
       "pregnancy": false,
-      "suggested_action": "plausible — confirm",
+      "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
           "code": "1171357005",

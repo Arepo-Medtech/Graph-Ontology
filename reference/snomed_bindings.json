@@ -5,11 +5,12 @@
   "counts": {
     "exact": 258,
     "normalised": 6,
-    "candidate": 346,
+    "candidate": 331,
     "unmatched": 29,
     "unvalidated": 0,
     "retired": 0,
-    "total": 639
+    "total": 639,
+    "candidates_removed": 15
   },
   "results": [
     {
@@ -1964,45 +1965,8 @@
     {
       "condition": "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "1231283007",
-          "display": "Congenital isolated adrenocorticotropic hormone deficiency",
-          "synonyms": [
-            "Congenital isolated adrenocorticotropic hormone deficiency (disorder)",
-            "Congenital isolated adrenocorticotropic hormone deficiency",
-            "A rare endocrine disease characterised by neonatal hypoglycaemia, prolonged cholestatic jaundice, and seizures. Typical are low plasma ACTH and cortisol levels in the absence of structural pituitary defects, and sometimes low partial growth hormone deficiency is associated.",
-            "Congenital isolated ACTH (adrenocorticotropic hormone) deficiency",
-            "A rare endocrine disease characterized by neonatal hypoglycemia, prolonged cholestatic jaundice, and seizures. Typical are low plasma ACTH and cortisol levels in the absence of structural pituitary defects, and sometimes low partial growth hormone deficiency is associated."
-          ]
-        },
-        {
-          "code": "783098009",
-          "display": "Short stature due to partial growth hormone receptor deficiency",
-          "synonyms": [
-            "Short stature due to partial GHR deficiency is a rare, genetic, endocrine disease characterized by idiopathic short stature due to diminished GHR function (decreased ligand binding or reduced availability of receptor), thus resulting in partial insensitivity to growth hormone.",
-            "Short stature due to partial growth hormone receptor deficiency (disorder)",
-            "Short stature due to partial GHR deficiency is a rare, genetic, endocrine disease characterised by idiopathic short stature due to diminished GHR function (decreased ligand binding or reduced availability of receptor), thus resulting in partial insensitivity to growth hormone.",
-            "Short stature due to partial growth hormone receptor deficiency",
-            "Short stature due to partial GHR (growth hormone receptor) deficiency"
-          ]
-        },
-        {
-          "code": "1340175001",
-          "display": "CPE-related Prader-Willi-like syndrome",
-          "synonyms": [
-            "Blakemore Durmaz Vasileiou syndrome",
-            "Carboxypeptidase E-related Prader-Willi-like syndrome (disorder)",
-            "BDV syndrome",
-            "Carboxypeptidase E-related Prader-Willi-like syndrome",
-            "CPE-related Prader-Willi-like syndrome",
-            "BDV (Blakemore Durmaz Vasileiou) syndrome",
-            "A rare Prader-Willi-like syndrome with characteristics of intellectual disability, morbid obesity, hypogonadotrophic hypogonadism, hyperphagia and developmental delay. Endocrine disorders including hypothyroidism and insulin resistance can be observed. Unlike Prader-Willi syndrome, profound muscular hypotonia, feeding difficulties in neonates, short stature and growth hormone deficiency are not observed."
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
@@ -4399,36 +4363,8 @@
     {
       "condition": "Maternal hyperphenylalaninaemia due to phenylketonuria",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "713187004",
-          "display": "Polyhydramnios due to maternal disease",
-          "synonyms": [
-            "Polyhydramnios due to maternal disease",
-            "Polyhydramnios due to maternal disease (disorder)"
-          ]
-        },
-        {
-          "code": "1263691008",
-          "display": "Fetal disorder due to maternal death",
-          "synonyms": [
-            "Fetal disorder due to maternal death (disorder)",
-            "Fetal disorder due to maternal death",
-            "Foetal disorder due to maternal death"
-          ]
-        },
-        {
-          "code": "1003728008",
-          "display": "Fetal disorder due to maternal hypertension",
-          "synonyms": [
-            "Fetal disorder due to maternal hypertension (disorder)",
-            "Foetal disorder due to maternal hypertension",
-            "Fetal disorder due to maternal hypertension"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Type III Short bowel syndrome with intestinal failure",
@@ -6012,47 +5948,8 @@
     {
       "condition": "Preterm birth",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "773691007",
-          "display": "Congenital erosive and vesicular dermatosis",
-          "synonyms": [
-            "Congenital erosive and vesicular dermatosis with reticulated supple scarring",
-            "Congenital erosive and vesicular dermatosis (disorder)",
-            "CEVD - congenital erosive and vesicular dermatosis",
-            "Congenital erosive and vesicular dermatosis",
-            "A rare, idiopathic skin disease characterised by widespread, congenital, superficial erosions and vesicles (often involving more than 75% of the body) which heal leaving scars with a supple, symmetrical, reticulated pattern, frequently resulting in cicatricial alopecia and hyperthermia and/or hypohidrosis. Nail anomalies, neurodevelopmental and ophthalmologic abnormalities, tongue atrophy and preterm birth, with or without history of chorioamnionitis, are commonly associated.",
-            "A rare, idiopathic skin disease characterized by widespread, congenital, superficial erosions and vesicles (often involving more than 75% of the body) which heal leaving scars with a supple, symmetrical, reticulated pattern, frequently resulting in cicatricial alopecia and hyperthermia and/or hypohidrosis. Nail anomalies, neurodevelopmental and ophthalmologic abnormalities, tongue atrophy and preterm birth, with or without history of chorioamnionitis, are commonly associated."
-          ]
-        },
-        {
-          "code": "1340042007",
-          "display": "Chronic intervillositis of unknown aetiology",
-          "synonyms": [
-            "A rare disorder related to pregnancy with characteristics of placental inflammatory process with clusters of histiocytes and associated fibrin in intervillous spaces, resulting in adverse pregnancy outcomes including intrauterine growth restriction, preterm birth, and pregnancy loss. Higher grading according to the proportion of involved intervillous space has been associated with poorer outcomes. There is a significant risk of recurrence in subsequent pregnancies.",
-            "CIUE - chronic intervillositis of unknown aetiology",
-            "Chronic intervillositis of unknown etiology",
-            "CIUE - chronic intervillositis of unknown etiology",
-            "Chronic intervillositis of unknown etiology (disorder)",
-            "Chronic intervillositis of unknown aetiology"
-          ]
-        },
-        {
-          "code": "715430001",
-          "display": "Indomethacin embryofetopathy",
-          "synonyms": [
-            "Indomethacin embryofetopathy refers to the manifestations that may be observed in a fetus or newborn when the mother has taken indomethacin, a potent prostaglandin inhibitor and tocolytic agent that can cross placenta, during pregnancy. Reported adverse fetal/neonatal effects include decreased renal function resulting in oligohydramnios, closure of the ductus arteriosus, and delayed cardiovascular adaptation at birth. These effects are usually transient and reversible. Indomethacin may also be a risk factor for cerebral injury (periventricular leucomalacia) and necrotising enterocolitis in preterm infants.",
-            "Indomethacin embryofetopathy",
-            "Foetal indomethacin syndrome",
-            "Indomethacin embryofetopathy refers to the manifestations that may be observed in a fetus or newborn when the mother has taken indomethacin, a potent prostaglandin inhibitor and tocolytic agent that can cross placenta, during pregnancy. Reported adverse fetal/neonatal effects include decreased renal function resulting in oligohydramnios, closure of the ductus arteriosus, and delayed cardiovascular adaptation at birth. These effects are usually transient and reversible. Indomethacin may also be a risk factor for cerebral injury (periventricular leukomalacia) and necrotizing enterocolitis in preterm infants.",
-            "Embryofetopathy caused by indomethacin (disorder)",
-            "Embryofetopathy caused by indomethacin",
-            "Fetal indomethacin syndrome"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Bulky or Stage III/IV follicular lymphoma",
@@ -8906,21 +8803,8 @@
     {
       "condition": "Facial lipoatrophy",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "773331001",
-          "display": "Nestor Guillermo progeria syndrome",
-          "synonyms": [
-            "Nestor-Guillermo progeria syndrome is a rare, genetic, progeroid syndrome characterized by a prematurely aged appearance associated with severe osteolysis (notably on mandible, clavicles, ribs, distal phalanges, and long bones), osteoporosis, generalized lipoatrophy and absence of cardiovascular, atherosclerotic and metabolic complications, presenting a relatively long survival. Additional characteristics include growth retardation, joint stiffness (mainly of fingers, hands, knees, and elbows), wide cranial sutures, dysmorphic facial features (prominent eyes, convex nasal ridge, malocclusion, dental crowding, thin lip vermillion, microretrognathia) and persistent eyebrows, eyelashes and scalp hair.",
-            "Nestor Guillermo progeria syndrome",
-            "NGPS - Nestor Guillermo progeria syndrome",
-            "Nestor-Guillermo progeria syndrome is a rare, genetic, progeroid syndrome characterised by a prematurely aged appearance associated with severe osteolysis (notably on mandible, clavicles, ribs, distal phalanges, and long bones), osteoporosis, generalised lipoatrophy and absence of cardiovascular, atherosclerotic and metabolic complications, presenting a relatively long survival. Additional characteristics include growth retardation, joint stiffness (mainly of fingers, hands, knees, and elbows), wide cranial sutures, dysmorphic facial features (prominent eyes, convex nasal ridge, malocclusion, dental crowding, thin lip vermillion, microretrognathia) and persistent eyebrows, eyelashes and scalp hair.",
-            "Nestor Guillermo progeria syndrome (disorder)"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Urothelial toxicity",
@@ -9332,38 +9216,8 @@
     {
       "condition": "Anaemia associated with intrinsic renal disease",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "472326004",
-          "display": "Fetal hypertrophic cardiomyopathy associated with renal disease",
-          "synonyms": [
-            "Fetal hypertrophic cardiomyopathy associated with renal disease",
-            "Fetal hypertrophic cardiomyopathy associated with renal disease (disorder)",
-            "Foetal hypertrophic cardiomyopathy associated with renal disease"
-          ]
-        },
-        {
-          "code": "363287001",
-          "display": "Renal failure associated with renal vascular disease",
-          "synonyms": [
-            "Renal failure associated with renal vascular disease (disorder)",
-            "Renal failure associated with renal vascular disease"
-          ]
-        },
-        {
-          "code": "420543008",
-          "display": "Anaemia associated with AIDS",
-          "synonyms": [
-            "Anemia associated with AIDS",
-            "Anaemia associated with AIDS",
-            "Anaemia associated with acquired immunodeficiency syndrome",
-            "Anemia associated with acquired immunodeficiency syndrome",
-            "Anemia associated with acquired immunodeficiency syndrome (disorder)"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Diarrhoea",
@@ -9993,35 +9847,8 @@
     {
       "condition": "Diarrhoea of greater than 2 weeks duration",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "429715006",
-          "display": "Gestation greater than 20 weeks",
-          "synonyms": [
-            "Gestation greater than 20 weeks (finding)",
-            "Gestation greater than 20 weeks"
-          ]
-        },
-        {
-          "code": "313180007",
-          "display": "Gestation greater than 24 weeks",
-          "synonyms": [
-            "Gestation greater than 24 weeks (finding)",
-            "Gestation greater than 24 weeks",
-            "Gestation >24 weeks"
-          ]
-        },
-        {
-          "code": "428566005",
-          "display": "Gestation less than 20 weeks",
-          "synonyms": [
-            "Gestation less than 20 weeks (finding)",
-            "Gestation less than 20 weeks"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Homocystinuria",
@@ -10164,38 +9991,8 @@
     {
       "condition": "Termination of an intra-uterine pregnancy",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "18302006",
-          "display": "Hysterotomy and termination of pregnancy",
-          "synonyms": [
-            "Therapeutic abortion by hysterotomy (procedure)",
-            "Incision of uterus for termination of pregnancy",
-            "Hysterotomy and termination of pregnancy",
-            "Therapeutic abortion by hysterotomy",
-            "Obstetrical hysterotomy for termination of pregnancy"
-          ]
-        },
-        {
-          "code": "699240001",
-          "display": "Combined intrauterine and ovarian pregnancy",
-          "synonyms": [
-            "Combined intrauterine and ovarian pregnancy",
-            "Combined intrauterine and ovarian pregnancy (disorder)"
-          ]
-        },
-        {
-          "code": "442478007",
-          "display": "Combined tubal and intrauterine pregnancy",
-          "synonyms": [
-            "Combined tubal and intrauterine pregnancy",
-            "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy (disorder)",
-            "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Locally advanced, metastatic or recurrent biliary tract cancer",
@@ -11952,46 +11749,8 @@
     {
       "condition": "The onset of lactation",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "stemmed",
-      "candidates": [
-        {
-          "code": "1172841001",
-          "display": "Combined oxidative phosphorylation defect type 30",
-          "synonyms": [
-            "Combined oxidative phosphorylation defect type 30 (disorder)",
-            "COXPD30 - combined oxidative phosphorylation defect type 30",
-            "A rare mitochondrial oxidative phosphorylation disorder characterised by neonatal onset of hypotonia, feeding difficulties, deafness, and early fatal respiratory failure. Cardiac and liver involvement has been reported. Serum lactate is increased, and metabolic studies show decreased activity of mitochondrial respiratory complexes I and IV in skeletal muscle.",
-            "Combined oxidative phosphorylation defect type 30",
-            "A rare mitochondrial oxidative phosphorylation disorder characterized by neonatal onset of hypotonia, feeding difficulties, deafness, and early fatal respiratory failure. Cardiac and liver involvement has been reported. Serum lactate is increased, and metabolic studies show decreased activity of mitochondrial respiratory complexes I and IV in skeletal muscle."
-          ]
-        },
-        {
-          "code": "764456001",
-          "display": "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-          "synonyms": [
-            "A rare, hereditary inborn error of metabolism characterised by an acute onset of encephalopathy in infancy or early childhood. Apart from these episodic acute events, the disorder shows a relatively benign course. Multiple metabolic abnormalities are present, including metabolic acidosis, respiratory alkalosis, hypoglycaemia, increased serum lactate and alanine.",
-            "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-            "CA5A related hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency",
-            "CA-VA (carbonic anhydrase VA) deficiency",
-            "Carbonic anhydrase VA deficiency",
-            "A rare, hereditary inborn error of metabolism characterized by an acute onset of encephalopathy in infancy or early childhood. Apart from these episodic acute events, the disorder shows a relatively benign course. Multiple metabolic abnormalities are present, including metabolic acidosis, respiratory alkalosis, hypoglycemia, increased serum lactate and alanine.",
-            "Hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency (disorder)",
-            "Carbonic anhydrase 5A related hyperammonemic encephalopathy due to carbonic anhydrase VA deficiency"
-          ]
-        },
-        {
-          "code": "763688008",
-          "display": "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome",
-          "synonyms": [
-            "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome",
-            "Hearing loss, encephaloneuropathy, obesity, valvulopathy syndrome",
-            "Deafness-encephaloneuropathy-obesity-valvulopathy syndrome is a rare mitochondrial disease with marked clinical variability typically characterised by encephalomyopathy, kidney disease (nephrotic syndrome), optic atrophy, early-onset deafness, pancytopenia, obesity, and cardiac disease (valvulopathy). Additionally, macrocephaly, intellectual disability, hyperlactataemia, elevated lactate/pyruvate ratio, insulin-dependent diabetes, livedo reticularis, liver dysfunction and seizures have also been associated.",
-            "Deafness, encephaloneuropathy, obesity, valvulopathy syndrome (disorder)",
-            "Deafness-encephaloneuropathy-obesity-valvulopathy syndrome is a rare mitochondrial disease with marked clinical variability typically characterized by encephalomyopathy, kidney disease (nephrotic syndrome), optic atrophy, early-onset deafness, pancytopenia, obesity, and cardiac disease (valvulopathy). Additionally, macrocephaly, intellectual disability, hyperlactatemia, elevated lactate/pyruvate ratio, insulin-dependent diabetes, livedo reticularis, liver dysfunction and seizures have also been associated."
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "stemmed"
     },
     {
       "condition": "Type 1 diabetes",
@@ -12006,39 +11765,8 @@
     {
       "condition": "Contraception",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "308419002",
-          "display": "Contraception call",
-          "synonyms": [
-            "Contraception call",
-            "Contraception call (procedure)"
-          ]
-        },
-        {
-          "code": "389095005",
-          "display": "Contraception care",
-          "synonyms": [
-            "Contraception care",
-            "Family planning care: contraception",
-            "Family planning treatments and procedures",
-            "Contraception care (regime/therapy)",
-            "Family planning: contraception"
-          ]
-        },
-        {
-          "code": "398780007",
-          "display": "Contraception education",
-          "synonyms": [
-            "Contraception education",
-            "Health education - contraception",
-            "Advice about contraception",
-            "Contraception education (procedure)"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Ablation of thyroid remnant tissue",
@@ -12521,60 +12249,14 @@
     {
       "condition": "Upper and lower respiratory tract infections",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "763532008",
-          "display": "Familial nasal acilia",
-          "synonyms": [
-            "Familial nasal acilia is a rare genetic otorhinolaryngologic disease characterized by respiratory morbidity due to lack of cilia on the respiratory tract epithelial cells. The disease manifests from birth with respiratory distress, neonatal pneumonia, dyspnea, lobar atelectasis and bronchiectasis. Recurrent infections of the upper and lower respiratory tract, chronic humid coughing, and chronic sinusitis, otitis and rhinitis are typical lifelong presenting conditions.",
-            "Familial nasal acilia is a rare genetic otorhinolaryngologic disease characterised by respiratory morbidity due to lack of cilia on the respiratory tract epithelial cells. The disease manifests from birth with respiratory distress, neonatal pneumonia, dyspnoea, lobar atelectasis and bronchiectasis. Recurrent infections of the upper and lower respiratory tract, chronic humid coughing, and chronic sinusitis, otitis and rhinitis are typical lifelong presenting conditions.",
-            "Familial nasal acilia (disorder)",
-            "Familial nasal acilia"
-          ]
-        },
-        {
-          "code": "771479000",
-          "display": "Combined immunodeficiency due to STK4 deficiency",
-          "synonyms": [
-            "A rare, genetic, combined T and B cell immunodeficiency characterized by T- and B-cell lymphopenia, hypergammaglobulinemia and intermittent neutropenia. It presents with recurrent opportunistic viral, bacterial and fungal infections involving skin (cutaneous papillomatosis, molluscum contagiosum, skin abscesses, mucocutaneous candidiasis), upper and lower respiratory tract or septicemia. Other clinical features include autoimmune manifestations (autoimmune hemolytic anemia) and congenital heart defects (atrial septal defects, patent foramen ovale, mitral, tricuspid and pulmonary valve insufficiency).",
-            "A rare, genetic, combined T and B cell immunodeficiency characterised by T- and B-cell lymphopenia, hypergammaglobulinaemia and intermittent neutropenia. It presents with recurrent opportunistic viral, bacterial and fungal infections involving skin (cutaneous papillomatosis, molluscum contagiosum, skin abscesses, mucocutaneous candidiasis), upper and lower respiratory tract or septicaemia. Other clinical features include autoimmune manifestations (autoimmune haemolytic anaemia) and congenital heart defects (atrial septal defects, patent foramen ovale, mitral, tricuspid and pulmonary valve insufficiency).",
-            "Combined immunodeficiency due to serine/threonine kinase 4 deficiency (disorder)",
-            "Combined immunodeficiency due to serine/threonine kinase 4 deficiency",
-            "Combined immunodeficiency due to STK4 deficiency",
-            "Combined immunodeficiency due to STK4 (serine/threonine kinase 4) deficiency"
-          ]
-        },
-        {
-          "code": "771443008",
-          "display": "Complement component 3 deficiency",
-          "synonyms": [
-            "Complement component 3 deficiency",
-            "Complement component 3 deficiency (disorder)",
-            "C3 deficiency",
-            "Complement component 3 deficiency is a rare, genetic, primary immunodeficiency characterised by susceptibility to infection (mainly by gram negative bacteria) due to extremely low C3 plasma levels. Patients typically present recurrent episodes of sinusitis, tonsillitis, and/or otitis, as well as upper and lower respiratory tract infections (including pneumonia) and skin infections, such as erythema multiforme. Autoimmune disease resembling systemic lupus erythematosus and mesangiocapillary or membranoproliferative glomerulonephritis may develop, resulting in renal failure.",
-            "Complement component 3 deficiency is a rare, genetic, primary immunodeficiency characterized by susceptibility to infection (mainly by gram negative bacteria) due to extremely low C3 plasma levels. Patients typically present recurrent episodes of sinusitis, tonsillitis, and/or otitis, as well as upper and lower respiratory tract infections (including pneumonia) and skin infections, such as erythema multiforme. Autoimmune disease resembling systemic lupus erythematosus and mesangiocapillary or membranoproliferative glomerulonephritis may develop, resulting in renal failure."
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Complicated urinary tract infection",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "609491002",
-          "display": "Induced termination of pregnancy complicated by urinary tract infection",
-          "synonyms": [
-            "Induced termination of pregnancy complicated by urinary tract infection (disorder)",
-            "Termination of pregnancy complicated by urinary tract infection",
-            "Induced termination of pregnancy complicated by urinary tract infection"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Whipworm infestation",
@@ -12987,50 +12669,8 @@
     {
       "condition": "Patients undergoing in-vitro fertilisation",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "52637005",
-          "display": "In vitro fertilisation",
-          "synonyms": [
-            "Test tube ovum fertilization (procedure)",
-            "In vitro fertilisation",
-            "In vitro fertilisation procedure",
-            "IVF - in vitro fertilisation",
-            "In vitro fertilization",
-            "Test tube ovum fertilization",
-            "Test tube ovum fertilisation",
-            "In vitro fertilization procedure",
-            "IVF - in vitro fertilization",
-            "Test tube baby technique"
-          ]
-        },
-        {
-          "code": "10231000132102",
-          "display": "IVF pregnancy",
-          "synonyms": [
-            "IVF - in-vitro fertilisation pregnancy",
-            "IVF pregnancy",
-            "In-vitro fertilisation pregnancy",
-            "IVF - in-vitro fertilization pregnancy",
-            "In-vitro fertilization pregnancy",
-            "In-vitro fertilization pregnancy (finding)"
-          ]
-        },
-        {
-          "code": "711544002",
-          "display": "In vitro fertilisation with surrogacy",
-          "synonyms": [
-            "In vitro fertilisation with surrogacy",
-            "IVF with surrogacy",
-            "In vitro fertilization with subsequent transfer to an unrelated surrogate.",
-            "In vitro fertilization with surrogacy (procedure)",
-            "In vitro fertilisation with subsequent transfer to an unrelated surrogate.",
-            "In vitro fertilization with surrogacy"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Acute myelogenous leukaemia",
@@ -13225,43 +12865,8 @@
     {
       "condition": "Secondarily infected traumatic skin lesions",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "715223009",
-          "display": "Fetal varicella syndrome",
-          "synonyms": [
-            "Fetal varicella syndrome (disorder)",
-            "Fetal varicella syndrome",
-            "A rare acquired developmental anomaly syndrome characterized by skin, neurological, ocular, limbs and growth defects secondary to maternal Varicella-Zoster Virus (VZV) infection.",
-            "A rare acquired developmental anomaly syndrome characterised by skin, neurological, ocular, limbs and growth defects secondary to maternal Varicella-Zoster Virus (VZV) infection.",
-            "Foetal varicella syndrome"
-          ]
-        },
-        {
-          "code": "774080007",
-          "display": "Neonatal scleroderma",
-          "synonyms": [
-            "Neonatal scleroderma",
-            "A rare secondary neonatal autoimmune disease characterized by neonatal onset of erythematous skin lesions with a linear appearance that gradually become indurated and hyperpigmented and progressively present skin atrophy. Positive serum antibodies (in particular antinuclear antibodies and/or rheumatoid factor) may be associated.",
-            "Neonatal scleroderma (disorder)",
-            "A rare secondary neonatal autoimmune disease characterised by neonatal onset of erythematous skin lesions with a linear appearance that gradually become indurated and hyperpigmented and progressively present skin atrophy. Positive serum antibodies (in particular antinuclear antibodies and/or rheumatoid factor) may be associated."
-          ]
-        },
-        {
-          "code": "778004006",
-          "display": "Autoinflammation-PLCG2-associated antibody deficiency-immune dysregulation",
-          "synonyms": [
-            "Autoinflammation-PLCG2-associated antibody deficiency-immune dysregulation",
-            "A rare, mixed autoinflammatory and autoimmune syndrome disorder characterized by recurrent neutrophilic blistering skin lesions, arthralgia, ocular inflammation, inflammatory bowel disease, absence of autoantibodies, and mild immunodeficiency manifested by recurrent sinopulmonary infections and deficiency of circulating antibodies. Inflammatory phenotype is not provoked by cold temperatures.",
-            "A rare, mixed autoinflammatory and autoimmune syndrome disorder characterised by recurrent neutrophilic blistering skin lesions, arthralgia, ocular inflammation, inflammatory bowel disease, absence of autoantibodies, and mild immunodeficiency manifested by recurrent sinopulmonary infections and deficiency of circulating antibodies. Inflammatory phenotype is not provoked by cold temperatures.",
-            "Autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation",
-            "APLAID - autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation",
-            "Autoinflammation phospholipase C gamma 2 associated antibody deficiency and immune dysregulation (disorder)"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Tinea pedis",
@@ -14191,42 +13796,8 @@
     {
       "condition": "Septicaemia",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "137701000119106",
-          "display": "Antepartum septicaemia",
-          "synonyms": [
-            "Antepartum septicemia (disorder)",
-            "Antepartum septicemia",
-            "Antepartum septicaemia"
-          ]
-        },
-        {
-          "code": "10001005",
-          "display": "Bacterial sepsis",
-          "synonyms": [
-            "Bacterial septicemia",
-            "Bacterial sepsis (disorder)",
-            "Bacterial sepsis",
-            "Bacterial septicaemia"
-          ]
-        },
-        {
-          "code": "2858002",
-          "display": "Puerperal sepsis",
-          "synonyms": [
-            "Puerperal sepsis (disorder)",
-            "Puerperal septicemia",
-            "Puerperal sepsis",
-            "Puerperal septicaemia",
-            "Puerperal fever",
-            "Postpartum sepsis",
-            "Childbed fever"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Proven",
@@ -14299,22 +13870,8 @@
     {
       "condition": "Mixed episodes",
       "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "774084003",
-          "display": "Neonatal antiphospholipid syndrome",
-          "synonyms": [
-            "Neonatal antiphospholipid syndrome is a rare, secondary, neonatal autoimmune disease characterised by single or recurrent episodes of venous, arterial or mixed thrombosis in a neonate whose mother does not have antiphospholipid syndrome manifestations. Patients present positive antiphospholipid antibodies and may have additional abnormalities associated (e.g. cardiac valve disease, livedo reticularis, thrombocytopenia, nephropathy, neurological manifestations).",
-            "Neonatal antiphospholipid syndrome is a rare, secondary, neonatal autoimmune disease characterized by single or recurrent episodes of venous, arterial or mixed thrombosis in a neonate whose mother does not have antiphospholipid syndrome manifestations. Patients present positive antiphospholipid antibodies and may have additional abnormalities associated (e.g. cardiac valve disease, livedo reticularis, thrombocytopenia, nephropathy, neurological manifestations).",
-            "Neonatal Hughes syndrome",
-            "Neonatal antiphospholipid syndrome (disorder)",
-            "Neonatal antiphospholipid syndrome",
-            "Neonatal antiphospholipid antibody syndrome"
-          ]
-        }
-      ]
+      "method": "candidates_removed",
+      "query_tier": "full"
     },
     {
       "condition": "Stage IV non-small cell lung cancer",
