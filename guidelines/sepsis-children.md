@@ -290,6 +290,7 @@ rather than a prescription — the volume at which persisting shock means callin
 
 | Guideline here | Connection |
 |---|---|
+| ⚠️ **Paediatric sepsis — the NSW pathway** | **the state pathway this guideline defers to**, and it **differs on specifics**: BGL threshold, blood culture volume, oxygen target, time-to-antibiotic checkbox |
 | **Sepsis** (ACSQHC, adults) | the adult standard **postdates this guideline**; the paediatric document is the older half of the pair |
 | **Febrile child** | routes any seriously unwell febrile child here **irrespective of the degree of fever**; this guideline supplies the matching caution that **most febrile children do not have sepsis** |
 | **Febrile seizure** | **signs of sepsis, meningitis or encephalitis** are its red flags for serious infection |
@@ -304,7 +305,7 @@ rather than a prescription — the volume at which persisting shock means callin
 | **The two management flowcharts** | ⚠️ **observation** | **resolved 2026-09-22** — the images were downloaded and read, and the algorithm is transcribed above. **Those claims carry `pass_image_transcription`, not `pass`: they cannot be machine re-checked by `scripts/verify.py` and are subject to transcription error. Doses must be re-checked against the image by a person before clinical use** |
 | **"clindamycin 15/kg"** | **observation** | the unit is **missing in the source image**. mg/kg is the evident reading, consistent with the vancomycin line beside it; **not asserted** |
 | **Adrenaline infusion concentration** | ⚠️ **observation** | **6 mg in 1 L here versus 1 mg in 1 L in the anaphylaxis in children guideline** — a sixfold difference between two RCH protocols, **neither of which mentions the other** |
-| **State and territory sepsis pathways** | ⚠️ **input_unavailable** | the source states these **must be followed** where they exist, and names **NSW, Queensland, Western Australia** and a **National** resource. **None retrieved. In those jurisdictions this document is not the operative one** |
+| **State and territory sepsis pathways** | ⚠️ **partly resolved** | the source states these **must be followed**. ✅ **NSW retrieved 2026-09-22** — see **`guidelines/sepsis-children-nsw-pathway.md`**, which tabulates where the two documents differ, including **a hypoglycaemia threshold of 3.0 vs 3.3 mmol/L** and **a single blood culture volume vs a seven-band weight table**. ⚠️ **Queensland and Western Australia remain unretrieved** |
 | **Stated currency** | ⚠️ **time_sensitive** | **Last Updated March 2020**; **newest reference 2018**. **The oldest source in this compendium**, on a topic where the adult ACSQHC standard here is newer |
 | **Aboriginal and Torres Strait Islanders as a high-risk group** | **input_unavailable** | listed without stated basis, magnitude or cultural safety guidance — **the same omission as the febrile child guideline**, making it a pattern across RCH CPGs rather than a single lapse |
 | **"CRT >2"** | **observation** | units not stated in the retrieved text; **read as seconds by convention, not asserted** |

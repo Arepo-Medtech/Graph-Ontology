@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,350 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 59 guidelines · 2,374 claims · 244 `Unresolved` rows**
 
 *Revised the same day: **all thirteen algorithm images have been recovered** and **Finding 1 is closed**.
 **93 claims now carry `pass_image_transcription`.***
@@ -169,8 +169,11 @@ the sharpest are worth naming:
 
 1. ✅ **Done.** All thirteen algorithm images are transcribed. **93 claims now carry
    `pass_image_transcription` and a person should check each dose against its image.**
-2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be
-   followed** — in those jurisdictions this compendium's sepsis file is not the operative document.
+2. ⚠️ **One of three done.** **NSW retrieved 2026-09-22** as its own file. It differs from the RCH guideline
+   on a **hypoglycaemia threshold (3.0 vs 3.3 mmol/L)**, a **blood culture volume (one figure vs a seven-band
+   weight table)**, an **oxygen target**, and a **60-minute time-to-antibiotic checkbox** the guideline does
+   not have. **Queensland and Western Australia remain unretrieved**, and in those states this compendium's
+   sepsis file is still not the operative document.
 3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`
