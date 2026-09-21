@@ -19,6 +19,7 @@ RxNorm is US public domain.
 """
 from __future__ import annotations
 
+import glob
 import json
 import os
 import sys
@@ -27,8 +28,7 @@ from pathlib import Path
 import duckdb
 
 RF2 = os.environ.get("AU_RF2_SNAPSHOT",
-                     "/Users/ken-arepo/iCloud Drive (Archive)/Documents/Documents - Citrus-Arepo/ONTOLOGIES/"
-                     "SnomedCT_Release_AU1000036_20260731/Snapshot")
+                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260731/Snapshot")
 REL = "20260731"
 OUT = Path("out"); OUT.mkdir(exist_ok=True)
 DB = OUT / "compendium.duckdb"
@@ -49,7 +49,30 @@ LEVELS = {
     "medicinal product unit of use": "MPUU", "medicinal product pack": "MPP",
 }
 
-print("loading RF2 …", flush=True)
+# --- concept status ------------------------------------------------------------------------------
+# The AU bundle as distributed here ships no sct2_Concept_Snapshot file, and inactive concepts keep
+# active descriptions, so "has an active FSN" is NOT "is active" (557 inactive products leaked in
+# before this check existed). Resolution order: (1) a Concept snapshot in the RF2 dir, (2) a Concept
+# Full file at the release root or under Full/Terminology, collapsed to its latest row per id,
+# (3) the OWL expression refset (every active concept has an active axiom; the root has none).
+def _concept_status_sql():
+    snap = glob.glob(f"{RF2}/Terminology/sct2_Concept_Snapshot*.txt")
+    if snap:
+        return "snapshot", f"SELECT id, active FROM read_csv('{snap[0]}', delim='\t', header=true, quote='', all_varchar=true)"
+    root = os.path.dirname(RF2.rstrip("/"))
+    full = glob.glob(f"{root}/sct2_Concept_Full*.txt") + glob.glob(f"{root}/Full/Terminology/sct2_Concept_Full*.txt")
+    if full:
+        return "full", (f"SELECT id, active FROM (SELECT id, active, row_number() OVER (PARTITION BY id ORDER BY effectiveTime DESC) rn "
+                        f"FROM read_csv('{full[0]}', delim='\t', header=true, quote='', all_varchar=true)) WHERE rn=1")
+    owl = glob.glob(f"{RF2}/Terminology/sct2_sRefset_OWLExpressionSnapshot*.txt")
+    if owl:
+        return "owl", (f"SELECT referencedComponentId AS id, max(active) AS active "
+                       f"FROM read_csv('{owl[0]}', delim='\t', header=true, quote='', all_varchar=true) GROUP BY 1")
+    raise SystemExit("no source for concept activeness (Concept snapshot, Concept Full, or OWL refset)")
+
+CONCEPT_STATUS_SOURCE, _status_sql = _concept_status_sql()
+print(f"loading RF2 … (concept status from {CONCEPT_STATUS_SOURCE})", flush=True)
+con.execute(f"CREATE TABLE concept_status AS {_status_sql}")
 con.execute(f"""
 CREATE TABLE dsc AS SELECT id, active, moduleId, conceptId, typeId, term
   FROM read_csv('{RF2}/Terminology/sct2_Description_Snapshot-en-au_AU1000036_{REL}.txt', delim='\t', header=true, quote='', all_varchar=true);
@@ -63,7 +86,8 @@ CREATE TABLE lang AS SELECT referencedComponentId AS descId
 con.execute(f"""
 CREATE TABLE concept AS
 WITH f AS (SELECT conceptId AS id, moduleId AS module, term AS fsn, regexp_extract(term, '\\(([^()]+)\\)$', 1) AS tag
-           FROM dsc WHERE active='1' AND typeId='{FSN_TYPE}'),
+           FROM dsc WHERE active='1' AND typeId='{FSN_TYPE}'
+             AND conceptId IN (SELECT id FROM concept_status WHERE active='1')),
      p AS (SELECT d.conceptId AS id, any_value(d.term) AS pt FROM dsc d JOIN lang l ON l.descId=d.id
            WHERE d.active='1' AND d.typeId<>'{FSN_TYPE}' GROUP BY 1)
 SELECT f.id, f.module, f.fsn, f.tag, coalesce(p.pt, regexp_replace(f.fsn, ' \\([^()]+\\)$', '')) AS pt,

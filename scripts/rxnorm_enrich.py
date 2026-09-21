@@ -17,8 +17,7 @@ from pathlib import Path
 import duckdb
 
 RF2 = os.environ.get("AU_RF2_SNAPSHOT",
-                     "/Users/ken-arepo/iCloud Drive (Archive)/Documents/Documents - Citrus-Arepo/ONTOLOGIES/"
-                     "SnomedCT_Release_AU1000036_20260731/Snapshot")
+                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260731/Snapshot")
 REL = "20260731"
 OUT = Path("cache/rxnorm_substances.json")
 RXNAV = "https://rxnav.nlm.nih.gov/REST"

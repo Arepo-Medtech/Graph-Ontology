@@ -6,7 +6,7 @@ sources; nothing is fuzzy-matched and every link carries its method.
 
 | Source | What it contributes | Licence / handling |
 |---|---|---|
-| SNOMED CT-AU RF2 snapshot (NCTS) | AMT concepts at every level, `Has product name` (brand), `is a` (generic), active / precise ingredient, basis of strength, dose form, `Contains clinical drug` (pack → unit), AU preferred terms | Licensed. Read from disk (`AU_RF2_SNAPSHOT`), never committed |
+| SNOMED CT-AU RF2 snapshot (NCTS) | AMT concepts at every level, `Has product name` (brand), `is a` (generic), active / precise ingredient, basis of strength, dose form, `Contains clinical drug` (pack → unit), AU preferred terms | Licensed. Read from disk (`AU_RF2_SNAPSHOT`), never committed. Concept activeness comes from a Concept snapshot, else the Concept *Full* file at the release root collapsed to its latest row, else the OWL axiom refset — see [Concept status](#concept-status) |
 | PBS Public API v3 | `items`, `amt-items`, `atc-codes`, and `item-atc-relationships`; selected `item-overview` evidence on demand | Commonwealth CC BY; copyright notice and source schedule retained in `cache/pbs/*.json` |
 | AMH Medicines, July 2026 | Curated pregnancy-safety and supplement-role distinctions, including route, gestational window and dose context | Subscriber source; only concise paraphrased metadata, edition, access date and direct URLs are committed |
 | RxNorm via RxNav (NLM) | Ingredient identity (RxCUI, IN/PIN) for SNOMED substances, by exact or normalised name | US public domain |
@@ -51,6 +51,19 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
 - **product**, **pbs**, **pbs_tpuu**, **rxnorm**, **ingredient**, **contains**, **brand_of**,
   **unit_generic**, **pack_generic**, **ctpp_tpp**, **mpuu_mp**, **pbs_atc_code**, and
   **pbs_item_atc** — the normalised building blocks.
+
+## Concept status
+
+Inactive SNOMED concepts keep active descriptions, so an active FSN does **not** mean an active
+concept. The AU bundle as distributed here ships no `sct2_Concept_Snapshot` file, and until the
+build checked concept status 557 inactive products (247 TPUU, 235 MP, 75 MPUU) were in `product`
+and 247 inactive TPUUs in `transcode` — e.g. `21433011000036107 paracetamol (medicinal product)`,
+inactivated 2024-09-30. `build_compendium.py` now resolves status in this order and prints which
+source it used:
+
+1. `Terminology/sct2_Concept_Snapshot*.txt` in `AU_RF2_SNAPSHOT`;
+2. `sct2_Concept_Full*.txt` at the release root (or `Full/Terminology/`), latest row per concept;
+3. the OWL expression refset — every active concept carries an active axiom (root excepted).
 
 ## Build
 
