@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 59 guidelines · 2,374 claims · 244 `Unresolved` rows**
+**Generated 2026-09-22 · 60 guidelines · 2,416 claims · 252 `Unresolved` rows**
 
 *Revised the same day: **all thirteen algorithm images have been recovered** and **Finding 1 is closed**.
 **93 claims now carry `pass_image_transcription`.***
@@ -172,8 +172,10 @@ the sharpest are worth naming:
 2. ⚠️ **One of three done.** **NSW retrieved 2026-09-22** as its own file. It differs from the RCH guideline
    on a **hypoglycaemia threshold (3.0 vs 3.3 mmol/L)**, a **blood culture volume (one figure vs a seven-band
    weight table)**, an **oxygen target**, and a **60-minute time-to-antibiotic checkbox** the guideline does
-   not have. **Queensland and Western Australia remain unretrieved**, and in those states this compendium's
-   sepsis file is still not the operative document.
+   not have. ✅ **Queensland retrieved too** (May 2026, its own file). ⚠️ **Two of the three documents' differences
+   are three-way and decision-changing — blood culture volume, and IM ceftriaxone dose and trigger.**
+   **Western Australia remains unretrieved**, and in that state this compendium's sepsis file is still not
+   the operative document.
 3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`

@@ -1,0 +1,267 @@
+{
+  "guideline": "guidelines/sepsis-children-qld.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of Children's Health Queensland, 'Sepsis - Recognition and emergency management in children' (Queensland Paediatric Clinical Guidelines, last updated May 2026). The page is not served by the scraping tool used elsewhere in this compendium and was retrieved through the browser; the page text was read in two passes and persisted before quoting. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The Queensland Paediatric Sepsis Pathway (a 12-page PDF the guideline refers to throughout for screening, antibiotic guidance and neonatal dosing), the CREDD dosing reference, and the CEWT scoring rules were NOT retrieved and are recorded as input_unavailable; only the IM ceftriaxone rescue dose is stated by this source. Two direct conflicts with other current Australian paediatric sepsis documents in this compendium are recorded as evidence_unsettled rather than resolved: anaerobic blood culture (Queensland says collection is not needed, RCH specifies anaerobic bottle volumes) and IM ceftriaxone (50 mg/kg max 2 g at 60 minutes here, 100 mg/kg max 4 g at RCH, NSW triggering at 15 minutes without a dose).",
+  "claims": [
+    {
+      "claim": "Sepsis is a medical emergency and early recognition and treatment is imperative for survival, sepsis should be considered in every child with acute illness or new onset of organ dysfunction, and diagnosis is based on clinical judgement supported by laboratory findings",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis is a medical emergency: early recognition and treatment is imperative for survival. \u2026 Consider sepsis in every child with acute illness or new onset of organ dysfunction. \u2026 Diagnosis is based on clinical judgement supported by laboratory findings."
+    },
+    {
+      "claim": "Certain groups including very young children and children of Aboriginal, Torres Strait Islander, Pacific Islander or Maori origin have a higher risk of sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Certain groups including very young children and children of Aboriginal / Torres Strait Islander / Pacific Islander / Maori origin have a higher risk of sepsis."
+    },
+    {
+      "claim": "The initial treatment bundle includes collection of blood samples including blood cultures, administration of appropriate antibiotics, rapid fluid resuscitation and early consideration of inotropes, ideally within 60 minutes of presentation, and early escalation to paediatric critical care onsite or via Retrieval Services Queensland is essential",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Initial treatment bundle includes collection of blood samples including blood cultures, administration of appropriate antibiotics, rapid fluid resuscitation and early consideration of inotropes; ideally within 60 minutes of presentation. \u2026 Early escalation to paediatric critical care (onsite or via Retrieval Services) Queensland (RSQ) is essential."
+    },
+    {
+      "claim": "The mortality rate for untreated septic shock is more than 80 per cent and even with treatment is estimated at 15 to 20 per cent in children, and failure to recognise sepsis and delay in appropriate treatment are common themes in reviews of sepsis related mortality in children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The mortality rate for untreated septic shock is more than 80% and even with treatment is estimated at 15-20% in children. \u2026 Failure to recognise sepsis and the delay in appropriate treatment are common themes in reviews of sepsis related mortality in children."
+    },
+    {
+      "claim": "Septic shock is identified as sepsis with cardiovascular organ dysfunction, acknowledging that hypotension is a late and often pre-terminal sign in children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "It is identified as sepsis with cardiovascular organ dysfunction, acknowledging that hypotension is a late and often pre-terminal sign in children."
+    },
+    {
+      "claim": "Toxic shock syndrome is a potentially life-threatening subset of paediatric sepsis caused by superantigens from toxin-producing strains of Staphylococcus aureus or Streptococcal pyogenes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Toxic shock syndrome is a potentially life-threatening subset of paediatric sepsis, caused by superantigens from toxin-producing strains of Staphylococcus aureus or Streptococcal pyogenes."
+    },
+    {
+      "claim": "Children at high risk for sepsis include neonates and premature infants, children of Aboriginal, Torres Strait Islander, Pacific Islander or Maori origin, those with unimmunised or incomplete immunisation status, asplenia whether surgical or functional such as sickle cell disease, long-term steroid use, recent surgical procedure within 6 weeks, intravenous recreational drug use, indwelling lines or catheters such as VP shunt or CVAD, and recent inpatient episode of sepsis within 6 to 12 weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Children at high risk for sepsis \u2026 neonates and premature infants \u2026 children of Aboriginal / Torres Strait Islander / Pacific Islander / Maori origin \u2026 unimmunised or incomplete immunisation status \u2026 asplenia (surgical or functional e.g. sickle cell disease) \u2026 long-term steroid use \u2026 recent surgical procedure (within 6 weeks) \u2026 intravenous recreational drug use \u2026 indwelling lines or catheters (e.g. VP shunt or CVAD) \u2026 Recent inpatient episode of sepsis (within 6-12 weeks)"
+    },
+    {
+      "claim": "The sepsis pathway features of severe illness refer to the CEWT scores for the system examined such as the respiratory rate or heart rate, and not the overall CEWT score which can be misleading",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Paediatric sepsis pathway features of severe illness refer to the CEWT scores for the system examined e.g. the respiratory rate or heart rate; NOT the overall CEWT score which can be misleading."
+    },
+    {
+      "claim": "Vital sign features of severe illness include altered mental state, severe tachypnoea, increased work of breathing, grunt, weak cry or apnoea, marked and persistent tachycardia including high normal in the absence of drivers such as fever or pain, hypotension, poor skin perfusion, and indicators of moderate to severe dehydration",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "altered mental state \u2026 severe tachypnoea, increased work of breathing, grunt, weak cry or apnoea \u2026 marked and persistent tachycardia (including high normal in the absence of drivers i.e. fever, pain) \u2026 hypotension \u2026 poor skin perfusion \u2026 indicators of moderate to severe dehydration"
+    },
+    {
+      "claim": "It is important to pay attention to concerns expressed by the caregiver, particularly changes in usual behaviour of the child",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "It is important to pay attention to concerns expressed by the caregiver, particularly changes in usual behaviour of the child."
+    },
+    {
+      "claim": "The Childhood Early Warning Tool normal ranges are heart rate 100 to 159, minimum systolic BP above 75 and respiratory rate 21 to 45 for under 1 year; heart rate 90 to 139, systolic above 80 and respiratory rate 16 to 35 for 1 to 4 years; heart rate 80 to 129, systolic above 85 and respiratory rate 16 to 30 for 5 to 11 years; and heart rate 60 to 119, systolic above 90 and respiratory rate 16 to 25 for 12 to 17 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "< 1 year old 100-159 >75 21-45 \u2026 1-4 year old 90-139 >80 16-35 \u2026 5-11 year old 80-129 >85 16-30 \u2026 12-17 year old 60-119 >90 16-25"
+    },
+    {
+      "claim": "Laboratory sign features of severe illness include lactate above 2 being concerning and above 4, glucose below 3 noting it can be high with stress, low platelets, elevated creatinine, elevated INR, and elevated bilirubin or ALT",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "lactate > 2 concerning, > 4 \u2026 glucose < 3 (note can be high with stress) \u2026 low platelets \u2026 elevated Creatinine \u2026 elevated INR \u2026 elevated bilirubin or ALT"
+    },
+    {
+      "claim": "Children with septic shock may have normal blood pressure, and the way in which the child presents does not change management nor determine type of inotropic support",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Children with septic shock may have normal blood pressure. The way in which the child presents does not change management nor determine type of inotropic support."
+    },
+    {
+      "claim": "Hypotension is a late and often terminal sign in paediatric septic shock",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hypotension is a late, and often terminal, sign in paediatric septic shock."
+    },
+    {
+      "claim": "Shock with vasoconstriction is common in infants and young children with constricted peripheral systemic vasculature giving cold peripheries and prolonged capillary refill time, and tachycardia is usually present with relative bradycardia a pre-terminal sign",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Shock with vasoconstriction \u2026 common in infants and young children \u2026 Constricted peripheral systemic vasculature: cold peripheries and prolonged capillary refill time \u2026 Tachycardia is usually present; relative bradycardia is a pre-terminal sign"
+    },
+    {
+      "claim": "Shock with vasodilation is more common in older children and adults and is characterised by vasoplegia in which systemic vascular resistance is low with low diastolic blood pressure, giving brisk or flash capillary refill and full or bounding pulses",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Shock with vasodilation \u2026 More common in older children (and adults) \u2026 Characterised by vasoplegia, in which the systemic vascular resistance is low with low diastolic blood pressure: brisk capillary refill time ('flash' capillary refill) and pulses are usually felt to be full or bounding"
+    },
+    {
+      "claim": "High lactate levels above 4 have been associated with increased mortality, PICU admission and hospital length of stay, and a lactate above 2 is potentially concerning but a lactate above 4 requires urgent action",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "High lactate levels > 4 have been associated with increased mortality, PICU admission and hospital length of stay. A lactate that is > 2 is potentially concerning but a lactate > 4 requires urgent action."
+    },
+    {
+      "claim": "In septic shock antibiotic administration should not be delayed for specimen collection or testing beyond one hour",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In septic shock, do not delay antibiotic administration for specimen collection or testing beyond ONE hour."
+    },
+    {
+      "claim": "Blood culture should be prioritised over other blood tests and ideally collected prior to antibiotics, but treatment should not be delayed for collection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prioritise over other blood tests. Ideally, blood sample should be collected prior to antibiotics but do not delay treatment for collection."
+    },
+    {
+      "claim": "Culture sensitivity increases with blood volume, and the recommended volume for aerobic culture in a yellow top bottle is aiming 2 to 6 mL and ideally 4 mL, with 1 mL the minimum for neonates",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Culture sensitivity increases with blood volume. Recommended volume for aerobic culture in yellow top bottle: \u2026 Aiming 2-6 mL, ideally 4 mL \u2026 for neonates, 1 mL is the minimum"
+    },
+    {
+      "claim": "Collection of anaerobic blood culture is not needed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Collection of anaerobic blood culture is not needed."
+    },
+    {
+      "claim": "If the child has a CVAD, blood cultures should be taken from each lumen as per protocol, and increased lactate should not be attributed to difficult venepuncture",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If the child has a CVAD, blood cultures should be taken from each lumen as per protocol. \u2026 Do NOT attribute increased lactate to difficult venepuncture."
+    },
+    {
+      "claim": "Lumbar puncture is not indicated in the initial work up and is contraindicated in established sepsis until haemodynamically stable, and once stable should only be performed in an alert child with no signs of raised ICP, coagulopathy or haemodynamic compromise",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Lumbar puncture \u2026 Not indicated in the initial work up and contraindicated in established sepsis until hemodynamically stable. Once stable, only perform in alert child with no signs of raised ICP, coagulopathy or haemodynamic compromise."
+    },
+    {
+      "claim": "White cell count and PCR for meningitis diagnosis can be done on CSF from a delayed lumbar puncture",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Can do WCC and PCR for meningitis diagnosis on CSF from delayed LP."
+    },
+    {
+      "claim": "In septic shock antimicrobials should be administered as soon as possible within 1 hour of recognition, with delay beyond 1 hour associated with increased mortality, and in sepsis without shock antimicrobials should still be administered as soon as possible, suggested within up to 3 hours of recognition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In septic shock, antimicrobials should be administered as soon as possible within 1 hour of recognition. In shock, delayed time to antimicrobial administration beyond 1 hour has been associated with an increased mortality. In sepsis without shock, antimicrobials should still be administered as soon as possible, suggested within up to 3 hours of recognition."
+    },
+    {
+      "claim": "If there is no IV or IO access within 60 minutes, ceftriaxone 50 mg/kg IM to a maximum of 2 grams should be administered and assistance sought",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Urgently administer broad-spectrum antibiotics IV or IO as per QPSP antibiotic guidance - if no IV or IO access within 60 minutes, administer Ceftriaxone 50mg/kg IM (maximum 2 grams) and seek assistance."
+    },
+    {
+      "claim": "IM dosing of antibiotics often fails to deliver adequate coverage due to poor perfusion and so should only be used when other methods have failed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "IM dosing of antibiotics often fails to deliver adequate coverage due to poor perfusion and so should only be used when other methods have failed."
+    },
+    {
+      "claim": "Immediate fluid resuscitation starts with 10 to 20 mL/kg of a balanced solution such as Plasmalyte or sodium chloride 0.9 per cent, to be pushed in less than five minutes using a 50 mL syringe with a staff member dedicated to pushing fluids",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Provide immediate fluid resuscitation starting with 10-20 mL/kg of balanced solution (like Plasmalyte) or sodium chloride 0.9% (normal saline) to be pushed in less than five minutes using 50 mL syringe with a staff member dedicated to pushing fluids."
+    },
+    {
+      "claim": "Fluids should be titrated to response being a decrease in heart rate and improvement of end-organ perfusion, repeated as necessary while evaluating for signs of fluid overload, and hypotonic fluids should never be used as bolus therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Titrate to response: decrease in heart rate and the improvement of end-organ perfusion. Repeat as necessary, evaluating for signs of fluid overload. \u2026 Hypotonic fluids should never be used as bolus therapy."
+    },
+    {
+      "claim": "Inotropic support with adrenaline as first line should be commenced if normal physiological parameters are not restored after giving more than 40 to 60 mL/kg of fluids, or at any time if hypotension is present",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Commence inotropic support of Adrenaline (as first line) if normal physiological parameters are not restored after giving more than 40-60 mL/kg of fluids or anytime if hypotension is present."
+    },
+    {
+      "claim": "A child may arrest from cardiovascular collapse on rapid sequence induction or intubation, drugs with negative inotropy such as midazolam or propofol should be avoided with an arrest dose of adrenaline IV ready, and pure alpha agonists such as metaraminol should be avoided as myocardial depression can be significant",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Child may arrest from cardiovascular collapse on RSI /intubation. \u2026 Avoid drugs with negative inotropy (such as Midazolam or Propofol) and have arrest dose of Adrenaline IV ready. Avoid pure alpha agonists such as metaraminol as myocardial depression can be significant."
+    },
+    {
+      "claim": "The child should be adequately pre-oxygenated with haemodynamics optimised by concomitant fluid resuscitation and adrenaline infusion prior to intubation, and the induction drug dose should be reduced to 50 per cent of the weight-based dose in a child with significant cardiovascular compromise",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Adequately pre-oxygenate child and have haemodynamics optimised with concomitant fluid resuscitation and Adrenaline infusion prior to intubation. \u2026 Reduce the induction drug dose in a child with significant cardiovascular compromise (i.e. 50% of weight-based dose)."
+    },
+    {
+      "claim": "Ketamine at 0.5 to 1 mg/kg and/or fentanyl at 1 to 2 micrograms/kg for induction as less cardiodepressant agents, with rocuronium at 1.2 mg/kg for muscle relaxation, are generally a suitable combination for rapid sequence induction",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ketamine (0.5-1mg/kg)and/or Fentanyl (1-2 microgram/kg) for induction (less cardiodepressant) and Rocuronium (1.2 mg/kg) for muscle relaxation are generally a suitable combination for rapid sequence induction."
+    },
+    {
+      "claim": "First-line inotrope is adrenaline starting at 0.1 microgram/kg/min, with dosing above 0.5 micrograms/kg/min concerning and to be done only in conjunction with PICU or RSQ, and it can be administered temporarily via a peripheral IV or IO line before central access is gained",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "First-line choice: Adrenaline starting at 0.1 microgram/kg/min (dosing > 0.5microgram/kg/min is concerning and should be done only in conjunction with PICU/RSQ), which can be administered temporarily via a peripheral IV or IO line before central access is gained in a suitable environment."
+    },
+    {
+      "claim": "Second-line inotrope is noradrenaline starting at 0.1 micrograms/kg/min, and push dose adrenaline aliquots can be given as 1 microgram/kg being 0.1 mL/kg of a 1 in 100,000 adrenaline solution if the infusion is being prepared and the patient remains in shock",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Second-line choice: Noradrenaline starting at 0.1 micrograms/kg/min \u2026 Aliquots of Adrenaline IV (Push dose pressors) can be given as 1 microgram/kg (i.e. 0.1 mL/kg of a 1:100,000 Adrenaline solution) if infusion is being prepared and the patient remains in shock."
+    },
+    {
+      "claim": "Umbilical line access should be considered in newborns up to 2 weeks of life",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider umbilical line access in newborns up to 2 weeks of life."
+    },
+    {
+      "claim": "For those with suspected adrenal insufficiency, blood should if possible be collected for cortisol and ACTH and then hydrocortisone IV at 1 mg/kg administered",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For those with suspected adrenal insufficiency, if possible, collect blood for cortisol and ACTH and then administer Hydrocortisone IV (1 mg/kg)."
+    },
+    {
+      "claim": "Alternative diagnoses should be considered in all patients, especially neonates who may have a metabolic or cardiogenic cause of their shock such as congenital duct dependent lesions or acquired cardiac failure, and electrolyte disturbance such as hypocalcaemia is common in critically ill children with sepsis and can contribute to poor cardiac function",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider alternative diagnoses in all patients, especially neonates who may have a metabolic or cardiogenic (congenital duct dependent lesions or acquired cardiac failure e.g. myocarditis) cause of their shock. \u2026 Electrolyte disturbance (e.g. hypocalcaemia) is common in critically-ill children with sepsis and can contribute to poor cardiac function."
+    },
+    {
+      "claim": "Escalation triggers to paediatric critical care are hypotension with blood pressure CEWT score 2 or more, reduced level of consciousness despite resuscitation, lactate 2 mmol/L or greater or not reducing, and persistent tachycardia with heart rate CEWT score 2 or more",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hypotension (Blood pressure CEWT score 2 or more) \u2026 Reduced level of consciousness despite resuscitation \u2026 Lactate 2mmol/L or greater or not reducing \u2026 Persistent tachycardia (Heart rate CEWT score 2 or more)"
+    },
+    {
+      "claim": "If there is no onsite paediatric critical care service, Retrieval Services Queensland should be contacted on 1300 799 127",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If no onsite paediatric critical care service contact RSQ on 1300 799 127:"
+    },
+    {
+      "claim": "CREDD, the Children's Resuscitation Emergency Drug Dosages, provides weight-based medication and equipment for managing critically unwell children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "CREDD (Children's Resuscitation Emergency Drug Dosages) provides weight-based medication and equipment for managing these critically unwell children."
+    },
+    {
+      "claim": "The guideline was last updated May 2026",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Last updated:   May 2026"
+    }
+  ],
+  "summary": {
+    "total": 42,
+    "pass": 42,
+    "fail": 0
+  }
+}
