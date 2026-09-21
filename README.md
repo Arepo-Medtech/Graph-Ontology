@@ -118,7 +118,11 @@ tables result:
 | MP 9,858 | 139 (1.4 %) | OMOP's AMT carries almost no medicinal-product level |
 | AU substances 1,053 | 200 (`AU Substance` class) | |
 
-The missing fifth are products released after the 2021 snapshot. Two ways to finish: an OHDSI Athena download
+The missing fifth are products released after the 2021 snapshot. To finish offline with zero API calls, download an
+OHDSI Athena bundle (free account; tick SNOMED, RxNorm, RxNorm Extension, AMT, LOINC, ATC, UCUM — see
+`~/code/spine/docs/athena.md`) and run `scripts/omophub_bridge.py athena <unpacked dir>`: DuckDB reads `CONCEPT.csv` and
+`CONCEPT_RELATIONSHIP.csv`, fills the same caches for every level (TPUU, TPP, CTPP, MPUU, MP) and all 6,593 substances,
+and writes the report; then rebuild. Two ways to finish: an OHDSI Athena download
 (free account; `CONCEPT.csv` + `CONCEPT_RELATIONSHIP.csv` hold every `Maps to` offline, zero API calls) or a paid
 OMOPHub plan. The scripts resume from the caches either way; the offline `report` needs no calls.
 OMOP's AMT snapshot is from 2021, so products released since are `in_omop=false`; the RxNav route stays

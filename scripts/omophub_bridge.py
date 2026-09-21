@@ -13,6 +13,7 @@ independent second verdict on the by-name RxNorm links from rxnorm_enrich/rxnorm
   scripts/omophub_bridge.py substances            SNOMED substance -> OMOP concept -> RxNorm ingredient (`Maps to`)
                                                   -> cache/omophub_substances.json    {sctid: {...}}
   scripts/omophub_bridge.py report                agreement with cache/rxnorm_substances.json -> out/omop_bridge_report.md
+  scripts/omophub_bridge.py athena <dir>          the whole bridge offline from an OHDSI Athena bundle (zero API calls; all levels + substances)
 
 Rate limit is 120 requests/min (burst 20 per 10 s); the client paces itself and honours 429 + ratelimit-reset.
 Every phase is resumable: results are written every 200 calls and skipped on re-run. Run outside the sandbox
@@ -34,9 +35,9 @@ from typing import Any, Dict, Iterable, List, Optional
 import duckdb
 
 BASE = "https://api.omophub.com/v1"
-CACHE = Path("cache")
-OUT = Path("out")
-DB = OUT / "compendium.duckdb"
+CACHE = Path(os.environ.get("OMOPHUB_BRIDGE_CACHE", "cache"))   # override for tests / dry runs
+OUT = Path(os.environ.get("OMOPHUB_BRIDGE_OUT", "out"))
+DB = Path("out") / "compendium.duckdb"
 VOCAB_CACHE = CACHE / "omophub_amt_concepts.json"
 MAP_CACHE = CACHE / "omophub_amt_maps.json"
 SUBS_CACHE = CACHE / "omophub_substances.json"
@@ -218,6 +219,62 @@ def cmd_substances(args) -> int:
     return cmd_report(args)
 
 
+# --- athena: the same bridge offline from an OHDSI Athena bundle (zero API calls) ----------------------------
+def cmd_athena(args) -> int:
+    """Fill the same caches the API path fills, but from Athena's CONCEPT.csv + CONCEPT_RELATIONSHIP.csv with DuckDB.
+    AMT product -> `Maps to` -> standard drug concept; SNOMED / AMT substance -> `Maps to` -> RxNorm ingredient."""
+    src = Path(args.dir)
+    concept = next((p for p in src.rglob("CONCEPT.csv")), None)
+    rel = next((p for p in src.rglob("CONCEPT_RELATIONSHIP.csv")), None)
+    if not concept or not rel:
+        sys.exit(f"CONCEPT.csv / CONCEPT_RELATIONSHIP.csv not found under {src}")
+    con = duckdb.connect()
+    con.execute(f"CREATE VIEW c AS SELECT * FROM read_csv('{concept}', delim='\t', header=true, quote='', all_varchar=true)")
+    con.execute(f"CREATE VIEW r AS SELECT * FROM read_csv('{rel}', delim='\t', header=true, quote='', all_varchar=true)")
+    con.execute("CREATE TABLE amt AS SELECT concept_id, concept_code, concept_name, concept_class_id, standard_concept, domain_id, vocabulary_id, invalid_reason, valid_end_date FROM c WHERE vocabulary_id='AMT'")
+    n_amt = con.execute("SELECT count(*) FROM amt").fetchone()[0]
+    print(f"Athena: AMT concepts {n_amt:,}", flush=True)
+    vocab = {r[1]: {"concept_id": int(r[0]), "concept_code": r[1], "concept_name": r[2], "concept_class_id": r[3], "standard_concept": r[4], "domain_id": r[5], "vocabulary_id": r[6], "invalid_reason": r[7], "valid_end_date": r[8]}
+             for r in con.execute("SELECT * FROM amt").fetchall()}
+    save(VOCAB_CACHE, {"_meta": {"next_page": 1, "total_pages": 0, "source": "athena"}, "concepts": vocab})
+    con.execute("""CREATE TABLE maps AS
+      SELECT src.concept_code AS src_code, src.vocabulary_id AS src_vocab, tgt.concept_id AS target_concept_id, tgt.concept_name AS target_name,
+             tgt.vocabulary_id AS target_vocabulary, tgt.concept_code AS target_code, tgt.standard_concept AS target_standard, tgt.domain_id AS target_domain
+      FROM r JOIN c src ON src.concept_id=r.concept_id_1 JOIN c tgt ON tgt.concept_id=r.concept_id_2
+      WHERE r.relationship_id='Maps to' AND r.invalid_reason IS NULL AND src.vocabulary_id IN ('AMT','SNOMED')""")
+    maps: Dict[str, Any] = {}
+    cdb = duckdb.connect(str(DB), read_only=True)
+    for level, q in (("tpuu", "SELECT DISTINCT tpuu_id FROM transcode"), ("mpuu", "SELECT id FROM product WHERE level='MPUU'"), ("mp", "SELECT id FROM product WHERE level='MP'"),
+                     ("tpp", "SELECT id FROM product WHERE level='TPP'"), ("ctpp", "SELECT id FROM product WHERE level='CTPP'")):
+        codes = [x[0] for x in cdb.execute(q).fetchall()]
+        con.execute("CREATE OR REPLACE TABLE want AS SELECT unnest(?::VARCHAR[]) AS code", [codes])
+        rows = con.execute("SELECT w.code, m.target_concept_id, m.target_name, m.target_vocabulary, m.target_code, m.target_standard, m.target_domain FROM want w JOIN maps m ON m.src_code=w.code AND m.src_vocab='AMT'").fetchall()
+        by: Dict[str, List[Dict[str, Any]]] = {}
+        for code, *t in rows:
+            by.setdefault(code, []).append({"target_concept_id": int(t[0]), "target_name": t[1], "target_vocabulary": t[2], "target_code": t[3], "target_standard": t[4], "target_domain": t[5]})
+        for code in codes:
+            v = vocab.get(code)
+            maps[code] = ({"in_omop": True, "level": level, "concept_id": v["concept_id"], "concept_class": v["concept_class_id"], "self_standard": v["standard_concept"] == "S", "targets": by.get(code, [])}
+                          if v else {"in_omop": False, "level": level, "targets": []})
+        print(f"  {level.upper():<5} {len(codes):>6} codes, in AMT {sum(1 for c in codes if c in vocab):>6}, with a standard target {sum(1 for c in codes if by.get(c) or (vocab.get(c) or {}).get('standard_concept')=='S'):>6}", flush=True)
+    save(MAP_CACHE, maps)
+    rx = load(CACHE / "rxnorm_substances.json")          # Stage 5 cache when present; otherwise every substance in the store
+    sids = sorted(rx) or [x[0] for x in cdb.execute("SELECT DISTINCT substance_id FROM substance ORDER BY 1").fetchall()]
+    subs: Dict[str, Any] = {}
+    con.execute("CREATE OR REPLACE TABLE want AS SELECT unnest(?::VARCHAR[]) AS code", [sids])
+    src_rows = {r[0]: r for r in con.execute("SELECT w.code, c.concept_id, c.concept_name, c.vocabulary_id, c.domain_id, c.concept_class_id, c.standard_concept, c.invalid_reason FROM want w JOIN c ON c.concept_code=w.code AND c.vocabulary_id IN ('SNOMED','AMT')").fetchall()}
+    tgt_rows: Dict[str, List[Dict[str, Any]]] = {}
+    for code, *t in con.execute("SELECT w.code, m.target_concept_id, m.target_name, m.target_vocabulary, m.target_code, m.target_standard, m.target_domain FROM want w JOIN maps m ON m.src_code=w.code").fetchall():
+        tgt_rows.setdefault(code, []).append({"target_concept_id": int(t[0]), "target_name": t[1], "target_vocabulary": t[2], "target_code": t[3], "target_standard": t[4], "target_domain": t[5]})
+    for sid in sids:
+        r_ = src_rows.get(sid)
+        subs[sid] = {"omop": ({"concept_id": int(r_[1]), "concept_name": r_[2], "vocabulary_id": r_[3], "domain_id": r_[4], "concept_class_id": r_[5], "standard_concept": r_[6], "invalid_reason": r_[7]} if r_ else None),
+                     "targets": tgt_rows.get(sid, [])}
+    save(SUBS_CACHE, subs)
+    print(f"substances: {sum(1 for s in subs.values() if s['omop'])} of {len(subs)} in OMOP; {sum(1 for s in subs.values() if any(t['target_vocabulary']=='RxNorm' for t in s['targets']))} with an RxNorm target", flush=True)
+    return cmd_report(args)
+
+
 # --- report --------------------------------------------------------------------------------------------
 def cmd_report(args) -> int:
     rx = load(CACHE / "rxnorm_substances.json")
@@ -278,6 +335,7 @@ def main() -> int:
     m = sub.add_parser("map"); m.add_argument("level", choices=["tpuu", "mpuu", "mp"]); m.set_defaults(fn=cmd_map)
     sub.add_parser("substances").set_defaults(fn=cmd_substances)
     sub.add_parser("report").set_defaults(fn=cmd_report)
+    a = sub.add_parser("athena", help="fill the same caches offline from an OHDSI Athena bundle directory (CONCEPT.csv + CONCEPT_RELATIONSHIP.csv)"); a.add_argument("dir"); a.set_defaults(fn=cmd_athena)
     args = ap.parse_args()
     return args.fn(args)
 
