@@ -1,0 +1,291 @@
+{
+  "guideline": "guidelines/anaphylaxis-children.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Anaphylaxis' (last updated October 2025, PIC endorsed), including key points, background, the clinical features table, investigations, the adrenaline dose chart and its footnote, the device table, refractory anaphylaxis, the peripheral IV infusion protocol, other considerations, observation and admission, consultation and transfer triggers, the discharge checklist, PBS availability, the WAO diagnostic criteria, timing by route, fatal anaphylaxis, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. Doses, the device weight bands and the infusion recipe are transcribed verbatim from the source's own tables and text, which state them in full. The initial and refractory management flowcharts are IMAGES and were not retrieved: the sequence, the interval between IM adrenaline doses, the injection site, and the fluid and oxygen steps are inside them, are recorded as input_unavailable, and are not reconstructed.",
+  "claims": [
+    {
+      "claim": "The World Allergy Organization Anaphylaxis Committee definition of anaphylaxis is a serious systemic hypersensitivity reaction that is usually rapid in onset and may cause death",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**A serious systemic hypersensitivity reaction that is usually rapid in onset and may cause death**"
+    },
+    {
+      "claim": "Severe anaphylaxis is characterised by potentially life-threatening compromise in airway, breathing and/or circulation, and may occur without typical skin features or circulatory shock being present",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Severe anaphylaxis is characterised by potentially life-threatening compromise in: \u2026 - **Airway, breathing and/or circulation** \u2026 May occur **without** typical skin features or circulatory shock being present"
+    },
+    {
+      "claim": "Initial treatment is to remove the allergen if possible and give IM adrenaline",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "2. Initial treatment is to remove the allergen if possible and give IM adrenaline"
+    },
+    {
+      "claim": "In children with possible anaphylaxis and known asthma, clinicians should always give adrenaline first, then asthma medications",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "3. In children with possible anaphylaxis and known asthma, **always give adrenaline first**, then asthma medications"
+    },
+    {
+      "claim": "Position is important and the child should be laid flat or sat with legs extended and not allowed to stand or walk for at least 1 hour after symptoms have resolved",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "4. Position is important. **Lay child flat or sitting with legs extended \u2013 do NOT allow to stand or walk** for at least 1 hour after symptoms have resolved"
+    },
+    {
+      "claim": "As anaphylaxis is a clinical diagnosis, emergency treatment should be guided by clinician judgement rather than a precise definition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "As anaphylaxis is a clinical diagnosis, emergency treatment should be guided by clinician judgement rather than a precise definition"
+    },
+    {
+      "claim": "Respiratory symptoms predominate in children and may resolve prior to any treatment or hospital arrival, but should still be recognised to avoid missed diagnosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Respiratory symptoms predominate in children, and may resolve prior to any treatment or hospital arrival, but should still be recognised to avoid missed diagnosis"
+    },
+    {
+      "claim": "Gastrointestinal symptoms such as abdominal pain are not always due to anaphylaxis, but when severe the diagnosis should be considered to avoid treatment delay",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Gastrointestinal symptoms (eg abdominal pain) are not always due to anaphylaxis, but when severe, consider the diagnosis to avoid treatment delay"
+    },
+    {
+      "claim": "Airway features of anaphylaxis are difficult or noisy breathing, tongue rather than lip swelling, throat swelling or tightness, hoarse voice or change in character of cry, and drooling in infants",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Airway | Difficult or noisy breathing<br>**Tongue** (not lip) swelling<br> Throat swelling or tightness<br> Hoarse voice or change in character of cry<br> Drooling (infants) |"
+    },
+    {
+      "claim": "Breathing features, which are the most common in children, are difficulty talking, wheeze and persistent usually sudden onset cough",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Breathing<br>(most common in children) | Difficulty talking<br> Wheeze<br> Persistent (usually sudden onset) cough |"
+    },
+    {
+      "claim": "Circulation features of anaphylaxis are pale and floppy in an infant, persistent dizziness, sudden drowsiness, collapse with or without unconsciousness, hypotension, tachycardia, bradycardia, and cardiac arrest",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Circulation | Pale and floppy (infant)<br> Persistent dizziness<br> Sudden drowsiness<br> Collapse with or without unconsciousness<br> Hypotension, tachycardia, bradycardia<br> Cardiac arrest |"
+    },
+    {
+      "claim": "Severe or persistent gastrointestinal symptoms are a sign of anaphylaxis of any cause, mild gastrointestinal symptoms are a sign of anaphylaxis when caused by insect stings or parenteral medications, and mild gastrointestinal symptoms are not a sign of anaphylaxis when caused by food",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Severe/persistent** GI symptoms (abdominal pain and/or vomiting) are a sign of anaphylaxis of **any cause**<br>**Mild** GI symptoms (abdominal pain and/or vomiting) are a sign of anaphylaxis when caused by **insect stings or parenteral medications**<br>**Mild** GI symptoms (abdominal pain and/or vomiting) are **not** a sign of anaphylaxis when caused by **food**"
+    },
+    {
+      "claim": "Skin signs including facial angioedema and widespread hives alone do not indicate anaphylaxis, and skin signs are absent in 10 to 20 per cent of cases",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Skin signs (including facial angioedema, widespread hives) **alone** do **not** indicate anaphylaxis (skin signs absent in 10-20%) |"
+    },
+    {
+      "claim": "Investigations are required in none in the majority because anaphylaxis is a clinical diagnosis, and in special circumstances tryptase may be considered",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "None in the majority; **anaphylaxis is a clinical diagnosis.** In special circumstances consider tryptase (see below)"
+    },
+    {
+      "claim": "The adrenaline dose for a child under 1 year weighing under 7.5 kg is 0.1 mL of 1:1000 with no device available, and for 1 to 2 years at 10 kg is 0.1 mL with a 150 microgram device for 7.5 to 20 kg under 5 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| <1 | <7.5 | 0.1\\* | Not available | \u2026 | 1-2 | 10 | 0.1 | 7.5-20 kg (<5 yrs):<br>150 microg |"
+    },
+    {
+      "claim": "The adrenaline dose is 0.15 mL at 2 to 4 years and 15 kg, 0.2 mL at 4 to 5 years and 20 kg, and 0.3 mL at 5 to 10 years and 30 kg with a 300 microgram device for over 20 kg aged 5 years or more",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| 2-4 | 15 | 0.15 | \u2026 | 4-5 | 20 | 0.2 | \u2026 | 5-10 | 30 | 0.3 | >20 kg (\u22655 yrs):<br>300 microg |"
+    },
+    {
+      "claim": "The adrenaline dose is 0.4 mL at 10 to 12 years and 40 kg, and 0.5 mL at over 12 years and over 50 kg with a 500 microgram or 300 microgram device for over 50 kg aged over 12 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| 10-12 | 40 | 0.4 | \u2026 | >12 | >50 | 0.5 | >50 kg (>12 yrs):<br>500 microg or 300 microg |"
+    },
+    {
+      "claim": "Volumes under 0.1 mL are difficult to measure accurately and prone to 10 times overdose, particularly in a stressful situation when managing anaphylaxis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "NB volumes <0.1 mL are difficult to measure accurately and prone to 10x overdose, particularly in a stressful situation when managing anaphylaxis"
+    },
+    {
+      "claim": "The adrenaline devices are EpiPen Jr at 150 micrograms or 0.15 mg for 7.5 to 20 kg under 5 years, EpiPen at 300 micrograms or 0.3 mg for over 20 kg aged 5 years or more, and Anapen at 500 micrograms or 0.5 mg for over 50 kg aged over 12 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| EpiPen\u00ae Jr<br>(150 microg / 0.15 mg) | 7.5-20 kg (<5 years) | \u2026 | EpiPen\u00ae<br>(300 microg / 0.3 mg) | >20 kg (\u22655 years) | \u2026 | Anapen\u00ae<br>(500 microg / 0.5 mg) | >50 kg (>12 years) |"
+    },
+    {
+      "claim": "Refractory anaphylaxis is anaphylaxis requiring ongoing treatment due to persisting respiratory or cardiovascular symptoms despite 2 appropriate doses of IM adrenaline",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Refractory anaphylaxis is anaphylaxis requiring ongoing treatment (due to persisting respiratory or cardiovascular symptoms) despite 2 appropriate doses of IM adrenaline**"
+    },
+    {
+      "claim": "In anaphylaxis refractory to adrenaline infusion clinicians should seek expert critical care or transport service advice, and IV bolus adrenaline is not recommended but may be used in peri-arrest scenarios at adrenaline 1 microgram/kg IV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Seek expert critical care / transport service advice \u2026 **IV bolus adrenaline is not recommended**, but may be used in peri-arrest scenarios eg adrenaline 1 microg/kg IV"
+    },
+    {
+      "claim": "Clinicians should follow local infusion guidelines, and in non-tertiary hospital settings the stated infusion guideline can be used in consultation with a senior clinician and paediatric transport services",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Follow local infusion guidelines** \u2026 In non-tertiary hospital settings, the infusion guideline below can be used in consultation with a senior clinician and paediatric transport services:"
+    },
+    {
+      "claim": "The peripheral IV adrenaline infusion is made by mixing 1 mL of 1:1000 adrenaline in 1000 mL of sodium chloride 0.9 per cent giving approximately 1 microgram/mL, started at 5 mL/kg/hr which is approximately 0.1 microgram/kg/min",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Mix 1 mL of **1:1000** adrenaline in 1000 mL of sodium chloride 0.9% (approx 1 microg/mL) \u2026 Start infusion at 5 mL/kg/hr (approx 0.1 microg/kg/min)"
+    },
+    {
+      "claim": "A dedicated line, infusion pump and anti-reflux valves should be used when possible, the dose should be titrated according to response and side effects, high infusion rates should be avoided for more than 2 hours as this may cause fluid overload, and monitoring should be continuous including all vital signs, 12-lead ECG and conscious state",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A dedicated line, infusion pump and anti-reflux valves should be used when possible \u2026 Titrate dose according to response and side effects \u2026 Avoid high infusion rates for more than 2 hours as this may cause fluid overload \u2026 Monitor continuously (all vital signs, 12-lead ECG and conscious state)"
+    },
+    {
+      "claim": "Subcutaneous adrenaline should not be used as absorption is less reliable and can be delayed compared to IM",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Do **not** use subcutaneous adrenaline, as absorption is less reliable and can be delayed compared to IM"
+    },
+    {
+      "claim": "Antihistamines, corticosteroids and leukotriene antagonists should not be given in anaphylaxis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Antihistamines, corticosteroids and leukotriene antagonists **should not** be given in anaphylaxis"
+    },
+    {
+      "claim": "Serum tryptase has no role in acute management of anaphylaxis and should only be ordered where significant diagnostic doubt exists such as idiopathic anaphylaxis or co-existing anxiety, or after consultation with a paediatric allergy specialist in special circumstances such as insect stings, diagnostic agents or perioperative reactions",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Serum tryptase has no role in acute management of anaphylaxis. It should only be ordered in situations where significant diagnostic doubt exists (eg idiopathic, co-existing anxiety) or after consultation with a paediatric allergy specialist in special circumstances (eg insect stings, diagnostic agents, perioperative reactions)"
+    },
+    {
+      "claim": "All children with anaphylaxis should be observed in a setting equipped to manage deterioration for at least 4 hours after the last dose of adrenaline, or after onset of symptoms if no adrenaline is given",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All children with anaphylaxis should be **observed** in a setting equipped to manage deterioration, **for at least 4 hours**: \u2026 After last dose of adrenaline \u2026 After onset of symptoms if no adrenaline is given"
+    },
+    {
+      "claim": "Overnight admission for observation is recommended for more than 2 adrenaline doses, adrenaline infusion, IV fluid resuscitation or circulatory involvement, history of biphasic reaction or more severe initial reaction, poorly controlled asthma, living in an isolated location with delay to emergency services, presenting for medical care late in the evening, and anaphylaxis to monoclonal antibody therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": ">2 adrenaline doses, adrenaline infusion, IV fluid resuscitation, circulatory involvement \u2026 History of biphasic reaction, more severe initial reaction \u2026 Poorly controlled asthma \u2026 Lives in an isolated location with delay to emergency services \u2026 Presents for medical care late in the evening \u2026 Anaphylaxis to monoclonal antibody therapy"
+    },
+    {
+      "claim": "Consultation with the local paediatric or allergy immunology team should be considered for high risk of fatal anaphylaxis, more than 1 dose of adrenaline, first diagnosis of anaphylaxis, and anaphylaxis to monoclonal antibody therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "High risk of fatal anaphylaxis (see additional notes) \u2026 >1 dose of adrenaline \u2026 First diagnosis of anaphylaxis"
+    },
+    {
+      "claim": "Transfer should be considered for more than 2 doses of adrenaline meaning refractory anaphylaxis, adrenaline infusion, and a child requiring care beyond the comfort level of the hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": ">2 doses of adrenaline (refractory anaphylaxis) \u2026 Adrenaline infusion \u2026 A child requiring care beyond the comfort level of the hospital"
+    },
+    {
+      "claim": "Discharge may be considered when the child is clinically stable and not requiring adrenaline for at least 4 hours",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinically stable and not requiring adrenaline for at least 4 hours"
+    },
+    {
+      "claim": "The discharge checklist includes updating the medical record identifying the suspected allergen to avoid where possible, supplying or prescribing 2 adrenaline devices with the option of keeping the child until morning if a script cannot be accessed due to pharmacy closure, and training in correct use with a trainer device of the prescribed brand and appropriate positioning such as not standing or walking during anaphylaxis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. **Update the medical record** identifying suspected allergen to avoid where possible \u2026 3. **2 EpiPen\u00ae/ EpiPen\u00ae Jr/ Anapen\u00ae** supplied or prescribed, if unable to access script due to pharmacy closure (eg overnight) then consider keeping until morning \u2026 4. Training in correct use with trainer device of prescribed brand and appropriate positioning (eg **not** standing or walking during anaphylaxis)"
+    },
+    {
+      "claim": "Children with medication or drug anaphylaxis are generally not prescribed an adrenaline device",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "- Children with medication (drug) anaphylaxis are generally not prescribed an adrenaline device"
+    },
+    {
+      "claim": "The discharge checklist also includes considering a MedicAlert bracelet, referral to a paediatrician for review as soon as possible, optimising asthma management including diagnosis, asthma action plan and preventers, and considering reporting as per local requirements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "5. Consider MedicAlert bracelet \u2026 7. Referral to paediatrician or for review as soon as possible \u2026 8. **Optimise asthma management** including diagnosis, asthma action plan and preventers \u2026 9. Consider reporting as per local requirements"
+    },
+    {
+      "claim": "EpiPen, EpiPen Jr and Anapen are available on PBS for all children with a history of anaphylaxis, and they require authority prescription or can be purchased without prescription at full cost",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "EpiPen\u00ae / EpiPen\u00ae Jr / Anapen\u00ae are available on PBS for all children with a history of anaphylaxis. See . They require authority prescription or can be purchased without prescription at full cost."
+    },
+    {
+      "claim": "According to the World Allergy Organization Anaphylaxis Committee, anaphylaxis is highly likely when any one of two criteria are fulfilled",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "According to the World Allergy Organization Anaphylaxis Committee, anaphylaxis is highly likely when **any one** of the following two criteria are fulfilled:"
+    },
+    {
+      "claim": "The first WAO criterion is acute onset of an illness over minutes to several hours with simultaneous involvement of the skin, mucosal tissue or both, and at least one of respiratory compromise, reduced blood pressure or associated symptoms of end-organ dysfunction, or severe gastrointestinal symptoms especially after exposure to non-food allergens",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. Acute onset of an illness (minutes to several hours) with simultaneous involvement of the skin, mucosal tissue, or both (eg generalized hives, pruritus or flushing, swollen lips-tongue-uvula), **and at least one of the following:** \u2026 1. **Respiratory** compromise (eg dyspnoea, wheeze-bronchospasm, stridor, reduced peak expiratory flow, hypoxaemia) \u2026 2. Reduced **blood pressure** or associated symptoms of end-organ dysfunction (eg hypotonia (collapse), syncope, incontinence) \u2026 3. **Severe** gastrointestinal symptoms (eg severe crampy abdominal pain, repetitive vomiting), especially after exposure to **non-food allergens**"
+    },
+    {
+      "claim": "The second WAO criterion is acute onset of hypotension or bronchospasm or laryngeal involvement after exposure to a known or highly probable allergen for that patient over minutes to several hours, even in the absence of typical skin involvement",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "2. Acute onset of **hypotension or bronchospasm or laryngeal involvement** after exposure to a known or highly probable allergen for that patient (minutes to several hours), even in the absence of typical skin involvement"
+    },
+    {
+      "claim": "Timing of reactions is dependent on the trigger with most developing quickly over minutes, allergens given by parenteral route such as IV medication, IM injection or insect sting often cause symptoms in 5 to 15 minutes, ingested food allergens cause symptoms typically by 30 minutes, and oral medication allergy is slower usually occurring in 1 to 6 hours",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Timing of reactions is dependent on the trigger, most develop quickly over minutes \u2026 Allergens given by parenteral route (eg IV medication, IM injection, insect sting) often cause symptoms in 5-15 minutes \u2026 Ingested food allergens cause symptoms typically by 30 minutes \u2026 Oral medication (drug) allergy are slower usually occurring in 1-6 hours"
+    },
+    {
+      "claim": "Fatal anaphylaxis is rare in Australia at approximately 1 per million population and is mainly triggered by food in children, and cardiorespiratory arrest more than 4 hours after initial allergen exposure is rare",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prevalence: rare in Australia, approximately 1 per million/population \u2026 Mainly triggered by food in children \u2026 **Cardiorespiratory arrest more than 4 hours after initial allergen exposure is rare**"
+    },
+    {
+      "claim": "Risk factors for fatal anaphylaxis are delay to administration of adrenaline or emergency response services, upright posture, poorly controlled asthma, allergy to peanut, tree nuts and seafood, adolescence, and pre-existing cardiac and respiratory conditions",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Delay to administration of adrenaline or emergency response services \u2026 Upright posture \u2026 Poorly controlled asthma (see ) \u2026 Allergy to peanut, tree nuts and seafood \u2026 Adolescence \u2026 Pre-existing cardiac and respiratory conditions"
+    },
+    {
+      "claim": "Severity of previous reactions does not predict future risk, and proper diagnosis and safe discharge management are essential to minimise risk on discharge",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Severity of previous reactions does not predict future risk** \u2026 Proper diagnosis and safe discharge management are essential to minimise risk on discharge"
+    },
+    {
+      "claim": "The guideline was last updated October 2025 and is PIC endorsed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Last updated October 2025 \u2026 PIC Endorsed"
+    },
+    {
+      "claim": "The initial anaphylaxis management and refractory anaphylaxis management are presented as flowcharts",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Initial anaphylaxis management flowchart \u2026 Refractory anaphylaxis management flowchart"
+    },
+    {
+      "claim": "The guideline cites the ASCIA Acute Management of Anaphylaxis Guideline 2024 accessed 17 October 2025 and ANZCOR 2025 Anaphylaxis accessed 17 October 2025",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Australasian Society of Clinical Immunology and Allergy (ASCIA). Acute Management of Anaphylaxis Guideline, 2024. . Accessed 17/10/2025 \u2026 Australian and New Zealand Resuscitation Council (ANZCOR), 2025, Anaphylaxis, accessed 17 October 2025"
+    }
+  ],
+  "summary": {
+    "total": 46,
+    "pass": 46,
+    "fail": 0
+  }
+}
