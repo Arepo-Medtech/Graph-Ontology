@@ -1,0 +1,345 @@
+{
+  "guideline": "guidelines/smoking-cessation.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the RACGP Supporting smoking cessation guideline (Recommendations and Tobacco harm reduction chapters, last revised 29 September 2021). Recommendation number, strength and certainty transcribed together. Recommendation 15's caveat list did not render in the retrieved page and is recorded as input_unavailable, NOT reconstructed. The nicotine vaping regulatory paragraph is transcribed as the 2021 source states it and flagged time_sensitive; S2 is cited only to establish that the regulations changed from 1 October 2024, not for its content. No NRT or varenicline doses are asserted; the dosage table and linked prescribing guide were not retrieved.",
+  "claims": [
+    {
+      "claim": "Recommendation 1: all patients who smoke should be offered brief advice to quit smoking (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 1 - All patients who smoke should be offered brief advice to quit smoking ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 2: a system for identifying all people who smoke and documenting tobacco use should be used in every practice or healthcare service (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 2 - A system for identifying all people who smoke and documenting tobacco use should be used in every practice or healthcare service. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 3: offer brief cessation advice in routine consultations and appointments whenever possible (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 3 - Offer brief cessation advice in routine consultations and appointments, whenever possible. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 4: offer follow-up to all people who are attempting to quit smoking (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 4 - Offer follow-up to all people who are attempting to quit smoking. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 5: in the absence of contraindications, pharmacotherapy with nicotine replacement therapy, varenicline or bupropion is an effective aid when accompanied by behavioural support and should be recommended to all people who smoke who have evidence of nicotine dependence, with choice based on efficacy, clinical suitability and patient preference (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 5 - In the absence of contraindications, pharmacotherapy (nicotine replacement therapy, varenicline or bupropion) is an effective aid when accompanied by behavioural support, and should be recommended to all people who smoke who have evidence of nicotine dependence. Choice of pharmacotherapy is based on efficacy, clinical suitability and patient preference. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 6: combination nicotine replacement therapy with patch and oral form accompanied by behavioural support is more effective than NRT monotherapy accompanied by behavioural support and should be recommended to people who smoke who have evidence of nicotine dependence (strong recommendation, moderate certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 6 - Combination nicotine replacement therapy (NRT) (ie patch and oral form) accompanied by behavioural support is more effective than NRT monotherapy accompanied by behavioural support, and should be recommended to people who smoke who have evidence of nicotine dependence. ... Strong recommendation, moderate certainty"
+    },
+    {
+      "claim": "Recommendation 7: for people who have stopped smoking at the end of a standard course of NRT, clinicians may consider recommending an additional course of NRT to reduce relapse (conditional recommendation for the intervention, low certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 7 - For people who have stopped smoking at the end of a standard course of nicotine replacement therapy (NRT), clinicians may consider recommending an additional course of NRT to reduce relapse. ... Conditional recommendation for the intervention, low certainty"
+    },
+    {
+      "claim": "Recommendation 8a: nicotine replacement therapy is safe to use in patients with stable cardiovascular disease (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "a) Nicotine replacement therapy (NRT) is safe to use in patients with stable cardiovascular disease. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 8b: NRT should be used with caution in patients who have had a recent myocardial infarction, unstable angina, severe arrhythmias or recent cerebrovascular events (strong recommendation, moderate certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "b) NRT should be used with caution in patients who have had a recent myocardial infarction, unstable angina, severe arrhythmias or recent cerebrovascular events. ... Strong recommendation, moderate certainty"
+    },
+    {
+      "claim": "Recommendation 9: for women who are pregnant and unable to quit smoking with behavioural support alone, clinicians might recommend nicotine replacement therapy compared with no NRT, with behavioural support and monitoring also provided (conditional recommendation for the intervention, low certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 9 - For women who are pregnant and unable to quit smoking with behavioural support alone, clinicians might recommend nicotine replacement therapy (NRT), compared with no NRT. Behavioural support and monitoring should also be provided. ... Conditional recommendation for the intervention, low certainty"
+    },
+    {
+      "claim": "Recommendation 10: varenicline should be recommended to people who smoke and who have been assessed as clinically suitable for this medication, provided in combination with behavioural support (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 10 - Varenicline should be recommended to people who smoke and who have been assessed as clinically suitable for this medication; it should be provided in combination with behavioural support. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 11: for people who have abstained from smoking after a standard course of varenicline in combination with behavioural support, clinicians may consider a further course of varenicline to reduce relapse (conditional recommendation for the intervention, low certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 11 - For people who have abstained from smoking after a standard course of varenicline in combination with behavioural support, clinicians may consider a further course of varenicline to reduce relapse. ... Conditional recommendation for the intervention, low certainty"
+    },
+    {
+      "claim": "Recommendation 12: for people attempting to quit smoking using varenicline accompanied by behavioural support, clinicians might recommend the use of varenicline in combination with nicotine replacement therapy compared with varenicline alone (conditional recommendation for the intervention, moderate certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 12 - For people who are attempting to quit smoking using varenicline accompanied by behavioural support, clinicians might recommend the use of varenicline in combination with nicotine replacement therapy, compared with varenicline alone. ... Conditional recommendation for the intervention, moderate certainty"
+    },
+    {
+      "claim": "Recommendation 13: bupropion sustained release should be recommended to people who have been assessed as clinically suitable, provided in combination with behavioural support, and bupropion is less effective than either varenicline or combination nicotine replacement therapy (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 13 - Bupropion sustained release should be recommended to people who have been assessed as clinically suitable for this medication; it should be provided in combination with behavioural support. Bupropion is less effective than either varenicline or combination nicotine replacement therapy. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Recommendation 14: nortriptyline should be considered as a second-line pharmacotherapy agent because of its adverse effects profile (strong recommendation, moderate certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 14 - Nortriptyline should be considered as a second-line pharmacotherapy agent because of its adverse effects profile. ... Strong recommendation, moderate certainty"
+    },
+    {
+      "claim": "Recommendation 15: for people who have tried to achieve smoking cessation with first-line therapy combining behavioural support and TGA-approved pharmacotherapy but failed and are still motivated to quit, nicotine vaping products may be a reasonable intervention to recommend along with behavioural support, preceded by an evidence-informed shared decision-making process in which the patient is made aware of stated caveats (conditional recommendation for intervention, low certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 15 - For people who have tried to achieve smoking cessation with first-line therapy (combination of behavioural support and TGA-approved pharmacotherapy) but failed and are still motivated to quit smoking, NVPs may be a reasonable intervention to recommend along with behavioural support. However, this needs to be preceded by an evidence-informed shared-decision making process, whereby the patient is aware of the following caveats: ... Conditional recommendation for intervention, low certainty"
+    },
+    {
+      "claim": "Recommendation 16: referral to telephone call-back counselling services should be offered to all people who smoke (strong recommendation, high certainty)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recommendation 16 - Referral to telephone call-back counselling services should be offered to all people who smoke. ... Strong recommendation, high certainty"
+    },
+    {
+      "claim": "Three forms of medicine, nicotine replacement therapy, varenicline and bupropion, are licensed and available in Australia to assist smoking cessation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Three forms of medicine - NRT, varenicline and bupropion - are licensed and available in Australia to assist smoking cessation."
+    },
+    {
+      "claim": "Varenicline is the most effective single-form pharmacotherapy for smoking cessation and combination NRT is as effective as varenicline and more effective than single types of NRT",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Varenicline is the most effective single-form pharmacotherapy for smoking cessation. Combination NRT is as effective as varenicline and more effective than single types of NRT."
+    },
+    {
+      "claim": "At the standard dose varenicline can more than double the chances of successful long-term smoking cessation compared with pharmacologically unassisted quit attempts",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "At the standard dose, varenicline can more than double the chances of successful long-term smoking cessation when compared with pharmacologically unassisted quit attempts."
+    },
+    {
+      "claim": "In a Cochrane review meta-analysis varenicline was found to be more effective than bupropion, more effective than NRT monotherapy and similar in effect to combination NRT",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In a Cochrane review meta-analysis, varenicline was found to be more effective than bupropion, more effective than NRT monotherapy and similar in effect to combination NRT."
+    },
+    {
+      "claim": "Varenicline improves smoking cessation rates two-fold over bupropion and is well tolerated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Varenicline improves smoking cessation rates two-fold over bupropion and is well tolerated."
+    },
+    {
+      "claim": "Smoking cessation using NRT is always less harmful than continuing to smoke",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Smoking cessation using NRT is always less harmful than continuing to smoke."
+    },
+    {
+      "claim": "NRT provides lower doses of nicotine at a slower rate than tobacco smoking and none of the available forms including transdermal patch, gum, inhalator, lozenge and mouth spray offer the same rapid nicotine delivery of a cigarette",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "NRT provides lower doses of nicotine at a slower rate than tobacco smoking; none of the available forms of NRT (ie transdermal patch, gum, inhalator, lozenge, mouth spray) offer the same rapid nicotine delivery of a cigarette."
+    },
+    {
+      "claim": "The advantage of acute-dosing NRT is that both the amount and timing of doses can be titrated by the person who smokes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The advantage of acute-dosing NRT is that both the amount and timing of doses can be titrated by the person who smokes."
+    },
+    {
+      "claim": "Standard dosing references and product information guides for NRT tend to recommend more conservative doses",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Standard dosing references and product information guides for NRT tend to recommend more conservative doses."
+    },
+    {
+      "claim": "Regular use of NRT beyond 12 months is not generally recommended as there is no evidence of efficacy beyond 24 weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Regular use of NRT beyond 12 months is not generally recommended as there is no evidence of efficacy beyond 24 weeks."
+    },
+    {
+      "claim": "NRT may be considered in women who are pregnant if they were unsuccessful in stopping smoking without pharmacotherapy, with benefits and risks explained carefully by a suitably qualified health professional and the clinician supervising the pregnancy also consulted",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "NRT may be considered in women who are pregnant if they were unsuccessful in stopping smoking without pharmacotherapy. If NRT is used, the benefits and risks should be explained carefully to the patient by a suitably qualified health professional. The clinician supervising the pregnancy should also be consulted."
+    },
+    {
+      "claim": "Varenicline is a nicotinic receptor partial agonist drug for smoking cessation that relieves symptoms of craving and withdrawal",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Varenicline is a nicotinic receptor partial agonist drug for smoking cessation that relieves symptoms of craving and withdrawal."
+    },
+    {
+      "claim": "There are two equally effective options for quitting with varenicline chosen by preference: a fixed option where the person sets a date to stop smoking and varenicline starts one to two weeks before this date, and a flexible approach where the person begins varenicline dosing then quits smoking between days 8 and 35 of treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There are two options for quitting with varenicline, both equally effective but chosen by preference: fixed option, which involves the person who smokes setting a date to stop smoking - varenicline should start one to two weeks before this date; flexible approach, when the person who smokes begins varenicline dosing, then quits smoking between days 8 and 35 of treatment."
+    },
+    {
+      "claim": "Varenicline can be used in those who smoke with mental health problems but must be monitored during quit attempts, and these patients should be advised to report unusual mood changes, depression, behaviour disturbance and suicidal thoughts and stop using the medicine if these occur",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Varenicline can be used in those who smoke with mental health problems, but must be monitored during quit attempts. These patients should be advised to report unusual mood changes, depression, behaviour disturbance and suicidal thoughts, and stop using the medicine if these occur."
+    },
+    {
+      "claim": "Varenicline is not recommended for pregnant and breastfeeding women nor for adolescents",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Varenicline is not recommended for pregnant and breastfeeding women, nor for adolescents."
+    },
+    {
+      "claim": "For extended varenicline treatment one study continued for an additional 12 weeks and another for an additional 40 weeks, and the benefit appears to be maintained only for the period of use of varenicline",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "One study continued treatment for an additional 12 weeks, the other for an additional 40 weeks. The benefit appears to be maintained only for the period of use of varenicline."
+    },
+    {
+      "claim": "The Expert Advisory Group rated the certainty of the evidence for combining varenicline with NRT as moderate and concluded there is a small but not trivial improvement in smoking cessation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The EAG rated the certainty of the evidence as moderate, and concluded that, on current evidence, there is a small but not trivial improvement in smoking cessation for people taking varenicline in addition to NRT, compared to NRT alone."
+    },
+    {
+      "claim": "There is no clinical study of varenicline combined with oral NRT, and the rationale is that varenicline helps relieve background cravings and reduce the stimulatory effects of smoking while oral NRT products alleviate cue-induced triggers",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is no clinical study of varenicline combined with oral NRT. Varenicline helps to relieve background cravings and reduce the stimulatory effects of smoking, and oral NRT products alleviate cue-induced triggers."
+    },
+    {
+      "claim": "The goal for those who smoke should always be to stop smoking altogether in order to reduce or eliminate the harms from smoking",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The goal for those who smoke should always be to stop smoking altogether in order to reduce or eliminate the harms from smoking."
+    },
+    {
+      "claim": "Reducing cigarette intake without a nicotine supplement is not recommended and has little proven health benefit, because research has found that when reducing cigarette intake those who smoke adjust their smoking topography such as number of puffs and depth of inhalation to maintain the desired level of nicotine",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Reducing cigarette intake without a nicotine supplement is not recommended and has little proven health benefit. Research has found that when reducing cigarette intake, those who smoke adjust their smoking topography (ie number of puffs, depth of inhalation) to maintain the desired level of nicotine."
+    },
+    {
+      "claim": "Those who are not willing to quit can be advised to partially substitute their cigarette intake with NRT, gradually reducing cigarette intake and increasing NRT, and the use of NRT in this way can double the odds of progressing to complete smoking cessation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Those who are not willing to quit can be advised to partially substitute their cigarette intake with NRT. Gradually, cigarette intake can be reduced and NRT increased. The use of NRT in this way can double the odds of progressing to complete smoking cessation."
+    },
+    {
+      "claim": "Those who use nicotine replacement therapy for smoking reduction are approximately twice as likely to progress to quitting as those who do not",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "those who use nicotine replacement therapy (NRT) for smoking reduction are approximately twice as likely to progress to quitting as those who do not."
+    },
+    {
+      "claim": "Long-term partial replacement with nicotine is not recommended as no clear health benefit has been demonstrated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Long-term partial replacement with nicotine is not recommended as no clear health benefit has been demonstrated."
+    },
+    {
+      "claim": "A reduction in smoking by 50% may slightly reduce the risk of lung cancer in people who were smoking 15 or more cigarettes each day, however there is no risk-free level of exposure to tobacco smoke",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A reduction in smoking by 50% may slightly reduce the risk of lung cancer in people who were smoking 15 or more cigarettes each day; however, there is no risk-free level of exposure to tobacco smoke."
+    },
+    {
+      "claim": "Nicotine vaping products are products that contain nicotine in salt or base form in a solution designed to be inhaled using a vaping device, including vape liquids, e-liquids and e-juices that contain nicotine and the nicotine solution in nicotine e-cigarettes and pods",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Nicotine vaping products | Products that contain nicotine (in salt or base form) in a solution designed to be inhaled using a vaping device. Includes vape liquids, e-liquids and e-juices that contain nicotine, and the nicotine solution in nicotine e-cigarettes and pods."
+    },
+    {
+      "claim": "Heated tobacco products are not nicotine vaping products",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Note: \u201cHeated tobacco products\u201d are not nicotine vaping products"
+    },
+    {
+      "claim": "The nicotine content of e-cigarettes can vary from zero to up to over 50 mg/mL",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The nicotine content of e-cigarettes can vary from zero to up to over 50 mg/mL."
+    },
+    {
+      "claim": "The use of e-cigarettes is controversial as its long-term safety profile is still largely unknown",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The use of e-cigarettes is controversial as its long-term safety profile is still largely unknown."
+    },
+    {
+      "claim": "Nicotine vaping products are not approved therapeutic products and the constituents of the vapour produced by e-cigarettes has not been rigorously tested and standardised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "NVPs are not approved therapeutic products and the constituents of the vapour produced by e-cigarettes has not been rigourously tested and standardised."
+    },
+    {
+      "claim": "The Royal Australian and New Zealand College of Psychiatrists supports the legalisation and regulation of nicotine e-cigarettes and other vaporised nicotine products to facilitate their use as harm reduction tools in recognition of disproportionately high smoking prevalence and low quit rates among people living with mental illness, however other organisations oppose use of e-cigarettes for this purpose",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In recognition of the disproportionately high smoking prevalence and low quit rates among people living with mental health illnesses, the Royal Australian and New Zealand College of Psychiatrists supports the legalisation and regulation of nicotine e-cigarettes and other vaporised nicotine products to facilitate their use as harm reduction tools. However, other organisations oppose use of e-cigarettes for this purpose."
+    },
+    {
+      "claim": "The Australian National Drug Household Survey conducted in 2019 found that 22.3% of people aged 15-24 years reported ever using e-cigarettes while 4.5% reported current or recent use, up from 2.3% in 2016",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Australian National Drug Household Survey conducted in 2019 found that 22.3% of people aged 15-24 years reported ever using e-cigarettes while 4.5% reported current or recent use (up from 2.3% in 2016)."
+    },
+    {
+      "claim": "An association has been observed in young people between e-cigarette use and future experimentation with smoking",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An association has been observed in young people between e-cigarette use and future experimentation with smoking."
+    },
+    {
+      "claim": "US National Youth Tobacco Survey data found current e-cigarette use among high school students increased from 1.5% in 2011 to 20.8% in 2018",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The US National Youth Tobacco Survey data found a dramatic increase in current e-cigarette use among high school students: 1.5% in 2011 to 20.8% in 2018."
+    },
+    {
+      "claim": "Many contextual factors including the strength and maturity of tobacco control policies influence the prevalence of tobacco use, therefore comparisons between countries need to be made with caution",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "However, many contextual factors, including the strength and maturity of tobacco control policies, influence the prevalence of tobacco use; therefore, comparisons between countries need to be made with caution."
+    },
+    {
+      "claim": "In Australia a precautionary approach to the use of e-cigarettes has been taken, and from 1 October 2021 nicotine was re-scheduled to a Schedule 4 medicine available by prescription only, with consumers requiring a prescription for all purchases of nicotine vaping products regardless of source",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In Australia, a precautionary approach to the use of e-cigarettes has been taken. From 1 October 2021 nicotine has been re-scheduled to a Schedule 4 medicine, available by prescription only. Consumers require a prescription for all purchases of NVPs regardless of where they are sourced from."
+    },
+    {
+      "claim": "As stated in the source there were no Therapeutic Goods Administration approved nicotine vaping products in the Australian Register of Therapeutic Goods, and nicotine vaping products are unapproved medicines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There are currently no Therapeutic Goods Administration (TGA) approved NVPs in the Australian Register of Therapeutic Goods (ARTG). Nicotine vaping products are unapproved medicines."
+    },
+    {
+      "claim": "The guideline was last revised 29 September 2021",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Last revised: 29 Sep 2021"
+    },
+    {
+      "claim": "Guidance on smoking and vaping cessation support has been produced for the changes to Australia's vaping regulations as of 1 October 2024",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Guidance on smoking and vaping cessation support has been produced for the changes to Australia's vaping regulations, as of 1 October 2024."
+    }
+  ],
+  "summary": {
+    "total": 55,
+    "pass": 55,
+    "fail": 0
+  }
+}
