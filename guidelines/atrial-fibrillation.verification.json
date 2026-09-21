@@ -1,0 +1,405 @@
+{
+  "guideline": "guidelines/atrial-fibrillation.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the MJA executive summary of the 2018 NHFA/CSANZ Australian atrial fibrillation guideline. GRADE strength and evidence quality transcribed with each recommendation. Score thresholds and the digoxin target compared character by character. The full Heart Lung Circ guideline (S2) was NOT retrieved; drug doses and algorithm figures held there are recorded as input_unavailable and not written from model memory. The 2018 publication date is flagged time_sensitive.",
+  "claims": [
+    {
+      "claim": "The CHA2DS2-VA score, the sexless CHA2DS2-VASc score, is recommended for predicting stroke risk in AF (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The CHA2DS2-VA score - the sexless CHA2DS2-VASc score - is recommended for predicting stroke risk in AF. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "The sexless score was adopted to avoid the cumbersome practice of selecting different CHA2DS2-VASc thresholds for males and females when recommending anticoagulation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "To avoid the cumbersome practice of selecting different CHA2DS2-VASc thresholds for males and females when recommending anticoagulation, these guidelines recommend a sexless CHA2DS2-VASc score, abbreviated as CHA2DS2-VA score"
+    },
+    {
+      "claim": "C scores 1 for congestive heart failure including both HFrEF and HFpEF or moderately to severely reduced systolic left ventricular function whether or not there is a history of heart failure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "C | 1 | Congestive heart failure: recent signs, symptoms or admission for decompensated heart failure; this includes both HFrEF and HFpEF, or moderately to severely reduced systolic left ventricular function, whether or not there is a history of heart failure"
+    },
+    {
+      "claim": "H scores 1 for history of hypertension whether or not blood pressure is currently elevated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "H | 1 | History of hypertension, whether or not blood pressure is currently elevated"
+    },
+    {
+      "claim": "A2 scores 2 for age 75 years or over, and A scores 1 for age 65-74 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A2 | 2 | Age >= 75 years ... A | 1 | Age 65-74 years"
+    },
+    {
+      "claim": "D scores 1 for diabetes and S2 scores 2 for history of prior stroke, transient ischaemic attack or systemic thromboembolism",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "D | 1 | Diabetes ... S2 | 2 | History of prior stroke or transient ischaemic attack or systemic thromboembolism"
+    },
+    {
+      "claim": "V scores 1 for vascular disease defined as prior myocardial infarction, peripheral arterial disease, complex aortic atheroma or plaque on imaging",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "V | 1 | Vascular disease, defined as prior myocardial infarction or peripheral arterial disease or complex aortic atheroma or plaque on imaging (if performed)"
+    },
+    {
+      "claim": "Annual review of low risk patients is recommended because stroke risk factors may change over time due to ageing or new comorbidities",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Stroke risk factors may change over time due to ageing or development of new comorbidities. Hence, annual review of low risk patients is recommended to ensure that risk is adequately characterised to guide oral anticoagulant (OAC) therapy."
+    },
+    {
+      "claim": "Oral anticoagulation is recommended in non-valvular AF with a CHA2DS2-VA score of 2 or more unless contraindicated (GRADE Strong, Evidence High)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Oral anticoagulation therapy to prevent stroke and systemic embolism is recommended in patients with non-valvular AF whose CHA2DS2-VA score is 2 or more, unless there are contraindications to anticoagulation. GRADE: Strong; Evidence: High."
+    },
+    {
+      "claim": "Oral anticoagulation should be considered in non-valvular AF with a CHA2DS2-VA score of 1 (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Oral anticoagulation therapy to prevent stroke and systemic embolism should be considered in patients with non-valvular AF whose CHA2DS2-VA score is 1. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Oral anticoagulation is not recommended in non-valvular AF with a CHA2DS2-VA score of 0 (GRADE Weak, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "ulation therapy to prevent thromboembolism and systemic embolism is not recommended in patients with non-valvular AF whose CHA2DS2-VA score is 0. GRADE: Weak; Evidence: Moderate."
+    },
+    {
+      "claim": "When oral anticoagulation is initiated in non-valvular AF, a NOAC (apixaban, dabigatran or rivaroxaban) is recommended in preference to warfarin (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When oral anticoagulation is initiated in a patient with non-valvular AF, a non-vitamin K OAC (NOAC; apixaban, dabigatran or rivaroxaban) is recommended in preference to warfarin. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Antiplatelet therapy is not recommended for stroke prevention in non-valvular AF regardless of stroke risk (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Antiplatelet therapy is not recommended for stroke prevention in non-valvular AF patients, regardless of stroke risk. Grade: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "The evidence for stroke prevention with aspirin is weak and aspirin may have bleeding rates similar to oral anticoagulants",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The evidence for stroke prevention with aspirin is weak, and aspirin may have bleeding rates similar to OACs."
+    },
+    {
+      "claim": "Non-valvular AF refers to AF in the absence of moderate to severe mitral stenosis or mechanical heart valve",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Non-valvular AF refers to AF in the absence of moderate to severe mitral stenosis or mechanical heart valve."
+    },
+    {
+      "claim": "Patients with atrial flutter have a slightly lower stroke risk than patients with AF but the risk still exists and many have episodes of AF, so the same anticoagulation recommendations apply",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients with atrial flutter have a slightly lower stroke risk than patients with AF, but the risk still exists and many of these patients have episodes of AF so the same recommendations for anticoagulation apply."
+    },
+    {
+      "claim": "Asymptomatic patients with AF detected on opportunistic screening have a comparable stroke risk to symptomatic patients",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Asymptomatic patients with AF detected on opportunistic screening have a comparable stroke risk to symptomatic patients."
+    },
+    {
+      "claim": "For device-detected AF with CHA2DS2-VA of 2 or more, close follow-up is needed with consideration of an oral anticoagulant when an episode lasts more than 24 hours",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "patients with a CHA2DS2-VA score >= 2 should have close follow-up for development of clinical AF, with consideration of an OAC when an episode lasts for more than 24 hours."
+    },
+    {
+      "claim": "Patients at high risk of stroke are also at high risk of major bleeding, net clinical benefit almost always favours stroke prevention over major bleeding, and bleeding risk scores should not be used to avoid anticoagulation in patients with AF",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients at high risk of stroke are also at high risk of major bleeding. The net clinical benefit almost always favours stroke prevention over major bleeding, so bleeding risk scores should not be used to avoid anticoagulation in patients with AF."
+    },
+    {
+      "claim": "Reversible bleeding factors should be identified and corrected in AF patients for whom anticoagulation is indicated (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Reversible bleeding factors should be identified and corrected in AF patients for whom anticoagulation is indicated. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Modifiable bleeding risk factors include hypertension with systolic BP above 160 mmHg, labile INR with time in therapeutic range below 60% for which changing to a NOAC should be considered, concomitant antiplatelets and NSAIDs, and excess alcohol above 8 drinks per week",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hypertension (SBP > 160 mmHg) | Blood pressure control reduces the potential risk of bleeding; Labile INR (TTR < 60%) | Consider changing to an NOAC; Concomitant medications including antiplatelet agents and NSAIDs | Minimise duration of double or triple therapy in patients with coronary disease and AF; Excess alcohol (> 8 drinks/week)"
+    },
+    {
+      "claim": "For advanced age, stroke risk outweighs bleeding risk, and for previous stroke the risk of recurrent stroke outweighs the risk of bleeding",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advanced age | Stroke risk outweighs bleeding risk ... Previous stroke | Risk of recurrent stroke outweighs risk of bleeding"
+    },
+    {
+      "claim": "Cirrhotic liver disease is a contraindication to NOACs as patients are excluded from trials, and in dialysis-dependent kidney disease the role of anticoagulation is controversial with warfarin only indicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Dialysis-dependent kidney disease | The role of anticoagulation (warfarin only indicated) in this population is controversial; Cirrhotic liver disease | Contraindication to NOACs (patients are excluded from trials); consider advice from hepatologist"
+    },
+    {
+      "claim": "Intracranial haemorrhage risk is high in Aboriginal and Torres Strait Islander patients receiving anticoagulants and careful attention should be paid to blood pressure control in these populations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "ICH risk is high in Aboriginal and Torres Strait Islander patients receiving anticoagulants; Pay careful attention to blood pressure control in these populations"
+    },
+    {
+      "claim": "INR monitoring may be difficult in remote Australian communities and therefore NOACs have the capacity to greatly improve anticoagulant therapy in patients with non-valvular AF",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "International normalised ratio (INR) monitoring may be difficult in remote Australian communities, and therefore NOACs have the capacity to greatly improve anticoagulant therapy in patients with non-valvular AF."
+    },
+    {
+      "claim": "Point-of-care INR measurement is recommended in the primary care management of patients receiving warfarin (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Point-of-care INR measurement is recommended in the primary care management of patients receiving warfarin. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Opportunistic point-of-care screening in the clinic or community should be conducted in people aged 65 years or more (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Opportunistic point-of-care screening in the clinic or community should be conducted in people aged 65 years or more. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Devices that provide a medical quality electrocardiogram trace are preferred to pulse-taking or pulse-based devices for screening because an electrocardiogram is required to confirm the diagnosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Devices that provide a medical quality electrocardiogram trace are preferred to pulse-taking or pulse-based devices for screening, because an electrocardiogram is required to confirm the diagnosis."
+    },
+    {
+      "claim": "Pacemakers and defibrillators should be interrogated regularly for atrial high rate episodes and these should be confirmed by atrial electrocardiogram to be AF (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pacemakers and defibrillators should be interrogated regularly for atrial high rate episodes (AHREs), and should be confirmed by atrial electrocardiogram to be AF. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "A transthoracic echocardiogram should be performed in all patients with newly diagnosed AF (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A transthoracic echocardiogram should be performed in all patients with newly diagnosed AF. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Intercurrent risk factors and comorbidities including hypertension, diabetes, heart failure, valvular heart disease and alcohol excess should be identified and their management considered an important component of treatment (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intercurrent risk factors and comorbidities, including hypertension, diabetes, heart failure, valvular heart disease and alcohol excess, should be identified and their management considered an important component of treatment in patients with AF. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Newer risk factors of interest include obesity, sleep apnoea, physical inactivity and prehypertension, and physician-led weight and risk factor management in overweight and obese patients markedly reduces AF burden and improves quality of life in paroxysmal AF",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "there has been interest in several newer risk factors, including obesity, sleep apnoea, physical inactivity and prehypertension. Physician-led intervention of weight and risk factor management in overweight and obese patients has been shown to lead to a marked reduction in AF burden, and to an improvement in quality of life in patients with paroxysmal AF."
+    },
+    {
+      "claim": "A rhythm control or rate control strategy should be selected, documented and communicated for all AF patients and reviewed regularly (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A rhythm control or a rate control strategy should be selected, documented and communicated for all AF patients, and this strategy should be reviewed regularly. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Factors favouring rhythm over rate control include younger, more physically active and highly symptomatic patients, paroxysmal or early persistent AF, left ventricular dysfunction, no severe left atrial enlargement, and difficulty achieving adequate ventricular rate control",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Factors favouring rhythm over rate control include patients who are younger, more physically active and highly symptomatic; those with paroxysmal or early persistent AF; and those with left ventricular dysfunction; no severe left atrial enlargement; and those in whom adequate control of the ventricular rate is difficult to achieve."
+    },
+    {
+      "claim": "Beta-adrenoceptor antagonists or non-dihydropyridine calcium channel antagonists are recommended for acute control of the ventricular rate in haemodynamically stable patients, with caution if given intravenously (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Beta-Adrenoceptor antagonists or non-dihydropyridine calcium channel antagonists are recommended for acute control of the ventricular rate in haemodynamically stable patients, although caution is needed if given intravenously. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Intravenous verapamil must be used with extreme caution because of its strong negative inotropic effect, and digoxin has delayed onset and weak rate control effect particularly as monotherapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intravenous verapamil must be used with extreme caution because of its strong negative inotropic effect. Digoxin may be considered in addition to the above agents, but it has a delayed onset of action and has a weak effect in terms of rate control, particularly when used as monotherapy."
+    },
+    {
+      "claim": "In patients with marginal haemodynamic reserve, established heart failure or other significant structural heart disease, amiodarone may be the most effective rate control option",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In patients with marginal haemodynamic reserve, established heart failure or other significant structural heart disease, amiodarone may be the most effective rate control option"
+    },
+    {
+      "claim": "Beta-adrenoceptor antagonists or non-dihydropyridine calcium channel antagonists should be first line agents for long term control of the ventricular rate (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Beta-Adrenoceptor antagonists or non-dihydropyridine calcium channel antagonists should be the first line agents used for long term control of the ventricular rate. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Digoxin can be useful as a second line agent or in combination, with serum concentration monitored to maintain levels below 1.2 ng/mL",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Digoxin can be useful as a second line agent or in combination with beta-blockers or calcium antagonists and, if used, serum concentration should be monitored with the goal of maintaining levels < 1.2 ng/mL."
+    },
+    {
+      "claim": "Verapamil and diltiazem should not be used in the presence of left ventricular systolic dysfunction, and amiodarone should be considered a last line option given its toxicity profile",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Verapamil and diltiazem should not be used in the presence of left ventricular systolic dysfunction. Amiodarone should be considered a last line option, given its toxicity profile."
+    },
+    {
+      "claim": "Membrane-active rhythm control agents such as flecainide or sotalol should not be continued in patients being started on or transitioned to a long term rate control strategy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Membrane-active rhythm control agents (eg, flecainide or sotalol) should not be continued in patients being started on or transitioned to a long term rate control strategy."
+    },
+    {
+      "claim": "Electrical cardioversion should be performed urgently in haemodynamically unstable patients with AF (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Electrical cardioversion should be performed urgently in haemodynamically unstable patients with AF. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Flecainide can be considered for rapid conversion to sinus rhythm intravenously or orally in patients without left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease, after consideration of thromboembolic risk (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Flecainide can be considered for rapid conversion to sinus rhythm, either intravenously or orally, in patients without left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease, after consideration of thromboembolic risk. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Flecainide results in earlier and more effective conversion to sinus rhythm compared with amiodarone",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Flecainide results in earlier and more effective conversion to sinus rhythm when compared with amiodarone."
+    },
+    {
+      "claim": "There is a high spontaneous reversion rate to sinus rhythm for new onset AF within 48 hours so a wait and watch approach with rate control may be reasonable in a mildly symptomatic patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is a high spontaneous reversion rate to sinus rhythm for new onset AF within 48 hours, so a wait and watch approach with rate control may be reasonable in a mildly symptomatic patient."
+    },
+    {
+      "claim": "Atrioventricular nodal blocking medication should be administered before flecainide to avoid 1:1 conduction of atrial flutter",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Atrioventricular nodal blocking medication should be administered to patients before flecainide to avoid 1:1 conduction of atrial flutter."
+    },
+    {
+      "claim": "In patients with AF duration of more than 48 hours or unknown duration, acute rhythm control should generally not be attempted unless left atrial thrombus is excluded with transoesophageal echocardiography",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In patients with an AF duration of more than 48 hours or of unknown duration, acute rhythm control should generally not be attempted unless left atrial thrombus is excluded with transoesophageal echocardiography."
+    },
+    {
+      "claim": "Flecainide can be considered in maintenance of sinus rhythm in patients without left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease (GRADE Strong, Evidence High)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Flecainide can be considered in the maintenance of sinus rhythm in patients without left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease. GRADE: Strong; Evidence: High."
+    },
+    {
+      "claim": "Amiodarone can be considered for maintenance of sinus rhythm as a second line agent or first line in patients with left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease (GRADE Strong, Evidence High), but has long term toxicities so should not be first line treatment choice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Amiodarone can be considered for maintenance of sinus rhythm as a second line agent or as a first line agent in patients with left ventricular systolic dysfunction, moderate left ventricular hypertrophy or coronary artery disease. GRADE: Strong; Evidence: High. ... However, amiodarone is associated with potential long term toxicities and therefore should not be a first line treatment choice"
+    },
+    {
+      "claim": "Sotalol has modest efficacy in maintenance of sinus rhythm and torsades de pointes occurs in about 2% of patients, necessitating close monitoring of the QT interval for all patients",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sotalol has modest efficacy in maintenance of sinus rhythm, and torsades de pointes occurs in about 2% of patients, necessitating close monitoring of the QT interval for all patients."
+    },
+    {
+      "claim": "Beta-blockers are generally regarded as less effective than antiarrhythmic drugs in the maintenance of sinus rhythm",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Beta-Blockers are generally regarded as less effective than antiarrhythmic drugs in the maintenance of sinus rhythm."
+    },
+    {
+      "claim": "Catheter ablation should be considered for symptomatic paroxysmal or persistent AF refractory or intolerant to at least one class I or III antiarrhythmic medication (GRADE Strong, Evidence High)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Catheter ablation should be considered for symptomatic paroxysmal or persistent AF refractory or intolerant to at least one class I or III antiarrhythmic medication. GRADE: Strong; Evidence: High."
+    },
+    {
+      "claim": "Catheter ablation can be considered for symptomatic paroxysmal or persistent AF in selected patients with heart failure with reduced ejection fraction (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Catheter ablation can be considered for symptomatic paroxysmal or persistent AF in selected patients with heart failure with reduced ejection fraction. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "20-30% of ablation patients will require a second procedure within the first 12 months and major complication rates from experienced Australian institutions have been about 1%",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "it is important to emphasise that 20-30% of ablation patients will require a second procedure within the first 12 months. Major complication rates from experienced Australian institutions have been about 1%."
+    },
+    {
+      "claim": "In patients at increased risk of stroke anticoagulation should be continued indefinitely even following a successful ablation procedure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In patients at increased risk of stroke, anticoagulation should be continued indefinitely, even following a successful procedure."
+    },
+    {
+      "claim": "Surgical ablation of AF to restore sinus rhythm in the context of concomitant cardiac surgery may be considered for patients with symptomatic paroxysmal, persistent or long-standing persistent AF (GRADE Strong, Evidence Moderate)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Surgical ablation of AF to restore sinus rhythm in the context of concomitant cardiac surgery may be considered for patients with symptomatic paroxysmal, persistent or long-standing persistent AF. GRADE: Strong; Evidence: Moderate."
+    },
+    {
+      "claim": "Careful assessment of bleeding and ischaemic risks should be undertaken for patients with AF who have a long term requirement for anticoagulation and require dual antiplatelet therapy after acute coronary syndrome or stent implantation (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Careful assessment of the bleeding and ischaemic risks (ie, stroke, new or recurrent cardiac ischaemia or infarction, and stent thrombosis) should be undertaken for patients with AF who have a long term requirement for anticoagulation for stroke prevention and require dual antiplatelet therapy after acute coronary syndrome or stent implantation (or both). GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Duration of triple therapy with aspirin, a P2Y12 inhibitor and an oral anticoagulant should be as short as possible to minimise bleeding while covering the initial period of high thrombotic risk, and proton pump inhibitors likely reduce gastrointestinal bleeding risk on triple therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Duration of triple therapy (aspirin, P2Y12 inhibitor and OAC) should be as short as possible to minimise bleeding, while ensuring coverage of the initial period of high thrombotic risk. The risk of gastrointestinal bleeding in patients on triple therapy is likely to be reduced by concomitant administration of proton pump inhibitors."
+    },
+    {
+      "claim": "Where dual antiplatelet therapy is required in combination with an oral anticoagulant, aspirin and clopidogrel are recommended, and discontinuation of antiplatelet therapy should be considered 12 months after stent implantation or acute coronary syndrome with continuation of oral anticoagulant alone",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Where dual antiplatelet therapy is required in combination with an OAC, aspirin and clopidogrel are recommended. Where an OAC is used for AF, discontinuation of antiplatelet therapy should be considered 12 months after stent implantation, acute coronary syndrome, or both, with continuation of OAC therapy alone."
+    },
+    {
+      "claim": "An integrated care approach is recommended, aiming to provide patient-centred comprehensive treatment delivered by a multidisciplinary team (GRADE Strong, Evidence High)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An integrated care approach is recommended; such an approach aims to provide patient-centred comprehensive treatment delivered by a multidisciplinary team. GRADE: Strong; Evidence: High."
+    },
+    {
+      "claim": "Integrated care focuses on multidisciplinary teams, patient-centred care with a focus on shared decision making, and application of eHealth",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Integrated care focuses on three fundamental aspects: multidisciplinary teams, patient-centred care with a focus on shared decision making, and application of eHealth."
+    },
+    {
+      "claim": "All patients prescribed pharmacotherapy for AF including rhythm control and anticoagulation should have treatment adherence and persistence regularly monitored and supported using accessible and patient-centred strategies (GRADE Strong, Evidence Low)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All patients prescribed pharmacotherapy for the management of AF, including core rhythm control and anticoagulation therapies, should have their treatment adherence and persistence regularly monitored and supported using accessible and patient-centred strategies. GRADE: Strong; Evidence: Low."
+    },
+    {
+      "claim": "Long term persistence to oral anticoagulants decreases over time with about one-third to half of patients discontinuing therapy within 2.5 years of initiation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Long term persistence to OACs tends to decrease over time; about one-third to half of patients discontinue therapy within 2.5 years of initiation."
+    },
+    {
+      "claim": "Recent studies on improving anticoagulant adherence via electronic applications have shown mixed results, and earlier educational and behavioural studies did not generate enough evidence to determine their impact",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recent studies focus on improving adherence to anticoagulants via the use of electronic applications, with mixed results. Earlier studies focused on educational and behavioural interventions, but did not generate enough evidence to determine their impact."
+    },
+    {
+      "claim": "These are the first Australian guidelines on atrial fibrillation and no guidelines had previously been developed specific to the Australian population",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "International guidelines on the diagnosis and management of AF are available, but individual recommendations may differ, and no guidelines have previously been developed specific to the Australian population."
+    }
+  ],
+  "summary": {
+    "total": 65,
+    "pass": 65,
+    "fail": 0
+  }
+}
