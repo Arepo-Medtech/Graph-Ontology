@@ -1,0 +1,291 @@
+{
+  "guideline": "guidelines/iron-deficiency.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "S1 (Balendran and Forsyth, Aust Prescr 2021) was retrieved in full by direct page scrape and every S1 claim is checked against that text, including Tables 1, 2 and 3. S2 (Med J Aust 2024;221(7)) was NOT directly scraped; its passages were retrieved via the search index and are quoted verbatim and used only as quoted. That retrieval difference is stated in the guideline itself. No product-level oral regimens or intravenous iron doses are asserted; the sources give a dosing range and interval only.",
+  "claims": [
+    {
+      "claim": "Iron deficiency without anaemia is even more common than iron deficiency anaemia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Iron deficiency without anaemia is even more common."
+    },
+    {
+      "claim": "Although it is three times as common as iron deficiency anaemia, iron deficiency without anaemia is an under-recognised and undertreated condition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Although it is three times as common as iron deficiency anaemia, iron deficiency without anaemia is an under-recognised and undertreated condition."
+    },
+    {
+      "claim": "Approximately 70% of the iron in adults is found within haemoglobin in red blood cells so anaemia is the most readily recognised effect of iron deficiency, however it is now apparent that iron deficiency in the absence of anaemia also has unfavourable consequences",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Approximately 70% of the iron in adults is found within haemoglobin in red blood cells so anaemia is the most readily recognised effect of iron deficiency. However, it is now apparent that iron deficiency in the absence of anaemia also has unfavourable consequences."
+    },
+    {
+      "claim": "Iron deficiency anaemia affects approximately 20% of the world's population, and WHO estimates that 8% of preschool children, 12% of pregnant women and 15% of non-pregnant women of reproductive age in Australia have anaemia with iron deficiency being the major cause",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Iron deficiency is the most common mineral deficiency and iron deficiency anaemia affects approximately 20% of the world's population. ... The World Health Organization (WHO) estimates that 8% of preschool children, 12% of pregnant women and 15% of non-pregnant women of reproductive age in Australia have anaemia, with iron deficiency being the major cause."
+    },
+    {
+      "claim": "Anaemia is highly prevalent in indigenous communities, and a study of an Aboriginal community in Western Australia identified anaemia among 55% of women and 18% of men",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Anaemia is highly prevalent in indigenous communities. A study of an Aboriginal community in Western Australia identified anaemia among 55% of women and 18% of men."
+    },
+    {
+      "claim": "Iron deficiency without anaemia has been associated with weakness, fatigue, reduced exercise performance, difficulty in concentrating and poor work productivity, neurocognitive dysfunction including irritability, fibromyalgia syndrome, restless legs syndrome, symptom persistence in patients treated for hypothyroidism, and poor neurodevelopmental outcomes in infants born to mothers with iron deficiency",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "weakness, fatigue, reduced exercise performance, difficulty in concentrating, and poor work productivity; neurocognitive dysfunction including irritability; fibromyalgia syndrome; restless legs syndrome; symptom persistence in patients treated for hypothyroidism; poor neurodevelopmental outcomes in infants born to mothers with iron deficiency."
+    },
+    {
+      "claim": "Iron deficiency can result in a wide range of symptoms that are non-specific and may not be initially recognised as being due to iron deficiency",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A deficiency can therefore result in a wide range of symptoms that are non-specific and may not be initially recognised as being due to iron deficiency."
+    },
+    {
+      "claim": "A reduced ferritin is the most reliable initial marker to diagnose iron deficiency without anaemia, and although WHO defines low serum ferritin as less than 12 microgram per litre in adults, a concentration of less than 30 microgram per litre has a high sensitivity of 92% and specificity of 98% for iron deficiency, correlating with the absence of iron stores in the bone marrow",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A reduced ferritin is the most reliable initial marker to diagnose iron deficiency without anaemia. Although WHO defines low serum ferritin as less than 12 microgram/L in adults, a concentration of less than 30 microgram/L has a high sensitivity (92%) and specificity (98%) for iron deficiency, correlating with the absence of iron stores in the bone marrow"
+    },
+    {
+      "claim": "Ferritin is an acute-phase protein so it rises in inflammatory conditions and in the elderly, which can make the diagnosis of iron deficiency challenging",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ferritin is an acute-phase protein so it rises in inflammatory conditions and in the elderly. This can make the diagnosis of iron deficiency challenging."
+    },
+    {
+      "claim": "The ferritin and transferrin thresholds for diagnosing iron deficiency are less than 30 microgram per litre for the general population, less than 100 microgram per litre with transferrin saturation below 20% in inflammatory states, less than 100 microgram per litre or less than 300 with transferrin saturation below 20% in heart failure, and less than 500 microgram per litre with transferrin saturation below 30% in kidney disease",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "General population | <30 microgram/L | - | Inflammatory states | <100 microgram/L | <20% | Heart failure | <100 microgram/L | - | <300 microgram/L | <20% | Kidney disease | <500 microgram/L | <30%"
+    },
+    {
+      "claim": "To diagnose iron deficiency in patients with heart failure the European Society of Cardiology has recommended a ferritin concentration below 100 microgram per litre, or below 300 microgram per litre with a transferrin saturation below 20%",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "To diagnose iron deficiency in patients with heart failure, the European Society of Cardiology has recommended a ferritin concentration below 100 microgram/L, or below 300 microgram/L with a transferrin saturation below 20%."
+    },
+    {
+      "claim": "In chronic kidney disease the Kidney Disease Improving Global Outcomes guideline advises iron supplements if ferritin is below 500 microgram per litre and the transferrin saturation is less than 30%",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In chronic kidney disease, the Kidney Disease Improving Global Outcomes guideline advises iron supplements if ferritin is below 500 microgram/L and the transferrin saturation is less than 30%."
+    },
+    {
+      "claim": "As an acute-phase reactant ferritin may be falsely normal or elevated in iron deficient individuals when there is concurrent inflammation, obesity, steatotic liver disease, malignancy or other chronic disease, and a serum ferritin level less than 70 micrograms per litre in an individual with a concurrent inflammatory condition may suggest iron deficiency",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "As an acute-phase reactant, ferritin may be falsely normal or elevated in iron deficient individuals when there is concurrent inflammation, obesity, steatotic liver disease, malignancy or other chronic disease. Thus, a serum ferritin level less than 70ug/L in an individual with a concurrent inflammatory condition may suggest iron deficiency."
+    },
+    {
+      "claim": "An elevated plasma concentration of the soluble transferrin receptor is another useful biochemical marker for iron deficiency which can be used to distinguish it from anaemia of chronic disease, however there is currently no Medicare rebate for this test, and the gold standard for diagnosis is a bone marrow biopsy but this is not commonly used",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An elevated plasma concentration of the soluble transferrin receptor is another useful biochemical marker for iron deficiency which can be used to distinguish it from anaemia of chronic disease. However, there is currently no Medicare rebate for this test. The gold standard for the diagnosis of iron deficiency is a bone marrow biopsy, but this is not commonly used."
+    },
+    {
+      "claim": "Changes in iron status before the development of anaemia may be suggested on a full blood count by falling values for mean cell haemoglobin and mean corpuscular volume and an increased red cell distribution width",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Changes in iron status before the development of anaemia may be suggested on a full blood count by falling values for mean cell haemoglobin and mean corpuscular volume and an increased red cell distribution width."
+    },
+    {
+      "claim": "Iron deficiency can occur secondary to inadequate dietary intake, increased requirements such as pregnancy and breastfeeding, impaired absorption such as coeliac disease or bariatric surgery, or blood loss such as menstrual, blood donation or gastrointestinal, and the underlying cause of iron deficiency should always be sought and managed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Iron deficiency can occur secondary to inadequate dietary intake, increased requirements (e.g. pregnancy and breastfeeding), impaired absorption (e.g. coeliac disease, bariatric surgery), or blood loss (e.g. menstrual, blood donation, gastrointestinal). ... The underlying cause of iron deficiency should always be sought and managed."
+    },
+    {
+      "claim": "A drug history should be taken particularly regarding anticoagulants, over-the-counter non-steroidal anti-inflammatory drugs and antiplatelet drugs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A drug history should be taken particularly regarding anticoagulants, over-the-counter non-steroidal anti-inflammatory drugs and antiplatelet drugs."
+    },
+    {
+      "claim": "To improve tolerability, increase adherence to therapy and improve absorption, alternate-day dosing of 60 to 200 mg depending on tolerability is superior to daily dosing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "To improve tolerability, increase adherence to therapy and improve absorption, alternate-day dosing (60-200 mg, depending on tolerability) is superior to daily dosing."
+    },
+    {
+      "claim": "Elemental oral iron doses of larger than or equal to 60 mg reduce the absorption of subsequent oral doses, and a single 200 mg dose taken on alternate days results in about twice the absorption of a single 100 mg daily dose",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Elemental oral iron doses of larger than or equal to 60mg reduce the absorption of subsequent oral doses. A single 200mg dose taken on alternate days results in about twice the absorption of a single 100mg daily dose."
+    },
+    {
+      "claim": "Ferrous salts fumarate, sulphate and gluconate are preferred as they are the best absorbed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "ferrous salts (fumarate, sulphate, gluconate) are preferred as they are the best absorbed."
+    },
+    {
+      "claim": "Guidelines recommend that patients should be counselled to take their iron supplements one hour before or two hours after food, and sometimes it may be possible to compromise on the timing of the dose if this helps the patient adhere to therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Guidelines recommend that patients should be counselled to take their iron supplements one hour before or two hours after food. Sometimes it may be possible to compromise on the timing of the dose if this helps the patient adhere to therapy."
+    },
+    {
+      "claim": "Ferrous iron taken on an empty stomach ensures optimal absorption",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Ferrous iron taken on an empty stomach ensures optimal absorption."
+    },
+    {
+      "claim": "Gastrointestinal adverse effects such as nausea, epigastric pain and diarrhoea reduce adherence, and controlled-release preparations and iron polymaltose complex are reported to have a lower incidence of gastrointestinal adverse effects however the iron polymaltose complex is expensive which limits its use",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "While there are several advantages of oral supplementation, gastrointestinal adverse effects such as nausea, epigastric pain and diarrhoea reduce adherence. Controlled-release preparations and iron polymaltose complex are reported to have a lower incidence of gastrointestinal adverse effects, however, the iron polymaltose complex is expensive which limits its use."
+    },
+    {
+      "claim": "Vitamin C co-administration has long been recommended to improve oral iron absorption, however a recent study reported no significant between-group difference for the mean change in serum ferritin at eight weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Vitamin C co-administration has long been recommended to improve oral iron absorption. However, a recent study reported no significant between-group difference for the mean change in serum ferritin at eight weeks."
+    },
+    {
+      "claim": "Haem iron from liver, red meat, seafood and poultry has a superior gastrointestinal uptake compared to free plant-based iron, and vegetarians can maintain adequate iron intake with a wide variety of non-haem iron foods such as wholegrains, legumes, nuts, seeds, dried fruits and green leafy vegetables, but these strategies are unlikely to be sufficient to correct iron deficiency",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Haem iron (liver, red meat, seafood, poultry) has a superior gastrointestinal uptake compared to free iron (plant-based). Vegetarians can maintain adequate iron intake if a wide variety of non-haem iron is consumed in foods such as wholegrains, legumes, nuts, seeds, dried fruits and green leafy vegetables, but these strategies are unlikely to be sufficient to correct iron deficiency."
+    },
+    {
+      "claim": "Inhibitors of iron absorption including tea, coffee, cocoa and red wines should be avoided, and this dietary strategy is appropriate for asymptomatic patients who are not at risk of poor absorption",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Inhibitors of iron absorption (tea, coffee, cocoa, and red wines) should be avoided. This strategy is appropriate for asymptomatic patients who are not at risk of poor absorption."
+    },
+    {
+      "claim": "Oral iron therapy is the first-line and safest treatment for symptomatic patients or patients at risk of developing anaemia and is convenient and cost effective",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Oral iron therapy is the first-line and safest treatment for symptomatic patients or patients at risk of developing anaemia. It is convenient and cost effective."
+    },
+    {
+      "claim": "If parenteral iron supplementation is required intravenous iron is indicated and there is no role for intramuscular therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If parenteral iron supplementation is required, intravenous iron is indicated. There is no role for intramuscular therapy."
+    },
+    {
+      "claim": "The intravenous preparations available are ferric carboxymaltose, ferric derisomaltose, iron polymaltose and iron sucrose",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The intravenous preparations available are ferric carboxymaltose, ferric derisomaltose, iron polymaltose and iron sucrose."
+    },
+    {
+      "claim": "The use of intravenous iron should be limited because of its adverse effects including permanent skin staining, hypophosphataemia and rarely anaphylaxis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The use of intravenous iron should be limited because of its adverse effects, including permanent skin staining, hypophosphataemia and rarely anaphylaxis."
+    },
+    {
+      "claim": "Intravenous iron should be avoided if there is active systemic infection to avoid any possibility that iron may promote microbial growth and disrupt immune responses",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intravenous iron should be avoided if there is active systemic infection to avoid any possibility that iron may promote microbial growth and disrupt immune responses."
+    },
+    {
+      "claim": "The main indications for intravenous iron include unsuccessful oral therapy meaning failure, poor adherence or intolerance; malabsorption such as coeliac disease or bariatric surgery; inflammatory bowel disease; chronic kidney disease receiving erythropoiesis-stimulating drugs; rapid increase in iron required such as pre-operatively for urgent surgery or following acute blood loss; and heart failure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "unsuccessful oral therapy - failure, poor adherence, intolerance; malabsorption (e.g. coeliac disease, bariatric surgery); inflammatory bowel disease; chronic kidney disease receiving erythropoiesis- stimulating drugs; rapid increase in iron required (e.g. pre-operatively for urgent surgery or following acute blood loss); heart failure."
+    },
+    {
+      "claim": "Supplementation with intravenous iron results in a faster haemoglobin concentration increase compared with oral iron supplementation although haemoglobin levels at 12 weeks are similar",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Supplementation with intravenous iron results in a faster haemoglobin concentration increase compared with oral iron supplementation, although haemoglobin levels at 12 weeks are similar."
+    },
+    {
+      "claim": "After oral supplements have been taken for 60 to 90 days, fasting iron studies are repeated one week after stopping therapy to check if the iron deficiency has been corrected",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "After oral supplements have been taken for 60-90 days, fasting iron studies are repeated one week after stopping therapy to check if the iron deficiency has been corrected."
+    },
+    {
+      "claim": "Serum iron has a diurnal variation and the ideal specimen is a fasting morning sample after oral iron supplementation has been withheld for at least 24 hours before testing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Serum iron has a diurnal variation and the ideal specimen is a fasting morning sample after oral iron supplementation has been withheld for at least 24 hours before testing."
+    },
+    {
+      "claim": "Iron studies should be repeated approximately 60 to 90 days, or as clinically appropriate, after intravenous iron therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Iron studies should be repeated approximately 60-90 days, or as clinically appropriate, after intravenous iron therapy."
+    },
+    {
+      "claim": "Oral iron should be continued for at least three months following an effective response, and adherence and impaired iron uptake should be considered with inadequate responses",
+      "source": "S2",
+      "verdict": "pass",
+      "source_text": "Oral iron should be continued for at least three months following an effective response; adherence and impaired iron uptake should be considered with inadequate responses."
+    },
+    {
+      "claim": "If there is no response to oral iron therapy or if iron deficiency recurs, further investigations should be considered to exclude blood loss or malabsorption, a fall in haemoglobin concentration may be significant even if the patient does not become anaemic, and depending on the clinical findings referral to a gynaecologist or a gastroenterologist may be appropriate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If there is no response to oral iron therapy or if iron deficiency recurs, further investigations should be considered to exclude blood loss or malabsorption. A fall in haemoglobin concentration may be significant even if the patient does not become anaemic. Depending on the clinical findings, referral to a gynaecologist or a gastroenterologist may be appropriate."
+    },
+    {
+      "claim": "The evidence regarding the benefit of iron replacement in non-anaemic iron deficiency is based on several small trials and observational studies mainly in women of reproductive age and patients with heart failure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The evidence regarding the benefit of iron replacement in non-anaemic iron deficiency is based on several small trials and observational studies, mainly in women of reproductive age and patients with heart failure"
+    },
+    {
+      "claim": "Correcting iron deficiency improves fatigue in some studies but the impact on neurocognitive dysfunction is uncertain, and improves symptoms of fibromyalgia possibly related to the role of iron as a cofactor in neurotransmitter synthesis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Fatigue and neurocognitive dysfunction | Improves fatigue in some studies but impact on neurocognitive dysfunction is uncertain ... Fibromyalgia | Improves symptoms of fibromyalgia, possibly related to the role of iron as a cofactor in neurotransmitter synthesis"
+    },
+    {
+      "claim": "Small randomised trials have shown improved restless legs symptoms with iron supplementation if the serum ferritin is 75 microgram per litre or less",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Restless legs | Small, randomised trials have shown improved symptoms with iron supplementation if the serum ferritin is <=75 microgram/L"
+    },
+    {
+      "claim": "Several randomised clinical trials in patients who have heart failure with reduced ejection fraction and iron deficiency have reported improvements in symptoms and quality of life after intravenous iron therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Heart failure | Several randomised clinical trials in patients who have heart failure with reduced ejection fraction and iron deficiency have reported improvements in symptoms and quality of life after intravenous iron therapy"
+    },
+    {
+      "claim": "Intravenous iron in haemodialysis patients with ferritin below 700 microgram per litre and transferrin saturation below 40% results in less need for erythropoiesis-stimulating drugs, possible cardiovascular benefits and reduced blood transfusion requirements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Chronic kidney disease (haemodialysis) | Intravenous iron in patients with ferritin <700 microgram/L and transferrin saturation <40% results in less need for erythropoiesis-stimulating drugs, possible cardiovascular benefits and reduced blood transfusion requirements"
+    },
+    {
+      "claim": "Iron deficiency should be corrected before and during pregnancy to prevent impaired neurocognitive function including poor memory and slower neural processing in the child",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnancy | Iron deficiency should be corrected before and during pregnancy to prevent impaired neurocognitive function (poor memory and slower neural processing) in the child"
+    },
+    {
+      "claim": "While there is extensive literature surrounding iron deficiency anaemia there is a paucity of evidence in non-anaemic iron deficiency, the current literature is predominantly based on small studies with often heterogeneous populations, and as a result there are no firm pathways to guide investigations, treatment and monitoring",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "While there is extensive literature surrounding iron deficiency anaemia, there is a paucity of evidence in non-anaemic iron deficiency. The current literature is predominantly based on small studies with often heterogeneous populations. As a result, there are no firm pathways to guide investigations, treatment and monitoring."
+    },
+    {
+      "claim": "Iron studies will usually show a low ferritin and low transferrin saturation with a normal haemoglobin concentration in iron deficiency without anaemia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Iron studies will usually show a low ferritin and low transferrin saturation with a normal haemoglobin concentration."
+    }
+  ],
+  "summary": {
+    "total": 46,
+    "pass": 46,
+    "fail": 0
+  }
+}
