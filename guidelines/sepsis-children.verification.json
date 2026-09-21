@@ -1,0 +1,183 @@
+{
+  "guideline": "guidelines/sepsis-children.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Sepsis - assessment and management' (last updated March 2020, PIC endorsed), including the state-pathway banner, key points, background, pathogens by age, assessment, cold and warm shock, toxin mediated sepsis, red flags, the nine key management principles, consultation and ICU transfer triggers, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The approach to management is TWO FLOWCHART IMAGES and was not retrieved: antibiotic choice, fluid bolus volume, inotrope selection and doses, and the timing sequence are all inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to resuscitate a child. The state and territory sepsis pathways the source says must be followed were not retrieved and are recorded as input_unavailable. 'CRT >2' is given without units in the source; seconds is not asserted.",
+  "claims": [
+    {
+      "claim": "Some state and territory health departments have sepsis pathways and these must be followed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Some state and territory health departments have ; these must be followed**"
+    },
+    {
+      "claim": "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection"
+    },
+    {
+      "claim": "It is important to diagnose sepsis quickly but also to not over-diagnose, and most children with fever with or without a focus do not have sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "2. It is important to diagnose sepsis quickly but also to not over-diagnose. Most children with fever (with or without a focus) do not have sepsis"
+    },
+    {
+      "claim": "Septic shock is sepsis with evidence of cardiovascular organ dysfunction and hypotension is a late sign",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "3. Septic shock is sepsis with evidence of cardiovascular organ dysfunction; hypotension is a late sign"
+    },
+    {
+      "claim": "Rapid vascular access, early initiation of empiric antibiotics and carefully titrated fluid resuscitation is vital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "4. Rapid vascular access, early initiation of empiric antibiotics and carefully titrated fluid resuscitation is vital"
+    },
+    {
+      "claim": "Inotropes and vasopressors may be safely administered via peripheral cannula or intraosseous access in children during initial resuscitation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "5. Inotropes and vasopressors may be safely administered via peripheral cannula or intraosseous access (IO) in children during initial resuscitation"
+    },
+    {
+      "claim": "Sepsis is a major cause of morbidity and mortality in children and care delivered in the first hour following sepsis identification is crucial",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis is a major cause of morbidity and mortality in children \u2026 Care delivered in the first hour following sepsis identification is crucial"
+    },
+    {
+      "claim": "High risk groups include neonates, immunocompromised children, children with central venous access devices, and Aboriginal and Torres Strait Islanders",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "High risk groups include: \u2026 neonates \u2026 immunocompromised children \u2026 children with central venous access devices \u2026 Aboriginal and Torres Strait Islanders"
+    },
+    {
+      "claim": "Major pathogens in infants under 2 months of age are Escherichia coli and Group B Streptococcus, Listeria monocytogenes is uncommon, and HSV infection should be considered in the differential diagnosis of sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Major pathogens in infants <2 months of age: \u2026 _Escherichia coli_ \u2026 Group B _Streptococcus_ \u2026 _Listeria monocytogenes_ is uncommon \u2026 HSV infection should be considered in differential diagnosis of sepsis"
+    },
+    {
+      "claim": "Major pathogens in older children are Neisseria meningitidis, Streptococcus pneumoniae, Staphylococcus aureus whether MSSA or MRSA, and Group A Streptococcus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Major pathogens in older children: \u2026 _Neisseria meningitidis_ \u2026 _Streptococcus pneumoniae_ \u2026 _Staphylococcus aureus_(MSSA or MRSA) \u2026 Group A _Streptococcus_(GAS)"
+    },
+    {
+      "claim": "Sepsis or septic shock should be considered in a patient with a suspected or proven bacterial infection and any of the listed features",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis or septic shock should be considered in a patient with a suspected or proven bacterial infection **and** any of the following"
+    },
+    {
+      "claim": "Features prompting consideration of sepsis include altered conscious state with lethargy, irritability, floppiness or weak cry, and unwell appearance with or without non-blanching rash",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Altered conscious state (lethargy, irritability, floppiness, weak cry) \u2026 Unwell appearance \u00b1 non-blanching rash"
+    },
+    {
+      "claim": "Features of cardiovascular dysfunction include reduced peripheral perfusion, pale, cool or mottled skin, prolonged central capillary refill time, tachycardia, decreased urine output of less than 1 mL/kg/hr, or narrow pulse pressure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "reduced peripheral perfusion, pale, cool or mottled skin, prolonged central capillary refill time (CRT >2), tachycardia, decreased urine output (<1 mL/kg/hr) or narrow pulse pressure"
+    },
+    {
+      "claim": "Cold shock features narrow pulse pressure and prolonged capillary refill and is more common in neonates and infants",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "cold shock: narrow pulse pressure, prolonged capillary refill (more common in neonates/infants)"
+    },
+    {
+      "claim": "Warm shock features wide pulse pressure, bounding pulses and flushed skin with rapid capillary refill, is more common in older children and adolescents, and is often under-recognised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "warm shock: wide pulse pressure, bounding pulses, flushed skin with rapid capillary refill (more common in older children/adolescents and often under-recognised)"
+    },
+    {
+      "claim": "Other features prompting consideration of sepsis include tachypnoea with or without hypoxia or grunting not adequately explained by a respiratory illness, unexplained pain, and fever or hypothermia noting that temperature may be normal in neonates or the immunocompromised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Tachypnoea \u00b1 hypoxia \u00b1 grunting (not adequately explained by a respiratory illness) \u2026 Unexplained pain \u2026 Fever or hypothermia (temperature may be normal in neonates or the immunocompromised)"
+    },
+    {
+      "claim": "Toxin mediated sepsis is caused by superantigens from toxin-producing strains of S. aureus or Group A Streptococcus, and clinical features may include fever, vomiting, diarrhoea, myalgia, conjunctival injection, confusion, collapse and a widespread erythematous rash",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Toxin mediated sepsis: caused by superantigens from toxin-producing strains of _S. aureus_ or GAS \u2026 Clinical features may include fever, vomiting, diarrhoea, myalgia, conjunctival injection, confusion, collapse and a widespread erythematous rash"
+    },
+    {
+      "claim": "Red flag features are a high level of parental concern, representation within 48 hours, clinical deterioration despite treatment, and recent surgery or burns",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Red flag features \u2026 High level of parental concern \u2026 Representation within 48 hours \u2026 Clinical deterioration despite treatment \u2026 Recent surgery or burns"
+    },
+    {
+      "claim": "The key principles in managing severe sepsis or septic shock are early recognition and seeking senior help, assessing airway and breathing and administering oxygen if required, rapid vascular access, empiric antibiotic therapy, carefully titrated fluid resuscitation, early initiation of inotropes, early involvement of critical care services, source control, and frequent reassessment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. **Early recognition/seeking senior help** \u2026 2. **Assess airway and breathing and administer oxygen if required** \u2026 3. **Rapid vascular access** \u2026 4. **Empiric antibiotic therapy** \u2026 5. **Carefully titrated fluid resuscitation** \u2026 6. **Early initiation of inotropes** \u2026 7. **Early involvement of critical care services** \u2026 8. **Source control** \u2026 9. **Frequent reassessment**"
+    },
+    {
+      "claim": "Consultation with the local paediatric team should be considered for any child with suspected sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Any child with suspected sepsis"
+    },
+    {
+      "claim": "Transfer to intensive care should be considered where a child requires escalation of care beyond the local centre, including signs of shock persisting despite 40 mL/kg fluid, inotrope requirement, persistent venous serum lactate above 3 mmol/L, neutropenia under 1000 per mm3 unrelated to chemotherapy, large pleural effusion with near white out of the hemithorax, and coagulopathy with INR above 1.6, APTT above 60 or fibrinogen under 1",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Child requiring escalation of care beyond local centre \u2026 Signs of shock persisting despite 40 mL/kg fluid \u2026 Inotrope requirement \u2026 Persistent venous serum lactate >3 mmol/L \u2026 Neutropenia (<1000/mm3) unrelated to chemotherapy \u2026 Large pleural effusion (near white out of the hemithorax) \u2026 Coagulopathy (INR >1.6, APTT >60, Fib <1)"
+    },
+    {
+      "claim": "Secondary resuscitation measures including second line inotrope or vasopressor, steroids, haemofiltration and ECMO should be discussed with Retrieval Services or PICU",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Secondary resuscitation measures (second line inotrope/vasopressor, steroids, haemofiltration, ECMO) should be discussed with Retrieval Services or PICU"
+    },
+    {
+      "claim": "The guideline names NSW, Queensland, Western Australia and National resources",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**NSW** \u2026 **Queensland** \u2026 **Western Australia** \u2026 **National**"
+    },
+    {
+      "claim": "The guideline was last updated March 2020 and is PIC endorsed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Last Updated March 2020 \u2026 PIC Endorsed"
+    },
+    {
+      "claim": "The approach to management is presented as two flowchart pages",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis flowchart 1st page \u2026 Spesis flowchart 2nd page"
+    },
+    {
+      "claim": "The guideline cites Maitland et al, Mortality after fluid bolus in African children with severe infection, New England Journal of Medicine 2011",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Maitland K, Kiguli S, Opoka RO, et al. _Mortality after fluid bolus in African children with severe infection._ N Engl J Med 2011; 364:2483."
+    },
+    {
+      "claim": "The guideline cites Kumar et al 2006 on duration of hypotension before initiation of effective antimicrobial therapy as the critical determinant of survival in human septic shock, and Weiss et al 2014 on delayed antimicrobial therapy increasing mortality and organ dysfunction duration in pediatric sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Kumar A, Roberts D, Wood K, et al. Duration of hypotension before initiation of effective antimicrobial therapy is the critical determinant of survival in human septic shock. \u2026 Weiss SL, Fitzgerald JC, Balamuth F, et al. _Delayed antimicrobial therapy increases mortality and organ dysfunction duration in pediatric sepsis._ Crit Care Med 2014; 42:2409."
+    },
+    {
+      "claim": "The guideline's reference list includes both the Third International Consensus Definitions for Sepsis and Septic Shock known as Sepsis-3 from 2016 and the International pediatric sepsis consensus conference definitions from 2005",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3).   2016; 315(8):801-810. \u2026 Goldstein B, Giroir B, Randolph A, International Consensus Conference on Pediatric Sepsis. _International pediatric sepsis consensus conference: definitions for sepsis and organ dysfunction in pediatrics._ Pediatr Crit Care Med 2005; 6:2."
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "pass": 28,
+    "fail": 0
+  }
+}
