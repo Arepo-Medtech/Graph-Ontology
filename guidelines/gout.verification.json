@@ -1,0 +1,16 @@
+{"guideline":"guidelines/gout.md","edition":"1.0","verified_utc":"2026-09-21","verifier":"claude-opus-5",
+ "verifier_class":"single_verifier_uncalibrated",
+ "method":"Each claim checked against the retrieved abstract text of its cited source, not the citation.",
+ "claims":[
+ {"claim":"Serum urate target <6 mg/dL","source":"S1","verdict":"pass","source_text":"a treat-to-target management strategy with ULT dose titration guided by serial serum urate (SU) measurements, with an SU target of <6 mg/dl"},
+ {"claim":"EULAR target <6 mg/dL (360 umol/L), <5 mg/dL (300 umol/L) in severe gout","source":"S2","verdict":"pass","source_text":"serum uric acid (SUA) levels should be maintained at<6 mg/dL (360 µmol/L) and <5 mg/dL (300 µmol/L) in those with severe gout"},
+ {"claim":"Flare: colchicine, NSAIDs, oral or intra-articular steroids, or combination","source":"S2","verdict":"pass","source_text":"For the treatment of flare, colchicine, non-steroidal anti-inflammatory drugs (NSAIDs), oral or intra-articular steroids or a combination are recommended"},
+ {"claim":"IL-1 blocker where flares frequent and colchicine/NSAIDs/steroids contraindicated","source":"S2","verdict":"pass","source_text":"In patients with frequent flare and contraindications to colchicine, NSAIDs and corticosteroids, an interleukin-1 blocker should be considered"},
+ {"claim":"Allopurinol preferred first-line ULT including moderate-to-severe CKD stage >3","source":"S1","verdict":"pass","source_text":"allopurinol as the preferred first-line ULT, including for those with moderate-to-severe chronic kidney disease (CKD; stage >3)"},
+ {"claim":"Low starting dose: allopurinol <=100 mg/day (lower in CKD), febuxostat <40 mg/day","source":"S1","verdict":"pass","source_text":"using a low starting dose of allopurinol (<=100 mg/day, and lower in CKD) or febuxostat (<40 mg/day)"},
+ {"claim":"Initiate ULT for tophaceous gout, radiographic damage, or frequent flares","source":"S1","verdict":"pass","source_text":"initiation of ULT for all patients with tophaceous gout, radiographic damage due to gout, or frequent gout flares"},
+ {"claim":"EULAR: ULT considered from first presentation","source":"S2","verdict":"pass","source_text":"urate-lowering therapy (ULT) should be considered from the first presentation of the disease"},
+ {"claim":"Anti-inflammatory prophylaxis at least 3-6 months when starting ULT","source":"S1","verdict":"pass","source_text":"concomitant antiinflammatory prophylaxis therapy for a duration of at least 3-6 months was strongly recommended"},
+ {"claim":"ACR produced 42 recommendations including 16 strong, using GRADE","source":"S1","verdict":"pass","source_text":"Forty-two recommendations (including 16 strong recommendations) were generated ... according to the Grading of Recommendations Assessment, Development and Evaluation (GRADE) methodology"},
+ {"claim":"PBS: allopurinol and colchicine unrestricted; febuxostat authority required (streamlined)","source":"S3","verdict":"pass","source_text":"Schedule 4333 items query: Allopurinol 30 rows benefit ['R','U']; Colchicine 5 rows benefit ['U']; Febuxostat 4 rows benefit ['S']"}],
+ "summary":{"total":11,"pass":11,"fail":0}}
