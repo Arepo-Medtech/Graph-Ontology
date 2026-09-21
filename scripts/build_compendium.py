@@ -256,7 +256,8 @@ p = Path("cache/rxnorm_substances.json")
 if p.exists():
     for sctid, rec in json.load(open(p)).items():
         if rec.get("rxcui"):
-            rx_rows.append({"substance_id": sctid, "rxcui_ingredient": rec["rxcui"], "rxnorm_name": rec.get("name"), "rxnorm_tty": rec.get("tty"), "source": "rxnav-by-name"})
+            # v2 cache (rxnorm_resolve.py) records the method that produced each link; v1 was by-name only
+            rx_rows.append({"substance_id": sctid, "rxcui_ingredient": rec["rxcui"], "rxnorm_name": rec.get("name"), "rxnorm_tty": rec.get("tty"), "source": rec.get("method", "rxnav-by-name")})
 (OUT / "_rx.json").write_text(json.dumps(rx_rows or [{"substance_id": None, "rxcui_ingredient": None, "rxnorm_name": None, "rxnorm_tty": None, "source": None}]))
 con.execute("CREATE TABLE rxnorm AS SELECT DISTINCT * FROM read_json_auto('out/_rx.json')")
 
@@ -374,6 +375,7 @@ print(con.sql("""SELECT
   (SELECT count(*) FROM therapeutic_role_evidence) AS therapeutic_role_evidence_rows
 """).df().T.to_string(header=False))
 print("\nsample transcode rows:")
-print(con.sql("SELECT tpuu_pt, brand, generic_mpuu, ingredients, dose_form, pbs_codes, rxnorm_names FROM transcode WHERE pbs_codes IS NOT NULL AND rxcuis IS NOT NULL USING SAMPLE 5").df().to_string(index=False, max_colwidth=45))
+# DuckDB samples the FROM before WHERE, so filter in a subquery or the sample is usually empty
+print(con.sql("SELECT tpuu_pt, brand, generic_mpuu, ingredients, dose_form, pbs_codes, rxnorm_names FROM (SELECT * FROM transcode WHERE pbs_codes IS NOT NULL AND rxcuis IS NOT NULL) USING SAMPLE 5").df().to_string(index=False, max_colwidth=45))
 con.close()
 print(f"\nwritten: {DB} + out/*.parquet + selected tables as CSV")

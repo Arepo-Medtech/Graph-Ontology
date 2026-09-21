@@ -9,7 +9,7 @@ sources; nothing is fuzzy-matched and every link carries its method.
 | SNOMED CT-AU RF2 snapshot (NCTS) | AMT concepts at every level, `Has product name` (brand), `is a` (generic), active / precise ingredient, basis of strength, dose form, `Contains clinical drug` (pack → unit), AU preferred terms | Licensed. Read from disk (`AU_RF2_SNAPSHOT`), never committed. Concept activeness comes from a Concept snapshot, else the Concept *Full* file at the release root collapsed to its latest row, else the OWL axiom refset — see [Concept status](#concept-status) |
 | PBS Public API v3 | `items`, `amt-items`, `atc-codes`, and `item-atc-relationships`; selected `item-overview` evidence on demand | Commonwealth CC BY; copyright notice and source schedule retained in `cache/pbs/*.json` |
 | AMH Medicines, July 2026 | Curated pregnancy-safety and supplement-role distinctions, including route, gestational window and dose context | Subscriber source; only concise paraphrased metadata, edition, access date and direct URLs are committed |
-| RxNorm via RxNav (NLM) | Ingredient identity (RxCUI, IN/PIN) for SNOMED substances, by exact or normalised name | US public domain |
+| RxNorm via RxNav (NLM) | Ingredient identity (RxCUI, IN/PIN/MIN) for SNOMED substances: RxNorm's own SNOMED CT id map first, then SNOMED ancestor (salts/hydrates), then name equality — see [RxNorm resolution](#rxnorm-resolution) | US public domain |
 
 ## Levels (from FSN semantic tags)
 
@@ -71,7 +71,8 @@ source it used:
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/pbs_pull.py        # public tier: 1 request / 20 s
-.venv/bin/python scripts/rxnorm_enrich.py   # optional, ~1–2 h; resolves all ingredient substances via RxNav
+.venv/bin/python scripts/rxnorm_enrich.py   # optional, ~1–2 h; first pass, by name via RxNav
+.venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
 .venv/bin/python scripts/build_compendium.py
 ```
 
@@ -85,7 +86,28 @@ assembled item response on demand:
 ```
 
 `cache/rxcui_to_sctid.json` seeds RxNorm links from the Synthea AU bridge built in
-`Arepo-Medtech/data-golf-2026`; `rxnorm_enrich.py` extends them to every AMT ingredient.
+`Arepo-Medtech/data-golf-2026`; `rxnorm_enrich.py` extends them to every AMT ingredient and
+`rxnorm_resolve.py` re-grades every link with auditable methods.
+
+## RxNorm resolution
+
+Every substance AMT uses as an active or precise ingredient gets one record in
+`cache/rxnorm_substances.json` with a `method`, surfaced as `rxnorm.source`:
+
+| method | meaning |
+|---|---|
+| `rxnav-snomedct-id` | RxNav id map (`idtype=SNOMEDCT`), i.e. RxNorm's own SNOMED CT US atoms. Authoritative; it corrected by-name errors such as *Morphine sulfate* → morphine hydrochloride. International concept ids only |
+| `snomed-ancestor` | AU-authored salts/hydrates: nearest `is a` ancestor (≤ 3 hops) resolved by the id map whose preferred term is a prefix of the child's. `via_sctid`, `via_name`, `hops` are recorded |
+| `rxnav-by-name-verified` | first-pass by-name hit whose RxNorm name or RxNorm synonym equals a SNOMED description after British→American normalisation |
+| `rxnav-approximate-verified` | RxNav `approximateTerm` candidate passing the same equality test |
+| `rxnav-name-preparation` | RxNorm `<name> preparation` / `<name> extract` forms for botanicals; lowest accepted tier |
+| `rxnav-base-of-salt` | salt/ester/hydrate with no RxNorm entry of its own, linked to the base `IN` when every remaining token is a salt/hydrate word (e.g. *Mosapride citrate* → mosapride). Precision loss is deliberate and visible in the method |
+| `rxnav-by-name-unverified` | first-pass hit that failed verification; **excluded** from the `rxnorm` table, listed in `out/rxnorm_review.tsv` |
+| `not-applicable:<bucket>` | substance groupers and pharmacological classes (`… and/or … derivative`, `… inhibitor`, used as ingredients by international MP concepts), vaccine antigens/strains, allergen extracts, excipients, medical foods, cell/gene therapy: no RxNorm ingredient is expected |
+| `unresolved` | nothing found; the top RxNav candidates are kept in `candidates` for review |
+
+`out/rxnorm_resolution_report.md` lists counts per method and every legacy link that a stronger
+method changed.
 
 ## Query examples
 
