@@ -1,0 +1,291 @@
+{
+  "guideline": "guidelines/hip-fracture-care.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ACSQHC Hip Fracture Care Clinical Care Standard, including the seven quality statements, the for-clinicians sections and the full indicator list. No analgesic agents, doses, nerve block techniques, antibiotic prophylaxis or thromboprophylaxis regimens are asserted; the standard names none and defers to current guidelines. Some retrieved text contains extraction artefacts where double-n collapsed ('pla ing' for planning, 'a ual' for annual, 'presentatio' for presentation); source_text is preserved verbatim and the guideline renders the evident word.",
+  "claims": [
+    {
+      "claim": "The target age for the Standard is 50 years and older, and the care described is also appropriate for people aged under 50 who have a suspected hip fracture judged to be caused by osteoporosis or osteopenia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The target age for this Standard is 50 years and older. The care described in this Standard is also appropriate for people aged under 50 years who have a suspected hip fracture that is judged to be caused by osteoporosis or osteopenia."
+    },
+    {
+      "claim": "The Standard applies to care provided in all hospital settings including public and private hospitals and subacute facilities",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This Standard applies to care provided in all hospital settings, including public and private hospitals and subacute facilities."
+    },
+    {
+      "claim": "Clinicians should put in place interventions to prevent or manage delirium in accordance with the Delirium Clinical Care Standard",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Put in place interventions to prevent or manage delirium, in accordance with the Delirium Clinical Care Standard"
+    },
+    {
+      "claim": "Overall indicator 8a is the proportion of patients with a hip fracture who returned to pre-fracture walking ability within 120 days following surgery",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 8a | Proportion of patients with a hip fracture who returned to pre-fracture walking ability within 120 days following surgery"
+    },
+    {
+      "claim": "Overall indicator 8b is the proportion of patients who returned to live in a private residence within 120 days following surgery",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 8b | Proportion of patients who returned to live in a private residence within 120 days following surgery"
+    },
+    {
+      "claim": "Overall indicator 8c is survival 30 days from presentation to hospital for a hip fracture",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 8c | Survival 30 days from presentation to hospital for a hip fracture"
+    },
+    {
+      "claim": "Quality statement 4 states that a patient with a hip fracture receives surgery within 36 hours of first presentation to hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient with a hip fracture receives surgery within 36 hours of first presentation to hospital."
+    },
+    {
+      "claim": "There is an expectation that all patients will receive surgery within 36 hours no matter the hospital where they first present",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is an expectation that all patients will receive surgery within 36 hours, no matter the hospital where they first present."
+    },
+    {
+      "claim": "If a patient sustains a fracture in hospital surgery should be performed within 36 hours of the fracture occurring",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a patient sustains a fracture in hospital, surgery should be performed within 36 hours of the fracture occurring."
+    },
+    {
+      "claim": "For hospitals that do not provide hip fracture surgery, prompt transfer should be organised and the care pathway initiated locally to optimise the patient's pre-operative condition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For hospitals that do not provide hip fracture surgery, organise prompt transfer and initiate the care pathway locally to optimise the patient's pre-operative condition."
+    },
+    {
+      "claim": "Quality statement 5 states that a patient with a hip fracture is mobilised without restrictions on weight bearing starting the day of or the day after surgery and at least once a day according to the patient's clinical condition and agreed goals of care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient with a hip fracture is mobilised without restrictions on weight bearing starting the day of, or the day after surgery, and at least once a day, according to the patient's clinical condition and agreed goals of care."
+    },
+    {
+      "claim": "Mobilised means the patient manages to stand and step transfer out of bed onto a chair or commode or walk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Mobilised means the patient manages to stand and step transfer out of bed onto a chair/commode or walk."
+    },
+    {
+      "claim": "Patients should be allowed to bear weight as tolerated but weight-bearing should be avoided if there is a clinical concern about the fracture, the fixation or the likelihood of healing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Allow patients to bear weight as tolerated, but avoid weight-bearing if there is a clinical concern about the fracture, the fixation or the likelihood of healing."
+    },
+    {
+      "claim": "Additional exercises such as training of gait, balance and functional tasks can further improve patient outcomes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Additional exercises, such as training of gait, balance and functional tasks can further improve patient outcomes."
+    },
+    {
+      "claim": "Quality statement 2 states that a patient with a hip fracture is assessed for pain at the time of presentation to the emergency department and regularly throughout their acute admission, and that pain management includes appropriate multimodal analgesia and incorporates peripheral nerve blocks unless contraindicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient with a hip fracture is assessed for pain at the time of presentation to the emergency department and regularly throughout their acute admission. Pain management includes appropriate multimodal analgesia, and incorporates peripheral nerve blocks unless contraindicated."
+    },
+    {
+      "claim": "Many patients with a hip fracture will have received analgesics in the ambulance",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Many patients with a hip fracture will have received analgesics in the ambulance."
+    },
+    {
+      "claim": "Pain should be assessed and documented immediately upon presentation to hospital, within 30 minutes of administering initial analgesia, hourly until the patient is settled and pain is managed, and regularly as part of routine nursing and other clinicians' observations throughout the admission",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assess and document the patient's pain: immediately upon presentation to hospital; within 30 minutes of administering initial analgesia; hourly until the patient is settled and pain is managed; regularly as part of routine nursing and other clinicians' observations throughout the admission."
+    },
+    {
+      "claim": "A nerve block has the potential to reduce opioid dose requirements and their unwanted side effects such as sedation, respiratory complications and delirium",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A nerve block has the potential to reduce opioid dose requirements and their unwanted side effects (such as sedation, respiratory complications and delirium)."
+    },
+    {
+      "claim": "Quality statement 1 states that a patient presenting to hospital with a suspected hip fracture receives care guided by timely assessment and management of medical conditions including cognition, pain, nutritional status and frailty, with arrangements made according to a locally endorsed hip fracture pathway",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient presenting to hospital with a suspected hip fracture receives care guided by timely assessment and management of medical conditions, including cognition, pain, nutritional status and frailty. Arrangements are made according to a locally endorsed hip fracture pathway."
+    },
+    {
+      "claim": "The locally endorsed hip fracture pathway should include screening for malnutrition, frailty, cognitive impairment and risk factors for delirium; identifying comorbidity and medicines that may impact on time to surgery or readiness for surgery; providing pain relief; assessing for underlying acute and chronic medical conditions precipitating the fall; excluding other injuries; and conducting relevant diagnostic imaging and pathology",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "screening for malnutrition, frailty, cognitive impairment and risk factors for delirium; identifying comorbidity and medicines that may impact on time to surgery or readiness for surgery; providing pain relief; assessing for underlying acute and chronic medical conditions precipitating the fall, excluding other injuries; conducting relevant diagnostic imaging and pathology."
+    },
+    {
+      "claim": "The frailty assessment should be documented and the results used to guide care planning",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Document the frailty assessment and use the results to guide care pla ing."
+    },
+    {
+      "claim": "The Clinical Frailty Scale can predict adverse outcomes in older people in hospital including hospital-based harm, emergency department and inpatient length of stay, the need for placement in an aged care facility, and death",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Clinical Frailty Scale can predict adverse outcomes in older people in hospital, including hospital-based harm, emergency department and inpatient length of stay, the need for placement in an aged care facility, and death."
+    },
+    {
+      "claim": "Quality statement 3 states that a patient with a hip fracture is offered treatment based on an orthogeriatric model of care as defined in the Australian and New Zealand Guideline for Hip Fracture Care, and that coordinated orthogeriatric and multidisciplinary review includes assessment and management of malnutrition, frailty, cognitive impairment and delirium",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient with a hip fracture is offered treatment based on an orthogeriatric model of care as defined in the Australian and New Zealand Guideline for Hip Fracture Care. Coordinated orthogeriatric and multidisciplinary review includes assessment and management of malnutrition, frailty, cognitive impairment and delirium."
+    },
+    {
+      "claim": "From the time of admission the orthogeriatric model includes regular orthogeriatrician assessment including medication review, managing patient comorbidities, optimisation for surgery, early identification of goals of care in discussion with the patient and their family or support people documented in the comprehensive care plan, and early assessment of nutritional status using a validated assessment tool reassessed during the admission with individualised interventions including offering oral nutritional supplements postoperatively",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "From the time of admission, offer patients with a hip fracture a formal orthogeriatric model of care that includes: regular orthogeriatrician assessment including medication review; managing patient comorbidities; optimisation for surgery; early identification of goals of care, in discussion with the patient and their family or support people and documented in the comprehensive care pla ; early assessment of the patient's nutritional status using a validated assessment tool, reassessed during the course of the admission with individualised interventions when required including offering oral nutritional supplements postoperatively"
+    },
+    {
+      "claim": "Clinicians should discuss treatment options with the patient, explaining the goals, benefits, risks and limitations of treatment options, taking into account the patient's medical conditions, goals of care and prior level of function",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Discuss treatment options with the patient. Explain the goals, benefits, risks and limitations of treatment options, taking into account the patient's medical conditions, goals of care and prior level of function."
+    },
+    {
+      "claim": "If a hip fracture complicates or precipitates a terminal illness, the role of surgery should be considered as part of a palliative care approach to alleviate symptoms and minimise suffering",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a hip fracture complicates or precipitates a terminal illness, consider the role of surgery as part of a palliative care approach to alleviate symptoms and minimise suffering."
+    },
+    {
+      "claim": "If clinically indicated and in accordance with patient preferences, surgery should be performed within 36 hours of the patient's first presentation to hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If clinically indicated and in accordance with patient preferences, surgery should be performed within 36 hours of the patient's first presentation to hospital."
+    },
+    {
+      "claim": "Surgical antibiotic prophylaxis and thromboprophylaxis should be prescribed according to current guidelines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prescribe surgical antibiotic prophylaxis and thromboprophylaxis according to current guidelines."
+    },
+    {
+      "claim": "Quality statement 6 states that before a patient leaves hospital after a hip fracture they receive a falls and bone health assessment and management plan with appropriate referral for secondary fracture prevention",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Before a patient leaves hospital after a hip fracture, they receive a falls and bone health assessment and management plan, with appropriate referral for secondary fracture prevention."
+    },
+    {
+      "claim": "Patients with a hip fracture should be assessed for their risk of another fracture and educated by discussing risk factors for falls and providing written information on specific exercises to improve muscle strength and balance",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assess patients with a hip fracture for their risk of another fracture. Educate them by discussing risk factors for falls and providing written information on specific exercises to improve muscle strength and balance."
+    },
+    {
+      "claim": "Where clinically indicated the need for bone protection medicines should be discussed and treatment initiated prior to discharge, and where appropriate the patient should be referred to an established fracture liaison service",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Where clinically indicated, discuss the need for bone protection medicines and initiate treatment prior to discharge. Where appropriate, refer to an established fracture liaison service (FLS)."
+    },
+    {
+      "claim": "The management plan should be included in the patient's discharge summary and care plan",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure the management plan is included in the patient's discharge summary and care plan."
+    },
+    {
+      "claim": "Quality statement 7 states that before leaving hospital an individualised care plan is developed in discussion with the patient and their family or support person describing their goals of care and ongoing care needs, including mobilisation activities and expected function post-injury, wound care, pain management, nutrition, fracture prevention strategies, changed or new medicines and specific rehabilitation services and equipment, and that this plan is provided to the patient and communicated with the patient's general practice and other ongoing clinicians and care providers on discharge",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Before leaving hospital, an individualised care plan is developed in discussion with the patient and their family or support person, that describes their goals of care and ongoing care needs. The plan includes mobilisation activities and expected function post-injury, wound care, pain management, nutrition, fracture prevention strategies, changed or new medicines and specific rehabilitation services and equipment. This plan is provided to the patient, and communicated with the patient's general practice and other ongoing clinicians and care providers on discharge."
+    },
+    {
+      "claim": "The individualised care plan is separate to a clinical discharge summary and should identify any changes in medicines, any new medicines or ongoing pain management, and identify equipment and contact details for rehabilitation services and refer as required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The individualised care plan is separate to a clinical discharge summary and should: identify any changes in medicines, any new medicines or ongoing pain management; identify equipment and contact details for rehabilitation services and refer as required"
+    },
+    {
+      "claim": "Patient-facing resources named include the ANZHFR My Hip Fracture and NZHQSC Recovering from a Hip Fracture booklets",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "for example the ANZHFR My Hip Fracture or NZHQSC Recovering from a Hip Fracture booklets"
+    },
+    {
+      "claim": "Indicator 1a is the proportion of patients with a hip fracture who were screened for cognitive impairment using a validated tool on presentation to hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 1a | Proportion of patients with a hip fracture who were screened for cognitive impairment using a validated tool on presentation to hospital"
+    },
+    {
+      "claim": "Indicator 2a is the proportion of patients who either received analgesia within 30 minutes of presentation or did not require it according to an assessment of their pain",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 2a | Proportion of patients with a hip fracture who either received analgesia within 30 minutes of presentation or did not require it according to an assessment of their pain"
+    },
+    {
+      "claim": "Indicator 2b is the proportion of patients who received a peripheral nerve block prior to surgery, and indicator 2c is the proportion transferred from another hospital who received a peripheral nerve block prior to transfer",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 2b | Proportion of patients with a hip fracture who received a peripheral nerve block prior to surgery | Indicator 2c | Proportion of patients with a hip fracture who were transferred from another hospital for treatment who received a peripheral nerve block prior to transfer"
+    },
+    {
+      "claim": "Indicator 3a is the proportion who had a clinical frailty assessment using a validated tool, indicator 3b the proportion assessed for delirium following surgery, and indicator 3c the proportion who received protein and energy oral nutritional supplements during their admission",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 3a | Proportion of patients with a hip fracture who had a clinical frailty assessment using a validated tool | Indicator 3b | Proportion of admitted patients with a hip fracture who were assessed for delirium following surgery | Indicator 3c | Proportion of admitted patients with a hip fracture who received protein and energy oral nutritional supplements during their admission"
+    },
+    {
+      "claim": "Indicator 4a is the proportion of admitted patients who received surgery within 36 hours of their first presentation to a hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 4a | Proportion of admitted patients with a hip fracture who received surgery within 36 hours of their first presentation to a hospital"
+    },
+    {
+      "claim": "Indicator 5a is the proportion mobilised the day of or the day after their hip fracture surgery, and indicator 5b the proportion who experienced a new Stage II or higher pressure injury",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 5a | Proportion of admitted patients with a hip fracture who were mobilised the day of, or the day after, their hip fracture surgery | Indicator 5b | Proportion of admitted patients with a hip fracture who experienced a new Stage II (or higher) pressure injury"
+    },
+    {
+      "claim": "Indicator 6a is the proportion of admitted patients who received bone protection medicine while in hospital or a prescription prior to separation from hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 6a | Proportion of admitted patients with a hip fracture who received bone protection medicine while in hospital or a prescription prior to separation from hospital"
+    },
+    {
+      "claim": "Indicator 7a is evidence of local arrangements for the development of an individualised care plan for hip fracture patients prior to separation from hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 7a | Evidence of local arrangements for the development of an individualised care plan for hip fracture patients prior to separation from hospital"
+    },
+    {
+      "claim": "No benchmarks are set for these indicators by the Commission, and facilities can compare their performance to other facilities and to the national average in published ANZHFR annual reports and real-time dashboards",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "No benchmarks are set for these indicators by the Commission. Facilities can compare their performance on each quality indicator to the performance of other facilities, and to the national average in published ANZHFR a ual reports and real-time dashboards."
+    },
+    {
+      "claim": "Indicator definitions required to collect and calculate indicator data are specified online at METEOR",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
+    },
+    {
+      "claim": "Healthcare service systems should include transfer protocols including consideration of straight to ward pathways",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Systems should include transfer protocols including consideration of straight to ward"
+    }
+  ],
+  "summary": {
+    "total": 46,
+    "pass": 46,
+    "fail": 0
+  }
+}
