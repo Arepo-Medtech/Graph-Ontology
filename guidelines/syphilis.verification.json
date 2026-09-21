@@ -1,0 +1,196 @@
+{
+  "guideline": "guidelines/syphilis.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM syphilis page (modified 7 Sep 2026). Doses and dates compared character by character.",
+  "time_sensitive": "The Bicillin L-A shortage claims carry expiry dates (31 Mar 2027, 30 Nov 2027) and a source date of 7 Sep 2026. They WILL become false. Any reuse must check the source.",
+  "claims": [
+    {
+      "claim": "Both strengths of Bicillin L-A prefilled syringes are in shortage; 1.2 MU until 31 March 2027, 600,000 units until 30 November 2027",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is currently a shortage of both strengths of Bicillin L-A (benzathine benzylpenicillin tetrahydrate) prefilled syringes for injection (600,000 units per syringe and 1.2 million units per syringe). ... The shortage of Bicillin L-A 1.2 million unit prefilled syringe for injection is expected to last until 31 March 2027. ... The shortage of Bicillin L-A 600,000 unit prefilled syringe for injection has been extended until 30 November 2027."
+    },
+    {
+      "claim": "Emergency supply available from Pfizer Australia; overseas-registered products approved under section 19A of the Therapeutic Goods Act 1989; prioritise for high-priority patient groups",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Emergency supply is available from Pfizer Australia. ... Overseas-registered benzathine benzylpenicillin products are approved for supply under section 19A of the Therapeutic Goods Act 1989. Benzathine benzylpenicillin products should be prioritised for use in high-priority patient groups."
+    },
+    {
+      "claim": "Around 50% have no symptoms and are diagnosed only by serological screening; syphilis can mimic many conditions so consider testing in all patients with unexplained symptoms",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Around 50% of people will have no symptoms and will only be diagnosed by screening with serological testing. ... As syphilis can mimic many other conditions, consider syphilis testing in all patients with unexplained symptoms."
+    },
+    {
+      "claim": "Increasing prevalence in the general population, especially women of reproductive age, so low threshold for testing required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recent concerning increase in prevalence in the general population, especially in women of reproductive age, so low threshold for testing is required."
+    },
+    {
+      "claim": "Syphilis in pregnancy has led to re-emergence of congenital syphilis; seek urgent specialist advice and ensure urgent active recall",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Syphilis in pregnant people has led to the re-emergence of congenital syphilis. If diagnosed during pregnancy, seek urgent specialist advice and ensure urgent and active recall for treatment."
+    },
+    {
+      "claim": "Early infectious syphilis is primary, secondary and early latent, i.e. asymptomatic infection acquired within the previous 2 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Early infectious syphilis: primary and secondary and early latent infection, ie asymptomatic infection acquired within the previous 2 years."
+    },
+    {
+      "claim": "Late latent is asymptomatic infection acquired more than 2 years before diagnosis, or when duration is unknown",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Late latent syphilis, i.e. asymptomatic infection acquired more than 2 years before diagnosis, or when the duration of infection is unknown."
+    },
+    {
+      "claim": "If any doubt about the length of infection, treat as late latent disease",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If any doubt about the length of infection, treat as late latent disease."
+    },
+    {
+      "claim": "After 2 years people are no longer infectious to sexual partners, but late latent syphilis can still be transmitted to the fetus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "After 2 years people are no longer infectious to sexual partners. Importantly however late latent syphilis is able to be transmitted during pregnancy to the fetus."
+    },
+    {
+      "claim": "Primary: chancre mostly painless with well-defined margin and indurated base; about 30% multiple ulcers; incubation 10-90 days average 3 weeks; heals spontaneously even if untreated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The ulcer is mostly (but not always) relatively painless with a well defined margin and an indurated (firm) base. In about 30% of cases there may be multiple ulcers and other atypical presentations ... Incubation period is 10-90 days (average 3 weeks). ... Even if untreated, the ulcer usually spontaneously heals within a few weeks."
+    },
+    {
+      "claim": "Secondary: usually more than 6 weeks after infection; skin involved in over 90%; incubation 2-24 weeks average 6 weeks; rash confusable with drug eruption, pityriasis rosea or guttate psoriasis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Secondary syphilis usually occurs more than 6 weeks after infection ... The skin is involved in over 90% of cases ... The rash can be easily confused with drug eruptions, pityriasis rosea or guttate psoriasis. ... Incubation period is 2-24 weeks (average 6 weeks)."
+    },
+    {
+      "claim": "Neurological signs (visual changes, tinnitus, deafness, cranial nerve palsies, meningitis) may indicate early neurosyphilis requiring intravenous therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Neurological signs of visual changes, tinnitus, deafness, cranial nerve palsies or meningitis may indicate early neurosyphilis requiring intravenous therapy."
+    },
+    {
+      "claim": "Early syphilis: benzathine benzylpenicillin 2.4 MU (1.8 g) IMI stat, given as 2 injections containing 1.2 MU (0.9 g)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Early syphilis (primary, secondary, early latent) | Benzathine benzylpenicillin 2.4 MU (1.8 g) IMI, Stat, given as 2 injections containing 1.2 MU (0.9 g)"
+    },
+    {
+      "claim": "Late or unknown duration: same dose weekly for 3 weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Late syphilis or syphilis of unknown duration (late latent > 2 years) | Benzathine benzylpenicillin 2.4 MU (1.8 g) IMI, given as 2 injections containing 1.2 MU (0.9 g) weekly for 3 weeks"
+    },
+    {
+      "claim": "Formulation must be long acting; short-acting formulations such as benzylpenicillin are ineffective",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intramuscular penicillin formulation used should be long acting, as short-acting formulations (e.g. benzylpenicillin) are ineffective."
+    },
+    {
+      "claim": "RPR serology repeated on the day treatment commences to provide an accurate baseline",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients being treated for primary and secondary syphilis should have RPR serology repeated on the day treatment is commenced to provide an accurate baseline for monitoring treatment response."
+    },
+    {
+      "claim": "Jarisch-Herxheimer occurs 6-12 hours after commencing treatment; fever, headache, malaise, rigors, joint pains, lasting several hours; patients should be alerted and reassured",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Jarisch-Herxheimer reaction is a common reaction to treatment in patients with primary and secondary syphilis. It occurs 6-12 hours after commencing treatment, and is an unpleasant reaction of varying severity with fever, headache, malaise, rigors and joint pains, and lasts for several hours. ... Patients should be alerted to the possibility of this reaction and reassured accordingly."
+    },
+    {
+      "claim": "Doxycycline alternative: early (<2 years) and presumptive treatment 100 mg orally twice a day for 14 days; late (>2 years) or unknown 100 mg twice a day for 28 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Early (< 2 years) syphilis and presumptive treatment of people exposed to syphilis: doxycycline 100 mg orally twice a day for 14 days. Late (> 2 years) or unknown duration syphilis: doxycycline 100 mg orally twice a day for 28 days."
+    },
+    {
+      "claim": "Allergy assessed with a validated tool such as PENFAST; family history or intolerance-type reaction warrants immediate delabeling and penicillin treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Take an allergy history and conduct an assessment using a validated tool such as PENFAST. For people with only a family history or reaction suggesting intolerance immediate delabeling and treatment with penicillin is appropriate."
+    },
+    {
+      "claim": "Pregnancy: only penicillin shown effective, those allergic should be desensitised and treated with penicillin; fetal monitoring may be advised beyond 20 weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Only penicillin has been shown to be effective, so those allergic should be desensitised and treated with penicillin. ... Fetal monitoring may be advised if more than 20 weeks of pregnancy."
+    },
+    {
+      "claim": "HIV co-infection: discuss with specialist if CD4 <350 cells/uL as lumbar puncture may be advised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Discuss with a specialist if CD4 count < 350 cells/\u03bcL as a lumbar puncture for CSF examination may be advised."
+    },
+    {
+      "claim": "Contact tracing: primary 3 months plus duration of symptoms; secondary 6 months plus duration; early latent 12 months; late latent test current partners and trace as early latent if in doubt",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Primary syphilis: 3 months plus duration of symptoms or last negative test; Secondary syphilis: 6 months plus duration of symptoms or last negative test; Early latent: 12 months or most recent negative test; Late latent syphilis: Test current partner/s. If any doubt as to whether the patient has early latent or late latent syphilis, contact trace as for early latent syphilis."
+    },
+    {
+      "claim": "Presumptively treat all sexual contacts from the last 3 months of primary or secondary syphilis regardless of serology with benzathine benzylpenicillin 2.4 MU IMI stat",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Presumptively treat all sexual contacts from the last 3 months of patients with primary or secondary syphilis regardless of serology with benzathine benzylpenicillin 2.4 MU (1.8 g) IMI, Stat."
+    },
+    {
+      "claim": "Ongoing sexual contacts of pregnant people are the highest priority and must be presumptively treated as soon as possible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ongoing sexual contacts of pregnant people are the highest priority and must be presumptively treated as soon as possible to prevent re-infection during pregnancy."
+    },
+    {
+      "claim": "No sex with partners from last 3 months (primary), 6 months (secondary) or 12 months (early latent) until tested and treated; no sexual contact 7 days after treatment commenced",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sexual contact for 7 days after treatment is commenced ... Advise no sex with partners from the last 3 months (primary syphilis), 6 months (secondary syphilis) or 12 months (early latent) until the partners have been tested and treated if necessary."
+    },
+    {
+      "claim": "Test of cure: clinical review and repeat RPR at 3 months, then 6 months and if necessary 12 months; 4-fold drop indicates adequate response; seek advice if rising or no 4-fold drop by 12 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Review all patients clinically and with repeat RPR testing at 3 months, then at 6 months and (if necessary) at 12 months after completing treatment. A 4-fold drop (e.g. 1:8 to 1:2) indicates adequate response to treatment. Seek specialist advice if RPR is rising or a 4-fold drop is not achieved by 12 months."
+    },
+    {
+      "claim": "Auditable outcome: 100% of patients with syphilis have had follow-up serology tests by 6 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of patients with syphilis have had follow-up serology tests by 6 months."
+    },
+    {
+      "claim": "In prior treated syphilis CMIA/EIA and TPPA antibodies usually positive for life; RPR is the marker of disease activity and treatment response; re-infection assessed on symptoms and significant rise in RPR titre",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In patients with prior treated syphilis, antibodies detected via CMIA/EIA and TPPA tests are usually positive for life. The RPR is a marker for disease activity and treatment response. ... Re-infection is assessed based on symptoms and a significant rise in RPR titre."
+    },
+    {
+      "claim": "In very early infection NAAT may be positive before seroconversion; if primary suspected but serology negative, ensure PCR swab and repeat serology after 2 weeks following presumptive treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In very early infection, the NAAT test may be positive before seroconversion. ... If there is a clinical suspicion of primary syphilis but serology is negative, ensure a PCR swab has been done and repeat serology after 2 weeks following presumptive treatment."
+    },
+    {
+      "claim": "Positive syphilis results in a child should be urgently discussed with a specialist and child protection services",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Positive syphilis results in a child should be urgently discussed with a specialist and child protection services."
+    }
+  ],
+  "summary": {
+    "total": 30,
+    "pass": 30,
+    "fail": 0
+  }
+}
