@@ -3,14 +3,14 @@
   "binding_policy": "exact or normalised display only; ranked hits are candidates, not bindings",
   "binding_policy_v2": "exact/normalised match on display or designation, in <<404684003 OR <<71388002, AND the concept must have a parent (orphan = retired = rejected)",
   "counts": {
-    "exact": 258,
-    "normalised": 6,
-    "candidate": 331,
+    "bound": 264,
+    "candidate": 330,
     "unmatched": 29,
+    "candidates_removed": 15,
+    "corrected_pending_attestation": 1,
     "unvalidated": 0,
     "retired": 0,
-    "total": 639,
-    "candidates_removed": 15
+    "total": 639
   },
   "results": [
     {
@@ -14603,5 +14603,6 @@
       ]
     }
   ],
-  "human_corrections_applied": 1
+  "human_corrections_applied": 1,
+  "counts_note": "recomputed from results after corrections; the binder run block drifted by 1"
 }
