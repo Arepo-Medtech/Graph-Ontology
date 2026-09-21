@@ -1,0 +1,5 @@
+{
+  "_note": "SNOMED CT-AU concept ids for body-system disorder roots, used to assign body_system from the is-a ancestor closure of each bound condition. Ships EMPTY on purpose: these ids must be verified against the AU release in hand, never copied from memory. Populate with `python scripts/bind_conditions.py --list-ancestor-roots`, which reports the most common high-level ancestors with their preferred terms.",
+  "_schema": {"<concept_id>": "<body system label>"},
+  "roots": {}
+}
