@@ -2,3 +2,8 @@ cache/
 out/
 .venv/
 __pycache__/
+
+# Foundry output under out/ is already covered by the out/ rule above.
+# Durable artefacts live in reference/ instead: the condition set, the SNOMED
+# binding queue (which accumulates human confirmations), validated splits and
+# verification verdicts. Those are work products, not build output.
