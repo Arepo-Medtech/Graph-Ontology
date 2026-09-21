@@ -1,0 +1,177 @@
+{
+  "guideline": "guidelines/mycoplasma-genitalium.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM M. genitalium page. Doses, resistance percentages and cure rates compared character by character.",
+  "claims": [
+    {
+      "claim": "Asymptomatic screening for M. genitalium is not currently recommended, due to lack of knowledge of natural history, rising antimicrobial resistance and increasing complexities around access to effective treatments",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Asymptomatic screening for M. genitalium is not currently recommended due to lack of knowledge regarding its natural history, rising antimicrobial resistance and increasing complexities around access to effective treatments."
+    },
+    {
+      "claim": "Macrolide resistance exceeds 60% in Australia in the majority of cases and exceeds 80% in men who have sex with men",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Azithromycin (macrolide) resistance exceeds 60% in Australia in the majority of cases and exceeds 80% in men who have sex with men."
+    },
+    {
+      "claim": "Fluoroquinolone resistance is rising and approaching 20% in many urban settings, impacting moxifloxacin efficacy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Fluoroquinolone resistance is also rising and approaching 20% in many urban settings impacting on the efficacy of moxifloxacin."
+    },
+    {
+      "claim": "Macrolide-resistance assays and resistance-guided therapy improve first-line cure from 60 to >90%",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use of macrolide-resistance assays and resistance guided therapy for M. genitalium have been shown to improve first-line cure from 60 to >90%."
+    },
+    {
+      "claim": "Test on clinical indication: acute, persistent and recurrent non-gonococcal urethritis, cervicitis, PID, post-coital bleeding, ongoing sexual contacts",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acute, persistent and recurrent non-gonococcal urethritis; Cervicitis; Pelvic inflammatory disease; Post-coital bleeding; Ongoing sexual contacts of M. genitalium infection."
+    },
+    {
+      "claim": "Throat swabs are not recommended as pharyngeal infection is uncommon",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Throat swabs are not recommended as pharyngeal infection is uncommon."
+    },
+    {
+      "claim": "Vaginal swabs are the most sensitive specimen; endocervical swabs slightly less sensitive",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Most studies suggest vaginal swabs are the most sensitive specimen. ... Endocervical swabs are slightly less sensitive than vaginal swabs"
+    },
+    {
+      "claim": "Where resistance testing is unavailable, reasonable to assume macrolide resistance in infections persisting after azithromycin failure and in MSM where resistance exceeds 80% in most urban settings",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Without access to resistance testing, it is reasonable to assume macrolide resistance is present in infections persisting after failure of azithromycin and in men who have sex with men, where macrolide resistance exceeds 80% in most urban settings in Australia."
+    },
+    {
+      "claim": "Macrolide-susceptible: doxycycline 100 mg twice a day for 7 days followed by azithromycin 1 g immediately then 500 mg daily for 3 days (total 2.5 g)",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "M. genitalium infection known or suspected to be macrolide susceptible | Doxycycline 100 mg twice a day for 7 days followed by Azithromycin 1 g immediately then 500 mg daily for 3 days (total 2.5 g)"
+    },
+    {
+      "claim": "Macrolide-resistant: doxycycline 100 mg twice a day for 7 days followed by moxifloxacin 400 mg daily for 7 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "M. genitalium infection known or suspected to be macrolide resistant | Doxycycline 100 mg twice a day for 7 days followed by Moxifloxacin 400 mg daily for 7 days"
+    },
+    {
+      "claim": "PID due to M. genitalium: moxifloxacin 400 mg daily for 14 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pelvic inflammatory disease due to M. genitalium | Moxifloxacin 400 mg daily for 14 days"
+    },
+    {
+      "claim": "PID: if responding to empiric doxycycline and metronidazole complete the 14 day regimen and do a test of cure; if still symptomatic recall and switch to 14 days moxifloxacin; not supported by randomised data in M. genitalium-associated PID",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a patient is clinically responding to this 14 day empiric regimen then complete it and undertake a test of cure to ensure M.genitalium eradication. If a patient remains symptomatic, then recall them and switch to 14 days of moxifloxacin. This regimen was evaluated in a randomised controlled trial of all-cause PID and has been used in patients with M. genitalium-associated PID but is not supported by randomised data."
+    },
+    {
+      "claim": "Moxifloxacin requires a private prescription, is not recommended in pregnancy or breastfeeding, is expensive, and is associated with diarrhoea and uncommonly tendinopathy, neurological and cardiac events",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Moxifloxacin requires a private prescription, is not recommended for use in pregnancy or breast feeding, and is expensive. It can be associated with diarrhoea, uncommonly with tendinopathy, neurological and cardiac events."
+    },
+    {
+      "claim": "Not all fluoroquinolone resistance mutations are strongly associated with failure; speak to your laboratory about the predictive value of their assay",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "not all mutations are strongly associated with failure of fluoroquinolones ... Speak to your laboratory about the predictive value of their assay."
+    },
+    {
+      "claim": "Pristinamycin 1 g three times daily with doxycycline 100 mg twice daily for 10 days cures 75% of macrolide-resistant infections; available via TGA Special Access Scheme",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pristinamycin: 1 g 3 times daily combined with doxycycline 100 mg twice daily for 10 days. Cures 75% of macrolide-resistant infections. Pristinamycin is available through hospital pharmacies, using the Special Access Scheme of the Therapeutic Goods Administration (TGA)."
+    },
+    {
+      "claim": "Minocycline 100 mg twice daily for 14 days cures 70% of macrolide-resistant infections; available on private script",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Minocycline: 100 mg twice daily for 14 days. Cures 70% of macrolide-resistant infections. Minocycline is available on private script."
+    },
+    {
+      "claim": "Doxycycline 100 mg twice daily with sitafloxacin 100 mg twice daily for 7 days used in cases failing all other therapies with >90% efficacy; sitafloxacin more effective than moxifloxacin, via TGA Special Access Scheme",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Combination therapy with doxycycline 100 mg twice daily and sitafloxacin 100 mg twice daily for 7 days. This regimen has been used in cases who have failed all other available therapies with > 90% efficacy. Sitafloxacin is more effective than moxifloxacin and is available through hospital pharmacies, using the Special Access Scheme of the TGA."
+    },
+    {
+      "claim": "Pregnancy: azithromycin is category B1 and can be prescribed if macrolide-susceptible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If M.genitalium is detected, it is macrolide-susceptible, and treatment is being considered, then azithromycin is category B1 and can be prescribed in pregnancy."
+    },
+    {
+      "claim": "Pregnancy: moxifloxacin is category B3 and contraindicated; pristinamycin 1 g four times daily for 10 days may be recommended",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "this case should be discussed with a specialist as moxifloxacin is category B3 and contraindicated. Pristinamycin may be recommended at a dose of 1 g 4 times daily for 10 days."
+    },
+    {
+      "claim": "Published studies support an association with pre-term birth but have tended not to adjust for STIs and other confounders, so more data is needed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Published studies support an association between M.genitalium and pre-term birth but have tended not to adjust for STIs and other confounders, so more data is needed."
+    },
+    {
+      "claim": "Test of cure should not be done earlier than 14-21 days after treatment is completed; earlier testing can give false positives",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Test of cure by NAAT should not be done earlier than 14-21 days after treatment is completed. Test of cure before this time can result in false positive results."
+    },
+    {
+      "claim": "Advise no condomless sex until tested for cure 14-21 days after completion of treatment, and no sex with untested previous partners",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no condomless sex until tested for cure (14-21 days after completion of treatment). Advise no sex with untested previous sexual partners."
+    },
+    {
+      "claim": "The time period for contact tracing is unknown; contact tracing is recommended for ongoing sexual partners",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The time period for contact tracing is unknown. Contact tracing is recommended for ongoing sexual partners."
+    },
+    {
+      "claim": "Treatment of contacts should be based on the macrolide-resistance profile of their infection if available, otherwise informed by infection status and treatment history of the index",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Treatment of contacts should be based on the macrolide-resistance profile of their infection if available, but if not available, should be informed by infection status and treatment history of the index."
+    },
+    {
+      "claim": "M. genitalium is not a notifiable condition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "M. genitalium is not a notifiable condition."
+    },
+    {
+      "claim": "In persistent infection failing treatment, the impact of repeated antimicrobial courses and adverse effects must be balanced against likelihood of harm from M. genitalium, as a shared decision",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In cases of ongoing persistent M. genitalium that has failed to respond to antimicrobials, the impact of repeated courses of antimicrobials and likelihood of adverse effects needs to be balanced against the likelihood of harm caused to the patient from M. genitalium. The decision regarding ongoing testing and treatment requires considered discussion so that an informed decision can be reached between the clinician and the patient."
+    },
+    {
+      "claim": "Established cause of urethritis, cervicitis and PID and associated with preterm delivery; evidence for tubal factor infertility and proctitis does not show a strong and consistent association",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Established cause of urethritis, cervicitis and pelvic inflammatory disease (PID) and associated with preterm delivery. Evidence suggests a role in tubal factor infertility and proctitis although studies do not show a strong and consistent association."
+    }
+  ],
+  "summary": {
+    "total": 27,
+    "pass": 27,
+    "fail": 0
+  }
+}
