@@ -1,0 +1,198 @@
+{
+  "guideline": "guidelines/stroke-and-tia.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the Stroke Foundation Summary of recommendations (June 2025), 8 of 57 pages. Recommendation strengths reproduced as the source labels them.",
+  "source_coverage": "chapters 1-3 of 8. Thrombolysis, thrombectomy, secondary prevention and rehabilitation NOT retrieved.",
+  "claims": [
+    {
+      "claim": "All potentially reperfusion-eligible stroke patients: immediate ambulance dispatch, time critical emergency",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All stroke patients potentially eligible for reperfusion therapies should have an ambulance dispatched as an immediate response and be managed as a time critical emergency."
+    },
+    {
+      "claim": "Preferential transfer to a hospital capable of reperfusion AND stroke unit care; pre-notify",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ambulance services should preferentially transfer suspected stroke patients to a hospital capable of delivering reperfusion therapies as well as stroke unit care. ... should pre-notify the hospital of a suspected stroke case"
+    },
+    {
+      "claim": "Mobile stroke unit recommended for potentially eligible patients in major cities",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For patients in major cities with suspected stroke who are potentially eligible for reperfusion therapies, pre-hospital treatment in a mobile stroke unit is recommended."
+    },
+    {
+      "claim": "GPs encouraged to educate reception staff in FAST and redirect suspected acute stroke calls to 000",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "General practitioners are encouraged to educate reception staff in the FAST stroke recognition message and to redirect any calls about suspected acute stroke to 000."
+    },
+    {
+      "claim": "Suspected TIA (symptoms fully resolved) requires urgent clinical assessment",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All patients with suspected transient ischaemic attack (TIA), i.e. focal neurological symptoms due to focal ischaemia that have fully resolved, should have urgent clinical assessment."
+    },
+    {
+      "claim": "Present or fluctuating symptoms: treat as stroke, immediate ED and stroke specialist referral",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients with symptoms that are present or fluctuating at time of initial assessment should be treated as having a stroke and be immediately referred for emergency department and stroke specialist assessment"
+    },
+    {
+      "claim": "ABCD2 in isolation should be AVOIDED; may delay recognition of AF and symptomatic carotid stenosis",
+      "strength": "Weak AGAINST",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In TIA patients, use of the ABCD2 risk score in isolation to determine the urgency of investigation may delay recognition of atrial fibrillation and symptomatic carotid stenosis in some patients and should be avoided."
+    },
+    {
+      "claim": "Anterior circulation TIA: early carotid imaging, not delayed more than 2 days",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All TIA patients with anterior circulation symptoms should undergo early carotid imaging with CT angiography (aortic arch to cerebral vertex), carotid Doppler ultrasound or MR angiography. Carotid imaging should preferably be done during the initial assessment but should not be delayed more than 2 days"
+    },
+    {
+      "claim": "Suspected TIA: commence secondary prevention therapy urgently",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients with suspected TIA should commence secondary prevention therapy urgently"
+    },
+    {
+      "claim": "All TIA patients investigated for AF with ECG; anticoagulation early after haemorrhage excluded",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All patients with TIA should be investigated for atrial fibrillation with ECG during initial assessment ... TIA patients with atrial fibrillation should commence anticoagulation therapy early after brain imaging has excluded haemorrhage, unless contraindicated"
+    },
+    {
+      "claim": "Reperfusion candidates imaged immediately; others urgent CT or MRI, preferably within 60 minutes",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All patients with suspected stroke who are candidates for reperfusion therapies should undergo brain imaging immediately. All other suspected stroke patients should have an urgent brain CT or MRI ('urgent' being immediately where facilities are available and preferably within 60 minutes)"
+    },
+    {
+      "claim": "MRI more sensitive and specific than non-contrast CT, preferred when diagnostic confirmation required",
+      "strength": "Weak",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In patients with suspected stroke and TIA, MRI is more sensitive and specific than non-contrast CT and is the preferred modality when diagnostic confirmation is required."
+    },
+    {
+      "claim": "Thin slice <2 mm non-contrast CT rather than standard 5 mm to identify hyperdense thrombus",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If using CT to identify hyperdense thrombus, thin slice (< 2 mm) non-contrast CT should be used rather than the standard 5 mm slices to improve diagnostic sensitivity for vessel occlusion."
+    },
+    {
+      "claim": "Potential thrombectomy candidates: vascular imaging aortic arch to cerebral vertex",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All patients who would potentially be candidates for endovascular thrombectomy should have vascular imaging from aortic arch to cerebral vertex (CTA or MRA)"
+    },
+    {
+      "claim": "Routine brain imaging ~24 hours after reperfusion to identify haemorrhagic transformation",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Routine brain imaging approximately 24 hours after reperfusion therapies have been administered is recommended to identify haemorrhagic transformation and delineate the extent of infarction"
+    },
+    {
+      "claim": "IV iodinated contrast should not be delayed by renal function concerns; post-hydration with 0.9% saline advisable",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The administration of intravenous iodinated contrast for CT angiography/perfusion, when clinically indicated, should not be delayed by concerns regarding renal function. Post-hydration with intravenous 0.9% saline is advisable."
+    },
+    {
+      "claim": "Vascular imaging should not be performed for syncope or other non-focal neurological presentations",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Vascular imaging should not be performed for syncope or other non-focal neurological presentations."
+    },
+    {
+      "claim": "Initial ECG monitoring for all stroke patients, generally at least first 24 hours",
+      "strength": "Weak",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Initial ECG monitoring should be undertaken for all patients with stroke. The duration and mode of monitoring should be guided by individual patient factors but would generally be recommended for at least the first 24 hours."
+    },
+    {
+      "claim": "Embolic stroke of uncertain source: longer term ECG monitoring, external or implantable",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For patients with embolic stroke of uncertain source, longer term ECG monitoring (external or implantable) should be used."
+    },
+    {
+      "claim": "All stroke patients admitted to hospital and treated in a stroke unit with an interdisciplinary team",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All stroke patients should be admitted to hospital and be treated in a stroke unit with an interdisciplinary team."
+    },
+    {
+      "claim": "Direct stroke unit admission preferably within three hours of onset",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All stroke patients should be admitted directly to a stroke unit (preferably within three hours of stroke onset)."
+    },
+    {
+      "claim": "All acute stroke services implement standardised protocols for fever, glucose and swallowing",
+      "strength": "Strong",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All acute stroke services should implement standardised protocols to manage fever, glucose and swallowing difficulties in stroke patients."
+    },
+    {
+      "claim": "Rehabilitation needs assessed within 24-48 hours of stroke unit admission",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Every stroke patient should have their rehabilitation needs assessed within 24-48 hours of admission to the stroke unit by members of the interdisciplinary team"
+    },
+    {
+      "claim": "Blood glucose reading taken; hypoglycaemia can present as a stroke mimic",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A blood glucose reading should be taken to improve specificity (hypoglycaemia can present as a 'stroke mimic')."
+    },
+    {
+      "claim": "Stroke severity assessed and recorded on admission using a validated tool e.g. NIHSS",
+      "strength": "Practice point",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Stroke severity should be assessed and recorded on admission by a trained clinician using a validated tool (e.g. NIHSS)."
+    },
+    {
+      "claim": "IV thrombolysis time window",
+      "source": "-",
+      "verdict": "not_asserted",
+      "note": "A search result indicated a living update extending the window. NOT retrieved from the source and deliberately not stated in the guideline."
+    }
+  ],
+  "summary": {
+    "total": 26,
+    "pass": 25,
+    "not_asserted": 1,
+    "fail": 0
+  }
+}
