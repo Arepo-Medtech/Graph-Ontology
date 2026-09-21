@@ -24,6 +24,7 @@ TABLES = {
     "items": 10_000,
     "atc-codes": 10_000,
     "item-atc-relationships": 10_000,
+    "restrictions": 10_000,
 }
 
 
