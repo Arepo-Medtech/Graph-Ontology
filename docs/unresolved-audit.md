@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 60 guidelines · 2,416 claims · 252 `Unresolved` rows**
+**Generated 2026-09-22 · 61 guidelines · 2,458 claims · 260 `Unresolved` rows**
 
 *Revised the same day: **all thirteen algorithm images have been recovered** and **Finding 1 is closed**.
 **93 claims now carry `pass_image_transcription`.***
@@ -138,6 +138,25 @@ find out by how much.
 
 ## ⚠️ Finding 4 — population listed as a risk factor without a basis
 
+### ⚠️ Revised 2026-09-22: a fourth document takes the other approach
+
+**Four Australian paediatric sepsis documents are now in this compendium.** **RCH, NSW and Queensland** each
+list **Aboriginal and Torres Strait Islander** (Queensland adds **Pacific Islander or Māori**) origin as a risk
+factor, **none with a stated basis, magnitude or cultural safety guidance**.
+
+**Western Australia does not name an ethnicity at all.** Its high-risk list reaches the same populations
+through **rural and/or remote location · socioeconomic deprivation · delayed access to healthcare ·
+cultural and linguistic diversity** — and it carries the practice through to care with **use an interpreter
+for families with limited English proficiency**.
+
+**WA is the jurisdiction with the largest remote population and the longest retrieval distances**, so this is
+not a softening. It is a different construction of the same risk, and **each item names something a service
+can change.**
+
+⚠️ **This makes Finding 4 a choice rather than an omission.** Three documents categorise the patient; one
+describes the barrier. **The compendium records both and adjudicates neither** — but a reader setting house
+policy should decide deliberately, not inherit whichever document they opened first.
+
 **Two RCH paediatric guidelines list Aboriginal and Torres Strait Islander (and, in one, Pacific Islander or
 Māori) origin as a high-risk group** — in **febrile child**, alongside central lines and congenital heart
 disease; in **sepsis (children)**, alongside neonates and immunocompromised children. **Neither states a
@@ -174,8 +193,8 @@ the sharpest are worth naming:
    weight table)**, an **oxygen target**, and a **60-minute time-to-antibiotic checkbox** the guideline does
    not have. ✅ **Queensland retrieved too** (May 2026, its own file). ⚠️ **Two of the three documents' differences
    are three-way and decision-changing — blood culture volume, and IM ceftriaxone dose and trigger.**
-   **Western Australia remains unretrieved**, and in that state this compendium's sepsis file is still not
-   the operative document.
+   ✅ **All three retrieved.** ⚠️ **Four documents now give four rules on blood culture technique and three
+   on IM ceftriaxone.** See the four-way table in `sepsis-children-wa.md`.
 3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`

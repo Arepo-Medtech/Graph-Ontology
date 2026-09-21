@@ -1,0 +1,267 @@
+{
+  "guideline": "guidelines/sepsis-children-wa.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the Perth Children's Hospital Emergency Department Guideline 'Sepsis recognition and management'. The site is not served by the scraping tool used elsewhere in this compendium and was retrieved through the browser in three passes; the page text was persisted before quoting. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The PCH Sepsis Pathway, Figure 1 flowchart, neonatal antibiotic doses, the ChAMP Sepsis and Bacteraemia Guideline, and the adrenaline/noradrenaline monographs and infusion calculator were NOT retrieved and are recorded as input_unavailable or access; several are internal WA Health only. One finding is recorded rather than resolved: this guideline's high-risk list names remoteness, socioeconomic deprivation, delayed access to healthcare and cultural and linguistic diversity, and does NOT name Aboriginal and Torres Strait Islander origin, where the RCH, NSW and Queensland documents in this compendium all do. Both framings are recorded; the compendium does not adjudicate between them.",
+  "claims": [
+    {
+      "claim": "For every hour a child remains in septic shock the mortality risk doubles",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For every hour a child remains in septic shock the mortality risk doubles."
+    },
+    {
+      "claim": "Care delivered in the first hour after sepsis identification is crucial in ensuring the optimum outcome for the patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Care delivered in the first hour after sepsis identification is crucial in ensuring the optimum outcome for the patient."
+    },
+    {
+      "claim": "Sepsis is a dysregulated host response to infection leading to life threatening end organ dysfunction, and septic shock is sepsis with evidence of cardiovascular dysfunction",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis is a dysregulated host response to infection leading to life threatening end organ dysfunction. \u2026 Septic shock is sepsis with evidence of cardiovascular dysfunction."
+    },
+    {
+      "claim": "Hypotension is generally a late sign and is not required to diagnose septic shock in children, however the presence of hypotension is confirmatory of shock",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hypotension is generally a late sign and is not required to diagnose septic shock in children. However, the presence of hypotension is confirmatory of shock."
+    },
+    {
+      "claim": "The key points are early recognition and initiation of treatment, rapid vascular access within 5 minutes of recognition of septic shock, and empiric antibiotic therapy as soon as possible and within 60 minutes of septic shock recognition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. Early recognition and initiation of treatment. \u2026 2. Rapid vascular access, within 5 minutes of recognition of septic shock. \u2026 3. Empiric antibiotic therapy as soon as possible and within 60 minutes of septic shock recognition:"
+    },
+    {
+      "claim": "If unable to gain vascular access rapidly, for example within 15 minutes, the initial dose of antibiotics should be given intramuscularly, and blood sampling should be attempted at time of vascular access but must not delay treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If unable to gain vascular access rapidly (e.g. within 15 minutes), give initial dose of antibiotics intramuscularly. \u2026 Blood sampling should be attempted at time of vascular access but must not delay treatment."
+    },
+    {
+      "claim": "Fluid resuscitation of shocked patients uses sodium chloride 0.9 per cent or balanced fluid boluses as a push aiming for shock reversal, at 10 mL/kg for neonates under 4 weeks old and 10 to 20 mL/kg for children 4 weeks and older",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use sodium chloride 0.9% or balanced fluid boluses, as a push, aiming for shock reversal \u2026 Neonates < 4 weeks old: 10 mL/kg \u2026 Child >= 4 weeks old: 10 - 20 mL/kg"
+    },
+    {
+      "claim": "Inotropes or vasoactive support should be initiated early via peripheral access for fluid refractory shock defined as 40 mL/kg or more of fluid without shock reversal, and source control undertaken if possible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "5. Early initiation of inotropes / vasoactive support, via peripheral access for fluid refractory shock (>=40 mL/kg fluid without shock reversal). \u2026 6. Source control (if possible)."
+    },
+    {
+      "claim": "Sepsis should be considered in a patient with suspected or proven infection and/or fever or hypothermia with temperature 38 degrees or above or below 36 degrees, and one or more signs of impaired tissue perfusion",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sepsis should be considered in a patient with suspected or proven infection \u2026 AND/OR fever / hypothermia (temperature >= 38 C or < 36 C) \u2026 AND one or more signs of impaired tissue perfusion below:"
+    },
+    {
+      "claim": "Signs of impaired tissue perfusion include tachycardia disproportionate to fever, anxiety or medications, bradycardia, cold shock with capillary refill time 3 seconds or more, cool peripheries, cool or mottled skin, reduced peripheral pulses and narrow pulse pressure, and warm shock with capillary refill time under 1 second, bounding pulses and wide pulse pressure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Tachycardia disproportionate to fever, anxiety, medications \u2026 Bradycardia \u2026 Cold shock: capillary refill time (CRT) >= 3 seconds, cool peripheries, cool or mottled skin, reduced peripheral pulses, narrow pulse pressure \u2026 Warm shock: CRT < 1 second, bounding pulses, wide pulse pressure"
+    },
+    {
+      "claim": "Further signs include altered level of consciousness, drowsiness or irritability, hypotension as a late sign, new onset end organ dysfunction, evolving petechial or purpuric rash, and unexplained pain",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Altered level of consciousness (LOC) / drowsiness / irritability \u2026 Hypotension (a late sign of septic shock in children) \u2026 New onset end organ dysfunction \u2026 Evolving petechial or purpuric rash \u2026 Unexplained pain"
+    },
+    {
+      "claim": "Blood collection should not be allowed to delay antibiotics or fluid more than a few minutes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Do not allow blood collection to delay antibiotics / fluid more than a few minutes."
+    },
+    {
+      "claim": "Children presenting with a fever may appear unwell with abnormal vital signs, however most children with a fever do not have sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Children presenting with a fever may appear unwell with abnormal vital signs, however most children with a fever do not have sepsis."
+    },
+    {
+      "claim": "A period of observation may help differentiate children with fever due to self-limited viral infection, whose abnormal vital signs normalise over time, from those requiring further work-up for potential early sepsis, whose abnormal vital signs persist or worsen over time with clinical deterioration or persistently unwell appearance",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A period of observation may help differentiate children with fever due to self-limited viral infection (abnormal vital signs that normalise over time) and those that require further work-up and management for potential early sepsis (abnormal vital signs that persist or worsen over time, clinical deterioration or persistently unwell appearance)."
+    },
+    {
+      "claim": "Several serious neonatal conditions can mimic sepsis including congenital cardiac lesions, bowel obstruction and other abdominal emergencies, metabolic disorders, seizures and non-accidental injury",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Several serious neonatal conditions can mimic sepsis, including but not limited to congenital cardiac lesions, bowel obstruction and other abdominal emergencies, metabolic disorders, seizures, and non-accidental injury."
+    },
+    {
+      "claim": "Clinicians should always remember to check femoral pulses are palpable in an unwell neonate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Always remember to check femoral pulses are palpable in an unwell neonate."
+    },
+    {
+      "claim": "The high risk groups are infants less than 3 months of age, immunosuppression due to chemotherapy, long-term steroids, other immunosuppressants, asplenia and other chronic medical conditions, unimmunised or incompletely immunised children, children with central venous access devices or indwelling medical devices, complex or chronic medical conditions, and recent surgery, burn or wound",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infants less than 3 months of age \u2026 Immunosuppression due to chemotherapy, long-term steroids, other immunosuppressants, asplenia and other chronic medical conditions \u2026 Unimmunised / incompletely immunised children \u2026 Children with central venous access devices (CVAD), indwelling medical devices \u2026 Complex / chronic medical conditions \u2026 Recent surgery, burn or wound"
+    },
+    {
+      "claim": "The high risk groups also include children living in rural and/or remote locations or living in socioeconomically deprived settings or with delayed access to healthcare, culturally and linguistically diverse children, children with multiple presentations to healthcare providers including GP with the same infective illness, and family and/or clinician concern",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Children living in rural and / or remote locations or living in socioeconomically deprived settings or with delayed access to healthcare \u2026 Culturally and linguistically diverse children \u2026 Children with multiple presentations to healthcare providers (including GP) with the same infective illness \u2026 Family and/or clinician concern"
+    },
+    {
+      "claim": "Vascular access is a priority and should be tasked to an experienced clinician, and for patients with septic shock if intravenous access cannot be gained within 5 minutes or after two attempts intraosseous access should be inserted",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This is a priority and should be tasked to an experienced clinician. \u2026 For patients with septic shock, if unable to gain intravenous access within 5 minutes or after two attempts, insert intraosseous access"
+    },
+    {
+      "claim": "Use of an umbilical venous catheter should be considered in neonates under 7 days of age",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider use of an umbilical venous catheter (UVC) in neonates < 7 days of age."
+    },
+    {
+      "claim": "Normal blood test results such as a normal CRP, white cell count or lactate do not exclude sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Normal blood test results (e.g. a normal CRP, white cell count or lactate) do not exclude sepsis."
+    },
+    {
+      "claim": "Peripheral blood cultures should be taken even if antibiotics have already been given, preferably two BACTEC Peds Plus/F bottles from two different sites",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Peripheral blood cultures (even if antibiotics already given - preferably two BACTEC Peds Plus/F bottles from two different sites)"
+    },
+    {
+      "claim": "The investigation set includes procalcitonin and an additional EDTA tube if possible for PCR testing such as meningococcal, pneumococcal and Group A streptococcal PCR",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Procalcitonin \u2026 Additional EDTA tube (if possible) for PCR testing e.g., Meningococcal, Pneumococcal, Group A Streptococcal PCR"
+    },
+    {
+      "claim": "Hypoglycaemia with a blood glucose level below 3 mmol/L should be corrected with 2 mL/kg of glucose 10 per cent, with the blood glucose repeated after treatment and further treatment given as indicated by repeated measurements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Correct hypoglycaemia (blood glucose level < 3 mmol/L) with 2 mL/kg of glucose 10%. Repeat blood glucose level after treatment and give further treatment as indicated by repeated measurements."
+    },
+    {
+      "claim": "A normal lactate level does not exclude sepsis, and a lactate above 4 mmol/L in children with sepsis is associated with increased mortality and adverse outcomes in some studies, with these patients requiring urgent senior clinician review within 5 minutes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A normal lactate level does not exclude sepsis. \u2026 A lactate > 4 mmol/L in children with sepsis, has an association with increased mortality and adverse outcomes in some studies. These patients require urgent (within 5 minutes) senior clinician review as per the PCH Sepsis pathway."
+    },
+    {
+      "claim": "A urine sample is recommended in all children with sepsis or suspected sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A urine sample is recommended in all children with sepsis / suspected sepsis."
+    },
+    {
+      "claim": "A cerebrospinal fluid sample is recommended for all children with suspected meningitis including all neonates under 4 weeks postnatal age with sepsis or suspected sepsis, and lumbar puncture should not be performed on an unstable, shocked or coagulopathic child or if there is evidence of raised intracranial pressure or any other contraindication",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A cerebrospinal fluid sample is recommended for all children with suspected meningitis including all neonates (< 4 weeks postnatal age) with sepsis / suspected sepsis. Lumbar puncture should not performed on an unstable, shocked or coagulopathic child or if there is evidence of raised intracranial pressure or any other contraindication"
+    },
+    {
+      "claim": "Delayed antimicrobial therapy is an independent risk factor for mortality and prolonged organ dysfunction in sepsis, and initial empiric intravenous antibiotic therapy must be administered as soon as possible after vascular access is obtained, prior to or concurrently with the first fluid bolus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Delayed antimicrobial therapy is an independent risk factor for mortality and prolonged organ dysfunction in sepsis. \u2026 Initial empiric intravenous antibiotic therapy must be administered as soon as possible after vascular access is obtained, prior to or concurrently with the first fluid bolus."
+    },
+    {
+      "claim": "Antibiotics should be given within 60 minutes of recognition of septic shock, ideally within 15 minutes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Within 60 minutes of recognition of septic shock, ideally within 15 minutes."
+    },
+    {
+      "claim": "Cefepime, cefotaxime, ceftriaxone and gentamicin can be given as an IV push over 5 minutes or intramuscularly and should be prioritised over antibiotics with a longer infusion time that cannot be given intramuscularly, and vancomycin should be infused over 60 minutes or at a rate of 10 mg/minute whichever is longer",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Cefepime, cefotaxime, ceftriaxone and gentamicin can be given as an IV push over 5 minutes or be given intramuscularly and administration of these antibiotics should be prioritised over others which have a longer infusion time and cannot be given intramuscularly. Vancomycin should be infused over 60 minutes OR at a rate of 10 mg/minute whichever is longer."
+    },
+    {
+      "claim": "For community acquired sepsis or septic shock in children 4 weeks and older the regimen is IV or intraosseous ceftriaxone 50 mg/kg per dose to a maximum of 2 grams 12 hourly, and if shocked add gentamicin 7 mg/kg to a maximum of 560 mg once daily and vancomycin 15 mg/kg per dose to a maximum of 750 mg 6 hourly",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "IV/Intraosseous ceftriaxone 50 mg/kg/dose (to a maximum of 2 grams) 12 hourly \u2026 IV/Intraosseous gentamicin 7 mg/kg (to a maximum 560 mg) ONCE daily \u2026 IV/Intraosseous vancomycin 15 mg/kg/dose (to a maximum of 750 mg) 6 hourly"
+    },
+    {
+      "claim": "For fever above 38 degrees without a source and suspicion of bacteraemia without haemodynamic instability the regimen is IV or intraosseous ceftriaxone 50 mg/kg per dose to a maximum of 2 grams 24 hourly, and for healthcare-associated sepsis it is cefepime 50 mg/kg per dose to a maximum of 2 grams 8 hourly",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "IV/Intraosseous ceftriaxone 50 mg/kg/dose (to a maximum of 2 grams) 24 hourly \u2026 IV/Intraosseous cefepime 50 mg/kg/dose (max of 2 grams) 8 hourly"
+    },
+    {
+      "claim": "Antibiotic administration should not be delayed in severely unwell children if microbiological sample collection is delayed or unsuccessful, and severely unwell with sepsis includes evidence of end-organ dysfunction or elevated lactate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Do not delay antibiotic administration in severely unwell children if microbiological sample collection is delayed or unsuccessful. \u2026 evidence of end-organ dysfunction or elevated lactate"
+    },
+    {
+      "claim": "Fluid resuscitation should be titrated carefully as both inadequate and excessive fluid resuscitation may be harmful, and fluids should be considered in the same way as any other intravenously administered medication with the potential benefits and harms for the individual patient considered prior to administration",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Fluid resuscitation should be titrated carefully. Both inadequate and excessive fluid resuscitation may be harmful. \u2026 Fluids should be considered in the same way as any other intravenously administered medication, with the potential benefits and harms for the individual patient considered prior to administration."
+    },
+    {
+      "claim": "Sodium chloride 0.9 per cent should be used as the default initial resuscitation fluid, and balanced fluids may be preferred in already acidotic or hyperchloraemic patients due to the potential for sodium chloride 0.9 per cent to cause a hyperchloraemic acidosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sodium chloride 0.9% should be used as the default initial resuscitation fluid. \u2026 Balanced fluids may be preferred in already acidotic or hyperchloraemic patients due to the potential for sodium chloride 0.9% to cause a hyperchloraemic acidosis."
+    },
+    {
+      "claim": "Discussion with critical care is mandatory if 40 mL/kg or more of fluid resuscitation is needed, and fluid volumes of up to and over 60 mL/kg may be needed in the first 60 minutes in some instances of septic shock",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Discussion with critical care is mandatory if needing >= 40 mL/kg fluid resuscitation. \u2026 Fluid volumes of up to and over 60 mL/kg may be needed in the first 60 minutes in some instances of septic shock."
+    },
+    {
+      "claim": "The adrenaline infusion is prepared using adrenaline 1:1000 ampoules adding 6 mg of adrenaline to a 1 L bag of sodium chloride 0.9 per cent, where 1 mL/kg/hr of this infusion equals 0.1 micrograms/kg/minute, usually started at 0.1 micrograms/kg/minute that is 1 mL/kg/hour from birth to 18 years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Using adrenaline 1:1000 (1 mg/mL) ampoules, add 6 mg of adrenaline to a 1 L bag of sodium chloride 0.9%. \u2026 1 mL/kg/hr of this infusion = 0.1 micrograms/kg/minute of adrenaline. \u2026 Birth to 18 years: usually start at 0.1 microgram/kg/minute i.e. 1 mL/kg/hour."
+    },
+    {
+      "claim": "The noradrenaline infusion is prepared using noradrenaline 4 mg in 4 mL ampoules adding 6 mg of noradrenaline to a 1 L bag of sodium chloride 0.9 per cent, and the site of administration should be monitored regularly for signs of extravasation with central access obtained as soon as practical",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Using noradrenaline (4 mg/4 mL) ampoules, add 6 mg of noradrenaline to a 1 L bag of sodium chloride 0.9%. \u2026 The site of administration should be monitored regularly for signs of extravasation. Central access should be obtained as soon as practical."
+    },
+    {
+      "claim": "Intubation in sepsis or septic shock is a high risk procedure, clinicians should prepare for potential cardiorespiratory arrest with resuscitation doses of adrenaline, all induction agents have the potential to worsen or precipitate shock in unstable septic patients, medications with a relatively stable cardiovascular profile should be chosen and agents more likely to cause cardiovascular depression avoided, and reduced doses of induction agents may be sufficient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intubation in sepsis / septic shock is a high risk procedure \u2026 Prepare for potential cardiorespiratory arrest with resuscitation doses of adrenaline (epinephrine) \u2026 All induction agents have the potential to worsen / precipitate shock in unstable septic patients. \u2026 Choose medications with a relatively stable cardiovascular profile and avoid agents that are more likely to cause cardiovascular depression. \u2026 Reduced doses of induction agents may be sufficient in these patients."
+    },
+    {
+      "claim": "Intravenous hydrocortisone therapy should be considered for those with catecholamine resistant shock, and children on long-term steroid therapy or with known adrenal insufficiency should receive stress dose steroids",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intravenous hydrocortisone therapy should also be considered for those with catecholamine resistant shock. \u2026 Children on long-term steroid therapy or with known adrenal insufficiency should receive stress dose steroids"
+    },
+    {
+      "claim": "The time for next medical review should be documented within 4 hours of sepsis pathway commencement, cultural needs should be considered with an interpreter used for families with limited English proficiency, and antibiotic prophylaxis arranged for household contacts in meningococcal and Group A streptococcal sepsis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Document time for next medical review (within 4 hours of PCH Sepsis Pathway commencement). \u2026 Consider cultural needs, and use an interpreter for families with limited English proficiency. \u2026 Antibiotic prophylaxis for household contacts (Meningococcal and Group A Streptococcal sepsis)."
+    },
+    {
+      "claim": "Patients with a hospital admission of 7 days or more due to sepsis should be referred to the Post-Sepsis Follow-Up Program",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For patients with a >=7-day hospital admission due to sepsis, refer to the PCH Post-Sepsis Follow-Up Program"
+    }
+  ],
+  "summary": {
+    "total": 42,
+    "pass": 42,
+    "fail": 0
+  }
+}
