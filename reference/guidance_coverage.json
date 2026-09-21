@@ -1,0 +1,25 @@
+{
+  "_note": "Coverage of common conditions by OPENLY PUBLISHED Australian guidance. status: open = free full text; partial = free but dated//fragmentary; gap = no free AU source, commercial only (AMH Therapeutics / Therapeutic Guidelines).",
+  "conditions": [
+    {"condition": "Asthma", "status": "open", "source": "Australian Asthma Handbook", "url": "https://www.asthmahandbook.org.au/management/adults", "body": "National Asthma Council"},
+    {"condition": "COPD", "status": "open", "source": "COPD-X Plan", "url": "https://copdx.org.au/copd-x-plan/", "body": "Lung Foundation Australia"},
+    {"condition": "Type 2 diabetes", "status": "open", "source": "Management of type 2 diabetes: handbook for general practice", "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/management-of-type-2-diabetes/introduction", "body": "RACGP / Diabetes Australia"},
+    {"condition": "Chronic kidney disease", "status": "open", "source": "CKD Management in Primary Care, 5th ed", "url": "https://kidney.org.au/wp-content/uploads/2025/11/KHA-CKD-Handbook-5th-Ed-July2024.pdf", "body": "Kidney Health Australia"},
+    {"condition": "Cardiovascular risk / lipids", "status": "open", "source": "Australian Guideline for assessing and managing CVD risk", "url": "https://d35rj4ptypp2hd.cloudfront.net/pdf/Guideline-for-assessing-and-managing-CVD-risk_20230522.pdf", "body": "Heart Foundation"},
+    {"condition": "Heart failure", "status": "open", "source": "Australian clinical guidelines for the management of heart failure 2018", "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0033/961467/heart-failure-guidelines-2018.pdf", "body": "NHFA / CSANZ"},
+    {"condition": "Hypertension", "status": "partial", "source": "Guideline for diagnosis and management of hypertension in adults 2016", "url": "https://assets.contentstack.io/v3/assets/blt8a393bb3b76c0ede/bltbf3d36e10b48f01f/65b0963ea933e532ae0286de/01_Hypertension-guideline-2016_WEB.pdf", "body": "Heart Foundation", "caveat": "2016 edition; Heart Foundation update announced for 2025 but not yet published as free full text at time of check"},
+    {"condition": "Depression / mood disorders", "status": "partial", "source": "RANZCP mood disorders clinical practice guideline 2020", "url": "https://www.ranzcp.org/getmedia/a8c79505-c0b5-46b4-9f27-67f79e047674/Mood-disorders-clinical-practice-guideline-2020.pdf", "body": "RANZCP", "caveat": "RANZCP flags this as >5 years old and no longer current guidance"},
+    {"condition": "Immunisation", "status": "open", "source": "Australian Immunisation Handbook", "url": "https://immunisationhandbook.health.gov.au/", "body": "Dept of Health", "caveat": "Firecrawl declines health.gov.au; uses curl+bs4 fallback"},
+    {"condition": "Cancer (systemic therapy)", "status": "open", "source": "eviQ", "url": "https://www.eviq.org.au/", "body": "Cancer Institute NSW", "caveat": "free but requires registration"},
+    {"condition": "Stroke", "status": "open", "source": "Living Clinical Guidelines for Stroke Management", "url": "https://informme.org.au/guidelines/living-clinical-guidelines-for-stroke-management", "body": "Stroke Foundation"},
+    {"condition": "Sexually transmitted infections", "status": "open", "source": "Australian STI Management Guidelines", "url": "https://sti.guidelines.org.au/", "body": "ASHM"},
+    {"condition": "Atrial fibrillation", "status": "open", "source": "NHFA/CSANZ AF guideline", "url": "https://www.heartlungcirc.org/article/S1443-9506(18)31778-5/fulltext", "body": "NHFA / CSANZ"},
+    {"condition": "Gout", "status": "gap", "source": null, "url": null, "body": null, "caveat": "No free AU guideline. International: ACR 2020, EULAR 2016. AU standard of care is Therapeutic Guidelines (paid)"},
+    {"condition": "Migraine", "status": "gap", "source": null, "url": null, "body": null, "caveat": "No free AU guideline. AU standard is Therapeutic Guidelines / AMH (paid)"},
+    {"condition": "UTI / antibiotic selection", "status": "gap", "source": null, "url": null, "body": null, "caveat": "Therapeutic Guidelines: Antibiotic is the AU standard and is paid. This is the single biggest gap for prescribing"},
+    {"condition": "GORD / dyspepsia", "status": "gap", "source": null, "url": null, "body": null, "caveat": "No free AU guideline"},
+    {"condition": "Osteoporosis", "status": "partial", "source": "RACGP osteoporosis guideline", "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/guidelines-by-topic/view-all-guidelines-by-topic/musculoskeletal", "body": "RACGP / Healthy Bones Australia"},
+    {"condition": "Anxiety disorders", "status": "gap", "source": null, "url": null, "body": null, "caveat": "No current free AU guideline; RANZCP covers mood, not anxiety"},
+    {"condition": "Insomnia", "status": "gap", "source": null, "url": null, "body": null, "caveat": "No free AU guideline"}
+  ]
+}
