@@ -1,0 +1,291 @@
+{
+  "guideline": "guidelines/bacterial-vaginosis.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM bacterial vaginosis page (modified 29 June 2026). Doses, concentrations, durations and recurrence percentages compared character by character. The NEJM randomised controlled trial underpinning the partner-treatment recommendation is described on the page but not cited by author, title or year; it is recorded as input_unavailable and NOT reconstructed from model memory. The source uses the undefined abbreviation 'MPT' once, in the adherence instruction; it is preserved verbatim in source_text and paraphrased as partner treatment in the guideline.",
+  "claims": [
+    {
+      "claim": "Bacterial vaginosis affects one in four people with a vagina of reproductive age globally, with considerable variation in prevalence between countries and sub-populations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Bacterial vaginosis (BV) affects one in four people with a vagina of reproductive age globally, with considerable variation in prevalence between countries and sub-populations."
+    },
+    {
+      "claim": "A randomised controlled trial published in the New England Journal of Medicine showed that treating an ongoing or regular sexual partner with a penis with combination oral and topical antibiotics at the same time the person with a vagina receives first-line therapy improves BV cure over 12 weeks",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A recent randomised controlled trial, published in the New England Journal of Medicine, has shown that treating an ongoing/ regular sexual partner with a penis with a combination oral and topical antibiotics, at the same time a person with a vagina is receiving first line antibiotic therapy for BV, improves BV cure over 12 weeks."
+    },
+    {
+      "claim": "The trial provides evidence that reinfection is a very significant driver of BV recurrence and that BV is sexually transmissible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This trial provides evidence that reinfection is a very significant driver of BV recurrence, and that BV is sexually transmissible."
+    },
+    {
+      "claim": "The trial intervention was the partner with a penis taking 7 days of oral metronidazole twice daily in combination with application of 2% clindamycin cream to the penile skin twice daily",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The intervention involved the partner with penis taking 7 days of oral metronidazole twice daily in combination with the application of 2% clindamycin cream to the penile skin twice daily."
+    },
+    {
+      "claim": "Partner treatment was effective in people with vaginal BV with and without IUDs, and with circumcised and uncircumcised partners",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Partner treatment was effective in people with vaginal BV with and without IUDs, and with circumcised and uncircumcised partners"
+    },
+    {
+      "claim": "People with vaginas who have BV and an ongoing or regular sexual partner experience BV recurrence rates of 60-80% in the absence of partner treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with vaginas who have BV, and an ongoing/regular sexual partner, experience BV recurrence rates of 60-80% in the absence of partner treatment."
+    },
+    {
+      "claim": "Prior to evidence that treatment of ongoing partners with a penis improves BV cure, more than 50% of people experienced post-treatment recurrence within 3-12 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prior to evidence that treatment of ongoing partners with a penis improves BV cure, > 50% of people experience post-treatment recurrence within 3-12 months."
+    },
+    {
+      "claim": "BV is a polymicrobial vaginal dysbiosis characterised by a change from a Lactobacillus dominant state to high diversity and quantities of anaerobic bacteria including Gardnerella vaginalis, Fannyhessea vaginae, Mobiluncus spp and Prevotella spp",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A polymicrobial vaginal dysbiosis characterised by a change from a Lactobacillus dominant state to one with high diversity and quantities of anaerobic bacteria including Gardnerella vaginalis, Fannyhessea vaginae, Mobiluncus spp, Prevotella spp, and other BV-associated bacteria."
+    },
+    {
+      "claim": "Studies have identified a polymicrobial biofilm adherent to vaginal epithelial cells of people with bacterial vaginosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Studies have identified a polymicrobial biofilm adherent to vaginal epithelial cells of people with bacterial vaginosis."
+    },
+    {
+      "claim": "BV has the epidemiological profile of a sexually transmissible infection, with strong association between acquisition and young age of first sex, increased numbers of sex partners, exposure to new sex partners and lack of condom use for penile-vaginal sex",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "BV has the epidemiological profile of a sexually transmissible infection. There is a strong association between acquisition of BV and young age of first sex, increased numbers of sex partners, exposure to new sex partners and lack of condom use for penile-vaginal sex."
+    },
+    {
+      "claim": "BV-associated bacteria are present in the urethra and penile skin in partners of people with bacterial vaginosis, with high concordance in couples where one partner has a penis and the other a vagina, and very high concordance in couples with vaginas",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "BV-associated bacteria are present in the urethra and penile skin in partners of people with bacterial vaginosis, with high concordance of BV-associated bacteria in the genitals of couples where one partner has a penis and the other a vagina. Couples with vaginas show very high concordance for bacterial vaginosis and BV-associated bacteria."
+    },
+    {
+      "claim": "Clinical diagnosis uses Amsel criteria and presumptive treatment can be offered if 3 or 4 criteria are present: thin white or grey homogenous discharge on speculum examination, vaginal pH above 4.5, a positive whiff test or genital malodour on examination, and clue cells on microscopy of Gram stain of high vaginal swab",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinical diagnosis is made using Amsel criteria (see below); if 3 or 4 of the following criteria are present, presumptive treatment can be offered. 1. Thin white/grey homogenous discharge on speculum examination 2. Elevated vaginal pH (pH > 4.5) 3. Whiff test: malodour with addition of potassium hydroxide to vaginal secretions, or if not available, genital malodour on examination 4. Clue cells on microscopy of Gram stain of high vaginal swab."
+    },
+    {
+      "claim": "Clinician collection ensures visualisation of secretions and measurement of vaginal pH, and microscopy can be performed on self-collected pH strips or clinician collected swabs smeared on a slide",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinician collection ensures visualisation of secretions and measurement of vaginal pH; microscopy can be performed on self-collected pH strips or clinician collected swabs smeared on a slide."
+    },
+    {
+      "claim": "Isolation of Gardnerella vaginalis by NAAT cannot be used to diagnose bacterial vaginosis as the organism can also be isolated in people with an optimal vaginal microbiota and no BV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Isolation of Gardnerella vaginalis (by NAAT) is reported by some laboratories but cannot be used to diagnose bacterial vaginosis as this organism can also be isolated in people with an optimal vaginal microbiota and no bacterial vaginosis."
+    },
+    {
+      "claim": "If the laboratory uses NAAT testing, speak to the pathology provider about its comparative performance, and Gram stain scoring such as Nugent score or Ison-Hay is increasingly only used in specialised services",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If your laboratory uses NAAT testing, speak to your pathology provider about its comparative performance. Scoring of the vaginal Gram stain (i.e. Nugent score, Ison-Hay method), are increasingly only used in specialised services."
+    },
+    {
+      "claim": "The clinical indication for testing is symptoms of bacterial vaginosis: abnormal vaginal discharge and/or malodour",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Symptoms of bacterial vaginosis: abnormal vaginal discharge and/or malodour"
+    },
+    {
+      "claim": "Recommended treatment for symptomatic BV is metronidazole 400 mg PO BD with food for 7 days, or metronidazole 0.75% gel 5 g intravaginally nocte for 5 nights which is not on the PBS, or clindamycin 2% vaginal cream 5 g one applicator intravaginally nocte for 7 days which is not on the PBS",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Symptomatic bacterial vaginosis | Metronidazole 400 mg PO, BD with food for 7 days. OR Metronidazole 0.75% gel 5 g, intravaginally nocte for 5 nights (not on PBS). OR Clindamycin 2% vaginal cream 5 g, one applicator intravaginally nocte for 7 days (not on PBS)."
+    },
+    {
+      "claim": "For people with vaginal BV who have an ongoing or regular partner with a penis, concurrent partner treatment is recommended",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For people with vaginal BV who have an ongoing or regular partner with a penis, concurrent partner treatment is recommended (and outlined below)."
+    },
+    {
+      "claim": "Alternative treatment is clindamycin 300 mg PO BD for 7 days or metronidazole 2 g PO stat",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clindamycin 300 mg PO, BD for 7 days. OR Metronidazole 2 g PO, stat."
+    },
+    {
+      "claim": "Stat dose and short-duration regimens are associated with higher rates of recurrence",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Stat. dose and short-duration regimens are associated with higher rates of recurrence."
+    },
+    {
+      "claim": "Treatment is aimed at alleviating symptoms in people with BV or offered to asymptomatic people with BV requesting treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Treatment is aimed at alleviating symptoms in people with BV or offered to asymptomatic people with BV requesting treatment."
+    },
+    {
+      "claim": "The auditable outcome is that 100% of symptomatic patients are treated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of symptomatic patients are treated."
+    },
+    {
+      "claim": "Patients and their partners should refrain from vaginal penetrative sexual practices or use condoms for penile-vaginal sex consistently during treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients and their partners should refrain from vaginal penetrative sexual practices or use condoms for penile-vaginal sex consistently during treatment."
+    },
+    {
+      "claim": "Douching and intravaginal cleaning practices should be avoided",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Douching and intravaginal cleaning practices should be avoided."
+    },
+    {
+      "claim": "Treatment of partners with a penis involves oral metronidazole 400 mg twice daily for 7 days in combination with topical 2% clindamycin cream twice daily to the penile skin for 7 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Oral metronidazole: 400mg twice daily for 7 days in combination with Topical 2% clindamycin cream twice daily to the penile skin for 7 days."
+    },
+    {
+      "claim": "Partner treatment is most effective in closed or monogamous relationships where all partners have been synchronously treated, due to the risk of introduction of BV-associated bacteria from concurrent untreated partners",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Partner treatment is most effective in closed/monogamous relationships where all partners have been synchronously treated, due to the risk of introduction of BV-associated bacteria from concurrent untreated partners."
+    },
+    {
+      "claim": "The clindamycin cream is applied as a fingertip unit, with foreskin retracted if present, rubbed gently over the whole head of the penis from tip to the groove below the head",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients need to squeeze a line of cream from the fingertip of their index finger to the first crease... If they have foreskin, it should be retracted before applying the cream. Ask them to rub the cream gently over the skin of the head of the penis, covering the whole head from the tip of the penis to the groove, just below the head."
+    },
+    {
+      "claim": "A second fingertip unit is rubbed down the shaft from the groove under the head to the base, covering front and back, and the patient may not need the full two fingertips of cream",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Then squeeze a second line of cream from the fingertip of their index finger to the first crease and rub this second dose of cream down the shaft of the penis, starting at the groove under the head, and moving down the shaft to the base of the penis. They need to cover the front and the back of the shaft and make sure all of the cream is gently rubbed into the skin. They may not need the full two finger tips of cream."
+    },
+    {
+      "claim": "The cream should be applied immediately after showering and not before, repeated twice daily for 7 days, with full adherence to partner treatment and avoidance of unprotected sex during the treatment period",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The process should be repeated twice daily for 7 days. They need to apply the cream immediately after showering and not before. Advise that 100% adherence to MPT and avoidance of unprotected sex during the treatment period."
+    },
+    {
+      "claim": "Clindamycin cream may potentially weaken latex if the cream has just been applied",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clindamycin cream may potentially weaken latex if the cream has just been applied."
+    },
+    {
+      "claim": "No trials of partner treatment for couples with vaginas have been conducted, but high concordance is consistently reported, so testing of partners with vaginas should be offered to detect and treat BV in the partner, and there are no published trials on whether empiric treatment without testing improves BV cure for the index",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "No trials of partner treatment for couples with vaginas have been conducted to inform clinical practice. However, high concordance for BV is consistently reported within couples with vaginas. Testing of partners with vaginas should be offered in order to detect and treat BV in the partner, which is likely to reduce reinfection of the index and BV recurrence. There are no published trials to determine whether empiric treatment without testing for BV in ongoing partners with vaginas improves BV cure for the index with vaginal BV."
+    },
+    {
+      "claim": "Contact tracing is not indicated, there are insufficient data to recommend treatment of casual or non-regular partners with a penis, and assessment of partners with a vagina is recommended as concordance is high",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Contact tracing is not indicated. There are insufficient data to recommend treatment of casual/non-regular partners with a penis. Assessment of partner(s) with a vagina is recommended as concordance is high"
+    },
+    {
+      "claim": "Evidence does not support routine screening for bacterial vaginosis in low risk pregnancies, before surgical termination of pregnancy, or before insertion of an IUD in asymptomatic people",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Evidence does not support routine screening for bacterial vaginosis in low risk pregnancies, before surgical termination of pregnancy or insertion of an IUD in asymptomatic people."
+    },
+    {
+      "claim": "Bacterial vaginosis diagnosed or suspected at the time of IUD insertion should be treated with no need to delay the procedure",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Bacterial vaginosis diagnosed or suspected at the time of IUD insertion should be treated with no need to delay the procedure"
+    },
+    {
+      "claim": "Copper IUDs have been associated with increased risk of BV acquisition and recurrence, partner treatment improves BV cure for people with an IUD, and switching to an alternative method should be considered for recurrent BV with a copper IUD",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Copper IUDs have been associated with increased risk of bacterial vaginosis acquisition and recurrence. If a patient using an IUD develops bacterial vaginosis, treat as recommended. Treatment of an ongoing partner with a penis has been shown to improve BV cure for people with an IUD. If the patient experiences recurrent bacterial vaginosis with a copper IUD consider switching to an alternative method."
+    },
+    {
+      "claim": "The association between hormonal IUD use and BV is unclear and more data are needed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An association between hormonal IUD use and BV is unclear and more data are needed."
+    },
+    {
+      "claim": "In pregnancy standard treatment is recommended if symptomatic, and there is no clinical benefit of treatment for asymptomatic patients in low-risk pregnancies",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnancy | Standard treatment is recommended if symptomatic. There is no clinical benefit of treatment for asymptomatic patients in low-risk pregnancies."
+    },
+    {
+      "claim": "In breastfeeding consider intravaginal treatment, as metronidazole may affect taste of breast milk and high doses should be avoided",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Breastfeeding | Consider intravaginal treatment. Metronidazole may affect taste of breast milk; avoid high doses in breastfeeding."
+    },
+    {
+      "claim": "For recurrent infection intravaginal metronidazole 0.75% gel 5 g twice per week for 4 months reduces recurrence during treatment although the benefit does not persist when discontinued, and intravaginal boric acid regimens via compounding pharmacy have not shown sustained benefit on discontinuation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Recurrent infection | Intravaginal metronidazole 0.75% gel 5 g twice per week for 4 months reduces recurrence during treatment, although this benefit does not persist when discontinued. Intravaginal boric acid regimens (via compounding pharmacy) have also been used but have not shown sustained benefit on discontinuation."
+    },
+    {
+      "claim": "If allergic to nitroimidazoles, use clindamycin",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Allergy to principal treatment choice | If allergic to nitroimidazoles, use clindamycin."
+    },
+    {
+      "claim": "Intravaginal preparations may affect condom integrity",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Intravaginal preparations | May affect condom integrity."
+    },
+    {
+      "claim": "There is currently insufficient evidence to recommend the use of intravaginal lactic acid or vaginal probiotics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is currently insufficient evidence to recommend the use of intravaginal lactic acid or vaginal probiotics."
+    },
+    {
+      "claim": "BV increases the risk of spontaneous abortion, premature labour, chorioamnionitis, postpartum endometritis, pelvic inflammatory disease including after surgical termination of pregnancy or IUD insertion, acquisition of chlamydia, gonorrhoea and herpes simplex type 2, and acquisition and transmission of HIV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Increased risk of: spontaneous abortion; premature labour; chorioamnionitis; postpartum endometritis; pelvic inflammatory disease (including after surgical termination of pregnancy, intra-uterine device (IUD) insertion or other gynaecological instrumentation); acquisition of chlamydia, gonorrhoea, herpes simplex type 2; acquisition and transmission of human immunodeficiency virus (HIV) infection."
+    },
+    {
+      "claim": "BV presents with malodorous thin white or greyish homogenous vaginal discharge and is commonly asymptomatic",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Malodorous vaginal discharge; Thin white or greyish homogenous vaginal discharge; Commonly asymptomatic"
+    },
+    {
+      "claim": "Follow-up is unnecessary if symptoms resolve and test of cure is not required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Unnecessary if symptoms resolve. Test of cure. Not required"
+    },
+    {
+      "claim": "If symptoms persist or recur patients should be reviewed to confirm the diagnosis, and tested for STIs if not undertaken at first presentation as concurrent STIs are common",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If symptoms persist or recur it is recommended patients are reviewed, as it is important to confirm the diagnosis. Test for STIs, if not undertaken at first presentation as concurrent STIs are common."
+    }
+  ],
+  "summary": {
+    "total": 46,
+    "pass": 46,
+    "fail": 0
+  }
+}
