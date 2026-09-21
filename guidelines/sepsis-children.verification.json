@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Sepsis - assessment and management' (last updated March 2020, PIC endorsed), including the state-pathway banner, key points, background, pathogens by age, assessment, cold and warm shock, toxin mediated sepsis, red flags, the nine key management principles, consultation and ICU transfer triggers, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The approach to management is TWO FLOWCHART IMAGES and was not retrieved: antibiotic choice, fluid bolus volume, inotrope selection and doses, and the timing sequence are all inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to resuscitate a child. The state and territory sepsis pathways the source says must be followed were not retrieved and are recorded as input_unavailable. 'CRT >2' is given without units in the source; seconds is not asserted.",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Sepsis - assessment and management' (last updated March 2020, PIC endorsed), including the state-pathway banner, key points, background, pathogens by age, assessment, cold and warm shock, toxin mediated sepsis, red flags, the nine key management principles, consultation and ICU transfer triggers, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The approach to management is TWO FLOWCHART IMAGES and was not retrieved: antibiotic choice, fluid bolus volume, inotrope selection and doses, and the timing sequence are all inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to resuscitate a child. The state and territory sepsis pathways the source says must be followed were not retrieved and are recorded as input_unavailable. 'CRT >2' is given without units in the source; seconds is not asserted. ADDENDUM 2026-09-22: the two management flowcharts were subsequently downloaded as PNG images and read visually. Twenty-eight further claims were added carrying verdict pass_image_transcription and source S2. These were checked against the source, but the source is a DIAGRAM: they cannot be re-checked by scripts/verify.py, and they are subject to transcription error in a way the text-quoted claims are not. Every dose among them must be re-checked against the image by a person before clinical use. The source image prints 'clindamycin 15/kg' with no unit; it is reproduced as printed and the evident reading of mg/kg is not asserted.",
   "claims": [
     {
       "claim": "Some state and territory health departments have sepsis pathways and these must be followed",
@@ -173,11 +173,180 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3).   2016; 315(8):801-810. \u2026 Goldstein B, Giroir B, Randolph A, International Consensus Conference on Pediatric Sepsis. _International pediatric sepsis consensus conference: definitions for sepsis and organ dysfunction in pediatrics._ Pediatr Crit Care Med 2005; 6:2."
+    },
+    {
+      "claim": "In the first 5 minutes the immediate actions are to call for senior help, attach cardiorespiratory monitoring, address airway and breathing compromise, and administer oxygen",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "First 5 minutes / Immediate actions / Call for senior help / Attach cardiorespiratory monitoring / Address airway, breathing compromise / Administer oxygen"
+    },
+    {
+      "claim": "In the first 15 minutes vascular access should be established, inserting an IO cannula if no IV access is established promptly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "First 15 minutes / Establish vascular access / Insert IO cannula if no IV access established promptly"
+    },
+    {
+      "claim": "Bloods to take are blood culture and VBG with lactate and glucose as priority, FBE, CRP, UEC, LFT, coags and plus or minus group and hold, and urinalysis and lumbar puncture should be considered once the child has been stabilised",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Take bloods: / Blood culture, VBG with lactate and glucose (priority) / FBE, CRP, UEC, LFT, Coags, +/- Group and hold / Urinalysis and lumbar puncture should be considered once the child has been stabilised"
+    },
+    {
+      "claim": "Antibiotics should be administered via IV push administration, and IM should be considered if there are delays in IV or IO access",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Administer antibiotics (via IV push administration) / Consider IM if delays in IV/IO access"
+    },
+    {
+      "claim": "In the first 30 minutes IV fluid is given as sodium chloride 0.9 per cent, 20 mL/kg or 10 mL/kg in neonates as a push bolus then reassess, and if required an additional 10 mL/kg bolus repeated as necessary to a maximum total volume of 40 mL/kg",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "First 30 minutes / IV fluid administration with sodium chloride (NaCl) 0.9% / 20 mL/kg (10 mL/kg in neonates) bolus as a push, then reassess / If required give an additional bolus (10 mL/kg) and repeat as necessary to a maximum total volume of 40 mL/kg"
+    },
+    {
+      "claim": "There should be repeated assessment of fluid status, perfusion including heart rate, capillary refill time and urine output, clinical condition and assessment for signs of fluid overload, and early commencement of inotropes should be considered for children with limited response to fluids",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Repeated assessment of fluid status, perfusion (heart rate, CRT, urine output), clinical condition and assessment for signs of fluid overload / Consider early commencement to inotropes for children with limited response to fluids"
+    },
+    {
+      "claim": "Children requiring 40 mL/kg of fluid resuscitation should be managed in a critical care environment",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Children requiring 40mL/kg of fluid resuscitation should be managed in a critical care environment"
+    },
+    {
+      "claim": "In the first 60 minutes, for persisting circulatory failure after 40 mL/kg fluid resuscitation, adrenaline 0.05 to 0.2 micrograms/kg/min should be given",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "First 60 minutes / Inotrope/vasopressor / For persisting circulatory failure after 40 mL/kg fluid resuscitation, give: / Adrenaline 0.05-0.2 mcg/kg/min"
+    },
+    {
+      "claim": "Adrenaline can be given via peripheral access, IV or IO, whilst awaiting transfer to PICU, with Paediatric Intensive Care input sought onsite or via Retrieval Services, and push dose inotropes may be used with an experienced clinician",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Can be given via peripheral access (IV or IO) whilst awaiting transfer to PICU. Seek Paediatric Intensive Care input (onsite or via Retrieval Services) / Push dose inotropes may be used with experienced clinician"
+    },
+    {
+      "claim": "Children requiring inotrope or vasopressor support should be managed in a critical care environment",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Children requiring inotrope/vasopressor support should be managed in a critical care environment"
+    },
+    {
+      "claim": "For respiratory support, in a patient with normal conscious state non-invasive ventilation by HFNC, CPAP or BiPAP should be considered, and in a patient with altered conscious state intubation should be considered with discussion with retrieval services and involvement of local ICU and anaesthetic services",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Respiratory support / In a patient with normal conscious state consider non-invasive ventilation (HFNC/CPAP/BiPAP) / In a patient with altered conscious state consider intubation and discuss with retrieval services and involve local ICU and anaesthetic services"
+    },
+    {
+      "claim": "There is a high risk of cardiac arrest associated with use of induction agents in children with septic shock",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "There is a high risk of cardiac arrest associated with use of induction agents in children with septic shock"
+    },
+    {
+      "claim": "For neonates 7 days or younger the antibiotic regimen is benzylpenicillin 60 mg/kg IV 12 hourly and cefotaxime 50 mg/kg IV 12 hourly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "\u22647 days: benzylpenicillin 60 mg/kg IV 12H and cefotaxime 50 mg/kg IV 12H"
+    },
+    {
+      "claim": "For infants over 7 to 28 days the regimen is benzylpenicillin 60 mg/kg IV 6 to 8 hourly and ceftriaxone 100 mg/kg IV daily or cefotaxime 50 mg/kg IV 6 to 8 hourly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": ">7 to 28 days: benzylpenicillin 60 mg/kg IV 6-8H and ceftriaxone 100 mg/kg IV daily or cefotaxime 50 mg/kg IV 6-8H"
+    },
+    {
+      "claim": "For infants 1 to 2 months or younger the regimen is benzylpenicillin 60 mg/kg IV 4 to 6 hourly and ceftriaxone 100 mg/kg IV daily",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "1 to \u22642 months: benzylpenicillin 60 mg/kg IV 4-6H and ceftriaxone 100 mg/kg IV daily"
+    },
+    {
+      "claim": "For children over 2 months the regimen is ceftriaxone 100 mg/kg to a maximum of 4 g IV daily or cefotaxime 50 mg/kg to a maximum of 2 g IV 6 hourly, and vancomycin 15 mg/kg to a maximum of 750 mg IV 6 hourly and clindamycin printed as 15/kg to a maximum of 600 mg IV 8 hourly and IVIG for toxic shock syndrome",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": ">2 months: ceftriaxone 100 mg/kg (max 4 g) IV daily or cefotaxime 50 mg/kg (max 2 g) IV 6H / and vancomycin 15 mg/kg (max 750 mg) IV 6H and clindamycin 15/kg (max 600 mg) IV 8H and IVIG for toxic shock syndrome"
+    },
+    {
+      "claim": "For oncology patients the regimen is piperacillin/tazobactam 100 mg/kg to a maximum of 4 g IV 6 hourly, adding amikacin 22.5 mg/kg or 18 mg/kg if over 10 years to a maximum of 1.5 g IV daily and vancomycin 15 mg/kg to a maximum of 750 mg IV 6 hourly if severely unwell or high risk",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "For oncology patients / piperacillin/tazobactam 100 mg/kg (max 4 g) IV 6H / Add amikacin 22.5 mg/kg (18 mg/kg if >10 y) (max 1.5 g) IV daily and vancomycin 15 mg/kg (max 750 mg) IV 6H if severely unwell/high risk"
+    },
+    {
+      "claim": "For non-oncology patients with central venous access the regimen is vancomycin 15 mg/kg to a maximum of 750 mg IV 6 hourly and ceftriaxone 100 mg/kg to a maximum of 4 g IV daily or cefotaxime 50 mg/kg to a maximum of 2 g IV 6 hourly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "For non-oncology patients with central venous access / vancomycin 15 mg/kg (max 750 mg) IV 6H and ceftriaxone 100 mg/kg (max 4g) IV daily or cefotaxime 50 mg/kg (max 2g) IV 6H"
+    },
+    {
+      "claim": "Aciclovir 20 mg/kg IV 8 hourly should be considered if HSV is suspected in a child under 3 months with skin lesions, seizures or hepatitis",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider adding aciclovir 20mg/kg IV 8H if HSV suspected <3 months: skin lesions, seizures, hepatitis"
+    },
+    {
+      "claim": "There will be situations where additional empiric cover may be warranted based on local epidemiology and at the discretion of the senior clinician, for example vancomycin for suspected MRSA",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "There will be situations where additional empiric cover may be warranted, based on local epidemiology and at the discretion of the senior clinician e.g. vancomycin for suspected MRSA"
+    },
+    {
+      "claim": "If IV access is unavailable, IM ceftriaxone 100 mg/kg to a maximum of 4 g daily should be given, and this can also be used in infants 2 months or younger",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "If IV access unavailable, give IM ceftriaxone 100 mg/kg (max 4 g) daily. Can also be used \u22642 months"
+    },
+    {
+      "claim": "For previous antibiotic anaphylaxis, specialist advice should be sought",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "For previous antibiotic anaphylaxis: seek specialist advice"
+    },
+    {
+      "claim": "The suggested adrenaline infusion where local guidelines are not available is 6 mg being 6 ampoules of 1 in 1000 in 1 L of 0.9 per cent sodium chloride, where 1 mL/kg/hr equals 0.1 micrograms/kg/min",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Suggested inotrope/vasopressor, if local guidelines not available: / Adrenaline infusion: / 6 mg (6 ampoules of 1 in 1000) in 1 L of 0.9% NaCl ; 1 mL/kg/hr = 0.1 mcg/kg/min"
+    },
+    {
+      "claim": "The adrenaline infusion starting dose is 0.5 mL/kg/hr equating to 0.05 micrograms/kg/min, titrated by 0.5 mL/kg/hr, to a maximum dose of 10 mL/kg/hr equating to 1 microgram/kg/min, and the line and 3-way taps should be primed with inotrope infusion",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Starting dose 0.5 mL/kg/hr (0.05 mcg/kg/min), titrate by 0.5 mL/kg/hr / Max dose 10 mL/kg/hr (1 mcg/kg/min) / Ensure line (and 3-way taps) are primed with inotrope infusion"
+    },
+    {
+      "claim": "If initial lactate is above 3 mmol/L this suggests poor tissue perfusion, and clinicians should resuscitate and repeat after 2 hours aiming for less than 2 mmol/L",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "If initial lactate >3 mmol/L, this suggests poor tissue perfusion. Resuscitate and repeat after 2 hours, aim for <2 mmol/L"
+    },
+    {
+      "claim": "Source control includes considering removal of an infected device or drainage of an abscess, and ketamine 0.5 to 1 mg/kg IV is given for procedural sedation",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Source control e.g. consider removal of an infected device or drainage of an abscess / Ketamine 0.5-1 mg/kg IV for procedural sedation"
+    },
+    {
+      "claim": "Myocarditis or cardiomyopathy should be considered if there is cold shock with tachycardia, or deterioration with fluid bolus, with chest x-ray looking for cardiomegaly and echo",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider myocarditis or cardiomyopathy if cold shock with tachycardia, or deterioration with fluid bolus \u2013 chest x-ray looking for cardiomegaly, echo"
+    },
+    {
+      "claim": "Children on long-term steroid therapy or with known adrenal insufficiency should receive stress dose steroids, and for patients with blood glucose below 3.3 mmol/L clinicians should refer to hypoglycaemia guidelines",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Children on long-term steroid therapy or with known adrenal insufficiency should receive stress dose steroids / For patients with BGL <3.3 mmol/L please refer to hypoglycaemia guidelines"
     }
   ],
   "summary": {
-    "total": 28,
+    "total": 56,
     "pass": 28,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 28
   }
 }

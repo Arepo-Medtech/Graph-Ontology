@@ -1,6 +1,8 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,257 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 58 guidelines · 2,285 claims · 236 `Unresolved` rows**
+
+*Revised the same day: paediatric sepsis algorithm recovered from its images — see Finding 1.*
 
 Every guideline ends with an `Unresolved` table. This is the audit of those tables read as a set — the
 things this compendium records that it cannot answer, grouped so they can be acted on rather than
@@ -32,7 +34,7 @@ algorithm was not.
 | **Acute asthma (children)** | **4** | salbutamol puff counts and intervals, ipratropium regimens, **steroid agent and dose**, oxygen targets, IV sequence |
 | **Anaphylaxis (children)** | **2** | the **interval between IM adrenaline doses**, injection site, fluid and oxygen steps |
 | **Febrile child** | **2** | the entire triage for **29 days–3 months** and **>3 months** |
-| **Sepsis (children)** | **2** | **the whole treatment algorithm** — antibiotic choice, fluid bolus volume, inotrope doses, timing |
+| ~~**Sepsis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — images downloaded and read; algorithm transcribed into the guideline under verdict `pass_image_transcription` |
 | **Seizures — acute management (children)** | **1** | the **sequence of agents and intervals between doses** |
 | **Fitness to drive — seizures** | **2** | Figures 13 and 14, the decision trees summarising the whole chapter |
 
@@ -46,6 +48,32 @@ so in its own body, not only in its table.
 **This is not a defect in the sources.** A flowchart is a good way to present an emergency algorithm to a
 clinician. It is a structural limit on *this* pipeline — and the most actionable item in this audit, because
 it is fixable by retrieval rather than by judgement.
+
+### ✅ Method established, 2026-09-22
+
+**The paediatric sepsis flowcharts have now been downloaded and read**, and the algorithm is transcribed into
+that guideline. **Eleven images across five guidelines remain.**
+
+What it recovered, none of which existed in the retrieved text: the **time-banded structure (5 / 15 / 30 /
+60 minutes)**; **fluid as 20 then 10 then 10 mL/kg to a 40 mL/kg ceiling**; **four antibiotic regimens in the
+first two months of life**; the **adrenaline infusion recipe**; and — most consequentially —
+**"There is a high risk of cardiac arrest associated with use of induction agents in children with septic
+shock."**
+
+⚠️ **It also carries a new and lesser verification basis.** Those claims take the verdict
+**`pass_image_transcription`**: checked against the source, **but the source is a diagram**. They cannot be
+re-checked by `scripts/verify.py`, and they are exposed to transcription error — misread digits especially —
+in a way text quotes are not. **`verify.py` reports them separately and tells the reader to verify doses
+against the image by eye.** They count toward `total` and **not** toward `pass`.
+
+**Two cross-guideline hazards surfaced only once the diagram was legible:**
+
+- **The adrenaline infusion is 6 mg in 1 L in paediatric sepsis and 1 mg in 1 L in paediatric anaphylaxis** —
+  a **sixfold** concentration difference between two guidelines from the same hospital, **neither of which
+  mentions the other**
+- **Lumbar puncture waits for stabilisation in sepsis** but is done **without delay and ideally before
+  antibiotics** in **febrile child**. Both are right for their patient; **the compendium is where they can be
+  read side by side**
 
 ## ⚠️ Finding 2 — documents whose stated currency is wrong or expired
 
@@ -109,7 +137,9 @@ the sharpest are worth naming:
 
 ## Priority, if this list is to be worked
 
-1. **Retrieve the thirteen algorithm images** and transcribe them. Largest clinical gap, and purely mechanical.
+1. **Retrieve the eleven remaining algorithm images** and transcribe them — the method is established and the
+   sepsis one is done. Largest clinical gap, and purely mechanical. **Each transcription adds
+   `pass_image_transcription` claims that a person should check against the image.**
 2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be
    followed** — in those jurisdictions this compendium's sepsis file is not the operative document.
 3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.

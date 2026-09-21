@@ -19,7 +19,13 @@ JOINER = " … "          # multi-fragment source_text separator
 # "pass" requires a verbatim quote. The rest record why no quote exists; they
 # count toward total but not toward pass, which is the 6-claim gap in the totals.
 VERDICTS = {"pass", "fail", "not_quoted", "not_asserted", "searched_not_found",
-            "attested_not_sourced"}
+            "attested_not_sourced", "pass_image_transcription"}
+
+# "pass" means the quote was checked against RETRIEVED TEXT and can be re-checked
+# here. "pass_image_transcription" means a human-or-model read it off a diagram:
+# genuinely checked against the source, but NOT machine re-checkable, and subject
+# to transcription error in a way text quotes are not. Doses read this way should
+# be re-checked against the image by a person before use.
 
 # Unicode punctuation the scrape and the JSON render differently. Folding these
 # is an ENCODING normalisation: the words are identical either way.
@@ -50,7 +56,8 @@ def check(path, source=None):
         v = c.get("verdict")
         # A claim may legitimately carry no quote: the early guidelines record
         # WHY in the verdict itself. Only "pass" obliges a verbatim source_text.
-        need = ("claim", "source", "verdict", "source_text") if v == "pass" \
+        need = ("claim", "source", "verdict", "source_text") \
+               if v in ("pass", "pass_image_transcription") \
                else ("claim", "source", "verdict")
         for k in need:
             if not (c.get(k) or "").strip():
@@ -65,11 +72,17 @@ def check(path, source=None):
     s = d.get("summary") or {}
     npass = sum(1 for c in claims if c.get("verdict") == "pass")
     nfail = sum(1 for c in claims if c.get("verdict") == "fail")
-    nunq = sum(1 for c in claims if c.get("verdict") not in ("pass", "fail"))
+    nimg = sum(1 for c in claims if c.get("verdict") == "pass_image_transcription")
+    if nimg:
+        notes.append(f"{nimg} claim(s) transcribed from a DIAGRAM - not machine "
+                     f"re-checkable; verify doses against the image by eye")
+    nunq = sum(1 for c in claims
+               if c.get("verdict") not in ("pass", "fail", "pass_image_transcription"))
     if nunq:
         notes.append(f"{nunq} claim(s) carry no quote by design: "
                      + ", ".join(sorted({c["verdict"] for c in claims
-                                         if c.get("verdict") not in ("pass", "fail")})))
+                                         if c.get("verdict") not in
+                                         ("pass", "fail", "pass_image_transcription")})))
     if s.get("total") != len(claims):
         errs.append(f"summary.total {s.get('total')} != {len(claims)} claims")
     if s.get("pass") != npass:
