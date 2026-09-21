@@ -1,0 +1,339 @@
+{
+  "guideline": "guidelines/febrile-child.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Febrile child' (PIC endorsed), including key points, background, history, examination and the unwell-child feature table, management, the infants-28-days-or-less section, consultation, transfer, discharge, additional notes on temperature measurement, lumbar puncture, urine collection and blood culture, the blood culture volume table, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The management algorithms for infants 29 days to 3 months and children over 3 months are flowchart IMAGES and were not retrieved: they are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to triage those age groups. Empiric antibiotic choice and dose are deferred by the source to local antimicrobial guidelines and are not stated or reconstructed. The page states 'Last update September 2022' while both flowcharts are filenamed Feb2025; this discrepancy is recorded as time_sensitive rather than resolved.",
+  "claims": [
+    {
+      "claim": "Key point 1 is that febrile neonates 28 days or less of corrected age require investigations being FBE, CRP, blood, urine and CSF cultures plus or minus CXR, and empiric IV antibiotic therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "1. Febrile neonates \u226428 days of corrected age require investigations (FBE, CRP, blood, urine and CSF cultures \u00b1 CXR) and empiric IV antibiotic therapy"
+    },
+    {
+      "claim": "Key point 2 is that in febrile infants over 28 days of corrected age and under 3 months, clinicians should have a low threshold for investigation and treatment based on clinical appearance and presence or absence of a clinically obvious focus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "2. In Febrile infants >28 days of corrected age and <3 months, have a low threshold for investigation and treatment based on clinical appearance and presence (or absence) of a clinically obvious focus"
+    },
+    {
+      "claim": "Key point 3 is that in infants under 3 months of age, hypothermia or temperature instability can be signs of serious bacterial infection or other serious illness",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "3. In infants <3 months of age, hypothermia or temperature instability can be signs of serious bacterial infection (or other serious illness)"
+    },
+    {
+      "claim": "The severity of illness cannot be predicted by the degree of fever, its rapidity of onset, its response to antipyretics or the presence of febrile seizures, and the appearance of the child is the most useful indicator",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "4. The severity of illness cannot be predicted by the degree of fever, its rapidity of onset, its response to antipyretics or the presence of febrile seizures; the appearance of the child is the most useful indicator"
+    },
+    {
+      "claim": "Fever is defined as body temperature greater than 38.0 degrees Celsius",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Definition of fever: body temperature >38.0\u00ba Celsius"
+    },
+    {
+      "claim": "Where possible clinicians should use the same body site and the same type of thermometer when measuring temperatures",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Where possible, use the same body site and the same type of thermometer when measuring temperatures"
+    },
+    {
+      "claim": "The most common causes of fever in children are viral infections however serious bacterial infections need to be considered, and the most common serious bacterial infections found in children without a focus are urinary tract infections",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The most common causes of fever in children are viral infections, however serious bacterial infections (SBIs) need to be considered \u2026 The most common SBIs found in children without a focus are urinary tract infections"
+    },
+    {
+      "claim": "Since the introduction of the pneumococcal vaccine the rate of occult bacteraemia has fallen to less than 1 per cent in healthy immunised children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Since the introduction of the pneumococcal vaccine, the rate of occult bacteraemia has fallen to <1% in healthy, immunised children"
+    },
+    {
+      "claim": "Children with fever for 5 days or more should be assessed for Kawasaki disease or PIMS-TS if there is a history of COVID-19 infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Children with fever for \u22655 days should be assessed for Kawasaki disease or PIMS-TS if there is a history of COVID-19 infection"
+    },
+    {
+      "claim": "Other uncommon causes of prolonged fever in children include inflammatory, immune-mediated and neoplastic conditions and specialist input may be required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Other uncommon causes of prolonged fever in children include inflammatory, immune-mediated and neoplastic conditions; specialist input may be required"
+    },
+    {
+      "claim": "History should cover localising symptoms such as cough, headache, photophobia, diarrhoea, vomiting, abdominal pain, musculoskeletal pain and rash",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Localising symptoms eg cough, headache, photophobia, diarrhoea, vomiting, abdominal pain, musculoskeletal pain, rash"
+    },
+    {
+      "claim": "Prior treatment with antibiotics may mask signs of a bacterial infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Medication: prior treatment with antibiotics may mask signs of a bacterial infection"
+    },
+    {
+      "claim": "High risk factors include prematurity, immunosuppression or oncological conditions, central line in situ, chronic lung disease, congenital heart disease, previous invasive bacterial infections, children of Aboriginal, Torres Strait Islander, Pacific Islander or Maori origin, and multiple health service presentations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "High risk: prematurity, immunosuppression/oncological conditions (see ), central line in situ, chronic lung disease, congenital heart disease, previous invasive bacterial infections, children of Aboriginal, Torres Strait Islander, Pacific Islander or Maori origin, multiple health service presentations"
+    },
+    {
+      "claim": "Teething does not cause fever",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Teething does not cause fever"
+    },
+    {
+      "claim": "Post vaccination fever is common with a typical onset within 24 hours of immunisation and duration up to 2 to 3 days, however in an unwell child fever should not be attributed to vaccination alone",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Post vaccination fever is common, with a typical onset within 24 hours of immunisation and duration up to 2-3 days; however, in an unwell child, fever should not be attributed to vaccination alone"
+    },
+    {
+      "claim": "Certain aspects of the child's behaviour and appearance provide the best indication of whether they are at high risk of serious bacterial infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Certain aspects of the child's behaviour and appearance provide the best indication of whether they are at high risk of SBI"
+    },
+    {
+      "claim": "Colour features suggestive of an unwell child are pallor including parent or carer report, mottled, and blue or cyanosed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Colour** | Pallor (including parent/carer report) <br> <br>Mottled <br> <br>Blue/cyanosed |"
+    },
+    {
+      "claim": "Activity features suggestive of an unwell child are lethargy or decreased activity, not responding normally to social cues, does not wake or only with prolonged stimulation or if roused does not stay awake, and weak, high-pitched or continuous cry",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Activity** | Lethargy or decreased activity <br> <br>Not responding normally to social cues <br> <br>Does not wake or only with prolonged stimulation, or if roused, does not stay awake <br> <br>Weak, high-pitched or continuous cry |"
+    },
+    {
+      "claim": "Respiratory features suggestive of an unwell child are grunting, tachypnoea, increased work of breathing and hypoxia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Respiratory** | Grunting <br> <br>Tachypnoea <br> <br>Increased work of breathing <br> <br>Hypoxia |"
+    },
+    {
+      "claim": "Circulation and hydration features suggestive of an unwell child are poor feeding, dry mucous membranes, persistent tachycardia, central capillary refill time of 3 seconds or more, reduced skin turgor and reduced urine output",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Circulation and Hydration** | Poor feeding <br> <br>Dry mucous membranes <br> <br>Persistent tachycardia <br> <br>Central capillary refill time \u22653 seconds <br> <br>Reduced skin turgor <br> <br>Reduced urine output |"
+    },
+    {
+      "claim": "Neurological features suggestive of an unwell child are bulging fontanelle, excessive irritability, neck stiffness, focal neurological signs, and focal, complex or prolonged seizures",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Neurological** | Bulging fontanelle <br>Excessive irritability <br> <br>Neck stiffness <br> <br>Focal neurological signs <br> <br>Focal, complex or prolonged seizures |"
+    },
+    {
+      "claim": "Other features suggestive of an unwell child are non-blanching rash, fever for 5 days or more, swelling of a limb or joint, and non-weight bearing or not using an extremity",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| **Other** | Non-blanching rash <br> <br>Fever for \u22655 days <br> <br>Swelling of a limb or joint <br> <br>Non-weight bearing/not using an extremity |"
+    },
+    {
+      "claim": "The features suggestive of an unwell child are adapted from the NICE guideline Feverish illness in children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Adapted from: Feverish illness in children"
+    },
+    {
+      "claim": "The child should be examined for a clinical focus of infection, removing clothing as required to complete a full examination and looking for subtle signs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The child should be examined for a clinical focus of infection \u2026 Remove clothing as required to complete a full examination, looking for subtle signs"
+    },
+    {
+      "claim": "Any febrile child who appears seriously unwell should be managed as suspected sepsis irrespective of the degree of fever",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Any febrile child who appears seriously unwell should be managed as suspected sepsis (see ), irrespective of the degree of fever"
+    },
+    {
+      "claim": "Clinicians should not accept apparent otitis media or upper respiratory symptoms as the source of infection in young infants or unwell children, and these children still require assessment for possible serious bacterial infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Do not accept apparent otitis media or upper respiratory symptoms as the source of infection in young infants or unwell children. These children still require assessment for possible SBI"
+    },
+    {
+      "claim": "If the child is stable it is preferable to complete investigations looking for an infective focus before commencing antibiotics, and in children from high risk groups clinicians should have a lower threshold for investigations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If the child is stable, it is preferable to complete investigations looking for an infective focus before commencing antibiotics \u2026 In children from high risk groups, have a lower threshold for investigations"
+    },
+    {
+      "claim": "UTI is the most common serious bacterial infection and if there is no clinically obvious focus for fever, urine collection and testing should be performed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "UTI is the most common SBI, if there is no clinically obvious focus for fever, urine collection and testing should be performed"
+    },
+    {
+      "claim": "Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns and clinicians should refer to local guidelines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "**Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns; please refer to**"
+    },
+    {
+      "claim": "For infants 28 days or less of corrected age clinicians should assess promptly for signs of sepsis and discuss with a senior doctor, perform FBE, CRP, blood culture, urine by suprapubic aspirate, LP plus or minus CXR, and give prompt treatment with empiric antibiotics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assess promptly for signs of sepsis and discuss with a senior doctor. \u2026 FBE, CRP, blood culture, urine (by SPA; see section on Urine collection below for other methods), LP \u00b1 CXR"
+    },
+    {
+      "claim": "If the infant appears unwell or there is likely to be a delay in completing all of the required investigations, clinicians should proceed with administration of antibiotics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If the infant appears unwell, or there is likely to be a delay in completing all of the required investigations, proceed with administration of antibiotics"
+    },
+    {
+      "claim": "Consultation with the local paediatric team should be considered for an unwell child, septic shock, infants under 28 days corrected age with fever who should be admitted for empiric antibiotics, barriers to follow-up within 24 hours due to social or external factors where admission should be considered, a high-risk child, advice needed regarding empiric treatment, and prolonged fever of unclear cause",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infants <28 days corrected age with fever (should be admitted for empiric antibiotics) \u2026 Barriers to follow-up within 24 hours due to social or external factors (consider admission)"
+    },
+    {
+      "claim": "Transfer to a tertiary centre should be considered for a child requiring care above the level of comfort of the local hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Child requiring care above the level of comfort of the local hospital"
+    },
+    {
+      "claim": "Discharge may be considered for infants 29 days to 3 months of corrected age when they are well, investigations are normal, the case has been discussed with a senior doctor and follow-up within 12 to 24 hours has been arranged, and for children over 3 months corrected age when they are well and follow up has been arranged",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infants 29 days to 3 months of corrected age: well, investigations normal, discussed with senior doctor, follow-up within 12-24 hours has been arranged \u2026 Children >3 months corrected age: well, follow up has been arranged"
+    },
+    {
+      "claim": "Parents should always be advised to return for review if the child is deteriorating",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Always advise parents to return for review if the child is deteriorating"
+    },
+    {
+      "claim": "Axillary temperature is recommended for infants under 3 months of age and for a more accurate reading the thermometer should be placed over the axillary artery for 3 minutes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Axillary temperature: recommended for infants <3 months of age \u2026 For a more accurate reading, the thermometer should be placed over the axillary artery for 3 minutes."
+    },
+    {
+      "claim": "Tympanic temperature is recommended for children over 3 months of age and for an accurate measurement the pinna must be retracted to straighten the external auditory meatus and the instrument should be directed at the tympanic membrane",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Tympanic temperature: recommended for children >3 months of age. For an accurate measurement, the pinna must be retracted to straighten the external auditory meatus and the instrument should be directed at the tympanic membrane."
+    },
+    {
+      "claim": "Skin temperature measurement using forehead or infrared thermometers is unreliable",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Skin temperature: forehead or infrared thermometers are unreliable"
+    },
+    {
+      "claim": "For rectal temperature in neonates clinicians should screen first with axillary temperature then consider performing a rectal temperature if a fever is still suspected",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Rectal temperature: in neonates, screen first with axillary temperature, then consider performing a rectal temperature if a fever is still suspected"
+    },
+    {
+      "claim": "When indicated, lumbar puncture should be performed without delay and ideally before the administration of antibiotics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When indicated, LP should be performed without delay and, ideally, before the administration of antibiotics"
+    },
+    {
+      "claim": "Contraindications to lumbar puncture include impaired conscious state, focal neurological signs, impaired coagulation or haemodynamic instability",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Contraindications to LP include impaired conscious state, focal neurological signs, impaired coagulation or haemodynamic instability"
+    },
+    {
+      "claim": "Where there are contraindications to lumbar puncture, treatment for meningitis or encephalitis should be commenced and an LP performed when the child is stable and there are no contraindications",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In this circumstance, treatment for meningitis/encephalitis should be commenced and an LP performed when the child is stable and there are no contraindications"
+    },
+    {
+      "claim": "Bag urine specimens should never be sent for culture due to high false positive rates, with a contamination rate of 50 per cent",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Bag urine specimens should never be sent for culture due to high false positive rates - contamination rate 50%"
+    },
+    {
+      "claim": "Suprapubic aspirate is the gold standard for urine collection with a contamination rate of 1 per cent, and in/out catheter is useful if there is little urine in the bladder such as after failed clean catch or SPA with a contamination rate of 10 per cent",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Suprapubic aspirate (see ): gold standard - contamination rate 1% \u2026 In/out catheter: useful if there is little urine in the bladder, such as after failed clean catch or SPA (discard first few drops of urine if possible to reduce contamination) - contamination rate 10%"
+    },
+    {
+      "claim": "Midstream urine is the preferred method for toilet-trained children who can void on request with a contamination rate of 25 per cent, and clean catch is appropriate for pre-continent children who cannot void on request but are not seriously unwell, also with a contamination rate of 25 per cent",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Midstream urine (MSU): preferred method for toilet-trained children who can void on request - contamination rate 25% \u2026 Clean catch: appropriate for pre-continent children who cannot void on request, but are not seriously unwell \u2026 - contamination rate 25%"
+    },
+    {
+      "claim": "The perineal or genital area should be cleaned with saline-soaked gauze for 10 seconds before collecting midstream or clean catch urine",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The perineal/genital area should be cleaned with saline-soaked gauze for 10 seconds before collecting midstream or clean catch urine"
+    },
+    {
+      "claim": "Blood cultures should be taken using an aseptic technique and sterile gloves, accuracy of blood culture results relies on correct blood volume to improve detection of bacteraemia or fungaemia, and the aerobic bottle should be inoculated preferentially if there is inadequate volume for both bottles",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Blood cultures should be taken using an aseptic technique and sterile gloves \u2026 Accuracy of blood culture results rely on correct blood volume to improve detection of bacteraemia or fungaemia \u2026 Inoculate aerobic bottle preferentially, ie if inadequate volume for both bottles"
+    },
+    {
+      "claim": "The paediatric aerobic blood culture bottle takes a minimum volume of 0.5 mL and maximum of 4 mL, and the adult aerobic bottle takes a minimum of 5 mL and maximum of 10 mL",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Min vol: **0.5 mL**<br>Max vol: **4 mL** | Min vol: **5 mL**<br>Max vol: **10 mL** |"
+    },
+    {
+      "claim": "Blood culture volumes by weight are 1 mL under 1.5 kg, 1.5 mL for 1.5 to 5 kg, 3 mL for 5 to 10 kg, and 4 mL for 11 to 15 kg",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| <1.5 kg | **1 mL** |  | N/A (unless specific clinical indication) | \u2026 | 1.5-5 kg | **1.5 mL** |  | \u2026 | 5-10 kg | **3 mL** |  | **5 mL** | \u2026 | 11-15 kg | **4 mL** |  | **5 mL** |"
+    },
+    {
+      "claim": "For children 16 to 20 kg the adult aerobic volume is 6 mL and anaerobic 6 mL, for 21 to 25 kg it is 8 mL and 8 mL, and for over 25 kg it is 10 mL and 10 mL",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| 21-25 kg | **8 mL** | **8 mL** | \u2026 | >25 kg | **10 mL** | **10 mL** |"
+    },
+    {
+      "claim": "The guideline states a last update of September 2022, while both management flowcharts are named Feb2025",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Last update September 2022 \u2026 Febrile child CPG_29 day plus flowchart_Feb2025 \u2026 Febrile child CPG_3 month plus flowchart_Feb2025"
+    },
+    {
+      "claim": "The guideline is PIC endorsed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "PIC Endorsed"
+    },
+    {
+      "claim": "The guideline cites Craig et al 2010, a prospective cohort study of 15,781 febrile illnesses on the accuracy of clinical symptoms and signs for the diagnosis of serious bacterial infection in young febrile children",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Craig JC, Williams GJ, Jones M, Codarini M, Macaskill P, Hayen A, et al. The accuracy of clinical symptoms and signs for the diagnosis of serious bacterial infection in young febrile children: prospective cohort study of 15 781 febrile illnesses. BMJ. 2010;340:c1594."
+    },
+    {
+      "claim": "The guideline cites a systematic review finding that infrared ear thermometry for fever diagnosis in children has poor sensitivity, and the Step-by-Step approach for the management of young febrile infants",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Dodd SR, Lancaster GA, Craig JV, Smyth RL, Williamson PR. In a systematic review, infrared ear thermometry for fever diagnosis in children finds poor sensitivity. \u2026 Gomez B, Mintegi S, Bressan S, Da Dalt L, Gervaix A, Lacroix L, et al. Validation of the \"Step-by-Step\" Approach in the Management of Young Febrile Infants. 2016."
+    }
+  ],
+  "summary": {
+    "total": 54,
+    "pass": 54,
+    "fail": 0
+  }
+}
