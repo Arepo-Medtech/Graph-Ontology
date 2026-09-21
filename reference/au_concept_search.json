@@ -1,0 +1,2230 @@
+{
+  "note": "Unresolved conditions re-searched across the whole terminology (ecl '*') rather than <<404684003 Clinical finding only.",
+  "searched": 379,
+  "with_findings": 111,
+  "exact_matches_missed": 35,
+  "namespaces_seen": {
+    "1000000": 8,
+    "1000032": 2,
+    "1000036": 11,
+    "1000052": 1,
+    "1000087": 5,
+    "1000112": 2,
+    "1000119": 94,
+    "1000122": 1,
+    "1000124": 7,
+    "1000132": 3,
+    "1000146": 3,
+    "1000168": 28,
+    "1000181": 2,
+    "1000210": 1
+  },
+  "results": [
+    {
+      "condition": "Patients undergoing in-vitro fertilisation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "10231000132102",
+          "display": "IVF pregnancy",
+          "semantic_tag": null,
+          "namespace": "1000132"
+        }
+      ]
+    },
+    {
+      "condition": "Contraception",
+      "exact_match_found": [
+        {
+          "code": "146680009",
+          "display": "Contraception",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "1376571000168103",
+          "display": "Hormonal contraception",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Septicaemia",
+      "exact_match_found": [
+        {
+          "code": "154313001",
+          "display": "Septicaemia",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "105592009",
+          "display": "Septicaemia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "137701000119106",
+          "display": "Antepartum septicaemia",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Diarrhoea of greater than 2 weeks duration",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1391851000168106",
+          "display": "H/O: fetal loss after 20 weeks",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1637171000168101",
+          "display": "Indigenous status",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "1200271000168100",
+          "display": "Vaccination of Aboriginal or Torres Strait Islander person",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "1637251000168103",
+          "display": "Aboriginal and Torres Strait Islander",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "1479951000168100",
+          "display": "Aboriginal and Torres Strait Islander health centre",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "1292991000168106",
+          "display": "Aboriginal and Torres Strait Islander health service",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "826241000168109",
+          "display": "Aboriginal and Torres Strait Islander health worker",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "933754141000036107",
+          "display": "Aboriginal and Torres Strait Islander traditional medicine service",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "1578861000168108",
+          "display": "Aboriginal and Torres Strait Islander maternal and infant health service",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Cardiac arrhythmias",
+      "exact_match_found": [
+        {
+          "code": "53488008",
+          "display": "Cardiac dysrhythmia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Fungal infections",
+      "exact_match_found": [
+        {
+          "code": "154394006",
+          "display": "(Dermatophytosis &/or tinea &/or ringworm) or (fungal infections) or (mycoses)",
+          "semantic_tag": "mycoses",
+          "namespace": null
+        },
+        {
+          "code": "266214005",
+          "display": "(Dermatophytosis &/or tinea &/or ringworm) or (fungal infections) or (mycoses)",
+          "semantic_tag": "mycoses",
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Hyperphenylalaninaemia due to phenylketonuria",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "145621000146106",
+          "display": "Headache due to exertion",
+          "semantic_tag": null,
+          "namespace": "1000146"
+        },
+        {
+          "code": "1462591000168103",
+          "display": "Myopathy due to statin",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Infection suspected or proven to be due to a susceptible organism",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "721121000124104",
+          "display": "Diabetes mellitus type 1 stage 2",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Local intra-articular or peri-articular infiltration",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1781000032103",
+          "display": "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments",
+          "semantic_tag": null,
+          "namespace": "1000032"
+        },
+        {
+          "code": "1771000032100",
+          "display": "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments",
+          "semantic_tag": null,
+          "namespace": "1000032"
+        }
+      ]
+    },
+    {
+      "condition": "Phobic disorders",
+      "exact_match_found": [
+        {
+          "code": "191720001",
+          "display": "Phobic disorders (& [social] or [phobic anxiety])",
+          "semantic_tag": "& [social] or [phobic anxiety]",
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "106001000119101",
+          "display": "COPD co-occurrent with acute bronchitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "1751000119100",
+          "display": "Acute exacerbation of COPD with asthma",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Fungal or yeast infection",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "12391000132109",
+          "display": "Invasive fungal infection",
+          "semantic_tag": null,
+          "namespace": "1000132"
+        },
+        {
+          "code": "1466101000168102",
+          "display": "Suspected fungal infection",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Acute bacterial enterocolitis",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "16606531000119101",
+          "display": "Acute diffuse ischaemic enterocolitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Acute lymphoblastic leukaemia",
+      "exact_match_found": [
+        {
+          "code": "128822004",
+          "display": "Precursor cell lymphoblastic leukaemia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Acute myelogenous leukaemia",
+      "exact_match_found": [
+        {
+          "code": "1162928000",
+          "display": "Acute myeloid leukaemia",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "17788007",
+          "display": "Acute myeloid leukaemia, no ICD-O subtype",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Acute promyelocytic leukaemia",
+      "exact_match_found": [
+        {
+          "code": "28950004",
+          "display": "Acute promyelocytic leukaemia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Basal cell carcinoma",
+      "exact_match_found": [
+        {
+          "code": "1338007",
+          "display": "Basal cell carcinoma",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Bone",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "85275011000036101",
+          "display": "Bonecal",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "3256011000036108",
+          "display": "Bonefos",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "903341000168105",
+          "display": "Bonezol",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "1198591000168103",
+          "display": "Bone cement",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Bordetella pertussis",
+      "exact_match_found": [
+        {
+          "code": "5247005",
+          "display": "Bordetella pertussis",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "25471000087103",
+          "display": "Bordetella pertussis toxoid",
+          "semantic_tag": null,
+          "namespace": "1000087"
+        }
+      ]
+    },
+    {
+      "condition": "Chemotherapy-induced neutropenia",
+      "exact_match_found": [
+        {
+          "code": "425229001",
+          "display": "Chemotherapy-induced neutropenia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Cholangiocarcinoma",
+      "exact_match_found": [
+        {
+          "code": "70179006",
+          "display": "Cholangiocarcinoma",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "78001000146109",
+          "display": "Metastatic cholangiocarcinoma",
+          "semantic_tag": null,
+          "namespace": "1000146"
+        },
+        {
+          "code": "73711000119107",
+          "display": "H/O: cholangiocarcinoma",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic asthma",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1761000119103",
+          "display": "Chronic obstructive airway disease with asthma",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10692761000119107",
+          "display": "Asthma-chronic obstructive pulmonary disease overlap syndrome",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10692721000119102",
+          "display": "Chronic obstructive asthma co-occurrent with acute exacerbation of asthma",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic kidney disease with Type 2 diabetes",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "771000119108",
+          "display": "Chronic kidney disease due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "751000119104",
+          "display": "Chronic kidney disease stage 1 due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "741000119101",
+          "display": "Chronic kidney disease stage 2 due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "721000119107",
+          "display": "Chronic kidney disease stage 4 due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "711000119100",
+          "display": "Chronic kidney disease stage 5 due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "71421000119105",
+          "display": "Hypertension in chronic kidney disease due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Coronary artery disease",
+      "exact_match_found": [
+        {
+          "code": "8957000",
+          "display": "Coronary artery disease",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Cystic fibrosis - homozygous for the F508del mutation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1426351000168106",
+          "display": "Whole blood common CFTR mutations detection test",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "933451051000036103",
+          "display": "Reproductive genetic carrier screen for CFTR, SMN1 and FMR1",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        }
+      ]
+    },
+    {
+      "condition": "Definite",
+      "exact_match_found": [
+        {
+          "code": "255545003",
+          "display": "Definite",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Epididymo-orchitis",
+      "exact_match_found": [
+        {
+          "code": "155915005",
+          "display": "Epididymo-orchitis",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "24084007",
+          "display": "Epididymo-orchitis",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Extensive-stage small cell lung cancer",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "683991000119103",
+          "display": "Extensive stage primary small cell carcinoma of lung",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Eye inflammation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "15630771000119104",
+          "display": "Uveitis of right eye",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Fungal infection",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "915811000168101",
+          "display": "Fungal infection prophylaxis",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "12391000132109",
+          "display": "Invasive fungal infection",
+          "semantic_tag": null,
+          "namespace": "1000132"
+        },
+        {
+          "code": "1466101000168102",
+          "display": "Suspected fungal infection",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Genital herpes",
+      "exact_match_found": [
+        {
+          "code": "154333002",
+          "display": "Genital herpes",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Grade II to IV acute graft versus host disease",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "128641000119100",
+          "display": "Acute graft-versus-host disease following transplant of kidney",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "HER2 positive breast cancer",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1082901000112103",
+          "display": "Primary malignant neoplasm of breast with axillary lymph node invasion",
+          "semantic_tag": null,
+          "namespace": "1000112"
+        }
+      ]
+    },
+    {
+      "condition": "Haemodialysis",
+      "exact_match_found": [
+        {
+          "code": "302497006",
+          "display": "Haemodialysis",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "309432002",
+          "display": "Haemodialysis",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "27392003",
+          "display": "Haemodialysis",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "421503006",
+          "display": "Haemodialysis",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "151048001",
+          "display": "Renal dialysis (& haemodialysis)",
+          "semantic_tag": "& haemodialysis",
+          "namespace": null
+        },
+        {
+          "code": "266809003",
+          "display": "Renal dialysis (& haemodialysis)",
+          "semantic_tag": "& haemodialysis",
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "1345661000168104",
+          "display": "Haemodialysis solution",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Haemophilus influenzae type B",
+      "exact_match_found": [
+        {
+          "code": "103442008",
+          "display": "Haemophilus influenzae type b",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Hodgkin lymphoma",
+      "exact_match_found": [
+        {
+          "code": "1163005009",
+          "display": "Hodgkin lymphoma",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "14537002",
+          "display": "Hodgkin lymphoma",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "128930002",
+          "display": "Hodgkin lymphoma (category)",
+          "semantic_tag": "category",
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Hypsarrhythmia",
+      "exact_match_found": [
+        {
+          "code": "28055006",
+          "display": "West syndrome",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Infantile spasms",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "290871000119101",
+          "display": "Infantile spasms co-occurrent with status epilepticus",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "290881000119103",
+          "display": "Refractory infantile spasms co-occurrent with status epilepticus",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Intermediate",
+      "exact_match_found": [
+        {
+          "code": "11896004",
+          "display": "Intermediate",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "3361000181108",
+          "display": "Intermediate metaboliser",
+          "semantic_tag": null,
+          "namespace": "1000181"
+        }
+      ]
+    },
+    {
+      "condition": "Intractable childhood epilepsy",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "434541000124109",
+          "display": "Benign rolandic epilepsy, refractory",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        },
+        {
+          "code": "434551000124106",
+          "display": "Benign rolandic epilepsy, non-refractory",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Lymphoma",
+      "exact_match_found": [
+        {
+          "code": "269627002",
+          "display": "(Lymphatic tissue carcinoma) or (lymphoma)",
+          "semantic_tag": "lymphoma",
+          "namespace": null
+        },
+        {
+          "code": "21964009",
+          "display": "Malignant lymphoma",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Major depression",
+      "exact_match_found": [
+        {
+          "code": "370143000",
+          "display": "Major depressive disorder",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Malignant gastrointestinal stromal tumour",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "16636051000119105",
+          "display": "Primary malignant gastrointestinal stromal neoplasm of colon",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "16823941000119108",
+          "display": "Primary malignant gastrointestinal stromal neoplasm of pancreas",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "16636101000119105",
+          "display": "Primary malignant gastrointestinal stromal neoplasm of rectum",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Malignant neoplasia",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "94281000119101",
+          "display": "Malignant multiple endocrine neoplasia type 2a",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Opioid-induced constipation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "136801000119102",
+          "display": "Therapeutic opioid induced constipation",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Oral",
+      "exact_match_found": [
+        {
+          "code": "738956005",
+          "display": "Oral",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "260548002",
+          "display": "Oral",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "1385901000168100",
+          "display": "Oral commissuroplasty",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "139011000036106",
+          "display": "Oral liquid",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        }
+      ]
+    },
+    {
+      "condition": "Paediatric low grade glioma",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "90811000119100",
+          "display": "Low grade malignant glioma of brain",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Pneumocystis carinii pneumonia",
+      "exact_match_found": [
+        {
+          "code": "155557008",
+          "display": "Pneumocystis carinii pneumonia",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "57541005",
+          "display": "Pulmonary pneumocystosis",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Pneumocystis jiroveci pneumonia",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "916081000168105",
+          "display": "Pneumocystis jiroveci pneumonia prophylaxis",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Primary axillary hyperhidrosis",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "10677551000119108",
+          "display": "Primary focal hyperhidrosis of axilla",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10677591000119103",
+          "display": "Primary focal hyperhidrosis of face",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10677631000119103",
+          "display": "Primary focal hyperhidrosis of palm of hand",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10677671000119100",
+          "display": "Primary focal hyperhidrosis of sole of foot",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "682291000119101",
+          "display": "Primary angiosarcoma of axillary region",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Proliferative diabetic retinopathy and/or Diabetic macular oedema",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "97331000119101",
+          "display": "Macular oedema and retinopathy due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Proven",
+      "exact_match_found": [
+        {
+          "code": "277025001",
+          "display": "Proven",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "53524011000036103",
+          "display": "Proven",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "53524011000036103",
+          "display": "Proven",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "82669011000036108",
+          "display": "ProVen Plus",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "82696011000036101",
+          "display": "ProVen Plus tablet",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "13721000181104",
+          "display": "Corynebacterium provencense",
+          "semantic_tag": null,
+          "namespace": "1000181"
+        }
+      ]
+    },
+    {
+      "condition": "Pseudomonas aeruginosa infection",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1098281000000102",
+          "display": "Infection caused by Pseudomonas aeruginosa Liverpool epidemic strain",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        }
+      ]
+    },
+    {
+      "condition": "SARS-CoV-2 infection",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "880529761000119102",
+          "display": "Infection of lower respiratory tract caused by SARS-CoV-2",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "1240541000000107",
+          "display": "Infection of upper respiratory tract caused by SARS-CoV-2",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        }
+      ]
+    },
+    {
+      "condition": "Squamous cell cancer of the oropharynx",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "105121000119102",
+          "display": "Squamous cell carcinoma of vagina",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Stroke embolism",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "915141931000119109",
+          "display": "Cerebrovascular accident due to embolism of basilar artery",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "329461000119102",
+          "display": "Stroke due to occlusion of left cerebellar artery by embolus",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "152148641000119104",
+          "display": "Cerebrovascular accident due to embolism of bilateral carotid arteries",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "58173271000119101",
+          "display": "Cerebrovascular accident due to embolism of bilateral cerebellar arteries",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "732330391000119107",
+          "display": "Cerebrovascular accident due to embolism of bilateral vertebral arteries",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "517253051000119105",
+          "display": "Cerebrovascular accident due to embolism of left vertebral artery",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "384430101000119103",
+          "display": "Cerebrovascular accident due to embolism of right carotid artery",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Subfoveal choroidal neovascularisation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "16837401000119105",
+          "display": "Bilateral neovascularisation of choroid of eyes due to degenerative myopia",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "16837461000119106",
+          "display": "Neovascularisation of choroid of right eye due to degenerative myopia",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Suspected",
+      "exact_match_found": [
+        {
+          "code": "415684004",
+          "display": "Suspected",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "76053005",
+          "display": "Suspected diagnosis",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "380721000087109",
+          "display": "Amoebiasis suspected",
+          "semantic_tag": null,
+          "namespace": "1000087"
+        },
+        {
+          "code": "1081901000112109",
+          "display": "Suspected glomerulonephritis",
+          "semantic_tag": null,
+          "namespace": "1000112"
+        },
+        {
+          "code": "1290561000000101",
+          "display": "Suspected mpox",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        }
+      ]
+    },
+    {
+      "condition": "Terminal malignant neoplasia",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "94281000119101",
+          "display": "Malignant multiple endocrine neoplasia type 2a",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Tyrosinaemia",
+      "exact_match_found": [
+        {
+          "code": "190694001",
+          "display": "Tyrosinaemia",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Urothelial carcinoma",
+      "exact_match_found": [
+        {
+          "code": "27090000",
+          "display": "Transitional cell carcinoma",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Venous ulcer",
+      "exact_match_found": [
+        {
+          "code": "41915009",
+          "display": "Stasis ulcer",
+          "semantic_tag": null,
+          "namespace": null
+        },
+        {
+          "code": "371032004",
+          "display": "Stasis ulcer",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Wounds",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "34541000087107",
+          "display": "Multiple open wounds",
+          "semantic_tag": null,
+          "namespace": "1000087"
+        },
+        {
+          "code": "353971000052107",
+          "display": "Number of wounds",
+          "semantic_tag": null,
+          "namespace": "1000052"
+        }
+      ]
+    },
+    {
+      "condition": "X-linked hypophosphataemia",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1117371000168105",
+          "display": "X-linked acrogigantism",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Acute allergic reaction with anaphylaxis",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "99031000119107",
+          "display": "Acute exacerbation of asthma co-occurrent with allergic rhinitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10674711000119105",
+          "display": "Acute severe exacerbation of asthma co-occurrent with allergic rhinitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10676511000119109",
+          "display": "Acute severe exacerbation of moderate persistent asthma co-occurrent with allergic rhinitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10675551000119104",
+          "display": "Acute severe exacerbation of severe persistent asthma co-occurrent with allergic rhinitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "10675991000119100",
+          "display": "Acute severe exacerbation of mild persistent allergic asthma co-occurrent with allergic rhinitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Acute severe ulcerative colitis",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "969688801000119108",
+          "display": "Acute left-sided ulcerative colitis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Adenocarcinoma of the pancreas",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1651000119109",
+          "display": "Primary adenocarcinoma of pancreas",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "681621000119105",
+          "display": "Primary adenocarcinoma of body of pancreas",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "681721000119103",
+          "display": "Primary adenocarcinoma of head of pancreas",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "681831000119107",
+          "display": "Primary adenocarcinoma of neck of pancreas",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Blepharospasm or hemifacial spasm",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "16907601000119106",
+          "display": "Bilateral hemifacial spasm",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15630241000119104",
+          "display": "Hemifacial spasm of left facial nerve",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15630201000119101",
+          "display": "Hemifacial spasm of right facial nerve",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "CD30 positive systemic anaplastic large cell lymphoma",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "351131000119104",
+          "display": "ALK-positive anaplastic large cell lymphoma of spleen",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Castration resistant non-metastatic carcinoma of the prostate",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "40861000146101",
+          "display": "Metastatic non-small cell carcinoma",
+          "semantic_tag": null,
+          "namespace": "1000146"
+        }
+      ]
+    },
+    {
+      "condition": "Chelation of elevated copper levels",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "933359971000036103",
+          "display": "Urine pre and post chelation therapy copper measurement",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        },
+        {
+          "code": "1403131000168101",
+          "display": "Hair copper measurement",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic arthropathies",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "50661000087103",
+          "display": "Chronic musculoskeletal pain due to disorder of joint",
+          "semantic_tag": null,
+          "namespace": "1000087"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic liver failure with fat malabsorption",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "2053831000122108",
+          "display": "Acute on chronic liver failure",
+          "semantic_tag": null,
+          "namespace": "1000122"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic severe disabling pain",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1121000119107",
+          "display": "Chronic neck pain",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "109771000119103",
+          "display": "Chronic postoperative pain",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic stable plaque type psoriasis vulgaris",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "172218281000119101",
+          "display": "Bilateral stable nontraumatic chronic slipped upper femoral epiphyses",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "634152221000119100",
+          "display": "Stable nontraumatic chronic slipped upper femoral epiphysis of left femoral head",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "702721811000119101",
+          "display": "Stable nontraumatic chronic slipped upper femoral epiphysis of right femoral head",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Chronic treatment of hereditary angioedema Types 1 or 2",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "751000119104",
+          "display": "Chronic kidney disease stage 1 due to type 2 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "90731000119103",
+          "display": "Chronic kidney disease stage 2 due to type 1 diabetes",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Combined deficiency of human growth hormone and gonadotrophins",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "848784381000119105",
+          "display": "Hormone receptor negative and human epidermal growth factor receptor 2 positive malignant neoplasm of breast",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "423238741000119103",
+          "display": "Hormone receptor positive and human epidermal growth factor receptor 2 positive malignant neoplasm of breast",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Combined immunoglobulin E mediated allergy to cows' milk protein and soy protein",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "442931000124103",
+          "display": "Adult soy protein isolate formula",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Cows' milk protein enteropathy",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "141001000119104",
+          "display": "Milk protein enteropathy",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Cows' milk protein enteropathy and intolerance to soy protein",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "442931000124103",
+          "display": "Adult soy protein isolate formula",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Cows' milk protein enteropathy with failure to thrive",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "443191000124106",
+          "display": "Soy-based standard infant formula",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Cystic fibrosis - one residual function mutation",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1426351000168106",
+          "display": "Whole blood common CFTR mutations detection test",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Elevated intra-ocular pressure",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "15747041000119100",
+          "display": "Bilateral raised intraocular pressure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Enterokinase deficiency",
+      "exact_match_found": [
+        {
+          "code": "190952002",
+          "display": "Enterokinase deficiency",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Enthesitis/spondylitis related juvenile idiopathic arthritis",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "16043231000119108",
+          "display": "Monoarticular juvenile idiopathic arthritis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "16044751000119106",
+          "display": "Polyarticular juvenile idiopathic arthritis",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Familial heterozygous hypercholesterolaemia",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "109271000119105",
+          "display": "Family history of double heterozygous familial hypercholesterolaemia",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Gyrate atrophy of the choroid and retina",
+      "exact_match_found": [
+        {
+          "code": "367536002",
+          "display": "Gyrate atrophy of the choroid and retina",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "HER2 positive adenocarcinoma of the stomach",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "681631000119108",
+          "display": "Primary adenocarcinoma of body of stomach",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "681681000119109",
+          "display": "Primary adenocarcinoma of fundus of stomach",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Hypsarrhythmia and/or infantile spasms",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "342291000119102",
+          "display": "Infantile and/or juvenile cataract",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Immunotherapy sensitive advanced or metastatic cancer",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "61371000210101",
+          "display": "Systemic anti cancer therapy regimen",
+          "semantic_tag": null,
+          "namespace": "1000210"
+        }
+      ]
+    },
+    {
+      "condition": "Initial moderate to severe genital herpes",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "8771000119104",
+          "display": "Bilateral moderate to severe visual impairment",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Intestinal malabsorption including short bowel syndrome",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "809482891000119103",
+          "display": "Short bowel syndrome with colon in continuity",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Limited-stage small cell lung cancer",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "683991000119103",
+          "display": "Extensive stage primary small cell carcinoma of lung",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Oesophageal candidiasis",
+      "exact_match_found": [
+        {
+          "code": "187023002",
+          "display": "Candidiasis: [OS NOS] or [granuloma] or [intestinal] or [oesophageal] or [rectal])",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    },
+    {
+      "condition": "Paediatric high grade glioma",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1385951000168101",
+          "display": "High grade dysplasia",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Patients unable to take a solid dose form of an ACE inhibitor",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "722101000168101",
+          "display": "Dose based prescribing route of administration reference set",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "722081000168108",
+          "display": "Dose based prescribing dose form reference set",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        },
+        {
+          "code": "722091000168106",
+          "display": "Dose based prescribing dose frequency and interval reference set",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Preservation of bone mineral density",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "1579081000168100",
+          "display": "Bone densitometry service",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Progressive fibrosing Interstitial lung disease",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "328661000119108",
+          "display": "Interstitial lung disease of childhood",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Pruritus associated with chronic kidney disease",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "324121000000109",
+          "display": "Chronic kidney disease stage 1 with proteinuria",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        },
+        {
+          "code": "324181000000105",
+          "display": "Chronic kidney disease stage 2 with proteinuria",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        },
+        {
+          "code": "324251000000105",
+          "display": "Chronic kidney disease stage 3 with proteinuria",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        },
+        {
+          "code": "324311000000101",
+          "display": "Chronic kidney disease stage 3A with proteinuria",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        }
+      ]
+    },
+    {
+      "condition": "Reduction of breast cancer risk",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "838351000000107",
+          "display": "Education about risk of malignant neoplasm of breast",
+          "semantic_tag": null,
+          "namespace": "1000000"
+        }
+      ]
+    },
+    {
+      "condition": "Rehydration in intestinal failure",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "440295211000119108",
+          "display": "Failure of intestine",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "1382761000168105",
+          "display": "High salt dry diet",
+          "semantic_tag": null,
+          "namespace": "1000168"
+        }
+      ]
+    },
+    {
+      "condition": "Short stature due to short stature homeobox gene disorders",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "368331000119100",
+          "display": "Short stature co-occurrent and due to endocrine disorder",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Soft tissue sarcoma",
+      "exact_match_found": [
+        {
+          "code": "1187396000",
+          "display": "Sarcoma",
+          "semantic_tag": null,
+          "namespace": null
+        }
+      ],
+      "extension_concepts": [
+        {
+          "code": "49291000119105",
+          "display": "H/O: soft tissue sarcoma",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Spasticity of the lower limb following an acute event",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "132111000119107",
+          "display": "Acute deep venous thrombosis of lower limb due to and following coronary artery bypass grafting",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "290931000119108",
+          "display": "Monoplegia of lower limb due to and following stroke",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15711401000119105",
+          "display": "Acute deep vein thrombosis of left lower limb following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15711241000119106",
+          "display": "Acute deep vein thrombosis of right lower limb following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15711321000119106",
+          "display": "Acute deep vein thrombosis of bilateral lower limbs following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15708241000119104",
+          "display": "Acute deep vein thrombosis of right lower limb following coronary artery bypass graft",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Spasticity of the upper limb following an acute event",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "291121000119103",
+          "display": "Monoplegia of upper limb due to and following stroke",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15708401000119100",
+          "display": "Acute deep vein thrombosis of left upper limb following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15708201000119101",
+          "display": "Acute deep vein thrombosis of right upper limb following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "15708321000119104",
+          "display": "Acute deep vein thrombosis of bilateral upper limbs following procedure",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        },
+        {
+          "code": "674161000119102",
+          "display": "Monoplegia of upper limb due to and following ischaemic stroke",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Squamous cell cancer of the hypopharynx",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "105121000119102",
+          "display": "Squamous cell carcinoma of vagina",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Type III Short bowel syndrome with intestinal failure",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "809482891000119103",
+          "display": "Short bowel syndrome with colon in continuity",
+          "semantic_tag": null,
+          "namespace": "1000119"
+        }
+      ]
+    },
+    {
+      "condition": "Use in patients receiving palliative care",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "25761000087103",
+          "display": "Inpatient palliative care environment",
+          "semantic_tag": null,
+          "namespace": "1000087"
+        },
+        {
+          "code": "191000036101",
+          "display": "Patient record used in clinical study",
+          "semantic_tag": null,
+          "namespace": "1000036"
+        }
+      ]
+    },
+    {
+      "condition": "Combined intolerance to cows' milk protein, soy protein and protein hydrolysate formulae",
+      "exact_match_found": [],
+      "extension_concepts": [
+        {
+          "code": "442931000124103",
+          "display": "Adult soy protein isolate formula",
+          "semantic_tag": null,
+          "namespace": "1000124"
+        }
+      ]
+    },
+    {
+      "condition": "Anxiety states",
+      "exact_match_found": [
+        {
+          "code": "154882009",
+          "display": "(Anxiety state (& [states] or [panic attack])) or (pseudocyesis)",
+          "semantic_tag": "pseudocyesis",
+          "namespace": null
+        },
+        {
+          "code": "268752000",
+          "display": "(Anxiety state (& [states] or [panic attack])) or (pseudocyesis)",
+          "semantic_tag": "pseudocyesis",
+          "namespace": null
+        }
+      ],
+      "extension_concepts": []
+    }
+  ],
+  "triage": {
+    "method": "An active concept has at least one parent; orphans are retired. NB an ECL self-reference (<<id) returns the concept whether or not it is active, so it CANNOT be used to test activity.",
+    "active_genuine_misses": 13,
+    "orphan_retired_must_not_bind": 17,
+    "junk_from_broken_condition_names": 5
+  },
+  "finding": "The AU-extension hypothesis is NOT supported. Namespace 1000119 dominates the extension concepts found (94 of ~160); Australian namespaces 1000036 and 1000168 account for 39. PrEP was a real AU concept but is not evidence of a pattern.\n\nThe material finding is the opposite: an unconstrained search (ecl '*') is UNSAFE. Of 35 exact matches it surfaced, 17 are retired orphan concepts \u2014 Septicaemia 154313001, Coronary artery disease 8957000, Genital herpes 154333002 \u2014 which look like perfect matches and must never be bound. The <<404684003 constraint was silently protecting against this.\n\nGenuine misses are ~13 and have two causes: wrong hierarchy (Haemodialysis is a procedure, like PrEP) and result truncation (Major depressive disorder ranked 6th against count=5).",
+  "recommended_binder_changes": [
+    "Raise count from 5 to 20; Major depressive disorder was rank 6.",
+    "Search <<404684003 OR <<71388002 (procedure), tagging which hierarchy matched.",
+    "REQUIRE a parent before binding. An orphan concept is retired; this rule alone would have blocked all 17 bad matches above, and it mirrors the concept-activeness gate this repo already applies to AMT products."
+  ],
+  "active_misses": [
+    {
+      "condition": "Acute lymphoblastic leukaemia",
+      "concept_id": "128822004",
+      "display": "Precursor cell lymphoblastic leukaemia",
+      "parents": [
+        "Acute leukaemia",
+        "Lymphoid leukaemia"
+      ]
+    },
+    {
+      "condition": "Acute myelogenous leukaemia",
+      "concept_id": "1162928000",
+      "display": "Acute myeloid leukaemia",
+      "parents": [
+        "Acute leukaemia",
+        "Myeloid leukaemia"
+      ]
+    },
+    {
+      "condition": "Acute promyelocytic leukaemia",
+      "concept_id": "28950004",
+      "display": "Acute promyelocytic leukaemia",
+      "parents": [
+        "Acute myeloid leukaemia"
+      ]
+    },
+    {
+      "condition": "Basal cell carcinoma",
+      "concept_id": "1338007",
+      "display": "Basal cell carcinoma",
+      "parents": [
+        "Malignant basal cell tumour"
+      ]
+    },
+    {
+      "condition": "Bordetella pertussis",
+      "concept_id": "5247005",
+      "display": "Bordetella pertussis",
+      "parents": [
+        "Bordetella species"
+      ]
+    },
+    {
+      "condition": "Cholangiocarcinoma",
+      "concept_id": "70179006",
+      "display": "Cholangiocarcinoma",
+      "parents": [
+        "Malignant adenomatous neoplasm"
+      ]
+    },
+    {
+      "condition": "Haemodialysis",
+      "concept_id": "302497006",
+      "display": "Haemodialysis",
+      "parents": [
+        "Extracorporeal circulation procedure",
+        "Renal dialysis"
+      ]
+    },
+    {
+      "condition": "Haemophilus influenzae type B",
+      "concept_id": "103442008",
+      "display": "Haemophilus influenzae type b",
+      "parents": [
+        "Haemophilus influenzae"
+      ]
+    },
+    {
+      "condition": "Hodgkin lymphoma",
+      "concept_id": "1163005009",
+      "display": "Hodgkin lymphoma",
+      "parents": [
+        "Malignant lymphoma"
+      ]
+    },
+    {
+      "condition": "Major depression",
+      "concept_id": "370143000",
+      "display": "Major depressive disorder",
+      "parents": [
+        "Depression"
+      ]
+    },
+    {
+      "condition": "Urothelial carcinoma",
+      "concept_id": "27090000",
+      "display": "Transitional cell carcinoma",
+      "parents": [
+        "Malignant neoplasm",
+        "Transitional cell neoplasm"
+      ]
+    },
+    {
+      "condition": "Venous ulcer",
+      "concept_id": "41915009",
+      "display": "Stasis ulcer",
+      "parents": [
+        "Ulcer"
+      ]
+    },
+    {
+      "condition": "Soft tissue sarcoma",
+      "concept_id": "1187396000",
+      "display": "Sarcoma",
+      "parents": [
+        "Malignant neoplasm",
+        "Soft tissue tumour AND/OR sarcoma"
+      ]
+    }
+  ],
+  "orphans_rejected": [
+    {
+      "condition": "Contraception",
+      "concept_id": "146680009",
+      "display": "Contraception"
+    },
+    {
+      "condition": "Septicaemia",
+      "concept_id": "154313001",
+      "display": "Septicaemia"
+    },
+    {
+      "condition": "Cardiac arrhythmias",
+      "concept_id": "53488008",
+      "display": "Cardiac dysrhythmia"
+    },
+    {
+      "condition": "Fungal infections",
+      "concept_id": "154394006",
+      "display": "(Dermatophytosis &/or tinea &/or ringworm) or (fungal infections) or (mycoses)"
+    },
+    {
+      "condition": "Phobic disorders",
+      "concept_id": "191720001",
+      "display": "Phobic disorders (& [social] or [phobic anxiety])"
+    },
+    {
+      "condition": "Chemotherapy-induced neutropenia",
+      "concept_id": "425229001",
+      "display": "Chemotherapy-induced neutropenia"
+    },
+    {
+      "condition": "Coronary artery disease",
+      "concept_id": "8957000",
+      "display": "Coronary artery disease"
+    },
+    {
+      "condition": "Epididymo-orchitis",
+      "concept_id": "155915005",
+      "display": "Epididymo-orchitis"
+    },
+    {
+      "condition": "Genital herpes",
+      "concept_id": "154333002",
+      "display": "Genital herpes"
+    },
+    {
+      "condition": "Hypsarrhythmia",
+      "concept_id": "28055006",
+      "display": "West syndrome"
+    },
+    {
+      "condition": "Lymphoma",
+      "concept_id": "269627002",
+      "display": "(Lymphatic tissue carcinoma) or (lymphoma)"
+    },
+    {
+      "condition": "Pneumocystis carinii pneumonia",
+      "concept_id": "155557008",
+      "display": "Pneumocystis carinii pneumonia"
+    },
+    {
+      "condition": "Tyrosinaemia",
+      "concept_id": "190694001",
+      "display": "Tyrosinaemia"
+    },
+    {
+      "condition": "Enterokinase deficiency",
+      "concept_id": "190952002",
+      "display": "Enterokinase deficiency"
+    },
+    {
+      "condition": "Gyrate atrophy of the choroid and retina",
+      "concept_id": "367536002",
+      "display": "Gyrate atrophy of the choroid and retina"
+    },
+    {
+      "condition": "Oesophageal candidiasis",
+      "concept_id": "187023002",
+      "display": "Candidiasis: [OS NOS] or [granuloma] or [intestinal] or [oesophageal] or [rectal])"
+    },
+    {
+      "condition": "Anxiety states",
+      "concept_id": "154882009",
+      "display": "(Anxiety state (& [states] or [panic attack])) or (pseudocyesis)"
+    }
+  ]
+}
