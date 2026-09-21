@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of Austroads Assessing Fitness to Drive (AP-G56) Part B section 6.2, Seizures and epilepsy, including 6.2.1 relevance to the driving task, 6.2.2 general assessment and management guidelines, 6.2.3 medical standards for licensing, all three standards tables (default, possible reductions, other factors) and the closing notes on licensing responsibility, conditional licences and reporting. Figures 13 and 14 are decision-tree images; their content is not asserted beyond the surrounding text. Part A sections on confidentiality and reporting, section 1.2.4 blackouts of undetermined mechanism, section 6.3 head injury, section 7.2.9 psychogenic nonepileptic seizures and Appendix 3 on reporting legislation are cross-referenced by this chapter and were not retrieved; they are recorded as input_unavailable. Retrieved text contains extraction artefacts where line breaks collapsed into 'nn' and one typographical error in the source table ('24-period' for 24-hour period); source_text is preserved verbatim.",
+  "method": "Each claim checked against the retrieved text of Austroads Assessing Fitness to Drive (AP-G56) Part B section 6.2, Seizures and epilepsy, including 6.2.1 relevance to the driving task, 6.2.2 general assessment and management guidelines, 6.2.3 medical standards for licensing, all three standards tables (default, possible reductions, other factors) and the closing notes on licensing responsibility, conditional licences and reporting. Figures 13 and 14 are decision-tree images; their content is not asserted beyond the surrounding text. Part A sections on confidentiality and reporting, section 1.2.4 blackouts of undetermined mechanism, section 6.3 head injury, section 7.2.9 psychogenic nonepileptic seizures and Appendix 3 on reporting legislation are cross-referenced by this chapter and were not retrieved; they are recorded as input_unavailable. Retrieved text contains extraction artefacts where line breaks collapsed into 'nn' and one typographical error in the source table ('24-period' for 24-hour period); source_text is preserved verbatim. ADDENDUM 2026-09-22: Figures 13 and 14 were retrieved as images via the browser (direct download returns 403) and read visually. Nine further claims carry verdict pass_image_transcription and source S2. Unlike the RCH paediatric flowcharts transcribed elsewhere in this compendium, these two figures contained NOTHING absent from the retrieved text: they are summaries of section 6.2.3, exactly as the Standard describes them. The only thing Figure 13 states more directly than the tables is that the reduction list has eight entries for private drivers and four for commercial drivers.",
   "claims": [
     {
       "claim": "Assessing Fitness to Drive states that the responsibility for issuing, renewing, suspending or cancelling a person's driver licence including a conditional licence lies ultimately with the driver licensing authority, and that licensing decisions are based on a full consideration of relevant factors relating to health and driving performance",
@@ -383,11 +383,66 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "Seizures associated with loss of awareness, even if brief or subtle, or loss of motor control, have the potential to impair the ability to control a motor vehicle."
+    },
+    {
+      "claim": "Figure 13 shows that a driver with seizures is assessed by a GP or specialist if a private driver, or by a specialist if a commercial driver, and is then asked whether there are factors that reduce the crash risk",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Seizure(s) / Private driver / Commercial driver / GP or specialist assessment / Specialist assessment / Are there factors that reduce the crash risk?"
+    },
+    {
+      "claim": "In Figure 13 the factors that reduce crash risk listed for private drivers are childhood seizures, first seizure, acute symptomatic seizures, epilepsy treated for the first time, safe seizures, sleep-only seizures, previously well-controlled seizures, and exceptional case",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Childhood seizures / First seizure / Acute symptomatic seizures / Epilepsy treated for the first time / 'Safe' seizures / Sleep-only seizures / Previously well-controlled seizures / Exceptional case"
+    },
+    {
+      "claim": "In Figure 13 the factors listed for commercial drivers are only childhood seizures, first seizure, acute symptomatic seizures, and exceptional case",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Are there factors that reduce the crash risk? / Childhood seizures / First seizure / Acute symptomatic seizures / Exceptional case"
+    },
+    {
+      "claim": "In Figure 13, no reducing factors gives a 1-year minimum non-driving period for private drivers and a 10-year minimum non-driving period for commercial drivers, while yes leads to the table, and both paths lead to a conditional licence",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "No / 1-year minimum non-driving period / 10-year minimum non-driving period / Yes / Refer table / Conditional licence"
+    },
+    {
+      "claim": "Figure 13 lists management factors as surgery, noncompliance with management, withdrawal of antiseizure medication, reduction of antiseizure medication, seizure causing crash, and resumption of full licence",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Management factors / Surgery / Noncompliance with management / Withdrawal of antiseizure medication / Reduction of antiseizure medication / Seizure causing crash / Resumption of full licence"
+    },
+    {
+      "claim": "Figure 14 defines epilepsy treated for the first time as treatment with antiepileptic medication commenced for the first time within the last 18 months",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Epilepsy treated for the first time (defined as treatment with antiepileptic medication commenced for the first time within the last 18 months)"
+    },
+    {
+      "claim": "In Figure 14 a commercial vehicle driver goes to the default standard of a minimum 10-year non-driving seizure-free period",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Commercial vehicle driver? / Yes / Default standard (minimum 10-year non-driving seizure-free period)"
+    },
+    {
+      "claim": "In Figure 14 a non-commercial driver is asked whether treatment started more than 6 months ago; if no, reassess after at least 6 months of treatment",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Commercial vehicle driver? / No / Treatment started more than 6 months ago? / No / Reassess after at least 6 months of treatment"
+    },
+    {
+      "claim": "In Figure 14, if there have been no seizures the driver may return to driving on a conditional licence 6 months after the last seizure, and if there have been seizures the question is whether they were only in the first 6 months after starting treatment, with yes giving the conditional licence at 6 months after the last seizure and no giving the default standard of a minimum 1-year non-driving seizure-free period",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Any seizures? / No / May return to driving on a conditional licence 6 months after last seizure / Yes / Seizures were only in the first 6 months after starting treatment? / Yes / No / Default standard (minimum 1-year non-driving seizure-free period)"
     }
   ],
   "summary": {
-    "total": 63,
+    "total": 72,
     "pass": 63,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 9
   }
 }

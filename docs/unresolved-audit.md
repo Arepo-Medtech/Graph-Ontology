@@ -1,10 +1,9 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,341 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 58 guidelines · 2,350 claims · 236 `Unresolved` rows**
 
-*Revised the same day: **all eleven RCH paediatric algorithm images have been recovered** — sepsis,
-anaphylaxis, acute asthma, febrile child and acute seizures. See Finding 1. **84 claims now carry
-`pass_image_transcription`**, and Finding 1 is closed except for the two Austroads decision trees.*
+*Revised the same day: **all thirteen algorithm images have been recovered** and **Finding 1 is closed**.
+**93 claims now carry `pass_image_transcription`.***
 
 Every guideline ends with an `Unresolved` table. This is the audit of those tables read as a set — the
 things this compendium records that it cannot answer, grouped so they can be acted on rather than
@@ -38,7 +37,7 @@ algorithm was not.
 | ~~**Febrile child**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — and it recovered the **empiric antibiotic agents**, absent from the text |
 | ~~**Sepsis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — images downloaded and read; algorithm transcribed into the guideline under verdict `pass_image_transcription` |
 | ~~**Seizures — acute management (children)**~~ | ~~1~~ | ✅ **RESOLVED 2026-09-22** — the five-minute gating, and that reassessment runs from **completion** of the infusion |
-| **Fitness to drive — seizures** | **2** | Figures 13 and 14, the decision trees summarising the whole chapter |
+| ~~**Fitness to drive — seizures**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — ⚠️ **and these two contained nothing absent from the text.** See below |
 
 **Five of the six RCH paediatric guidelines in this compendium had their treatment algorithm in an image.**
 The exception is **febrile seizure**, which has no algorithm to lose. ✅ **All five have now been recovered.**
@@ -55,7 +54,17 @@ it is fixable by retrieval rather than by judgement.
 ### ✅ Method established, 2026-09-22
 
 **The paediatric sepsis flowcharts have now been downloaded and read**, and the algorithm is transcribed into
-that guideline. ✅ **All eleven RCH paediatric images are recovered. Two Austroads decision trees remain.**
+that guideline. ✅ **Finding 1 is closed. All thirteen images are recovered.**
+
+⚠️ **But they were not all the same kind of thing.** The **eleven RCH paediatric flowcharts** contained
+substantial clinical content found nowhere in their guidelines' text — a cardiac-arrest warning, a
+contradiction with a guideline's own key point, drug regimens, an adrenaline interval, a line incompatibility,
+an LP posture. The **two Austroads figures contained nothing new**: they are summaries of a section already
+transcribed in full, exactly as the Standard describes them.
+
+**"The content is in an image" is therefore not a uniform category, and cannot be triaged as one.** Whether a
+diagram is load-bearing or decorative can only be established by looking at it — which is an argument for
+retrieving every one, not for deprioritising the ones that look like summaries.
 
 What it recovered, none of which existed in the retrieved text: the **time-banded structure (5 / 15 / 30 /
 60 minutes)**; **fluid as 20 then 10 then 10 mL/kg to a 40 mL/kg ceiling**; **four antibiotic regimens in the
@@ -158,9 +167,8 @@ the sharpest are worth naming:
 
 ## Priority, if this list is to be worked
 
-1. **Retrieve the two remaining Austroads decision trees (Figures 13 and 14)** and transcribe them — the method is established and the
-   sepsis one is done. Largest clinical gap, and purely mechanical. **Each transcription adds
-   `pass_image_transcription` claims that a person should check against the image.**
+1. ✅ **Done.** All thirteen algorithm images are transcribed. **93 claims now carry
+   `pass_image_transcription` and a person should check each dose against its image.**
 2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be
    followed** — in those jurisdictions this compendium's sepsis file is not the operative document.
 3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.

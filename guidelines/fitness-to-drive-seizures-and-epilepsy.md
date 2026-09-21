@@ -95,6 +95,43 @@ below applies to **private drivers only** unless stated.
 medication for at least the preceding 12 months** [S1]. **For commercial drivers, resumption of an
 unconditional licence will not be considered** [S1].
 
+## The two decision trees, transcribed from the figure images
+
+**Verification basis differs** — read off the figures, verdict **`pass_image_transcription`** [S2].
+
+⚠️ **Unlike every other diagram recovered for this compendium, these two contain nothing absent from the
+text.** They are exactly what the Standard calls them — decision trees that **summarise** section 6.2.3. That
+is a finding in itself: **"the content is in an image" is not a uniform category**, and these two were the
+benign case.
+
+**Figure 13 — overview of management of a driver with seizures** [S2]:
+
+**Seizure(s)** → **private driver** (**GP or specialist assessment**) or **commercial driver** (**specialist
+assessment**) → **are there factors that reduce the crash risk?** → **No** gives a **1-year minimum
+non-driving period** (private) or **10-year minimum non-driving period** (commercial); **Yes** → **refer
+table**. Either path leads to **conditional licence**, then to **management factors: surgery ·
+noncompliance with management · withdrawal of antiseizure medication · reduction of antiseizure medication ·
+seizure causing crash · resumption of full licence**.
+
+⚠️ **The one thing the figure states more plainly than the tables**: the reduction list is **eight items for
+private drivers** — **childhood seizures · first seizure · acute symptomatic seizures · epilepsy treated for
+the first time · 'safe' seizures · sleep-only seizures · previously well-controlled seizures · exceptional
+case** — and **four for commercial drivers**: **childhood seizures · first seizure · acute symptomatic
+seizures · exceptional case** [S2].
+
+**Half the available reductions do not exist for a commercial driver.** The tables say *"There is no
+reduction. The default standard applies."* four separate times; the figure shows it as a shorter list.
+
+**Figure 14 — epilepsy treated for the first time** [S2], defined as **treatment with antiepileptic
+medication commenced for the first time within the last 18 months**:
+
+**Commercial vehicle driver?** → **Yes** → **default standard (minimum 10-year non-driving seizure-free
+period)**. **No** → **treatment started more than 6 months ago?** → **No** → **reassess after at least 6
+months of treatment**. **Yes** → **any seizures?** → **No** → **may return to driving on a conditional licence
+6 months after last seizure**. **Yes** → **seizures were only in the first 6 months after starting
+treatment?** → **Yes** → **conditional licence 6 months after last seizure**; **No** → **default standard
+(minimum 1-year non-driving seizure-free period)**.
+
 ## ⚠️ One hard gate: the crash
 
 > **If a person has experienced a crash or has lost control of the vehicle as a result of a seizure, the
@@ -240,7 +277,7 @@ with treatment, in conjunction with the support of a health professional and reg
 | Point | Kind | Detail |
 |---|---|---|
 | **Epilepsy diagnosis and drug treatment** | **out_of_scope** | this is a licensing standard. **Seizure classification, drug choice, status epilepticus, drug-resistant epilepsy and paediatric epilepsy remain uncovered in this compendium** |
-| **Figures 13 and 14** | **input_unavailable** | the two decision trees summarising the whole chapter are images; **their content is not asserted beyond the text that describes them** |
+| **Figures 13 and 14** | ✅ **resolved** | retrieved and transcribed above under **`pass_image_transcription`**. ⚠️ **They contained nothing absent from the text** — genuinely summaries, unlike the RCH paediatric flowcharts elsewhere in this compendium |
 | **Part A sections 3.3, 3.3.1, 3.3.7, 2.2.7, 2.2.8** | **input_unavailable** | confidentiality, privacy, reporting to the licensing authority, independent expert panels, older drivers and multiple conditions — repeatedly cross-referenced, not retrieved |
 | **Section 1.2.4 Blackouts of undetermined mechanism** | **input_unavailable** | the pathway when it is unclear whether loss of consciousness was a seizure |
 | **Section 7.2.9 Psychogenic nonepileptic seizures** | **input_unavailable** | referred to twice; PNES criteria are in the psychiatric chapter |
@@ -254,3 +291,4 @@ with treatment, in conjunction with the support of a health professional and reg
 | id | citation | type |
 |---|---|---|
 | S1 | Austroads. *Assessing Fitness to Drive for commercial and private vehicle drivers* (AP-G56), Part B section 6.2 Seizures and epilepsy. Sydney: Austroads | national medical standard for driver licensing (AU) |
+| S2 | *ibid.*, **Figure 13** (overview of management of a driver with seizures) and **Figure 14** (epilepsy treated for the first time) — **read from the figure images** | diagrams, transcribed by eye |
