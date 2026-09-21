@@ -1,6 +1,12 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 61 guidelines · 2,458 claims · 260 `Unresolved` rows**
+**Generated 2026-09-22 · 61 guidelines · 2,458 claims · 380 `Unresolved` rows**
+
+> ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
+> sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
+> taxonomy term to be **bold**; the earliest guidelines write it plain. **They use the same six-term taxonomy
+> as everything else, and always did.** The real count is **380**, and **no guideline in this compendium lacks
+> tagged `Unresolved` rows.** Finding 3 has been rewritten accordingly. The error was mine, not the files'.
 
 *Revised the same day: **all thirteen algorithm images have been recovered** and **Finding 1 is closed**.
 **93 claims now carry `pass_image_transcription`.***
@@ -13,13 +19,13 @@ encountered one file at a time.
 
 | Kind | Count | What it means |
 |---|---|---|
-| **`input_unavailable`** | **127** | the source refers to something that was not retrieved. **The single largest category by far** |
-| **`evidence_unsettled`** | **47** | the literature or the authorities disagree, and the source says so |
-| **`observation`** | **21** | something true about the document rather than the medicine |
-| **`out_of_scope`** | **19** | the source explicitly excludes it, and nothing here covers it |
-| **`time_sensitive`** | **15** | the source's currency is in doubt or it has expired |
-| **`access`** | **7** | licensed or subscription content, cited by reference and not reproduced |
-| | **236** | |
+| **`input_unavailable`** | **225** | the source refers to something that was not retrieved. **The single largest category by far** |
+| **`evidence_unsettled`** | **64** | the literature or the authorities disagree, and the source says so |
+| **`out_of_scope`** | **40** | the source explicitly excludes it, and nothing here covers it |
+| **`observation`** | **27** | something true about the document rather than the medicine |
+| **`time_sensitive`** | **13** | the source's currency is in doubt or it has expired |
+| **`access`** | **11** | licensed or subscription content, cited by reference and not reproduced |
+| | **380** | |
 
 **`input_unavailable` outnumbers everything else combined.** That is the honest shape of this work: the
 commonest reason a question is open is not that medicine is uncertain, but that **the document points
@@ -122,19 +128,37 @@ against the image by eye.** They count toward `total` and **not** toward `pass`.
 and **febrile seizure** (February 2026) are months old. **The compendium holds both states from the same
 issuers**, which is only visible across the set.
 
-## ⚠️ Finding 3 — the first sixteen guidelines predate the taxonomy
+## ⚠️ Finding 3 — the earliest guidelines are a different generation, and they have something the later ones lost
 
-**Sixteen guidelines carry no taxonomy-tagged `Unresolved` rows**: asthma, cardiovascular disease risk,
-chlamydia and gonorrhoea, chronic kidney disease, COPD, generalised anxiety disorder, gout, heart failure,
-insomnia, major depressive disorder, migraine, osteoporosis, stroke and TIA, syphilis, type 2 diabetes, UTI.
+**Corrected.** The sixteen earliest guidelines were re-examined on 2026-09-22 against the current contract.
+**They are not deficient. They follow an earlier but coherent version of it**, and the differences run both
+ways.
 
-These are the earliest files. **Five of them also carry the pre-taxonomy verdict vocabulary** —
-`not_quoted`, `not_asserted`, `searched_not_found`, `attested_not_sourced` — which is the **six-claim gap**
-between 2,257 total and 2,251 pass. `scripts/verify.py` accepts that vocabulary and reports it as a note.
+**What they do that the later ones do not:**
 
-**They are not wrong; they are older.** But their gaps are not counted in the 236 above, so **the true number
-of open items is higher than this audit states**, and a re-pass over the first sixteen would be the way to
-find out by how much.
+⚠️ **Eleven carry a PBS layer** — `PBS Public API v3, Schedule 4333` as a cited source alongside the clinical
+one: cardiovascular disease risk, COPD, generalised anxiety disorder, gout, heart failure, insomnia, major
+depressive disorder, migraine, osteoporosis, type 2 diabetes, UTI. **The other fifty guidelines have no PBS
+layer at all.**
+
+**That is a regression, not an improvement.** The compendium's purpose is an Australian layer over clinical
+guidance, and the newest files — the paediatric set, the sepsis set, the clinical care standards — carry PBS
+information only where their source happened to mention it. **The earliest files went and got it.**
+
+**Four declare the limits of Australian sourcing in their own headers**, in bold, in the first paragraph:
+**gout**, **insomnia** and **migraine** each state *"No free Australian guideline exists"*, and
+**osteoporosis** states *"Australian coverage is **partial**"*. They then lead on American, European or UK
+guidance and attach PBS as the Australian layer. **That is the honest construction available at the time, and
+it is declared rather than hidden.**
+
+**What they lack:** a **"Where this connects in the compendium"** table. **None of the sixteen has one** —
+which is unsurprising, since when they were written there was little to connect to. That is the one piece of
+the current contract genuinely worth retrofitting, and it is now the highest-value work on this list.
+
+**Five carry the pre-taxonomy *verdict* vocabulary** — `not_quoted`, `not_asserted`, `searched_not_found`,
+`attested_not_sourced` — which is the **six-claim gap** between `total` and `pass`. `scripts/verify.py`
+accepts that vocabulary and reports it as a note. **The taxonomy in their `Unresolved` tables is the current
+one; only the formatting differs.**
 
 ## ⚠️ Finding 4 — population listed as a risk factor without a basis
 
@@ -195,7 +219,10 @@ the sharpest are worth naming:
    are three-way and decision-changing — blood culture volume, and IM ceftriaxone dose and trigger.**
    ✅ **All three retrieved.** ⚠️ **Four documents now give four rules on blood culture technique and three
    on IM ceftriaxone.** See the four-way table in `sepsis-children-wa.md`.
-3. **Re-pass the first sixteen guidelines** against the current contract and taxonomy.
+3. ⚠️ **Revised.** The first sixteen **do not need a taxonomy re-pass** — they already have it. Two real
+   jobs remain: **add a "Where this connects" table to each** (none has one), and **decide whether to
+   restore the PBS layer to the other fifty guidelines**, which is the larger gap and runs the opposite way
+   to what this audit first assumed.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`
    currently machine-checks only the seven written since it existed.
@@ -203,7 +230,8 @@ the sharpest are worth naming:
 ## Method
 
 Counts are read directly from the `Unresolved` tables of `guidelines/*.md` by regex over the taxonomy
-markers, and from `guidelines/*.verification.json` summaries. **They count rows, not severity.** A row
+markers, and from `guidelines/*.verification.json` summaries. **They count rows, not severity**, and they are matched **formatting-agnostically** after the first version
+of this audit undercounted by requiring bold. A row
 recording an unretrieved appendix and a row recording a missing resuscitation algorithm weigh the same here;
 Findings 1–4 are the reading that the counts alone do not give.
 
