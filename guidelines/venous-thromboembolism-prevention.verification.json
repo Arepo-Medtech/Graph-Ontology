@@ -1,0 +1,195 @@
+{
+  "guideline": "guidelines/venous-thromboembolism-prevention.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ACSQHC Venous Thromboembolism Prevention Clinical Care Standard (2020), including the seven quality statements, the for-clinicians sections and the indicator list. The Standard names no anticoagulant, dose, duration or mechanical method, deferring to a current locally endorsed evidence-based guideline; none is asserted here. The risk assessment tools, Key considerations pages and Appendix 1 were not retrieved.",
+  "claims": [
+    {
+      "claim": "Venous thromboembolism is a major cause of morbidity and mortality for patients admitted to hospital and a common preventable cause of in-hospital death",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Venous thromboembolism (VTE) is a major cause of morbidity and mortality for patients admitted to hospital, and a common preventable cause of in-hospital death."
+    },
+    {
+      "claim": "Deep vein thrombosis occurs when blood clots form in veins usually deep inside the legs or in the pelvis where they may cause symptoms like pain, tenderness, redness or swelling of the leg",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Deep vein thrombosis (DVT): Occurs when blood clots form in veins, usually deep inside the legs or in the pelvis, where they may cause symptoms like pain, tenderness, redness, or swelling of the leg."
+    },
+    {
+      "claim": "Pulmonary embolism occurs when a blood clot breaks off, moves through the veins and blocks blood vessels in the lungs, with symptoms including shortness of breath, coughing up blood, chest pain, faintness and loss of consciousness, and if enough blood vessels are blocked in the lungs the person can die",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pulmonary embolism (PE): Occurs when a blood clot breaks off, moves through the veins and blocks blood vessels in the lungs. Symptoms include shortness of breath, coughing up blood, chest pain, faintness, and loss of consciousness. If enough blood vessels are blocked in the lungs, the person can die."
+    },
+    {
+      "claim": "The goal of the Standard is to reduce avoidable death or disability caused by hospital-acquired VTE through improved identification of patients at risk, assessment of VTE and bleeding risk, and appropriate use of VTE prevention methods, with patients also receiving information about VTE and the risks and benefits of prevention so they can share in decisions with their clinicians both in and out of hospital",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The goal of the Venous Thromboembolism Prevention Clinical Care Standard is to reduce avoidable death or disability caused by hospital-acquired VTE through improved identification of patients who are at risk, assessment of VTE and bleeding risk, and appropriate use of VTE prevention methods. Patients should also receive information about VTE and the risks and benefits of prevention so they can share in decisions with their clinicians both in and out of hospital about their care and ways to prevent VTE."
+    },
+    {
+      "claim": "The Commission has commenced a review of the Venous Thromboembolism Prevention Clinical Care Standard 2020 to ensure that the Standard aligns with the latest evidence-based guidance and clinical practice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Commission has commenced a review of the Venous Thromboembolism (VTE) Prevention Clinical Care Standard (2020) to ensure that the Standard aligns with the latest evidence-based guidance and clinical practice."
+    },
+    {
+      "claim": "The Standard includes seven quality statements describing safe and appropriate care and a set of indicators to support monitoring and quality improvement",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Venous Thromboembolism Prevention Clinical Care Standard includes: seven quality statements describing safe and appropriate care; a set of indicators to support monitoring and quality improvement."
+    },
+    {
+      "claim": "Quality statement 1 states that a patient potentially at risk of VTE as determined by local hospital or unit policy receives a timely assessment of VTE risk using a locally endorsed evidence-based tool to determine their need for VTE prevention, and that the result is documented at the time of the assessment in a place easily accessible to all clinicians involved in the patient's care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient potentially at risk of VTE (as determined by local hospital/unit policy) receives a timely assessment of VTE risk using a locally endorsed evidence-based tool to determine their need for VTE prevention. The result is documented at the time of the assessment, in a place that is easily accessible to all clinicians involved in the patient's care."
+    },
+    {
+      "claim": "Clinicians should use a standardised, locally endorsed, evidence-based tool or checklist to aid the VTE risk assessment, for example the NSW Clinical Excellence Commission Adult VTE Risk Assessment Tool, ensuring the tool includes an assessment of patient and admission-related factors known to increase VTE risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use a standardised, locally endorsed, evidence-based tool or checklist to aid the assessment, for example, the NSW Clinical Excellence Commission (CEC): Adult VTE Risk Assessment Tool ... Ensure the tool includes an assessment of patient and admission-related factors that are known to increase VTE risk"
+    },
+    {
+      "claim": "The best possible medication history obtained as part of the admission process should be used to identify medicines the patient might be taking including complementary and over-the-counter medicines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use the best possible medication history (BPMH) obtained as part of the admission process to identify medicines the patient might be taking (including complementary and over-"
+    },
+    {
+      "claim": "Quality statement 2 states that a patient assessed to be at risk of VTE has a prevention plan developed that balances the risk of thrombosis against the risk and consequences of bleeding as an adverse effect of VTE prevention medicines, and that other contraindications to VTE prevention methods are also considered before offering any to the patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient assessed to be at risk of VTE has a prevention plan developed that balances the risk of thrombosis against the risk and consequences of bleeding (as an adverse effect of VTE prevention medicines). Other contraindications to VTE prevention methods are also considered before offering any to the patient."
+    },
+    {
+      "claim": "Bleeding risk should be assessed using a standardised, locally endorsed evidence-based tool or checklist that assesses the admission and patient-related factors that may influence bleeding risk including the reason for admission, the patient's comorbidities, bleeding history and medication history",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assess bleeding risk using a standardised, locally endorsed evidence-based tool or checklist ... Ensure the tool assesses the admission and patient-related factors that may influence bleeding risk, including the reason for admission, the patient's comorbidities, bleeding history, and medication history."
+    },
+    {
+      "claim": "The best possible medication history should be used to identify medicines including complementary and over-the-counter medicines that increase the risk of bleeding, and Appendix 1 lists medicines that can affect bleeding risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use the BPMH obtained during the admission process to identify medicines the patient might be taking (including complementary and over-the-counter medicines) that increase the risk of bleeding. See Appendix 1 for a list of medicines that can affect bleeding risk."
+    },
+    {
+      "claim": "Quality statement 3 states that a patient at risk of VTE receives information and education about VTE and ways to prevent it tailored to their risks and needs and shares in decisions regarding their VTE prevention plan",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient at risk of VTE receives information and education about VTE and ways to prevent it tailored to their risks and needs, and shares in decisions regarding their VTE prevention plan."
+    },
+    {
+      "claim": "Patient education should cover VTE and ways to potentially prevent it in a format they can understand, the importance of mobilising as soon as possible and remaining hydrated unless mobility or fluid restrictions are in place, the findings of their VTE risk assessment and their individual risk factors, the risks and benefits of prophylaxis including how it works, correct use, monitoring requirements, options to manage potential adverse events such as bleeding, precautions, and the potential outcomes if prophylaxis is not used correctly, and the symptoms of VTE and bleeding and how to minimise the risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "VTE and ways to potentially prevent it tailored to the patient's risk and in a format they can understand; the importance of mobilising as soon as possible and remaining hydrated, unless mobility or fluid restrictions are in place; the findings of their VTE risk assessment and their individual risk factors for developing VTE; the risks and benefits of VTE prophylaxis, including how it works, correct use, monitoring requirements, available options to manage potential adverse events such as bleeding, precautions to be taken while using prophylaxis, and the potential outcomes if prophylaxis is not used correctly; the symptoms of VTE and bleeding, how to minimise the risk of these occurring, and what to do i"
+    },
+    {
+      "claim": "Quality statement 4 states that a patient's VTE prevention plan is documented and communicated to all clinicians involved in their care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient's VTE prevention plan is documented and communicated to all clinicians involved in their care."
+    },
+    {
+      "claim": "Once the plan has been discussed with the patient it should be documented with the results of the risk assessment on a national standard medication chart paper or electronic, or where applicable the patient's medical record, approved risk assessment form or other place according to local hospital or unit policy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Once you have discussed the plan for VTE prophylaxis with the patient, document the prevention plan with the results of the risk assessment on a national standard medication chart (paper or electronic), or where applicable, the patient's medical record, approved risk assessment form, or other place according to local hospital/unit policy."
+    },
+    {
+      "claim": "Clinicians should ensure other clinicians involved in the patient's care are aware that a prevention plan has been documented so it can be actioned",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure other clinicians involved in the patient's care are aware that a prevention plan has been documented so it can be actioned."
+    },
+    {
+      "claim": "Quality statement 5 states that a patient requiring a VTE prevention plan is offered medicines and/or mechanical methods of VTE prevention according to a current, locally endorsed, evidence-based guideline taking into consideration the patient's clinical condition and their preferences",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient requiring a VTE prevention plan is offered medicines and/or mechanical methods of VTE prevention according to a current, locally endorsed, evidence-based guideline taking into consideration the patient's clinical condition and their preferences."
+    },
+    {
+      "claim": "Information and education about the recommended prophylaxis should be provided at the time it is initiated to reduce the likelihood of harm associated with its use, including the risks and benefits, how to use it, how long to use it for, possible side effects and how they should be managed, and any associated precautions",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Provide information and education about the recommended prophylaxis at the time it is initiated to reduce the likelihood of harm associated with its use. This should include the risks and benefits of prophylaxis, how to use it, how long to use it for, possible side effects and how they should be managed, and any associated precautions."
+    },
+    {
+      "claim": "Clinicians should invite the patient to ask questions and use methods such as teach-back to confirm the patient understands how to use their prophylaxis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Invite the patient to ask questions, and use methods such as teach-back to confirm the patient understands how to use their"
+    },
+    {
+      "claim": "Quality statement 6 states that during hospitalisation a patient's thrombosis and bleeding risk is reassessed and documented at intervals no longer than every seven days, whenever the patient's clinical condition or goals of care change, and on discharge from hospital, and that the patient is also monitored for VTE-related complications each time risk is reassessed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During hospitalisation, a patient's thrombosis and bleeding risk is reassessed and documented at intervals no longer than every seven days, whenever the patient's clinical condition or goals of care change, and on discharge from hospital. The patient is also monitored for VTE-related complications each time risk is reassessed."
+    },
+    {
+      "claim": "Reassessments should include a review of any VTE-related complications that may have occurred such as a clot or bleed and of any medicine-related problems related to the use of medicines to prevent VTE such as erroneous concomitant prescribing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure that reassessments also include a review of any VTE-related complications that may have occurred (such as a clot or bleed) and of any medicine-related problems related to the use of medicines to prevent VTE, such as erroneous concomitant prescribing."
+    },
+    {
+      "claim": "If VTE risk or bleeding risk changes during the admission, VTE prophylaxis should be reviewed and adjusted in line with a current, locally endorsed, evidence-based guideline and the patient's preferences",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If VTE risk or bleeding risk changes during the admission, review VTE prophylaxis and adjust in line with a current, locally endorsed, evidence-based guideline and the patient's prefe"
+    },
+    {
+      "claim": "Quality statement 7 states that a patient at risk of VTE following hospitalisation receives a written discharge plan or care plan before they leave hospital describing their ongoing individualised care to prevent VTE following discharge, that the plan is discussed with the patient before they leave hospital to ensure they understand the recommended care and follow-up that may be required, and that the plan is communicated to the patient's general practitioner or ongoing clinical provider within 48 hours of discharge",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient at risk of VTE following hospitalisation receives a written discharge plan or care plan before they leave hospital, which describes their ongoing, individualised care to prevent VTE following discharge. The plan is discussed with the patient before they leave hospital to ensure they understand the recommended care and follow-up that may be required. The plan is also communicated to the patient's general practitioner or ongoing clinical provider within 48 hours of discharge so that ongoing care to prevent VTE can be completed in accordance with the plan."
+    },
+    {
+      "claim": "Before a patient leaves hospital their risk of VTE and bleeding should be reassessed to determine the need for prophylaxis after discharge, and the plan should summarise the reason for the patient's admission, their risk factors for VTE, any VTE prophylaxis used while in hospital and any ongoing prophylaxis needed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Before a patient leaves hospital, reassess their risk of VTE and bleeding to determine the need for prophylaxis after discharge. Develop a written discharge plan or care plan with the patient and provide them with information about the ongoing care required to prevent VTE. Ensure the plan summarises the reason for the patient's admission, their risk factors for VTE, any VTE prophylaxis used while in hospital and any ongoing prophylaxis needed"
+    },
+    {
+      "claim": "Indicator 1a is the proportion of patients admitted to hospital who were assessed for VTE risk within 24 hours of admission using a locally endorsed risk assessment tool and had the outcome of the risk assessment documented in their medical record",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 1a | Proportion of patients admitted to hospital who were assessed for VTE risk within 24 hours of admission, using a locally endorsed risk assessment tool, and had the outcome of the risk assessment documented in their medical record"
+    },
+    {
+      "claim": "Indicator 5a is the proportion of patients prescribed VTE prophylaxis appropriate to their VTE and bleeding risks in accordance with the locally approved guideline or policy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 5a | Proportion of patients prescribed VTE prophylaxis appropriate to their VTE and bleeding risks in accordance with the locally approved guideline/policy"
+    },
+    {
+      "claim": "Indicator 7a is the proportion of patients discharged on VTE prophylaxis that had a documented care plan that included the prescribed medicines, dose and duration of treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Indicator 7a | Proportion of patients discharged on VTE prophylaxis that had a documented care plan that included the prescribed medicine(s), dose and duration of treatment"
+    },
+    {
+      "claim": "No benchmarks are set for these indicators by the Commission and definitions required to collect and calculate indicator data are specified online at METEOR",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "No benchmarks are set for these indicators by the Commission. When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
+    },
+    {
+      "claim": "Health outcomes for Aboriginal and Torres Strait Islander peoples can be improved by addressing systemic racism and other root causes that reduce access to care, and it is recognised that cultural safety is determined by the Aboriginal and Torres Strait Islander individuals, families and communities experiencing the care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health outcomes for Aboriginal and Torres Strait Islander peoples can be improved by addressing systemic racism and other root causes that reduce access to care. ... However, it is recognised that cultural safety is determined by the Aboriginal and Torres Strait Islander individuals, families and communities experiencing the care."
+    }
+  ],
+  "summary": {
+    "total": 30,
+    "pass": 30,
+    "fail": 0
+  }
+}
