@@ -1,9 +1,9 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,301 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 58 guidelines · 2,324 claims · 236 `Unresolved` rows**
 
-*Revised the same day: the **paediatric sepsis** and **paediatric anaphylaxis** algorithms were recovered from
-their images — see Finding 1. **44 claims now carry `pass_image_transcription`.***
+*Revised the same day: the **paediatric sepsis**, **anaphylaxis** and **acute asthma** algorithms were recovered
+from their images — see Finding 1. **67 claims now carry `pass_image_transcription`.***
 
 Every guideline ends with an `Unresolved` table. This is the audit of those tables read as a set — the
 things this compendium records that it cannot answer, grouped so they can be acted on rather than
@@ -32,7 +32,7 @@ algorithm was not.
 
 | Guideline | Images | What is inside them |
 |---|---|---|
-| **Acute asthma (children)** | **4** | salbutamol puff counts and intervals, ipratropium regimens, **steroid agent and dose**, oxygen targets, IV sequence |
+| ~~**Acute asthma (children)**~~ | ~~4~~ | ✅ **RESOLVED 2026-09-22** — and it surfaced a **contradiction with the guideline's own key point 4** (see below) |
 | ~~**Anaphylaxis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — recovered the **IM site (lateral mid-thigh)**, the **mg/kg rule behind the dose chart**, and the **5-minute repeat interval** |
 | **Febrile child** | **2** | the entire triage for **29 days–3 months** and **>3 months** |
 | ~~**Sepsis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — images downloaded and read; algorithm transcribed into the guideline under verdict `pass_image_transcription` |
@@ -53,7 +53,7 @@ it is fixable by retrieval rather than by judgement.
 ### ✅ Method established, 2026-09-22
 
 **The paediatric sepsis flowcharts have now been downloaded and read**, and the algorithm is transcribed into
-that guideline. **Nine images across four guidelines remain.**
+that guideline. **Five images across three guidelines remain.**
 
 What it recovered, none of which existed in the retrieved text: the **time-banded structure (5 / 15 / 30 /
 60 minutes)**; **fluid as 20 then 10 then 10 mL/kg to a 40 mL/kg ceiling**; **four antibiotic regimens in the
@@ -75,6 +75,17 @@ against the image by eye.** They count toward `total` and **not** toward `pass`.
 - **Lumbar puncture waits for stabilisation in sepsis** but is done **without delay and ideally before
   antibiotics** in **febrile child**. Both are right for their patient; **the compendium is where they can be
   read side by side**
+- ⚠️ **Acute asthma key point 4 says "give steroids early in moderate, severe and life-threatening asthma".
+  Its own moderate flowchart says "Avoid steroids" for 1–5 year olds.** The negative **Foster 2018** trial in
+  preschool virus-associated wheeze is in the reference list and is the probable reason, but **the guideline
+  does not reconcile them — and a reader working from the key points alone would give a steroid the flowchart
+  withholds.** This was invisible while the algorithm was a picture
+- **IM adrenaline in life-threatening asthma is the identical dose, route, site and interval as in
+  anaphylaxis** — 10 microg/kg or 0.01 mL/kg of 1:1000, lateral thigh, every 5 minutes. **A sixth interlock
+  between those two guidelines, specified only in the diagrams**
+- **Aminophylline is a live second-line IV agent** in two asthma algorithms and **appears nowhere in that
+  guideline's text**. It also carries a line-compatibility warning found only in the picture: **aminophylline
+  and magnesium are not compatible in one IV line**
 
 ## ⚠️ Finding 2 — documents whose stated currency is wrong or expired
 
@@ -138,7 +149,7 @@ the sharpest are worth naming:
 
 ## Priority, if this list is to be worked
 
-1. **Retrieve the nine remaining algorithm images** and transcribe them — the method is established and the
+1. **Retrieve the five remaining algorithm images** and transcribe them — the method is established and the
    sepsis one is done. Largest clinical gap, and purely mechanical. **Each transcription adds
    `pass_image_transcription` claims that a person should check against the image.**
 2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be

@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Acute asthma' (last updated July 2023, PIC endorsed), including key points, background, history, examination, red flags, investigations, treatment, the severity classification table, IV magnesium sulfate dosing, other management considerations, consultation and transfer triggers, discharge criteria, discharge instructions and the reference list. The page was retrieved twice: once with anchor tags excluded and once with them retained, because several clinically significant words sit inside hyperlinks (notably 'other signs of anaphylaxis' in the severe and life-threatening severity columns, and 'bronchiolitis'). The second retrieval is the one quoted. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The four management flowcharts (mild, moderate, severe, life-threatening) are IMAGES and were not retrieved: salbutamol puff counts and intervals, ipratropium regimens, steroid agent and dose, oxygen targets and the IV therapy sequence are inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to dose salbutamol or steroids. The IM adrenaline dose for life-threatening asthma is not given by this source and is not imported from the anaphylaxis guideline.",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Acute asthma' (last updated July 2023, PIC endorsed), including key points, background, history, examination, red flags, investigations, treatment, the severity classification table, IV magnesium sulfate dosing, other management considerations, consultation and transfer triggers, discharge criteria, discharge instructions and the reference list. The page was retrieved twice: once with anchor tags excluded and once with them retained, because several clinically significant words sit inside hyperlinks (notably 'other signs of anaphylaxis' in the severe and life-threatening severity columns, and 'bronchiolitis'). The second retrieval is the one quoted. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The four management flowcharts (mild, moderate, severe, life-threatening) are IMAGES and were not retrieved: salbutamol puff counts and intervals, ipratropium regimens, steroid agent and dose, oxygen targets and the IV therapy sequence are inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to dose salbutamol or steroids. The IM adrenaline dose for life-threatening asthma is not given by this source and is not imported from the anaphylaxis guideline. ADDENDUM 2026-09-22: all four management flowcharts were downloaded as PNG images and read visually. 23 further claims were added carrying verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py and every dose must be re-checked against the image by a person. The diagrams contain a direct tension with the guideline's own key point 4: key point 4 states 'give steroids early in moderate, severe and life-threatening asthma', while the moderate flowchart states 'Avoid steroids' for 1-5 year olds. Both are transcribed as written and the tension is recorded as evidence_unsettled rather than resolved. The diagrams also contain aminophylline as a live second-line agent, which appears nowhere in the retrieved text.",
   "claims": [
     {
       "claim": "If unsure whether a child has anaphylaxis or asthma, clinicians should treat for anaphylaxis, and treatment of both is time critical",
@@ -263,11 +263,150 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "Singhi, S, et al. Randomised comparison of intravenous magnesium sulfate, terbutaline and aminophylline for children with acute severe asthma. _Acta Paediatr_. 2014 \u2026 Yung M, et al. Randomised controlled trial of aminophylline for severe acute asthma. _Arch Dis Child_ 1998"
+    },
+    {
+      "claim": "Oxygen is administered via nasal prongs to target SpO2 of 90 per cent or above, and nebulisation is reserved for children unable to tolerate MDI",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Administer oxygen via nasal prongs to target SpO2 >=90% / Reserve nebulisation for children unable to tolerate MDI"
+    },
+    {
+      "claim": "For mild asthma in children 1 to 5 years the initial treatment is 2 to 6 puffs salbutamol MDI via spacer and mask as a single dose, and for those 6 years and over it is 12 puffs salbutamol MDI via spacer, with reassessment 20 minutes after the dose",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Mild / 1-5 years / 2-6 puffs salbutamol MDI via spacer and mask as a single dose / >=6 years / 12 puffs salbutamol MDI via spacer / Reassess 20 minutes after dose"
+    },
+    {
+      "claim": "A good response in mild asthma, such as reduced work of breathing, means no further salbutamol and reassessment at 1 hour and 2 hours after the initial salbutamol dose",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Good response (eg reduced WOB) / No further salbutamol and reassess at 1 hour and 2 hours after initial salbutamol dose"
+    },
+    {
+      "claim": "If work of breathing is not increased at reassessment the child may be discharged with asthma education including ensuring adequate inhaler and spacer technique, an asthma action plan, and follow-up with a long term care provider",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Increased WOB? / No / Discharge with / Asthma education (including ensuring adequate inhaler and spacer technique) / Asthma action plan / Follow-up with long term care provider"
+    },
+    {
+      "claim": "A response but minimal improvement, such as persistent increased work of breathing or oxygen requirement, means treating as moderate, and in children 6 years and over a further 12 puffs salbutamol MDI via spacer is given",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Response but minimal improvement (eg persistent increased WOB or oxygen requirement) / Treat as moderate / Further 12 puffs salbutamol MDI via spacer"
+    },
+    {
+      "claim": "In mild asthma in children 1 to 5 years, no response means seeking senior advice, stopping salbutamol and considering an alternative diagnosis",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "No response / Seek senior advice / Stop salbutamol / Consider alternative diagnosis"
+    },
+    {
+      "claim": "For moderate asthma in children 1 to 5 years the treatment is 6 puffs salbutamol MDI via spacer and mask every 20 minutes for 3 doses and steroids should be AVOIDED, while for children 6 years and over it is 12 puffs every 20 minutes for 3 doses and oral steroids should be given",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Moderate / 1-5 years / 6 puffs salbutamol MDI via spacer and mask every 20 minutes for 3 doses / Avoid steroids / >=6 years / 12 puffs salbutamol MDI via spacer and mask every 20 minutes for 3 doses / Give oral steroids"
+    },
+    {
+      "claim": "Oral steroid dosing is prednisolone 1 mg/kg to a maximum of 50 mg or dexamethasone 0.3 mg/kg to a maximum of 16 mg, and the IV preparation can be administered orally",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Oral steroid dosing / Prednisolone 1 mg/kg (max 50 mg) or Dexamethasone 0.3 mg/kg (max 16 mg) / IV preparation can be administered orally"
+    },
+    {
+      "claim": "In moderate asthma reassessment is at 30 minutes after the 3rd salbutamol dose, and a good response means improved air entry, work of breathing, respiratory rate and SpO2",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Reassess at 30 minutes after 3rd salbutamol dose / Good response? / eg improved air entry, WOB, RR, SpO2"
+    },
+    {
+      "claim": "Following a good response salbutamol is continued as required, with less than 3 hourly requiring admission and 3 hourly or more allowing discharge",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Continue salbutamol as required / <3 hourly - admit / >=3 hourly - discharge"
+    },
+    {
+      "claim": "If the response is inadequate an alternative diagnosis should be considered and ipratropium added: for 1 to 5 years 6 puffs salbutamol 30 to 60 minutely as required and 4 puffs ipratropium bromide every 20 minutes for 3 doses with steroids considered, and for 6 years and over 12 puffs salbutamol 30 to 60 minutely and 8 puffs ipratropium every 20 minutes for 3 doses, with ipratropium continued every 4 hours",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider alternative diagnosis / 6 puffs salbutamol MDI via spacer and mask 30-60 minutely as required and 4 puffs ipratropium bromide MDI via spacer and mask, every 20 min for 3 doses / Consider steroids / 12 puffs salbutamol MDI via spacer and mask 30-60 minutely as required and 8 puffs ipratropium bromide MDI via spacer and mask, every 20 min for 3 doses / Consider continuing ipratropium bromide every 4 hours"
+    },
+    {
+      "claim": "Where the response remains inadequate the child is treated as severe, or salbutamol is continued at 6 puffs for 1 to 5 years or 12 puffs for 6 years and over 1 to 2 hourly as needed with admission, and prednisolone 1 mg/kg daily for the next 2 days may be considered on discharge",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Treat as severe / Continue 6 puffs (1-5 years) or 12 puffs (>=6 years) salbutamol MDI via spacer and mask 1-2 hourly PRN and admit / Consider prednisolone 1 mg/kg daily for next 2 days"
+    },
+    {
+      "claim": "Ongoing assessment and monitoring covers work of breathing, mental state and alertness, activity levels and oxygen saturations, and if deteriorating the child should be treated as severe with senior advice sought and an alternative diagnosis considered",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Ongoing assessment and monitoring of: work of breathing / mental state/alertness / activity levels / oxygen saturations / If deteriorating / Treat as severe / Seek senior advice / Consider alternative diagnosis"
+    },
+    {
+      "claim": "Severe asthma requires admission to resus and involvement of senior staff, with salbutamol 6 puffs for 1 to 5 years or 12 puffs for 6 years and over every 20 minutes for 3 doses, and ipratropium bromide 4 puffs or 8 puffs respectively every 20 minutes for 3 doses",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Severe / Admit to resus and involve senior staff / 6 puffs salbutamol MDI via spacer and mask every 20 min for 3 doses and 4 puffs ipratropium bromide MDI via spacer and mask every 20 min for 3 doses / 12 puffs salbutamol MDI via spacer and mask every 20 min for 3 doses and 8 puffs ipratropium bromide MDI via spacer and mask every 20 min for 3 doses"
+    },
+    {
+      "claim": "In severe asthma IV access is obtained and corticosteroids given early either oral or intravenous, with intravenous options of methylprednisolone 1 mg/kg to a maximum of 60 mg IV 6 hourly, or hydrocortisone 4 mg/kg to a maximum of 100 mg IV 6 hourly, or dexamethasone 0.6 mg/kg to a maximum of 16 mg IV 24 to 48 hourly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "IV access / Give corticosteroids early (oral or intravenous) / Intravenous options: / Methylprednisolone 1 mg/kg (max 60 mg) IV 6 hourly / Hydrocortisone 4 mg/kg (max 100 mg) IV 6 hourly / Dexamethasone 0.6 mg/kg (max 16 mg) IV 24-48 hourly"
+    },
+    {
+      "claim": "Second line IV treatment should be considered early, being magnesium sulphate 0.2 mmol/kg to a maximum of 8 mmol IV administered over 20 minutes, and aminophylline 10 mg/kg to a maximum of 500 mg IV infused over 30 to 60 minutes with cardiac monitoring, which can be given 6 hourly",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider second line IV treatment early / Second line IV treatment options: reassess after each treatment / Magnesium sulphate 0.2 mmol/kg (max 8 mmol) IV administered over 20 min / Aminophylline 10 mg/kg (max 500 mg) IV to be infused over 30-60 min with cardiac monitoring; this dose can be given 6 hourly"
+    },
+    {
+      "claim": "Life-threatening asthma requires admission to resus and senior staff, with respiratory support by oxygen via high flow nasal cannula, continuous positive airway pressure or bilevel airway pressure",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Life-threatening / Admit to resus and involve senior staff / Respiratory support: oxygen via high flow nasal cannula, continuous positive airway pressure or bilevel airway pressure"
+    },
+    {
+      "claim": "In life-threatening asthma inhaled bronchodilators are given as nebules continuously: for 1 to 5 years 2.5 mg salbutamol nebules and 250 micrograms ipratropium bromide nebules, and for 6 years and over 5 mg salbutamol nebules and 500 micrograms ipratropium bromide nebules, via nebuliser chamber continuously",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "2.5 mg salbutamol nebules and 250 microg ipratropium bromide nebules via nebuliser chamber continuously / 5 mg salbutamol nebules and 500 microg ipratropium bromide nebules via nebuliser chamber continuously"
+    },
+    {
+      "claim": "In life-threatening asthma intramuscular adrenaline 10 micrograms/kg or 0.01 mL/kg of 1:1000 into the lateral thigh should be considered and repeated every 5 minutes as required",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider intramuscular adrenaline 10 microg/kg or 0.01 mL/kg of 1:1000 into the lateral thigh and repeat every 5 min as required"
+    },
+    {
+      "claim": "In life-threatening asthma dexamethasone is given at 0.6 mg/kg to a maximum of 16 mg IV initially with another dose in 24 to 48 hours if required",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Dexamethasone 0.6 mg/kg (max 16 mg) IV initially, another dose in 24-48 hours if required"
+    },
+    {
+      "claim": "Aminophylline and magnesium are not compatible in one IV line, and if given simultaneously a second IV cannula is required",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Aminophylline and magnesium are not compatible in one IV line. If given simultaneously, a second IV cannula is required"
+    },
+    {
+      "claim": "Where there is no good response to maximal life-threatening asthma treatment, paediatric intensive care input should be sought, and children requiring maximal asthma treatment should be managed in a critical care environment",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Good response? / No / Seek paediatric intensive care input / Children requiring maximal asthma treatment should be managed in a critical care environment"
+    },
+    {
+      "claim": "Intravenous salbutamol may be considered although there is limited evidence for benefit, at 5 to 15 micrograms/kg to a maximum of 300 micrograms over 10 minutes, repeated if required or followed with an IV infusion of 1 to 2 micrograms/kg/min to a maximum of 200 micrograms/min, adjusted according to response and heart rate and increased if necessary up to 5 micrograms/kg/min",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Consider intravenous salbutamol (however limited evidence for benefit) / 5-15 microg/kg (max 300 microg) over 10 min / Repeat dose if required or follow with IV infusion 1-2 microg/kg/min (max 200 microg/min) / Adjust infusion according to response and heart rate / Increase if necessary, up to 5 microg/kg/min (max 200 microg/min)"
     }
   ],
   "summary": {
-    "total": 43,
+    "total": 66,
     "pass": 43,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 23
   }
 }
