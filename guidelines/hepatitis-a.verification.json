@@ -1,0 +1,183 @@
+{
+  "guideline": "guidelines/hepatitis-a.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM hepatitis A page. Incubation, infectivity and trace-back intervals compared character by character.",
+  "claims": [
+    {
+      "claim": "Hepatitis A is an acute infection of the liver which does not cause chronic hepatitis, and care is usually supportive",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hepatitis A is an acute infection of the liver. ... It does not cause chronic hepatitis, care is usually supportive."
+    },
+    {
+      "claim": "Infection with hepatitis A confers lifelong immunity",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infection with hepatitis A confers lifelong immunity."
+    },
+    {
+      "claim": "Offer hepatitis A immunisation to people at risk including men who have sex with men, people who inject drugs, Aboriginal and Torres Strait Islander people, people in custodial settings and sex workers",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Offer hepatitis A immunisation to people at risk of hepatitis A, including men who have sex with men, people who inject drugs, Aboriginal and Torres Strait Islander people, people in custodial settings and sex workers."
+    },
+    {
+      "claim": "The auditable outcomes are that 100% of HIV-positive men who have sex with men are vaccinated or immune and 100% of close contacts receive vaccination if susceptible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of human immunodeficiency virus (HIV)-positive men who have sex with men are vaccinated or immune. 100% of close contacts receive vaccination if susceptible."
+    },
+    {
+      "claim": "If there is a risk of occupational transmission of hepatitis A, such as food handlers, healthcare workers or child-care workers, the person must be excluded from work for at least 1 week after the onset of jaundice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If there is a risk of occupational transmission of hepatitis A (e.g. food handlers, healthcare workers, child-care workers), then must be excluded from work for at least 1 week after the onset of jaundice."
+    },
+    {
+      "claim": "Advise no sexual contact during the acute illness and for at least 1 week after the onset of jaundice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sexual contact during the acute illness and for at least 1 week after the onset of jaundice."
+    },
+    {
+      "claim": "Screening for hepatitis A is not recommended during routine sexual health screening, or before hepatitis A immunisation, unless a previous infection is reported or considered likely",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Screening for hepatitis A is not recommended during routine sexual health screening, or before hepatitis A immunisation, unless a previous infection is reported or considered likely."
+    },
+    {
+      "claim": "AST, ALT and bilirubin are raised in acute hepatitis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Blood | AST, ALT, bilirubin | Raised in acute hepatitis"
+    },
+    {
+      "claim": "Anti-HAV IgM indicates acute HAV infection and persists for 3-6 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Anti-HAV IgM | Acute HAV infection, persists for 3-6 months"
+    },
+    {
+      "claim": "Anti-HAV Ig-total indicates previous infection or vaccination",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Anti-HAV Ig-total | Previous infection or vaccination"
+    },
+    {
+      "claim": "Other causes of acute hepatitis including hepatitis B and hepatitis C should be excluded",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Exclude other causes of acute hepatitis, including hepatitis B and hepatitis C."
+    },
+    {
+      "claim": "Symptomatic infection is managed with supportive care, with hospitalisation if severe illness or clinical deterioration",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Symptomatic infection | Supportive care. Hospitalisation if severe illness or clinical deterioration."
+    },
+    {
+      "claim": "Severe hepatitis may require hospital admission",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Complicated infection | Severe hepatitis may require hospital admission."
+    },
+    {
+      "claim": "In pregnancy seek specialist advice as hepatitis can be more severe in pregnant people",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnancy | Seek specialist advice. Severe hepatitis can be more severe in pregnant people."
+    },
+    {
+      "claim": "Comprehensive STI testing may be appropriate depending on the patient's history",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Comprehensive sexually transmitted infections (STI) testing may be appropriate, depending on the patient's history."
+    },
+    {
+      "claim": "Notify the state or territory health department",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Notify the state or territory health department."
+    },
+    {
+      "claim": "The incubation period is 15-50 days with a mean of 28 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Incubation period 15-50 days, mean of 28 days"
+    },
+    {
+      "claim": "Acute hepatitis presents with lethargy, nausea, fever and anorexia for a few days then jaundice, pale stools and dark urine",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acute hepatitis: lethargy, nausea, fever, anorexia for a few days then jaundice, pale stools and dark urine"
+    },
+    {
+      "claim": "Hepatitis A is usually asymptomatic in children with more severe illness in the elderly and pregnant people, and usually resolves in 1 month",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Usually asymptomatic in children, more severe illness in elderly and pregnant people. Usually resolves in 1 month"
+    },
+    {
+      "claim": "Liver failure is rare in hepatitis A",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Liver failure is rare"
+    },
+    {
+      "claim": "Most hepatitis A infections are from contaminated food or water but faecal-oral transmission can also occur during sex, especially in men who have sex with men",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Most infections are from contaminated food or water but faecal-oral transmission can also occur during sex, especially in men who have sex with men."
+    },
+    {
+      "claim": "Hepatitis A is a notifiable condition and contact tracing is important to prevent re-infection and reduce transmission",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Notifiable condition. Contact tracing is important to prevent re-infection and reduce transmission."
+    },
+    {
+      "claim": "Trace back 50 days from onset of symptoms",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Trace back 50 days from onset of symptoms"
+    },
+    {
+      "claim": "Infectivity runs from 2 weeks before the onset of prodromal symptoms to 1 week after the onset of jaundice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infectivity for 2 weeks before the onset of prodromal symptoms, to 1 week after the onset of jaundice."
+    },
+    {
+      "claim": "The diagnosing doctor is responsible for initiating and documenting a discussion about contact tracing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The diagnosing doctor is responsible for initiating and documenting a discussion about contact tracing."
+    },
+    {
+      "claim": "Post-exposure prophylaxis using hepatitis A vaccine or normal human immunoglobulin can be used to prevent secondary cases in close contacts",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Post-exposure prophylaxis using hepatitis A vaccine or normal human immunoglobulin (NHIG) (passive immunisation) can be used to prevent secondary cases in close contacts of hepatitis A cases."
+    },
+    {
+      "claim": "Review in 1 week to confirm contact tracing and, if high risk such as men who have sex with men, provide further sexual health education and prevention counselling",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Review in 1 week provides an opportunity to: Confirm contact tracing procedures have been undertaken or offer more contact tracing support. If high risk e.g. men who have sex with men, provide further sexual health education and prevention counselling."
+    },
+    {
+      "claim": "Hepatitis A is caused by hepatitis A virus, a small single-stranded RNA virus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hepatitis A virus (HAV), a small single-stranded RNA virus."
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "pass": 28,
+    "fail": 0
+  }
+}
