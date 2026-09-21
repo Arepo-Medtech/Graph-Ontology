@@ -139,6 +139,16 @@ is defined — by the patient's own history rather than by a fixed number of wee
 - **100% of patients should have contact tracing performed** [S1].
 - **100% of patients should be offered treatment at the time of diagnosis** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM set; HIV changes the management of most of them |
+| **Hepatitis B** · **Hepatitis C** | co-infection alters treatment sequencing in both |
+| **Mpox** | ⚠️ advanced HIV is the strongest predictor of severe mpox |
+| **Stillbirth** | antenatal screening and vertical transmission |
+| **Sepsis in children** | immunocompromise as a high-risk criterion in every paediatric sepsis document here |
+
 ## Unresolved
 
 | Point | Kind | Detail |

@@ -309,6 +309,16 @@ aged 5–14, and RHD all-age prevalence higher than 2 per 1000** [S1].
 follow-up** [S1]. **Women with RHD who are pregnant or of childbearing age require pre-conception counselling
 and specialist care** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Donovanosis** | ⚠️ both are conditions of the same **remote and under-served Australian communities** |
+| **Atrial fibrillation** · **Heart failure** | the downstream consequences of rheumatic valve disease |
+| **Antimicrobial stewardship** | secondary prophylaxis is the longest antibiotic course in this compendium |
+| **Sepsis in children** · **Sepsis — the Queensland guideline** | ⚠️ **Group A *Streptococcus*** is a named pathogen in both, and the cause of the toxic shock syndrome those guidelines treat |
+| **Stillbirth** | rheumatic heart disease in pregnancy |
+
 ## Unresolved
 
 | Point | Kind | Detail |

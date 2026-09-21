@@ -137,6 +137,14 @@ at 3 months** [S1]. **Recurrence requires biopsy** [S1].
 **Retesting is not required**, but offers the opportunity to retest past the window period for other STIs if
 not done at first presentation [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM set |
+| **Acute rheumatic fever and rheumatic heart disease** | ⚠️ both are conditions of the same **remote and under-served Australian communities**, and both are near-eliminated where access is good |
+| **Syphilis** | the principal differential for a genital ulcer |
+
 ## Unresolved
 
 | Point | Kind | Detail |

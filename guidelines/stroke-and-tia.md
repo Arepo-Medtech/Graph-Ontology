@@ -120,6 +120,15 @@ and swallowing difficulties** [S1].
 **Rehabilitation needs assessed within 24–48 hours** of stroke unit admission by the interdisciplinary team
 using an appropriate tool (practice point) [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Stroke** (ACSQHC, 11 June 2026) | ⚠️ **the newer document on the same territory.** This guideline draws on the Stroke Foundation *Clinical Guidelines for Stroke Management*; the ACSQHC standard is the quality instrument built over them, and **explicitly excludes TIA** — which is what this file covers |
+| **Atrial fibrillation** | the commonest treatable cause of cardioembolic stroke |
+| **Fitness to drive — seizures and epilepsy** | the licensing consequences of a cerebrovascular event, and the chapter *Assessing Fitness to Drive* devotes to them |
+| **Cardiovascular disease risk** | the shared upstream risk calculation |
+
 ## Unresolved
 
 | Point | Kind | Detail |

@@ -115,6 +115,14 @@ men** — to provide further sexual health education and prevention counselling 
 There is no test of cure and no retesting on this page; the follow-up exists for the **contacts and the
 next infection**, not for the index patient's liver.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Hepatitis B** · **Hepatitis C** | the rest of the viral hepatitis set |
+| **HIV** | shared risk populations and outbreak context |
+| **Antimicrobial stewardship** | ⚠️ this guideline carries a **do not perform pre-vaccination serology** recommendation in most settings |
+
 ## Unresolved
 
 | Point | Kind | Detail |

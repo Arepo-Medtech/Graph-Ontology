@@ -59,6 +59,15 @@ Both agents with quoted effect estimates are constrained — duloxetine restrict
 authority-required — while **diazepam is unrestricted**. The least-restricted pharmacological option in
 Australia is a benzodiazepine, which is not among the agents the comparative evidence singles out.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Major depressive disorder** | the commonest comorbidity, and the two guidelines share their evidence base |
+| **Insomnia** | overlapping presentation and overlapping prescribing |
+| **Delirium** | ⚠️ benzodiazepines are warned against there because **they increase delirium** — relevant wherever anxiolytics are considered in older people |
+| **Alcohol problems** | frequently comorbid and frequently the reason treatment fails |
+
 ## Unresolved
 
 | Point | Kind | Detail |

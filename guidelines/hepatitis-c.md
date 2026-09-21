@@ -165,6 +165,15 @@ conditions such as diabetes** [S1].
 - **Children of mothers who are HCV PCR positive and not tested in the post-natal period should be
   tested** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Hepatitis A** · **Hepatitis B** | the rest of the viral hepatitis set |
+| **HIV** | co-infection and shared populations |
+| **Alcohol problems** | the largest modifiable factor in fibrosis progression |
+| **Lymphogranuloma venereum** | shared epidemiology |
+
 ## Unresolved
 
 | Point | Kind | Detail |

@@ -114,6 +114,15 @@ they wish to disclose** to current or future partners [S1].
 deferred because symptoms were too severe, and educate about condoms, contraception, HIV PrEP/PEP, safe
 injecting, consent, cervical screening and HAV/HBV/HPV vaccination [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM set |
+| **HIV** | shared transmission risk in both directions |
+| **Stillbirth** · **Seizures — acute management in children** | ⚠️ **neonatal HSV** — the paediatric sepsis and seizure guidelines both name **HSV in infants under 3 months**, with aciclovir in the sepsis algorithms |
+| **Antimicrobial stewardship** | ⚠️ this guideline carries a **do not use HSV serology** recommendation |
+
 ## Unresolved
 
 | Point | Kind | Detail |

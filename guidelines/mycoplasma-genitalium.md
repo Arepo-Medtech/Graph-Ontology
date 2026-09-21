@@ -113,6 +113,14 @@ informed by the index case's infection status and treatment history [S1].
 The source treats "stop treating" as a legitimate outcome requiring a considered, shared decision — which
 follows directly from not screening asymptomatic people in the first place.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM Australian STI Management Guidelines set in this compendium |
+| **Antimicrobial stewardship** | ⚠️ macrolide resistance drives resistance-guided therapy here, and this guideline carries the compendium's explicit **do not screen asymptomatic people** recommendation |
+| **Bacterial vaginosis** · **Trichomoniasis** | shared presentations and shared partner-notification questions |
+
 ## Unresolved
 
 | Point | Kind | Detail |

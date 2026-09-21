@@ -128,6 +128,14 @@ to bring someone back.
 **Test of cure: not applicable.** **Retesting: not required** — but consider testing for other STIs if not
 done at first presentation, or retesting past the window period [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM set |
+| **HIV** | immunosuppression alters presentation and treatment response |
+| **Hepatitis B** | the other vaccine-preventable infection in this series |
+
 ## Unresolved
 
 | Point | Kind | Detail |

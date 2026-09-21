@@ -190,6 +190,15 @@ gynaecological instrumentation), **acquisition of chlamydia, gonorrhoea and herp
 **If symptoms persist or recur, review — it is important to confirm the diagnosis. Test for STIs if not
 undertaken at first presentation, as concurrent STIs are common** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Trichomoniasis** · **Candidiasis** | the three causes of vaginal discharge |
+| **Mycoplasma genitalium** · **Chlamydia and gonorrhoea** | co-testing and partner notification |
+| **Antimicrobial stewardship** | recurrent BV is a repeat-prescribing problem |
+| **Stillbirth** | preterm birth risk is why BV is treated in pregnancy |
+
 ## Unresolved
 
 | Point | Kind | Detail |

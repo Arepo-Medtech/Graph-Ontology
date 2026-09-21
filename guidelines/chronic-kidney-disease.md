@@ -101,6 +101,17 @@ calculator** applies at varying CKD stages, expanded nutrition guidance, a new n
 a **stepwise approach to albuminuria reduction**, and new sections on genetic kidney disease, pharmacological
 management, heart failure and CKD, pain management, contraception and pregnancy, and hyperuricaemia.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **UTI — acute cystitis in women** | ⚠️ **nitrofurantoin and eGFR** is the crossing point between these two guidelines, and the item flagged for attestation |
+| **Type 2 diabetes** | the commonest cause; both guidelines watch the same ACR and eGFR |
+| **Cardiovascular disease risk** | CKD is a risk multiplier in that guideline's own equation |
+| **Heart failure** | shared diuretic and RAS-inhibitor decisions |
+| **Gout** | allopurinol dosing turns on renal function |
+| **Iron deficiency** | anaemia of CKD and the IV iron threshold |
+
 ## Unresolved
 
 | Point | Kind | Detail |

@@ -137,6 +137,14 @@ infection** [S1].
 the mouth [S1]. **Proctitis is characterised by rectal pain, bleeding, rectal discharge, tenesmus and
 changed bowel habit** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** | LGV is a *Chlamydia trachomatis* serovar — the same organism, a different syndrome |
+| **HIV** · **Syphilis** · **Hepatitis C** | the shared epidemiology this guideline is written around |
+| **Antimicrobial stewardship** | extended doxycycline courses and the resistance argument |
+
 ## Unresolved
 
 | Point | Kind | Detail |

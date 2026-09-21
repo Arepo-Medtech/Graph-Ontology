@@ -127,6 +127,15 @@ but it is one centre and now dated.
 Below eGFR 60 the best evidence favours fosfomycin over nitrofurantoin [S10] — an agent not on the PBS
 schedule [S9]. That gap is live, not theoretical.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chronic kidney disease** | ⚠️ **nitrofurantoin and eGFR** — the crossing point flagged for attestation |
+| **Antimicrobial stewardship** | uncomplicated UTI is the canonical narrow-spectrum, short-course target |
+| **Febrile child** | ⚠️ **UTI is the most common serious bacterial infection in children without a focus**, and that guideline carries the full paediatric urine collection protocol with contamination rates |
+| **Sepsis** · **Sepsis in children** | urosepsis is the escalation both guidelines route to |
+
 ## Unresolved
 
 | Point | Kind | Detail |

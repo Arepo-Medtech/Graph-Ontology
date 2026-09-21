@@ -103,6 +103,16 @@ This is the migraine pattern again, and it matters more here because the recomme
 glycaemic control: it is about reducing cardiovascular and kidney events. The administrative gradient runs
 against the organ-protective agents.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chronic kidney disease** | the commonest complication, with shared ACR and eGFR monitoring |
+| **Cardiovascular disease risk** | diabetes is a primary input to the risk equation |
+| **Heart failure** | SGLT2 inhibitors cross both guidelines |
+| **Fitness to drive — seizures and epilepsy** | ⚠️ *Assessing Fitness to Drive* carries **its own diabetes chapter**, with hypoglycaemia as the licensing concern |
+| **Chronic kidney disease** · **Iron deficiency** | anaemia screening in diabetic kidney disease |
+
 ## Unresolved
 
 | Point | Kind | Detail |

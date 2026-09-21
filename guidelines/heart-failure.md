@@ -88,6 +88,16 @@ The 2018 foundation therapies are the accessible ones: ACE inhibitors, an ARB, m
 and furosemide are all unrestricted. Everything the guideline places at "selected patients" — ARNI,
 ivabradine — plus the SGLT2 inhibitors the guideline never positioned for HFrEF, require authority.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Atrial fibrillation** | cause, consequence and shared anticoagulation decision |
+| **Acute coronary syndromes** | the commonest antecedent |
+| **Cardiovascular disease risk** | the prevention guideline upstream of this one |
+| **Chronic kidney disease** | cardiorenal interaction governs diuretic and RAS-inhibitor use |
+| **Iron deficiency** | ⚠️ IV iron in heart failure is a specific indication in that guideline |
+
 ## Unresolved
 
 | Point | Kind | Detail |

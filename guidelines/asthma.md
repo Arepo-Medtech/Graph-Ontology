@@ -96,6 +96,15 @@ prescriber to consider the listed maximum quantity"* — the **60-day prescribin
 Age restrictions differ by device and are a prescribing constraint, not a clinical one: most budesonide–
 formoterol products are ≥12 years, while *DuoResp Spiromax* and *Fostair* are **≥18 years** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Acute asthma in children** | ⚠️ the acute and paediatric complement. **They differ in emphasis**: this guideline states **treatment solely with as-needed SABA is not recommended**, while the paediatric acute file makes **SABA crucial** in the exacerbation and **switches adolescents off budesonide/formoterol to salbutamol** in hospital |
+| **Anaphylaxis in children** | **poorly controlled asthma** is a risk factor for **fatal anaphylaxis**, and *optimise asthma management* is a discharge checklist item there |
+| **COPD** | the other obstructive airways guideline; overlap matters where both are present |
+| **Smoking cessation** | the single largest modifiable factor across both airways guidelines |
+
 ## Unresolved
 
 | Point | Kind | Detail |

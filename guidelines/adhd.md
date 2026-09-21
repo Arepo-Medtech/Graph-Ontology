@@ -336,6 +336,15 @@ both pharmacological and cognitive behavioural based interventions** *(6.3.6, CC
 
 Sequencing without a queue — stabilise first, but the second clause exists to stop "first" becoming "never".
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Sodium valproate** | ⚠️ **ADHD appears there as an *outcome* of fetal valproate exposure (OR 1.4–1.8)**, not a diagnosis to treat |
+| **Fitness to drive — seizures and epilepsy** | *Assessing Fitness to Drive* addresses attentional and cognitive fitness |
+| **Major depressive disorder** · **Generalised anxiety disorder** | the commonest comorbidities and the commonest differentials |
+| **Psychotropic medicines for people with cognitive disability** | the shared question of prescribing for behaviour |
+
 ## Unresolved
 
 | Point | Kind | Detail |

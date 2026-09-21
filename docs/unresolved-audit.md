@@ -151,9 +151,29 @@ information only where their source happened to mention it. **The earliest files
 guidance and attach PBS as the Australian layer. **That is the honest construction available at the time, and
 it is declared rather than hidden.**
 
-**What they lack:** a **"Where this connects in the compendium"** table. **None of the sixteen has one** —
-which is unsurprising, since when they were written there was little to connect to. That is the one piece of
-the current contract genuinely worth retrofitting, and it is now the highest-value work on this list.
+**What they lacked:** a **"Where this connects in the compendium"** table. ✅ **Retrofitted 2026-09-22 —
+to all thirty-three guidelines that were missing one, not only the sixteen.** Every guideline in the
+compendium now carries one: **61/61**.
+
+**The retrofit found connections that did not exist when the files were written**, because the corpus has
+since grown around them. Among them:
+
+- ⚠️ **Migraine → sodium valproate.** Valproate is used **off label for migraine prevention** with efficacy
+  comparable to topiramate or candesartan — and carries the full teratogenicity constraint. The migraine
+  guideline predates the valproate one by a day and could not have said so.
+- ⚠️ **Osteoporosis → sodium valproate.** **Valproate therapy of more than 10 years is associated with
+  decreased bone mineral density.**
+- ⚠️ **UTI → febrile child.** **UTI is the most common serious bacterial infection in children without a
+  focus**, and the paediatric guideline carries the urine collection protocol with contamination rates that
+  the adult one does not.
+- ⚠️ **Genital herpes → paediatric sepsis and seizures.** **Neonatal HSV** is named in both, with aciclovir
+  in the sepsis algorithms recovered from the flowchart images.
+- ⚠️ **Type 2 diabetes → fitness to drive.** *Assessing Fitness to Drive* carries **its own diabetes
+  chapter**; so does dementia.
+- ⚠️ **Stroke and TIA → Stroke (ACSQHC).** The older Stroke Foundation guideline and the June 2026 standard
+  built over it, where the standard **explicitly excludes TIA** — which is what the older file covers.
+- ⚠️ **Donovanosis → acute rheumatic fever.** Both are conditions of the **same remote and under-served
+  Australian communities**, and both are near-eliminated where access is good.
 
 **Five carry the pre-taxonomy *verdict* vocabulary** — `not_quoted`, `not_asserted`, `searched_not_found`,
 `attested_not_sourced` — which is the **six-claim gap** between `total` and `pass`. `scripts/verify.py`
@@ -219,10 +239,8 @@ the sharpest are worth naming:
    are three-way and decision-changing — blood culture volume, and IM ceftriaxone dose and trigger.**
    ✅ **All three retrieved.** ⚠️ **Four documents now give four rules on blood culture technique and three
    on IM ceftriaxone.** See the four-way table in `sepsis-children-wa.md`.
-3. ⚠️ **Revised.** The first sixteen **do not need a taxonomy re-pass** — they already have it. Two real
-   jobs remain: **add a "Where this connects" table to each** (none has one), and **decide whether to
-   restore the PBS layer to the other fifty guidelines**, which is the larger gap and runs the opposite way
-   to what this audit first assumed.
+3. ✅ **Connections tables done — 61/61.** ⚠️ **The PBS layer remains**: eleven guidelines have one, fifty
+   do not, and that is the larger gap and runs the opposite way to what this audit first assumed.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`
    currently machine-checks only the seven written since it existed.

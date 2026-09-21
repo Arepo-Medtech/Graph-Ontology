@@ -70,6 +70,15 @@ four weeks, is unsubsidised in Australia. What remains unrestricted is benzodiaz
 An Australian prescriber following the evidence toward orexin antagonists and away from benzodiazepines
 finds the subsidy pointing the other way.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Delirium** | ⚠️ **benzodiazepines increase delirium** — the strongest argument against hypnotics in older inpatients |
+| **Opioid analgesic stewardship — acute pain** | **respiratory depression** is the other guideline's reason for the same caution about benzodiazepines |
+| **Dementia** | sleep disturbance is common and sedative prescribing is a named quality problem |
+| **Generalised anxiety disorder** · **Major depressive disorder** | overlapping presentations and overlapping prescribing |
+
 ## Unresolved
 
 | Point | Kind | Detail |

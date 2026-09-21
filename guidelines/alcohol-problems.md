@@ -258,6 +258,17 @@ prevent further central nervous system damage**; **attend to advanced liver dise
 and **avoid interactions between medications for alcohol use disorders and other medications — e.g.
 paracetamol, benzodiazepines, anticoagulants and non-steroidal anti-inflammatory drugs**.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Major depressive disorder** · **Generalised anxiety disorder** | bidirectional and frequently the reason treatment fails |
+| **Hepatitis C** | the largest modifiable factor in fibrosis progression |
+| **Delirium** | ⚠️ withdrawal is a named cause, and **benzodiazepines are indicated here and warned against there** |
+| **Stillbirth** | **no safe level of alcohol in pregnancy**; alcohol-dependent pregnant women admitted with an addiction specialist |
+| **Seizures — acute management in children** | **drug or alcohol withdrawal** is a listed cause of acute symptomatic seizures |
+| **Fitness to drive — seizures and epilepsy** | *Assessing Fitness to Drive* carries its own **substance misuse** chapter |
+
 ## Unresolved
 
 | Point | Kind | Detail |

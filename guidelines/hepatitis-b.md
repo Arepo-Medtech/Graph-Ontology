@@ -148,6 +148,15 @@ immunosuppression.
 - **Chronic hepatitis: infection lasting over 6 months, can be lifelong** [S1].
 - **Complications: liver cirrhosis and liver failure; hepatocellular carcinoma** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Hepatitis A** · **Hepatitis C** | the rest of the viral hepatitis set |
+| **HIV** | co-infection alters antiretroviral choice |
+| **Stillbirth** | ⚠️ antenatal screening and vertical transmission |
+| **Chronic kidney disease** | tenofovir and renal monitoring |
+
 ## Unresolved
 
 | Point | Kind | Detail |

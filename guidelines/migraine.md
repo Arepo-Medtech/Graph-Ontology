@@ -64,6 +64,14 @@ unrestricted. Every acute triptan is restricted or authority-required.
 So the practical first line in Australian general practice is a moderate-certainty agent, and that is a
 funding decision rather than a clinical one. It should be visible when it is made.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Sodium valproate** | ⚠️ **valproate is used off label for migraine prevention** with efficacy comparable to topiramate or candesartan — and carries the full teratogenicity constraint for people of childbearing potential |
+| **Transient ischaemic attack** · **Stroke** | migraine with aura sits in the differential and in the risk calculation |
+| **Fitness to drive — seizures and epilepsy** | topiramate and valproate are shared agents with the epilepsy set |
+
 ## Unresolved
 
 | Point | Kind | Detail |

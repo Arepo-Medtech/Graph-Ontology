@@ -176,6 +176,15 @@ to assess recovery, emergence of complications, and **need for assistance with i
 scab** and **typically last 3 weeks, but can be longer**; prodromal symptoms **typically last up to 5
 days** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **HIV** | ⚠️ advanced HIV is the strongest predictor of severe disease |
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the ASHM set this guideline sits in |
+| **Anogenital warts** · **Genital herpes** | the principal differentials for anogenital lesions |
+| **Sodium valproate** | ⚠️ the compendium's other case where **evidence and practice moved in different directions** — two negative tecovirimat RCTs against retained stockpiles, and a valproate warning added despite unreproduced findings |
+
 ## Unresolved
 
 | Point | Kind | Detail |

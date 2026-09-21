@@ -108,6 +108,17 @@ management — BP-lowering and lipid-modifying — is unrestricted. Where migrai
 prescriber away from the best-supported agent, here the subsidy and the guideline agree. The constrained
 agents (PCSK9 inhibitors, inclisiran) sit beyond the first-line recommendations.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Acute coronary syndromes** | the event this guideline exists to prevent |
+| **Stroke** · **Transient ischaemic attack** | the cerebrovascular half of the same risk calculation |
+| **Atrial fibrillation** | a risk factor handled by its own guideline, and the reason stroke's indicator 5c audits anticoagulant prescribing |
+| **Type 2 diabetes** · **Chronic kidney disease** | both feed the risk equation and both have their own guidelines here |
+| **Heart failure** | the outcome shared with the above |
+| **Smoking cessation** | the modifiable factor with the largest single effect |
+
 ## Unresolved
 
 | Point | Kind | Detail |

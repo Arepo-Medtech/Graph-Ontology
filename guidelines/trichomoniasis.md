@@ -105,6 +105,15 @@ HAV/HBV/HPV vaccination [S1].
 **Retesting at 4 weeks** for patients who remain symptomatic or where **partner treatment remains
 uncertain** — which also allows retesting for other STIs past the window period [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Syphilis** · **HIV** · **Hepatitis A · B · C** | the rest of the ASHM set |
+| **Bacterial vaginosis** · **Candidiasis** | the three causes of vaginal discharge, best read together |
+| **Antimicrobial stewardship** | ⚠️ this guideline carries a **do not screen** recommendation outside high-prevalence populations |
+| **Stillbirth** | adverse pregnancy outcome is the reason screening is considered at all |
+
 ## Unresolved
 
 | Point | Kind | Detail |

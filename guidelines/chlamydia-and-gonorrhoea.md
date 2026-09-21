@@ -108,6 +108,14 @@ The source states these as measurable standards [S1][S2]:
 - 100% advised to avoid sexual contact for 7 days after treatment
 - 100% recalled for repeat testing after 3 months
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Syphilis** · **Mycoplasma genitalium** · **Trichomoniasis** · **HIV** · **Genital herpes** · **LGV** · **Donovanosis** · **Anogenital warts** | the rest of the ASHM Australian STI Management Guidelines set in this compendium |
+| **Antimicrobial stewardship** | gonorrhoea resistance is the stewardship problem these guidelines are written around |
+| **Hepatitis A · B · C** | co-testing and shared risk populations in the same ASHM series |
+
 ## Unresolved
 
 | Point | Kind | Detail |

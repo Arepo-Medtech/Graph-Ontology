@@ -70,6 +70,16 @@ That is not an argument for amitriptyline: effect size is one axis and tolerabil
 are others the retrieved abstracts do not quantify. It is an observation that here, unusually, the subsidy
 and the efficacy ranking do not point in opposite directions.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Generalised anxiety disorder** | shared evidence base and frequent comorbidity |
+| **Insomnia** | a symptom, a risk factor and a separate prescribing decision |
+| **Alcohol problems** · **Smoking cessation** | both bidirectionally linked and both with their own guidelines here |
+| **Sodium valproate** | ⚠️ valproate is approved for **bipolar disorder** and carries the teratogenicity constraint — relevant wherever the diagnosis is revised |
+| **Dementia** | depression is both a differential and a risk factor |
+
 ## Unresolved
 
 | Point | Kind | Detail |

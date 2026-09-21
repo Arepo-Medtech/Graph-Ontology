@@ -397,6 +397,17 @@ carers **delivered by bilingual, bicultural workers**.
 **People with dementia are vulnerable to abuse and neglect**; all staff supporting them **should receive
 information and training about how to prevent and manage suspected abuse** *(61, PP)* [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Sodium valproate** | ⚠️ **not recommended for behavioural and psychological symptoms of dementia** — not improved, and more serious adverse effects |
+| **Psychotropic medicines for people with cognitive disability** | the same problem: psychotropics prescribed for behaviour without evidence of benefit |
+| **Delirium** | the commonest acute differential, and the two standards cite each other |
+| **Fitness to drive — seizures and epilepsy** | ⚠️ *Assessing Fitness to Drive* carries **its own dementia chapter** (section 6.1) |
+| **Hip fracture care** · **Osteoporosis** | falls and fracture risk |
+| **Stroke** | the stroke standard assesses **cognition** at follow-up |
+
 ## Unresolved
 
 | Point | Kind | Detail |

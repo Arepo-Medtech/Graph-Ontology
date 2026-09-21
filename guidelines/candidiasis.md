@@ -136,6 +136,14 @@ unless symptoms fail to resolve — also consider alternative diagnoses** [S1].
 **May need a longer course of topical treatment — e.g. 7 days minimum. Fluconazole and boric acid are
 contraindicated** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Bacterial vaginosis** · **Trichomoniasis** | the three causes of vaginal discharge, and the commonest misdiagnosis among them |
+| **Type 2 diabetes** | recurrent candidiasis as a presenting sign |
+| **Antimicrobial stewardship** | antibiotic exposure is a named precipitant |
+
 ## Unresolved
 
 | Point | Kind | Detail |

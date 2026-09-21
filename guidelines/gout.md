@@ -62,6 +62,14 @@ The first-line agent is unrestricted, as is flare treatment. Febuxostat — the 
 fails or is not tolerated — carries an authority requirement, so the step from first to second line is an
 administrative step as well as a clinical one.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chronic kidney disease** | allopurinol starting dose and titration depend on renal function |
+| **Cardiovascular disease risk** | the febuxostat cardiovascular signal sits at this junction |
+| **Osteoarthritis — knee and hip** | the differential that most often delays a gout diagnosis |
+
 ## Unresolved
 
 | Point | Kind | Detail |

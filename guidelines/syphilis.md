@@ -147,6 +147,14 @@ is clinically suspected but serology is negative, ensure a PCR swab has been don
 **Positive syphilis results in a child should be urgently discussed with a specialist and child protection
 services** [S1].
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Chlamydia and gonorrhoea** · **Mycoplasma genitalium** · **HIV** · **Hepatitis B** | the rest of the ASHM Australian STI Management Guidelines set, with shared testing and contact tracing |
+| **Stillbirth** | ⚠️ congenital syphilis and antenatal screening — the obstetric consequence |
+| **Antimicrobial stewardship** | benzathine penicillin supply and the narrow-spectrum argument |
+
 ## Unresolved
 
 | Point | Kind | Detail |

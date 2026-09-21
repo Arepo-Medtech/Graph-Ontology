@@ -63,6 +63,15 @@ decision in Australia before it is a clinical one.
 
 Colecalciferol's absence is a listing fact, not a clinical one: it is widely available over the counter.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Hip fracture care** | ⚠️ the fracture this guideline exists to prevent, with its own ACSQHC standard here |
+| **Sodium valproate** | ⚠️ **valproate therapy of more than 10 years is associated with decreased bone mineral density and increased osteoporosis risk** |
+| **COPD** | long-term oral corticosteroid exposure |
+| **Dementia** · **Delirium** | falls risk, and the hip fracture pathway both feed |
+
 ## Unresolved
 
 | Point | Kind | Detail |

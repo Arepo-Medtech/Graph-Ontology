@@ -123,6 +123,14 @@ and doxycycline — which matches the guideline's first-line recommendations exa
 bronchodilators are restricted or authority-required, so the constraint sits on **maintenance**, not on
 **rescue**.
 
+## Where this connects in the compendium
+
+| Guideline here | Connection |
+|---|---|
+| **Asthma** | the other obstructive airways guideline; ⚠️ **COPD-X surveillance is paused**, so currency differs sharply between the two |
+| **Smoking cessation** | the only intervention that changes the disease trajectory |
+| **Acute asthma in children** | the paediatric counterpart of exacerbation management, including the MDI-over-nebuliser preference |
+
 ## Unresolved
 
 | Point | Kind | Detail |
