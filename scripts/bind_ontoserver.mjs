@@ -47,20 +47,34 @@ const truncate = (t) => t.split(/\s+/)
   .map((w) => (w.length > 7 ? w.slice(0, 7) : w))
   .join(" ");
 
+// Bind only concepts that have a parent. Every active concept but the root has
+// one; an orphan is retired. Without this, 17 of 35 exact matches found in a
+// whole-terminology search were retired concepts with IDENTICAL display text —
+// Septicaemia 154313001, Coronary artery disease 8957000 — which bind silently
+// and wrongly. Mirrors the concept-activeness gate this repo applies to AMT.
+const hasParent = async (code) => {
+  const p = await expandSnomed("", { ecl: `>!${code}`, count: 1 });
+  return p === null ? null : p.length > 0;      // null = unvalidated, not absent
+};
+
 const [src, out] = process.argv.slice(2);
 const doc = JSON.parse(readFileSync(src, "utf8"));
 const results = [];
-let exact = 0, normalised = 0, candidate = 0, unmatched = 0, unvalidated = 0;
+let exact = 0, normalised = 0, candidate = 0, unmatched = 0, unvalidated = 0, retired = 0;
 
 for (const [i, rec] of doc.conditions.entries()) {
   const name = rec.condition;
-  let hits = await expandSnomed(name, { count: 5 });
+  // A PBS indication can name a finding OR an intervention. PrEP and
+  // Haemodialysis are procedures and were unreachable under findings alone.
+  const ECL = "<<404684003 OR <<71388002";
+  // count 20, not 5: "Major depressive disorder" ranked 6th and was truncated away.
+  let hits = await expandSnomed(name, { ecl: ECL, count: 20 });
   let tier = "full";
   if (hits !== null && hits.length === 0) {
     const stem = truncate(name);
     if (stem !== name) {
       await sleep(120);
-      const retry = await expandSnomed(stem, { count: 5 });
+      const retry = await expandSnomed(stem, { ecl: ECL, count: 20 });
       if (retry && retry.length) { hits = retry; tier = "stemmed"; }
     }
   }
@@ -71,12 +85,22 @@ for (const [i, rec] of doc.conditions.entries()) {
     const lower = name.toLowerCase();
     const e = hits.find((h) => terms(h).some((t) => stripTag(t).toLowerCase() === lower));
     const n = hits.find((h) => terms(h).some((t) => norm(stripTag(t)) === norm(name)));
-    if (e) {
+    const chosen = e || n;
+    const live = chosen ? await hasParent(chosen.code) : null;
+    if (chosen && live === false) {
+      results.push({ condition: name, snomed: null, method: "rejected_retired_concept",
+                     rejected: { concept_id: chosen.code, display: chosen.display },
+                     why: "concept has no parent: retired, despite an exact term match" });
+      retired++;
+    } else if (e && live) {
       const via = stripTag(e.display).toLowerCase() === lower ? "exact_display" : "exact_synonym";
-      results.push({ condition: name, snomed: { concept_id: e.code, display: e.display, method: via, query_tier: tier } }); exact++;
-    } else if (n) {
+      results.push({ condition: name, snomed: { concept_id: e.code, display: e.display, method: via, query_tier: tier, parent_verified: true } }); exact++;
+    } else if (n && live) {
       const via = norm(stripTag(n.display)) === norm(name) ? "normalised_display" : "normalised_synonym";
-      results.push({ condition: name, snomed: { concept_id: n.code, display: n.display, method: via, query_tier: tier } }); normalised++;
+      results.push({ condition: name, snomed: { concept_id: n.code, display: n.display, method: via, query_tier: tier, parent_verified: true } }); normalised++;
+    } else if (chosen) {
+      results.push({ condition: name, snomed: null, method: "unvalidated_retry",
+                     why: "parentage check did not return" }); unvalidated++;
     }
     else if (hits.length) {
       results.push({ condition: name, snomed: null, method: "candidate_unconfirmed",
@@ -91,7 +115,9 @@ for (const [i, rec] of doc.conditions.entries()) {
 writeFileSync(out, JSON.stringify({
   source: "NCTS Ontoserver, SNOMED CT-AU 20260731 (pinned)",
   binding_policy: "exact or normalised display only; ranked hits are candidates, not bindings",
-  counts: { exact, normalised, candidate, unmatched, unvalidated, total: results.length },
+  binding_policy_v2: "exact/normalised match on display or designation, in <<404684003 OR <<71388002, "
+    + "AND the concept must have a parent (orphan = retired = rejected)",
+  counts: { exact, normalised, candidate, unmatched, unvalidated, retired, total: results.length },
   results,
 }, null, 2));
-console.log(`\nexact ${exact}  normalised ${normalised}  candidate ${candidate}  unmatched ${unmatched}  unvalidated ${unvalidated}`);
+console.log(`\nexact ${exact}  normalised ${normalised}  candidate ${candidate}  unmatched ${unmatched}  retired ${retired}  unvalidated ${unvalidated}`);

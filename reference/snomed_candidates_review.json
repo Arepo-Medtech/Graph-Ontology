@@ -1,12 +1,12 @@
 {
-  "note": "Review queue, hierarchy-enriched, risky first. Signals are TRIAGE, not verdicts: they say where to look, not what is true. Nothing is auto-bound.",
+  "note": "Review queue. Hierarchy-enriched, risky first. Nothing auto-bound.",
   "legend": {
     "off_domain": "reject",
     "parent_better": "bind the parent instead",
     "narrower": "hit is a sub-type",
     "plausible": "confirm"
   },
-  "count": 348,
+  "count": 345,
   "candidates": [
     {
       "condition": "Facial lipoatrophy",
@@ -62,8 +62,8 @@
       "other_hits": [],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -104,66 +104,8 @@
       "other_hits": [],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
-      }
-    },
-    {
-      "condition": "Patients undergoing in-vitro fertilisation",
-      "top_hit": {
-        "code": "10231000132102",
-        "display": "IVF pregnancy",
-        "synonyms": [
-          "IVF - in-vitro fertilisation pregnancy",
-          "IVF pregnancy",
-          "In-vitro fertilisation pregnancy",
-          "IVF - in-vitro fertilization pregnancy",
-          "In-vitro fertilization pregnancy",
-          "In-vitro fertilization pregnancy (finding)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "118185001",
-          "display": "Finding related to pregnancy"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "IVF",
-          "pregnancy"
-        ]
-      },
-      "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
-      "other_hits": [
-        {
-          "code": "443633009",
-          "display": "Conceived by IVF",
-          "synonyms": [
-            "Conceived by IVF",
-            "Conceived by in vitro fertilisation",
-            "Conceived by in vitro fertilization (finding)",
-            "Conceived by in vitro fertilization"
-          ]
-        },
-        {
-          "code": "213202009",
-          "display": "Complications of attempted introduction of fertilised ovum following IVF",
-          "synonyms": [
-            "Complications of attempted introduction of fertilised ovum following IVF",
-            "Complications of attempted introduction of fertilised ovum following in vitro fertilisation",
-            "Complications of attempted introduction of fertilized ovum following in vitro fertilization (disorder)",
-            "Complications of attempted introduction of fertilized ovum following in vitro fertilization"
-          ]
-        }
-      ],
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -244,8 +186,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -329,8 +271,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -393,8 +335,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -461,8 +403,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -508,30 +450,24 @@
       "other_hits": [],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
       "condition": "Contraception",
       "top_hit": {
-        "code": "102955006",
-        "display": "Contraception failure",
+        "code": "308419002",
+        "display": "Contraception call",
         "synonyms": [
-          "Contraception failure",
-          "Occurrence of pregnancy despite contraception.",
-          "Pregnancy with contraceptive device",
-          "Contraception failure (finding)"
+          "Contraception call",
+          "Contraception call (procedure)"
         ]
       },
       "parents": [
         {
-          "code": "243816001",
-          "display": "Contraception status"
-        },
-        {
-          "code": "83074005",
-          "display": "Unplanned pregnancy"
+          "code": "308397003",
+          "display": "Patient call procedure"
         }
       ],
       "signals": {
@@ -539,32 +475,37 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "failure"
+          "call"
         ]
       },
       "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
       "other_hits": [
         {
-          "code": "243816001",
-          "display": "Contraception status",
+          "code": "389095005",
+          "display": "Contraception care",
           "synonyms": [
-            "Contraception status",
-            "Contraception status (finding)"
+            "Contraception care",
+            "Family planning care: contraception",
+            "Family planning treatments and procedures",
+            "Contraception care (regime/therapy)",
+            "Family planning: contraception"
           ]
         },
         {
-          "code": "1376571000168103",
-          "display": "Hormonal contraception",
+          "code": "398780007",
+          "display": "Contraception education",
           "synonyms": [
-            "Hormonal contraception",
-            "Hormonal contraception (finding)"
+            "Contraception education",
+            "Health education - contraception",
+            "Advice about contraception",
+            "Contraception education (procedure)"
           ]
         }
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -624,8 +565,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -685,8 +626,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -735,8 +676,8 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -777,21 +718,82 @@
           ]
         },
         {
-          "code": "1010298008",
-          "display": "Fetal disorder due to maternal overweight",
+          "code": "1003728008",
+          "display": "Fetal disorder due to maternal hypertension",
           "synonyms": [
-            "Fetal disorder due to maternal overweight",
-            "Foetal disorder due to maternal overweight",
-            "Fetal disorder due to maternal overweight (disorder)",
-            "Fetal disorder due to overweight mother",
-            "Foetal disorder due to overweight mother"
+            "Fetal disorder due to maternal hypertension (disorder)",
+            "Foetal disorder due to maternal hypertension",
+            "Fetal disorder due to maternal hypertension"
           ]
         }
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
+      }
+    },
+    {
+      "condition": "Patients undergoing in-vitro fertilisation",
+      "top_hit": {
+        "code": "52637005",
+        "display": "In vitro fertilisation",
+        "synonyms": [
+          "Test tube ovum fertilization (procedure)",
+          "In vitro fertilisation",
+          "In vitro fertilisation procedure",
+          "IVF - in vitro fertilisation",
+          "In vitro fertilization",
+          "Test tube ovum fertilization",
+          "Test tube ovum fertilisation",
+          "In vitro fertilization procedure",
+          "IVF - in vitro fertilization",
+          "Test tube baby technique"
+        ]
+      },
+      "parents": [
+        {
+          "code": "63487001",
+          "display": "Assisted fertilisation"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": []
+      },
+      "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
+      "other_hits": [
+        {
+          "code": "10231000132102",
+          "display": "IVF pregnancy",
+          "synonyms": [
+            "IVF - in-vitro fertilisation pregnancy",
+            "IVF pregnancy",
+            "In-vitro fertilisation pregnancy",
+            "IVF - in-vitro fertilization pregnancy",
+            "In-vitro fertilization pregnancy",
+            "In-vitro fertilization pregnancy (finding)"
+          ]
+        },
+        {
+          "code": "711544002",
+          "display": "In vitro fertilisation with surrogacy",
+          "synonyms": [
+            "In vitro fertilisation with surrogacy",
+            "IVF with surrogacy",
+            "In vitro fertilization with subsequent transfer to an unrelated surrogate.",
+            "In vitro fertilization with surrogacy (procedure)",
+            "In vitro fertilisation with subsequent transfer to an unrelated surrogate.",
+            "In vitro fertilization with surrogacy"
+          ]
+        }
+      ],
+      "quarantine": {
+        "reason": "pregnancy_or_reproductive",
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
@@ -868,28 +870,35 @@
       ],
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
       }
     },
     {
       "condition": "Termination of an intra-uterine pregnancy",
       "top_hit": {
-        "code": "699240001",
-        "display": "Combined intrauterine and ovarian pregnancy",
+        "code": "18302006",
+        "display": "Hysterotomy and termination of pregnancy",
         "synonyms": [
-          "Combined intrauterine and ovarian pregnancy",
-          "Combined intrauterine and ovarian pregnancy (disorder)"
+          "Therapeutic abortion by hysterotomy (procedure)",
+          "Incision of uterus for termination of pregnancy",
+          "Hysterotomy and termination of pregnancy",
+          "Therapeutic abortion by hysterotomy",
+          "Obstetrical hysterotomy for termination of pregnancy"
         ]
       },
       "parents": [
         {
-          "code": "31601007",
-          "display": "Combined pregnancy"
+          "code": "84275009",
+          "display": "Obstetrical hysterotomy"
         },
         {
-          "code": "9899009",
-          "display": "Ovarian pregnancy"
+          "code": "177118006",
+          "display": "Operation on gravid uterus"
+        },
+        {
+          "code": "386641000",
+          "display": "Therapeutic termination of pregnancy procedure"
         }
       ],
       "signals": {
@@ -897,14 +906,20 @@
         "parent_better": false,
         "narrower": false,
         "adds_words": [
-          "Combined",
-          "intrauterine",
-          "and",
-          "ovarian"
+          "Hysterotomy",
+          "and"
         ]
       },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
       "other_hits": [
+        {
+          "code": "699240001",
+          "display": "Combined intrauterine and ovarian pregnancy",
+          "synonyms": [
+            "Combined intrauterine and ovarian pregnancy",
+            "Combined intrauterine and ovarian pregnancy (disorder)"
+          ]
+        },
         {
           "code": "442478007",
           "display": "Combined tubal and intrauterine pregnancy",
@@ -913,74 +928,14 @@
             "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy (disorder)",
             "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy"
           ]
-        },
-        {
-          "code": "237217000",
-          "display": "Uterine leiomyoma in pregnancy, childbirth and the puerperium",
-          "synonyms": [
-            "Uterine fibroids in pregnancy, childbirth and the puerperium",
-            "Uterine leiomyoma in pregnancy, childbirth and the puerperium",
-            "Uterine fibroids in pregnancy, childbirth and the puerperium (disorder)"
-          ]
         }
       ],
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure.",
       "quarantine": {
         "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
-      },
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
-    },
-    {
-      "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
-      "top_hit": {
-        "code": "778050009",
-        "display": "Idiopathic eosinophilic myositis",
-        "synonyms": [
-          "Idiopathic eosinophilic myositis (disorder)",
-          "Idiopathic eosinophilic myositis",
-          "Idiopathic eosinophilia-associated myopathy",
-          "A rare idiopathic inflammatory myopathy characterised by eosinophilic infiltration and inflammatory lesions of the skeletal muscle tissue, in the absence of an identifiable causative factor (e.g. parasitic infection, drug intake, systemic or malignant disease). Clinically patients may present focal or generalised muscle weakness and pain, difficulties to walk, motor clumsiness and/or mild bilateral Achilles tendon contracture, as well as elevated serum creatine kinase levels and peripheral blood and/or bone marrow hypereosinophilia.",
-          "A rare idiopathic inflammatory myopathy characterized by eosinophilic infiltration and inflammatory lesions of the skeletal muscle tissue, in the absence of an identifiable causative factor (e.g. parasitic infection, drug intake, systemic or malignant disease). Clinically patients may present focal or generalized muscle weakness and pain, difficulties to walk, motor clumsiness and/or mild bilateral Achilles tendon contracture, as well as elevated serum creatine kinase levels and peripheral blood and/or bone marrow hypereosinophilia."
-        ]
-      },
-      "parents": [
-        {
-          "code": "370474006",
-          "display": "Eosinophilic myositis"
-        },
-        {
-          "code": "320150004",
-          "display": "Idiopathic eosinophilia"
-        },
-        {
-          "code": "702380008",
-          "display": "Idiopathic inflammatory myopathy"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Idiopathic",
-          "eosinophilic",
-          "myositis"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": [
-        {
-          "code": "1332134000",
-          "display": "Maculopapular cutaneous mastocytosis",
-          "synonyms": [
-            "Maculopapular cutaneous mastocytosis",
-            "A form of cutaneous mastocytosis (CM) characterised by the presence of multiple hyperpigmented macules, papules or nodules associated with abnormal accumulation of mast cells in the skin. Most patients present in infancy or childhood, but onset may also occur in adulthood. Mutations in the KIT gene (4q11-q12) have been identified however this mutation is rare in the paediatric population and the aetiology and pathogenesis in these cases remains to be determined. The disease generally occurs sporadically but rare familial cases have been reported.",
-            "Maculopapular cutaneous mastocytosis (disorder)",
-            "A form of cutaneous mastocytosis (CM) characterized by the presence of multiple hyperpigmented macules, papules or nodules associated with abnormal accumulation of mast cells in the skin. Most patients present in infancy or childhood, but onset may also occur in adulthood. Mutations in the KIT gene (4q11-q12) have been identified however this mutation is rare in the pediatric population and the etiology and pathogenesis in these cases remains to be determined. The disease generally occurs sporadically but rare familial cases have been reported."
-          ]
-        }
-      ]
+        "requires_manual_review": true,
+        "why": "AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding here attaches a pregnancy-safety record to the wrong clinical object."
+      }
     },
     {
       "condition": "Acute mania or mixed episodes",
@@ -1551,9 +1506,9 @@
           "fasting"
         ]
       },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
       "other_hits": [],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Disabling pain",
@@ -1929,25 +1884,22 @@
     {
       "condition": "Hyperphenylalaninaemia due to phenylketonuria",
       "top_hit": {
-        "code": "14858001",
-        "display": "Enophthalmos due to surgery",
+        "code": "1197675002",
+        "display": "Duodenitis due to vasculitis",
         "synonyms": [
-          "Enophthalmos due to surgery (disorder)",
-          "Enophthalmos due to surgery"
+          "Duodenitis due to vasculitis",
+          "Vasculitic duodenitis",
+          "Duodenitis due to vasculitis (disorder)"
         ]
       },
       "parents": [
         {
-          "code": "88797001",
-          "display": "Complication of surgical procedure"
+          "code": "72007001",
+          "display": "Duodenitis"
         },
         {
-          "code": "80093006",
-          "display": "Enophthalmos"
-        },
-        {
-          "code": "363342003",
-          "display": "Visual system complication of procedure"
+          "code": "24813008",
+          "display": "Gastrointestinal complication"
         }
       ],
       "signals": {
@@ -1955,33 +1907,28 @@
         "parent_better": false,
         "narrower": false,
         "adds_words": [
-          "Enophthalmos",
+          "Duodenitis",
           "due",
-          "surgery"
+          "vasculitis"
         ]
       },
       "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
       "other_hits": [
         {
-          "code": "145621000146106",
-          "display": "Headache due to exertion",
+          "code": "128191000",
+          "display": "Encephalomyelitis due to rubella",
           "synonyms": [
-            "Headache provoked by physical exertion",
-            "Exertion-induced headache",
-            "Headache due to exertion (finding)",
-            "Headache on exertion",
-            "Headache due to exertion",
-            "Exertional headache"
+            "Encephalomyelitis due to rubella",
+            "Encephalomyelitis due to rubella (disorder)",
+            "Rubella encephalomyelitis"
           ]
         },
         {
-          "code": "14900002",
-          "display": "Hypopituitarism due to radiotherapy",
+          "code": "14858001",
+          "display": "Enophthalmos due to surgery",
           "synonyms": [
-            "Hypopituitarism due to radiotherapy",
-            "Hypopituitarism due to radiotherapy (disorder)",
-            "Post-radiotherapy hypopituitarism",
-            "Radiotherapy-induced hypopituitarism"
+            "Enophthalmos due to surgery (disorder)",
+            "Enophthalmos due to surgery"
           ]
         }
       ]
@@ -2425,44 +2372,6 @@
       ]
     },
     {
-      "condition": "Local intra-articular or peri-articular infiltration",
-      "top_hit": {
-        "code": "768934004",
-        "display": "Intraneural perineurioma",
-        "synonyms": [
-          "Intraneural perineurioma",
-          "Intraneural perineurioma is a rare tumor of cranial and spinal nerves arising from peripheral nerve sheath and composed exclusively or predominantly of cells showing perineurial differentiation. It presents as a localized, tubular or fusiform enlargement of a nerve or nerve segment, usually in the extremities or the trunk, associated with a motor-predominant mononeuropathy including slow, painless, gradual loss of motor function in the involved nerve trunk with muscle weakness and atrophy and, rarely, sensory dysfunction. Cranial nerve involvement is rare.",
-          "Intraneural perineurioma is a rare tumour of cranial and spinal nerves arising from peripheral nerve sheath and composed exclusively or predominantly of cells showing perineurial differentiation. It presents as a localised, tubular or fusiform enlargement of a nerve or nerve segment, usually in the extremities or the trunk, associated with a motor-predominant mononeuropathy including slow, painless, gradual loss of motor function in the involved nerve trunk with muscle weakness and atrophy and, rarely, sensory dysfunction. Cranial nerve involvement is rare.",
-          "Intraneural perineurioma (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "92071005",
-          "display": "Benign neoplasm of cranial nerve"
-        },
-        {
-          "code": "254984005",
-          "display": "Benign neoplasm of spinal nerve and sheath"
-        },
-        {
-          "code": "404036006",
-          "display": "Perineurioma"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Intraneural",
-          "perineurioma"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": []
-    },
-    {
       "condition": "Migraine attack",
       "top_hit": {
         "code": "1197429000",
@@ -2581,76 +2490,6 @@
           ]
         }
       ]
-    },
-    {
-      "condition": "Patients requiring administration of fluorouracil by intravenous infusion",
-      "top_hit": {
-        "code": "704676006",
-        "display": "At risk of negative response to nurse controlled analgesia",
-        "synonyms": [
-          "At increased risk of negative response to nurse controlled analgesia",
-          "At risk of negative response to nurse controlled analgesia",
-          "Nurse controlled analgesia is a technique by which the nurse or health professional licensed to administer medications, gives the patient a pre-programmed amount of an intravenous or subcutaneous analgesic solution as a bolus dose by the press of a button.",
-          "At increased risk of negative response to nurse controlled analgesia (finding)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "129850005",
-          "display": "At risk for negative response to medicine"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "risk",
-          "negative",
-          "response",
-          "nurse",
-          "controlled",
-          "analgesia"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
-      "other_hits": [],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
-    },
-    {
-      "condition": "Patients requiring administration of fluorouracil by intravenous injection",
-      "top_hit": {
-        "code": "704676006",
-        "display": "At risk of negative response to nurse controlled analgesia",
-        "synonyms": [
-          "At increased risk of negative response to nurse controlled analgesia",
-          "At risk of negative response to nurse controlled analgesia",
-          "Nurse controlled analgesia is a technique by which the nurse or health professional licensed to administer medications, gives the patient a pre-programmed amount of an intravenous or subcutaneous analgesic solution as a bolus dose by the press of a button.",
-          "At increased risk of negative response to nurse controlled analgesia (finding)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "129850005",
-          "display": "At risk for negative response to medicine"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "risk",
-          "negative",
-          "response",
-          "nurse",
-          "controlled",
-          "analgesia"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
-      "other_hits": [],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Patients requiring doses greater than 20 mg per week",
@@ -2925,46 +2764,6 @@
           ]
         }
       ]
-    },
-    {
-      "condition": "Von Hippel-Lindau disease",
-      "top_hit": {
-        "code": "764961009",
-        "display": "Hereditary primary clear cell renal cell carcinoma",
-        "synonyms": [
-          "Hereditary primary clear cell renal cell carcinoma (disorder)",
-          "Hereditary primary clear cell renal cell carcinoma",
-          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
-          "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
-          "Hereditary primary clear cell renal cell adenocarcinoma"
-        ]
-      },
-      "parents": [
-        {
-          "code": "717736007",
-          "display": "Familial renal cell carcinoma"
-        },
-        {
-          "code": "1268351001",
-          "display": "Primary clear cell carcinoma of kidney"
-        }
-      ],
-      "signals": {
-        "off_domain": true,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Hereditary",
-          "primary",
-          "clear",
-          "cell",
-          "renal",
-          "cell",
-          "carcinoma"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": []
     },
     {
       "condition": "Whipworm infestation",
@@ -3352,11 +3151,11 @@
           ]
         },
         {
-          "code": "312148000",
-          "display": "Fungal ear infection",
+          "code": "312150008",
+          "display": "Fungal cardiovascular infection",
           "synonyms": [
-            "Fungal ear infection",
-            "Fungal ear infection (disorder)"
+            "Fungal cardiovascular infection",
+            "Fungal cardiovascular infection (disorder)"
           ]
         }
       ]
@@ -3771,7 +3570,7 @@
           "Polyomavirus"
         ]
       },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
       "other_hits": [
         {
           "code": "723830005",
@@ -3794,7 +3593,7 @@
           ]
         }
       ],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Systemic light chain amyloidosis",
@@ -4363,67 +4162,15 @@
           ]
         },
         {
-          "code": "296900006",
-          "display": "Androgen overdose",
+          "code": "407709006",
+          "display": "Androgen level",
           "synonyms": [
-            "Androgen overdose",
-            "Androgen overdose (disorder)"
+            "Androgen level",
+            "Androgen level (procedure)",
+            "Androgen measurement"
           ]
         }
       ]
-    },
-    {
-      "condition": "Assisting bone marrow transplantation",
-      "top_hit": {
-        "code": "234520000",
-        "display": "Bone marrow transplant failure",
-        "synonyms": [
-          "Bone marrow transplant failure",
-          "Failed bone marrow transplant engraftment",
-          "Bone marrow transplant failure (disorder)",
-          "Failure of bone marrow graft"
-        ]
-      },
-      "parents": [
-        {
-          "code": "428103008",
-          "display": "Disorder of transplanted bone marrow"
-        },
-        {
-          "code": "269295009",
-          "display": "Transplanted organ failure"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "failure"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
-      "other_hits": [
-        {
-          "code": "737300001",
-          "display": "Bone marrow transplant present",
-          "synonyms": [
-            "Bone marrow transplant present (finding)",
-            "Bone marrow transplant present",
-            "Bone marrow transplant recipient"
-          ]
-        },
-        {
-          "code": "234519006",
-          "display": "Bone marrow transplant rejection",
-          "synonyms": [
-            "Rejection of bone marrow graft",
-            "Bone marrow transplant rejection",
-            "Bone marrow transplant rejection (disorder)"
-          ]
-        }
-      ],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Basal cell carcinoma",
@@ -4475,17 +4222,25 @@
     {
       "condition": "Bone",
       "top_hit": {
-        "code": "23149001",
-        "display": "Bone crepitus",
+        "code": "409778008",
+        "display": "Bone abscess",
         "synonyms": [
-          "Bone crepitus",
-          "Bone crepitus (finding)"
+          "Bone abscess (disorder)",
+          "Bone abscess"
         ]
       },
       "parents": [
         {
-          "code": "118953000",
-          "display": "Bone finding"
+          "code": "128477000",
+          "display": "Abscess"
+        },
+        {
+          "code": "879976004",
+          "display": "Lesion of bone"
+        },
+        {
+          "code": "300861003",
+          "display": "Mass of musculoskeletal structure"
         }
       ],
       "signals": {
@@ -4493,27 +4248,25 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "crepitus"
+          "abscess"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "203465002",
-          "display": "Bone cyst",
+          "code": "298350001",
+          "display": "Bone absent",
           "synonyms": [
-            "Bone cyst",
-            "Bone cyst (disorder)"
+            "Bone absent",
+            "Bone absent (finding)"
           ]
         },
         {
-          "code": "118953000",
-          "display": "Bone finding",
+          "code": "23149001",
+          "display": "Bone crepitus",
           "synonyms": [
-            "Bone finding",
-            "General bone observation",
-            "Bone observation",
-            "Bone finding (finding)"
+            "Bone crepitus",
+            "Bone crepitus (finding)"
           ]
         }
       ]
@@ -4584,21 +4337,17 @@
     {
       "condition": "Bordetella pertussis",
       "top_hit": {
-        "code": "93417001",
-        "display": "Conjunctivitis caused by Bordetella pertussis",
+        "code": "122206002",
+        "display": "Bordetella pertussis culture",
         "synonyms": [
-          "Conjunctivitis caused by Bordetella pertussis (disorder)",
-          "Conjunctivitis caused by Bordetella pertussis"
+          "Bordetella pertussis culture (procedure)",
+          "Bordetella pertussis culture"
         ]
       },
       "parents": [
         {
-          "code": "128350005",
-          "display": "Bacterial conjunctivitis"
-        },
-        {
-          "code": "782715005",
-          "display": "Infection caused by Bordetella"
+          "code": "122251002",
+          "display": "Bordetella culture"
         }
       ],
       "signals": {
@@ -4606,27 +4355,25 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "Conjunctivitis",
-          "caused"
+          "culture"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "192650000",
-          "display": "Meningitis caused by Bordetella pertussis",
+          "code": "315073006",
+          "display": "Bordetella pertussis antibody level",
           "synonyms": [
-            "Meningitis caused by Bordetella pertussis (disorder)",
-            "Meningitis caused by Bordetella pertussis"
+            "Bordetella pertussis antibody level",
+            "Bordetella pertussis antibody level (procedure)"
           ]
         },
         {
-          "code": "737589003",
-          "display": "DNA of Bordetella pertussis not detected",
+          "code": "122183004",
+          "display": "Bordetella pertussis antigen assay",
           "synonyms": [
-            "DNA of Bordetella pertussis not detected",
-            "Deoxyribonucleic acid of Bordetella pertussis not detected (finding)",
-            "Deoxyribonucleic acid of Bordetella pertussis not detected"
+            "Bordetella pertussis antigen assay",
+            "Bordetella pertussis antigen assay (procedure)"
           ]
         }
       ]
@@ -4695,22 +4442,20 @@
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
+          "code": "413742003",
+          "display": "Cancer pain and symptom management",
+          "synonyms": [
+            "Cancer pain and symptom management (procedure)",
+            "Cancer pain and symptom management"
+          ]
+        },
+        {
           "code": "788891004",
           "display": "Chronic pain after cancer treatment",
           "synonyms": [
             "Chronic pain after cancer treatment (finding)",
             "Chronic post cancer treatment pain",
             "Chronic pain after cancer treatment"
-          ]
-        },
-        {
-          "code": "735935009",
-          "display": "Chronic pain due to malignant neoplastic disease",
-          "synonyms": [
-            "Chronic pain due to malignancy",
-            "Chronic pain due to malignant neoplastic disease",
-            "Chronic pain due to malignant neoplastic disease (finding)",
-            "Chronic cancer related pain"
           ]
         }
       ]
@@ -4755,13 +4500,12 @@
           ]
         },
         {
-          "code": "420505005",
-          "display": "Corneal endothelial allograft rejection",
+          "code": "86825002",
+          "display": "Chronic arterial allograft rejection",
           "synonyms": [
-            "Corneal endothelial allograft rejection",
-            "Endothelial corneal graft rejection",
-            "Endothelial corneal allograft rejection",
-            "Corneal endothelial allograft rejection (disorder)"
+            "Chronic arterial allograft rejection",
+            "Allograft arteriopathy",
+            "Chronic arterial allograft rejection (finding)"
           ]
         }
       ]
@@ -5126,14 +4870,14 @@
           ]
         },
         {
-          "code": "1332470007",
-          "display": "Chronic kidney disease stage 3A due to type 2 diabetes",
+          "code": "90731000119103",
+          "display": "Chronic kidney disease stage 2 due to type 1 diabetes",
           "synonyms": [
-            "Chronic kidney disease stage 3A due to type 2 diabetes mellitus",
-            "Chronic kidney disease stage 3A due to type 2 diabetes",
-            "Chronic kidney disease stage 3A due to type 2 diabetes mellitus (disorder)",
-            "Chronic kidney disease stage 3A due to type II diabetes mellitus",
-            "Chronic renal disease stage 3A due to type 2 diabetes mellitus"
+            "Chronic kidney disease stage 2 due to type 1 diabetes mellitus",
+            "Chronic kidney disease stage 2 due to type I diabetes mellitus",
+            "Chronic kidney disease stage 2 due to T1DM (type 1 diabetes mellitus)",
+            "Chronic kidney disease stage 2 due to type 1 diabetes",
+            "Chronic kidney disease stage 2 due to type 1 diabetes mellitus (disorder)"
           ]
         }
       ]
@@ -5442,21 +5186,23 @@
     {
       "condition": "Corneal grafts",
       "top_hit": {
-        "code": "314552006",
-        "display": "Corneal graft astigmatism",
+        "code": "60656008",
+        "display": "Corneal transplant",
         "synonyms": [
-          "Corneal graft astigmatism",
-          "Corneal graft astigmatism (disorder)"
+          "Corneal transplant",
+          "Corneal graft",
+          "Grafting of cornea",
+          "Corneal transplant (procedure)"
         ]
       },
       "parents": [
         {
-          "code": "82649003",
-          "display": "Astigmatism"
+          "code": "120095006",
+          "display": "Eye transplant"
         },
         {
-          "code": "314551004",
-          "display": "Corneal graft disorder"
+          "code": "72208004",
+          "display": "Operative procedure on cornea"
         }
       ],
       "signals": {
@@ -5464,73 +5210,25 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "astigmatism"
+          "transplant"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
+        {
+          "code": "314552006",
+          "display": "Corneal graft astigmatism",
+          "synonyms": [
+            "Corneal graft astigmatism",
+            "Corneal graft astigmatism (disorder)"
+          ]
+        },
         {
           "code": "314551004",
           "display": "Corneal graft disorder",
           "synonyms": [
             "Corneal graft disorder (disorder)",
             "Corneal graft disorder"
-          ]
-        },
-        {
-          "code": "314553001",
-          "display": "Corneal graft infection",
-          "synonyms": [
-            "Corneal graft infection (disorder)",
-            "Corneal graft infection"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Coronary artery disease",
-      "top_hit": {
-        "code": "420006002",
-        "display": "Obliterative coronary artery disease",
-        "synonyms": [
-          "Obliterative coronary artery disease",
-          "Obliterative coronary artery disease (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "53741008",
-          "display": "Coronary arteriosclerosis"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Obliterative",
-          "disease"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "1293192009",
-          "display": "Premature coronary artery disease",
-          "synonyms": [
-            "PCAD - premature coronary artery disease",
-            "Premature coronary artery disease",
-            "Typically defined by the age of onset of coronary artery disease presenting in men under 45 years and women under 55 years. However, age thresholds for defining primary coronary artery disease can vary between 45 and 65 years, as observed in various studies.",
-            "Premature coronary artery disease (disorder)"
-          ]
-        },
-        {
-          "code": "240567009",
-          "display": "Syphilitic coronary artery disease",
-          "synonyms": [
-            "Syphilitic coronary artery disease",
-            "Syphilitic coronary artery disease (disorder)",
-            "Late quaternary syphilitic coronary artery disease"
           ]
         }
       ]
@@ -5646,22 +5344,22 @@
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
+          "code": "1426351000168106",
+          "display": "Whole blood common CFTR mutations detection test",
+          "synonyms": [
+            "Detection of common CFTR (cystic fibrosis transmembrane conductance regulator) gene mutations in whole blood specimen (procedure)",
+            "Detection of common CFTR mutations in whole blood for cystic fibrosis",
+            "Whole blood common CFTR mutations detection test",
+            "Detection of common CFTR (cystic fibrosis transmembrane conductance regulator) gene mutations in whole blood specimen"
+          ]
+        },
+        {
           "code": "441520002",
           "display": "Carrier of cystic fibrosis gene mutation",
           "synonyms": [
             "Cystic fibrosis gene carrier",
             "Carrier of cystic fibrosis gene mutation (finding)",
             "Carrier of cystic fibrosis gene mutation"
-          ]
-        },
-        {
-          "code": "1296527009",
-          "display": "Cystic fibrosis due to heterozygous deltaF508 mutation",
-          "synonyms": [
-            "Cystic fibrosis due to heterozygous deltaF508 mutation",
-            "Cystic fibrosis due to heterozygous deltaF508 mutation (disorder)",
-            "DeltaF508 heterozygous mucoviscidosis",
-            "DeltaF508 heterozygous cystic fibrosis"
           ]
         }
       ]
@@ -5962,60 +5660,6 @@
       "other_hits": []
     },
     {
-      "condition": "Epididymo-orchitis",
-      "top_hit": {
-        "code": "1285641001",
-        "display": "Acute epididymo-orchitis",
-        "synonyms": [
-          "Acute inflammation of testis and epididymis",
-          "Acute epididymo-orchitis",
-          "Acute inflammation of testis and epididymis (disorder)",
-          "Acute orchitis and epididymitis"
-        ]
-      },
-      "parents": [
-        {
-          "code": "127342003",
-          "display": "Acute disorder of male genital organ"
-        },
-        {
-          "code": "128482007",
-          "display": "Acute inflammatory disease"
-        },
-        {
-          "code": "197983000",
-          "display": "Orchitis and epididymitis"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Acute"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "236772009",
-          "display": "Gonococcal epididymo-orchitis",
-          "synonyms": [
-            "Gonococcal epididymo-orchitis",
-            "Gonococcal epididymo-orchitis (disorder)"
-          ]
-        },
-        {
-          "code": "312220006",
-          "display": "Infective epididymo-orchitis",
-          "synonyms": [
-            "Infective epididymo-orchitis",
-            "Infective epididymo-orchitis (disorder)"
-          ]
-        }
-      ]
-    },
-    {
       "condition": "Epileptic seizures",
       "top_hit": {
         "code": "1366368009",
@@ -6053,12 +5697,13 @@
           ]
         },
         {
-          "code": "1366366008",
-          "display": "Epileptic seizures induced by orgasm",
+          "code": "1366429001",
+          "display": "Epileptic seizures induced by music",
           "synonyms": [
-            "Epileptic seizures induced by orgasm",
-            "Epileptic seizures induced by orgasm (finding)",
-            "Reflex epileptic seizures which are consistently and reproducibly induced by orgasm."
+            "Epileptic seizures induced by music",
+            "Epileptic seizures induced by music (finding)",
+            "Reflex epileptic seizures which are consistently and reproducibly induced by music.",
+            "Musicogenic seizures"
           ]
         }
       ]
@@ -6066,19 +5711,17 @@
     {
       "condition": "Eradication of Helicobacter pylori",
       "top_hit": {
-        "code": "721730009",
-        "display": "Infection caused by Helicobacter pylori",
+        "code": "281897000",
+        "display": "Helicobacter eradication therapy",
         "synonyms": [
-          "Infection caused by Helicobacter pylori (disorder)",
-          "Infection caused by Helicobacter pylori",
-          "Helicobacter pylori infection",
-          "Infection caused by H. pylori (Helicobacter pylori)"
+          "Helicobacter eradication therapy",
+          "Helicobacter eradication therapy (regime/therapy)"
         ]
       },
       "parents": [
         {
-          "code": "6185008",
-          "display": "Disease caused by Helicobacter"
+          "code": "243120004",
+          "display": "Regimes and therapies"
         }
       ],
       "signals": {
@@ -6086,28 +5729,27 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "Infection",
-          "caused"
+          "therapy"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "401041004",
-          "display": "Helicobacter pylori microscopy - negative",
+          "code": "122214008",
+          "display": "Helicobacter pylori culture",
           "synonyms": [
-            "Helicobacter pylori not seen on microscopy (finding)",
-            "Helicobacter pylori not seen on microscopy",
-            "Helicobacter pylori microscopy - negative"
+            "Helicobacter pylori culture",
+            "Helicobacter pylori culture (procedure)"
           ]
         },
         {
-          "code": "89662003",
-          "display": "Helicobacter-associated pyloric ulcer",
+          "code": "721730009",
+          "display": "Infection caused by Helicobacter pylori",
           "synonyms": [
-            "Helicobacter-associated pyloric ulcer",
-            "Pyloric ulcer caused by H. pylori (Helicobacter pylori)",
-            "Helicobacter-associated pyloric ulcer (disorder)"
+            "Infection caused by Helicobacter pylori (disorder)",
+            "Infection caused by Helicobacter pylori",
+            "Helicobacter pylori infection",
+            "Infection caused by H. pylori (Helicobacter pylori)"
           ]
         }
       ]
@@ -6221,17 +5863,17 @@
     {
       "condition": "Fallopian tube cancer",
       "top_hit": {
-        "code": "289833000",
-        "display": "Fallopian tube absent",
+        "code": "48672005",
+        "display": "Accessory fallopian tube",
         "synonyms": [
-          "Fallopian tube absent (finding)",
-          "Fallopian tube absent"
+          "Accessory fallopian tube",
+          "Accessory fallopian tube (disorder)"
         ]
       },
       "parents": [
         {
-          "code": "289831003",
-          "display": "Fallopian tube finding"
+          "code": "85029000",
+          "display": "Congenital anomaly of fallopian tubes"
         }
       ],
       "signals": {
@@ -6239,28 +5881,26 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "absent"
+          "Accessory"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "128134005",
-          "display": "Fallopian tube disorder",
+          "code": "237143006",
+          "display": "Blocked fallopian tube",
           "synonyms": [
-            "Fallopian tube disorder",
-            "Fallopian tube disease",
-            "Disorder of fallopian tube",
-            "Fallopian tube disorder (disorder)"
+            "Tubal block",
+            "Blocked fallopian tube (disorder)",
+            "Blocked fallopian tube"
           ]
         },
         {
-          "code": "289831003",
-          "display": "Fallopian tube finding",
+          "code": "289833000",
+          "display": "Fallopian tube absent",
           "synonyms": [
-            "Fallopian tube finding (finding)",
-            "Fallopian tube finding",
-            "Fallopian tube observations"
+            "Fallopian tube absent (finding)",
+            "Fallopian tube absent"
           ]
         }
       ]
@@ -6475,98 +6115,48 @@
     {
       "condition": "Fungal",
       "top_hit": {
-        "code": "1163488000",
-        "display": "Fungal colitis",
+        "code": "372247004",
+        "display": "Fungal arthritis",
         "synonyms": [
-          "Colitis caused by Fungi (disorder)",
-          "Colitis caused by Fungi",
-          "Fungal colitis"
+          "Fungal arthritis",
+          "Arthritis due to fungal infection",
+          "Fungal arthritis (disorder)"
         ]
       },
       "parents": [
-        {
-          "code": "447004005",
-          "display": "Enteritis caused by fungus"
-        },
-        {
-          "code": "39341005",
-          "display": "Infectious colitis"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "colitis"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "1163493002",
-          "display": "Fungal duodenitis",
-          "synonyms": [
-            "Duodenitis caused by fungus (disorder)",
-            "Duodenitis caused by fungus",
-            "Fungal duodenitis"
-          ]
-        },
-        {
-          "code": "1163508000",
-          "display": "Fungal hydrocephalus",
-          "synonyms": [
-            "Hydrocephalus due to mycosis (disorder)",
-            "Fungal hydrocephalus",
-            "Hydrocephalus due to mycosis"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Fungal infection",
-      "top_hit": {
-        "code": "312150008",
-        "display": "Fungal cardiovascular infection",
-        "synonyms": [
-          "Fungal cardiovascular infection",
-          "Fungal cardiovascular infection (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "128402005",
-          "display": "Infectious disease of cardiovascular system"
-        },
-        {
-          "code": "3218000",
-          "display": "Mycosis"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "cardiovascular"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "312148000",
-          "display": "Fungal ear infection",
-          "synonyms": [
-            "Fungal ear infection",
-            "Fungal ear infection (disorder)"
-          ]
-        },
         {
           "code": "312151007",
-          "display": "Fungal musculoskeletal infection",
+          "display": "Fungal musculoskeletal infection"
+        },
+        {
+          "code": "396234004",
+          "display": "Infective arthritis"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": true,
+        "adds_words": [
+          "arthritis"
+        ]
+      },
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "other_hits": [
+        {
+          "code": "359707007",
+          "display": "Fungal chorioretinitis",
           "synonyms": [
-            "Fungal musculoskeletal infection",
-            "Fungal musculoskeletal infection (disorder)"
+            "Fungal chorioretinitis (disorder)",
+            "Fungal chorioretinitis"
+          ]
+        },
+        {
+          "code": "359702001",
+          "display": "Fungal choroiditis",
+          "synonyms": [
+            "Fungal choroiditis",
+            "Fungal choroiditis (disorder)"
           ]
         }
       ]
@@ -6722,54 +6312,6 @@
       ]
     },
     {
-      "condition": "Haemodialysis",
-      "top_hit": {
-        "code": "278904002",
-        "display": "Haemodialysis diet",
-        "synonyms": [
-          "Haemodialysis diet",
-          "Hemodialysis diet (finding)",
-          "Hemodialysis diet"
-        ]
-      },
-      "parents": [
-        {
-          "code": "226077000",
-          "display": "Therapeutic diet"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "diet"
-        ]
-      },
-      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
-      "other_hits": [
-        {
-          "code": "331000124109",
-          "display": "Haemodialysis finding",
-          "synonyms": [
-            "Haemodialysis finding",
-            "Hemodialysis finding",
-            "Hemodialysis finding (finding)"
-          ]
-        },
-        {
-          "code": "702635003",
-          "display": "Inadequate haemodialysis",
-          "synonyms": [
-            "Inadequate hemodialysis (disorder)",
-            "Inadequate hemodialysis",
-            "Inadequate haemodialysis"
-          ]
-        }
-      ],
-      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
-    },
-    {
       "condition": "Haemophilus influenzae type B",
       "top_hit": {
         "code": "1156927006",
@@ -6804,11 +6346,13 @@
           ]
         },
         {
-          "code": "722722006",
-          "display": "Haemophilus influenzae type b invasive infection",
+          "code": "915581000168109",
+          "display": "Haemophilus influenzae type b antibiotic prophylaxis",
           "synonyms": [
-            "Haemophilus influenzae type b invasive infection (disorder)",
-            "Haemophilus influenzae type b invasive infection"
+            "Antibiotic prophylaxis for Haemophilus influenzae type b infection (procedure)",
+            "Haemophilus influenzae type b antibiotic prophylaxis",
+            "Antibiotic prophylaxis for Haemophilus influenzae type b infection",
+            "Hib (Haemophilus influenza type b) antibiotic prophylaxis"
           ]
         }
       ]
@@ -7235,6 +6779,52 @@
       ]
     },
     {
+      "condition": "Inborn errors of protein metabolism",
+      "top_hit": {
+        "code": "13837003",
+        "display": "Inborn errors of metabolism screen",
+        "synonyms": [
+          "Inborn errors of metabolism screen",
+          "Inborn errors of metabolism screen (procedure)"
+        ]
+      },
+      "parents": [
+        {
+          "code": "312851005",
+          "display": "Screening for disorder"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": true,
+        "adds_words": [
+          "screen"
+        ]
+      },
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "other_hits": [
+        {
+          "code": "86095007",
+          "display": "Inborn error of metabolism",
+          "synonyms": [
+            "Inborn error of metabolism",
+            "Inborn error of metabolism (disorder)",
+            "IBEM - Inborn error of metabolism",
+            "IEM - Inborn error of metabolism"
+          ]
+        },
+        {
+          "code": "72262000",
+          "display": "Inborn error of glutathione metabolism",
+          "synonyms": [
+            "Inborn error of glutathione metabolism",
+            "Inborn error of glutathione metabolism (disorder)"
+          ]
+        }
+      ]
+    },
+    {
       "condition": "Infantile spasms",
       "top_hit": {
         "code": "1340127006",
@@ -7296,17 +6886,21 @@
     {
       "condition": "Infertility",
       "top_hit": {
-        "code": "2904007",
-        "display": "Male infertility",
+        "code": "6738008",
+        "display": "Female infertility",
         "synonyms": [
-          "Male infertility (disorder)",
-          "Male infertility"
+          "Female infertility",
+          "Female infertility (disorder)"
         ]
       },
       "parents": [
         {
-          "code": "363194005",
-          "display": "Disorder of male reproductive system"
+          "code": "363124003",
+          "display": "Disorder of female reproductive system"
+        },
+        {
+          "code": "106104001",
+          "display": "Female reproductive finding"
         },
         {
           "code": "8619003",
@@ -7318,26 +6912,26 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "Male"
+          "Female"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "236803007",
-          "display": "Oligosynaptic infertility",
+          "code": "389094009",
+          "display": "Infertility care",
           "synonyms": [
-            "Oligochiasmic infertility",
-            "Oligosynaptic infertility",
-            "Oligosynaptic infertility (disorder)"
+            "Infertility care",
+            "Infertility care (regime/therapy)",
+            "Family planning: infertility"
           ]
         },
         {
-          "code": "297106006",
-          "display": "Primary infertility",
+          "code": "386301001",
+          "display": "Infertility education",
           "synonyms": [
-            "Primary infertility",
-            "Primary infertility (finding)"
+            "Infertility education (procedure)",
+            "Infertility education"
           ]
         }
       ]
@@ -7380,14 +6974,14 @@
           ]
         },
         {
-          "code": "1303868000",
-          "display": "Intermediate DEND syndrome",
+          "code": "1671341000168100",
+          "display": "Bd2 - intermediate budding",
           "synonyms": [
-            "Intermediate DEND syndrome",
-            "Developmental delay, epilepsy, neonatal diabetes syndrome, intermediate form",
-            "A rare, genetic, neonatal diabetes mellitus syndrome, that is a variant of DEND syndrome and has clinical characteristics of neonatal insulin-dependent diabetes mellitus, mild motor, speech or cognitive delay, and the absence of epilepsy.",
-            "Intermediate DEND (developmental delay, epilepsy, neonatal diabetes) syndrome",
-            "Developmental delay, epilepsy, neonatal diabetes syndrome, intermediate form (disorder)"
+            "Bd2 - intermediate budding",
+            "Bd2",
+            "Tumour budding score Bd2 intermediate budding",
+            "Intermediate budding",
+            "Tumor budding score Bd2 intermediate budding (finding)"
           ]
         }
       ]
@@ -7566,68 +7160,22 @@
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "109976000",
-          "display": "Lymphoepithelioid lymphoma",
+          "code": "308121000",
+          "display": "Follicular lymphoma",
           "synonyms": [
-            "Lennert's lymphoma",
-            "Lymphoepithelioid lymphoma",
-            "Lymphoepithelioid lymphoma (disorder)"
+            "Follicular lymphoma",
+            "Follicular lymphoma (disorder)",
+            "Follicular non-Hodgkin's lymphoma",
+            "Follicular non-Hodgkin lymphoma"
           ]
         },
         {
-          "code": "118600007",
-          "display": "Malignant lymphoma",
+          "code": "276811008",
+          "display": "Gastric lymphoma",
           "synonyms": [
-            "Malignant lymphoma",
-            "Malignant lymphoma (disorder)"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Major depression",
-      "top_hit": {
-        "code": "87512008",
-        "display": "Mild major depression",
-        "synonyms": [
-          "Mild major depression",
-          "Mild major depression (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "370143000",
-          "display": "Major depressive disorder"
-        },
-        {
-          "code": "310495003",
-          "display": "Mild depression"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Mild"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "720455008",
-          "display": "Minimal major depression",
-          "synonyms": [
-            "Minimal major depression",
-            "Minimal major depression (disorder)"
-          ]
-        },
-        {
-          "code": "832007",
-          "display": "Moderate major depression",
-          "synonyms": [
-            "Moderate major depression",
-            "Moderate major depression (disorder)"
+            "Gastric lymphoma",
+            "Gastric lymphoma (disorder)",
+            "Lymphoma of stomach"
           ]
         }
       ]
@@ -8087,30 +7635,17 @@
     {
       "condition": "Oral",
       "top_hit": {
-        "code": "1089971000119108",
-        "display": "Oral cyst",
+        "code": "361274000",
+        "display": "Oral apraxia",
         "synonyms": [
-          "Cyst of structure of internal part of mouth (disorder)",
-          "Cyst of structure of internal part of mouth",
-          "Oral cyst"
+          "Oral apraxia",
+          "Oral apraxia (disorder)"
         ]
       },
       "parents": [
         {
-          "code": "441457006",
-          "display": "Cyst"
-        },
-        {
-          "code": "50410009",
-          "display": "Disorder of upper digestive tract"
-        },
-        {
-          "code": "300854002",
-          "display": "Mass of oral cavity"
-        },
-        {
-          "code": "1071000119107",
-          "display": "Oral lesion"
+          "code": "74227009",
+          "display": "Apraxia of speech"
         }
       ],
       "signals": {
@@ -8118,25 +7653,28 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "cyst"
+          "apraxia"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "229692002",
-          "display": "Oral dystonia",
+          "code": "1385901000168100",
+          "display": "Oral commissuroplasty",
           "synonyms": [
-            "Oral dystonia",
-            "Oral dystonia (disorder)"
+            "Reconstruction of commissure of lip",
+            "Reconstruction of commissure of lip (procedure)",
+            "Oral commissurotomy",
+            "Oral commissuroplasty"
           ]
         },
         {
-          "code": "20674003",
-          "display": "Oral fistula",
+          "code": "1089971000119108",
+          "display": "Oral cyst",
           "synonyms": [
-            "Oral fistula",
-            "Oral fistula (disorder)"
+            "Cyst of structure of internal part of mouth (disorder)",
+            "Cyst of structure of internal part of mouth",
+            "Oral cyst"
           ]
         }
       ]
@@ -8413,18 +7951,18 @@
     {
       "condition": "Pneumocystis carinii pneumonia",
       "top_hit": {
-        "code": "414256007",
-        "display": "Pneumocystis jirovecii present",
+        "code": "415123009",
+        "display": "Pneumocystis jirovecii immunofluorescence",
         "synonyms": [
-          "Pneumocystis carinii present",
-          "Pneumocystis jirovecii present (finding)",
-          "Pneumocystis jirovecii present"
+          "Pneumocystis jirovecii immunofluorescence",
+          "Pneumocystis carinii immunofluorescence",
+          "Pneumocystis jirovecii immunofluorescence (procedure)"
         ]
       },
       "parents": [
         {
-          "code": "441742003",
-          "display": "Evaluation finding"
+          "code": "118119003",
+          "display": "Measurement of microbial antibody"
         }
       ],
       "signals": {
@@ -8433,40 +7971,7 @@
         "narrower": true,
         "adds_words": [
           "jirovecii",
-          "present"
-        ]
-      },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": []
-    },
-    {
-      "condition": "Pneumocystis jiroveci pneumonia",
-      "top_hit": {
-        "code": "443201006",
-        "display": "Pneumocystis jirovecii choroiditis",
-        "synonyms": [
-          "Inflammation of choroid caused by Pneumocystis jirovecii (disorder)",
-          "Pneumocystis jirovecii choroiditis",
-          "Inflammation of choroid caused by Pneumocystis jirovecii infection",
-          "Inflammation of choroid caused by Pneumocystis jirovecii"
-        ]
-      },
-      "parents": [
-        {
-          "code": "359702001",
-          "display": "Fungal choroiditis"
-        },
-        {
-          "code": "75549005",
-          "display": "Infection caused by Pneumocystis jirovecii"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "choroiditis"
+          "immunofluorescence"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
@@ -8481,15 +7986,51 @@
           ]
         },
         {
-          "code": "414171001",
-          "display": "Extrapulmonary pneumocystis jirovecii infection",
+          "code": "916081000168105",
+          "display": "Pneumocystis jiroveci pneumonia prophylaxis",
           "synonyms": [
-            "Extrapulmonary pneumocystis jirovecii infection",
-            "Extrapulmonary pneumocystis jirovecii infection (disorder)",
-            "Extrapulmonary pneumocystosis"
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia",
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia (procedure)",
+            "Pneumocystis jiroveci pneumonia prophylaxis",
+            "PCP (Pneumocystis pneumonia) prophylaxis",
+            "PJP (Pneumocystis jiroveci pneumonia) prophylaxis"
           ]
         }
       ]
+    },
+    {
+      "condition": "Pneumocystis jiroveci pneumonia",
+      "top_hit": {
+        "code": "916081000168105",
+        "display": "Pneumocystis jiroveci pneumonia prophylaxis",
+        "synonyms": [
+          "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia",
+          "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia (procedure)",
+          "Pneumocystis jiroveci pneumonia prophylaxis",
+          "PCP (Pneumocystis pneumonia) prophylaxis",
+          "PJP (Pneumocystis jiroveci pneumonia) prophylaxis"
+        ]
+      },
+      "parents": [
+        {
+          "code": "1373708004",
+          "display": "Administration of prophylactic antibiotic for respiratory infection"
+        },
+        {
+          "code": "865899005",
+          "display": "Pneumocystosis jirovecii pneumonia prophylaxis"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": true,
+        "adds_words": [
+          "prophylaxis"
+        ]
+      },
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "other_hits": []
     },
     {
       "condition": "Primary axillary hyperhidrosis",
@@ -8764,13 +8305,13 @@
           ]
         },
         {
-          "code": "420505005",
-          "display": "Corneal endothelial allograft rejection",
+          "code": "175902000",
+          "display": "Cadaveric renal transplant",
           "synonyms": [
-            "Corneal endothelial allograft rejection",
-            "Endothelial corneal graft rejection",
-            "Endothelial corneal allograft rejection",
-            "Corneal endothelial allograft rejection (disorder)"
+            "Cadaveric renal transplant",
+            "Cadaveric renal transplant (procedure)",
+            "Cadaver renal allotransplant",
+            "Cadaver renal allograft"
           ]
         }
       ]
@@ -9326,17 +8867,17 @@
     {
       "condition": "Suspected",
       "top_hit": {
-        "code": "55383003",
-        "display": "Unidentified body but identity suspected",
+        "code": "171399004",
+        "display": "Examination for suspected neoplasm",
         "synonyms": [
-          "Unidentified body but identity suspected",
-          "Unidentified body but identity suspected (finding)"
+          "Examination for suspected neoplasm",
+          "Examination for suspected neoplasm (procedure)"
         ]
       },
       "parents": [
         {
-          "code": "9331004",
-          "display": "Unidentified body"
+          "code": "171397002",
+          "display": "Medical examination for suspected condition"
         }
       ],
       "signals": {
@@ -9344,34 +8885,80 @@
         "parent_better": false,
         "narrower": true,
         "adds_words": [
-          "Unidentified",
-          "body",
-          "but",
-          "identity"
+          "Examination",
+          "for",
+          "neoplasm"
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
-          "code": "10743881000119104",
-          "display": "Suspected fetal abnormality affecting management of mother",
+          "code": "171400006",
+          "display": "Examination for suspected tuberculosis",
           "synonyms": [
-            "Suspected abnormality of fetus affecting management of mother",
-            "Suspected foetal abnormality affecting management of mother",
-            "Suspected fetal abnormality affecting management of mother",
-            "Suspected fetal abnormality affecting management of mother (disorder)",
-            "Suspected abnormality of foetus affecting management of mother"
+            "TB - Examination for suspected tuberculosis",
+            "Examination for suspected tuberculosis",
+            "Examination for suspected tuberculosis (procedure)"
           ]
         },
         {
-          "code": "720495005",
-          "display": "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome",
+          "code": "171405001",
+          "display": "Examination for suspected cardiovascular disease",
           "synonyms": [
-            "A rare multiple congenital anomalies syndrome, reported in the offsprings of a consanguineous couple and characterized by multiple congenital skeletal (dolichocephaly, skull asymmetry, camptodactyly, clubfoot), muscular (muscle hypoplasia), ocular (anophthalmia, buphthalmos, retinal detachment, aniridia) and cardiac (prolapse of tricuspid valves, mitral and tricuspid insufficiency) abnormalities. An autosomal recessive inheritance with variable expressivity was suspected. There have been no further descriptions in the literature since 1992.",
-            "A rare multiple congenital anomalies syndrome, reported in the offsprings of a consanguineous couple and characterised by multiple congenital skeletal (dolichocephaly, skull asymmetry, camptodactyly, clubfoot), muscular (muscle hypoplasia), ocular (anophthalmia, buphthalmos, retinal detachment, aniridia) and cardiac (prolapse of tricuspid valves, mitral and tricuspid insufficiency) abnormalities. An autosomal recessive inheritance with variable expressivity was suspected. There have been no further descriptions in the literature since 1992.",
-            "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome",
-            "Cassia Stocco dos Santos syndrome",
-            "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome (disorder)"
+            "Examination for suspected cardiovascular disease",
+            "Examination for suspected cardiovascular disease (procedure)"
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "Systemic embolism",
+      "top_hit": {
+        "code": "1382088008",
+        "display": "Embolisation of portal-systemic shunt",
+        "synonyms": [
+          "Embolisation of portal-systemic shunt",
+          "Embolization of portal-systemic shunt (procedure)",
+          "Embolization of portal-systemic shunt"
+        ]
+      },
+      "parents": [
+        {
+          "code": "370616009",
+          "display": "Correction of portal-systemic shunt"
+        },
+        {
+          "code": "711277004",
+          "display": "Embolisation of abdominal vein"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": true,
+        "adds_words": [
+          "portal",
+          "shunt"
+        ]
+      },
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "other_hits": [
+        {
+          "code": "405283007",
+          "display": "Coil embolisation of portal-systemic shunt",
+          "synonyms": [
+            "Coil embolisation of portal-systemic shunt",
+            "Coil embolization of portal-systemic shunt",
+            "Coil embolization of portal-systemic shunt (procedure)"
+          ]
+        },
+        {
+          "code": "707823006",
+          "display": "Percutaneous transluminal embolisation for major systemic to pulmonary collateral artery",
+          "synonyms": [
+            "Percutaneous transluminal embolization for major systemic to pulmonary collateral artery",
+            "Percutaneous transluminal embolisation for major systemic to pulmonary collateral artery",
+            "Percutaneous transluminal embolization for major systemic to pulmonary collateral artery (procedure)"
           ]
         }
       ]
@@ -9860,7 +9447,17 @@
         ]
       },
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
-      "other_hits": []
+      "other_hits": [
+        {
+          "code": "708252004",
+          "display": "Discharge from virtual ward",
+          "synonyms": [
+            "Discharge from a virtual ward that uses the systems, staffing, and daily routine of a hospital ward to deliver preventive care to patients in their own home.",
+            "Discharge from virtual ward (procedure)",
+            "Discharge from virtual ward"
+          ]
+        }
+      ]
     },
     {
       "condition": "Uveal melanoma",
@@ -9949,19 +9546,19 @@
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
+          "code": "443749004",
+          "display": "Assessment of risk of venous thromboembolism",
+          "synonyms": [
+            "Assessment of risk of venous thromboembolism (procedure)",
+            "Assessment of risk of venous thromboembolism"
+          ]
+        },
+        {
           "code": "711328005",
           "display": "At high risk of venous thromboembolism",
           "synonyms": [
             "At high risk of venous thromboembolism",
             "At high risk of venous thromboembolism (finding)"
-          ]
-        },
-        {
-          "code": "699035003",
-          "display": "At low risk of venous thromboembolism",
-          "synonyms": [
-            "At low risk of venous thromboembolism (finding)",
-            "At low risk of venous thromboembolism"
           ]
         }
       ]
@@ -9998,6 +9595,15 @@
       "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
       "other_hits": [
         {
+          "code": "1332170002",
+          "display": "Venous ulcer of calf",
+          "synonyms": [
+            "Venous ulcer of calf (disorder)",
+            "Venous ulcer of calf",
+            "Stasis ulcer of calf"
+          ]
+        },
+        {
           "code": "1332165009",
           "display": "Venous ulcer of foot",
           "synonyms": [
@@ -10005,14 +9611,49 @@
             "Venous ulcer of foot (disorder)",
             "Stasis ulcer of foot"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "condition": "Von Hippel-Lindau disease",
+      "top_hit": {
+        "code": "405835004",
+        "display": "Von Hippel-Lindau disease mutation carrier detection test",
+        "synonyms": [
+          "VHL disease mutation carrier detection test",
+          "Von Hippel-Lindau disease mutation carrier detection test",
+          "Von Hippel-Lindau disease mutation carrier detection test (procedure)"
+        ]
+      },
+      "parents": [
         {
-          "code": "1332166005",
-          "display": "Venous ulcer of heel",
+          "code": "405825005",
+          "display": "Molecular genetic test"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": true,
+        "adds_words": [
+          "disease",
+          "mutation",
+          "carrier",
+          "detection",
+          "test"
+        ]
+      },
+      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "other_hits": [
+        {
+          "code": "764961009",
+          "display": "Hereditary primary clear cell renal cell carcinoma",
           "synonyms": [
-            "Stasis ulcer of heel",
-            "Venous ulcer of heel",
-            "Venous ulcer of heel (disorder)"
+            "Hereditary primary clear cell renal cell carcinoma (disorder)",
+            "Hereditary primary clear cell renal cell carcinoma",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+            "Hereditary primary clear cell renal cell adenocarcinoma"
           ]
         }
       ]
@@ -10130,6 +9771,36 @@
       ]
     },
     {
+      "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
+      "top_hit": {
+        "code": "1200271000168100",
+        "display": "Vaccination of Aboriginal or Torres Strait Islander person",
+        "synonyms": [
+          "Vaccination of Aboriginal or Torres Strait Islander person",
+          "Immunisation of Aboriginal or Torres Strait Islander person",
+          "Vaccination of Australian Aboriginal or Torres Strait Islander person (procedure)",
+          "Vaccination of Australian Aboriginal or Torres Strait Islander person"
+        ]
+      },
+      "parents": [
+        {
+          "code": "33879002",
+          "display": "Active immunisation"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": [
+          "Vaccination",
+          "person"
+        ]
+      },
+      "suggested_action": "plausible \u2014 confirm",
+      "other_hits": []
+    },
+    {
       "condition": "Ablation of thyroid remnant tissue",
       "top_hit": {
         "code": "56823000",
@@ -10165,11 +9836,14 @@
           ]
         },
         {
-          "code": "247206004",
-          "display": "Optic disc tissue remnants",
+          "code": "112891005",
+          "display": "Autotransplant of thyroid tissue",
           "synonyms": [
-            "Optic disc tissue remnants",
-            "Optic disc tissue remnants (finding)"
+            "Autotransplantation of thyroid tissue",
+            "Reposition of thyroid tissue",
+            "Autotransplant of thyroid tissue",
+            "Reimplantation of thyroid tissue",
+            "Autotransplantation of thyroid tissue (procedure)"
           ]
         }
       ]
@@ -10212,11 +9886,13 @@
           ]
         },
         {
-          "code": "1344893007",
-          "display": "Pressure injury healed",
+          "code": "225393005",
+          "display": "Pressure injury assessment",
           "synonyms": [
-            "Pressure injury healed (finding)",
-            "Pressure injury healed"
+            "Pressure injury assessment",
+            "Bed sore assessment",
+            "Pressure injury assessment (procedure)",
+            "Pressure sore assessment"
           ]
         }
       ]
@@ -10422,6 +10098,16 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+          "synonyms": [
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
+          ]
+        },
+        {
           "code": "301007008",
           "display": "Gastro-oesophageal erosion",
           "synonyms": [
@@ -10429,24 +10115,6 @@
             "Gastro-esophageal erosion",
             "Gastro-oesophageal erosion",
             "Gastroesophageal erosion (disorder)"
-          ]
-        },
-        {
-          "code": "235595009",
-          "display": "Gastro-oesophageal reflux disease",
-          "synonyms": [
-            "GORD - Gastro-oesophageal reflux disease",
-            "Gastro-oesophageal reflux disease",
-            "GOR - Gastro-esophageal reflux",
-            "Gastro-oesophageal reflux",
-            "Gastroesophageal reflux disease",
-            "Gastro-esophageal reflux",
-            "GORD - Gastro-esophageal reflux disease",
-            "Gastrooesophageal reflux disease",
-            "GOR - Gastro-oesophageal reflux",
-            "Gastroesophageal reflux disease (disorder)",
-            "Gastro-esophageal reflux disease",
-            "GERD - Gastro-esophageal reflux disease"
           ]
         }
       ]
@@ -10540,27 +10208,28 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "771474005",
-          "display": "Gastric adenocarcinoma and proximal polyposis of stomach",
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
           "synonyms": [
-            "Familial fundic gland polyposis with gastric cancer",
-            "Gastric adenocarcinoma and proximal polyposis of the stomach (GAPPS) is a rare hereditary gastric cancer characterised by proximal gastric polyposis and increased risk of early-onset, intestinal-type adenocarcinoma of the gastric body, with no duodenal or colorectal polyposis.",
-            "Gastric adenocarcinoma and proximal polyposis of stomach (disorder)",
-            "GAPPS - gastric adenocarcinoma and proximal polyposis of stomach",
-            "Gastric adenocarcinoma and proximal polyposis of the stomach (GAPPS) is a rare hereditary gastric cancer characterized by proximal gastric polyposis and increased risk of early-onset, intestinal-type adenocarcinoma of the gastric body, with no duodenal or colorectal polyposis.",
-            "Gastric adenocarcinoma and proximal polyposis of stomach"
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
           ]
         },
         {
-          "code": "1197754004",
-          "display": "Congenital brachyoesophagus, intrathoracic stomach, vertebral anomalies syndrome",
+          "code": "1371342000",
+          "display": "Administration of prophylactic drug or medicament for gastro-oesophageal reflux disease",
           "synonyms": [
-            "A rare syndromic oesophageal malformation characterised by severe congenital brachyoesophagus with midline diaphragmatic hernia and secondary intrathoracic stomach, and vertebral anomalies (in particular rachischisis of the cervical/thoracic spine). Additional reported manifestations include intrauterine growth restriction, short neck, intestinal malrotation, herniation of other abdominal organs, and cleft lip, among others. The condition is mostly fatal in the neonatal or early infantile period.",
-            "Congenital brachyoesophagus, intrathoracic stomach, vertebral anomalies syndrome",
-            "Serpentine-like syndrome",
-            "A rare syndromic esophageal malformation characterized by severe congenital brachyesophagus with midline diaphragmatic hernia and secondary intrathoracic stomach, and vertebral anomalies (in particular rachischisis of the cervical/thoracic spine). Additional reported manifestations include intrauterine growth restriction, short neck, intestinal malrotation, herniation of other abdominal organs, and cleft lip, among others. The condition is mostly fatal in the neonatal or early infantile period.",
-            "Congenital brachyesophagus, intrathoracic stomach, vertebral anomalies syndrome",
-            "Congenital brachyesophagus, intrathoracic stomach, vertebral anomalies syndrome (disorder)"
+            "Administration of prophylactic drug or medicament for gastroesophageal reflux disease",
+            "Gastro-oesophageal reflux prophylaxis",
+            "GORD (gastroesophageal reflux disease) prophylaxis",
+            "Administration of prophylactic drug or medicament for gastroesophageal reflux disease (procedure)",
+            "GERD (gastroesophageal reflux disease) prophylaxis",
+            "GERD (gastro-oesophageal reflux disease) prophylaxis",
+            "Gastroesophageal reflux prophylaxis",
+            "Administration of prophylactic drug or medicament for gastro-oesophageal reflux disease",
+            "GORD (gastro-oesophageal reflux disease) prophylaxis"
           ]
         }
       ]
@@ -10600,19 +10269,22 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "254843006",
-          "display": "Familial cancer of breast",
+          "code": "268547008",
+          "display": "Screening for breast cancer",
           "synonyms": [
-            "Familial cancer of breast",
-            "Familial cancer of breast (disorder)"
+            "Screening for malignant neoplasm of breast",
+            "Breast cancer screening",
+            "Screening for breast cancer",
+            "Screening for malignant neoplasm of breast (procedure)",
+            "Breast neoplasm screening"
           ]
         },
         {
-          "code": "724451007",
-          "display": "Fear of breast cancer",
+          "code": "60631000210103",
+          "display": "Breast cancer multidisciplinary meeting",
           "synonyms": [
-            "Fear of breast cancer (finding)",
-            "Fear of breast cancer"
+            "Breast cancer multidisciplinary meeting (procedure)",
+            "Breast cancer multidisciplinary meeting"
           ]
         }
       ]
@@ -10778,12 +10450,15 @@
           ]
         },
         {
-          "code": "310255003",
-          "display": "Anti-neutrophil cytoplasmic antibody negative",
+          "code": "401134007",
+          "display": "ANCA profile",
           "synonyms": [
-            "Anti-neutrophil cytoplasmic antibody negative",
-            "Anti-neutrophil cytoplasmic antibody not detected (finding)",
-            "Anti-neutrophil cytoplasmic antibody not detected"
+            "ANCA profile",
+            "Neutrophil cytoplasmic autoantibody profile",
+            "Antineutrophil cytoplasmic antibodies profile determination",
+            "Antineutrophil cytoplasmic antibodies (ANCA) profile determination",
+            "Antineutrophil cytoplasmic antibodies profile determination (procedure)",
+            "ANCA profile determination"
           ]
         }
       ]
@@ -10936,6 +10611,114 @@
           ]
         }
       ]
+    },
+    {
+      "condition": "Assisting autologous peripheral blood progenitor cell transplantation",
+      "top_hit": {
+        "code": "425983008",
+        "display": "Autologous peripheral blood stem cell transplant",
+        "synonyms": [
+          "Autologous peripheral blood stem cell transplant (procedure)",
+          "Autologous peripheral blood stem cell transplant"
+        ]
+      },
+      "parents": [
+        {
+          "code": "53088000",
+          "display": "Autogenous transplant"
+        },
+        {
+          "code": "278257006",
+          "display": "Peripheral blood stem cell transplant"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": [
+          "stem"
+        ]
+      },
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
+      "other_hits": [
+        {
+          "code": "711429001",
+          "display": "Allogeneic haemopoietic progenitor cell transplant",
+          "synonyms": [
+            "Allogeneic haemopoietic progenitor cell transplant",
+            "Autologous HPCT",
+            "Transplantation of autologous progenitor cell",
+            "Transplantation of autologous progenitor cell (procedure)"
+          ]
+        },
+        {
+          "code": "278257006",
+          "display": "Peripheral blood stem cell transplant",
+          "synonyms": [
+            "Peripheral blood stem cell transplantation",
+            "2nd stage peripheral stem cell infusion",
+            "Peripheral blood stem cell transplantation (procedure)",
+            "Peripheral blood stem cell rescue",
+            "Peripheral blood stem cell graft",
+            "Peripheral blood stem cell transplant",
+            "Second stage peripheral stem cell infusion",
+            "PBSC - Peripheral blood stem cell graft"
+          ]
+        }
+      ],
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
+    },
+    {
+      "condition": "Assisting bone marrow transplantation",
+      "top_hit": {
+        "code": "23719005",
+        "display": "Bone marrow transplant",
+        "synonyms": [
+          "Transplantation of bone marrow (procedure)",
+          "Bone marrow graft",
+          "Transfusion of bone marrow",
+          "Transplantation of bone marrow",
+          "Bone marrow transplant",
+          "BMT - Bone marrow transplant"
+        ]
+      },
+      "parents": [
+        {
+          "code": "234336002",
+          "display": "Haemopoietic stem cell transplant"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": []
+      },
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
+      "other_hits": [
+        {
+          "code": "58390007",
+          "display": "Allogeneic bone marrow transplant",
+          "synonyms": [
+            "Allogeneic bone marrow transplant",
+            "Allogeneic bone marrow graft",
+            "Allogeneic bone marrow transplantation",
+            "Allogeneic bone marrow transplantation (procedure)"
+          ]
+        },
+        {
+          "code": "58776007",
+          "display": "Autologous bone marrow transplant",
+          "synonyms": [
+            "Autologous bone marrow transplant (procedure)",
+            "Autologous bone marrow transplant",
+            "Autologous bone marrow graft",
+            "ABMT - Autologous bone marrow transplant"
+          ]
+        }
+      ],
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Atypical mycobacterial infections",
@@ -11144,15 +10927,11 @@
           ]
         },
         {
-          "code": "770596007",
-          "display": "Rippling muscle disease with myasthenia gravis",
+          "code": "33981001",
+          "display": "Edrophonium chloride test for myasthenia gravis",
           "synonyms": [
-            "Rippling muscle disease with myasthenia gravis (disorder)",
-            "Rippling muscle disease with myasthenia gravis is a rare, acquired, neuromuscular disease characterized by CAV3 mutation-negative rippling muscle disease in association with acetylcholine receptor antibody-mediated myasthenia gravis. Patients typically present exercise-induced, electrically silent muscle rippling with myalgia, in combination with generalized myasthenia gravis symptoms (ptosis, diplopia, neck weakness, dysphagia and dyspnea).",
-            "Rippling muscle disease with myasthenia gravis is a rare, acquired, neuromuscular disease characterised by CAV3 mutation-negative rippling muscle disease in association with acetylcholine receptor antibody-mediated myasthenia gravis. Patients typically present exercise-induced, electrically silent muscle rippling with myalgia, in combination with generalised myasthenia gravis symptoms (ptosis, diplopia, neck weakness, dysphagia and dyspnoea).",
-            "Rippling muscle disease with myasthenia gravis",
-            "Acquired rippling muscle disease",
-            "Immune-mediated rippling muscle disease"
+            "Edrophonium chloride test for myasthenia gravis",
+            "Edrophonium chloride test for myasthenia gravis (procedure)"
           ]
         }
       ]
@@ -11748,23 +11527,23 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "123791008",
-          "display": "Fibrinogen in blood above reference range",
+          "code": "39847004",
+          "display": "Copper measurement",
           "synonyms": [
-            "Fibrinogen in blood above reference range",
-            "Fibrinogen in blood above reference range (finding)",
-            "Elevated fibrinogen level"
+            "Copper measurement",
+            "Copper measurement (procedure)",
+            "Copper level"
           ]
         },
         {
-          "code": "407151008",
-          "display": "Increased lead level",
+          "code": "933359971000036103",
+          "display": "Urine pre and post chelation therapy copper measurement",
           "synonyms": [
-            "Raised lead level",
-            "Elevated lead level",
-            "Lead level above reference range",
-            "Increased lead level",
-            "Lead level above reference range (finding)"
+            "Urine pre and post chelation therapy copper screen",
+            "Urine pre and post chelation therapy copper level",
+            "Measurement of copper in urine specimen pre and post chelation therapy",
+            "Measurement of copper in urine specimen pre and post chelation therapy (procedure)",
+            "Urine pre and post chelation therapy copper measurement"
           ]
         }
       ]
@@ -12904,23 +12683,21 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "1296527009",
-          "display": "Cystic fibrosis due to heterozygous deltaF508 mutation",
+          "code": "444260001",
+          "display": "Cystic fibrosis 20 common mutation test",
           "synonyms": [
-            "Cystic fibrosis due to heterozygous deltaF508 mutation",
-            "Cystic fibrosis due to heterozygous deltaF508 mutation (disorder)",
-            "DeltaF508 heterozygous mucoviscidosis",
-            "DeltaF508 heterozygous cystic fibrosis"
+            "Cystic fibrosis 20 common mutation test",
+            "Screen for 20 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique (procedure)",
+            "Screen for 20 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique"
           ]
         },
         {
-          "code": "1296528004",
-          "display": "Cystic fibrosis due to homozygous deltaF508 mutation",
+          "code": "443530000",
+          "display": "Cystic fibrosis 29 common mutation test",
           "synonyms": [
-            "Cystic fibrosis due to homozygous deltaF508 mutation (disorder)",
-            "Cystic fibrosis due to homozygous deltaF508 mutation",
-            "DeltaF508 homozygous cystic fibrosis",
-            "DeltaF508 homozygous mucoviscidosis"
+            "Screen for 29 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique (procedure)",
+            "Screen for 29 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique",
+            "Cystic fibrosis 29 common mutation test"
           ]
         }
       ]
@@ -13734,13 +13511,13 @@
           ]
         },
         {
-          "code": "301007008",
-          "display": "Gastro-oesophageal erosion",
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
           "synonyms": [
-            "Gastroesophageal erosion",
-            "Gastro-esophageal erosion",
-            "Gastro-oesophageal erosion",
-            "Gastroesophageal erosion (disorder)"
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
           ]
         }
       ]
@@ -14040,7 +13817,18 @@
         ]
       },
       "suggested_action": "plausible \u2014 confirm",
-      "other_hits": []
+      "other_hits": [
+        {
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+          "synonyms": [
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
+          ]
+        }
+      ]
     },
     {
       "condition": "HER2 positive adenocarcinoma of the stomach",
@@ -14418,20 +14206,20 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "1186880002",
-          "display": "Dementia due to cobalamin deficiency",
+          "code": "1251399006",
+          "display": "Alopecia due to iron deficiency",
           "synonyms": [
-            "Dementia due to cobalamin deficiency (disorder)",
-            "Dementia due to cobalamin deficiency",
-            "Dementia due to vitamin B12 deficiency"
+            "Alopecia due to iron deficiency",
+            "Alopecia due to iron deficiency (disorder)"
           ]
         },
         {
-          "code": "1186879000",
-          "display": "Dementia due to thiamine deficiency",
+          "code": "111574001",
+          "display": "Anaemia due to copper deficiency",
           "synonyms": [
-            "Dementia due to thiamine deficiency",
-            "Dementia due to thiamine deficiency (disorder)"
+            "Anemia due to copper deficiency",
+            "Anemia due to copper deficiency (disorder)",
+            "Anaemia due to copper deficiency"
           ]
         }
       ]
@@ -14647,54 +14435,6 @@
             "Metastatic malignant neoplasm to female genital organ",
             "Metastatic malignant neoplasm of female genital organ",
             "Metastasis to female genital organ"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Inborn errors of protein metabolism",
-      "top_hit": {
-        "code": "86095007",
-        "display": "Inborn error of metabolism",
-        "synonyms": [
-          "Inborn error of metabolism",
-          "Inborn error of metabolism (disorder)",
-          "IBEM - Inborn error of metabolism",
-          "IEM - Inborn error of metabolism"
-        ]
-      },
-      "parents": [
-        {
-          "code": "66091009",
-          "display": "Congenital disease"
-        },
-        {
-          "code": "1821000146108",
-          "display": "Hereditary metabolic disease"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": []
-      },
-      "suggested_action": "plausible \u2014 confirm",
-      "other_hits": [
-        {
-          "code": "72262000",
-          "display": "Inborn error of glutathione metabolism",
-          "synonyms": [
-            "Inborn error of glutathione metabolism",
-            "Inborn error of glutathione metabolism (disorder)"
-          ]
-        },
-        {
-          "code": "43465001",
-          "display": "Inborn error of lipoprotein metabolism",
-          "synonyms": [
-            "Inborn error of lipoprotein metabolism",
-            "Inborn error of lipoprotein metabolism (disorder)"
           ]
         }
       ]
@@ -15021,6 +14761,65 @@
           "synonyms": [
             "Primary non-small cell lung cancer (disorder)",
             "Primary non-small cell lung cancer"
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "Local intra-articular or peri-articular infiltration",
+      "top_hit": {
+        "code": "1781000032103",
+        "display": "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments",
+        "synonyms": [
+          "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments (procedure)",
+          "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments"
+        ]
+      },
+      "parents": [
+        {
+          "code": "73231008",
+          "display": "Internal fixation of tibia"
+        },
+        {
+          "code": "91101005",
+          "display": "Operation on ligament"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": [
+          "Internal",
+          "fixation",
+          "fracture",
+          "tibial",
+          "surface",
+          "knee",
+          "with",
+          "repair",
+          "reconstruction",
+          "ligaments"
+        ]
+      },
+      "suggested_action": "plausible \u2014 confirm",
+      "other_hits": [
+        {
+          "code": "1771000032100",
+          "display": "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments",
+          "synonyms": [
+            "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments",
+            "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments (procedure)"
+          ]
+        },
+        {
+          "code": "768934004",
+          "display": "Intraneural perineurioma",
+          "synonyms": [
+            "Intraneural perineurioma",
+            "Intraneural perineurioma is a rare tumor of cranial and spinal nerves arising from peripheral nerve sheath and composed exclusively or predominantly of cells showing perineurial differentiation. It presents as a localized, tubular or fusiform enlargement of a nerve or nerve segment, usually in the extremities or the trunk, associated with a motor-predominant mononeuropathy including slow, painless, gradual loss of motor function in the involved nerve trunk with muscle weakness and atrophy and, rarely, sensory dysfunction. Cranial nerve involvement is rare.",
+            "Intraneural perineurioma is a rare tumour of cranial and spinal nerves arising from peripheral nerve sheath and composed exclusively or predominantly of cells showing perineurial differentiation. It presents as a localised, tubular or fusiform enlargement of a nerve or nerve segment, usually in the extremities or the trunk, associated with a motor-predominant mononeuropathy including slow, painless, gradual loss of motor function in the involved nerve trunk with muscle weakness and atrophy and, rarely, sensory dysfunction. Cranial nerve involvement is rare.",
+            "Intraneural perineurioma (disorder)"
           ]
         }
       ]
@@ -15378,6 +15177,14 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
+          "code": "386490009",
+          "display": "Urinary retention care",
+          "synonyms": [
+            "Urinary retention care",
+            "Urinary retention care (regime/therapy)"
+          ]
+        },
+        {
           "code": "236648008",
           "display": "Acute retention of urine",
           "synonyms": [
@@ -15385,16 +15192,6 @@
             "ARU - Acute retention of urine",
             "Acute urinary retention",
             "Acute retention of urine (disorder)"
-          ]
-        },
-        {
-          "code": "398064005",
-          "display": "Neurogenic bladder",
-          "synonyms": [
-            "Neurogenic urinary bladder",
-            "Neurogenic bladder",
-            "Neurogenic urinary bladder (finding)",
-            "Neuropathic bladder"
           ]
         }
       ]
@@ -15805,6 +15602,91 @@
       ]
     },
     {
+      "condition": "Patients requiring administration of fluorouracil by intravenous infusion",
+      "top_hit": {
+        "code": "116792006",
+        "display": "Intravenous infusion of cytomegalovirus immunoglobulin",
+        "synonyms": [
+          "Intravenous infusion of Cytomegalovirus immune globulin",
+          "Administration of Cytomegalovirus immune globulin, Intravenous",
+          "Intravenous infusion of cytomegalovirus immunoglobulin",
+          "Intravenous infusion of Cytomegalovirus immune globulin (procedure)",
+          "Intravenous infusion of CMV (cytomegalovirus) immunoglobulin",
+          "CMV (cytomegalovirus) immunoglobulin administration by intravenous infusion",
+          "Cytomegalovirus immune globulin administration by intravenous infusion"
+        ]
+      },
+      "parents": [
+        {
+          "code": "116790003",
+          "display": "Administration of Cytomegalovirus immunoglobulin, human"
+        },
+        {
+          "code": "698802001",
+          "display": "Administration of immunoglobulin by intravenous route"
+        },
+        {
+          "code": "432054008",
+          "display": "Infusion of drug or medicament via intravenous route"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": [
+          "cytomegalovirus",
+          "immunoglobulin"
+        ]
+      },
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
+      "other_hits": [],
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
+    },
+    {
+      "condition": "Patients requiring administration of fluorouracil by intravenous injection",
+      "top_hit": {
+        "code": "1230099001",
+        "display": "Preparation of injection for self administration by subject",
+        "synonyms": [
+          "Preparation of injection for self administration by subject (regime/therapy)",
+          "Preparation, adjustment and disposal of an injection intended for self-administration by the patient.",
+          "Preparation of injection for self administration by subject",
+          "Preparation of self-injection"
+        ]
+      },
+      "parents": [
+        {
+          "code": "443425001",
+          "display": "Preparation for procedure"
+        }
+      ],
+      "signals": {
+        "off_domain": false,
+        "parent_better": false,
+        "narrower": false,
+        "adds_words": [
+          "Preparation",
+          "for",
+          "self",
+          "subject"
+        ]
+      },
+      "suggested_action": "REJECT \u2014 wrong hierarchy for this wording",
+      "other_hits": [
+        {
+          "code": "898143001",
+          "display": "Home parenteral therapy",
+          "synonyms": [
+            "Care provided in the home for the delivery of parenteral drug or hydration therapy for patients with acute, chronic or terminal illnesses. Parenteral therapy is administered intravenously or by injection through the skin.",
+            "Home parenteral therapy",
+            "Home parenteral therapy (regime/therapy)"
+          ]
+        }
+      ],
+      "structural_note": "PBS wording names an INTERVENTION. Re-search under <<71388002 Procedure."
+    },
+    {
       "condition": "Patients unable to take a solid dose form of an ACE inhibitor",
       "top_hit": {
         "code": "1303415000",
@@ -15852,17 +15734,17 @@
     {
       "condition": "Peri-articular infiltration",
       "top_hit": {
-        "code": "255128001",
-        "display": "Malignant infiltration of peripheral nerve",
+        "code": "231329004",
+        "display": "Peribulbar infiltration",
         "synonyms": [
-          "Malignant infiltration of peripheral nerve (disorder)",
-          "Malignant infiltration of peripheral nerve"
+          "Peribulbar infiltration",
+          "Peribulbar infiltration (procedure)"
         ]
       },
       "parents": [
         {
-          "code": "254986007",
-          "display": "Malignant neoplasm of peripheral nerve"
+          "code": "231327002",
+          "display": "Ophthalmological infiltrations"
         }
       ],
       "signals": {
@@ -15870,28 +15752,28 @@
         "parent_better": false,
         "narrower": false,
         "adds_words": [
-          "Malignant",
-          "peripheral",
-          "nerve"
+          "Peribulbar"
         ]
       },
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "782865007",
-          "display": "Eosinophilia of peritoneal fluid",
+          "code": "408803000",
+          "display": "Perineal infiltration with local anaesthetic",
           "synonyms": [
-            "Eosinophilia of peritoneal fluid",
-            "Eosinophilia of peritoneal fluid (finding)",
-            "Eosinophilic infiltration of peritoneal cavity"
+            "Infiltration of perineum with local anaesthetic",
+            "Infiltration of perineum with local anesthetic (procedure)",
+            "Perineal infiltration with local anaesthetic",
+            "Perineal infiltration with local anesthetic",
+            "Infiltration of perineum with local anesthetic"
           ]
         },
         {
-          "code": "255129009",
-          "display": "Malignant infiltration of peripheral nerve plexus",
+          "code": "255128001",
+          "display": "Malignant infiltration of peripheral nerve",
           "synonyms": [
-            "Malignant infiltration of peripheral nerve plexus (disorder)",
-            "Malignant infiltration of peripheral nerve plexus"
+            "Malignant infiltration of peripheral nerve (disorder)",
+            "Malignant infiltration of peripheral nerve"
           ]
         }
       ]
@@ -16078,22 +15960,21 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "707218004",
-          "display": "Bone density above reference range",
+          "code": "312681000",
+          "display": "Bone density scan",
           "synonyms": [
-            "Bone density above reference range (finding)",
-            "Bone density high",
-            "Bone density above reference range"
+            "Bone density scan (procedure)",
+            "Bone density scan"
           ]
         },
         {
-          "code": "449781000",
-          "display": "Bone density below reference range",
+          "code": "22059005",
+          "display": "CT bone density",
           "synonyms": [
-            "Bone density below reference range",
-            "Bone density below normal",
-            "Bone density below reference range (finding)",
-            "Bone density low"
+            "Computed tomography bone density study",
+            "Computed tomography bone density study (procedure)",
+            "QCT (quantitative computed tomography) of bone density",
+            "CT bone density"
           ]
         }
       ]
@@ -16490,6 +16371,15 @@
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
+          "code": "838351000000107",
+          "display": "Education about risk of malignant neoplasm of breast",
+          "synonyms": [
+            "Education about risk of malignant neoplasm of breast (procedure)",
+            "Education about risk of malignant neoplasm of breast",
+            "Education about risk of breast cancer"
+          ]
+        },
+        {
           "code": "254837009",
           "display": "Malignant neoplasm of breast",
           "synonyms": [
@@ -16498,14 +16388,6 @@
             "Malignant neoplasm of breast",
             "Breast cancer",
             "Malignant tumor of breast"
-          ]
-        },
-        {
-          "code": "254843006",
-          "display": "Familial cancer of breast",
-          "synonyms": [
-            "Familial cancer of breast",
-            "Familial cancer of breast (disorder)"
           ]
         }
       ]
@@ -16601,11 +16483,11 @@
           ]
         },
         {
-          "code": "66276000",
-          "display": "Organ or tissue vascular perfusion increased",
+          "code": "30700006",
+          "display": "Excision of transplanted tissue or organ",
           "synonyms": [
-            "Organ or tissue vascular perfusion increased (finding)",
-            "Organ or tissue vascular perfusion increased"
+            "Excision of transplanted tissue or organ (procedure)",
+            "Excision of transplanted tissue or organ"
           ]
         }
       ]
@@ -18207,18 +18089,18 @@
     {
       "condition": "Use in patients receiving palliative care",
       "top_hit": {
-        "code": "1602131000168109",
-        "display": "Substance use therapy program participation",
+        "code": "225967005",
+        "display": "Self-care patient education",
         "synonyms": [
-          "Patient participation in substance use therapy program (finding)",
-          "Patient participation in substance use therapy program",
-          "Substance use therapy program participation"
+          "Self-care patient education",
+          "Self-care patient education (procedure)",
+          "Patient education in self-care"
         ]
       },
       "parents": [
         {
-          "code": "1602061000168100",
-          "display": "Health program participation"
+          "code": "311401005",
+          "display": "Patient education"
         }
       ],
       "signals": {
@@ -18226,29 +18108,28 @@
         "parent_better": false,
         "narrower": false,
         "adds_words": [
-          "Substance",
-          "therapy",
-          "program",
-          "participation"
+          "Self",
+          "education"
         ]
       },
       "suggested_action": "plausible \u2014 confirm",
       "other_hits": [
         {
-          "code": "713835001",
-          "display": "Declined consent for use of patient data in risk stratification for unplanned hospital admission",
+          "code": "718904006",
+          "display": "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period)",
           "synonyms": [
-            "Declined consent for use of patient data in risk stratification for unplanned hospital admission",
-            "Declined consent for use of patient data in risk stratification for unplanned hospital admission (finding)"
+            "Assessment using IPOS (Integrated Palliative care Outcome Scale) Patient Version (1 week recall period)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period) (procedure)"
           ]
         },
         {
-          "code": "722077007",
-          "display": "Renal papillary necrosis caused by analgesic drug",
+          "code": "718899007",
+          "display": "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period)",
           "synonyms": [
-            "Renal papillary necrosis in a patient with a long history of regular analgesic drug use.",
-            "Renal papillary necrosis caused by analgesic drug (disorder)",
-            "Renal papillary necrosis caused by analgesic drug"
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period) (procedure)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period)",
+            "Assessment using IPOS (Integrated Palliative care Outcome Scale) Patient Version (3 day recall period)"
           ]
         }
       ]
@@ -18453,6 +18334,6 @@
       ]
     }
   ],
-  "warning": "Signals are LEXICAL triage only. The 'plausible' tier is NOT a safe tier: 'Diarrhoea of greater than 2 weeks duration' scored plausible against 'Gestation greater than 20 weeks' because they share words. No candidate should be bound without human review.",
-  "quarantined": 15
+  "quarantined": 15,
+  "warning": "Signals are LEXICAL triage, not verdicts. The 'plausible' tier is NOT safe: of 16 quarantined pregnancy candidates reviewed by hand, 6 carried no flag at all and every one was wrong."
 }

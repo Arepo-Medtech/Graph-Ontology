@@ -1,12 +1,14 @@
 {
   "source": "NCTS Ontoserver, SNOMED CT-AU 20260731 (pinned)",
   "binding_policy": "exact or normalised display only; ranked hits are candidates, not bindings",
+  "binding_policy_v2": "exact/normalised match on display or designation, in <<404684003 OR <<71388002, AND the concept must have a parent (orphan = retired = rejected)",
   "counts": {
-    "exact": 253,
+    "exact": 258,
     "normalised": 6,
-    "candidate": 349,
-    "unmatched": 31,
+    "candidate": 346,
+    "unmatched": 29,
     "unvalidated": 0,
+    "retired": 0,
     "total": 639
   },
   "results": [
@@ -48,7 +50,8 @@
         "concept_id": "195967001",
         "display": "Asthma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -57,7 +60,8 @@
         "concept_id": "156370009",
         "display": "Psoriatic arthritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -66,7 +70,8 @@
         "concept_id": "64766004",
         "display": "Ulcerative colitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -75,7 +80,8 @@
         "concept_id": "69896004",
         "display": "Rheumatoid arthritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -84,7 +90,8 @@
         "concept_id": "34000006",
         "display": "Crohn's disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -93,7 +100,8 @@
         "concept_id": "410502007",
         "display": "Juvenile idiopathic arthritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -102,7 +110,8 @@
         "concept_id": "9631008",
         "display": "Ankylosing spondylitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -111,7 +120,8 @@
         "concept_id": "11399002",
         "display": "Pulmonary arterial hypertension",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -120,7 +130,8 @@
         "concept_id": "254637007",
         "display": "Non-small cell lung cancer",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -129,7 +140,8 @@
         "concept_id": "109989006",
         "display": "Multiple myeloma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -138,7 +150,8 @@
         "concept_id": "49049000",
         "display": "Parkinson's disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -147,7 +160,8 @@
         "concept_id": "190905008",
         "display": "Cystic fibrosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -156,7 +170,8 @@
         "concept_id": "14760008",
         "display": "Constipation",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -165,7 +180,8 @@
         "concept_id": "254837009",
         "display": "Malignant neoplasm of breast",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -213,7 +229,8 @@
         "concept_id": "92818009",
         "display": "Chronic myeloid leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -222,7 +239,8 @@
         "concept_id": "1963002",
         "display": "Paroxysmal nocturnal haemoglobinuria",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -231,7 +249,8 @@
         "concept_id": "713777005",
         "display": "Non-radiographic axial spondyloarthritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -240,7 +259,8 @@
         "concept_id": "16932000",
         "display": "Nausea and vomiting",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -249,7 +269,8 @@
         "concept_id": "86406008",
         "display": "HIV infection",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -258,7 +279,8 @@
         "concept_id": "5262007",
         "display": "Spinal muscular atrophy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -272,7 +294,8 @@
         "concept_id": "59393003",
         "display": "Hidradenitis suppurativa",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -316,7 +339,8 @@
         "concept_id": "44054006",
         "display": "Type 2 diabetes",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -362,7 +386,8 @@
         "concept_id": "22253000",
         "display": "Pain",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -371,7 +396,8 @@
         "concept_id": "91861009",
         "display": "Acute myeloid leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -454,7 +480,8 @@
         "concept_id": "24700007",
         "display": "Multiple sclerosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -463,7 +490,8 @@
         "concept_id": "13645005",
         "display": "COPD",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -472,7 +500,8 @@
         "concept_id": "1286877004",
         "display": "Colorectal cancer",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -481,7 +510,8 @@
         "concept_id": "789660001",
         "display": "Atypical haemolytic uraemic syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -571,7 +601,8 @@
         "concept_id": "201796004",
         "display": "Systemic onset juvenile chronic arthritis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -580,7 +611,8 @@
         "concept_id": "74107003",
         "display": "Acromegaly",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -697,7 +729,8 @@
         "concept_id": "302215000",
         "display": "Thrombocytopenia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -706,7 +739,8 @@
         "concept_id": "48447003",
         "display": "Chronic heart failure",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -715,7 +749,8 @@
         "concept_id": "372244006",
         "display": "Malignant melanoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -724,7 +759,8 @@
         "concept_id": "58214004",
         "display": "Schizophrenia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -733,7 +769,8 @@
         "concept_id": "64859006",
         "display": "Osteoporosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -881,7 +918,8 @@
         "concept_id": "450845009",
         "display": "Primary nocturnal enuresis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -890,7 +928,8 @@
         "concept_id": "406506008",
         "display": "Attention deficit hyperactivity disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1184,19 +1223,19 @@
           ]
         },
         {
+          "code": "443749004",
+          "display": "Assessment of risk of venous thromboembolism",
+          "synonyms": [
+            "Assessment of risk of venous thromboembolism (procedure)",
+            "Assessment of risk of venous thromboembolism"
+          ]
+        },
+        {
           "code": "711328005",
           "display": "At high risk of venous thromboembolism",
           "synonyms": [
             "At high risk of venous thromboembolism",
             "At high risk of venous thromboembolism (finding)"
-          ]
-        },
-        {
-          "code": "699035003",
-          "display": "At low risk of venous thromboembolism",
-          "synonyms": [
-            "At low risk of venous thromboembolism (finding)",
-            "At low risk of venous thromboembolism"
           ]
         }
       ]
@@ -1207,7 +1246,8 @@
         "concept_id": "235595009",
         "display": "Gastro-oesophageal reflux disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1254,7 +1294,8 @@
         "concept_id": "235599003",
         "display": "Eosinophilic oesophagitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1452,7 +1493,8 @@
         "concept_id": "40733004",
         "display": "Infection",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1461,7 +1503,8 @@
         "concept_id": "20165001",
         "display": "Hyperphosphataemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1503,7 +1546,8 @@
         "concept_id": "38825009",
         "display": "Deficiency of testosterone biosynthesis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1512,7 +1556,8 @@
         "concept_id": "129103003",
         "display": "Endometriosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1521,7 +1566,8 @@
         "concept_id": "21897009",
         "display": "Generalised anxiety disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1530,7 +1576,8 @@
         "concept_id": "11381005",
         "display": "Acne",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1539,7 +1586,8 @@
         "concept_id": "25501002",
         "display": "Social phobia",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1609,7 +1657,8 @@
         "concept_id": "109969005",
         "display": "Diffuse non-Hodgkin's lymphoma, large cell",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1618,7 +1667,8 @@
         "concept_id": "389145006",
         "display": "Allergic asthma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1627,7 +1677,8 @@
         "concept_id": "16652001",
         "display": "Fabry's disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1670,40 +1721,19 @@
         "concept_id": "38341003",
         "display": "Hypertension",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Major depression",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "87512008",
-          "display": "Mild major depression",
-          "synonyms": [
-            "Mild major depression",
-            "Mild major depression (disorder)"
-          ]
-        },
-        {
-          "code": "720455008",
-          "display": "Minimal major depression",
-          "synonyms": [
-            "Minimal major depression",
-            "Minimal major depression (disorder)"
-          ]
-        },
-        {
-          "code": "832007",
-          "display": "Moderate major depression",
-          "synonyms": [
-            "Moderate major depression",
-            "Moderate major depression (disorder)"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "370143000",
+        "display": "Major depressive disorder",
+        "method": "exact_synonym",
+        "query_tier": "full",
+        "parent_verified": true
+      }
     },
     {
       "condition": "Chronic arthropathies",
@@ -1860,7 +1890,8 @@
         "concept_id": "56294008",
         "display": "Nicotine dependence",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -1977,27 +2008,16 @@
       "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
       "snomed": null,
       "method": "candidate_unconfirmed",
-      "query_tier": "stemmed",
+      "query_tier": "full",
       "candidates": [
         {
-          "code": "778050009",
-          "display": "Idiopathic eosinophilic myositis",
+          "code": "1200271000168100",
+          "display": "Vaccination of Aboriginal or Torres Strait Islander person",
           "synonyms": [
-            "Idiopathic eosinophilic myositis (disorder)",
-            "Idiopathic eosinophilic myositis",
-            "Idiopathic eosinophilia-associated myopathy",
-            "A rare idiopathic inflammatory myopathy characterised by eosinophilic infiltration and inflammatory lesions of the skeletal muscle tissue, in the absence of an identifiable causative factor (e.g. parasitic infection, drug intake, systemic or malignant disease). Clinically patients may present focal or generalised muscle weakness and pain, difficulties to walk, motor clumsiness and/or mild bilateral Achilles tendon contracture, as well as elevated serum creatine kinase levels and peripheral blood and/or bone marrow hypereosinophilia.",
-            "A rare idiopathic inflammatory myopathy characterized by eosinophilic infiltration and inflammatory lesions of the skeletal muscle tissue, in the absence of an identifiable causative factor (e.g. parasitic infection, drug intake, systemic or malignant disease). Clinically patients may present focal or generalized muscle weakness and pain, difficulties to walk, motor clumsiness and/or mild bilateral Achilles tendon contracture, as well as elevated serum creatine kinase levels and peripheral blood and/or bone marrow hypereosinophilia."
-          ]
-        },
-        {
-          "code": "1332134000",
-          "display": "Maculopapular cutaneous mastocytosis",
-          "synonyms": [
-            "Maculopapular cutaneous mastocytosis",
-            "A form of cutaneous mastocytosis (CM) characterised by the presence of multiple hyperpigmented macules, papules or nodules associated with abnormal accumulation of mast cells in the skin. Most patients present in infancy or childhood, but onset may also occur in adulthood. Mutations in the KIT gene (4q11-q12) have been identified however this mutation is rare in the paediatric population and the aetiology and pathogenesis in these cases remains to be determined. The disease generally occurs sporadically but rare familial cases have been reported.",
-            "Maculopapular cutaneous mastocytosis (disorder)",
-            "A form of cutaneous mastocytosis (CM) characterized by the presence of multiple hyperpigmented macules, papules or nodules associated with abnormal accumulation of mast cells in the skin. Most patients present in infancy or childhood, but onset may also occur in adulthood. Mutations in the KIT gene (4q11-q12) have been identified however this mutation is rare in the pediatric population and the etiology and pathogenesis in these cases remains to be determined. The disease generally occurs sporadically but rare familial cases have been reported."
+            "Vaccination of Aboriginal or Torres Strait Islander person",
+            "Immunisation of Aboriginal or Torres Strait Islander person",
+            "Vaccination of Australian Aboriginal or Torres Strait Islander person (procedure)",
+            "Vaccination of Australian Aboriginal or Torres Strait Islander person"
           ]
         }
       ]
@@ -2026,13 +2046,13 @@
           ]
         },
         {
-          "code": "420505005",
-          "display": "Corneal endothelial allograft rejection",
+          "code": "175902000",
+          "display": "Cadaveric renal transplant",
           "synonyms": [
-            "Corneal endothelial allograft rejection",
-            "Endothelial corneal graft rejection",
-            "Endothelial corneal allograft rejection",
-            "Corneal endothelial allograft rejection (disorder)"
+            "Cadaveric renal transplant",
+            "Cadaveric renal transplant (procedure)",
+            "Cadaver renal allotransplant",
+            "Cadaver renal allograft"
           ]
         }
       ]
@@ -2081,7 +2101,8 @@
         "concept_id": "190687004",
         "display": "Phenylketonuria",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2090,7 +2111,8 @@
         "concept_id": "266569009",
         "display": "Benign prostatic hyperplasia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2142,7 +2164,8 @@
         "concept_id": "60380001",
         "display": "Narcolepsy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2183,7 +2206,8 @@
         "concept_id": "109995007",
         "display": "Myelodysplastic syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2192,7 +2216,8 @@
         "concept_id": "86406008",
         "display": "HIV infection",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2241,7 +2266,8 @@
         "concept_id": "193462001",
         "display": "Insomnia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2278,7 +2304,8 @@
         "concept_id": "46152009",
         "display": "Tear film insufficiency",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2366,7 +2393,8 @@
         "concept_id": "31712002",
         "display": "Primary biliary cholangitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2394,12 +2422,13 @@
           ]
         },
         {
-          "code": "1366366008",
-          "display": "Epileptic seizures induced by orgasm",
+          "code": "1366429001",
+          "display": "Epileptic seizures induced by music",
           "synonyms": [
-            "Epileptic seizures induced by orgasm",
-            "Epileptic seizures induced by orgasm (finding)",
-            "Reflex epileptic seizures which are consistently and reproducibly induced by orgasm."
+            "Epileptic seizures induced by music",
+            "Epileptic seizures induced by music (finding)",
+            "Reflex epileptic seizures which are consistently and reproducibly induced by music.",
+            "Musicogenic seizures"
           ]
         }
       ]
@@ -2445,7 +2474,8 @@
         "concept_id": "74162007",
         "display": "Progressive intrahepatic cholestasis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2566,7 +2596,8 @@
         "concept_id": "60737008",
         "display": "Iron overload",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2608,7 +2639,8 @@
         "concept_id": "402356004",
         "display": "Chronic graft-versus-host disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2617,7 +2649,8 @@
         "concept_id": "308121000",
         "display": "Follicular lymphoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2707,7 +2740,8 @@
         "concept_id": "232048009",
         "display": "Branch retinal vein occlusion with macular oedema",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2716,7 +2750,8 @@
         "concept_id": "232039004",
         "display": "Central retinal vein occlusion with macular oedema",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2725,7 +2760,8 @@
         "concept_id": "312912001",
         "display": "Macular oedema due to diabetes",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2770,7 +2806,8 @@
         "concept_id": "371631005",
         "display": "Panic disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2796,7 +2833,8 @@
         "concept_id": "75544000",
         "display": "Opioid dependence",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2805,7 +2843,8 @@
         "concept_id": "128053003",
         "display": "Deep venous thrombosis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2814,7 +2853,8 @@
         "concept_id": "59282003",
         "display": "Pulmonary embolism",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2823,7 +2863,8 @@
         "concept_id": "56038003",
         "display": "Staphylococcal infection",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2832,7 +2873,8 @@
         "concept_id": "86044005",
         "display": "Amyotrophic lateral sclerosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2959,7 +3001,8 @@
         "concept_id": "12584003",
         "display": "Bone pain",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -2968,7 +3011,8 @@
         "concept_id": "253005002",
         "display": "Vasoactive intestinal peptide-secreting tumour",
         "method": "normalised_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3047,7 +3091,8 @@
         "concept_id": "91478007",
         "display": "Secondary hyperparathyroidism",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3056,7 +3101,8 @@
         "concept_id": "302162004",
         "display": "Chronic idiopathic urticaria",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3219,7 +3265,8 @@
         "concept_id": "127225006",
         "display": "Chronic myelomonocytic leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3262,7 +3309,8 @@
         "concept_id": "47709007",
         "display": "Malignant hypercalcaemia",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3271,7 +3319,8 @@
         "concept_id": "5291005",
         "display": "Hypocalcaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3280,7 +3329,8 @@
         "concept_id": "397827003",
         "display": "Growth hormone deficiency",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3359,7 +3409,8 @@
         "concept_id": "34911001",
         "display": "Congenital hypoplasia of penis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3368,7 +3419,8 @@
         "concept_id": "786460007",
         "display": "Detrusor overactivity",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3377,7 +3429,8 @@
         "concept_id": "66931009",
         "display": "Hypercalcaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3391,7 +3444,8 @@
         "concept_id": "1255086008",
         "display": "Differentiated thyroid carcinoma",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3400,7 +3454,8 @@
         "concept_id": "236069009",
         "display": "Chronic constipation",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3409,7 +3464,8 @@
         "concept_id": "53132006",
         "display": "Zollinger-Ellison syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3418,7 +3474,8 @@
         "concept_id": "44635007",
         "display": "Faecal impaction",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3466,7 +3523,8 @@
         "concept_id": "33995003",
         "display": "Acquired megacolon",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3550,7 +3608,8 @@
         "concept_id": "14232007",
         "display": "Cryptococcal meningitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3577,13 +3636,12 @@
           ]
         },
         {
-          "code": "420505005",
-          "display": "Corneal endothelial allograft rejection",
+          "code": "86825002",
+          "display": "Chronic arterial allograft rejection",
           "synonyms": [
-            "Corneal endothelial allograft rejection",
-            "Endothelial corneal graft rejection",
-            "Endothelial corneal allograft rejection",
-            "Corneal endothelial allograft rejection (disorder)"
+            "Chronic arterial allograft rejection",
+            "Allograft arteriopathy",
+            "Chronic arterial allograft rejection (finding)"
           ]
         }
       ]
@@ -3679,7 +3737,8 @@
         "concept_id": "266609001",
         "display": "Female infertility of anovulatory origin",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3689,28 +3748,28 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "2904007",
-          "display": "Male infertility",
+          "code": "6738008",
+          "display": "Female infertility",
           "synonyms": [
-            "Male infertility (disorder)",
-            "Male infertility"
+            "Female infertility",
+            "Female infertility (disorder)"
           ]
         },
         {
-          "code": "236803007",
-          "display": "Oligosynaptic infertility",
+          "code": "389094009",
+          "display": "Infertility care",
           "synonyms": [
-            "Oligochiasmic infertility",
-            "Oligosynaptic infertility",
-            "Oligosynaptic infertility (disorder)"
+            "Infertility care",
+            "Infertility care (regime/therapy)",
+            "Family planning: infertility"
           ]
         },
         {
-          "code": "297106006",
-          "display": "Primary infertility",
+          "code": "386301001",
+          "display": "Infertility education",
           "synonyms": [
-            "Primary infertility",
-            "Primary infertility (finding)"
+            "Infertility education (procedure)",
+            "Infertility education"
           ]
         }
       ]
@@ -3721,7 +3780,8 @@
         "concept_id": "700250006",
         "display": "Idiopathic pulmonary fibrosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3886,7 +3946,8 @@
         "concept_id": "52985009",
         "display": "Chylous ascites",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3895,7 +3956,8 @@
         "concept_id": "109992005",
         "display": "Polycythaemia vera",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3922,7 +3984,8 @@
         "concept_id": "4740000",
         "display": "Herpes zoster",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3931,7 +3994,8 @@
         "concept_id": "109385007",
         "display": "Kaposi's sarcoma",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3940,7 +4004,8 @@
         "concept_id": "213148006",
         "display": "Transplanted organ rejection",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -3949,7 +4014,8 @@
         "concept_id": "9014002",
         "display": "Psoriasis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4032,7 +4098,8 @@
         "concept_id": "37796009",
         "display": "Migraine",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4041,7 +4108,8 @@
         "concept_id": "24079001",
         "display": "Atopic dermatitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4141,22 +4209,20 @@
           ]
         },
         {
+          "code": "413742003",
+          "display": "Cancer pain and symptom management",
+          "synonyms": [
+            "Cancer pain and symptom management (procedure)",
+            "Cancer pain and symptom management"
+          ]
+        },
+        {
           "code": "788891004",
           "display": "Chronic pain after cancer treatment",
           "synonyms": [
             "Chronic pain after cancer treatment (finding)",
             "Chronic post cancer treatment pain",
             "Chronic pain after cancer treatment"
-          ]
-        },
-        {
-          "code": "735935009",
-          "display": "Chronic pain due to malignant neoplastic disease",
-          "synonyms": [
-            "Chronic pain due to malignancy",
-            "Chronic pain due to malignant neoplastic disease",
-            "Chronic pain due to malignant neoplastic disease (finding)",
-            "Chronic cancer related pain"
           ]
         }
       ]
@@ -4252,7 +4318,8 @@
         "concept_id": "92814006",
         "display": "Chronic lymphocytic leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4261,7 +4328,8 @@
         "concept_id": "414941008",
         "display": "Onychomycosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4271,29 +4339,30 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "1602131000168109",
-          "display": "Substance use therapy program participation",
+          "code": "225967005",
+          "display": "Self-care patient education",
           "synonyms": [
-            "Patient participation in substance use therapy program (finding)",
-            "Patient participation in substance use therapy program",
-            "Substance use therapy program participation"
+            "Self-care patient education",
+            "Self-care patient education (procedure)",
+            "Patient education in self-care"
           ]
         },
         {
-          "code": "713835001",
-          "display": "Declined consent for use of patient data in risk stratification for unplanned hospital admission",
+          "code": "718904006",
+          "display": "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period)",
           "synonyms": [
-            "Declined consent for use of patient data in risk stratification for unplanned hospital admission",
-            "Declined consent for use of patient data in risk stratification for unplanned hospital admission (finding)"
+            "Assessment using IPOS (Integrated Palliative care Outcome Scale) Patient Version (1 week recall period)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (1 week recall period) (procedure)"
           ]
         },
         {
-          "code": "722077007",
-          "display": "Renal papillary necrosis caused by analgesic drug",
+          "code": "718899007",
+          "display": "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period)",
           "synonyms": [
-            "Renal papillary necrosis in a patient with a long history of regular analgesic drug use.",
-            "Renal papillary necrosis caused by analgesic drug (disorder)",
-            "Renal papillary necrosis caused by analgesic drug"
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period) (procedure)",
+            "Assessment using Integrated Palliative care Outcome Scale Patient Version (3 day recall period)",
+            "Assessment using IPOS (Integrated Palliative care Outcome Scale) Patient Version (3 day recall period)"
           ]
         }
       ]
@@ -4323,7 +4392,8 @@
         "concept_id": "427419006",
         "display": "Transformed migraine",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4350,14 +4420,12 @@
           ]
         },
         {
-          "code": "1010298008",
-          "display": "Fetal disorder due to maternal overweight",
+          "code": "1003728008",
+          "display": "Fetal disorder due to maternal hypertension",
           "synonyms": [
-            "Fetal disorder due to maternal overweight",
-            "Foetal disorder due to maternal overweight",
-            "Fetal disorder due to maternal overweight (disorder)",
-            "Fetal disorder due to overweight mother",
-            "Foetal disorder due to overweight mother"
+            "Fetal disorder due to maternal hypertension (disorder)",
+            "Foetal disorder due to maternal hypertension",
+            "Fetal disorder due to maternal hypertension"
           ]
         }
       ]
@@ -4408,7 +4476,8 @@
         "concept_id": "237816004",
         "display": "Central precocious puberty",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4489,33 +4558,29 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "1197675002",
+          "display": "Duodenitis due to vasculitis",
+          "synonyms": [
+            "Duodenitis due to vasculitis",
+            "Vasculitic duodenitis",
+            "Duodenitis due to vasculitis (disorder)"
+          ]
+        },
+        {
+          "code": "128191000",
+          "display": "Encephalomyelitis due to rubella",
+          "synonyms": [
+            "Encephalomyelitis due to rubella",
+            "Encephalomyelitis due to rubella (disorder)",
+            "Rubella encephalomyelitis"
+          ]
+        },
+        {
           "code": "14858001",
           "display": "Enophthalmos due to surgery",
           "synonyms": [
             "Enophthalmos due to surgery (disorder)",
             "Enophthalmos due to surgery"
-          ]
-        },
-        {
-          "code": "145621000146106",
-          "display": "Headache due to exertion",
-          "synonyms": [
-            "Headache provoked by physical exertion",
-            "Exertion-induced headache",
-            "Headache due to exertion (finding)",
-            "Headache on exertion",
-            "Headache due to exertion",
-            "Exertional headache"
-          ]
-        },
-        {
-          "code": "14900002",
-          "display": "Hypopituitarism due to radiotherapy",
-          "synonyms": [
-            "Hypopituitarism due to radiotherapy",
-            "Hypopituitarism due to radiotherapy (disorder)",
-            "Post-radiotherapy hypopituitarism",
-            "Radiotherapy-induced hypopituitarism"
           ]
         }
       ]
@@ -4585,7 +4650,8 @@
         "concept_id": "82236004",
         "display": "Familial x-linked hypophosphataemic vitamin D refractory rickets",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4594,7 +4660,8 @@
         "concept_id": "88616000",
         "display": "Acne vulgaris",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4603,7 +4670,8 @@
         "concept_id": "306058006",
         "display": "Aplastic anaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4612,7 +4680,8 @@
         "concept_id": "233947005",
         "display": "Chronic thromboembolic pulmonary hypertension",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4621,7 +4690,8 @@
         "concept_id": "92824003",
         "display": "Neurofibromatosis type 1",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4630,7 +4700,8 @@
         "concept_id": "63480004",
         "display": "Chronic bronchitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4677,7 +4748,8 @@
         "concept_id": "191736004",
         "display": "Obsessive-compulsive disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4686,7 +4758,8 @@
         "concept_id": "2089002",
         "display": "Paget's disease of bone",
         "method": "normalised_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4695,40 +4768,19 @@
         "concept_id": "394659003",
         "display": "Acute coronary syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Fungal infection",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "312150008",
-          "display": "Fungal cardiovascular infection",
-          "synonyms": [
-            "Fungal cardiovascular infection",
-            "Fungal cardiovascular infection (disorder)"
-          ]
-        },
-        {
-          "code": "312148000",
-          "display": "Fungal ear infection",
-          "synonyms": [
-            "Fungal ear infection",
-            "Fungal ear infection (disorder)"
-          ]
-        },
-        {
-          "code": "312151007",
-          "display": "Fungal musculoskeletal infection",
-          "synonyms": [
-            "Fungal musculoskeletal infection",
-            "Fungal musculoskeletal infection (disorder)"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "3218000",
+        "display": "Mycosis",
+        "method": "exact_synonym",
+        "query_tier": "full",
+        "parent_verified": true
+      }
     },
     {
       "condition": "Oesophageal candidiasis",
@@ -4782,7 +4834,8 @@
         "concept_id": "371596008",
         "display": "Bipolar I disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -4796,6 +4849,22 @@
       "method": "candidate_unconfirmed",
       "query_tier": "full",
       "candidates": [
+        {
+          "code": "1781000032103",
+          "display": "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments",
+          "synonyms": [
+            "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments (procedure)",
+            "Internal fixation of intra-articular fracture of tibial articular surface of knee with repair or reconstruction of ligaments"
+          ]
+        },
+        {
+          "code": "1771000032100",
+          "display": "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments",
+          "synonyms": [
+            "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments",
+            "Internal fixation of intra-articular fracture of femoral condyle and tibial articular surface of knee with repair or reconstruction of ligaments (procedure)"
+          ]
+        },
         {
           "code": "768934004",
           "display": "Intraneural perineurioma",
@@ -4814,7 +4883,8 @@
         "concept_id": "128473001",
         "display": "Uveitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5091,7 +5161,8 @@
         "concept_id": "40930008",
         "display": "Hypothyroidism",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5100,7 +5171,8 @@
         "concept_id": "60168000",
         "display": "Osteomyelitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5127,7 +5199,8 @@
         "concept_id": "192990004",
         "display": "Benign myoclonic epilepsy in infancy",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5241,15 +5314,11 @@
           ]
         },
         {
-          "code": "770596007",
-          "display": "Rippling muscle disease with myasthenia gravis",
+          "code": "33981001",
+          "display": "Edrophonium chloride test for myasthenia gravis",
           "synonyms": [
-            "Rippling muscle disease with myasthenia gravis (disorder)",
-            "Rippling muscle disease with myasthenia gravis is a rare, acquired, neuromuscular disease characterized by CAV3 mutation-negative rippling muscle disease in association with acetylcholine receptor antibody-mediated myasthenia gravis. Patients typically present exercise-induced, electrically silent muscle rippling with myalgia, in combination with generalized myasthenia gravis symptoms (ptosis, diplopia, neck weakness, dysphagia and dyspnea).",
-            "Rippling muscle disease with myasthenia gravis is a rare, acquired, neuromuscular disease characterised by CAV3 mutation-negative rippling muscle disease in association with acetylcholine receptor antibody-mediated myasthenia gravis. Patients typically present exercise-induced, electrically silent muscle rippling with myalgia, in combination with generalised myasthenia gravis symptoms (ptosis, diplopia, neck weakness, dysphagia and dyspnoea).",
-            "Rippling muscle disease with myasthenia gravis",
-            "Acquired rippling muscle disease",
-            "Immune-mediated rippling muscle disease"
+            "Edrophonium chloride test for myasthenia gravis",
+            "Edrophonium chloride test for myasthenia gravis (procedure)"
           ]
         }
       ]
@@ -5442,7 +5511,8 @@
         "concept_id": "83035003",
         "display": "Chylothorax",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5451,7 +5521,8 @@
         "concept_id": "392559009",
         "display": "Osteomalacia due to neoplasm",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5508,7 +5579,8 @@
         "concept_id": "68815009",
         "display": "SLE glomerulonephritis syndrome",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5596,7 +5668,8 @@
         "concept_id": "414916001",
         "display": "Obesity",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5641,7 +5714,8 @@
         "concept_id": "38394007",
         "display": "Chronic suppurative otitis media",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5706,7 +5780,8 @@
         "concept_id": "48694002",
         "display": "Anxiety",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5715,7 +5790,8 @@
         "concept_id": "35489007",
         "display": "Depression",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5724,7 +5800,8 @@
         "concept_id": "443487006",
         "display": "Mantle cell lymphoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5733,7 +5810,8 @@
         "concept_id": "68528007",
         "display": "Hyperphenylalaninaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5742,7 +5820,8 @@
         "concept_id": "128045006",
         "display": "Cellulitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5766,27 +5845,28 @@
           ]
         },
         {
-          "code": "771474005",
-          "display": "Gastric adenocarcinoma and proximal polyposis of stomach",
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
           "synonyms": [
-            "Familial fundic gland polyposis with gastric cancer",
-            "Gastric adenocarcinoma and proximal polyposis of the stomach (GAPPS) is a rare hereditary gastric cancer characterised by proximal gastric polyposis and increased risk of early-onset, intestinal-type adenocarcinoma of the gastric body, with no duodenal or colorectal polyposis.",
-            "Gastric adenocarcinoma and proximal polyposis of stomach (disorder)",
-            "GAPPS - gastric adenocarcinoma and proximal polyposis of stomach",
-            "Gastric adenocarcinoma and proximal polyposis of the stomach (GAPPS) is a rare hereditary gastric cancer characterized by proximal gastric polyposis and increased risk of early-onset, intestinal-type adenocarcinoma of the gastric body, with no duodenal or colorectal polyposis.",
-            "Gastric adenocarcinoma and proximal polyposis of stomach"
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
           ]
         },
         {
-          "code": "1197754004",
-          "display": "Congenital brachyoesophagus, intrathoracic stomach, vertebral anomalies syndrome",
+          "code": "1371342000",
+          "display": "Administration of prophylactic drug or medicament for gastro-oesophageal reflux disease",
           "synonyms": [
-            "A rare syndromic oesophageal malformation characterised by severe congenital brachyoesophagus with midline diaphragmatic hernia and secondary intrathoracic stomach, and vertebral anomalies (in particular rachischisis of the cervical/thoracic spine). Additional reported manifestations include intrauterine growth restriction, short neck, intestinal malrotation, herniation of other abdominal organs, and cleft lip, among others. The condition is mostly fatal in the neonatal or early infantile period.",
-            "Congenital brachyoesophagus, intrathoracic stomach, vertebral anomalies syndrome",
-            "Serpentine-like syndrome",
-            "A rare syndromic esophageal malformation characterized by severe congenital brachyesophagus with midline diaphragmatic hernia and secondary intrathoracic stomach, and vertebral anomalies (in particular rachischisis of the cervical/thoracic spine). Additional reported manifestations include intrauterine growth restriction, short neck, intestinal malrotation, herniation of other abdominal organs, and cleft lip, among others. The condition is mostly fatal in the neonatal or early infantile period.",
-            "Congenital brachyesophagus, intrathoracic stomach, vertebral anomalies syndrome",
-            "Congenital brachyesophagus, intrathoracic stomach, vertebral anomalies syndrome (disorder)"
+            "Administration of prophylactic drug or medicament for gastroesophageal reflux disease",
+            "Gastro-oesophageal reflux prophylaxis",
+            "GORD (gastroesophageal reflux disease) prophylaxis",
+            "Administration of prophylactic drug or medicament for gastroesophageal reflux disease (procedure)",
+            "GERD (gastroesophageal reflux disease) prophylaxis",
+            "GERD (gastro-oesophageal reflux disease) prophylaxis",
+            "Gastroesophageal reflux prophylaxis",
+            "Administration of prophylactic drug or medicament for gastro-oesophageal reflux disease",
+            "GORD (gastro-oesophageal reflux disease) prophylaxis"
           ]
         }
       ]
@@ -5797,7 +5877,8 @@
         "concept_id": "765330003",
         "display": "Autosomal dominant polycystic kidney disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5820,20 +5901,20 @@
           ]
         },
         {
-          "code": "1186880002",
-          "display": "Dementia due to cobalamin deficiency",
+          "code": "1251399006",
+          "display": "Alopecia due to iron deficiency",
           "synonyms": [
-            "Dementia due to cobalamin deficiency (disorder)",
-            "Dementia due to cobalamin deficiency",
-            "Dementia due to vitamin B12 deficiency"
+            "Alopecia due to iron deficiency",
+            "Alopecia due to iron deficiency (disorder)"
           ]
         },
         {
-          "code": "1186879000",
-          "display": "Dementia due to thiamine deficiency",
+          "code": "111574001",
+          "display": "Anaemia due to copper deficiency",
           "synonyms": [
-            "Dementia due to thiamine deficiency",
-            "Dementia due to thiamine deficiency (disorder)"
+            "Anemia due to copper deficiency",
+            "Anemia due to copper deficiency (disorder)",
+            "Anaemia due to copper deficiency"
           ]
         }
       ]
@@ -5844,7 +5925,8 @@
         "concept_id": "90688005",
         "display": "Chronic renal failure",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -5853,15 +5935,14 @@
         "concept_id": "918591000168102",
         "display": "Antiretroviral pre-exposure prophylaxis for HIV infection",
         "method": "manual_correction_procedure_hierarchy",
-        "state": "corrected_pending_attestation",
-        "corrected_utc": "2026-09-21T11:57:00.778918+00:00",
+        "corrected_utc": "2026-09-21",
         "corrected_from": {
           "concept_id": "91948008",
           "display": "Asymptomatic HIV infection in pregnancy",
-          "why_wrong": "Inverts the clinical situation. PrEP is given to people WITHOUT HIV; this concept asserts established infection, and in pregnancy."
+          "why_wrong": "Inverts the clinical situation. PrEP is given to people WITHOUT HIV; this concept asserts established infection, in pregnancy."
         },
-        "why": "PBS wording names an intervention, not a finding. 918591000168102 is an Australian extension concept (namespace 1000168) under 897017002 Antiviral prophylaxis, and matches the PBS indication wording directly.",
-        "found_by": "searched <<71388002 Procedure; the binder had constrained every query to <<404684003 Clinical finding, so this concept was unreachable"
+        "why": "PBS wording names an intervention. 918591000168102 is an Australian extension concept (namespace 1000168) under 897017002 Antiviral prophylaxis. The binder leaves it a candidate because the PBS phrasing 'against human immunodeficiency virus infection' is not an exact match for 'for HIV infection' \u2014 a judgement call, so it is recorded here rather than auto-bound.",
+        "state": "corrected_pending_attestation"
       },
       "query_tier": "full"
     },
@@ -5924,7 +6005,8 @@
         "concept_id": "276799004",
         "display": "Dermatofibrosarcoma protuberans",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6079,7 +6161,8 @@
         "concept_id": "706970001",
         "display": "Triple negative malignant neoplasm of breast",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6098,21 +6181,21 @@
           ]
         },
         {
+          "code": "1332170002",
+          "display": "Venous ulcer of calf",
+          "synonyms": [
+            "Venous ulcer of calf (disorder)",
+            "Venous ulcer of calf",
+            "Stasis ulcer of calf"
+          ]
+        },
+        {
           "code": "1332165009",
           "display": "Venous ulcer of foot",
           "synonyms": [
             "Venous ulcer of foot",
             "Venous ulcer of foot (disorder)",
             "Stasis ulcer of foot"
-          ]
-        },
-        {
-          "code": "1332166005",
-          "display": "Venous ulcer of heel",
-          "synonyms": [
-            "Stasis ulcer of heel",
-            "Venous ulcer of heel",
-            "Venous ulcer of heel (disorder)"
           ]
         }
       ]
@@ -6258,7 +6341,8 @@
         "concept_id": "254651007",
         "display": "Squamous cell carcinoma of skin",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6300,7 +6384,8 @@
         "concept_id": "1285576009",
         "display": "Chronic rhinosinusitis with multiple nasal polyps",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6309,7 +6394,8 @@
         "concept_id": "86268005",
         "display": "Achondroplasia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6318,7 +6404,8 @@
         "concept_id": "66590003",
         "display": "Alcohol dependence",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6366,7 +6453,8 @@
         "concept_id": "414341000",
         "display": "Giant cell arteritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6442,7 +6530,8 @@
         "concept_id": "399357009",
         "display": "Thiamin deficiency",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6451,7 +6540,8 @@
         "concept_id": "36976004",
         "display": "Hypoparathyroidism",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6460,7 +6550,8 @@
         "concept_id": "40777006",
         "display": "Chronic hyperkalaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6481,19 +6572,22 @@
           ]
         },
         {
-          "code": "254843006",
-          "display": "Familial cancer of breast",
+          "code": "268547008",
+          "display": "Screening for breast cancer",
           "synonyms": [
-            "Familial cancer of breast",
-            "Familial cancer of breast (disorder)"
+            "Screening for malignant neoplasm of breast",
+            "Breast cancer screening",
+            "Screening for breast cancer",
+            "Screening for malignant neoplasm of breast (procedure)",
+            "Breast neoplasm screening"
           ]
         },
         {
-          "code": "724451007",
-          "display": "Fear of breast cancer",
+          "code": "60631000210103",
+          "display": "Breast cancer multidisciplinary meeting",
           "synonyms": [
-            "Fear of breast cancer (finding)",
-            "Fear of breast cancer"
+            "Breast cancer multidisciplinary meeting (procedure)",
+            "Breast cancer multidisciplinary meeting"
           ]
         }
       ]
@@ -6504,7 +6598,8 @@
         "concept_id": "45369008",
         "display": "AVP-D - arginine vasopressin deficiency",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6513,7 +6608,8 @@
         "concept_id": "82236004",
         "display": "Familial x-linked hypophosphataemic vitamin D refractory rickets",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6713,22 +6809,21 @@
           ]
         },
         {
-          "code": "707218004",
-          "display": "Bone density above reference range",
+          "code": "312681000",
+          "display": "Bone density scan",
           "synonyms": [
-            "Bone density above reference range (finding)",
-            "Bone density high",
-            "Bone density above reference range"
+            "Bone density scan (procedure)",
+            "Bone density scan"
           ]
         },
         {
-          "code": "449781000",
-          "display": "Bone density below reference range",
+          "code": "22059005",
+          "display": "CT bone density",
           "synonyms": [
-            "Bone density below reference range",
-            "Bone density below normal",
-            "Bone density below reference range (finding)",
-            "Bone density low"
+            "Computed tomography bone density study",
+            "Computed tomography bone density study (procedure)",
+            "QCT (quantitative computed tomography) of bone density",
+            "CT bone density"
           ]
         }
       ]
@@ -6744,7 +6839,8 @@
         "concept_id": "1299166008",
         "display": "Generalised tonic-clonic status epilepticus",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6753,7 +6849,8 @@
         "concept_id": "12295008",
         "display": "Bronchiectasis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -6838,7 +6935,8 @@
         "concept_id": "702391001",
         "display": "Renal cell carcinoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7036,7 +7134,8 @@
         "concept_id": "879969009",
         "display": "Breakthrough pain",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7087,7 +7186,8 @@
         "concept_id": "9389005",
         "display": "Herpes simplex keratitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7135,7 +7235,8 @@
         "concept_id": "33659008",
         "display": "Keloid scar",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7240,7 +7341,8 @@
         "concept_id": "253001006",
         "display": "Merkel cell carcinoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7249,6 +7351,15 @@
       "method": "candidate_unconfirmed",
       "query_tier": "full",
       "candidates": [
+        {
+          "code": "405835004",
+          "display": "Von Hippel-Lindau disease mutation carrier detection test",
+          "synonyms": [
+            "VHL disease mutation carrier detection test",
+            "Von Hippel-Lindau disease mutation carrier detection test",
+            "Von Hippel-Lindau disease mutation carrier detection test (procedure)"
+          ]
+        },
         {
           "code": "764961009",
           "display": "Hereditary primary clear cell renal cell carcinoma",
@@ -7268,7 +7379,8 @@
         "concept_id": "31822004",
         "display": "Urethritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7312,7 +7424,8 @@
         "concept_id": "84027009",
         "display": "Pernicious anaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7358,7 +7471,8 @@
         "concept_id": "426373005",
         "display": "Relapsing remitting multiple sclerosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7567,7 +7681,8 @@
         "concept_id": "84114007",
         "display": "Heart failure",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7608,7 +7723,8 @@
         "concept_id": "363478007",
         "display": "Malignant neoplasm of thyroid gland",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7617,7 +7733,8 @@
         "concept_id": "84757009",
         "display": "Epilepsy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7626,7 +7743,8 @@
         "concept_id": "10811000202109",
         "display": "Ulcerative proctitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7674,6 +7792,15 @@
           ]
         },
         {
+          "code": "838351000000107",
+          "display": "Education about risk of malignant neoplasm of breast",
+          "synonyms": [
+            "Education about risk of malignant neoplasm of breast (procedure)",
+            "Education about risk of malignant neoplasm of breast",
+            "Education about risk of breast cancer"
+          ]
+        },
+        {
           "code": "254837009",
           "display": "Malignant neoplasm of breast",
           "synonyms": [
@@ -7682,14 +7809,6 @@
             "Malignant neoplasm of breast",
             "Breast cancer",
             "Malignant tumor of breast"
-          ]
-        },
-        {
-          "code": "254843006",
-          "display": "Familial cancer of breast",
-          "synonyms": [
-            "Familial cancer of breast",
-            "Familial cancer of breast (disorder)"
           ]
         }
       ]
@@ -7859,7 +7978,8 @@
         "concept_id": "82725007",
         "display": "Progressive myositis ossificans",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7918,7 +8038,8 @@
         "concept_id": "238078005",
         "display": "Familial homozygous hypercholesterolaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7927,7 +8048,8 @@
         "concept_id": "403914000",
         "display": "Superficial basal cell carcinoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -7989,11 +8111,12 @@
           ]
         },
         {
-          "code": "296900006",
-          "display": "Androgen overdose",
+          "code": "407709006",
+          "display": "Androgen level",
           "synonyms": [
-            "Androgen overdose",
-            "Androgen overdose (disorder)"
+            "Androgen level",
+            "Androgen level (procedure)",
+            "Androgen measurement"
           ]
         }
       ]
@@ -8158,23 +8281,21 @@
           ]
         },
         {
-          "code": "1296527009",
-          "display": "Cystic fibrosis due to heterozygous deltaF508 mutation",
+          "code": "444260001",
+          "display": "Cystic fibrosis 20 common mutation test",
           "synonyms": [
-            "Cystic fibrosis due to heterozygous deltaF508 mutation",
-            "Cystic fibrosis due to heterozygous deltaF508 mutation (disorder)",
-            "DeltaF508 heterozygous mucoviscidosis",
-            "DeltaF508 heterozygous cystic fibrosis"
+            "Cystic fibrosis 20 common mutation test",
+            "Screen for 20 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique (procedure)",
+            "Screen for 20 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique"
           ]
         },
         {
-          "code": "1296528004",
-          "display": "Cystic fibrosis due to homozygous deltaF508 mutation",
+          "code": "443530000",
+          "display": "Cystic fibrosis 29 common mutation test",
           "synonyms": [
-            "Cystic fibrosis due to homozygous deltaF508 mutation (disorder)",
-            "Cystic fibrosis due to homozygous deltaF508 mutation",
-            "DeltaF508 homozygous cystic fibrosis",
-            "DeltaF508 homozygous mucoviscidosis"
+            "Screen for 29 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique (procedure)",
+            "Screen for 29 common genetic mutations of cystic fibrosis using amplification refractory mutation system polymerase chain reaction assay technique",
+            "Cystic fibrosis 29 common mutation test"
           ]
         }
       ]
@@ -8185,7 +8306,8 @@
         "concept_id": "393563007",
         "display": "Glioblastoma multiforme",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8194,7 +8316,8 @@
         "concept_id": "420120006",
         "display": "Gastrointestinal stromal tumour",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8214,22 +8337,22 @@
           ]
         },
         {
+          "code": "1426351000168106",
+          "display": "Whole blood common CFTR mutations detection test",
+          "synonyms": [
+            "Detection of common CFTR (cystic fibrosis transmembrane conductance regulator) gene mutations in whole blood specimen (procedure)",
+            "Detection of common CFTR mutations in whole blood for cystic fibrosis",
+            "Whole blood common CFTR mutations detection test",
+            "Detection of common CFTR (cystic fibrosis transmembrane conductance regulator) gene mutations in whole blood specimen"
+          ]
+        },
+        {
           "code": "441520002",
           "display": "Carrier of cystic fibrosis gene mutation",
           "synonyms": [
             "Cystic fibrosis gene carrier",
             "Carrier of cystic fibrosis gene mutation (finding)",
             "Carrier of cystic fibrosis gene mutation"
-          ]
-        },
-        {
-          "code": "1296527009",
-          "display": "Cystic fibrosis due to heterozygous deltaF508 mutation",
-          "synonyms": [
-            "Cystic fibrosis due to heterozygous deltaF508 mutation",
-            "Cystic fibrosis due to heterozygous deltaF508 mutation (disorder)",
-            "DeltaF508 heterozygous mucoviscidosis",
-            "DeltaF508 heterozygous cystic fibrosis"
           ]
         }
       ]
@@ -8335,7 +8458,8 @@
         "concept_id": "190818004",
         "display": "Waldenstr\u00f6m macroglobulinaemia",
         "method": "normalised_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8349,7 +8473,8 @@
         "concept_id": "400122007",
         "display": "Primary cutaneous T-cell lymphoma",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8505,7 +8630,8 @@
         "concept_id": "13746004",
         "display": "Bipolar disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8514,7 +8640,8 @@
         "concept_id": "277572006",
         "display": "Precursor B-cell acute lymphoblastic leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8523,7 +8650,8 @@
         "concept_id": "709044004",
         "display": "Chronic kidney disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8603,7 +8731,8 @@
         "concept_id": "55464009",
         "display": "Systemic lupus erythematosus",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8657,7 +8786,8 @@
         "concept_id": "314557000",
         "display": "Bacterial keratitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8666,7 +8796,8 @@
         "concept_id": "1214006",
         "display": "Infection caused by Strongyloides",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8758,7 +8889,8 @@
         "concept_id": "27718001",
         "display": "Maple syrup urine disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8767,7 +8899,8 @@
         "concept_id": "22455005",
         "display": "Cytomegaloviral retinitis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8805,7 +8938,8 @@
         "concept_id": "190855004",
         "display": "Hypomagnesaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8851,7 +8985,8 @@
         "concept_id": "74333002",
         "display": "Spasmodic torticollis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8860,7 +8995,8 @@
         "concept_id": "360416003",
         "display": "Glutaryl-CoA dehydrogenase deficiency",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8869,7 +9005,8 @@
         "concept_id": "165232002",
         "display": "Urinary incontinence",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8941,7 +9078,8 @@
         "concept_id": "69080001",
         "display": "Propionic acidaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8950,7 +9088,8 @@
         "concept_id": "42393006",
         "display": "Methylmalonic acidaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -8977,11 +9116,11 @@
           ]
         },
         {
-          "code": "66276000",
-          "display": "Organ or tissue vascular perfusion increased",
+          "code": "30700006",
+          "display": "Excision of transplanted tissue or organ",
           "synonyms": [
-            "Organ or tissue vascular perfusion increased (finding)",
-            "Organ or tissue vascular perfusion increased"
+            "Excision of transplanted tissue or organ (procedure)",
+            "Excision of transplanted tissue or organ"
           ]
         }
       ]
@@ -8992,7 +9131,8 @@
         "concept_id": "9713002",
         "display": "Prostatitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9001,7 +9141,8 @@
         "concept_id": "15628003",
         "display": "Gonorrhoea",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9010,7 +9151,8 @@
         "concept_id": "95361005",
         "display": "Mucositis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9053,7 +9195,8 @@
         "concept_id": "56819008",
         "display": "Endocarditis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9138,7 +9281,8 @@
         "concept_id": "87513003",
         "display": "Herpes zoster ophthalmicus",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9181,7 +9325,8 @@
         "concept_id": "387759001",
         "display": "Chronic granulomatous disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9226,7 +9371,8 @@
         "concept_id": "62315008",
         "display": "Diarrhoea",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9235,7 +9381,8 @@
         "concept_id": "4386001",
         "display": "Bronchospasm",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9333,11 +9480,11 @@
           ]
         },
         {
-          "code": "312148000",
-          "display": "Fungal ear infection",
+          "code": "312150008",
+          "display": "Fungal cardiovascular infection",
           "synonyms": [
-            "Fungal ear infection",
-            "Fungal ear infection (disorder)"
+            "Fungal cardiovascular infection",
+            "Fungal cardiovascular infection (disorder)"
           ]
         }
       ]
@@ -9383,7 +9530,8 @@
         "concept_id": "52254009",
         "display": "Nephrotic syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9428,7 +9576,42 @@
     {
       "condition": "Assisting autologous peripheral blood progenitor cell transplantation",
       "snomed": null,
-      "method": "unmatched"
+      "method": "candidate_unconfirmed",
+      "query_tier": "full",
+      "candidates": [
+        {
+          "code": "425983008",
+          "display": "Autologous peripheral blood stem cell transplant",
+          "synonyms": [
+            "Autologous peripheral blood stem cell transplant (procedure)",
+            "Autologous peripheral blood stem cell transplant"
+          ]
+        },
+        {
+          "code": "711429001",
+          "display": "Allogeneic haemopoietic progenitor cell transplant",
+          "synonyms": [
+            "Allogeneic haemopoietic progenitor cell transplant",
+            "Autologous HPCT",
+            "Transplantation of autologous progenitor cell",
+            "Transplantation of autologous progenitor cell (procedure)"
+          ]
+        },
+        {
+          "code": "278257006",
+          "display": "Peripheral blood stem cell transplant",
+          "synonyms": [
+            "Peripheral blood stem cell transplantation",
+            "2nd stage peripheral stem cell infusion",
+            "Peripheral blood stem cell transplantation (procedure)",
+            "Peripheral blood stem cell rescue",
+            "Peripheral blood stem cell graft",
+            "Peripheral blood stem cell transplant",
+            "Second stage peripheral stem cell infusion",
+            "PBSC - Peripheral blood stem cell graft"
+          ]
+        }
+      ]
     },
     {
       "condition": "Assisting bone marrow transplantation",
@@ -9437,31 +9620,35 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "234520000",
-          "display": "Bone marrow transplant failure",
+          "code": "23719005",
+          "display": "Bone marrow transplant",
           "synonyms": [
-            "Bone marrow transplant failure",
-            "Failed bone marrow transplant engraftment",
-            "Bone marrow transplant failure (disorder)",
-            "Failure of bone marrow graft"
+            "Transplantation of bone marrow (procedure)",
+            "Bone marrow graft",
+            "Transfusion of bone marrow",
+            "Transplantation of bone marrow",
+            "Bone marrow transplant",
+            "BMT - Bone marrow transplant"
           ]
         },
         {
-          "code": "737300001",
-          "display": "Bone marrow transplant present",
+          "code": "58390007",
+          "display": "Allogeneic bone marrow transplant",
           "synonyms": [
-            "Bone marrow transplant present (finding)",
-            "Bone marrow transplant present",
-            "Bone marrow transplant recipient"
+            "Allogeneic bone marrow transplant",
+            "Allogeneic bone marrow graft",
+            "Allogeneic bone marrow transplantation",
+            "Allogeneic bone marrow transplantation (procedure)"
           ]
         },
         {
-          "code": "234519006",
-          "display": "Bone marrow transplant rejection",
+          "code": "58776007",
+          "display": "Autologous bone marrow transplant",
           "synonyms": [
-            "Rejection of bone marrow graft",
-            "Bone marrow transplant rejection",
-            "Bone marrow transplant rejection (disorder)"
+            "Autologous bone marrow transplant (procedure)",
+            "Autologous bone marrow transplant",
+            "Autologous bone marrow graft",
+            "ABMT - Autologous bone marrow transplant"
           ]
         }
       ]
@@ -9472,7 +9659,8 @@
         "concept_id": "89655007",
         "display": "Congenital neutropenia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9546,7 +9734,8 @@
         "concept_id": "254829001",
         "display": "Liposarcoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9670,7 +9859,8 @@
         "concept_id": "247398009",
         "display": "Neuropathic pain",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9715,7 +9905,8 @@
         "concept_id": "201101007",
         "display": "Actinic keratosis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9757,7 +9948,8 @@
         "concept_id": "385093006",
         "display": "Community acquired pneumonia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9837,7 +10029,8 @@
         "concept_id": "11282001",
         "display": "Homocystinuria",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9846,7 +10039,8 @@
         "concept_id": "734434007",
         "display": "Pyridoxine-dependent developmental and epileptic encephalopathy",
         "method": "normalised_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9855,7 +10049,8 @@
         "concept_id": "56989000",
         "display": "Eaton-Lambert syndrome",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -9877,23 +10072,23 @@
           ]
         },
         {
-          "code": "123791008",
-          "display": "Fibrinogen in blood above reference range",
+          "code": "39847004",
+          "display": "Copper measurement",
           "synonyms": [
-            "Fibrinogen in blood above reference range",
-            "Fibrinogen in blood above reference range (finding)",
-            "Elevated fibrinogen level"
+            "Copper measurement",
+            "Copper measurement (procedure)",
+            "Copper level"
           ]
         },
         {
-          "code": "407151008",
-          "display": "Increased lead level",
+          "code": "933359971000036103",
+          "display": "Urine pre and post chelation therapy copper measurement",
           "synonyms": [
-            "Raised lead level",
-            "Elevated lead level",
-            "Lead level above reference range",
-            "Increased lead level",
-            "Lead level above reference range (finding)"
+            "Urine pre and post chelation therapy copper screen",
+            "Urine pre and post chelation therapy copper level",
+            "Measurement of copper in urine specimen pre and post chelation therapy",
+            "Measurement of copper in urine specimen pre and post chelation therapy (procedure)",
+            "Urine pre and post chelation therapy copper measurement"
           ]
         }
       ]
@@ -9954,14 +10149,14 @@
           ]
         },
         {
-          "code": "1332470007",
-          "display": "Chronic kidney disease stage 3A due to type 2 diabetes",
+          "code": "90731000119103",
+          "display": "Chronic kidney disease stage 2 due to type 1 diabetes",
           "synonyms": [
-            "Chronic kidney disease stage 3A due to type 2 diabetes mellitus",
-            "Chronic kidney disease stage 3A due to type 2 diabetes",
-            "Chronic kidney disease stage 3A due to type 2 diabetes mellitus (disorder)",
-            "Chronic kidney disease stage 3A due to type II diabetes mellitus",
-            "Chronic renal disease stage 3A due to type 2 diabetes mellitus"
+            "Chronic kidney disease stage 2 due to type 1 diabetes mellitus",
+            "Chronic kidney disease stage 2 due to type I diabetes mellitus",
+            "Chronic kidney disease stage 2 due to T1DM (type 1 diabetes mellitus)",
+            "Chronic kidney disease stage 2 due to type 1 diabetes",
+            "Chronic kidney disease stage 2 due to type 1 diabetes mellitus (disorder)"
           ]
         }
       ]
@@ -9972,6 +10167,17 @@
       "method": "candidate_unconfirmed",
       "query_tier": "full",
       "candidates": [
+        {
+          "code": "18302006",
+          "display": "Hysterotomy and termination of pregnancy",
+          "synonyms": [
+            "Therapeutic abortion by hysterotomy (procedure)",
+            "Incision of uterus for termination of pregnancy",
+            "Hysterotomy and termination of pregnancy",
+            "Therapeutic abortion by hysterotomy",
+            "Obstetrical hysterotomy for termination of pregnancy"
+          ]
+        },
         {
           "code": "699240001",
           "display": "Combined intrauterine and ovarian pregnancy",
@@ -9987,15 +10193,6 @@
             "Combined tubal and intrauterine pregnancy",
             "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy (disorder)",
             "Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy"
-          ]
-        },
-        {
-          "code": "237217000",
-          "display": "Uterine leiomyoma in pregnancy, childbirth and the puerperium",
-          "synonyms": [
-            "Uterine fibroids in pregnancy, childbirth and the puerperium",
-            "Uterine leiomyoma in pregnancy, childbirth and the puerperium",
-            "Uterine fibroids in pregnancy, childbirth and the puerperium (disorder)"
           ]
         }
       ]
@@ -10024,7 +10221,8 @@
         "concept_id": "706970001",
         "display": "Triple negative malignant neoplasm of breast",
         "method": "normalised_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10096,12 +10294,15 @@
           ]
         },
         {
-          "code": "310255003",
-          "display": "Anti-neutrophil cytoplasmic antibody negative",
+          "code": "401134007",
+          "display": "ANCA profile",
           "synonyms": [
-            "Anti-neutrophil cytoplasmic antibody negative",
-            "Anti-neutrophil cytoplasmic antibody not detected (finding)",
-            "Anti-neutrophil cytoplasmic antibody not detected"
+            "ANCA profile",
+            "Neutrophil cytoplasmic autoantibody profile",
+            "Antineutrophil cytoplasmic antibodies profile determination",
+            "Antineutrophil cytoplasmic antibodies (ANCA) profile determination",
+            "Antineutrophil cytoplasmic antibodies profile determination (procedure)",
+            "ANCA profile determination"
           ]
         }
       ]
@@ -10112,7 +10313,8 @@
         "concept_id": "194828000",
         "display": "Angina",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10205,7 +10407,8 @@
         "concept_id": "81004002",
         "display": "Leprosy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10246,7 +10449,8 @@
         "concept_id": "23511006",
         "display": "Meningococcal infectious disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10320,7 +10524,8 @@
         "concept_id": "238927000",
         "display": "Chronic discoid lupus erythematosus",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10329,7 +10534,8 @@
         "concept_id": "68225006",
         "display": "Alopecia areata",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10397,11 +10603,13 @@
           ]
         },
         {
-          "code": "722722006",
-          "display": "Haemophilus influenzae type b invasive infection",
+          "code": "915581000168109",
+          "display": "Haemophilus influenzae type b antibiotic prophylaxis",
           "synonyms": [
-            "Haemophilus influenzae type b invasive infection (disorder)",
-            "Haemophilus influenzae type b invasive infection"
+            "Antibiotic prophylaxis for Haemophilus influenzae type b infection (procedure)",
+            "Haemophilus influenzae type b antibiotic prophylaxis",
+            "Antibiotic prophylaxis for Haemophilus influenzae type b infection",
+            "Hib (Haemophilus influenza type b) antibiotic prophylaxis"
           ]
         }
       ]
@@ -10417,7 +10625,8 @@
         "concept_id": "314207007",
         "display": "Non-Q wave myocardial infarction",
         "method": "normalised_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10469,7 +10678,8 @@
         "concept_id": "9418005",
         "display": "Necrobiosis lipoidica",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10497,7 +10707,8 @@
         "concept_id": "240701006",
         "display": "Systemic aspergillosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10507,12 +10718,32 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "415123009",
+          "display": "Pneumocystis jirovecii immunofluorescence",
+          "synonyms": [
+            "Pneumocystis jirovecii immunofluorescence",
+            "Pneumocystis carinii immunofluorescence",
+            "Pneumocystis jirovecii immunofluorescence (procedure)"
+          ]
+        },
+        {
           "code": "414256007",
           "display": "Pneumocystis jirovecii present",
           "synonyms": [
             "Pneumocystis carinii present",
             "Pneumocystis jirovecii present (finding)",
             "Pneumocystis jirovecii present"
+          ]
+        },
+        {
+          "code": "916081000168105",
+          "display": "Pneumocystis jiroveci pneumonia prophylaxis",
+          "synonyms": [
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia",
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia (procedure)",
+            "Pneumocystis jiroveci pneumonia prophylaxis",
+            "PCP (Pneumocystis pneumonia) prophylaxis",
+            "PJP (Pneumocystis jiroveci pneumonia) prophylaxis"
           ]
         }
       ]
@@ -10565,7 +10796,8 @@
         "concept_id": "53891004",
         "display": "Lichen simplex chronicus",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10574,7 +10806,8 @@
         "concept_id": "721798004",
         "display": "Invasive aspergillosis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10583,7 +10816,8 @@
         "concept_id": "37610005",
         "display": "Inflammation of cervix",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10643,7 +10877,8 @@
         "concept_id": "302835009",
         "display": "Phaeochromocytoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10664,6 +10899,14 @@
           ]
         },
         {
+          "code": "386490009",
+          "display": "Urinary retention care",
+          "synonyms": [
+            "Urinary retention care",
+            "Urinary retention care (regime/therapy)"
+          ]
+        },
+        {
           "code": "236648008",
           "display": "Acute retention of urine",
           "synonyms": [
@@ -10671,16 +10914,6 @@
             "ARU - Acute retention of urine",
             "Acute urinary retention",
             "Acute retention of urine (disorder)"
-          ]
-        },
-        {
-          "code": "398064005",
-          "display": "Neurogenic bladder",
-          "synonyms": [
-            "Neurogenic urinary bladder",
-            "Neurogenic bladder",
-            "Neurogenic urinary bladder (finding)",
-            "Neuropathic bladder"
           ]
         }
       ]
@@ -10730,7 +10963,8 @@
         "concept_id": "3951002",
         "display": "Proctitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10739,7 +10973,8 @@
         "concept_id": "43116000",
         "display": "Eczema",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10748,7 +10983,8 @@
         "concept_id": "697970009",
         "display": "Giant cell tumour of bone",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10757,7 +10993,8 @@
         "concept_id": "46263000",
         "display": "Cataplexy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10784,7 +11021,8 @@
         "concept_id": "13920009",
         "display": "Hepatic encephalopathy",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10793,7 +11031,8 @@
         "concept_id": "13277001",
         "display": "Cystic acne",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10837,7 +11076,8 @@
         "concept_id": "238608008",
         "display": "Scalp psoriasis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -10852,31 +11092,14 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "443201006",
-          "display": "Pneumocystis jirovecii choroiditis",
+          "code": "916081000168105",
+          "display": "Pneumocystis jiroveci pneumonia prophylaxis",
           "synonyms": [
-            "Inflammation of choroid caused by Pneumocystis jirovecii (disorder)",
-            "Pneumocystis jirovecii choroiditis",
-            "Inflammation of choroid caused by Pneumocystis jirovecii infection",
-            "Inflammation of choroid caused by Pneumocystis jirovecii"
-          ]
-        },
-        {
-          "code": "414256007",
-          "display": "Pneumocystis jirovecii present",
-          "synonyms": [
-            "Pneumocystis carinii present",
-            "Pneumocystis jirovecii present (finding)",
-            "Pneumocystis jirovecii present"
-          ]
-        },
-        {
-          "code": "414171001",
-          "display": "Extrapulmonary pneumocystis jirovecii infection",
-          "synonyms": [
-            "Extrapulmonary pneumocystis jirovecii infection",
-            "Extrapulmonary pneumocystis jirovecii infection (disorder)",
-            "Extrapulmonary pneumocystosis"
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia",
+            "Antibiotic prophylaxis of Pneumocystis jiroveci pneumonia (procedure)",
+            "Pneumocystis jiroveci pneumonia prophylaxis",
+            "PCP (Pneumocystis pneumonia) prophylaxis",
+            "PJP (Pneumocystis jiroveci pneumonia) prophylaxis"
           ]
         }
       ]
@@ -10887,7 +11110,8 @@
         "concept_id": "449248000",
         "display": "Nasopharyngeal carcinoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11129,7 +11353,8 @@
         "concept_id": "372244006",
         "display": "Malignant melanoma",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11334,7 +11559,8 @@
         "concept_id": "61462000",
         "display": "Malaria",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11471,7 +11697,8 @@
         "concept_id": "68566005",
         "display": "Urinary tract infection",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11480,7 +11707,8 @@
         "concept_id": "87522002",
         "display": "Iron deficiency anaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11489,7 +11717,8 @@
         "concept_id": "38539003",
         "display": "Infection caused by Onchocerca volvulus",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11498,6 +11727,14 @@
       "method": "candidate_unconfirmed",
       "query_tier": "full",
       "candidates": [
+        {
+          "code": "13837003",
+          "display": "Inborn errors of metabolism screen",
+          "synonyms": [
+            "Inborn errors of metabolism screen",
+            "Inborn errors of metabolism screen (procedure)"
+          ]
+        },
         {
           "code": "86095007",
           "display": "Inborn error of metabolism",
@@ -11515,14 +11752,6 @@
             "Inborn error of glutathione metabolism",
             "Inborn error of glutathione metabolism (disorder)"
           ]
-        },
-        {
-          "code": "43465001",
-          "display": "Inborn error of lipoprotein metabolism",
-          "synonyms": [
-            "Inborn error of lipoprotein metabolism",
-            "Inborn error of lipoprotein metabolism (disorder)"
-          ]
         }
       ]
     },
@@ -11532,7 +11761,8 @@
         "concept_id": "198130006",
         "display": "Pelvic inflammatory disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11541,7 +11771,8 @@
         "concept_id": "128870005",
         "display": "Crusted scabies",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11586,78 +11817,29 @@
         "concept_id": "87827003",
         "display": "Isovaleryl-CoA dehydrogenase deficiency",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Haemodialysis",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "278904002",
-          "display": "Haemodialysis diet",
-          "synonyms": [
-            "Haemodialysis diet",
-            "Hemodialysis diet (finding)",
-            "Hemodialysis diet"
-          ]
-        },
-        {
-          "code": "331000124109",
-          "display": "Haemodialysis finding",
-          "synonyms": [
-            "Haemodialysis finding",
-            "Hemodialysis finding",
-            "Hemodialysis finding (finding)"
-          ]
-        },
-        {
-          "code": "702635003",
-          "display": "Inadequate haemodialysis",
-          "synonyms": [
-            "Inadequate hemodialysis (disorder)",
-            "Inadequate hemodialysis",
-            "Inadequate haemodialysis"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "302497006",
+        "display": "Haemodialysis",
+        "method": "exact_display",
+        "query_tier": "full",
+        "parent_verified": true
+      }
     },
     {
       "condition": "Coronary artery disease",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "420006002",
-          "display": "Obliterative coronary artery disease",
-          "synonyms": [
-            "Obliterative coronary artery disease",
-            "Obliterative coronary artery disease (disorder)"
-          ]
-        },
-        {
-          "code": "1293192009",
-          "display": "Premature coronary artery disease",
-          "synonyms": [
-            "PCAD - premature coronary artery disease",
-            "Premature coronary artery disease",
-            "Typically defined by the age of onset of coronary artery disease presenting in men under 45 years and women under 55 years. However, age thresholds for defining primary coronary artery disease can vary between 45 and 65 years, as observed in various studies.",
-            "Premature coronary artery disease (disorder)"
-          ]
-        },
-        {
-          "code": "240567009",
-          "display": "Syphilitic coronary artery disease",
-          "synonyms": [
-            "Syphilitic coronary artery disease",
-            "Syphilitic coronary artery disease (disorder)",
-            "Late quaternary syphilitic coronary artery disease"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "53741008",
+        "display": "Coronary arteriosclerosis",
+        "method": "exact_synonym",
+        "query_tier": "full",
+        "parent_verified": true
+      }
     },
     {
       "condition": "Gyrate atrophy of the choroid and retina",
@@ -11700,7 +11882,8 @@
         "concept_id": "396275006",
         "display": "Osteoarthritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11816,7 +11999,8 @@
         "concept_id": "46635009",
         "display": "Type 1 diabetes",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11826,29 +12010,32 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "102955006",
-          "display": "Contraception failure",
+          "code": "308419002",
+          "display": "Contraception call",
           "synonyms": [
-            "Contraception failure",
-            "Occurrence of pregnancy despite contraception.",
-            "Pregnancy with contraceptive device",
-            "Contraception failure (finding)"
+            "Contraception call",
+            "Contraception call (procedure)"
           ]
         },
         {
-          "code": "243816001",
-          "display": "Contraception status",
+          "code": "389095005",
+          "display": "Contraception care",
           "synonyms": [
-            "Contraception status",
-            "Contraception status (finding)"
+            "Contraception care",
+            "Family planning care: contraception",
+            "Family planning treatments and procedures",
+            "Contraception care (regime/therapy)",
+            "Family planning: contraception"
           ]
         },
         {
-          "code": "1376571000168103",
-          "display": "Hormonal contraception",
+          "code": "398780007",
+          "display": "Contraception education",
           "synonyms": [
-            "Hormonal contraception",
-            "Hormonal contraception (finding)"
+            "Contraception education",
+            "Health education - contraception",
+            "Advice about contraception",
+            "Contraception education (procedure)"
           ]
         }
       ]
@@ -11877,11 +12064,14 @@
           ]
         },
         {
-          "code": "247206004",
-          "display": "Optic disc tissue remnants",
+          "code": "112891005",
+          "display": "Autotransplant of thyroid tissue",
           "synonyms": [
-            "Optic disc tissue remnants",
-            "Optic disc tissue remnants (finding)"
+            "Autotransplantation of thyroid tissue",
+            "Reposition of thyroid tissue",
+            "Autotransplant of thyroid tissue",
+            "Reimplantation of thyroid tissue",
+            "Autotransplantation of thyroid tissue (procedure)"
           ]
         }
       ]
@@ -11892,7 +12082,8 @@
         "concept_id": "59026006",
         "display": "Blepharospasm",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11980,7 +12171,8 @@
         "concept_id": "709044004",
         "display": "Chronic kidney disease",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11989,7 +12181,8 @@
         "concept_id": "29633007",
         "display": "Glycogen storage disease",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -11998,7 +12191,8 @@
         "concept_id": "249274008",
         "display": "Urinary symptoms",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12007,7 +12201,8 @@
         "concept_id": "860914002",
         "display": "Erectile dysfunction",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12016,7 +12211,8 @@
         "concept_id": "74942003",
         "display": "Echinococcosis",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12044,28 +12240,27 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "93417001",
-          "display": "Conjunctivitis caused by Bordetella pertussis",
+          "code": "122206002",
+          "display": "Bordetella pertussis culture",
           "synonyms": [
-            "Conjunctivitis caused by Bordetella pertussis (disorder)",
-            "Conjunctivitis caused by Bordetella pertussis"
+            "Bordetella pertussis culture (procedure)",
+            "Bordetella pertussis culture"
           ]
         },
         {
-          "code": "192650000",
-          "display": "Meningitis caused by Bordetella pertussis",
+          "code": "315073006",
+          "display": "Bordetella pertussis antibody level",
           "synonyms": [
-            "Meningitis caused by Bordetella pertussis (disorder)",
-            "Meningitis caused by Bordetella pertussis"
+            "Bordetella pertussis antibody level",
+            "Bordetella pertussis antibody level (procedure)"
           ]
         },
         {
-          "code": "737589003",
-          "display": "DNA of Bordetella pertussis not detected",
+          "code": "122183004",
+          "display": "Bordetella pertussis antigen assay",
           "synonyms": [
-            "DNA of Bordetella pertussis not detected",
-            "Deoxyribonucleic acid of Bordetella pertussis not detected (finding)",
-            "Deoxyribonucleic acid of Bordetella pertussis not detected"
+            "Bordetella pertussis antigen assay",
+            "Bordetella pertussis antigen assay (procedure)"
           ]
         }
       ]
@@ -12098,7 +12293,8 @@
         "concept_id": "10087007",
         "display": "Infection caused by Schistosoma",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12165,42 +12361,19 @@
         "concept_id": "275498002",
         "display": "Respiratory tract infection",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Epididymo-orchitis",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "1285641001",
-          "display": "Acute epididymo-orchitis",
-          "synonyms": [
-            "Acute inflammation of testis and epididymis",
-            "Acute epididymo-orchitis",
-            "Acute inflammation of testis and epididymis (disorder)",
-            "Acute orchitis and epididymitis"
-          ]
-        },
-        {
-          "code": "236772009",
-          "display": "Gonococcal epididymo-orchitis",
-          "synonyms": [
-            "Gonococcal epididymo-orchitis",
-            "Gonococcal epididymo-orchitis (disorder)"
-          ]
-        },
-        {
-          "code": "312220006",
-          "display": "Infective epididymo-orchitis",
-          "synonyms": [
-            "Infective epididymo-orchitis",
-            "Infective epididymo-orchitis (disorder)"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "197983000",
+        "display": "Orchitis and epididymitis",
+        "method": "exact_synonym",
+        "query_tier": "full",
+        "parent_verified": true
+      }
     },
     {
       "condition": "Endophthalmitis",
@@ -12208,7 +12381,8 @@
         "concept_id": "1847009",
         "display": "Endophthalmitis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12217,7 +12391,8 @@
         "concept_id": "274080003",
         "display": "Bacterial gastroenteritis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12502,6 +12677,16 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "60656008",
+          "display": "Corneal transplant",
+          "synonyms": [
+            "Corneal transplant",
+            "Corneal graft",
+            "Grafting of cornea",
+            "Corneal transplant (procedure)"
+          ]
+        },
+        {
           "code": "314552006",
           "display": "Corneal graft astigmatism",
           "synonyms": [
@@ -12515,14 +12700,6 @@
           "synonyms": [
             "Corneal graft disorder (disorder)",
             "Corneal graft disorder"
-          ]
-        },
-        {
-          "code": "314553001",
-          "display": "Corneal graft infection",
-          "synonyms": [
-            "Corneal graft infection (disorder)",
-            "Corneal graft infection"
           ]
         }
       ]
@@ -12571,6 +12748,22 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "281897000",
+          "display": "Helicobacter eradication therapy",
+          "synonyms": [
+            "Helicobacter eradication therapy",
+            "Helicobacter eradication therapy (regime/therapy)"
+          ]
+        },
+        {
+          "code": "122214008",
+          "display": "Helicobacter pylori culture",
+          "synonyms": [
+            "Helicobacter pylori culture",
+            "Helicobacter pylori culture (procedure)"
+          ]
+        },
+        {
           "code": "721730009",
           "display": "Infection caused by Helicobacter pylori",
           "synonyms": [
@@ -12578,24 +12771,6 @@
             "Infection caused by Helicobacter pylori",
             "Helicobacter pylori infection",
             "Infection caused by H. pylori (Helicobacter pylori)"
-          ]
-        },
-        {
-          "code": "401041004",
-          "display": "Helicobacter pylori microscopy - negative",
-          "synonyms": [
-            "Helicobacter pylori not seen on microscopy (finding)",
-            "Helicobacter pylori not seen on microscopy",
-            "Helicobacter pylori microscopy - negative"
-          ]
-        },
-        {
-          "code": "89662003",
-          "display": "Helicobacter-associated pyloric ulcer",
-          "synonyms": [
-            "Helicobacter-associated pyloric ulcer",
-            "Pyloric ulcer caused by H. pylori (Helicobacter pylori)",
-            "Helicobacter-associated pyloric ulcer (disorder)"
           ]
         }
       ]
@@ -12733,7 +12908,8 @@
         "concept_id": "77480004",
         "display": "Congenital biliary atresia",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12742,7 +12918,8 @@
         "concept_id": "102616008",
         "display": "Pain in mouth",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12751,7 +12928,8 @@
         "concept_id": "386692008",
         "display": "Heavy menstrual bleeding",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12776,20 +12954,22 @@
           ]
         },
         {
-          "code": "109976000",
-          "display": "Lymphoepithelioid lymphoma",
+          "code": "308121000",
+          "display": "Follicular lymphoma",
           "synonyms": [
-            "Lennert's lymphoma",
-            "Lymphoepithelioid lymphoma",
-            "Lymphoepithelioid lymphoma (disorder)"
+            "Follicular lymphoma",
+            "Follicular lymphoma (disorder)",
+            "Follicular non-Hodgkin's lymphoma",
+            "Follicular non-Hodgkin lymphoma"
           ]
         },
         {
-          "code": "118600007",
-          "display": "Malignant lymphoma",
+          "code": "276811008",
+          "display": "Gastric lymphoma",
           "synonyms": [
-            "Malignant lymphoma",
-            "Malignant lymphoma (disorder)"
+            "Gastric lymphoma",
+            "Gastric lymphoma (disorder)",
+            "Lymphoma of stomach"
           ]
         }
       ]
@@ -12800,7 +12980,8 @@
         "concept_id": "266599000",
         "display": "Dysmenorrhoea",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -12809,6 +12990,22 @@
       "method": "candidate_unconfirmed",
       "query_tier": "full",
       "candidates": [
+        {
+          "code": "52637005",
+          "display": "In vitro fertilisation",
+          "synonyms": [
+            "Test tube ovum fertilization (procedure)",
+            "In vitro fertilisation",
+            "In vitro fertilisation procedure",
+            "IVF - in vitro fertilisation",
+            "In vitro fertilization",
+            "Test tube ovum fertilization",
+            "Test tube ovum fertilisation",
+            "In vitro fertilization procedure",
+            "IVF - in vitro fertilization",
+            "Test tube baby technique"
+          ]
+        },
         {
           "code": "10231000132102",
           "display": "IVF pregnancy",
@@ -12822,23 +13019,15 @@
           ]
         },
         {
-          "code": "443633009",
-          "display": "Conceived by IVF",
+          "code": "711544002",
+          "display": "In vitro fertilisation with surrogacy",
           "synonyms": [
-            "Conceived by IVF",
-            "Conceived by in vitro fertilisation",
-            "Conceived by in vitro fertilization (finding)",
-            "Conceived by in vitro fertilization"
-          ]
-        },
-        {
-          "code": "213202009",
-          "display": "Complications of attempted introduction of fertilised ovum following IVF",
-          "synonyms": [
-            "Complications of attempted introduction of fertilised ovum following IVF",
-            "Complications of attempted introduction of fertilised ovum following in vitro fertilisation",
-            "Complications of attempted introduction of fertilized ovum following in vitro fertilization (disorder)",
-            "Complications of attempted introduction of fertilized ovum following in vitro fertilization"
+            "In vitro fertilisation with surrogacy",
+            "IVF with surrogacy",
+            "In vitro fertilization with subsequent transfer to an unrelated surrogate.",
+            "In vitro fertilization with surrogacy (procedure)",
+            "In vitro fertilisation with subsequent transfer to an unrelated surrogate.",
+            "In vitro fertilization with surrogacy"
           ]
         }
       ]
@@ -12890,6 +13079,15 @@
             "Declined consent for use of patient data in risk stratification for unplanned hospital admission",
             "Declined consent for use of patient data in risk stratification for unplanned hospital admission (finding)"
           ]
+        },
+        {
+          "code": "708252004",
+          "display": "Discharge from virtual ward",
+          "synonyms": [
+            "Discharge from a virtual ward that uses the systems, staffing, and daily routine of a hospital ward to deliver preventive care to patients in their own home.",
+            "Discharge from virtual ward (procedure)",
+            "Discharge from virtual ward"
+          ]
         }
       ]
     },
@@ -12899,23 +13097,27 @@
         "concept_id": "118613001",
         "display": "Hairy cell leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Patients requiring administration of fluorouracil by intravenous infusion",
       "snomed": null,
       "method": "candidate_unconfirmed",
-      "query_tier": "stemmed",
+      "query_tier": "full",
       "candidates": [
         {
-          "code": "704676006",
-          "display": "At risk of negative response to nurse controlled analgesia",
+          "code": "116792006",
+          "display": "Intravenous infusion of cytomegalovirus immunoglobulin",
           "synonyms": [
-            "At increased risk of negative response to nurse controlled analgesia",
-            "At risk of negative response to nurse controlled analgesia",
-            "Nurse controlled analgesia is a technique by which the nurse or health professional licensed to administer medications, gives the patient a pre-programmed amount of an intravenous or subcutaneous analgesic solution as a bolus dose by the press of a button.",
-            "At increased risk of negative response to nurse controlled analgesia (finding)"
+            "Intravenous infusion of Cytomegalovirus immune globulin",
+            "Administration of Cytomegalovirus immune globulin, Intravenous",
+            "Intravenous infusion of cytomegalovirus immunoglobulin",
+            "Intravenous infusion of Cytomegalovirus immune globulin (procedure)",
+            "Intravenous infusion of CMV (cytomegalovirus) immunoglobulin",
+            "CMV (cytomegalovirus) immunoglobulin administration by intravenous infusion",
+            "Cytomegalovirus immune globulin administration by intravenous infusion"
           ]
         }
       ]
@@ -12962,16 +13164,25 @@
       "condition": "Patients requiring administration of fluorouracil by intravenous injection",
       "snomed": null,
       "method": "candidate_unconfirmed",
-      "query_tier": "stemmed",
+      "query_tier": "full",
       "candidates": [
         {
-          "code": "704676006",
-          "display": "At risk of negative response to nurse controlled analgesia",
+          "code": "1230099001",
+          "display": "Preparation of injection for self administration by subject",
           "synonyms": [
-            "At increased risk of negative response to nurse controlled analgesia",
-            "At risk of negative response to nurse controlled analgesia",
-            "Nurse controlled analgesia is a technique by which the nurse or health professional licensed to administer medications, gives the patient a pre-programmed amount of an intravenous or subcutaneous analgesic solution as a bolus dose by the press of a button.",
-            "At increased risk of negative response to nurse controlled analgesia (finding)"
+            "Preparation of injection for self administration by subject (regime/therapy)",
+            "Preparation, adjustment and disposal of an injection intended for self-administration by the patient.",
+            "Preparation of injection for self administration by subject",
+            "Preparation of self-injection"
+          ]
+        },
+        {
+          "code": "898143001",
+          "display": "Home parenteral therapy",
+          "synonyms": [
+            "Care provided in the home for the delivery of parenteral drug or hydration therapy for patients with acute, chronic or terminal illnesses. Parenteral therapy is administered intravenously or by injection through the skin.",
+            "Home parenteral therapy",
+            "Home parenteral therapy (regime/therapy)"
           ]
         }
       ]
@@ -13000,11 +13211,13 @@
           ]
         },
         {
-          "code": "1344893007",
-          "display": "Pressure injury healed",
+          "code": "225393005",
+          "display": "Pressure injury assessment",
           "synonyms": [
-            "Pressure injury healed (finding)",
-            "Pressure injury healed"
+            "Pressure injury assessment",
+            "Bed sore assessment",
+            "Pressure injury assessment (procedure)",
+            "Pressure sore assessment"
           ]
         }
       ]
@@ -13056,7 +13269,8 @@
         "concept_id": "6020002",
         "display": "Tinea pedis",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13065,7 +13279,8 @@
         "concept_id": "406602003",
         "display": "Infection caused by Staphylococcus aureus",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13293,7 +13508,8 @@
         "concept_id": "13200003",
         "display": "Peptic ulcer",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13302,7 +13518,8 @@
         "concept_id": "302841002",
         "display": "Malignant lymphoma - small lymphocytic",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13351,30 +13568,28 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "48672005",
+          "display": "Accessory fallopian tube",
+          "synonyms": [
+            "Accessory fallopian tube",
+            "Accessory fallopian tube (disorder)"
+          ]
+        },
+        {
+          "code": "237143006",
+          "display": "Blocked fallopian tube",
+          "synonyms": [
+            "Tubal block",
+            "Blocked fallopian tube (disorder)",
+            "Blocked fallopian tube"
+          ]
+        },
+        {
           "code": "289833000",
           "display": "Fallopian tube absent",
           "synonyms": [
             "Fallopian tube absent (finding)",
             "Fallopian tube absent"
-          ]
-        },
-        {
-          "code": "128134005",
-          "display": "Fallopian tube disorder",
-          "synonyms": [
-            "Fallopian tube disorder",
-            "Fallopian tube disease",
-            "Disorder of fallopian tube",
-            "Fallopian tube disorder (disorder)"
-          ]
-        },
-        {
-          "code": "289831003",
-          "display": "Fallopian tube finding",
-          "synonyms": [
-            "Fallopian tube finding (finding)",
-            "Fallopian tube finding",
-            "Fallopian tube observations"
           ]
         }
       ]
@@ -13460,28 +13675,30 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "231329004",
+          "display": "Peribulbar infiltration",
+          "synonyms": [
+            "Peribulbar infiltration",
+            "Peribulbar infiltration (procedure)"
+          ]
+        },
+        {
+          "code": "408803000",
+          "display": "Perineal infiltration with local anaesthetic",
+          "synonyms": [
+            "Infiltration of perineum with local anaesthetic",
+            "Infiltration of perineum with local anesthetic (procedure)",
+            "Perineal infiltration with local anaesthetic",
+            "Perineal infiltration with local anesthetic",
+            "Infiltration of perineum with local anesthetic"
+          ]
+        },
+        {
           "code": "255128001",
           "display": "Malignant infiltration of peripheral nerve",
           "synonyms": [
             "Malignant infiltration of peripheral nerve (disorder)",
             "Malignant infiltration of peripheral nerve"
-          ]
-        },
-        {
-          "code": "782865007",
-          "display": "Eosinophilia of peritoneal fluid",
-          "synonyms": [
-            "Eosinophilia of peritoneal fluid",
-            "Eosinophilia of peritoneal fluid (finding)",
-            "Eosinophilic infiltration of peritoneal cavity"
-          ]
-        },
-        {
-          "code": "255129009",
-          "display": "Malignant infiltration of peripheral nerve plexus",
-          "synonyms": [
-            "Malignant infiltration of peripheral nerve plexus (disorder)",
-            "Malignant infiltration of peripheral nerve plexus"
           ]
         }
       ]
@@ -13492,7 +13709,8 @@
         "concept_id": "443936004",
         "display": "Oligodendroglioma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13634,28 +13852,30 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "361274000",
+          "display": "Oral apraxia",
+          "synonyms": [
+            "Oral apraxia",
+            "Oral apraxia (disorder)"
+          ]
+        },
+        {
+          "code": "1385901000168100",
+          "display": "Oral commissuroplasty",
+          "synonyms": [
+            "Reconstruction of commissure of lip",
+            "Reconstruction of commissure of lip (procedure)",
+            "Oral commissurotomy",
+            "Oral commissuroplasty"
+          ]
+        },
+        {
           "code": "1089971000119108",
           "display": "Oral cyst",
           "synonyms": [
             "Cyst of structure of internal part of mouth (disorder)",
             "Cyst of structure of internal part of mouth",
             "Oral cyst"
-          ]
-        },
-        {
-          "code": "229692002",
-          "display": "Oral dystonia",
-          "synonyms": [
-            "Oral dystonia",
-            "Oral dystonia (disorder)"
-          ]
-        },
-        {
-          "code": "20674003",
-          "display": "Oral fistula",
-          "synonyms": [
-            "Oral fistula",
-            "Oral fistula (disorder)"
           ]
         }
       ]
@@ -13741,6 +13961,16 @@
           ]
         },
         {
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+          "synonyms": [
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
+          ]
+        },
+        {
           "code": "301007008",
           "display": "Gastro-oesophageal erosion",
           "synonyms": [
@@ -13748,24 +13978,6 @@
             "Gastro-esophageal erosion",
             "Gastro-oesophageal erosion",
             "Gastroesophageal erosion (disorder)"
-          ]
-        },
-        {
-          "code": "235595009",
-          "display": "Gastro-oesophageal reflux disease",
-          "synonyms": [
-            "GORD - Gastro-oesophageal reflux disease",
-            "Gastro-oesophageal reflux disease",
-            "GOR - Gastro-esophageal reflux",
-            "Gastro-oesophageal reflux",
-            "Gastroesophageal reflux disease",
-            "Gastro-esophageal reflux",
-            "GORD - Gastro-esophageal reflux disease",
-            "Gastrooesophageal reflux disease",
-            "GOR - Gastro-oesophageal reflux",
-            "Gastroesophageal reflux disease (disorder)",
-            "Gastro-esophageal reflux disease",
-            "GERD - Gastro-esophageal reflux disease"
           ]
         }
       ]
@@ -13844,7 +14056,8 @@
         "concept_id": "425333006",
         "display": "Myeloproliferative disorder",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13888,7 +14101,8 @@
         "concept_id": "443719001",
         "display": "Leiomyosarcoma",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -13935,13 +14149,44 @@
         "concept_id": "230690007",
         "display": "Stroke",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
       "condition": "Systemic embolism",
       "snomed": null,
-      "method": "unmatched"
+      "method": "candidate_unconfirmed",
+      "query_tier": "stemmed",
+      "candidates": [
+        {
+          "code": "1382088008",
+          "display": "Embolisation of portal-systemic shunt",
+          "synonyms": [
+            "Embolisation of portal-systemic shunt",
+            "Embolization of portal-systemic shunt (procedure)",
+            "Embolization of portal-systemic shunt"
+          ]
+        },
+        {
+          "code": "405283007",
+          "display": "Coil embolisation of portal-systemic shunt",
+          "synonyms": [
+            "Coil embolisation of portal-systemic shunt",
+            "Coil embolization of portal-systemic shunt",
+            "Coil embolization of portal-systemic shunt (procedure)"
+          ]
+        },
+        {
+          "code": "707823006",
+          "display": "Percutaneous transluminal embolisation for major systemic to pulmonary collateral artery",
+          "synonyms": [
+            "Percutaneous transluminal embolization for major systemic to pulmonary collateral artery",
+            "Percutaneous transluminal embolisation for major systemic to pulmonary collateral artery",
+            "Percutaneous transluminal embolization for major systemic to pulmonary collateral artery (procedure)"
+          ]
+        }
+      ]
     },
     {
       "condition": "Septicaemia",
@@ -14025,33 +14270,28 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "55383003",
-          "display": "Unidentified body but identity suspected",
+          "code": "171399004",
+          "display": "Examination for suspected neoplasm",
           "synonyms": [
-            "Unidentified body but identity suspected",
-            "Unidentified body but identity suspected (finding)"
+            "Examination for suspected neoplasm",
+            "Examination for suspected neoplasm (procedure)"
           ]
         },
         {
-          "code": "10743881000119104",
-          "display": "Suspected fetal abnormality affecting management of mother",
+          "code": "171400006",
+          "display": "Examination for suspected tuberculosis",
           "synonyms": [
-            "Suspected abnormality of fetus affecting management of mother",
-            "Suspected foetal abnormality affecting management of mother",
-            "Suspected fetal abnormality affecting management of mother",
-            "Suspected fetal abnormality affecting management of mother (disorder)",
-            "Suspected abnormality of foetus affecting management of mother"
+            "TB - Examination for suspected tuberculosis",
+            "Examination for suspected tuberculosis",
+            "Examination for suspected tuberculosis (procedure)"
           ]
         },
         {
-          "code": "720495005",
-          "display": "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome",
+          "code": "171405001",
+          "display": "Examination for suspected cardiovascular disease",
           "synonyms": [
-            "A rare multiple congenital anomalies syndrome, reported in the offsprings of a consanguineous couple and characterized by multiple congenital skeletal (dolichocephaly, skull asymmetry, camptodactyly, clubfoot), muscular (muscle hypoplasia), ocular (anophthalmia, buphthalmos, retinal detachment, aniridia) and cardiac (prolapse of tricuspid valves, mitral and tricuspid insufficiency) abnormalities. An autosomal recessive inheritance with variable expressivity was suspected. There have been no further descriptions in the literature since 1992.",
-            "A rare multiple congenital anomalies syndrome, reported in the offsprings of a consanguineous couple and characterised by multiple congenital skeletal (dolichocephaly, skull asymmetry, camptodactyly, clubfoot), muscular (muscle hypoplasia), ocular (anophthalmia, buphthalmos, retinal detachment, aniridia) and cardiac (prolapse of tricuspid valves, mitral and tricuspid insufficiency) abnormalities. An autosomal recessive inheritance with variable expressivity was suspected. There have been no further descriptions in the literature since 1992.",
-            "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome",
-            "Cassia Stocco dos Santos syndrome",
-            "Anophthalmia and megalocornea with cardiopathy and skeletal anomalies syndrome (disorder)"
+            "Examination for suspected cardiovascular disease",
+            "Examination for suspected cardiovascular disease (procedure)"
           ]
         }
       ]
@@ -14116,7 +14356,8 @@
         "concept_id": "188733003",
         "display": "Chronic eosinophilic leukaemia",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14125,7 +14366,8 @@
         "concept_id": "393573009",
         "display": "Hypereosinophilic syndrome",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14134,7 +14376,8 @@
         "concept_id": "13753008",
         "display": "Hemifacial spasm",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14143,7 +14386,8 @@
         "concept_id": "38433004",
         "display": "No sensitivity to pain",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14152,7 +14396,8 @@
         "concept_id": "386661006",
         "display": "Fever",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14162,30 +14407,28 @@
       "query_tier": "full",
       "candidates": [
         {
-          "code": "1163488000",
-          "display": "Fungal colitis",
+          "code": "372247004",
+          "display": "Fungal arthritis",
           "synonyms": [
-            "Colitis caused by Fungi (disorder)",
-            "Colitis caused by Fungi",
-            "Fungal colitis"
+            "Fungal arthritis",
+            "Arthritis due to fungal infection",
+            "Fungal arthritis (disorder)"
           ]
         },
         {
-          "code": "1163493002",
-          "display": "Fungal duodenitis",
+          "code": "359707007",
+          "display": "Fungal chorioretinitis",
           "synonyms": [
-            "Duodenitis caused by fungus (disorder)",
-            "Duodenitis caused by fungus",
-            "Fungal duodenitis"
+            "Fungal chorioretinitis (disorder)",
+            "Fungal chorioretinitis"
           ]
         },
         {
-          "code": "1163508000",
-          "display": "Fungal hydrocephalus",
+          "code": "359702001",
+          "display": "Fungal choroiditis",
           "synonyms": [
-            "Hydrocephalus due to mycosis (disorder)",
-            "Fungal hydrocephalus",
-            "Hydrocephalus due to mycosis"
+            "Fungal choroiditis",
+            "Fungal choroiditis (disorder)"
           ]
         }
       ]
@@ -14249,6 +14492,16 @@
             "Malignant neoplasm of gastroesophageal junction",
             "Malignant neoplasm of cardioesophageal junction of stomach (disorder)"
           ]
+        },
+        {
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+          "synonyms": [
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
+          ]
         }
       ]
     },
@@ -14258,7 +14511,8 @@
         "concept_id": "363402007",
         "display": "Malignant neoplasm of oesophagus",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14297,13 +14551,13 @@
           ]
         },
         {
-          "code": "301007008",
-          "display": "Gastro-oesophageal erosion",
+          "code": "427421001",
+          "display": "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
           "synonyms": [
-            "Gastroesophageal erosion",
-            "Gastro-esophageal erosion",
-            "Gastro-oesophageal erosion",
-            "Gastroesophageal erosion (disorder)"
+            "Fibreoptic endoscopic endoluminal plication of gastro-oesophageal junction",
+            "Fibreoptic endoscopic endoluminal plication of gastro-esophageal junction",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction (procedure)",
+            "Fiberoptic endoscopic endoluminal plication of gastro-esophageal junction"
           ]
         }
       ]
@@ -14414,14 +14668,14 @@
           ]
         },
         {
-          "code": "1303868000",
-          "display": "Intermediate DEND syndrome",
+          "code": "1671341000168100",
+          "display": "Bd2 - intermediate budding",
           "synonyms": [
-            "Intermediate DEND syndrome",
-            "Developmental delay, epilepsy, neonatal diabetes syndrome, intermediate form",
-            "A rare, genetic, neonatal diabetes mellitus syndrome, that is a variant of DEND syndrome and has clinical characteristics of neonatal insulin-dependent diabetes mellitus, mild motor, speech or cognitive delay, and the absence of epilepsy.",
-            "Intermediate DEND (developmental delay, epilepsy, neonatal diabetes) syndrome",
-            "Developmental delay, epilepsy, neonatal diabetes syndrome, intermediate form (disorder)"
+            "Bd2 - intermediate budding",
+            "Bd2",
+            "Tumour budding score Bd2 intermediate budding",
+            "Intermediate budding",
+            "Tumor budding score Bd2 intermediate budding (finding)"
           ]
         }
       ]
@@ -14571,7 +14825,8 @@
         "concept_id": "111253001",
         "display": "Infection of bone",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14581,29 +14836,27 @@
       "query_tier": "full",
       "candidates": [
         {
+          "code": "409778008",
+          "display": "Bone abscess",
+          "synonyms": [
+            "Bone abscess (disorder)",
+            "Bone abscess"
+          ]
+        },
+        {
+          "code": "298350001",
+          "display": "Bone absent",
+          "synonyms": [
+            "Bone absent",
+            "Bone absent (finding)"
+          ]
+        },
+        {
           "code": "23149001",
           "display": "Bone crepitus",
           "synonyms": [
             "Bone crepitus",
             "Bone crepitus (finding)"
-          ]
-        },
-        {
-          "code": "203465002",
-          "display": "Bone cyst",
-          "synonyms": [
-            "Bone cyst",
-            "Bone cyst (disorder)"
-          ]
-        },
-        {
-          "code": "118953000",
-          "display": "Bone finding",
-          "synonyms": [
-            "Bone finding",
-            "General bone observation",
-            "Bone observation",
-            "Bone finding (finding)"
           ]
         }
       ]
@@ -14614,7 +14867,8 @@
         "concept_id": "363162000",
         "display": "Infectious disorder of joint",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14668,7 +14922,8 @@
         "concept_id": "422587007",
         "display": "Nausea",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14677,7 +14932,8 @@
         "concept_id": "235675006",
         "display": "Gastroparesis syndrome",
         "method": "exact_synonym",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14686,7 +14942,8 @@
         "concept_id": "48130008",
         "display": "Hypogonadism",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14695,7 +14952,8 @@
         "concept_id": "400003000",
         "display": "Delayed puberty",
         "method": "exact_display",
-        "query_tier": "full"
+        "query_tier": "full",
+        "parent_verified": true
       }
     },
     {
@@ -14787,5 +15045,6 @@
         }
       ]
     }
-  ]
+  ],
+  "human_corrections_applied": 1
 }

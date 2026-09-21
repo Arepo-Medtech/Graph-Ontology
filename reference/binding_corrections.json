@@ -1,0 +1,24 @@
+{
+  "_note": "Human decisions about SNOMED bindings. Applied AFTER every binder run by scripts/apply_corrections.py, so improving the binder never discards a review. Without this the 348-candidate queue resets each time the binder changes.",
+  "_states": {
+    "corrected_pending_attestation": "a human chose this concept; awaiting named sign-off",
+    "attested": "signed off by a named clinician; carries attestor and date",
+    "rejected": "this condition must NOT bind to this concept"
+  },
+  "corrections": [
+    {
+      "condition": "Pre-exposure prophylaxis against human immunodeficiency virus infection",
+      "state": "corrected_pending_attestation",
+      "concept_id": "918591000168102",
+      "display": "Antiretroviral pre-exposure prophylaxis for HIV infection",
+      "method": "manual_correction_procedure_hierarchy",
+      "corrected_utc": "2026-09-21",
+      "corrected_from": {
+        "concept_id": "91948008",
+        "display": "Asymptomatic HIV infection in pregnancy",
+        "why_wrong": "Inverts the clinical situation. PrEP is given to people WITHOUT HIV; this concept asserts established infection, in pregnancy."
+      },
+      "why": "PBS wording names an intervention. 918591000168102 is an Australian extension concept (namespace 1000168) under 897017002 Antiviral prophylaxis. The binder leaves it a candidate because the PBS phrasing 'against human immunodeficiency virus infection' is not an exact match for 'for HIV infection' — a judgement call, so it is recorded here rather than auto-bound."
+    }
+  ]
+}
