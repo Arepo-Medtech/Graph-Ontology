@@ -124,3 +124,41 @@ worth knowing before changing this code:
 3. **`filter` is a conjunctive word-PREFIX search.** Inflections miss —
    "metastases" does not prefix "metastatic". A stemmed retry tier recovers
    them (unmatched 46 → 31).
+
+## Primary care: items x atc-codes
+
+`conditions_from_atc.py` covers the population restrictions miss — items on the
+unrestricted benefit (`benefit_type_code = 'U'`), prescribable without authority.
+
+**It does not fill the primary-care condition gap, and the attempt is worth
+recording so it is not repeated.** ATC classifies drugs, not diseases. Of 411
+level-2 and level-3 labels, only ~20 name a condition; the rest name pharmacology
+("Beta blocking agents") or are noise classes ("Other analgesics and
+antipyretics"). After deduplication that yields **17 conditions**, against 597
+from restrictions.
+
+Two extraction patterns were tried and dropped because they produced junk on real
+labels — `IRON PREPARATIONS` gave "Iron", `ANTITHROMBOTIC AGENTS` gave
+"Thrombotic", `STOMATOLOGICAL PREPARATIONS` gave "Stomatological". The self-check
+asserts they stay dropped. Precision was chosen over recall: a wrong condition in
+a clinical knowledge base is worse than a missing one.
+
+### What this output is actually good for
+
+| Output | Weight | Use |
+|---|---|---|
+| `therapeutic_areas` | solid | 64 ATC level-2 groups with unrestricted prescribing, item and drug counts. The real primary-care prescribing landscape, and a gap-finder: an area with unrestricted prescribing and no condition in the set is an uncovered area |
+| `conditions` | weak | 17 conditions, `therapy_evidence: atc_class_inferred`. An inference from drug class, never a stated indication. Kept separate from `pbs_subsidised_restricted` on purpose |
+
+Current schedule (4333): 6,966 distinct PBS codes, 1,201 unrestricted, 1,056
+mapped to an ATC level-2 group across 64 areas. Largest: antibacterials for
+systemic use (103 items, 20 drugs), renin-angiotensin agents (88/28),
+antineoplastics (74/30), lipid modifying agents (42/12).
+
+### What would actually fill the gap
+
+Mapping a primary-care drug to the condition it treats needs an indication
+source. PBS does not carry one for unrestricted items — that is what the
+unrestricted benefit means. The options are the TGA Product Information
+(indications per registered product, free, no bulk API) or a commercial
+indication feed from AMH or Therapeutic Guidelines. Neither is a scraping job.
