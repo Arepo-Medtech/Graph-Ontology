@@ -1,0 +1,237 @@
+{
+  "guideline": "guidelines/lymphogranuloma-venereum.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM LGV page. Doses, durations and tracing intervals compared character by character.",
+  "claims": [
+    {
+      "claim": "LGV is caused by Chlamydia trachomatis serovars L1-3, while non-LGV genital chlamydia is caused by serovars D-K",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Lymphogranuloma venereum (LGV) is caused by the bacterium Chlamydia trachomatis serovars L1-3 (non-LGV genital chlamydia is caused by the other serovars D-K)."
+    },
+    {
+      "claim": "The request form should state: Proctitis: NAAT. If chlamydia positive please send for LGV testing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Write on request form Proctitis: NAAT. If chlamydia positive please send for LGV testing"
+    },
+    {
+      "claim": "Ensure the laboratory has sent positive chlamydia samples from men who have sex with men with proctitis for LGV typing to the local reference laboratory",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure laboratory has sent positive chlamydia samples from men who have sex with men with proctitis for LGV typing to local reference laboratory"
+    },
+    {
+      "claim": "Initial test in patients with proctitis symptoms is a chlamydia NAAT on a clinician-collected or self-collected rectal swab",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Rectal swab | Chlamydia NAAT (Initial test; in patients with proctitis symptoms) | Clinician-collected or self-collected rectal swab."
+    },
+    {
+      "claim": "LGV-specific NAAT is a subsequent test performed on the same rectal sample when the chlamydia test is positive in symptomatic men who have sex with men",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Performed on same rectal sample collected for initial test | LGV specific NAAT (Subsequent test performed on positive rectal chlamydia test in symptomatic men who have sex with men)"
+    },
+    {
+      "claim": "Ulcer swabs use a clinician-collected viral transport swab rolled directly over the lesion, and chlamydia NAAT is not a routine test for genital ulceration and should only be performed where clinical suspicion of LGV is high",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Swab from ulcers | Chlamydia NAAT (Initial test to investigate ulcer) | Clinician-collected viral transport swab rolled directly over lesion. Chlamydia NAAT is not a routine test for genital ulceration and should only be performed in those with high clinical suspicion of LGV."
+    },
+    {
+      "claim": "LGV in Australia is usually symptomatic, hence routine screening of asymptomatic patients is not recommended",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "LGV in Australia is usually symptomatic, hence routine screening of asymptomatic patients is not recommended."
+    },
+    {
+      "claim": "LGV testing is recommended for men who have sex with men living with HIV with a positive chlamydia rectal swab even if asymptomatic, and all men who have sex with men with chlamydial proctitis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "LGV testing is recommended for men who have sex with men living with HIV with a positive chlamydia rectal swab (even if they are asymptomatic) and all men who have sex with men with chlamydial proctitis."
+    },
+    {
+      "claim": "On proctoscopy a red, ulcerated, oedematous mucosa is typical and may be accompanied by mucopurulent discharge, and a gram stain showing more than 20 white cells on high powered film is suggestive of LGV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If proctoscopy is performed, a red, ulcerated, oedematous mucosa is typical, and may be accompanied by mucopurulent discharge. A gram stain showing > 20 white cells on high powered film is suggestive of LGV."
+    },
+    {
+      "claim": "LGV is a very uncommon vaginal infection in Australia and if suspected referral to a local Sexual Health or Infectious Diseases clinic is advised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "LGV is a very uncommon vaginal infection in Australia. If suspected, referral to a local Sexual Health or Infectious Diseases clinic is advised."
+    },
+    {
+      "claim": "Suspected or confirmed LGV is treated with doxycycline 100 mg orally twice a day for 21 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Suspected or confirmed LGV | Doxycycline 100 mg orally twice a day for 21 days"
+    },
+    {
+      "claim": "Alternative regimens are not recommended due to lack of efficacy data, and specialist advice should be sought if an alternative is required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Alternative regimens are not recommended due to lack of efficacy data. If alternative regimen required, seek specialist advice."
+    },
+    {
+      "claim": "LGV DNA can persist in the rectum for up to 16 days after initiation of treatment, hence a 21-day course is required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Studies have shown that LGV DNA can persist in the rectum for up to 16 days after initiation of treatment, hence a long course (21 days) is required."
+    },
+    {
+      "claim": "At initial consultation for a patient with proctitis and suspicion of LGV, also treat for gonorrhoea and HSV, as LGV serovar results may take time to return",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "At initial consultation for the patient with proctitis with a suspicion of LGV, treat also for gonorrhoea and HSV. LGV serovar results may take some time to return from the laboratory."
+    },
+    {
+      "claim": "Advise no sexual contact for 21 days while taking treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sexual contact for 21 days while taking treatment."
+    },
+    {
+      "claim": "Advise no sex with partners from the last 3 months until the partners have been tested and treated if necessary",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sex with partners from the last 3 months until the partners have been tested and treated if necessary."
+    },
+    {
+      "claim": "Primary care professionals do not have to notify state or territory health departments about LGV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Primary care professionals do not have to notify the state or territory health departments about LGV."
+    },
+    {
+      "claim": "Inguinal buboes may require drainage through normal skin under ultrasound guidance with specialist advice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Inguinal buboes | These may require drainage through normal skin under ultrasound guidance. Seek specialist advice."
+    },
+    {
+      "claim": "If symptoms persist despite initial treatment, check that other STI tests were done at the initial consult and seek specialist advice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Persistence of symptoms despite initial treatment | Check other sexually transmitted infections (STI) tests were done at initial consult. Seek specialist advice"
+    },
+    {
+      "claim": "Pregnancy and allergy to the principal treatment choice both direct the clinician to seek specialist advice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnancy | Seek specialist advice ... Allergy to principal treatment choice | Seek specialist advice"
+    },
+    {
+      "claim": "LGV in men who have sex with men is associated with a high rate of co-infection with gonorrhoea, syphilis, hepatitis C and HIV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "LGV in men who have sex with men (MSM) is associated with a high rate of co-infection with gonorrhoea, syphilis, hepatitis C and human immunodeficiency virus (HIV)."
+    },
+    {
+      "claim": "HSV can also cause symptoms of proctitis, therefore HSV NAAT should be taken at the time of consultation, and tests should be conducted at initial consultation and at follow-up",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Herpes simplex virus (HSV) can also cause symptoms of proctitis, therefore HSV NAAT should be taken at the time of consultation. Tests for these conditions should be conducted at the time of initial consultation, and at follow-up."
+    },
+    {
+      "claim": "In addition to syphilis serology, syphilis NAAT can be performed from any area of ulceration",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In addition to syphilis serology, syphilis NAAT can be performed from any area of ulceration."
+    },
+    {
+      "claim": "LGV is rare in Australia, therefore contact tracing is of high priority and should be performed in all patients with confirmed infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "LGV is rare in Australia, therefore contact tracing is of high priority and should be performed in all patients with confirmed infection."
+    },
+    {
+      "claim": "All partners should be traced back for a minimum of 3 months before development of primary symptoms, or since arrival from an LGV endemic area if infection likely occurred overseas",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "All partners should be traced back for a minimum of 3 months before the development of primary symptoms, or since arrival from an LGV endemic area if infection likely to have occurred overseas."
+    },
+    {
+      "claim": "If asymptomatic, contact tracing for sex partners in the last 6 months is recommended",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If asymptomatic, contact tracing for sex partners in the last 6 months is recommended."
+    },
+    {
+      "claim": "Review in 1 week to review initial results, confirm adherence and symptom resolution, confirm contact tracing, and educate about condoms, contraception, HIV PrEP/PEP, safe injecting, consent, cervical screening and HAV, HBV and HPV vaccination",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Review in 1 week provides an opportunity to: Review results from initial consultation. Confirm patient adherence with treatment and assess for symptom resolution. Confirm contact tracing procedures have been undertaken or offer more contact tracing support. Educate about condom use, contraception, HIV PrEP/PEP, safe injecting practices, consent, CST and vaccinations for HAV, HBV and HPV as indicated."
+    },
+    {
+      "claim": "Test of cure by chlamydia NAAT should occur at 6 weeks, which is 3 weeks after treatment completion",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Test of cure by chlamydia NAAT should occur at 6 weeks (3 weeks after treatment completion)."
+    },
+    {
+      "claim": "If test of cure is positive, seek specialist advice and send the sample for LGV testing to confirm LGV persistence; if negative there is no need to send for LGV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If test of cure is positive, seek specialist advice. This sample should be sent for LGV testing if positive to confirm LGV persistence. If negative, there is no need to send for LGV."
+    },
+    {
+      "claim": "Full STI testing including syphilis, HIV if negative initially, and hepatitis C should be performed at 3 months and then as required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Full STI testing including syphilis, HIV (if negative initially) and hepatitis C testing should be performed at 3 months, and then as required depending on clinical guidelines"
+    },
+    {
+      "claim": "Auditable outcomes are that 100% of patients diagnosed with LGV have contact tracing completed and 100% are recommended to repeat HIV and hepatitis C testing at 3 months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of patients diagnosed with LGV have contact tracing completed (patient or provider). 100% of patients are recommended to repeat HIV and hepatitis C testing at 3 months."
+    },
+    {
+      "claim": "Primary LGV presents as a small ulcer or nodule on penis, vulva or anus which may go unnoticed, plus proctitis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Primary - small ulcer/nodule on penis/vulva/anus (may go unnoticed) - proctitis"
+    },
+    {
+      "claim": "Secondary LGV presents as inguino-femoral lymph node swelling and/or discharge, known as a bubo, with or without erythema",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Secondary - Inguino-femoral lymph node swelling and/or discharge (Bubo), +/- erythema"
+    },
+    {
+      "claim": "Tertiary LGV causes chronic proctitis, fistulae, strictures, genital oedema and scarring of the vulva known as esthiomene",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Tertiary - Chronic proctitis, fistulae, strictures, genital oedema, scarring of vulva (esthiomene)"
+    },
+    {
+      "claim": "Long-term tertiary sequelae are rarely seen in Australia but may occur with chronic untreated infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Long-term tertiary sequelae are rarely seen in Australia, but may occur with chronic untreated infection."
+    },
+    {
+      "claim": "The site of the primary lesion depends on the site of inoculation and could be genital, perianal or rarely in the mouth",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The site of the primary lesion depends on the site of inoculation: it could be on the genitals, perianal area or rarely in the mouth."
+    },
+    {
+      "claim": "Proctitis is characterised by rectal pain, bleeding, rectal discharge, tenesmus and changed bowel habit",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Proctitis is characterised by rectal pain, bleeding, rectal discharge, tenesmus and changed bowel habit."
+    }
+  ],
+  "summary": {
+    "total": 37,
+    "pass": 37,
+    "fail": 0
+  }
+}
