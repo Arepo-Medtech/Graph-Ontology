@@ -129,6 +129,92 @@ services** [S1]:
 it. The fluid-overload caution is the consequence of a 1 microg/mL dilution: the dose arrives inside a large
 volume.
 
+## ⚠️ The algorithm, transcribed from the flowchart images
+
+**Verification basis differs for this section.** Everything above was quoted from retrieved text and
+machine-checked verbatim. **The two flowcharts are images; this was read off them by eye** and carries the
+verdict **`pass_image_transcription`** — checked against the source, **not machine re-checkable, and exposed
+to transcription error in a way the rest of this file is not.** ⚠️ **Re-check every dose against the image
+before clinical use.**
+
+### Initial management
+
+**Assess for** [S2]:
+
+> **Upper airway obstruction (stridor, oral swelling)** · **OR** · **Lower airway obstruction (wheeze,
+> respiratory distress)** · **OR** · **Shock (dizziness, pallor, collapse, hypotension, severe/persistent
+> vomiting and/or abdominal pain)** · **+/-** · **Skin changes (itchy rash / redness)**
+
+Then, in order [S2]:
+
+1. **Remove trigger (stop infusion)**
+2. **Lay child flat. Do not allow to stand or walk.** ⚠️ **If difficulty breathing, sit with legs extended.
+   If vomiting, lay on side in recovery position**
+3. **GIVE ADRENALINE**
+
+### ⚠️ The adrenaline detail that was missing from the text
+
+> **Inject IM lateral mid-thigh**
+> **10 microg/kg (max 500 microg) IM**
+> **Using adrenaline 1:1000: 0.01 mL/kg (min 0.1 mL, max 0.5 mL)**
+> **OR** **Use adrenaline device**
+>
+> ⚠️ **If in doubt, give adrenaline** [S2]
+
+**Three things the retrieved text did not contain**: the **injection site**, the **mg/kg rule behind the age
+chart**, and **"if in doubt, give adrenaline"**.
+
+**The `min 0.1 mL` here is the same floor as the dose chart's footnote** about volumes under 0.1 mL being
+**prone to 10x overdose** — so the floor appears in both the table and the algorithm, from opposite
+directions.
+
+4. **Give O₂. Attach monitoring: SpO₂, BP, ECG** [S2]
+
+### ⚠️ Repeat after five minutes
+
+> **IF NO OR INADEQUATE RESPONSE — Repeat IM adrenaline after 5 minutes** [S2]
+>
+> **NO IMPROVEMENT AFTER TWO DOSES OF IM ADRENALINE = REFRACTORY ANAPHYLAXIS**
+> **Call for expert critical care help: ED Senior / ICU / Anaesthetics / Transport Service. IV / IO
+> access** [S2]
+
+**The five-minute interval is the single most-used number in this guideline and it existed nowhere in the
+retrieved text** — only the *definition* of refractory anaphylaxis as failure after two doses, with no
+statement of how long to wait between them.
+
+### Refractory anaphylaxis
+
+> **Give IV bolus: 10–20 mL/kg sodium chloride 0.9%** **AND** **Start IV adrenaline infusion** — **dedicated
+> IV line**
+>
+> **Follow local protocol** **OR** example: **Mix 1 mL adrenaline 1:1000 in 1000 mL sodium chloride 0.9%.
+> Usual starting dose 5 mL/kg/hr (≈0.1 microg/kg/min)**
+>
+> ⚠️ **Give IM adrenaline every 5 minutes until infusion started**
+>
+> **Seek expert critical care / transport service advice early** [S2]
+
+**IM dosing does not stop when the infusion is being prepared** — it continues every five minutes until the
+infusion is actually running.
+
+**This confirms the infusion recipe already quoted from the text**, and therefore confirms the discrepancy
+with the **sepsis in children** guideline, whose adrenaline infusion is **6 mg in 1 L** — **six times this
+concentration**. Two RCH guidelines, neither citing the other.
+
+### Airway, breathing, circulation
+
+| | [S2] |
+|---|---|
+| **AIRWAY — partial obstruction / stridor** | **Nebulised adrenaline (5 mL of 1:1000)** |
+| **AIRWAY — complete obstruction** | see **Acute Upper Airway Obstruction**, **Intubation via Emergency Airway Management**, **Can't Intubate Can't Oxygenate** |
+| **BREATHING — wheeze** | **Salbutamol via spacer or nebuliser.** ⚠️ **See management of life-threatening Asthma** |
+| **BREATHING — apnoea** | **Oxygenate and ventilate via bag valve mask / endotracheal tube / supraglottic airway** |
+| **CIRCULATION — shock** | **Prioritise adrenaline infusion. Continue IV boluses 10–20 mL/kg sodium chloride 0.9%** |
+| **CIRCULATION — cardiac arrest** | **BLS/ALS.** See **Management of Cardiopulmonary Arrest** |
+
+⚠️ **The breathing box points at the asthma guideline.** That is a **fifth** interlock between these two
+documents, and it was inside a picture: the compendium's asthma file already records four.
+
 ## ⚠️ Four hours, and why
 
 **All children with anaphylaxis should be observed in a setting equipped to manage deterioration, for at least
@@ -203,9 +289,10 @@ minimise risk on discharge** [S1].
 
 | Point | Kind | Detail |
 |---|---|---|
-| **Initial and refractory management flowcharts** | **input_unavailable** | both are images. **The dose chart and infusion recipe are transcribed above, but the sequence, the interval between IM doses, and the fluid and oxygen steps are inside the diagrams** and are not reconstructed |
-| **IM adrenaline site and repeat interval** | **input_unavailable** | the dose is given; **the injection site and how soon to repeat are not stated in the retrieved text** |
-| **IV fluid resuscitation volume** | **input_unavailable** | named as an admission criterion and a management step; **no volume stated** |
+| **Initial and refractory management flowcharts** | ⚠️ **observation** | **resolved 2026-09-22** — downloaded and transcribed above under **`pass_image_transcription`**. Not machine re-checkable; **doses must be re-checked against the image by a person** |
+| ~~IM adrenaline site and repeat interval~~ | ✅ **resolved** | **IM lateral mid-thigh**, **repeat after 5 minutes**, and **every 5 minutes until an infusion is started** — all three were in the diagram only |
+| ~~IV fluid resuscitation volume~~ | ✅ **resolved** | **10–20 mL/kg sodium chloride 0.9%**, repeated in shock |
+| **Adrenaline infusion concentration** | ⚠️ **observation** | **1 mg in 1 L here versus 6 mg in 1 L in sepsis in children** — a sixfold difference between two RCH protocols, **now confirmed from both sources' own diagrams**, and **neither mentions the other** |
 | **Asthma** | **out_of_scope** | step 8 of the discharge checklist routes to a separate guideline; **asthma is not covered anywhere in this compendium** |
 | **ASCIA Action Plan for Anaphylaxis** | **input_unavailable** | the individualised plan is checklist item 2; **its content was not retrieved** |
 | **"High risk of fatal anaphylaxis"** | **observation** | a consultation trigger defined only by cross-reference to the risk-factor list; **no threshold or count is given** |
@@ -217,3 +304,4 @@ minimise risk on discharge** [S1].
 | id | citation | type |
 |---|---|---|
 | S1 | The Royal Children's Hospital Melbourne. *Clinical Practice Guidelines: Anaphylaxis.* Last updated October 2025. PIC Endorsed | paediatric clinical practice guideline (AU) |
+| S2 | *ibid.*, **"Initial anaphylaxis management flowchart" and "Refractory anaphylaxis management flowchart"** — **read from the images** rather than from retrieved text | diagram, transcribed by eye |

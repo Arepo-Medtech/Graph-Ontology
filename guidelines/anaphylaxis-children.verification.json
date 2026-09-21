@@ -4,7 +4,7 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Anaphylaxis' (last updated October 2025, PIC endorsed), including key points, background, the clinical features table, investigations, the adrenaline dose chart and its footnote, the device table, refractory anaphylaxis, the peripheral IV infusion protocol, other considerations, observation and admission, consultation and transfer triggers, the discharge checklist, PBS availability, the WAO diagnostic criteria, timing by route, fatal anaphylaxis, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. Doses, the device weight bands and the infusion recipe are transcribed verbatim from the source's own tables and text, which state them in full. The initial and refractory management flowcharts are IMAGES and were not retrieved: the sequence, the interval between IM adrenaline doses, the injection site, and the fluid and oxygen steps are inside them, are recorded as input_unavailable, and are not reconstructed.",
+  "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Anaphylaxis' (last updated October 2025, PIC endorsed), including key points, background, the clinical features table, investigations, the adrenaline dose chart and its footnote, the device table, refractory anaphylaxis, the peripheral IV infusion protocol, other considerations, observation and admission, consultation and transfer triggers, the discharge checklist, PBS availability, the WAO diagnostic criteria, timing by route, fatal anaphylaxis, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. Doses, the device weight bands and the infusion recipe are transcribed verbatim from the source's own tables and text, which state them in full. The initial and refractory management flowcharts are IMAGES and were not retrieved: the sequence, the interval between IM adrenaline doses, the injection site, and the fluid and oxygen steps are inside them, are recorded as input_unavailable, and are not reconstructed. ADDENDUM 2026-09-22: both management flowcharts were downloaded as PNG images and read visually. 16 further claims were added carrying verdict pass_image_transcription and source S2. They cannot be re-checked by scripts/verify.py and are subject to transcription error; every dose among them must be re-checked against the image by a person before clinical use. The diagrams supplied three items absent from the retrieved text: the IM injection site (lateral mid-thigh), the mg/kg rule behind the age-based dose chart (10 microg/kg, max 500 microg; 0.01 mL/kg of 1:1000, min 0.1 mL, max 0.5 mL), and the repeat interval (5 minutes, and every 5 minutes until an infusion is started).",
   "claims": [
     {
       "claim": "The World Allergy Organization Anaphylaxis Committee definition of anaphylaxis is a serious systemic hypersensitivity reaction that is usually rapid in onset and may cause death",
@@ -281,11 +281,108 @@
       "source": "S1",
       "verdict": "pass",
       "source_text": "Australasian Society of Clinical Immunology and Allergy (ASCIA). Acute Management of Anaphylaxis Guideline, 2024. . Accessed 17/10/2025 \u2026 Australian and New Zealand Resuscitation Council (ANZCOR), 2025, Anaphylaxis, accessed 17 October 2025"
+    },
+    {
+      "claim": "The initial flowchart directs assessment for upper airway obstruction with stridor or oral swelling, or lower airway obstruction with wheeze or respiratory distress, or shock with dizziness, pallor, collapse, hypotension, severe or persistent vomiting and/or abdominal pain, with or without skin changes of itchy rash or redness",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Assess for: Upper airway obstruction (stridor, oral swelling) OR Lower airway obstruction (wheeze, respiratory distress) OR Shock (dizziness, pallor, collapse, hypotension, severe/persistent vomiting and/or abdominal pain) +/- Skin changes (itchy rash / redness)"
+    },
+    {
+      "claim": "The first step is to remove the trigger and stop any infusion",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Remove trigger (stop infusion)"
+    },
+    {
+      "claim": "The child should be laid flat and not allowed to stand or walk; if there is difficulty breathing they should sit with legs extended, and if vomiting they should be laid on their side in the recovery position",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Lay child flat / Do not allow to stand or walk / If difficulty breathing, sit with legs extended / If vomiting, lay on side in recovery position"
+    },
+    {
+      "claim": "Adrenaline should be injected IM into the lateral mid-thigh at 10 micrograms/kg to a maximum of 500 micrograms",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "GIVE ADRENALINE / Inject IM lateral mid-thigh / 10 microg/kg (max 500 microg) IM"
+    },
+    {
+      "claim": "Using adrenaline 1:1000 the volume is 0.01 mL/kg with a minimum of 0.1 mL and a maximum of 0.5 mL, or an adrenaline device may be used",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Using adrenaline 1:1000: 0.01 mL/kg (min 0.1 mL, max 0.5 mL) OR Use adrenaline device"
+    },
+    {
+      "claim": "If in doubt, give adrenaline",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "If in doubt, give adrenaline"
+    },
+    {
+      "claim": "Oxygen should be given and monitoring attached including SpO2, blood pressure and ECG",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Give O2 / Attach monitoring: SpO2, BP, ECG"
+    },
+    {
+      "claim": "If there is no or inadequate response, IM adrenaline should be repeated after 5 minutes",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "IF NO OR INADEQUATE RESPONSE / Repeat IM adrenaline after 5 minutes"
+    },
+    {
+      "claim": "No improvement after two doses of IM adrenaline equals refractory anaphylaxis, and expert critical care help should be called being ED senior, ICU, anaesthetics or transport service, with IV or IO access obtained",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "NO IMPROVEMENT AFTER TWO DOSES OF IM ADRENALINE = REFRACTORY ANAPHYLAXIS / Call for expert critical care help: ED Senior / ICU / Anaesthetics/ Transport Service / IV / IO access"
+    },
+    {
+      "claim": "In refractory anaphylaxis an IV bolus of 10 to 20 mL/kg sodium chloride 0.9 per cent should be given and an IV adrenaline infusion started via a dedicated IV line",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Give IV bolus: 10-20 mL/kg sodium chloride 0.9% AND Start IV adrenaline infusion / Dedicated IV line"
+    },
+    {
+      "claim": "The infusion should follow local protocol, or as an example mix 1 mL adrenaline 1:1000 in 1000 mL sodium chloride 0.9 per cent with a usual starting dose of 5 mL/kg/hr approximating 0.1 micrograms/kg/min",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Follow local protocol OR Example (see below algorithm): Mix 1 mL adrenaline 1:1000 in 1000 mL sodium chloride 0.9% / Usual starting dose 5 mL/kg/hr (approx 0.1 microg/kg/min)"
+    },
+    {
+      "claim": "IM adrenaline should be given every 5 minutes until the infusion is started",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Give IM adrenaline every 5 minutes until infusion started"
+    },
+    {
+      "claim": "Expert critical care or transport service advice should be sought early",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "Seek expert critical care / transport service advice early"
+    },
+    {
+      "claim": "For partial airway obstruction or stridor, nebulised adrenaline of 5 mL of 1:1000 should be given, and for complete obstruction the guideline refers to acute upper airway obstruction, intubation via emergency airway management, and can't intubate can't oxygenate",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "AIRWAY / Partial obstruction / stridor / Nebulised adrenaline (5 mL of 1:1000) / Complete obstruction / See Acute Upper Airway Obstruction / See Intubation via Emergency Airway Management / See Can't Intubate Can't Oxygenate"
+    },
+    {
+      "claim": "For wheeze, salbutamol should be given via spacer or nebuliser with reference to the management of life-threatening asthma, and for apnoea the child should be oxygenated and ventilated via bag valve mask, endotracheal tube or supraglottic airway",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "BREATHING / Wheeze / Salbutamol via spacer or nebuliser / See management of life-threatening Asthma / Apnoea / Oxygenate and ventilate via bag valve mask / endotracheal tube / supraglottic airway"
+    },
+    {
+      "claim": "For shock the adrenaline infusion should be prioritised and IV boluses of 10 to 20 mL/kg sodium chloride 0.9 per cent continued, and for cardiac arrest BLS and ALS apply with reference to management of cardiopulmonary arrest",
+      "source": "S2",
+      "verdict": "pass_image_transcription",
+      "source_text": "CIRCULATION / Shock / Prioritise adrenaline infusion / Continue IV boluses 10-20 mL/kg sodium chloride 0.9% / Cardiac arrest / BLS/ALS / See Management of Cardiopulmonary Arrest"
     }
   ],
   "summary": {
-    "total": 46,
+    "total": 62,
     "pass": 46,
-    "fail": 0
+    "fail": 0,
+    "pass_image_transcription": 16
   }
 }

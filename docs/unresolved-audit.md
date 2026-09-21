@@ -1,8 +1,9 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 58 guidelines · 2,285 claims · 236 `Unresolved` rows**
+**Generated 2026-09-22 · 58 guidelines · 2,301 claims · 236 `Unresolved` rows**
 
-*Revised the same day: paediatric sepsis algorithm recovered from its images — see Finding 1.*
+*Revised the same day: the **paediatric sepsis** and **paediatric anaphylaxis** algorithms were recovered from
+their images — see Finding 1. **44 claims now carry `pass_image_transcription`.***
 
 Every guideline ends with an `Unresolved` table. This is the audit of those tables read as a set — the
 things this compendium records that it cannot answer, grouped so they can be acted on rather than
@@ -32,7 +33,7 @@ algorithm was not.
 | Guideline | Images | What is inside them |
 |---|---|---|
 | **Acute asthma (children)** | **4** | salbutamol puff counts and intervals, ipratropium regimens, **steroid agent and dose**, oxygen targets, IV sequence |
-| **Anaphylaxis (children)** | **2** | the **interval between IM adrenaline doses**, injection site, fluid and oxygen steps |
+| ~~**Anaphylaxis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — recovered the **IM site (lateral mid-thigh)**, the **mg/kg rule behind the dose chart**, and the **5-minute repeat interval** |
 | **Febrile child** | **2** | the entire triage for **29 days–3 months** and **>3 months** |
 | ~~**Sepsis (children)**~~ | ~~2~~ | ✅ **RESOLVED 2026-09-22** — images downloaded and read; algorithm transcribed into the guideline under verdict `pass_image_transcription` |
 | **Seizures — acute management (children)** | **1** | the **sequence of agents and intervals between doses** |
@@ -52,7 +53,7 @@ it is fixable by retrieval rather than by judgement.
 ### ✅ Method established, 2026-09-22
 
 **The paediatric sepsis flowcharts have now been downloaded and read**, and the algorithm is transcribed into
-that guideline. **Eleven images across five guidelines remain.**
+that guideline. **Nine images across four guidelines remain.**
 
 What it recovered, none of which existed in the retrieved text: the **time-banded structure (5 / 15 / 30 /
 60 minutes)**; **fluid as 20 then 10 then 10 mL/kg to a 40 mL/kg ceiling**; **four antibiotic regimens in the
@@ -70,7 +71,7 @@ against the image by eye.** They count toward `total` and **not** toward `pass`.
 
 - **The adrenaline infusion is 6 mg in 1 L in paediatric sepsis and 1 mg in 1 L in paediatric anaphylaxis** —
   a **sixfold** concentration difference between two guidelines from the same hospital, **neither of which
-  mentions the other**
+  mentions the other**. ⚠️ **Now confirmed from both documents' own diagrams, not inferred**
 - **Lumbar puncture waits for stabilisation in sepsis** but is done **without delay and ideally before
   antibiotics** in **febrile child**. Both are right for their patient; **the compendium is where they can be
   read side by side**
@@ -137,7 +138,7 @@ the sharpest are worth naming:
 
 ## Priority, if this list is to be worked
 
-1. **Retrieve the eleven remaining algorithm images** and transcribe them — the method is established and the
+1. **Retrieve the nine remaining algorithm images** and transcribe them — the method is established and the
    sepsis one is done. Largest clinical gap, and purely mechanical. **Each transcription adds
    `pass_image_transcription` claims that a person should check against the image.**
 2. **Retrieve the state and territory sepsis pathways** the paediatric sepsis guideline says **must be
