@@ -293,8 +293,11 @@ if ps.exists():
                            "rxnav_rxcui": rxnav, "agreement": agreement})
 (OUT / "_omop_drug.json").write_text(json.dumps(drug_rows or [{"product_id": None, "level": None, "amt_concept_id": None, "amt_concept_class": None, "standard_concept_id": None, "standard_name": None, "standard_vocabulary": None, "standard_code": None, "in_omop": None}]))
 (OUT / "_omop_substance.json").write_text(json.dumps(subst_rows or [{"substance_id": None, "omop_concept_id": None, "omop_vocabulary": None, "omop_concept_class": None, "omop_rxcui": None, "omop_rxnorm_name": None, "rxnav_rxcui": None, "agreement": None}]))
-con.execute("CREATE TABLE omop_drug AS SELECT * FROM read_json_auto('out/_omop_drug.json')")
-con.execute("CREATE TABLE omop_substance AS SELECT * FROM read_json_auto('out/_omop_substance.json')")
+# explicit column types: an all-null placeholder row would otherwise be inferred as JSON and break the summary filters
+con.execute("""CREATE TABLE omop_drug AS SELECT * FROM read_json_auto('out/_omop_drug.json', columns={product_id:'VARCHAR', level:'VARCHAR', amt_concept_id:'BIGINT',
+    amt_concept_class:'VARCHAR', standard_concept_id:'BIGINT', standard_name:'VARCHAR', standard_vocabulary:'VARCHAR', standard_code:'VARCHAR', in_omop:'BOOLEAN'})""")
+con.execute("""CREATE TABLE omop_substance AS SELECT * FROM read_json_auto('out/_omop_substance.json', columns={substance_id:'VARCHAR', omop_concept_id:'BIGINT',
+    omop_vocabulary:'VARCHAR', omop_concept_class:'VARCHAR', omop_rxcui:'VARCHAR', omop_rxnorm_name:'VARCHAR', rxnav_rxcui:'VARCHAR', agreement:'VARCHAR'})""")
 
 # --- the wide transcode table: one row per TPUU ---------------------------------------------
 con.execute("""

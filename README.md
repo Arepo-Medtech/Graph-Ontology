@@ -104,6 +104,23 @@ tables result:
 | `omop_substance` | one row per ingredient substance | `omop_concept_id`, `omop_vocabulary`, `omop_rxcui` (RxNorm ingredient via OMOP), `rxnav_rxcui` (RxNav route), `agreement` = agree / disagree / omop-only / rxnav-only / neither |
 
 `transcode` gains `omop_amt_concept_id`, `omop_drug_concept_id`, `omop_drug_name`, `omop_drug_vocabulary`.
+
+**Status 2026-09-22 — stopped by the OMOPHub quota.** The free plan allows 3,000 API calls a month (error
+`monthly_limit_exceeded`); the bridge needs roughly 40,000. Before the ceiling it secured the whole AMT vocabulary
+(136,850 concepts, one pass, cached) and the first 1,600 TPUU mappings, which is enough to size the job:
+
+| compendium level | in OMOP's AMT (v20210630) | note |
+|---|---|---|
+| TPUU 24,634 | 19,344 (78.5 %) | 1,600 mapped: 1,580 reach a standard drug concept (RxNorm Extension 1,337, RxNorm 225) |
+| TPP 47,960 / CTPP 50,748 | 78 % | packs present at the same rate as their units |
+| MPP 17,008 | 14,114 (83 %) | |
+| MPUU 16,137 | 6,549 (41 %) | |
+| MP 9,858 | 139 (1.4 %) | OMOP's AMT carries almost no medicinal-product level |
+| AU substances 1,053 | 200 (`AU Substance` class) | |
+
+The missing fifth are products released after the 2021 snapshot. Two ways to finish: an OHDSI Athena download
+(free account; `CONCEPT.csv` + `CONCEPT_RELATIONSHIP.csv` hold every `Maps to` offline, zero API calls) or a paid
+OMOPHub plan. The scripts resume from the caches either way; the offline `report` needs no calls.
 OMOP's AMT snapshot is from 2021, so products released since are `in_omop=false`; the RxNav route stays
 the source for those. `out/omop_bridge_report.md` summarises coverage and lists where the two RxNorm routes
 disagree. Rate limit is 120 requests/min, so the first full run takes a few hours; caches make re-runs incremental.
