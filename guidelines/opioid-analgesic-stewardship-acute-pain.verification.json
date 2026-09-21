@@ -1,0 +1,267 @@
+{
+  "guideline": "guidelines/opioid-analgesic-stewardship-acute-pain.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ACSQHC Opioid Analgesic Stewardship in Acute Pain Clinical Care Standard, including the nine quality statements and the for-clinicians sections. No doses are stated by the standard, which defers to Therapeutic Guidelines and Acute Pain Management: Scientific Evidence; these are recorded as input_unavailable. The sedation score threshold is quoted as the standard gives it, without naming a scale the source does not name. Some retrieved text contains extraction artefacts where 'nn' collapsed ('ca ot' for 'cannot', 'Pla ing' for 'Planning'); source_text is preserved verbatim and the guideline renders the evident word.",
+  "claims": [
+    {
+      "claim": "The goal of the Opioid Analgesic Stewardship in Acute Pain Clinical Care Standard is to ensure the appropriate use and review of opioid analgesics for the management of acute pain to optimise patient outcomes and reduce the potential for opioid-related harm",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The goal of the Opioid Analgesic Stewardship in Acute Pain Clinical Care Standard to ensure the appropriate use and review of opioid analgesics for the management of acute pain to optimise patient outcomes and reduce the potential for opioid-related harm."
+    },
+    {
+      "claim": "Opioid analgesics are high-risk medicines widely used in hospitals and primary care to manage pain",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Opioid analgesics are high-risk medicines, widely used in hospitals and primary care to manage pain."
+    },
+    {
+      "claim": "Patients cannot be reliably assessed for risk of respiratory depression",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients ca ot be reliably assessed for risk of respiratory depression (OIVI)."
+    },
+    {
+      "claim": "Excess sedation is a reliable indicator of respiratory depression",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Excess sedation is a reliable indicator of respiratory depression (OIVI)."
+    },
+    {
+      "claim": "Patients with excess sedation such as a score of greater than 1 should be managed by de-escalating the opioid analgesic dose and continued monitoring, all opioids should be withheld until the patient is awake, and if more analgesia is needed a smaller dose should be given regardless of pain score",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients with excess sedation (such as a score of greater than 1) should be managed by de-escalating the opioid analgesic dose and continued monitoring. Withhold all opioids until the patient is awake. If more analgesia is needed, a smaller dose should be given regardless of pain score."
+    },
+    {
+      "claim": "Patient sedation levels should be monitored and the results documented in the monitoring chart in the patient medical record, monitoring sedation should always be paired with appropriate opioid analgesic prescription and dose adjustment, and excess sedation may require escalation of care according to locally approved protocols",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patient sedation levels should be monitored and the results documented in the monitoring chart in the patient medical record. ... Monitoring sedation should always be paired with appropriate opioid analgesic prescription and dose adjustment. Excess sedation may require escalation of care, according to locally approved protocols."
+    },
+    {
+      "claim": "Administration of naloxone to reverse respiratory depression should be considered according to a locally approved protocol",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider the administration of naloxone to reverse respiratory depression (OIVI), according to a locally approved protocol."
+    },
+    {
+      "claim": "Quality statement 5 states that if an opioid analgesic is considered appropriate for an opioid-naive patient with acute pain an immediate-release formulation should be used at the lowest appropriate dose for a limited duration in line with best practice guidelines, that modified-release opioid analgesics cannot be safely or rapidly titrated and their use in acute pain should be exceptional and not routine, and that the patient is supported to cease any opioid analgesic use as their function and pain improve",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If an opioid analgesic is considered appropriate for an opioid-naive patient with acute pain, use an immediate-release formulation at the lowest appropriate dose, for a limited duration, and prescribe in line with best practice guidelines. Modified-release opioid analgesics ca ot be safely or rapidly titrated and their use in acute pain should be exceptional and not routine. The patient is supported to cease any opioid analgesic use as their function and pain improve."
+    },
+    {
+      "claim": "There is no evidence to support the use of modified-release opioid analgesics for acute pain, some emerging evidence shows their use is problematic, and modified-release opioid analgesics following surgery are associated with increased risk of opioid-related harm and complications",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is no evidence to support the use of modified-release opioid analgesics for acute pain. Some emerging evidence shows that their use is problematic. For example, modified-release opioid analgesics following surgery are associated with increased risk of opioid-related harm and complications."
+    },
+    {
+      "claim": "The Therapeutic Goods Administration states that modified-release products should only be used where the pain is opioid-responsive and the patient requires daily, continuous, long-term treatment, and long-term treatment does not align with the definition of acute pain",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Therapeutic Goods Administration (TGA) states that modified-release products should only be used where the pain is opioid-responsive and the patient requires daily, continuous, long-term treatment. Long-term treatment does not align with the definition of acute pain."
+    },
+    {
+      "claim": "An opioid analgesic weaning and cessation plan is particularly important because long-term opioid use often starts with using opioid analgesics for acute pain",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An opioid analgesic weaning and cessation plan is particularly important for patients prescribed opioid analgesics because long-term opioid use often starts with using opioid analgesics for acute pain."
+    },
+    {
+      "claim": "Pharmaceutical Benefits Scheme requirements for drugs of addiction, state and territory regulations, and best practice guidelines should be considered when prescribing opioid analgesics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider Pharmaceutical Benefits Scheme requirements for drugs of addiction, state and territory regulations, and best practice guidelines when prescribing opioid analgesics."
+    },
+    {
+      "claim": "Individual patient characteristics such as age, weight, hepatic and renal function, allergies and other health conditions such as obstructive sleep apnoea should be considered, along with the patient's opioid status and other medicines prescribed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider the individual patient's characteristics such as age, weight, hepatic and renal function, allergies, and other health conditions such as obstructive sleep apnoea. Consider the patient's opioid status and other medicines prescribed."
+    },
+    {
+      "claim": "Paracetamol and anti-inflammatories should be used to reduce the dose of opioid analgesic for acute pain, and strategies to minimise overall opioid analgesic use should be considered",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Use paracetamol and anti-inflammatories to reduce the dose of opioid analgesic for acute pain. ... Consider strategies to minimise overall opioid analgesic use."
+    },
+    {
+      "claim": "Clinicians should consider whether the patient has a life-limiting illness and whether they are in the care of a palliative care team",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Consider whether the patient has a life-limiting illness and whether they are in the care of a palliative care team."
+    },
+    {
+      "claim": "Opioid analgesic dose reduction should start as soon as possible and can usually start one to two days after major surgery or trauma",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Opioid analgesic dose reduction should start as soon as possible, and can usually start one to two days after major surgery or trauma."
+    },
+    {
+      "claim": "In general opioid analgesics should be discontinued before paracetamol and non-steroidal anti-inflammatories are discontinued",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In general, opioid analgesics should be discontinued before paracetamol and non-steroidal anti-inflammatories are discontinued."
+    },
+    {
+      "claim": "A weaning and cessation plan should be defined guided by assessing the patient's functional activity and pain scores, the amount of opioid analgesic used in each 24-hour period and the duration of therapy, and should be discussed and agreed with the patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Define an opioid analgesic weaning and cessation plan guided by assessing the patient's functional activity and pain scores, the amount of opioid analgesic used in each 24-hour period and the duration of therapy. ... Discuss, and agree to, the weaning and cessation plan with the patient."
+    },
+    {
+      "claim": "If discontinuing opioid analgesics prescribed for a short duration and used for less than 10 days doses can be reduced quickly, which also applies when discontinuing immediate-release opioids prescribed for acute pain in patients who are also on long-term opioid analgesic therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For example, if discontinuing opioid analgesics that were prescribed for a short duration and used for less than 10 days, doses can be reduced quickly. This also applies when discontinuing immediate-release opioids prescribed for acute pain in patients who are also on long-term opioid analgesic therapy."
+    },
+    {
+      "claim": "Quality statement 2 states that analgesic prescribing for a patient with acute pain is guided by its expected severity and assessment of patient-reported pain intensity and the impact of pain on the patient's function",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Analgesic prescribing for a patient with acute pain is guided by its expected severity and assessment of patient-reported pain intensity and the impact of pain on the patient's function."
+    },
+    {
+      "claim": "Clinicians should assess the patient's functional activity using an evidence-based assessment tool before prescribing an opioid analgesic, with results considered together with pain scores in discussion with the patient to guide treatment, and the outcome documented in the medical record",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When treating a patient with acute pain, assess the patient's functional activity using an evidence-based assessment tool before prescribing an opioid analgesic. The results of the functional assessment should be considered together with patient's pain scores in discussion with the patient to guide appropriate treatment. The outcome of the assessments should be documented in the patient's medical rec"
+    },
+    {
+      "claim": "Quality statement 1 states that the nonpharmacological and pharmacological options for managing acute pain are discussed with a patient and their carer in a way they can understand and that leads to a shared understanding of the decision to use an opioid analgesic or other treatments",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The nonpharmacological and pharmacological options for managing acute pain are discussed with a patient and their carer in a way that they can understand, and that leads to a shared understanding of the decision to use an opioid analgesic or other treatment(s)."
+    },
+    {
+      "claim": "Clinicians should discuss the patient's expected recovery and the potential benefits and harms of acute pain treatment options, tailoring options in line with a stepwise approach which may or may not result in prescribing opioid analgesics",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Discuss the patient's expected recovery, and the potential benefits and harms of acute pain treatment options, with them or their carer. Tailor the options to the patient's acute pain in line with a stepwise approach when providing treatment options, which may or may not result in prescribing opioid analgesics."
+    },
+    {
+      "claim": "Quality statement 3 states that whenever an opioid analgesic is considered for a patient with acute pain their risk of opioid-related harm is assessed, and an opioid analgesic may be prescribed when other analgesics are not clinically feasible or sufficient and the potential benefits outweigh the potential harms",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Whenever an opioid analgesic is considered for a patient with acute pain, their risk of opioid-related harm is assessed. An opioid analgesic may be prescribed when other analgesics are not clinically feasible or sufficient, and the potential benefits outweigh the potential harms."
+    },
+    {
+      "claim": "Clinicians should identify and document avoidable, modifiable risks of harm if opioid analgesics are prescribed, using appropriate assessment tools where possible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Identify and document avoidable, modifiable risks of harm if opioid analgesics are prescribed for a patient with acute pain, using appropriate assessment tools where possible."
+    },
+    {
+      "claim": "Vulnerable groups at increased risk of opioid analgesic-related harm include older people, infants and children, pregnant and breastfeeding patients, patients with a disability, patients with unstable adverse social circumstances, patients with psychological comorbidities, and patients with substance use disorders",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "These include older people, infants and children, pregnant and breastfeeding patients, patients with a disability, patients with unstable adverse social circumstances, patients with psychological comorbidities, and patients with substance use disorders."
+    },
+    {
+      "claim": "Older age is commonly reported as being associated with increased risk of respiratory depression, and other risk factors include chronic opioid analgesic use, chronic sleep-disordered breathing, chronic obstructive pulmonary disease, diabetes, hypertension, hepatic or renal impairment, neurological diseases and obesity",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Older age is one risk factor commonly reported as being associated with an increased risk of respiratory depression (OIVI). ... Other risk factors include chronic opioid analgesic use, chronic sleep-disordered breathing, chronic obstructive pulmonary disease, diabetes, hypertension, hepatic or renal impairment, neurological diseases and obesity."
+    },
+    {
+      "claim": "Modifiable avoidable risk factors for sedation and respiratory depression include use of more than one opioid analgesic at a time, use of modified-release oral and transdermal opioid analgesics, use of continuous opioid analgesic infusions, continued administration of opioid analgesics to treat pain that is not responding to opioid analgesics, and co-administration of CNS depressants such as benzodiazepines and other sedative hypnotics, barbiturates, gabapentinoids, alcohol and recreational drugs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Modifiable, avoidable risk factors for sedation and respiratory depression (OIVI) include: use of more than one opioid analgesic at a time; use of modified-release oral and transdermal opioid analgesics; use of continuous opioid analgesic infusions; continued administration of opioid analgesics to treat pain that is not responding to opioid analgesics; co-administration of central nervous system (CNS) depressants such as benzodiazepines and other sedative hypnotics, barbiturates, gabapentinoids, alcohol and recreational drugs."
+    },
+    {
+      "claim": "CNS depressants such as benzodiazepines or other sedative hypnotics, barbiturates and gabapentinoids increase the risk of excess sedation, these medicines should be avoided, and patients taking them should be subject to increased monitoring",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "CNS depressants such as benzodiazepines or other sedative hypnotics, barbiturates, and gabapentinoids increase the risk of excess sedation. These medicines should be avoided and patients taking these medicines should be subject to increased monitoring."
+    },
+    {
+      "claim": "Clinicians should establish the patient's opioid status and existing opioid analgesics in their possession",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Establish the patient's opioid status and existing opioid analgesics in their possession"
+    },
+    {
+      "claim": "Quality statement 6 states that when an opioid analgesic is prescribed, supplied or administered adverse effects are monitored and managed, and the patient and carer are made aware of potential adverse effects and signs of overdose including respiratory depression",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When an opioid analgesic is prescribed, supplied or administered for a patient with acute pain, adverse effects are monitored and managed. The patient and carer are made aware of potential adverse effects and signs of overdose, including respiratory depression."
+    },
+    {
+      "claim": "The frequency of patient monitoring will be influenced by the hospital setting, pain severity, age and comorbidities, and the dose and route of administration of the opioid analgesic, and management strategies should include adjustments to the dose, route of administration, formulation and type of opioid analgesic",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The frequency of patient monitoring will be influenced by the hospital setting, pain severity, age and comorbidities, and the dose and route of administration of the opioid analgesic. Develop appropriate management strategies for the adverse effects, including adjustments to the dose, route of administration, formulation and type of opioid analgesic."
+    },
+    {
+      "claim": "Appropriate treatments should be prescribed to prevent and manage opioid analgesic-induced adverse effects, including laxatives to prevent or treat constipation and appropriate treatments for nausea and vomiting and itchiness",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prescribe appropriate treatments to prevent and manage opioid analgesic-induced adverse effects: laxatives to prevent or treat constipation, and appropriate treatments for nausea and vomiting, and itchiness."
+    },
+    {
+      "claim": "Quality statement 4 states that a patient with acute pain prescribed an opioid analgesic who is at increased risk of opioid-related harm is appropriately managed in conjunction with a locally approved pathway to mitigate the potential for harm",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient with acute pain prescribed an opioid analgesic who is at increased risk of opioid-related harm is appropriately managed in conjunction with a locally approved pathway to mitigate the potential for harm."
+    },
+    {
+      "claim": "Patients identified at increased risk should be managed and referred according to a defined clinical pathway for appropriate support services including escalation of care to specialist services for paediatrics, pain management, drug and alcohol, clinical pharmacy and allied health, and the patient should be informed why they are being referred",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Manage and refer patients identified at increased risk of opioid-related harm according to a defined clinical pathway for appropriate support services. This includes escalation of care to specialist services for paediatrics, pain management, drug and alcohol, clinical pharmacy and allied health. Inform the patient why they are being referred."
+    },
+    {
+      "claim": "Quality statement 7 states that when a patient with acute pain is prescribed, supplied or administered an opioid analgesic the intended duration of therapy and the review and referral plan are documented in the healthcare record, and the cause of the pain is documented including on the inpatient prescription",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When a patient with acute pain is prescribed, supplied or administered an opioid analgesic, the intended duration of therapy, and the review and referral plan are documented in the patient's healthcare record. The cause of the pain for which the opioid analgesic is prescribed is documented, including on the inpatient prescription."
+    },
+    {
+      "claim": "When prescribing opioid analgesics clinicians should document the indication, intended duration in number of days, the review and referral plan, and the weaning and cessation plan in the patient's healthcare record",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When prescribing opioid analgesics, document the indication, intended duration (number of days), the review and referral plan, and the weaning and cessation plan in the patient's healthcare record."
+    },
+    {
+      "claim": "Quality statement 8 states that during hospital care a patient prescribed an opioid analgesic for acute pain is assessed regularly to determine their response to therapy and whether an opioid analgesic is effective and appropriate for their stage of care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During hospital care, a patient prescribed an opioid analgesic for acute pain is assessed regularly to determine their response to therapy and whether an opioid analgesic is effective and appropriate for their stage of care."
+    },
+    {
+      "claim": "If the opioid analgesic is continued decisions about the appropriate daily dose should be based on the oral morphine-equivalent daily dose given in the past 24 hours",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If the opioid analgesic is continued, decisions about the appropriate daily dose of opioid analgesic should be based on the oral morphine-equivalent daily dose (oMEDD) given in the past 24 hours."
+    },
+    {
+      "claim": "A patient prescribed an opioid analgesic for acute pain should have regular assessment of their pain and function during hospital care, and due to interpatient variability the timing of regular assessments should be individualised",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "During their hospital care, a patient prescribed an opioid analgesic for acute pain should have regular assessment of their pain and function. Due to interpatient variability, the timing of regular assessments should b"
+    },
+    {
+      "claim": "Quality statement 9 states that planning for appropriate analgesic use at the transfer of care begins when a patient is started on an opioid analgesic during their hospital visit according to an agreed opioid analgesic weaning and cessation protocol, and that the number of days supply of an opioid analgesic on discharge is based on multiple factors including the expected course of the patient's condition, appropriate arrangements for follow-up and opioid analgesic use in the last 24 hours before discharge",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pla ing for appropriate analgesic use at the transfer of care begins when a patient is started on an opioid analgesic during their hospital visit, according to an agreed opioid analgesic weaning and cessation protocol. The number of days' supply of an opioid analgesic on discharge is based on multiple factors, including the expected course of the patient's condition, appropriate arrangements for follow-up and opioid analgesic use in the last 24 hours before discharge."
+    },
+    {
+      "claim": "Clinicians should plan for appropriate opioid analgesic use at the transfer of care when a patient is first prescribed, supplied or administered an opioid analgesic for acute pain, and follow a weaning and cessation protocol to start weaning and cessation during the hospital stay",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Plan for appropriate opioid analgesic use at the transfer of care when a patient is first prescribed, supplied or administered an opioid analgesic for acute pain during their hospital visit/stay. Follow an opioid analgesic weaning and cessation protocol to start weaning and cessation of opioid analgesics during their hospital stay/visit guided by assessing"
+    }
+  ],
+  "summary": {
+    "total": 42,
+    "pass": 42,
+    "fail": 0
+  }
+}
