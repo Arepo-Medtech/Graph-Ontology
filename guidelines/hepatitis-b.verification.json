@@ -1,0 +1,225 @@
+{
+  "guideline": "guidelines/hepatitis-b.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the ASHM hepatitis B page (modified 29 June 2026). Intervals, percentages and programme dates compared character by character. Serology interpretation and antiviral regimens are delegated by the source to the ASHM Decision making tool and are recorded as input_unavailable, NOT reconstructed from model memory. The vaccination-era age heuristic is anchored to 2020 in the source and is flagged time_sensitive.",
+  "claims": [
+    {
+      "claim": "Anyone with a positive hepatitis B surface antigen needs ongoing monitoring and needs to be considered for treatment, and a healthy carrier does not exist",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Anyone with a positive hepatitis B surface antigen (HBsAg) needs ongoing monitoring and needs to be considered for treatment. A healthy carrier does not exist."
+    },
+    {
+      "claim": "Chronic hepatitis B infection can cause hepatocellular carcinoma even in the absence of liver cirrhosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Chronic hepatitis B infection (HBsAg positive) can cause hepatocellular carcinoma even in the absence of liver cirrhosis."
+    },
+    {
+      "claim": "Hepatitis B infection causes acute hepatitis which may progress to chronic infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infection causes acute hepatitis, which may progress to chronic infection."
+    },
+    {
+      "claim": "The source delegates ordering and interpreting hepatitis B serology, and management, to the ASHM Decision making tool for hepatitis B",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For assistance with the ordering and interpreting hepatitis B serology please follow the ASHM Decision making tool for hepatitis B ... For management of Hepatitis B please follow the ASHM Decision making tool for hepatitis B"
+    },
+    {
+      "claim": "Routine adolescent immunisation commenced in Australia in 1997 and universal infant vaccination commenced in May 2000, so those who were 34 years old or younger in 2020 and grew up in Australia can generally be assumed vaccinated and do not need testing, although serology may still be warranted for certain high-risk groups such as people with HIV or people who inject drugs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In Australia, routine adolescent immunisation commenced in 1997 and universal infant vaccination commenced in May 2000. Therefore those who were 34 years old or younger in 2020 and who grew up in Australia can generally be assumed to have been vaccinated and do not need testing. However, for certain high-risk population groups it may still be warranted to check their hepatitis B serology (e.g. people with HIV, or people who inject drugs)."
+    },
+    {
+      "claim": "The risk of developing chronic hepatitis B is greater than 90% if infection is acquired at birth or under 5 years and less than 5% if acquired as an adult",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The risk of developing chronic hepatitis B is > 90% if infection acquired at birth or < 5 years and < 5% if infection acquired as an adult."
+    },
+    {
+      "claim": "Most people living with chronic hepatitis B in Australia were born overseas, particularly in the Asia Pacific region, Europe, Africa and the Middle East",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Most people living with chronic hepatitis B in Australia were born overseas, particularly in the Asia Pacific region, Europe, Africa and the Middle East."
+    },
+    {
+      "claim": "There is elevated prevalence among Aboriginal and Torres Strait Islander people living in remote areas and among some culturally and linguistically diverse populations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Elevated prevalence among Aboriginal and Torres Strait Islander people living in remote areas and among some culturally and linguistically diverse populations."
+    },
+    {
+      "claim": "Transmission occurs from mother to child vertically, via parenteral exposure such as shared injection equipment, or through sexual or household contact horizontally",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Transmission occurs from mother to child (vertical), via parenteral exposure (shared injection equipment), or through sexual or household contact (horizontal)."
+    },
+    {
+      "claim": "HBV is a blood borne virus and sexually transmissible infection, so casual household contact such as sharing cutlery is not a risk for transmission of hepatitis B",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Note that HBV is a blood borne virus and sexually transmissible infection, and hence casual household contact (e.g. sharing cutlery) is not a risk for transmission of hepatitis B."
+    },
+    {
+      "claim": "People living with hepatitis B can use HIV PrEP if at risk of HIV but must use the daily method rather than the on-demand method",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People who use HIV pre-exposure prophylaxis (PrEP) | People living with hepatitis B can use PrEP if they are at risk of human immunodeficiency virus (HIV), but must use the daily method rather than the on-demand method of PrEP."
+    },
+    {
+      "claim": "Seek immediate specialist advice if a person living with hepatitis B needs HIV PEP, as some PEP medications also treat HBV",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People who need HIV post-exposure prophylaxis (PEP) | Seek immediate specialist advice if a person who is living with hepatitis B needs HIV PEP, as some PEP medications also treat HBV."
+    },
+    {
+      "claim": "In pregnancy specialist review is needed, the infant needs hepatitis B vaccination and immunoglobulin at birth, the pregnant person may need antiviral therapy to reduce transmission at birth, and people who have given birth may be at risk of hepatitis B flares in the post-natal period",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Pregnancy | Needs specialist review. Infant needs hepatitis B vaccination and immunoglobulin (HBIG) at birth; the pregnant person may need antiviral therapy to reduce transmission at birth. People who have given birth may be at risk of hepatitis B flares in the post-natal period."
+    },
+    {
+      "claim": "Advise no sexual contact during acute illness unless the partner is immune",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Advise no sexual contact during acute illness unless partner is immune."
+    },
+    {
+      "claim": "Commence contact tracing and consider testing sexual contacts, household contacts and close family members, vaccinating if not immune",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Commence contact tracing. Consider testing sexual contacts, household contacts and close family members and vaccinate if not immune."
+    },
+    {
+      "claim": "Notify the state or territory health department and consider comprehensive STI testing depending on the patient's sexual history",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Notify the state or territory health department. Consider comprehensive STI testing, depending on the patient's sexual history."
+    },
+    {
+      "claim": "Hepatitis B is a notifiable condition and contact tracing is important to prevent re-infection and reduce transmission",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Notifiable condition. Contact tracing is important to prevent re-infection and reduce transmission."
+    },
+    {
+      "claim": "For acute hepatitis B trace back 6 months before onset of symptoms",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For acute hepatitis B: trace back 6 months before onset of symptoms."
+    },
+    {
+      "claim": "Most people diagnosed with hepatitis B in Australia will have acquired it at birth, so contact tracing needs to be conducted differently than for acute hepatitis B",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Most people diagnosed with hepatitis B in Australia will have acquired hepatitis B at birth, and hence contact tracing will need to be conducted differently than for acute hepatitis B."
+    },
+    {
+      "claim": "Patients are infectious for 2 weeks before onset of symptoms and until they become HBsAg negative, which is lifelong if chronic infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Infectious for 2 weeks before onset of symptoms and until the patient becomes HBsAg negative; life long if chronic infection."
+    },
+    {
+      "claim": "Test sexual and household contacts and family members, offer vaccination if susceptible, and provide further assessment for those with current infection",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Test sexual and household contacts and family members, offer vaccination if susceptible, further assessment for those with current infection."
+    },
+    {
+      "claim": "Hepatitis B immunoglobulin can be given as post-exposure prophylaxis in certain high-risk situations such as sexual, injecting or occupational exposure, or as a birth dose to reduce transmission risk from an HBsAg-positive person to their child",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Hepatitis B immunoglobulin (HBIG) can be given as post-exposure prophylaxis in certain high-risk situations (e.g. sexual, injecting or occupational exposure) or as a birth dose to reduce transmission risk from an HBsAg-positive person to their child."
+    },
+    {
+      "claim": "Acute infection should be monitored until HBsAg negative",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acute infection should be monitored until HBsAg negative."
+    },
+    {
+      "claim": "Chronic infection requires life-long follow-up including 6-12 monthly hepatitis B monitoring, yearly hepatitis B DNA viral load, liver function testing and antiviral therapy if indicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Chronic infection requires life-long follow-up, including 6-12 monthly hepatitis B monitoring, yearly hepatitis B DNA viral load, liver function testing and antiviral therapy if indicated."
+    },
+    {
+      "claim": "Certain populations with chronic hepatitis B require 6-monthly hepatocellular carcinoma screening with abdominal ultrasound and alpha-fetoprotein",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Certain populations with chronic hepatitis B require 6-monthly hepatocellular carcinoma screening (abdominal ultrasound and alpha-fetoprotein)."
+    },
+    {
+      "claim": "Check hepatitis A status and vaccinate if susceptible, and check hepatitis C status and discuss with a hepatologist if hepatitis C positive",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Check hepatitis A status and vaccinate if susceptible. Check hepatitis C status, and discuss with a hepatologist if hepatitis C positive."
+    },
+    {
+      "claim": "Patients with chronic hepatitis B should be assessed for other causes of hepatitis such as alcohol and fatty liver and counselled to reduce these factors if relevant",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients with chronic hepatitis B should be assessed for other causes of hepatitis (e.g. alcohol, fatty liver), and should be counselled to reduce these factors if relevant (e.g. reduced alcohol intake)."
+    },
+    {
+      "claim": "Check hepatitis D status in patients diagnosed with hepatitis B who were born in hepatitis D virus endemic regions including Mongolia, Moldova, West and Central Africa",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Check hepatitis D status in patients diagnosed with hepatitis B who were born in hepatitis D virus (HDV) endemic regions (including Mongolia, Moldova, West and Central Africa)."
+    },
+    {
+      "claim": "Prior infection provides life-long immunity to re-infection, but patients with resolved infection may experience a hepatitis B flare if immunocompromised such as when receiving chemotherapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prior infection provides life-long immunity to re-infection. Patients with resolved infection may experience a hepatitis B flare if immunocompromised (e.g. if receiving chemotherapy)."
+    },
+    {
+      "claim": "Auditable outcomes are that 100% of patients with chronic hepatitis B have annual reviews and 100% of sexual, household and family contacts are tested and vaccinated if susceptible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "100% of patients with chronic hepatitis B infection have annual reviews. 100% of sexual, household and family contacts are tested and vaccinated if susceptible."
+    },
+    {
+      "claim": "Asymptomatic hepatitis B infection is common",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Asymptomatic infection: common"
+    },
+    {
+      "claim": "Acute hepatitis B presents with right upper quadrant pain, lethargy, nausea, fever and anorexia for a few days then jaundice, with an incubation of 45-180 days and a mean of 60 days",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acute hepatitis: right upper quadrant pain, lethargy, nausea, fever, anorexia for a few days then jaundice. Incubation 45-180 days (mean: 60 days)"
+    },
+    {
+      "claim": "Chronic hepatitis is infection lasting over 6 months and can be life-long",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Chronic hepatitis: infection lasting over 6 months, can be life-long"
+    },
+    {
+      "claim": "Complications of hepatitis B include liver cirrhosis, liver failure and hepatocellular carcinoma",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Liver cirrhosis and liver failure; Hepatocellular carcinoma"
+    },
+    {
+      "claim": "Hepatitis B is caused by HBV, a double-stranded DNA virus",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "HBV, a double-stranded DNA virus."
+    }
+  ],
+  "summary": {
+    "total": 35,
+    "pass": 35,
+    "fail": 0
+  }
+}
