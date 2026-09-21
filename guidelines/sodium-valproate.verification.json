@@ -1,0 +1,297 @@
+{
+  "guideline": "guidelines/sodium-valproate.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved full text of the Australian Prescriber article (published 2 June 2026, finalised 21 April 2026, peer reviewed), including its summary, clinical indications, adverse effects, monitoring, teratogenicity, paternal exposure, conclusion, conflict-of-interest statement and reference list. The only dose-related figures asserted are those the source states: the 1100 mg/day teratogenicity threshold, folic acid at least 0.4 mg daily, and lamotrigine titration over around 6 weeks. No valproate, lamotrigine or levetiracetam dosing regimen is reconstructed. The source's term 'mental retardation' in its hepatotoxicity risk-factor list is transcribed unchanged and flagged as Unresolved rather than silently modernised. Therapeutic Guidelines and the Australian Medicines Handbook are cited by the source as references and are licensed content, cited by reference only and not reproduced. The author's declared conflict of interest is recorded in the guideline.",
+  "claims": [
+    {
+      "claim": "Sodium valproate is an approved treatment for epilepsy and bipolar disorder in Australia and is associated with a range of adverse effects that require monitoring and may limit its use",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Sodium valproate (valproate) is an approved treatment for epilepsy\nand bipolar disorder in Australia.\n\nIt is associated with a range of adverse\neffects that require monitoring and may limit its use."
+    },
+    {
+      "claim": "Due to its teratogenicity valproate should not be prescribed to women of childbearing potential, lamotrigine or levetiracetam are preferred alternatives in epilepsy, and if no alternative is suitable and valproate is prescribed contraception should be co-prescribed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Due to its teratogenicity, valproate should\nnot be prescribed to women of childbearing potential. Lamotrigine or\nlevetiracetam are preferred alternatives in epilepsy. If no alternative is suitable\nand valproate is prescribed, contraception should be co-prescribed."
+    },
+    {
+      "claim": "Concerns have been raised about the potential risk of neurodevelopmental disorders in children born to men taking valproate, and although these findings have not been confirmed in robust studies male patients should be informed of the potential risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Concerns have been raised about the potential\nrisk of neurodevelopmental disorders in children born to men taking valproate; although\nthese findings have not been confirmed in robust studies, male patients should\nbe informed of the potential risk."
+    },
+    {
+      "claim": "Over the past 15 years prescribing patterns for valproate in Australia have shifted, and for much of this period valproate was the most prescribed antiepileptic drug, however its use has declined due to an improved understanding of its teratogenic effects and the availability of safer alternative antiepileptic drugs in pregnancy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Over the past 15 years, prescribing patterns for valproate in\nAustralia have shifted. For much of this period, valproate was the most\nprescribed antiepileptic drug; however, its use has declined due to an improved\nunderstanding of its teratogenic effects and the availability of safer alternative\nantiepileptic drugs in pregnancy."
+    },
+    {
+      "claim": "Valproate was first registered in Australia as a treatment for epilepsy and is first line for managing genetic generalised epilepsies, which include absence, myoclonic and tonic-clonic seizures",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate was first registered in Australia as\na treatment for epilepsy. It is first line for managing genetic generalised\nepilepsies, which include absence, myoclonic and tonic-clonic seizures."
+    },
+    {
+      "claim": "Valproate is also approved in Australia as a treatment for mania in people with bipolar disorder, is recommended as adjunct therapy to an antipsychotic for acute mania, and is an option for maintenance therapy if lithium cannot be used",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate is also approved in Australia as a treatment\nfor mania in people with bipolar disorder. It is recommended as adjunct therapy\nto an antipsychotic for acute mania and is an option for maintenance therapy if\nlithium cannot be used."
+    },
+    {
+      "claim": "Valproate is used off label for the prevention of migraine with efficacy comparable with topiramate or candesartan, and other off-label uses include neuropathic pain, status epilepticus and status migrainosus however the efficacy of valproate for these conditions has not been established",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate is also used off label for the prevention\nof migraine, \u2026 with efficacy comparable with topiramate or candesartan. \u2026 Other off-label uses include neuropathic\npain, status epilepticus and status migrainosus; however, the efficacy of\nvalproate for these conditions has not been established."
+    },
+    {
+      "claim": "Valproate has been used off label to manage behavioural and psychological symptoms of dementia, however studies have shown that these symptoms are not improved by valproate and its use is associated with increased serious adverse effects, therefore it is not recommended for this indication",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate\nhas also been used off label to manage behavioural and psychological symptoms of\ndementia. However, studies have shown that these symptoms are not improved by\nvalproate and its use is associated with increased serious adverse effects; \u2026 therefore, it\nis not recommended for this indication."
+    },
+    {
+      "claim": "Common adverse effects of valproate at at least 1% include increased appetite which can lead to weight gain, tremor, drowsiness and hair loss, and these may require valproate dose reduction or withdrawal to resolve",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Common adverse effects of valproate (at least\n1%) include increased appetite (which can lead to weight gain), tremor,\ndrowsiness and hair loss. \u2026 These may require valproate dose reduction or withdrawal to\nresolve."
+    },
+    {
+      "claim": "Valproate can cause paraesthesia that is usually mild and transient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate can also cause paraesthesia that is usually mild and\ntransient."
+    },
+    {
+      "claim": "Polycystic ovary syndrome occurs at a higher rate in women taking valproate for epilepsy than in women receiving other antiepileptic drugs, at almost a twofold increased risk, although the magnitude of this association varies between studies because of differences in PCOS definitions and diagnostic criteria",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Polycystic ovary syndrome (PCOS) occurs at a\nhigher rate in women taking valproate for epilepsy than in women receiving\nother antiepileptic drugs (almost a twofold increased risk), although the magnitude\nof this association varies between studies because of differences in PCOS definitions\nand diagnostic criteria."
+    },
+    {
+      "claim": "If PCOS is suspected in an individual taking valproate clinicians should consider an alternative antiepileptic drug and refer the patient to an endocrinologist or gynaecologist",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If PCOS is suspected in an individual taking valproate, consider an\nalternative antiepileptic drug and refer the patient to an endocrinologist or\ngynaecologist."
+    },
+    {
+      "claim": "Mild usually asymptomatic thrombocytopenia is the most common haematological effect of valproate occurring in 12 to 18% of patients and generally resolves on dose reduction, leucopenia can occur in 0.4 to 5% of patients, and pancytopenia is rare",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Mild, usually asymptomatic thrombocytopenia is\nthe most common haematological effect of valproate (12 to 18% of patients)\nand generally resolves on dose reduction. \u2026 Leucopenia can occur (0.4 to 5% of patients) and pancytopenia is rare."
+    },
+    {
+      "claim": "Valproate-induced hepatotoxicity is rare at 1 in 20,000 but can be fatal, hepatotoxicity risk is highest in the first 6 months of valproate therapy accounting for 95% of cases, and valproate should be avoided in patients with hepatic impairment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate-induced hepatotoxicity is rare (1 in\n20,000) but can be fatal. \u2026 Hepatotoxicity risk is highest in the first 6 months of valproate therapy\n(95% of cases). \u2026 Valproate\nshould be avoided in patients with hepatic impairment."
+    },
+    {
+      "claim": "Significant risk factors for valproate-associated hepatotoxicity include age 3 years and below, congenital metabolic disorders such as carnitine deficiency, urea cycle disorders and POLG mutations, degenerative disorders, organic brain disease, brain damage or mental retardation, and concurrent use of multiple antiepileptic drugs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Significant\nrisk factors for valproate-associated hepatotoxicity include age 3 years\nand below, congenital metabolic disorders (carnitine deficiency, urea cycle\ndisorders, _POLG_ mutations), degenerative disorders, organic brain\ndisease, brain damage or mental retardation, and concurrent use of multiple\nantiepileptic drugs."
+    },
+    {
+      "claim": "Asymptomatic elevation of liver enzymes including alkaline phosphatase, aspartate aminotransferase and alanine aminotransferase occurs in approximately 10% of people taking valproate, and if this occurs clinicians should consider reducing the valproate dose and repeat liver function tests after 1 month",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Asymptomatic\nelevation of liver enzymes (alkaline phosphatase, aspartate aminotransferase\nand alanine aminotransferase) occurs in approximately 10% of people taking\nvalproate. \u2026 If this occurs, consider reducing the valproate dose and repeat\nliver function tests after 1 month."
+    },
+    {
+      "claim": "Unlike some other antiepileptic drugs such as carbamazepine and phenytoin, valproate does not cause elevations of gamma-glutamyl transferase",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Unlike some other antiepileptic drugs\n(e.g. carbamazepine, phenytoin), valproate does not cause elevations of\ngamma-glutamyl transferase."
+    },
+    {
+      "claim": "Stevens-Johnson syndrome is a rare but potentially fatal skin reaction associated with some antiepileptic drugs, typically presents as a rash that spreads quickly over a few days often with fever and sore throat, and its occurrence with valproate has been reported but may have been confounded by concomitant administration of lamotrigine",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Stevens-Johnson syndrome (SJS) is a rare but\npotentially fatal skin reaction associated with some antiepileptic drugs (e.g.\ncarbamazepine, phenytoin, lamotrigine). It typically presents as a rash that\nspreads quickly over a few days, often with fever and sore throat. The occurrence\nof SJS with valproate has been reported but may have been confounded by\nconcomitant administration of lamotrigine."
+    },
+    {
+      "claim": "Stevens-Johnson syndrome is more likely to occur in the first 8 weeks of antiepileptic therapy and patients should be advised to stop taking valproate if a rash appears and to inform the prescriber",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "SJS\nis more likely to occur in the first 8 weeks of antiepileptic therapy; patients\nshould be advised to stop taking valproate if a rash appears and to inform the\nprescriber."
+    },
+    {
+      "claim": "Valproate therapy of more than 10 years duration is associated with decreased bone mineral density and increased risk of osteoporosis, and assessment of vitamin D status may be considered depending on individual risk factors for osteoporosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate therapy of more than 10 years duration\nis associated with decreased bone mineral density and increased risk of osteoporosis. \u2026 Assessment of vitamin D status may be considered depending on individual\nrisk factors for osteoporosis."
+    },
+    {
+      "claim": "Acute valproate toxicity meaning overdose is dose related and may manifest as drowsiness, tremor, confusion and ataxia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acute valproate toxicity (i.e. overdose) is\ndose related and may manifest as drowsiness, tremor, confusion and ataxia."
+    },
+    {
+      "claim": "Clinical monitoring of a patient receiving valproate should address tolerability, alertness, weight gain and tremor",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinical monitoring of a patient receiving\nvalproate should address tolerability, alertness, weight gain and tremor."
+    },
+    {
+      "claim": "There is not universal agreement on routine laboratory monitoring to reduce risk of valproate-associated hepatotoxicity, baseline testing such as full blood count and biochemical profile has been suggested, and further blood tests are undertaken only if significant clinical symptoms arise such as anorexia, vomiting, malaise, loss of seizure control, oedema or jaundice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is not universal agreement on routine laboratory\nmonitoring to reduce risk of valproate-associated hepatotoxicity. Baseline\ntesting (e.g. full blood count, biochemical profile) has been suggested. \u2026 Further blood tests are undertaken only if significant clinical\nsymptoms arise (e.g. anorexia, vomiting, malaise, loss of seizure control,\noedema, jaundice)."
+    },
+    {
+      "claim": "Patients or families should report symptoms such as anorexia, vomiting, malaise, loss of seizure control, oedema or jaundice promptly to a healthcare professional and valproate should be stopped",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Patients or families should report these symptoms promptly\nto a healthcare professional and valproate should be stopped."
+    },
+    {
+      "claim": "Therapeutic drug monitoring has a limited role as there is no direct correlation between valproate plasma concentration and clinical efficacy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Therapeutic drug monitoring has a limited role,\nas there is no direct correlation between valproate plasma concentration and\nclinical efficacy."
+    },
+    {
+      "claim": "Maternal valproate therapy is associated with an increased risk of major congenital malformations, and this risk is dose dependent with a reported incidence of 3.3% at valproate daily doses below 1100 mg increasing to 30.2% at daily doses of 1100 mg or more",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Maternal valproate therapy is associated with\nan increased risk of major congenital malformations. This risk is dose\ndependent, with a reported incidence of 3.3% at valproate daily doses below\n1100 mg, increasing to 30.2% at daily doses of 1100 mg or more."
+    },
+    {
+      "claim": "Congenital malformations associated with valproate include neural tube defects such as spina bifida and anencephaly, craniofacial, cardiac and limb defects, and hypospadias",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Congenital malformations\nassociated with valproate include neural tube defects such as spina bifida and anencephaly,\ncraniofacial, cardiac and limb defects, and hypospadias."
+    },
+    {
+      "claim": "Valproate can affect fetal neurodevelopment leading to increased risks of intellectual disability with odds ratio 2.4 to 4.5, attention deficit hyperactivity disorder with odds ratio 1.4 to 1.8, and autism spectrum disorder with odds ratio 1.7 to 4.4",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valproate\ncan affect fetal neurodevelopment, leading to increased risks of intellectual\ndisability (odds ratio \\[OR\\] 2.4 to 4.5), attention deficit hyperactivity\ndisorder (OR 1.4 to 1.8) and autism spectrum disorder (OR 1.7 to 4.4)."
+    },
+    {
+      "claim": "To date no dose of valproate has been established as completely free of risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "To\ndate, no dose of valproate has been established as completely free of risk."
+    },
+    {
+      "claim": "Because of its teratogenicity the Australian Therapeutic Goods Administration and overseas drug regulatory agencies recommend against the use of valproate in women of childbearing potential unless other drugs are ineffective or not tolerated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Because of its teratogenicity, the Australian\nTherapeutic Goods Administration (TGA) \u2026 and overseas drug regulatory agencies \u2026 recommend against the use of valproate in women of childbearing potential\nunless other drugs are ineffective or not tolerated."
+    },
+    {
+      "claim": "If valproate is prescribed to a woman of childbearing potential it should be prescribed by a specialist experienced in managing epilepsy or bipolar disorder and co-prescribed with effective contraception",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If valproate is prescribed,\nit should be prescribed by a specialist experienced in managing epilepsy or\nbipolar disorder \u2026 and co-prescribed with effective contraception."
+    },
+    {
+      "claim": "Estrogen-containing contraceptives may increase the clearance of valproate and reduce plasma valproate concentrations, prescribers should monitor clinical response when an estrogen-containing contraceptive is started, and a non-estrogen-containing contraceptive such as an intrauterine device or a progesterone-only pill is an option depending on patient preference",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Estrogen-containing\ncontraceptives may increase the clearance of valproate and reduce plasma\nvalproate concentrations; \u2026 prescribers\nshould monitor clinical response when an estrogen-containing contraceptive is\nstarted. \u2026 A non\u2013estrogen-containing contraceptive such as an intrauterine device or a progesterone-only\npill is an option, depending on patient preference."
+    },
+    {
+      "claim": "For women of childbearing potential who require treatment for epilepsy levetiracetam or lamotrigine are preferred, and both are listed on the Australian Pharmaceutical Benefits Scheme for the initial treatment of epilepsy for women of childbearing potential, are safe during pregnancy, have no known long-term safety issues and are well tolerated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For women of childbearing potential who\nrequire treatment for epilepsy, levetiracetam or lamotrigine are preferred. Both\nare listed on the Australian Pharmaceutical Benefits Scheme for the initial\ntreatment of epilepsy for women of childbearing potential, are safe during\npregnancy, have no known long-term safety issues and are well tolerated."
+    },
+    {
+      "claim": "If a woman taking valproate for epilepsy becomes pregnant changing to levetiracetam or lamotrigine may be considered, and if there is no effective alternative the dose of valproate should be kept to the lowest dose that prevents seizures",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a woman taking valproate for epilepsy becomes\npregnant, changing to levetiracetam or lamotrigine may be considered. If there\nis no effective alternative, the dose of valproate should be kept to the lowest\ndose that prevents seizures."
+    },
+    {
+      "claim": "Folic acid has not been shown to reduce the risk of major congenital malformations associated with valproate, however if used a dose of at least 0.4 mg daily prior to conception and during pregnancy is recommended",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Folic acid has not been shown to reduce the risk\nof major congenital malformations associated with valproate; \u2026 however, if\nused, a dose of at least 0.4 mg daily prior to conception and during\npregnancy is recommended."
+    },
+    {
+      "claim": "For women who require treatment for bipolar disorder and are planning pregnancy the use of valproate should be avoided if possible, lithium is the most effective option but it too can cause congenital malformations, and lamotrigine is less effective but is safe in pregnancy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For\nwomen who require treatment for bipolar disorder and are planning pregnancy, the\nuse of valproate should be avoided, if possible. \u2026 Lithium is the most\neffective option, but it too can cause congenital malformations. Lamotrigine is\nless effective but is safe in pregnancy"
+    },
+    {
+      "claim": "Lamotrigine requires slow titration over around 6 weeks to reach an effective dose, during this period the patient is at risk of harm, and advice should be sought from the treating psychiatrist",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "requires slow titration over around\n6 weeks to reach an effective dose. During this period, the patient is at risk\nof harm, and advice should be sought from the treating\npsychiatrist."
+    },
+    {
+      "claim": "In some circumstances such as a pregnant individual with severe or unstable epilepsy or bipolar disorder the benefits of continuing valproate treatment may outweigh the risks of harm to the fetus, for example stopping valproate may lead to a relapse of bipolar disorder which can increase risk of maternal self-harm or suicidality",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In\nsome circumstances, such as a pregnant individual with severe or unstable epilepsy\nor bipolar disorder, the benefits of continuing valproate treatment may\noutweigh the risks of harm to the fetus; for example, stopping valproate may\nlead to a relapse of bipolar disorder, which can increase risk of maternal self-harm\nor suicidality."
+    },
+    {
+      "claim": "Assessment of the benefits and risks of valproate use should be contextualised to the patient considering the severity of their condition, the risk and impact of adverse effects on the mother and fetus, gestational timing and patient preferences",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Assessment of the benefits and risks of valproate use should be\ncontextualised to the patient, considering the severity of their condition, the\nrisk and impact of adverse effects on the mother and fetus, gestational timing\nand patient preferences."
+    },
+    {
+      "claim": "Male-mediated teratogenesis associated with valproate intake was suggested by a retrospective cohort study published in 2023 which reported an increased risk of neurodevelopmental disorders such as autism spectrum disorder, intellectual disability and attention deficit hyperactivity disorder in the offspring of men who took valproate in the 3 months before conception compared with men who took lamotrigine or levetiracetam",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Male-mediated teratogenesis associated with\nvalproate intake was suggested by a retrospective cohort study published in\n2023, \u2026 which\nreported an increased risk of neurodevelopmental disorders (e.g. autism\nspectrum disorder, intellectual disability, attention deficit hyperactivity\ndisorder) in the offspring of men who took valproate in the 3 months\nbefore conception, compared with men who took lamotrigine or levetiracetam."
+    },
+    {
+      "claim": "The 2023 paternal exposure findings were regarded as unsubstantiated by the TGA and the Epilepsy Society of Australia because of methodological issues, subsequent studies were not able to reproduce these findings, and the European Medicines Agency is undertaking a signal procedure to analyse the conflicting results of these studies",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "However,\nthese findings were regarded as unsubstantiated by the TGA \u2026 and the Epilepsy Society of Australia \u2026 because\nof methodological issues, and subsequent studies were not able to reproduce these\nfindings. \u2026 The European Medicines Agency is undertaking a signal procedure to\nanalyse the conflicting results of these studies."
+    },
+    {
+      "claim": "Despite study limitations, as a precaution, sponsors of sodium valproate products have added new warnings to their product information and consumer medicine information documents",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Despite study limitations, as a precaution,\nsponsors of sodium valproate products have added new warnings to their product\ninformation and consumer medicine information documents."
+    },
+    {
+      "claim": "In 2025 the TGA issued a safety update advising prescribers to inform male patients of the potential risks and the need for effective contraception for both partners during valproate treatment and for 3 months after stopping it",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In 2025, the TGA\nissued a \u2026 safety\nupdate \u2026 advising prescribers to inform male patients of the potential risks and\nthe need for effective contraception (for both partners) during valproate\ntreatment and for 3 months after stopping it."
+    },
+    {
+      "claim": "Male patients should be advised to consult their doctor about alternative treatments if they plan to father a child, before stopping contraception, or if pregnancy occurs, and should also be advised not to donate sperm during valproate treatment and for 3 months after stopping treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Male patients should be\nadvised to consult their doctor about alternative treatments if they plan to\nfather a child, before stopping contraception, or if pregnancy occurs. They\nshould also be advised not to donate sperm during valproate treatment and for\n3 months after stopping treatment."
+    },
+    {
+      "claim": "The article was finalised on 21 April 2026 and is peer reviewed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "_This article was_\n_finalised on 21 April 2026._ \u2026 **This article is peer reviewed.**"
+    },
+    {
+      "claim": "The author declares that Dan McLaughlin is the chair of the Epilepsy Society of Australia's Drugs and Devices Committee and was a co-author of the Epilepsy Society of Australia's position statements on Generic Drug Use in Epilepsy and Valproate Use in Men and Offspring Risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "_Conflicts of interest: Dan McLaughlin is_\n_the chair of the Epilepsy Society of Australia's Drugs and Devices Committee._\n_Dan was a co-author of the Epilepsy Society of Australia's position statements_\n_on 'Generic Drug Use in Epilepsy' and 'Valproate Use in Men and Offspring Risk'._"
+    },
+    {
+      "claim": "The dose-dependent teratogenicity figures derive from the Australian register of anti-epileptic drugs in pregnancy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Vajda FJ, O'Brien T J, Hitchcock A, Graham\n     J, Cook M, Lander C, et al. Critical relationship between sodium valproate dose\n     and human teratogenicity: results of the Australian register of anti-epileptic\n     drugs in pregnancy. J Clin Neurosci 2004;11:854-8."
+    }
+  ],
+  "summary": {
+    "total": 47,
+    "pass": 47,
+    "fail": 0
+  }
+}
