@@ -1,0 +1,519 @@
+{
+  "guideline": "guidelines/dementia.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-21",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "method": "Each claim checked against the retrieved text of the 2016 Clinical Practice Guidelines and Principles of Care for People with Dementia (recommendations section, pages V-XVIII). Recommendation number and grade (EBR with quality rating, CBR, or PP) transcribed with each. The NHMRC approval date and five-year validity are recorded verbatim; the resulting expiry is stated as arithmetic on the source's own terms. The 2016 statement that routine biomarker use is premature is transcribed as written and explicitly NOT updated from model memory. Disease-modifying therapies are recorded as input_unavailable.",
+  "claims": [
+    {
+      "claim": "The recommendations were approved by the CEO of the NHMRC on 1 February 2016 under section 14A of the National Health and Medical Research Council Act 1992, and the approval is valid for a period of five years",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The guidelines (recommendations) on pages V-XVIII were approved by the Chief Executive Officer of the National Health and Medical Research Council (NHMRC) on 1 February 2016 under section 14A of the National Health and Medical Research Council Act 1992. In approving the guidelines (recommendations), NHMRC considers that they meet the NHMRC standard for clinical practice guidelines. This approval is valid for a period of five years."
+    },
+    {
+      "claim": "The guideline was published in February 2016 by the Guideline Adaptation Committee, Sydney",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Published: February 2016 ... Guideline Adaptation Committee. Clinical Practice Guidelines and Principles of Care for People with Dementia. Sydney. Guideline Adaptation Committee; 2016."
+    },
+    {
+      "claim": "The guideline is an adaptation of Dementia: Supporting people with dementia and their carers in health and social care, published by the NCC-MH in 2006",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This publication is an adaptation of 'Dementia: Supporting people with dementia and their carers in health and social care', published by the NCC-MH in 2006."
+    },
+    {
+      "claim": "General population screening for dementia should not be undertaken",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "General population screening for dementia should not be undertaken."
+    },
+    {
+      "claim": "Concerns or symptoms should be explored when first raised by the person, carers or family and should not be dismissed as part of ageing",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Concerns or symptoms should be explored when first raised, noted or reported by the person, carer(s) or family and should not be dismissed as 'part of ageing'."
+    },
+    {
+      "claim": "Medical practitioners working with older people should be alert to cognitive decline especially in those aged 75 years and older",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Medical practitioners working with older people should be alert to cognitive decline, especially in those aged 75 years and older."
+    },
+    {
+      "claim": "People with a possible diagnosis of dementia should be offered referral to memory assessment specialists or services for a comprehensive assessment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with a possible diagnosis of dementia should be offered referral to memory assessment specialists or services for a comprehensive assessment."
+    },
+    {
+      "claim": "Memory assessment services or specialists identifying mild cognitive impairment should typically offer follow-up after six to 18 months at the service or with a general practitioner, other medical practitioner or nurse practitioner to monitor cognitive changes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Memory assessment services or specialists that identify people with mild cognitive impairment should typically offer follow-up either at the memory assessment service or with a general practitioner, other medical practitioner or nurse practitioner after six to 18 months to monitor cognitive changes and other signs of possible dementia."
+    },
+    {
+      "claim": "A diagnosis of dementia should be made only after a comprehensive assessment including history from the person, history from someone who knows them well if possible, cognitive and mental state examination with a validated instrument, physical examination, a medication review to identify and minimise medications including over-the-counter products that may adversely affect cognition and to simplify dosing, and consideration of other causes including delirium or depression",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A diagnosis of dementia should be made only after a comprehensive assessment, which should include: history taking from the person; history taking from a person who knows the person well, if possible; cognitive and mental state examination with a validated instrument; physical examination; a review of medication in order to identify and minimise use of medications, including over-the-counter products, that may adversely affect cognitive functioning and to simplify medication dosing; consideration of other causes (including delirium or depression)."
+    },
+    {
+      "claim": "A basic dementia screen should be performed at presentation usually in primary care including routine haematology, biochemistry with electrolytes, calcium, glucose and renal and liver function, thyroid function tests, and serum vitamin B12 and folate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A basic dementia screen should be performed at the time of presentation, usually within primary care. It should include the following blood tests: routine haematology; biochemistry tests (including electrolytes, calcium, glucose, and renal and liver function); thyroid function tests; serum vitamin B12 and folate levels."
+    },
+    {
+      "claim": "Testing for syphilis serology or HIV should be undertaken only in those with histories suggesting they are at risk",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Testing for syphilis serology or HIV should be undertaken only in those with histories suggesting they are at risk."
+    },
+    {
+      "claim": "Clinical presentation should determine whether chest X-ray or electrocardiogram are needed, and an electrocardiogram should be considered if intending to prescribe acetylcholinesterase inhibitors",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinical presentation should determine whether investigations such as chest X-ray or electrocardiogram are needed. An electrocardiogram should be considered if intending to prescribe acetylcholinesterase inhibitors."
+    },
+    {
+      "claim": "At diagnosis and at regular intervals subsequently, assessment should be made for medical comorbidities and key psychiatric features associated with dementia including depression and psychosis",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "At the time of diagnosis of dementia, and at regular intervals subsequently, assessment should be made for medical comorbidities and key psychiatric features associated with dementia, including depression and psychosis, to ensure optimal management of coexisting conditions."
+    },
+    {
+      "claim": "Cerebrospinal fluid examination should not be performed as a routine investigation for dementia but may be indicated if Creutzfeldt-Jakob disease is suspected or in rapidly progressive dementia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Cerebrospinal fluid examination should not be performed as a routine investigation for dementia. Cerebrospinal fluid examination may be indicated if Creutzfeldt-Jakob disease is suspected or in rapidly progressive dementia."
+    },
+    {
+      "claim": "Electroencephalography should not be used as a routine investigation but should be considered if delirium or Creutzfeldt-Jakob disease is suspected or in assessment of associated seizure disorder",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Electroencephalography should not be used as a routine investigation in people with dementia. Electroencephalography should be considered if a diagnosis of delirium or Creutzfeldt-Jakob disease is suspected, or in the assessment of associated seizure disorder in those with dementia."
+    },
+    {
+      "claim": "Brain biopsy for diagnostic purposes should be considered only in highly selected people whose dementia is thought to be due to a potentially reversible condition that cannot be diagnosed in any other way",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Brain biopsy for diagnostic purposes should be considered only in highly selected people whose dementia is thought to be due to a potentially reversible condition that cannot be diagnosed in any other way."
+    },
+    {
+      "claim": "Many diagnostic technologies including biomarkers for beta-amyloid or neuronal injury such as FDG-PET or CSF tau are being evaluated and may prove useful in future, and the routine use of these technologies in clinical practice is considered premature",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Many diagnostic technologies including biomarkers for beta-amyloid or neuronal injury (e.g., 18F-fluorodeoxyglucose Positron Emission Tomography [FDG-PET] or CSF tau) are currently being evaluated and may prove to be useful in the assessment of dementia in the future. The routine use of these technologies in clinical practice is considered to be premature."
+    },
+    {
+      "claim": "HMPAO SPECT should not be used in people with mild cognitive impairment either for the differentiation of dementia from MCI or for the differentiation of progressive from non-progressive MCI",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "HMPAO SPECT should not be used in people with mild cognitive impairment (MCI) either for the differentiation of dementia from MCI or for the differentiation of progressive from non-progressive MCI."
+    },
+    {
+      "claim": "Structural imaging with CT or MRI should usually be used in the assessment of suspected dementia to exclude other cerebral pathologies and help establish subtype diagnosis unless clinical judgement indicates this inappropriate, and may not always be needed in moderate-to-severe dementia if the diagnosis is already clear",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Structural imaging (with computed tomography [CT] or magnetic resonance imaging [MRI]) should usually be used in the assessment of people with suspected dementia to exclude other cerebral pathologies and to help establish the subtype diagnosis, unless clinical judgement indicates this inappropriate. Structural imaging may not always be needed in those presenting with moderate-to-severe dementia, if the diagnosis is already clear."
+    },
+    {
+      "claim": "A diagnosis of subtype of dementia should be made by healthcare professionals with expertise in differential diagnosis using international standardised criteria",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A diagnosis of subtype of dementia should be made by healthcare professionals with expertise in differential diagnosis using international standardised criteria"
+    },
+    {
+      "claim": "The Kimberley Indigenous Cognitive Assessment KICA-Cog or KICA-Screen tool is recommended for use with remote living Indigenous Australians for whom alternative cognitive assessment tools are not considered appropriate, with quality of evidence low for KICA-Cog and very low for KICA-Screen",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Kimberley Indigenous Cognitive Assessment (KICA-Cog) or KICA-Screen tool is recommended for use with remote living Indigenous Australians for whom the use of alternative cognitive assessment tools is not considered appropriate. ... Quality of evidence is low for the KICA-Cog and very low for the KICA Screen"
+    },
+    {
+      "claim": "The modified KICA is recommended as an alternative to the Mini Mental State Exam in urban and rural Indigenous Australian populations when illiteracy, language or cultural considerations deem it appropriate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The modified KICA (mKICA) is recommended as an alternative to the Mini Mental State Exam (MMSE) in urban and rural Indigenous Australian populations when illiteracy, language or cultural considerations deem it appropriate."
+    },
+    {
+      "claim": "The Rowland Universal Dementia Assessment Scale should be considered for assessing cognition in CALD populations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Rowland Universal Dementia Assessment Scale (RUDAS) should be considered for assessing cognition in CALD populations."
+    },
+    {
+      "claim": "Clinical cognitive assessment should use an instrument with established reliability and validity, taking full account of factors known to affect performance including age, educational level, non-English speaking background, prior level of functioning, aphasia, hearing or visual impairments, psychiatric illness or physical and neurological problems",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Clinical cognitive assessment in those with suspected dementia should include examination using an instrument with established reliability and validity. Health and aged care professionals should take full account of other factors known to affect performance, including age, educational level, non-English speaking background, prior level of functioning, aphasia, hearing or visual impairments, psychiatric illness or physical/neurological problems when interpreting scores."
+    },
+    {
+      "claim": "The diagnosis of dementia should be communicated to the person with dementia by a medical practitioner, honestly and respectfully using a gradual and individualised approach",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The diagnosis of dementia should be communicated to the person with dementia by a medical practitioner. The medical practitioner should be honest and respectful and use a gradual and individualised approach when communicating the diagnosis"
+    },
+    {
+      "claim": "People have the right to know their diagnosis and the right not to know their diagnosis, and in rare cases where the person indicates they do not wish to be told this wish should be respected",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The medical practitioner should recognise that people have the right to know their diagnosis and the right not to know their diagnosis. In rare cases where the person with dementia indicates that they do not wish to be told his or her diagnosis, this wish should be respected."
+    },
+    {
+      "claim": "Information about dementia should be provided clearly, emphasising that progression is often slow, symptomatic treatments are available and that research is striving to find cures though so far without success",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The medical practitioner should provide information about dementia in a clear manner and emphasise that progression is often slow, symptomatic treatments are available and that research is striving to find cures, though so far without success."
+    },
+    {
+      "claim": "People with a history of depression or self-harm may be at particular risk of depression, self-harm or suicide following a diagnosis of dementia particularly in the first few months post diagnosis, and counselling should be offered",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Medical practitioners should be aware that people with a history of depression and/or selfharm may be at particular risk of depression, self-harm or suicide following a diagnosis of dementia, particularly in the first few months post diagnosis. While such reactions are believed to be uncommon, counselling should be offered as an additional way to support the person during this time."
+    },
+    {
+      "claim": "Any one of the three acetylcholinesterase inhibitors donepezil, galantamine or rivastigmine is recommended as an option for managing the symptoms of mild to moderately severe Alzheimer's disease, and any one could be considered for severe Alzheimer's disease",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Any one of the three acetylcholinesterase inhibitors (donepezil, galantamine or rivastigmine) are recommended as options for managing the symptoms of mild to moderately severe Alzheimer's disease. Any one of the three acetylcholinesterase inhibitors could be considered for managing the symptoms of severe Alzheimer's disease."
+    },
+    {
+      "claim": "Prior to initiation of an acetylcholinesterase inhibitor medical practitioners should consider performing an ECG, recording weight and undertaking a falls risk assessment, and concomitant administration of medications with anticholinergic effects should be avoided",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Prior to initiation of treatment medical practitioners should consider performing an electrocardiogram(ECG), recording weight and undertaking a falls risk assessment.Concomitant administration of medications with anticholinergic effects should be avoided."
+    },
+    {
+      "claim": "Acetylcholinesterase inhibitors are associated with adverse reactions including nausea, vomiting, diarrhoea, dizziness, increased urinary incontinence and frequency, falls, muscle cramps, weight loss, anorexia, headache and insomnia, and heart block is a rare but serious potential adverse event",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Medical and nurse practitioners should be aware that the acetylcholinesterase inhibitors are associated with a number of adverse reactions that have a risk of harm.These includebut are not limited to)nausea,vomiting,diarrhoea,dizziness,increased urinary incontinence and frequency,falls,muscle cramps,weight loss,anorexia,headache and insomnia.Heart block is a rare,but serious potential adverse event."
+    },
+    {
+      "claim": "Memantine is recommended as an option for people with moderate-to-severe Alzheimer's disease who are intolerant of or have a contraindication to acetylcholinesterase inhibitors, and for severe renal impairment with creatinine clearance below 30 ml/min the dose should be halved",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Memantine is recommended as an option for people with moderate-to-severe Alzheimer's disease who are intolerant of or have a contraindication to acetylcholinesterase inhibitors.For people with severe renal impairment(creatinine clearance<30ml/min)the dose of memantine should be halved."
+    },
+    {
+      "claim": "Any one of the three acetylcholinesterase inhibitors could be considered for managing symptoms of Dementia with Lewy Bodies, Parkinson's Disease dementia, vascular dementia or mixed dementia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Any one of the three acetylcholinesterase inhibitors (donepezil,galantamine or rivastigmine) could be considered for managing the symptoms of Dementia with Lewy Bodies,Parkinson's Disease dementia,vascular dementia or mixed dementia."
+    },
+    {
+      "claim": "The combination of an acetylcholinesterase inhibitor plus memantine could be considered for managing the symptoms of moderate-to-severe Alzheimer's disease",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The combination of an acetylcholinesterase inhibitor plus memantine could be considered for managing the symptoms of moderate-to-severe Alzheimer's disease."
+    },
+    {
+      "claim": "People prescribed an acetylcholinesterase inhibitor or memantine should be reviewed within a short time such as one month for adverse effects and dose titration and within six months to determine clinically meaningful response, with review and consideration of de-prescribing at regular intervals including at admission to residential care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People who have been prescribed an acetylcholinesterase inhibitor or memantine should be reviewed within a short time (e.g., one month) for evaluation of adverse effects and dose titration and within six months, to determine whether there is a clinically meaningful response to treatment. Review and consideration of de-prescribing is recommended at regular intervals including at the time of admission to residential care."
+    },
+    {
+      "claim": "Acetylcholinesterase inhibitors should not be prescribed for people with mild cognitive impairment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Acetylcholinesterase inhibitors should not be prescribed for people with mild cognitive impairment."
+    },
+    {
+      "claim": "Acetylcholinesterase inhibitors are not currently listed for severe Alzheimer's disease on the Pharmaceutical Benefits Scheme",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Not currently listed for severe Alzheimer's disease on the Pharmaceutical Benefits Scheme"
+    },
+    {
+      "claim": "Acetylcholinesterase inhibitors are not currently listed on the Pharmaceutical Benefits Scheme for Dementia with Lewy Bodies, Parkinson's Disease dementia, vascular dementia or mixed dementia",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Not currently listed for these indications on the Pharmaceutical Benefits Scheme"
+    },
+    {
+      "claim": "Pharmaceutical Benefits Scheme listing for acetylcholinesterase inhibitor plus memantine is for single therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Listing on the Pharmaceutical Benefits Scheme is for single therapy"
+    },
+    {
+      "claim": "The only antipsychotic currently listed for BPSD on the Pharmaceutical Benefits Scheme is risperidone",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The only antipsychotic that is currently listed for BPSD on the Pharmaceutical Benefits Scheme is risperidone."
+    },
+    {
+      "claim": "There is currently insufficient evidence to recommend routine use of Souvenaid in people with mild Alzheimer's disease, and Souvenaid should not be recommended for people with moderate or severe Alzheimer's disease",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There is currently insufficient evidence to recommend the routine use of Souvenaid in people with mild Alzheimer's disease. Souvenaid should not be recommended for people with moderate or severe Alzheimer's disease."
+    },
+    {
+      "claim": "People with dementia who develop behavioural and psychological symptoms should usually be treated using non-pharmacological approaches in the first instance, with pharmacological intervention usually offered first only if the person, carers or family are severely distressed, pain is the suspected cause, or there is immediate risk of harm, and any pharmacological management should complement not replace non-pharmacological approaches",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia who develop behavioural and psychological symptoms of dementia should usually be treated using non-pharmacological approaches in the first instance. Pharmacological intervention should usually only be offered first if the person, their carer(s) or family is severely distressed, pain is the suspected cause, or there is an immediate risk of harm to the person with dementia or others (i.e., very severe symptoms). If pharmacological management is used, this should complement, not replace, non-pharmacological approaches."
+    },
+    {
+      "claim": "Factors that may increase the likelihood of distressing behavioural and psychological symptoms include unmet needs such as pain, hunger, need to eliminate, lack of privacy, lack of meaningful activities and communication, and lowered stress threshold such as conflicts or poor communication within the family or between staff and carer stress",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "These factors include: unmet needs (e.g., pain, hunger, need to eliminate, lack of privacy, lack of meaningful activities, communication); lowered stress threshold (e.g., conflicts or poor communication within the family or between staff, carer stress)."
+    },
+    {
+      "claim": "Comprehensive assessment of behavioural and psychological symptoms should include analysis of the behaviours using an antecedent, behaviour, consequence approach, frequency, timing and presentation, assessment of physical and mental health, level of pain or discomfort, medication side effects, religious and spiritual beliefs and cultural norms, environmental and interpersonal factors, assessment of carers health and communication style, and understanding the behaviour as a form of communication",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "analysis of the behaviours (e.g., antecedent [triggers], behaviour description and consequence [ABC approach]), frequency, timing and presentation; assessment of the person with dementia's physical and mental health; their level of pain or discomfort; whether they are experiencing side effects of medication; the influence of religious and spiritual beliefs and cultural norms; physical environmental and interpersonal factors; an assessment of carer(s) health and communication style when interacting with the person with dementia should also be undertaken; understanding the behaviour as a form of communication."
+    },
+    {
+      "claim": "If a person with dementia is suspected to be in pain due to their distress or behaviour as indicated by an observational pain assessment tool, analgesic medication should be trialled using a stepped approach for a defined time period, particularly if opioids are used",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a person with dementia is suspected to be in pain due to their distress or behaviour, as indicated by responses on an observational pain assessment tool, analgesic medication should be trialled using a stepped approach. The trial should be for a defined time period, particularly if opioids are used."
+    },
+    {
+      "claim": "For depression and/or anxiety the individual therapies to consider are therapeutic use of music and/or dancing, support and counselling, and reminiscence therapy; for agitation they are behavioural management interventions, therapeutic use of music and/or dancing, massage, and reminiscence therapy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For depression and or/anxiety: therapeutic use of music and/or dancing; support and counselling; reminiscence therapy. ... For agitation: behavioural management interventions; therapeutic use of music and/or dancing; massage; reminiscence therapy."
+    },
+    {
+      "claim": "Carers and family should be offered interventions involving carer skills training in managing symptoms and communicating effectively, meaningful activity planning, environmental redesign and modification to improve safety and enjoyment, and problem solving and management planning",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "carer(s) and family should be offered interventions which involve: carer skills training in managing symptoms and communicating effectively with the person with dementia; meaningful activity planning; environmental redesign and modification to improve safety and enjoyment; problem solving and management planning."
+    },
+    {
+      "claim": "People with dementia who experience agitation should be offered a trial of SSRI antidepressants with the strongest evidence for citalopram if non-pharmacological treatments are inappropriate or have failed, with review, evaluation of efficacy and consideration of de-prescribing after two months",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia who experience agitation should be offered a trial of selective serotonin reuptake inhibitor (SSRI) antidepressants (the strongest evidence for effectiveness exists for citalopram) if non-pharmacological treatments are inappropriate or have failed. Review with evaluation of efficacy and consideration of de-prescribing should occur after two months."
+    },
+    {
+      "claim": "The role of antidepressants in the treatment of depression in people with dementia is uncertain and larger trials have not shown benefit in group data, though those with a pre-existing history of major depression prior to developing dementia who develop comorbid major depression should be treated in the usual way",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The role of antidepressants in the treatment of depression in people with dementia is uncertain. Larger trials conducted in people with dementia have not shown benefit (in group data) for antidepressants for treatment of depression per se. Nevertheless, it is considered that those with a pre-existing history of major depression (prior to developing dementia) who develop a co-morbid major depression should be treated in the usual way."
+    },
+    {
+      "claim": "Antidepressant medications with anticholinergic effects such as tricyclic antidepressants should be avoided because they may adversely affect cognition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Antidepressant medications with anticholinergic effects (e.g., tricyclic antidepressants) should be avoided because they may adversely affect cognition."
+    },
+    {
+      "claim": "People with Alzheimer's disease, vascular dementia or mixed dementias with mild-to-moderate behavioural and psychological symptoms should not usually be prescribed antipsychotic medications because of the increased risk of cerebrovascular adverse events and death",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with Alzheimer's disease, vascular dementia or mixed dementias with mild-to-moderate behavioural and psychological symptoms of dementia should not usually be prescribed antipsychotic medications because of the increased risk of cerebrovascular adverse events and death."
+    },
+    {
+      "claim": "As far as possible antipsychotics should be avoided in people with Dementia with Lewy Bodies due to the risk of severe untoward reactions particularly extrapyramidal side effects, acetylcholinesterase inhibitors could be considered, and if antipsychotics are used atypical agents with low propensity for extrapyramidal side effects such as quetiapine and olanzapine are considered to have the best tolerability with low dosage and close monitoring",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "As far as possible, antipsychotics should be avoided in people with Dementia with Lewy Bodies due to the risk of severe untoward reactions, particularly extrapyramidal side effects. Acetylcholinesterase inhibitors could be considered. If antipsychotics are used for severe behavioural and psychological symptoms of dementia, atypical or second generation antipsychotics with low propensity to cause extrapyramidal side effects should be used; quetiapine and olanzapine are . Healthcare professionals should use low considered to have the best tolerability dosage and closely monitor for adverse effects."
+    },
+    {
+      "claim": "People with dementia and severe behavioural and psychological symptoms causing significant distress may be offered treatment with an antipsychotic, with risperidone having the strongest evidence for treating psychosis, risperidone and olanzapine the strongest evidence for agitation and aggression, and weaker evidence for aripiprazole",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia and severe behavioural and psychological symptoms of dementia (i.e., psychosis and/or agitation/aggression) causing significant distress to themselves or others, may be offered treatment with an antipsychotic medication. Risperidone has the strongest evidence for treating psychosis. Risperidone and have the strongest evidence for treating agitation/aggression, with olanzapine weaker evidence for aripiprazole"
+    },
+    {
+      "claim": "Antipsychotic use requires full discussion of benefits and risks including assessment of cerebrovascular risk factors and discussion of possible increased risk of stroke or TIA and adverse effects on cognition, identification and documentation of target symptoms, consideration of comorbid conditions, individual risk-benefit analysis, initially low dose titrated upwards if necessary, and monitoring for adverse effects including metabolic syndrome",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "There should be a full discussion with the person with dementia and their carers and family about the possible benefits and risks of treatment. In particular, cerebrovascular risk factors should be assessed and the possible increased risk of stroke/transient ischaemic attack and possible adverse effects on cognition discussed. Target symptoms should be identified, quantified and documented. The effect of comorbid conditions, such as depression, should be considered. The choice of antipsychotic should be made after an individual risk-benefit analysis. The dose should be initially low and titrated upwards if necessary. Monitoring for adverse effects including the metabolic syndrome should occur."
+    },
+    {
+      "claim": "If no efficacy is observed within a relatively short timeframe usually one to two weeks antipsychotic treatment should be discontinued, and treatment should be reviewed every four to 12 weeks considering the need for antipsychotics and possible cessation, with regular assessment and recording of changes in cognition and target symptoms",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If there is no efficacy observed within a relatively short timeframe (usually one to two weeks), treatment should be discontinued. Treatment should be reviewed every four to 12 weeks, considering the need for antipsychotics and possible cessation of medication. Review should include regular assessment and recording of changes in cognition and target symptoms."
+    },
+    {
+      "claim": "Where people with dementia have moderate to severe behavioural and psychological symptoms that put themselves or others at risk, referral to a specialist service should occur",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Where people with dementia have moderate to severe behavioural and psychological symptoms that puts themselves or others at risk, referral to a specialist service for the management of behavioural and psychological symptoms should occur."
+    },
+    {
+      "claim": "If medications are necessary for control of violence, aggression and extreme agitation, oral medication should be offered before parenteral medication",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If medications are necessary for the control of violence, aggression and extreme agitation in people with dementia, oral medication should be offered before parenteral medication."
+    },
+    {
+      "claim": "If parenteral treatment is necessary, intramuscular administration is preferable because it is safer than intravenous, intravenous should be used only in exceptional circumstances, vital signs should be monitored, and health professionals should be aware that loss of consciousness can be mistaken for sleep so more intensive monitoring is required if the person appears asleep",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If parenteral treatment is necessary for the control of violence, aggression and extreme agitation, intramuscular administration is preferable because it is safer than intravenous administration. Intravenous administration should be used only in exceptional circumstances. Vital signs should be monitored after parenteral treatment. Health professionals should be aware that loss of consciousness can be mistaken for sleep. If the person appears to be or is asleep, more intensive monitoring is required because of the risk of loss of consciousness."
+    },
+    {
+      "claim": "If parenteral medication is necessary for control of violence, aggression and extreme agitation, olanzapine or lorazepam are preferred and wherever possible a single agent should be used in preference to a combination",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If parenteral medication is necessary for the control of violence, aggression and extreme agitation in people with dementia, olanzapine or lorazepam are preferred. Wherever possible, a single agent should be used in preference to a combination."
+    },
+    {
+      "claim": "Health professionals using medication for behavioural control should be trained in its correct use, able to assess risks particularly in people who may be dehydrated or physically ill, understand cardiorespiratory effects and dose titration, recognise the importance of the recovery position and monitoring vital signs, be trained in resuscitation with annual retraining, understand airway maintenance, and know the laws for informed consent in their jurisdiction",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "be trained in the correct use of medications for behavioural control; be able to assess the risks associated with pharmacological control of violence, aggression and extreme agitation, particularly in people who may be dehydrated or physically ill; understand the cardiorespiratory effects of the acute administration of any medications used and the need to titrate dosage to effect; recognise the importance of positioning people who have received these medications in the recovery position and of monitoring vital signs; be familiar with and trained in the use of resuscitation equipment; undertake annual retraining in resuscitation techniques; understand the importance of maintaining a clear airway; be knowledgeable about the laws for informed consent in their jurisdiction."
+    },
+    {
+      "claim": "People with dementia who have received involuntary sedation should be offered the opportunity along with carers and family to discuss their experiences and be provided with a clear explanation of the decision to use urgent sedation, documented in their notes",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia who have received involuntary sedation should be offered the opportunity, along with their carer(s) and family, to discuss their experiences and be provided with a clear explanation of the decision to use urgent sedation. This should be documented in their notes."
+    },
+    {
+      "claim": "People with dementia should be strongly encouraged to exercise and assessment and advice from a physiotherapist or exercise physiologist may be indicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia should be strongly encouraged to exercise. Assessment and advice from a physiotherapist or exercise physiologist may be indicated."
+    },
+    {
+      "claim": "People with dementia living in the community should be offered occupational therapy interventions including environmental assessment and modification to aid independent functioning, prescription of assistive technology, and tailored intervention to promote independence in activities of daily living which may involve problem solving, task simplification and education and skills training for carers and family",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia living in the community should be offered occupational therapy interventions which should include: environmental assessment and modification to aid independent functioning; prescription of assistive technology; and tailored intervention to promote independence in activities of daily living which may involve problem solving, task simplification and education and skills training for their carer(s) and family."
+    },
+    {
+      "claim": "Interventions to promote functional and social independence should include consistency of care staff, stability in living environment, flexibility to accommodate fluctuating abilities, support to participate in tailored meaningful and enjoyable activities, and assessment and intervention to promote independent self-care skills and prevent excess disability including supporting the person to retain continence",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "consistency of care staff; stability in living environment; flexibility to accommodate fluctuating abilities; support for people with dementia and their carer(s) and families to participate in tailored activities that are meaningful and enjoyable; assessment and intervention, involving the carer(s) and family wherever possible, to promote independent self-care skills and prevent excess disability, in particular supporting the person with dementia to retain continence"
+    },
+    {
+      "claim": "People with dementia should have their weight monitored and nutritional status assessed regularly, with consultation with a dietitian and/or assessment by a speech pathologist indicated in cases of undernutrition",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia should have their weight monitored and nutritional status assessed regularly. In cases of undernutrition, consultation with a dietitian and/or assessment by a speech pathologist may be indicated."
+    },
+    {
+      "claim": "Upon diagnosis the medical practitioner should recommend the person with dementia or their carers makes an appointment to see a dentist who should conduct an assessment and formulate a long term treatment plan",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Upon diagnosis, the medical practitioner should recommend the person with dementia (or their carer(s) or family) makes an appointment to see a dentist. The dentist should conduct an assessment and formulate a long term treatment plan."
+    },
+    {
+      "claim": "Carers are at increased risk of poor health and their needs should be assessed and reviewed regularly by their own health practitioner, addressed regularly including if the person with dementia has entered residential care and after their death",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Carers are at an increased risk of poor health and their needs should be assessed and reviewed regularly by their own health practitioner. Carer and family needs should be addressed regularly, including if the person with dementia has entered residential care, and after their death."
+    },
+    {
+      "claim": "The person with dementia, their carers and family should be offered respite appropriate to their needs which may include in-home respite, day respite, planned activity groups and residential respite",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The person with dementia, their carer(s) and family should be offered respite appropriate to their needs. This may include in-home respite, day respite, planned activity groups and residential respite."
+    },
+    {
+      "claim": "Carer and family support programs should be tailored to the individual, delivered in the home or another accessible location over multiple sessions, and include education about dementia and its consequences, information about relevant services including respite, referral to support organisations, individualised strategies and skill building, training in care and communication, coping strategies including stress management, and training in the use of pleasant and meaningful activities",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Programs should be tailored to the needs of the individual and delivered in the home or at another accessible location. Programs should be delivered over multiple sessions and include: education regarding dementia and its consequences; information regarding relevant services including respite; referral to support organisations such as Alzheimer's Australia or Carers Australia; development of individualised strategies and building carer skills to overcome specific problems experienced by the person with dementia as reported by the carer; training in providing care and communicating most effectively with the person with dementia; support and information regarding coping strategies to maintain their own wellbeing including stress management; training in the use of pleasant and meaningful activities as a strategy to engage the person with dementia"
+    },
+    {
+      "claim": "Carers and families should be provided with information about how to join a mutual support group, with groups of the preferred composition available since individual preferences for group composition may vary",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health and aged care professionals should provide carers and families with information regarding how to join a mutual support group. Individual preferences for group composition may vary and groups of the preferred composition should be available."
+    },
+    {
+      "claim": "Carers and families should be supported to build resilience and maintain overall health and fitness and where necessary offered psychological therapy conducted by a specialist practitioner",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Carers and families of people with dementia should be supported to build resilience and maintain overall health and fitness. Where necessary, they should be offered psychological therapy, conducted by a specialist practitioner."
+    },
+    {
+      "claim": "Care for people with advanced dementia should be based on a palliative approach and involve a palliative care service if indicated, with treatment and care provided as per the person's Advance Care Plans",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Care for people with advanced dementia should be based on a palliative approach and involve a palliative care service if indicated. Treatment and care should be provided as per the person's Advance Care Plans."
+    },
+    {
+      "claim": "Staff and carers should continue to offer people with dementia food and drink by mouth, nutritional support including artificial tube feeding should be considered if dysphagia is thought to be transient, but artificial feeding should not generally be used in people with severe dementia for whom dysphagia or disinclination to eat is a manifestation of disease severity",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health and aged care staff and carers and families should continue to offer people with dementia food and drink by mouth. ... Nutritional support, including artificial (tube) feeding, should be considered if dysphagia is thought to be a transient phenomenon, but artificial feeding should not generally be used in people with severe dementia for whom dysphagia or disinclination to eat is a manifestation of disease severity."
+    },
+    {
+      "claim": "If a person with severe dementia has a fever a clinical assessment should be undertaken, simple analgesics, antipyretics and mechanical means of cooling may suffice, and antibiotics may be considered as a palliative measure in the terminal stages but this needs an individual assessment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If a person with severe dementia has a fever, a clinical assessment should be undertaken. Simple analgesics, antipyretics and mechanical means of cooling the person may suffice. Antibiotics may be considered as a palliative measure in the terminal stages of dementia, but this needs an individual assessment."
+    },
+    {
+      "claim": "In the absence of a valid and applicable advance directive to refuse resuscitation, the decision to resuscitate should take account of expressed wishes or beliefs of the person with dementia together with the views of carers, family and the multidisciplinary team, in accordance with Australian Resuscitation Council guidance and state or territory mental health and guardianship laws where capacity is lacking, and Advance Care Plans must be recorded in the medical notes and care plans",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "In the absence of a valid and applicable advance directive to refuse resuscitation, the decision to resuscitate should take account of any expressed wishes or beliefs of the person with dementia, together with the views of the carer(s) and family and the multidisciplinary team. The decision should be made in accordance with the guidance developed by the Australian Resuscitation Council and, if the person with dementia lacks capacity, the provisions of state or territory based mental health and guardianship laws. Advance Care Plans must be recorded in the medical notes and care plans"
+    },
+    {
+      "claim": "Valid informed consent should always be sought from the person with dementia for decisions regarding financial affairs, health care and living arrangements, and if the person lacks capacity the relevant state and territory laws on substitute decision making must be followed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Valid informed consent should always be sought from the person with dementia for decisions regarding financial affairs, health care and living arrangements. If the person lacks the capacity to make a decision, the relevant state and territory laws in respect of substitute decision making for financial and personal and health matters must be followed."
+    },
+    {
+      "claim": "Health and aged care professionals should discuss with the person with dementia while they still have capacity, and their carers and family, the use of an Enduring Power of Attorney and enduring guardianship and Advance Care Plans, which should be revisited regularly and following any significant change in health condition or circumstance and completed or updated at the time of Aged Care Assessment Team assessment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health and aged care professionals should discuss with the person with dementia, while he or she still has capacity, and his or her carer(s) and family the use of: an Enduring Power of Attorney and enduring guardianship; Advance Care Plans. Advance Care Plans should be revisited with the person with dementia and his or her carer(s) and family on a regular basis and following any significant change in health condition or circumstance. Advance Care Plans should be completed or updated at the time of assessment undertaken by the Aged Care Assessment Team."
+    },
+    {
+      "claim": "People with dementia should not be excluded from any health care services because of their diagnosis, whatever their age",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with dementia should not be excluded from any health care services because of their diagnosis, whatever their age."
+    },
+    {
+      "claim": "If language or culture is a barrier to accessing or understanding services, treatment and care, professionals should provide information in the preferred language and in an accessible format, professional interpreters, and interventions in the preferred language",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If language or culture is a barrier to accessing or understanding services, treatment and care, health and aged care professionals should provide the person with dementia and/or their carer(s) and family with: information in the preferred language and in an accessible format; professional interpreters; interventions in the preferred language."
+    },
+    {
+      "claim": "People with younger onset dementia have unique needs and organisations should tailor their services to ensure they are age appropriate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People with younger onset dementia have unique needs; organisations should tailor their services in order to ensure that they are age appropriate and address the needs of the person with younger onset dementia and their carer(s) and family."
+    },
+    {
+      "claim": "Health and aged care services working to improve the health and care of Indigenous Australians living with dementia should be culturally sensitive and informed and utilise translators and/or cultural interpreters where necessary particularly during assessment, when communicating the diagnosis and gaining consent, and should employ Indigenous staff members at all levels",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health and aged care services working to improve the health and care of Indigenous Australians living with dementia should be culturally sensitive and informed and utilise translators and/or cultural interpreters where necessary, particularly during assessment, when communicating the diagnosis and gaining consent. ... should employ Indigenous staff members at all levels to contribute actively to this goal."
+    },
+    {
+      "claim": "As the transition to residential care is a particularly difficult step for the person living with dementia, their family and community, health and aged care professionals should display sensitivity and could consider organising support from the community and Indigenous staff members at this time",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "As the transition to residential care is a particularly difficult step for the person living with dementia, their family and community, health and aged care professionals should display sensitivity and could consider organising support from the community and Indigenous staff members at this time."
+    },
+    {
+      "claim": "Services should recognise and be responsive to the cultural and linguistic needs of CALD people living with dementia and utilise a range of communication tools including bilingual bicultural staff or professional interpreters across the whole service pathway particularly during assessment, when communicating the diagnosis and gaining consent",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Health and aged care services need to recognise and be responsive to the cultural and linguistic needs of CALD people living with dementia, their carer(s) and families. Services should utilise a range of communication tools, including working with bilingual bicultural staff or professional interpreters across the whole service pathway, particularly during assessment, when communicating the diagnosis and gaining consent."
+    },
+    {
+      "claim": "As people with dementia are vulnerable to abuse and neglect, all health and aged care staff supporting them should receive information and training about how to prevent and manage suspected abuse",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "As people with dementia are vulnerable to abuse and neglect, all health and aged care staff supporting people with dementia should receive information and training about how to prevent and manage suspected abuse."
+    }
+  ],
+  "summary": {
+    "total": 84,
+    "pass": 84,
+    "fail": 0
+  }
+}
