@@ -3536,10 +3536,10 @@
             "Porto sinusoidal vascular disease (disorder)",
             "Porto sinusoidal vascular disease",
             "Portosinusoidal vascular disease",
-            "A rare vascular liver disease characterised by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric oesophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/µl, increased spleen size ≥13 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, haematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported.",
+            "A rare vascular liver disease characterised by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric oesophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/\u00b5l, increased spleen size \u226513 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, haematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported.",
             "PSVD - porto sinusoidal vascular disease",
             "Porto-sinusoidal vascular disease",
-            "A rare vascular liver disease characterized by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric esophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/µl, increased spleen size ≥13 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, hematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported."
+            "A rare vascular liver disease characterized by the absence of cirrhosis with or without portal hypertension and histological lesions involving portal venules or sinusoids. Patients may present either with specific clinical signs of portal hypertension (including gastric esophageal or ectopic varices, portal hypertensive bleeding or porto-systemic collaterals at imaging) or a histological lesion specific to porto sinusoidal vascular disease (including obliterative portal venopathy, nodular regenerative hyperplasmia or incomplete septal fibrosis or cirrhosis) or they may manifest clinical signs that are not specific to portal hypertension (such as ascites, platelet count <150.000/\u00b5l, increased spleen size \u226513 cm in the largest axis) together with a histological lesion including portal tract abnormalities, irregular distribution of the portal tracts and central veins, non-zonal sinusoidal dilation, mild perisinusoidal fibrosis. Possible associations with altered immunity, hematological diseases and prothrombotic conditions, infections, congenital or familial defects, or drug exposure are reported."
           ]
         }
       ]
@@ -5849,39 +5849,21 @@
     },
     {
       "condition": "Pre-exposure prophylaxis against human immunodeficiency virus infection",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "91948008",
+      "snomed": {
+        "concept_id": "918591000168102",
+        "display": "Antiretroviral pre-exposure prophylaxis for HIV infection",
+        "method": "manual_correction_procedure_hierarchy",
+        "state": "corrected_pending_attestation",
+        "corrected_utc": "2026-09-21T11:57:00.778918+00:00",
+        "corrected_from": {
+          "concept_id": "91948008",
           "display": "Asymptomatic HIV infection in pregnancy",
-          "synonyms": [
-            "Asymptomatic human immunodeficiency virus infection in pregnancy",
-            "Asymptomatic HIV infection in pregnancy",
-            "Asymptomatic human immunodeficiency virus infection in pregnancy (disorder)"
-          ]
+          "why_wrong": "Inverts the clinical situation. PrEP is given to people WITHOUT HIV; this concept asserts established infection, and in pregnancy."
         },
-        {
-          "code": "86406008",
-          "display": "HIV infection",
-          "synonyms": [
-            "Human immunodeficiency virus infection",
-            "HIV infection",
-            "HIV - Human immunodeficiency virus infection",
-            "Human immunodeficiency virus infection (disorder)"
-          ]
-        },
-        {
-          "code": "1142045004",
-          "display": "Primary human immunodeficiency virus infection",
-          "synonyms": [
-            "Primary HIV infection",
-            "Primary human immunodeficiency virus infection",
-            "Primary human immunodeficiency virus infection (disorder)"
-          ]
-        }
-      ]
+        "why": "PBS wording names an intervention, not a finding. 918591000168102 is an Australian extension concept (namespace 1000168) under 897017002 Antiviral prophylaxis, and matches the PBS indication wording directly.",
+        "found_by": "searched <<71388002 Procedure; the binder had constrained every query to <<404684003 Clinical finding, so this concept was unreachable"
+      },
+      "query_tier": "full"
     },
     {
       "condition": "Cows' milk anaphylaxis",
@@ -6952,15 +6934,15 @@
       "candidates": [
         {
           "code": "1149448005",
-          "display": "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
+          "display": "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
           "synonyms": [
-            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C (disorder)",
+            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C (disorder)",
             "At least 30% of the sites on teeth exhibit periodontitis, and interdental attachment loss is at least 5 millimetres with radiographic evidence of bone loss extending to at least the middle third of the root, loss of at least 5 teeth due to periodontitis and no more than 10 opposing pairs of remaining teeth with a need for complex rehabilitation due to masticatory dysfunction, occlusal trauma resulting in tooth mobility, alveolar ridge defects and teeth that have moved from original positions. There is radiographic evidence of clinical attachment or bone loss with a minimum of 2 millimetres over the last 5 years, disease progression exceeds expectations related to biofilm deposits and bacterial control therapies, patient smokes at least 10 cigarettes daily and may be diabetic but exhibits HbA1c levels of at least 7%.",
             "At least 30% of the sites on teeth exhibit periodontitis, and interdental attachment loss is at least 5 millimeters with radiographic evidence of bone loss extending to at least the middle third of the root, loss of at least 5 teeth due to periodontitis and no more than 10 opposing pairs of remaining teeth with a need for complex rehabilitation due to masticatory dysfunction, occlusal trauma resulting in tooth mobility, alveolar ridge defects and teeth that have moved from original positions. There is radiographic evidence of clinical attachment or bone loss with a minimum of 2 millimeters over the last 5 years, disease progression exceeds expectations related to biofilm deposits and bacterial control therapies, patient smokes at least 10 cigarettes daily and may be diabetic but exhibits HbA1c levels of at least 7%.",
-            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
-            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
-            "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
-            "AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C"
+            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C",
+            "American Academy of Periodontology and European Federation of Periodontology 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
+            "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalized periodontitis Stage 4 Grade C",
+            "AAP/EFP 2017 Classification of Periodontal and Peri\u2010implant Diseases and Conditions generalised periodontitis Stage 4 Grade C"
           ]
         }
       ]
@@ -7273,8 +7255,8 @@
           "synonyms": [
             "Hereditary primary clear cell renal cell carcinoma (disorder)",
             "Hereditary primary clear cell renal cell carcinoma",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
             "Hereditary primary clear cell renal cell adenocarcinoma"
           ]
         }
@@ -8351,7 +8333,7 @@
       "condition": "Waldenstrom macroglobulinaemia",
       "snomed": {
         "concept_id": "190818004",
-        "display": "Waldenström macroglobulinaemia",
+        "display": "Waldenstr\u00f6m macroglobulinaemia",
         "method": "normalised_synonym",
         "query_tier": "full"
       }
@@ -10178,9 +10160,9 @@
           "synonyms": [
             "Idiopathic CD4 lymphocytopenia (disorder)",
             "Idiopathic CD4 lymphocytopenia",
-            "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterised by persistent CD4 T-cell lymphopenia (less than 300 cells/µL on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leucoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed.",
+            "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterised by persistent CD4 T-cell lymphopenia (less than 300 cells/\u00b5L on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leucoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed.",
             "ICL - idiopathic CD4 lymphocytopenia",
-            "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterized by persistent CD4 T-cell lymphopenia (less than 300 cells/µL on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leukoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed."
+            "Idiopathic CD4 lymphocytopenia is a rare primary immunodeficiency disorder characterized by persistent CD4 T-cell lymphopenia (less than 300 cells/\u00b5L on multiple occasions) not associated with any other underlying primary or secondary immune deficiency. Patients typically present opportunistic infections (with cryptococcal, mycobacterial, candidal, varicella zoster virus infections and progressive multifocal leukoencephalopathy being the most prevalent), malignancies (mainly lymphoproliferative disorders), or autoimmune disorders. Some individuals are asymptomatic and incidentally diagnosed."
           ]
         },
         {
@@ -10920,9 +10902,9 @@
           "synonyms": [
             "Lennox-Gastaut syndrome (disorder)",
             "Lennox-Gastaut syndrome",
-            "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalized tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behavior disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying etiology. The EEG has diffuse background slowing. Interictal generalized slow spike-and-wave (≤2.5 Hz) and generalized paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria.",
+            "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalized tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behavior disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying etiology. The EEG has diffuse background slowing. Interictal generalized slow spike-and-wave (\u22642.5 Hz) and generalized paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria.",
             "LGS - Lennox-Gastaut syndrome",
-            "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalised tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behaviour disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying aetiology. The EEG has diffuse background slowing. Interictal generalised slow spike-and-wave (≤2.5 Hz) and generalised paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria."
+            "A type of developmental and epileptic encephalopathy that presents with drug-resistant seizures between 18 months and 18 years of age (peak onset at 3 to 5 years, onset in second decade is rare). Tonic seizures and at least one other seizure type are mandatory for the diagnosis. Other seizure types include atypical absence seizures, atonic seizures, myoclonic seizures, focal seizures, generalised tonic-clonic seizures, nonconvulsive status epilepticus and epileptic spasms. Development is usually impaired before seizure onset, but over time there is developmental slowing and plateauing with subsequent moderate to severe intellectual disability in 90% of individuals. Behaviour disorders (hyperactivity, aggression), autism spectrum disorder, sleep disturbances are common. Neurological examination is often abnormal and related to the underlying aetiology. The EEG has diffuse background slowing. Interictal generalised slow spike-and-wave (\u22642.5 Hz) and generalised paroxysmal fast activity in sleep (10 Hz or more) are mandatory diagnostic criteria."
           ]
         },
         {
@@ -11075,8 +11057,8 @@
           "synonyms": [
             "Hereditary primary clear cell renal cell carcinoma (disorder)",
             "Hereditary primary clear cell renal cell carcinoma",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
-            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dubé syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumour predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
+            "Hereditary clear cell renal cell carcinoma (ccRCC) is a hereditary renal cancer syndrome defined as development of ccRCC in two or more family members without evidence of constitutional chromosome 3 translocation, von Hippel-Lindau disease or other tumor predisposing syndromes associated with ccRCC, such as tuberous sclerosis or Birt-Hogg-Dub\u00e9 syndrome.",
             "Hereditary primary clear cell renal cell adenocarcinoma"
           ]
         },
@@ -11092,10 +11074,10 @@
         },
         {
           "code": "1263460007",
-          "display": "Birt Hogg Dubé syndrome",
+          "display": "Birt Hogg Dub\u00e9 syndrome",
           "synonyms": [
-            "Birt Hogg Dubé syndrome (disorder)",
-            "Birt Hogg Dubé syndrome",
+            "Birt Hogg Dub\u00e9 syndrome (disorder)",
+            "Birt Hogg Dub\u00e9 syndrome",
             "Hornstein Knickenberg syndrome",
             "A rare inherited cancer-predisposing syndrome characterized by skin lesions, kidney tumors, and pulmonary cysts that may be associated with pneumothorax. The kidney tumors range from benign oncocytomas to malignant renal cell carcinomas including chromophobe, clear cell or papillary subtypes. Fibrofolliculomas are characterized by a circumscribed proliferation of collagen and fibroblasts surrounding distorted hair follicles from which basaloid cells protrude into the surrounding fibromucinous stroma. Other characteristic skin anomalies are trichodiscomas and acrochordons. Dermatological manifestations usually develop in the third and fourth decades of life and persist indefinitely. The syndrome is transmitted in an autosomal dominant fashion.",
             "Fibrofolliculomas with trichodiscomas and acrochordons",
@@ -13184,9 +13166,9 @@
         },
         {
           "code": "715984007",
-          "display": "Boucher Neuhäuser syndrome",
+          "display": "Boucher Neuh\u00e4user syndrome",
           "synonyms": [
-            "Boucher Neuhäuser syndrome",
+            "Boucher Neuh\u00e4user syndrome",
             "A very rare autosomal recessive, slowly progressive neurodegenerative disorder characterised by the triad of cerebellar ataxia (that generally manifests at adolescence or early adulthood), chorioretinal dystrophy, which may have a later onset (up to the fifth-sixth decade) leading to variable degrees of visual impairment, and hypogonadotropic hypogonadism (delayed puberty and lack of secondary sex characteristics). Ataxia-hypogonadism-choroidal dystrophy syndrome belongs to a clinical continuum of neurodegenerative disorders along with the clinically overlapping cerebellar ataxia-hypogonadism syndrome.",
             "A very rare autosomal recessive, slowly progressive neurodegenerative disorder characterized by the triad of cerebellar ataxia (that generally manifests at adolescence or early adulthood), chorioretinal dystrophy, which may have a later onset (up to the fifth-sixth decade) leading to variable degrees of visual impairment, and hypogonadotropic hypogonadism (delayed puberty and lack of secondary sex characteristics). Ataxia-hypogonadism-choroidal dystrophy syndrome belongs to a clinical continuum of neurodegenerative disorders along with the clinically overlapping cerebellar ataxia-hypogonadism syndrome.",
             "Cerebellar ataxia with hypogonadism and choroidal dystrophy syndrome",

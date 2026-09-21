@@ -6,7 +6,7 @@
     "narrower": "hit is a sub-type",
     "plausible": "confirm"
   },
-  "count": 349,
+  "count": 348,
   "candidates": [
     {
       "condition": "Facial lipoatrophy",
@@ -795,69 +795,6 @@
       }
     },
     {
-      "condition": "Pre-exposure prophylaxis against human immunodeficiency virus infection",
-      "top_hit": {
-        "code": "91948008",
-        "display": "Asymptomatic HIV infection in pregnancy",
-        "synonyms": [
-          "Asymptomatic human immunodeficiency virus infection in pregnancy",
-          "Asymptomatic HIV infection in pregnancy",
-          "Asymptomatic human immunodeficiency virus infection in pregnancy (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "91947003",
-          "display": "Asymptomatic HIV infection"
-        },
-        {
-          "code": "609496007",
-          "display": "Complication occurring during pregnancy"
-        },
-        {
-          "code": "721166000",
-          "display": "HIV complicating pregnancy, childbirth and the puerperium"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Asymptomatic",
-          "HIV",
-          "pregnancy"
-        ]
-      },
-      "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
-      "other_hits": [
-        {
-          "code": "86406008",
-          "display": "HIV infection",
-          "synonyms": [
-            "Human immunodeficiency virus infection",
-            "HIV infection",
-            "HIV - Human immunodeficiency virus infection",
-            "Human immunodeficiency virus infection (disorder)"
-          ]
-        },
-        {
-          "code": "1142045004",
-          "display": "Primary human immunodeficiency virus infection",
-          "synonyms": [
-            "Primary HIV infection",
-            "Primary human immunodeficiency virus infection",
-            "Primary human immunodeficiency virus infection (disorder)"
-          ]
-        }
-      ],
-      "quarantine": {
-        "reason": "pregnancy_or_reproductive",
-        "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
-        "requires_manual_review": true
-      }
-    },
-    {
       "condition": "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
       "top_hit": {
         "code": "1231283007",
@@ -966,7 +903,7 @@
           "ovarian"
         ]
       },
-      "suggested_action": "QUARANTINE \u2014 manual review required regardless of signal",
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
       "other_hits": [
         {
           "code": "442478007",
@@ -991,7 +928,8 @@
         "reason": "pregnancy_or_reproductive",
         "why": "AMH-derived teratogen classifications and gestational windows attach BY CONDITION. A wrong binding here attaches a pregnancy-safety record to the wrong clinical object.",
         "requires_manual_review": true
-      }
+      },
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "A patient identifying as Aboriginal or Torres Strait Islander",
@@ -1613,8 +1551,9 @@
           "fasting"
         ]
       },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": []
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "other_hits": [],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Disabling pain",
@@ -2674,8 +2613,9 @@
           "analgesia"
         ]
       },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": []
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "other_hits": [],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Patients requiring administration of fluorouracil by intravenous injection",
@@ -2708,8 +2648,9 @@
           "analgesia"
         ]
       },
-      "suggested_action": "REJECT \u2014 neither hit nor any parent shares a concept with the condition",
-      "other_hits": []
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
+      "other_hits": [],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Patients requiring doses greater than 20 mg per week",
@@ -3830,7 +3771,7 @@
           "Polyomavirus"
         ]
       },
-      "suggested_action": "consider parent instead: 238741003 Hair follicle disorder",
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
       "other_hits": [
         {
           "code": "723830005",
@@ -3852,7 +3793,8 @@
             "46,XY disorder of sex development due to isolated 17,20-lyase deficiency (disorder)"
           ]
         }
-      ]
+      ],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Systemic light chain amyloidosis",
@@ -4460,7 +4402,7 @@
           "failure"
         ]
       },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
       "other_hits": [
         {
           "code": "737300001",
@@ -4480,7 +4422,8 @@
             "Bone marrow transplant rejection (disorder)"
           ]
         }
-      ]
+      ],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Basal cell carcinoma",
@@ -6803,7 +6746,7 @@
           "diet"
         ]
       },
-      "suggested_action": "hit is narrower \u2014 check it is not a sub-type",
+      "suggested_action": "REJECT \u2014 wrong hierarchy searched; re-search under Procedure",
       "other_hits": [
         {
           "code": "331000124109",
@@ -6823,7 +6766,8 @@
             "Inadequate haemodialysis"
           ]
         }
-      ]
+      ],
+      "structural_note": "This PBS wording names an INTERVENTION, not a clinical finding. The binder constrained every query to <<404684003 Clinical finding, so the correct concept was unreachable and the hit shown is necessarily wrong. Re-search under <<71388002 Procedure."
     },
     {
       "condition": "Haemophilus influenzae type B",
@@ -18510,5 +18454,5 @@
     }
   ],
   "warning": "Signals are LEXICAL triage only. The 'plausible' tier is NOT a safe tier: 'Diarrhoea of greater than 2 weeks duration' scored plausible against 'Gestation greater than 20 weeks' because they share words. No candidate should be bound without human review.",
-  "quarantined": 16
+  "quarantined": 15
 }
