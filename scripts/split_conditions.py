@@ -16,8 +16,8 @@ left unsplit.
 """
 import argparse, json, re, pathlib
 
-OUT = pathlib.Path("out/conditions_split.json")
-SRC = pathlib.Path("out/conditions.json")
+OUT = pathlib.Path("reference/conditions_split.json")
+SRC = pathlib.Path("reference/conditions.json")
 
 # Never split on these: they join clauses, not entities.
 NO_SPLIT = re.compile(r"\b(secondary to|associated with|following|due to|where|"

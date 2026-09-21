@@ -3,8 +3,7 @@ out/
 .venv/
 __pycache__/
 
-# foundry output: generated, belongs to whoever ran the batches
-out/tickets/
-out/ledger.jsonl
-out/entail_batch.jsonl
-out/guidance/
+# Foundry output under out/ is already covered by the out/ rule above.
+# Durable artefacts live in reference/ instead: the condition set, the SNOMED
+# binding queue (which accumulates human confirmations), validated splits and
+# verification verdicts. Those are work products, not build output.

@@ -20,7 +20,7 @@ import argparse, json, glob, pathlib, time, urllib.parse, urllib.request, dateti
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 BATCH = pathlib.Path("out/entail_batch.jsonl")
-VERDICTS = pathlib.Path("out/entail_verdicts.jsonl")
+VERDICTS = pathlib.Path("reference/entail_verdicts.jsonl")
 VERIFIER_CLASS = "single_verifier_uncalibrated"
 
 def abstracts(pmids):

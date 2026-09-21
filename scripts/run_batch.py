@@ -12,7 +12,7 @@ import argparse, json, re, sys, pathlib
 from pathlib import Path
 import foundry, ledger
 
-CONDITIONS = pathlib.Path("out/conditions.json")
+CONDITIONS = pathlib.Path("reference/conditions.json")
 ATTESTATIONS = pathlib.Path("reference/attestations.json")
 
 def load_attestations():

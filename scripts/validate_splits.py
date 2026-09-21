@@ -10,7 +10,7 @@ and records every rejection so the discards are inspectable.
 """
 import json, pathlib, foundry
 
-SRC = pathlib.Path("out/conditions_split.json")
+SRC = pathlib.Path("reference/conditions_split.json")
 
 def main():
     doc = json.loads(SRC.read_text())

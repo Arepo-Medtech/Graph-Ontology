@@ -25,6 +25,21 @@ out/conditions.json ──► split_conditions ──► validate_splits ──�
 | `entail.py` | stage-4 topical verification harness | `demo` |
 | `guidance_fetch.py` | fetches openly published AU guidance into Tier B markdown | `--demo` |
 
+## What is versioned and what is not
+
+`out/` is build output and gitignored. These four live in `reference/` because
+they are work products, not artefacts a rebuild reproduces:
+
+| File | Why versioned |
+|---|---|
+| `conditions.json` | the 639-condition spine everything else references; diffs are reviewable |
+| `snomed_bindings.json` | 349 candidates awaiting human confirmation. A **work queue** that accumulates decisions — regenerating it discards them |
+| `conditions_split.json` | 65 kept / 14 rejected split children, adjudicated by PubMed calls |
+| `entail_verdicts.jsonl` | 40 verification judgements; the evidence for removing the trimmed tier |
+
+Tickets, the ledger and fetched guidance stay under `out/`: they are rebuilt
+from these plus the PBS cache.
+
 ## The ledger is the only state
 
 `out/ledger.jsonl` is append-only and never rewritten. Batch membership,
