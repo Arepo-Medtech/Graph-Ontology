@@ -1,0 +1,372 @@
+{
+ "guideline": "guidelines/bipolar-disorder.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder",
+  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium",
+  "https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "ENTIRELY from AMH across three pages, read under subscription and PARAPHRASED: no passage reproduced, no source_text stored, and NOTHING here is machine re-checkable. A targeted search of RACGP's open AJGP for bipolar disorder and for lithium monitoring returned NO RESULTS AT ALL; that absence is recorded rather than filled. AMH's own first paragraph limits its guidance to BIPOLAR I, and that limit is carried into the guideline's scope rather than quietly generalised.",
+ "summary": {
+  "total": 55,
+  "pass": 0,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "PUBLISHED STUDIES OF DRUG TREATMENT HAVE OFTEN ONLY INCLUDED PATIENTS WITH BIPOLAR I DISORDER, or have not subclassified subjects as bipolar I or II; EVIDENCE FOR EFFICACY OF DRUG TREATMENT IS LIMITED AND IS PARTICULARLY POOR FOR BIPOLAR II DISORDER, so AMH's guidance applies to bipolar I",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The rationale for drug use is to treat symptoms of mania, treat depression, prevent recurrence of manic or depressive symptoms, and prevent complications such as SUICIDE",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LITHIUM IS THE DRUG OF CHOICE for prevention of manic or depressive episodes and for treatment of acute mania, and IS ASSOCIATED WITH A REDUCED RISK OF SUICIDE",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Valproate and carbamazepine are alternatives when lithium is ineffective, CONSIDERED TOO DANGEROUS IN UNRELIABLE PATIENTS, or poorly tolerated, and are sometimes used with each other or with lithium",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "CARBAMAZEPINE CONCENTRATION CORRELATES POORLY WITH EFFECT ON MOOD, but evidence suggests the valproate concentration needed is similar to that used for seizure disorders; lamotrigine may be considered for depressive episodes or maintenance and DOES NOT REQUIRE concentration monitoring",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CHOICE OF AGENT IN WOMEN OF REPRODUCTIVE AGE REQUIRES CAREFUL CONSIDERATION",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Antipsychotics are widely used across acute mania, depressive episodes and maintenance; OLDER AGENTS such as haloperidol are used in acute mania and NEWER agents such as olanzapine and quetiapine across illness phases",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MILD-TO-MODERATE acute mania can usually be managed with an antipsychotic, lithium OR valproate; in SEVERE acute mania first-line treatment is an ANTIPSYCHOTIC PLUS EITHER LITHIUM OR VALPROATE",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In the initial phase of a manic episode, BEFORE THE ONSET OF ACTION OF FIRST-LINE DRUGS, adding an antipsychotic and/or a benzodiazepine is usually needed to relieve symptoms and reduce the risk of self-injury and risk to others",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "WHEN USED WITH BENZODIAZEPINES THE SEDATING EFFECTS OF ANTIPSYCHOTICS MAY BE POTENTIATED, so dosage adjustments may be needed, PARTICULARLY AS SYMPTOMS BEGIN TO RESOLVE",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "ELECTROCONVULSIVE THERAPY is an alternative in patients unresponsive to drug treatment or with particularly severe symptoms, and maintenance ECT may be considered for those who respond to it in acute episodes",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "PEOPLE WITH BIPOLAR DISORDER MAY SPEND MUCH OF THEIR LIVES IN A DEPRESSED STATE; choice and order of treatments is influenced by the type of bipolar disorder, the presence of psychotic features, and severity of depression",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For bipolar depression, lithium, valproate, lamotrigine, quetiapine or olanzapine can be used as monotherapy; AS ANTIDEPRESSANTS MAY PROVOKE MANIA OR A RAPID CYCLING PATTERN, ANTIDEPRESSANT MONOTHERAPY IS NOT RECOMMENDED",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "When an acute depressive episode does not respond to maintenance lithium at optimal dose, an antidepressant with SSRIs possibly preferred, or valproate, lamotrigine or quetiapine, may be ADDED",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For RAPID CYCLING, identify and treat contributing conditions such as HYPOTHYROIDISM or drug or alcohol misuse, and TAPER OR STOP medicines that may contribute, SUCH AS ANTIDEPRESSANTS; many people who experience rapid cycling will require more than one drug",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Most patients require long-term maintenance drug treatment with adjunctive psychological interventions; LITHIUM AND VALPROATE ARE FIRST-LINE for maintenance, with antipsychotics such as quetiapine, lamotrigine (particularly where depressive episodes are a feature) and carbamazepine as alternatives",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Psychological interventions such as interpersonal and social rhythm therapy and cognitive behaviour therapy may help alongside drug treatment",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "CORTICOSTEROIDS, AS WELL AS ILLICIT STIMULANT DRUGS, MAY INDUCE MANIA",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MONITOR AND SUPPORT MEDICATION COMPLIANCE AS IT CAN BE POOR",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bipolar disorder' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/bipolar-disorder, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium's mode of action is unknown; it inhibits dopamine release, enhances serotonin release and decreases formation of intracellular second messengers",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium for ACUTE MANIA, adult, oral, initially 750 to 1000 mg daily in divided doses, increasing by 250 to 500 mg daily if necessary and adjusting to serum concentration",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Lithium for PROPHYLAXIS, adult, oral 250 to 1000 mg daily in divided doses or as a single dose at night for 2 weeks, then adjusted to serum concentration; use a REDUCED dose in the elderly and in renal impairment",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "TAKE BLOOD FOR LITHIUM CONCENTRATION 12 HOURS AFTER THE LAST DOSE",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Measure lithium concentration 5 TO 7 DAYS after starting and after each dose change until stabilised, then EVERY 3 MONTHS; steady state may not be reached for 4 to 7 days, longer in the elderly or in renal impairment",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Monitor lithium concentration MORE FREQUENTLY during illness such as gastroenteritis, during manic or depressive phases, with changes in weight, diet or temperature, in pregnancy, and with concomitant medication such as diuretics",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium therapeutic range: ACUTE MANIA usually 0.6 to 1 mmol/L, up to 1.2 mmol/L in some people; PROPHYLAXIS 0.4 to 1 mmol/L, usually 0.6 to 0.8 mmol/L",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "SYMPTOMS OF LITHIUM TOXICITY ARE COMMON WHEN THE CONCENTRATION EXCEEDS 1.5 mmol/L, or 1.2 mmol/L IN THE ELDERLY -- and clinical toxicity can sometimes occur at LOWER concentrations, particularly with organic neurological damage or other CNS illness such as epilepsy",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Mild-to-moderate lithium toxicity: blurred vision, increasing diarrhoea, nausea, vomiting, muscle weakness, drowsiness, apathy, ataxia, FLU-LIKE ILLNESS. Severe: increased muscle tone, hyperreflexia, myoclonic jerks, coarse tremor, dysarthria, disorientation, psychosis, seizures, coma",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "HYPONATRAEMIA INCREASES THE RISK OF LITHIUM TOXICITY: avoid lithium or use it cautiously where sodium may fall -- vomiting, diarrhoea, use of DIURETICS, dehydration, Addison's disease",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Avoid lithium or use it carefully where renal clearance may be decreased, FOR EXAMPLE WITH NSAIDs; toxicity relates to serum concentration and the risk is UNACCEPTABLY HIGH in severe renal impairment and when renal function is unstable; reduce the dose even in relatively mild renal dysfunction",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Treat HYPOTHYROIDISM before starting lithium, which often causes thyroid dysfunction, usually hypothyroidism; PSORIASIS may be exacerbated or precipitated by lithium",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Common lithium adverse effects: metallic taste, nausea, diarrhoea, epigastric discomfort, weight gain, fatigue, headache, vertigo, tremor, acne, psoriasis, leucocytosis, nephrotoxicity, hypothyroidism (usually asymptomatic), HYPERCALCAEMIA, HYPERPARATHYROIDISM, and benign T wave changes on ECG",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "NEPHROGENIC DIABETES INSIPIDUS with polydipsia and polyuria is FREQUENT with lithium and may be reversible on stopping; it GREATLY INCREASES THE RISK OF LITHIUM TOXICITY, so reassess the need for lithium if it develops",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium is associated with REDUCED GLOMERULAR FILTRATION RATE and there are reports of END-STAGE RENAL DISEASE; long-term treatment and episodes of acute toxicity are thought to increase the risk of nephrotoxicity, though the contribution of lithium is complicated by background rates of diabetes and cardiovascular disease, which are higher in the population with bipolar disorder",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LONG-TERM LITHIUM TREATMENT OF MORE THAN 10 YEARS INCREASES THE RISK OF RENAL TUMOURS, including cancers and oncocytomas",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Check weight, serum calcium including ionised calcium, parathyroid hormone, and renal and thyroid function at baseline then EVERY 3 TO 6 MONTHS and AT LEAST ANNUALLY; check renal function more frequently if unstable, and monitor for clinical signs of thyroid dysfunction",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "For patients with significant cardiac disease, consider an ECG at baseline and at follow-up on lithium",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "DO NOT STOP LITHIUM ABRUPTLY: withdraw gradually OVER AT LEAST 4 WEEKS to avoid relapse",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Lithium's ONSET OF ACTION MAY BE DELAYED FOR 6 TO 10 DAYS, so in severe mania consider adding a benzodiazepine or antipsychotic, using oral agents where possible with careful compliance supervision, and withdrawing them after acute mania has resolved; MOST PATIENTS REQUIRE HOSPITALISATION FOR ACUTE MANIA",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Counsel patients on lithium: regular blood tests are important; BE ALERT FOR TOXICITY -- extreme thirst and frequent urination, nausea and vomiting -- especially during illness, excessive sweating or low fluid intake, and IF THESE OCCUR STOP THE TABLETS AND SEEK MEDICAL ATTENTION IMMEDIATELY",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Take lithium WITH FOOD; do not break, crush or chew Quilonum SR, and avoid taking it with hot drinks; MAINTAIN A NORMAL DIET WITH REGULAR SALT AND FLUID INTAKE and drink more non-alcoholic fluid in hot weather to avoid toxicity",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AVOID SODIUM BICARBONATE ON LITHIUM -- found in indigestion products such as Salvital and urinary alkalinisers such as Ural -- AS IT MAKES LITHIUM LESS EFFECTIVE",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium in PREGNANCY may increase the risk of CONGENITAL HEART DEFECTS, with neonatal neurotoxicity and hypothyroidism also reported; avoid if possible particularly in the first trimester -- HOWEVER CONTINUING LITHIUM MAY BE THE BEST OPTION because poorly controlled bipolar disorder may compromise maternal health AND CARBAMAZEPINE, VALPROATE AND LAMOTRIGINE ARE NOT SUITABLE ALTERNATIVES DURING PREGNANCY",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LITHIUM CLEARANCE INCREASES IN THE SECOND HALF OF PREGNANCY so dose adjustments may be needed; use the lowest dose possible, and AFTER THE BIRTH GIVE THE PRECONCEPTION DOSE as clearance returns to normal immediately",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In pregnancy check lithium concentration more often, for example MONTHLY, increasing towards term such as EACH WEEK FROM WEEK 36, and then WITHIN 24 HOURS AFTER THE BIRTH; many recommend reducing the dose in the last days of pregnancy or stopping it for 1 to 2 days before planned delivery or onset of labour to avoid maternal and neonatal toxicity, with greater attention to hydration",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Consider interrupting lithium briefly during the preoperative and perioperative periods, as fasting and changes in fluid intake or dynamics may alter serum concentration",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The lithium products listed are 250 mg scored tablets (Lithicarb) and 450 mg controlled-release tablets (Quilonum SR)",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Lithium' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-bipolar-disorder/lithium, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Valproate for BIPOLAR DISORDER, adult, oral, initially 600 mg daily in 2 doses, increasing every 3 days by 200 mg daily according to response; maintenance oral or IV 1 to 2 g (20 to 30 mg/kg) daily in 2 doses",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AVOID VALPROATE IF POSSIBLE IN THOSE OF CHILD-BEARING POTENTIAL because of teratogenic risk; where there is no effective alternative, use the lowest possible dose and ENSURE ADEQUATE CONTRACEPTION",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "VALPROATE IN PREGNANCY increases the risk of NEURAL TUBE DEFECTS such as spina bifida and other congenital malformations including orofacial clefts and cardiac, urogenital and limb defects; DELAY IN MOTOR AND COGNITIVE DEVELOPMENT is associated with valproate IN UP TO 30 TO 40% OF CHILDREN, and some data suggest an association with autism spectrum disorder and autism",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Valproate risk is DOSE-RELATED AND APPEARS TO INCREASE SIGNIFICANTLY AT DOSES ABOVE 650 mg DAILY",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Common valproate adverse effects include nausea, vomiting, INCREASED APPETITE and WEIGHT GAIN, dose-related tremor, THINNING OR LOSS OF SCALP HAIR usually temporary, drowsiness, dizziness, memory impairment, ataxia, dose-related elevated aminotransferases, asymptomatic hyperammonaemia, dose-related thrombocytopenia, MENSTRUAL IRREGULARITIES, POLYCYSTIC OVARIES and HYPERANDROGENISM IN FEMALES",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "RARE BUT SERIOUS valproate effects are HEPATIC FAILURE and PANCREATITIS, which USUALLY OCCUR IN THE FIRST 6 MONTHS AND CAN BE FATAL, as well as hyperammonaemic encephalopathy, blood dyscrasias, extrapyramidal syndrome including parkinsonism, and reduced bone mineral density with fractures on long-term use",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "There is POOR CORRELATION between valproate efficacy and plasma concentration, but concentrations may confirm toxicity or compliance; in epilepsy and ACUTE MANIA the usual therapeutic range is 40 to 100 mg/L (280 to 700 micromol/L), up to 150 mg/L in some people, measured as a TROUGH, with steady state after 3 to 5 days",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Valproate SHOULD BE SAFE TO USE IN BREASTFEEDING with one report of adverse effects; consider monitoring the baby for petechial rash",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Valproate' at https://amhonline.amh.net.au/chapters/neurological-drugs/antiseizure-drugs/other-antiseizure-drugs/valproate, July 2026 release, read under subscription 2026-09-22"
+  }
+ ]
+}
