@@ -49,6 +49,12 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   window, dose context, evidence category, recommendation, paraphrased summary and source provenance.
   **pregnancy_safety_evidence**, **supplement_role_evidence**, and **therapeutic_role_evidence** are domain-specific subsets; see
   [AMH clinical evidence](docs/clinical-evidence.md).
+- **strength** — every ingredient strength AMT states, read out of the OWL axioms where AMT keeps them as
+  concrete values (`DataHasValue(:1142135004 "12"^^xsd:decimal)`): 67,425 rows over 39,939 products, in four
+  styles — total quantity 38,592, concentration 18,929 (AU extension), presentation 6,724, concentration 3,180
+  (international). The RF2 relationship file carries none of them, so `rel` never had them.
+- **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
+  against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
 - **product**, **pbs**, **pbs_tpuu**, **rxnorm**, **ingredient**, **contains**, **brand_of**,
   **unit_generic**, **pack_generic**, **ctpp_tpp**, **mpuu_mp**, **pbs_atc_code**, and
   **pbs_item_atc** — the normalised building blocks.
@@ -76,6 +82,8 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
 .venv/bin/python scripts/omophub_bridge.py athena ~/code/spine/out/omop-vocab   # AMT → OMOP standard drugs, offline from the Athena bundle installed by `spine omop vocab --athena` (~1 min)
 .venv/bin/python scripts/build_compendium.py
+.venv/bin/python scripts/drug_strength.py extract     # AMT strengths out of the OWL axioms (~1 min)
+.venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
