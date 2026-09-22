@@ -1,0 +1,530 @@
+{
+ "guideline": "guidelines/sexually-transmissible-infections.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/",
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/",
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/",
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/",
+  "https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/",
+  "https://sti.guidelines.org.au/syndromes/epididymo-orchitis/",
+  "https://sti.guidelines.org.au/syndromes/cervicitis/",
+  "https://sti.guidelines.org.au/syndromes/urethritis-penile/",
+  "https://sti.guidelines.org.au/whats-new/",
+  "https://pubmed.ncbi.nlm.nih.gov/40035163/"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "PRIMARILY OPEN AND QUOTED. Eight topic pages of ASHM's Australian STI Management Guidelines for Use in Primary Care, plus their What's New page, retrieved 2026-09-22 and QUOTED VERBATIM -- every pass claim is machine re-checkable against the retrieved files. This source is ENDORSED BY THE BBVSS and FUNDED BY THE AUSTRALIAN CENTRE FOR DISEASE CONTROL. It was retrieved because AMH's genital infections table points to it. ⚠️ IT CLOSES THE GONORRHOEA GAP that the compendium's drug-choice-for-selected-infections guideline flagged, AND IT CARRIES ACTUAL DOSES, which AMH's tables do not. ⚠️ THE SECOND SOURCE AMH POINTS TO -- the ASID Clostridioides difficile guidelines, Intern Med J 2025; 55(3): 503-13 -- IS CLOSED ACCESS AND WAS NOT RETRIEVED: Unpaywall is_oa false, oa_status closed, no PMC copy, publisher HTTP 403, all checked 2026-09-22. ONLY ITS PUBLIC PUBMED ABSTRACT IS HELD, which confirms the citation and the metronidazole-to-vancomycin change but gives NO DOSE and NO RECURRENCE ALGORITHM. An AJGP search for an open Australian C. difficile article found nothing. Five claims comparing this source with AMH are marked licensed_source_not_quoted because the AMH side of the comparison is paraphrased. ⚠️ CURRENCY: the gonorrhoea, genital herpes, cervicitis, epididymo-orchitis and urethritis pages appear in NEITHER the 2023-24 nor the 2024-25 minor-review list, so on the face of the What's New page their last revision was the 2020-2022 major review.",
+ "summary": {
+  "total": 68,
+  "pass": 62,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "These guidelines are ASHM's Australian STI Management Guidelines for Use in Primary Care. They are ENDORSED BY THE BLOOD BORNE VIRUSES AND SEXUALLY TRANSMITTED INFECTIONS STANDING COMMITTEE (BBVSS) and FUNDED BY THE AUSTRALIAN CENTRE FOR DISEASE CONTROL, though ASHM states the material should not be taken to represent the ACDC's views and the content is ASHM's sole responsibility",
+   "source": "S6",
+   "verdict": "pass",
+   "source_text": "These guidelines have been endorsed by the Blood Borne Viruses and Sexually Transmitted Infections Standing Committee (BBVSS). Funded by: The Australian STI Management Guidelines for Use in Primary care received funding from the Australian Centre for Disease Control. … the material contained in this resource produced by ASHM should not be taken to represent the views of the Australian Centre for Disease Control. The content of this resource is the sole responsibility of ASHM.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Epididymo-orchitis' at https://sti.guidelines.org.au/syndromes/epididymo-orchitis/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CURRENCY. The last MAJOR review of these guidelines ran 2020-2022. A MINOR REVIEW IN 2023-2024 updated Chlamydia and Mycoplasma genitalium; A MINOR REVIEW IN 2024-2025 updated PID. ⚠️ GONORRHOEA, GENITAL HERPES, CERVICITIS, EPIDIDYMO-ORCHITIS AND URETHRITIS APPEAR IN NEITHER MINOR-REVIEW LIST, so on the face of this page their last revision was the 2020-2022 major review",
+   "source": "S9",
+   "verdict": "pass",
+   "source_text": "Minor Review (2024 – 2025) A minor review of these Guidelines was undertaken in 2024 – 2025, with updates made to the following sections: Anogenital ulcers Anorectal syndromes Bacterial vaginosis Mpox PID Pregnant people Skin rash and lesions Syphilis … Minor Review (2023 – 2024) A minor review of these Guidelines was undertaken in 2023-2024, with updates made to the following sections: Aboriginal and Torres Strait Islander People Chlamydia Genital dermatology Hepatitis C Mycoplasma genitalium People who use drugs Regional and remote populations Syphilis Pregnant people … Major Review (2020 – 2022) These Guidelines were updated between 2020-2022",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'What's New' at https://sti.guidelines.org.au/whats-new/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A 2020-2022 key change: DOXYCYCLINE IS THE RECOMMENDED TREATMENT FOR C. TRACHOMATIS IN ALL ANATOMICAL SITES, and TO IMPROVE ANTIBIOTIC STEWARDSHIP IMMEDIATE TREATMENT IS NOT RECOMMENDED FOR ALL SEXUAL CONTACTS of chlamydia -- instead offer testing of exposed anatomical sites and await results",
+   "source": "S9",
+   "verdict": "pass",
+   "source_text": "Doxycycline is the recommended treatment for trachomatis in all anatomical sites. … To improve antibiotic stewardship, immediate treatment is not recommended for all sexual contacts of chlamydia – instead, offer testing of exposed anatomical sites and await results.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'What's New' at https://sti.guidelines.org.au/whats-new/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "GONORRHOEA, uncomplicated genital and anorectal infection: CEFTRIAXONE 500 MG IMI STAT IN 2 ML 1% LIGNOCAINE PLUS AZITHROMYCIN 1 G PO STAT",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Uncomplicated genital and anorectal infection … Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 1 g PO, stat.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GONORRHOEA, uncomplicated PHARYNGEAL infection: CEFTRIAXONE 500 MG IMI STAT IN 2 ML 1% LIGNOCAINE PLUS AZITHROMYCIN 2 G PO STAT -- ⚠️ DOUBLE THE AZITHROMYCIN DOSE USED FOR GENITAL INFECTION. Azithromycin given as 1 g followed by 1 g 6 hours later may reduce gastrointestinal side-effects",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Uncomplicated pharyngeal infection … Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 2 g PO, stat. … Azithromycin given as 1 g followed by 1 g 6 hours later may reduce gastrointestinal side-effects.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "ADULT GONOCOCCAL CONJUNCTIVITIS: CEFTRIAXONE 1 G IMI STAT IN 2 ML 1% LIGNOCAINE PLUS AZITHROMYCIN 1 G PO STAT. The gonorrhoea page lists conjunctivitis among symptoms as PURULENT, SIGHT-THREATENING",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Adult gonococcal conjunctivitis … Ceftriaxone 1 g IMI, stat. in 2 mL 1% lignocaine PLUS Azithromycin 1 g PO, stat. … Conjunctivitis: purulent, sight-threatening",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ For gonorrhoea, ALTERNATIVE TREATMENTS ARE NOT RECOMMENDED BECAUSE OF HIGH LEVELS OF RESISTANCE, EXCEPT for some remote Australian locations and severe allergic reactions -- SEEK LOCAL SPECIALIST ADVICE",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Alternative treatments are not recommended because of high levels of resistance, EXCEPT for some remote Australian locations and severe allergic reactions. Seek local specialist advice",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ REDUCED SUSCEPTIBILITY TO THE FIRST-LINE TREATMENT of IM ceftriaxone and azithromycin IS EMERGING IN URBAN AUSTRALIA. DUAL ANTIBIOTIC TREATMENT IS RECOMMENDED TO CREATE A PHARMACOLOGICAL BARRIER to the development of more widespread resistance, and ⚠️ CEFTRIAXONE MONOTHERAPY SHOULD NOT BE USED OUTSIDE SPECIALIST CENTRES monitoring culture-based antibiotic susceptibility",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Reduced susceptibility to the first-line treatment of intramuscular injection ceftriaxone and azithromycin is emerging in urban Australia. … Dual antibiotic treatment is recommended to create a pharmacological barrier to the development of more widespread resistance to treatment. … Ceftriaxone monotherapy should not be used outside specialist centres monitoring culture-based antibiotic susceptibility.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ SHARING OF ANTIMICROBIAL RESISTANCE GENETIC MATERIAL BETWEEN BACTERIA AND REDUCED DRUG PENETRATION TO PHARYNGEAL MUCOSA MAKES IT THE MOST LIKELY SITE OF TREATMENT FAILURE -- which is why the pharyngeal azithromycin dose is doubled",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Sharing of antimicrobial resistance genetic material between bacteria and reduced drug penetration to pharyngeal mucosa makes it the most likely site of treatment failure.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CIPROFLOXACIN 500 MG ORALLY IMMEDIATELY can be used to treat gonorrhoea, ⚠️ BUT ONLY IF SUSCEPTIBILITY HAS BEEN CONFIRMED ON NAAT OR CULTURE, AND THIS SHOULD NOT DELAY TREATMENT",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Ciprofloxacin 500 mg orally immediately can be used to treat gonorrhoea, but only if susceptibility has been confirmed on NAAT or culture, and this should not delay treatment.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ ALWAYS COLLECT SAMPLES FOR GONOCOCCAL CULTURE BEFORE TREATING GONORRHOEA, to determine antimicrobial sensitivity and CONTRIBUTE TO ANTIMICROBIAL RESISTANCE SURVEILLANCE. HOWEVER, DO NOT DELAY TREATMENT TO WAIT FOR THESE CULTURE RESULTS. ⚠️ CLINICIANS MUST SPECIFICALLY REQUEST 'GONOCOCCAL CULTURE' RATHER THAN GENERAL 'CULTURE', as gonococci require specific culture conditions, and the sample should reach the laboratory within 24 hours",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "ALWAYS collect samples for gonococcal culture before treating gonorrhoea, to determine antimicrobial sensitivity and contribute to antimicrobial resistance surveillance. However, do not delay treatment to wait for these culture results. … Clinicians must specifically request ’gonococcal culture’ rather than general ’culture’, as gonococci require specific culture conditions. … should reach the laboratory within 24 hours",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "GONORRHOEA is asymptomatic in most people at anal and pharyngeal sites, VAGINAL GONORRHOEA IS OFTEN ASYMPTOMATIC (IN 80% OF CASES), and PENILE URETHRAL GONORRHOEA IS ALMOST ALWAYS SYMPTOMATIC (IN 85-90% OF CASES). ⚠️ PREVIOUS INFECTION DOES NOT PROVIDE IMMUNITY TO NEW INFECTION",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Anal and pharyngeal gonorrhoea infections are asymptomatic in most people, vaginal gonorrhoea is often asymptomatic (in 80% of cases), and penile urethral gonorrhoea is almost always symptomatic (in 85-90% of cases). … Previous infection does not provide immunity to new infection.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "After gonorrhoea treatment: ADVISE NO SEXUAL CONTACT FOR 7 DAYS after treatment is commenced, or until the course is completed and symptoms resolved, whichever is later; ADVISE NO SEX WITH PARTNERS FROM THE LAST 2 MONTHS until partners have been tested and treated; NOTIFY THE STATE OR TERRITORY HEALTH DEPARTMENT; and CONSIDER HIV PRE-EXPOSURE PROPHYLAXIS FOR ANYONE DIAGNOSED WITH GONORRHOEA",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Advise no sexual contact for 7 days after treatment is commenced, or until the course is completed and symptoms resolved, whichever is later. … Advise no sex with partners from the last 2 months until the partners have been tested and treated if necessary. … Notify the state or territory health department. … Consider human immunodeficiency virus ( HIV ) pre-exposure prophylaxis (PrEP) for anyone diagnosed with gonorrhoea.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "GONORRHOEA WITH RECTAL CHLAMYDIA CO-INFECTION: treat for BOTH -- CEFTRIAXONE 500 MG IMI STAT IN 2 ML 1% LIGNOCAINE PLUS DOXYCYCLINE 100 MG PO BD 7 DAYS IF ASYMPTOMATIC, BUT 21 DAYS IF SYMPTOMATIC",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "For rectal co-infection with chlamydia , treatment should be given for gonorrhoea AND chlamydia i.e. Ceftriaxone 500 mg IMI, stat. in 2 mL 1% lignocaine PLUS Doxycycline 100 mg PO, BD 7 days if asymptomatic, but 21 days if symptomatic",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "If a patient with gonorrhoea has an INTRAUTERINE DEVICE, LEAVE IT IN PLACE and treat as recommended, seeking specialist advice as needed",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "If a patient has an intrauterine device (IUD), leave it in place and treat as recommended. Seek specialist advice as needed.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Gonorrhoea' at https://sti.guidelines.org.au/sexually-transmissible-infections/gonorrhoea/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CHLAMYDIA, uncomplicated genital or pharyngeal infection: DOXYCYCLINE 100 MG PO BD 7 DAYS. Alternative AZITHROMYCIN 1 G PO STAT -- CONSIDER WHERE ADHERENCE TO DAILY TREATMENT IS LIKELY TO BE POOR, ESPECIALLY WHERE ANORECTAL INFECTION IS LESS LIKELY",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated genital or pharyngeal infection Doxycycline 100 mg PO, BD 7 days … Azithromycin 1 g PO, stat. Consider where adherence to daily treatment likely to be poor especially where anorectal infection is less likely.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CHLAMYDIA, ANORECTAL infection: DOXYCYCLINE 100 MG PO BD FOR 7 DAYS IF ASYMPTOMATIC, BUT 21 DAYS IF SYMPTOMATIC. Alternative AZITHROMYCIN 1 G PO STAT AND REPEAT IN 12-24 HOURS",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Doxycycline 100 mg PO, BD for 7 days if asymptomatic, but 21 days if symptomatic … Azithromycin 1 g PO, stat. and repeat in 12-24 hours",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CHLAMYDIA IN PREGNANCY: AZITHROMYCIN 1 G PO STAT is the recommended treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pregnant people Azithromycin 1 g PO, stat.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ IMMEDIATE TREATMENT IS NOT RECOMMENDED FOR ALL SEXUAL CONTACTS OF CHLAMYDIA -- offer testing of exposed anatomical sites and AWAIT RESULTS. If contact treatment is initiated, use recommended treatment; ONLY USE AZITHROMYCIN IF ADHERENCE IS LIKELY TO BE POOR or it matches the index case treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immediate treatment is not recommended for all sexual contacts of chlamydia but offer testing of exposed anatomical sites and await results. … If contact treatment is initiated, use recommended treatment. Only use azithromycin if adherence likely to be poor or matches index case treatment.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Chlamydia contact tracing: ALL PARTNERS SHOULD BE TRACED BACK FOR 6 MONTHS, and THE DIAGNOSING DOCTOR IS RESPONSIBLE FOR INITIATING AND DOCUMENTING A DISCUSSION ABOUT CONTACT TRACING. CONSIDER PRESUMPTIVE TREATMENT IF THERE HAS BEEN SEXUAL CONTACT WITHIN THE PAST 2 WEEKS or when the person's circumstances mean later treatment may not occur",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All partners should be traced back for 6 months. … The diagnosing doctor is responsible for initiating and documenting a discussion about contact tracing. … Consider presumptive treatment if there has been sexual contact within the past 2 weeks or when the person’s individual circumstances mean later treatment may not occur.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "PATIENT DELIVERED PARTNER THERAPY -- the index patient delivers the prescription or treatment to their partners -- ⚠️ IS APPROVED IN SOME JURISDICTIONS ONLY, for heterosexual index patients with anogenital or oropharyngeal chlamydia whose partners are unlikely to seek testing or treatment. GUIDANCE IS AVAILABLE IN VICTORIA, NSW AND THE NT",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The index patient delivers the prescription or treatment to their partner/s. … Consider using patient delivered partner therapy which is approved in some jurisdictions for heterosexual index patients with anogenital or oropharyngeal chlamydia whose partners are unlikely to seek chlamydia testing or treatment, or with repeat infections whose partners have not been treated. … Patient delivered partner therapy guidance is available in Victoria, NSW, and the NT",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CHLAMYDIA TEST OF CURE IS NOT ROUTINELY RECOMMENDED, EXCEPT FOR PREGNANT PEOPLE AND ANORECTAL INFECTION TREATED WITH AZITHROMYCIN. ⚠️ Where indicated it must be performed NO EARLIER THAN 4 WEEKS AFTER TREATMENT IS COMPLETED, TO PREVENT A FALSE POSITIVE RESULT DUE TO PERSISTENT CHLAMYDIA DNA. Separately, RE-INFECTION IS COMMON and RETESTING AT 3 MONTHS IS RECOMMENDED",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not routinely recommended, except for: Pregnant people Anorectal infection treated with Azithromycin … Test of cure by nucleic acid amplification test (NAAT) in these situations should be performed no earlier than 4 weeks after treatment is completed to prevent false positive result due to persistent chlamydia DNA. … Re-infection is common Retesting at 3 months is recommended to detect re-infection.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MYCOPLASMA GENITALIUM known or suspected MACROLIDE-SUSCEPTIBLE: DOXYCYCLINE 100 MG TWICE A DAY FOR 7 DAYS FOLLOWED BY AZITHROMYCIN 1 G IMMEDIATELY THEN 500 MG DAILY FOR 3 DAYS (TOTAL 2.5 G)",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Doxycycline 100 mg twice a day for 7 days followed by Azithromycin 1 g immediately then 500 mg daily for 3 days (total 2.5 g)",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MYCOPLASMA GENITALIUM known or suspected MACROLIDE-RESISTANT: DOXYCYCLINE 100 MG TWICE A DAY FOR 7 DAYS FOLLOWED BY MOXIFLOXACIN 400 MG DAILY FOR 7 DAYS",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Doxycycline 100 mg twice a day for 7 days followed by Moxifloxacin 400 mg daily for 7 days",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "PELVIC INFLAMMATORY DISEASE DUE TO M. GENITALIUM: MOXIFLOXACIN 400 MG DAILY FOR 14 DAYS",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Pelvic inflammatory disease due to M. genitalium Moxifloxacin 400 mg daily for 14 days",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ MACROLIDE-RESISTANCE TESTING IN M. GENITALIUM IS RECOMMENDED WHERE AVAILABLE, and the treatment options assume the clinician knows whether the infection is macrolide-susceptible or resistant. WITHOUT ACCESS TO RESISTANCE TESTING, IT IS REASONABLE TO ASSUME MACROLIDE RESISTANCE IS PRESENT in infections persisting after failure of azithromycin and in men who have sex with men, ⚠️ WHERE MACROLIDE RESISTANCE EXCEEDS 80% IN MOST URBAN SETTINGS IN AUSTRALIA",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "recommended where available, and the following treatment options are based on the treating clinician’s knowing that an infection is macrolide-susceptible or resistant. … Without access to resistance testing, it is reasonable to assume macrolide resistance is present in infections persisting after failure of azithromycin and in men who have sex with men , where macrolide resistance exceeds 80% in most urban settings in Australia.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ MOXIFLOXACIN REQUIRES A PRIVATE PRESCRIPTION, IS NOT RECOMMENDED IN PREGNANCY OR BREASTFEEDING, AND IS EXPENSIVE. It can be associated with diarrhoea, uncommonly with TENDINOPATHY, NEUROLOGICAL AND CARDIAC EVENTS. ASSESS ALL PATIENTS in whom a quinolone is considered FOR CONTRAINDICATIONS AND RISK OF ADVERSE EFFECTS and review concurrent medications",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Moxifloxacin requires a private prescription, is not recommended for use in pregnancy or breast feeding, and is expensive. It can be associated with diarrhoea, uncommonly with tendinopathy, neurological and cardiac events. Assess all patients in whom you consider a quinolone for contraindications and risk of adverse effects and review concurrent medications.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ FLUOROQUINOLONE RESISTANCE MUTATIONS ARE INCREASING AND DETECTED IN 15-20% OF M. GENITALIUM INFECTIONS IN URBAN CENTRES; however, NOT ALL MUTATIONS ARE STRONGLY ASSOCIATED WITH FAILURE of fluoroquinolones. ⚠️ SPEAK TO YOUR LABORATORY ABOUT THE PREDICTIVE VALUE OF THEIR ASSAY, because it matters how well it predicts moxifloxacin treatment outcomes",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Fluoroquinolone resistance mutations are increasing and detected in 15-20% of M. genitalium infections in urban centres; however, not all mutations are strongly associated with failure of fluoroquinolones. … Speak to your laboratory about the predictive value of their assay.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "M. GENITALIUM AFTER MOXIFLOXACIN FAILS, from PUBLISHED CASE SERIES, SEEKING SPECIALIST ADVICE: PRISTINAMYCIN 1 G 3 TIMES DAILY WITH DOXYCYCLINE 100 MG TWICE DAILY FOR 10 DAYS, CURING 75% of macrolide-resistant infections, available through hospital pharmacies on the TGA SPECIAL ACCESS SCHEME; MINOCYCLINE 100 MG TWICE DAILY FOR 14 DAYS, CURING 70%, on private script; or DOXYCYCLINE 100 MG TWICE DAILY WITH SITAFLOXACIN 100 MG TWICE DAILY FOR 7 DAYS in cases who have failed all other therapies, with >90% EFFICACY, also Special Access Scheme",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "If moxifloxacin fails or cannot be used and M. genitalium persists, seek specialist advice. The following regimens have been used with efficacy reported in published case series: … Pristinamycin: 1 g 3 times daily combined with doxycycline 100 mg twice daily for 10 days. Cures 75% of macrolide-resistant infections. Pristinamycin is available through hospital pharmacies, using the Special Access Scheme of the Therapeutic Goods Administration (TGA). … Minocycline: 100 mg twice daily for 14 days. Cures 70% of macrolide-resistant infections. Minocycline is available on private script. … Combination therapy with doxycycline 100 mg twice daily and sitafloxacin 100 mg twice daily for 7 days. This regimen has been used in cases who have failed all other available therapies with > 90% efficacy.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "M. GENITALIUM IN PREGNANCY: decisions are MADE ON A CASE BY CASE BASIS AND INVOLVE THE PATIENT. If macrolide-susceptible, AZITHROMYCIN IS CATEGORY B1 AND CAN BE PRESCRIBED. ⚠️ MOXIFLOXACIN IS CATEGORY B3 AND CONTRAINDICATED -- discuss macrolide-resistant cases with a specialist. PRISTINAMYCIN MAY BE RECOMMENDED AT 1 G 4 TIMES DAILY FOR 10 DAYS, with LIMITED DATA in pregnancy and breastfeeding",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Decisions regarding treatment in pregnancy need to be made on a case by case basis and involve the patient. … then azithromycin is category B1 and can be prescribed in pregnancy. … moxifloxacin is category B3 and contraindicated. Pristinamycin may be recommended at a dose of 1 g 4 times daily for 10 days. While limited data are available for the use of pristinamycin in pregnancy and breast feeding this antibiotic is used in pregnancy in Europe and Australia.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "After M. genitalium treatment: ADVISE NO CONDOMLESS SEX UNTIL TESTED FOR CURE, 14-21 DAYS AFTER COMPLETION OF TREATMENT, and no sex with untested previous partners. ⚠️ M. GENITALIUM IS NOT A NOTIFIABLE CONDITION",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Advise no condomless sex until tested for cure ( 14-21 days after completion of treatment). … M. genitalium is not a notifiable condition.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "PID, MILD-TO-MODERATE, OUTPATIENT: CEFTRIAXONE 500 MG IN 2 ML OF 1% LIGNOCAINE IMI, OR 500 MG IV, STAT PLUS METRONIDAZOLE 400 MG PO BD FOR 14 DAYS PLUS DOXYCYCLINE 100 MG PO BD FOR 14 DAYS",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "Ceftriaxone 500 mg in 2 mL of 1% lignocaine IMI, or 500 mg IV, stat PLUS Metronidazole 400 mg PO, BD for 14 days PLUS Doxycycline 100 mg PO, BD for 14 days",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "PID, SEVERE, INPATIENT: CEFTRIAXONE 2 G IV DAILY OR CEFOTAXIME 2 G IV TDS PLUS AZITHROMYCIN 500 MG IV DAILY PLUS METRONIDAZOLE 500 MG IV BD",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "Ceftriaxone 2 g IV, daily OR Cefotaxime 2 g IV, TDS PLUS Azithromycin 500 mg IV, daily PLUS Metronidazole 500 mg IV , BD",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "PID IN PREGNANCY OR BREASTFEEDING: AVOID DOXYCYCLINE AND USE THE AZITHROMYCIN REGIMEN -- for mild-to-moderate infection, CEFTRIAXONE 500 MG IN 2 ML OF 1% LIGNOCAINE IMI OR 500 MG IV STAT PLUS METRONIDAZOLE 400 MG PO BD FOR 14 DAYS PLUS AZITHROMYCIN 1 G PO STAT PLUS AZITHROMYCIN 1 G PO STAT 1 WEEK LATER",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "If pregnant or breastfeeding, avoid doxycycline and use azithromycin regimen i.e. for mild-to-moderate infection: Ceftriaxone 500 mg in 2 mL of 1% lignocaine IMI, or 500 mg IV, stat. PLUS Metronidazole 400 mg PO, BD for 14 days PLUS Azithromycin 1 g PO, stat PLUS Azithromycin 1 g PO, stat, 1 week later",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ IN PID, BEGIN TREATMENT IMMEDIATELY WITH A PROVISIONAL DIAGNOSIS, WITHOUT WAITING FOR TEST RESULTS. RAPID RESPONSE TO APPROPRIATE ANTIBIOTIC TREATMENT IS HIGHLY PREDICTIVE OF PID",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "Rapid response to appropriate antibiotic treatment is highly predictive of PID. … Begin treatment immediately with provisional diagnosis, without waiting for test results.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In PID, CONSIDER REMOVAL OF AN IUD IF THERE IS NO RESPONSE TO TREATMENT WITHIN 48-72 HOURS, balancing the decision with the risk of pregnancy and considering oral emergency contraception",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "Consider removal of IUD if no response to treatment within 48-72 hours. Balance decision with risk of pregnancy and consider oral emergency contraception.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CONSIDER ADMISSION IN PID IF: clinically unwell including unstable vital signs, or pain not manageable as an outpatient; DIAGNOSIS UNCERTAIN; A SURGICAL EMERGENCY CANNOT BE EXCLUDED; suspicion or definitive diagnosis of a PELVIC ABSCESS; severe illness or LACK OF RESPONSE TO OUTPATIENT MANAGEMENT IN 48-72 HOURS; intolerance to oral therapy; PREGNANCY; or HOMELESS OR UNSTABLE ACCOMMODATION",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "clinically unwell including unstable vital signs, or pain not able to be managed in an outpatient setting diagnosis uncertain a surgical emergency cannot be excluded suspicion or definitive diagnosis of a pelvic abscess severe illness or a lack of response to outpatient management in 48 – 72 hours intolerance to oral therapy pregnancy homeless or unstable accommodation.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "PID follow-up: REVIEW AT 48-72 HOURS to assess adherence and response; IF NO CLINICAL IMPROVEMENT HAS OCCURRED BY 72 HOURS, CONSIDER ADMISSION; FURTHER REVIEW AT 1-2 WEEKS, repeating a pregnancy test if clinically indicated",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "Review at 48-72 hours to assess adherence and response to treatment If no clinical improvement has occurred <72 hours, then consider admission Further review at 1-2 weeks to ensure adequate clinical response to treatment, adherence and treatment of sexual contacts; repeat pregnancy test, if clinically indicated.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ ON M. GENITALIUM-ASSOCIATED PID, the guideline states its own evidence limit: M. genitalium results are OFTEN RECEIVED ABOUT A WEEK AFTER PRESUMPTIVE PID TREATMENT HAS BEGUN; empirical doxycycline and metronidazole HAS RECENTLY SHOWN SOME EFFICACY; if the patient is responding, COMPLETE THE 14-DAY EMPIRIC REGIMEN AND UNDERTAKE A TEST OF CURE, but IF STILL SYMPTOMATIC, RECALL AND SWITCH TO 14 DAYS OF MOXIFLOXACIN. ⚠️ THIS REGIMEN WAS EVALUATED IN A RANDOMISED CONTROLLED TRIAL OF ALL-CAUSE PID AND HAS BEEN USED IN M. GENITALIUM-ASSOCIATED PID BUT IS NOT SUPPORTED BY RANDOMISED DATA",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "results are often received about a week after presumptive PID treatment has begun. Empirical therapy, consisting of doxycycline and metronidazole, has recently shown some efficacy against … If a patient is clinically responding to this 14 day empiric regimen then complete it and undertake a test of cure to ensure … eradication. If a patient remains symptomatic, then recall them and switch to 14 days of moxifloxacin. This regimen was evaluated in a randomised controlled trial of all-cause … and has been used in patients with … -associated … but is not supported by randomised data.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Mycoplasma genitalium' at https://sti.guidelines.org.au/sexually-transmissible-infections/mycoplasma-genitalium/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ TREAT SEXUALLY ACTIVE MEN WITH EPIDIDYMO-ORCHITIS PRESUMPTIVELY FOR GONORRHOEA AND CHLAMYDIA. Regimen where chlamydia or gonorrhoea is suspected: CEFTRIAXONE 500 MG IN 2 ML OF 1% LIGNOCAINE IMI STAT PLUS EITHER DOXYCYCLINE 100 MG PO BD FOR 14 DAYS OR AZITHROMYCIN 1 G PO STAT AND REPEATED 1 WEEK LATER",
+   "source": "S6",
+   "verdict": "pass",
+   "source_text": "Treat sexually active men with epididymo-orchitis presumptively for gonorrhoea and chlamydia . … Ceftriaxone 500mg in 2 mL of 1% lignocaine IMI, stat PLUS EITHER Doxycycline 100mg PO, BD for 14 days OR Azithromycin 1g PO, stat and repeated 1 week later.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Epididymo-orchitis' at https://sti.guidelines.org.au/syndromes/epididymo-orchitis/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In epididymo-orchitis, FOR MEN WHO ENGAGE IN INSERTIVE ANAL SEX treat empirically as above, BUT IF RESPONSE IS POOR ALTERNATIVE TREATMENT MAY BE REQUIRED TO TREAT ENTERIC ORGANISMS -- seek specialist advice. IN SEVERE CASES TREATMENT MAY NEED TO CONTINUE FOR UP TO 3 WEEKS",
+   "source": "S6",
+   "verdict": "pass",
+   "source_text": "For men who engage in insertive anal sex, treat empirically as above, however if response is poor, alternative treatment may be required to treat enteric organisms. Seek specialist advice. … In severe cases, treatment may need to be continued for up to 3 weeks.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Epididymo-orchitis' at https://sti.guidelines.org.au/syndromes/epididymo-orchitis/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Epididymo-orchitis: BED REST, SCROTAL SUPPORT AND ANALGESIA ARE COMMONLY REQUIRED. COMPLETE RESOLUTION OF THE SWELLING MAY TAKE SEVERAL WEEKS, BUT A SUBSTANTIAL RESPONSE SHOULD OCCUR IN 4-5 DAYS -- and follow-up is at 4-5 days. ⚠️ TEST OF CURE IS NOT RECOMMENDED, but men with chlamydia and gonorrhoea SHOULD BE RETESTED FOR RE-INFECTION AFTER 3 MONTHS. CONFIRMED UTIs IN MEN OFTEN REQUIRE FURTHER INVESTIGATION OR UROLOGICAL REFERRAL",
+   "source": "S6",
+   "verdict": "pass",
+   "source_text": "Bed rest, scrotal support and analgesia are commonly required. Complete resolution of the swelling may take several weeks, but a substantial response should occur in 4-5 days. … Test of cure is not recommended. … Men with chlamydia and gonorrhoea should be retested for re-infection after 3 months Confirmed urinary tract infections in men often require further investigation or urological referral.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Epididymo-orchitis' at https://sti.guidelines.org.au/syndromes/epididymo-orchitis/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Epididymo-orchitis contact tracing: IF STI-RELATED, ALL SEXUAL PARTNERS FROM THE PAST 6 MONTHS SHOULD BE TESTED AND TREATED; IF URINARY TRACT INFECTION, CONTACT TRACING IS NOT REQUIRED",
+   "source": "S6",
+   "verdict": "pass",
+   "source_text": "If STI -related, all sexual partners from the past 6 months should be tested and treated If urinary tract infection, contact tracing is not required",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Epididymo-orchitis' at https://sti.guidelines.org.au/syndromes/epididymo-orchitis/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "GENITAL HERPES, INITIAL EPISODE: VALACICLOVIR 500 MG PO BD FOR 5-10 DAYS; alternative ACICLOVIR 400 MG PO TDS FOR 5-10 DAYS. ⚠️ INITIAL EPISODES MAY REQUIRE A 10-DAY COURSE IF SYMPTOMS ARE SLOW TO RESOLVE, and TREATMENT SHOULD NOT BE DELAYED for those presenting with moderate-to-severe episodes, particularly initial episodes",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "Initial episode Valaciclovir 500mg PO, BD for 5 -10 days Aciclovir 400mg PO, TDS for 5 -10 days … Treatment should not be delayed for those presenting with moderate-to-severe episodes, particularly initial episodes. … Initial episodes may require a 10-day course of treatment if symptoms are slow to resolve.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GENITAL HERPES RECURRENCE, EPISODIC THERAPY -- ⚠️ SHOULD BE SELF-INITIATED AT THE FIRST HINT OF SYMPTOMS: VALACICLOVIR 500 MG PO BD FOR 3 DAYS; alternatives FAMCICLOVIR 1 G ORALLY TWICE A DAY FOR 1 DAY, OR ACICLOVIR 800 MG TDS FOR 2 DAYS",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "Should be self-initiated at the first hint of symptoms … Valaciclovir 500mg PO, BD for 3 days Famciclovir 1g orally twice a day for 1 day or Aciclovir 800mg TDS for 2 days",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GENITAL HERPES RECURRENCE, SUPPRESSIVE THERAPY: VALACICLOVIR 500 MG PO DAILY FOR 6 MONTHS; alternatives FAMCICLOVIR 250 MG PO BD FOR 6 MONTHS OR ACICLOVIR 400 MG BD. ⚠️ REVIEW THE NEED FOR SUPPRESSIVE THERAPY 6 MONTHLY, AS RECURRENCES USUALLY BECOME LESS FREQUENT AND LESS SEVERE WITH TIME",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "Valaciclovir 500mg PO, daily for 6 months Famciclovir 250mg PO, BD for 6 months or Aciclovir 400mg BD … Review the need for suppressive therapy 6 monthly as recurrences usually become less frequent and less severe with time.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "HSV SUPPRESSION IN PREGNANCY: VALACICLOVIR 500 MG PO BD FROM 36 WEEKS UNTIL BIRTH; alternative ACICLOVIR 400 MG TDS FROM 36 WEEKS UNTIL BIRTH. ⚠️ ROUTINELY COMMENCE HSV SUPPRESSION FROM 36 WEEKS GESTATION IN PEOPLE WHO KNOW THEY HAVE THE INFECTION, WITH OR WITHOUT LESIONS, and commence EARLIER in people with multiple recurrent lesions during pregnancy. THE GREATEST RISK OF SEQUELAE FOR THE BABY IS WHEN HSV IS ACQUIRED IN THE THIRD TRIMESTER OR CLOSE TO THE TIME OF DELIVERY",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "Valaciclovir 500mg PO, BD from 36 weeks until birth Aciclovir 400mg TDS from 36 weeks until birth … The greatest risk of sequelae for the baby is when HSV is acquired in the third trimester or close to the time of delivery. Routinely commence HSV suppression from 36 weeks gestation in people who know they have the infection (with or without lesions). Commence at an earlier gestation in people with multiple recurrent lesions during pregnancy .",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ GENITAL HERPES ANTIVIRALS REQUIRE PBS STREAMLINE AUTHORITY SCRIPTS, and those with FREQUENT RECURRENCES -- eg 2 OR 3 TIMES PER MONTH -- or immunosuppression MAY REQUIRE HIGHER DOSES, with PBS AUTHORITY REQUIRED FOR AN INCREASED AMOUNT OF MEDICATION",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "NB – Pharmaceutical Benefits Scheme (PBS) streamline authority scripts required … Those with frequent recurrences (e.g. 2 or 3 times per month) or immunosuppression may require higher doses (PBS authority required for increased amount of medication).",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Genital herpes symptom relief: REGULAR ANALGESIA, TOPICAL LIGNOCAINE TO REDUCE PAIN FROM EROSIONS, FISSURES AND ULCERS, and URINATING IN A BATH OR SHOWER RELIEVES SUPERFICIAL DYSURIA. ⚠️ NEUROPATHIC BLADDER REQUIRES URGENT CATHETERISATION AND REFERRAL. ⚠️ HSV IS NOT A NOTIFIABLE DISEASE and CONTACT TRACING IS NOT RECOMMENDED",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "Regular analgesia Topical lignocaine to reduce pain from erosions, fissures and ulcers Urinating in a bath or shower relieves superficial dysuria Neuropathic bladder requires urgent catheterisation and referral … HSV is not a notifiable disease. … Contact tracing is not recommended, but patients may need support if they wish to disclose to current or future sexual partners.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ THE PSYCHOSOCIAL IMPACT OF A GENITAL HERPES DIAGNOSIS CAN BE PROFOUND BUT IS OFTEN BASED ON MISINFORMATION. PROVIDING FACTS ABOUT HIGH COMMUNITY PREVALENCE (70%-80% HSV1 AND 12-15% HSV2) AND LARGELY MILD CLINICAL EFFECT IS IMPORTANT FOR REDUCING STIGMA. TRANSMISSION CAN OCCUR FROM SOMEONE UNAWARE THEY HAVE THE INFECTION and symptoms can first occur DAYS OR YEARS AFTER ACQUISITION. Refer to a psychologist where the patient is unable to accept the diagnosis, significantly distressed, or anxious about having the infection when tested negative",
+   "source": "S4",
+   "verdict": "pass",
+   "source_text": "This can be profound but is often based on misinformation. Providing facts about high community prevalence (70%-80% HSV1 and 12-15% HSV2) and largely mild clinical effect is important for reducing stigma. … transmission can occur from someone unaware they have the infection and symptoms can also occur for the first time some days or years after acquisition. … Refer to a psychologist for support with patients who are unable to accept the diagnosis, are significantly distressed by the diagnosis, or anxious about having the infection when tested negative.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Genital herpes simplex virus (HSV)' at https://sti.guidelines.org.au/sexually-transmissible-infections/genital-herpes-simplex-virus-hsv/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "PENILE URETHRITIS, NGU LIKELY: DOXYCYCLINE 100 MG PO BD FOR 7 DAYS. GONORRHOEA LIKELY: CEFTRIAXONE 500 MG IN 2 ML OF 1% LIGNOCAINE IMI STAT PLUS AZITHROMYCIN 1 G PO STAT, with an alternative of CEFTRIAXONE 500 MG IMI STAT PLUS DOXYCYCLINE 100 MG PO BD FOR 7 DAYS",
+   "source": "S8",
+   "verdict": "pass",
+   "source_text": "NGU likely Doxycycline 100 mg PO, BD for 7 days … Ceftriaxone 500 mg in 2 mL of 1% lignocaine IMI, stat PLUS Azithromycin 1 g PO, stat … Ceftriaxone 500 mg in 2 mL of 1% lignocaine IMI, stat PLUS Doxycycline 100 mg PO, BD for 7 days",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Urethritis - penile' at https://sti.guidelines.org.au/syndromes/urethritis-penile/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In urethritis, CEFTRIAXONE IS THE MOST EFFECTIVE TREATMENT FOR GONORRHOEA BUT AZITHROMYCIN IS ADDED TO REDUCE THE CHANCE OF RESISTANCE EMERGING. DOXYCYCLINE IS PREFERRED FOR NGU AND CHLAMYDIA AND ALSO INITIATES TREATMENT FOR M. GENITALIUM. When NGU is likely but you would also prefer to cover gonorrhoea, IT IS REASONABLE TO ADD DOXYCYCLINE INSTEAD OF AZITHROMYCIN TO CEFTRIAXONE",
+   "source": "S8",
+   "verdict": "pass",
+   "source_text": "is the most effective treatment for … but azithromycin is added to reduce the chance of resistance emerging. … Doxycycline is preferred for NGU and chlamydia and also initiates treatment for … it is reasonable to add doxycycline instead of azithromycin to ceftriaxone.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Urethritis - penile' at https://sti.guidelines.org.au/syndromes/urethritis-penile/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "If urethritis symptoms do not resolve, SEEK SPECIALIST ADVICE FOR MANAGEMENT OF PERSISTENT NGU, INCLUDING M. GENITALIUM (OFTEN RESISTANT), HERPES SIMPLEX VIRUS AND ADENOVIRUS",
+   "source": "S8",
+   "verdict": "pass",
+   "source_text": "If symptoms do not resolve, seek specialist advice for management of persistent NGU, including … (often resistant), herpes simplex virus ( … ) and adenovirus.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Urethritis - penile' at https://sti.guidelines.org.au/syndromes/urethritis-penile/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CERVICITIS: ⚠️ IT IS IMPORTANT TO KNOW WHICH ORGANISM IS CAUSING THE CERVICITIS, and IF POSSIBLE WAIT FOR THE TEST RESULTS BEFORE CONSIDERING TREATMENT AS TARGETED TREATMENT IS MORE SUCCESSFUL. IF SAME DAY TREATMENT IS GIVEN, TREAT FOR C. TRACHOMATIS AND N. GONORRHOEAE AT A MINIMUM",
+   "source": "S7",
+   "verdict": "pass",
+   "source_text": "It is important to know which organism is causing the cervicitis. … If possible, wait for the test results before considering treatment as targeted treatment is more successful. … If same day treatment is given, treat for Chlamydia trachomatis and Neisseria gonorrhoeae at a minimum.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Cervicitis' at https://sti.guidelines.org.au/syndromes/cervicitis/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CERVICITIS due to CHLAMYDIA: DOXYCYCLINE 100 MG PO BD FOR 7 DAYS; alternative AZITHROMYCIN 500 MG x 2 PO STAT, which is SAFE IN PREGNANCY. Due to GONORRHOEA: CEFTRIAXONE 500 MG IN 2 ML LIGNOCAINE 1% IMI STAT PLUS AZITHROMYCIN 500 MG x 2 PO STAT. ⚠️ USE AZITHROMYCIN 1 G STAT AS FIRST-LINE C. TRACHOMATIS TREATMENT IN PREGNANCY; N. GONORRHOEAE TREATMENT IS THE SAME AS IN NON-PREGNANT PEOPLE",
+   "source": "S7",
+   "verdict": "pass",
+   "source_text": "Azithromycin 500 mg x 2 PO, stat Safe in pregnancy … Ceftriaxone 500 mg, in 2 mL lignocaine 1% IMI, stat Plus azithromycin 500 mg x 2 PO, stat … Use azithromycin 1g stat as first-line Chlamydia trachomatis treatment in pregnancy ; Neisseria gonorrhoeae treatment is the same as in non-pregnant people.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Cervicitis' at https://sti.guidelines.org.au/syndromes/cervicitis/, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Patients with a CLINICAL DIAGNOSIS OF CERVICITIS WHO ARE AT INCREASED RISK OF BEING LOST TO FOLLOW-UP SHOULD BE TREATED AT INITIAL ASSESSMENT WHETHER A PATHOGEN IS IDENTIFIED OR NOT",
+   "source": "S7",
+   "verdict": "pass",
+   "source_text": "who are at increased of being lost to follow-up should be treated at initial assessment whether a pathogen is identified or not.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Cervicitis' at https://sti.guidelines.org.au/syndromes/cervicitis/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ THE GUIDELINES SET AUDITABLE OUTCOMES: 100% OF PATIENTS DIAGNOSED WITH CHLAMYDIA ARE TREATED WITH AN APPROPRIATE ANTIBIOTIC REGIMEN; 100% OF PATIENTS DIAGNOSED WITH URETHRITIS likewise; 100% OF PEOPLE DIAGNOSED WITH PID HAVE HAD INVESTIGATIONS FOR GONORRHOEA AND CHLAMYDIA; and for epididymo-orchitis, IF STI-RELATED, 100% OF REGULAR PARTNERS ARE TESTED AND TREATED",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "100% of patients diagnosed with chlamydia are treated with an appropriate antibiotic regimen.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Chlamydia' at https://sti.guidelines.org.au/sexually-transmissible-infections/chlamydia/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Auditable outcome for PID: 100% OF PEOPLE DIAGNOSED WITH PID HAVE HAD INVESTIGATIONS FOR GONORRHOEA AND CHLAMYDIA",
+   "source": "S5",
+   "verdict": "pass",
+   "source_text": "100% of people diagnosed with PID have had investigations for gonorrhoea and chlamydia .",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pelvic inflammatory diseases (PID)' at https://sti.guidelines.org.au/syndromes/pelvic-inflammatory-diseases-pid/, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ AMH's C. difficile row cites the Australasian guidelines at Intern Med J 2025; 55(3): 503-13. THE CITATION IS CONFIRMED AGAINST THE PUBLIC PUBMED RECORD: Longhitano, Roder, Blackmore, Campbell, May and Athan, 'Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand', PMID 40035163, doi:10.1111/imj.16638, published 2025-03-04 and indexed as a PRACTICE GUIDELINE",
+   "source": "C1",
+   "verdict": "pass",
+   "source_text": "Longhitano A, Roder C, Blackmore T, Campbell A, May M, Athan E. Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand. Internal medicine journal (Intern Med J). 2025; 55(3): 503-513. Published 2025-03-04. Article types: Journal Article, Practice Guideline.",
+   "locator": "Longhitano A, Roder C, Blackmore T, Campbell A, May M, Athan E, 'Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand', Intern Med J 2025; 55(3): 503-13, PMID 40035163, doi:10.1111/imj.16638 - PUBLIC ABSTRACT ONLY, retrieved from PubMed 2026-09-22; full text CLOSED ACCESS (Unpaywall is_oa false, no PMC copy, publisher HTTP 403)"
+  },
+  {
+   "claim": "⚠️ THE ASID ABSTRACT INDEPENDENTLY CORROBORATES AMH'S HEADLINE CHANGE: the updated guidelines explore changes to treatment recommendations 'INCLUDING THE REPLACEMENT OF ORAL METRONIDAZOLE WITH VANCOMYCIN FOR INITIAL CDI AND THE EMERGING ROLE FOR FIDAXOMICIN AND FAECAL-MICROBIOTA TRANSPLANT'. The previous Australasian guidelines were published in 2016",
+   "source": "C1",
+   "verdict": "pass",
+   "source_text": "including the replacement of oral metronidazole with vancomycin for initial CDI and the emerging role for fidaxomicin and faecal-microbiota transplant. … Since the last published Australasian guidelines in 2016, new therapeutic options are available, prompting a necessary update to management recommendations.",
+   "locator": "Longhitano A, Roder C, Blackmore T, Campbell A, May M, Athan E, 'Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand', Intern Med J 2025; 55(3): 503-13, PMID 40035163, doi:10.1111/imj.16638 - PUBLIC ABSTRACT ONLY, retrieved from PubMed 2026-09-22; full text CLOSED ACCESS (Unpaywall is_oa false, no PMC copy, publisher HTTP 403)"
+  },
+  {
+   "claim": "The ASID abstract states that C. DIFFICILE INFECTION IS ASSOCIATED WITH SIGNIFICANT MORBIDITY AND MORTALITY WITHIN THE AUSTRALIAN POPULATION, and that TREATMENT RECOMMENDATIONS POSE CHALLENGES AT BOTH COMMUNITY AND HOSPITAL-BASED LEVELS DUE TO THE RECURRENT, REFRACTORY AND POTENTIALLY SEVERE NATURE OF THE DISEASE",
+   "source": "C1",
+   "verdict": "pass",
+   "source_text": "Clostridioides difficile infection (CDI) is associated with significant morbidity and mortality within the Australian population. Treatment recommendations for CDI pose challenges at both community and hospital-based levels due to the recurrent, refractory and potentially severe nature of the disease.",
+   "locator": "Longhitano A, Roder C, Blackmore T, Campbell A, May M, Athan E, 'Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand', Intern Med J 2025; 55(3): 503-13, PMID 40035163, doi:10.1111/imj.16638 - PUBLIC ABSTRACT ONLY, retrieved from PubMed 2026-09-22; full text CLOSED ACCESS (Unpaywall is_oa false, no PMC copy, publisher HTTP 403)"
+  },
+  {
+   "claim": "⚠️ THE ASID GUIDELINE FULL TEXT IS CLOSED ACCESS AND WAS NOT RETRIEVED. Checked 2026-09-22: Unpaywall returns is_oa FALSE, oa_status CLOSED, with NO open-access locations; there is NO PubMed Central copy; and the publisher page returns HTTP 403. ⚠️ NO DOSE, DURATION OR RECURRENCE ALGORITHM FROM THAT GUIDELINE IS HELD IN THIS COMPENDIUM",
+   "source": "C1",
+   "verdict": "pass",
+   "source_text": "Unpaywall api.unpaywall.org/v2/10.1111/imj.16638 : is_oa false, oa_status closed, no oa_locations. … PubMed Central: no PMCID (article not in PMC). … Publisher onlinelibrary.wiley.com/doi/10.1111/imj.16638 : HTTP 403. … FULL TEXT NOT RETRIEVED. Only this abstract, which is public on PubMed, is held.",
+   "locator": "Longhitano A, Roder C, Blackmore T, Campbell A, May M, Athan E, 'Australasian Society of Infectious Diseases updated guidelines for the management of Clostridioides difficile infection in adults and children in Australia and New Zealand', Intern Med J 2025; 55(3): 503-13, PMID 40035163, doi:10.1111/imj.16638 - PUBLIC ABSTRACT ONLY, retrieved from PubMed 2026-09-22; full text CLOSED ACCESS (Unpaywall is_oa false, no PMC copy, publisher HTTP 403)"
+  },
+  {
+   "claim": "An open Australian general-practice source giving C. DIFFICILE DOSES was sought in RACGP's Australian Journal of General Practice on 2026-09-22 and NOT FOUND. The vancomycin dose, the 10-day duration and the recurrence algorithm therefore remain UNQUOTED, resting on AMH's licensed table alone.",
+   "source": "-",
+   "verdict": "searched_not_found",
+   "locator": "see method"
+  },
+  {
+   "claim": "⚠️ DISAGREEMENT WITH AMH #1 -- AZITHROMYCIN FOR CHLAMYDIA. AMH's genital infections table states flatly that for chlamydial and other non-gonococcal urethritis 'AZITHROMYCIN IS NO LONGER RECOMMENDED AS M. GENITALIUM IS INCREASINGLY RESISTANT'. ⚠️ THE NATIONAL STI GUIDELINES DO NOT SAY THIS OF CHLAMYDIA: they retain azithromycin 1 g stat as a named ALTERNATIVE for uncomplicated chlamydia where adherence is likely to be poor, and as the RECOMMENDED treatment in PREGNANCY. ⚠️ A prescriber reading AMH alone would conclude azithromycin is off the table for chlamydia, including in pregnancy, WHICH THE NATIONAL GUIDELINE DOES NOT SUPPORT. NOT RESOLVED HERE -- BOTH POSITIONS ARE RECORDED",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Genital infections' at https://amhonline.amh.net.au/chapters/anti-infectives/tables/genital-infections-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "⚠️ DISAGREEMENT WITH AMH #2 -- THE M. GENITALIUM AZITHROMYCIN REGIMEN. AMH's cervicitis row says 'doxycycline followed by either azithromycin or moxifloxacin if macrolide-resistant' WITHOUT SPECIFYING THE AZITHROMYCIN SCHEDULE. ⚠️ The national guideline's schedule is NOT a single dose: it is 1 g immediately THEN 500 MG DAILY FOR 3 DAYS, TOTAL 2.5 G, after 7 days of doxycycline. ⚠️ A single 1 g dose would be UNDER-TREATMENT",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Genital infections' at https://amhonline.amh.net.au/chapters/anti-infectives/tables/genital-infections-table, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ GAP IN AMH CLOSED -- GONORRHOEA. AMH's genital infections table contains NO GONORRHOEA TREATMENT ROW; gonorrhoea appears there only as a pathogen within sexually acquired epididymo-orchitis and PID. ⚠️ The national guideline's regimen -- ceftriaxone 500 mg IMI plus azithromycin 1 g PO, doubled to 2 g azithromycin for pharyngeal infection -- IS NOW HELD IN THIS COMPENDIUM, QUOTED AND RE-CHECKABLE",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Genital infections' at https://amhonline.amh.net.au/chapters/anti-infectives/tables/genital-infections-table, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ PARTIAL DISAGREEMENT WITH AMH #3 -- HSV SUPPRESSION DURATION. AMH says to treat suppression for '6 TO 12 MONTHS THEN REVIEW'. The national guideline specifies VALACICLOVIR 500 MG DAILY FOR 6 MONTHS with the need for suppression REVIEWED 6 MONTHLY. ⚠️ These are compatible in practice but AMH's upper bound of 12 months before review is LONGER than the national guideline's review interval",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Genital infections' at https://amhonline.amh.net.au/chapters/anti-infectives/tables/genital-infections-table, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ AMH AND THE NATIONAL GUIDELINE AGREE on the mild-to-moderate PID regimen -- doxycycline plus metronidazole for 14 days plus a single IM ceftriaxone dose -- and on the breastfeeding substitution of two azithromycin doses a week apart. ⚠️ AMH has NO SEVERE/INPATIENT PID REGIMEN; the national guideline does",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Genital infections' at https://amhonline.amh.net.au/chapters/anti-infectives/tables/genital-infections-table, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  }
+ ]
+}
