@@ -1,297 +1,301 @@
 {
-  "guideline": "guidelines/antimicrobial-stewardship.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-21",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Antimicrobial Stewardship Clinical Care Standard, including the eight quality statements, the for-clinicians sections and the indicator list. The standard names no antimicrobial agent, dose or duration, deferring entirely to Therapeutic Guidelines and local formularies; none is asserted here. Indicator 8c was truncated in retrieval and is recorded as input_unavailable.",
-  "claims": [
-    {
-      "claim": "The goals of the Standard are to ensure the appropriate use and review of antimicrobials to optimise patient outcomes, lessen the harms of adverse effects and reduce the emergence of antimicrobial resistance, and to ensure a patient receives optimal antimicrobial therapy for the treatment or prevention of an infection including assurance when an antimicrobial is not needed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "ensure the appropriate use and review of antimicrobials to optimise patient outcomes, lessen the harms of adverse effects, and reduce the emergence of antimicrobial resistance ... ensure that a patient receives optimal antimicrobial therapy for the treatment or prevention of an infection, including assurance when an antimicrobial is not needed."
-    },
-    {
-      "claim": "Optimal therapy means using the right antimicrobial to treat the condition, at the right dose, at the right frequency, by the right route of administration, at the right time and for the right duration, based on accurate assessment and timely review",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "This means using the right antimicrobial to treat the condition, at the right dose, at the right frequency, by the right route of administration, at the right time and for the right duration, based on accurate assessment and timely review."
-    },
-    {
-      "claim": "Quality statement 1 states that a patient with a life-threatening condition due to a suspected infection receives an appropriate antimicrobial immediately, without waiting for the results of investigations",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with a life-threatening condition due to a suspected infection receives an appropriate antimicrobial immediately, without waiting for the results of investigations."
-    },
-    {
-      "claim": "When treating a patient with suspected sepsis or another life-threatening infection, appropriate empiric antimicrobials should be administered as soon as possible, and there should be prompt access to the appropriate antimicrobials",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When treating a patient with suspected sepsis or another life-threatening infection, administer appropriate empiric antimicrobials as soon as possible. There should be prompt access to the appropriate antimicrobials."
-    },
-    {
-      "claim": "Clinical specimens should be obtained as appropriate but administration of antimicrobials should not be delayed and results of investigations should not be waited for, and when results are received the treatment should be immediately reassessed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Obtain clinical specimens as appropriate, but do not delay administration of antimicrobials and do not wait for results of investigations. When results are received, immediately reassess the treatment."
-    },
-    {
-      "claim": "If there is no immediate access to the appropriate antimicrobials, immediate transfer of the patient to an acute care facility should be arranged, for example ambulance transfer to a hospital, which is relevant in community settings or for some rural hospitals",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If there is no immediate access to the appropriate antimicrobials, arrange for immediate transfer of the patient to an acute care facility; for example, ambulance transfer to a hospital. This is relevant in community settings or for some rural hospitals."
-    },
-    {
-      "claim": "When considering the administration of antimicrobials for patients with life-threatening or serious infections, the patient's advance care plan should be considered",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When considering the administration of antimicrobials for patients with life-threatening or serious infections, the patient's advance care plan should be considered."
-    },
-    {
-      "claim": "Quality statement 2 states that when a patient is prescribed an antimicrobial this is done in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines and the antimicrobial formulary",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When a patient is prescribed an antimicrobial, this is done in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines and the antimicrobial formulary."
-    },
-    {
-      "claim": "Antimicrobials should be prescribed according to current Therapeutic Guidelines or locally endorsed guidelines including the appropriate active ingredient, dose, formulation, route and frequency of administration, and duration for the patient's clinical condition",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Prescribe an antimicrobial according to the current Therapeutic Guidelines or locally endorsed guidelines, including the appropriate active ingredient, dose, formulation, route and frequency of administration, and duration for the patient's clinical condition."
-    },
-    {
-      "claim": "Antimicrobials should be prescribed, dispensed and administered in line with local antimicrobial formularies and restrictions where available, including those applied to broad-spectrum antimicrobials",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Prescribe, dispense and administer antimicrobials in line with local antimicrobial formularies and restrictions, where available, including those applied to broad-spectrum antimicrobials."
-    },
-    {
-      "claim": "The individual patient's characteristics such as age, weight, renal function, allergies, other medicines prescribed and other health conditions should be considered",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider the individual patient's characteristics, such as age, weight, renal function, allergies, other medicines prescribed and other health conditions."
-    },
-    {
-      "claim": "Quality statement 3 states that when an adverse reaction including an allergy to an antimicrobial is reported by a patient or recorded in their healthcare record, the active ingredients, date, nature and severity of the reaction are assessed and documented, which enables the most appropriate antimicrobial to be used when required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When an adverse reaction (including an allergy) to an antimicrobial is reported by a patient or recorded in their healthcare record, the active ingredient(s), date, nature and severity of the reaction are assessed and documented. This enables the most appropriate antimicrobial to be used when required."
-    },
-    {
-      "claim": "Before prescribing, dispensing or administering an antimicrobial, clinicians should consider the patient's previous adverse reactions to medicines, checking the healthcare record and asking the patient about the active ingredients, date the adverse event occurred, nature and severity of the reaction including how it was managed, and where they recorded it such as on an allergy bracelet or a medicines list",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Before prescribing, dispensing or administering an antimicrobial, consider the patient's previous adverse reactions to medicines. Check the healthcare record and ask the patient about their previous adverse reactions, including the active ingredient(s), date the adverse event occurred, nature and severity of the reaction (including how it was managed), and where they recorded it, such as on an allergy bracelet or a medicines list."
-    },
-    {
-      "claim": "If any of the essential elements for assessing an adverse reaction are unknown this should be explicitly documented in the patient's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If any of the essential elements for assessing an adverse reaction are unknown (see below), this should be explicitly documented in the patient's healthcare record."
-    },
-    {
-      "claim": "The essential elements for assessing an adverse reaction are the patient's description of the event, the nature of the reaction, the active ingredients thought to have caused it, an assessment of likelihood, the severity of the event, and the date and location of the care because the original record may have more detail",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The essential elements for assessing an adverse reaction are the: Patient's description of the event (what happened to the patient); Nature of the reaction (diagnosis of the reaction); Active ingredient(s) thought to have caused the adverse reaction; Assessment of likelihood(certainty it was caused by the active ingredient); Severity of event (consequence to the patient, for example hospitalisation); Date and location of the care (because the original record may have more detail)."
-    },
-    {
-      "claim": "Clinicians should assess the likelihood of the adverse reaction being caused by the active ingredients, with relevant factors including the potential for the adverse reaction to recur and the likely consequences to the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Assess the likelihood of the adverse reaction being caused by the active ingredient(s). Factors relevant to your decision about whether to use an antimicrobial or not include the potential for the adverse reaction to recur and the likely consequences to the patient."
-    },
-    {
-      "claim": "The accuracy of the documentation should be reviewed and the patient's healthcare record updated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Review the accuracy of the documentation and update the patient's healthcare record."
-    },
-    {
-      "claim": "Any changes to a patient's adverse reaction or allergy status should be communicated to the patient and their regular clinician, for example in My Health Record or a discharge summary for the general practitioner, and it may also be necessary to update the patient's medicines list",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Communicate any changes to a patient's adverse reaction or allergy status to the patient and their regular clinician (for example, in My Health Record or a discharge summary for the general practitioner). It may also be necessary to update the patient's medicines list."
-    },
-    {
-      "claim": "If a patient experiences a new adverse reaction to an antimicrobial the essential elements should be documented in the patient's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If a patient experiences a new adverse reaction to an antimicrobial, document the essential elements (as above) in the patient's healthcare record."
-    },
-    {
-      "claim": "Quality statement 4 states that a patient with a suspected infection has appropriate samples taken for microbiology testing as clinically indicated, preferably before starting antimicrobial therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with a suspected infection has appropriate samples taken for microbiology testing as clinically indicated, preferably before starting antimicrobial therapy."
-    },
-    {
-      "claim": "Obtaining appropriate samples before starting antimicrobial therapy ensures that treatment can be specific for the infecting organism and that the most appropriate narrow-spectrum antimicrobial is used",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Obtain appropriate samples for microbiology testing when clinically indicated and before starting antimicrobial therapy whenever possible. This ensures that treatment can be specific for the infecting organism, and that the most appropriate narrow-spectrum antimicrobial is used."
-    },
-    {
-      "claim": "For patients with a life-threatening or serious infection such as sepsis, clinical specimens should be obtained as appropriate but antimicrobials started as soon as possible, with treatment reassessed as soon as test results are available",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For patients with a life-threatening or serious infection (such as sepsis), obtain clinical specimens as appropriate but start administering antimicrobials as soon as possible. Reassess the treatment as soon as the test results are available."
-    },
-    {
-      "claim": "Quality statement 5 states that a patient with an infection or at risk of an infection is provided with information about their condition and treatment options in a way that they can understand, and if antimicrobials are prescribed information on how to use them, when to stop, potential side effects and a review plan is discussed with the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with an infection, or at risk of an infection, is provided with information about their condition and treatment options in a way that they can understand. If antimicrobials are prescribed, information on how to use them, when to stop, potential side effects and a review plan is discussed with the patient."
-    },
-    {
-      "claim": "Clinicians should discuss with the patient the expected progression of the infection and the potential benefits and harms of the treatment options, which may or may not include antimicrobials, considering the patient's preferences and needs",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Discuss with the patient the expected progression of the infection and the potential benefits and harms of the treatment options, which may or may not include antimicrobials. This discussion should consider the patient's preferences and needs."
-    },
-    {
-      "claim": "If antimicrobials are not needed clinicians should reassure the patient and inform them of other treatments that can help with symptoms",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If antimicrobials are not needed, reassure the patient and inform them of other treatments that can help with symptoms."
-    },
-    {
-      "claim": "If antimicrobials are needed clinicians should discuss the importance of using antimicrobials as prescribed, how long to take them, any potential adverse effects, any potential drug interactions with existing medicines, and when the treatment will be reviewed or ceased",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If antimicrobials are needed, discuss with the patient the importance of using antimicrobials as prescribed, how long to take them, any potential adverse effects, any potential drug interactions with existing medicines, and when the treatment will be reviewed or ceased."
-    },
-    {
-      "claim": "Verbal and/or written information and resources about treatment options and antimicrobial therapy should be provided to the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Provide verbal and/or written information and resources to the patient about their treatment options and their antimicrobial therapy."
-    },
-    {
-      "claim": "Quality statement 6 states that when a patient is prescribed an antimicrobial the indication, active ingredient, dose, frequency and route of administration, and the intended duration or review plan are documented in the patient's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When a patient is prescribed an antimicrobial, the indication, active ingredient, dose, frequency and route of administration, and the intended duration or review plan are documented in the patient's healthcare record."
-    },
-    {
-      "claim": "When prescribing antimicrobials clinicians should document the indication, active ingredient, dose, frequency and route of administration, intended duration and a review plan, and if required document any plans for therapeutic drug monitoring",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When prescribing antimicrobials, document the indication, active ingredient, dose, frequency and route of administration, intended duration, and a review plan in the patient's healthcare record. If required, document any plans for therapeutic drug monitoring."
-    },
-    {
-      "claim": "Where electronic healthcare records are used, flags and reminders should be incorporated into the record management system to support documentation in all relevant fields or consideration given to making them mandatory fields",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Where electronic healthcare records are being used, incorporate flags and reminders into the record management system to support documentation in all relevant fields or consider making them mandatory fields."
-    },
-    {
-      "claim": "Quality statement 7 states that a patient prescribed an antimicrobial has regular clinical review of their therapy with the frequency dependent on patient acuity and risk factors, that the need for ongoing antimicrobial use, appropriate microbial spectrum of activity, dose, frequency and route of administration are assessed and adjusted accordingly, and that investigation results are reviewed promptly when reported",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient prescribed an antimicrobial has regular clinical review of their therapy, with the frequency of review dependent on patient acuity and risk factors. The need for ongoing antimicrobial use, appropriate microbial spectrum of activity, dose, frequency and route of administration are assessed and adjusted accordingly. Investigation results are reviewed promptly when they are reported."
-    },
-    {
-      "claim": "If the patient is on intravenous agents oral options should be considered to reduce hospital-acquired infections, and the antimicrobial agent and dose should be appropriate for the site of the infection and patient parameters such as renal function",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If the patient is on intravenous agents, consider oral options to reduce hospital-acquired infections. Ensure the antimicrobial agent and dose are appropriate for the site of the infection and patient parameters (such as renal function)."
-    },
-    {
-      "claim": "If microbiological tests are ordered the results should be reviewed within 24 hours of them being available and used to consider whether changing or stopping antimicrobials is appropriate",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If microbiological tests are ordered, review the results within 24 hours of them being available, and use this information to consider whether changing or stopping antimicrobials is appropriate."
-    },
-    {
-      "claim": "When prescribing a broad-spectrum antimicrobial the patient's clinical status and any microbiology results should be reviewed to determine whether the patient's treatment can be switched",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When prescribing a broad-spectrum antimicrobial, review the patient's clinical status and any microbiology results to determine whether the patient's treatment can be switched"
-    },
-    {
-      "claim": "Quality statement 8 states that a patient having surgery or a procedure is prescribed antimicrobial prophylaxis in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines, including recommendations about the need for prophylaxis, choice of antimicrobial, dose, route and timing of administration, and duration",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient having surgery or a procedure is prescribed antimicrobial prophylaxis in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines. This includes recommendations about the need for prophylaxis, choice of antimicrobial, dose, route and timing of administration, and duration."
-    },
-    {
-      "claim": "Clinicians should consider the patient's clinical condition when prescribing surgical prophylaxis, for example colonisation with a multidrug-resistant organism or patient allergies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider the patient's clinical condition (for example, colonisation with a multidrug-resistant organism, or patient allergies)."
-    },
-    {
-      "claim": "Antimicrobials should not be prescribed post-procedurally as prolonged antimicrobial use is not usually required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Avoid prescribing antimicrobials post-procedurally, as prolonged antimicrobial use is not usually required."
-    },
-    {
-      "claim": "Topical antimicrobials are not recommended for surgical prophylaxis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "topical antimicrobials are not recommended for surgical prophylaxis."
-    },
-    {
-      "claim": "Off-label routes of administration for antimicrobials such as irrigations, pastes, washes or topical applications should be avoided for surgical prophylaxis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Avoid using off-label routes of administration for antimicrobials such as irrigations, pastes, washes or topical applications for surgical prophylaxis"
-    },
-    {
-      "claim": "Indicator 2a is the proportion of antimicrobial prescriptions in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines, and indicator 2b is the proportion of prescriptions for restricted antimicrobials in accordance with the locally endorsed approval policy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 2a | The proportion of antimicrobial prescriptions that are in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines | Indicator 2b | The proportion of prescriptions for restricted antimicrobials that are in accordance with the locally endorsed approval policy"
-    },
-    {
-      "claim": "Indicator 3a is the proportion of patients with an adverse reaction to an antimicrobial with comprehensive documentation of the reaction in their healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 3a | The proportion of patients with an adverse reaction to an antimicrobial with comprehensive documentation of the reaction in their healthcare record"
-    },
-    {
-      "claim": "Indicator 6a is the proportion of prescriptions for which the indication for prescribing the antimicrobial is documented, and indicator 6b is the proportion for which the duration, stop date or review date is documented",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 6a | The proportion of prescriptions for which the indication for prescribing the antimicrobial is documented | Indicator 6b | The proportion of prescriptions for which the duration, stop date or review date for the antimicrobial is documented"
-    },
-    {
-      "claim": "Indicator 7a is the proportion of prescriptions for which an antimicrobial review and updated treatment decision is documented within 48 hours from the first prescription",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 7a | The proportion of prescriptions for which an antimicrobial review and updated treatment decision is documented within 48 hours from the first prescription"
-    },
-    {
-      "claim": "Indicator 8a is the proportion of patients for whom the perioperative prophylactic antimicrobial is prescribed in accordance with guidelines and indicator 8b is the proportion for whom the dose is prescribed in accordance with guidelines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 8a | The proportion of patients for whom the perioperative prophylactic antimicrobial is prescribed in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines | Indicator 8b | The proportion of patients for whom the perioperative prophylactic antimicrobial dose is prescribed in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines"
-    },
-    {
-      "claim": "No benchmarks are set for any indicator by the Commission, and definitions required to collect and calculate indicator data are specified online at METEOR",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "No benchmarks are set for any indicator by the Commission. ... When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
-    },
-    {
-      "claim": "Antimicrobial resistance poses a significant threat to public health and the Standard supports quality improvement initiatives conducted by health services and clinicians to help reduce antimicrobial resistance rates and preserve the effectiveness of antimicrobial medicines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Antimicrobial resistance poses a significant threat to public health. The Antimicrobial Stewardship Clinical Care Standard supports quality improvement initiatives conducted by health services and clinicians to help reduce antimicrobial resistance rates and preserve the effectiveness of antimicrobial medicines."
-    },
-    {
-      "claim": "Healthcare services should ensure clinicians have access to and use the current Therapeutic Guidelines and evidence-based locally endorsed guidelines when prescribing antimicrobials",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure clinicians have access to and use the current Therapeutic Guidelines and evidence-based, locally endorsed guidelines when prescribing antimicrobials."
-    }
-  ],
-  "summary": {
-    "total": 47,
-    "pass": 47,
-    "fail": 0
+ "guideline": "guidelines/antimicrobial-stewardship.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-21",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Antimicrobial Stewardship Clinical Care Standard, including the eight quality statements, the for-clinicians sections and the indicator list. The standard names no antimicrobial agent, dose or duration, deferring entirely to Therapeutic Guidelines and local formularies; none is asserted here. Indicator 8c was truncated in retrieval and is recorded as input_unavailable. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "The goals of the Standard are to ensure the appropriate use and review of antimicrobials to optimise patient outcomes, lessen the harms of adverse effects and reduce the emergence of antimicrobial resistance, and to ensure a patient receives optimal antimicrobial therapy for the treatment or prevention of an infection including assurance when an antimicrobial is not needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ensure the appropriate use and review of antimicrobials to optimise patient outcomes, lessen the harms of adverse effects, and reduce the emergence of antimicrobial resistance - ensure that a patient receives optimal antimicrobial therapy for the treatment or prevention of an infection, including assurance when an antimicrobial is not needed"
+  },
+  {
+   "claim": "Optimal therapy means using the right antimicrobial to treat the condition, at the right dose, at the right frequency, by the right route of administration, at the right time and for the right duration, based on accurate assessment and timely review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This means using the right antimicrobial to treat the condition, at the right dose, at the right frequency, by the right route of administration, at the right time and for the right duration, based on accurate assessment and timely review."
+  },
+  {
+   "claim": "Quality statement 1 states that a patient with a life-threatening condition due to a suspected infection receives an appropriate antimicrobial immediately, without waiting for the results of investigations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with a life-threatening condition due to a suspected infection receives an appropriate antimicrobial immediately, without waiting for the results of investigations."
+  },
+  {
+   "claim": "When treating a patient with suspected sepsis or another life-threatening infection, appropriate empiric antimicrobials should be administered as soon as possible, and there should be prompt access to the appropriate antimicrobials",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When treating a patient with suspected sepsis 1 or another life-threatening infection, administer appropriate empiric antimicrobials as soon as possible. There should be prompt access to the appropriate antimicrobials"
+  },
+  {
+   "claim": "Clinical specimens should be obtained as appropriate but administration of antimicrobials should not be delayed and results of investigations should not be waited for, and when results are received the treatment should be immediately reassessed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain clinical specimens as appropriate, but do not delay administration of antimicrobials and do not wait for results of investigations. When results are received, immediately reassess the treatment."
+  },
+  {
+   "claim": "If there is no immediate access to the appropriate antimicrobials, immediate transfer of the patient to an acute care facility should be arranged, for example ambulance transfer to a hospital, which is relevant in community settings or for some rural hospitals",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there is no immediate access to the appropriate antimicrobials, arrange for immediate transfer of the patient to an acute care facility; for example, ambulance transfer to a hospital. This is relevant in community settings or for some rural hospitals."
+  },
+  {
+   "claim": "When considering the administration of antimicrobials for patients with life-threatening or serious infections, the patient's advance care plan should be considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When considering the administration of antimicrobials for patients with life-threatening or serious infections, the patient's advance care plan should be considered."
+  },
+  {
+   "claim": "Quality statement 2 states that when a patient is prescribed an antimicrobial this is done in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines and the antimicrobial formulary",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When a patient is prescribed an antimicrobial, this is done in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines and the antimicrobial formulary."
+  },
+  {
+   "claim": "Antimicrobials should be prescribed according to current Therapeutic Guidelines or locally endorsed guidelines including the appropriate active ingredient, dose, formulation, route and frequency of administration, and duration for the patient's clinical condition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prescribe an antimicrobial according to the current Therapeutic Guidelines or locally endorsed guidelines, including the appropriate active ingredient, dose, formulation, route and frequency of administration, and duration for the patient's clinical condition."
+  },
+  {
+   "claim": "Antimicrobials should be prescribed, dispensed and administered in line with local antimicrobial formularies and restrictions where available, including those applied to broad-spectrum antimicrobials",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prescribe, dispense and administer antimicrobials in line with local antimicrobial formularies and restrictions, where available, including those applied to broad-spectrum antimicrobials."
+  },
+  {
+   "claim": "The individual patient's characteristics such as age, weight, renal function, allergies, other medicines prescribed and other health conditions should be considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider the individual patient's characteristics, such as age, weight, renal function, allergies, other medicines prescribed and other health conditions."
+  },
+  {
+   "claim": "Quality statement 3 states that when an adverse reaction including an allergy to an antimicrobial is reported by a patient or recorded in their healthcare record, the active ingredients, date, nature and severity of the reaction are assessed and documented, which enables the most appropriate antimicrobial to be used when required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When an adverse reaction (including an allergy) to an antimicrobial is reported by a patient or recorded in their healthcare record, the active ingredient(s), date, nature and severity of the reaction are assessed and documented. This enables the most appropriate antimicrobial to be used when required."
+  },
+  {
+   "claim": "Before prescribing, dispensing or administering an antimicrobial, clinicians should consider the patient's previous adverse reactions to medicines, checking the healthcare record and asking the patient about the active ingredients, date the adverse event occurred, nature and severity of the reaction including how it was managed, and where they recorded it such as on an allergy bracelet or a medicines list",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Before prescribing, dispensing or administering an antimicrobial, consider the patient's previous adverse reactions to medicines. Check the healthcare record and ask the patient about their previous adverse reactions, including the active ingredient(s), date the adverse event occurred, nature and severity of the reaction (including how it was managed), and where they recorded it, such as on an allergy bracelet or a medicines list."
+  },
+  {
+   "claim": "If any of the essential elements for assessing an adverse reaction are unknown this should be explicitly documented in the patient's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If any of the essential elements for assessing an adverse reaction are unknown (see below), this should be explicitly documented in the patient's healthcare record."
+  },
+  {
+   "claim": "The essential elements for assessing an adverse reaction are the patient's description of the event, the nature of the reaction, the active ingredients thought to have caused it, an assessment of likelihood, the severity of the event, and the date and location of the care because the original record may have more detail",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The essential elements for assessing an adverse reaction are the: - Patient's description of the event (what happened to the patient) - Nature of the reaction (diagnosis of the reaction) - Active ingredient(s) thought to have caused the adverse reaction - Assessment of likelihood (certainty it was caused by the active ingredient) - Severity of event (consequence to the patient, for example hospitalisation) - Date and location of the care (because the original record may have more detail"
+  },
+  {
+   "claim": "Clinicians should assess the likelihood of the adverse reaction being caused by the active ingredients, with relevant factors including the potential for the adverse reaction to recur and the likely consequences to the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess the likelihood of the adverse reaction being caused by the active ingredient(s). Factors relevant to your decision about whether to use an antimicrobial or not include the potential for the adverse reaction to recur and the likely consequences to the patient."
+  },
+  {
+   "claim": "The accuracy of the documentation should be reviewed and the patient's healthcare record updated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Review the accuracy of the documentation and update the patient's healthcare record."
+  },
+  {
+   "claim": "Any changes to a patient's adverse reaction or allergy status should be communicated to the patient and their regular clinician, for example in My Health Record or a discharge summary for the general practitioner, and it may also be necessary to update the patient's medicines list",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Communicate any changes to a patient's adverse reaction or allergy status to the patient and their regular clinician (for example, in My Health Record or a discharge summary for the general practitioner). It may also be necessary to update the patient's medicines list."
+  },
+  {
+   "claim": "If a patient experiences a new adverse reaction to an antimicrobial the essential elements should be documented in the patient's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a patient experiences a new adverse reaction to an antimicrobial, document the essential elements (as above) in the patient's healthcare record."
+  },
+  {
+   "claim": "Quality statement 4 states that a patient with a suspected infection has appropriate samples taken for microbiology testing as clinically indicated, preferably before starting antimicrobial therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with a suspected infection has appropriate samples taken for microbiology testing as clinically indicated, preferably before starting antimicrobial therapy."
+  },
+  {
+   "claim": "Obtaining appropriate samples before starting antimicrobial therapy ensures that treatment can be specific for the infecting organism and that the most appropriate narrow-spectrum antimicrobial is used",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain appropriate samples for microbiology testing when clinically indicated and before starting antimicrobial therapy whenever possible. This ensures that treatment can be specific for the infecting organism, and that the most appropriate narrow-spectrum antimicrobial is used."
+  },
+  {
+   "claim": "For patients with a life-threatening or serious infection such as sepsis, clinical specimens should be obtained as appropriate but antimicrobials started as soon as possible, with treatment reassessed as soon as test results are available",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients with a life-threatening or serious infection (such as sepsis), obtain clinical specimens as appropriate but start administering antimicrobials as soon as possible. Reassess the treatment as soon as the test results are available."
+  },
+  {
+   "claim": "Quality statement 5 states that a patient with an infection or at risk of an infection is provided with information about their condition and treatment options in a way that they can understand, and if antimicrobials are prescribed information on how to use them, when to stop, potential side effects and a review plan is discussed with the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with an infection, or at risk of an infection, is provided with information about their condition and treatment options in a way that they can understand. If antimicrobials are prescribed, information on how to use them, when to stop, potential side effects and a review plan is discussed with the patient."
+  },
+  {
+   "claim": "Clinicians should discuss with the patient the expected progression of the infection and the potential benefits and harms of the treatment options, which may or may not include antimicrobials, considering the patient's preferences and needs",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss with the patient the expected progression of the infection and the potential benefits and harms of the treatment options, which may or may not include antimicrobials. This discussion should consider the patient's preferences and needs."
+  },
+  {
+   "claim": "If antimicrobials are not needed clinicians should reassure the patient and inform them of other treatments that can help with symptoms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If antimicrobials are not needed, reassure the patient and inform them of other treatments that can help with symptoms."
+  },
+  {
+   "claim": "If antimicrobials are needed clinicians should discuss the importance of using antimicrobials as prescribed, how long to take them, any potential adverse effects, any potential drug interactions with existing medicines, and when the treatment will be reviewed or ceased",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If antimicrobials are needed, discuss with the patient the importance of using antimicrobials as prescribed, how long to take them, any potential adverse effects, any potential drug interactions with existing medicines, and when the treatment will be reviewed or ceased."
+  },
+  {
+   "claim": "Verbal and/or written information and resources about treatment options and antimicrobial therapy should be provided to the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Provide verbal and/or written information and resources to the patient about their treatment options and their antimicrobial therapy."
+  },
+  {
+   "claim": "Quality statement 6 states that when a patient is prescribed an antimicrobial the indication, active ingredient, dose, frequency and route of administration, and the intended duration or review plan are documented in the patient's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When a patient is prescribed an antimicrobial, the indication, active ingredient, dose, frequency and route of administration, and the intended duration or review plan are documented in the patient's healthcare record."
+  },
+  {
+   "claim": "When prescribing antimicrobials clinicians should document the indication, active ingredient, dose, frequency and route of administration, intended duration and a review plan, and if required document any plans for therapeutic drug monitoring",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When prescribing antimicrobials, document the indication, active ingredient, dose, frequency and route of administration, intended duration, and a review plan in the patient's healthcare record. If required, document any plans for therapeutic drug monitoring."
+  },
+  {
+   "claim": "Where electronic healthcare records are used, flags and reminders should be incorporated into the record management system to support documentation in all relevant fields or consideration given to making them mandatory fields",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where electronic healthcare records are being used, incorporate flags and reminders into the record management system to support documentation in all relevant fields or consider making them mandatory fields."
+  },
+  {
+   "claim": "Quality statement 7 states that a patient prescribed an antimicrobial has regular clinical review of their therapy with the frequency dependent on patient acuity and risk factors, that the need for ongoing antimicrobial use, appropriate microbial spectrum of activity, dose, frequency and route of administration are assessed and adjusted accordingly, and that investigation results are reviewed promptly when reported",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient prescribed an antimicrobial has regular clinical review of their therapy, with the frequency of review dependent on patient acuity and risk factors. The need for ongoing antimicrobial use, appropriate microbial spectrum of activity, dose, frequency and route of administration are assessed and adjusted accordingly. Investigation results are reviewed promptly when they are reported."
+  },
+  {
+   "claim": "If the patient is on intravenous agents oral options should be considered to reduce hospital-acquired infections, and the antimicrobial agent and dose should be appropriate for the site of the infection and patient parameters such as renal function",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the patient is on intravenous agents, consider oral options to reduce hospital-acquired infections. Ensure the antimicrobial agent and dose are appropriate for the site of the infection and patient parameters (such as renal function)."
+  },
+  {
+   "claim": "If microbiological tests are ordered the results should be reviewed within 24 hours of them being available and used to consider whether changing or stopping antimicrobials is appropriate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If microbiological tests are ordered, review the results within 24 hours of them being available, and use this information to consider whether changing or stopping antimicrobials is appropriate."
+  },
+  {
+   "claim": "When prescribing a broad-spectrum antimicrobial the patient's clinical status and any microbiology results should be reviewed to determine whether the patient's treatment can be switched",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When prescribing a broad-spectrum antimicrobial, review the patient's clinical status and any microbiology results to determine whether the patient's treatment can be switched"
+  },
+  {
+   "claim": "Quality statement 8 states that a patient having surgery or a procedure is prescribed antimicrobial prophylaxis in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines, including recommendations about the need for prophylaxis, choice of antimicrobial, dose, route and timing of administration, and duration",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient having surgery or a procedure is prescribed antimicrobial prophylaxis in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines. This includes recommendations about the need for prophylaxis, choice of antimicrobial, dose, route and timing of administration, and duration."
+  },
+  {
+   "claim": "Clinicians should consider the patient's clinical condition when prescribing surgical prophylaxis, for example colonisation with a multidrug-resistant organism or patient allergies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider the patient's clinical condition (for example, colonisation with a multidrug-resistant organism, or patient allergies)."
+  },
+  {
+   "claim": "Antimicrobials should not be prescribed post-procedurally as prolonged antimicrobial use is not usually required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid prescribing antimicrobials post-procedurally, as prolonged antimicrobial use is not usually required."
+  },
+  {
+   "claim": "Topical antimicrobials are not recommended for surgical prophylaxis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "topical antimicrobials are not recommended for surgical prophylaxis."
+  },
+  {
+   "claim": "Off-label routes of administration for antimicrobials such as irrigations, pastes, washes or topical applications should be avoided for surgical prophylaxis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid using off-label routes of administration for antimicrobials such as irrigations, pastes, washes or topical applications for surgical prophylaxis"
+  },
+  {
+   "claim": "Indicator 2a is the proportion of antimicrobial prescriptions in accordance with the current Therapeutic Guidelines or evidence-based locally endorsed guidelines, and indicator 2b is the proportion of prescriptions for restricted antimicrobials in accordance with the locally endorsed approval policy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 2a The proportion of antimicrobial prescriptions that are in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines Indicator 2b The proportion of prescriptions for restricted antimicrobials that are in accordance with the locally endorsed approval policy"
+  },
+  {
+   "claim": "Indicator 3a is the proportion of patients with an adverse reaction to an antimicrobial with comprehensive documentation of the reaction in their healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 3a The proportion of patients with an adverse reaction to an antimicrobial with comprehensive documentation of the reaction in their healthcare record"
+  },
+  {
+   "claim": "Indicator 6a is the proportion of prescriptions for which the indication for prescribing the antimicrobial is documented, and indicator 6b is the proportion for which the duration, stop date or review date is documented",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 6a The proportion of prescriptions for which the indication for prescribing the antimicrobial is documented Indicator 6b The proportion of prescriptions for which the duration, stop date or review date for the antimicrobial is documented"
+  },
+  {
+   "claim": "Indicator 7a is the proportion of prescriptions for which an antimicrobial review and updated treatment decision is documented within 48 hours from the first prescription",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 7a The proportion of prescriptions for which an antimicrobial review and updated treatment decision is documented within 48 hours from the first prescription"
+  },
+  {
+   "claim": "Indicator 8a is the proportion of patients for whom the perioperative prophylactic antimicrobial is prescribed in accordance with guidelines and indicator 8b is the proportion for whom the dose is prescribed in accordance with guidelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 8a The proportion of patients for whom the perioperative prophylactic antimicrobial is prescribed in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines Indicator 8b The proportion of patients for whom the perioperative prophylactic antimicrobial dose is prescribed in accordance with the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines"
+  },
+  {
+   "claim": "No benchmarks are set for any indicator by the Commission, and definitions required to collect and calculate indicator data are specified online at METEOR",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No benchmarks are set for any indicator by the Commission. ... When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
+  },
+  {
+   "claim": "Antimicrobial resistance poses a significant threat to public health and the Standard supports quality improvement initiatives conducted by health services and clinicians to help reduce antimicrobial resistance rates and preserve the effectiveness of antimicrobial medicines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antimicrobial resistance poses a significant threat to public health. The Antimicrobial Stewardship Clinical Care Standard supports quality improvement initiatives conducted by health services and clinicians to help reduce antimicrobial resistance rates and preserve the effectiveness of antimicrobial medicines."
+  },
+  {
+   "claim": "Healthcare services should ensure clinicians have access to and use the current Therapeutic Guidelines and evidence-based locally endorsed guidelines when prescribing antimicrobials",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure clinicians have access to and use the current Therapeutic Guidelines and evidence-based, locally endorsed guidelines when prescribing antimicrobials."
   }
+ ],
+ "summary": {
+  "total": 47,
+  "pass": 47,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/antimicrobial-stewardship"
+ ],
+ "retrieved_utc": "2026-09-22"
 }

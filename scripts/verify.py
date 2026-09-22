@@ -7,6 +7,15 @@ appear verbatim in the retrieved source file.
   python3 scripts/verify.py guidelines/stroke.verification.json --source /tmp/st.txt
   python3 scripts/verify.py guidelines/*.verification.json
 
+Most guidelines cite several sources, and one retrieved file is only ever one
+of them. --only-source limits the verbatim check to the claims attributed to
+that source id, so a re-check against a single fetched page does not report
+the other sources' claims as failures. Claims from the other sources are left
+unchecked, and the count of skipped claims is printed rather than hidden.
+
+  python3 scripts/verify.py guidelines/sepsis.verification.json \
+      --source /tmp/sepsis.txt --only-source S1
+
 Whitespace is collapsed on both sides before comparison, so line-wrapping
 differences pass but paraphrase does not. This does NOT check that a claim
 follows from its source_text -- that stays a human judgement, which is what
@@ -15,6 +24,17 @@ verifier_class: single_verifier_uncalibrated records.
 import json, re, sys
 
 JOINER = " … "          # multi-fragment source_text separator
+# The earliest guidelines wrote the same elision as three ASCII dots. Both mark
+# "these passages are not contiguous in the source", so both must split, or a
+# fragment either side of one gets compared as though it were continuous text.
+ALT_JOINER = " ... "
+
+
+def split_frags(s):
+    out = []
+    for part in s.split(JOINER):
+        out.extend(part.split(ALT_JOINER))
+    return out
 
 # "pass" requires a verbatim quote. The rest record why no quote exists; they
 # count toward total but not toward pass, which is the 6-claim gap in the totals.
@@ -39,7 +59,7 @@ def ws(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-def check(path, source=None):
+def check(path, source=None, only_source=None):
     errs, notes = [], []
     d = json.load(open(path))
 
@@ -96,27 +116,49 @@ def check(path, source=None):
     if s.get("fail") != nfail:
         errs.append(f"summary.fail {s.get('fail')} != {nfail}")
 
-    checked = 0
+    checked = skipped = 0
     if source:
         hay = ws(open(source, encoding="utf-8", errors="replace").read())
         for i, c in enumerate(claims, 1):
             if c.get("verdict") != "pass":
                 continue
-            for frag in c.get("source_text", "").split(JOINER):
+            if only_source and c.get("source") != only_source:
+                skipped += 1
+                continue
+            for frag in split_frags(c.get("source_text", "")):
                 frag = ws(frag)
                 if not frag:
                     continue
                 checked += 1
-                if frag not in hay:
+                pos = hay.find(frag)
+                if pos < 0:
                     errs.append(f"claim {i}: source_text NOT VERBATIM: {frag[:90]!r}")
+                    continue
+                # A fragment that stops mid-word is still a substring, so the
+                # plain check passes it. "the clinical concer" matched "...concern"
+                # that way, hiding a lost letter. Require whole words at both ends.
+                end = pos + len(frag)
+                if frag[-1].isalnum() and end < len(hay) and hay[end].isalnum():
+                    errs.append(f"claim {i}: fragment ENDS MID-WORD "
+                                f"({frag[-24:]!r} + {hay[end:end+12]!r})")
+                if frag[0].isalnum() and pos > 0 and hay[pos - 1].isalnum():
+                    errs.append(f"claim {i}: fragment STARTS MID-WORD "
+                                f"({hay[max(0,pos-12):pos]!r} + {frag[:24]!r})")
+        if skipped:
+            notes.append(f"{skipped} claim(s) NOT re-checked: they cite a source "
+                         f"other than {only_source}")
     return errs, notes, checked
 
 
 def main(argv):
-    src = None
+    src = only = None
     if "--source" in argv:
         i = argv.index("--source")
         src = argv[i + 1]
+        argv = argv[:i] + argv[i + 2:]
+    if "--only-source" in argv:
+        i = argv.index("--only-source")
+        only = argv[i + 1]
         argv = argv[:i] + argv[i + 2:]
     if not argv:
         print(__doc__)
@@ -124,7 +166,7 @@ def main(argv):
 
     bad = 0
     for p in argv:
-        errs, notes, n = check(p, src)
+        errs, notes, n = check(p, src, only)
         name = p.rsplit("/", 1)[-1].replace(".verification.json", "")
         if errs:
             bad += 1

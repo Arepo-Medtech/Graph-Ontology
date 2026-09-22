@@ -1,289 +1,289 @@
 {
-  "guideline": "guidelines/peripheral-intravenous-catheters.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-22",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "retrieved_from": [
-    "https://www.safetyandquality.gov.au/clinical-care-standards/management-peripheral-intravenous-catheters"
-  ],
-  "retrieved_utc": "2026-09-22",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Management of Peripheral Intravenous Catheters Clinical Care Standard, including all ten quality statements, the for-clinicians/for-services/for-consumers sections, Box 6 (replacement recommendations) and the indicator list. Every source_text fragment was machine-checked verbatim with scripts/verify.py. Indicators 9 and 10 were TRUNCATED in the retrieved indicator table and are transcribed only as far as they were captured. Flushing solution, volume and frequency, and PIVC length and gauge selection, are deferred by the Standard to local policy and were not retrieved. The Australian Guidelines for the Prevention and Control of Infection in Healthcare and the IV-WISE creed are referenced and were not retrieved. One cross-guideline tension is recorded rather than resolved: this Standard states PIVCs should not be used to obtain blood cultures, while the paediatric sepsis guidelines in this compendium direct that blood cultures be taken at the time vascular access is obtained. Retrieved text contains extraction artefacts where double-n collapsed ('co ectors' for connectors, 'palpatio' for palpation); source_text is preserved verbatim. Source URL recorded at retrieval.",
-  "claims": [
-    {
-      "claim": "Quality statement 1 states that a patient requiring medicines or fluids is assessed to identify the most appropriate route of administration for their clinical needs",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient requiring medicines or fluids is assessed to identify the most appropriate route of administration for their clinical needs."
-    },
-    {
-      "claim": "Clinicians should consider whether another route of administration such as the oral, intramuscular, subcutaneous, rectal, intra-osseous or intra-peritoneal route is appropriate before using the IV route",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider whether another route of administration (for example, the oral, intramuscular, subcutaneous, rectal, intra-osseous or intra-peritoneal route) is appropriate, before using the IV route."
-    },
-    {
-      "claim": "Insertion of a PIVC pre-emptively may be appropriate for patients at risk of clinical deterioration, but collection of pathology samples is not a valid reason to insert a PIVC, and although this often happens in emergency departments it can lead to unused PIVCs being left in",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Insertion of a PIVC pre-emptively may be appropriate for patients at risk of clinical deterioration. Collection of pathology samples is not a valid reason to insert a PIVC; although this often happens in emergency departments, it can lead to unused PIVCs being left in."
-    },
-    {
-      "claim": "PIVCs should not be used to obtain blood cultures as this leads to an increased risk of contamination to the blood culture and PIVC",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "PIVCs should not be used to obtain blood cultures as this leads to an increased risk of contamination to the blood culture and PIVC."
-    },
-    {
-      "claim": "Organisational policies and processes should support the consideration of all routes of administration of medications and fluids before therapy is started, and the IV route should only be used if other routes are not suitable",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that organisational policies and processes support the consideration of all routes of administration of medications and fluids before therapy is started, and that the IV route is only used if other routes are not suitable."
-    },
-    {
-      "claim": "Indicator 1 is the proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose since it was inserted",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 1 | Proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose since it was inserted |"
-    },
-    {
-      "claim": "Quality statement 2 states that a patient requiring intravenous access receives information and education about their need for the device and the procedure, that their consent is obtained, and that they are advised on their role in reducing the risk of device-related complications",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient requiring intravenous access receives information and education about their need for the device and the procedure. Their consent is obtained and they are advised on their role in reducing the risk of device-related complications."
-    },
-    {
-      "claim": "Clinicians should support the patient to have an active role in preventing PIVC-related complications by providing information and education",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Support the patient to have an active role in preventing PIVC-related complications by providing information and education"
-    },
-    {
-      "claim": "Clinicians should ask the patient about previous PIVC insertions to identify any concerns such as difficulty with particular access sites, allergies to tapes or antiseptics, or certain sites where a PIVC should not be inserted",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ask the patient about previous PIVC insertions to identify any concerns, such as difficulty with particular access sites, allergies to tapes or antiseptics, or certain sites where a PIVC should not be inserted."
-    },
-    {
-      "claim": "Clinicians should invite the patient to ask questions and use methods such as teach-back to confirm understanding, and should continue to ask the patient if they have any concerns while the PIVC is in place and for at least 48 hours after it has been removed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Invite the patient to ask questions, and use methods such as teach-back to confirm they understand the information they have received. Continue to ask the patient if they have any concerns while the PIVC is in place and for at least 48 hours after it has been removed."
-    },
-    {
-      "claim": "Indicator 2 is the proportion of patients with a PIVC in situ that can identify the reason for the device",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 2 | Proportion of patients with a PIVC in situ that can identify the reason for the device |"
-    },
-    {
-      "claim": "Quality statement 3 states that a patient's PIVC is inserted and maintained by clinicians who are trained and assessed as competent in current evidence-based practices for vessel health preservation and preventing device-related complications relevant to their scope of practice, and that insertion by a clinician working towards competency is supervised by a clinician who is trained and assessed as competent",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient's PIVC is inserted and maintained by clinicians who are trained and assessed as competent in current evidence-based practices for vessel health preservation and preventing device-related complications, relevant to their scope of practice. Insertion by a clinician working towards achieving competency is supervised by a clinician who is trained and assessed as competent."
-    },
-    {
-      "claim": "Indicator 3 is evidence of a locally approved policy that ensures healthcare professionals are competent in PIVC insertion, monitoring and removal",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 3 | Evidence of a locally approved policy that ensures healthcare professionals are competent in PIVC insertion, monitoring, and removal |"
-    },
-    {
-      "claim": "Quality statement 4 states that a patient requiring a PIVC is assessed to identify the most suitable insertion site and PIVC by length and gauge to meet their clinical needs and preferences for its location",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient requiring a PIVC is assessed to identify the most suitable insertion site and PIVC (length and gauge) to meet their clinical needs and preferences for its location."
-    },
-    {
-      "claim": "Clinicians should identify a suitable insertion site taking into account the potential risk of infection, mechanical complications and patient comfort, preferably using veins in the non-dominant arm, and should ask the patient if they have a preference for the location and follow their preference if this would allow safe administration of therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Identify a suitable insertion site by taking into account the potential risk of infection, mechanical complications and patient comfort, preferably using veins in the non-dominant arm. Ask the patient if they have a preference for the location of the PIVC, and follow their preference if this would allow safe administration of therapy."
-    },
-    {
-      "claim": "Clinicians should use a site likely to last the duration of the prescribed therapy to maximise dwell time and patient comfort, should avoid areas of flexion unless clinically necessary and re-site cubital fossa IVs as soon as appropriate, and should not use veins in the lower extremities unless necessary",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Use a site that is likely to last the duration of the prescribed therapy to maximise dwell time and patient comfort. This means choosing a site that will promote self-care, prevent accidental removal or blockage, and facilitate the safe administration of therapy. Avoid areas of flexion unless clinically necessary; re-site cubital fossa IVs as soon as appropriate. Do not use veins in the lower extremities unless this is necessary"
-    },
-    {
-      "claim": "Devices with safety-engineered protective features should be used to reduce the risk of injury involving a sharp",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Use devices with safety-engineered protective features to reduce the risk of injury involving a sharp."
-    },
-    {
-      "claim": "Indicator 4a is evidence of local arrangements that provide systematic support for decisions related to the selection of an appropriate PIVC device, and indicator 4b is the proportion of patients with a PIVC in situ over an area of flexion, specified to include patients with a PIVC in situ for 24 hours or longer",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 4a | Evidence of local arrangements that provide systematic support for decisions related to the selection of an appropriate PIVC device |n| Indicator 4b | Proportion of patients with a PIVC in situ over an area of flexion<br>Note: This indicator is specified to include patients with a PIVC in situ for 24 hours or longer. |"
-    },
-    {
-      "claim": "Quality statement 5 states that the likelihood of inserting a PIVC successfully on the first attempt is maximised for each patient according to a health service organisation's process for maximising first-time insertion success",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The likelihood of inserting a PIVC successfully on the first attempt is maximised for each patient, according to a health service organisation's process for maximising first-time insertion success."
-    },
-    {
-      "claim": "Strategies to optimise first-time insertion success include escalating to a more experienced clinician, using technology-assisted devices such as ultrasound, or adjunct supportive therapies such as local anaesthetics, and for paediatric patients considering parental support or child play therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Strategies to optimise first-time insertion success include escalating to a more experienced clinician, using technology-assisted devices such as ultrasound, or adjunct supportive therapies such as local anaesthetics. For paediatric patients, consider using parental support or child play therapy to maximise the likelihood of successful insertion on the first attempt."
-    },
-    {
-      "claim": "Difficult or unsuccessful insertions can cause bruising, thrombosis, delays in treatment, reduced access to veins for future health needs, and undue pain and anxiety for the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Difficult or unsuccessful insertions can cause bruising, thrombosis, delays in treatment, reduced access to veins for future health needs, and undue pain and anxiety for the patient."
-    },
-    {
-      "claim": "If more than one attempt to insert the PIVC is required, the reason should be specified in the patient's medical record, for example lack of more experienced staff to escalate to in the after-hours setting or patient dehydration",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If more than one attempt to insert the PIVC is required, specify the reason (for example, lack of more experienced staff to escalate to in the after-hours setting, or patient dehydration) in the patient's medical record and act according to local policy."
-    },
-    {
-      "claim": "Indicator 5a is evidence of a locally approved policy that defines the local protocol to support PIVC insertion on first attempt, and indicator 5b is the proportion of patients who report their PIVC was inserted on the first attempt",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 5a | Evidence of a locally approved policy that defines the local protocol to support PIVC insertion on first attempt |n| Indicator 5b | Proportion of patients who report their PIVC was inserted on the first attempt |"
-    },
-    {
-      "claim": "Quality statement 6 states that a clinician inserting a patient's PIVC uses standard precautions including aseptic technique, and that the device is secured and a sterile, transparent, semipermeable dressing is applied unless contraindicated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A clinician inserting a patient's PIVC uses standard precautions, including aseptic technique. The device is secured and a sterile, transparent, semipermeable dressing is applied unless contraindicated."
-    },
-    {
-      "claim": "If there is hair at the insertion site it should be removed with clippers as shaving with a razor increases the risk of infection, and the skin should be decontaminated with 2 per cent chlorhexidine gluconate in 70 per cent alcohol unless contraindicated, allowing for appropriate cleaning and drying time",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If there is hair at the insertion site, remove with clippers as shaving with a razor increases the risk of infection. Decontaminate the skin with 2% chlorhexidine gluconate in 70% alcohol unless contraindicated, allowing for appropriate cleaning and drying time."
-    },
-    {
-      "claim": "PIVCs should be labelled in accordance with the National Standard for User-applied Labelling of Injectable Medicines, Fluids and Lines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that PIVCs are labelled in accordance with the _National Standard for User-applied Labelling of Injectable Medicines, Fluids and Lines_ (the Labelling Standard)."
-    },
-    {
-      "claim": "Quality statement 7 states that a patient with a PIVC will have documentation of its insertion, maintenance and removal, and regular review of the insertion site",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with a PIVC will have documentation of its insertion, maintenance and removal, and regular review of the insertion site."
-    },
-    {
-      "claim": "If an electronic system is used for records it should capture the date and time of insertion and confirm that the PIVC has been removed before the patient is discharged from hospital",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If an electronic system is used for records, ensure that it captures the date and time of insertion, and confirms that the PIVC has been removed before the patient is discharged from hospital."
-    },
-    {
-      "claim": "Indicator 7a is evidence of a locally approved policy that defines the documentation for PIVC insertion, maintenance, removal and regular review, and indicator 7b is the proportion of patients with a PIVC in situ with the indication for insertion documented in their medical record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 7a | Evidence of a locally approved policy that defines the documentation for PIVC insertion, maintenance, removal, and regular review |n| Indicator 7b | Proportion of patients with a PIVC in situ with the indication for insertion documented in their medical record |"
-    },
-    {
-      "claim": "Quality statement 8 states that a patient's PIVC and insertion site is inspected by a clinician for signs of complications at least once per shift or every eight hours, when accessing the device, and if the patient raises concerns, that standard precautions including aseptic technique are used when performing site care and accessing the PIVC, and that patency is checked and flushing performed at intervals according to local policy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient's PIVC and insertion site is inspected by a clinician for signs of complications at least once per shift or every eight hours, when accessing the device, and if the patient raises concerns. Standard precautions including aseptic technique are used when performing site care and accessing the PIVC. Patency is checked and flushing is performed at intervals according to local policy to assess device function and minimise risk of device failure."
-    },
-    {
-      "claim": "Needleless connectors should be decontaminated before and after access with 70 per cent alcohol or other solution recommended in current evidence-based or best-practice guidelines and allowed to fully air dry",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Decontaminate needleless co ectors before and after access with 70% alcohol or other solution recommended in current evidence-based or best-practice guidelines, and allow to fully air dry."
-    },
-    {
-      "claim": "Indicator 8a is the proportion of patients with a PIVC in situ who have their insertion site inspected for complications at least every 8 hours, and indicator 8b is the proportion with a clean, dry and secure PIVC dressing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 8a | Proportion of patients with a PIVC in situ who have their PIVC insertion site inspected for complications at least every 8 hours |n| Indicator 8b | Proportion of patients with a PIVC in situ with a clean, dry and secure PIVC dressing |"
-    },
-    {
-      "claim": "Quality statement 9 states that the ongoing need for a patient's PIVC is reviewed and documented at least daily, or more often if clinically indicated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The ongoing need for a patient's PIVC is reviewed and documented at least daily, or more often if clinically indicated."
-    },
-    {
-      "claim": "Clinicians should review and document the ongoing clinical need at least once per day, review whether switching from IV to oral therapy is possible, and remove the PIVC immediately if it is no longer required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Review and document the ongoing clinical need for a patient's PIVC at least once per day, or more often if clinically indicated. Review whether switching from IV to oral therapy is possible. Remove the PIVC immediately if it is no longer required."
-    },
-    {
-      "claim": "The consumer text advises that if a PIVC has not been used in the last 24 hours the patient should ask their clinician if it is still needed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If your PIVC has not been used in the last 24 hours, ask your clinician if it is still needed."
-    },
-    {
-      "claim": "Quality statement 10 states that a patient with a PIVC will have it removed when it is no longer needed or at the first sign of malfunction or local site complications, and that a new PIVC will be inserted only if ongoing peripheral vascular access is necessary, consistent with the replacement recommendations in the current version of the Australian Guidelines for the Prevention and Control of Infection in Healthcare",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with a PIVC will have it removed when it is no longer needed or at the first sign of malfunction or local site complications. A new PIVC will be inserted only if ongoing peripheral vascular access is necessary, consistent with the replacement recommendations in the current version of the Australian Guidelines for the Prevention and Control of Infection in Healthcare."
-    },
-    {
-      "claim": "Signs and symptoms indicating the PIVC should be removed include pain and tenderness at the insertion site with or without palpation, warmth, redness or swelling, leakage of fluid from the insertion site, and resistance when flushing or absence of blood return",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Signs and symptoms that indicate that the PIVC should be removed include: \u2026 - pain and tenderness at the insertion site, with or without palpatio \u2026 - warmth, redness or swellingn- leakage of fluid from the insertion siten- resistance when flushing or absence of blood return."
-    },
-    {
-      "claim": "PIVCs should not be routinely replaced in neonates and children",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Do not routinely replace PIVCs in neonates and children."
-    },
-    {
-      "claim": "Option 1 for adults is to replace a PIVC every 72 hours, based on observational studies that show an increased risk of bloodstream infection with PIVCs left in place for more than 72 hours",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Option 1: Replace a PIVC every 72 hours \u2026 This practice is based on observational studies that show an increased risk of bloodstream infection with PIVCs left in place for more than 72 hours."
-    },
-    {
-      "claim": "Option 2 is to replace a PIVC based on clinical indication, informed by a systematic review first published in 2011 and updated most recently in 2015 which concluded that rates of bloodstream infection and thrombophlebitis were not significantly different when PIVCs were changed based on clinical indication rather than routinely replaced, and this can be cost saving and may reduce discomfort for patients",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Option 2: Replace a PIVC based on clinical indication \u2026 This option is informed by a systematic review, first published in 2011 and updated most recently in 2015, which concluded that rates of bloodstream infection and thrombophlebitis were not significantly different when PIVCs were changed based on clinical indication rather than routinely replaced. \u2026 Replacing a PIVC based on clinical indication can be cost saving and may reduce the discomfort for patients associated with regular replacement."
-    },
-    {
-      "claim": "Clinicians should document the reason for removal of the PIVC and the condition of the site, and observe the insertion site for 48 hours after removal for signs of post-infusion pain, redness or swelling",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Document the reason for removal of the PIVC and the condition of the site. Observe the insertion site for 48 hours after the PIVC is removed for signs of post-infusion pain, redness or swelling."
-    },
-    {
-      "claim": "Clinicians should consider re-siting PIVCs within 24 hours when adherence to aseptic technique is uncertain or unknown, such as insertion during a medical emergency",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider re-siting PIVCs, within 24 hours, when adherence to aseptic technique is uncertain or unknown, such as insertion during a medical emergency."
-    },
-    {
-      "claim": "For hospitalised patients PIVCs should be removed before discharge unless the PIVC is intended to continue beyond discharge as part of the patient's care plan",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For hospitalised patients, ensure that PIVCs are removed before discharge, unless the PIVC is intended to continue beyond discharge as part of the patient's care plan."
-    },
-    {
-      "claim": "The surveillance considerations include the quality of PIVC surveillance in the healthcare facility, including surveillance of regular inspection of the site and device, and of PIVC-related Staphylococcus aureus bacteraemia",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "the quality of PIVC surveillance in the healthcare facility, including surveillance of regular inspection of the site and device, and of PIVC-related _Staphylococcus aureus_ bacteraemia (SAB)"
-    },
-    {
-      "claim": "Indicator 9 concerns the proportion of patients with a PIVC in situ who have been assessed in the last 24 hours, and indicator 10 concerns the proportion with a PIVC in situ that has not been used for a therapeutic purpose",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 9 | Proportion of patients with a PIVC in situ who have been assessed in the last 24 hours to deter \u2026 | Indicator 10 | Proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose in"
-    }
-  ],
-  "summary": {
-    "total": 45,
-    "pass": 45,
-    "fail": 0
+ "guideline": "guidelines/peripheral-intravenous-catheters.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/management-peripheral-intravenous-catheters"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Management of Peripheral Intravenous Catheters Clinical Care Standard, including all ten quality statements, the for-clinicians/for-services/for-consumers sections, Box 6 (replacement recommendations) and the indicator list. Every source_text fragment was machine-checked verbatim with scripts/verify.py. Indicators 9 and 10 were TRUNCATED in the retrieved indicator table and are transcribed only as far as they were captured. Flushing solution, volume and frequency, and PIVC length and gauge selection, are deferred by the Standard to local policy and were not retrieved. The Australian Guidelines for the Prevention and Control of Infection in Healthcare and the IV-WISE creed are referenced and were not retrieved. One cross-guideline tension is recorded rather than resolved: this Standard states PIVCs should not be used to obtain blood cultures, while the paediatric sepsis guidelines in this compendium direct that blood cultures be taken at the time vascular access is obtained. Retrieved text contains extraction artefacts where double-n collapsed ('co ectors' for connectors, 'palpatio' for palpation); source_text is preserved verbatim. Source URL recorded at retrieval. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "Quality statement 1 states that a patient requiring medicines or fluids is assessed to identify the most appropriate route of administration for their clinical needs",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient requiring medicines or fluids is assessed to identify the most appropriate route of administration for their clinical needs."
+  },
+  {
+   "claim": "Clinicians should consider whether another route of administration such as the oral, intramuscular, subcutaneous, rectal, intra-osseous or intra-peritoneal route is appropriate before using the IV route",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider whether another route of administration (for example, the oral, intramuscular, subcutaneous, rectal, intra-osseous or intra-peritoneal route) is appropriate, before using the IV route."
+  },
+  {
+   "claim": "Insertion of a PIVC pre-emptively may be appropriate for patients at risk of clinical deterioration, but collection of pathology samples is not a valid reason to insert a PIVC, and although this often happens in emergency departments it can lead to unused PIVCs being left in",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Insertion of a PIVC pre-emptively may be appropriate for patients at risk of clinical deterioration. Collection of pathology samples is not a valid reason to insert a PIVC; although this often happens in emergency departments, it can lead to unused PIVCs being left in."
+  },
+  {
+   "claim": "PIVCs should not be used to obtain blood cultures as this leads to an increased risk of contamination to the blood culture and PIVC",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PIVCs should not be used to obtain blood cultures as this leads to an increased risk of contamination to the blood culture and PIVC."
+  },
+  {
+   "claim": "Organisational policies and processes should support the consideration of all routes of administration of medications and fluids before therapy is started, and the IV route should only be used if other routes are not suitable",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that organisational policies and processes support the consideration of all routes of administration of medications and fluids before therapy is started, and that the IV route is only used if other routes are not suitable."
+  },
+  {
+   "claim": "Indicator 1 is the proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose since it was inserted",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 1 Proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose since it was inserted"
+  },
+  {
+   "claim": "Quality statement 2 states that a patient requiring intravenous access receives information and education about their need for the device and the procedure, that their consent is obtained, and that they are advised on their role in reducing the risk of device-related complications",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient requiring intravenous access receives information and education about their need for the device and the procedure. Their consent is obtained and they are advised on their role in reducing the risk of device-related complications."
+  },
+  {
+   "claim": "Clinicians should support the patient to have an active role in preventing PIVC-related complications by providing information and education",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Support the patient to have an active role in preventing PIVC-related complications by providing information and education"
+  },
+  {
+   "claim": "Clinicians should ask the patient about previous PIVC insertions to identify any concerns such as difficulty with particular access sites, allergies to tapes or antiseptics, or certain sites where a PIVC should not be inserted",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ask the patient about previous PIVC insertions to identify any concerns, such as difficulty with particular access sites, allergies to tapes or antiseptics, or certain sites where a PIVC should not be inserted."
+  },
+  {
+   "claim": "Clinicians should invite the patient to ask questions and use methods such as teach-back to confirm understanding, and should continue to ask the patient if they have any concerns while the PIVC is in place and for at least 48 hours after it has been removed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Invite the patient to ask questions, and use methods such as teach-back to confirm they understand the information they have received. Continue to ask the patient if they have any concerns while the PIVC is in place and for at least 48 hours after it has been removed."
+  },
+  {
+   "claim": "Indicator 2 is the proportion of patients with a PIVC in situ that can identify the reason for the device",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 2 Proportion of patients with a PIVC in situ that can identify the reason for the device"
+  },
+  {
+   "claim": "Quality statement 3 states that a patient's PIVC is inserted and maintained by clinicians who are trained and assessed as competent in current evidence-based practices for vessel health preservation and preventing device-related complications relevant to their scope of practice, and that insertion by a clinician working towards competency is supervised by a clinician who is trained and assessed as competent",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient's PIVC is inserted and maintained by clinicians who are trained and assessed as competent in current evidence-based practices for vessel health preservation and preventing device-related complications, relevant to their scope of practice. Insertion by a clinician working towards achieving competency is supervised by a clinician who is trained and assessed as competent."
+  },
+  {
+   "claim": "Indicator 3 is evidence of a locally approved policy that ensures healthcare professionals are competent in PIVC insertion, monitoring and removal",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 3 Evidence of a locally approved policy that ensures healthcare professionals are competent in PIVC insertion, monitoring, and removal"
+  },
+  {
+   "claim": "Quality statement 4 states that a patient requiring a PIVC is assessed to identify the most suitable insertion site and PIVC by length and gauge to meet their clinical needs and preferences for its location",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient requiring a PIVC is assessed to identify the most suitable insertion site and PIVC (length and gauge) to meet their clinical needs and preferences for its location."
+  },
+  {
+   "claim": "Clinicians should identify a suitable insertion site taking into account the potential risk of infection, mechanical complications and patient comfort, preferably using veins in the non-dominant arm, and should ask the patient if they have a preference for the location and follow their preference if this would allow safe administration of therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Identify a suitable insertion site by taking into account the potential risk of infection, mechanical complications and patient comfort, preferably using veins in the non-dominant arm. Ask the patient if they have a preference for the location of the PIVC, and follow their preference if this would allow safe administration of therapy."
+  },
+  {
+   "claim": "Clinicians should use a site likely to last the duration of the prescribed therapy to maximise dwell time and patient comfort, should avoid areas of flexion unless clinically necessary and re-site cubital fossa IVs as soon as appropriate, and should not use veins in the lower extremities unless necessary",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use a site that is likely to last the duration of the prescribed therapy to maximise dwell time and patient comfort. This means choosing a site that will promote self-care, prevent accidental removal or blockage, and facilitate the safe administration of therapy. Avoid areas of flexion unless clinically necessary; re-site cubital fossa IVs as soon as appropriate. Do not use veins in the lower extremities unless this is necessary"
+  },
+  {
+   "claim": "Devices with safety-engineered protective features should be used to reduce the risk of injury involving a sharp",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use devices with safety-engineered protective features to reduce the risk of injury involving a sharp."
+  },
+  {
+   "claim": "Indicator 4a is evidence of local arrangements that provide systematic support for decisions related to the selection of an appropriate PIVC device, and indicator 4b is the proportion of patients with a PIVC in situ over an area of flexion, specified to include patients with a PIVC in situ for 24 hours or longer",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 4a Evidence of local arrangements that provide systematic support for decisions related to the selection of an appropriate PIVC device Indicator 4b Proportion of patients with a PIVC in situ over an area of flexion Note: This indicator is specified to include patients with a PIVC in situ for 24 hours or longer"
+  },
+  {
+   "claim": "Quality statement 5 states that the likelihood of inserting a PIVC successfully on the first attempt is maximised for each patient according to a health service organisation's process for maximising first-time insertion success",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The likelihood of inserting a PIVC successfully on the first attempt is maximised for each patient, according to a health service organisation's process for maximising first-time insertion success."
+  },
+  {
+   "claim": "Strategies to optimise first-time insertion success include escalating to a more experienced clinician, using technology-assisted devices such as ultrasound, or adjunct supportive therapies such as local anaesthetics, and for paediatric patients considering parental support or child play therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Strategies to optimise first-time insertion success include escalating to a more experienced clinician, using technology-assisted devices such as ultrasound, or adjunct supportive therapies such as local anaesthetics. For paediatric patients, consider using parental support or child play therapy to maximise the likelihood of successful insertion on the first attempt."
+  },
+  {
+   "claim": "Difficult or unsuccessful insertions can cause bruising, thrombosis, delays in treatment, reduced access to veins for future health needs, and undue pain and anxiety for the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Difficult or unsuccessful insertions can cause bruising, thrombosis, delays in treatment, reduced access to veins for future health needs, and undue pain and anxiety for the patient."
+  },
+  {
+   "claim": "If more than one attempt to insert the PIVC is required, the reason should be specified in the patient's medical record, for example lack of more experienced staff to escalate to in the after-hours setting or patient dehydration",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If more than one attempt to insert the PIVC is required, specify the reason (for example, lack of more experienced staff to escalate to in the after-hours setting, or patient dehydration) in the patient's medical record and act according to local policy."
+  },
+  {
+   "claim": "Indicator 5a is evidence of a locally approved policy that defines the local protocol to support PIVC insertion on first attempt, and indicator 5b is the proportion of patients who report their PIVC was inserted on the first attempt",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 5a Evidence of a locally approved policy that defines the local protocol to support PIVC insertion on first attempt Indicator 5b Proportion of patients who report their PIVC was inserted on the first attempt"
+  },
+  {
+   "claim": "Quality statement 6 states that a clinician inserting a patient's PIVC uses standard precautions including aseptic technique, and that the device is secured and a sterile, transparent, semipermeable dressing is applied unless contraindicated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A clinician inserting a patient's PIVC uses standard precautions, including aseptic technique. The device is secured and a sterile, transparent, semipermeable dressing is applied unless contraindicated."
+  },
+  {
+   "claim": "If there is hair at the insertion site it should be removed with clippers as shaving with a razor increases the risk of infection, and the skin should be decontaminated with 2 per cent chlorhexidine gluconate in 70 per cent alcohol unless contraindicated, allowing for appropriate cleaning and drying time",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there is hair at the insertion site, remove with clippers as shaving with a razor increases the risk of infection. Decontaminate the skin with 2% chlorhexidine gluconate in 70% alcohol unless contraindicated, allowing for appropriate cleaning and drying time."
+  },
+  {
+   "claim": "PIVCs should be labelled in accordance with the National Standard for User-applied Labelling of Injectable Medicines, Fluids and Lines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that PIVCs are labelled in accordance with the National Standard for User-applied Labelling of Injectable Medicines, Fluids and Lines (the Labelling Standard"
+  },
+  {
+   "claim": "Quality statement 7 states that a patient with a PIVC will have documentation of its insertion, maintenance and removal, and regular review of the insertion site",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with a PIVC will have documentation of its insertion, maintenance and removal, and regular review of the insertion site."
+  },
+  {
+   "claim": "If an electronic system is used for records it should capture the date and time of insertion and confirm that the PIVC has been removed before the patient is discharged from hospital",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If an electronic system is used for records, ensure that it captures the date and time of insertion, and confirms that the PIVC has been removed before the patient is discharged from hospital."
+  },
+  {
+   "claim": "Indicator 7a is evidence of a locally approved policy that defines the documentation for PIVC insertion, maintenance, removal and regular review, and indicator 7b is the proportion of patients with a PIVC in situ with the indication for insertion documented in their medical record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 7a Evidence of a locally approved policy that defines the documentation for PIVC insertion, maintenance, removal, and regular review Indicator 7b Proportion of patients with a PIVC in situ with the indication for insertion documented in their medical record"
+  },
+  {
+   "claim": "Quality statement 8 states that a patient's PIVC and insertion site is inspected by a clinician for signs of complications at least once per shift or every eight hours, when accessing the device, and if the patient raises concerns, that standard precautions including aseptic technique are used when performing site care and accessing the PIVC, and that patency is checked and flushing performed at intervals according to local policy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient's PIVC and insertion site is inspected by a clinician for signs of complications at least once per shift or every eight hours, when accessing the device, and if the patient raises concerns. Standard precautions including aseptic technique are used when performing site care and accessing the PIVC. Patency is checked and flushing is performed at intervals according to local policy to assess device function and minimise risk of device failure."
+  },
+  {
+   "claim": "Needleless connectors should be decontaminated before and after access with 70 per cent alcohol or other solution recommended in current evidence-based or best-practice guidelines and allowed to fully air dry",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Decontaminate needleless connectors before and after access with 70% alcohol or other solution recommended in current evidence-based or best-practice guidelines, and allow to fully air dry"
+  },
+  {
+   "claim": "Indicator 8a is the proportion of patients with a PIVC in situ who have their insertion site inspected for complications at least every 8 hours, and indicator 8b is the proportion with a clean, dry and secure PIVC dressing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 8a Proportion of patients with a PIVC in situ who have their PIVC insertion site inspected for complications at least every 8 hours Indicator 8b Proportion of patients with a PIVC in situ with a clean, dry and secure PIVC dressing"
+  },
+  {
+   "claim": "Quality statement 9 states that the ongoing need for a patient's PIVC is reviewed and documented at least daily, or more often if clinically indicated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ongoing need for a patient's PIVC is reviewed and documented at least daily, or more often if clinically indicated."
+  },
+  {
+   "claim": "Clinicians should review and document the ongoing clinical need at least once per day, review whether switching from IV to oral therapy is possible, and remove the PIVC immediately if it is no longer required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Review and document the ongoing clinical need for a patient's PIVC at least once per day, or more often if clinically indicated. Review whether switching from IV to oral therapy is possible. Remove the PIVC immediately if it is no longer required."
+  },
+  {
+   "claim": "The consumer text advises that if a PIVC has not been used in the last 24 hours the patient should ask their clinician if it is still needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If your PIVC has not been used in the last 24 hours, ask your clinician if it is still needed."
+  },
+  {
+   "claim": "Quality statement 10 states that a patient with a PIVC will have it removed when it is no longer needed or at the first sign of malfunction or local site complications, and that a new PIVC will be inserted only if ongoing peripheral vascular access is necessary, consistent with the replacement recommendations in the current version of the Australian Guidelines for the Prevention and Control of Infection in Healthcare",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with a PIVC will have it removed when it is no longer needed or at the first sign of malfunction or local site complications. A new PIVC will be inserted only if ongoing peripheral vascular access is necessary, consistent with the replacement recommendations in the current version of the Australian Guidelines for the Prevention and Control of Infection in Healthcare."
+  },
+  {
+   "claim": "Signs and symptoms indicating the PIVC should be removed include pain and tenderness at the insertion site with or without palpation, warmth, redness or swelling, leakage of fluid from the insertion site, and resistance when flushing or absence of blood return",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Signs and symptoms that indicate that the PIVC should be removed include: … - pain and tenderness at the insertion site, with or without palpation … warmth, redness or swelling - leakage of fluid from the insertion site - resistance when flushing or absence of blood return"
+  },
+  {
+   "claim": "PIVCs should not be routinely replaced in neonates and children",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not routinely replace PIVCs in neonates and children."
+  },
+  {
+   "claim": "Option 1 for adults is to replace a PIVC every 72 hours, based on observational studies that show an increased risk of bloodstream infection with PIVCs left in place for more than 72 hours",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Option 1: Replace a PIVC every 72 hours … This practice is based on observational studies that show an increased risk of bloodstream infection with PIVCs left in place for more than 72 hours."
+  },
+  {
+   "claim": "Option 2 is to replace a PIVC based on clinical indication, informed by a systematic review first published in 2011 and updated most recently in 2015 which concluded that rates of bloodstream infection and thrombophlebitis were not significantly different when PIVCs were changed based on clinical indication rather than routinely replaced, and this can be cost saving and may reduce discomfort for patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Option 2: Replace a PIVC based on clinical indication … This option is informed by a systematic review, first published in 2011 and updated most recently in 2015, which concluded that rates of bloodstream infection and thrombophlebitis were not significantly different when PIVCs were changed based on clinical indication rather than routinely replaced. … Replacing a PIVC based on clinical indication can be cost saving and may reduce the discomfort for patients associated with regular replacement."
+  },
+  {
+   "claim": "Clinicians should document the reason for removal of the PIVC and the condition of the site, and observe the insertion site for 48 hours after removal for signs of post-infusion pain, redness or swelling",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Document the reason for removal of the PIVC and the condition of the site. Observe the insertion site for 48 hours after the PIVC is removed for signs of post-infusion pain, redness or swelling."
+  },
+  {
+   "claim": "Clinicians should consider re-siting PIVCs within 24 hours when adherence to aseptic technique is uncertain or unknown, such as insertion during a medical emergency",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider re-siting PIVCs, within 24 hours, when adherence to aseptic technique is uncertain or unknown, such as insertion during a medical emergency."
+  },
+  {
+   "claim": "For hospitalised patients PIVCs should be removed before discharge unless the PIVC is intended to continue beyond discharge as part of the patient's care plan",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For hospitalised patients, ensure that PIVCs are removed before discharge, unless the PIVC is intended to continue beyond discharge as part of the patient's care plan."
+  },
+  {
+   "claim": "The surveillance considerations include the quality of PIVC surveillance in the healthcare facility, including surveillance of regular inspection of the site and device, and of PIVC-related Staphylococcus aureus bacteraemia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the quality of PIVC surveillance in the healthcare facility, including surveillance of regular inspection of the site and device, and of PIVC-related Staphylococcus aureus bacteraemia (SAB"
+  },
+  {
+   "claim": "Indicator 9 concerns the proportion of patients with a PIVC in situ who have been assessed in the last 24 hours, and indicator 10 concerns the proportion with a PIVC in situ that has not been used for a therapeutic purpose",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 9 Proportion of patients with a PIVC in situ who have been assessed in the last 24 hours to determine … Indicator 10 Proportion of patients with a PIVC in situ that has not been used for a therapeutic purpose in"
   }
+ ],
+ "summary": {
+  "total": 45,
+  "pass": 45,
+  "fail": 0
+ }
 }

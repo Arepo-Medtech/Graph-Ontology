@@ -1,289 +1,290 @@
 {
-  "guideline": "guidelines/third-and-fourth-degree-perineal-tears.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-22",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "retrieved_from": [
-    "https://www.safetyandquality.gov.au/standards/clinical-care-standards/third-and-fourth-degree-perineal-tears-clinical-care-standard"
-  ],
-  "retrieved_utc": "2026-09-22",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Third and Fourth Degree Perineal Tears Clinical Care Standard, including all seven quality statements, the for-clinicians/for-services/for-women sections, Table 1 (risk factors), Table 2 (forceps versus vacuum), Boxes 2, 3 and 4, and the full indicator list. Every source_text fragment was machine-checked verbatim with scripts/verify.py. Surgical technique and suture material, antibiotic agent and dose, and analgesic and laxative regimens are not stated by the source and are not reconstructed. The RANZCOG and RCOG documents summarised in the boxes were not retrieved. Retrieved text contains extraction artefacts where double-n collapsed ('pla ed' for planned, 'ma er' for manner, 'conditio' for condition); source_text is preserved verbatim and the guideline renders the evident word. Source URL recorded at retrieval.",
-  "claims": [
-    {
-      "claim": "Third or fourth degree perineal tears affect around 3 out of 100 women giving birth vaginally and around 5 out of 100 women giving birth vaginally for the first time",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Third or fourth degree perineal tears affect: \u2026 - around 3 out of 100 women giving birth vaginallyn- around 5 out of 100 women giving birth vaginally for the first time."
-    },
-    {
-      "claim": "Most women who sustain a third or fourth degree perineal tear recover well with appropriate treatment and support although some will need specialised care to optimise their recovery, and while not all such tears can be prevented it is possible to reduce the risk of their occurrence",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Most women who sustain a third or fourth degree perineal tear recover well with appropriate treatment and support, although some will need specialised care to optimise their recovery. \u2026 While not all third and fourth degree perineal tears can be prevented, it is possible to reduce the risk of their occurrence."
-    },
-    {
-      "claim": "Quality statement 1 states that during the antenatal period a woman is informed about the risk of a third or fourth degree perineal tear, and that throughout pregnancy, labour and birth she is supported to make decisions and provide informed consent for the care she receives",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "During the antenatal period, a woman is informed about the risk of a third or fourth degree perineal tear. Throughout pregnancy, labour and birth, she is supported to make decisions and provide informed consent for the care she receives."
-    },
-    {
-      "claim": "By the third trimester clinicians should discuss the potential for a third or fourth degree perineal tear",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "By the third trimester, discuss the potential for a third or fourth degree perineal tear."
-    },
-    {
-      "claim": "The discussion should cover that perineal tears are common and most heal well without complications, that third or fourth degree tears are less common at around 3 per cent of all women who give birth vaginally and 5 per cent of first vaginal births, and relevant risk factors for the individual woman including her obstetric history, noting that it is not possible to predict who will have a third or fourth degree perineal tear",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- the fact that perineal tears are common and most heal well without complicationsn- the fact that third or fourth degree tears are less common (around 3% of all women who give birth vaginally and 5% of first vaginal births)n- relevant risk factors for the individual woman, including her obstetric history (see Table 1), noting that it is not possible to predict who will have a third or fourth degree perineal tear"
-    },
-    {
-      "claim": "The discussion should also cover what can be done to reduce risk according to current evidence, the possible use of induction of labour, epidural analgesia, instruments, episiotomy and an unplanned caesarean section with their risks and benefits, the woman's preference for how she would like to give birth, the assessment and examination to expect after the birth, and how a tear will be treated if it does occur, noting that many women do not have faecal incontinence",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- what can be done to reduce risk according to current evidencen- the possible use of induction of labour, epidural analgesia, instruments, episiotomy and an unpla ed caesarean section, and their risks and benefitsn- the woman's preference for how she would like to give birthn- assessment and examination to expect after the birthn- how a third or fourth degree perineal tear will be treated if it does occur, and what can be done to assist recovery and improve outcomes (noting that many woman do not have faecal incontinence)."
-    },
-    {
-      "claim": "Midwives providing antenatal care for women with added risks such as female genital mutilation or a previous third or fourth degree perineal tear should arrange consultation with an obstetrician or GP obstetrician",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Midwives providing antenatal care for women with added risks (for example female genital mutilation or a previous third or fourth degree perineal tear) should arrange consultation with an obstetrician or GP obstetrician."
-    },
-    {
-      "claim": "Individual maternal risk factors are women having their first vaginal birth and women of south Asian ethnicity, the fetal risk factor is infants with a higher birth weight, and risks arising during labour and birth are persistent occipito-posterior position, shoulder dystocia, prolonged second stage of labour, instrumental vaginal birth, epidural pain relief and midline episiotomy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Individual risk factors (mother) | - women having their first vaginal birth<br>- women of south Asian ethnicity |n| Fetal risk factors | - infants with a higher birth weight* |n| Risks arising during labour and birth | - persistent occipito-posterior position<br>- shoulder dystocia<br>- prolonged second stage of labour<br>- instrumental vaginal birth<br>- epidural pain relief **<br>- midline episiotomy*** |"
-    },
-    {
-      "claim": "The higher birth weight threshold is more than 3.5 or 4 kg in epidemiological studies, epidural risk may be indirectly associated with prolonged second stage of labour or instrumental delivery, and a midline episiotomy is associated with an increased risk compared to medio-lateral episiotomy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "> 3.5 or 4 kg in epidemiological studies \u2026 Risk may be indirectly associated with prolonged second stage of labour or instrumental delivery. \u2026 A midline episiotomy is associated with an increased risk compared to medio-lateral episiotomy."
-    },
-    {
-      "claim": "Quality statement 2 states that a woman choosing a vaginal birth is offered evidence-based care to reduce her risk of a third or fourth degree perineal tear",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A woman choosing a vaginal birth is offered evidence-based care to reduce her risk of a third or fourth degree perineal tear."
-    },
-    {
-      "claim": "During pregnancy, perineal self-massage by the woman or her partner after 34 weeks of pregnancy can reduce the risk of third and fourth degree perineal tears, and pelvic floor muscle training may help women prepare for labour and birth and reduce the risk, with the woman needing to understand the correct technique and be referred to an appropriate clinician for training if needed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- perineal self-massage (or by her partner) after 34 weeks of pregnancy can reduce the risk of third and fourth degree perineal tearsn- pelvic floor muscle training may help women prepare for labour and birth and reduce the risk of third and fourth degree perineal tears. Ensure that the woman understands the correct technique to use and refer her to an appropriate clinician for training, if needed."
-    },
-    {
-      "claim": "During a vaginal birth, applying warm compresses on perineal distention can significantly reduce risk on moderate grade evidence, slowing the fetal head at crowning and the birth of the shoulders may reduce risk on low to moderate grade evidence, and perineal massage during the second stage of labour may reduce risk on low to moderate grade evidence although the acceptability of this practice to women has not been established",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- applying warm compresses on perineal distention can significantly reduce risk (moderate grade evidence)n- slowing the fetal head at crowning and the birth of the shoulders may reduce risk (low to moderate grade evidence)n- perineal massage during the second stage of labour may reduce risk, however, the acceptability of this practice to women has not been established (low to moderate grade evidence)."
-    },
-    {
-      "claim": "The selective use of episiotomy may result in fewer women experiencing a third or fourth degree perineal tear on low to moderate grade evidence, and if an episiotomy is performed a medio-lateral technique with the incision angle 60 degrees from the midline is recommended",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The selective use of episiotomy (see Box 2) may result in fewer women experiencing a third or fourth degree perineal tear (low to moderate grade evidence). If an episiotomy is performed, a medio-lateral technique with the incision angle 60\u00b0 from the midline is recommended."
-    },
-    {
-      "claim": "Medio-lateral episiotomy should be offered in instrumental vaginal birth, especially for nulliparous women",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Medio-lateral episiotomy should be offered in instrumental vaginal birth, especially for nulliparous women."
-    },
-    {
-      "claim": "RANZCOG notes that episiotomy should be considered where there is a high likelihood of a third or fourth degree perineal tear, shoulder dystocia, a need for accelerated birth of a compromised fetus, or a history of female genital mutilation",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- a high likelihood of a third or fourth degree perineal tear<br>- shoulder dystocia<br>- a need for accelerated birth of a compromised fetus<br>a history of female genital mutilation."
-    },
-    {
-      "claim": "Quality statement 3 states that when intervention is indicated in a vaginal birth, the choice of intervention is based on the clinical situation, the benefits and risks of each option and discussion with the woman",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When intervention is indicated in a vaginal birth, the choice of intervention is based on the clinical situation, the benefits and risks of each option and discussion with the woman."
-    },
-    {
-      "claim": "Instrumental vaginal birth may be indicated when there is fetal compromise, a need to reduce the effects of the second stage of labour because of a medical condition, or slow progress in the second stage of labour associated with risks to the woman or fetus",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Instrumental vaginal birth may be indicated when there is: \u2026 - fetal compromisen- a need to reduce the effects of the second stage of labour because of a medical conditio \u2026 - slow progress in the second stage of labour, associated with risks to the woman or fetus."
-    },
-    {
-      "claim": "Forceps use is associated with increased risk of a third or fourth degree perineal tear and other vaginal trauma compared with vacuum-assisted birth, and both carry a small risk of any neonatal injury but the nature of injuries differs between instruments",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Forceps use is associated with increased risk of a third or fourth degree perineal tear and other vaginal trauma compared with vacuum-assisted birth. Both carry a small risk of any neonatal injury, but the nature of injuries differs between instruments"
-    },
-    {
-      "claim": "Compared with vacuum, forceps are more likely to cause third or fourth degree tears with a relative risk of 1.89 and absolute rates of 14 per cent versus 7 per cent, any type of vaginal trauma with a relative risk of 2.48 and rates of 26 per cent versus 12 per cent, and facial injury with a relative risk of 5.10 and rates of 1.7 per cent versus 0.2 per cent",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- third or fourth degree tears | RR; 1.89 (95% CI 1.51\u20132.37) | 14% vs 7% |n| - any type of vaginal trauma | RR; 2.48 (95% CI 1.59\u20133.87) | 26% vs 12% |n| - facial injury | RR; 5.10 (95% 1.12\u201323.25) | 1.7% vs 0.2% |"
-    },
-    {
-      "claim": "Forceps are more likely to achieve a vaginal birth with a relative risk of 0.65 and rates of 91 per cent versus 86 per cent successful vaginal birth, and there is no significant difference between instruments for any neonatal injury, low Apgar score under 7 at 5 minutes, or low pH under 7.2 in umbilical artery at birth",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- achieve a vaginal birth | RR; 0.65 (95% CI 0.45\u20130.94) | 91% vs 86% successful vaginal birth | \u2026 **No significant difference between instruments** \u2026 - any neonatal injuryn- low Apgar score (<7) at 5 minutesn- low pH (<7.2) in umbilical artery at birth."
-    },
-    {
-      "claim": "During a first vaginal birth where instruments are used, medio-lateral episiotomy with an incision angle of 60 degrees reduces the risk of a third or fourth degree tear, tools such as Episcissors-60 may assist in achieving a post-suturing angle of 40 to 60 degrees, and the protective effect of episiotomy is highest when forceps are used especially with a first time vaginal birth",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "During a first vaginal birth where instruments are used, medio-lateral episiotomy (with an incision angle of 60\u00b0) reduces the risk of a third or fourth degree tear. Tools to help ensure the correct angle of incision include special episiotomy scissors, such as Episcissors\u201160, which may assist midwives and obstetricians achieve a post-suturing angle of 40\u201360\u00b0. The protective effect of episiotomy is highest when forceps are used, especially with a first time vaginal birth."
-    },
-    {
-      "claim": "Additional planning is recommended in case a vaginal birth is not achieved with the first approach, and the risks of subsequent options such as sequential use of instruments or caesarean section at full dilatation should be considered",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Additional pla ing is recommended in case a vaginal birth is not achieved with the first approach, and the risks of subsequent options should be considered (for example, sequential use of instruments or caesarean section at full dilatation)."
-    },
-    {
-      "claim": "Quality statement 4 states that after a vaginal birth a woman is offered examination by an appropriately trained clinician to exclude the possibility of a third or fourth degree perineal tear, and that a tear is classified using the Royal College of Obstetricians and Gynaecologists classification and documented in the woman's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "After a vaginal birth, a woman is offered examination by an appropriately trained clinician to exclude the possibility of a third or fourth degree perineal tear. A tear is classified using the Royal College of Obstetricians and Gynaecologists classification and is documented in the woman's healthcare record."
-    },
-    {
-      "claim": "Clinicians should offer appropriate pain management and conduct the examination with due respect for the woman's recent trauma, and if a tear is suspected or identified further assessment is recommended including a rectal examination to assess whether the internal or external anal sphincters have been damaged",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Offer appropriate pain management and conduct the examination with due respect for the woman's recent trauma. If a tear is suspected or identified on examination of the perineum, further assessment is recommended, including a rectal examination to assess whether the internal or external anal sphincters have been damaged."
-    },
-    {
-      "claim": "Whenever possible a second experienced clinician should be present during the examination to assist with identifying and classifying the tear, and if in doubt about the degree of injury the tear should be classified to a higher degree because incorrect classification can result in a suboptimal repair and may increase maternal morbidity in the longer term",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Whenever possible, ask a second, experienced clinician to be present during the examination to assist with identifying and classifying the tear. If in doubt about the degree of injury, classify the tear to a higher degree. Incorrect classification can result in a suboptimal repair and may increase maternal morbidity in the longer term."
-    },
-    {
-      "claim": "The RCOG classification is first degree tear as injury to perineal skin and/or vaginal mucosa, second degree as injury to perineum involving perineal muscles but not the anal sphincter, third degree as injury involving the anal sphincter complex, and fourth degree as injury involving the anal sphincter complex and anorectal mucosa",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- first degree tear: injury to perineal skin and/or vaginal mucosa<br>- second degree tear: injury to perineum involving perineal muscles but not involving the anal sphincter<br>- third degree tear: injury to perineum involving the anal sphincter complex \u2026 - fourth degree tear: injury to perineum involving the anal sphincter complex (EAS and IAS) and anorectal mucosa."
-    },
-    {
-      "claim": "Third degree tears are subdivided into grade 3a with less than 50 per cent of external anal sphincter thickness torn, grade 3b with more than 50 per cent of external anal sphincter thickness torn, and grade 3c with both external and internal anal sphincter torn",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- grade 3a tear \u2013 less than 50% of external anal sphincter (EAS) thickness torn<br>- grade 3b tear \u2013 more than 50% of EAS thickness torn<br>- grade 3c tear \u2013 both EAS and internal anal sphincter (IAS) torn"
-    },
-    {
-      "claim": "Rectal buttonhole injuries involve a tear of the rectal mucosa with an intact anal sphincter complex with no obvious visual damage to the perineum, may lead to a rectovaginal fistula if not recognised and repaired, are not included in the RCOG classification and should be documented separately",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Rectal buttonhole injuries involve a tear of the rectal mucosa with an intact anal sphincter complex and, visually, there is no obvious damage to the perineum. If not recognised and repaired, this type of tear may lead to a rectovaginal fistula. These types of injuries should be repaired. \u2026 Rectal buttonhole tears are not included in the RCOG classification and should be documented separately."
-    },
-    {
-      "claim": "Quality statement 5 states that when a woman has a third or fourth degree perineal tear it is promptly repaired by an appropriately trained and experienced clinician in a suitable environment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When a woman has a third or fourth degree perineal tear, it is promptly repaired by an appropriately trained and experienced clinician, in a suitable environment."
-    },
-    {
-      "claim": "Surgical repair should be conducted as soon as possible to minimise the risk of infection and blood loss, in a suitable environment with good lighting, sterile conditions and access to appropriate equipment and clinical support, and in most cases in an operating theatre, with a risk assessment conducted if the labour ward replicates theatre conditions",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Surgical repair should be conducted as soon as possible to minimise the risk of infection and blood loss. \u2026 The repair should be performed in a suitable environment with good lighting, sterile conditions and access to appropriate equipment and clinical support. In most cases the repair should be conducted in an operating theatre. If the labour ward replicates the environmental conditions of an operating theatre, a risk assessment should be conducted to determine whether this is a suitable environment."
-    },
-    {
-      "claim": "The repair should be conducted under adequate anaesthesia using surgical techniques and materials consistent with evidence-based guidelines, and a rectal examination should be performed after repair to ensure that sutures have not been inadvertently inserted through the anorectal mucosa",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The repair should be conducted under adequate anaesthesia, using surgical techniques and materials that are consistent with evidence-based guidelines. A rectal examination should be performed after repair to ensure that sutures have not been inadvertently inserted through the anorectal mucosa."
-    },
-    {
-      "claim": "Only appropriately trained and experienced clinicians should repair a third or fourth degree perineal tear, and registrars should be supervised by a senior clinician unless they have completed their Assessment of Procedural and Surgical Skills or equivalent credentialing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Only appropriately trained and experienced clinicians should repair a third or fourth degree perineal tear. Refer women to an appropriately qualified clinician if required. Registrars should be supervised by a senior clinician, unless they have completed their Assessment of Procedural and Surgical Skills or the equivalent level of credentialing or training for the repair of third or fourth degree perineal tears."
-    },
-    {
-      "claim": "Some women may decline surgical treatment because they do not want to be separated from their baby, and clinicians should advise the woman whether it is possible for her baby and support person to be present during repair and support her to maintain uninterrupted skin-to-skin contact and breastfeed during the procedure whenever possible",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Some women may decline surgical treatment because they do not want to be separated from their baby. Advise the woman whether it is possible for her baby and support person to be present during repair and support her to maintain uninterrupted skin-to-skin contact and breastfeed during the procedure, whenever possible."
-    },
-    {
-      "claim": "The decision to use prophylactic antibiotics should be made on a case-by-case basis following recommendations in the current Therapeutic Guidelines Antibiotic, and although evidence is limited prophylactic antibiotics for third and fourth degree perineal tears are recommended or considered reasonable in most clinical practice guidelines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The decision to use prophylactic antibiotics should be made on a case-by-case basis, following recommendations in the current _Therapeutic Guidelines: Antibiotic._ Although evidence is limited, prophylactic antibiotics for third and fourth degree perineal tears are recommended or considered reasonable in most clinical practice guidelines."
-    },
-    {
-      "claim": "Quality statement 6 states that after repair of a third or fourth degree perineal tear a woman receives postoperative care that includes the opportunity for debriefing, physiotherapy and psychosocial support",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "After repair of a third or fourth degree perineal tear, a woman receives postoperative care that includes the opportunity for debriefing, physiotherapy and psychosocial support."
-    },
-    {
-      "claim": "While the woman is in hospital she should be given an opportunity to discuss her recent experience with the clinicians present during the birth and to ask them questions, and an appointment should be arranged with a healthcare professional with experience in pelvic floor health such as a physiotherapist as well as with a psychologist or social worker if she is likely to need support or assistance at home",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "While the woman is in hospital, give her an opportunity to discuss her recent experience with the clinician(s) present during the birth and to ask them questions. \u2026 Arrange an appointment with a healthcare professional with experience in pelvic floor health such as a physiotherapist, as well as with a psychologist, or social worker if she is likely to need support or assistance at home."
-    },
-    {
-      "claim": "Quality statement 7 states that a woman with a third or fourth degree perineal tear receives individualised continuity of care and appropriate follow-up and referral to optimise her ongoing physical, emotional, psychological and sexual health",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A woman with a third or fourth degree perineal tear receives individualised continuity of care and appropriate follow-up and referral to optimise her ongoing physical, emotional, psychological and sexual health."
-    },
-    {
-      "claim": "Discharge summaries should record adequate information about the birth and the woman's ongoing care needs including monitoring for late onset symptoms or signs of faecal incontinence, dyspareunia, postnatal anxiety or depression, or relationship difficulties, with appropriate referral options provided",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that adequate information is recorded in discharge summaries about the birth and the woman's ongoing care needs including monitoring for late onset symptoms or signs of faecal incontinence, dyspareunia, postnatal anxiety or depression, or relationship difficulties, and provide appropriate referral options."
-    },
-    {
-      "claim": "Clinicians should acknowledge that if the woman's support person or partner witnessed a traumatic birth it may affect their health and wellbeing, and should offer them an opportunity to debrief and refer them for support if required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Acknowledge that, if the woman's support person or partner witnessed a traumatic birth, it may affect their health and wellbeing. Offer them an opportunity to debrief and refer them for support if required."
-    },
-    {
-      "claim": "Women should be advised that a third or fourth degree tear does not exclude a subsequent vaginal birth and to discuss future birth planning with a maternity healthcare provider experienced in caring for women with previous third or fourth degree tears",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Advise women that a third or fourth degree tear does not exclude a subsequent vaginal birth. Advise them to discuss future birth pla ing with a maternity healthcare provider who has experience in caring for women with previous third or fourth degree tears, who can provide counselling about future pregnancies and discuss the woman's preferences."
-    },
-    {
-      "claim": "Women with faecal incontinence will need support to effectively manage their condition, and as such problems may emerge sometime after birth women should be informed that support is available and encouraged to report symptoms",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Women with faecal incontinence will need support to effectively manage their condition. As such problems may emerge sometime after birth, inform women that support is available if needed and encourage them to report symptoms."
-    },
-    {
-      "claim": "Indicator 2 is the proportion of women who had a vaginal birth who received warm compresses during the second stage of labour",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 2 | Proportion of women who had a vaginal birth who received warm compresses during the second stage of labour |"
-    },
-    {
-      "claim": "Indicators 3a to 3d are the proportions of women who had an instrumental vaginal birth using vacuum, using forceps, who had a vacuum-assisted birth with episiotomy, and who had a forceps-assisted birth with episiotomy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 3a | Proportion of women who had an instrumental vaginal birth using vacuum |n| Indicator 3b | Proportion of women who had an instrumental vaginal birth using forceps |n| Indicator 3c | Proportion of women who had a vacuum-assisted birth with episiotomy |n| Indicator 3d | Proportion of women who had a forceps-assisted birth with episiotomy |"
-    },
-    {
-      "claim": "Indicator 4a is the proportion of women who sustained a perineal tear during birth who received a genito-anal examination to assess the grade of the tear, and indicators 4b to 4e are the proportions of women who had a vaginal birth who sustained a grade 3a, grade 3b, grade 3c and fourth degree perineal tear respectively",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| Indicator 4a | Proportion of women who sustained a perineal tear during birth who received a genito-anal examination to assess the grade of the perineal tear |n| Indicator 4b | Proportion of women who had a vaginal birth who sustained a Grade 3a perineal tear |n| Indicator 4c | Proportion of women who had a vaginal birth who sustained a Grade 3b perineal tear |n| Indicator 4d | Proportion of women who had a vaginal birth who sustained a Grade 3c perineal tear |n| Indicator 4e | Proportion of women who had a vaginal birth who sustained a fourth degree perineal tear |"
-    },
-    {
-      "claim": "No benchmarks are set for the indicators by the Commission",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "No benchmarks are set for these indicators by the Commission."
-    }
-  ],
-  "summary": {
-    "total": 45,
-    "pass": 45,
-    "fail": 0
+ "guideline": "guidelines/third-and-fourth-degree-perineal-tears.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/standards/clinical-care-standards/third-and-fourth-degree-perineal-tears-clinical-care-standard",
+  "https://www.safetyandquality.gov.au/clinical-care-standards/third-and-fourth-degree-perineal-tears"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Third and Fourth Degree Perineal Tears Clinical Care Standard, including all seven quality statements, the for-clinicians/for-services/for-women sections, Table 1 (risk factors), Table 2 (forceps versus vacuum), Boxes 2, 3 and 4, and the full indicator list. Every source_text fragment was machine-checked verbatim with scripts/verify.py. Surgical technique and suture material, antibiotic agent and dose, and analgesic and laxative regimens are not stated by the source and are not reconstructed. The RANZCOG and RCOG documents summarised in the boxes were not retrieved. Retrieved text contains extraction artefacts where double-n collapsed ('pla ed' for planned, 'ma er' for manner, 'conditio' for condition); source_text is preserved verbatim and the guideline renders the evident word. Source URL recorded at retrieval. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "Third or fourth degree perineal tears affect around 3 out of 100 women giving birth vaginally and around 5 out of 100 women giving birth vaginally for the first time",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Third or fourth degree perineal tears affect: … around 3 out of 100 women giving birth vaginally - around 5 out of 100 women giving birth vaginally for the first time"
+  },
+  {
+   "claim": "Most women who sustain a third or fourth degree perineal tear recover well with appropriate treatment and support although some will need specialised care to optimise their recovery, and while not all such tears can be prevented it is possible to reduce the risk of their occurrence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most women who sustain a third or fourth degree perineal tear recover well with appropriate treatment and support, although some will need specialised care to optimise their recovery. … While not all third and fourth degree perineal tears can be prevented, it is possible to reduce the risk of their occurrence."
+  },
+  {
+   "claim": "Quality statement 1 states that during the antenatal period a woman is informed about the risk of a third or fourth degree perineal tear, and that throughout pregnancy, labour and birth she is supported to make decisions and provide informed consent for the care she receives",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "During the antenatal period, a woman is informed about the risk of a third or fourth degree perineal tear. Throughout pregnancy, labour and birth, she is supported to make decisions and provide informed consent for the care she receives."
+  },
+  {
+   "claim": "By the third trimester clinicians should discuss the potential for a third or fourth degree perineal tear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "By the third trimester, discuss the potential for a third or fourth degree perineal tear."
+  },
+  {
+   "claim": "The discussion should cover that perineal tears are common and most heal well without complications, that third or fourth degree tears are less common at around 3 per cent of all women who give birth vaginally and 5 per cent of first vaginal births, and relevant risk factors for the individual woman including her obstetric history, noting that it is not possible to predict who will have a third or fourth degree perineal tear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the fact that perineal tears are common and most heal well without complications - the fact that third or fourth degree tears are less common (around 3% of all women who give birth vaginally and 5% of first vaginal births) - relevant risk factors for the individual woman, including her obstetric history (see Table 1), noting that it is not possible to predict who will have a third or fourth degree perineal tear"
+  },
+  {
+   "claim": "The discussion should also cover what can be done to reduce risk according to current evidence, the possible use of induction of labour, epidural analgesia, instruments, episiotomy and an unplanned caesarean section with their risks and benefits, the woman's preference for how she would like to give birth, the assessment and examination to expect after the birth, and how a tear will be treated if it does occur, noting that many women do not have faecal incontinence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "what can be done to reduce risk according to current evidence - the possible use of induction of labour, epidural analgesia, instruments, episiotomy and an unplanned caesarean section, and their risks and benefits - the woman's preference for how she would like to give birth - assessment and examination to expect after the birth - how a third or fourth degree perineal tear will be treated if it does occur, and what can be done to assist recovery and improve outcomes (noting that many woman do not have faecal incontinence"
+  },
+  {
+   "claim": "Midwives providing antenatal care for women with added risks such as female genital mutilation or a previous third or fourth degree perineal tear should arrange consultation with an obstetrician or GP obstetrician",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Midwives providing antenatal care for women with added risks (for example female genital mutilation or a previous third or fourth degree perineal tear) should arrange consultation with an obstetrician or GP obstetrician."
+  },
+  {
+   "claim": "Individual maternal risk factors are women having their first vaginal birth and women of south Asian ethnicity, the fetal risk factor is infants with a higher birth weight, and risks arising during labour and birth are persistent occipito-posterior position, shoulder dystocia, prolonged second stage of labour, instrumental vaginal birth, epidural pain relief and midline episiotomy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Individual risk factors (mother) - women having their first vaginal birth - women of south Asian ethnicity Fetal risk factors - infants with a higher birth weight* Risks arising during labour and birth - persistent occipito-posterior position - shoulder dystocia - prolonged second stage of labour - instrumental vaginal birth - epidural pain relief ** - midline episiotomy"
+  },
+  {
+   "claim": "The higher birth weight threshold is more than 3.5 or 4 kg in epidemiological studies, epidural risk may be indirectly associated with prolonged second stage of labour or instrumental delivery, and a midline episiotomy is associated with an increased risk compared to medio-lateral episiotomy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "> 3.5 or 4 kg in epidemiological studies … Risk may be indirectly associated with prolonged second stage of labour or instrumental delivery. … A midline episiotomy is associated with an increased risk compared to medio-lateral episiotomy."
+  },
+  {
+   "claim": "Quality statement 2 states that a woman choosing a vaginal birth is offered evidence-based care to reduce her risk of a third or fourth degree perineal tear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A woman choosing a vaginal birth is offered evidence-based care to reduce her risk of a third or fourth degree perineal tear."
+  },
+  {
+   "claim": "During pregnancy, perineal self-massage by the woman or her partner after 34 weeks of pregnancy can reduce the risk of third and fourth degree perineal tears, and pelvic floor muscle training may help women prepare for labour and birth and reduce the risk, with the woman needing to understand the correct technique and be referred to an appropriate clinician for training if needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "perineal self-massage (or by her partner) after 34 weeks of pregnancy can reduce the risk of third and fourth degree perineal tears - pelvic floor muscle training may help women prepare for labour and birth and reduce the risk of third and fourth degree perineal tears. Ensure that the woman understands the correct technique to use and refer her to an appropriate clinician for training, if needed"
+  },
+  {
+   "claim": "During a vaginal birth, applying warm compresses on perineal distention can significantly reduce risk on moderate grade evidence, slowing the fetal head at crowning and the birth of the shoulders may reduce risk on low to moderate grade evidence, and perineal massage during the second stage of labour may reduce risk on low to moderate grade evidence although the acceptability of this practice to women has not been established",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "applying warm compresses on perineal distention can significantly reduce risk (moderate grade evidence) - slowing the fetal head at crowning and the birth of the shoulders may reduce risk (low to moderate grade evidence) - perineal massage during the second stage of labour may reduce risk, however, the acceptability of this practice to women has not been established (low to moderate grade evidence"
+  },
+  {
+   "claim": "The selective use of episiotomy may result in fewer women experiencing a third or fourth degree perineal tear on low to moderate grade evidence, and if an episiotomy is performed a medio-lateral technique with the incision angle 60 degrees from the midline is recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The selective use of episiotomy (see Box 2) may result in fewer women experiencing a third or fourth degree perineal tear (low to moderate grade evidence). If an episiotomy is performed, a medio-lateral technique with the incision angle 60° from the midline is recommended."
+  },
+  {
+   "claim": "Medio-lateral episiotomy should be offered in instrumental vaginal birth, especially for nulliparous women",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Medio-lateral episiotomy should be offered in instrumental vaginal birth, especially for nulliparous women."
+  },
+  {
+   "claim": "RANZCOG notes that episiotomy should be considered where there is a high likelihood of a third or fourth degree perineal tear, shoulder dystocia, a need for accelerated birth of a compromised fetus, or a history of female genital mutilation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a high likelihood of a third or fourth degree perineal tear - shoulder dystocia - a need for accelerated birth of a compromised fetus a history of female genital mutilation"
+  },
+  {
+   "claim": "Quality statement 3 states that when intervention is indicated in a vaginal birth, the choice of intervention is based on the clinical situation, the benefits and risks of each option and discussion with the woman",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When intervention is indicated in a vaginal birth, the choice of intervention is based on the clinical situation, the benefits and risks of each option and discussion with the woman."
+  },
+  {
+   "claim": "Instrumental vaginal birth may be indicated when there is fetal compromise, a need to reduce the effects of the second stage of labour because of a medical condition, or slow progress in the second stage of labour associated with risks to the woman or fetus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Instrumental vaginal birth may be indicated when there is: … fetal compromise - a need to reduce the effects of the second stage of labour because of a medical condition … - slow progress in the second stage of labour, associated with risks to the woman or fetus."
+  },
+  {
+   "claim": "Forceps use is associated with increased risk of a third or fourth degree perineal tear and other vaginal trauma compared with vacuum-assisted birth, and both carry a small risk of any neonatal injury but the nature of injuries differs between instruments",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Forceps use is associated with increased risk of a third or fourth degree perineal tear and other vaginal trauma compared with vacuum-assisted birth. Both carry a small risk of any neonatal injury, but the nature of injuries differs between instruments"
+  },
+  {
+   "claim": "Compared with vacuum, forceps are more likely to cause third or fourth degree tears with a relative risk of 1.89 and absolute rates of 14 per cent versus 7 per cent, any type of vaginal trauma with a relative risk of 2.48 and rates of 26 per cent versus 12 per cent, and facial injury with a relative risk of 5.10 and rates of 1.7 per cent versus 0.2 per cent",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "third or fourth degree tears RR; 1.89 (95% CI 1.51-2.37) 14% vs 7% - any type of vaginal trauma RR; 2.48 (95% CI 1.59-3.87) 26% vs 12% - facial injury RR; 5.10 (95% 1.12-23.25) 1.7% vs 0.2"
+  },
+  {
+   "claim": "Forceps are more likely to achieve a vaginal birth with a relative risk of 0.65 and rates of 91 per cent versus 86 per cent successful vaginal birth, and there is no significant difference between instruments for any neonatal injury, low Apgar score under 7 at 5 minutes, or low pH under 7.2 in umbilical artery at birth",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "achieve a vaginal birth RR; 0.65 (95% CI 0.45-0.94) 91% vs 86% successful vaginal birth … No significant difference between instruments … any neonatal injury - low Apgar score (<7) at 5 minutes - low pH (<7.2) in umbilical artery at birth"
+  },
+  {
+   "claim": "During a first vaginal birth where instruments are used, medio-lateral episiotomy with an incision angle of 60 degrees reduces the risk of a third or fourth degree tear, tools such as Episcissors-60 may assist in achieving a post-suturing angle of 40 to 60 degrees, and the protective effect of episiotomy is highest when forceps are used especially with a first time vaginal birth",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "During a first vaginal birth where instruments are used, medio-lateral episiotomy (with an incision angle of 60°) reduces the risk of a third or fourth degree tear. Tools to help ensure the correct angle of incision include special episiotomy scissors, such as Episcissors‑60, which may assist midwives and obstetricians achieve a post-suturing angle of 40–60°. The protective effect of episiotomy is highest when forceps are used, especially with a first time vaginal birth."
+  },
+  {
+   "claim": "Additional planning is recommended in case a vaginal birth is not achieved with the first approach, and the risks of subsequent options such as sequential use of instruments or caesarean section at full dilatation should be considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Additional planning is recommended in case a vaginal birth is not achieved with the first approach, and the risks of subsequent options should be considered (for example, sequential use of instruments or caesarean section at full dilatation"
+  },
+  {
+   "claim": "Quality statement 4 states that after a vaginal birth a woman is offered examination by an appropriately trained clinician to exclude the possibility of a third or fourth degree perineal tear, and that a tear is classified using the Royal College of Obstetricians and Gynaecologists classification and documented in the woman's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After a vaginal birth, a woman is offered examination by an appropriately trained clinician to exclude the possibility of a third or fourth degree perineal tear. A tear is classified using the Royal College of Obstetricians and Gynaecologists classification and is documented in the woman's healthcare record."
+  },
+  {
+   "claim": "Clinicians should offer appropriate pain management and conduct the examination with due respect for the woman's recent trauma, and if a tear is suspected or identified further assessment is recommended including a rectal examination to assess whether the internal or external anal sphincters have been damaged",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Offer appropriate pain management and conduct the examination with due respect for the woman's recent trauma. If a tear is suspected or identified on examination of the perineum, further assessment is recommended, including a rectal examination to assess whether the internal or external anal sphincters have been damaged."
+  },
+  {
+   "claim": "Whenever possible a second experienced clinician should be present during the examination to assist with identifying and classifying the tear, and if in doubt about the degree of injury the tear should be classified to a higher degree because incorrect classification can result in a suboptimal repair and may increase maternal morbidity in the longer term",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whenever possible, ask a second, experienced clinician to be present during the examination to assist with identifying and classifying the tear. If in doubt about the degree of injury, classify the tear to a higher degree. Incorrect classification can result in a suboptimal repair and may increase maternal morbidity in the longer term."
+  },
+  {
+   "claim": "The RCOG classification is first degree tear as injury to perineal skin and/or vaginal mucosa, second degree as injury to perineum involving perineal muscles but not the anal sphincter, third degree as injury involving the anal sphincter complex, and fourth degree as injury involving the anal sphincter complex and anorectal mucosa",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "first degree tear: injury to perineal skin and/or vaginal mucosa - second degree tear: injury to perineum involving perineal muscles but not involving the anal sphincter - third degree tear: injury to perineum involving the anal sphincter complex … - fourth degree tear: injury to perineum involving the anal sphincter complex (EAS and IAS) and anorectal mucosa."
+  },
+  {
+   "claim": "Third degree tears are subdivided into grade 3a with less than 50 per cent of external anal sphincter thickness torn, grade 3b with more than 50 per cent of external anal sphincter thickness torn, and grade 3c with both external and internal anal sphincter torn",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "grade 3a tear - less than 50% of external anal sphincter (EAS) thickness torn - grade 3b tear - more than 50% of EAS thickness torn - grade 3c tear - both EAS and internal anal sphincter (IAS) torn"
+  },
+  {
+   "claim": "Rectal buttonhole injuries involve a tear of the rectal mucosa with an intact anal sphincter complex with no obvious visual damage to the perineum, may lead to a rectovaginal fistula if not recognised and repaired, are not included in the RCOG classification and should be documented separately",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rectal buttonhole injuries involve a tear of the rectal mucosa with an intact anal sphincter complex and, visually, there is no obvious damage to the perineum. If not recognised and repaired, this type of tear may lead to a rectovaginal fistula. These types of injuries should be repaired. … Rectal buttonhole tears are not included in the RCOG classification and should be documented separately."
+  },
+  {
+   "claim": "Quality statement 5 states that when a woman has a third or fourth degree perineal tear it is promptly repaired by an appropriately trained and experienced clinician in a suitable environment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When a woman has a third or fourth degree perineal tear, it is promptly repaired by an appropriately trained and experienced clinician, in a suitable environment."
+  },
+  {
+   "claim": "Surgical repair should be conducted as soon as possible to minimise the risk of infection and blood loss, in a suitable environment with good lighting, sterile conditions and access to appropriate equipment and clinical support, and in most cases in an operating theatre, with a risk assessment conducted if the labour ward replicates theatre conditions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Surgical repair should be conducted as soon as possible to minimise the risk of infection and blood loss. … The repair should be performed in a suitable environment with good lighting, sterile conditions and access to appropriate equipment and clinical support. In most cases the repair should be conducted in an operating theatre. If the labour ward replicates the environmental conditions of an operating theatre, a risk assessment should be conducted to determine whether this is a suitable environment."
+  },
+  {
+   "claim": "The repair should be conducted under adequate anaesthesia using surgical techniques and materials consistent with evidence-based guidelines, and a rectal examination should be performed after repair to ensure that sutures have not been inadvertently inserted through the anorectal mucosa",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The repair should be conducted under adequate anaesthesia, using surgical techniques and materials that are consistent with evidence-based guidelines. A rectal examination should be performed after repair to ensure that sutures have not been inadvertently inserted through the anorectal mucosa."
+  },
+  {
+   "claim": "Only appropriately trained and experienced clinicians should repair a third or fourth degree perineal tear, and registrars should be supervised by a senior clinician unless they have completed their Assessment of Procedural and Surgical Skills or equivalent credentialing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Only appropriately trained and experienced clinicians should repair a third or fourth degree perineal tear. Refer women to an appropriately qualified clinician if required. Registrars should be supervised by a senior clinician, unless they have completed their Assessment of Procedural and Surgical Skills or the equivalent level of credentialing or training for the repair of third or fourth degree perineal tears."
+  },
+  {
+   "claim": "Some women may decline surgical treatment because they do not want to be separated from their baby, and clinicians should advise the woman whether it is possible for her baby and support person to be present during repair and support her to maintain uninterrupted skin-to-skin contact and breastfeed during the procedure whenever possible",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Some women may decline surgical treatment because they do not want to be separated from their baby. Advise the woman whether it is possible for her baby and support person to be present during repair and support her to maintain uninterrupted skin-to-skin contact and breastfeed during the procedure, whenever possible."
+  },
+  {
+   "claim": "The decision to use prophylactic antibiotics should be made on a case-by-case basis following recommendations in the current Therapeutic Guidelines Antibiotic, and although evidence is limited prophylactic antibiotics for third and fourth degree perineal tears are recommended or considered reasonable in most clinical practice guidelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The decision to use prophylactic antibiotics should be made on a case-by-case basis, following recommendations in the current Therapeutic Guidelines: Antibiotic. Although evidence is limited, prophylactic antibiotics for third and fourth degree perineal tears are recommended or considered reasonable in most clinical practice guidelines"
+  },
+  {
+   "claim": "Quality statement 6 states that after repair of a third or fourth degree perineal tear a woman receives postoperative care that includes the opportunity for debriefing, physiotherapy and psychosocial support",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After repair of a third or fourth degree perineal tear, a woman receives postoperative care that includes the opportunity for debriefing, physiotherapy and psychosocial support."
+  },
+  {
+   "claim": "While the woman is in hospital she should be given an opportunity to discuss her recent experience with the clinicians present during the birth and to ask them questions, and an appointment should be arranged with a healthcare professional with experience in pelvic floor health such as a physiotherapist as well as with a psychologist or social worker if she is likely to need support or assistance at home",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While the woman is in hospital, give her an opportunity to discuss her recent experience with the clinician(s) present during the birth and to ask them questions. … Arrange an appointment with a healthcare professional with experience in pelvic floor health such as a physiotherapist, as well as with a psychologist, or social worker if she is likely to need support or assistance at home."
+  },
+  {
+   "claim": "Quality statement 7 states that a woman with a third or fourth degree perineal tear receives individualised continuity of care and appropriate follow-up and referral to optimise her ongoing physical, emotional, psychological and sexual health",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A woman with a third or fourth degree perineal tear receives individualised continuity of care and appropriate follow-up and referral to optimise her ongoing physical, emotional, psychological and sexual health."
+  },
+  {
+   "claim": "Discharge summaries should record adequate information about the birth and the woman's ongoing care needs including monitoring for late onset symptoms or signs of faecal incontinence, dyspareunia, postnatal anxiety or depression, or relationship difficulties, with appropriate referral options provided",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that adequate information is recorded in discharge summaries about the birth and the woman's ongoing care needs including monitoring for late onset symptoms or signs of faecal incontinence, dyspareunia, postnatal anxiety or depression, or relationship difficulties, and provide appropriate referral options."
+  },
+  {
+   "claim": "Clinicians should acknowledge that if the woman's support person or partner witnessed a traumatic birth it may affect their health and wellbeing, and should offer them an opportunity to debrief and refer them for support if required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acknowledge that, if the woman's support person or partner witnessed a traumatic birth, it may affect their health and wellbeing. Offer them an opportunity to debrief and refer them for support if required."
+  },
+  {
+   "claim": "Women should be advised that a third or fourth degree tear does not exclude a subsequent vaginal birth and to discuss future birth planning with a maternity healthcare provider experienced in caring for women with previous third or fourth degree tears",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advise women that a third or fourth degree tear does not exclude a subsequent vaginal birth. Advise them to discuss future birth planning with a maternity healthcare provider who has experience in caring for women with previous third or fourth degree tears, who can provide counselling about future pregnancies and discuss the woman's preferences"
+  },
+  {
+   "claim": "Women with faecal incontinence will need support to effectively manage their condition, and as such problems may emerge sometime after birth women should be informed that support is available and encouraged to report symptoms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Women with faecal incontinence will need support to effectively manage their condition. As such problems may emerge sometime after birth, inform women that support is available if needed and encourage them to report symptoms."
+  },
+  {
+   "claim": "Indicator 2 is the proportion of women who had a vaginal birth who received warm compresses during the second stage of labour",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 2 Proportion of women who had a vaginal birth who received warm compresses during the second stage of labour"
+  },
+  {
+   "claim": "Indicators 3a to 3d are the proportions of women who had an instrumental vaginal birth using vacuum, using forceps, who had a vacuum-assisted birth with episiotomy, and who had a forceps-assisted birth with episiotomy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 3a Proportion of women who had an instrumental vaginal birth using vacuum Indicator 3b Proportion of women who had an instrumental vaginal birth using forceps Indicator 3c Proportion of women who had a vacuum-assisted birth with episiotomy Indicator 3d Proportion of women who had a forceps-assisted birth with episiotomy"
+  },
+  {
+   "claim": "Indicator 4a is the proportion of women who sustained a perineal tear during birth who received a genito-anal examination to assess the grade of the tear, and indicators 4b to 4e are the proportions of women who had a vaginal birth who sustained a grade 3a, grade 3b, grade 3c and fourth degree perineal tear respectively",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 4a Proportion of women who sustained a perineal tear during birth who received a genito-anal examination to assess the grade of the perineal tear Indicator 4b Proportion of women who had a vaginal birth who sustained a Grade 3a perineal tear Indicator 4c Proportion of women who had a vaginal birth who sustained a Grade 3b perineal tear Indicator 4d Proportion of women who had a vaginal birth who sustained a Grade 3c perineal tear Indicator 4e Proportion of women who had a vaginal birth who sustained a fourth degree perineal tear"
+  },
+  {
+   "claim": "No benchmarks are set for the indicators by the Commission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No benchmarks are set for these indicators by the Commission."
   }
+ ],
+ "summary": {
+  "total": 45,
+  "pass": 45,
+  "fail": 0
+ }
 }

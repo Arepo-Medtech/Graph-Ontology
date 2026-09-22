@@ -1,261 +1,265 @@
 {
-  "guideline": "guidelines/sepsis.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-21",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Sepsis Clinical Care Standard, including the seven quality statements, Box 1 and the for-clinicians sections. The standard names no antimicrobial agent, dose or fluid volume; none is asserted here. Lactate thresholds sit in local decision support tools and are not stated. Some retrieved text contains extraction artefacts where double-n collapsed ('saturatio' for saturation, 'ski' for skin, 'concentratio' for concentration, 'informatio' for information); source_text is preserved verbatim and the guideline renders the evident word.",
-  "claims": [
-    {
-      "claim": "Quality statement 1 is titled Could it be sepsis? and states that a diagnosis of sepsis is considered in any patient with an acute illness or clinical deterioration that may be due to infection, with a clinical support tool that includes assessment of vital signs and lactate used to help recognise sepsis early and escalate care when required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Quality statement 1 \u2013 Could it be sepsis? A diagnosis of sepsis is considered in any patient with an acute illness or clinical deterioration that may be due to infection. A clinical support tool that includes assessment of vital signs and lactate is used to help recognise sepsis early and escalate care when required."
-    },
-    {
-      "claim": "Recognising a patient with sepsis can be challenging and sepsis should be considered in all patients with acute illness or deterioration who may have an infection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Recognising a patient with sepsis can be challenging. Consider sepsis in all patients with acute illness or deterioration who may have an infection."
-    },
-    {
-      "claim": "The presentation of sepsis in neonates and children may differ to adults, and in children hypotension is not necessary to diagnose septic shock",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Importantly, the presentation of sepsis in neonates and children may differ to adults. In children, hypotension is not necessary to diagnose septic shock."
-    },
-    {
-      "claim": "In older people commonly recognised sepsis signs and symptoms are often absent, older people are more likely to have relative immunosuppression, the presentation is less likely to include a fever, raised white cell count or raised C-reactive protein, and hypothermia, delirium and falls in frail people are more likely",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In older people, commonly recognised sepsis signs and symptoms are often absent. Older people are more likely to have relative immunosuppression. The presentation is less likely to include a fever, raised white cell count or raised C-reactive protein. In older people, hypothermia, delirium and falls (in frail people) are more likely."
-    },
-    {
-      "claim": "Clinical support tools are available to help detect sepsis early and enable further assessment and escalation, although these tools do not replace clinical judgement",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Clinical support tools are available to help detect sepsis early and enable further assessment and escalation, although these tools do not replace clinical judgement."
-    },
-    {
-      "claim": "Tools will vary according to the patient age, cultural needs and healthcare setting and no single tool will apply to everyone",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Tools will vary according to the patient age, cultural needs and healthcare setting - no single tool will apply to everyone."
-    },
-    {
-      "claim": "Where a decision support tool is not available, for example for neonatal and maternity patients, early assessment and escalation to a clinician with expertise in recognising and managing sepsis are the priority",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For situations where a decision support tool is not available (for example, for neonatal and maternity patients), early assessment and escalation to a clinician with expertise in recognising and managing sepsis are the priority."
-    },
-    {
-      "claim": "To determine whether a patient has signs or symptoms of organ dysfunction a full set of observations should be taken including respiratory rate, oxygen saturation, heart rate, systolic blood pressure, temperature, altered mentation, behaviour change or delirium, poor peripheral perfusion, cool peripheries, delayed capillary refill time or mottled skin, blood lactate concentration, and in pregnant women the vital signs of the fetus measured using cardiotocography",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "take a full set of observations that includes vital signs and other relevant observations appropriate to the patient, including: respiratory rate; oxygen saturatio ; heart rate; systolic blood pressure; temperature; altered mentation, behaviour change or delirium; poor peripheral perfusion, cool peripheries, delayed capillary refill time or mottled ski ; blood lactate concentratio ; in pregnant women, the vital signs of the fetus measured using cardiotocography (CTG)."
-    },
-    {
-      "claim": "Where this will not delay urgent care venous blood lactate levels should be tested, and capillary lactates may be useful in children",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Where this will not delay urgent care, test venous blood lactate levels. Capillary lactates may be useful in children."
-    },
-    {
-      "claim": "An increased lactate level may indicate a protective or a maladaptive response to shock and can play an important role in screening, blood lactate should be included routinely in decision-making for an acutely deteriorating patient or suspected sepsis, and assessment of lactate levels is not sufficient for the purpose of diagnosis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "An increased lactate level may indicate a protective or a maladaptive response to shock and can play an important role in screening. Include blood lactate routinely in decision-making for an acutely deteriorating patient or for suspected sepsis. Although assessment of lactate levels is not sufficient for the purpose of diagnosis, it is a relatively simple"
-    },
-    {
-      "claim": "Indicator 1a is the proportion of patients with suspected sepsis who had blood lactate levels taken as part of screening for sepsis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 1a | Proportion of patients with suspected sepsis who had blood lactate levels taken as a part of screening for sepsis."
-    },
-    {
-      "claim": "Quality statement 3 states that a patient with suspected sepsis has blood cultures taken immediately ensuring that this does not delay the administration of appropriate antimicrobial therapy, that when signs of infection-related organ dysfunction are present appropriate antimicrobials are started within 60 minutes, and that antimicrobial therapy is managed in line with the Antimicrobial Stewardship Clinical Care Standard including a review within 48 hours from the first dose",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with suspected sepsis has blood cultures taken immediately, ensuring that this does not delay the administration of appropriate antimicrobial therapy. When signs of infection-related organ dysfunction are present, appropriate antimicrobials are started within 60 minutes. Antimicrobial therapy is managed in line with the Antimicrobial Stewardship Clinical Care Standard, including a review within 48 hours from the first dose."
-    },
-    {
-      "claim": "Blood cultures should be obtained before administering antimicrobials where this does not delay urgent treatment, and for adults this includes two sets of blood cultures and for children one set of blood cultures, with other relevant microbiological cultures also collected ideally before administering antimicrobials",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Obtain blood cultures for microbiological testing for patients with suspected sepsis before administering antimicrobials, where this does not delay urgent treatment. For adults, this includes two sets of blood cultures, and for children one set of blood cultures. Other relevant microbiological cultures should also be collected, ideally before administering antimicrobials."
-    },
-    {
-      "claim": "In the community setting if obtaining blood cultures is outside the scope of clinical practice the patient should be referred to hospital immediately",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In the community setting, if this is outside the scope of clinical practice, refer the patient to hospital immediately."
-    },
-    {
-      "claim": "Clinicians should not wait for blood test results if someone is clearly unwell, urgent antimicrobial therapy should start as soon as possible, and antimicrobials should not be withheld while awaiting the results of microbiological or other tests",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Do not wait for blood test results if someone is clearly unwell. Urgent antimicrobial therapy should start as soon as possible. Do not withhold antimicrobials while awaiting the results of microbiological (for example, blood, urine, pus, sputum microscopy or culture) or other tests."
-    },
-    {
-      "claim": "Antimicrobials should be started within 60 minutes of recognising infection-related organ dysfunction and as soon as possible if shock is present",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Start antimicrobials within 60 minutes of recognising infection-related organ dysfunction, and as soon as possible if shock is present."
-    },
-    {
-      "claim": "In an adult patient without shock where there is uncertainty about the likelihood of an infectious cause, alternative diagnoses should be rapidly investigated, and if concern for infection persists after appropriate evaluation antimicrobial therapy should start as soon as possible and no later than three hours from initial clinical review",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In an adult patient without shock, where there is uncertainty about the likelihood of an infectious cause, rapidly investigate alternative diagnoses. ... If concern for infection persists after appropriate evaluation, start antimicrobial therapy as soon as possible, no later than three hours from initial clinical review"
-    },
-    {
-      "claim": "Care should be escalated to a clinician with experience in recognising and managing sepsis if required, and all patients who may have sepsis should be closely monitored with care escalated in the event of deterioration such as evolving or worsening signs of organ dysfunction",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Escalate care to a clinician with experience in recognising and managing sepsis, if required. Closely monitor all patients who may have sepsis and ensure their care is escalated in the event of deterioration, such as evolving or worsening signs of organ dysfunction"
-    },
-    {
-      "claim": "Consultation with an infectious diseases physician or clinical microbiologist should be arranged if there is uncertainty about the appropriate antimicrobial therapy or local sepsis guidelines, ideally when initiating therapy or else on review",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Arrange consultation with an infectious diseases physician or clinical microbiologist if there is uncertainty about the appropriate antimicrobial therapy or local sepsis guidelines, ideally when initiating therapy, or else on review."
-    },
-    {
-      "claim": "As patients with sepsis often require higher doses of antimicrobials, the patient's other medicines should be reviewed by an experienced clinician, preferably a pharmacist, to avoid interactions and enable the safe and appropriate administration of antimicrobial therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "As patients with sepsis often require higher doses of antimicrobials, the patient's other medicines should be reviewed by an experienced clinician, preferably a pharmacist, to avoid interactions and enable the safe and appropriate administration of antimicrobial therapy."
-    },
-    {
-      "claim": "When prescribing antimicrobials for Aboriginal or Torres Strait Islander peoples the higher prevalence of multidrug-resistant organisms should be considered, referring to the Central Australian Rural Practitioners Association guidelines or other guidelines based on local resistance data where appropriate",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When prescribing antimicrobials for Aboriginal or Torres Strait Islander peoples, consider the higher prevalence of multidrug-resistant organisms. Refer to the Central Australian Rural Practitioners Association guidelines, or other guidelines based on local resistance data, where appropriate."
-    },
-    {
-      "claim": "Quality statement 2 states that sepsis is a time-critical medical emergency, that assessment and treatment of a patient with suspected sepsis are started urgently according to a locally approved clinical pathway with their response to treatment monitored and reviewed, and that the patient is reviewed by a clinician experienced in recognising and managing sepsis and escalated to a higher level of care when required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Sepsis is a time-critical medical emergency. Assessment and treatment of a patient with suspected sepsis are started urgently according to a locally approved clinical pathway, and their response to treatment is monitored and reviewed. The patient is reviewed by a clinician experienced in recognising and managing sepsis, and is escalated to a higher level of care when required."
-    },
-    {
-      "claim": "When sepsis is part of a differential diagnosis expediting assessment and treatment is essential, and a locally approved clinical pathway appropriate to the patient's age and clinical setting should be used to guide assessment, diagnosis and appropriate treatments within the recommended time frame",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When sepsis is part of a differential diagnosis, expediting assessment and treatment is essential. Use a locally approved clinical pathway, appropriate to the patient's age and clinical setting, to guide assessment, diagnosis and appropriate treatments within the recommended time frame."
-    },
-    {
-      "claim": "Any clinician can activate the sepsis clinical pathway at an early stage and the principles of recognise, resuscitate, refer and review should guide care",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Any clinician can activate the sepsis clinical pathway at an early stage. The principles of recognise, resuscitate, refer and review should guide care."
-    },
-    {
-      "claim": "Clinicians should recognise the signs of clinically significant organ dysfunction and if sepsis is suspected escalate immediately and activate the rapid response system",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Recognise the signs of clinically significant organ dysfunction and, if sepsis is suspected, escalate immediately and activate the rapid response system."
-    },
-    {
-      "claim": "In smaller hospitals that do not always have doctors on site, relevant local procedures related to care of the deteriorating patient should be followed and on-call clinicians will need to be called into the hospital",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In smaller hospitals that do not always have doctors on site, follow relevant local procedures related to care of the deteriorating patient for the healthcare setting. On-call clinicians will need to be called into the hospital."
-    },
-    {
-      "claim": "Sepsis clinical pathways should include criteria to support clinical decision-making to enable recognition of sepsis, including a clinical decision support tool with parameter thresholds for vital signs and blood lactate measurement, and guidance on recognising clinically significant organ dysfunction that warrants starting time-sensitive interventions such as fluid resuscitation, administration of appropriate antimicrobials and timely surgical source control when required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Criteria to support clinical decision-making to enable recognition of sepsis, including: a clinical decision support tool with parameter thresholds for vital signs and blood lactate measurement; guidance on recognising clinically significant organ dysfunction that warrants starting time-sensitive interventions, such as fluid resuscitation, administration of appropriate antimicrobials, and timely surgical source control when required"
-    },
-    {
-      "claim": "Sepsis clinical pathways should include triggers and timeframes for escalation of care, including methods to communicate with a clinician experienced in recognising and managing sepsis, processes to enable escalation 24 hours a day 7 days a week, escalation to higher levels of care, the ability for emergency transfer of patients to or from other health services, and a way for appropriate investigations and treatments to start before transfer",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Triggers and timeframes for escalation of care. This includes: methods to communicate with a clinician who has experience in recognising and managing sepsis; processes to enable escalation to an appropriate clinician with experience in sepsis 24 hours a day, 7 days a week; escalation to higher levels of care; the ability for emergency transfer of patients to or from other health services; a way for the appropriate investigations and treatments to start before transfer"
-    },
-    {
-      "claim": "Sepsis clinical pathways should include guidance on the availability and timing of appropriate interventions including fluids and other time-critical treatments, blood cultures, antimicrobial therapy and source control for the suspected infection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Guidance on the availability of appropriate interventions and timing of their use, including diagnostics, medicines and treatments. Guidance on the appropriate use of: fluids and other time-critical treatment(s); blood culture(s); antimicrobial therapy; source control for the suspected infection"
-    },
-    {
-      "claim": "Sepsis clinical pathways should include timeframes for clinical review including appropriate monitoring and review of investigation results, the patient's response to treatment and the antimicrobial plan",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Timeframes for clinical review, which includes appropriate monitoring and review of investigation results, the patient's response to treatment and the antimicrobial plan"
-    },
-    {
-      "claim": "Sepsis clinical pathways should include ways to consider the patient's age, cultural needs, goals of care and advance care plans in decision-making, and consideration of alternate diagnoses",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ways to consider the patient's age, cultural needs, goals of care and advanced care plans in decision-making; Consideration of alternate diagnoses."
-    },
-    {
-      "claim": "Clinical pathways are designed to assist clinical judgement using the best available clinical evidence",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Clinical pathways are designed to assist clinical judgement using the best available clinical evidence."
-    },
-    {
-      "claim": "Quality statement 4 states that sepsis is a complex multisystem disease requiring a multidisciplinary approach to treatment and that a patient with sepsis has their treatment in hospital coordinated by a clinician with expertise in managing patients with sepsis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Sepsis is a complex, multisystem disease requiring a multidisciplinary approach to treatment. A patient with sepsis has their treatment in hospital coordinated by a clinician with expertise in managing patients with sepsis."
-    },
-    {
-      "claim": "A clinician experienced in sepsis management should coordinate care with the patient and family at the centre of the multidisciplinary team, ensuring the patient, carer or family participate in decision-making whenever possible and that the patient voice is being respected, heard and responded to, and attending regular multidisciplinary meetings",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A clinician who is experienced in sepsis management should coordinate care, with the patient and family at the centre of the multidisciplinary team. ... The coordinating clinician should ensure that the patient, carer or family participate in decision-making whenever possible, and that the patient voice is being respected, heard and responded to. The coordinating clinician should attend regular multidisciplinary meetings"
-    },
-    {
-      "claim": "Quality statement 5 states that a patient, their family or carer is informed about sepsis from the time that it is suspected in a way that they can understand, that information includes the expected treatment and potential health effects of sepsis, and that information is provided verbally and in writing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient, their family or carer is informed about sepsis from the time that it is suspected in a way that they can understand. Information includes the expected treatment and potential health effects of sepsis. Information is provided verbally and in writing."
-    },
-    {
-      "claim": "Patients should be supported from when sepsis is first suspected by providing verbal information early, with written information provided while in hospital appropriate to the stage of care",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Support patients from when sepsis is first suspected, by providing verbal information early. Written information should be provided while in hospital, appropriate to the stage of care."
-    },
-    {
-      "claim": "Information provided should cover the suspected or probable sepsis diagnosis, treatment options and the benefits and risks associated with them including the rationale behind the treatment, the signs of deterioration and what patients should do if they deteriorate, systems to escalate care when the patient family or carer is concerned, and what they can do to best support their health after discharge",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Provide information about: their suspected or probable sepsis diagnosis; treatment options and the benefits and risks associated with them, including the rationale behind the treatment; the signs of deterioration and what patients should do if they deteriorate; systems to escalate care when the patient, their family or carer is concerned; what they can do to best support their health after discharge"
-    },
-    {
-      "claim": "Quality statement 6 states that a patient with known or suspected sepsis has a documented clinical handover at transitions of care including the provisional sepsis diagnosis, comorbidities and the management plan for medicines and medical conditions, and that this information is provided to the patient, their family and carer as appropriate",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with known or suspected sepsis has a documented clinical handover at transitions of care. This includes the provisional sepsis diagnosis, comorbidities, and the management plan for medicines and medical conditions. This information is provided to the patient, their family and carer as appropriate."
-    },
-    {
-      "claim": "Where the transition involves transfer to a higher level of care such as from primary care or a smaller hospital to a larger hospital, the initial plan may be limited to relevant history, examinations, initial management and reason for transfer, and the documentation should identify the patient's carer where relevant",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Where the transition involves transfer to a higher level of care for further assessment and treatment of suspected sepsis (such as from primary care or a smaller hospital to a larger hospital), the initial plan may be limited to relevant history, examinations, initial management and reason for transfer. The documentation should identify the patient's carer where relevant."
-    },
-    {
-      "claim": "Quality statement 7 states that a patient who has survived sepsis receives individualised follow-up care to optimise functional outcomes, minimise recurrence, reduce rehospitalisation and manage the ongoing health effects of sepsis, requiring structured holistic and coordinated post-discharge care and education involving the patient, their family, carer, general practitioner and other clinicians, and that support and information are provided to the family or carer of a patient who has died from sepsis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient who has survived sepsis receives individualised follow-up care to optimise functional outcomes, minimise recurrence, reduce rehospitalisation and manage the ongoing health effects of sepsis. This requires structured, holistic and coordinated post-discharge care and education that involves the patient, their family, carer, general practitioner and other clinicians. Support and information are provided to the family or carer of a patient who has died from sepsis."
-    },
-    {
-      "claim": "After sepsis treatment in hospital clinicians should consider the patient's ongoing care needs and how these will be managed, communicate the ongoing care plan to the patient's general practitioner on discharge, and ensure the patient is aware of any follow-up appointments required with these communicated to the GP as part of discharge documentation",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "After sepsis treatment in hospital, consider the patient's ongoing care needs and how these will be managed. When discharging a patient from hospital, communicate the ongoing care plan to the patient's general practitioner (GP). Ensure that the patient is aware of any follow-up appointments required and communicate these to the patient's GP as part of their discharge documentation."
-    }
-  ],
-  "summary": {
-    "total": 41,
-    "pass": 41,
-    "fail": 0
+ "guideline": "guidelines/sepsis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-21",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Sepsis Clinical Care Standard, including the seven quality statements, Box 1 and the for-clinicians sections. The standard names no antimicrobial agent, dose or fluid volume; none is asserted here. Lactate thresholds sit in local decision support tools and are not stated. Some retrieved text contains extraction artefacts where double-n collapsed ('saturatio' for saturation, 'ski' for skin, 'concentratio' for concentration, 'informatio' for information); source_text is preserved verbatim and the guideline renders the evident word. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "Quality statement 1 is titled Could it be sepsis? and states that a diagnosis of sepsis is considered in any patient with an acute illness or clinical deterioration that may be due to infection, with a clinical support tool that includes assessment of vital signs and lactate used to help recognise sepsis early and escalate care when required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Quality statement 1 – Could it be sepsis? A diagnosis of sepsis is considered in any patient with an acute illness or clinical deterioration that may be due to infection. A clinical support tool that includes assessment of vital signs and lactate is used to help recognise sepsis early and escalate care when required."
+  },
+  {
+   "claim": "Recognising a patient with sepsis can be challenging and sepsis should be considered in all patients with acute illness or deterioration who may have an infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recognising a patient with sepsis can be challenging. Consider sepsis in all patients with acute illness or deterioration who may have an infection."
+  },
+  {
+   "claim": "The presentation of sepsis in neonates and children may differ to adults, and in children hypotension is not necessary to diagnose septic shock",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Importantly, the presentation of sepsis in neonates and children may differ to adults. In children, hypotension is not necessary to diagnose septic shock."
+  },
+  {
+   "claim": "In older people commonly recognised sepsis signs and symptoms are often absent, older people are more likely to have relative immunosuppression, the presentation is less likely to include a fever, raised white cell count or raised C-reactive protein, and hypothermia, delirium and falls in frail people are more likely",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In older people, commonly recognised sepsis signs and symptoms are often absent. Older people are more likely to have relative immunosuppression. The presentation is less likely to include a fever, raised white cell count or raised C-reactive protein. In older people, hypothermia, delirium and falls (in frail people) are more likely."
+  },
+  {
+   "claim": "Clinical support tools are available to help detect sepsis early and enable further assessment and escalation, although these tools do not replace clinical judgement",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical support tools are available to help detect sepsis early and enable further assessment and escalation, although these tools do not replace clinical judgement."
+  },
+  {
+   "claim": "Tools will vary according to the patient age, cultural needs and healthcare setting and no single tool will apply to everyone",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tools will vary according to the patient age, cultural needs and healthcare setting - no single tool will apply to everyone."
+  },
+  {
+   "claim": "Where a decision support tool is not available, for example for neonatal and maternity patients, early assessment and escalation to a clinician with expertise in recognising and managing sepsis are the priority",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For situations where a decision support tool is not available (for example, for neonatal and maternity patients), early assessment and escalation to a clinician with expertise in recognising and managing sepsis are the priority."
+  },
+  {
+   "claim": "To determine whether a patient has signs or symptoms of organ dysfunction a full set of observations should be taken including respiratory rate, oxygen saturation, heart rate, systolic blood pressure, temperature, altered mentation, behaviour change or delirium, poor peripheral perfusion, cool peripheries, delayed capillary refill time or mottled skin, blood lactate concentration, and in pregnant women the vital signs of the fetus measured using cardiotocography",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "take a full set of observations that includes vital signs and other relevant observations appropriate to the patient, including: - respiratory rate - oxygen saturation - heart rate - systolic blood pressure - temperature - altered mentation, behaviour change or delirium - poor peripheral perfusion, cool peripheries, delayed capillary refill time or mottled skin - blood lactate concentration - in pregnant women, the vital signs of the fetus measured using cardiotocography (CTG"
+  },
+  {
+   "claim": "Where this will not delay urgent care venous blood lactate levels should be tested, and capillary lactates may be useful in children",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where this will not delay urgent care, test venous blood lactate levels. Capillary lactates may be useful in children."
+  },
+  {
+   "claim": "An increased lactate level may indicate a protective or a maladaptive response to shock and can play an important role in screening, blood lactate should be included routinely in decision-making for an acutely deteriorating patient or suspected sepsis, and assessment of lactate levels is not sufficient for the purpose of diagnosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An increased lactate level may indicate a protective or a maladaptive response to shock and can play an important role in screening. Include blood lactate routinely in decision-making for an acutely deteriorating patient or for suspected sepsis. Although assessment of lactate levels is not sufficient for the purpose of diagnosis, it is a relatively simple"
+  },
+  {
+   "claim": "Indicator 1a is the proportion of patients with suspected sepsis who had blood lactate levels taken as part of screening for sepsis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 1a Proportion of patients with suspected sepsis who had blood lactate levels taken as a part of screening for sepsis"
+  },
+  {
+   "claim": "Quality statement 3 states that a patient with suspected sepsis has blood cultures taken immediately ensuring that this does not delay the administration of appropriate antimicrobial therapy, that when signs of infection-related organ dysfunction are present appropriate antimicrobials are started within 60 minutes, and that antimicrobial therapy is managed in line with the Antimicrobial Stewardship Clinical Care Standard including a review within 48 hours from the first dose",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with suspected sepsis has blood cultures taken immediately, ensuring that this does not delay the administration of appropriate antimicrobial therapy. When signs of infection-related organ dysfunction are present, appropriate antimicrobials are started within 60 minutes. Antimicrobial therapy is managed in line with the Antimicrobial Stewardship Clinical Care Standard, including a review within 48 hours from the first dose."
+  },
+  {
+   "claim": "Blood cultures should be obtained before administering antimicrobials where this does not delay urgent treatment, and for adults this includes two sets of blood cultures and for children one set of blood cultures, with other relevant microbiological cultures also collected ideally before administering antimicrobials",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain blood cultures for microbiological testing for patients with suspected sepsis before administering antimicrobials, where this does not delay urgent treatment. For adults, this includes two sets of blood cultures, and for children one set of blood cultures. Other relevant microbiological cultures should also be collected, ideally before administering antimicrobials."
+  },
+  {
+   "claim": "In the community setting if obtaining blood cultures is outside the scope of clinical practice the patient should be referred to hospital immediately",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the community setting, if this is outside the scope of clinical practice, refer the patient to hospital immediately."
+  },
+  {
+   "claim": "Clinicians should not wait for blood test results if someone is clearly unwell, urgent antimicrobial therapy should start as soon as possible, and antimicrobials should not be withheld while awaiting the results of microbiological or other tests",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not wait for blood test results if someone is clearly unwell. Urgent antimicrobial therapy should start as soon as possible. Do not withhold antimicrobials while awaiting the results of microbiological (for example, blood, urine, pus, sputum microscopy or culture) or other tests."
+  },
+  {
+   "claim": "Antimicrobials should be started within 60 minutes of recognising infection-related organ dysfunction and as soon as possible if shock is present",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Start antimicrobials within 60 minutes of recognising infection-related organ dysfunction, and as soon as possible if shock is present."
+  },
+  {
+   "claim": "In an adult patient without shock where there is uncertainty about the likelihood of an infectious cause, alternative diagnoses should be rapidly investigated, and if concern for infection persists after appropriate evaluation antimicrobial therapy should start as soon as possible and no later than three hours from initial clinical review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In an adult patient without shock, where there is uncertainty about the likelihood of an infectious cause, rapidly investigate alternative diagnoses. ... If concern for infection persists after appropriate evaluation, start antimicrobial therapy as soon as possible, no later than three hours from initial clinical review"
+  },
+  {
+   "claim": "Care should be escalated to a clinician with experience in recognising and managing sepsis if required, and all patients who may have sepsis should be closely monitored with care escalated in the event of deterioration such as evolving or worsening signs of organ dysfunction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Escalate care to a clinician with experience in recognising and managing sepsis, if required. … Closely monitor all patients who may have sepsis and ensure their care is escalated in the event of deterioration, such as evolving or worsening signs of organ dysfunction"
+  },
+  {
+   "claim": "Consultation with an infectious diseases physician or clinical microbiologist should be arranged if there is uncertainty about the appropriate antimicrobial therapy or local sepsis guidelines, ideally when initiating therapy or else on review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Arrange consultation with an infectious diseases physician or clinical microbiologist if there is uncertainty about the appropriate antimicrobial therapy or local sepsis guidelines, ideally when initiating therapy, or else on review."
+  },
+  {
+   "claim": "As patients with sepsis often require higher doses of antimicrobials, the patient's other medicines should be reviewed by an experienced clinician, preferably a pharmacist, to avoid interactions and enable the safe and appropriate administration of antimicrobial therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "As patients with sepsis often require higher doses of antimicrobials, the patient's other medicines should be reviewed by an experienced clinician, preferably a pharmacist, to avoid interactions and enable the safe and appropriate administration of antimicrobial therapy."
+  },
+  {
+   "claim": "When prescribing antimicrobials for Aboriginal or Torres Strait Islander peoples the higher prevalence of multidrug-resistant organisms should be considered, referring to the Central Australian Rural Practitioners Association guidelines or other guidelines based on local resistance data where appropriate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When prescribing antimicrobials for Aboriginal or Torres Strait Islander peoples, consider the higher prevalence of multidrug-resistant organisms. Refer to the Central Australian Rural Practitioners Association guidelines, or other guidelines based on local resistance data, where appropriate."
+  },
+  {
+   "claim": "Quality statement 2 states that sepsis is a time-critical medical emergency, that assessment and treatment of a patient with suspected sepsis are started urgently according to a locally approved clinical pathway with their response to treatment monitored and reviewed, and that the patient is reviewed by a clinician experienced in recognising and managing sepsis and escalated to a higher level of care when required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sepsis is a time-critical medical emergency. Assessment and treatment of a patient with suspected sepsis are started urgently according to a locally approved clinical pathway, and their response to treatment is monitored and reviewed. The patient is reviewed by a clinician experienced in recognising and managing sepsis, and is escalated to a higher level of care when required."
+  },
+  {
+   "claim": "When sepsis is part of a differential diagnosis expediting assessment and treatment is essential, and a locally approved clinical pathway appropriate to the patient's age and clinical setting should be used to guide assessment, diagnosis and appropriate treatments within the recommended time frame",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When sepsis is part of a differential diagnosis, expediting assessment and treatment is essential. Use a locally approved clinical pathway, appropriate to the patient's age and clinical setting, to guide assessment, diagnosis and appropriate treatments within the recommended time frame."
+  },
+  {
+   "claim": "Any clinician can activate the sepsis clinical pathway at an early stage and the principles of recognise, resuscitate, refer and review should guide care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any clinician can activate the sepsis clinical pathway at an early stage. The principles of recognise, resuscitate, refer and review should guide care."
+  },
+  {
+   "claim": "Clinicians should recognise the signs of clinically significant organ dysfunction and if sepsis is suspected escalate immediately and activate the rapid response system",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recognise the signs of clinically significant organ dysfunction and, if sepsis is suspected, escalate immediately and activate the rapid response system."
+  },
+  {
+   "claim": "In smaller hospitals that do not always have doctors on site, relevant local procedures related to care of the deteriorating patient should be followed and on-call clinicians will need to be called into the hospital",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In smaller hospitals that do not always have doctors on site, follow relevant local procedures related to care of the deteriorating patient for the healthcare setting. On-call clinicians will need to be called into the hospital."
+  },
+  {
+   "claim": "Sepsis clinical pathways should include criteria to support clinical decision-making to enable recognition of sepsis, including a clinical decision support tool with parameter thresholds for vital signs and blood lactate measurement, and guidance on recognising clinically significant organ dysfunction that warrants starting time-sensitive interventions such as fluid resuscitation, administration of appropriate antimicrobials and timely surgical source control when required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Criteria to support clinical decision-making to enable recognition of sepsis, including: - a clinical decision support tool with parameter thresholds for vital signs and blood lactate measurement - guidance on recognising clinically significant organ dysfunction that warrants starting time-sensitive interventions, such as fluid resuscitation, administration of appropriate antimicrobials, and timely surgical source control when required"
+  },
+  {
+   "claim": "Sepsis clinical pathways should include triggers and timeframes for escalation of care, including methods to communicate with a clinician experienced in recognising and managing sepsis, processes to enable escalation 24 hours a day 7 days a week, escalation to higher levels of care, the ability for emergency transfer of patients to or from other health services, and a way for appropriate investigations and treatments to start before transfer",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Triggers and timeframes for escalation of care. This includes: - methods to communicate with a clinician who has experience in recognising and managing sepsis - processes to enable escalation to an appropriate clinician with experience in sepsis 24 hours a day, 7 days a week - escalation to higher levels of care - the ability for emergency transfer of patients to or from other health services - a way for the appropriate investigations and treatments to start before transfer"
+  },
+  {
+   "claim": "Sepsis clinical pathways should include guidance on the availability and timing of appropriate interventions including fluids and other time-critical treatments, blood cultures, antimicrobial therapy and source control for the suspected infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Guidance on the availability of appropriate interventions and timing of their use, including diagnostics, medicines and treatments. Guidance on the appropriate use of: - fluids and other time-critical treatment(s) - blood culture(s) - antimicrobial therapy - source control for the suspected infection"
+  },
+  {
+   "claim": "Sepsis clinical pathways should include timeframes for clinical review including appropriate monitoring and review of investigation results, the patient's response to treatment and the antimicrobial plan",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Timeframes for clinical review, which includes appropriate monitoring and review of investigation results, the patient's response to treatment and the antimicrobial plan"
+  },
+  {
+   "claim": "Sepsis clinical pathways should include ways to consider the patient's age, cultural needs, goals of care and advance care plans in decision-making, and consideration of alternate diagnoses",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ways to consider the patient's age, cultural needs, goals of care and advanced care plans in decision-making - Consideration of alternate diagnoses"
+  },
+  {
+   "claim": "Clinical pathways are designed to assist clinical judgement using the best available clinical evidence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical pathways are designed to assist clinical judgement using the best available clinical evidence."
+  },
+  {
+   "claim": "Quality statement 4 states that sepsis is a complex multisystem disease requiring a multidisciplinary approach to treatment and that a patient with sepsis has their treatment in hospital coordinated by a clinician with expertise in managing patients with sepsis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sepsis is a complex, multisystem disease requiring a multidisciplinary approach to treatment. A patient with sepsis has their treatment in hospital coordinated by a clinician with expertise in managing patients with sepsis."
+  },
+  {
+   "claim": "A clinician experienced in sepsis management should coordinate care with the patient and family at the centre of the multidisciplinary team, ensuring the patient, carer or family participate in decision-making whenever possible and that the patient voice is being respected, heard and responded to, and attending regular multidisciplinary meetings",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A clinician who is experienced in sepsis management should coordinate care, with the patient and family at the centre of the multidisciplinary team. ... The coordinating clinician should ensure that the patient, carer or family participate in decision-making whenever possible, and that the patient voice is being respected, heard and responded to. The coordinating clinician should attend regular multidisciplinary meetings"
+  },
+  {
+   "claim": "Quality statement 5 states that a patient, their family or carer is informed about sepsis from the time that it is suspected in a way that they can understand, that information includes the expected treatment and potential health effects of sepsis, and that information is provided verbally and in writing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient, their family or carer is informed about sepsis from the time that it is suspected in a way that they can understand. Information includes the expected treatment and potential health effects of sepsis. Information is provided verbally and in writing."
+  },
+  {
+   "claim": "Patients should be supported from when sepsis is first suspected by providing verbal information early, with written information provided while in hospital appropriate to the stage of care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Support patients from when sepsis is first suspected, by providing verbal information early. Written information should be provided while in hospital, appropriate to the stage of care."
+  },
+  {
+   "claim": "Information provided should cover the suspected or probable sepsis diagnosis, treatment options and the benefits and risks associated with them including the rationale behind the treatment, the signs of deterioration and what patients should do if they deteriorate, systems to escalate care when the patient family or carer is concerned, and what they can do to best support their health after discharge",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Provide information about: - their suspected or probable sepsis diagnosis - treatment options and the benefits and risks associated with them, including the rationale behind the treatment - the signs of deterioration and what patients should do if they deteriorate - systems to escalate care when the patient, their family or carer is concerned - what they can do to best support their health after discharge"
+  },
+  {
+   "claim": "Quality statement 6 states that a patient with known or suspected sepsis has a documented clinical handover at transitions of care including the provisional sepsis diagnosis, comorbidities and the management plan for medicines and medical conditions, and that this information is provided to the patient, their family and carer as appropriate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with known or suspected sepsis has a documented clinical handover at transitions of care. This includes the provisional sepsis diagnosis, comorbidities, and the management plan for medicines and medical conditions. This information is provided to the patient, their family and carer as appropriate."
+  },
+  {
+   "claim": "Where the transition involves transfer to a higher level of care such as from primary care or a smaller hospital to a larger hospital, the initial plan may be limited to relevant history, examinations, initial management and reason for transfer, and the documentation should identify the patient's carer where relevant",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where the transition involves transfer to a higher level of care for further assessment and treatment of suspected sepsis (such as from primary care or a smaller hospital to a larger hospital), the initial plan may be limited to relevant history, examinations, initial management and reason for transfer. The documentation should identify the patient's carer where relevant."
+  },
+  {
+   "claim": "Quality statement 7 states that a patient who has survived sepsis receives individualised follow-up care to optimise functional outcomes, minimise recurrence, reduce rehospitalisation and manage the ongoing health effects of sepsis, requiring structured holistic and coordinated post-discharge care and education involving the patient, their family, carer, general practitioner and other clinicians, and that support and information are provided to the family or carer of a patient who has died from sepsis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient who has survived sepsis receives individualised follow-up care to optimise functional outcomes, minimise recurrence, reduce rehospitalisation and manage the ongoing health effects of sepsis. This requires structured, holistic and coordinated post-discharge care and education that involves the patient, their family, carer, general practitioner and other clinicians. Support and information are provided to the family or carer of a patient who has died from sepsis."
+  },
+  {
+   "claim": "After sepsis treatment in hospital clinicians should consider the patient's ongoing care needs and how these will be managed, communicate the ongoing care plan to the patient's general practitioner on discharge, and ensure the patient is aware of any follow-up appointments required with these communicated to the GP as part of discharge documentation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After sepsis treatment in hospital, consider the patient's ongoing care needs and how these will be managed. When discharging a patient from hospital, communicate the ongoing care plan to the patient's general practitioner (GP). Ensure that the patient is aware of any follow-up appointments required and communicate these to the patient's GP as part of their discharge documentation."
   }
+ ],
+ "summary": {
+  "total": 41,
+  "pass": 41,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/sepsis"
+ ],
+ "retrieved_utc": "2026-09-22"
 }

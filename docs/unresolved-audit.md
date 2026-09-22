@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 70 guidelines · 2,998 claims · 465 `Unresolved` rows**
+**Generated 2026-09-22 · 70 guidelines · 2,998 claims · 465 `Unresolved` rows · 7 findings**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -254,7 +254,49 @@ the situation where knowing *which page, when* matters.
 
 **Consequence**: `verifier_class: single_verifier_uncalibrated` was honest about *who* verified, and silent
 about *what against*. `scripts/verify.py --source` can machine-check a guideline **only if someone still has
-the retrieved text**, and for 48 of 61 nobody does.
+the retrieved text**, and for 48 of 61 nobody did.
+
+### Progress, 2026-09-22 — 18 closed, 37 outstanding
+
+Eighteen guidelines were re-retrieved from their source page and every claim attributed to that source was
+re-checked against the fresh copy: **832 fragments, all verbatim, all whole-word**. `retrieved_from` now
+records the page actually fetched. The rest still cannot be machine-rechecked.
+
+⚠️ **One provenance error was made and corrected in the same pass.** `psychotropic-medicines-cognitive-disability.md`
+was given the ACSQHC standard's URL, but **all 50 of its claims cite the Australian Prescriber article**, not
+the standard. A `retrieved_from` that does not serve the claims is worse than none, because it invites a
+re-check that will fail for the wrong reason. Corrected to the Australian Prescriber URL and re-verified
+against it.
+
+## ⚠️ Finding 7 — the stored quotes were not verbatim, and the checker could not see it
+
+Found 2026-09-22 while re-retrieving sources for Finding 5. **Thirteen guidelines held `source_text` that was
+not a verbatim quote of the source document.** Three separate mechanisms, all invisible to
+`scripts/verify.py` as it then stood:
+
+1. ⚠️ **Lost letters.** The cleaning step applied to an early scrape consumed a letter from words containing
+   a doubled *n*: **"planned" stored as "pla ed"**, "plan" as "Pla", "concentration" as "concentratio",
+   "connection" as "co ection". **38 spots.**
+2. **Markdown artifacts carried into the quote**: `**` emphasis markers, table pipes, and bullet joins glued
+   to the preceding word as **"swellingn- leakage"**. **44 spots.**
+3. ⚠️ **Truncated fragments that still passed.** A fragment ending mid-word is *still a substring* of the
+   page, so the verbatim check passed it. **"the clinical concer"** matched "…the clinical concern" and the
+   lost letter was hidden by the very check meant to catch it.
+
+**None of this reached the guideline prose** — the 70 `.md` files contained **zero** instances. The defect was
+confined to the evidence records, which is to say: to precisely the thing a reader would check.
+
+**What was done.** Quotes were not reconstructed from memory. Each damaged fragment was located in a freshly
+retrieved copy of the same page by alignment and replaced with **what the page actually says**
+(`scripts/repair_quotes.py`, which reports anything it cannot match confidently instead of guessing).
+`scripts/verify.py` gained two checks it was missing: it now splits on the **` ... ` elision** the earliest
+files used (those fragments had never been verbatim-checked at all, because the two passages either side of
+an elision were being compared as one continuous string), and it now **rejects a fragment that begins or ends
+mid-word**.
+
+**Outstanding:** `fitness-to-drive-seizures-and-epilepsy.md` retains **7 glued bullet separators in one
+claim**. Austroads returns **403 to a direct fetch** and the browser pane was not available this session, so
+the page could not be re-retrieved. **Left as found rather than repaired from memory**, and flagged here.
 
 ✅ **`retrieved_from` and `retrieved_utc` are now fields** in the verification JSON, populated for the 13
 guidelines retrieved this session. **`verify.py` prints a note for every file lacking them.**

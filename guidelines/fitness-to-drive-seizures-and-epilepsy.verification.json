@@ -1,454 +1,454 @@
 {
-  "guideline": "guidelines/fitness-to-drive-seizures-and-epilepsy.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-22",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "retrieved_from": [
-    "https://austroads.gov.au/publications/assessing-fitness-to-drive/ap-g56/neurological-conditions/seizures-and-epilepsy",
-    "https://austroads.gov.au/__data/assets/image/0035/468179/AFTD-Figure_13.jpg",
-    "https://austroads.gov.au/__data/assets/image/0027/468180/AFTD-Figure_14.jpg"
-  ],
-  "retrieved_utc": "2026-09-22",
-  "method": "Each claim checked against the retrieved text of Austroads Assessing Fitness to Drive (AP-G56) Part B section 6.2, Seizures and epilepsy, including 6.2.1 relevance to the driving task, 6.2.2 general assessment and management guidelines, 6.2.3 medical standards for licensing, all three standards tables (default, possible reductions, other factors) and the closing notes on licensing responsibility, conditional licences and reporting. Figures 13 and 14 are decision-tree images; their content is not asserted beyond the surrounding text. Part A sections on confidentiality and reporting, section 1.2.4 blackouts of undetermined mechanism, section 6.3 head injury, section 7.2.9 psychogenic nonepileptic seizures and Appendix 3 on reporting legislation are cross-referenced by this chapter and were not retrieved; they are recorded as input_unavailable. Retrieved text contains extraction artefacts where line breaks collapsed into 'nn' and one typographical error in the source table ('24-period' for 24-hour period); source_text is preserved verbatim. ADDENDUM 2026-09-22: Figures 13 and 14 were retrieved as images via the browser (direct download returns 403) and read visually. Nine further claims carry verdict pass_image_transcription and source S2. Unlike the RCH paediatric flowcharts transcribed elsewhere in this compendium, these two figures contained NOTHING absent from the retrieved text: they are summaries of section 6.2.3, exactly as the Standard describes them. The only thing Figure 13 states more directly than the tables is that the reduction list has eight entries for private drivers and four for commercial drivers.",
-  "claims": [
-    {
-      "claim": "Assessing Fitness to Drive states that the responsibility for issuing, renewing, suspending or cancelling a person's driver licence including a conditional licence lies ultimately with the driver licensing authority, and that licensing decisions are based on a full consideration of relevant factors relating to health and driving performance",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The responsibility for issuing, renewing, suspending or cancelling a person's driver licence (including a conditional licence) lies ultimately with the driver licensing authority. Licensing decisions are based on a full consideration of relevant factors relating to health and driving performance."
-    },
-    {
-      "claim": "Patients should be made aware of the effects of their condition on driving and should be advised of their legal obligation to notify the driver licensing authority where driving is likely to be affected, and the health professional may themselves advise the driver licensing authority as the situation requires",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patients should be made aware of the effects of their condition on driving and should be advised of their legal obligation to notify the driver licensing authority where driving is likely to be affected. The health professional may themselves advise the driver licensing authority as the situation requires"
-    },
-    {
-      "claim": "From 22 June 2022 there have been changes to the fitness to drive criteria for seizures and epilepsy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "From 22 June 2022 there have been changes to the fitness to drive criteria for seizures and epilepsy."
-    },
-    {
-      "claim": "Assessing Fitness to Drive Part B contains chapters on blackouts, cardiovascular conditions, diabetes mellitus, hearing loss and deafness, musculoskeletal conditions, neurological conditions including dementia and seizures and epilepsy, psychiatric conditions, sleep disorders, substance misuse, and vision and eye disorders",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "1. BlackoutsOpen/Closen \u2026 2. Cardiovascular conditions \u2026 3. Diabetes mellitus \u2026 4. Hearing loss and deafness \u2026 5. Musculoskeletal conditions \u2026 6. Neurological conditionsOpen/Closen  - 6.1. Dementiann  - 6.2. Seizures and epilepsy \u2026 7. Psychiatric conditions \u2026 8. Sleep disorders \u2026 9. Substance misuse \u2026 10. Vision and eye disorders"
-    },
-    {
-      "claim": "Epilepsy refers to the tendency to experience recurrent seizures and not all people who experience a seizure have epilepsy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Epilepsy refers to the tendency to experience recurrent seizures. Not all people who experience a seizure have epilepsy."
-    },
-    {
-      "claim": "Epilepsy is a common disorder with a cumulative incidence of 2 per cent of the population, with 0.5 per cent affected and taking medication at any one time",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Epilepsy is a common disorder with a cumulative incidence of 2 per cent of the population, with 0.5 per cent affected and taking medication at any one time."
-    },
-    {
-      "claim": "Most cases of epilepsy respond well to treatment with a terminal remission rate of 80 per cent or more, the majority suffer few seizures in a lifetime, and about half will have no further seizures in the first one or two years after starting treatment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Most cases respond well to treatment, with a terminal remission rate of 80 per cent or more. The majority suffer few seizures in a lifetime, and about half will have no further seizures in the first one or two years after starting treatment."
-    },
-    {
-      "claim": "Most studies have reported an elevated crash risk among drivers with epilepsy but the size of the risk varies considerably across the studies, and these studies have found that people with epilepsy are twice as likely to be involved in a motor vehicle crash compared with the general driving population",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Most studies have reported an elevated crash risk among drivers with epilepsy, but the size of the risk varies considerably across the studies. These studies have found that people with epilepsy are twice as likely to be involved in a motor vehicle crash compared with the general driving population."
-    },
-    {
-      "claim": "More recent studies have found that drivers who do not take antiseizure medication as prescribed are at an increased risk for experiencing a crash",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "More recent studies have found that drivers who do not take antiseizure medication as prescribed are at an increased risk for experiencing a crash."
-    },
-    {
-      "claim": "Under the default standard a person cannot hold an unconditional licence if the person has experienced a seizure, and for private drivers a conditional licence may be considered subject to at least annual review taking into account information provided by the treating doctor as to whether there have been no seizures for at least 12 months and the person follows medical advice including adherence to medication if prescribed or recommended",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A person cannot hold an **unconditional licence**:<br>- if the person has experienced a seizure.<br>A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review*** taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- there have been no seizures for at least 12 months**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed or recommended."
-    },
-    {
-      "claim": "Under the default standard for commercial drivers a conditional licence may be considered subject to at least annual review taking into account information provided by a specialist in epilepsy as to whether there have been no seizures for at least 10 years, an EEG conducted in the last 6 months has shown no epileptiform activity and no other EEG conducted in the last 12 months has shown epileptiform activity, and the person follows medical advice",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review*** taking into account information provided by a **specialist in epilepsy** as to whether the following criteria are met:<br>- there have been no seizures for at least **10 years****; **and**<br>- an EEG conducted in the last 6 months has shown no epileptiform activity and no other EEG conducted in the last 12 months has shown epileptiform activity***; **and**<br>- the person follows medical advice, including adherence to medication if prescribed or recommended."
-    },
-    {
-      "claim": "The EEG requirement for commercial drivers is only required for initial granting of the conditional licence and not for annual review",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "_This is only required for initial granting of the conditional licence and not for annual review._"
-    },
-    {
-      "claim": "Commercial vehicle driving exposes the driver and the public to a relatively greater risk because of the increased time spent at the wheel as well as the generally greater potential for injury from motor vehicle crashes due to the greater size or weight of commercial vehicles or large numbers of passengers carried, for this reason the acceptable risk of a seizure-related crash for commercial driving is much less and the requirements applied are much stricter, and in addition sleep deprivation is a common provoking factor in epilepsy and may be experienced in long-distance transport driving and amongst drivers doing shift work",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Commercial vehicle driving exposes the driver and the public to a relatively greater risk because of the increased time spent at the wheel, as well as the generally greater potential for injury from motor vehicle crashes due to the greater size or weight of commercial vehicles, or large numbers of passengers carried. For this reason, the acceptable risk of a seizure-related crash for commercial driving is much less, and the requirements applied are much stricter; in addition, sleep deprivation is a common provoking factor in epilepsy and may be experienced in long-distance transport driving and amongst drivers doing shift work."
-    },
-    {
-      "claim": "With regard to licensing the treating doctor or general practitioner may liaise with the driver licensing authority about whether the criteria are met for driving a private vehicle, but only a specialist may do so for a commercial vehicle driver",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "With regard to licensing, the treating doctor or general practitioner may liaise with the driver licensing authority about whether the criteria are met for driving a private vehicle, but only a specialist may do so for a commercial vehicle driver."
-    },
-    {
-      "claim": "If a driver who is taking antiseizure medication has experienced an extended seizure-free period of more than 10 years for private drivers and more than 20 years for commercial drivers, the driver licensing authority may consider reduced review requirements of at least once every three years based on advice from the treating doctor or specialist",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If a driver who is taking antiseizure medication has experienced an extended seizure-free period (more than 10 years for private drivers, and more than 20 years for commercial drivers) the driver licensing authority may consider reduced review requirements (at least once every three years) based on advice from the treating doctor or specialist."
-    },
-    {
-      "claim": "The hierarchy of standards comprises a default standard applicable to all cases of seizure unless reductions are allowed, and reductions for specific types of epilepsy or specific circumstances including an allowance for exceptional circumstances upon the advice of a specialist in epilepsy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "This hierarchy comprises:nn- a default standard, applicable to all cases of seizure, unless reductions are allowed (refer below and to the standards table)n- reductions for specific types of epilepsy or specific circumstances, including an allowance for exceptional circumstances upon the advice of a specialist in epilepsy"
-    },
-    {
-      "claim": "The situations in which a variation from the default standard may be considered are seizures in childhood, first seizure, epilepsy treated for the first time, acute symptomatic seizures, safe seizures, seizures only in sleep, seizures in a person previously well controlled, and exceptional circumstances",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "seizures in childhoodn- first seizuren- epilepsy treated for the first timen- acute symptomatic seizuresn- 'safe' seizuresn- seizures only in sleepn- seizures in a person previously well controlledn- exceptional circumstances."
-    },
-    {
-      "claim": "In most cases exceptions to the default standard will be considered only for private vehicle drivers, and a reduction in restrictions for commercial vehicle drivers will generally only be granted after considering information provided by a specialist with expertise in epilepsy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In most cases, exceptions to the default standard will be considered only for private vehicle drivers. A reduction in restrictions for commercial vehicle drivers will generally only be granted after considering information provided by a specialist with expertise in epilepsy."
-    },
-    {
-      "claim": "A history of a benign seizure or epilepsy syndrome usually limited to childhood such as febrile seizures, benign focal epilepsy or childhood absence epilepsy does not disqualify the person from holding an unconditional licence as long as there have been no seizures after 11 years of age, and this applies to both private and commercial standards",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A history of a benign seizure or epilepsy syndrome usually limited to childhood does not disqualify the person from holding an **unconditional licence**, as long as there have been no seizures after 11 years of age. \u2026 **Commercial standards**<br>A history of a benign seizure or epilepsy syndrome usually limited to childhood does not disqualify the person from holding an **unconditional licence**, as long as there have been no seizures after 11 years of age."
-    },
-    {
-      "claim": "For a first seizure of any type the person must report their condition to the driver licensing authority, and two or more seizures in a 24-hour period are considered a single seizure",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "**First seizure (of any type)**<br>The person must report their condition to the driver licensing authority.<br>Note: Two or more seizures in a 24-period are considered a single seizure."
-    },
-    {
-      "claim": "For a first seizure a private conditional licence may be considered subject to at least annual review taking into account information from the treating doctor as to whether there have been no further seizures with or without medication for at least 6 months, and resumption of an unconditional licence may be considered if antiseizure medication has not been prescribed in the past 12 months and there have been no seizures for at least 2 years",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review**, taking into account information provided by the **treating doctor** as to whether the following criterion is met:<br>- there have been no further seizures (with or without medication) for at least 6 months.<br>Resumption of an **unconditional licence** may be considered by the driver licensing authority, taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- antiseizure medication has not been prescribed in the past 12 months; **and**<br>- there have been no seizures for at least **2 years**."
-    },
-    {
-      "claim": "For a first seizure a commercial conditional licence may be considered if there have been no seizures for at least 5 years with or without medication and the EEG criteria are met, and resumption of an unconditional commercial licence requires no antiseizure medication in the past 12 months, no seizures for at least 10 years, and the EEG criteria",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review**, taking into account information provided by a **specialist in epilepsy** as to whether the following criteria are met:<br>- there have been no seizures for at **least 5 years** (with or without medication); **and**<br>- an EEG conducted in the last **6 months** has shown no epileptiform activity and no other EEG conducted in the last **12 months** has shown epileptiform activity*.<br>Resumption of an **unconditional licence** may be considered by the driver licensing authority, taking into account information provided by a specialist in epilepsy as to whether the following criteria are met:<br>- antiseizure medication has not been prescribed in the past **12 months**; **and**<br>- there have been no seizures for at least **10 years**"
-    },
-    {
-      "claim": "The occurrence of a first seizure warrants medical specialist assessment where available, approximately half of all people experiencing their first seizure will never have another seizure while half will have further seizures meaning epilepsy, the risk of recurrence falls with time, and if a second seizure occurs except on the same day as the first the risk of recurrence is much higher",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The occurrence of a first seizure warrants medical specialist assessment, where available. Approximately half of all people experiencing their first seizure will never have another seizure, while half will have further seizures (i.e. epilepsy). The risk of recurrence falls with time. \u2026 If a second seizure occurs (except on the same day as the first), the risk of recurrence is much higher."
-    },
-    {
-      "claim": "For the purpose of these standards epilepsy treated for the first time means that treatment was started for the first time within the preceding 18 months",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For the purpose of these standards, epilepsy treated for the first time means that treatment was started for the first time within the preceding 18 months."
-    },
-    {
-      "claim": "For epilepsy treated for the first time a private conditional licence may be considered if the person has been treated for at least 6 months, there have been no seizures in the preceding 6 months, any seizures after the start of treatment happened only in the first 6 months and not in the last 6 months, and the person follows medical advice; for commercial drivers there is no reduction and the default standard applies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- the person has been treated for at least **6 months**; **and**<br>- there have been no seizures in the preceding **6 months**; **and**<br>- if any seizures occurred after the start of treatment, they happened only in the **first 6 months** after starting treatment and not in the last **6 months**; **and**<br>- the person follows medical advice, including adherence to medication. | **Commercial standards**<br>There is no reduction. The default standard applies."
-    },
-    {
-      "claim": "When treatment with an antiseizure drug is started in a previously untreated person enough time should pass to establish that the drug is effective before driving is recommenced, however effectiveness cannot be established until the person reaches an appropriate dose, and for example if a drug is being gradually introduced over three weeks and a seizure occurs in the second week it would be premature to declare the drug ineffective",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When treatment with an antiseizure drug is started in a previously untreated person, enough time should pass to establish that the drug is effective before driving is recommenced. However, effectiveness cannot be established until the person reaches an appropriate dose. For example, if a drug is being gradually introduced over three weeks and a seizure occurs in the second week, it would be premature to declare the drug ineffective."
-    },
-    {
-      "claim": "The standard allows seizures to occur within the first six months after starting treatment without lengthening the required seizure-free period, however if seizures occur more than six months after starting therapy a longer seizure-free period is required",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The standard allows seizures to occur within the first six months after starting treatment without lengthening the required seizure-free period. However, if seizures occur more than six months after starting therapy, a longer seizure-free period is required"
-    },
-    {
-      "claim": "The standard gives the worked example that if a patient has a seizure three months after starting therapy they may be fit to drive six months after the most recent seizure which is nine months after starting therapy, whereas if a person experiences a seizure eight months after starting therapy the default standard applies and they may not be fit to drive until 12 months after the most recent seizure",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For example, if a patient has a seizure three months after starting therapy, they may be fit to drive six months after the most recent seizure (nine months after starting therapy). However, if a person experiences a seizure eight months after starting therapy, the default standard applies and they may not be fit to drive until 12 months after the most recent seizure."
-    },
-    {
-      "claim": "If the patient has received no treatment in the last five years or more, resumption of treatment is managed as if treated for the first time",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If the patient has received no treatment in the last five years or more, resumption of treatment is managed as if treated for the first time (as above)."
-    },
-    {
-      "claim": "Acute symptomatic seizures are caused by a transient brain disorder or metabolic disturbance such as encephalitis, hyponatraemia, head injury or drug or alcohol withdrawal in patients without previous epilepsy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Acute symptomatic seizures are caused by a transient brain disorder or metabolic disturbance (e.g. encephalitis, hyponatraemia, head injury or drug or alcohol withdrawal) in patients without previous epilepsy."
-    },
-    {
-      "claim": "For acute symptomatic seizures a private conditional licence may be considered if there have been no further seizures for at least 6 months, a commercial conditional licence requires no further seizures for at least 12 months plus the EEG criteria, and if there have been two or more separate transient disorders causing acute symptomatic seizures the default standard applies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- there have been no further seizures for at least 6 months.<br>If there have been two or more separate transient disorders causing acute symptomatic seizures, the default standard applies. \u2026 - there have been no further seizures for at least **12 months**; **and**<br>- an EEG conducted in the last **6 months** has shown no epileptiform activity and no other EEG conducted in the last **12 months** has shown epileptiform activity*.<br>If there have been two or more separate transient disorders causing acute symptomatic seizures, the default standard applies."
-    },
-    {
-      "claim": "Safe seizures are seizures that do not impair consciousness or the ability to control a motor vehicle, however this must be well established without exceptions and corroborated by reliable witnesses or video-EEG recording because people may believe their consciousness is unimpaired when it is not, and for example some auras are associated with impaired consciousness that the person does not perceive",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Some seizures do not impair consciousness or the ability to control a motor vehicle; however, this must be well established without exceptions and corroborated by reliable witnesses or video- EEG recording because people may believe their consciousness is unimpaired when it is not. For example, some 'auras' are associated with impaired consciousness that the person does not perceive."
-    },
-    {
-      "claim": "Isolated infrequent myoclonic jerks without impaired awareness may be considered safe in the context of no seizures of any other type for more than 12 months",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Isolated infrequent myoclonic jerks (without impaired awareness) may be considered safe in the context of no seizures of any other type for more than 12 months."
-    },
-    {
-      "claim": "Any seizures that involve confusion or vagueness, automatisms, difficulty speaking or emotional features or memory loss are not considered safe seizures",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Any seizures that involve confusion/vagueness, automatisms, difficulty speaking or emotional features or memory loss are not considered safe seizures."
-    },
-    {
-      "claim": "Regarding prolonged aura, it may be impossible to stop immediately and safely because of traffic conditions, and even if the person is able to stop the vehicle before the seizure they may then be in a confused state and not appreciate the danger of resuming their journey, so such seizures can be considered safe only in exceptional circumstances and must be considered by the driver licensing authority on a case-by-case basis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Furthermore, it may be impossible to stop immediately and safely because of traffic conditions. Even if the person is able to stop the vehicle before the seizure, they may then be in a confused state and not appreciate the danger of resuming their journey. For these reasons, such seizures can be considered safe only in exceptional circumstances and must be considered by the driver licensing authority on a case-by- case basis."
-    },
-    {
-      "claim": "For safe seizures a private conditional licence may be considered if safe seizures have been present for at least 2 years, there have been no seizures of other type for at least 2 years, and the person follows medical advice, and for commercial drivers there is no reduction",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- 'safe' seizures have been present for at least **2 years**; **and**<br>- there have been no seizures of other type for at least **2 years**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed.<br>If the above criteria are not met, the default standard applies. | **Commercial standards**<br>There is no reduction. The default standard applies."
-    },
-    {
-      "claim": "For sleep-only seizures a private conditional licence may be considered despite continuing seizures only during sleep if there have been no previous seizures while awake and the first sleep-only seizure was at least 12 months ago, or if there have been previous seizures while awake but not in the preceding 2 years and sleep-only seizures have been occurring for at least 2 years; for commercial drivers there is no reduction",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- there have been no previous seizures while awake; **and**<br>- the first sleep-only seizure was at least **12 months** ago; \u2026 - there have been previous seizures while awake but not in the preceding **2 years**; **and**<br>- sleep-only seizures have been occurring for at least **2 years**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed.<br>If the above criteria are not met, the default standard applies. | **Commercial standards**<br>There is no reduction. The default standard applies."
-    },
-    {
-      "claim": "Well controlled is defined as no seizures during the 12 months leading up to the last seizure",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "'Well controlled' is defined as: there were no seizures during the 12 months leading up to the last seizure."
-    },
-    {
-      "claim": "For a seizure in a person under treatment whose epilepsy was previously well controlled a private conditional licence may be considered if the seizure was caused by an identified provoking factor that can be reliably avoided and has not caused previous seizures and there have been no seizures for at least 4 weeks, or if no cause was identified and there have been no seizures for at least 3 months; for commercial drivers there is no reduction",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- the seizure was caused by an identified provoking factor*; **and**<br>- the provoking factor can be reliably avoided; **and**<br>- the provoking factor has not caused previous seizures; **and**<br>- there have been no seizures for at **least 4 weeks**; \u2026 - no cause for the seizure was identified; **and**<br>- there have been no seizures for at **least 3 months**; **and**<br>- the person follows medical advice, including adherence to medication. \u2026 **Commercial standards**<br>There is no reduction. The default standard applies."
-    },
-    {
-      "claim": "For the purpose of the standards sleep deprivation is not considered a provoking factor, and some provocative factors such as sleep deprivation, unless severe, cannot be reliably avoided",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For the purpose of these standards, sleep deprivation is not considered a provoking factor. \u2026 Some provocative factors (e.g. sleep deprivation), unless severe, cannot be reliably avoided."
-    },
-    {
-      "claim": "Under the exceptional cases standard where a medical specialist experienced in managing epilepsy considers that a person with seizures or epilepsy does not meet the standards for a conditional licence but nonetheless may be safe to drive, a conditional licence may be considered if the driver licensing authority, after considering clinical information provided by the treating medical specialist, considers that the risk of a crash caused by a seizure is acceptably low",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Where a medical specialist who is experienced in managing epilepsy considers that a person with seizures or epilepsy does not meet the standards for a conditional licence but nonetheless may be safe to drive, a conditional licence may be considered if the driver licensing authority, after considering clinical information provided by the treating medical specialist, considers that the risk of a crash caused by a seizure is acceptably low."
-    },
-    {
-      "claim": "If a person has experienced a crash or has lost control of the vehicle as a result of a seizure, the default seizure-free non-driving period applies even if they fall into one of the seizure categories that allow a reduction",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If a person has experienced a crash or has lost control of the vehicle as a result of a seizure, the default seizure-free non- driving period applies, even if they fall into one of the seizure categories that allow a reduction."
-    },
-    {
-      "claim": "People are not eligible for a reduction if they have had a motor vehicle crash or lost control of a vehicle due to a seizure, and the longer non-driving period applies if the situation is covered by more than one standard",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "People are not eligible for a reduction if they have had a motor vehicle crash or lost control of a vehicle due to a seizure. \u2026 The longer non-driving period applies if the situation is covered by more than one standard."
-    },
-    {
-      "claim": "If a patient refuses to follow a treating doctor's recommendation the patient should be assessed as not fit to drive, and the treating doctor may consider reporting this information to the driver licensing authority so it can be considered in the event that another doctor certifies the person as fit to drive without therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If a patient refuses to follow a treating doctor's recommendation, the patient should be assessed as not fit to drive. The treating doctor may consider reporting this information to the driver licensing authority so it can be considered in the event that another doctor certifies the person as fit to drive without therapy."
-    },
-    {
-      "claim": "If the treating doctor doubts the reliability of the relevant clinical information such as unreported seizures likely due to the person not recognising the occurrence of seizures or deliberately not reporting seizures, the person is not fit to drive",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If the **treating doctor** doubts the reliability of the relevant clinical information (e.g. unreported seizures, likely due to the person not recognising the occurrence of seizures or deliberately not reporting seizures), the person is **not fit to drive**."
-    },
-    {
-      "claim": "Some people with epilepsy are unable to reliably report the occurrence of seizures because their awareness is impaired by their seizure, some others deliberately fail to report seizures, and corroboration by people in regular contact with the person may decrease any uncertainty",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Some people with epilepsy are unable to reliably report the occurrence of seizures because their awareness is impaired by their seizure. Some others deliberately fail to report seizures. In both situations, the person may report that no seizures have occurred, when, in fact, they have, and the person is unfit to drive. Corroboration by people in regular contact with the person may decrease any uncertainty."
-    },
-    {
-      "claim": "For planned withdrawal of antiseizure medication in a private driver who satisfies the standard to hold a conditional licence, the person should not drive during the period in which the dose is being tapered and for 3 months after the last dose",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The person should not drive:<br>- during the period in which the dose is being tapered; **and**<br>- for **3 months** after the last dose*."
-    },
-    {
-      "claim": "If a drug is being withdrawn as part of a switch from one drug to another, for example to reduce teratogenic risk, the 3-month non-driving period still applies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "_If a drug is being withdrawn as part of a switch from one drug to another (e.g. to reduce teratogenic risk), the 3-month non- driving period still applies._"
-    },
-    {
-      "claim": "If seizures recur during planned withdrawal the driver licensing authority may allow the person to resume driving on a conditional licence subject to at least annual review if the previously effective medication regimen is resumed, there have been no seizures for 4 weeks after resuming the medication regimen, and the person follows medical advice",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If seizures recur, the driver licensing authority may allow the person to resume driving on a **conditional licence** subject to at least **annual review**, taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- the previously effective medication regimen is resumed; **and**<br>- there have been no seizures for **4 weeks** after resuming the medication regimen; **and**<br>- the person follows medical advice, including adherence to medication."
-    },
-    {
-      "claim": "For a recommended reduction in dosage of antiseizure medication in a private driver, driving may continue if the dose reduction is due only to the presence of current dose-related side effects and is unlikely to affect seizure control, or if the dose is being reduced after an increase due to a temporary situation that has now resolved such as pregnancy to the dose that was effective before the increase; otherwise the person should not drive during the reduction and for 3 months after completing it",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Driving may continue:<br>- if the dose reduction is due only to the presence of current dose-related side effects and is unlikely to affect seizure control; **or**<br>- if the dose is being reduced after an increase due to a temporary situation that has now resolved (e.g. pregnancy) to the dose that was effective before the increase.<br>In circumstances other than above, the person should not drive:<br>- during the period in which the dose reduction is being made; **and**<br>- for **3 months** after completing the dose reduction."
-    },
-    {
-      "claim": "For commercial vehicle drivers if antiseizure medication is to be withdrawn the person will no longer meet the criteria to hold a conditional licence, and driving may continue only after consideration by the driver licensing authority under the Exceptional cases standard",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If antiseizure medication is to be withdrawn, the person will no longer meet the criteria to hold a conditional licence. Driving may continue only after consideration by the driver licensing authority under the Exceptional cases standard."
-    },
-    {
-      "claim": "For epilepsy treated by surgery a private conditional licence may be considered if there have been no seizures for at least 12 months following surgery and the person follows medical advice with respect to medication adherence, and the vision standard may also apply if there is a visual field defect",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- there have been no seizures for at least **12 months** following surgery; **and**<br>- the person follows medical advice with respect to medication adherence.<br>The vision standard may also apply if there is a visual field defect."
-    },
-    {
-      "claim": "Where a person has had no seizures for at least five years and has taken no antiseizure medication for at least the preceding 12 months the driver licensing authority may consider granting an unconditional licence, and this does not apply to commercial vehicle drivers",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Where a person has had no seizures for at least five years and has taken no antiseizure medication for at least the preceding 12 months, the driver licensing authority may consider granting an unconditional licence. This does not apply to commercial vehicle drivers."
-    },
-    {
-      "claim": "Electroencephalography is an important tool in diagnosing epilepsy and in people who have had one or more seizures it has a limited but valuable role in predicting seizure recurrence, however because there is a wide range of clinical situations with varying utility of EEG it does not form part of the driving standards except for the initial fitness assessment of commercial drivers",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Electroencephalography is an important tool in diagnosing epilepsy. In people who have had one or more seizures, it has a limited but valuable role in predicting seizure recurrence. It may also be used to identify subtle episodes in which awareness may be impaired. Because there is a wide range of clinical situations, with varying utility of EEG, it does not form part of the driving standards except for the initial fitness assessment of commercial drivers."
-    },
-    {
-      "claim": "When epileptiform abnormalities that may represent subtle seizures such as generalised spike-wave bursts lasting longer than three seconds or photoparoxysmal response are found on the EEG of those who meet the standard to hold a conditional or unconditional licence, their fitness should be assessed on a case-by-case basis and this may require more detailed testing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When epileptiform abnormalities that may represent subtle seizures (e.g. generalised spike-wave bursts lasting longer than three seconds, or photoparoxysmal response) are found on the EEG of those who meet the standard to hold a conditional (or unconditional) licence, their fitness should be assessed on a case-by-case basis. This may require more detailed testing."
-    },
-    {
-      "claim": "All licence holders should be advised that the person must continue to take antiseizure medication regularly as recommended, should ensure they get adequate sleep and not drive when sleep-deprived, and should avoid circumstances or the use of substances such as excessive alcohol that are known to increase the risk of seizures",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "- The person must continue to take antiseizure medication regularly as recommended.n- The person should ensure they get adequate sleep and not drive when sleep- deprived.n- The person should avoid circumstances, or the use of substances (e.g. excessive alcohol), that are known to increase the risk of seizures."
-    },
-    {
-      "claim": "It is good medical practice for any person with initial seizures to be referred to a specialist where available for accurate diagnosis of the specific epilepsy syndrome so that appropriate treatment is instituted and all the risks associated with epilepsy including driving can be explained",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "It is good medical practice for any person with initial seizures to be referred to a specialist, where available, for accurate diagnosis of the specific epilepsy syndrome so that appropriate treatment is instituted and all the risks associated with epilepsy, including driving, can be explained."
-    },
-    {
-      "claim": "Conditional licences rely on individual responsibility for management of the condition including compliance with treatment, in conjunction with the support of a health professional and regular review",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Conditional licences rely on individual responsibility for management of the condition, including compliance with treatment, in conjunction with the support of a health professional and regular review."
-    },
-    {
-      "claim": "Drivers of private vehicles who hold a conditional licence should be reviewed at least annually by their treating doctor unless experiencing an extended seizure-free period, and commercial vehicle drivers should be reviewed at least annually by a specialist regarding any conditional licence that has been issued",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Drivers of private vehicles who hold a conditional licence should be reviewed at least annually by their treating doctor (unless experiencing an extended seizure-free period \u2013 see The default standard ). Commercial vehicle drivers should be reviewed at least annually by a specialist regarding any conditional licence that has been issued."
-    },
-    {
-      "claim": "For a conditional licence to be issued the health professional must provide to the driver licensing authority details of the medical criteria not met, evidence of the medical criteria met, as well as the proposed conditions and monitoring requirements",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For a conditional licence to be issued, the health professional must provide to the driver licensing authority details of the medical criteria not met, evidence of the medical criteria met, as well as the proposed conditions and monitoring requirements."
-    },
-    {
-      "claim": "While a person may meet individual disease criteria, concurrent medical conditions may combine to affect fitness to drive, for example hearing, visual or cognitive impairment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "While a person may meet individual disease criteria, concurrent medical conditions may combine to affect fitness to drive \u2013 for example, hearing, visual or cognitive impairment"
-    },
-    {
-      "claim": "Private standards apply to drivers of cars, light rigid vehicles or motorcycles unless carrying public passengers or requiring a dangerous goods driver licence, and commercial standards apply to drivers of heavy vehicles, public passenger vehicles or requiring a dangerous goods driver licence",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "**Private standards**<br>(Drivers of cars, light rigid vehicles or motorcycles unless carrying public passengers or requiring a dangerous goods driver licence \u2013 refer to definition in Table 3) | Commercial standards<br>(Drivers of heavy vehicles, public passenger vehicles or requiring a dangerous goods driver licence \u2013 refer to definition in Table 3)"
-    },
-    {
-      "claim": "Seizures associated with loss of awareness, even if brief or subtle, or loss of motor control, have the potential to impair the ability to control a motor vehicle",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Seizures associated with loss of awareness, even if brief or subtle, or loss of motor control, have the potential to impair the ability to control a motor vehicle."
-    },
-    {
-      "claim": "Figure 13 shows that a driver with seizures is assessed by a GP or specialist if a private driver, or by a specialist if a commercial driver, and is then asked whether there are factors that reduce the crash risk",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Seizure(s) / Private driver / Commercial driver / GP or specialist assessment / Specialist assessment / Are there factors that reduce the crash risk?"
-    },
-    {
-      "claim": "In Figure 13 the factors that reduce crash risk listed for private drivers are childhood seizures, first seizure, acute symptomatic seizures, epilepsy treated for the first time, safe seizures, sleep-only seizures, previously well-controlled seizures, and exceptional case",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Childhood seizures / First seizure / Acute symptomatic seizures / Epilepsy treated for the first time / 'Safe' seizures / Sleep-only seizures / Previously well-controlled seizures / Exceptional case"
-    },
-    {
-      "claim": "In Figure 13 the factors listed for commercial drivers are only childhood seizures, first seizure, acute symptomatic seizures, and exceptional case",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Are there factors that reduce the crash risk? / Childhood seizures / First seizure / Acute symptomatic seizures / Exceptional case"
-    },
-    {
-      "claim": "In Figure 13, no reducing factors gives a 1-year minimum non-driving period for private drivers and a 10-year minimum non-driving period for commercial drivers, while yes leads to the table, and both paths lead to a conditional licence",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "No / 1-year minimum non-driving period / 10-year minimum non-driving period / Yes / Refer table / Conditional licence"
-    },
-    {
-      "claim": "Figure 13 lists management factors as surgery, noncompliance with management, withdrawal of antiseizure medication, reduction of antiseizure medication, seizure causing crash, and resumption of full licence",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Management factors / Surgery / Noncompliance with management / Withdrawal of antiseizure medication / Reduction of antiseizure medication / Seizure causing crash / Resumption of full licence"
-    },
-    {
-      "claim": "Figure 14 defines epilepsy treated for the first time as treatment with antiepileptic medication commenced for the first time within the last 18 months",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Epilepsy treated for the first time (defined as treatment with antiepileptic medication commenced for the first time within the last 18 months)"
-    },
-    {
-      "claim": "In Figure 14 a commercial vehicle driver goes to the default standard of a minimum 10-year non-driving seizure-free period",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Commercial vehicle driver? / Yes / Default standard (minimum 10-year non-driving seizure-free period)"
-    },
-    {
-      "claim": "In Figure 14 a non-commercial driver is asked whether treatment started more than 6 months ago; if no, reassess after at least 6 months of treatment",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Commercial vehicle driver? / No / Treatment started more than 6 months ago? / No / Reassess after at least 6 months of treatment"
-    },
-    {
-      "claim": "In Figure 14, if there have been no seizures the driver may return to driving on a conditional licence 6 months after the last seizure, and if there have been seizures the question is whether they were only in the first 6 months after starting treatment, with yes giving the conditional licence at 6 months after the last seizure and no giving the default standard of a minimum 1-year non-driving seizure-free period",
-      "source": "S2",
-      "verdict": "pass_image_transcription",
-      "source_text": "Any seizures? / No / May return to driving on a conditional licence 6 months after last seizure / Yes / Seizures were only in the first 6 months after starting treatment? / Yes / No / Default standard (minimum 1-year non-driving seizure-free period)"
-    }
-  ],
-  "summary": {
-    "total": 72,
-    "pass": 63,
-    "fail": 0,
-    "pass_image_transcription": 9
+ "guideline": "guidelines/fitness-to-drive-seizures-and-epilepsy.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://austroads.gov.au/publications/assessing-fitness-to-drive/ap-g56/neurological-conditions/seizures-and-epilepsy",
+  "https://austroads.gov.au/__data/assets/image/0035/468179/AFTD-Figure_13.jpg",
+  "https://austroads.gov.au/__data/assets/image/0027/468180/AFTD-Figure_14.jpg"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Each claim checked against the retrieved text of Austroads Assessing Fitness to Drive (AP-G56) Part B section 6.2, Seizures and epilepsy, including 6.2.1 relevance to the driving task, 6.2.2 general assessment and management guidelines, 6.2.3 medical standards for licensing, all three standards tables (default, possible reductions, other factors) and the closing notes on licensing responsibility, conditional licences and reporting. Figures 13 and 14 are decision-tree images; their content is not asserted beyond the surrounding text. Part A sections on confidentiality and reporting, section 1.2.4 blackouts of undetermined mechanism, section 6.3 head injury, section 7.2.9 psychogenic nonepileptic seizures and Appendix 3 on reporting legislation are cross-referenced by this chapter and were not retrieved; they are recorded as input_unavailable. Retrieved text contains extraction artefacts where line breaks collapsed into 'nn' and one typographical error in the source table ('24-period' for 24-hour period); source_text is preserved verbatim. ADDENDUM 2026-09-22: Figures 13 and 14 were retrieved as images via the browser (direct download returns 403) and read visually. Nine further claims carry verdict pass_image_transcription and source S2. Unlike the RCH paediatric flowcharts transcribed elsewhere in this compendium, these two figures contained NOTHING absent from the retrieved text: they are summaries of section 6.2.3, exactly as the Standard describes them. The only thing Figure 13 states more directly than the tables is that the reduction list has eight entries for private drivers and four for commercial drivers. KNOWN DEFECT (recorded 2026-09-22): claim 17 holds seven bullet separators glued to the preceding word ('childhoodn- first seizuren- ...'), an artifact of the original scrape's cleaning. Austroads returns 403 to a direct fetch and the page could not be re-retrieved this session, so the fragments were LEFT AS FOUND rather than repaired from memory. Re-retrieve and run scripts/repair_quotes.py to close this.",
+ "claims": [
+  {
+   "claim": "Assessing Fitness to Drive states that the responsibility for issuing, renewing, suspending or cancelling a person's driver licence including a conditional licence lies ultimately with the driver licensing authority, and that licensing decisions are based on a full consideration of relevant factors relating to health and driving performance",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The responsibility for issuing, renewing, suspending or cancelling a person's driver licence (including a conditional licence) lies ultimately with the driver licensing authority. Licensing decisions are based on a full consideration of relevant factors relating to health and driving performance."
+  },
+  {
+   "claim": "Patients should be made aware of the effects of their condition on driving and should be advised of their legal obligation to notify the driver licensing authority where driving is likely to be affected, and the health professional may themselves advise the driver licensing authority as the situation requires",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients should be made aware of the effects of their condition on driving and should be advised of their legal obligation to notify the driver licensing authority where driving is likely to be affected. The health professional may themselves advise the driver licensing authority as the situation requires"
+  },
+  {
+   "claim": "From 22 June 2022 there have been changes to the fitness to drive criteria for seizures and epilepsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "From 22 June 2022 there have been changes to the fitness to drive criteria for seizures and epilepsy."
+  },
+  {
+   "claim": "Assessing Fitness to Drive Part B contains chapters on blackouts, cardiovascular conditions, diabetes mellitus, hearing loss and deafness, musculoskeletal conditions, neurological conditions including dementia and seizures and epilepsy, psychiatric conditions, sleep disorders, substance misuse, and vision and eye disorders",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "1. BlackoutsOpen/Closen … 2. Cardiovascular conditions … 3. Diabetes mellitus … 4. Hearing loss and deafness … 5. Musculoskeletal conditions … 6. Neurological conditionsOpen/Closen  - 6.1. Dementiann  - 6.2. Seizures and epilepsy … 7. Psychiatric conditions … 8. Sleep disorders … 9. Substance misuse … 10. Vision and eye disorders"
+  },
+  {
+   "claim": "Epilepsy refers to the tendency to experience recurrent seizures and not all people who experience a seizure have epilepsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Epilepsy refers to the tendency to experience recurrent seizures. Not all people who experience a seizure have epilepsy."
+  },
+  {
+   "claim": "Epilepsy is a common disorder with a cumulative incidence of 2 per cent of the population, with 0.5 per cent affected and taking medication at any one time",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Epilepsy is a common disorder with a cumulative incidence of 2 per cent of the population, with 0.5 per cent affected and taking medication at any one time."
+  },
+  {
+   "claim": "Most cases of epilepsy respond well to treatment with a terminal remission rate of 80 per cent or more, the majority suffer few seizures in a lifetime, and about half will have no further seizures in the first one or two years after starting treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most cases respond well to treatment, with a terminal remission rate of 80 per cent or more. The majority suffer few seizures in a lifetime, and about half will have no further seizures in the first one or two years after starting treatment."
+  },
+  {
+   "claim": "Most studies have reported an elevated crash risk among drivers with epilepsy but the size of the risk varies considerably across the studies, and these studies have found that people with epilepsy are twice as likely to be involved in a motor vehicle crash compared with the general driving population",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most studies have reported an elevated crash risk among drivers with epilepsy, but the size of the risk varies considerably across the studies. These studies have found that people with epilepsy are twice as likely to be involved in a motor vehicle crash compared with the general driving population."
+  },
+  {
+   "claim": "More recent studies have found that drivers who do not take antiseizure medication as prescribed are at an increased risk for experiencing a crash",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More recent studies have found that drivers who do not take antiseizure medication as prescribed are at an increased risk for experiencing a crash."
+  },
+  {
+   "claim": "Under the default standard a person cannot hold an unconditional licence if the person has experienced a seizure, and for private drivers a conditional licence may be considered subject to at least annual review taking into account information provided by the treating doctor as to whether there have been no seizures for at least 12 months and the person follows medical advice including adherence to medication if prescribed or recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person cannot hold an **unconditional licence**:<br>- if the person has experienced a seizure.<br>A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review*** taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- there have been no seizures for at least 12 months**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed or recommended."
+  },
+  {
+   "claim": "Under the default standard for commercial drivers a conditional licence may be considered subject to at least annual review taking into account information provided by a specialist in epilepsy as to whether there have been no seizures for at least 10 years, an EEG conducted in the last 6 months has shown no epileptiform activity and no other EEG conducted in the last 12 months has shown epileptiform activity, and the person follows medical advice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review*** taking into account information provided by a **specialist in epilepsy** as to whether the following criteria are met:<br>- there have been no seizures for at least **10 years****; **and**<br>- an EEG conducted in the last 6 months has shown no epileptiform activity and no other EEG conducted in the last 12 months has shown epileptiform activity***; **and**<br>- the person follows medical advice, including adherence to medication if prescribed or recommended."
+  },
+  {
+   "claim": "The EEG requirement for commercial drivers is only required for initial granting of the conditional licence and not for annual review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "_This is only required for initial granting of the conditional licence and not for annual review._"
+  },
+  {
+   "claim": "Commercial vehicle driving exposes the driver and the public to a relatively greater risk because of the increased time spent at the wheel as well as the generally greater potential for injury from motor vehicle crashes due to the greater size or weight of commercial vehicles or large numbers of passengers carried, for this reason the acceptable risk of a seizure-related crash for commercial driving is much less and the requirements applied are much stricter, and in addition sleep deprivation is a common provoking factor in epilepsy and may be experienced in long-distance transport driving and amongst drivers doing shift work",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Commercial vehicle driving exposes the driver and the public to a relatively greater risk because of the increased time spent at the wheel, as well as the generally greater potential for injury from motor vehicle crashes due to the greater size or weight of commercial vehicles, or large numbers of passengers carried. For this reason, the acceptable risk of a seizure-related crash for commercial driving is much less, and the requirements applied are much stricter; in addition, sleep deprivation is a common provoking factor in epilepsy and may be experienced in long-distance transport driving and amongst drivers doing shift work."
+  },
+  {
+   "claim": "With regard to licensing the treating doctor or general practitioner may liaise with the driver licensing authority about whether the criteria are met for driving a private vehicle, but only a specialist may do so for a commercial vehicle driver",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "With regard to licensing, the treating doctor or general practitioner may liaise with the driver licensing authority about whether the criteria are met for driving a private vehicle, but only a specialist may do so for a commercial vehicle driver."
+  },
+  {
+   "claim": "If a driver who is taking antiseizure medication has experienced an extended seizure-free period of more than 10 years for private drivers and more than 20 years for commercial drivers, the driver licensing authority may consider reduced review requirements of at least once every three years based on advice from the treating doctor or specialist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a driver who is taking antiseizure medication has experienced an extended seizure-free period (more than 10 years for private drivers, and more than 20 years for commercial drivers) the driver licensing authority may consider reduced review requirements (at least once every three years) based on advice from the treating doctor or specialist."
+  },
+  {
+   "claim": "The hierarchy of standards comprises a default standard applicable to all cases of seizure unless reductions are allowed, and reductions for specific types of epilepsy or specific circumstances including an allowance for exceptional circumstances upon the advice of a specialist in epilepsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This hierarchy comprises:nn- a default standard, applicable to all cases of seizure, unless reductions are allowed (refer below and to the standards table)n- reductions for specific types of epilepsy or specific circumstances, including an allowance for exceptional circumstances upon the advice of a specialist in epilepsy"
+  },
+  {
+   "claim": "The situations in which a variation from the default standard may be considered are seizures in childhood, first seizure, epilepsy treated for the first time, acute symptomatic seizures, safe seizures, seizures only in sleep, seizures in a person previously well controlled, and exceptional circumstances",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "seizures in childhoodn- first seizuren- epilepsy treated for the first timen- acute symptomatic seizuresn- 'safe' seizuresn- seizures only in sleepn- seizures in a person previously well controlledn- exceptional circumstances."
+  },
+  {
+   "claim": "In most cases exceptions to the default standard will be considered only for private vehicle drivers, and a reduction in restrictions for commercial vehicle drivers will generally only be granted after considering information provided by a specialist with expertise in epilepsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In most cases, exceptions to the default standard will be considered only for private vehicle drivers. A reduction in restrictions for commercial vehicle drivers will generally only be granted after considering information provided by a specialist with expertise in epilepsy."
+  },
+  {
+   "claim": "A history of a benign seizure or epilepsy syndrome usually limited to childhood such as febrile seizures, benign focal epilepsy or childhood absence epilepsy does not disqualify the person from holding an unconditional licence as long as there have been no seizures after 11 years of age, and this applies to both private and commercial standards",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A history of a benign seizure or epilepsy syndrome usually limited to childhood does not disqualify the person from holding an **unconditional licence**, as long as there have been no seizures after 11 years of age. … **Commercial standards**<br>A history of a benign seizure or epilepsy syndrome usually limited to childhood does not disqualify the person from holding an **unconditional licence**, as long as there have been no seizures after 11 years of age."
+  },
+  {
+   "claim": "For a first seizure of any type the person must report their condition to the driver licensing authority, and two or more seizures in a 24-hour period are considered a single seizure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "**First seizure (of any type)**<br>The person must report their condition to the driver licensing authority.<br>Note: Two or more seizures in a 24-period are considered a single seizure."
+  },
+  {
+   "claim": "For a first seizure a private conditional licence may be considered subject to at least annual review taking into account information from the treating doctor as to whether there have been no further seizures with or without medication for at least 6 months, and resumption of an unconditional licence may be considered if antiseizure medication has not been prescribed in the past 12 months and there have been no seizures for at least 2 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review**, taking into account information provided by the **treating doctor** as to whether the following criterion is met:<br>- there have been no further seizures (with or without medication) for at least 6 months.<br>Resumption of an **unconditional licence** may be considered by the driver licensing authority, taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- antiseizure medication has not been prescribed in the past 12 months; **and**<br>- there have been no seizures for at least **2 years**."
+  },
+  {
+   "claim": "For a first seizure a commercial conditional licence may be considered if there have been no seizures for at least 5 years with or without medication and the EEG criteria are met, and resumption of an unconditional commercial licence requires no antiseizure medication in the past 12 months, no seizures for at least 10 years, and the EEG criteria",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A **conditional licence** may be considered by the driver licensing authority subject to at least **annual review**, taking into account information provided by a **specialist in epilepsy** as to whether the following criteria are met:<br>- there have been no seizures for at **least 5 years** (with or without medication); **and**<br>- an EEG conducted in the last **6 months** has shown no epileptiform activity and no other EEG conducted in the last **12 months** has shown epileptiform activity*.<br>Resumption of an **unconditional licence** may be considered by the driver licensing authority, taking into account information provided by a specialist in epilepsy as to whether the following criteria are met:<br>- antiseizure medication has not been prescribed in the past **12 months**; **and**<br>- there have been no seizures for at least **10 years**"
+  },
+  {
+   "claim": "The occurrence of a first seizure warrants medical specialist assessment where available, approximately half of all people experiencing their first seizure will never have another seizure while half will have further seizures meaning epilepsy, the risk of recurrence falls with time, and if a second seizure occurs except on the same day as the first the risk of recurrence is much higher",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The occurrence of a first seizure warrants medical specialist assessment, where available. Approximately half of all people experiencing their first seizure will never have another seizure, while half will have further seizures (i.e. epilepsy). The risk of recurrence falls with time. … If a second seizure occurs (except on the same day as the first), the risk of recurrence is much higher."
+  },
+  {
+   "claim": "For the purpose of these standards epilepsy treated for the first time means that treatment was started for the first time within the preceding 18 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For the purpose of these standards, epilepsy treated for the first time means that treatment was started for the first time within the preceding 18 months."
+  },
+  {
+   "claim": "For epilepsy treated for the first time a private conditional licence may be considered if the person has been treated for at least 6 months, there have been no seizures in the preceding 6 months, any seizures after the start of treatment happened only in the first 6 months and not in the last 6 months, and the person follows medical advice; for commercial drivers there is no reduction and the default standard applies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- the person has been treated for at least **6 months**; **and**<br>- there have been no seizures in the preceding **6 months**; **and**<br>- if any seizures occurred after the start of treatment, they happened only in the **first 6 months** after starting treatment and not in the last **6 months**; **and**<br>- the person follows medical advice, including adherence to medication. | **Commercial standards**<br>There is no reduction. The default standard applies."
+  },
+  {
+   "claim": "When treatment with an antiseizure drug is started in a previously untreated person enough time should pass to establish that the drug is effective before driving is recommenced, however effectiveness cannot be established until the person reaches an appropriate dose, and for example if a drug is being gradually introduced over three weeks and a seizure occurs in the second week it would be premature to declare the drug ineffective",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When treatment with an antiseizure drug is started in a previously untreated person, enough time should pass to establish that the drug is effective before driving is recommenced. However, effectiveness cannot be established until the person reaches an appropriate dose. For example, if a drug is being gradually introduced over three weeks and a seizure occurs in the second week, it would be premature to declare the drug ineffective."
+  },
+  {
+   "claim": "The standard allows seizures to occur within the first six months after starting treatment without lengthening the required seizure-free period, however if seizures occur more than six months after starting therapy a longer seizure-free period is required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The standard allows seizures to occur within the first six months after starting treatment without lengthening the required seizure-free period. However, if seizures occur more than six months after starting therapy, a longer seizure-free period is required"
+  },
+  {
+   "claim": "The standard gives the worked example that if a patient has a seizure three months after starting therapy they may be fit to drive six months after the most recent seizure which is nine months after starting therapy, whereas if a person experiences a seizure eight months after starting therapy the default standard applies and they may not be fit to drive until 12 months after the most recent seizure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For example, if a patient has a seizure three months after starting therapy, they may be fit to drive six months after the most recent seizure (nine months after starting therapy). However, if a person experiences a seizure eight months after starting therapy, the default standard applies and they may not be fit to drive until 12 months after the most recent seizure."
+  },
+  {
+   "claim": "If the patient has received no treatment in the last five years or more, resumption of treatment is managed as if treated for the first time",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the patient has received no treatment in the last five years or more, resumption of treatment is managed as if treated for the first time (as above)."
+  },
+  {
+   "claim": "Acute symptomatic seizures are caused by a transient brain disorder or metabolic disturbance such as encephalitis, hyponatraemia, head injury or drug or alcohol withdrawal in patients without previous epilepsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute symptomatic seizures are caused by a transient brain disorder or metabolic disturbance (e.g. encephalitis, hyponatraemia, head injury or drug or alcohol withdrawal) in patients without previous epilepsy."
+  },
+  {
+   "claim": "For acute symptomatic seizures a private conditional licence may be considered if there have been no further seizures for at least 6 months, a commercial conditional licence requires no further seizures for at least 12 months plus the EEG criteria, and if there have been two or more separate transient disorders causing acute symptomatic seizures the default standard applies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- there have been no further seizures for at least 6 months.<br>If there have been two or more separate transient disorders causing acute symptomatic seizures, the default standard applies. … - there have been no further seizures for at least **12 months**; **and**<br>- an EEG conducted in the last **6 months** has shown no epileptiform activity and no other EEG conducted in the last **12 months** has shown epileptiform activity*.<br>If there have been two or more separate transient disorders causing acute symptomatic seizures, the default standard applies."
+  },
+  {
+   "claim": "Safe seizures are seizures that do not impair consciousness or the ability to control a motor vehicle, however this must be well established without exceptions and corroborated by reliable witnesses or video-EEG recording because people may believe their consciousness is unimpaired when it is not, and for example some auras are associated with impaired consciousness that the person does not perceive",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Some seizures do not impair consciousness or the ability to control a motor vehicle; however, this must be well established without exceptions and corroborated by reliable witnesses or video- EEG recording because people may believe their consciousness is unimpaired when it is not. For example, some 'auras' are associated with impaired consciousness that the person does not perceive."
+  },
+  {
+   "claim": "Isolated infrequent myoclonic jerks without impaired awareness may be considered safe in the context of no seizures of any other type for more than 12 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Isolated infrequent myoclonic jerks (without impaired awareness) may be considered safe in the context of no seizures of any other type for more than 12 months."
+  },
+  {
+   "claim": "Any seizures that involve confusion or vagueness, automatisms, difficulty speaking or emotional features or memory loss are not considered safe seizures",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any seizures that involve confusion/vagueness, automatisms, difficulty speaking or emotional features or memory loss are not considered safe seizures."
+  },
+  {
+   "claim": "Regarding prolonged aura, it may be impossible to stop immediately and safely because of traffic conditions, and even if the person is able to stop the vehicle before the seizure they may then be in a confused state and not appreciate the danger of resuming their journey, so such seizures can be considered safe only in exceptional circumstances and must be considered by the driver licensing authority on a case-by-case basis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Furthermore, it may be impossible to stop immediately and safely because of traffic conditions. Even if the person is able to stop the vehicle before the seizure, they may then be in a confused state and not appreciate the danger of resuming their journey. For these reasons, such seizures can be considered safe only in exceptional circumstances and must be considered by the driver licensing authority on a case-by- case basis."
+  },
+  {
+   "claim": "For safe seizures a private conditional licence may be considered if safe seizures have been present for at least 2 years, there have been no seizures of other type for at least 2 years, and the person follows medical advice, and for commercial drivers there is no reduction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- 'safe' seizures have been present for at least **2 years**; **and**<br>- there have been no seizures of other type for at least **2 years**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed.<br>If the above criteria are not met, the default standard applies. | **Commercial standards**<br>There is no reduction. The default standard applies."
+  },
+  {
+   "claim": "For sleep-only seizures a private conditional licence may be considered despite continuing seizures only during sleep if there have been no previous seizures while awake and the first sleep-only seizure was at least 12 months ago, or if there have been previous seizures while awake but not in the preceding 2 years and sleep-only seizures have been occurring for at least 2 years; for commercial drivers there is no reduction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- there have been no previous seizures while awake; **and**<br>- the first sleep-only seizure was at least **12 months** ago; … - there have been previous seizures while awake but not in the preceding **2 years**; **and**<br>- sleep-only seizures have been occurring for at least **2 years**; **and**<br>- the person follows medical advice, including adherence to medication if prescribed.<br>If the above criteria are not met, the default standard applies. | **Commercial standards**<br>There is no reduction. The default standard applies."
+  },
+  {
+   "claim": "Well controlled is defined as no seizures during the 12 months leading up to the last seizure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "'Well controlled' is defined as: there were no seizures during the 12 months leading up to the last seizure."
+  },
+  {
+   "claim": "For a seizure in a person under treatment whose epilepsy was previously well controlled a private conditional licence may be considered if the seizure was caused by an identified provoking factor that can be reliably avoided and has not caused previous seizures and there have been no seizures for at least 4 weeks, or if no cause was identified and there have been no seizures for at least 3 months; for commercial drivers there is no reduction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- the seizure was caused by an identified provoking factor*; **and**<br>- the provoking factor can be reliably avoided; **and**<br>- the provoking factor has not caused previous seizures; **and**<br>- there have been no seizures for at **least 4 weeks**; … - no cause for the seizure was identified; **and**<br>- there have been no seizures for at **least 3 months**; **and**<br>- the person follows medical advice, including adherence to medication. … **Commercial standards**<br>There is no reduction. The default standard applies."
+  },
+  {
+   "claim": "For the purpose of the standards sleep deprivation is not considered a provoking factor, and some provocative factors such as sleep deprivation, unless severe, cannot be reliably avoided",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For the purpose of these standards, sleep deprivation is not considered a provoking factor. … Some provocative factors (e.g. sleep deprivation), unless severe, cannot be reliably avoided."
+  },
+  {
+   "claim": "Under the exceptional cases standard where a medical specialist experienced in managing epilepsy considers that a person with seizures or epilepsy does not meet the standards for a conditional licence but nonetheless may be safe to drive, a conditional licence may be considered if the driver licensing authority, after considering clinical information provided by the treating medical specialist, considers that the risk of a crash caused by a seizure is acceptably low",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where a medical specialist who is experienced in managing epilepsy considers that a person with seizures or epilepsy does not meet the standards for a conditional licence but nonetheless may be safe to drive, a conditional licence may be considered if the driver licensing authority, after considering clinical information provided by the treating medical specialist, considers that the risk of a crash caused by a seizure is acceptably low."
+  },
+  {
+   "claim": "If a person has experienced a crash or has lost control of the vehicle as a result of a seizure, the default seizure-free non-driving period applies even if they fall into one of the seizure categories that allow a reduction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a person has experienced a crash or has lost control of the vehicle as a result of a seizure, the default seizure-free non- driving period applies, even if they fall into one of the seizure categories that allow a reduction."
+  },
+  {
+   "claim": "People are not eligible for a reduction if they have had a motor vehicle crash or lost control of a vehicle due to a seizure, and the longer non-driving period applies if the situation is covered by more than one standard",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People are not eligible for a reduction if they have had a motor vehicle crash or lost control of a vehicle due to a seizure. … The longer non-driving period applies if the situation is covered by more than one standard."
+  },
+  {
+   "claim": "If a patient refuses to follow a treating doctor's recommendation the patient should be assessed as not fit to drive, and the treating doctor may consider reporting this information to the driver licensing authority so it can be considered in the event that another doctor certifies the person as fit to drive without therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a patient refuses to follow a treating doctor's recommendation, the patient should be assessed as not fit to drive. The treating doctor may consider reporting this information to the driver licensing authority so it can be considered in the event that another doctor certifies the person as fit to drive without therapy."
+  },
+  {
+   "claim": "If the treating doctor doubts the reliability of the relevant clinical information such as unreported seizures likely due to the person not recognising the occurrence of seizures or deliberately not reporting seizures, the person is not fit to drive",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the **treating doctor** doubts the reliability of the relevant clinical information (e.g. unreported seizures, likely due to the person not recognising the occurrence of seizures or deliberately not reporting seizures), the person is **not fit to drive**."
+  },
+  {
+   "claim": "Some people with epilepsy are unable to reliably report the occurrence of seizures because their awareness is impaired by their seizure, some others deliberately fail to report seizures, and corroboration by people in regular contact with the person may decrease any uncertainty",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Some people with epilepsy are unable to reliably report the occurrence of seizures because their awareness is impaired by their seizure. Some others deliberately fail to report seizures. In both situations, the person may report that no seizures have occurred, when, in fact, they have, and the person is unfit to drive. Corroboration by people in regular contact with the person may decrease any uncertainty."
+  },
+  {
+   "claim": "For planned withdrawal of antiseizure medication in a private driver who satisfies the standard to hold a conditional licence, the person should not drive during the period in which the dose is being tapered and for 3 months after the last dose",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The person should not drive:<br>- during the period in which the dose is being tapered; **and**<br>- for **3 months** after the last dose*."
+  },
+  {
+   "claim": "If a drug is being withdrawn as part of a switch from one drug to another, for example to reduce teratogenic risk, the 3-month non-driving period still applies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "_If a drug is being withdrawn as part of a switch from one drug to another (e.g. to reduce teratogenic risk), the 3-month non- driving period still applies._"
+  },
+  {
+   "claim": "If seizures recur during planned withdrawal the driver licensing authority may allow the person to resume driving on a conditional licence subject to at least annual review if the previously effective medication regimen is resumed, there have been no seizures for 4 weeks after resuming the medication regimen, and the person follows medical advice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If seizures recur, the driver licensing authority may allow the person to resume driving on a **conditional licence** subject to at least **annual review**, taking into account information provided by the **treating doctor** as to whether the following criteria are met:<br>- the previously effective medication regimen is resumed; **and**<br>- there have been no seizures for **4 weeks** after resuming the medication regimen; **and**<br>- the person follows medical advice, including adherence to medication."
+  },
+  {
+   "claim": "For a recommended reduction in dosage of antiseizure medication in a private driver, driving may continue if the dose reduction is due only to the presence of current dose-related side effects and is unlikely to affect seizure control, or if the dose is being reduced after an increase due to a temporary situation that has now resolved such as pregnancy to the dose that was effective before the increase; otherwise the person should not drive during the reduction and for 3 months after completing it",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Driving may continue:<br>- if the dose reduction is due only to the presence of current dose-related side effects and is unlikely to affect seizure control; **or**<br>- if the dose is being reduced after an increase due to a temporary situation that has now resolved (e.g. pregnancy) to the dose that was effective before the increase.<br>In circumstances other than above, the person should not drive:<br>- during the period in which the dose reduction is being made; **and**<br>- for **3 months** after completing the dose reduction."
+  },
+  {
+   "claim": "For commercial vehicle drivers if antiseizure medication is to be withdrawn the person will no longer meet the criteria to hold a conditional licence, and driving may continue only after consideration by the driver licensing authority under the Exceptional cases standard",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If antiseizure medication is to be withdrawn, the person will no longer meet the criteria to hold a conditional licence. Driving may continue only after consideration by the driver licensing authority under the Exceptional cases standard."
+  },
+  {
+   "claim": "For epilepsy treated by surgery a private conditional licence may be considered if there have been no seizures for at least 12 months following surgery and the person follows medical advice with respect to medication adherence, and the vision standard may also apply if there is a visual field defect",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- there have been no seizures for at least **12 months** following surgery; **and**<br>- the person follows medical advice with respect to medication adherence.<br>The vision standard may also apply if there is a visual field defect."
+  },
+  {
+   "claim": "Where a person has had no seizures for at least five years and has taken no antiseizure medication for at least the preceding 12 months the driver licensing authority may consider granting an unconditional licence, and this does not apply to commercial vehicle drivers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where a person has had no seizures for at least five years and has taken no antiseizure medication for at least the preceding 12 months, the driver licensing authority may consider granting an unconditional licence. This does not apply to commercial vehicle drivers."
+  },
+  {
+   "claim": "Electroencephalography is an important tool in diagnosing epilepsy and in people who have had one or more seizures it has a limited but valuable role in predicting seizure recurrence, however because there is a wide range of clinical situations with varying utility of EEG it does not form part of the driving standards except for the initial fitness assessment of commercial drivers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Electroencephalography is an important tool in diagnosing epilepsy. In people who have had one or more seizures, it has a limited but valuable role in predicting seizure recurrence. It may also be used to identify subtle episodes in which awareness may be impaired. Because there is a wide range of clinical situations, with varying utility of EEG, it does not form part of the driving standards except for the initial fitness assessment of commercial drivers."
+  },
+  {
+   "claim": "When epileptiform abnormalities that may represent subtle seizures such as generalised spike-wave bursts lasting longer than three seconds or photoparoxysmal response are found on the EEG of those who meet the standard to hold a conditional or unconditional licence, their fitness should be assessed on a case-by-case basis and this may require more detailed testing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When epileptiform abnormalities that may represent subtle seizures (e.g. generalised spike-wave bursts lasting longer than three seconds, or photoparoxysmal response) are found on the EEG of those who meet the standard to hold a conditional (or unconditional) licence, their fitness should be assessed on a case-by-case basis. This may require more detailed testing."
+  },
+  {
+   "claim": "All licence holders should be advised that the person must continue to take antiseizure medication regularly as recommended, should ensure they get adequate sleep and not drive when sleep-deprived, and should avoid circumstances or the use of substances such as excessive alcohol that are known to increase the risk of seizures",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- The person must continue to take antiseizure medication regularly as recommended.n- The person should ensure they get adequate sleep and not drive when sleep- deprived.n- The person should avoid circumstances, or the use of substances (e.g. excessive alcohol), that are known to increase the risk of seizures."
+  },
+  {
+   "claim": "It is good medical practice for any person with initial seizures to be referred to a specialist where available for accurate diagnosis of the specific epilepsy syndrome so that appropriate treatment is instituted and all the risks associated with epilepsy including driving can be explained",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is good medical practice for any person with initial seizures to be referred to a specialist, where available, for accurate diagnosis of the specific epilepsy syndrome so that appropriate treatment is instituted and all the risks associated with epilepsy, including driving, can be explained."
+  },
+  {
+   "claim": "Conditional licences rely on individual responsibility for management of the condition including compliance with treatment, in conjunction with the support of a health professional and regular review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Conditional licences rely on individual responsibility for management of the condition, including compliance with treatment, in conjunction with the support of a health professional and regular review."
+  },
+  {
+   "claim": "Drivers of private vehicles who hold a conditional licence should be reviewed at least annually by their treating doctor unless experiencing an extended seizure-free period, and commercial vehicle drivers should be reviewed at least annually by a specialist regarding any conditional licence that has been issued",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Drivers of private vehicles who hold a conditional licence should be reviewed at least annually by their treating doctor (unless experiencing an extended seizure-free period – see The default standard ). Commercial vehicle drivers should be reviewed at least annually by a specialist regarding any conditional licence that has been issued."
+  },
+  {
+   "claim": "For a conditional licence to be issued the health professional must provide to the driver licensing authority details of the medical criteria not met, evidence of the medical criteria met, as well as the proposed conditions and monitoring requirements",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For a conditional licence to be issued, the health professional must provide to the driver licensing authority details of the medical criteria not met, evidence of the medical criteria met, as well as the proposed conditions and monitoring requirements."
+  },
+  {
+   "claim": "While a person may meet individual disease criteria, concurrent medical conditions may combine to affect fitness to drive, for example hearing, visual or cognitive impairment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While a person may meet individual disease criteria, concurrent medical conditions may combine to affect fitness to drive – for example, hearing, visual or cognitive impairment"
+  },
+  {
+   "claim": "Private standards apply to drivers of cars, light rigid vehicles or motorcycles unless carrying public passengers or requiring a dangerous goods driver licence, and commercial standards apply to drivers of heavy vehicles, public passenger vehicles or requiring a dangerous goods driver licence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "**Private standards**<br>(Drivers of cars, light rigid vehicles or motorcycles unless carrying public passengers or requiring a dangerous goods driver licence – refer to definition in Table 3) | Commercial standards<br>(Drivers of heavy vehicles, public passenger vehicles or requiring a dangerous goods driver licence – refer to definition in Table 3)"
+  },
+  {
+   "claim": "Seizures associated with loss of awareness, even if brief or subtle, or loss of motor control, have the potential to impair the ability to control a motor vehicle",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Seizures associated with loss of awareness, even if brief or subtle, or loss of motor control, have the potential to impair the ability to control a motor vehicle."
+  },
+  {
+   "claim": "Figure 13 shows that a driver with seizures is assessed by a GP or specialist if a private driver, or by a specialist if a commercial driver, and is then asked whether there are factors that reduce the crash risk",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Seizure(s) / Private driver / Commercial driver / GP or specialist assessment / Specialist assessment / Are there factors that reduce the crash risk?"
+  },
+  {
+   "claim": "In Figure 13 the factors that reduce crash risk listed for private drivers are childhood seizures, first seizure, acute symptomatic seizures, epilepsy treated for the first time, safe seizures, sleep-only seizures, previously well-controlled seizures, and exceptional case",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Childhood seizures / First seizure / Acute symptomatic seizures / Epilepsy treated for the first time / 'Safe' seizures / Sleep-only seizures / Previously well-controlled seizures / Exceptional case"
+  },
+  {
+   "claim": "In Figure 13 the factors listed for commercial drivers are only childhood seizures, first seizure, acute symptomatic seizures, and exceptional case",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Are there factors that reduce the crash risk? / Childhood seizures / First seizure / Acute symptomatic seizures / Exceptional case"
+  },
+  {
+   "claim": "In Figure 13, no reducing factors gives a 1-year minimum non-driving period for private drivers and a 10-year minimum non-driving period for commercial drivers, while yes leads to the table, and both paths lead to a conditional licence",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "No / 1-year minimum non-driving period / 10-year minimum non-driving period / Yes / Refer table / Conditional licence"
+  },
+  {
+   "claim": "Figure 13 lists management factors as surgery, noncompliance with management, withdrawal of antiseizure medication, reduction of antiseizure medication, seizure causing crash, and resumption of full licence",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Management factors / Surgery / Noncompliance with management / Withdrawal of antiseizure medication / Reduction of antiseizure medication / Seizure causing crash / Resumption of full licence"
+  },
+  {
+   "claim": "Figure 14 defines epilepsy treated for the first time as treatment with antiepileptic medication commenced for the first time within the last 18 months",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Epilepsy treated for the first time (defined as treatment with antiepileptic medication commenced for the first time within the last 18 months)"
+  },
+  {
+   "claim": "In Figure 14 a commercial vehicle driver goes to the default standard of a minimum 10-year non-driving seizure-free period",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Commercial vehicle driver? / Yes / Default standard (minimum 10-year non-driving seizure-free period)"
+  },
+  {
+   "claim": "In Figure 14 a non-commercial driver is asked whether treatment started more than 6 months ago; if no, reassess after at least 6 months of treatment",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Commercial vehicle driver? / No / Treatment started more than 6 months ago? / No / Reassess after at least 6 months of treatment"
+  },
+  {
+   "claim": "In Figure 14, if there have been no seizures the driver may return to driving on a conditional licence 6 months after the last seizure, and if there have been seizures the question is whether they were only in the first 6 months after starting treatment, with yes giving the conditional licence at 6 months after the last seizure and no giving the default standard of a minimum 1-year non-driving seizure-free period",
+   "source": "S2",
+   "verdict": "pass_image_transcription",
+   "source_text": "Any seizures? / No / May return to driving on a conditional licence 6 months after last seizure / Yes / Seizures were only in the first 6 months after starting treatment? / Yes / No / Default standard (minimum 1-year non-driving seizure-free period)"
   }
+ ],
+ "summary": {
+  "total": 72,
+  "pass": 63,
+  "fail": 0,
+  "pass_image_transcription": 9
+ }
 }

@@ -1,249 +1,253 @@
 {
-  "guideline": "guidelines/acute-anaphylaxis.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-22",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Acute Anaphylaxis Clinical Care Standard, including the six quality statements, Table 3 (adrenaline doses), the ASCIA overnight-observation criteria as reproduced, and the indicator list. Adrenaline doses are transcribed from Table 3 character by character. No repeat-dose interval or IV infusion regimen is asserted; the Standard states neither. Some retrieved text contains extraction artefacts where double-n collapsed ('ca ot' for cannot, 'pla ing' for planning, 'reactio' for reaction); source_text is preserved verbatim and the guideline renders the evident word.",
-  "claims": [
-    {
-      "claim": "Quality statement 3 states that a patient experiencing anaphylaxis is laid flat or allowed to sit with legs extended if breathing is difficult, an infant is held or laid horizontally, and the patient is not allowed to stand or walk during or immediately after the event until they are assessed as safe to do so even if they appear to have recovered",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient experiencing anaphylaxis is laid flat, or allowed to sit with legs extended if breathing is difficult. An infant is held or laid horizontally. The patient is not allowed to stand or walk during, or immediately after the event until they are assessed as safe to do so, even if they appear to have recovered."
-    },
-    {
-      "claim": "Fatality can occur within minutes if a patient stands or sits up suddenly while they have inadequate perfusion",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Fatality can occur within minutes if a patient stands or sits up suddenly while they have inadequate perfusion"
-    },
-    {
-      "claim": "Clinicians should ensure the patient is in a supine position and not allow them to stand or walk, monitor the patient's blood pressure and elevate their legs if their blood pressure is low",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure the patient is in a supine position; do not allow them to stand or walk. Monitor the patient's blood pressure and elevate their legs if their blood pressure is low."
-    },
-    {
-      "claim": "A semi-reclined position sufficient to relieve respiratory distress is allowed while the patient is monitored carefully for any circulatory collapse",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A semi-reclined position sufficient to relieve respiratory distress is allowed while the patient is monitored carefully for any circulatory collapse."
-    },
-    {
-      "claim": "Patients who are pregnant or vomiting should be placed on their side in the left lateral recovery position",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patients who are pregnant or vomiting should be placed on their side in the left lateral (recovery) position."
-    },
-    {
-      "claim": "Infants should be held horizontally across the body and must not be held upright or over a shoulder",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Infants should be held horizontally (across the body). They must not be held upright or over a shoulder."
-    },
-    {
-      "claim": "Clinicians should ensure the patient understands that they are not to stand up suddenly or walk until after they have been treated and assessed and why this is important, and communicate this to other staff caring for the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure the patient understands that they are not to stand up suddenly or walk until after they have been treated and assessed, and why this is important. Communicate this to other staff caring for the patient."
-    },
-    {
-      "claim": "Quality statement 2 states that a patient with anaphylaxis or suspected anaphylaxis is administered adrenaline intramuscularly without delay before any other treatment including asthma medicines, and that corticosteroids and antihistamines are not first-line treatments for anaphylaxis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with anaphylaxis, or suspected anaphylaxis, is administered adrenaline intramuscularly without delay, before any other treatment including asthma medicines. Corticosteroids and antihistamines are not first-line treatments for anaphylaxis."
-    },
-    {
-      "claim": "Delayed administration of adrenaline is a risk factor for fatal anaphylaxis, and if anaphylaxis is suspected in the presence of an allergy or anaphylaxis history or following exposure to a potential allergen it is safer to administer adrenaline early than to wait for progression which may be hard to reverse",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Delayed administration of adrenaline is a risk factor for fatal anaphylaxis. If anaphylaxis is suspected in the presence of an allergy or anaphylaxis history, or following exposure to a potential allergen, it is safer to administer adrenaline early than to wait for progression, which may be hard to reverse."
-    },
-    {
-      "claim": "There are no absolute contraindications to adrenaline administration in anaphylaxis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "There are no absolute contraindications to adrenaline administration in anaphylaxis."
-    },
-    {
-      "claim": "Adrenaline should be administered via intramuscular injection into the mid-anterolateral thigh using a needle of appropriate length",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "administer adrenaline via intramuscular (IM) injection into the mid-anterolateral thigh using a needle of appropriate length."
-    },
-    {
-      "claim": "Subcutaneous or inhaled routes for adrenaline are not recommended as they are less effective",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Subcutaneous or inhaled routes for adrenaline are not recommended as they are less effective."
-    },
-    {
-      "claim": "In most situations intramuscular adrenaline is preferred and is safer than the intravenous route, and adverse events have been reported in adult patients who received overdoses of intravenous adrenaline but these are rare with intramuscular adrenaline",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In most situations, IM adrenaline is preferred and is safer than the intravenous (IV) route. Adverse events have been reported in adult patients who received overdoses of IV adrenaline, but these are rare with IM adrenaline."
-    },
-    {
-      "claim": "An intravenous adrenaline infusion should only be administered when clinically appropriate and by clinicians trained to do so",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "An IV adrenaline infusion should only be administered when clinically appropriate, and: - by clinicians trained"
-    },
-    {
-      "claim": "Pregnant women experiencing anaphylaxis require the same dose of intramuscular adrenaline as other patients",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Pregnant women experiencing anaphylaxis require the same dose of IM adrenaline as other patients."
-    },
-    {
-      "claim": "The recommended intramuscular adrenaline doses using 1 in 1000 ampoules are 0.1 mL for under 1 year and under 7.5 kg, 0.1 mL at about 1 to 2 years and 10 kg, 0.15 mL at about 2 to 3 years and 15 kg, 0.2 mL at about 4 to 6 years and 20 kg, 0.3 mL at about 7 to 10 years and 30 kg, 0.4 mL at about 10 to 12 years and 40 kg, and 0.5 mL for over 12 years and adults over 50 kg",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "| ~<1 | <7.5 | 0.1 mL | Not available | ~1-2 | 10 | 0.1 mL | ... | ~2-3 | 15 | 0.15 mL | ... | ~4-6 | 20 | 0.2 mL | ... | ~7-10 | 30 | 0.3 mL | ... | ~10-12 | 40 | 0.4 mL | ... | >12 and adults | >50 | 0.5 mL |"
-    },
-    {
-      "claim": "Adrenaline injector devices are a 150 microgram device for 7.5 to 20 kg or about under 5 years, a 300 microgram device for over 20 kg or about over 5 years, and a 300 microgram or 500 microgram device for over 50 kg or about over 12 years, with no injector available for infants under 7.5 kg",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "7.5-20kg (~<5 years) 150 microgram device ... >20kg (~>5 years) 300 microgram device ... >50kg (~>12 years) 300 microgram or 500 microgram device ... | ~<1 | <7.5 | 0.1 mL | Not available |"
-    },
-    {
-      "claim": "Quality statement 1 states that a patient with acute-onset clinical deterioration with signs or symptoms of an allergic response is rapidly assessed for anaphylaxis, especially in the presence of an allergic trigger or a history of allergy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with acute-onset clinical deterioration with signs or symptoms of an allergic response is rapidly assessed for anaphylaxis, especially in the presence of an allergic trigger or a history of allergy."
-    },
-    {
-      "claim": "Clinicians should assess patients immediately for possible anaphylaxis if they present with rapid development of airway, breathing and/or circulation problems with or without skin or mucosal changes, and the presence of an allergic trigger or a history of allergy should heighten suspicion even if the patient is not in severe distress",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Assess patients immediately for possible anaphylaxis if they present with rapid development of airway, breathing and/or circulation problems, with or without skin or mucosal changes. The presence of an allergic trigger or a history of allergy should heighten suspicion even if the patient is not in severe distress."
-    },
-    {
-      "claim": "Symptoms typically occur in two or more body systems but this can be variable, and the most common triggers of anaphylaxis are food, insect venom and medicines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Symptoms typically occur in two or more body systems, but this can be variable. The most common triggers of anaphylaxis are food, insect venom and medicines"
-    },
-    {
-      "claim": "After exposure to a trigger the time until onset of signs and symptoms of anaphylaxis may range from minutes to several hours",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "After exposure to a trigger, the time until onset of signs and symptoms of anaphylaxis (Table 2) may range from minutes to several hours."
-    },
-    {
-      "claim": "A history should be obtained noting recent exposure to substances known to cause an allergic reaction, any known allergies including previous reactions and treatment, and any history of anaphylaxis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Obtain a history from the patient, noting: - recent exposure to substances known to cause an allergic reactio - any known allergies for the patient, including previous reactions and treatment - any history of anaphylaxis."
-    },
-    {
-      "claim": "The time of symptom onset should be documented in the patient's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Document the time of symptom onset in the patient's healthcare record."
-    },
-    {
-      "claim": "Clinicians should consider patient risk factors that potentially contribute to fatal anaphylaxis such as older age and cardiovascular and respiratory diseases",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider patient risk factors that potentially contribute to fatal anaphylaxis (for example, older age and cardiovascular and respiratory diseases"
-    },
-    {
-      "claim": "Quality statement 4 states that a patient who has an adrenaline injector has access to it for self-administration during all healthcare encounters, including patients keeping their adrenaline injector safely at their bedside during a hospital admission",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient who has an adrenaline injector has access to it for self-administration during all healthcare encounters. This includes patients keeping their adrenaline injector safely at their bedside during a hospital admission."
-    },
-    {
-      "claim": "For adrenaline to be given as soon as possible after the onset of symptoms it is important for the patient or their carer to be able to immediately administer their own adrenaline injector regardless of the setting, and a readily accessible adrenaline injector may also be used by a clinician if necessary",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For adrenaline to be given as soon as possible after the onset of symptoms of anaphylaxis, it is important for the patient (or their carer) to be able to immediately administer their own adrenaline injector, regardless of the setting. A readily accessible adrenaline injector may also be used by a clinician if necessary."
-    },
-    {
-      "claim": "As soon as possible following presentation or admission clinicians should assess the patient's capacity to safely use their injector, including checking their capacity, physical capability and willingness to use it and their ability to recognise the symptoms of anaphylaxis, considering medicines administered during the healthcare visit that may impair the patient's usual ability to recognise and treat anaphylaxis, involving a parent guardian or carer in the paediatric setting, and involving a family member or carer if appropriate when a patient is cognitively impaired or lives with a disability",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If a patient has an adrenaline injector, as soon as possible following presentation or admission, assess their capacity to safely use it during the healthcare encounter. This includes: - checking their capacity, physical capability and willingness to use their personal adrenaline injector and their ability to recognise the symptoms of anaphylaxis - considering medicines administered during the healthcare visit that may impair the patient's usual ability to recognise and treat anaphylaxis - involving a parent, guardian or carer in the assessment when in the paediatric setting - involving a family member or carer in the assessment, if appropriate, when a patient is cognitively impaired or lives with a disability."
-    },
-    {
-      "claim": "Quality statement 5 states that a patient treated for anaphylaxis remains under clinical observation for at least 4 hours after their last dose of adrenaline, or overnight as appropriate according to the ASCIA Acute Management of Anaphylaxis guidelines, with observation timeframes determined based on assessment and risk appraisal after initial treatment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient treated for anaphylaxis remains under clinical observation for at least 4 hours after their last dose of adrenaline, or overnight as appropriate according to the Australasian Society of Clinical Immunology and Allergy Acute Management of Anaphylaxis guidelines. Observation timeframes are determined based on assessment and risk appraisal after initial treatment."
-    },
-    {
-      "claim": "Patients should be observed for at least four hours after the last injection of adrenaline and reassessed after four hours, considering the severity of the reaction, concomitant conditions and history of anaphylaxis when deciding if more time is needed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Observe patients for at least four hours after the last injection of adrenaline following anaphylaxis. Reassess the patient after four hours. Consider the severity of the reaction, concomitant conditions and history of anaphylaxis when deciding if more time is needed."
-    },
-    {
-      "claim": "When the initial injection of adrenaline is administered in general practice or another primary care location where observation for four hours is not possible, ambulance transfer to an appropriate facility for clinical observation should be arranged",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "When the initial injection of adrenaline for anaphylaxis is administered in general practice or another primary care location, where observation for four hours is not possible, arrange ambulance transfer to an appropriate facility for clinical observation."
-    },
-    {
-      "claim": "Prolonged and biphasic reactions may occur, biphasic reactions are estimated to occur following 3 to 20% of anaphylactic reactions, and they cannot be predicted",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Prolonged and biphasic reactions may occur. Biphasic reactions are estimated to occur following 3-20% of anaphylactic reactions, and ca ot be predicted."
-    },
-    {
-      "claim": "A patient should be observed overnight if they had a severe reaction with hypotension or hypoxia, required repeated doses of adrenaline, have a history of severe asthma or protracted anaphylaxis, have other concomitant illnesses such as asthma, chest infection or arrhythmia, live alone or are remote from medical care, have known systemic mastocytosis, presented for health care late in the evening, or cannot easily replace their adrenaline injector on discharge and have no other adrenaline injector",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "a patient should be observed overnight if they: - had a severe reaction (hypotension or hypoxia) - required repeated doses of adrenaline - have a history of severe asthma or protracted anaphylaxis - have other concomitant illnesses, such as asthma, chest infection or arrhythmia - live alone or are remote from medical care - have known systemic mastocytosis - presented for health care late in the evening - ca ot easily replace their adrenaline injector on discharge and have no other adrenaline injector."
-    },
-    {
-      "claim": "Quality statement 6 states that before a patient leaves a healthcare facility after having anaphylaxis they are advised about the suspected allergen, allergen avoidance strategies and post-discharge care, that the discharge care plan is tailored to the allergen and includes details of the suspected allergen, the appropriate ASCIA Action Plan and the need for prompt follow-up with a general practitioner and clinical immunology or allergy specialist review, that where there is a risk of re-exposure the patient is prescribed a personal adrenaline injector and is trained in its use, and that details of the allergen, the anaphylactic reaction and discharge care arrangements are documented in the patient's healthcare record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Before a patient leaves a healthcare facility after having anaphylaxis, they are advised about the suspected allergen, allergen avoidance strategies and post-discharge care. The discharge care plan is tailored to the allergen and includes details of the suspected allergen, the appropriate ASCIA Action Plan, and the need for prompt follow-up with a general practitioner and clinical immunology/allergy specialist review. Where there is a risk of re-exposure, the patient is prescribed a personal adrenaline injector and is trained in its use. Details of the allergen, the anaphylactic reaction and discharge care arrangements are documented in the patient's healthcare record."
-    },
-    {
-      "claim": "Clinicians should discuss the suspected allergen with the patient and their carer and provide advice about allergy avoidance, tailoring discharge care to the suspected allergen and risk of re-exposure to ensure adequate follow-up and preventive measures",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Discuss the suspected allergen with the patient and their carer and provide advice about allergy avoidance. Tailor the patient's discharge care to the suspected allergen and risk of re-exposure to ensure adequate follow-up and preventive measures."
-    },
-    {
-      "claim": "In most cases discharge will include an ASCIA Action Plan, advice about the allergen or suspected allergen and how to avoid it, advice about follow-up visits with their GP and a clinical immunology or allergy specialist, the Commission Anaphylaxis Discharge Checklist and Discussion Guide, and prescribing personal adrenaline injectors where there is risk",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "In most cases this will include: - an ASCIA Action Pla - advice about the allergen or suspected allergen and how to avoid it - advice about follow-up visits with their GP and a clinical immunology/allergy specialist - the Commission Anaphylaxis Discharge Checklist and Discussion Guide - prescribing personal adrenaline injector(s), where ther"
-    },
-    {
-      "claim": "Indicator 1 is evidence of a locally approved anaphylaxis pathway and indicator 2 is the proportion of patients with anaphylaxis treated with intramuscular adrenaline",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 1 | Evidence of a locally approved anaphylaxis pathway | Indicator 2 | Proportion of patients with anaphylaxis treated with intramuscular adrenaline"
-    },
-    {
-      "claim": "Indicator 4 is evidence of a locally approved policy to ensure patients maintain access to their personal adrenaline injectors",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 4 | Evidence of a locally approved policy to ensure patients maintain access to their personal adrenaline injectors"
-    },
-    {
-      "claim": "Indicator 6a is evidence of local arrangements that ensure patients treated for anaphylaxis receive tailored discharge planning prior to separation from hospital, indicator 6b is the proportion separated from hospital with a completed ASCIA Action Plan for Anaphylaxis or ASCIA Action Plan for Drug Medication Allergy, and indicator 6c is the proportion who require adrenaline injectors who are supplied or prescribed an adrenaline injector prior to separation from hospital",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 6a | Evidence of local arrangements that ensure patients treated for anaphylaxis receive tailored discharge pla ing prior to separation from hospital | Indicator 6b | Proportion of patients treated for anaphylaxis separated from hospital with a completed ASCIA Action Plan for Anaphylaxis or ASCIA Action Plan for Drug (Medication) Allergy | Indicator 6c | Proportion of patients treated for anaphylaxis who require adrenaline injectors who are supplied or prescribed an adrenaline injector prior to separation from hospital"
-    },
-    {
-      "claim": "No benchmarks are set for these indicators by the Commission and definitions required to collect and calculate indicator data are specified online at METEOR",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "No benchmarks are set for these indicators by the Commission. When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
-    }
-  ],
-  "summary": {
-    "total": 39,
-    "pass": 39,
-    "fail": 0
+ "guideline": "guidelines/acute-anaphylaxis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Acute Anaphylaxis Clinical Care Standard, including the six quality statements, Table 3 (adrenaline doses), the ASCIA overnight-observation criteria as reproduced, and the indicator list. Adrenaline doses are transcribed from Table 3 character by character. No repeat-dose interval or IV infusion regimen is asserted; the Standard states neither. Some retrieved text contains extraction artefacts where double-n collapsed ('ca ot' for cannot, 'pla ing' for planning, 'reactio' for reaction); source_text is preserved verbatim and the guideline renders the evident word. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "Quality statement 3 states that a patient experiencing anaphylaxis is laid flat or allowed to sit with legs extended if breathing is difficult, an infant is held or laid horizontally, and the patient is not allowed to stand or walk during or immediately after the event until they are assessed as safe to do so even if they appear to have recovered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient experiencing anaphylaxis is laid flat, or allowed to sit with legs extended if breathing is difficult. An infant is held or laid horizontally. The patient is not allowed to stand or walk during, or immediately after the event until they are assessed as safe to do so, even if they appear to have recovered."
+  },
+  {
+   "claim": "Fatality can occur within minutes if a patient stands or sits up suddenly while they have inadequate perfusion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fatality can occur within minutes if a patient stands or sits up suddenly while they have inadequate perfusion"
+  },
+  {
+   "claim": "Clinicians should ensure the patient is in a supine position and not allow them to stand or walk, monitor the patient's blood pressure and elevate their legs if their blood pressure is low",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure the patient is in a supine position; do not allow them to stand or walk. Monitor the patient's blood pressure and elevate their legs if their blood pressure is low."
+  },
+  {
+   "claim": "A semi-reclined position sufficient to relieve respiratory distress is allowed while the patient is monitored carefully for any circulatory collapse",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A semi-reclined position sufficient to relieve respiratory distress is allowed while the patient is monitored carefully for any circulatory collapse."
+  },
+  {
+   "claim": "Patients who are pregnant or vomiting should be placed on their side in the left lateral recovery position",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients who are pregnant or vomiting should be placed on their side in the left lateral (recovery) position."
+  },
+  {
+   "claim": "Infants should be held horizontally across the body and must not be held upright or over a shoulder",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infants should be held horizontally (across the body). They must not be held upright or over a shoulder."
+  },
+  {
+   "claim": "Clinicians should ensure the patient understands that they are not to stand up suddenly or walk until after they have been treated and assessed and why this is important, and communicate this to other staff caring for the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure the patient understands that they are not to stand up suddenly or walk until after they have been treated and assessed, and why this is important. Communicate this to other staff caring for the patient."
+  },
+  {
+   "claim": "Quality statement 2 states that a patient with anaphylaxis or suspected anaphylaxis is administered adrenaline intramuscularly without delay before any other treatment including asthma medicines, and that corticosteroids and antihistamines are not first-line treatments for anaphylaxis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with anaphylaxis, or suspected anaphylaxis, is administered adrenaline intramuscularly without delay, before any other treatment including asthma medicines. Corticosteroids and antihistamines are not first-line treatments for anaphylaxis."
+  },
+  {
+   "claim": "Delayed administration of adrenaline is a risk factor for fatal anaphylaxis, and if anaphylaxis is suspected in the presence of an allergy or anaphylaxis history or following exposure to a potential allergen it is safer to administer adrenaline early than to wait for progression which may be hard to reverse",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Delayed administration of adrenaline is a risk factor for fatal anaphylaxis. If anaphylaxis is suspected in the presence of an allergy or anaphylaxis history, or following exposure to a potential allergen, it is safer to administer adrenaline early than to wait for progression, which may be hard to reverse."
+  },
+  {
+   "claim": "There are no absolute contraindications to adrenaline administration in anaphylaxis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are no absolute contraindications to adrenaline administration in anaphylaxis."
+  },
+  {
+   "claim": "Adrenaline should be administered via intramuscular injection into the mid-anterolateral thigh using a needle of appropriate length",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "administer adrenaline via intramuscular (IM) injection into the mid-anterolateral thigh using a needle of appropriate length."
+  },
+  {
+   "claim": "Subcutaneous or inhaled routes for adrenaline are not recommended as they are less effective",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Subcutaneous or inhaled routes for adrenaline are not recommended as they are less effective."
+  },
+  {
+   "claim": "In most situations intramuscular adrenaline is preferred and is safer than the intravenous route, and adverse events have been reported in adult patients who received overdoses of intravenous adrenaline but these are rare with intramuscular adrenaline",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In most situations, IM adrenaline is preferred and is safer than the intravenous (IV) route. Adverse events have been reported in adult patients who received overdoses of IV adrenaline, but these are rare with IM adrenaline."
+  },
+  {
+   "claim": "An intravenous adrenaline infusion should only be administered when clinically appropriate and by clinicians trained to do so",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An IV adrenaline infusion should only be administered when clinically appropriate, and: - by clinicians trained"
+  },
+  {
+   "claim": "Pregnant women experiencing anaphylaxis require the same dose of intramuscular adrenaline as other patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pregnant women experiencing anaphylaxis require the same dose of IM adrenaline as other patients."
+  },
+  {
+   "claim": "The recommended intramuscular adrenaline doses using 1 in 1000 ampoules are 0.1 mL for under 1 year and under 7.5 kg, 0.1 mL at about 1 to 2 years and 10 kg, 0.15 mL at about 2 to 3 years and 15 kg, 0.2 mL at about 4 to 6 years and 20 kg, 0.3 mL at about 7 to 10 years and 30 kg, 0.4 mL at about 10 to 12 years and 40 kg, and 0.5 mL for over 12 years and adults over 50 kg",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Table 3: Recommended doses for intramuscular adrenaline … ~<1 <7.5 0.1 mL Not available … ~1-2 10 0.1 mL … ~2-3 15 0.15 mL … ~4-6 20 0.2 mL … ~7-10 30 0.3 mL … ~10-12 40 0.4 mL … >12 and adults >50 0.5 mL"
+  },
+  {
+   "claim": "Adrenaline injector devices are a 150 microgram device for 7.5 to 20 kg or about under 5 years, a 300 microgram device for over 20 kg or about over 5 years, and a 300 microgram or 500 microgram device for over 50 kg or about over 12 years, with no injector available for infants under 7.5 kg",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adrenaline injector (for use instead of ampoules) … <7.5 0.1 mL Not available … 7.5-20kg (~<5 years) 150 microgram device … >20kg (~>5 years) 300 microgram device … >50kg (~>12 years) 300 microgram or 500 microgram device"
+  },
+  {
+   "claim": "Quality statement 1 states that a patient with acute-onset clinical deterioration with signs or symptoms of an allergic response is rapidly assessed for anaphylaxis, especially in the presence of an allergic trigger or a history of allergy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with acute-onset clinical deterioration with signs or symptoms of an allergic response is rapidly assessed for anaphylaxis, especially in the presence of an allergic trigger or a history of allergy."
+  },
+  {
+   "claim": "Clinicians should assess patients immediately for possible anaphylaxis if they present with rapid development of airway, breathing and/or circulation problems with or without skin or mucosal changes, and the presence of an allergic trigger or a history of allergy should heighten suspicion even if the patient is not in severe distress",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess patients immediately for possible anaphylaxis if they present with rapid development of airway, breathing and/or circulation problems, with or without skin or mucosal changes. The presence of an allergic trigger or a history of allergy should heighten suspicion even if the patient is not in severe distress."
+  },
+  {
+   "claim": "Symptoms typically occur in two or more body systems but this can be variable, and the most common triggers of anaphylaxis are food, insect venom and medicines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptoms typically occur in two or more body systems, but this can be variable. The most common triggers of anaphylaxis are food, insect venom and medicines"
+  },
+  {
+   "claim": "After exposure to a trigger the time until onset of signs and symptoms of anaphylaxis may range from minutes to several hours",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After exposure to a trigger, the time until onset of signs and symptoms of anaphylaxis (Table 2) may range from minutes to several hours."
+  },
+  {
+   "claim": "A history should be obtained noting recent exposure to substances known to cause an allergic reaction, any known allergies including previous reactions and treatment, and any history of anaphylaxis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain a history from the patient, noting: - recent exposure to substances known to cause an allergic reaction - any known allergies for the patient, including previous reactions and treatment - any history of anaphylaxis"
+  },
+  {
+   "claim": "The time of symptom onset should be documented in the patient's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Document the time of symptom onset in the patient's healthcare record."
+  },
+  {
+   "claim": "Clinicians should consider patient risk factors that potentially contribute to fatal anaphylaxis such as older age and cardiovascular and respiratory diseases",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider patient risk factors that potentially contribute to fatal anaphylaxis (for example, older age and cardiovascular and respiratory diseases"
+  },
+  {
+   "claim": "Quality statement 4 states that a patient who has an adrenaline injector has access to it for self-administration during all healthcare encounters, including patients keeping their adrenaline injector safely at their bedside during a hospital admission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient who has an adrenaline injector has access to it for self-administration during all healthcare encounters. This includes patients keeping their adrenaline injector safely at their bedside during a hospital admission."
+  },
+  {
+   "claim": "For adrenaline to be given as soon as possible after the onset of symptoms it is important for the patient or their carer to be able to immediately administer their own adrenaline injector regardless of the setting, and a readily accessible adrenaline injector may also be used by a clinician if necessary",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For adrenaline to be given as soon as possible after the onset of symptoms of anaphylaxis, it is important for the patient (or their carer) to be able to immediately administer their own adrenaline injector, regardless of the setting. A readily accessible adrenaline injector may also be used by a clinician if necessary."
+  },
+  {
+   "claim": "As soon as possible following presentation or admission clinicians should assess the patient's capacity to safely use their injector, including checking their capacity, physical capability and willingness to use it and their ability to recognise the symptoms of anaphylaxis, considering medicines administered during the healthcare visit that may impair the patient's usual ability to recognise and treat anaphylaxis, involving a parent guardian or carer in the paediatric setting, and involving a family member or carer if appropriate when a patient is cognitively impaired or lives with a disability",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a patient has an adrenaline injector, as soon as possible following presentation or admission, assess their capacity to safely use it during the healthcare encounter. This includes: - checking their capacity, physical capability and willingness to use their personal adrenaline injector and their ability to recognise the symptoms of anaphylaxis - considering medicines administered during the healthcare visit that may impair the patient's usual ability to recognise and treat anaphylaxis - involving a parent, guardian or carer in the assessment when in the paediatric setting - involving a family member or carer in the assessment, if appropriate, when a patient is cognitively impaired or lives with a disability."
+  },
+  {
+   "claim": "Quality statement 5 states that a patient treated for anaphylaxis remains under clinical observation for at least 4 hours after their last dose of adrenaline, or overnight as appropriate according to the ASCIA Acute Management of Anaphylaxis guidelines, with observation timeframes determined based on assessment and risk appraisal after initial treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient treated for anaphylaxis remains under clinical observation for at least 4 hours after their last dose of adrenaline, or overnight as appropriate according to the Australasian Society of Clinical Immunology and Allergy Acute Management of Anaphylaxis guidelines. Observation timeframes are determined based on assessment and risk appraisal after initial treatment."
+  },
+  {
+   "claim": "Patients should be observed for at least four hours after the last injection of adrenaline and reassessed after four hours, considering the severity of the reaction, concomitant conditions and history of anaphylaxis when deciding if more time is needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Observe patients for at least four hours after the last injection of adrenaline following anaphylaxis. Reassess the patient after four hours. Consider the severity of the reaction, concomitant conditions and history of anaphylaxis when deciding if more time is needed."
+  },
+  {
+   "claim": "When the initial injection of adrenaline is administered in general practice or another primary care location where observation for four hours is not possible, ambulance transfer to an appropriate facility for clinical observation should be arranged",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When the initial injection of adrenaline for anaphylaxis is administered in general practice or another primary care location, where observation for four hours is not possible, arrange ambulance transfer to an appropriate facility for clinical observation."
+  },
+  {
+   "claim": "Prolonged and biphasic reactions may occur, biphasic reactions are estimated to occur following 3 to 20% of anaphylactic reactions, and they cannot be predicted",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prolonged and biphasic reactions may occur. Biphasic reactions are estimated to occur following 3-20% of anaphylactic reactions, and cannot be predicted"
+  },
+  {
+   "claim": "A patient should be observed overnight if they had a severe reaction with hypotension or hypoxia, required repeated doses of adrenaline, have a history of severe asthma or protracted anaphylaxis, have other concomitant illnesses such as asthma, chest infection or arrhythmia, live alone or are remote from medical care, have known systemic mastocytosis, presented for health care late in the evening, or cannot easily replace their adrenaline injector on discharge and have no other adrenaline injector",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a patient should be observed overnight if they: - had a severe reaction (hypotension or hypoxia) - required repeated doses of adrenaline - have a history of severe asthma or protracted anaphylaxis - have other concomitant illnesses, such as asthma, chest infection or arrhythmia - live alone or are remote from medical care - have known systemic mastocytosis - presented for health care late in the evening - cannot easily replace their adrenaline injector on discharge and have no other adrenaline injector"
+  },
+  {
+   "claim": "Quality statement 6 states that before a patient leaves a healthcare facility after having anaphylaxis they are advised about the suspected allergen, allergen avoidance strategies and post-discharge care, that the discharge care plan is tailored to the allergen and includes details of the suspected allergen, the appropriate ASCIA Action Plan and the need for prompt follow-up with a general practitioner and clinical immunology or allergy specialist review, that where there is a risk of re-exposure the patient is prescribed a personal adrenaline injector and is trained in its use, and that details of the allergen, the anaphylactic reaction and discharge care arrangements are documented in the patient's healthcare record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Before a patient leaves a healthcare facility after having anaphylaxis, they are advised about the suspected allergen, allergen avoidance strategies and post-discharge care. The discharge care plan is tailored to the allergen and includes details of the suspected allergen, the appropriate ASCIA Action Plan, and the need for prompt follow-up with a general practitioner and clinical immunology/allergy specialist review. Where there is a risk of re-exposure, the patient is prescribed a personal adrenaline injector and is trained in its use. Details of the allergen, the anaphylactic reaction and discharge care arrangements are documented in the patient's healthcare record."
+  },
+  {
+   "claim": "Clinicians should discuss the suspected allergen with the patient and their carer and provide advice about allergy avoidance, tailoring discharge care to the suspected allergen and risk of re-exposure to ensure adequate follow-up and preventive measures",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss the suspected allergen with the patient and their carer and provide advice about allergy avoidance. Tailor the patient's discharge care to the suspected allergen and risk of re-exposure to ensure adequate follow-up and preventive measures."
+  },
+  {
+   "claim": "In most cases discharge will include an ASCIA Action Plan, advice about the allergen or suspected allergen and how to avoid it, advice about follow-up visits with their GP and a clinical immunology or allergy specialist, the Commission Anaphylaxis Discharge Checklist and Discussion Guide, and prescribing personal adrenaline injectors where there is risk",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In most cases this will include: - an ASCIA Action Plan - advice about the allergen or suspected allergen and how to avoid it - advice about follow-up visits with their GP and a clinical immunology/allergy specialist - the Commission Anaphylaxis Discharge Checklist and Discussion Guide - prescribing personal adrenaline injector(s), where there"
+  },
+  {
+   "claim": "Indicator 1 is evidence of a locally approved anaphylaxis pathway and indicator 2 is the proportion of patients with anaphylaxis treated with intramuscular adrenaline",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 1 Evidence of a locally approved anaphylaxis pathway Indicator 2 Proportion of patients with anaphylaxis treated with intramuscular adrenaline"
+  },
+  {
+   "claim": "Indicator 4 is evidence of a locally approved policy to ensure patients maintain access to their personal adrenaline injectors",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 4 Evidence of a locally approved policy to ensure patients maintain access to their personal adrenaline injectors"
+  },
+  {
+   "claim": "Indicator 6a is evidence of local arrangements that ensure patients treated for anaphylaxis receive tailored discharge planning prior to separation from hospital, indicator 6b is the proportion separated from hospital with a completed ASCIA Action Plan for Anaphylaxis or ASCIA Action Plan for Drug Medication Allergy, and indicator 6c is the proportion who require adrenaline injectors who are supplied or prescribed an adrenaline injector prior to separation from hospital",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 6a Evidence of local arrangements that ensure patients treated for anaphylaxis receive tailored discharge planning prior to separation from hospital Indicator 6b Proportion of patients treated for anaphylaxis separated from hospital with a completed ASCIA Action Plan for Anaphylaxis or ASCIA Action Plan for Drug (Medication) Allergy Indicator 6c Proportion of patients treated for anaphylaxis who require adrenaline injectors who are supplied or prescribed an adrenaline injector prior to separation from hospital"
+  },
+  {
+   "claim": "No benchmarks are set for these indicators by the Commission and definitions required to collect and calculate indicator data are specified online at METEOR",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No benchmarks are set for these indicators by the Commission. When using the indicators, please refer to the definitions required to collect and calculate indicator data which are specified online at METEOR."
   }
+ ],
+ "summary": {
+  "total": 39,
+  "pass": 39,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/acute-anaphylaxis"
+ ],
+ "retrieved_utc": "2026-09-22"
 }

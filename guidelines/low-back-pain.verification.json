@@ -1,309 +1,313 @@
 {
-  "guideline": "guidelines/low-back-pain.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-21",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ACSQHC Low Back Pain Clinical Care Standard (2022), including the quality statements, the for-clinicians, for-healthcare-services and for-consumers sections, and the named indicators. The standard defers pharmacological choice to Therapeutic Guidelines and states no doses; these are recorded as input_unavailable. Boxes 1, 2 and 4 and the alerting-features list were not retrieved and are recorded as input_unavailable. The MBS statement about MRI is flagged time_sensitive.",
-  "claims": [
-    {
-      "claim": "The Low Back Pain Clinical Care Standard comprises eight quality statements describing safe and appropriate care and a set of indicators to support monitoring and quality improvement",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "eight quality statements describing safe and appropriate care ... a set of indicators to support monitoring and quality improvement."
-    },
-    {
-      "claim": "Quality statement 7 states that a patient is advised that the goal of pain medicines is to enable physical activity, not to eliminate pain, and that if a medicine is prescribed it is in accordance with current Therapeutic Guidelines with ongoing review of benefit and clear stopping goals",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient is advised that the goal of pain medicines is to enable physical activity, not to eliminate pain. If a medicine is prescribed, it is in accordance with the current Therapeutic Guidelines, with ongoing review of benefit and clear stopping goals."
-    },
-    {
-      "claim": "Anticonvulsants, benzodiazepines and antidepressants are avoided because their risks often outweigh potential benefits and there is evidence of limited effectiveness",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Anticonvulsants, benzodiazepines and antidepressants are avoided, because their risks often outweigh potential benefits, and there is evidence of limited effectiveness."
-    },
-    {
-      "claim": "Opioid analgesics are considered only in carefully selected patients at the lowest dose for the shortest duration possible",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Opioid analgesics are considered only in carefully selected patients, at the lowest dose for the shortest duration possible."
-    },
-    {
-      "claim": "Clinicians should explain that the goal of pain medicines is to reduce pain to support continuation of usual activities including physical activity and work rather than to eliminate pain",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Explain that the goal of pain medicines is to reduce pain to support continuation of usual activities, including physical activity and work, rather than to eliminate pain."
-    },
-    {
-      "claim": "Evidence has shown that anticonvulsants including pregabalin and gabapentin, tricyclic antidepressants, selective serotonin reuptake inhibitors and benzodiazepines have no or limited effectiveness in reducing low back pain or disability and have significant risks",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Evidence has shown that anticonvulsants (pregabalin and gabapentin), tricyclic antidepressants, selective serotonin reuptake inhibitors and benzodiazepines have no or limited effectiveness in reducing low back pain or disability, and have significant risks."
-    },
-    {
-      "claim": "Opioid analgesics have limited evidence of short-term effectiveness, carry side effects such as constipation and somnolence, carry the risk of overdose and dependency, and can prolong the time to recovery",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Opioid analgesics have limited evidence of short-term effectiveness. In addition to side effects such as constipation and somnolence, they carry the risk of overdose and dependency, and can prolong the time to recovery."
-    },
-    {
-      "claim": "If opioid analgesics are used for severe acute pain, immediate-release formulations should be prescribed on a limited trial basis for a defined duration as part of an overall pain management strategy taking into account the patient's opioid status",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If opioid analgesics are used for severe acute pain - for example, in patients who present to the emergency department - prescribe immediate-release formulations on a limited trial basis for a defined duration, as part of an overall pain management strategy that takes into account the patient's opioid status."
-    },
-    {
-      "claim": "Before prescribing an opioid analgesic it is essential that the patient and anyone involved in their care understand how to use these medicines safely including their correct storage and disposal",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Before prescribing an opioid analgesic, it is essential that the patient and anyone involved in their care understand how to use these medicines safely, including their correct storage and disposal."
-    },
-    {
-      "claim": "Policies should limit prescribing of opioid analgesics for low back pain to immediate-release formulations for a limited duration",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Policies should limit prescribing of opioid analgesics for low back pain to immediate-release formulations for a limited duration."
-    },
-    {
-      "claim": "When a pain medicine is being considered clinicians should discuss the patient's expectations, preferences, comorbidities, needs and treatment goals, review current medicines including over-the-counter and previously prescribed pain medicines, provide information about risks and benefits including potential for dependency, prescribe the lowest effective dose for the shortest possible time in line with current Therapeutic Guidelines, establish and document clear stopping goals, encourage continuation of self-management strategies, and review early and frequently to assess effectiveness, adverse effects, misuse and functional gains",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "discuss the patient's individual expectations, preferences, comorbidities, needs and treatment goals ... review the patient's current medicines, including use of over-the-counter medicines, and previously prescribed medicines used to manage pai ... provide information about the risks and benefits associated with specific pain medicines, including the potential for dependency and how to manage side effects ... prescribe the lowest effective dose for the shortest possible time in line with current Therapeutic Guidelines ... establish and document clear stopping goals ... encourage the patient to continue other self-management strategies after they start the medicine ... review early and frequently to assess and monitor the effectiveness of the treatment, adverse effects, misuse and functional gains."
-    },
-    {
-      "claim": "More than 95% of low back pain cases do not have serious underlying causes",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "It is important to remember that more than 95% of low back pain cases do not have serious underlying causes."
-    },
-    {
-      "claim": "A patient without alerting features for serious underlying pathology may not receive any clinical benefit from diagnostic imaging, investigations are rarely helpful or indicated for low back pain, and imaging outside recommendations can create unnecessary concerns with incidental findings of no clinical significance leading to unnecessary tests",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient without alerting features for serious underlying pathology may not receive any clinical benefit from diagnostic imaging. Explain that investigations are rarely helpful or indicated for low back pain. Explain that imaging outside recommendations can create unnecessary concerns and that incidental findings with no clinical significance can lead to unnecessary tests."
-    },
-    {
-      "claim": "Early imaging is appropriate for a patient with alerting features for specific and/or serious underlying pathology, and specialist involvement should be considered to obtain guidance and appropriate imaging studies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Early imaging is appropriate for a patient with alerting features for specific and/or serious underlying pathology; consider specialist involvement to obtain guidance and appropriate imaging studies."
-    },
-    {
-      "claim": "MRI is generally preferred because it offers better sensitivity and a superior safety profile, however it is not covered by the Medicare Benefits Schedule if requested by a general practitioner, a physiotherapist or a chiropractor",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "MRI is generally preferred because it offers better sensitivity and a superior safety profile. However, it is not covered by the Medicare Benefits Schedule if requested by a general practitioner, a physiotherapist or a chiropractor."
-    },
-    {
-      "claim": "CT has a limited role but in the presence of alerting features may be considered in some cases such as when MRI is unavailable or contraindicated, or early consultation with a specialist is not available",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "CT has a limited role but in the presence of alerting features may be considered in some cases, such as when MRI is unavailable or contraindicated, or early consultation with a specialist is not available."
-    },
-    {
-      "claim": "Sufficient detail should be included on the radiological referral such as the provisional diagnosis and the clinical question being asked to ensure appropriate imaging and reporting, and any risks of radiation exposure should be discussed with the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that sufficient detail is included on the radiological referral, such as the provisional diagnosis and the clinical question being asked, to ensure appropriate imaging and reporting (see Box 2), and discuss any risks of radiation exposure with the patient."
-    },
-    {
-      "claim": "Patients should be advised that findings such as disc degeneration, facet joint arthritis, and disc bulges, fissures and protrusions are very common in people without pain and are usually a normal feature of ageing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Advise the patient that findings such as disc degeneration; facet joint arthritis; and disc bulges, fissures and protrusions are very common in people without pain and are usually a normal feature of ageing."
-    },
-    {
-      "claim": "Patient interpretations of imaging findings can lead to unnecessary distress and fear-avoidance behaviour, and when no serious pathology is found the report should be discussed in the context of history, examination and other investigations",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patient interpretations of imaging findings can lead to unnecessary distress and fear-avoidance behaviour. ... When no serious pathology is found, discuss the report in the context of history, examination and other investigations."
-    },
-    {
-      "claim": "Epidemiological reporting of imaging findings may help patients understand the probability and significance of incidental findings, and services should consider use of a reporting template that includes epidemiological reporting of common imaging findings",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Epidemiological reporting of imaging findings may help patients understand the probability and significance of incidental findings. ... Consider use of a template for reporting of imaging results that includes epidemiological reporting of common imaging findings to help clinicians and patients understand the probability and significance of incidental findings."
-    },
-    {
-      "claim": "The need for imaging should be reassessed for patients with changing or worsening symptoms, and patients with unchanged symptoms should not undergo repeated imaging unless a diagnosis not considered on previous imaging is being contemplated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The need for imaging should be reassessed for patients with changing or worsening symptoms. Patients with unchanged symptoms should not undergo repeated imaging unless a diagnosis that was not considered on previous imaging is being contemplated."
-    },
-    {
-      "claim": "Quality statement 1 requires that assessment of a new presentation focuses on screening for specific and/or serious pathology and consideration of psychosocial factors, includes a targeted history and physical examination with a focused neurological examination when appropriate, and that arrangements are made for follow-up based on an evidence-based low back pain pathway",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The assessment of a patient with a new presentation of low back pain symptoms, with or without leg pain or other neurological symptoms, focuses on screening for specific and/or serious pathology and consideration of psychosocial factors. It includes a targeted history and physical examination, with a focused neurological examination when appropriate. Arrangements are made for follow-up based on an evidence-based low back pain pathway."
-    },
-    {
-      "claim": "Differential diagnoses to consider include nephritis, colitis, hip osteoarthritis and aortic dissection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider differential diagnoses - for example, nephritis, colitis, hip osteoarthritis and aortic dissection."
-    },
-    {
-      "claim": "Physical examination should include a postural assessment, bony and soft tissue palpation for tenderness and tone, and movement assessment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Physical examination should include a postural assessment, bony and soft tissue palpation for tenderness and tone, and movement as"
-    },
-    {
-      "claim": "Validated tools named include the Brief Pain Inventory short form and the Clinically Organized Relevant Exam (CORE) Back Tool, and services should ensure clinicians have current training in clinical assessment of back pain and in the use of validated tools",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Brief Pain Inventory (short form) ... Clinically Organized Relevant Exam (CORE) Back Tool ... Ensure that clinicians have current training in the clinical assessment of back pain and, when relevant, in the use of validated tools."
-    },
-    {
-      "claim": "Quality statement 2 requires that early in each new presentation a patient is screened and assessed for psychosocial factors that may affect recovery, including their understanding of and concerns about diagnosis and pain and the impact of pain on their life, and that the assessment is repeated at subsequent visits to measure progress",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Early in each new presentation, a patient with low back pain, with or without leg pain or other neurological symptoms, is screened and assessed for psychosocial factors that may affect their recovery. This includes assessing their understanding of, and concerns about, diagnosis and pain, and the impact of pain on their life. The assessment is repeated at subsequent visits to measure progress."
-    },
-    {
-      "claim": "Certain psychosocial factors and emotional responses to pain are associated with delayed recovery and their presence indicates the need for further assessment and appropriate intervention, and a biopsychosocial approach considering the relationship between the patient's beliefs and pain behaviours should be used",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Certain psychosocial factors and emotional responses to pain are associated with delayed recovery, and their presence indicates the need for further assessment and appropriate intervention (see Box 1). Use a biopsychosocial approach that considers the relationship between the patient's beliefs and pain behaviours to manage the patient."
-    },
-    {
-      "claim": "Risk assessment tools should be considered early in each new episode of low back pain at the first or second visit",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider using risk assessment tools early in each new episode (first or second visit) of low back pain"
-    },
-    {
-      "claim": "Quality statement 4 requires that a patient is provided with information about their condition and receives targeted advice to increase understanding and address concerns and expectations, that the potential benefits, risks and costs of medicines and other treatment options are discussed, and that the patient is supported to ask questions and share in decisions about their care",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with low back pain is provided with information about their condition and receives targeted advice to increase their understanding, and address their concerns and expectations. The potential benefits, risks and costs of medicines and other treatment options are discussed, and the patient is supported to ask questions and share in decisions about their care."
-    },
-    {
-      "claim": "Clinicians should recognise and validate the patient's experience of pain and reassure patients about the benign nature of low back pain, the low risk of serious underlying disease and the likelihood of recurrence",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Recognise and validate the patient's experience of pain. Reassure patients about the benign nature of low back pain, the low risk of serious underlying disease and the likelihood of recurrence."
-    },
-    {
-      "claim": "Educational materials should be consistent with verbal advice, take into consideration the patient's culture and health literacy, and address any unhelpful beliefs and thoughts identified in the psychosocial assessment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Provide educational materials that are consistent with your verbal advice to reinforce key messages, taking into consideration the patient's culture and health literacy. Address any unhelpful beliefs and thoughts identified in the psychosocial assessment that may affect how the patient manages their sympt"
-    },
-    {
-      "claim": "Quality statement 5 requires that a patient is encouraged to stay active and continue or return to usual activity including work as soon as possible or feasible, that self-management strategies are discussed, and that the patient and clinician develop a plan together including practical advice to maximise function and limit the impact of pain and other symptoms on daily life, addressing individual needs and preferences",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with low back pain is encouraged to stay active and continue, or return to, usual activity, including work, as soon as possible or feasible. Self-management strategies are discussed. The patient and clinician develop a plan together that includes practical advice to maximise function, and limit the impact of pain and other symptoms on daily life. The plan addresses individual needs and preferences."
-    },
-    {
-      "claim": "Prolonged bed rest is harmful and should be discouraged",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Prolonged bed rest is harmful and should be discouraged."
-    },
-    {
-      "claim": "Clinicians should listen to the patient and validate that their thoughts and feelings are understandable and the pain they are experiencing is real, and discuss strategies to support the patient to continue to engage or quickly re-engage socially",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Listen to the patient, and validate that their thoughts and feelings are understandable, and the pain they are experiencing is real ... Discuss strategies to support the patient to continue to engage or quickly re-engage socially."
-    },
-    {
-      "claim": "Quality statement 6 requires that a patient is offered physical and/or psychological interventions based on their clinical and psychosocial assessment findings, with therapy targeted at overcoming identified barriers to recovery",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with low back pain is offered physical and/or psychological interventions based on their clinical and psychosocial assessment findings. Therapy is targeted at overcoming identified barriers to recovery."
-    },
-    {
-      "claim": "For patients with few psychosocial risk factors who are likely to improve quickly, simpler and less intensive support such as reassurance, guidance on self-management and advice to keep active should be considered, with a review offered at one to two weeks to assess recovery and the need for further physical or psychological interventions",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For patients with few psychosocial risk factors, who are likely to improve quickly, consider simpler and less intensive support such as reassurance, guidance on self-management and advice to keep active (see Box 4 in Quality statement 5). Offer a review at one to two weeks to assess recovery and the need for further physical or psychological interventions."
-    },
-    {
-      "claim": "For patients at higher risk of a poor outcome, early referral for physical and/or psychological therapies should be considered, and a multidisciplinary team approach should be used to address both physical and psychological components",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For patients at higher risk of a poor outcome, consider early referral for physical and/ or psychological therapi ... A multidisciplinary team approach should be used to address both physi"
-    },
-    {
-      "claim": "Quality statement 8 requires that a patient with persisting or worsening symptoms, signs or function is reassessed at an early stage to determine barriers to improvement, that referral for a multidisciplinary approach is considered, and that specialist medical or surgical review is indicated for severe or progressive back or leg pain unresponsive to other therapy, progressive neurological deficits, or other signs of specific and/or serious pathology",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "A patient with persisting or worsening symptoms, signs or function is reassessed at an early stage to determine the barriers to improvement. Referral for a multidisciplinary approach is considered. Specialist medical or surgical review is indicated for severe or progressive back or leg pain that is unresponsive to other therapy, progressive neurological deficits, or other signs of specific and/or serious pathology."
-    },
-    {
-      "claim": "Any treatments trialled should be assessed for efficacy and ineffective treatments should be discontinued rather than accumulated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Any treatments trialled should be assessed for efficacy, and ineffective treatments should be discontinued rather than accumulated."
-    },
-    {
-      "claim": "Ongoing compensation or legal actions that may affect a patient's response to treatment should be discussed because there is an association between compensation-related factors and poorer physical and psychological function",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Discuss ongoing compensation or legal actions that may affect a patient's response to treatment, because there is an association between compensation-related factors and poorer physical and psychological function."
-    },
-    {
-      "claim": "For a patient with disabling low back or leg pain or significantly limited function on review at 2 to 6 weeks, referral to a healthcare provider with relevant expertise should be considered",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For a patient with disabling low back or leg pain, or significantly limited function on review at 2-6 weeks, consider referral to a healthcare provider with expe"
-    },
-    {
-      "claim": "On review clinicians should assess whether lack of improvement relates to progression of the condition or to physical, functional or psychosocial factors, review the initial assessment and current management program including psychosocial factors, medicines and adherence to self-management strategies, and adjust the treatment plan accordingly",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If the patient's pain is persisting or worsening on review, assess if the lack of improvement relates to progression of their condition, or physical, functional or psychosocial factors. Review the initial assessment and current management program, including psychosocial factors that may delay recovery, medicines and adherence to self-management strategies, and adjust the treatment plan accordingly."
-    },
-    {
-      "claim": "The clinician will refer the patient to a spine surgeon if they suspect a serious condition for which surgery is appropriate, or if there is nerve compression that is getting worse",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Your clinician will also refer you to a spine surgeon if they suspect a serious condition for which surgery is appropriate, or if you have any nerve compression that is getting worse."
-    },
-    {
-      "claim": "Healthcare services should ensure systems, processes and resources are in place to support clinicians to monitor the symptoms, function and psychosocial wellbeing of patients, with protocols describing appropriate referral pathways and supporting timely access including for patients with persisting and worsening pain with signs of serious pathology",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that systems, processes and resources are in place to support clinicians to monitor the symptoms, function and psychosocial wellbeing of patients with low back pain. Protocols should describe appropriate referral pathways and support timely access, including for patients with persisting and worsening pain with signs of serious pathology."
-    },
-    {
-      "claim": "For services providing one component of multidisciplinary care, systems should be in place to facilitate effective shared care across multiple healthcare providers including mechanisms for regular communication among providers to deliver consistent information to the patient",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "For services providing one component of multidisciplinary care, ensure that systems are in place to facilitate effective shared care across multiple healthcare providers, including mechanisms for regular communication among providers to facilitate the delivery of consistent information to the patient."
-    },
-    {
-      "claim": "Indicator 1a is evidence of a locally approved low back pain assessment protocol and indicator 1b is the proportion of patients with acute low back pain with the findings of both their initial clinical assessment and screening for specific and/or serious underlying pathology documented in their medical record",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 1a | Evidence of a locally approved low back pain assessment protocol | Indicator 1b | Proportion of patients with acute low back pain with the findings of both their initial clinical assessment and screening for specific and/or serious underlying pathology documented in their medical record"
-    },
-    {
-      "claim": "Indicator 8a is evidence of a locally approved policy that defines the process for review and referral of patients with low back pain",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Indicator 8a | Evidence of a locally approved policy that defines the process for review and referral of patients with low back pain"
-    },
-    {
-      "claim": "Medicines generally not recommended for low back pain include benzodiazepines sometimes prescribed as muscle relaxants, anticonvulsants also used to treat epilepsy, and antidepressants, because they are not very effective for low back pain and can have significant side effects",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Medicines that are generally not recommended for low back pain include benzodiazepines (sometimes prescribed as muscle relaxants), anticonvulsants (also used to treat epilepsy) and antidepressants. This is because these medicines are not very effective for low back pain and can have significant side effects."
-    },
-    {
-      "claim": "Healthcare services should ensure policies, processes and pathways are in place for appropriate assessment of low back pain that describe indications for imaging patients with alerting features for serious underlying pathology and when imaging is not needed, and that systems are in place to monitor the appropriateness of imaging requests as part of quality improvement",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure that policies, processes and pathways are in place for appropriate assessment of low back pain, with or without leg pain, that describe indications for imaging patients with alerting features for serious underlying pathology and when imaging is not needed. ... Ensure that systems are in place to monitor the appropriateness of imaging requests for low back pain as part of quality improvement processes."
-    }
-  ],
-  "summary": {
-    "total": 49,
-    "pass": 49,
-    "fail": 0
+ "guideline": "guidelines/low-back-pain.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-21",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ACSQHC Low Back Pain Clinical Care Standard (2022), including the quality statements, the for-clinicians, for-healthcare-services and for-consumers sections, and the named indicators. The standard defers pharmacological choice to Therapeutic Guidelines and states no doses; these are recorded as input_unavailable. Boxes 1, 2 and 4 and the alerting-features list were not retrieved and are recorded as input_unavailable. The MBS statement about MRI is flagged time_sensitive. RE-VERIFIED 2026-09-22: the page recorded in retrieved_from was fetched again and every claim attributed to this source was re-checked against it with scripts/verify.py. Quotes stored from the earlier scrape carried that scrape's markdown artifacts (** emphasis, bullet joins glued on as 'n- ', table pipes) and, in some words containing a doubled n, a lost letter ('planned' stored as 'pla ed'). Those fragments were not verbatim with respect to the source document. Each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py), not reconstructed from memory.",
+ "claims": [
+  {
+   "claim": "The Low Back Pain Clinical Care Standard comprises eight quality statements describing safe and appropriate care and a set of indicators to support monitoring and quality improvement",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "eight quality statements describing safe and appropriate care - a set of indicators to support monitoring and quality improvement"
+  },
+  {
+   "claim": "Quality statement 7 states that a patient is advised that the goal of pain medicines is to enable physical activity, not to eliminate pain, and that if a medicine is prescribed it is in accordance with current Therapeutic Guidelines with ongoing review of benefit and clear stopping goals",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient is advised that the goal of pain medicines is to enable physical activity, not to eliminate pain. If a medicine is prescribed, it is in accordance with the current Therapeutic Guidelines, with ongoing review of benefit and clear stopping goals."
+  },
+  {
+   "claim": "Anticonvulsants, benzodiazepines and antidepressants are avoided because their risks often outweigh potential benefits and there is evidence of limited effectiveness",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anticonvulsants, benzodiazepines and antidepressants are avoided, because their risks often outweigh potential benefits, and there is evidence of limited effectiveness."
+  },
+  {
+   "claim": "Opioid analgesics are considered only in carefully selected patients at the lowest dose for the shortest duration possible",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Opioid analgesics are considered only in carefully selected patients, at the lowest dose for the shortest duration possible."
+  },
+  {
+   "claim": "Clinicians should explain that the goal of pain medicines is to reduce pain to support continuation of usual activities including physical activity and work rather than to eliminate pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Explain that the goal of pain medicines is to reduce pain to support continuation of usual activities, including physical activity and work, rather than to eliminate pain."
+  },
+  {
+   "claim": "Evidence has shown that anticonvulsants including pregabalin and gabapentin, tricyclic antidepressants, selective serotonin reuptake inhibitors and benzodiazepines have no or limited effectiveness in reducing low back pain or disability and have significant risks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Evidence has shown that anticonvulsants (pregabalin and gabapentin), tricyclic antidepressants, selective serotonin reuptake inhibitors and benzodiazepines have no or limited effectiveness in reducing low back pain or disability, and have significant risks."
+  },
+  {
+   "claim": "Opioid analgesics have limited evidence of short-term effectiveness, carry side effects such as constipation and somnolence, carry the risk of overdose and dependency, and can prolong the time to recovery",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Opioid analgesics have limited evidence of short-term effectiveness. In addition to side effects such as constipation and somnolence, they carry the risk of overdose and dependency, and can prolong the time to recovery."
+  },
+  {
+   "claim": "If opioid analgesics are used for severe acute pain, immediate-release formulations should be prescribed on a limited trial basis for a defined duration as part of an overall pain management strategy taking into account the patient's opioid status",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If opioid analgesics are used for severe acute pain - for example, in patients who present to the emergency department - prescribe immediate-release formulations on a limited trial basis for a defined duration, as part of an overall pain management strategy that takes into account the patient's opioid status."
+  },
+  {
+   "claim": "Before prescribing an opioid analgesic it is essential that the patient and anyone involved in their care understand how to use these medicines safely including their correct storage and disposal",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Before prescribing an opioid analgesic, it is essential that the patient and anyone involved in their care understand how to use these medicines safely, including their correct storage and disposal."
+  },
+  {
+   "claim": "Policies should limit prescribing of opioid analgesics for low back pain to immediate-release formulations for a limited duration",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Policies should limit prescribing of opioid analgesics for low back pain to immediate-release formulations for a limited duration."
+  },
+  {
+   "claim": "When a pain medicine is being considered clinicians should discuss the patient's expectations, preferences, comorbidities, needs and treatment goals, review current medicines including over-the-counter and previously prescribed pain medicines, provide information about risks and benefits including potential for dependency, prescribe the lowest effective dose for the shortest possible time in line with current Therapeutic Guidelines, establish and document clear stopping goals, encourage continuation of self-management strategies, and review early and frequently to assess effectiveness, adverse effects, misuse and functional gains",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "discuss the patient's individual expectations, preferences, comorbidities, needs and treatment goals - review the patient's current medicines, including use of over-the-counter medicines, and previously prescribed medicines used to manage pain - provide information about the risks and benefits associated with specific pain medicines, including the potential for dependency and how to manage side effects - prescribe the lowest effective dose for the shortest possible time in line with current Therapeutic Guidelines - establish and document clear stopping goals - encourage the patient to continue other self-management strategies after they start the medicine - review early and frequently to assess and monitor the effectiveness of the treatment, adverse effects, misuse and functional gains"
+  },
+  {
+   "claim": "More than 95% of low back pain cases do not have serious underlying causes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is important to remember that more than 95% of low back pain cases do not have serious underlying causes."
+  },
+  {
+   "claim": "A patient without alerting features for serious underlying pathology may not receive any clinical benefit from diagnostic imaging, investigations are rarely helpful or indicated for low back pain, and imaging outside recommendations can create unnecessary concerns with incidental findings of no clinical significance leading to unnecessary tests",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient without alerting features for serious underlying pathology may not receive any clinical benefit from diagnostic imaging. Explain that investigations are rarely helpful or indicated for low back pain. Explain that imaging outside recommendations can create unnecessary concerns and that incidental findings with no clinical significance can lead to unnecessary tests."
+  },
+  {
+   "claim": "Early imaging is appropriate for a patient with alerting features for specific and/or serious underlying pathology, and specialist involvement should be considered to obtain guidance and appropriate imaging studies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early imaging is appropriate for a patient with alerting features for specific and/or serious underlying pathology; consider specialist involvement to obtain guidance and appropriate imaging studies."
+  },
+  {
+   "claim": "MRI is generally preferred because it offers better sensitivity and a superior safety profile, however it is not covered by the Medicare Benefits Schedule if requested by a general practitioner, a physiotherapist or a chiropractor",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "MRI is generally preferred because it offers better sensitivity and a superior safety profile. However, it is not covered by the Medicare Benefits Schedule if requested by a general practitioner, a physiotherapist or a chiropractor."
+  },
+  {
+   "claim": "CT has a limited role but in the presence of alerting features may be considered in some cases such as when MRI is unavailable or contraindicated, or early consultation with a specialist is not available",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CT has a limited role but in the presence of alerting features may be considered in some cases, such as when MRI is unavailable or contraindicated, or early consultation with a specialist is not available."
+  },
+  {
+   "claim": "Sufficient detail should be included on the radiological referral such as the provisional diagnosis and the clinical question being asked to ensure appropriate imaging and reporting, and any risks of radiation exposure should be discussed with the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that sufficient detail is included on the radiological referral, such as the provisional diagnosis and the clinical question being asked, to ensure appropriate imaging and reporting (see Box 2), and discuss any risks of radiation exposure with the patient."
+  },
+  {
+   "claim": "Patients should be advised that findings such as disc degeneration, facet joint arthritis, and disc bulges, fissures and protrusions are very common in people without pain and are usually a normal feature of ageing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advise the patient that findings such as disc degeneration; facet joint arthritis; and disc bulges, fissures and protrusions are very common in people without pain and are usually a normal feature of ageing."
+  },
+  {
+   "claim": "Patient interpretations of imaging findings can lead to unnecessary distress and fear-avoidance behaviour, and when no serious pathology is found the report should be discussed in the context of history, examination and other investigations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patient interpretations of imaging findings can lead to unnecessary distress and fear-avoidance behaviour. ... When no serious pathology is found, discuss the report in the context of history, examination and other investigations."
+  },
+  {
+   "claim": "Epidemiological reporting of imaging findings may help patients understand the probability and significance of incidental findings, and services should consider use of a reporting template that includes epidemiological reporting of common imaging findings",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Epidemiological reporting of imaging findings may help patients understand the probability and significance of incidental findings. ... Consider use of a template for reporting of imaging results that includes epidemiological reporting of common imaging findings to help clinicians and patients understand the probability and significance of incidental findings."
+  },
+  {
+   "claim": "The need for imaging should be reassessed for patients with changing or worsening symptoms, and patients with unchanged symptoms should not undergo repeated imaging unless a diagnosis not considered on previous imaging is being contemplated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The need for imaging should be reassessed for patients with changing or worsening symptoms. Patients with unchanged symptoms should not undergo repeated imaging unless a diagnosis that was not considered on previous imaging is being contemplated."
+  },
+  {
+   "claim": "Quality statement 1 requires that assessment of a new presentation focuses on screening for specific and/or serious pathology and consideration of psychosocial factors, includes a targeted history and physical examination with a focused neurological examination when appropriate, and that arrangements are made for follow-up based on an evidence-based low back pain pathway",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The assessment of a patient with a new presentation of low back pain symptoms, with or without leg pain or other neurological symptoms, focuses on screening for specific and/or serious pathology and consideration of psychosocial factors. It includes a targeted history and physical examination, with a focused neurological examination when appropriate. Arrangements are made for follow-up based on an evidence-based low back pain pathway."
+  },
+  {
+   "claim": "Differential diagnoses to consider include nephritis, colitis, hip osteoarthritis and aortic dissection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider differential diagnoses - for example, nephritis, colitis, hip osteoarthritis and aortic dissection."
+  },
+  {
+   "claim": "Physical examination should include a postural assessment, bony and soft tissue palpation for tenderness and tone, and movement assessment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Physical examination should include a postural assessment, bony and soft tissue palpation for tenderness and tone, and movement assessment"
+  },
+  {
+   "claim": "Validated tools named include the Brief Pain Inventory short form and the Clinically Organized Relevant Exam (CORE) Back Tool, and services should ensure clinicians have current training in clinical assessment of back pain and in the use of validated tools",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Brief Pain Inventory (short form) - Clinically Organized Relevant Exam (CORE) Back Tool Ensure that clinicians have current training in the clinical assessment of back pain and, when relevant, in the use of validated tools"
+  },
+  {
+   "claim": "Quality statement 2 requires that early in each new presentation a patient is screened and assessed for psychosocial factors that may affect recovery, including their understanding of and concerns about diagnosis and pain and the impact of pain on their life, and that the assessment is repeated at subsequent visits to measure progress",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early in each new presentation, a patient with low back pain, with or without leg pain or other neurological symptoms, is screened and assessed for psychosocial factors that may affect their recovery. This includes assessing their understanding of, and concerns about, diagnosis and pain, and the impact of pain on their life. The assessment is repeated at subsequent visits to measure progress."
+  },
+  {
+   "claim": "Certain psychosocial factors and emotional responses to pain are associated with delayed recovery and their presence indicates the need for further assessment and appropriate intervention, and a biopsychosocial approach considering the relationship between the patient's beliefs and pain behaviours should be used",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Certain psychosocial factors and emotional responses to pain are associated with delayed recovery, and their presence indicates the need for further assessment and appropriate intervention (see Box 1). Use a biopsychosocial approach that considers the relationship between the patient's beliefs and pain behaviours to manage the patient."
+  },
+  {
+   "claim": "Risk assessment tools should be considered early in each new episode of low back pain at the first or second visit",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider using risk assessment tools early in each new episode (first or second visit) of low back pain"
+  },
+  {
+   "claim": "Quality statement 4 requires that a patient is provided with information about their condition and receives targeted advice to increase understanding and address concerns and expectations, that the potential benefits, risks and costs of medicines and other treatment options are discussed, and that the patient is supported to ask questions and share in decisions about their care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with low back pain is provided with information about their condition and receives targeted advice to increase their understanding, and address their concerns and expectations. The potential benefits, risks and costs of medicines and other treatment options are discussed, and the patient is supported to ask questions and share in decisions about their care."
+  },
+  {
+   "claim": "Clinicians should recognise and validate the patient's experience of pain and reassure patients about the benign nature of low back pain, the low risk of serious underlying disease and the likelihood of recurrence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recognise and validate the patient's experience of pain. Reassure patients about the benign nature of low back pain, the low risk of serious underlying disease and the likelihood of recurrence."
+  },
+  {
+   "claim": "Educational materials should be consistent with verbal advice, take into consideration the patient's culture and health literacy, and address any unhelpful beliefs and thoughts identified in the psychosocial assessment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Provide educational materials that are consistent with your verbal advice to reinforce key messages, taking into consideration the patient's culture and health literacy. Address any unhelpful beliefs and thoughts identified in the psychosocial assessment that may affect how the patient manages their symptoms"
+  },
+  {
+   "claim": "Quality statement 5 requires that a patient is encouraged to stay active and continue or return to usual activity including work as soon as possible or feasible, that self-management strategies are discussed, and that the patient and clinician develop a plan together including practical advice to maximise function and limit the impact of pain and other symptoms on daily life, addressing individual needs and preferences",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with low back pain is encouraged to stay active and continue, or return to, usual activity, including work, as soon as possible or feasible. Self-management strategies are discussed. The patient and clinician develop a plan together that includes practical advice to maximise function, and limit the impact of pain and other symptoms on daily life. The plan addresses individual needs and preferences."
+  },
+  {
+   "claim": "Prolonged bed rest is harmful and should be discouraged",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prolonged bed rest is harmful and should be discouraged."
+  },
+  {
+   "claim": "Clinicians should listen to the patient and validate that their thoughts and feelings are understandable and the pain they are experiencing is real, and discuss strategies to support the patient to continue to engage or quickly re-engage socially",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Listen to the patient, and validate that their thoughts and feelings are understandable, and the pain they are experiencing is real ... Discuss strategies to support the patient to continue to engage or quickly re-engage socially."
+  },
+  {
+   "claim": "Quality statement 6 requires that a patient is offered physical and/or psychological interventions based on their clinical and psychosocial assessment findings, with therapy targeted at overcoming identified barriers to recovery",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with low back pain is offered physical and/or psychological interventions based on their clinical and psychosocial assessment findings. Therapy is targeted at overcoming identified barriers to recovery."
+  },
+  {
+   "claim": "For patients with few psychosocial risk factors who are likely to improve quickly, simpler and less intensive support such as reassurance, guidance on self-management and advice to keep active should be considered, with a review offered at one to two weeks to assess recovery and the need for further physical or psychological interventions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients with few psychosocial risk factors, who are likely to improve quickly, consider simpler and less intensive support such as reassurance, guidance on self-management and advice to keep active (see Box 4 in Quality statement 5). Offer a review at one to two weeks to assess recovery and the need for further physical or psychological interventions."
+  },
+  {
+   "claim": "For patients at higher risk of a poor outcome, early referral for physical and/or psychological therapies should be considered, and a multidisciplinary team approach should be used to address both physical and psychological components",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients at higher risk of a poor outcome, consider early referral for physical and/ or psychological therapies ... A multidisciplinary team approach should be used to address both physical"
+  },
+  {
+   "claim": "Quality statement 8 requires that a patient with persisting or worsening symptoms, signs or function is reassessed at an early stage to determine barriers to improvement, that referral for a multidisciplinary approach is considered, and that specialist medical or surgical review is indicated for severe or progressive back or leg pain unresponsive to other therapy, progressive neurological deficits, or other signs of specific and/or serious pathology",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with persisting or worsening symptoms, signs or function is reassessed at an early stage to determine the barriers to improvement. Referral for a multidisciplinary approach is considered. Specialist medical or surgical review is indicated for severe or progressive back or leg pain that is unresponsive to other therapy, progressive neurological deficits, or other signs of specific and/or serious pathology."
+  },
+  {
+   "claim": "Any treatments trialled should be assessed for efficacy and ineffective treatments should be discontinued rather than accumulated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any treatments trialled should be assessed for efficacy, and ineffective treatments should be discontinued rather than accumulated."
+  },
+  {
+   "claim": "Ongoing compensation or legal actions that may affect a patient's response to treatment should be discussed because there is an association between compensation-related factors and poorer physical and psychological function",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss ongoing compensation or legal actions that may affect a patient's response to treatment, because there is an association between compensation-related factors and poorer physical and psychological function."
+  },
+  {
+   "claim": "For a patient with disabling low back or leg pain or significantly limited function on review at 2 to 6 weeks, referral to a healthcare provider with relevant expertise should be considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For a patient with disabling low back or leg pain, or significantly limited function on review at 2-6 weeks, consider referral to a healthcare provider with expertise"
+  },
+  {
+   "claim": "On review clinicians should assess whether lack of improvement relates to progression of the condition or to physical, functional or psychosocial factors, review the initial assessment and current management program including psychosocial factors, medicines and adherence to self-management strategies, and adjust the treatment plan accordingly",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the patient's pain is persisting or worsening on review, assess if the lack of improvement relates to progression of their condition, or physical, functional or psychosocial factors. Review the initial assessment and current management program, including psychosocial factors that may delay recovery, medicines and adherence to self-management strategies, and adjust the treatment plan accordingly."
+  },
+  {
+   "claim": "The clinician will refer the patient to a spine surgeon if they suspect a serious condition for which surgery is appropriate, or if there is nerve compression that is getting worse",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Your clinician will also refer you to a spine surgeon if they suspect a serious condition for which surgery is appropriate, or if you have any nerve compression that is getting worse."
+  },
+  {
+   "claim": "Healthcare services should ensure systems, processes and resources are in place to support clinicians to monitor the symptoms, function and psychosocial wellbeing of patients, with protocols describing appropriate referral pathways and supporting timely access including for patients with persisting and worsening pain with signs of serious pathology",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that systems, processes and resources are in place to support clinicians to monitor the symptoms, function and psychosocial wellbeing of patients with low back pain. Protocols should describe appropriate referral pathways and support timely access, including for patients with persisting and worsening pain with signs of serious pathology."
+  },
+  {
+   "claim": "For services providing one component of multidisciplinary care, systems should be in place to facilitate effective shared care across multiple healthcare providers including mechanisms for regular communication among providers to deliver consistent information to the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For services providing one component of multidisciplinary care, ensure that systems are in place to facilitate effective shared care across multiple healthcare providers, including mechanisms for regular communication among providers to facilitate the delivery of consistent information to the patient."
+  },
+  {
+   "claim": "Indicator 1a is evidence of a locally approved low back pain assessment protocol and indicator 1b is the proportion of patients with acute low back pain with the findings of both their initial clinical assessment and screening for specific and/or serious underlying pathology documented in their medical record",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 1a Evidence of a locally approved low back pain assessment protocol Indicator 1b Proportion of patients with acute low back pain with the findings of both their initial clinical assessment and screening for specific and/or serious underlying pathology documented in their medical record"
+  },
+  {
+   "claim": "Indicator 8a is evidence of a locally approved policy that defines the process for review and referral of patients with low back pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indicator 8a Evidence of a locally approved policy that defines the process for review and referral of patients with low back pain"
+  },
+  {
+   "claim": "Medicines generally not recommended for low back pain include benzodiazepines sometimes prescribed as muscle relaxants, anticonvulsants also used to treat epilepsy, and antidepressants, because they are not very effective for low back pain and can have significant side effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Medicines that are generally not recommended for low back pain include benzodiazepines (sometimes prescribed as muscle relaxants), anticonvulsants (also used to treat epilepsy) and antidepressants. This is because these medicines are not very effective for low back pain and can have significant side effects."
+  },
+  {
+   "claim": "Healthcare services should ensure policies, processes and pathways are in place for appropriate assessment of low back pain that describe indications for imaging patients with alerting features for serious underlying pathology and when imaging is not needed, and that systems are in place to monitor the appropriateness of imaging requests as part of quality improvement",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that policies, processes and pathways are in place for appropriate assessment of low back pain, with or without leg pain, that describe indications for imaging patients with alerting features for serious underlying pathology and when imaging is not needed. ... Ensure that systems are in place to monitor the appropriateness of imaging requests for low back pain as part of quality improvement processes."
   }
+ ],
+ "summary": {
+  "total": 49,
+  "pass": 49,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/low-back-pain"
+ ],
+ "retrieved_utc": "2026-09-22"
 }
