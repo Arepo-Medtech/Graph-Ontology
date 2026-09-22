@@ -115,7 +115,7 @@ Pathogens for cystitis: *E. coli*, *Staphylococcus saprophyticus*, *Proteus*, *K
   "the replacement of oral metronidazole with vancomycin for initial CDI and the emerging role for
   fidaxomicin and faecal-microbiota transplant". ⚠️ THE FULL TEXT IS CLOSED ACCESS AND WAS NOT RETRIEVED,
   so the vancomycin dose, the 10-day course and the recurrence algorithm below rest on AMH alone** —
-  see [`sexually-transmissible-infections`](sexually-transmissible-infections.md) for the access check.
+  see [`sti-syndromes-and-screening`](sti-syndromes-and-screening.md) for the access check.
 - ⚠️ **Avoid proton pump inhibitors, which may worsen outcome, and antidiarrhoeals such as loperamide,
   because toxin may be retained and worsen colitis** [D4].
 - ⚠️ **Risk factors are increasing age, severe disease, long antibacterial course and long hospital stay —
@@ -145,10 +145,13 @@ Traveller's diarrhoea pathogens depend on locality: enterotoxigenic or enteroagg
 **AMH refers the reader to the Australian STI Management Guidelines at `sti.guidelines.org.au`** [D5].
 
 > ### ⚠️ THAT SOURCE HAS SINCE BEEN RETRIEVED — PREFER IT OVER THIS TABLE
-> **[`sexually-transmissible-infections`](sexually-transmissible-infections.md)** carries the same
-> ground **open, quoted and WITH DOSES**, adds the **gonorrhoea regimen AMH omits entirely**, and
-> records **two places where it contradicts AMH** — on azithromycin for chlamydia, and on the
-> *M. genitalium* azithromycin schedule. **The table below is kept for completeness; the doses are
+> **Sixteen organism guidelines** — [`chlamydia-and-gonorrhoea`](chlamydia-and-gonorrhoea.md),
+> [`syphilis`](syphilis.md), [`genital-herpes`](genital-herpes.md),
+> [`mycoplasma-genitalium`](mycoplasma-genitalium.md) and the rest — carry this ground **open, quoted
+> and WITH DOSES**, including the **gonorrhoea regimen AMH omits entirely**.
+> **[`sti-syndromes-and-screening`](sti-syndromes-and-screening.md)** adds the syndrome and screening
+> layer and records **two places where ASHM contradicts AMH** — on azithromycin for chlamydia, and on
+> the *M. genitalium* azithromycin schedule. **The table below is kept for completeness; the doses are
 > not in it.**
 
 | Condition | Regimen | Qualifiers |
@@ -242,10 +245,10 @@ Pathogens: *N. meningitidis*, *S. pneumoniae*, *L. monocytogenes*, *H. influenza
 | 1 | ⚠️ **NOT ONE DOSE APPEARS IN THIS GUIDELINE.** The nine AMH tables give drug, route and duration and no milligram figure anywhere; they send the reader to the individual drug monograph. **No monograph was retrieved and nothing was supplied from memory.** ⚠️ **Every regimen here is incomplete — you cannot prescribe from this page.** | `input_unavailable` |
 | 2 | ⚠️ **AMH's own caveat is the governing limit: these tables "are not intended to supplant local protocols or management advice from clinical microbiologists or infectious diseases specialists"** [D0]. **Three separate tables also instruct the prescriber to be aware of local susceptibility patterns** [D1] [D6] — and, as in [`anti-infectives-general-principles`](anti-infectives-general-principles.md), **no source says where an Australian GP obtains a local antibiogram.** | `input_unavailable` |
 | 3 | **Nothing here is machine re-checkable.** All 60 claims are licensed and paraphrased. | `access` |
-| 4 | ⚠️ **RESOLVED 2026-09-22, ONE EACH WAY.** The **Australian STI Management Guidelines** were retrieved and are now [`sexually-transmissible-infections`](sexually-transmissible-infections.md) — **open, quoted, with real doses**, superseding the genital section above. ⚠️ **The 2025 Australasian *C. difficile* guidelines are CLOSED ACCESS** (Unpaywall `is_oa: false`, no PMC copy, publisher HTTP 403, checked 2026-09-22): **only the public abstract was obtained**, which confirms the citation and the metronidazole-to-vancomycin change but **gives no dose, duration or recurrence algorithm**. An AJGP search found no open Australian substitute. **The C. difficile numbers above still rest on AMH alone.** | `access` |
+| 4 | ⚠️ **RESOLVED 2026-09-22, ONE EACH WAY.** The **Australian STI Management Guidelines** were already held: the ORGANISM pages were written up on 2026-09-21 as [`chlamydia-and-gonorrhoea`](chlamydia-and-gonorrhoea.md), [`syphilis`](syphilis.md), [`genital-herpes`](genital-herpes.md), [`mycoplasma-genitalium`](mycoplasma-genitalium.md) and twelve more, and the SYNDROME and SCREENING pages were added 2026-09-22 as [`sti-syndromes-and-screening`](sti-syndromes-and-screening.md) — **all open, quoted and with real doses**, superseding the genital section above. ⚠️ **The 2025 Australasian *C. difficile* guidelines are CLOSED ACCESS** (Unpaywall `is_oa: false`, no PMC copy, publisher HTTP 403, checked 2026-09-22): **only the public abstract was obtained**, which confirms the citation and the metronidazole-to-vancomycin change but **gives no dose, duration or recurrence algorithm**. An AJGP search found no open Australian substitute. **The C. difficile numbers above still rest on AMH alone.** | `access` |
 | 5 | ⚠️ **Seventeen infections are excluded by AMH's own scope** [D0] — including **otitis media, rhinosinusitis and sore throat**, three of the commonest reasons an Australian GP prescribes an antibiotic. **They are not covered anywhere in this compendium either.** | `out_of_scope` |
 | 6 | **Severe presentations are repeatedly handed off rather than treated**: severe community-acquired *S. aureus* and severe *C. difficile* both say *seek specialist advice* [D4] [D6]; **high-severity pneumonia and severe pyelonephritis are only partly covered**. **This page is a primary-care page.** | `out_of_scope` |
-| 7 | **No gonorrhoea treatment row exists** in the genital table — gonorrhoea appears only as a pathogen in sexually acquired epididymo-orchitis and PID [D5]. ⚠️ **CLOSED 2026-09-22** from an open source: [`sexually-transmissible-infections`](sexually-transmissible-infections.md) carries the national regimen — **ceftriaxone 500 mg IMI plus azithromycin 1 g PO, doubled to 2 g azithromycin for pharyngeal infection** — quoted and re-checkable. | `input_unavailable` |
+| 7 | **No gonorrhoea treatment row exists** in the genital table — gonorrhoea appears only as a pathogen in sexually acquired epididymo-orchitis and PID [D5]. ⚠️ **ALREADY COVERED ELSEWHERE IN THIS COMPENDIUM**, from an open source: [`chlamydia-and-gonorrhoea`](chlamydia-and-gonorrhoea.md) carries the national regimen — **ceftriaxone 500 mg IMI plus azithromycin 1 g PO, doubled to 2 g azithromycin for pharyngeal infection** — quoted and re-checkable. **The gap is AMH's, not this compendium's.** | `input_unavailable` |
 | 8 | **No paediatric qualifier is given for most rows.** Children appear explicitly in acute cystitis duration, UTI prophylaxis, shingles and traveller's diarrhoea; elsewhere the tables are silent on whether the regimen differs. | `input_unavailable` |
 | 9 | **AMH gives no evidence grade or reference for any row** except the *C. difficile* citation. Durations such as "5 days then review" for cellulitis carry **no stated basis**. | `observation` |
 | 10 | **Penicillin allergy is handled by substitution only** — no row addresses **severity of allergy** beyond mastitis and pneumonia distinguishing severe from non-severe, and **no source addresses delabelling.** | `input_unavailable` |
