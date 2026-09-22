@@ -55,6 +55,9 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   (international). The RF2 relationship file carries none of them, so `rel` never had them.
 - **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
   against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
+- **atc**, **product_atc**, **product_atc_check** — an ATC class for 101,732 products: the PBS schedule's own for a
+  listed item (15,757), and OMOP's ancestry over RxNorm for the 85,975 the PBS never lists. Where both speak they
+  agree on the ATC 5th level for 8,870 of 9,056 products; see [ATC classification](docs/atc-classification.md).
 - **product**, **pbs**, **pbs_tpuu**, **rxnorm**, **ingredient**, **contains**, **brand_of**,
   **unit_generic**, **pack_generic**, **ctpp_tpp**, **mpuu_mp**, **pbs_atc_code**, and
   **pbs_item_atc** — the normalised building blocks.
@@ -84,6 +87,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/build_compendium.py
 .venv/bin/python scripts/drug_strength.py extract     # AMT strengths out of the OWL axioms (~1 min)
 .venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
+.venv/bin/python scripts/atc_bridge.py               # ATC classes: the PBS listing, plus OMOP's ancestry for everything else
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
