@@ -1,0 +1,219 @@
+{
+ "guideline": "guidelines/androgenetic-alopecia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2025/november/battling-a-receding-tide",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/androgenetic-alopecia",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP case study of November 2025, fetched and checked verbatim (14 claims, 6 of them doses). A1 is AMH across three pages, paraphrased, no passage reproduced and no source_text stored (17 claims, 5 doses). TWO DIVERGENCES ARE RECORDED RATHER THAN RESOLVED. First, ORAL MINOXIDIL: S1 gives starting doses and escalation for it, while A1 covers ONLY topical minoxidil and its androgenetic alopecia topic names only 'topical minoxidil' -- a coverage gap in A1, not a disagreement. Second, THE PSA REDUCTION: A1's dermatology monograph gives 42% after 48 weeks of finasteride 1 MG, while S1 says 'roughly 50%' for the same 1 mg indication; A1's separate 5-alpha-reductase inhibitor monograph gives 50% for finasteride 5 MG. A1 is dose-specific and S1 is not. Both figures are stated with their doses attached, because a PSA correction factor applied at the wrong dose affects prostate cancer detection.",
+ "claims": [
+  {
+   "claim": "S1 gives differential diagnoses of hair loss as androgenic alopecia with gradual onset recession over the temples and loss on the vertex, no scarring inflammation or scaling, a negative hair pull test and possible family history; telogen effluvium with acute onset diffuse loss often preceded by a trigger and a positive hair pull test; and alopecia areata with focal patches of more severe loss exposing smooth skin, spontaneous regrowth, a positive hair pull test and association with other autoimmune diseases",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Androgenic alopecia - Gradual onset male pattern baldness: recession over the temples and hair loss on the vertex of the scalp - No scarring, inflammation or scaling - Negative hair pull test - May have a family history of male pattern baldness Telogen effluvium - Acute onset diffuse hair loss - Often preceded by a trigger (eg stress, surgery, illness, medication) - Positive hair pull test Alopecia areata - Focal patches of more severe hair loss where underlying smooth skin is exposed - Spontaneously regrows - Positive hair pull test - Associated with other autoimmune diseases"
+  },
+  {
+   "claim": "S1 also lists hypothyroidism causing slow-growing, brittle, dry and coarse hair with hypothyroid symptoms, and trichotillomania as a psychiatric condition involving hair pulling leading to sporadic patches of variable length",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypothyroidism - Results in slow-growing, brittle, dry and coarse hair - Presence of hypothyroid symptoms (eg weight gain, sensitivity to cold, constipation)"
+  },
+  {
+   "claim": "S1 reports a randomised controlled trial of 428 men comparing the three most common regimens, observing hair regrowth in 80.5% of patients taking oral finasteride, 59.0% applying topical minoxidil and 94.1% taking combined treatment at 12-month follow-up",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A randomised control trial of 428 men compared the three most common treatment regimens for androgenic alopecia, observing hair regrowth in 80.5% of patients taking oral finasteride, 59.0% of patients applying topical minoxidil and 94.1% of patients taking combined treatment at the 12-month follow-up."
+  },
+  {
+   "claim": "S1 states that topical minoxidil or oral finasteride monotherapy is first-line in male patients with mild-to-moderate disease, that combination therapy might be considered although the added efficacy may not justify the increased risk of adverse effects, and that in severe cases combination therapy is recommended from the outset",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In light of these findings, topical minoxidil or oral finasteride monotherapy is the first-line treatment in male patients with mild-to-moderate disease. 3 Combination therapy might be considered in these patients, although the added efficacy of using both agents may not be enough to justify the increased risk of adverse effects. 2 In severe cases, however, combination therapy is recommended from the outset."
+  },
+  {
+   "claim": "S1 states that although there are no known physiological sequelae of androgenic alopecia the cosmetic impact may generate considerable social anxiety, so early combination therapy might be warranted in particularly concerned patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although there are no known physiological sequelae of androgenic alopecia, the cosmetic impact of hair loss may generate considerable social anxiety. 4 As such, early combination therapy might be warranted in particularly concerned patients to maximise the chances of successful cosmesis."
+  },
+  {
+   "claim": "S1 reports topical 5% minoxidil solution is associated with contact dermatitis and subsequent scalp pruritus in 19% and hypertrichosis in 4% after 24 weeks, while oral minoxidil 1 mg is not associated with pruritus but carries a much higher risk of hypertrichosis at 27% and a risk of limb oedema at 4% over the same period",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Topical 5% minoxidil solution is associated with contact dermatitis and subsequent scalp pruritis (19%) as well as hypertrichosis (4%) after 24 weeks of use. 5 Oral minoxidil 1 mg is not associated with pruritis but carries a much higher risk of hypertrichosis (27%) and a risk of limb oedema (4%) over the same period.",
+   "dose": true
+  },
+  {
+   "claim": "S1 advises warning patients of the potential for initial hair loss as minoxidil moves follicles into the anagen growth phase, that six months of continuous use is needed to recognise benefit, and encouraging progress photographs",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients should be informed of these side effects and warned of the potential for initial hair loss as minoxidil moves follicles into the anagen (growth) phase. Finally, patients should be informed that six months of continuous use is needed to recognise benefit, while being encouraged to take progress photographs."
+  },
+  {
+   "claim": "S1 gives topical minoxidil as 1 mL of 5% solution per day with the dose not commonly escalated, noting poorer adherence compared to oral delivery, availability over the counter, no PBS cover for androgenic alopecia, and follow-up at 6 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Topical minoxidil - 1 mL 5% minoxidil solution per day - Dose not commonly escalated - Poorer adherence compared to oral delivery - Not covered under the PBS for use in the treatment of androgenic alopecia - Available over the counter - Follow-up at 6 months",
+   "dose": true
+  },
+  {
+   "claim": "S1 states that optimal dosing of oral minoxidil is not yet established, that the starting dose is most commonly 2.5 mg per day escalating to 5 mg if response is inadequate with other common starting doses of 1 mg or 1.25 mg, that it has a poorer side effect profile than topical minoxidil, that doses under 2.5 mg must be compounded, and that it is often compounded with 1 mg finasteride for combination therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral minoxidil - Optimal dosing not yet established - Starting dose most commonly 2.5 mg per day, escalating to 5 mg if response is inadequate - Other common starting doses are 1 mg or 1.25 mg - Poorer side effect profile when compared to topical minoxidil - Doses under 2.5 mg must be compounded - Often compounded with 1 mg finasteride for combination therapy",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives oral finasteride as a starting dose of 1 mg once daily with the dose not commonly escalated, not covered under the PBS for androgenic alopecia, requiring a prescription, with follow-up at 6 to 12 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral finasteride - Starting dose of 1 mg once daily - Dose not commonly escalated - Not covered under the PBS for use in the treatment of androgenic alopecia - Prescription required - Follow-up at 6-12 months",
+   "dose": true
+  },
+  {
+   "claim": "S1 reports finasteride use is associated with a 2.22-fold increased risk of erectile dysfunction with 95% confidence interval 1.03 to 4.78, and a 1.08-fold risk of decreased libido and 1.75-fold risk of ejaculatory dysfunction although these findings are not statistically significant",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finasteride use is associated with a 2.22-fold increased risk of erectile dysfunction (95% confidence interval [CI]: 1.03-4.78). It also is associated with a 1.08-fold risk of decreased libido (95% CI: 0.67-1.76) and a 1.75-fold risk of ejaculatory dysfunction (95% CI: 0.79-3.88), although these findings are not statistically significant."
+  },
+  {
+   "claim": "S1 states finasteride has been associated with psychological adverse effects including depression and suicidality, but that these findings stem from cohort studies not protected from confounding, so it remains possible that treatment-seeking hair loss patients are more predisposed to adverse mental health outcomes than those who do not seek treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finasteride use has also been associated with psychological adverse effects including depression and suicidality; 7 however, these findings stem from cohort studies that are not protected from confounding. As such, it remains possible that treatment-seeking hair loss patients are more predisposed to adverse mental health outcomes than those who do not seek treatment."
+  },
+  {
+   "claim": "S1 states that finasteride is known to reduce PSA by roughly 50%, that as PSA remains an important marker for prostate cancer it is important patients are aware their threshold for urology referral should be lower",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "as finasteride is known to reduce PSA by roughly 50%. 8 As PSA remains an important marker for prostate cancer, 9 it is important that patients are aware that their threshold for urology referral should be lower.",
+   "dose": true
+  },
+  {
+   "claim": "S1 states finasteride leads to mildly impaired sperm parameters which improve when medication is ceased in 57% of cases, so patients must be asked if they are hoping to conceive in the future and should be started on minoxidil instead if this is the case",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finasteride leads to mildly impaired sperm parameters, which improve when medication is ceased in 57% of cases. 10 As such, patients must be asked if they are hoping to conceive in the future, and should be started on minoxidil instead if this is the case."
+  },
+  {
+   "claim": "AMH states that hair growth may be marginally stimulated or stabilised, meaning hair loss stopped or slowed, in mild-to-moderate thinning by either topical minoxidil in both men and women or by low-dose oral finasteride in men",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Androgenetic alopecia' (Dermatological drugs > Drugs for alopecia) at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/androgenetic-alopecia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states noticeable hair growth occurs by 3 to 4 months with maximal response after 12 months of continuous treatment, and that benefit of treatment is lost within 6 to 12 months of stopping",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Androgenetic alopecia' (Dermatological drugs > Drugs for alopecia) at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/androgenetic-alopecia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states response to alopecia treatment is best when many thin miniature hairs still remain before starting treatment, that no benefit is seen where there is no visible hair, and that estrogen and spironolactone have been used in women but efficacy is unknown",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Androgenetic alopecia' (Dermatological drugs > Drugs for alopecia) at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/androgenetic-alopecia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Finasteride inhibits 5-alpha-reductase type 2, blocking conversion of testosterone to dihydrotestosterone, and is indicated for androgenetic alopecia in men, with patients over 60 years unlikely to respond",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH gives the adult finasteride dose for androgenetic alopecia as oral 1 mg once daily, notes continuous treatment is required to maintain response, that generally not all hair loss is recovered, and that a dose increase does not provide additional benefit",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states infrequent finasteride adverse effects are impotence, decreased libido and ejaculation disorder, with rare effects including breast tenderness and enlargement, allergic reaction, poor semen quality, infertility and depression",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states safety and efficacy data for finasteride in men over 41 years are limited, that compared with baseline maximum improvement occurred within 1 to 2 years and was maintained above baseline for 5 years while hair loss was progressive with placebo, that trials have shown no benefit in postmenopausal women, and that treatment should stop if there is no benefit by 12 months",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that after 48 weeks of finasteride 1 mg daily, PSA concentration is reduced by an average of 42%, that it is not clear how long after stopping treatment PSA returns to baseline though it should be within 6 months, and that this should be taken into consideration if measuring PSA",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that although the product information recommends women who are or may become pregnant should not handle broken or crushed finasteride tablets without gloves, it is highly unlikely that enough finasteride would be absorbed to cause fetal harm",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Finasteride (dermatology)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/finasteride-dermatology, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The mechanism of topical minoxidil is unknown but is independent of vasodilation, with the duration of anagen increased and miniaturised follicles enlarged, and it is indicated for androgenetic alopecia and accepted for alopecia areata on specialist advice",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH gives topical minoxidil dosage as applied to the area where hair regrowth or stabilisation is required, with liquid 1 mL applied twice a day, and foam approximately half a capful being 1 g applied twice a day for men or once a day for women",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states common adverse effects of topical minoxidil are itch, erythema, dry skin, mild dermatitis, allergic contact dermatitis from either propylene glycol in the liquid product or minoxidil, and hypertrichosis which appears more common in women particularly if the higher strength is used, usually occurring on the face",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises avoiding topical minoxidil in pregnancy due to limited data, and states it appears safe in breastfeeding because of low topical absorption",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises applying minoxidil to dry skin and hair, washing hands well after application, allowing the product to dry before going to bed, not wearing a wig scarf or hat for at least 1 hour after application as this may increase absorption, and waiting at least 4 hours after application before washing the hair",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states a temporary increase in hair loss may occur during the first months of minoxidil treatment, that it may take 3 to 4 months before benefit is seen, and that if the patient responds they must keep using it otherwise the regrown hair will be lost",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states hair regrowth with minoxidil is usually seen after 3 to 4 months of continuous use and treatment should stop if there is no benefit after 6 months, that the higher concentration is slightly more effective in men but there is no difference in women, and that increasing the dose volume does not provide additional benefit",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states systemic absorption of topical minoxidil is normally minimal but excess use, occlusion or application to inflamed or atrophied skin may result in absorption sufficient to cause systemic effects",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Minoxidil (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-alopecia/minoxidil-skin, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 31,
+  "pass": 14,
+  "fail": 0
+ }
+}
