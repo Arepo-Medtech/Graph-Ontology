@@ -9,6 +9,11 @@
 
 **AMH topics closed by this guideline:** *Allergic rhinitis*, *Rhinitis*.
 
+> ⚠️ **Paired with [`rhinosinusitis.md`](rhinosinusitis.md).** ASCIA gives the framework in classes and
+> **states no drug dose anywhere**. The RCH guideline gives **named agents with paediatric doses** for the
+> same stepped approach — cetirizine, azelastine, mometasone, the combination spray, and the ocular drops.
+> The `input_unavailable` dose rows below are answered there, for children.
+
 ## The most common allergic disorder in the country, and undertreated
 
 > **Almost one in four Australians (23.9% of the population) had allergic rhinitis as stated in the
