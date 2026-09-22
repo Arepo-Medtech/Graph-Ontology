@@ -123,8 +123,8 @@ agents (PCSK9 inhibitors, inclisiran) sit beyond the first-line recommendations.
 
 | Point | Kind | Detail |
 |---|---|---|
-| Blood pressure and lipid treatment targets | input_unavailable | S1 covers "blood pressure-lowering treatment" and "lipid-modifying treatment" in sections not retrieved (pp. 82–86 of 108) |
-| Which agent or class first | input_unavailable | not in the retrieved pages |
+| Blood pressure and lipid treatment targets | input_unavailable | S1 covers "blood pressure-lowering treatment" and "lipid-modifying treatment" in sections not retrieved (pp. 82–86 of 108). ⚠️ **PARTLY ANSWERED 2026-09-22 from a DIFFERENT source:** the `hypertension` guideline in this compendium carries AMH's BP target (<140/90) and records a divergent open-source target (≤130/85). **Those pages of S1 are still not retrieved, and the lipid half is still open.** |
+| Which agent or class first | input_unavailable | not in the retrieved pages. ⚠️ **PARTLY ANSWERED 2026-09-22 from AMH** in the `hypertension` guideline (ACE inhibitor or sartan, dihydropyridine, or low-dose thiazide if 65 or older) — **not from S1** |
 | Treatment initiation at lower risk thresholds | input_unavailable | S1 §"Initiating treatment at lower CVD risk thresholds" not retrieved |
 | Elevated single risk factors | input_unavailable | S1 addresses these separately; not retrieved |
 | Lifestyle recommendation specifics | input_unavailable | smoking, nutrition, DASH, Mediterranean diet, physical activity, alcohol all covered in pages not retrieved |

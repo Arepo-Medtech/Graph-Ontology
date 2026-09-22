@@ -1,0 +1,384 @@
+{
+ "guideline": "guidelines/hypertensive-disorders-of-pregnancy.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy",
+  "https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia",
+  "https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate",
+  "https://amhonline.amh.net.au/chapters/blood-electrolytes/antiplatelet-drugs/other-antiplatelet-drugs/aspirin-antiplatelet",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/hypertension"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED AND MOSTLY OPEN -- the best-sourced obstetric guideline in this compendium. S1 is the OPEN RACGP AJGP article on hypertensive disorders in pregnancy (December 2024 supplement), retrieved as HTML, tag-stripped and QUOTED VERBATIM INCLUDING ITS DOSE TABLE, so most of the drug doses here are machine re-checkable. A1-A4 are four AMH pages, paraphrased, no passage stored. The two sources are used for DIFFERENT THINGS: S1 for antenatal and postpartum management, which it covers and AMH does not, and AMH for magnesium sulfate, which S1 does not dose at all. Where they overlap -- the aspirin prophylaxis dose -- BOTH figures are stated and the difference is recorded rather than merged.",
+ "summary": {
+  "total": 50,
+  "pass": 29,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "The spectrum of hypertensive disorders in pregnancy includes gestational hypertension, chronic hypertension, pre-eclampsia and eclampsia, and pre-eclampsia superimposed on chronic pre-existing hypertension, and can affect up to 8 to 10% of pregnant women",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The spectrum of HDIP includes gestational hypertension, chronic hypertension, pre-eclampsia (PET)/eclampsia and PET superimposed on chronic (pre-existing) hypertension, and this can affect up to 8-10% of pregnant women.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GESTATIONAL HYPERTENSION is new-onset hypertension, systolic above 140 or diastolic above 90 mmHg, AFTER 20 weeks' gestation, with no proteinuria or manifestations of pre-eclampsia, resolving by 12 weeks postpartum",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gestational hypertension is defined as a new onset of hypertension (systolic > 140 or diastolic > 90 mmHg) after 20 weeks' gestation, with nil associated proteinuria or manifestations of PET, and resolves by 12 weeks postpartum.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CHRONIC or pre-existing hypertension is high blood pressure diagnosed at any time BEFORE 20 weeks' gestation, or which does not resolve by 12 weeks postpartum",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chronic (pre-existing) hypertension is defined as high blood pressure that is diagnosed any time before 20 weeks' gestation or that does not resolve by 12 weeks postpartum.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "PRE-ECLAMPSIA AND ECLAMPSIA is high blood pressure developing after 20 weeks' gestation PLUS evidence of other end-organ dysfunction: renal (proteinuria, oliguria, raised creatinine), haematological (thrombocytopenia, haemolysis, DIC), hepatic (raised transaminases, epigastric or right upper quadrant pain), neurological (headaches, visual disturbances, hyperreflexia and clonus, generalised seizures of eclampsia, stroke) and foetal (intrauterine growth restriction)",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pre-eclampsia/Eclampsia is defined as the development of high blood pressure after 20 weeks' gestation, plus evidence of other end-organ dysfunction, including renal (proteinuria, oliguria, raised creatinine), haematological (thrombocytopenia, haemolysis, DIC), hepatic (raised transaminases, epigastric/right upper quadrant abdominal pain), neurological (headaches, visual disturbances, hyperreflexia and clonus, generalised seizures of eclampsia, stroke) and foetal (intrauterine growth restriction) manifestations.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "HELLP SYNDROME is haemolysis, elevated liver enzymes and low platelets, and occurs in 20% of severe pre-eclampsia cases",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HELLP syndrome is defined as haemolysis, elevated liver enzymes and low platelets and occurs in 20% of severe PET cases.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Higher risk of pre-eclampsia is conferred by ONE OR MORE MAJOR risk factors or TWO OR MORE MODERATE risk factors",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the presence of one or more major risk factors or two or more moderate risk factors confers a higher risk for developing PET",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "HIGH risk factors for pre-eclampsia are chronic hypertension, previous hypertensive disorder in pregnancy, chronic kidney disease, diabetes mellitus, autoimmune disease such as lupus or antiphospholipid syndrome, and multiple gestation; MODERATE risk factors are family history of pre-eclampsia, BMI over 35, age over 40, nulliparity, an interpregnancy gap of more than 10 years, reproductive technology assisted pregnancy, and a blood pressure systolic reading above 130 mmHg and/or diastolic above 80 mmHg",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High risk factors Moderate risk factors Chronic hypertension Previous hypertensive disorder in pregnancy Chronic kidney disease Diabetes mellitus Autoimmune disease (eg lupus or antiphospholipid syndrome) Multiple gestation Family history of PET BMI > 35 kg/m 2 Age > 40 years Nulliparity Interpregnancy gap of >10 years Reproductive technology assisted pregnancy Blood pressure systolic reading > 130 mmHg and/or diastolic > 80 mmHg",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Patients at higher risk of pre-eclampsia should be commenced on prophylactic LOW-DOSE ASPIRIN 150 mg DAILY and CALCIUM MORE THAN 1 g DAILY, which significantly reduce the risk of pre-eclampsia if commenced BEFORE 16 weeks' gestation and as early as 12 weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Those patients who are at higher risk of developing PET should be commenced on prophylactic treatment with low-dose aspirin (150 mg daily) and calcium (>1 g daily), … which have been demonstrated to be significant in reducing the risk of PET if commenced before 16 weeks' gestation (and as early as 12 weeks).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Diagnosis of a hypertensive disorder in pregnancy is a systolic BP above 140 mmHg and/or a diastolic above 90 mmHg, ON TWO OCCASIONS AT LEAST 15 MINUTES APART",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The diagnosis of HDIP is the measurement of elevated systolic blood pressure in a pregnant patient of > 140 mmHg and/or a diastolic blood pressure of > 90 mmHg, on two occasions, at least 15 minutes apart.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Signs suggestive of a hypertensive disorder in pregnancy include CLONUS OF MORE THAN 3 BEATS, hyperreflexia, epigastric or right upper quadrant tenderness, oedema and visual disturbance",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clonus > 3 beats",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Once a persistently elevated blood pressure has been recorded in a consult, the patient should be REFERRED URGENTLY to a tertiary healthcare centre or obstetric unit for full assessment and initiation of investigations by a health professional trained in managing hypertensive disorders in pregnancy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "once a persistently elevated blood pressure has been recorded in a consult, the patient should be referred urgently to a tertiary healthcare centre or obstetric unit for a full assessment and initiation of investigations by a health professional trained in managing HDIP",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Proteinuria assessment: bedside urinalysis is positive if 1+, and urine should then be sent for quantitative analysis; protein-creatinine ratio is positive above 30 mg/mmol; albumin-creatinine ratio is positive above 8 mg/mmol",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bedside urinalysis: positive if 1+; send urine for quantitative analysis Protein-creatinine ratio: positive if > 30 mg/mmol Albumin-creatinine ratio: positive if > 8 mg/mmol",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Pre-eclampsia bloods are a full blood examination for thrombocytopenia, urea electrolytes and creatinine for raised creatinine, liver function tests for raised transaminases, and coagulation studies for increased coagulopathy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "FBE: looking for thrombocytopenia UEC: looking for raised creatinine LFTs: looking for raised transaminases Coagulation studies: looking for increased coagulopathy",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Foetal ultrasound schedule: for CHRONIC hypertension, early dating ultrasound then growth scans at 28, 32 and 36 weeks' gestation; for GESTATIONAL hypertension, a growth scan at diagnosis then 3 to 4 weekly; for PRE-ECLAMPSIA, a growth scan at diagnosis then fortnightly plus fortnightly amniotic fluid index and Doppler assessment, or as directed by specialist care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early dating ultrasound then growth scans at 28, 32 and 36 weeks' gestation … Growth scan at time of diagnosis then 3-4 weekly … Growth scan at time of diagnosis then fortnightly plus fortnightly AFI + Doppler assessment",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "LABETALOL, METHYLDOPA and NIFEDIPINE MODIFIED-RELEASE tablets have demonstrated safety and efficacy in managing hypertensive disorders in pregnancy; prazosin, clonidine and hydralazine can also be used but are SECOND-LINE agents that should be deferred to specialist use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Labetalol, methyldopa and nifedipine modified-release tablets have demonstrated safety and efficacy in managing HDIP … Prazosin, clonidine and hydralazine can also be used in HDIP but are second-line agents that should be deferred to specialist use.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "First-line antihypertensive doses in hypertensive disorders of pregnancy: LABETALOL 100 mg twice daily to 400 mg three or four times daily, adverse effects bronchospasm, headache and bradycardia; METHYLDOPA 250 mg twice daily to 750 mg three or four times daily, adverse effects depression, dry mouth and sedation; NIFEDIPINE MODIFIED RELEASE 20 mg once daily to 60 mg twice daily, adverse effects headache as a first-dose effect, flushing, tachycardia and peripheral oedema",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Labetalol Beta blocker 100 mg bd-400 mg tds-qid Bronchospasm, headache, bradycardia … Methyldopa Central action 250 mg bd-750 mg tds-qid Depression, dry mouth, sedation … Nifedipine modified release Calcium channel blocker 20 mg od-60 mg bd Headache (first dose effect), flushing, tachycardia, peripheral oedema",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In chronic hypertension, patients taking ACE inhibitors, angiotensin receptor blockers or thiazide diuretics should be counselled on the INCREASED RISK OF CONGENITAL ABNORMALITIES if taken during pregnancy, and switched to an alternative agent",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In chronic hypertension, patients taking angiotensin-converting enzyme (ACE) inhibitors, angiotensin receptor blockers (ARB) or thiazide diuretics should be counselled on the increased risk of congenital abnormalities if they are taken during pregnancy and switched to an alternative agent.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Indications for referral to a tertiary unit for consideration of admission are elevated blood pressure above 140/90 to below 159/109 mmHg WITH clinical concerns for maternal or foetal wellbeing, or severe blood pressure above 160/110 mmHg",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indications for referral to a tertiary unit for consideration of admission are elevated blood pressure (ie > 140/90 to < 159/109 mmHg) and clinical concerns for maternal or foetal wellbeing, or severe blood pressure (ie > 160/110 mmHg).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "HELLP syndrome complications include placental abruption, placental failure, extreme prematurity and maternal cardiac and cerebrovascular complications, amounting to a 7 to 70% PERINATAL MORTALITY RATE and a 1 to 24% MATERNAL MORTALITY RATE",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "amounting to a 7-70% perinatal mortality rate and a 1-24% maternal mortality rate",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "IN ATYPICAL HELLP, haematological and biochemical derangement may PRECEDE hypertension and proteinuria, so HYPERTENSION AND PROTEINURIA ARE NOT ESSENTIAL FOR THE DIAGNOSIS",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a rare subset of HELLP cases, haematological and biochemical derangement might even precede hypertension and proteinuria; therefore, hypertension and proteinuria are not essential for its diagnosis.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In patients with a hypertensive disorder of pregnancy WITHOUT pre-eclampsia and with blood pressures below 160/110 mmHg, delivery should NOT be offered before 37 weeks' gestation unless there is another medical indication; for patients WITH pre-eclampsia, birth is recommended at 37 weeks' gestation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In HDIP patients without PET with blood pressures below 160/110 mmHg, delivery should not be offered before 37 weeks' gestation unless there is another medical indication for delivery. … For patients with PET, birth is recommended at 37 weeks' gestation.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "If preterm birth is expected before 34 weeks' gestation, corticosteroids are recommended for foetal lung maturation, a decision for a senior obstetrician in consultation with the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If preterm birth is expected in <34 weeks' gestation, corticosteroids are recommended for foetal lung maturation,",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "BLOOD PRESSURE PEAKS ON DAYS 3 TO 6 POSTNATALLY in both normotensive patients and those with a hypertensive disorder of pregnancy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood pressure peaks on days 3-6 postnatally in both normotensive and HDIP patients.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "WOMEN TAKING METHYLDOPA SHOULD BE CHANGED TO AN ALTERNATIVE AGENT after delivery because of susceptibility to POSTNATAL DEPRESSION on the agent",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Women taking methyldopa should be changed to an alternative agent secondary to the susceptibility to postnatal depression while on the agent.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Postpartum, it is good practice to change to ENALAPRIL 5 mg once daily to 10 mg twice daily, which has demonstrated safety and efficacy and may be preferred because of less frequent dosing than labetalol and nifedipine; these medications are all safe in breastfeeding",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "it is good practice to change to enalapril (5 mg od-10 mg bd), which has also been shown to demonstrate safety and efficacy and might be preferred secondary to less dosing in comparison to labetalol and nifedipine. … These medications are all safe in breastfeeding.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "At six weeks GPs perform a routine postpartum review including measurement of blood pressure and review of symptoms and signs; HYPERTENSION INCLUDING PRE-ECLAMPSIA CAN BE DIAGNOSED IN THE POSTPARTUM PERIOD AND CERTAINLY UP TO SIX WEEKS POSTPARTUM",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "At six weeks, GPs perform a routine postpartum review, which should include measurement of blood pressure, and again a review of symptoms and signs suggestive of HDIP. … It should be noted that hypertension including PET can be diagnosed in the postpartum period and certainly up to six weeks postpartum.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Where gestational hypertension and pre-eclampsia do NOT resolve by 12 weeks, this may herald essential hypertension, but secondary causes of hypertension need to be considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is important to recognise that where gestational hypertension and PET do not resolve by 12 weeks, this might herald essential hypertension, but secondary causes of hypertension need to be considered.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "It is reasonable to check blood pressure and perform a cardiovascular risk assessment ANNUALLY in women who have had a hypertensive disorder of pregnancy and who do not have essential hypertension",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is reasonable to check blood pressure and perform a cardiovascular risk assessment annually in women who have had an HDIP and who do not have essential hypertension.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In SUBSEQUENT PREGNANCIES the risk of a hypertensive disorder of pregnancy is approximately 20%, so prophylactic low-dose aspirin and calcium should be discussed from as early as 12 weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In subsequent pregnancies, the risk of HDIP is approximately 20%.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Hypertensive disorders in pregnancy: Approach to diagnosis and management', Volume 53 Supplement, December 2024, at https://www1.racgp.org.au/ajgp/2024/supplement-december/hypertensive-disorders-in-pregnancy, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH defines pre-eclampsia as hypertension with proteinuria or other disorders of the liver, kidneys, clotting system, brain or placenta usually developing after 20 weeks gestation; it complicates 2 TO 8% OF PREGNANCIES and can lead to poor intrauterine growth and early delivery",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH defines eclampsia as pre-eclampsia with one or more seizures, a serious complication affecting 1 IN 2000 DELIVERIES in developed countries",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Consider delivering the baby depending on gestational age and the condition of mother and baby, as pre-eclampsia resolves postpartum -- ALTHOUGH NEW MATERNAL COMPLICATIONS MAY OCCUR UP TO A WEEK AFTER DELIVERY",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MAGNESIUM SULFATE IS THE DRUG OF CHOICE for preventing seizures in women with pre-eclampsia, for treating eclamptic seizures and for preventing their recurrence; IT REDUCES THE DEVELOPMENT OF ECLAMPSIA IN WOMEN WITH PRE-ECLAMPSIA BY ABOUT HALF compared with placebo and may also reduce maternal mortality, while OUTCOME FOR THE BABIES IS UNAFFECTED",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Start magnesium sulfate prophylaxis in women with pre-eclampsia who are considered to be at risk of eclampsia",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For prevention, low-dose aspirin MODERATELY reduces the incidence of pre-eclampsia and its complications; calcium supplements also reduce the risk, PARTICULARLY WHEN DIETARY CALCIUM INTAKE IS LOW, and benefits appear greatest in women at higher risk",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Pre-eclampsia and eclampsia' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/pre-eclampsia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Magnesium sulfate for PRE-ECLAMPSIA, IV 4 g over 10 to 15 minutes, followed by a maintenance infusion of 1 g/hour continued for AT LEAST 24 HOURS AFTER DELIVERY",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Magnesium sulfate for ECLAMPSIA, IV 4 g over 5 to 10 minutes -- a FASTER bolus than for pre-eclampsia -- followed by a maintenance infusion of 1 g/hour continued for at least 24 hours AFTER THE LAST SEIZURE; a further 2 to 4 g over 5 to 10 minutes may be given if there is another seizure",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Before starting magnesium sulfate for an obstetric indication, CHECK that a knee or other tendon reflex is present, the respiratory rate is above 16 per minute, and urine output was above 100 mL in the previous 4 hours or above 25 mL/hour",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "During magnesium sulfate treatment monitor BP, heart rate, respiratory rate, oxygen saturation, urine output and reflexes; be guided by local protocol if reflexes are slow, respiratory rate is reduced or urine output falls below 25 mL/hour; STOP THE INFUSION if signs of toxicity develop and DO NOT RESUME until signs are normal",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "HAVE CALCIUM GLUCONATE INJECTION -- the antidote -- AVAILABLE in case of hypermagnesaemia requiring treatment",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The important signs of magnesium toxicity are LOSS OF DEEP TENDON REFLEXES and RESPIRATORY DEPRESSION from neuromuscular blockade; other effects include thirst, muscle weakness, hypotension, bradycardia, CNS depression, coma, circulatory collapse and cardiac arrest",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Magnesium sulfate is CONTRAINDICATED in heart block and hypermagnesaemia, and must be monitored closely in myasthenia gravis because it interferes with neuromuscular transmission and may markedly increase weakness, particularly of the respiratory muscles",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "IN OBSTETRIC PATIENTS BEING TREATED WITH NIFEDIPINE, nifedipine may increase the effects of magnesium sulfate and the risk of hypotension: use cautiously and monitor BP, deep tendon reflexes and respiratory function",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Magnesium is predominantly renally cleared; in reduced renal function or oliguria, meaning urine output under 100 mL over 4 hours, monitor plasma magnesium regularly, for example every 6 hours, and reduce the dose if necessary; the therapeutic magnesium concentration is 1.7 to 3.5 mmol/L",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "It is UNNECESSARY to monitor plasma magnesium concentration if renal function is normal",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Magnesium sulfate is safe to use in pregnancy and unlikely to be of concern in breastfeeding",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Magnesium sulfate' at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-obstetrics/drugs-pre-eclampsia/magnesium-sulfate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH gives aspirin for PREVENTION OF PRE-ECLAMPSIA as oral 75 TO 150 mg once daily, starting at 12 to 16 weeks gestation and continuing UNTIL DELIVERY; the indication is an ACCEPTED rather than an approved one, for women at moderate-to-high risk",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Aspirin (antiplatelet)' at https://amhonline.amh.net.au/chapters/blood-electrolytes/antiplatelet-drugs/other-antiplatelet-drugs/aspirin-antiplatelet, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's hypertension topic gives a target BP below 135/85 mmHg for stable chronic, gestational or non-severe pre-eclampsia, with methyldopa, labetalol and nifedipine as first-line oral drugs and oral hydralazine also considered",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypertension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/hypertension, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AVOID ACE INHIBITORS AND SARTANS DURING PREGNANCY",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypertension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/hypertension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For severe hypertension in pregnancy, systolic above 160 or diastolic above 110 mmHg, oral nifedipine as a CONVENTIONAL TABLET AVAILABLE THROUGH THE SAS, and parenteral labetalol and hydralazine, are used for urgent BP reduction following local protocols",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypertension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/hypertension, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  }
+ ]
+}
