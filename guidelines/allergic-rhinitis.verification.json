@@ -1,0 +1,349 @@
+{
+ "guideline": "guidelines/allergic-rhinitis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.allergy.org.au/hp/papers/allergic-rhinitis-clinical-update"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text (no intermediate scraper). Every claim below is verbatim-checked against that file with scripts/verify.py. The guideline prose paraphrases freely; source_text remains verbatim so each claim stays machine-recheckable. No drug dose appears in the source and none is reconstructed here.",
+ "claims": [
+  {
+   "claim": "ASCIA is the peak professional body of clinical immunology/allergy specialists in Australia and New Zealand",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This document has been developed by ASCIA, the peak professional body of clinical immunology/allergy specialists in Australia and New Zealand"
+  },
+  {
+   "claim": "23.9% of Australians reported allergic rhinitis in the ABS National Health Survey 2023",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Based on self-reports, almost one in four Australians (23.9% of the population) had allergic rhinitis as stated in the Australian Bureau of Statistics (ABS) National Health Survey 2023"
+  },
+  {
+   "claim": "Most common 15-54 years, peak 35-44, children 10%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the 2018 survey it was found to be most common between 15-54 years of age (peak between 35-44 years of age). Children were less likely to have allergic rhinitis (10%)"
+  },
+  {
+   "claim": "Often underdiagnosed, undertreated and sub-optimally self-treated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is often underdiagnosed, undertreated, and sub-optimally self-treated"
+  },
+  {
+   "claim": "Significant impact on sleep, concentration, learning, daily function and childhood development",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Can have a significant impact on sleep, concentration, learning and daily function, and affect childhood behaviour and development"
+  },
+  {
+   "claim": "United airway disease concept",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "United airway disease is the concept that allergic rhinitis and asthma are upper and lower respiratory tract manifestations of the same inflammatory process"
+  },
+  {
+   "claim": "50-80% of asthma patients have allergic rhinitis; 20-30% of rhinitis patients have asthma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "50-80% of patients with asthma have allergic rhinitis. … 20-30% of patients with allergic rhinitis have asthma"
+  },
+  {
+   "claim": "Allergic rhinitis is a risk factor for later asthma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Allergic rhinitis is a risk factor for subsequent asthma development"
+  },
+  {
+   "claim": "Treating rhinitis may improve asthma control",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Effective treatment of allergic rhinitis may improve asthma severity/control"
+  },
+  {
+   "claim": "Assess for coexistent disease in either condition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with either asthma or allergic rhinitis should be assessed for coexistent disease"
+  },
+  {
+   "claim": "Mechanism and lethality of thunderstorm asthma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Thunderstorm asthma is usually due to thunderstorms with rapid changes in wind, temperature and humidity. This causes pollen grains to absorb moisture, burst open and release large amounts of small pollen allergen particles. These particles penetrate the small airways of the lung, which can be fatal if medical treatment is delayed"
+  },
+  {
+   "claim": "Those affected usually had severe allergic rhinitis and ryegrass pollen allergy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not everyone affected by Australian thunderstorm asthma has previously experienced this condition. However, they have usually had severe allergic rhinitis and are allergic to ryegrass pollen"
+  },
+  {
+   "claim": "Advice to stay indoors around thunderstorms and use preventers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If patients are allergic to pollen, recommend that they stay indoors during, before and after thunderstorms in pollen seasons, or on windy days, and use preventer treatments"
+  },
+  {
+   "claim": "Timing classification of allergen exposure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Perennial - year-round symptoms triggered by indoor allergens such as dust mite, animal dander, and/or moulds … Seasonal - symptoms worsen during spring or summer and are often triggered by the pollens of grasses, weeds, or trees as well as moulds … triggered by chemicals, irritants, or allergens in the workplace. Symptoms improve when away from the workplace"
+  },
+  {
+   "claim": "Intermittent and persistent definitions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intermittent: <4 days/week or <4 weeks. … Persistent: >4 days/week or >4 weeks."
+  },
+  {
+   "claim": "Mild and moderate-severe definitions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild: Normal sleep, no impairment of daily activities, normal work, or school performance. … Moderate-severe: One or more of the following: abnormal sleep, impairment of activities, abnormal work or school performance, troublesome symptoms"
+  },
+  {
+   "claim": "INCS or combined INCS/antihistamine sprays are first line",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intranasal corticosteroids sprays or combined intranasal/antihistamine sprays are recommended first line treatments"
+  },
+  {
+   "claim": "Non-sedating antihistamines first line for intermittent mild disease",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First line treatment for intermittent mild allergic rhinitis or used in conjunction with other therapies"
+  },
+  {
+   "claim": "Onset of oral and intranasal antihistamines, and rescue use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rapid onset action (1-2 hours) … Very rapid onset action (within 30 minutes). May be used as a rescue medication to provide immediate relief of symptoms"
+  },
+  {
+   "claim": "Non-sedating recommended, sedating not recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Non-sedating antihistamines are recommended … Sedating antihistamines are not recommended"
+  },
+  {
+   "claim": "INCS more effective than nasal antihistamines for congestion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whilst some nasal antihistamines can reduce nasal congestion, intranasal corticosteroids (INCS) are more effective in reducing nasal congestion"
+  },
+  {
+   "claim": "INCS first line for persistent or moderate-severe disease and antihistamine failure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First line treatment for persistent and/or moderate to severe allergic rhinitis and treatment failures with antihistamines alone"
+  },
+  {
+   "claim": "INCS need continuous use; as-needed use is less effective",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continuous use is needed for long term benefit. … Use on an as-needed basis is less effective"
+  },
+  {
+   "claim": "INCS brands vary and have different age restrictions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Different intranasal corticosteroids often have different minimum age restrictions … Different brands of INCS vary in strength and efficacy"
+  },
+  {
+   "claim": "INCS do not cause atrophy and have minimal systemic absorption",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Topical corticosteroids such as INCS do not cause atrophy … Minimal potential for systemic absorption, when used in recommended doses"
+  },
+  {
+   "claim": "Growth monitoring in children on corticosteroids by any route",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whilst systemic absorption of INCS is negligible, growth of children and adolescents taking corticosteroids by any route should be monitored"
+  },
+  {
+   "claim": "INCS caution in glaucoma and cataracts",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "INCS must be used with caution in patients with pre-existing glaucoma and/or cataracts. Rare cases of cataracts, glaucoma and increased intraocular pressure have been reported following use of INCS"
+  },
+  {
+   "claim": "Saline irrigation is effective, safe and inexpensive but does not replace pharmacotherapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is usually well tolerated, effective in reducing rhinitis symptoms, safe and inexpensive. … Clears aeroallergens and inflammatory mucus but does not replace pharmacotherapy. … Large volume (>60 mL) and positive pressure devices are more effective than simple sprays (<1 mL)"
+  },
+  {
+   "claim": "Intranasal ipratropium only reduces watery rhinorrhoea",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Only decreases watery rhinorrhoea. … May be used in allergic rhinitis as adjunct treatment for persistent rhinorrhoea, with use of antihistamines or intranasal corticosteroid"
+  },
+  {
+   "claim": "Leukotriene antagonists add nothing to antihistamines and are inferior to INCS",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No additional benefit if used in combination with antihistamines. … The combination of leukotriene antagonists (such as montelukast) and antihistamines are no more effective than intranasal corticosteroids alone"
+  },
+  {
+   "claim": "No subsidy for leukotriene antagonists in allergic rhinitis alone",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is no Australian or New Zealand government subsidy for use of leukotriene antagonists for patients with allergic rhinitis alone"
+  },
+  {
+   "claim": "Decongestants short term 3-5 days only",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral or nasal decongestants may be used short term (3-5 days) to reduce nasal congestion if severe. This allows more effective administration of intranasal corticosteroids if turbinates are very swollen"
+  },
+  {
+   "claim": "Chronic intranasal decongestant use causes rhinitis medicamentosa",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chronic use of intranasal decongestants may lead to rebound nasal obstruction, called rhinitis medicamentosa"
+  },
+  {
+   "claim": "Decongestant contraindications",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Decongestants should not be used in patients with hypertension, coronary artery disease, prostatism or glaucoma. They should not be used in pregnancy"
+  },
+  {
+   "claim": "Oral corticosteroids rarely indicated with a 2-3 course annual ceiling",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Brief courses of oral corticosteroids (3-7 days) are rarely indicated, but may be considered … As short-term rescue medication if symptoms are severe, despite conventional therapy, but only up to a maximum limit of 2 or 3 short courses in a 12-month period"
+  },
+  {
+   "claim": "Depocorticosteroids not recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Depocorticosteroids are not recommended due to short duration of benefit and potential for local (subdermal and dermal atrophy) and systemic side effects"
+  },
+  {
+   "claim": "Patients needing oral corticosteroids should be referred to a specialist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients requiring oral corticosteroids for allergic rhinitis should be referred to a clinical immunology/allergy specialist for assessment"
+  },
+  {
+   "claim": "Pseudoephedrine restrictions for competitive athletes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a patient is a competitive athlete, it is important to ensure medications suggested are permitted. For example, pseudoephedrine used in some decongestants is subject to certain restrictions"
+  },
+  {
+   "claim": "Four-week primary care trial before referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Trial of pharmacotherapy initiated by primary care physicians and maintained for at least 4 weeks is recommended. Then consider referral to a specialist if no improvement"
+  },
+  {
+   "claim": "Doses may be reduced when symptoms improve",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When symptoms improve, pharmacotherapy doses may be reduced"
+  },
+  {
+   "claim": "Allergic conjunctivitis may occur with rhinitis or alone",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Allergic conjunctivitis presents with watery, itchy eyes and may occur in conjunction with allergic rhinitis or in isolation"
+  },
+  {
+   "claim": "Non-drug ocular measures and topical options",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Flush allergen from eyes (saline washes, liquid-tear preparations). … Cool compresses. … Oral antihistamines or topical mast cell stabilisers may be used to control itchy/watery eyes. … Intranasal corticosteroids can reduce ocular symptoms of allergic rhinitis"
+  },
+  {
+   "claim": "Ocular corticosteroids require ophthalmologist involvement",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ocular corticosteroids should only be prescribed in consultation with, and regular review by an ophthalmologist"
+  },
+  {
+   "claim": "CRSwNP definition and prevalence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is defined as inflammation of the paranasal sinuses for more than 12 weeks. … CRSwNP is present in 2-4% of the adult population"
+  },
+  {
+   "claim": "Aspirin hypersensitivity and Samter's triad",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aspirin hypersensitivity is common in people with polyposis and asthma (Samter's triad)"
+  },
+  {
+   "claim": "Consider polyps with persistent obstruction or anosmia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider polyps if a patient presents with persistent nasal obstruction and/or anosmia"
+  },
+  {
+   "claim": "CRSwNP treatment options",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nasal irrigation is a widespread first line treatment. … Intranasal corticosteroids are safe and effective for long term use. … A short course of antibiotics may have a role to play in non-Type 2 CRSwNP, but patient selection is important, and side effects need to be managed. … Endoscopic sinus surgery plays a significant role in the management of CRSwNP. … Surgery is safe, reduces symptom burden, and improves quality of life"
+  },
+  {
+   "claim": "Surgery has a limited role in rhinitis except CRSwNP",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Surgery plays a limited role in the management of rhinitis, except for CRSwNP. … Turbinate reduction and re-modelling of the nasal airway can improve medically refractory nasal obstruction. … Vidian neurectomy (division of autonomic nasal nerves) is not indicated for allergic rhinitis"
+  },
+  {
+   "claim": "Immunotherapy duration and specialist initiation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is usually administered for 3-5 years to produce durable effects, to reduce the frequency and severity of allergic rhinitis symptoms. … Should only be initiated by medical specialists with training in allergy, following a confirmed diagnosis"
+  },
+  {
+   "claim": "Average 50% reduction in symptoms or medication need",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Individual patients will experience different degrees of benefit, and on average there may be a 50% reduction in symptoms and/or medication need"
+  },
+  {
+   "claim": "Possible disease-modifying benefits in children",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Reduced risk of new sensitisation (developing IgE antibodies) from few to multiple aeroallergens in children. … Reduced risk of progression from allergic rhinitis to asthma in children. … Reduced asthma exacerbation"
+  },
+  {
+   "claim": "Available aeroallergen preparations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "House dust mite - Pollens (grass, tree, and weeds) - Animal dander - Moulds"
+  },
+  {
+   "claim": "Referral triggers for immunotherapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Allergic rhinitis is causing severe and/or persistent symptoms. … Are associated with intolerable side effects. … Do not adequately control symptoms. … Allergen avoidance is difficult, as in the case of pollen"
+  },
+  {
+   "claim": "Positive tests do not prove causation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Results of allergy tests should always be considered with a patient's clinical history. Positive tests do not automatically prove the allergen is causing the symptoms"
+  },
+  {
+   "claim": "Allergen minimisation may assist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Minimising exposure to confirmed allergens may assist in reducing symptoms of allergic rhinitis"
+  }
+ ],
+ "summary": {
+  "total": 55,
+  "pass": 55,
+  "fail": 0
+ }
+}
