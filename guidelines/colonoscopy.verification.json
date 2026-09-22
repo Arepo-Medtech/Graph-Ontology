@@ -1,0 +1,301 @@
+{
+  "guideline": "guidelines/colonoscopy.md",
+  "edition": "1.0",
+  "verified_utc": "2026-09-22",
+  "verifier": "claude-opus-5",
+  "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.safetyandquality.gov.au/standards/clinical-care-standards/colonoscopy-clinical-care-standard"
+  ],
+  "retrieved_utc": "2026-09-22",
+  "method": "Each claim checked against the retrieved text of the ACSQHC Colonoscopy Clinical Care Standard (updated 21 September 2025; page last updated 30 April 2026), including all nine quality statements, the for-clinicians/for-services/for-consumers sections, the cultural safety recommendations, the indicator list, the updates summary and the scope section. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The Standard's About section states it includes EIGHT quality statements while nine are listed and detailed; this is transcribed as found and recorded as an observation rather than reconciled. Indications and surveillance intervals are deferred by the Standard to Cancer Council Australia's two colorectal guidelines, and sedation agents and doses to ANZCA PG09 and PG15; none were retrieved and none is reconstructed. GESA's performance targets behind the certification model are referenced but not stated. Retrieved text contains extraction artefacts where double-n collapsed ('pla ed' for planned, 'perso el' for personnel, 'concer' for concern, 'ile' for ileum); source_text is preserved verbatim and the guideline renders the evident word. Source URL recorded at retrieval.",
+  "claims": [
+    {
+      "claim": "The Colonoscopy Clinical Care Standard aims to ensure the safe and appropriate use of colonoscopy and to maximise patients' likelihood of benefit from the procedure while reducing their risk of avoidable harm",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Colonoscopy Clinical Care Standard aims to ensure the safe and appropriate use of colonoscopy, and to maximise patients' likelihood of benefit from the procedure while reducing their risk of avoidable harm."
+    },
+    {
+      "claim": "Colonoscopy refers to the examination of the entire large bowel using a colonoscope, a camera on a flexible tube, and is a complex task requiring the colonoscopist to manipulate the colonoscope effectively to visualise the bowel while performing therapeutic interventions such as removing polyps or taking tissue samples",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Colonoscopy refers to the examination of the entire large bowel using a colonoscope - a camera on a flexible tube. It is a complex task that requires the colonoscopist to manipulate the colonoscope effectively to visualise the bowel, while performing therapeutic interventions such as removing polyps or taking tissue samples when required."
+    },
+    {
+      "claim": "The Standard's About section states that it includes eight quality statements describing safe and appropriate care",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The Colonoscopy Clinical Care Standard includes: \u2026 - eight quality statements describing safe and appropriate care"
+    },
+    {
+      "claim": "The updated Colonoscopy Clinical Care Standard was released on 21 September 2025 and replaces the Colonoscopy Clinical Care Standard of 2018, and the page was last updated 30 April 2026",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This updated Colonoscopy Clinical Care Standard was released on 21 September 2025 and replaces the Colonoscopy Clinical Care Standard (2018). \u2026 Last updated: 30 April 2026"
+    },
+    {
+      "claim": "Quality statement 1 states that when a patient is referred for consideration of colonoscopy the referring clinician provides sufficient information for the receiving clinician to assess the appropriateness, risk and urgency of consultation, and the receiving clinician or service allocates the patient an appointment according to their clinical needs",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When a patient is referred for consideration of colonoscopy, the referring clinician provides sufficient information for the receiving clinician to assess the appropriateness, risk and urgency of consultation. The receiving clinician or service allocates the patient an appointment according to their clinical needs."
+    },
+    {
+      "claim": "The referral should include the indication including presenting symptoms and the clinical concern, results and dates of previous investigations including iFOBT indicating whether this was through the National Screening Program, colonoscopies and histopathology, all relevant medical and family history including of bowel and other cancers and known genetic predispositions, current medicines and other medical conditions, and previous relevant treatment",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "- the indication for the referral, including presenting symptoms and the clinical concer \u2026 - results and dates of previous investigations, including iFOBT (indicating whether this was through the National Screening Program), colonoscopies and histopathologyn- all relevant medical and family history, including of bowel and other cancers and known genetic predispositionsn- current medicines and other medical conditionsn- previous relevant treatment."
+    },
+    {
+      "claim": "Clinicians should evaluate the likelihood of the patient benefiting from the procedure considering their overall health, comorbidities, likelihood of benefit from future management, the procedural risk and their willingness to proceed",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Evaluate the likelihood of the patient benefiting from the procedure, considering their overall health, comorbidities, likelihood of benefit from future management, the procedural risk and their willingness to proceed."
+    },
+    {
+      "claim": "An open-access or direct-access colonoscopy service allows clinicians to refer patients for a colonoscopy without a prior consultation with the colonoscopist, and open-access models have been developed to improve access to services for suitable patients such as following a positive screening iFOBT",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "An open-access (sometimes called direct-access) colonoscopy service is a service which allows clinicians to refer patients for a colonoscopy without a prior consultation with the colonoscopist. Open-access models have been developed to improve access to services for suitable patients (such as following a positive screening iFOBT ['poo test'])."
+    },
+    {
+      "claim": "For open-access services there should be the opportunity for contact between the patient and a suitably trained clinician, including a registered nurse or nurse practitioner, before the day of the procedure to enable the patient to ask questions about the procedure including potential risks, benefits and bowel preparation, which may be via telehealth when appropriate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "provide the opportunity for contact between the patient and a suitably trained clinician (including a registered nurse or nurse practitioner) before the day of the procedure to enable the patient to ask questions about the procedure, including about potential risks, benefits, and bowel preparation; this may be via telehealth when appropriate."
+    },
+    {
+      "claim": "Quality statement 2 states that a patient is offered timely colonoscopy when appropriate for the investigation of signs or symptoms of bowel disease, surveillance or screening consistent with national evidence-based guidelines, that decisions are made in the context of the patient's ability to tolerate the bowel preparation and colonoscopy and their likelihood of benefit, and that if colonoscopy is not appropriate the receiving clinician advises the patient and their referring clinician of alternative recommended management",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient is offered timely colonoscopy when appropriate for the investigation of signs or symptoms of bowel disease, surveillance or screening, as consistent with national evidence-based guidelines. Decisions are made in the context of the patient's ability to tolerate the bowel preparation and colonoscopy, and their likelihood of benefit. If colonoscopy is not appropriate, the receiving clinician advises the patient and their referring clinician of alternative recommended management."
+    },
+    {
+      "claim": "The Standard tells patients that people might have a colonoscopy for different reasons, that every person's situation is different, and that just because you are referred to a specialist to consider having a colonoscopy does not mean that it will be the right thing for you",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "People might have a colonoscopy for different reasons and every person's situation is different. Just because you are referred to a specialist to consider having a colonoscopy does not mean that it will be the right thing for you."
+    },
+    {
+      "claim": "A colonoscopy should only be offered if the benefits outweigh any risks of the procedure for the patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "You should only be offered a colonoscopy if the benefits outweigh any risks of the procedure for you."
+    },
+    {
+      "claim": "Quality statement 3 states that before starting bowel preparation a patient receives comprehensive patient-appropriate information about bowel preparation, the colonoscopy, and sedation or anaesthesia, has an opportunity to discuss the reason, risks, benefits, financial costs and alternative options before deciding to proceed, and that their understanding is assessed and the information provided and their consent documented",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Before starting bowel preparation, a patient receives comprehensive patient-appropriate information about bowel preparation, the colonoscopy, and sedation or anaesthesia. The patient has an opportunity to discuss the reason for the colonoscopy, the risks, benefits, financial costs and alternative options before deciding to proceed. Their understanding is assessed, and the information provided and their consent to sedation, colonoscopy and therapeutic intervention is documented."
+    },
+    {
+      "claim": "Potential adverse events to inform the patient of include those related to the bowel preparation or sedation, perforation, bleeding both immediate and delayed, splenic injury and missed pathology",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "- potential adverse events, including those related to the bowel preparation or sedation, perforation, bleeding (immediate and delayed), splenic injury and missed pathology"
+    },
+    {
+      "claim": "Even after giving consent a patient can ask for more information or change their mind about having the colonoscopy at any time before the colonoscopy begins",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Even after you have given your consent, you can ask for more information or change your mind about having the colonoscopy at any time before the colonoscopy begins."
+    },
+    {
+      "claim": "Split dosing of bowel preparation has been associated with increased adenoma detection rates, typically involves splitting the standard dose between the day before and the morning of the colonoscopy, and some of the dose should be given on the same day of the procedure 3 to 6 hours before the planned start",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "ire preparation on the day or evening before the colonoscopy and has been associated with increased adenoma detection rates. Typically, this involves splitting the standard dose of the bowel preparation between the day before and the morning of the colonoscopy. Ensure that some of the bowel preparation dose is given on the same day of the procedure (3-6 hours before the pla ed start of the procedure)."
+    },
+    {
+      "claim": "Patients on diabetes medicines, anticoagulants, antiplatelets or other medicines should be provided with individualised instructions about how to adjust their medicines and manage their condition as they undergo bowel preparation, and clinicians should enquire about the patient's use of medicines to lose weight due to the potential complications in endoscopic procedures",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure patients on diabetes medicines, anticoagulants, antiplatelets, or other medicines are provided with individualised instructions about how to adjust their medicines and manage their condition as they undergo bowel preparation. Enquire about the patient's use of medicines to lose weight, due to the potential complications in endoscopic procedures"
+    },
+    {
+      "claim": "Overnight admission should be considered for patients who are unlikely to manage bowel preparation independently",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "For example, overnight admission for patients who are unlikely to manage bowel preparation independently."
+    },
+    {
+      "claim": "Quality statement 5 states that before colonoscopy a patient is assessed by an appropriately trained clinician to identify any increased risk including cardiovascular, respiratory or airway compromise, that the use of sedation is planned accordingly, that the risks and benefits of sedation are discussed with the patient, and that sedation is administered and the patient monitored throughout the colonoscopy and recovery period in accordance with Australian and New Zealand College of Anaesthetists guidelines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Before colonoscopy, a patient is assessed by an appropriately trained clinician to identify any increased risk, including cardiovascular, respiratory or airway compromise. The use of sedation is pla ed accordingly. The risks and benefits of sedation are discussed with the patient. Sedation is administered and the patient is monitored throughout the colonoscopy and recovery period in accordance with Australian and New Zealand College of Anaesthetists guidelines."
+    },
+    {
+      "claim": "Patients should be provided with the opportunity to discuss the approach to sedation, which may include the option of no sedation where this is the patient's preference and is clinically appropriate",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Provide patients with the opportunity to discuss the approach to sedation. This may include the option of no sedation where this is the patient's preference and is clinically appropriate."
+    },
+    {
+      "claim": "If an increased risk is identified an anaesthetist, or other trained and credentialed medical practitioner within their scope of practice, should assess the patient and be present during the colonoscopy to care for the patient",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If an increased risk is identified, an anaesthetist, or other trained and credentialed medical practitioner within their scope of practice, should assess the patient and be present during the colonoscopy to care for the patient."
+    },
+    {
+      "claim": "Clinicians should ensure that the patient understands that their awareness of the colonoscopy will depend upon the depth of sedation, and sedation must be administered by a credentialed practitioner working within their scope of practice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure that the patient understands that their awareness of the colonoscopy will depend upon the depth of sedation. \u2026 Sedation must be administered by a credentialed practitioner working within their scope of practice."
+    },
+    {
+      "claim": "Whilst anaesthetists are specialists in the sedation-anaesthesia continuum, sedation may be administered and managed by clinicians from other clinical disciplines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Whilst anaesthetists are specialists in the sedation-anaesthesia continuum, sedation may be administered and managed by clinicians from other clinical disciplines."
+    },
+    {
+      "claim": "Quality statement 6 states that a patient's colonoscopy is performed by a credentialed clinician working within their scope of clinical practice who meets the requirements of an accepted certification and recertification process, and that sedation or anaesthesia and clinical support are provided by credentialed clinicians working within their scope of clinical practice",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "A patient's colonoscopy is performed by a credentialed clinician working within their scope of clinical practice, who meets the requirements of an accepted certification and recertification process. Sedation or anaesthesia, and clinical support are provided by credentialed clinicians working within their scope of clinical practice."
+    },
+    {
+      "claim": "Colonoscopists should undergo certification and participate in a recertification process accepted by their professional association and employer, and should supervise trainees at a level appropriate to their skill and experience",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If you are a colonoscopist, undergo certification and participate in a recertification process that is accepted by your professional association and employer. Supervise trainees at a level appropriate to their skill and experience."
+    },
+    {
+      "claim": "The model includes certification and periodic recertification of colonoscopists' performance in accordance with defined quality indicators and performance targets established by the Gastroenterological Society of Australia, overseen by the Conjoint Committee for the Recognition of Training in Gastrointestinal Endoscopy and the Recertification in Colonoscopy Conjoint Committee",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "certification - and periodic recertification - of colonoscopists' performance in accordance with defined quality indicators and performance targets established by the Gastroenterological Society of Australia (GESA), and overseen by the Conjoint Committee for the Recognition of Training in Gastrointestinal Endoscopy (CCRTGE) and the Recertification in Colonoscopy Conjoint Committee (RCCC)."
+    },
+    {
+      "claim": "The cultural safety recommendation for quality statement 6 is to ensure clinicians proactively reflect on their assumptions and biases and provide care that is holistic, culturally safe, and free of discrimination and racism",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure clinicians proactively reflect on their assumptions and biases, and provide care that is holistic, culturally safe, and free of discrimination and racism"
+    },
+    {
+      "claim": "Quality statement 7 states that when a patient is undergoing colonoscopy their entire colon including the caecum is examined carefully and systematically, that the adequacy of bowel preparation, clinical findings, biopsies, polyps removed, therapeutic interventions and details of any adverse events are documented, and that all polyps removed are submitted for histological examination",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "When a patient is undergoing colonoscopy their entire colon - including the caecum - is examined carefully and systematically. The adequacy of bowel preparation, clinical findings, biopsies, polyps removed, therapeutic interventions and details of any adverse events are documented. All polyps removed are submitted for histological examination."
+    },
+    {
+      "claim": "To maximise adenoma detection clinicians should intubate the caecum or terminal ileum and allow adequate time for mucosal inspection whenever performing colonoscopy, should examine the remaining bowel thoroughly in people with previous resection, and should assess the adequacy of bowel preparation using a validated tool such as the Boston Bowel Preparation Scale, Ottawa Bowel Preparation Scale or the Aronchick Scale",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "To maximise adenoma detection, intubate the caecum or terminal ileum and allow adequate time for mucosal inspection whenever performing colonoscopy. In people with previous resection, examine the remaining bowel thoroughly. Assess the adequacy of bowel preparation using a validated tool such as the Boston Bowel Preparation Scale, Ottawa Bowel Preparation Scale, or the Aronchick Scale."
+    },
+    {
+      "claim": "Clinicians should document the quality of the bowel preparation, whether caecal intubation was achieved with photodocumentation, withdrawal time, clinical findings, the details of polyps removed, how they were removed and whether they were retrieved, ensure all polyps removed are retrieved where possible and sent for histopathology, and for patients referred due to a positive National Screening Program iFOBT result report to the National Cancer Screening Register as soon as possible",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Document the quality of the bowel preparation, whether caecal intubation was achieved (with photodocumentation), withdrawal time, clinical findings, the details of polyps removed, how they were removed and whether they were retrieved. Ensure that all polyps removed are retrieved, where possible, and are sent for histopathology examination. For patients referred for colonoscopy due to a positive National Screening Program iFOBT result, reporting to the National Cancer Screening Register should occur as soon as possible."
+    },
+    {
+      "claim": "Adverse events including perforation, post-polypectomy bleeding and sedation-related cardio-respiratory compromise should be recorded in the patient record and relevant quality systems",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Record adverse events, including perforation, post-polypectomy bleeding and sedation-related cardio-respiratory compromise in the patient record and relevant quality systems"
+    },
+    {
+      "claim": "Equipment should be of adequate quality to enable safe and accurate visualisation and photodocumentation of the bowel, any adjunctive technologies such as artificial intelligence polyp detection, foot pump irrigation and narrow band imaging should be used in an assistive capacity and according to local policy, and clinicians remain accountable for delivering safe and high-quality care regardless of the technology used and for ensuring their practice meets their professional obligations",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Equipment used to perform the colonoscopy should be of adequate quality to enable safe and accurate visualisation and photodocumentation of the bowel. Any adjunctive technologies (such as artificial intelligence [AI] polyp detection, foot pump irrigation and narrow band imaging) should be used in an assistive capacity and according to local policy. Clinicians remain accountable for delivering safe and high-quality care regardless of the technology used, and for ensuring their practice meets their professional obligations."
+    },
+    {
+      "claim": "Healthcare services should establish procedures to collect and periodically monitor the quality of colonoscopies at the service level including caecal intubation, adenoma detection rate, sessile serrated lesion detection rate and adequacy of bowel preparation",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Establish procedures to collect and periodically monitor the quality of colonoscopies at the service level, including caecal intubation, adenoma detection rate, sessile serrated lesion detection rate and adequacy of bowel preparation."
+    },
+    {
+      "claim": "The addition of photodocumentation as a minimum requirement for the procedure is a key update in quality statement 7",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "- the addition of photodocumentation as a minimum requirement for the procedure (Quality statement 7)"
+    },
+    {
+      "claim": "The patient is safely discharged into the care of a responsible adult in accordance with Australian and New Zealand College of Anaesthetists guidelines",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "icines, and arrangements for medical follow-up. The patient is safely discharged into the care of a responsible adult, in accordance with Australian and New Zealand College of Anaesthetists guidelines."
+    },
+    {
+      "claim": "If despite all reasonable efforts a responsible adult is not available, the clinician responsible for managing sedation may exercise their judgement in deciding alternative post-sedation supervision and transport, excluding driving or public transport",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure patients are discharged by authorised clinical perso el into the care of a responsible adult after satisfactory discharge criteria are met. If, despite all reasonable efforts, a responsible adult is not available, the clinician responsible for managing sedation may exercise their judgement in deciding alternative post-sedation supervision and transport (excluding driving or public transport)."
+    },
+    {
+      "claim": "Alternatives including admission or scheduling of appointments to allow longer periods in recovery should be explored when scheduling admissions to avoid denying colonoscopy to people due to their social circumstances",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Alternatives, including admission or scheduling of appointments to allow longer periods in recovery, should be explored when scheduling admissions to avoid denying colonoscopy to people due to their social circumstances."
+    },
+    {
+      "claim": "Quality statement 9 states that the colonoscopist communicates the reason for the colonoscopy, its findings, any histology results and recommendations for follow-up in writing to the general practitioner, any other relevant clinician and the patient, that this information is recorded in facility records and other electronic shared record management systems, that recommendations for surveillance colonoscopy align with national evidence-based guidelines, and that if more immediate treatment or follow-up is needed the colonoscopist makes appropriate arrangements",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "The colonoscopist communicates the reason for the colonoscopy, its findings, any histology results and recommendations for follow-up in writing to the general practitioner, any other relevant clinician and the patient. This information is recorded in the facility records and other electronic shared record management systems to enable accurate follow-up by other clinicians. Recommendations for surveillance colonoscopy, if required, align with national evidence-based guidelines. If more immediate treatment or follow-up is needed, the colonoscopist makes appropriate arrangements."
+    },
+    {
+      "claim": "Both positive and negative histology findings should be communicated",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Ensure that both positive and negative histology findings are communicated."
+    },
+    {
+      "claim": "The report and results should be uploaded to the patient's healthcare record and My Health Record where this capability is available, and for National Screening Program participants colonoscopy outcomes, results and adverse events should be reported to the National Cancer Screening Register",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Upload the report and results to the patient's healthcare record and My Health Record (if this capability is available in clinical information systems). For National Screening Program participants, report colonoscopy outcomes, results and adverse events to the National Cancer Screening Register."
+    },
+    {
+      "claim": "If presenting symptoms have not been explained by the colonoscopy, clinicians should advise the patient and refer on if further investigation or treatment is required",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "If presenting symptoms have not been explained by the colonoscopy, advise the patient and refer on if further investigation or treatment is required."
+    },
+    {
+      "claim": "Indicator 2a is evidence of a locally approved policy that ensures the timely and appropriate provision of colonoscopy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Indicator 2a | Evidence of a locally approved policy that ensures the timely and appropriate provision of colonoscopy"
+    },
+    {
+      "claim": "Indicator 7a is the proportion of patients whose bowel preparation was adequate using a validated assessment, and indicator 7b is the proportion whose entire colon was examined to the caecum and/or terminal ileum",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Indicator 7a | Proportion of patients who had a colonoscopy whose bowel preparation was adequate using a validated assessment \u2026 | Indicator 7b | Proportion of patients who had a colonoscopy whose entire colon was examined to the caecum and/or terminal ile"
+    },
+    {
+      "claim": "Indicator 7c is the proportion of patients whose colonoscopy detected one or more adenomas, and indicator 7d is the proportion whose colonoscopy detected one or more sessile serrated lesions",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Indicator 7c | Proportion of patients who had a colonoscopy that detected one or more adenoma(s) \u2026 | Indicator 7d | Proportion of patients who had a colonoscopy that detected one or more sessile serrated lesion(s)"
+    },
+    {
+      "claim": "Indicator 9a is evidence of local arrangements to ensure information about a person's colonoscopy is recorded and shared",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "| Indicator 9a | Evidence of local arrangements to ensure information about a person's colonoscopy is recorded and shared to en"
+    },
+    {
+      "claim": "Modifiable lifestyle risk factors contribute to more than 50 per cent of bowel cancer cases",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "Modifiable lifestyle risk factors contribute to more than 50% of bowel cancer cases."
+    },
+    {
+      "claim": "The Standard does not cover care of children or adolescents under the age of 18 who are undergoing colonoscopy",
+      "source": "S1",
+      "verdict": "pass",
+      "source_text": "This Standard does not cover care of children or adolescents under the age of 18 who are undergoing colonoscopy."
+    }
+  ],
+  "summary": {
+    "total": 47,
+    "pass": 47,
+    "fail": 0
+  }
+}

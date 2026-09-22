@@ -254,6 +254,7 @@ That is worth preserving exactly as stated.
 
 | Guideline here | Connection |
 |---|---|
+| ⚠️ **Colonoscopy** | **iron deficiency anaemia is the commonest route to a colonoscopy referral in this compendium** — the ACSQHC standard governs how that colonoscopy is done |
 | **Heavy menstrual bleeding** | indicator 1a requires testing for **iron deficiency and anaemia**; menstrual blood loss is a named cause; oral treatment at first presentation is justified by **limiting complications from iron deficiency** |
 | **Heart failure** | its own ferritin threshold (**< 100, or < 300 with TSAT < 20%**), and **IV iron improves symptoms and quality of life in HFrEF** |
 | **Chronic kidney disease** | KDIGO threshold **< 500 with TSAT < 30%**; IV iron reduces need for erythropoiesis-stimulating drugs |
