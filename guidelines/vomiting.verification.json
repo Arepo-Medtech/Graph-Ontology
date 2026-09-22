@@ -1,0 +1,199 @@
+{
+ "guideline": "guidelines/vomiting.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Vomiting/"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text. Every claim is verbatim-checked against that file with scripts/verify.py. Prose paraphrases; source_text stays verbatim. The ondansetron weight-band table is a table rendered as text, quoted as one contiguous block; column alignment is a transcription risk and should be confirmed against the page before prescribing. Route, frequency and maximum for ondansetron are not stated on the page and are not reconstructed.",
+ "claims": [
+  {
+   "claim": "Bilious vomiting is obstruction until proven otherwise and needs urgent surgical referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilious (green) vomiting is due to a gastrointestinal obstruction until proven otherwise, and requires urgent surgical referral"
+  },
+  {
+   "claim": "Without diarrhoea consider causes other than gastroenteritis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a vomiting child without diarrhoea, always consider causes other than gastroenteritis"
+  },
+  {
+   "claim": "Always consider intracranial causes including inflicted injury",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intracranial causes, including raised intracranial pressure (ICP) and inflicted injury, should always be considered"
+  },
+  {
+   "claim": "Cessation of vomiting does not exclude a serious cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ondansetron can be used for symptomatic relief; however, cessation of vomiting does not exclude a serious cause"
+  },
+  {
+   "claim": "Vomiting is a symptom not a diagnosis and infection is the commonest cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vomiting is a common and non-specific symptom, not a diagnosis … Infection is the most common cause of acute vomiting"
+  },
+  {
+   "claim": "Bile is dark green not yellow and a visual aid helps families",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bile is dark green rather than yellow. Using a visual aid to clarify vomitus colour with families is helpful"
+  },
+  {
+   "claim": "Early morning vomiting with headache may be raised ICP",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early morning vomiting and headache may be due to raised ICP"
+  },
+  {
+   "claim": "Differential by nature of vomitus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilious (dark green) … GIT obstruction … Swallowed blood eg epistaxis, or in neonate from maternal blood due to delivery or nipple trauma … Projectile … Pyloric stenosis … Early morning vomiting … Raised ICP"
+  },
+  {
+   "claim": "Respiratory and abdominal associations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Wheeze, stridor, rash, cough, chest pain … Abdominal distension and tenderness, \"tinkling\"/absence of bowel sounds … Abdominal tenderness and fever"
+  },
+  {
+   "claim": "Torsion presentations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Lower abdominal/pelvic pain or testicular pain … Testicular torsion"
+  },
+  {
+   "claim": "Gastrointestinal associations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Associated with certain food ingestion … Non-IgE mediated food allergy … Rectal bleeding … Intussusception"
+  },
+  {
+   "claim": "Infective and neurological associations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever or systemic illness … Meningitis … History of head injury/concern for NAI … Intracranial bleed"
+  },
+  {
+   "claim": "Metabolic and toxic associations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Abdominal pain, polyuria, polydipsia … Toxidromes, possible toxin ingestion, drug use … Cannabis hyperemesis … Consider inborn errors of metabolism"
+  },
+  {
+   "claim": "Other associations including pregnancy and eating disorders",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specific pattern of vomiting … Cyclical vomiting syndrome … Urinary frequency, body changes, sexually active … Induced vomiting/purging, signs of disordered eating"
+  },
+  {
+   "claim": "Abdominal examination findings",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Abdominal distension could suggest acute abdomen or bowel obstruction (ask parent if abdomen changed in appearance) … 'Tinkling' high-pitched or absent of bowel sounds may suggest gastrointestinal obstruction … Examine testes for torsion, particularly in adolescent boys"
+  },
+  {
+   "claim": "Neurological examination findings",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Altered conscious state and/or abnormal neurology (eg Cushing's triad) may suggest intracranial pathology … Bulging fontanelle may be a sign of raised ICP"
+  },
+  {
+   "claim": "Red flags",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilious vomiting … Lethargy or listlessness … Inconsolable +/- bulging fontanelle in infant … Neck stiffness, photophobia and fever in older child … Signs of peritonitis … Persistent vomiting with poor growth or abnormal development"
+  },
+  {
+   "claim": "Most well children with isolated vomiting need no investigations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most well children with isolated vomiting do not require any other investigations … Targeted investigation is directed by likely differential diagnoses"
+  },
+  {
+   "claim": "BGL and ketone thresholds",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider BGL and ketones if BGL <3 mmol/L or >11 mmol/L. Ketotic hypoglycaemia can be a consequence of vomiting, more commonly in younger children"
+  },
+  {
+   "claim": "Shock bolus and hypoglycaemia treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treat shock with a bolus of 10-20 mL/kg sodium chloride 0.9% … If BGL <2.6 mmol/L, treat as per hypoglycaemia … If ketones present, consider carbohydrate source to correct (eg apple juice)"
+  },
+  {
+   "claim": "Surgical consultation triggers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consult local surgical team if there is evidence of a surgical cause of vomiting eg bowel obstruction, testicular or ovarian torsion and appendicitis"
+  },
+  {
+   "claim": "Ondansetron indication above 6 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "To assist with maintaining hydration in children >6 months of age"
+  },
+  {
+   "claim": "Ondansetron weight-band dosing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Weight Dose 8-15 kg 2 mg 15-30 kg 4 mg >30 kg 8 mg"
+  },
+  {
+   "claim": "Ondansetron may be given after head injury with monitoring",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Can be given with vomiting due to head injury provided other signs such as conscious state are carefully monitored"
+  },
+  {
+   "claim": "Senior advice before other antiemetics",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If ondansetron is ineffective, consult senior advice before prescribing other anti-emetics due to side effects"
+  },
+  {
+   "claim": "Oral rehydration first line including diluted apple juice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Encourage oral fluids as a first line option eg oral rehydration solution or diluted apple juice (1:1 apple juice to water)"
+  },
+  {
+   "claim": "Paediatric consultation triggers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advice regarding escalation of care … Patient is acutely unwell and not responding to fluid resuscitation … Severe metabolic derangement … Diagnostic uncertainty"
+  },
+  {
+   "claim": "Discharge criteria",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Alert and able to tolerate small amounts of oral intake … Normal vital signs … The cause of vomiting has been identified and adequately managed … High risk diagnoses have been considered and there is an adequate follow up plan in place with clear instructions on when to seek earlier review"
+  },
+  {
+   "claim": "Last updated September 2025",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Last updated September 2025"
+  },
+  {
+   "claim": "The guideline cites the AMH Children's Dosing Companion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Australian Medicines Handbook Children's Dosing Companion"
+  }
+ ],
+ "summary": {
+  "total": 30,
+  "pass": 30,
+  "fail": 0
+ }
+}
