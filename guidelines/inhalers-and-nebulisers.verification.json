@@ -1,0 +1,302 @@
+{
+ "guideline": "guidelines/inhalers-and-nebulisers.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment",
+  "https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers",
+  "https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers",
+  "https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED. R1-R3 are three AMH pages including its inhaler device table, paraphrased, no passage stored: device types, spacer rules, nebuliser cautions and the Australian device landscape. S1 is the OPEN RACGP AJGP article 'Respiratory inhalers and the environment' (December 2022), quoted verbatim. It is included because AMH's own inhalers page raises the greenhouse-gas point in a single practice point and does nothing with it, while S1 supplies the clinical decision framework -- including the only practical bedside test for DPI suitability found in any retrieved source. THIS GUIDELINE IS ABOUT DEVICES, NOT ABOUT ASTHMA OR COPD MANAGEMENT, which have their own guidelines in this compendium; no drug dose for either condition is set here.",
+ "summary": {
+  "total": 41,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "Pressurised metered dose inhalers contain an inert propellant gas which rapidly delivers drug to the lungs; most are activated by pushing the canister down while breathing in through the mouthpiece, WHICH GENERALLY REQUIRES GOOD HAND-BREATH COORDINATION",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "pMDIs SHOULD BE USED WITH A SPACER BY MOST CHILDREN UNDER 8 YEARS and by people with poor dexterity, unless they are using the breath-activated Autohaler",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "UNLESS IT HAS A DOSE COUNTER, THE ONLY RELIABLE METHOD FOR DETERMINING WHEN A pMDI IS EMPTY IS TO COUNT THE NUMBER OF DOSES ADMINISTERED",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The Respimat is a NON-PRESSURISED mist MDI, sometimes called a soft mist inhaler, with a compressed spring producing an aerosol; OPTIMAL DRUG DELIVERY DOES NOT DEPEND ON THE PATIENT'S INSPIRATORY FLOW, GOOD HAND-BREATH COORDINATION OR USE OF A SPACER",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Dry powder inhalers deliver drug as a powder, are BREATH-ACTIVATED, and do NOT require good hand-breath coordination or a spacer; HOWEVER THEY ARE LESS EFFECTIVE WHEN INSPIRATORY FLOW IS LOW -- for example in some children under 8 years, elderly patients with poor lung function, or DURING ACUTE ASTHMA ATTACKS -- in which cases pMDIs with spacers are preferred",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CONFUSINGLY, THE LABELLED STRENGTH OF AN INHALER MAY BE EXPRESSED DIFFERENTLY by manufacturers: the METERED or ex-valve dose is the amount intended for release on activation, while the DELIVERED or ex-actuator or ex-device dose is the amount actually expelled from the inhaler -- the metered dose minus a small quantity deposited on the mouthpiece",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "IN AUSTRALIA THE METERED DOSE IS MORE COMMONLY USED unless otherwise specified in the product information",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Spacers are used with pMDIs EXCEPT the Autohaler; using a pMDI with a spacer requires less hand-breath coordination, improves the pulmonary deposition pattern, reduces the risk of triggering a cough reflex and oropharyngeal deposition, and gives fewer local adverse effects and less systemic absorption",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "SPACERS ARE RECOMMENDED FOR: children, using a SMALL-VOLUME spacer for children under 5 years with a face mask if necessary; adults with poor hand-breath coordination; ACUTE ASTHMA ATTACKS; patients using inhaled corticosteroids, particularly at higher doses; and to reduce oropharyngeal adverse effects -- candidiasis, dysphonia, frequent cough reflex",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "LARGE-VOLUME SPACERS of 650 to 850 mL are MORE EFFICIENT than small-volume spacers of 60 to 160 mL but less convenient, and are UNSUITABLE FOR CHILDREN UNDER 5 YEARS because of their insufficient tidal volume",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Wash spacers BEFORE FIRST USE, then ONCE A MONTH: wash in warm water and dish-washing detergent, DO NOT RINSE, allow to AIR DRY -- do not dry with a cloth as this can make medication stick to the spacer and make it less effective -- and check for cracks and that the valve is functioning",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "TO REDUCE CONFUSION, AVOID USING DIFFERENT INHALER TYPES IF POSSIBLE",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ASSESS INHALER TECHNIQUE REGULARLY, using resources such as those at nationalasthma.org.au and lungfoundation.com.au",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The hydrofluorocarbons used as propellants in pMDIs are GREENHOUSE GASES which contribute to global warming, although they do NOT deplete the ozone layer",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Inhalers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/inhalers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nebulisers create aerosols for inhalation via a mouthpiece or face-mask; HIGHER DOSES ARE REQUIRED BY NEBULISER THAN BY pMDI because of decreased efficiency from lower pulmonary deposition",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "NEBULISERS INCREASE THE RISK OF TRANSMITTING VIRAL RESPIRATORY INFECTIONS via droplets and aerosols; AVOID USE IF POSSIBLE",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "USE OF pMDIs WITH A SPACER FOR SHORT-ACTING BETA2 AGONISTS IS AT LEAST AS EFFECTIVE AS NEBULISERS in acute exacerbations of asthma or COPD and is generally preferred; nebulisers may be used for severe exacerbations IN HOSPITAL where large doses of beta2 agonists may be required over long periods, and HOME USE SHOULD BE RESTRICTED TO SPECIAL CASES",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "To reduce eye and skin reactions from a nebuliser, consider a MOUTHPIECE rather than a mask, or wear eye protection and wash the face afterwards; there is also a risk of MICROBIAL CONTAMINATION, requiring correct cleaning and maintenance including REGULAR REPLACEMENT OF THE NEBULISER BOWL AND FILTER",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "EVIDENCE FOR COMPATIBILITY OF NEBULISER SOLUTIONS IS LIMITED; if solutions are combined, MIX JUST BEFORE USE and INSPECT THE MIXTURE for cloudiness or precipitation",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "COMBINATIONS OF ANY TWO OF salbutamol, ipratropium and budesonide APPEAR COMPATIBLE; for mixing three or more, AMH refers to the UK Specialist Pharmacy Service",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nebulisers' at https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease/nebulisers, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's inhaler table groups devices into pMDI, DPI and mist MDI, and lists SIXTEEN distinct DPI device designs and trade names in Australia -- Turbuhaler, Accuhaler, Ellipta, Breezhaler, Handihaler, Zonda, Genuair, Aerolizer, Easyhaler, Spiromax and LupinHaler among them -- alongside pMDIs and the Respimat mist MDI",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Two devices in AMH's table are BREATH-ACTIVATED pMDIs: the Airomir Autohaler (salbutamol) and the Qvar Autohaler (beclometasone)",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Several DPIs in AMH's table REQUIRE A CAPSULE TO BE LOADED INTO THE DEVICE before each dose: Foradile Aerolizer, Onbrez Breezhaler, Seebri Breezhaler, Braltus Zonda, Spiriva Handihaler, Tiotropium LupinHaler, Ultibro Breezhaler, Atectura Breezhaler and Enerzair Breezhaler",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's table carries an explicit warning that FLUTICASONE FUROATE IS NOT INTERCHANGEABLE WITH FLUTICASONE PROPIONATE",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ALL FOUR SALBUTAMOL PRODUCTS in AMH's table -- Airomir Autohaler, Asmol, Ventolin and Zempreon -- are pMDIs; the ONLY short-acting beta2 agonist listed as a DPI is TERBUTALINE as Bricanyl Turbuhaler",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's table lists triple ICS+LABA+LAMA combination inhalers: Trimbow (beclometasone, formoterol, glycopyrronium) and Breztri Aerosphere (budesonide, formoterol, glycopyrronium) as pMDIs, and Trelegy Ellipta (fluticasone furoate, vilanterol, umeclidinium) and Enerzair Breezhaler (mometasone, indacaterol, glycopyrronium) as DPIs",
+   "source": "R3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Inhalers used for asthma or COPD' at https://amhonline.amh.net.au/chapters/respiratory-drugs/tables/inhalers-table, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Asthma affects more than one in 10 people in Australia and COPD approximately 7.5% of people over the age of 40 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "asthma affecting more than one in 10 people, and chronic obstructive pulmonary disease (COPD) affecting approximately 7.5% of people over the age of 40 years",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "While ozone safe, the hydrofluorocarbon propellants in pMDIs are POTENT GREENHOUSE GASES, with an effect THOUSANDS OF TIMES GREATER than the equivalent volume of carbon dioxide",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "while ozone safe, HFCs are also potent greenhouse gases, with an effect thousands of times greater than the equivalent volume of carbon dioxide (CO 2 ).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In 2021, pMDI versions of fluticasone/salmeterol were dispensed APPROXIMATELY TWICE AS COMMONLY as the dry powder inhaler versions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For example, in 2021, pMDI versions of fluticasone/salmeterol were dispensed approximately twice as commonly as the dry powder inhaler (DPI) versions.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The reduction in carbon footprint from switching a person from regular pMDI use to DPI use is APPROXIMATELY 420 kg CO2e ANNUALLY -- similar to switching a petrol car to a hybrid (about 500 kg) or becoming vegetarian (about 660)",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the reduction in carbon footprint achieved by a person switching from regular pMDI use to DPI use (approximately 420 kg CO 2 e annually) is similar to them switching their petrol car to a hybrid (approximately 500 kg CO 2 e annually) or becoming vegetarian (approximately 660 CO 2 e annually)",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "THE BEST INHALER FOR ANY PATIENT IS ONE THAT THEY CAN AND WILL USE AS PRESCRIBED",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The best inhaler for any patient is one that they can and will use as prescribed.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Recent research from a large community sample in Canada found that APPROXIMATELY ONE-THIRD of people diagnosed with asthma, and APPROXIMATELY HALF of people diagnosed with COPD, CANNOT HAVE THEIR DIAGNOSES PROVEN after careful evaluation, even after withdrawal of treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recent research from a large community sample in Canada has found that approximately one-third of people diagnosed with asthma, and approximately half of people diagnosed with COPD, cannot have their diagnoses proven after careful evaluation, even after withdrawal of treatment.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "DPIs rely on inspiratory flow being sufficient to disaggregate and sweep the dry powder into the lungs, so they are NOT RECOMMENDED IN CHILDREN UNDER SIX YEARS or people with poor inspiratory flow",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Because DPIs rely on inspiratory flow being sufficient to disaggregate and sweep the dry powder into the lungs, they are not recommended in children under the age of six years or people with poor inspiratory flow.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "A PRACTICAL RULE OF THUMB for a DPI, where formal inspiratory flow measurement is not available in general practice: see if the patient, AFTER EXHALING, CAN TAKE A QUICK DEEP BREATH IN LESS THAN THREE SECONDS -- if so, inspiratory ability is considered sufficient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Formal measurement of inspiratory flow is not usually available in general practice, but a practical rule of thumb is to see if the patient, after exhaling, can take a quick deep breath in less than three seconds. If so, inspiratory ability is considered sufficient for a DPI.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In appropriate patients, DPIs are AT LEAST AS EFFECTIVE as pMDIs for clinical outcomes in asthma, with LEVEL 1 EVIDENCE showing no difference in randomised trials for both beta-agonists and inhaled corticosteroids",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In appropriate patients, DPIs are at least as effective as pMDIs for clinical outcomes in asthma. There is level 1 evidence showing no difference in randomised trials between these inhaler types for both β-agonists and inhaled corticosteroids.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A recent trial in England found that asthma control IMPROVED in patients moved from pMDIs to a DPI, while inhaler carbon footprint was REDUCED BY MORE THAN HALF",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indeed, a recent trial in England found that asthma control improved in patients moved from pMDIs to a DPI, while inhaler carbon footprint was reduced by more than half.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "THERE ARE NON-MDI INHALER OPTIONS AT EVERY TREATMENT STEP in the current Australian asthma guidelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "As this shows, there are non-MDI inhaler options at every treatment step in the current Australian guidelines.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  },
+  {
+   "claim": "One barrier to greener inhalers in Australia is the RESTRICTED PBS AVAILABILITY OF TERBUTALINE, THE SOLE SHORT-ACTING BETA2 AGONIST AVAILABLE IN A DPI; terbutaline aside, DPIs and pMDIs have similar costs to patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "One barrier to using greener inhalers in Australia is the restricted Pharmaceutical Benefits Scheme (PBS) availability of terbutaline, the sole SABA available in a DPI. … Terbutaline aside, DPIs and pMDIs have similar costs to patients,",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  },
+  {
+   "claim": "BUDESONIDE 400 MICROGRAMS TAKEN ONCE DAILY HAS EQUIVALENT CLINICAL OUTCOMES to the more traditional dosage of 200 micrograms twice daily, halving plastic waste and reducing cost and inconvenience",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For example, budesonide 400 μg taken once daily has equivalent clinical outcomes to the more traditional dosage of 200 μg twice daily.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "SABAs are easily available OVER THE COUNTER in Australia, and significant proportions of people with asthma report a combination of FREQUENT SABA USE AND LITTLE OR NO PREVENTER MEDICINE",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This is especially the case in Australia, where SABAs are easily available over the counter, and significant proportions of people with asthma report a combination of frequent SABA use and little or no preventer medicine.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Good disease control helps prevent excessive use of SABA inhalers, MOST OF WHICH ARE OF THE POLLUTING pMDI VARIETY -- INCLUDING ALL SALBUTAMOL INHALERS IN AUSTRALIA",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "good disease control helps to prevent excessive use of SABA inhalers, most of which are of the polluting pMDI variety (including all salbutamol inhalers in Australia)",
+   "locator": "RACGP, Australian Journal of General Practice, 'Respiratory inhalers and the environment', Volume 51 Issue 12, December 2022, at https://www1.racgp.org.au/ajgp/2022/december/respiratory-inhalers-and-the-environment, retrieved 2026-09-22"
+  }
+ ]
+}
