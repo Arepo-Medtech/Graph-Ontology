@@ -55,6 +55,10 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   (international). The RF2 relationship file carries none of them, so `rel` never had them.
 - **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
   against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
+- `out/rxnorm_review_queue.tsv` — the 2,063 unresolved substances, ranked by how many products they block, with
+  OMOP's own answer, the salt's base and the product counts attached. 1,070 are settled by that evidence; 993 still
+  need a person, and the first 210 of them cover half the blocked products. See
+  [the review queue](docs/rxnorm-review-queue.md).
 - **au_omop_ancestor**, **au_omop_unreached** — the Australian-authored clinical concepts OMOP has no concept for
   (6 of 6,849 exist there by code), placed at their nearest standard ancestor: 5,615 of the 5,938 that need one,
   86 % within two hops. See [SNOMED CT-AU where OMOP cannot see it](docs/au-snomed-to-omop.md).
@@ -104,6 +108,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/amt_indirect.py             # reach OMOP for the AMT concepts its 2021 snapshot never had
 .venv/bin/python scripts/route_and_salt.py           # route per product, and the salt-to-base map SNOMED does not state
 .venv/bin/python scripts/au_snomed_omop.py           # the nearest standard OMOP concept above each Australian one
+.venv/bin/python scripts/rxnorm_review_queue.py      # rank the unresolved substances by what they actually block
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
