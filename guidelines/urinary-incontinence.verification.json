@@ -1,0 +1,270 @@
+{
+ "guideline": "guidelines/urinary-incontinence.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2020/september/overactive-bladder-syndrome",
+  "https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence",
+  "https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP 2020 review of overactive bladder, fetched and checked verbatim (17 claims, 4 of them doses, including PBS status and monthly cost). A1 is AMH across two pages, paraphrased, no passage reproduced and no source_text stored (23 claims, 5 doses). THE SOURCES DISAGREE ON WHETHER THE NEWER SELECTIVE AGENTS ARE BETTER TOLERATED: A1 says evidence is LIMITED to support that adverse effects are less likely with transdermal oxybutynin or selective agents, while S1 asserts that more-selective agents have an improved tolerability profile. Both are stated with attribution. They also frame efficacy differently -- A1 gives an absolute effect (one fewer episode per 48 hours versus placebo) and S1 a success rate (over 65%) -- and both are given, because the two numbers answer different questions and averaging them would answer neither. S1 covers OVERACTIVE BLADDER, which is the urge type only; stress and overflow incontinence are covered by A1 alone.",
+ "claims": [
+  {
+   "claim": "Overactive bladder is characterised by unstable bladder contractions resulting in urinary urgency, frequency and nocturia, is frequently associated with urge incontinence, and large American and European studies suggest more than 10% of the general population is symptomatic with those aged over 65 years twice as likely to be affected",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Overactive bladder (OAB) is a common syndrome characterised by unstable bladder contractions, resulting in urinary urgency, frequency and nocturia (defined in Table 1). Classically, patients with OAB report difficulty suppressing the urge to urinate. OAB is frequently associated with urge incontinence. Associated urge urinary incontinence is common, with large American and European studies suggesting that >10% of the general population is symptomatic, with those aged >65 years being twice as likely to be affected."
+  },
+  {
+   "claim": "S1 defines urinary urgency as inability to defer voiding, urge incontinence as urgency causing non-voluntary urinary incontinence, urinary frequency as eight or more voids per 24 hours, and nocturia as awakening to void one or more times per night",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinary urgency Inability to defer voiding Urge incontinence Urgency causing non-voluntary urinary incontinence Urinary frequency Eight or more voids per 24 hours Nocturia Awakening to void ≥1 instance per night"
+  },
+  {
+   "claim": "S1 states that many patients downplay their symptoms of overactive bladder and do not raise the issue with health practitioners, and that while it may be difficult to completely cure, symptoms can be effectively reduced and quality of life improved without excessive cost or morbidity",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Many patients downplay their symptoms of OAB and do not raise the issue with health practitioners. 1 While OAB may be difficult to completely cure, symptoms can be effectively reduced, and quality of life can be improved without excessive cost or morbidity."
+  },
+  {
+   "claim": "Untreated urinary incontinence may increase the risk of urinary tract infection and cause significant surrounding inflammatory changes, and increased burden may be felt by the caregiver, affecting the caregiver's relationship with the patient",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Increased burden may be felt by the caregiver, thereby affecting the caregiver's relationship with the patient. Further, untreated urinary incontinence may increase the risk of urinary tract infection (UTI) and may cause significant surrounding inflammatory changes."
+  },
+  {
+   "claim": "S1 states that overactive bladder is a diagnosis of exclusion, that a neuropathic bladder from central nervous system disease may cause neurogenic detrusor overactivity which is high risk and requires complex urological input, and that urothelial carcinoma of the bladder can cause irritative voiding so symptoms similar to overactive bladder may be the first signs of high-grade bladder cancer",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pertinent key differential diagnoses must be considered and excluded prior to the diagnosis of OAB being confirmed. 6 Specifically, a neuropathic bladder from diseases of the central nervous system may result in neurogenic detrusor overactivity, a disease process that is high risk and requires complex urological input. Similarly, urothelial carcinoma of the bladder can result in irritative voiding and patients presenting with voiding dysfunction; therefore, symptoms similar to OAB may be the first signs of high-grade bladder cancer."
+  },
+  {
+   "claim": "S1 states that first-line treatment comprises conservative measures including weight reduction, a decrease in exposure to bladder stimulants, fluid optimisation and pelvic floor exercises",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First-line treatment comprises conservative measures including weight reduction, a decrease in exposure to bladder stimulants, fluid optimisation and pelvic floor exercises."
+  },
+  {
+   "claim": "S1 gives oral oxybutynin as 5 mg three times daily and topical oxybutynin as 3.9 mg per 24 hours, both PBS listed, with adverse effects of dry mouth, constipation, blurred vision, drowsiness and delirium",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oxybutynin Oral, 5 mg three times daily Yes Dry mouth, constipation, blurred vision, drowsiness, delirium Topical, 3.9 mg/24 hours Yes Skin reaction, dry mouth, constipation, blurred vision, drowsiness, delirium",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives solifenacin as oral 5 to 10 mg daily and mirabegron as oral 25 to 50 mg daily, both not PBS listed at 50 to 65 dollars per month, with solifenacin cautioned in severe hepatic impairment and mirabegron in hypertension and long QT syndrome",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Solifenacin Oral, 5-10 mg daily No, $50-65 per month Severe hepatic impairment Beta-3 agonist Mirabegron Oral, 25-50 mg daily No, $50-65 per month Hypertension, long QT syndrome",
+   "dose": true
+  },
+  {
+   "claim": "S1 states that non-selective anticholinergic agents are effective with a success rate of over 65%, but that fewer than 35% of patients are adherent to anticholinergic medications at 12 months after commencement",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Non-selective agents are effective, with a success rate of >65%. 15 Unfortunately, these agents have several adverse effects that can make them relatively poorly tolerated. Fewer than 35% of patients are adherent to anticholinergic medications at 12 months post-commencement."
+  },
+  {
+   "claim": "S1 states that anticholinergic agents, primarily non-selective agents, should be used cautiously in older patients because of their effects on cognitive function and possible interaction with other medications, and that prescribers should be aware these agents are contraindicated for patients with glaucoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anticholinergic agents, primarily non-selective agents, should also be used cautiously in older patients because of their effects on cognitive function and possible interaction with other medications. 16 Prescribers should be aware that these agents are contraindicated for patients with glaucoma."
+  },
+  {
+   "claim": "S1 states that if there is a good therapeutic response to oral oxybutynin but it is poorly tolerated because of systemic side effects, a common solution is topical oxybutynin patches which are better tolerated because of the lack of hepatic metabolites although they can cause a bothersome local skin reaction",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there is a good therapeutic response to oral oxybutynin but it is poorly tolerated because of systemic side effects, a common solution is to prescribe topical oxybutynin patches 3.9 mg/24 hours, which are better tolerated because of the lack of hepatic metabolites. However, they can also cause a bothersome local skin reaction."
+  },
+  {
+   "claim": "S1 states that more-selective agents have an improved tolerability profile at an increased expense, being selective for the M3 receptor and therefore having fewer systemic side effects, and that solifenacin is commonly prescribed in Australia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More-selective agents have an improved tolerability profile at an increased expense. These agents are selective for the M3 receptor and therefore have fewer systemic side effects and remarkable efficacy at the level of the bladder. Solifenacin is commonly prescribed in Australia."
+  },
+  {
+   "claim": "Mirabegron relaxes the detrusor muscle allowing higher bladder volumes before the need for urination, with significant improvements typically seen at week four after initiation and maintained at 12 months, and should be used cautiously in patients with difficult-to-control hypertension and a prolonged QT interval",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It works via a different path to anticholinergic agents by relaxing the detrusor muscle, allowing higher bladder volumes before the need for urination. Significant improvements are typically seen at week four after initiation of treatment, and improvements are maintained at 12 months. Given its action on the sympathetic system, mirabegron should be used cautiously in patients with difficult-to-control hypertension and a prolonged QT interval."
+  },
+  {
+   "claim": "S1 states that studies have shown it is both safe and efficacious to prescribe an antimuscarinic agent and beta-3 adrenoceptor agonist synergistically for patients refractory to monotherapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Studies have shown it is both safe and efficacious to prescribe an antimuscarinic agent and β3 adrenoceptor agonist synergistically for patients that are refractory to monotherapy."
+  },
+  {
+   "claim": "S1 states that intravesical botulinum toxin A is typically effective for 6 to 12 months and can be repeated, that half of patients treated reported improvement in symptoms, and that disadvantages include its temporary nature, the need for a general anaesthetic and a 5% risk of iatrogenic urinary retention requiring temporary catheterisation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The treatment is typically effective for 6-12 months, 17 but the procedure can be repeated. Half of the patients treated with intravesical botulinum toxin A reported improvement in symptoms of OAB. 17 The disadvantages of this treatment are its temporary nature, the need for a general anaesthetic (although local anaesthetic treatment is becoming more commonly available in Australia) and the small risk of iatrogenic urinary retention requiring temporary catheterisation (5%).",
+   "dose": true
+  },
+  {
+   "claim": "For sacral nerve stimulation an electrode is implanted in the S3 to S4 sacral foramen, and as defined by patient voiding diaries 90% of patients showed more than 50% improvement of symptoms, although one-third may require surgical revision within the first year and the battery will require replacing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For sacral nerve stimulation, surgeons implant an electrode in the S3-S4 sacral foramen with the aim of manipulating the sensory pathway of the bladder innervation. 18 As defined by patient voiding diaries, 90% of patients showed >50% improvement of symptoms. 18 Of the reported complications, one-third of patients may require surgical revision within the first year because of pain (and, less commonly, infection) or transient electric shock."
+  },
+  {
+   "claim": "For peripheral tibial nerve stimulation an electrode is inserted 5 cm above the medial malleolus and treatment continues for 30 minutes repeated weekly for up to 12 sessions with response typically observed within six treatments, and it is contraindicated in patients with pacemakers or defibrillators, those who are pregnant, and those with prior nerve damage affecting the tibial nerve or pelvic floor",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For peripheral tibial nerve stimulation (PTNS), an electrode is inserted into the skin 5 cm above the medial malleolus. … the amplitude is reduced by one level and the treatment continues for 30 minutes. Treatment is repeated weekly for up to 12 sessions. The response to therapy is typically observed within six treatments. Adverse effects include pain, which is typically mild, and bleeding. PTNS is contraindicated in patients with pacemakers/defibrillators, those who are pregnant or those with prior nerve damage affecting the tibial nerve or pelvic floor.",
+   "dose": true
+  },
+  {
+   "claim": "AMH describes three main types of urinary incontinence which may occur separately or in combination: urge, being involuntary loss of urine accompanied or preceded by a sudden urge to void due to bladder overactivity; stress, being involuntary leakage on effort, exertion, sneezing or coughing; and overflow, being urinary retention and bladder distension caused by outlet obstruction such as prostatic enlargement or by detrusor underactivity",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises asking the patient to keep a bladder diary for three 24-hour periods which may help identify the type of incontinence and possible aetiology, and notes tests such as urinalysis and post-void residual volume may be necessary",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Contributing factors to manage include urinary tract infection, constipation, excessive fluid intake, unstable diabetes and obesity, with reduced intake of caffeinated or alcoholic drinks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises considering drugs as a cause of incontinence including selective alpha-blockers such as prazosin, diuretics, anticholinesterases such as donepezil and sedatives, notes that opioids and drugs with anticholinergic effects may cause urinary retention and overflow incontinence, and states that drug-induced incontinence is particularly common in the elderly",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Non-drug measures to help bladder control include pelvic floor exercises and bladder training, which are particularly useful for stress and urge incontinence respectively, and protective pads and scheduled voiding may help especially in people with cognitive impairment or limited mobility",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Anticholinergics reduce bladder muscle contractility and increase bladder capacity and are mainly used for urge incontinence, but may increase voiding dysfunction causing hesitancy and retention in susceptible people",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that the benefit from anticholinergics varies between individuals, that on average there is one fewer episode of incontinence per 48 hours compared with placebo, and that there is no evidence of superior efficacy with newer agents such as solifenacin and darifenacin compared to oxybutynin",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH advises monitoring after 4 weeks for adverse effects including changes in cognitive function and assessing for improvement in symptoms, stopping if there is no overall benefit, and notes an alternative anticholinergic could be tried",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that propantheline is no longer recommended for treatment of urinary incontinence",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Mirabegron has similar efficacy to anticholinergics and is an option in people with urge incontinence who cannot tolerate anticholinergic adverse effects or when anticholinergics are not effective or contraindicated",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that vaginal estrogen may be effective for incontinence in postmenopausal women with urogenital symptoms, while systemic estrogens may worsen incontinence",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that botulinum toxin injected into the bladder wall may be considered for people with urge incontinence if other treatments are not tolerated or ineffective, that it should only be used in people able to self-catheterise if needed because of increased risk of urinary retention and UTI, that it should not be used in men with bladder outlet obstruction, and that there were few men in clinical trials with about 60% reporting no change or worsening of symptoms",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Selective alpha-blockers block receptors in the bladder neck and urethra which may help reduce outflow obstruction and overflow incontinence in males, but may precipitate or worsen incontinence in women",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that incontinence in neurological disease is complex and best managed by a specialist, with mainstays of treatment being intermittent self-catheterisation, behavioural modification and anticholinergics, and that botulinum toxins injected into the bladder wall, surgery and urinary appliances may be useful",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that intermittent catheterisation is preferred in most cases of overflow incontinence occurring postoperatively, postpartum or after neurological damage when improvement with time can be expected, that specialists sometimes use anticholinergics with selective alpha-blockers in men with coexisting urge incontinence and bladder outlet obstruction, and that indwelling catheters should only be used as a last resort",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Urinary incontinence' (Genitourinary drugs > Drugs for urinary incontinence) at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/urinary-incontinence, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The genitourinary anticholinergics are darifenacin, oxybutynin, propantheline, solifenacin and tolterodine, indicated for urinary urge incontinence",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises avoiding combination of genitourinary anticholinergics with other drugs having anticholinergic effects because the additive effect increases both therapeutic and adverse effects",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that anticholinergics are best avoided in dementia as they may worsen symptoms and antagonise the therapeutic effects of anticholinesterases",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises avoiding anticholinergics in urinary retention or significant bladder outlet obstruction, notes urinary symptoms may worsen in men with bladder outlet obstruction, and advises measuring post-void residual volume in men before starting treatment and monitoring for urinary retention especially during initial treatment when risk appears highest",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that elderly people may be more sensitive to anticholinergic adverse effects such as urinary retention, blurred vision, dry mouth, constipation and confusion, that adverse effects are usually dose related, and advises starting with a low dosage and increasing cautiously to the lowest effective dose",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states there is no clear evidence that any anticholinergic is the most effective, and that evidence is limited to support that adverse effects are less likely with transdermal oxybutynin or selective agents such as solifenacin and darifenacin",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH notes that solifenacin may increase the QT interval especially at high doses, and that all genitourinary anticholinergics are available as tablets with oxybutynin also available as a patch",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises warning patients that anticholinergics may cause drowsiness, dizziness or blurred vision affecting driving, and may reduce or prevent sweating which may affect the body's ability to cool down especially in hot weather",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug class monograph 'Anticholinergics (genitourinary)' at https://amhonline.amh.net.au/chapters/genitourinary-drugs/drugs-urinary-incontinence/anticholinergics-genitourinary, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 40,
+  "pass": 17,
+  "fail": 0
+ }
+}
