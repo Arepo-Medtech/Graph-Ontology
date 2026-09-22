@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 66 guidelines · 2,692 claims · 421 `Unresolved` rows**
+**Generated 2026-09-22 · 67 guidelines · 2,734 claims · 429 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -206,6 +206,13 @@ one; only the formatting differs.**
 list **Aboriginal and Torres Strait Islander** (Queensland adds **Pacific Islander or Māori**) origin as a risk
 factor, **none with a stated basis, magnitude or cultural safety guidance**.
 
+✅ **And one shows what the framing looks like when it is done.** The **Cataract Clinical Care Standard**
+states a basis and a required response: **"The level of comorbidities in Aboriginal and Torres Strait Islander
+people, their age at diagnosis and disparities in their health outcomes means that health care for this
+population needs to be refocused to meet the unique needs of each patient."** **Comorbidity burden, age at
+diagnosis, outcome disparity — then an obligation.** That is the contrast the five bare listings should be
+read against.
+
 ⚠️ **A fifth document joins them: bronchiolitis**, which lists **"Indigenous ethnicity"** — two words, no
 basis, no magnitude, no cultural safety guidance — as a risk factor for severe disease. **It is the bluntest
 of the five.**
@@ -264,8 +271,8 @@ and **one in development (Osteoporosis)**.
 
 | Standard | Note |
 |---|---|
-| **Cataract** | ophthalmology — a domain with no representation here at all |
-| **Emergency Laparotomy** | acute surgery — likewise |
+| ~~**Cataract**~~ | ✅ **added 2026-09-22** — ophthalmology's first appearance |
+| **Emergency Laparotomy** | acute surgery — still the one unrepresented domain |
 
 **And two guidelines here lead on a non-ACSQHC source where an ACSQHC standard exists:**
 
