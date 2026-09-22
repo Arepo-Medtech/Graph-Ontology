@@ -55,6 +55,12 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   (international). The RF2 relationship file carries none of them, so `rel` never had them.
 - **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
   against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
+- **product_route**, **product_route_check** — a route for 55,218 products (23,735 of the 24,634 branded units):
+  SNOMED's `Has dose form intended site` for 46,815, the PBS `manner_of_administration` for 15,303, agreeing on
+  6,858 of the 6,900 products both describe.
+- **substance_salt_base** — the 497 salt-to-base pairs AMT implies across 1,985 products. SNOMED's hierarchy puts
+  only 2 of the salts under their base, so `<<base` misses the rest; OMOP collapses 406 of them onto the same
+  standard ingredient. See [route and salt](docs/route-and-salt.md).
 - **omop_drug_indirect**, **omop_drug_indirect_check** — the AMT concepts OMOP's 2021 snapshot never had, placed
   through their generic (3,480 branded units) or through a unique ingredient-and-strength fingerprint (2,481), with
   the method scored against the mappings already known (91.1 % and 96.2 %); branded units reaching a standard drug
@@ -93,6 +99,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
 .venv/bin/python scripts/atc_bridge.py               # ATC classes: the PBS listing, plus OMOP's ancestry for everything else
 .venv/bin/python scripts/amt_indirect.py             # reach OMOP for the AMT concepts its 2021 snapshot never had
+.venv/bin/python scripts/route_and_salt.py           # route per product, and the salt-to-base map SNOMED does not state
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
