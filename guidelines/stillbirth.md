@@ -247,6 +247,7 @@ required**.
 | **Iron deficiency** | iron deficiency **should be corrected before and during pregnancy** to protect the child's neurocognitive function |
 | **Syphilis, hepatitis B, HIV, genital herpes** | vertical transmission and antenatal screening |
 | **Heavy menstrual bleeding** | the same structural device — **an indicator counting how often the intervention occurs** |
+| ⚠️ **Third and fourth degree perineal tears** | the other obstetric standard here. ⚠️ **This one measures the recovery half — indicator 7a audits bereavement care training — where that one measures nothing after the diagnosis** |
 | **Sepsis** | fetal vital signs by CTG are in its observation set |
 
 ## Unresolved
