@@ -55,6 +55,9 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   (international). The RF2 relationship file carries none of them, so `rel` never had them.
 - **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
   against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
+- **au_omop_ancestor**, **au_omop_unreached** — the Australian-authored clinical concepts OMOP has no concept for
+  (6 of 6,849 exist there by code), placed at their nearest standard ancestor: 5,615 of the 5,938 that need one,
+  86 % within two hops. See [SNOMED CT-AU where OMOP cannot see it](docs/au-snomed-to-omop.md).
 - **product_route**, **product_route_check** — a route for 55,218 products (23,735 of the 24,634 branded units):
   SNOMED's `Has dose form intended site` for 46,815, the PBS `manner_of_administration` for 15,303, agreeing on
   6,858 of the 6,900 products both describe.
@@ -100,6 +103,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/atc_bridge.py               # ATC classes: the PBS listing, plus OMOP's ancestry for everything else
 .venv/bin/python scripts/amt_indirect.py             # reach OMOP for the AMT concepts its 2021 snapshot never had
 .venv/bin/python scripts/route_and_salt.py           # route per product, and the salt-to-base map SNOMED does not state
+.venv/bin/python scripts/au_snomed_omop.py           # the nearest standard OMOP concept above each Australian one
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
