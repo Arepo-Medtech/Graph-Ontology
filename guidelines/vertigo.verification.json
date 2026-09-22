@@ -1,0 +1,538 @@
+{
+ "guideline": "guidelines/vertigo.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://australianprescriber.tg.org.au/articles/dealing-with-dizziness.html",
+  "https://australianprescriber.tg.org.au/articles/cinnarizine-dimenhydrinate-for-vertigo.html",
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/vertigo",
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine",
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate",
+  "https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 and S2 are open Australian Prescriber articles, fetched and checked verbatim; S1 is 2005 and S2 is 2021, and the age of S1 is stated in the guideline wherever its content could have moved on. A1 is AMH, read under subscription and PARAPHRASED: no AMH passage is reproduced and no source_text is stored, so those claims carry a locator and the verdict licensed_source_not_quoted and cannot be machine re-checked from this repository. Doses are flagged dose:true. The betahistine trial figures in S2 are quoted from AP's own table; the betahistine dose in that table (12 mg) is BELOW the AMH adult range and this is stated in the guideline rather than left for the reader to notice.",
+ "claims": [
+  {
+   "claim": "Dizziness covers a range of symptoms and is rarely a sign of a serious disorder",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dizziness is a term used to describe a range of symptoms, but is rarely a sign of a serious disorder."
+  },
+  {
+   "claim": "The common causes of vertigo are benign positional vertigo, Meniere's syndrome, vestibular neuritis and migraine",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The common causes of vertigo are benign positional vertigo, Meniere's syndrome, vestibular neuritis and migraine."
+  },
+  {
+   "claim": "Vertigo is usually provoked or aggravated by movement and relieved by rest, whereas dizziness unaltered by resting or moving is usually non-vestibular",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dizziness of vestibular origin (vertigo) is usually provoked or aggravated by movement and improved or relieved by rest (sitting or lying down). … dizziness which is unaltered between resting and moving about is usually non-vestibular in origin"
+  },
+  {
+   "claim": "Dizziness which precedes a blackout or near blackout usually indicates a syncopal or presyncopal disorder requiring a different approach",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dizziness which precedes a blackout or near blackout will usually indicate a syncopal/presyncopal disorder which requires a different approach."
+  },
+  {
+   "claim": "Drugs that can cause dizziness include antihypertensives, anticonvulsants, antidepressants and sedatives, acting through postural hypotension or direct vestibular effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Drugs which can cause dizziness include antihypertensives, anticonvulsants, antidepressants and sedatives. The dizziness occurs either through postural hypotension or direct effects on the central or peripheral vestibular system."
+  },
+  {
+   "claim": "Deafness, tinnitus and aural fullness suggest a labyrinthine cause; headache, diplopia, paraesthesiae, weakness, dysarthria or dysphagia suggest a neurological cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "symptoms such as deafness, tinnitus and aural fullness or pressure might suggest a labyrinthine cause, whereas symptoms such as headache, diplopia, facial/limb paraesthesiae, weakness or clumsiness, dysarthria or dysphagia might suggest a neurological cause"
+  },
+  {
+   "claim": "Duration separates the causes: under a minute in benign positional vertigo, minutes in TIA, minutes to hours in migraine and Meniere's, more than 24 hours in vestibular neuronitis or posterior circulation stroke",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vertigo lasts less than one minute in benign positional vertigo, minutes in transient ischaemic attacks, minutes to hours in migraine and Ménière's syndrome and for more than 24 hours in vestibular neuronitis or posterior circulation stroke."
+  },
+  {
+   "claim": "Recurrent isolated vertigo is usually peripheral and benign but not always; central vestibular disorders include brainstem lesions and multiple sclerosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although recurrent isolated vertigo is usually peripheral and benign, this is not always the case. Central vestibular disorders include brainstem lesions and multiple sclerosis."
+  },
+  {
+   "claim": "A patient with dizziness requires thorough neurological, otological and cardiovascular examination including supine and upright blood pressure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A patient with dizziness requires a thorough neurological, otological and cardiovascular examination, including supine and upright blood pressure measurements, particularly if the cause of the dizziness is not apparent from the history."
+  },
+  {
+   "claim": "Purely vertical or torsional nystagmus suggests a central lesion; mixed horizontal/torsional nystagmus suggests a peripheral vestibular cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Purely vertical or torsional nystagmus suggests a central lesion, whereas a mixed horizontal/torsional nystagmus suggests peripheral vestibular nystagmus."
+  },
+  {
+   "claim": "Peripheral vestibular nystagmus beats in the same direction regardless of eye position; nystagmus that changes direction with gaze may indicate a central neurological lesion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Peripheral vestibular nystagmus produces a nystagmus which beats in the same direction regardless of the eye position. Nystagmus which changes direction with different eye positions (for example, beating to the right on right gaze and then beating to the left on left gaze) may indicate a central neurological lesion."
+  },
+  {
+   "claim": "Peripheral vestibular nystagmus is attenuated by visual fixation, so it may not be detected by conventional examination",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The nystagmus of peripheral vestibular disorders tends to be attenuated by visual fixation and so nystagmus may not be detected in the conventional manner in these patients."
+  },
+  {
+   "claim": "Nystagmus from vestibular neuritis is obvious acutely but in many cases rapidly attenuates over 24-48 hours",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute severe vestibular insults such as vestibular neuritis may produce nystagmus, which is obvious in the acute phase, but in many cases this rapidly attenuates over 24-48 hours."
+  },
+  {
+   "claim": "The head-impulse test asks the patient to fixate on the examiner's nose while the head is rapidly rotated to either side, after excluding significant neck problems; in healthy people the eyes stay fixed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This test involves asking the patient to fixate on the examiner's nose. The examiner then rapidly rotates the patient's head to either side (after excluding any significant neck problem). … In healthy people the eyes remain fixed on the examiner's nose regardless of the head position."
+  },
+  {
+   "claim": "In a labyrinthine lesion the eyes move with the head towards the side of the lesion and a quick corrective eye movement follows; that corrective movement is the abnormality sought",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a patient with a labyrinthine lesion, the eyes will move with the head when turned to the side of the lesion and then after a short delay the visual system will trigger a quick corrective eye movement back to the examiner's nose. This quick corrective eye movement is the abnormality sought when undertaking the test."
+  },
+  {
+   "claim": "The head-impulse test is positive in vestibular neuritis but negative with a cerebellar infarct",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The head-impulse test is also useful in the differential diagnosis of cerebellar infarcts and vestibular neuritis. The test is positive in vestibular neuritis, but negative with a cerebellar infarct."
+  },
+  {
+   "claim": "In bilateral peripheral vestibular impairment dynamic visual acuity often drops several lines from static, for example 6/6 to 6/36 or 6/60; normal dynamic acuity does not rule out a unilateral lesion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In patients with bilateral peripheral vestibular impairment the visual acuity often drops several lines from the static to dynamic condition, for example from 6/6 to 6/36 or 6/60. … Normal dynamic visual acuity does not rule out a unilateral vestibular lesion."
+  },
+  {
+   "claim": "The Hallpike manoeuvre should be performed if there is any hint of positional vertigo and in all patients with no obvious cause for their symptoms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The manoeuvre should therefore be performed if there is any hint of positional vertigo and in all patients where there is no obvious cause for their symptoms."
+  },
+  {
+   "claim": "In the Hallpike manoeuvre the patient is rapidly moved from sitting to supine with the head hanging over the end of the couch or a pillow behind the shoulders, then the test is repeated with the head turned the other way",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The patient is then rapidly moved into a supine position on the examination couch with the head hanging over the end of the couch or a pillow placed behind the shoulders. … Then the test is repeated with the patient's head turned to the opposite side."
+  },
+  {
+   "claim": "A positive Hallpike shows, after a latency of up to several seconds, torsional/vertical nystagmus beating towards the lower ear with vertigo, locating the lesion to the lower ear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Typically a patient with benign positional vertigo will develop, after a short latency of up to several seconds, a torsional/vertical nystagmus with fast phases directed towards the lower ear accompanied by vertigo. This means the lesion is on the side of the lower ear."
+  },
+  {
+   "claim": "In patients with recurrent isolated vertigo and normal hearing there is a low yield from imaging, particularly for cerebellopontine angle tumours",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "in patients with recurrent isolated vertigo and normal hearing, there is a low yield from imaging studies particularly in regard to cerebellopontine angle tumours or masses"
+  },
+  {
+   "claim": "There is no singularly effective pharmacological treatment to abolish vertigo",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is no singularly effective pharmacological treatment to abolish vertigo"
+  },
+  {
+   "claim": "A patient can be supported through an acute episode with short-term vestibular sedatives such as benzodiazepines, antihistamines or prochlorperazine, plus antiemetics and bed rest",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a patient can be supported through an acute episode of vertigo with short-term use of vestibular sedatives such as benzodiazepines, antihistamines or prochlorperazine. Antiemetics and bed rest are also useful."
+  },
+  {
+   "claim": "The efficacy evidence for vestibular sedatives comes from laboratory animal research; clinical observation of efficacy is anecdotal and there are no controlled trials",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The evidence of efficacy of the vestibular sedatives is based on experimental laboratory animal research which shows reduced vestibular neural activity in response to these drugs. Clinical observation of this efficacy is anecdotal and there are no controlled trials."
+  },
+  {
+   "claim": "Patients with chronic or recurring vertigo are commonly treated with betahistine and/or prochlorperazine although there is no evidence of the drugs' long-term efficacy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with chronic or recurring vertigo are commonly treated with betahistine and/or prochlorperazine although there is no evidence of the drugs' long-term efficacy."
+  },
+  {
+   "claim": "Patients with chronic or recurring vertigo often do well with vestibular adaptation exercises or a formal vestibular rehabilitation program",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These patients will often do well with vestibular adaptation exercises or a formal vestibular rehabilitation program to help manage their symptoms."
+  },
+  {
+   "claim": "Drugs prescribed for acute vertigo should be used sparingly as they may impair the vestibular adaptation process",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The drugs prescribed for acute vertigo should be used sparingly as they may impair the vestibular adaptation process."
+  },
+  {
+   "claim": "SSRIs such as sertraline may have a role in the management of vertigo but have not been extensively studied",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Selective serotonin reuptake inhibitors such as sertraline may have a role in the management of vertigo, however, they have not been extensively studied."
+  },
+  {
+   "claim": "The most effective treatment of vertigo is treatment of the specific cause if it can be identified",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most effective treatment of vertigo is treatment of the specific cause if it can be identified"
+  },
+  {
+   "claim": "Particle repositioning manoeuvres for benign positional vertigo are 80-90% effective after a single manoeuvre against a spontaneous recovery rate of about 50% over six weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The particle repositioning manoeuvres for benign positional vertigo are 80-90% effective following a single manoeuvre compared to a spontaneous recovery rate of approximately 50% over six weeks."
+  },
+  {
+   "claim": "Benign positional vertigo can be treated with simple physical manoeuvres although recurrences are frequent; Brandt-Daroff positional exercises are a possible alternative",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Benign positional vertigo can be treated with simple physical manoeuvres, although recurrences are frequent. … The Brandt-Daroff positional exercises are a possible alternative treatment."
+  },
+  {
+   "claim": "Migraine is an important diagnostic consideration in dizziness whether or not there is an accompanying headache",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Migraine is an important diagnostic consideration in patients presenting with dizziness, whether they have an accompanying headache or not."
+  },
+  {
+   "claim": "In Meniere's syndrome the majority of patients respond to conservative management including a low salt diet and possibly diuretics",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the majority of patients will respond to conservative medical management including a low salt diet and possibly diuretics"
+  },
+  {
+   "claim": "Short-term corticosteroids may be useful in refractory Meniere's syndrome with relatively preserved hearing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Short-term corticosteroids may be useful in refractory cases with relatively preserved hearing."
+  },
+  {
+   "claim": "Intra-tympanic gentamicin and surgery are reserved for refractory Meniere's cases unresponsive to other measures with significant hearing loss",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More aggressive therapies such as intra-tympanic gentamicin and/or surgery are reserved for refractory cases unresponsive to other measures and where there is significant hearing loss."
+  },
+  {
+   "claim": "An acute vestibular syndrome resembling vestibular neuritis may be a manifestation of cerebrovascular disease, and increased diagnostic suspicion is required in older patients with vascular risk factors",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An acute vestibular syndrome resembling vestibular neuritis and recurrent brief isolated vertigo may occur as manifestations of cerebrovascular disease. Increased diagnostic suspicion is required in older patients with associated vascular risk factors."
+  },
+  {
+   "claim": "Vertigo has peripheral causes such as labyrinthitis and central causes such as cerebellar ischaemia, or a mixture; treatment should be aimed at the cause",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Vertigo has a variety of causes. These may be peripheral, such as labyrinthitis, or central, such as cerebellar ischaemia, or a mixture of the two. The treatment of vertigo should be aimed at the cause, but a variety of drugs has been used to relieve the symptom."
+  },
+  {
+   "claim": "Cinnarizine inhibits H1, H4 and dopamine D2 receptors and can block calcium channels; dimenhydrinate releases diphenhydramine, inhibits H1 and muscarinic receptors and enters the brain, so the combination has peripheral and central effects",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Cinnarizine inhibits histamine H 1 and H 4 receptors and dopamine D 2 receptors. It can also block calcium channels. Dimenhydrinate is a salt of diphenhydramine and chlorotheophylline. It inhibits histamine H 1 receptors and muscarinic acetylcholine receptors and can enter the brain. The combination of cinnarizine and dimenhydrinate will therefore have peripheral and central effects."
+  },
+  {
+   "claim": "Both drugs are metabolised mainly by CYP2D6, with potential to interact with other CYP2D6 substrates such as antidepressants and beta blockers",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "They are metabolised mainly by cytochrome P450 (CYP) 2D6 in the liver. There may be a potential to interact with other drugs metabolised by CYP2D6, such as antidepressants and beta blockers."
+  },
+  {
+   "claim": "The combination is contraindicated in severe hepatic or renal impairment",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "The combination is therefore contraindicated in patients with severe hepatic or renal impairment."
+  },
+  {
+   "claim": "An analysis of five double-blind randomised trials involved 635 patients of average age 53 years, most with vertigo for more than one year, taking the drugs three times a day for four weeks",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "An analysis of five of the double-blind, randomised trials involved 635 patients with an average age of 53 years. Most of them had experienced vertigo for more than one year. … The drugs were taken three times a day for four weeks."
+  },
+  {
+   "claim": "More than 68% taking the combination felt much or very much improved, against 33% of the betahistine group and 35% of the placebo group",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "More than 68% of the patients felt much improved or very much improved after taking the combination compared with 33% of the betahistine group and 35% of the placebo group."
+  },
+  {
+   "claim": "In the pooled five-trial table betahistine 12 mg reduced the vertigo score by 5.7 in 40 patients while placebo reduced it by 6.4 in 51 patients",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Betahistine 12 mg 40 5.7 … Placebo 51 6.4"
+  },
+  {
+   "claim": "In the same table the combination reduced the score by 13.6, cinnarizine 20 mg by 11.5 and dimenhydrinate 40 mg by 11.4",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Cinnarizine 20 mg/dimenhydrinate 40 mg 196 13.6 … Cinnarizine 20 mg 60 11.5 … Dimenhydrinate 40 mg 59 11.4"
+  },
+  {
+   "claim": "In the same table the higher single-agent doses performed worse than the lower ones: cinnarizine 50 mg reduced the score by 7.8 and dimenhydrinate 100 mg by 7.3",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Cinnarizine 50 mg 98 7.8 … Dimenhydrinate 100 mg 97 7.3"
+  },
+  {
+   "claim": "A later double-blind trial in 306 patients with peripheral vestibular vertigo excluded confirmed Meniere's disease although about 55% had a Meniere-like symptom complex",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "A more recent double-blind trial compared the combination to betahistine in 306 patients with peripheral vestibular vertigo. Approximately 55% of the patients had a Ménière-like symptom complex, but patients with confirmed Ménière's disease were excluded."
+  },
+  {
+   "claim": "In that trial the composite vertigo score declined 67.5% with the combination and 59.5% with betahistine after four weeks, with about 71% versus 63% much or very much improved",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "After four weeks this composite score had declined by 67.5% in the patients taking the combination and by 59.5% in those taking betahistine. Approximately 71% of the 152 patients randomised to the combination felt much improved or very much improved compared with 63% of the betahistine group."
+  },
+  {
+   "claim": "The most frequent adverse effects were fatigue, somnolence, dry mouth, headache and abdominal pain, and sedation may be increased by alcohol and other CNS depressants",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "the most frequent adverse effects seen with the combination of cinnarizine and dimenhydrinate were fatigue, somnolence, dry mouth, headache and abdominal pain. The sedative effects may be increased by other drugs, including alcohol, which depress the central nervous system."
+  },
+  {
+   "claim": "Anticholinergic effects make the combination contraindicated in angle-closure glaucoma and urinary retention, with convulsions, raised intracranial pressure and alcohol abuse also contraindications",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "As the combination has some anticholinergic effects, it is contraindicated in patients with angle-closure glaucoma or urinary retention. Convulsions, raised intracranial pressure and alcohol abuse are also contraindications."
+  },
+  {
+   "claim": "Cinnarizine has been associated with extrapyramidal effects including tardive dyskinesia which may be irreversible, so the combination should only be used short term",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Cinnarizine has been associated with extrapyramidal effects including tardive dyskinesia. As these effects may be irreversible, the combination should only be used for short-term management."
+  },
+  {
+   "claim": "The combination has a greater effect than either drug alone but the difference may be small, about two points on the 40-point score against cinnarizine 20 mg, and cinnarizine is not available on its own in Australia",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Combining cinnarizine with dimenhydrinate has a greater effect on vertigo than either drug alone, but the difference may be small. For example, in the five-trial analysis there was a difference of approximately two points between the combination and cinnarizine 20 mg on the 40-point vertigo score … However, cinnarizine is not available on its own in Australia."
+  },
+  {
+   "claim": "In Australia the combination is indicated only for adults who have not responded to other treatments, and given uncertainty about long-term safety treatment should not usually exceed four weeks",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "it is only indicated in Australia for adults who have not responded to other treatments. In view of the uncertainty about long-term safety, treatment should not usually exceed four weeks."
+  },
+  {
+   "claim": "Distinguishing peripheral from CNS pathology matters, and hearing loss is usually present in peripheral disease and rare in CNS disease",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In many cases vertigo is mild and self-limiting and a cause will not be found",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "There is little evidence of benefit for most drugs used for vertigo",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Benign paroxysmal positional vertigo is severe short-lasting vertigo induced by certain head positions",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Postural retraining using the Epley manoeuvre is useful in benign paroxysmal positional vertigo, medication is usually ineffective, and severe persistent symptoms may require surgery",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Vestibular neuronitis, also called labyrinthitis, is inflammation of the vestibular nerve frequently caused by a virus, is usually self-limiting, and may cause severe vertigo with nausea, vomiting and nystagmus",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Acute attacks of vestibular neuronitis may be treated as for Meniere's disease, and continual vomiting may require IV fluids",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Meniere's disease involves recurrent attacks of vertigo, tinnitus and hearing loss",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In Meniere's disease salt intake should be restricted and cigarettes, alcohol, caffeine and CNS stimulants avoided",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine or antihistamines are used for symptomatic relief of acute attacks of Meniere's disease, and long-term use should be avoided",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine, with or without diuretics, has been used for long-term control of vertigo, dizziness or imbalance, but it does not improve hearing and a placebo-controlled trial found it was not effective in preventing attacks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Surgery is an option in Meniere's disease if medical treatment fails",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Vertigo' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine is a histamine analogue and vasodilator thought to improve blood flow to the labyrinth and brain stem, indicated for Meniere's disease",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine adult oral dose is 24 to 48 mg daily in 2 or 3 doses",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Betahistine is contraindicated in phaeochromocytoma and in a history of peptic ulcer, and may exacerbate urticaria and asthma",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine commonly causes headache, nausea and dyspepsia, and GI adverse effects may be reduced by taking it with food or lowering the dose",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine should be taken with food and may take several weeks to reach full effect",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Betahistine has limited data in pregnancy and in breastfeeding, with no evidence of harm in breastfeeding",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cinnarizine with dimenhydrinate is indicated for short-term treatment of vertigo and is not first line, to be considered when other vertigo treatments are ineffective or inappropriate",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The cinnarizine with dimenhydrinate tablet contains cinnarizine 20 mg with dimenhydrinate 40 mg, and the adult dose is 1 tablet 3 times daily",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Cinnarizine with dimenhydrinate should not be used for more than 4 consecutive weeks or above the recommended dose, because the risk of extrapyramidal adverse effects increases with length of treatment and higher doses",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cinnarizine with dimenhydrinate is contraindicated in angle-closure glaucoma and urinary retention, may worsen prostatic hypertrophy and GI obstruction, and should be avoided in Parkinson's disease as symptoms may worsen",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In the elderly cinnarizine with dimenhydrinate carries an increased risk of adverse effects, particularly extrapyramidal effects, and the recommended dose should not be exceeded nor use continued beyond 4 consecutive weeks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cinnarizine with dimenhydrinate has no renal or hepatic data, with the manufacturer contraindicating use when creatinine clearance is under 25 mL/minute and in severe hepatic impairment, and not recommending use in pregnancy or breastfeeding",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cinnarizine with dimenhydrinate commonly causes somnolence, abdominal pain, dry mouth and headache, and rarely extrapyramidal effects which may be irreversible, paradoxical excitation and urinary retention",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine is indicated for nausea and vomiting and for vertigo",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The adult oral dose of prochlorperazine for vertigo is 5 to 10 mg 2 or 3 times daily",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The adult parenteral dose of prochlorperazine for vertigo is 12.5 mg IV or IM initially, then every 8 hours as needed, with IV doses given over 2 minutes",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Prochlorperazine is contraindicated in CNS depression and in children under 2 years, and the manufacturer contraindicates parenteral use in all children",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine should be avoided if possible in Parkinson's disease as symptoms may worsen, and domperidone is preferred",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine is safe to use in early pregnancy but carries a risk of neurological disturbance in infants when taken in late pregnancy, and is safe in breastfeeding",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine commonly causes constipation, dry mouth, drowsiness, akathisia, parkinsonism, blurred vision, extrapyramidal effects especially in children, hypotension and hyperprolactinaemia, and rarely prolonged QT interval and tardive dyskinesia",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prochlorperazine potentiates CNS depression and should be used short term only, because the risk of tardive dyskinesia increases with cumulative dose and length of treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 85,
+  "pass": 52,
+  "fail": 0
+ }
+}
