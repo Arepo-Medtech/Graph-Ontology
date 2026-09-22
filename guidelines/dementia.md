@@ -397,6 +397,18 @@ carers **delivered by bilingual, bicultural workers**.
 **People with dementia are vulnerable to abuse and neglect**; all staff supporting them **should receive
 information and training about how to prevent and manage suspected abuse** *(61, PP)* [S1].
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Donepezil | listed — Tablet containing donepezil hydrochloride 10 mg; Tablet containing donepezil hydrochloride 5 mg | **authority required / authority required (streamlined)** |
+| Rivastigmine | listed — Capsule 1.5 mg (as hydrogen tartrate); Capsule 3 mg (as hydrogen tartrate); Capsule 4.5 mg (as hydrogen tartrate); … | **authority required / authority required (streamlined)** |
+| Galantamine | listed — Capsule (prolonged release) 16 mg (as hydrobromide); Capsule (prolonged release) 24 mg (as hydrobromide); Capsule (prolonged release) 8 mg (as hydrobromide) | **authority required / authority required (streamlined)** |
+| Memantine | listed — Tablet containing memantine hydrochloride 10 mg; Tablet containing memantine hydrochloride 20 mg | **authority required / authority required (streamlined)** |
+| Risperidone | listed — I.M. injection (modified release), set containing 1 pre-filled syringe powder for injection 100 mg and 1 pre-filled syringe diluent 490 microlitres; I.M. injection (modified release), set containing 1 pre-filled syringe powder for injection 75 mg and 1 pre-filled syringe diluent 383 microlitres; I.M. injection (modified release), set containing 1 vial powder for injection 25 mg and 1 pre-filled syringe diluent 2 mL; … | **authority required / authority required (streamlined)** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -426,3 +438,4 @@ information and training about how to prevent and manage suspected abuse** *(61,
 | id | citation | type |
 |---|---|---|
 | S1 | Guideline Adaptation Committee. *Clinical Practice Guidelines and Principles of Care for People with Dementia.* Sydney: Guideline Adaptation Committee; February 2016. NHMRC Partnership Centre for Dealing with Cognitive and Related Functional Decline in Older People. NHMRC-approved 1 February 2016 (approval valid five years) | practice guideline (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

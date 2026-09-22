@@ -309,6 +309,18 @@ aged 5–14, and RHD all-age prevalence higher than 2 per 1000** [S1].
 follow-up** [S1]. **Women with RHD who are pregnant or of childbearing age require pre-conception counselling
 and specialist care** [S1].
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Benzathine Benzylpenicillin | listed — Injection containing 1,200,000 units benzathine benzylpenicillin tetrahydrate in 2.3 mL single use pre-filled syringe; Injection containing 600,000 units benzathine benzylpenicillin tetrahydrate in 1.17 mL single use pre-filled syringe; Powder for injection 1,200,000 units (s19A); … · program DB | **unrestricted** |
+| Phenoxymethylpenicillin | listed — Capsule 250 mg phenoxymethylpenicillin (as potassium); Capsule 500 mg phenoxymethylpenicillin (as potassium); Oral suspension 150 mg (as benzathine) per 5 mL, 100 mL; … | **restricted benefit / unrestricted** |
+| Erythromycin | listed — Capsule 250 mg (containing enteric coated pellets) | **authority required (streamlined) / unrestricted** |
+| Aspirin | listed — Capsule 100 mg (containing enteric coated pellets); Tablet 100 mg; Tablet 100 mg (enteric coated); … · extemporaneous / compounding ingredient* · s100 remote area Aboriginal health service* | **restricted benefit / unrestricted** |
+| Naproxen | listed — Oral suspension 125 mg per 5 mL, 474 mL; Tablet 1 g (sustained release); Tablet 250 mg; … · palliative care schedule* | **restricted benefit / authority required (streamlined)** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -337,4 +349,5 @@ and specialist care** [S1].
 | id | citation | type |
 |---|---|---|
 | S1 | Ralph AP, Currie BJ. *Therapeutics for rheumatic fever and rheumatic heart disease.* Aust Prescr, published 1 August 2022 | peer-reviewed practice synthesis (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | RHDAustralia (ARF/RHD writing group). *The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease.* Version 3.2. Darwin: Menzies School of Health Research; 2020 | practice guideline (AU), **not retrieved** |

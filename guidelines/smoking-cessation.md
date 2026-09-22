@@ -171,6 +171,16 @@ the strength and maturity of tobacco control policies, influence the prevalence 
 **This is the 2021 position.** Australia's vaping regulations changed from **1 October 2024** [S2].
 **Do not rely on the paragraph above as current law** — confirm the present scheme before advising a patient.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Varenicline | listed — Box containing 11 tablets 0.5 mg and 42 tablets 1 mg; Tablet 1 mg | **authority required (streamlined)** |
+| Bupropion | listed — Tablet containing bupropion hydrochloride 150 mg (sustained release) | **authority required (streamlined)** |
+| Nicotine | listed — Transdermal patch 114 mg; Transdermal patch 17.5 mg; Transdermal patch 35 mg; … | **restricted benefit** |
+
 ## Where this connects in the compendium
 
 **Recommendation 14 makes nortriptyline second-line** here on its adverse effect profile — and the
@@ -206,4 +216,5 @@ recent cerebrovascular events** — conditions covered by the **heart failure**,
 | id | citation | type |
 |---|---|---|
 | S1 | RACGP. *Supporting smoking cessation: A guide for health professionals*, 2nd edn. East Melbourne, Vic: RACGP. Recommendations and Tobacco harm reduction chapters; last revised 29 September 2021 | practice guideline (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | QuitCentre. *RACGP Guidelines — Supporting smoking & vaping cessation* — notice that guidance was produced for changes to Australia's vaping regulations as of 1 October 2024 | secondary notice; **cited only to flag that the regulatory position changed, not for its content** |

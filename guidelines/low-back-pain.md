@@ -232,6 +232,18 @@ Because this is a standard rather than a guideline, several statements carry mea
 | **1b** | **Proportion of patients with acute low back pain with the findings of both their initial clinical assessment and screening for specific and/or serious underlying pathology documented in their medical record** |
 | **8a** | **Evidence of a locally approved policy that defines the process for review and referral of patients with low back pain** |
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Paracetamol | listed — Oral liquid 240 mg per 5 mL, 200 mL; Suppository 500 mg; Tablet 500 mg; … · palliative care schedule* · s100 remote area Aboriginal health service* | **restricted benefit / unrestricted** |
+| Ibuprofen | listed — Tablet 400 mg · palliative care schedule* | **restricted benefit / unrestricted** |
+| Diclofenac | listed — Gel containing diclofenac sodium 30 mg per g, 25 g; Tablet (enteric coated) containing diclofenac sodium 25 mg; Tablet (enteric coated) containing diclofenac sodium 50 mg · s100 remote area Aboriginal health service* | **authority required / unrestricted** |
+| Amitriptyline | listed — Tablet containing amitriptyline hydrochloride 10 mg; Tablet containing amitriptyline hydrochloride 25 mg; Tablet containing amitriptyline hydrochloride 50 mg | **unrestricted** |
+| Pregabalin | listed — Capsule 150 mg; Capsule 25 mg; Capsule 300 mg; … | **authority required (streamlined)** |
+
 ## Where this connects in the compendium
 
 The three avoided classes reach across the set. **Benzodiazepines** appear in the insomnia guideline;
@@ -259,3 +271,4 @@ neither supports an opioid as ordinary care.
 | id | citation | type |
 |---|---|---|
 | S1 | Australian Commission on Safety and Quality in Health Care. *Low Back Pain Clinical Care Standard.* Sydney: ACSQHC; 2022 | clinical care standard (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

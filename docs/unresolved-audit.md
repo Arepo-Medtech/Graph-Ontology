@@ -145,6 +145,24 @@ layer at all.**
 guidance, and the newest files — the paediatric set, the sepsis set, the clinical care standards — carry PBS
 information only where their source happened to mention it. **The earliest files went and got it.**
 
+✅ **Partly repaired 2026-09-22.** `scripts/pbs_lookup.py` reads the cached PBS schedule and emits the table.
+**Twelve more guidelines now carry a PBS layer — 23/61.** The tool was validated by **reproducing the gout
+guideline's hand-built table exactly**, allopurinol through febuxostat, from an earlier session's manual work.
+
+**Two things the lookup found that no source in this compendium states:**
+
+- ⚠️ **Disulfiram is not on the PBS schedule at all.** A true negative, checked against every drug name in
+  the cache. **An unsubsidised agent is an access fact**, and the alcohol guideline's sources do not mention
+  it.
+- **The schedule lists valproate without its salt**, so a literal search for *sodium valproate* returns
+  nothing. That was a **false negative in my first pass**, caught before commit; the tool now falls back to
+  the salt-free moiety and **prints what it matched** so the substitution is never silent.
+
+⚠️ **PBS is not the right access layer everywhere.** The 38 guidelines still without one are largely
+**clinical care standards and paediatric emergency guidelines**, where the agents are hospital-administered
+and a community subsidy schedule says little. **That judgement belongs per guideline, not to a script run
+over all of them.**
+
 **Four declare the limits of Australian sourcing in their own headers**, in bold, in the first paragraph:
 **gout**, **insomnia** and **migraine** each state *"No free Australian guideline exists"*, and
 **osteoporosis** states *"Australian coverage is **partial**"*. They then lead on American, European or UK
@@ -239,8 +257,11 @@ the sharpest are worth naming:
    are three-way and decision-changing — blood culture volume, and IM ceftriaxone dose and trigger.**
    ✅ **All three retrieved.** ⚠️ **Four documents now give four rules on blood culture technique and three
    on IM ceftriaxone.** See the four-way table in `sepsis-children-wa.md`.
-3. ✅ **Connections tables done — 61/61.** ⚠️ **The PBS layer remains**: eleven guidelines have one, fifty
-   do not, and that is the larger gap and runs the opposite way to what this audit first assumed.
+3. ✅ **Connections tables done — 61/61.** ⚠️ **PBS layer: 23/61**, up from 11. `scripts/pbs_lookup.py`
+   now generates the table from the cached schedule, and **reproduces the hand-built gout table exactly** —
+   which is what validates it. **The remaining 38 are mostly clinical care standards and paediatric
+   emergency guidelines, where PBS is not the relevant access layer**; that judgement should be made per
+   guideline rather than by running the tool over everything.
 4. **Decide the house position on Finding 4** before attestation.
 5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`
    currently machine-checks only the seven written since it existed.

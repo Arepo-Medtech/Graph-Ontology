@@ -215,6 +215,18 @@ needs and preferences**.
 **"The possibility of treatment failure"** is named as something to discuss up front — which is what makes the
 three-to-six-month LNG-IUD expectation honest rather than optimistic.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Tranexamic Acid | listed — Tablet 500 mg | **unrestricted** |
+| Levonorgestrel | listed — Intrauterine drug delivery system 19.5 mg; Intrauterine drug delivery system 52 mg; Tablets 30 micrograms, 28 | **restricted benefit / unrestricted** |
+| Medroxyprogesterone | listed — Injection containing medroxyprogesterone acetate 150 mg in 1 mL pre-filled syringe; Tablet containing medroxyprogesterone acetate 10 mg; Tablet containing medroxyprogesterone acetate 100 mg; … | **restricted benefit / unrestricted** |
+| Norethisterone | listed — Tablet 5 mg; Tablets 350 micrograms, 28 | **restricted benefit / unrestricted** |
+| Naproxen | listed — Oral suspension 125 mg per 5 mL, 474 mL; Tablet 1 g (sustained release); Tablet 250 mg; … · palliative care schedule* | **restricted benefit / authority required (streamlined)** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -240,3 +252,4 @@ three-to-six-month LNG-IUD expectation honest rather than optimistic.
 | id | citation | type |
 |---|---|---|
 | S1 | Australian Commission on Safety and Quality in Health Care. *Heavy Menstrual Bleeding Clinical Care Standard.* Sydney: ACSQHC | clinical care standard (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

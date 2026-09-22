@@ -258,6 +258,18 @@ prevent further central nervous system damage**; **attend to advanced liver dise
 and **avoid interactions between medications for alcohol use disorders and other medications — e.g.
 paracetamol, benzodiazepines, anticoagulants and non-steroidal anti-inflammatory drugs**.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Naltrexone | listed — Tablet containing naltrexone hydrochloride 50 mg | **authority required (streamlined)** |
+| Acamprosate | listed — Tablet (enteric coated) containing acamprosate calcium 333 mg | **authority required (streamlined)** |
+| Disulfiram | **not listed** | — |
+| Thiamine | listed — Tablet containing thiamine hydrochloride 100 mg · s100 remote area Aboriginal health service* | **restricted benefit / authority required (streamlined) / unrestricted** |
+| Diazepam | listed — Oral liquid 10 mg per 10 mL, 100 mL; Tablet 2 mg; Tablet 5 mg · palliative care schedule* | **authority required / unrestricted** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -286,4 +298,5 @@ paracetamol, benzodiazepines, anticoagulants and non-steroidal anti-inflammatory
 | id | citation | type |
 |---|---|---|
 | S1 | Riordan BC, Winter DT, Barrett L, Ritter A, Lancaster K, Seear K, Butler K, Haber PS, et al. *New Australian guidelines for the treatment of alcohol problems: an overview of recommendations.* Med J Aust 2021; 215(7 Suppl) | practice guideline overview (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | NHMRC. *Australian Guidelines to Reduce Health Risks from Drinking Alcohol* — reproduced as Box 1 in S1 | national guideline (AU) |

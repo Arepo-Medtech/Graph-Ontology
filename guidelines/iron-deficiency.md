@@ -238,6 +238,18 @@ failure** [S1].
 **The source says plainly that no firm pathway exists** — and then gives the best available practice anyway.
 That is worth preserving exactly as stated.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Ferrous Sulfate | listed — Oral liquid containing 30 mg ferrous sulfate heptahydrate per mL, 250 mL · extemporaneous / compounding ingredient* | **unrestricted** |
+| Ferrous Fumarate | listed — Tablet 200 mg (equivalent to 65.7 mg iron) · s100 remote area Aboriginal health service* | **restricted benefit / unrestricted** |
+| Iron Polymaltose | listed — Injection 100 mg (iron) in 2 mL | **authority required (streamlined) / unrestricted** |
+| Ferric Carboxymaltose | listed — Injection 1000 mg (iron) in 20 mL; Injection 500 mg (iron) in 10 mL | **unrestricted** |
+| Ferric Derisomaltose | listed — Injection 1000 mg (iron) in 10 mL; Injection 500 mg (iron) in 5 mL | **unrestricted** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -266,4 +278,5 @@ That is worth preserving exactly as stated.
 | id | citation | type |
 |---|---|---|
 | S1 | Balendran S, Forsyth C. *Non-anaemic iron deficiency.* Aust Prescr 2021;44(6). doi:10.18773/austprescr.2021.052. Published 1 December 2021. Conflicts of interest: none declared | peer-reviewed practice synthesis (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | *Updating the diagnosis and management of iron deficiency in the era of routine ferritin testing.* Med J Aust 2024;221(7) | peer-reviewed practice synthesis (AU), **retrieved via search index** |

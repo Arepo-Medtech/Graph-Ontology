@@ -209,6 +209,18 @@ The source states it plainly, and it is recorded here because the compendium rec
 co-wrote.** The declaration is complete and made in the standard place; noting it is not a criticism of the
 article, and a reviewer should weigh that section knowing it.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Sodium Valproate | listed — Oral liquid containing sodium valproate 200 mg per 5 mL, 300 mL; Oral solution containing sodium valproate 200 mg per 5 mL, 300 mL; Tablet (enteric coated) containing sodium valproate 200 mg; … *(schedule lists as **valproate**)* | **restricted benefit** |
+| Lamotrigine | listed — Tablet 100 mg; Tablet 200 mg; Tablet 25 mg; … | **restricted benefit** |
+| Levetiracetam | listed — Oral solution 100 mg per mL, 300 mL; Tablet 1 g; Tablet 250 mg; … | **restricted benefit** |
+| Lithium Carbonate | listed — Tablet containing lithium carbonate 250 mg; Tablet containing lithium carbonate 450 mg (slow release) | **restricted benefit** |
+| Topiramate | listed — Capsule 15 mg; Capsule 25 mg; Capsule 50 mg; … | **authority required (streamlined)** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -238,3 +250,4 @@ article, and a reviewer should weigh that section knowing it.
 | id | citation | type |
 |---|---|---|
 | S1 | McLaughlin D. Sodium valproate: balancing benefits and risks especially in people of childbearing potential. *Aust Prescr* 2026;49(3). doi:10.18773/austprescr.2026.023 | peer-reviewed national drug bulletin (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

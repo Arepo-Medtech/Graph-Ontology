@@ -255,6 +255,20 @@ That figure is the reason adherence gets its own graded recommendation. The anti
 evidence behind it stops working when half the patients have stopped taking it — and **interventions to fix
 this have shown mixed results** [S1].
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Apixaban | listed — Tablet 2.5 mg; Tablet 5 mg | **authority required (streamlined)** |
+| Rivaroxaban | listed — Capsule 15 mg; Capsule 20 mg; Tablet 10 mg; … | **authority required (streamlined)** |
+| Dabigatran | listed — Capsule 110 mg (as mesilate); Capsule 150 mg (as mesilate); Capsule 75 mg (as mesilate) | **authority required (streamlined)** |
+| Warfarin | listed — Tablet containing warfarin sodium 1 mg; Tablet containing warfarin sodium 2 mg; Tablet containing warfarin sodium 3 mg; … | **unrestricted** |
+| Metoprolol | listed — Tablet containing metoprolol tartrate 100 mg; Tablet containing metoprolol tartrate 50 mg | **restricted benefit / unrestricted** |
+| Amiodarone | listed — Tablet containing amiodarone hydrochloride 100 mg; Tablet containing amiodarone hydrochloride 200 mg | **restricted benefit** |
+| Digoxin | listed — Paediatric oral solution 50 micrograms per mL, 60 mL; Tablet 250 micrograms; Tablet 62.5 micrograms | **restricted benefit** |
+
 ## Where this connects in the compendium
 
 The stroke score's own components point at five conditions already written here: **heart failure**
@@ -280,4 +294,5 @@ where the evidence runs out.**
 | id | citation | type |
 |---|---|---|
 | S1 | Brieger D, Amerena J, Attia J, et al. National Heart Foundation of Australia and the Cardiac Society of Australia and New Zealand: Australian clinical guidelines for the diagnosis and management of atrial fibrillation 2018. *Med J Aust* 2018; 209(8) — executive summary | practice guideline (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | Brieger D, Amerena J, Attia J, et al. *Heart Lung Circ* 2018; 27(10):1209–1266. doi:10.1016/j.hlc.2018.06.1043 — full guideline | practice guideline (AU), **not retrieved** |

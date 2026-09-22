@@ -218,6 +218,19 @@ should be individualised** [S1].
 **Discharge quantity is calculated, not defaulted** — from the last 24 hours of actual use, the expected
 course, and whether follow-up is arranged. And the planning starts at the **first** dose, not at discharge.
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Oxycodone | listed — Capsule containing oxycodone hydrochloride 10 mg; Capsule containing oxycodone hydrochloride 20 mg; Capsule containing oxycodone hydrochloride 5 mg; … · palliative care schedule* | **authority required / restricted benefit / authority required (streamlined)** |
+| Tapentadol | listed — Tablet (modified release) 100 mg (as hydrochloride); Tablet (modified release) 150 mg (as hydrochloride); Tablet (modified release) 200 mg (as hydrochloride); … | **authority required (streamlined)** |
+| Tramadol | listed — Capsule containing tramadol hydrochloride 50 mg; Injection containing tramadol hydrochloride 100 mg in 2 mL; Oral drops containing tramadol hydrochloride 100 mg per mL, 10 mL; … · program DB | **restricted benefit / authority required (streamlined) / unrestricted** |
+| Codeine | listed — Tablet containing codeine phosphate hemihydrate 30 mg · extemporaneous / compounding ingredient* | **restricted benefit / unrestricted** |
+| Paracetamol | listed — Oral liquid 240 mg per 5 mL, 200 mL; Suppository 500 mg; Tablet 500 mg; … · palliative care schedule* · s100 remote area Aboriginal health service* | **restricted benefit / unrestricted** |
+| Naloxone | listed — Injection containing naloxone hydrochloride 2 mg in 2 mL pre-filled syringe; Injection containing naloxone hydrochloride 400 micrograms in 1 mL ampoule; Nasal spray 1.8 mg (as hydrochloride dihydrate) in 0.1 mL single dose unit, 2 · program DB | **unrestricted** |
+
 ## Where this connects in the compendium
 
 **The low back pain standard** requires that opioids for low back pain be limited to **immediate-release
@@ -248,3 +261,4 @@ them.
 | id | citation | type |
 |---|---|---|
 | S1 | Australian Commission on Safety and Quality in Health Care. *Opioid Analgesic Stewardship in Acute Pain Clinical Care Standard.* Sydney: ACSQHC | clinical care standard (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

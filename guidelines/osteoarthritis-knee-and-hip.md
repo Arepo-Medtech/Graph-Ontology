@@ -197,6 +197,19 @@ evidence, balance of benefits and harms, **values and preferences, resource use*
 considerations [S1]. Standardised wording: **"recommend offering"** for strong, **"suggest offering"** for
 conditional [S1].
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Paracetamol | listed — Oral liquid 240 mg per 5 mL, 200 mL; Suppository 500 mg; Tablet 500 mg; … · palliative care schedule* · s100 remote area Aboriginal health service* | **restricted benefit / unrestricted** |
+| Ibuprofen | listed — Tablet 400 mg · palliative care schedule* | **restricted benefit / unrestricted** |
+| Diclofenac | listed — Gel containing diclofenac sodium 30 mg per g, 25 g; Tablet (enteric coated) containing diclofenac sodium 25 mg; Tablet (enteric coated) containing diclofenac sodium 50 mg · s100 remote area Aboriginal health service* | **authority required / unrestricted** |
+| Celecoxib | listed — Capsule 100 mg; Capsule 200 mg | **restricted benefit** |
+| Meloxicam | listed — Capsule 15 mg; Capsule 7.5 mg; Tablet 15 mg; … | **restricted benefit** |
+| Duloxetine | listed — Capsule 30 mg (as hydrochloride); Capsule 60 mg (as hydrochloride) | **restricted benefit** |
+
 ## Where this connects in the compendium
 
 The strong-against list includes **bisphosphonates, calcitonin and strontium ranelate** — all osteoporosis
@@ -226,3 +239,4 @@ against, in the most common chronic painful condition in general practice.**
 | id | citation | type |
 |---|---|---|
 | S1 | RACGP. *Guideline for the management of knee and hip osteoarthritis*, 2nd edition. Last revised 1 July 2018 — summary of recommendations (strong for, strong against, conditional for, conditional neutral, conditional against) and recommendation framework | practice guideline (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |

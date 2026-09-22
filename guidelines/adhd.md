@@ -336,6 +336,19 @@ both pharmacological and cognitive behavioural based interventions** *(6.3.6, CC
 
 Sequencing without a queue — stabilise first, but the second clause exists to stop "first" becoming "never".
 
+## Australian context — PBS
+
+**PBS Schedule 4333, looked up directly** [SP]. Agents named by this guideline's sources, checked against the cached PBS schedule with `scripts/pbs_lookup.py`. ⚠️ **A listing is not a recommendation, and the restriction text is not reproduced here** — only the benefit type and the forms on the schedule.
+
+| Agent | PBS | Benefit type |
+|---|---|---|
+| Methylphenidate | listed — Capsule containing methylphenidate hydrochloride 10 mg (modified release); Capsule containing methylphenidate hydrochloride 20 mg (modified release); Capsule containing methylphenidate hydrochloride 30 mg (modified release); … | **authority required** |
+| Dexamfetamine | listed — Tablet containing dexamfetamine sulfate 5 mg | **authority required** |
+| Lisdexamfetamine | listed — Capsule containing lisdexamfetamine dimesilate 20 mg; Capsule containing lisdexamfetamine dimesilate 30 mg; Capsule containing lisdexamfetamine dimesilate 40 mg; … | **authority required** |
+| Atomoxetine | listed — Capsule 10 mg (as hydrochloride); Capsule 100 mg (as hydrochloride); Capsule 18 mg (as hydrochloride); … | **authority required (streamlined)** |
+| Guanfacine | listed — Tablet 1 mg (as hydrochloride); Tablet 2 mg (as hydrochloride); Tablet 3 mg (as hydrochloride); … | **authority required (streamlined)** |
+| Clonidine | listed — Tablet containing clonidine hydrochloride 100 micrograms; Tablet containing clonidine hydrochloride 150 micrograms | **restricted benefit / unrestricted** |
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -362,4 +375,5 @@ Sequencing without a queue — stabilise first, but the second clause exists to 
 | id | citation | type |
 |---|---|---|
 | S1 | AADPA. *Australian Evidence-Based Clinical Practice Guideline for Attention Deficit Hyperactivity Disorder — Summary of Recommendations.* 3 October 2022. © Australian ADHD Professionals Association 2022 | practice guideline (AU) |
+| SP | PBS Public API v3, Schedule 4333 (cached `cache/pbs/items.json`) | primary data (AU) |
 | S2 | AADPA. *Australian Evidence-Based Clinical Practice ADHD Guideline* — approvals and endorsements statement | practice guideline (AU), landing page |
