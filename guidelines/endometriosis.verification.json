@@ -1,0 +1,297 @@
+{
+ "guideline": "guidelines/endometriosis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2024/january-february/endometriosis",
+  "https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP 2024 review, fetched and checked verbatim (32 claims). A1 is AMH, read under subscription and PARAPHRASED (13 claims); no passage reproduced, no source_text stored. THE DOSE TABLE COMES FROM THE OPEN SOURCE: 5 of the 7 dose claims are QUOTED and machine re-checkable, because S1 carries a full hormonal therapy table with doses and A1 does not. That is the reverse of the usual pattern in this corpus. The two sources take DIFFERENT POSITIONS on surgery for endometriosis-associated infertility -- A1 states flatly that surgery is the treatment of choice, S1 reports the three guidelines as agreeing only that surgery MIGHT improve fertility in stage 1 and 2 with data for stages 3 and 4 LESS CLEAR -- and both are stated with attribution rather than reconciled. S1 also disagrees with A1 on the levonorgestrel IUD interval (5 years vs A1's 5 or 8), the same conflict recorded in the contraception guideline from a different AJGP article.",
+ "claims": [
+  {
+   "claim": "Endometriosis is a chronic inflammatory condition defined as endometrial-like tissue proliferating outside the uterus, affecting one in nine Australian women and up to 50% of women experiencing infertility",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Endometriosis is a chronic inflammatory condition defined as endometrial-like tissue proliferating outside the uterus. It is a common yet frequently under-recognised condition affecting one in nine Australian women and up to 50% of women experiencing infertility."
+  },
+  {
+   "claim": "The average delay in the diagnosis of endometriosis in Australian women has been reported to be between seven and 12 years, and uncertainty and delays in diagnosis contribute to the psychological burden experienced by those with the condition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moradi et al reported the average delay in the diagnosis of endometriosis in Australian women to be between seven and 12 years. Uncertainty and delays in diagnosis contribute to the psychological burden experienced by those with the condition."
+  },
+  {
+   "claim": "It is estimated that there are 23,400 endometriosis-related hospitalisations and a cost to the economy of 9.3 billion dollars each year due to loss of quality of life and reduced productivity",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is estimated that there are 23,400 endometriosis-related hospitalisations and there is a cost to the economy of $9.3 billion each year due to loss of quality of life and reduced productivity."
+  },
+  {
+   "claim": "The most recognised staging system is the revised American Society of Reproductive Medicine system, which does not predict the severity of symptoms or prognosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most recognised staging system (Table 1) is the revised American Society of Reproductive Medicine (rASRM) staging system. 10 It does not predict the severity of symptoms or prognosis."
+  },
+  {
+   "claim": "Endometriosis is commonly classified into superficial peritoneal disease, ovarian endometriosis and deep infiltrating endometriosis defined as lesions invading more than 5 mm beyond the surface of the peritoneum, with pelvic organs such as the bladder, bowel, pelvic wall and retroperitoneal structures often involved",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Endometriosis is also commonly classified into three categories: superficial peritoneal disease, ovarian endometriosis and deep infiltrating endometriosis (DIE), defined as endometriotic lesions invading >5 mm beyond the surface of the peritoneum. 11 Pelvic organs such as the bladder, bowel, pelvic wall and retroperitoneal structures are often involved."
+  },
+  {
+   "claim": "S1 states that all three guidelines emphasise that a normal exam and imaging cannot exclude endometriosis and that people with suspected endometriosis should be referred to a gynaecologist for further consideration of laparoscopy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "all three guidelines emphasise that a normal exam and imaging cannot exclude endometriosis, and people with suspected endometriosis should be referred to a gynaecologist for further consideration of laparoscopy."
+  },
+  {
+   "claim": "S1's key point is that laparoscopy should no longer be considered the gold standard for diagnosis of endometriosis but should be considered if imaging is negative and/or empirical treatment is ineffective or inappropriate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Laparoscopy should no longer be considered the gold standard for diagnosis of endometriosis but should be considered if imaging is negative and/or empirical treatment is ineffective or inappropriate."
+  },
+  {
+   "claim": "Biopsy should be taken at the time of laparoscopy, however a negative histological result does not rule out endometriosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Biopsy should be taken at the time of laparoscopy. However, a negative histological result does not rule out endometriosis."
+  },
+  {
+   "claim": "Studies on endometriosis confirmed laparoscopically in adolescents demonstrated that all stages of endometriosis can be present",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Studies on endometriosis-confirmed laparoscopically in adolescents demonstrated that all stages of endometriosis can be present."
+  },
+  {
+   "claim": "S1 states there are no biomarkers with sufficient sensitivity or specificity to warrant use in the workup of endometriosis and that all three guidelines state biomarkers should not be used",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are no biomarkers with sufficient sensitivity or specificity to warrant use in the workup of endometriosis. All three guidelines state that biomarkers should not be used in the workup of endometriosis."
+  },
+  {
+   "claim": "Paracetamol and NSAIDs either alone or in combination might be offered for endometriosis-related pain, but the evidence on their effect is limited to one small randomised controlled trial using naproxen for which results were inconclusive, and the guidelines suggest a short trial after which other options should be considered and the patient referred",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Paracetamol and non-steroidal anti-inflammatories either alone or in combination might be offered for the management of endometriosis-related pain. 7-9 The evidence on their effect on endometriosis-related pain is limited to one small randomised controlled trial using naproxen, for which the results were inconclusive. The guidelines suggest a short trial of paracetamol and/or non-steroidal anti-inflammatories. If they do not provide adequate pain relief, other management options should be considered and the patient should be referred for further assessment."
+  },
+  {
+   "claim": "There are no studies evaluating the effectiveness of anti-neuropathic medications for endometriosis-related pain, and the RANZCOG guideline suggests they might be used as a broader chronic pain management strategy following referral to a pain or condition-specific specialist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are no studies evaluating the effectiveness of anti-neuropathic medications for endometriosis-related pain. The RANZCOG guideline suggests they might be used as a broader chronic pain management strategy following referral to a pain or condition-specific specialist."
+  },
+  {
+   "claim": "Hormonal therapies lead to a clinically significant reduction in dysmenorrhoea and non-menstrual pelvic pain without any demonstrating clear superiority, and all three guidelines recommend offering the combined oral contraceptive pill or a progestogen to people with suspected, confirmed or recurrent endometriosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These hormonal therapies have been shown to lead to a clinically significant reduction in dysmenorrhoea and non-menstrual pelvic pain, without any demonstrating clear superiority. 8 Patient preferences, priorities and tolerability should be considered when choosing whether to commence hormonal treatment and the type of therapy to commence. 7-9 Table 3 provides a summary of hormonal treatments. All three guidelines recommend offering the COCP or progestogen to people with suspected, confirmed or recurrent endometriosis."
+  },
+  {
+   "claim": "The ESHRE guideline recommends GnRH agonists as a second-line therapy whereas the RANZCOG guideline recommends their use only as an adjunct to surgery for deep infiltrating endometriosis involving bowel, bladder or ureters, their use requires specialist advice, and hormonal therapies should be avoided in those wishing to conceive",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ESHRE guideline recommends that GnRH agonists can be considered as a second-line therapy, whereas the RANZCOG guideline recommends their use only as an adjunct to surgery for DIE involving the bowel, bladder or ureters. The use of GnRH agonists requires specialist advice. Hormonal therapies should be avoided in those wishing to conceive."
+  },
+  {
+   "claim": "S1 gives no evidence of superiority of any one combined oral contraceptive preparation for endometriosis, available oral, vaginal ring or transdermal patch, used cyclically or continuously, with continuous use further reducing dysmenorrhoea",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Combined oral contraceptive pill No evidence of superiority of any one preparation Oral, vaginal ring or transdermal patch Yes - Cyclical or continuous - Continuous further reduces dysmenorrhoea",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives levonorgestrel 52 mg intrauterine device replaced 5 yearly and medroxyprogesterone 150 mg by intramuscular injection 3 monthly",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Levonorgestrel 52 mg (Mirena) Intrauterine device Yes Replace 5 yearly … Medroxyprogesterone 150 mg (Depo-Provera) Intramuscular injection Yes Injection 3 monthly",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives etonogestrel 68 mg subdermal implant replaced 3 yearly and oral medroxyprogesterone 10 mg three times daily",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Etonogestrel 68 mg (Implanon) Subdermal implant Yes Replace 3 yearly … Medroxyprogesterone Oral No 10 mg 3 times daily",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives oral dienogest 2 mg once daily which is not contraceptive, oral norethisterone 5 to 10 mg once daily which is contraceptive, and oral drospirenone 4 mg once daily which is contraceptive and currently off-label for endometriosis use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dienogest Oral No 2 mg once daily Norethisterone Oral Yes 5-10 mg once daily Drospirenone B Oral Yes 4 mg once daily",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives gonadotropin-releasing hormone agonists under specialist supervision for a maximum of 6 months, with goserelin 3.6 mg subcutaneous injection 4 weekly and nafarelin 200 micrograms intranasally twice daily, causing hot flushes, vaginal dryness, sexual dysfunction, amenorrhoea and reduced bone mineral density",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gonadotropin-releasing agonists (under specialist supervision) Maximum 6 months Goserelin Subcutaneous No 3.6 mg injection 4 weekly Hot flushes, vaginal dryness, sexual dysfunction, amenorrhoea, reduced BMD Breastfeeding, pregnancy, unexplained vaginal bleeding, osteoporosis Nafarelin Intranasal No 200 µg twice daily",
+   "dose": true
+  },
+  {
+   "claim": "S1 notes that bone mineral density usually recovers within 2 years of discontinuation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A Bone mineral density (BMD) usually recovers within 2 years of discontinuation."
+  },
+  {
+   "claim": "Major surgical complications are higher when deep infiltrating endometriosis is present particularly involving the bowel, and all three guidelines recommend that women with deep infiltrating endometriosis be referred to a centre of expertise or a multidisciplinary team",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Major surgical complications are higher when DIE is present, particularly involving the bowel. 22 The three guidelines recommend that women with DIE be referred to a centre of expertise or a multidisciplinary team with expertise in this area."
+  },
+  {
+   "claim": "Cystectomy of endometriomas is recommended by all three guidelines as it reduces the risk of recurrence and pain and increases spontaneous pregnancy rates compared to ablation, but this needs to be carefully weighed against its effect on ovarian reserve especially in young women not immediately seeking fertility",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cystectomy of endometriomas is recommended by all three guidelines as it reduces the risk of recurrence and pain and increases spontaneous pregnancy rates compared to ablation. 23 However, this needs to be carefully weighed up against its effect on ovarian reserve, especially in young women not immediately seeking fertility."
+  },
+  {
+   "claim": "S1 states it is important to counsel women that surgery is not a cure for endometriosis, that relapse of symptoms occurs in 40 to 45% of women, and that up to 30% are readmitted for surgery within five years of their first surgery",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is important to counsel women that surgery is not a cure for endometriosis. Surgery aims to remove any visible lesions. However, relapse of symptoms occurs in 40-45% of women. Up to 30% of women are readmitted for surgery within five years of their first surgery."
+  },
+  {
+   "claim": "Postoperative hormonal suppression via levonorgestrel IUD or continuous combined oral contraceptive might have some benefit for the secondary prevention of pain and disease recurrence, and all three guidelines recommend considering hormonal treatment following laparoscopy for endometriosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Postoperative hormonal suppression via levonorgestrel-IUD (LNG-IUD) or continuous COCP might have some benefit for the secondary prevention of pain and disease recurrence. 25,26 All three guidelines recommend considering hormonal treatment following laparoscopy for endometriosis."
+  },
+  {
+   "claim": "Hysterectomy might be considered if women have completed their family and medical and surgical interventions have been ineffective or where there is concurrent heavy menstrual bleeding or adenomyosis, with removal of all visible lesions at the same time, and when considering bilateral oophorectomy the increased risk of diminished bone density, dementia and cardiovascular disease should be discussed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hysterectomy (with or without removal of the ovaries) might be considered if women have completed their family and where medical and surgical interventions have been ineffective or where there is concurrent heavy menstrual bleeding and/or adenomyosis. 1-3 Removal of all visible lesions should be performed at the same time. When considering bilateral oophorectomy, the increased risk of diminished bone density, dementia and cardiovascular disease should be discussed."
+  },
+  {
+   "claim": "Women should be counselled that pain symptoms might persist or recur due to persisting or recurring endometriosis and/or central sensitisation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Women should be counselled that pain symptoms might persist or recur due to persisting or recurring endometriosis and/or central sensitisation."
+  },
+  {
+   "claim": "S1 states the three guidelines agree that offering surgical management of stage 1 and 2 endometriosis might improve fertility outcomes, that the data for fertility outcomes in surgical management of stages 3 and 4 are less clear, and that all three agree hormonal suppression should not be offered postoperatively when fertility is a main priority",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The three guidelines 7-9 agree that offering surgical management of rASRM stage 1 and 2 endometriosis might improve fertility outcomes. The data for fertility outcomes in surgical management of rASRM stages 3 and 4 are less clear. … All three guidelines agree that hormonal suppression should not be offered postoperatively, when fertility is a main priority."
+  },
+  {
+   "claim": "The ESHRE guideline suggests intrauterine insemination with ovarian stimulation might be performed in stage 1 and 2 endometriosis as pregnancy rates are higher than expectant management or insemination alone, that IVF is recommended if tubal function is compromised, there is male factor infertility or other treatments have failed, and that assisted reproduction is safe in women with endometriosis with no difference in recurrence rates",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ESHRE guideline suggests intrauterine insemination (IUI) with ovarian stimulation might be performed in women with rASRM stage 1 and 2 endometriosis, as pregnancy rates are higher in this group than expectant management or IUI alone. 7 In vitro fertilisation (IVF) is recommended if tubal function is compromised, there is male factor infertility or other treatments have failed. The ESHRE guideline reassures that ART is safe to use in women with endometriosis, given there is no difference in reoccurrence rates between women who have undergone ART and women who have not."
+  },
+  {
+   "claim": "The ESHRE guideline acknowledges that endometriosis might increase the risk of first trimester miscarriage and ectopic pregnancy, that pregnancy has a variable effect on lesions which might regress or grow, and that people should not be advised to become pregnant for the primary purpose of treating endometriosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ESHRE guideline acknowledges that endometriosis might increase the risk of first trimester miscarriage and ectopic pregnancy. 1 Pregnancy has a variable effect on endometriosis lesions; they might regress or grow. 28 People should not be advised to become pregnant for the primary purpose of treating endometriosis."
+  },
+  {
+   "claim": "Two to five per cent of people will experience endometriosis-related symptoms after menopause and differential diagnoses such as malignancy need to be considered when postmenopausal people present with pelvic pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ESHRE guideline reports that two to five per cent of people will experience endometriosis-related symptoms after menopause. 29 Differential diagnoses such as malignancy need to be considered when postmenopausal people present with pelvic pain."
+  },
+  {
+   "claim": "A systematic review found that people with a history of endometriosis might experience reactivation when treating menopausal symptoms with menopausal hormone therapy as well as an increased risk of malignant transformation of the lesions, found particularly with oestrogen-only preparations, and the ESHRE guideline recommends combined oestrogen-progesterone formulations be used including in people who have had a hysterectomy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A systematic review by Gemmell et al 30 found that people with a history of endometriosis might experience reactivation of endometriosis when treating menopausal symptoms with menopausal hormone therapy, as well as an increased risk of malignant transformation of the lesions. The latter was found particularly with oestrogen-only preparations. … combined oestrogen-progesterone formulations should be used, including in people who have had a hysterectomy"
+  },
+  {
+   "claim": "S1 advises referring young people aged 17 years and under with suspected or confirmed endometriosis to a paediatric and adolescent gynaecologist with an interest in endometriosis or to a gynaecologist comfortable treating adolescents, and that people with endometriosis meet the criteria for a chronic disease management plan",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Refer young people (aged 17 years and under) with suspected or confirmed endometriosis to a paediatric and adolescent gynaecologist with an interest in endometriosis or to a gynaecologist who is comfortable treating adolescents with possible endometriosis. … People with endometriosis meet the criteria for a chronic disease management plan."
+  },
+  {
+   "claim": "Endometriosis is the presence of endometrial tissue outside the uterus, symptoms vary considerably and do not always relate to the extent of disease, patients may be asymptomatic or have pelvic pain, menstrual changes such as heavy bleeding, bowel symptoms, fatigue or infertility, and it is usually a chronic disease that may require long-term management",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The rationale for drug use in endometriosis is to relieve pain including dysmenorrhoea, dyspareunia and other pelvic pain, and to induce atrophy within ectopic endometrium through hormonal treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Endometriosis treatment should be individualised according to age, symptoms, extent of disease and pregnancy plans",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that standard hormonal treatments for endometriosis include COCs, progestogens, GnRH agonists and danazol, that they induce atrophy within ectopic endometrium by suppressing estrogen activity or ovarian estrogen production, and that all have similar efficacy in reducing pain but differ in adverse effects and cost",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that NSAIDs are first line for pain relief in endometriosis and can be used with other treatments, that evidence is inconclusive regarding their effect on endometriosis pain although they are effective in relieving primary dysmenorrhoea, and that paracetamol may be used with or as an alternative to NSAIDs but evidence for effectiveness is lacking",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "COCs for endometriosis can be taken long term and are usually well tolerated, both 28-day and extended regimens are used with no evidence that one is more effective, although extended regimens may be useful in women with dysmenorrhoea",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Progestogens for endometriosis can be used long term, with continuous norethisterone, IM medroxyprogesterone and the levonorgestrel IUD also providing contraception, while an effective non-hormonal method of contraception must be used during treatment with dienogest",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that the GnRH agonists goserelin and nafarelin are associated with hypo-estrogenic adverse effects such as hot flushes, vaginal dryness and decreased bone mineral density, that duration of treatment is limited to 6 months due to loss of bone mineral density, and that adding combined menopausal hormone therapy as add-back therapy reduces these adverse effects and protects against bone loss while maintaining efficacy, which may allow longer treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "An effective non-hormonal method of contraception must be used during treatment with GnRH agonists, to avoid pregnancy in the event of missed doses",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that danazol has androgenic adverse effects such as hirsutism and voice change that limit its use, that other treatments are preferred, that the maximum duration of treatment is 9 months, and that an effective non-hormonal method of contraception must be used during treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that specialist guidance is recommended in endometriosis and that surgery is often needed and may be the most effective treatment for moderate-to-severe cases and endometriomas",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that surgery is the treatment of choice for infertility associated with endometriosis, and that hormonal treatments do not improve fertility and can delay conception",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that symptom recurrence following surgery or hormonal treatment in endometriosis is common",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Endometriosis' (Obstetric and gynaecological drugs > Drugs for endometriosis) at https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-endometriosis/endometriosis, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 45,
+  "pass": 32,
+  "fail": 0
+ }
+}
