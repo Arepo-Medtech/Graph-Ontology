@@ -9,7 +9,7 @@ sources; nothing is fuzzy-matched and every link carries its method.
 | SNOMED CT-AU RF2 snapshot (NCTS) | AMT concepts at every level, `Has product name` (brand), `is a` (generic), active / precise ingredient, basis of strength, dose form, `Contains clinical drug` (pack → unit), AU preferred terms | Licensed. Read from disk (`AU_RF2_SNAPSHOT`), never committed. Concept activeness comes from a Concept snapshot, else the Concept *Full* file at the release root collapsed to its latest row, else the OWL axiom refset — see [Concept status](#concept-status) |
 | PBS Public API v3 | `items`, `amt-items`, `atc-codes`, and `item-atc-relationships`; selected `item-overview` evidence on demand | Commonwealth CC BY; copyright notice and source schedule retained in `cache/pbs/*.json` |
 | AMH Medicines, July 2026 | Curated pregnancy-safety and supplement-role distinctions, including route, gestational window and dose context | Subscriber source; only concise paraphrased metadata, edition, access date and direct URLs are committed |
-| OMOP vocabulary via OMOPHub (Athena 2026.2) | AMT products (TPUU/MPUU/MP) → OMOP `AMT` concepts → standard drug concepts (`Maps to`, RxNorm Extension / RxNorm); SNOMED substances → RxNorm ingredients as a second route — see [OMOP bridge](#omop-bridge) | Athena vocabularies under their own terms; only concept ids, codes and names are cached (`cache/`, git-ignored). Needs `OMOPHUB_API_KEY` |
+| OMOP vocabulary via OMOPHub (Athena 2026.2) | AMT products (TPUU/MPUU/MP) → OMOP `AMT` concepts → standard drug concepts (`Maps to`, RxNorm Extension / RxNorm); SNOMED substances → RxNorm ingredients as a second route — see [OMOP bridge](#omop-bridge) | Athena vocabularies under their own terms; only concept ids, codes and names are cached (`cache/`, git-ignored). Offline from an Athena bundle, or `OMOPHUB_API_KEY` for single lookups |
 | RxNorm via RxNav (NLM) | Ingredient identity (RxCUI, IN/PIN/MIN) for SNOMED substances: RxNorm's own SNOMED CT id map first, then SNOMED ancestor (salts/hydrates), then name equality — see [RxNorm resolution](#rxnorm-resolution) | US public domain |
 
 ## Levels (from FSN semantic tags)
@@ -74,7 +74,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/pbs_pull.py        # public tier: 1 request / 20 s
 .venv/bin/python scripts/rxnorm_enrich.py   # optional, ~1–2 h; first pass, by name via RxNav
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
-.venv/bin/python scripts/omophub_bridge.py vocab && .venv/bin/python scripts/omophub_bridge.py map tpuu && .venv/bin/python scripts/omophub_bridge.py substances   # optional, hours (120 req/min); needs OMOPHUB_API_KEY
+.venv/bin/python scripts/omophub_bridge.py athena ~/code/spine/out/omop-vocab   # AMT → OMOP standard drugs, offline from the Athena bundle installed by `spine omop vocab --athena` (~1 min)
 .venv/bin/python scripts/build_compendium.py
 ```
 
@@ -105,29 +105,31 @@ tables result:
 
 `transcode` gains `omop_amt_concept_id`, `omop_drug_concept_id`, `omop_drug_name`, `omop_drug_vocabulary`.
 
-**Status 2026-09-22 — stopped by the OMOPHub quota.** The free plan allows 3,000 API calls a month (error
-`monthly_limit_exceeded`); the bridge needs roughly 40,000. Before the ceiling it secured the whole AMT vocabulary
-(136,850 concepts, one pass, cached) and the first 1,600 TPUU mappings, which is enough to size the job:
+**Status 2026-09-22 — finished offline from an OHDSI Athena bundle (release v20260829; OMOP's AMT is v20210630), zero API
+calls.** The OMOPHub route hit the free plan's 3,000 calls/month after the vocabulary pass and 1,600 TPUU mappings; the
+same joins over Athena's `CONCEPT.csv` + `CONCEPT_RELATIONSHIP.csv` (`scripts/omophub_bridge.py athena <dir>`, DuckDB,
+~1 minute) completed every level and every substance:
 
-| compendium level | in OMOP's AMT (v20210630) | note |
-|---|---|---|
-| TPUU 24,634 | 19,344 (78.5 %) | 1,600 mapped: 1,580 reach a standard drug concept (RxNorm Extension 1,337, RxNorm 225) |
-| TPP 47,960 / CTPP 50,748 | 78 % | packs present at the same rate as their units |
-| MPP 17,008 | 14,114 (83 %) | |
-| MPUU 16,137 | 6,549 (41 %) | |
-| MP 9,858 | 139 (1.4 %) | OMOP's AMT carries almost no medicinal-product level |
-| AU substances 1,053 | 200 (`AU Substance` class) | |
+| compendium level | in OMOP's AMT | with a standard drug concept | target vocabularies |
+|---|---|---|---|
+| TPUU 24,634 | 19,344 (78.5 %) | 19,208 | RxNorm Extension 14,915 · RxNorm 3,503 · AMT 790 |
+| TPP 47,960 | 37,537 (78.3 %) | 37,334 | |
+| CTPP 50,748 | 39,846 (78.5 %) | 39,621 | |
+| MPUU 16,137 | 6,549 (40.6 %) | 6,464 | RxNorm 3,056 · RxNorm Extension 2,817 · AMT 591 |
+| MP 9,858 | 139 (1.4 %) | 139 | AMT only — OMOP carries almost no medicinal-product level |
+| substances 6,593 | 6,241 (94.7 %, SNOMED or AMT concept) | 4,379 reach an RxNorm ingredient | |
 
-The missing fifth are products released after the 2021 snapshot. To finish offline with zero API calls, download an
-OHDSI Athena bundle (free account; tick SNOMED, RxNorm, RxNorm Extension, AMT, LOINC, ATC, UCUM — see
-`~/code/spine/docs/athena.md`) and run `scripts/omophub_bridge.py athena <unpacked dir>`: DuckDB reads `CONCEPT.csv` and
-`CONCEPT_RELATIONSHIP.csv`, fills the same caches for every level (TPUU, TPP, CTPP, MPUU, MP) and all 6,593 substances,
-and writes the report; then rebuild. Two ways to finish: an OHDSI Athena download
-(free account; `CONCEPT.csv` + `CONCEPT_RELATIONSHIP.csv` hold every `Maps to` offline, zero API calls) or a paid
-OMOPHub plan. The scripts resume from the caches either way; the offline `report` needs no calls.
-OMOP's AMT snapshot is from 2021, so products released since are `in_omop=false`; the RxNav route stays
-the source for those. `out/omop_bridge_report.md` summarises coverage and lists where the two RxNorm routes
-disagree. Rate limit is 120 requests/min, so the first full run takes a few hours; caches make re-runs incremental.
+Substance routes compared (RxNav via SNOMED id vs OMOP `Maps to`): same RxCUI 3,119 · different 1,098 · OMOP only 162 ·
+RxNav only 313 · neither 1,901. The 1,098 disagreements are overwhelmingly **salt vs base**: RxNav keeps the salt
+(quetiapine fumarate 221153) where OMOP maps to the base ingredient (quetiapine 51272), as OHDSI's standard-ingredient
+convention requires — a systematic difference to be aware of when joining to OMOP data, not a set of errors.
+`out/omop_bridge_report.md` lists them. The missing fifth of products are those released after OMOP's 2021 AMT
+snapshot (`in_omop=false`); the RxNav route stays the source for those. Store counters after the rebuild:
+`with_omop_drug` 19,208 (was 1,580), `substances_with_omop_rxnorm` 4,379.
+
+The API path (`vocab`, `map`, `substances`) still works for incremental lookups with `OMOPHUB_API_KEY` (120 req/min,
+3,000/month free); the bundle lives outside the repo (`~/Documents/ONTOLOGIES/`), and only concept ids, codes and
+names are cached under `cache/` (git-ignored).
 
 ## RxNorm resolution
 
