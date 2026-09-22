@@ -1,0 +1,66 @@
+{
+ "guideline": "guidelines/hypoglycaemia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "ENTIRELY from ONE AMH page, read under subscription and PARAPHRASED. No passage reproduced, no source_text stored, so NOTHING here is machine re-checkable and every statement must be verified by a person against a current subscription. ⚠️ THIS IS THE ONE PAGE IN THIS BATCH THAT GIVES REAL TREATMENT DOSES -- the glucose volumes for severe hypoglycaemia in adults. They are queued for attestation. ⚠️ AMH'S OWN INSTRUCTION IS TO FOLLOW LOCAL PROTOCOL WHERE AVAILABLE, and that is carried as the guideline's first line. NO GLUCAGON DOSE IS GIVEN.",
+ "summary": {
+  "total": 7,
+  "pass": 0,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ AMH'S OWN INSTRUCTION: FOLLOW LOCAL PROTOCOL WHERE AVAILABLE. Hypoglycaemia can occur in people with diabetes RECEIVING INSULIN OR SULFONYLUREAS",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MILD HYPOGLYCAEMIA will respond to ORAL GLUCOSE OR SUCROSE (cane sugar). ⚠️ GIVE GLUCOSE -- eg GLUCOSE TABLETS -- TO PEOPLE TREATED WITH ACARBOSE, BECAUSE OF DELAYED ABSORPTION OF SUCROSE",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22"
+  },
+  {
+   "claim": "SEVERE HYPOGLYCAEMIA IN AN ADULT UNABLE TO TAKE ORAL FOOD OR FLUIDS: SC OR IM GLUCAGON, OR IV INFUSION OF 15-20 g GLUCOSE -- WHICH IS 150-200 mL OF GLUCOSE 10%, OR 75-100 mL OF GLUCOSE 20% INJECTION",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ ALTERNATIVELY GLUCOSE 50% INJECTION MAY BE USED -- GIVE BY SLOW IV INJECTION INTO A SECURE IV CANNULA IN AN ANTECUBITAL VEIN TO REDUCE THE RISK OF SUPERFICIAL THROMBOPHLEBITIS",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "IN CHILDREN with severe hypoglycaemia, GIVE GLUCAGON OR IV GLUCOSE 10% INJECTION and FOLLOW LOCAL PROTOCOL. ⚠️ MONITOR CLOSELY -- CONTINUED GLUCOSE BOLUSES MAY RENDER A YOUNG CHILD HYPEROSMOLAR, WITH THE RISK OF CEREBRAL OEDEMA",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "RESPONSE SHOULD OCCUR WITHIN 10 MINUTES FOR GLUCAGON AND WITHIN 4-5 MINUTES FOR GLUCOSE. ⚠️ WHEN THE PERSON HAS RESPONDED, GIVE LONGER-ACTING CARBOHYDRATES -- eg A SANDWICH -- TO PREVENT RECURRENT HYPOGLYCAEMIA",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ PROLONGED TREATMENT WITH GLUCOSE INFUSION MAY BE REQUIRED FOR HYPOGLYCAEMIA DUE TO A LONG-ACTING SULFONYLUREA. OCTREOTIDE MAY BE USED IF HYPOGLYCAEMIA PERSISTS DESPITE GLUCOSE INFUSION",
+   "source": "M1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Hypoglycaemia' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes/drugs-hypoglycaemia/hypoglycaemia, July 2026 release ('Last modified by AMH: July 2026'), read under subscription 2026-09-22",
+   "dose": true
+  }
+ ]
+}
