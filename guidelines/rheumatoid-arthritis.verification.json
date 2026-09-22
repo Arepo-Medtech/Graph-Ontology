@@ -1,0 +1,246 @@
+{
+ "guideline": "guidelines/rheumatoid-arthritis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i",
+  "https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED. R1 and R2 are AMH's Rheumatoid arthritis topic and its Antirheumatics comparative table, paraphrased, no passage stored: the drug ladder and the dosing frequencies. S1 is an OPEN RACGP AJGP RESEARCH paper (May 2021) analysing a decade of BEACH data on how Australian GPs actually manage RA, quoted verbatim. It is used for two things AMH does not give: the GP's role and referral triggers as the RACGP guideline sets them, and what Australian practice actually looks like. ⚠️ S1 ITSELF NOTES THAT THE RACGP GUIDELINE IT REPORTS WAS ALREADY 10 YEARS OLD IN 2021, and that caveat is quoted and carried. NO DOSE APPEARS IN THIS GUIDELINE -- AMH's table gives FREQUENCIES, not doses, and no monograph was retrieved.",
+ "summary": {
+  "total": 34,
+  "pass": 10,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "The rationale for drug use in rheumatoid arthritis is to relieve symptoms of pain and stiffness, maintain level of function, and PREVENT DAMAGE TO BONES, JOINTS AND OTHER ORGANS",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "PATIENTS WITH RHEUMATOID ARTHRITIS ARE AT INCREASED RISK OF DEATH DUE TO CARDIOVASCULAR DISEASE compared with the general population: MANAGE CARDIOVASCULAR RISK FACTORS AND DISCOURAGE SMOKING",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Assess baseline function and joint damage and consider prognosis before starting treatment; provide education about the disease and the protection of joints, and arrange appropriate PHYSICAL AND OCCUPATIONAL THERAPY review",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Before starting treatment that suppresses immune function, consider active or latent infection such as hepatitis B or TB, IMMUNISATION REQUIREMENTS especially for LIVE VACCINES, hepatitis B vaccination if at risk, and any history of malignant disease",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "NSAIDs, paracetamol and an antirheumatic drug CAN BE STARTED WITH THE FIRST SYMPTOMS of rheumatoid arthritis",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "REFER TO A RHEUMATOLOGIST ONCE THE DIAGNOSIS IS MADE, AS MUCH OF THE JOINT DAMAGE OCCURS EARLY IN THE DISEASE, and treatment with an antirheumatic at this stage WILL RETARD PROGRESSIVE JOINT DESTRUCTION AND REDUCE LONG-TERM DISABILITY",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Drug choice is based on disease severity such as the presence of active synovitis, response to previous therapy, comorbidities, and the relative efficacy and toxicity of the drugs",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In EARLY rheumatoid arthritis, symptoms are best controlled by DISEASE SUPPRESSION WITH AN ANTIRHEUMATIC; analgesics including NSAIDs may also be needed",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LATE in disease, inflammation may not be prominent and PAIN IS OFTEN RELATED TO MECHANICAL FACTORS associated with established joint damage; management then includes physiotherapy, occupational therapy and surgical intervention, and paracetamol may be used instead of, or in addition to, an NSAID",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "INITIAL TREATMENT IS USUALLY WITH METHOTREXATE ALONE; if inadequate, a combination of antirheumatics THAT INCLUDES METHOTREXATE IF TOLERATED may be used",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "SULFASALAZINE OR HYDROXYCHLOROQUINE may be chosen first if symptoms are MILD and there are NO SIGNS OF POOR PROGNOSIS; SULFASALAZINE IS MORE EFFECTIVE AND ACTS SOONER THAN HYDROXYCHLOROQUINE",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LOW-DOSE ORAL CORTICOSTEROIDS are well tolerated and, USED IN EARLY DISEASE, MAY REDUCE EROSIONS; they may be used to minimise disease activity before the antirheumatic's onset of effect and to reduce inflammation during flares",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "WHEN STOPPING CORTICOSTEROIDS REDUCE THE DOSE SLOWLY TO AVOID REBOUND FLARE OF SYMPTOMS; there is concern about long-term adverse effects such as OSTEOPOROSIS and about DIFFICULTY WEANING PATIENTS FROM TREATMENT",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "INTRA-ARTICULAR corticosteroids can be used for symptomatic joints with synovitis AT ANY STAGE of the disease; PULSE, higher-dose, oral, IM or IV corticosteroids can bring the disease under control rapidly BUT THEIR USE IS CONTROVERSIAL",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CYTOKINE MODULATORS have a FASTER ONSET OF ACTION than conventional antirheumatics -- WITHIN WEEKS RATHER THAN MONTHS -- and are used, usually WITH METHOTREXATE, when conventional antirheumatics are inadequate; the Janus kinase inhibitors such as baricitinib and tofacitinib are not usually called biologicals",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Pro-inflammatory cytokines such as interleukin-1 and -6 and TNF alpha are involved in the pathogenesis of RA, and INHIBITING THEM CAN CAUSE ADVERSE EFFECTS BECAUSE THEY ARE ALSO IMPORTANT IN IMMUNE DEFENCE AGAINST TUMOURS AND INFECTION",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AVOID USING MORE THAN ONE CYTOKINE MODULATOR AT A TIME, AS THIS FURTHER INCREASES SUSCEPTIBILITY TO SERIOUS INFECTIONS",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ENSURE THAT ALL PATIENTS WITH RHEUMATOID ARTHRITIS RECEIVE PNEUMOCOCCAL AND ANNUAL INFLUENZA VACCINATIONS",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ADDING FISH OIL SUPPLEMENTS -- AT LEAST 2.7 g OF OMEGA-3 FATTY ACIDS DAILY -- REDUCES SEVERITY OF SYMPTOMS COMPARED WITH PLACEBO",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH refers readers to the Australian evidence-based LIVING recommendations for the treatment of inflammatory arthritis at livingguidelines.org",
+   "source": "R1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Rheumatoid arthritis' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Conventional antirheumatic regimens and selected adverse effects: AZATHIOPRINE oral once or twice daily, myelosuppression and hepatotoxicity; CICLOSPORIN oral twice daily, renal insufficiency, anaemia and hypertension; HYDROXYCHLOROQUINE oral once or twice daily, RETINAL DAMAGE, rash and GI effects; LEFLUNOMIDE oral once daily, infections, diarrhoea, PERIPHERAL NEUROPATHY, alopecia, rash, raised liver enzymes and headache; METHOTREXATE oral, SC or IM ONCE A WEEK, myelosuppression, mucosal ulcers, infections, nausea and diarrhoea; SULFASALAZINE oral in 2 or 3 doses daily, myelosuppression and rash",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Antirheumatics for rheumatoid arthritis: comparative information' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Cytokine modulator regimens: ABATACEPT SC once a week or IV every 4 weeks; ANAKINRA SC DAILY; RITUXIMAB IV as a 2-dose course repeated after more than 6 months; TOCILIZUMAB SC once a week or IV every 4 weeks -- selected adverse effects being infections for all, plus neutropenia for anakinra and tocilizumab, and thrombocytopenia, hyperlipidaemia and infusion-related reactions for tocilizumab",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Antirheumatics for rheumatoid arthritis: comparative information' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Janus kinase inhibitor regimens: BARICITINIB oral once daily, UPADACITINIB oral once daily, TOFACITINIB oral twice daily -- with infections, VENOUS THROMBOEMBOLISM and hyperlipidaemia listed for all three, and neutropenia and lymphopenia additionally for tofacitinib",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Antirheumatics for rheumatoid arthritis: comparative information' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "TNF-alpha antagonist regimens: ADALIMUMAB SC every 2 weeks; CERTOLIZUMAB SC every 2 or 4 weeks; ETANERCEPT SC once or twice a week; GOLIMUMAB SC once a month; INFLIXIMAB IV every 8 weeks or SC every 2 weeks -- with infections, WORSENING HEART FAILURE and blood dyscrasias listed for the class",
+   "source": "R2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Table - Antirheumatics for rheumatoid arthritis: comparative information' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/rheumatoid-arthritis, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In Australia in 2015 rheumatoid arthritis ranked 14TH OF THE 20 LEADING CAUSES OF TOTAL DISEASE BURDEN, with an Australian population prevalence reported at 0.5 to 0.6% and significantly higher in females than males",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Australia in 2015, rheumatoid arthritis (RA) ranked 14th of the 20 leading causes of total disease burden. … The Australian population prevalence of RA has been reported at 0.5-0.6%, … and significantly higher for females than for males.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GPs play an important part in the EARLY DIAGNOSIS and management of RA through referral to specialists, coordination and continuity of care, and ongoing co-management",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "General practitioners (GPs) play an important part in the early diagnosis and management of RA through referral to specialists, coordination and continuity of care, and ongoing co-management with other health professionals.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "THE RACGP GUIDELINE'S DIAGNOSTIC AND INITIAL PLAN, as reported by this study: history, clinical examination and diagnostic investigations -- ESR and/or CRP, RHEUMATOID FACTOR and ANTI-CYCLIC CITRULLINATED PEPTIDE (CCP) ANTIBODY -- plus simple analgesics and NSAIDs having evaluated cardiovascular, gastrointestinal and renal status",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The RACGP guidelines recommend GPs undertake a diagnostic process - history, clinical examination and diagnostic investigations (ESR and/or CRP, RhF and anti-cyclic citrullinated peptide [CCP] antibody) - and initial management plan (simple analgesics; NSAIDs, having evaluated cardiovascular, gastrointestinal and renal status).",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ THE REFERRAL TRIGGERS, as the study reports them from the RACGP guideline: RHEUMATOLOGIST REFERRAL SHOULD OCCUR IMMEDIATELY IF RHEUMATOID FACTOR AND/OR ANTI-CCP ANTIBODY IS POSITIVE, OR WITHIN SIX WEEKS AFTER PERSISTENT SWELLING IN MORE THAN ONE JOINT EVEN IF RHEUMATOID FACTOR IS NEGATIVE, OR IF NSAIDs OR STEROIDS ARE REQUIRED BEYOND SIX WEEKS after initial treatment -- with low-dose corticosteroids prescribed after consulting a rheumatologist, and DMARDs as early as possible for patients with poor prognosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If these fail, GPs are recommended to prescribe low-dose corticosteroids (after consulting a rheumatologist), and DMARDs as early as possible for patients with poor prognosis; rheumatologist referral should occur immediately if RhF and/or anti-CCP antibody is positive, or within six weeks after persistent swelling in more than one joint, even if RhF is negative, or if NSAIDs/steroids are required beyond six weeks after initial treatment.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ THE STUDY'S OWN CAVEAT ON THAT GUIDELINE: it notes the management actions recorded appear to correlate with current RACGP recommendations 'ALTHOUGH THESE ARE NOW 10 YEARS OLD AND MAY WARRANT REVISION' -- written in 2021",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "although these are now 10 years old and may warrant revision",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Across a decade of BEACH data, proportions of RA management encounters REMAINED STATIC, were higher for female patients, INCREASED WITH PATIENT AND GP AGE, increased with socioeconomic disadvantage in major cities, were higher for patients from English-speaking backgrounds, and were higher in regional and remote areas",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportions of RA management encounters: remained static across the decade, were higher for female patients, increased with patient and GP age, increased with socioeconomic disadvantage in major cities, were higher for patients from English-speaking backgrounds, and were higher in regional/remote areas.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The study concluded that GP BEHAVIOUR INDICATES EQUITY AND UNIFORMITY IN RA MANAGEMENT NATIONALLY, with very few differences across rurality groups in the management actions recorded",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GP behaviour indicates equity and uniformity in RA management nationally. … Generally, there were very few differences across rurality groups in the proportions of RA problem contacts receiving the management actions recorded, which suggests equity in the management provided by GPs across Australia.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ TWO PRESCRIBING FIGURES THE AUTHORS FLAG: NSAIDs were prescribed at 12% of RA contacts and the authors note it would be useful to determine the DURATION of use given the risks; and OPIOIDS at 12.5% OF RA CONTACTS, which 'should also be used prudently, given growing evidence of opioid-related harm'",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Given the risks associated with NSAID use, it would be useful to determine the duration of use for the 12% of RA contacts for whom NSAIDs were prescribed. … Opioids (12.5% of RA contacts) should also be used prudently, given growing evidence of opioid-related harm.",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ ACCESS IS UNEVEN: the RACGP guidelines recommend early referral to a specialist to improve outcomes, HOWEVER ACCESS TO SPECIALISTS OFTEN DIFFERS ACROSS GEOGRAPHIC AREAS, and COST IS ALSO A MAJOR BARRIER TO SPECIALIST CARE",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The RACGP guidelines also recommend early referral to a specialist to improve patient outcomes; … however, access to specialists often differs across geographic areas. … Cost is also a major barrier to specialist care,",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  },
+  {
+   "claim": "People living in the most disadvantaged areas are MORE LIKELY TO BE CURRENT SMOKERS AND HAVE OBESITY, factors that EXACERBATE SYMPTOMS OF RA",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People living in the most disadvantaged areas are more likely to be current smokers and have obesity (factors that exacerbate symptoms of RA),",
+   "locator": "RACGP, Australian Journal of General Practice, RESEARCH, 'Characteristic-specific rates of rheumatoid arthritis and its management in Australian general practice', Volume 50 Issue 5, May 2021, at https://www1.racgp.org.au/ajgp/2021/may/rates-of-rheumatoid-arthritis-and-its-management-i, retrieved 2026-09-22"
+  }
+ ]
+}
