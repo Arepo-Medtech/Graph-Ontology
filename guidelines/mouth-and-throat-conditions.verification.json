@@ -1,0 +1,273 @@
+{
+ "guideline": "guidelines/mouth-and-throat-conditions.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2020/september/common-benign-and-malignant-oral-mucosal-disease",
+  "https://www1.racgp.org.au/ajgp/2020/september/dental-abscess-death-and-morbidity",
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 and S2 are open RACGP AJGP articles from September 2020, fetched and checked verbatim (20 claims). A1 is AMH, paraphrased, no passage reproduced and no source_text stored (21 claims, 6 doses). THE SOURCES GIVE DIFFERENT REFERRAL THRESHOLDS FOR A NON-HEALING ORAL ULCER: S1 says 2 weeks or more, A1 says consider neoplasia beyond 3 weeks. Both are stated with attribution and the guideline does not split the difference, because the shorter threshold is the safer one for a cancer referral and saying so is a judgement the reader should make with both numbers in front of them. AMH's artificial saliva product table lists branded products with pH values; NO product row is reproduced, and only the clinically actionable rule -- neutral pH for patients with their own teeth -- is carried.",
+ "claims": [
+  {
+   "claim": "S1 states that mucosal turnover should occur in under 10 days and therefore any persistent ulcer that has been present for 2 weeks or more should be referred to an oral and maxillofacial surgeon or oral medicine specialist for biopsy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mucosal turnover should occur in <10 days; 2 therefore, any persistent ulcer that has been present for ≥2 weeks should be referred to an oral and maxillofacial surgeon or oral medicine specialist for biopsy."
+  },
+  {
+   "claim": "An ulcerated lesion is most commonly traumatic or immunological in origin, but the most important lesion to exclude is an oral malignancy, and persistence as opposed to episodic recurrence of an ulcer is an important feature",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An ulcerated lesion is most commonly traumatic or immunological (aphthous) in origin; however, the most important lesion to exclude is an oral malignancy. … Persistence, as opposed to episodic recurrence, of an ulcer is an importance feature."
+  },
+  {
+   "claim": "The most common oral ulcer is caused by trauma, most often mechanical such as biting but also thermal, radiation or chemical, and the cause must be addressed with review to ensure mucosal healing within two weeks, referring to an oral and maxillofacial surgeon if it persists beyond that period",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most common oral ulcer is one caused by trauma. This trauma is most often mechanical (eg biting) but may also be from thermal, radiation or chemical means. … The cause must be addressed if possible, and review to ensure mucosal healing within two weeks is recommended. If the ulcer persists beyond this period, referral to an oral and maxillofacial surgeon should be undertaken."
+  },
+  {
+   "claim": "Recurrent aphthous ulceration affects 20 to 50% of the population and presents as painful recurrent ulcers that almost always affect non-keratinised oral mucosa, with three recognised clinical subtypes: minor which is most common, major and herpetiform",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recurrent aphthous ulceration (otherwise known as recurrent aphthous stomatitis [RAS]) affects 20-50% of the population 3 and presents as painful, recurrent ulcers that almost always affect non-keratinised oral mucosa (buccal mucosa, floor of mouth, vestibule of the lips, soft palate and tongue). The aetiology of RAS is unknown but is thought most likely to be immunologically mediated. 4 There are three recognised clinical subtypes based on their clinical presentation: minor (most common), major and herpetiform."
+  },
+  {
+   "claim": "Minor aphthous ulcers are oval shaped and under 10 mm, frequently last 5 to 10 days and heal without scarring, while major aphthous ulcers are variably shaped and over 10 mm, can last up to six weeks, can heal with scarring, and can resemble an ulcer of an early malignancy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Minor aphthous ulcers are oval shaped and <10 mm in size, frequently last 5-10 days and heal without scarring (Figure 2). Major aphthous ulcers are variably shaped and >10 mm in size, can last up to six weeks and can heal with scarring. They can resemble an ulcer of an early malignancy."
+  },
+  {
+   "claim": "Herpetiform aphthous ulcers are numerous 1 to 2 mm diameter ulcerations that may coalesce, are not restricted to non-keratinised oral mucosa, and heal in 1 to 2 weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Herpetiform aphthous ulcers are numerous 1-2 mm diameter ulcerations that may coalesce and are not restricted to non-keratinised oral mucosa. They heal in 1-2 weeks."
+  },
+  {
+   "claim": "Aphthous-like ulceration can be associated with haematinic deficiency or gastrointestinal or rheumatological disease, and vitamin B12, folic acid or iron deficiency can be associated with recurrent aphthous stomatitis in a small proportion of patients, so these nutritional markers should be checked and corrected in this subgroup",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aphthous-like ulceration can be associated with haematinic deficiency or gastrointestinal or rheumatological disease. Vitamin B12, folic acid or iron deficiency can also be associated with RAS in a small proportion of patients, and these nutritional markers should be checked and corrected in this subgroup."
+  },
+  {
+   "claim": "The major risk factors for oral cavity squamous cell carcinoma are smoking, alcohol consumption of more than 3 standard drinks per day and betel quid consumption",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The major risk factors for oral cavity SCC are smoking, 8 alcohol consumption of >3 standard drinks per day 9 and betel quid (paan) consumption."
+  },
+  {
+   "claim": "Oral squamous cell carcinoma most commonly presents as a non-healing ulcer which can be indurated or firm with irregular margins and raised rolled edges, and as it invades adjacent structures may cause neurosensory change and tooth mobility, with alteration of speech and swallowing in late stages",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral SCC most commonly presents as a non-healing ulcer, which can be indurated/firm and have irregular margins and raised, rolled edges (Figures 3-6). As SCC invades adjacent structures in the oral cavity, it may result in neurosensory change (paraesthesia or anaesthesia) and tooth mobility. In late stages, it may cause alteration of speech and swallowing."
+  },
+  {
+   "claim": "S1 states that oral squamous cell carcinoma may not necessarily be painful and pain is not used to differentiate between a potentially malignant or benign cause of an ulcer, that it is found across virtually all age groups, and that up to 10% of squamous cell carcinomas are diagnosed in patients who do not smoke or drink alcohol, so the absence of risk factors does not rule out the possibility of malignancy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is important to note that oral SCC may not necessarily be painful, and pain is not used to differentiate between a potentially malignant or benign cause of an ulcer. In addition, oral SCC is found across virtually all age groups (including paediatric, although rarely), and up to 10% of SCCs are diagnosed in patients who do not smoke or drink alcohol. 10 Therefore, the absence of risk factors does not rule out the possibility of malignancy."
+  },
+  {
+   "claim": "If an ulcer is suspected to have any suspicious malignant features then immediate referral to an oral and maxillofacial surgeon or specialist unit in a tertiary hospital is indicated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If an ulcer is suspected to have any suspicious malignant features, then immediate referral to an oral and maxillofacial surgeon or specialist unit in a tertiary hospital is indicated."
+  },
+  {
+   "claim": "S1 states the possibility of an oral cavity malignancy should always be considered particularly with a non-healing ulcer, a bleeding lesion or an area of mucosa that persistently appears red or white, that leukoplakia and erythroplakia require mandatory referral for biopsy as a significant proportion will be dysplastic or malignant, and that any tissue excised from the oral cavity should be sent for histopathological examination",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The possibility of an oral cavity malignancy should always be considered, particularly with the presentation of a non-healing ulcer, a bleeding lesion or an area of mucosa that persistently appears red or white. - Any persistent ulcer that has been present for ≥2 weeks should be referred to an oral and maxillofacial surgeon or oral medicine specialist for biopsy. - Leukoplakia and erythroplakia are clinical terms used to describe oral white and red patches respectively that cannot be scraped off and cannot be ascribed to any disease or condition. Referral for biopsy is mandatory as a significant proportion of these lesions will be dysplastic or malignant. - Any tissue excised from the oral cavity should be sent for histopathological examination as the clinical appearance alone is insufficient to ensure a correct diagnosis."
+  },
+  {
+   "claim": "Lip cancer typically presents as a non-healing ulcer on the vermillion of the lower lip and its management is primarily surgical excision",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Lip cancer typically presents as a non-healing ulcer on the vermillion of the lower lip (Figure 7). The management of lip cancer is primarily surgical excision."
+  },
+  {
+   "claim": "S2 states that once dental infection has spread beyond the confines of the jaws there is an increasing risk of airway obstruction and septicaemia, and that if treated with antibiotics alone the infection will not resolve and will become progressively worse",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Once the infection has spread beyond the confines of the jaws, there is an increasing risk of airway obstruction and septicaemia. If treated with antibiotics alone, the infection will not resolve and will become progressively worse."
+  },
+  {
+   "claim": "S2 states that prompt assessment and referral to a tertiary hospital is required for cases at risk of airway compromise",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Prompt assessment and referral to a tertiary hospital is required for cases at risk of airway compromise."
+  },
+  {
+   "claim": "Patients with dental abscesses commonly initially present to their primary health providers, particularly if they have dental phobia or are financially constrained, and it is easy to underestimate their condition particularly if the infection has spread beyond the confines of the jaws",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Patients with dental abscesses commonly initially present to their primary health providers, particularly if they have dental phobia or are financially constrained. It is easy to underestimate their condition, particularly if the infection has spread beyond the confines of the jaws."
+  },
+  {
+   "claim": "S2 states that in the pre-antibiotic era dental infection was a common cause of death with fatality rates of 10 to 40%, that with antibiotics odontogenic infections responded well to penicillin, and that this may have created a false sense of security while antibiotic-resistant bacteria were generally on the increase",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "In the pre-antibiotic era, dental infection was a common cause of death, with fatality rates of 10-40%. 1 With the advent of antibiotics, odontogenic infections responded well to penicillin. This may have created a false sense of security, and such cases were usually treated by junior hospital staff operating out of hours. It may not have been noticed that antibiotic-resistant bacteria were generally on the increase."
+  },
+  {
+   "claim": "S2 reports that a patient with a spreading odontogenic infection died of airway obstruction a few hours after operation at the Royal Adelaide Hospital in 2002, prompting an immediate review and an audit, and that more than 1000 cases of severe odontogenic infection were managed there between 2002 and 2019",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "This was the situation at the Royal Adelaide Hospital in 2002 when a patient with a spreading odontogenic infection died of airway obstruction a few hours after operation (Case 1). … Altogether, more than 1000 cases of severe odontogenic infection have been managed at the Royal Adelaide Hospital in the period 2002-19."
+  },
+  {
+   "claim": "S2 states the most dangerous anatomical space is the submandibular space, that when the masseter muscle is irritated by inflammation trismus or difficulty in jaw opening ensues, and that the submandibular space is in direct contact with the pharyngeal spaces and down through the neck to the mediastinum and also connects to the contralateral side",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "The most dangerous space is the submandibular space, which is bounded by the mandible laterally, the mylohyoid muscle above and the subcutaneous tissue and skin below. It contains the submandibular gland, lymph nodes and the masseter muscle. When this muscle is irritated by the inflammation, trismus or difficulty in jaw opening ensues. The submandibular space is in direct contact with the pharyngeal spaces and down through the neck to the mediastinum. It also connects to the contralateral side."
+  },
+  {
+   "claim": "S2 states that swelling from the submandibular spaces can extend over a wide area of the airway in both length and breadth, and that Ludwig's angina strictly refers only to cases in which the whole neck bilaterally from the mandible to the clavicle is involved, such cases having a poor prognosis, although the term is commonly misinterpreted to apply to any localised neck infection",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "It is essential to understand that swelling from the submandibular spaces can extend over a wide area of the airway in both length and breadth (Figure 1). … Strictly, Ludwig's angina only refers to cases in which the whole neck bilaterally from the mandible to the clavicle is involved in infection. Such cases have a poor prognosis. 6,7 However, the term 'Ludwig's angina' is commonly misinterpreted to apply to any localised neck infection."
+  },
+  {
+   "claim": "Angular cheilitis is redness and maceration of the skin at the angle of the mouth usually associated with oral candidiasis, treated with topical miconazole, while crusting may suggest infection with Staphylococcus aureus, and other causes include ill-fitting dentures, dermatitis, and vitamin B or iron deficiency",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that for dental abscess, treatment by a dentist is crucial to remove infected tissue, drain the abscess and if necessary extract the tooth, that an antibacterial may also be required and is adjunctive to surgical treatment, and that antibacterial treatment should not be used alone as it cannot replace the need for dental or surgical treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Causes of dry mouth include disease of the salivary glands, radiation therapy and medication particularly drugs with anticholinergic activity such as tricyclic antidepressants",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises for dry mouth simple measures such as regular non-acidic sugarless drinks, sucking ice or sugarless lozenges, and sugarless chewing gum, notes artificial saliva products may be of benefit with neutral pH products recommended for patients with their own teeth, and encourages regular dental checks to monitor dental and gingival health",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's artificial saliva products table lists sprays and gels with pH values ranging from about 5 to 7, the higher-pH products being those closer to neutral",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Gingivitis is caused by plaque and calculus deposits on the teeth, effective treatment requires their removal by a dentist, and good oral hygiene with effective brushing and flossing prevents gingivitis and periodontal disease",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Non-alcoholic chlorhexidine mouthwash can inhibit plaque formation and may be used in moderate-to-severe gingivitis as an adjunct to improved oral hygiene and teeth scaling by a dentist",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that in acute ulcerative gingivitis antibacterial treatment is also needed, for example amoxicillin with clavulanic acid or clindamycin for 5 days, and that more severe infections require combination antibacterial treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In mild-to-moderate herpes stomatitis an adequate fluid intake, soft diet and analgesics may be all that is required, non-alcoholic chlorhexidine mouthwash can be used if tooth brushing is too painful, and severe herpes stomatitis requires systemic antivirals",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Oral candidiasis is more common in elderly people, and treatment with broad-spectrum antibacterials or inhaled corticosteroids, immunosuppression and diabetes all increase risk",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises that for immunocompetent patients oral candidiasis is treated with a topical antifungal such as miconazole, amphotericin B or nystatin for 1 to 2 weeks, with an oral antifungal such as fluconazole considered for severe or unresponsive disease especially in immunocompromised patients, and that for denture-associated candida stomatitis the upper surface of dentures should be brushed with oral miconazole after cleaning teeth",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that most oral ulcers are idiopathic and heal spontaneously in 10 to 14 days and often recur, that causes may include oral trauma, poor nutrition, drugs such as methotrexate, NSAIDs and nicorandil, infection and some diseases, and that neoplasia should be considered in non-healing ulcers present for more than 3 weeks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises using a saline mouthwash made by dissolving half a teaspoon of salt in a glass of warm water to soothe mild oral ulcers, and that non-alcoholic chlorhexidine mouthwash can be used short-term as it may hasten ulcer healing and prevent secondary infection",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states there is limited evidence for using topical agents to reduce oral ulcer severity and duration and that they do not prevent recurrence, that local corticosteroids such as triamcinolone paste offer symptomatic relief and may promote healing of mild to moderate ulcers and are best applied in the prodromal phase or when ulcers first appear, that local anaesthetics or anti-inflammatory drugs can be applied as needed for temporary analgesia, and that protectants stick to the mucosa and protect the ulcer from further abrasion",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sore throat is commonly caused by a virus and occasionally the cause is bacterial typically streptococcal, and topical products for symptomatic relief often contain anaesthetic, anti-inflammatory or antiseptic agents in a lozenge, gargle or spray with little evidence of benefit",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that in patients with severe acute sore throat where pain is not relieved by paracetamol or NSAIDs, consider adding to standard care a single dose of corticosteroid such as prednisolone 1 mg per kg to a maximum of 50 mg, repeating the dose the next day if necessary",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Group A beta-haemolytic streptococci are a more common cause of sore throat in children than adults, and symptoms may present abruptly and include fever, tonsillar exudate, cervical lymphadenopathy and absence of cough",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises that for suspected group A streptococcal pharyngitis and tonsillitis, patients at high risk of rheumatic fever such as rural or remote Aboriginal people should be treated with a systemic antibacterial, while for patients not at high risk antibacterials should be considered if symptoms are severe as they may reduce symptom duration and complications",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that where antibacterials are indicated for streptococcal sore throat, treat for 10 days with phenoxymethylpenicillin with cefalexin as an alternative, and that a single dose of IM benzathine benzylpenicillin may also be used",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that recurrent sore throat is common in childhood and usually has a viral cause, that recurrent tonsillitis is often over-diagnosed, that a throat swab during an acute episode can help guide diagnosis and management, and that although approaches including long-term low-dose penicillin have been used for true recurrent tonsillitis there is no good evidence of benefit and specialist referral should be considered",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that regular brushing and flossing and avoiding sugary foods and smoking, which reduces saliva, are important in preventing tooth decay, that fluoride encourages tooth enamel to repair itself, and that fluoride mouth rinses may reduce tooth decay in children even when fluoridated water and toothpaste are used",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Mouth and throat conditions' (Ear, nose and throat drugs > Drugs for mouth and throat conditions), including the 'Artificial saliva products' table, at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-mouth-throat-conditions/mouth-throat-conditions, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 41,
+  "pass": 20,
+  "fail": 0
+ }
+}
