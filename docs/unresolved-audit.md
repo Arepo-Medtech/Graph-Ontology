@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 61 guidelines · 2,458 claims · 380 `Unresolved` rows**
+**Generated 2026-09-22 · 62 guidelines · 2,510 claims · 388 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -205,6 +205,10 @@ one; only the formatting differs.**
 **Four Australian paediatric sepsis documents are now in this compendium.** **RCH, NSW and Queensland** each
 list **Aboriginal and Torres Strait Islander** (Queensland adds **Pacific Islander or Māori**) origin as a risk
 factor, **none with a stated basis, magnitude or cultural safety guidance**.
+
+⚠️ **A fifth document joins them: bronchiolitis**, which lists **"Indigenous ethnicity"** — two words, no
+basis, no magnitude, no cultural safety guidance — as a risk factor for severe disease. **It is the bluntest
+of the five.**
 
 **Western Australia does not name an ethnicity at all.** Its high-risk list reaches the same populations
 through **rural and/or remote location · socioeconomic deprivation · delayed access to healthcare ·
