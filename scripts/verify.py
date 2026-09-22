@@ -39,13 +39,26 @@ def split_frags(s):
 # "pass" requires a verbatim quote. The rest record why no quote exists; they
 # count toward total but not toward pass, which is the 6-claim gap in the totals.
 VERDICTS = {"pass", "fail", "not_quoted", "not_asserted", "searched_not_found",
-            "attested_not_sourced", "pass_image_transcription"}
+            "attested_not_sourced", "pass_image_transcription",
+            "licensed_source_not_quoted"}
 
 # "pass" means the quote was checked against RETRIEVED TEXT and can be re-checked
 # here. "pass_image_transcription" means a human-or-model read it off a diagram:
 # genuinely checked against the source, but NOT machine re-checkable, and subject
 # to transcription error in a way text quotes are not. Doses read this way should
 # be re-checked against the image by a person before use.
+#
+# "licensed_source_not_quoted" means the claim was read in a SUBSCRIBER source
+# (AMH, Therapeutic Guidelines) and paraphrased. No source_text is stored, because
+# storing the passage would redistribute licensed content. The claim therefore
+# CANNOT be machine re-checked from this repository: it carries a locator (which
+# topic, retrieved when) and must be verified by a person against their own
+# subscription. It counts toward total and NOT toward pass.
+#
+# Do NOT attach a citation to one of these claims that was found afterwards to fit
+# it. A claim read in AMH and cited to a PubMed paper located later records a
+# provenance that did not happen, and the verbatim check would PASS while the
+# attribution is false -- the one error this tool cannot see.
 
 # Unicode punctuation the scrape and the JSON render differently. Folding these
 # is an ENCODING normalisation: the words are identical either way.
@@ -85,6 +98,13 @@ def check(path, source=None, only_source=None):
         need = ("claim", "source", "verdict", "source_text") \
                if v in ("pass", "pass_image_transcription") \
                else ("claim", "source", "verdict")
+        if v == "licensed_source_not_quoted":
+            if (c.get("source_text") or "").strip():
+                errs.append(f"claim {i}: licensed_source_not_quoted must NOT carry "
+                            f"source_text (storing it redistributes licensed content)")
+            if not (c.get("locator") or "").strip():
+                errs.append(f"claim {i}: licensed_source_not_quoted requires a "
+                            f"locator (which topic, retrieved when)")
         for k in need:
             if not (c.get(k) or "").strip():
                 errs.append(f"claim {i}: missing or empty {k}")
@@ -102,6 +122,10 @@ def check(path, source=None, only_source=None):
     if nimg:
         notes.append(f"{nimg} claim(s) transcribed from a DIAGRAM - not machine "
                      f"re-checkable; verify doses against the image by eye")
+    nlic = sum(1 for c in claims if c.get("verdict") == "licensed_source_not_quoted")
+    if nlic:
+        notes.append(f"{nlic} claim(s) read in a LICENSED source and paraphrased: "
+                     f"not machine re-checkable here, verify against a subscription")
     nunq = sum(1 for c in claims
                if c.get("verdict") not in ("pass", "fail", "pass_image_transcription"))
     if nunq:

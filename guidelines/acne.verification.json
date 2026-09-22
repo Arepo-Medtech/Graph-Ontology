@@ -1,0 +1,302 @@
+{
+ "guideline": "guidelines/acne.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/acne",
+  "https://www1.racgp.org.au/ajgp/2023/october/unique-considerations-in-skin-of-colour"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "TWO SOURCES OF DIFFERENT KIND. A1 is the Australian Medicines Handbook therapeutic topic 'Acne' (July 2026 release), read under the subscription on this machine and PARAPHRASED. No AMH passage is reproduced and no source_text is stored, because storing it would redistribute licensed content; each A1 claim carries a locator naming the topic and retrieval date and has verdict licensed_source_not_quoted. Those claims CANNOT be machine re-checked from this repository and must be verified against a subscription. No citation has been attached to an A1 claim from any other work: a claim read in AMH and cited to a paper located afterwards would record a provenance that did not happen, and the verbatim check would pass while the attribution was false. S2 is open access, fetched with curl, and every S2 claim is verbatim-checked with scripts/verify.py. AMH drug monograph doses were deliberately not transcribed.",
+ "claims": [
+  {
+   "claim": "Acne vulgaris arises from increased sebum production, abnormal follicular keratinisation, proliferation of Cutibacterium acnes and inflammation, and management is directed at these factors",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Mild acne is mainly comedones with some papules and pustules; moderate is more widespread papules and pustules with possible mild scarring; severe has nodules, pseudocysts and widespread papules and pustules with possible extensive scarring",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Treatment should start early to prevent scarring and be tailored to severity",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Stated aims of drug treatment include improving complexion, preventing scarring, limiting disease duration and reducing acne-related depression and low self esteem",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The possibility of pregnancy should be considered and discussed before selecting acne treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Benzoyl peroxide, topical clindamycin and oral erythromycin are safe in pregnancy, and azelaic acid is considered safe because absorption is low despite absent data",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Doxycycline is contraindicated after 18 weeks gestation, equivalent to 16 weeks post conception, but is safe before that point",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cyproterone, topical and oral retinoids, and spironolactone are contraindicated in pregnancy",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical retinoids and benzoyl peroxide are first-line in mild or moderate acne, with azelaic acid as the alternative if either is poorly tolerated",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical clindamycin may be added for mild acne with inflammation, and oral antibacterials for moderate-to-severe acne with inflammation",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Isotretinoin is used for severe acne and for moderate acne unresponsive to first-line treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Oral hormonal treatment may be added in females with moderate or severe acne",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical retinoids are the treatment of choice for both comedonal and inflammatory acne and may be combined with other topical and oral treatments, but irritation may increase when more than one topical is used",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical retinoids are not to be used in pregnancy because of teratogenic risk",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Benzoyl peroxide is antibacterial and mildly comedolytic, useful in comedonal and mild inflammatory acne",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Azelaic acid is antibacterial and comedolytic and is a less irritating alternative to benzoyl peroxide in mild inflammatory acne",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Azelaic acid should be used cautiously in patients with dark complexions because it may cause hypopigmentation, although that effect may be useful where acne has left hyperpigmented scars",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Antibacterial resistance in skin flora is an increasing problem, and combining topical clindamycin with benzoyl peroxide or azelaic acid may reduce the risk of C. acnes resistance",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical clindamycin should be changed if there is no response after 6 to 8 weeks, stopped once inflammatory lesions resolve adequately, and limited to 3 months where possible",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Doxycycline is the oral antibacterial of choice for moderate-to-severe inflammatory acne, minocycline is second line because it has more adverse effects, and erythromycin may be used where tetracyclines are not tolerated or contraindicated",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Oral antibacterials should be combined with a topical retinoid and either benzoyl peroxide or azelaic acid, changed if there is no response after 6 to 8 weeks, and limited to 3 to 6 months when possible",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Antibacterials should not be switched or rotated in a patient who is responding, because response indicates efficacy and changing agents may promote resistance",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Oral hormonal treatments are limited to females and reduce sebum secretion, which is under androgen control; several months are usually required before benefit appears and prolonged treatment is needed to maintain it",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "All combined oral contraceptives are beneficial for acne, with a systematic review showing little difference in efficacy though further comparative data are needed",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "A combined oral contraceptive may be added to a topical retinoid, benzoyl peroxide or azelaic acid in moderate acne, either in addition to or instead of an oral antibacterial",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cyproterone is an anti-androgen sometimes recommended by specialists at doses higher than those in the combined oral contraceptive, particularly where there are signs of androgenisation such as hirsutism",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Spironolactone has potent anti-androgen activity and has been used by specialists to treat severe acne",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Isotretinoin acts primarily by reducing sebum secretion and its prescription is restricted to dermatologists or other authorised medical practitioners, with the relevant state or territory health department to be contacted",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Isotretinoin is a known teratogen and pregnancy should be avoided during treatment and for at least one month after stopping",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Abrasive agents, degreasing agents and preparations containing sulfur, salicylic acid, resorcinol and allantoin are widely used but their effectiveness is questionable",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Exfoliants may limit tolerance of other more effective agents and have no effect on sebaceous gland activity",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Referral to a dermatologist is indicated for severe or unresponsive acne, for example after 12 weeks of unsuccessful oral antibacterials, and for any patient at risk of scarring including a family history of acne scarring, or in significant psychological distress",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Acne conglobata, acne fulminans and pyoderma faciale are severe inflammatory forms requiring urgent dermatology referral for isotretinoin and oral corticosteroids",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Endocrine evaluation is indicated where there are signs of androgen excess such as hirsutism, androgenetic alopecia or menstrual irregularities",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Topical treatment should be applied to the entire affected area rather than to individual lesions",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Affected areas should be washed gently, avoiding vigorous scrubbing and abrasive cleansers which may increase inflammation, and toners and oil-based moisturisers should be avoided",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lesions should not be squeezed or picked because this increases scarring risk",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "A healthy balanced diet is advised and there is no relationship between particular foods and acne",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Acne' (Dermatological drugs > Drugs for acne), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Postinflammatory hyperpigmentation is a common complication of acne in skin of colour and should not be ignored",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "which is a common complication of acne in patients with skin of colour. It should not be ignored"
+  },
+  {
+   "claim": "General measures first: SPF 50+ sunscreen, protective clothing and avoiding irritation",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Because the patient is yet to trial any therapies, general measures should be suggested first. Photoprotection through the use of broad-spectrum sunscreen (SPF 50+) and protective clothing, such as hats, will reduce further darkening of the affected skin. Avoiding skin irritation, such as from scratching, rubbing or irritating fragrant skincare products, is also important"
+  },
+  {
+   "claim": "The acne must be treated to treat the hyperpigmentation",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "However, to best treat the PIH, the acne must also be treated"
+  },
+  {
+   "claim": "Occlusive hair oils and pomades contribute to acne and should be addressed culturally sensitively",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "The patient should be educated on how the use of occlusive hair oils and pomades contributed to her acne and encouraged, in a culturally sensitive way, to stop using these products"
+  },
+  {
+   "claim": "Practical alternatives to oil-based hair products and an application distance if they are retained",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "An example of a culturally sensitive approach would be to try to learn about the hair care practices for this patient and to provide alternatives to oil-based products, such as silicone, along with practical recommendations for washing her hair weekly or fortnightly with clarifying shampoo … she could consider application 2-3 cm away from the hairline with a covering over the hair at night to prevent indirect spread to the skin"
+  },
+  {
+   "claim": "Tretinoin and adapalene are the commonly prescribed Australian retinoids and should be introduced at low concentration a few times weekly",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Topical tretinoin and adapalene are commonly prescribed retinoids in Australia for both acne and PIH. Due to the irritant potential of all retinoids, low concentrations should be used initially, with application starting a few times per week and gradually increasing as tolerated"
+  },
+  {
+   "claim": "Escalation to oral antibiotics at about eight weeks, and isotretinoin for severe unresponsive cases",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "If the acne does not demonstrate improvement over a period of approximately eight weeks, oral antibiotics could be considered. Oral isotretinoin (dermatologist referral needed) might be required for severe cases that are not responsive to topical therapy alone and in which triggers are unable to be completely eliminated"
+  },
+  {
+   "claim": "Additional PIH treatments include hydroquinone, azelaic acid, chemical peels and laser",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "These include topical hydroquinone, azelaic acid, chemical peels and laser-based treatments"
+  },
+  {
+   "claim": "Hydroquinone is applied to the whole face rather than as spot treatment",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Application to the entire face is preferred over spot treatment for multiple areas of involvement to prevent irregular pigmentation"
+  }
+ ],
+ "summary": {
+  "total": 47,
+  "pass": 9,
+  "fail": 0
+ }
+}
