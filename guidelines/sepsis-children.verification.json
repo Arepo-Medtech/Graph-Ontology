@@ -4,6 +4,12 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/SEPSIS_assessment_and_management/",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/Sepsis%20flowchart%201st%20page.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/Spesis%20flowchart%202nd%20page.png"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Sepsis - assessment and management' (last updated March 2020, PIC endorsed), including the state-pathway banner, key points, background, pathogens by age, assessment, cold and warm shock, toxin mediated sepsis, red flags, the nine key management principles, consultation and ICU transfer triggers, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The approach to management is TWO FLOWCHART IMAGES and was not retrieved: antibiotic choice, fluid bolus volume, inotrope selection and doses, and the timing sequence are all inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to resuscitate a child. The state and territory sepsis pathways the source says must be followed were not retrieved and are recorded as input_unavailable. 'CRT >2' is given without units in the source; seconds is not asserted. ADDENDUM 2026-09-22: the two management flowcharts were subsequently downloaded as PNG images and read visually. Twenty-eight further claims were added carrying verdict pass_image_transcription and source S2. These were checked against the source, but the source is a DIAGRAM: they cannot be re-checked by scripts/verify.py, and they are subject to transcription error in a way the text-quoted claims are not. Every dose among them must be re-checked against the image by a person before clinical use. The source image prints 'clindamycin 15/kg' with no unit; it is reproduced as printed and the evident reading of mg/kg is not asserted.",
   "claims": [
     {

@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.childrens.health.qld.gov.au/for-health-professionals/queensland-paediatric-emergency-care-qpec/queensland-paediatric-clinical-guidelines/sepsis"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of Children's Health Queensland, 'Sepsis - Recognition and emergency management in children' (Queensland Paediatric Clinical Guidelines, last updated May 2026). The page is not served by the scraping tool used elsewhere in this compendium and was retrieved through the browser; the page text was read in two passes and persisted before quoting. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The Queensland Paediatric Sepsis Pathway (a 12-page PDF the guideline refers to throughout for screening, antibiotic guidance and neonatal dosing), the CREDD dosing reference, and the CEWT scoring rules were NOT retrieved and are recorded as input_unavailable; only the IM ceftriaxone rescue dose is stated by this source. Two direct conflicts with other current Australian paediatric sepsis documents in this compendium are recorded as evidence_unsettled rather than resolved: anaerobic blood culture (Queensland says collection is not needed, RCH specifies anaerobic bottle volumes) and IM ceftriaxone (50 mg/kg max 2 g at 60 minutes here, 100 mg/kg max 4 g at RCH, NSW triggering at 15 minutes without a dose).",
   "claims": [
     {

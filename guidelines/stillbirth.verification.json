@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.safetyandquality.gov.au/standards/clinical-care-standards/stillbirth-clinical-care-standard"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the ACSQHC Stillbirth Clinical Care Standard, including the ten quality statements, the for-clinicians sections and the indicator list. Table 1 (risk factors), the Decreased Fetal Movement and Fetal Growth Restriction Care Pathways, and the PSANZ classification system are referenced by the Standard and were not retrieved; they are recorded as input_unavailable and their content is not asserted. Some retrieved text contains extraction artefacts where double-n collapsed ('pla ed' for planned, 'ma er' for manner, 'pe' for people); source_text is preserved verbatim and the guideline renders the evident word.",
   "claims": [
     {

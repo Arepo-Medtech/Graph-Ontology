@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://pch.health.wa.gov.au/For-health-professionals/Emergency-Department-Guidelines/Sepsis-recognition-and-management"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the Perth Children's Hospital Emergency Department Guideline 'Sepsis recognition and management'. The site is not served by the scraping tool used elsewhere in this compendium and was retrieved through the browser in three passes; the page text was persisted before quoting. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The PCH Sepsis Pathway, Figure 1 flowchart, neonatal antibiotic doses, the ChAMP Sepsis and Bacteraemia Guideline, and the adrenaline/noradrenaline monographs and infusion calculator were NOT retrieved and are recorded as input_unavailable or access; several are internal WA Health only. One finding is recorded rather than resolved: this guideline's high-risk list names remoteness, socioeconomic deprivation, delayed access to healthcare and cultural and linguistic diversity, and does NOT name Aboriginal and Torres Strait Islander origin, where the RCH, NSW and Queensland documents in this compendium all do. Both framings are recorded; the compendium does not adjudicate between them.",
   "claims": [
     {

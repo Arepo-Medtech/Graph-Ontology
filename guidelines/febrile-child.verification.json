@@ -4,6 +4,12 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/febrile_child/",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/charts/Febrile%20child%20CPG_29%20day%20plus%20flowchart_Feb2025.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/charts/Febrile%20child%20CPG_3%20month%20plus%20flowchart_Feb2025.png"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Febrile child' (PIC endorsed), including key points, background, history, examination and the unwell-child feature table, management, the infants-28-days-or-less section, consultation, transfer, discharge, additional notes on temperature measurement, lumbar puncture, urine collection and blood culture, the blood culture volume table, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. The management algorithms for infants 29 days to 3 months and children over 3 months are flowchart IMAGES and were not retrieved: they are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to triage those age groups. Empiric antibiotic choice and dose are deferred by the source to local antimicrobial guidelines and are not stated or reconstructed. The page states 'Last update September 2022' while both flowcharts are filenamed Feb2025; this discrepancy is recorded as time_sensitive rather than resolved. ADDENDUM 2026-09-22: both triage flowcharts were downloaded as PNG images and read visually. Nine further claims carry verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py. The diagrams supply the empiric antibiotic agents, which the text omitted, and reveal that lumbar puncture is 'unless contraindicated' at 29 days to 3 months but only '+/-' over 3 months. Doses are still not stated anywhere in either the text or the diagrams and remain deferred to local antimicrobial guidelines.",
   "claims": [
     {

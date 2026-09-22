@@ -4,6 +4,12 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/Anaphylaxis/",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/Initial%20anaphylaxis%20management%20flowchart.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/Refractory%20anaphylaxis%20management%20flowchart.png"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Anaphylaxis' (last updated October 2025, PIC endorsed), including key points, background, the clinical features table, investigations, the adrenaline dose chart and its footnote, the device table, refractory anaphylaxis, the peripheral IV infusion protocol, other considerations, observation and admission, consultation and transfer triggers, the discharge checklist, PBS availability, the WAO diagnostic criteria, timing by route, fatal anaphylaxis, and the reference list. Every source_text fragment was machine-checked verbatim against the retrieved source with scripts/verify.py. Doses, the device weight bands and the infusion recipe are transcribed verbatim from the source's own tables and text, which state them in full. The initial and refractory management flowcharts are IMAGES and were not retrieved: the sequence, the interval between IM adrenaline doses, the injection site, and the fluid and oxygen steps are inside them, are recorded as input_unavailable, and are not reconstructed. ADDENDUM 2026-09-22: both management flowcharts were downloaded as PNG images and read visually. 16 further claims were added carrying verdict pass_image_transcription and source S2. They cannot be re-checked by scripts/verify.py and are subject to transcription error; every dose among them must be re-checked against the image by a person before clinical use. The diagrams supplied three items absent from the retrieved text: the IM injection site (lateral mid-thigh), the mg/kg rule behind the age-based dose chart (10 microg/kg, max 500 microg; 0.01 mL/kg of 1:1000, min 0.1 mL, max 0.5 mL), and the repeat interval (5 minutes, and every 5 minutes until an infusion is started).",
   "claims": [
     {

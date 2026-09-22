@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.safetyandquality.gov.au/standards/clinical-care-standards/acute-stroke-clinical-care-standard"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the ACSQHC Stroke Clinical Care Standard (updated 11 June 2026), including the eight quality statements, the for-clinicians/for-services/for-consumers sections, the full indicator list, the updates section and the scope section. The Standard defers all thrombolysis and thrombectomy time windows, ICH blood pressure targets and reversal agents to the Living Clinical Guidelines for Stroke Management; none were retrieved and none are reconstructed here. The National Acute Stroke Services Framework, which defines a capable hospital and a stroke unit, was not retrieved. Therapeutic Guidelines' stroke topic is cited by the Standard and is licensed content, cited by reference only and not reproduced. Retrieved text contains extraction artefacts where double-n collapsed ('pla ing' for planning, 'scree ' for screen, 'occlusio ' for occlusion); source_text is preserved verbatim and the guideline renders the evident word.",
   "claims": [
     {

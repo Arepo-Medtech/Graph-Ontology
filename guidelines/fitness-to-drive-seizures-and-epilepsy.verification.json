@@ -4,6 +4,12 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://austroads.gov.au/publications/assessing-fitness-to-drive/ap-g56/neurological-conditions/seizures-and-epilepsy",
+    "https://austroads.gov.au/__data/assets/image/0035/468179/AFTD-Figure_13.jpg",
+    "https://austroads.gov.au/__data/assets/image/0027/468180/AFTD-Figure_14.jpg"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of Austroads Assessing Fitness to Drive (AP-G56) Part B section 6.2, Seizures and epilepsy, including 6.2.1 relevance to the driving task, 6.2.2 general assessment and management guidelines, 6.2.3 medical standards for licensing, all three standards tables (default, possible reductions, other factors) and the closing notes on licensing responsibility, conditional licences and reporting. Figures 13 and 14 are decision-tree images; their content is not asserted beyond the surrounding text. Part A sections on confidentiality and reporting, section 1.2.4 blackouts of undetermined mechanism, section 6.3 head injury, section 7.2.9 psychogenic nonepileptic seizures and Appendix 3 on reporting legislation are cross-referenced by this chapter and were not retrieved; they are recorded as input_unavailable. Retrieved text contains extraction artefacts where line breaks collapsed into 'nn' and one typographical error in the source table ('24-period' for 24-hour period); source_text is preserved verbatim. ADDENDUM 2026-09-22: Figures 13 and 14 were retrieved as images via the browser (direct download returns 403) and read visually. Nine further claims carry verdict pass_image_transcription and source S2. Unlike the RCH paediatric flowcharts transcribed elsewhere in this compendium, these two figures contained NOTHING absent from the retrieved text: they are summaries of section 6.2.3, exactly as the Standard describes them. The only thing Figure 13 states more directly than the tables is that the reduction list has eight entries for private drivers and four for commercial drivers.",
   "claims": [
     {

@@ -47,6 +47,12 @@ def check(path, source=None):
               "claims", "summary"):
         if not d.get(k):
             errs.append(f"missing or empty top-level key: {k}")
+    # Provenance is a note, not an error: the older files predate the field.
+    # Without it a guideline cannot be re-verified, because nothing records
+    # WHICH page was retrieved -- a citation names the work, not the fetch.
+    if not d.get("retrieved_from"):
+        notes.append("no retrieved_from: source cannot be re-fetched for "
+                     "verification from this file alone")
     claims = d.get("claims") or []
     if not claims:
         return errs + ["no claims"], notes, 0

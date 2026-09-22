@@ -4,6 +4,11 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/Seizures_-_acute_management/",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/guideline_index/Seizures-acute-management.png"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Seizures - acute management' (last updated June 2025, PIC endorsed), including key points, background, assessment, history, examination, red flags, differential diagnosis, active seizure flowchart notes, the medications table, post seizure care, investigations, consultation and transfer triggers, discharge criteria, follow-up and reference list. Doses are transcribed verbatim from the source's own table, which states them in full; this is the first source in this compendium to do so. The active seizure flowchart is a diagram image and was NOT retrieved: the sequence of agents and the intervals between doses are recorded as input_unavailable and are not reconstructed, and the guideline states that it cannot be used to sequence therapy. Febrile seizure, neonatal seizures and ongoing paediatric epilepsy treatment are separate documents and are marked out_of_scope. The AMH Children's dosing companion is cited by the source as reference 1 and is licensed content, cited by reference only and not reproduced. The source contains one typographical slip ('Most seizures well self-terminate' for 'will'); source_text is preserved verbatim and the guideline renders the evident word. ADDENDUM 2026-09-22: the active seizure management flowchart was downloaded as a PNG image and read visually. Eight further claims carry verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py. The diagram supplies the agent sequence and the five-minute gating that the text omitted, including that reassessment is timed from COMPLETION of the second-line infusion rather than from its start.",
   "claims": [
     {

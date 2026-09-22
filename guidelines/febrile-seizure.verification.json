@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/Febrile_seizure/"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Febrile seizure' (last updated February 2026, PIC endorsed), including key points, background, genetics, history, examination, the simple/complex classification table, investigations, treatment, consultation, transfer, discharge, outpatient follow-up, parent information links and both reference lists. Lumbar puncture is not mentioned anywhere in the retrieved text and no position on it is asserted. Antipyretic and fever management are deferred by the source to a separate Febrile child guideline and are marked out_of_scope. UpToDate and BMJ Best Practice are cited by the source and are subscription content, cited by reference only and not reproduced. Two artefacts are disclosed: the temperature threshold renders as '380C' for 38 degrees Celsius, transcribed verbatim in source_text and rendered as the evident value in the guideline; and the page carries two versions of its own reference list, one viewed 26 September 2025 and one viewed May 2019.",
   "claims": [
     {

@@ -4,6 +4,10 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.cec.health.nsw.gov.au/__data/assets/pdf_file/0008/343475/Paediatric-Sepsis-Pathway.pdf"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the NSW Clinical Excellence Commission Paediatric Sepsis Pathway (form SMR060.399), obtained as a two-page PDF and extracted to markdown. Every source_text fragment was machine-checked verbatim with scripts/verify.py against the extracted text. The age-banded vital sign thresholds (respiratory rate, heart rate, blood pressure, ACVPU) are printed as tables on the form and did NOT survive extraction; they are recorded as input_unavailable and the guideline states that the RED and YELLOW zones cannot be applied from this file. The extracted reassess RED ZONE list reads 'Lactate < 4 mmol/L (or not improving)' where the recognise list reads 'Lactate >= 4 mmol/L'; this is transcribed as extracted, flagged, and not resolved. Antibiotic agents and doses are deferred by the form to Therapeutic Guidelines: Antibiotic, which is licensed content, cited by reference only and not reproduced.",
   "claims": [
     {

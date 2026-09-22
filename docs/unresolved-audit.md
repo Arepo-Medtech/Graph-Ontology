@@ -231,6 +231,26 @@ labelled as such.
 **Across two guidelines this is a pattern rather than a lapse**, and it is recorded in both files. It is
 flagged here because it is the kind of thing that should be seen as a set before attestation.
 
+## ⚠️ Finding 5 — provenance was never recorded
+
+**No guideline in this compendium recorded the URL it was built from**, until 2026-09-22.
+
+Every file cites its source properly — *ACSQHC, Stroke Clinical Care Standard*; *Aust Prescr 2026;49(3)*,
+with a DOI. **A citation names the work. It does not name the retrieval.** The ACSQHC standards, the ASHM
+guidelines and the RCH clinical practice guidelines are all multi-page sites whose content moves; the
+febrile child guideline's own **stated update date disagrees with its flowchart filenames**, which is exactly
+the situation where knowing *which page, when* matters.
+
+**Consequence**: `verifier_class: single_verifier_uncalibrated` was honest about *who* verified, and silent
+about *what against*. `scripts/verify.py --source` can machine-check a guideline **only if someone still has
+the retrieved text**, and for 48 of 61 nobody does.
+
+✅ **`retrieved_from` and `retrieved_utc` are now fields** in the verification JSON, populated for the 13
+guidelines retrieved this session. **`verify.py` prints a note for every file lacking them.**
+
+⚠️ **This is the one finding in this audit that would have been cheap to prevent and is expensive to
+repair.**
+
 ## What is genuinely unknowable
 
 Not every open item is a retrieval failure. **47 `evidence_unsettled` rows** record real disagreement, and
@@ -263,8 +283,20 @@ the sharpest are worth naming:
    emergency guidelines, where PBS is not the relevant access layer**; that judgement should be made per
    guideline rather than by running the tool over everything.
 4. **Decide the house position on Finding 4** before attestation.
-5. **Re-verify the 51 guidelines whose retrieved sources are no longer on disk** — `scripts/verify.py`
-   currently machine-checks only the seven written since it existed.
+5. ⚠️ **Blocked, and the reason is the finding.** **Not one of the 61 guidelines recorded the URL it was
+   retrieved from.** The `Sources` tables give citations — author, title, publisher, year, sometimes a PMID
+   or DOI — which name **the work**, not **the fetch**. For a multi-page site (the ACSQHC standards, ASHM,
+   the RCH guidelines) a citation does not pin which page was read, so **a re-verification would be checking
+   against a guess.**
+
+   ✅ **Fixed going forward.** `retrieved_from` is now a field in `*.verification.json`, populated for the
+   **13 guidelines retrieved in this session** — including the flowchart image URLs, which are the only
+   record of where transcribed doses came from. **`scripts/verify.py` now prints a note for every file
+   without it**, so the 48 that lack it are visible rather than assumed fine.
+
+   **Reconstructing the 48 missing URLs is the remaining work**, and it is archaeology: for each, find the
+   page whose text matches the recorded `source_text`. **That is the honest cost of not having recorded it at
+   the time.**
 
 ## Method
 

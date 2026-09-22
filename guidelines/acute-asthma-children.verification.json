@@ -4,6 +4,14 @@
   "verified_utc": "2026-09-22",
   "verifier": "claude-opus-5",
   "verifier_class": "single_verifier_uncalibrated",
+  "retrieved_from": [
+    "https://www.rch.org.au/clinicalguide/guideline_index/Asthma_acute/",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/guideline_index/Flowchart-1-acute-asthma-mild-mgmt-flowchart.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/guideline_index/Flowchart-2-acute-asthma-moderate-mgmt-flowchart.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/guideline_index/Flowchart-3-acute-asthma-severe-mgmt-flowchart.png",
+    "https://www.rch.org.au/uploadedImages/Main/Content/clinicalguide/guideline_index/Flowchart-4-acute-asthma-life-threatening-mgmt.png"
+  ],
+  "retrieved_utc": "2026-09-22",
   "method": "Each claim checked against the retrieved text of the RCH Melbourne Clinical Practice Guideline 'Acute asthma' (last updated July 2023, PIC endorsed), including key points, background, history, examination, red flags, investigations, treatment, the severity classification table, IV magnesium sulfate dosing, other management considerations, consultation and transfer triggers, discharge criteria, discharge instructions and the reference list. The page was retrieved twice: once with anchor tags excluded and once with them retained, because several clinically significant words sit inside hyperlinks (notably 'other signs of anaphylaxis' in the severe and life-threatening severity columns, and 'bronchiolitis'). The second retrieval is the one quoted. Every source_text fragment was machine-checked verbatim with scripts/verify.py. The four management flowcharts (mild, moderate, severe, life-threatening) are IMAGES and were not retrieved: salbutamol puff counts and intervals, ipratropium regimens, steroid agent and dose, oxygen targets and the IV therapy sequence are inside them, are recorded as input_unavailable, and are not reconstructed. The guideline states it cannot be used to dose salbutamol or steroids. The IM adrenaline dose for life-threatening asthma is not given by this source and is not imported from the anaphylaxis guideline. ADDENDUM 2026-09-22: all four management flowcharts were downloaded as PNG images and read visually. 23 further claims were added carrying verdict pass_image_transcription and source S2; they cannot be re-checked by scripts/verify.py and every dose must be re-checked against the image by a person. The diagrams contain a direct tension with the guideline's own key point 4: key point 4 states 'give steroids early in moderate, severe and life-threatening asthma', while the moderate flowchart states 'Avoid steroids' for 1-5 year olds. Both are transcribed as written and the tension is recorded as evidence_unsettled rather than resolved. The diagrams also contain aminophylline as a live second-line agent, which appears nowhere in the retrieved text.",
   "claims": [
     {
