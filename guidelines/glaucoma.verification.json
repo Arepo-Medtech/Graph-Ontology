@@ -1,0 +1,373 @@
+{
+ "guideline": "guidelines/glaucoma.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2026/july/glaucoma-in-general-practice",
+  "https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP review of July 2026 -- two months old -- fetched and checked verbatim (34 claims). A1 is AMH, read under subscription and PARAPHRASED (24 claims, 5 of them the dosing frequencies in its comparison table), no passage reproduced and no source_text stored. S1's referral thresholds are quoted so they are machine re-checkable here. S1 carries a medication quick-reference chart as an IMAGE (its Figure 4); it was NOT transcribed and nothing from it is claimed, because a figure read off a rendered page is not the same evidence as quoted text -- the drug detail in this guideline comes from AMH's table instead and is marked as licensed and unquoted. AMH's statement that up to 75% of angle-closure glaucoma is intermittent or chronic rather than an acute crisis reframes S1's emphasis on acute red flags; both are stated and neither is presented as correcting the other.",
+ "claims": [
+  {
+   "claim": "Glaucoma is the second leading cause of irreversible blindness in Australia in people aged over 55 years, with over 50 to 60% of cases in Australia remaining undiagnosed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Glaucoma is the second leading cause of irreversible blindness in Australia in people aged over 55 years, with prevalence increasing as the population ages, but over 50-60% of cases in Australia remain undiagnosed."
+  },
+  {
+   "claim": "The economic impact of glaucoma to Australia was 4.3 billion dollars in 2025, up from 1.9 billion in 2005, in direct and indirect healthcare system costs and lost wellbeing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The economic impact of glaucoma to Australia is significant and rising, with $4.3 billion in 2025 (up from $1.9 billion in 2005) in direct and indirect healthcare system costs and lost wellbeing."
+  },
+  {
+   "claim": "Glaucoma is best understood as a progressive optic neuropathy in which intraocular pressure is a modifiable risk factor, not the disease itself, with optimal management focused on slowing progression tailored to stage, age and comorbidities",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Glaucoma is best understood as a progressive optic neuropathy in which intraocular pressure (IOP) is a modifiable risk factor, not the disease itself; optimal management focuses on slowing disease progression tailored to stage, age and comorbidities."
+  },
+  {
+   "claim": "Progression in glaucoma is confirmed with formal visual field testing and optical coherence tomography, both of which are outside the scope of general practice and instead performed by optometrists and ophthalmologists",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Progression in glaucoma is confirmed with formal visual field (VF) testing and optical coherence tomography (OCT), both of which are outside the scope of general practice and instead performed by optometrists and ophthalmologists."
+  },
+  {
+   "claim": "The key role of general practitioners is care coordination rather than direct diagnosis or monitoring, and decisions on glaucoma management including diagnosis confirmation and progression assessment should remain under ophthalmologist supervision",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This underscores the key role of general practitioners (GPs) in care coordination rather than direct diagnosis or monitoring, with optometry-led VF testing and optic nerve imaging now central to early community detection and ongoing surveillance. 4,6 Decisions on glaucoma management, including diagnosis confirmation and progression assessment, should remain under ophthalmologist supervision, especially for patients showing progression, advanced disease or high-risk features."
+  },
+  {
+   "claim": "Angle-closure glaucoma occurs when aqueous outflow is blocked by apposition of the iris to the trabecular meshwork, and acute attacks cause severe ocular pain, haloes, blurred vision, headache and nausea and require same-day ophthalmology referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Angle-closure glaucoma (ACG) occurs when aqueous outflow is blocked by apposition of the iris to the trabecular meshwork (Figure 2). 8 Acute attacks cause severe ocular pain, haloes, blurred vision, headache and nausea, and require same-day ophthalmology referral."
+  },
+  {
+   "claim": "Primary open-angle glaucoma is chronic and typically asymptomatic, presenting with optic-nerve cupping and field loss, sometimes despite normal intraocular pressure in normal-tension glaucoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary open-angle glaucoma (POAG) is chronic and typically asymptomatic, presenting with optic-nerve cupping and field loss, sometimes despite normal IOP (normal-tension glaucoma)."
+  },
+  {
+   "claim": "Secondary glaucomas arise from corticosteroid use, uveitis, trauma or vascular disease, with referral urgency determined by the underlying cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Secondary glaucomas arise from corticosteroid use, uveitis, trauma or vascular disease, with referral urgency determined by the underlying cause."
+  },
+  {
+   "claim": "The risk of glaucoma rises by approximately 7% for each additional year of age, and individuals aged 60 to 69 years have a three-fold higher risk than those aged 40 to 49 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recent systematic reviews show that the risk of glaucoma increases steadily with age, rising by approximately 7% for each additional year. 10-12 Individuals aged 60-69 years exhibit a three-fold higher risk compared with those aged 40-49 years."
+  },
+  {
+   "claim": "Having a first-degree relative with glaucoma confers an estimated two-and-a-half-fold elevation in risk, and glaucoma incidence is disproportionately elevated among individuals of African and Asian ancestry compared with those of European descent",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Having a first-degree relative with glaucoma confers an estimated two-point-five-fold elevation in risk. 10-12 Glaucoma incidence is disproportionately elevated among individuals of African and Asian ancestry compared with those of European descent."
+  },
+  {
+   "claim": "High myopia and marked hypermetropia increase susceptibility for both open-angle and angle-closure subtypes, and diabetes mellitus and chronic corticosteroid use are significant risk factors, with ocular trauma associated with higher odds of secondary glaucoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High myopia and marked hypermetropia also contribute to increased susceptibility for both open-angle and angle-closure subtypes. 10-12 Diabetes mellitus and chronic corticosteroid use have been identified as significant risk factors in cohort analyses. 10- 12 Furthermore, a history of ocular trauma is associated with higher odds of developing secondary glaucoma."
+  },
+  {
+   "claim": "Ocular hypertension remains the single strongest modifiable clinical risk factor and is useful for screening, with risk rising for each 1 mmHg increment, while male sex is associated with higher risk of open-angle glaucoma and angle-closure is more frequent in females",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While not always present, ocular hypertension remains the single strongest modifiable clinical risk factor and is useful for screening, with risk rising for each 1 mmHg increment. 10-12 Male sex is associated with higher risk of POAG and ACG is more frequent in females."
+  },
+  {
+   "claim": "Hypertension and barriers to accessing care such as lower socioeconomic status and limited eye screening might also contribute to increased glaucoma risk in some populations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypertension and barriers to accessing care, such as lower socioeconomic status and limited eye screening, might also contribute to increased risk in some populations."
+  },
+  {
+   "claim": "Acute angle closure should be suspected in any patient with sudden ocular pain, haloes, blurred vision, nausea or vomiting and a red eye with a mid-dilated fixed pupil or corneal haze, and bilateral involvement is rare in an acute case",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute angle-closure (AAC) should be suspected in any patient with sudden ocular pain, haloes, blurred vision, nausea or vomiting, and a red eye with a mid-dilated fixed pupil or corneal haze (Table 1). The GP should take a detailed history and perform an examination looking for the described signs. Bilateral involvement is rare in an acute case."
+  },
+  {
+   "claim": "Intermittent or prodromal angle-closure attacks are distinguished by occurrence in dim light and might be accompanied by headaches or periorbital discomfort, and require referral to same-day ophthalmology or an emergency department",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intermittent (prodromal) angle-closure attacks are specifically distinguished by occurrence in dim light and might be accompanied by headaches or periorbital discomfort. 4,5,13 Like AAC, a history and examination is required as well as considering secondary causes such as trauma, lens-induced, or uveitic angle closure. Referral to same-day ophthalmology or an emergency department is required."
+  },
+  {
+   "claim": "Sudden vision loss, new field defects or optic-disc haemorrhage signal rapidly progressive open-angle disease and require urgent referral, and referral should not be delayed in cases presenting with atypical or ambiguous features",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sudden vision loss, new field defects, or optic-disc haemorrhage signal rapidly progressive open-angle disease and require urgent referral. 4,5 Do not delay referral in cases presenting with atypical or ambiguous features."
+  },
+  {
+   "claim": "S1 gives same-day ophthalmology or emergency department referral for severe peri-ocular pain, red eye, haloes, blurred vision or nausea and vomiting plus one of steamy cornea, ciliary flush, fixed mid-dilated pupil or IOP at or above 30 mmHg",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe peri-ocular pain, red eye, haloes, blurred vision, nausea/vomiting PLUS one of steamy cornea, ciliary flush, fixed mid-dilated pupil, IOP ≥30 mmHg Acute angle-closure glaucoma (AACG) A Same-day ophthalmology/ED"
+  },
+  {
+   "claim": "S1 gives urgent referral within 1 week for transient brow ache or blurred vision in dim light, haloes, nausea or vomiting episodes or a shallow anterior chamber on oblique flashlight test",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Transient brow ache or blurred vision in dim light; haloes around light, nausea/ vomiting episodes, shallow anterior chamber on oblique flashlight test Intermittent angle closure Urgent referral ≤1 week"
+  },
+  {
+   "claim": "S1 gives urgent referral within 1 week for a sudden drop in visual acuity or new field loss, a fresh optic-disc Drance haemorrhage, or a vertical cup-to-disc ratio at or above 0.8 or asymmetry at or above 0.3",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sudden drop in VA or new field loss OR fresh optic-disc (Drance) haemorrhage OR vertical CDR ≥0.8 or asymmetry ≥0.3 Rapidly progressive open- angle glaucoma Urgent referral ≤1 week"
+  },
+  {
+   "claim": "S1 gives urgent referral within 48 hours for intraocular pressure at or above 35 mmHg even if asymptomatic, or 25 to 34 mmHg with a suspicious disc or reproducible visual field defect",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IOP ≥35 mmHg (even if asymptomatic) OR IOP 25-34 mmHg with suspicious disc or reproducible VF defect Sight-threatening ocular hypertension Urgent referral ≤48 h"
+  },
+  {
+   "claim": "S1 gives routine referral within 1 to 3 months for intraocular pressure 22 to 25 mmHg without other risk factors, or a high-risk patient over 60 years with family history, diabetes or steroid use even if IOP is normal",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IOP 22-25 mmHg without other risk factors; high-risk patient (age >60 years, FHx, diabetes, steroid use) even if IOP normal Possible early POAG/NTG Routine referral 1-3 months"
+  },
+  {
+   "claim": "General practitioners can work collaboratively with community-based optometrists who can measure intraocular pressure when this is not available to the GP",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GPs can work collaboratively with community-based optometrists who can measure IOP when this is not available to the GP."
+  },
+  {
+   "claim": "S1 states that if acute angle closure is suspected and no contraindication exists, a topical beta-blocker such as timolol and oral acetazolamide might be administered while arranging transfer",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "an important practice point of care for GPs is that if AAC is suspected and no contraindication exists, topical β-blocker (eg Timolol) and oral acetazolamide might be administered while arranging transfer."
+  },
+  {
+   "claim": "Clinical assessment should include visual acuity testing and a brief history covering family history of glaucoma, corticosteroid exposure, ocular trauma and prior surgery",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical assessment should include visual acuity testing and a brief history covering family history of glaucoma, corticosteroid exposure, ocular trauma and prior surgery."
+  },
+  {
+   "claim": "Direct ophthalmoscopy might allow gross assessment of the optic disc, but accurate estimation of the cup-to-disc ratio is often challenging in undilated pupils and should be interpreted cautiously, while marked asymmetry between eyes or a clearly enlarged cup might still warrant referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Direct ophthalmoscopy might allow a gross assessment of the optic disc, but accurate estimation of the cup-to-disc ratio is often challenging in undilated pupils and should be interpreted cautiously. 5,13 Findings such as marked asymmetry between eyes or a clearly enlarged cup might still warrant referral."
+  },
+  {
+   "claim": "Tonometry is not routinely available in primary care and is not required to guide referral decisions, and the oblique flashlight test can be used as a simple screening tool for a shallow anterior chamber and risk of angle closure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tonometry is not routinely available in primary care and is not required to guide referral decisions; where prior IOP measurements are available from optometry or hospital records, they might provide supportive context. 5,6 The oblique flashlight test can be used as a simple screening tool for a shallow anterior chamber and risk of angle closure."
+  },
+  {
+   "claim": "Low-cost fundus cameras and smartphone adaptors have variable availability and accuracy and require training, so should be viewed as adjuncts rather than standard GP tools, and artificial intelligence-based disc analysis remains investigational and is not recommended for routine clinical use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While low-cost fundus cameras and smartphone adaptors might facilitate image capture in some settings, their availability and accuracy are variable and they require training; they should be viewed as adjuncts rather than standard GP tools. 4,6 Artificial intelligence-based disc analysis remains investigational and is not recommended for routine clinical use."
+  },
+  {
+   "claim": "Ensuring uninterrupted access and correct use of topical therapy is essential as intervals for ophthalmologist review might be annual, especially as PBS prescribing now allows up to 12 months' supply for some glaucoma medications under the 60-day dispensing model",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensuring uninterrupted access and correct use of topical therapy is essential, as intervals for review with an ophthalmologist might be annual, especially as Pharmaceutical Benefits Scheme (PBS) prescribing now allows up to 12 months' supply for some glaucoma medications under the 60-day dispensing model."
+  },
+  {
+   "claim": "S1 lists common systemic adverse effects as bradycardia, hypotension and bronchospasm with topical beta-blockers particularly in underlying cardiac or respiratory disease; fatigue, dry mouth, drowsiness and delayed allergic conjunctivitis with alpha agonists; and paraesthesia, gastrointestinal upset, electrolyte disturbance and metabolic acidosis with carbonic anhydrase inhibitors especially oral agents",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common systemic adverse effects include bradycardia, hypotension and bronchospasm with topical β-blockers, particularly in patients with underlying cardiac or respiratory disease; fatigue, dry mouth, drowsiness and delayed allergic conjunctivitis with α-agonists; and paraesthesia, gastrointestinal upset, electrolyte disturbance and metabolic acidosis with carbonic anhydrase inhibitors, especially when oral agents are used."
+  },
+  {
+   "claim": "Glaucoma is managed in a stepwise fashion escalating from drops to selective laser trabeculoplasty, minimally invasive glaucoma surgery and in advanced cases incisional procedures such as trabeculectomy or tube shunt",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Glaucoma is managed in a stepwise fashion, escalating from drops to selective laser trabeculoplasty (SLT), minimally invasive glaucoma surgery (MIGS) and, in advanced cases, incisional procedures (trabeculectomy or tube shunt)."
+  },
+  {
+   "claim": "After glaucoma surgery GPs contribute by reinforcing adherence to prescribed post-operative drops, reviewing systemic medications that might influence intraocular pressure, and recognising warning symptoms such as ocular pain, redness or blurred vision that require urgent re-referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After glaucoma surgery, patients remain under close ophthalmology review, but GPs contribute by reinforcing adherence to prescribed post-operative drops, reviewing systemic medications that might influence IOP, and recognising warning symptoms such as ocular pain, redness or blurred vision that require urgent re-referral."
+  },
+  {
+   "claim": "S1 states that shared-care pathways should always retain ophthalmologist oversight particularly for patients with progression, advanced disease or high-risk profiles, and that optometry-performed visual field testing serves a screening function but does not replace specialist evaluation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Shared-care pathways should always retain ophthalmologist oversight, particularly for patients with progression, advanced disease or high-risk profiles. Optometry-performed VF testing serves a screening function but does not replace specialist evaluation."
+  },
+  {
+   "claim": "S1's key points are to recognise and act on angle-closure red flags immediately, to think progression not pressure because IOP is a surrogate marker, and that renewal of scripts every 6 months is critical for stable annual-review patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- Recognise and act on angle-closure red flags immediately. - Think progression, not pressure: IOP is a surrogate marker. - Maintain continuous medication supply: renewal of scripts every 6 months is critical for stable annual-review patients."
+  },
+  {
+   "claim": "S1 advises screening for steroid exposure by all routes and history of ocular trauma, supporting drop adherence by prescribing, teaching technique and monitoring side effects, and that GPs should consider having an established relationship with an ophthalmologist in their region",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- Screen for steroid exposure (all routes) and history of ocular trauma. - Support drop adherence: prescribe, teach technique and monitor side-effects. - GPs should consider having an established relationship with an ophthalmologist in their region so that urgent referrals and advice can be sought for eye conditions including glaucoma."
+  },
+  {
+   "claim": "Glaucomas are optic neuropathies characterised by optic disc changes and irreversible, progressive visual field loss, classified as either open-angle or angle-closure and may be primary or secondary",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Although increased intraocular pressure is not a defining characteristic of glaucoma it is the main modifiable risk factor, and treatments that lower it reduce the rate of glaucoma progression whether or not IOP is increased",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Initial treatment of open-angle glaucoma is generally with topical drugs or selective laser trabeculoplasty, with surgery considered in some cases such as advanced glaucoma",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Management of secondary glaucomas may also include removal or treatment of the underlying cause where possible, such as stopping corticosteroids or treating inflammatory eye disease",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "A target intraocular pressure should be established for each patient using factors such as baseline IOP, glaucoma severity and other risk factors, and this target is used to assess treatment efficacy and should be reviewed regularly",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Prostaglandin analogues are generally first-line for open-angle glaucoma due to higher efficacy, once-daily dosing and minimal systemic adverse effects, with timolol also used but potentially causing systemic adverse effects, and a topical alpha2 agonist or carbonic anhydrase inhibitor as alternatives",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Pilocarpine is less commonly used for glaucoma due to adverse effects",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's comparison table gives prostaglandin analogues bimatoprost, latanoprost and travoprost as 1 dose per day and the most effective class, increasing aqueous humour outflow and possibly causing iris hyperpigmentation and eyelash changes",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's comparison table gives timolol as 1 to 2 doses per day, decreasing aqueous humour production and possibly causing systemic adverse effects such as bradycardia and bronchospasm",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's comparison table gives the alpha2 agonists apraclonidine and brimonidine as 2 to 3 doses per day, increasing aqueous humour outflow and decreasing its production, with apraclonidine usable only short term",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's comparison table gives the carbonic anhydrase inhibitors brinzolamide and dorzolamide as 2 to 3 doses per day, decreasing aqueous humour production",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's comparison table gives pilocarpine as 3 to 4 doses per day, increasing aqueous humour outflow, less commonly used, with a high incidence of adverse effects such as blurred vision and headache",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "When choosing topical glaucoma treatment the irritant effects of preservatives should be considered, particularly in patients with ocular surface disease such as dry eye syndrome, and products containing less irritant or no preservatives should be used if possible",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "When a single glaucoma drug is not tolerated or does not seem effective, consider switching to an alternative drug, and if response to a prostaglandin analogue is poor switching to another one may be effective as drugs in this class are structurally different",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "When a single drug is effective but the target intraocular pressure is still not reached, consider adding a second drug; fixed-dose combinations offer less dose flexibility but are generally preferred as they are convenient, aid compliance, reduce exposure to preservatives and reduce cost to the patient",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Acetazolamide is the only oral treatment for glaucoma and has adverse effects that limit its use to refractory glaucoma or short-term treatment before and after surgery",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Glaucoma treatment including efficacy and adverse effects should be reviewed 2 to 8 weeks after any change in medication and regularly thereafter",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Compliance and administration technique should be checked before changing glaucoma drug treatment, and as glaucoma is usually asymptomatic compliance is a major problem with only about 30 to 70% of prescribed doses taken",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In some cases topical glaucoma treatment may be started in just one eye using the other as a control, and if effective treatment is then started in the other eye",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Although patients with ocular hypertension, meaning increased intraocular pressure without glaucoma changes, have an increased risk of glaucoma, not all will develop it; monitoring alone is often appropriate and treatment may be considered for those with additional risk factors",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that up to 75% of patients with angle-closure glaucoma will have intermittent or chronic angle closure with asymptomatic progressive loss of visual field rather than an acute crisis",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Initial treatment of angle-closure glaucoma is laser iridotomy, with surgical procedures considered if unsuccessful, and topical treatment may be used particularly in those with persistent raised intraocular pressure despite laser or surgical procedures",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Risk factors for angle-closure glaucoma include Asian ethnicity, older age, female gender, family history and long sight, and use of topical or systemic drugs that cause pupil dilation may precipitate an acute angle-closure crisis",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Acute angle-closure crisis is an ophthalmic emergency requiring urgent referral to an ophthalmologist, and treatments used to reduce intraocular pressure prior to laser iridotomy may include timolol, a topical alpha2 agonist, topical carbonic anhydrase inhibitor, pilocarpine, oral or IV acetazolamide or IV mannitol",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Glaucomas' (Eye drugs > Drugs for glaucoma), including the table 'Comparison of topical drugs for open-angle glaucoma', at https://amhonline.amh.net.au/chapters/eye-drugs/drugs-glaucoma/glaucomas, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 58,
+  "pass": 34,
+  "fail": 0
+ }
+}

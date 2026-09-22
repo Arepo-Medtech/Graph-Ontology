@@ -63,7 +63,13 @@ VERDICTS = {"pass", "fail", "not_quoted", "not_asserted", "searched_not_found",
 # Unicode punctuation the scrape and the JSON render differently. Folding these
 # is an ENCODING normalisation: the words are identical either way.
 PUNCT = {"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"',
-         "\u2013": "-", "\u2014": "-", "\u2212": "-", "\u00a0": " "}
+         "\u2013": "-", "\u2014": "-", "\u2212": "-", "\u00a0": " ",
+         # Zero-width characters carry no word and are invisible in the source
+         # and in the quote, so a fragment spanning one fails a check no human
+         # reading either string could predict. Folded to a space, not to "",
+         # because a zero-width space is sometimes the ONLY separator between
+         # two words and deleting it would glue them together.
+         "\u200b": " ", "\u200c": " ", "\u200d": " ", "\ufeff": " "}
 
 
 def ws(s):
