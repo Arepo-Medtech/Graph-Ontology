@@ -303,6 +303,7 @@ management** [S1].
 | **Anaphylaxis in children** | ⚠️ **mutually referential at four points** — treat for anaphylaxis if unsure, anaphylaxis signs inside the severity table, IM adrenaline in life-threatening asthma, and anaphylaxis mortality rising with poor asthma control |
 | **Asthma** (adults and adolescents ≥12) | the **Australian Asthma Handbook** guideline here covers **stable disease in ≥12s** and explicitly excludes children and acute asthma; ⚠️ note the two disagree in emphasis — the adult guideline states **treatment solely with as-needed SABA is not recommended**, while this one makes **SABA crucial** in the acute exacerbation and **switches adolescents off budesonide/formoterol to salbutamol** in hospital |
 | ⚠️ **Bronchiolitis** | the reciprocal pair — this guideline sends **wheezing infants under 12 months** there; **that guideline prohibits beta-2 agonists outright, including in infants with a personal or family history of atopy** |
+| ⚠️ **Croup** | **loudness of stridor is not a good indicator of severity** there; **the silent chest** here. The same trap in two different obstructions |
 | **Smoking cessation** | **passive smoking** is a listed trigger |
 | **Febrile child, febrile seizure** | the same reasoning about procedures that harm — **blood gases cause deterioration**, as **blood tests and neuroimaging** risk **unnecessary painful procedure** |
 | **Sepsis in children** | **exacerbations often precipitated by a respiratory viral infection**; the shared problem of distinguishing severity from treatment effect |

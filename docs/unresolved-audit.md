@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 62 guidelines · 2,510 claims · 388 `Unresolved` rows**
+**Generated 2026-09-22 · 63 guidelines · 2,555 claims · 395 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the

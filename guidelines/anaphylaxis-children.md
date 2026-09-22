@@ -283,7 +283,8 @@ minimise risk on discharge** [S1].
 | **Sepsis in children** | the other paediatric shock state — **warm shock** there and **circulatory collapse** here share an appearance |
 | **Febrile child** | the same structural device: **an admission criterion made of circumstance rather than physiology** |
 | **Antimicrobial stewardship** | drug allergy labelling is the stewardship half; **children with medication anaphylaxis are generally not prescribed a device** |
-| **Asthma** *(not yet in this set)* | **optimise asthma management** is step 8 of the discharge checklist, and poorly controlled asthma is a fatality risk factor |
+| **Acute asthma in children** | **optimise asthma management** is step 8 of the discharge checklist, and poorly controlled asthma is a fatality risk factor |
+| ⚠️ **Croup** | **nebulised adrenaline 5 mL of 1:1000 for stridor — the identical dose**; anaphylaxis is croup's first listed differential; and both instruct that the child's **position of comfort** must not be changed |
 
 ## Unresolved
 

@@ -199,6 +199,7 @@ the illness, the expected progression and when and where to seek further advice*
 | **Febrile child** | **fever** is a presenting feature, and this guideline's refusal of blood tests and CXR sits against that guideline's conditional investigation set |
 | **Sepsis in children** | the differential that justifies the risk-factor list; **apnoea** is a feature in both |
 | **Antimicrobial stewardship** | ⚠️ **antibiotics including azithromycin are prohibited**, and **the CXR is refused because it leads to them** |
+| ⚠️ **Croup** | **the same drugs, the opposite answer** — corticosteroids and adrenaline are prohibited here and primary there, in children of overlapping age |
 | **Smoking cessation** | **exposure to cigarette smoke** is a listed risk factor for severe disease |
 
 ## Unresolved
