@@ -8,10 +8,11 @@ does not.
 > ⚠️ **ENTIRELY LICENSED AND UNQUOTED.** All 24 claims come from **one AMH page**, paraphrased.
 > **Nothing here is machine re-checkable.**
 
-> ⚠️ **THE OBVIOUS QUESTION IS THE ONE THIS GUIDELINE CANNOT ANSWER.** "Which drug for which bug" lives in
-> **AMH's *Drug choice for selected infections* page and its nine organism-susceptibility tables, which
-> were NOT retrieved**, and in ***Therapeutic Guidelines***, which is **licensed and not held in this
-> compendium at all.** See *Unresolved* #1.
+> ⚠️ **THE OBVIOUS QUESTION IS NOT ANSWERED HERE.** "Which drug for which bug" lives in **AMH's *Drug
+> choice for selected infections* page and its nine tables** — since retrieved, and written up as
+> **[`drug-choice-for-selected-infections`](drug-choice-for-selected-infections.md)**, which gives drug,
+> route and duration but ⚠️ **still no dose** — and in ***Therapeutic Guidelines***, which is **licensed
+> and not held in this compendium at all.** See *Unresolved* #1.
 
 **AMH topic closed by this guideline:** *Anti-infectives, general principles*.
 
@@ -157,14 +158,14 @@ GI adverse effects and SUPER-INFECTION WITH RESISTANT ORGANISMS** [N1].
 
 | # | Item | Class |
 |---|---|---|
-| 1 | ⚠️ **THE CENTRAL QUESTION IS UNANSWERED HERE.** No organism–drug pairing, no regimen, no dose. **AMH's *Drug choice for selected infections* page and its NINE organism-susceptibility tables were NOT retrieved** — and ***Therapeutic Guidelines***, the Australian source for this, is **licensed and not held in this compendium at all.** **Nothing supplied from memory.** | `input_unavailable` |
+| 1 | ⚠️ **PARTLY ANSWERED 2026-09-22.** No organism–drug pairing, regimen or dose appears *here*. **AMH's *Drug choice for selected infections* page and all NINE of its tables have since been retrieved and written up as [`drug-choice-for-selected-infections`](drug-choice-for-selected-infections.md)** — which supplies **drug, route and duration** for 30-odd infections but ⚠️ **still NO dose**, because the tables carry none. ***Therapeutic Guidelines*** remains **licensed and not held in this compendium at all.** **Nothing supplied from memory.** | `input_unavailable` |
 | 2 | **Not one anti-infective is dosed**, including cefazolin, named for surgical prophylaxis [N1]. | `input_unavailable` |
 | 3 | **Nothing here is machine re-checkable.** | `access` |
 | 4 | **No definition of "local susceptibility data" or where an Australian GP obtains it** appears in the source. ⚠️ **The instruction to base empirical treatment on local data is unusable without a local antibiogram.** | `input_unavailable` |
 | 5 | **Antifungals, antivirals, antiretrovirals, antiprotozoals and anthelmintics are inside this chapter and NOT covered** by the principles page beyond the word "anti-infective". ⚠️ **Worm infections remain an open AMH topic in this compendium.** | `out_of_scope` |
 | 6 | **The duration bands [N1] give no drug and no exact duration**, and AMH gives no source or evidence grade for them. | `observation` |
 | 7 | **Allergy — particularly penicillin allergy delabelling — is not addressed** by the retrieved page, despite being the commonest reason an Australian GP departs from a narrow-spectrum first choice. | `input_unavailable` |
-| 8 | **Endocarditis prophylaxis is named as an indication [N1]** and AMH has a dedicated table that was **NOT retrieved.** | `input_unavailable` |
+| 8 | **Endocarditis prophylaxis is named as an indication [N1].** ⚠️ **ANSWERED 2026-09-22** — AMH's dedicated table has been retrieved and is in [`drug-choice-for-selected-infections`](drug-choice-for-selected-infections.md): single dose before the procedure, amoxicillin or ampicillin first choice, **clindamycin in penicillin hypersensitivity or if a beta-lactam was used more than once in the previous month**. **Still no dose.** | `input_unavailable` |
 
 ---
 
