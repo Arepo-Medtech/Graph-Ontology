@@ -1,0 +1,271 @@
+{
+ "guideline": "guidelines/nocturnal-enuresis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Enuresis_-_Bed_wetting_and_Monosymptomatic_Enuresis/"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text. Every claim is verbatim-checked against that file with scripts/verify.py. Prose paraphrases; source_text stays verbatim. NOTE: the page marks red flag features by COLOUR ('Red flag features in Red'), which does not survive text extraction, so the red flag set could not be isolated and is recorded as input_unavailable rather than guessed. Source last updated July 2019, seven years before retrieval, and it carries desmopressin doses.",
+ "claims": [
+  {
+   "claim": "Night continence is a normal developmental process with a strong genetic tendency",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Attaining night time continence is a normal developmental process, with significant age variation. There is a strong genetic tendency to bedwetting"
+  },
+  {
+   "claim": "Age expectations and prevalence at 4 and 6 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "bladder control and coordination usually occurs by 4 years of age, however night-time … bladder control typically takes longer and is not expected until a child is 5-7 … years old. At 4 years of age, nearly 1 in 3 children wets … the bed, but this falls to about 1 in 10 by age 6"
+  },
+  {
+   "claim": "Treatment usually not started before age 6",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Enuresis is common and generally causes no lasting problems. Typically treatment is not started before age 6 years, as there is a high rate of spontaneous resolution"
+  },
+  {
+   "claim": "Pathogenesis mechanisms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The pathogenesis involves several possible mechanisms including nocturnal polyuria, detrusor overactivity and an increased arousal threshold"
+  },
+  {
+   "claim": "Treatment threshold is social interference",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For most children, enuresis is only seen as a problem when it interferes with their ability to socialise with friends (for example overnight stays or school camps). If the enuresis is infrequent and/or not distressing to the child or parents, treatment is not"
+  },
+  {
+   "claim": "Most children have no underlying problem but suffer shame",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most children who wet the bed have no significant underlying physical or emotional problems. However, many will feel embarrassed or ashamed and suffer from decreased self-esteem, particularly as the child gets older"
+  },
+  {
+   "claim": "Monosymptomatic enuresis definition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monosymptomatic enuresis (MSE) is defined as enuresis without any other lower urinary tract symptoms or history of bladder dysfunction"
+  },
+  {
+   "claim": "Daytime symptoms require a different approach and may be treated first",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The presence of daytime, lower urinary tract symptoms requires a different approach … If daytime symptoms predominate, consider treating before bedwetting"
+  },
+  {
+   "claim": "History focuses on voiding habits",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Much of the history should focus … on voiding habits"
+  },
+  {
+   "claim": "Acute onset may indicate systemic illness",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Onset of bedwetting (if … last few days to weeks - consider whether this is a presentation of systemic illness)"
+  },
+  {
+   "claim": "Six months of prior dryness and secondary enuresis referral",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Has the child previously been dry at night without assistance for 6 months? … The presence of unexplained persistent … secondary enuresis despite adequate management should prompt specialist referral"
+  },
+  {
+   "claim": "Daytime symptom checklist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Presence of day-time symptoms (frequency, urgency, polyuria, dysuria/recurrent … poor urinary stream/straining, leakage)"
+  },
+  {
+   "claim": "Bowel habit, sleep and comorbidity history",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bowel habit (constipation/soiling) … Sleeping arrangements and routine (including own bed/bedroom, snoring and disturbed sleep) … developmental or behavioural problems, diabetes mellitus or sleep apnoea"
+  },
+  {
+   "claim": "Social history includes family capacity and vulnerability",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "family capacity and motivation to engage in treatment, social difficulties (vulnerable child/family)"
+  },
+  {
+   "claim": "Examination items including spine",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Height, weight, BP - poor growth / loss of weight / … Abdomen - distended bladder, faecal mass … Lower Back/Spine - exclude occult spinal dysraphism or tethered cord (asymmetric/deviation of gluteal cleft) … Assessment of lower limb neurology"
+  },
+  {
+   "claim": "Urinalysis not required in primary enuresis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dipstick urinalysis is not required in primary enuresis. Consider if red flags apparent. Further imaging or blood tests are not routinely recommended in enuresis"
+  },
+  {
+   "claim": "Constipation must be managed first",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Constipation, if present, should be adequately managed before addressing enuresis"
+  },
+  {
+   "claim": "Encourage regular fluids and toileting",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Encourage regular fluids and toileting throughout the day (eg during school break times) and just before bedtime"
+  },
+  {
+   "claim": "Advise against fluid restriction but eliminate evening caffeine",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advise against fluid restriction, but eliminate caffeinated beverages in the evening"
+  },
+  {
+   "claim": "Explain normal bladder function and that it is common",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advise on normal bladder function and the pathogenesis of enuresis, including the genetic tendency. Also, that this is a common problem effecting their peer group and they should not be embarrassed"
+  },
+  {
+   "claim": "Both parent and child must be motivated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Both parent and child must be motivated before starting behavioural interventions"
+  },
+  {
+   "claim": "Alarm therapy is the most effective modality over 6 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Alarm therapy is the most effective treatment modality available in children older than 6 years of age, but requires motivation of both child and parent"
+  },
+  {
+   "claim": "Alarms have better long-term success than medication",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Considered the most useful and successful initial way to treat bedwetting - good long-term success and fewer relapses than medication"
+  },
+  {
+   "claim": "Alarms take 6 to 8 weeks and are recommended from 6-7 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "it may take 6-8 weeks … to work … Generally recommended in children from 6-7 … years of age, depending on their physical ability, maturity and motivation"
+  },
+  {
+   "claim": "Alarms are hired from pharmacies and continence services",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bedwetting alarms are available for hire from selected pharmacies, community continence services, tertiary centres, and private practitioners. The Continence Foundation of Australia has a list of"
+  },
+  {
+   "claim": "Intellectual and hearing impairment do not preclude alarm therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild to moderate intellectual impairment does not preclude treatment and in hearing impaired children consider using a vibrating alarm"
+  },
+  {
+   "claim": "Carer emotional state is a contraindication to alarm therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not suitable if the carer is experiencing emotional difficulty, expressing anger or blame toward the child, or is unlikely to cope with the additional burden of a bedwetting alarm and sleep disruption in the household"
+  },
+  {
+   "claim": "The child must be fully awake during the process",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children should be 'in charge' of their alarm and may need to be woken initially to turn the alarm off themselves. It is critical for success of alarm therapy that the child is fully awake during the process of going to the bathroom"
+  },
+  {
+   "claim": "Reward the behaviour not the dry night",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Reward systems can be useful during alarm therapy to reward behaviours such as waking or going to the toilet when the alarm goes off (Not for dry nights per se)"
+  },
+  {
+   "claim": "Alarm response timelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a child is showing early signs of response after 4 weeks, continue treatment until 2 weeks of uninterrupted dry nights are achieved … Discontinue treatment if no early signs of response within 4 weeks … incomplete dryness after 3 months, reconsider if ongoing treatment is appropriate or a further trial of the alarm in 3-6 months"
+  },
+  {
+   "claim": "Overlearning method",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Once dryness is achieved for 2 weeks or more, consider introducing “overlearning” - to over condition the bladder. Encourage the child to drink extra fluids in the hour before bedtime, providing a greater challenge to remaining dry, which may reduce the rate of relapse"
+  },
+  {
+   "claim": "Tricyclics are no longer recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tricyclic medications are no longer recommended. They are less effective than other therapies and have a higher risk of adverse events"
+  },
+  {
+   "claim": "Desmopressin indications",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "alarm therapy has failed or is not suitable … if rapid onset/short-term improvement is a priority of treatment"
+  },
+  {
+   "claim": "Desmopressin relapse rate on withdrawal",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Relapse rates are high when withdrawn, (60-70 percent)"
+  },
+  {
+   "claim": "Desmopressin sublingual and oral dosing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "6 years, sublingual, initially 120 micrograms at bedtime; if needed, after 1-2 weeks increase to a maximum of 240 micrograms at bedtime … 6 years, oral, initially 200 micrograms at bedtime; if needed, increase to 400 micrograms at bedtime"
+  },
+  {
+   "claim": "Intranasal route not recommended due to hyponatraemia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "route is not recommended due to higher risk of hyponatraemia"
+  },
+  {
+   "claim": "Fluid restriction window and contraindication",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Restrict fluid from 1 hour before the dose until at least 8 hours after the dose. Desmopressin is contraindicated for children who can't"
+  },
+  {
+   "claim": "Assess at 4 weeks and withdraw every 3 months",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess response after 4 weeks to determine continuation of treatment (if no response consider cessation). … Withdraw for at least 1 week every 3 months to assess for relapse and ongoing need for medication"
+  },
+  {
+   "claim": "Lifting and waking do not promote long-term dryness",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neither lifting (carrying a child to the toilet with an effort not to wake them) nor waking and walking the child to the toilet will promote long-term dryness"
+  },
+  {
+   "claim": "Self-instigated waking may be useful",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Waking a child by parents or carers, either regularly or randomly, is only a short-term method of managing bedwetting. A young person who self-instigates waking (using a mobile phone alarm or an alarm clock) may be a useful strategy"
+  },
+  {
+   "claim": "Referral triggers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Persistent enuresis with failure of an enuresis alarm … Day-time enuresis or combined day/night enuresis after exclusion or treatment of a UTI and constipation … History of recurrent urinary tract infections … Comorbidities such as type 1 diabetes, physical or neurological problems … Substantial psychological or behavioural problems (consider mental health referral, paediatrician and/or child protection services if significant concern exists)"
+  },
+  {
+   "claim": "Last updated July 2019",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Last updated July 2019"
+  }
+ ],
+ "summary": {
+  "total": 42,
+  "pass": 42,
+  "fail": 0
+ }
+}
