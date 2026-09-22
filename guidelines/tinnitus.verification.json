@@ -1,0 +1,320 @@
+{
+ "guideline": "guidelines/tinnitus.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2018/april/tinnitus",
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/tinnitus"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP review, fetched and checked verbatim (42 fragments). A1 is AMH, read under subscription and PARAPHRASED: no passage reproduced, no source_text stored, verdict licensed_source_not_quoted with a locator. NO claim in this guideline is flagged dose:true, and that is correct: neither source recommends a drug for tinnitus, and the one drug intervention named (steroids for sudden-onset SNHL) is given WITHOUT a dose by both sources. No dose has been supplied from memory or carried from another guideline. The two sources give DIFFERENT ototoxic drug lists; both are recorded separately rather than merged, because merging would attribute to each source a list it does not give.",
+ "claims": [
+  {
+   "claim": "Tinnitus is conscious awareness of a sound in the absence of an external auditory stimulus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tinnitus may be defined as conscious awareness of a sound in the absence of an external auditory stimulus."
+  },
+  {
+   "claim": "At least two-thirds of Australians have reported noticeable tinnitus at some point in their lives",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "At least two-thirds of Australians have reported suffering from noticeable tinnitus at some point in their lives."
+  },
+  {
+   "claim": "People with tinnitus almost always present to their general practitioner, who is best placed to assess, investigate and counsel",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People with tinnitus almost always seek the attention of their general practitioner, who is best placed to assess, investigate and provide appropriate counselling."
+  },
+  {
+   "claim": "Tinnitus is categorised as subjective, objective, primary or secondary, and assessment begins by determining which type the patient presents with",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tinnitus may be categorised as subjective, objective, primary or secondary. The assessment of tinnitus begins by determining which of these types with the patient presents with."
+  },
+  {
+   "claim": "In subjective tinnitus only the affected individual hears the sound; in objective tinnitus the examiner can hear it too, for example temporomandibular joint crepitus or the bruit of a vascular malformation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Subjective tinnitus Only the affected individual can hear the sound … Objective tinnitus The sound can also be heard by the examiner (eg crepitus of temporomandibular joint, bruit of vascular malformation)"
+  },
+  {
+   "claim": "Primary tinnitus is idiopathic and may or may not be associated with sensorineural hearing loss, which should be symmetrical; secondary tinnitus has a specific underlying cause other than symmetrical SNHL",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary tinnitus Tinnitus that is idiopathic and may or may not be associated with sensorineural hearing loss (SNHL). 1 The SNHL should be symmetrical … Secondary tinnitus Tinnitus associated with a specific underlying cause (other than symmetrical SNHL)"
+  },
+  {
+   "claim": "Tinnitus apparent for less than 6 months is acute or recent onset; more than 6 months is chronic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute or recent onset tinnitus Apparent for <6 months … Chronic tinnitus Apparent for >6 months"
+  },
+  {
+   "claim": "Bothersome and non-bothersome tinnitus must be differentiated because this determines how active the GP needs to be about management",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "One must also differentiate between bothersome tinnitus and non-bothersome tinnitus because this will influence how active the treating general practitioner (GP) needs to be about management."
+  },
+  {
+   "claim": "Almost any insult to the auditory pathway can cause tinnitus, and several non-auditory conditions can also lead to it",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Almost any insult to the auditory pathway can result in tinnitus. Several non-auditory conditions can also lead to tinnitus."
+  },
+  {
+   "claim": "Secondary causes include cerumen impaction and otitis externa in the external ear, otosclerosis, otitis media and cholesteatoma in the middle ear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "External ear - Cerumen impaction - Otitis externa Middle ear - Otosclerosis - Otitis media - Cholesteatoma"
+  },
+  {
+   "claim": "Inner ear causes include vestibular schwannoma, Meniere's disease and cochleitis or neuritis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inner ear - Vestibular schwannoma - Meniere's disease - Cochleitis/neuritis"
+  },
+  {
+   "claim": "Ototoxic medications listed as secondary causes are antibiotics such as aminoglycosides and vancomycin, cancer medications, diuretics such as frusemide, and aspirin or other salicylates",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ototoxic medications: - antibiotics (eg aminoglycosides and vancomycin) - cancer medications - diuretics (eg frusemide) - Aspirin or other salicylates"
+  },
+  {
+   "claim": "Non-auditory causes include vascular anomalies presenting as pulsatile tinnitus, myoclonus such as stapedial myoclonus, and nasopharyngeal carcinoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Non-auditory cause - Vascular anomalies (present as pulsatile tinnitus) - Myoclonus, such as stapedial myoclonus - Nasopharyngeal carcinoma (can cause unilateral otitis media with effusion, leading to hearing loss and tinnitus)"
+  },
+  {
+   "claim": "Pulsatile tinnitus raises the possibility of a vascular lesion such as a glomus tumour",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is it constant or pulsatile? Pulsatile tinnitus raises the possibility of a vascular lesion, such as a glomus tumour."
+  },
+  {
+   "claim": "Unilateral tinnitus raises the possibility of a focal lesion such as a vestibular schwannoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is the tinnitus unilateral or bilateral? Unilateral tinnitus raises the possibility of a focal lesion, such as a vestibular schwannoma."
+  },
+  {
+   "claim": "Associated otological symptoms such as otalgia, otorrhoea or vertigo raise the possibility of secondary tinnitus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Are there any associated otological symptoms (eg otalgia, otorrhoea, vertigo)? Such symptoms raise the possibility of secondary tinnitus."
+  },
+  {
+   "claim": "Sudden onset sensorineural hearing loss requires prompt management with steroids",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sudden onset sensorineural hearing loss (SNHL) requires prompt management with steroids."
+  },
+  {
+   "claim": "When there is sudden-onset SNHL a pure tone audiogram should be requested promptly, steroid therapy commenced, and the patient referred urgently to an otolaryngologist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When there is sudden-onset SNHL, pure tone audiogram should be requested promptly, steroid therapy commenced, and the patient referred to an otolaryngologist urgently."
+  },
+  {
+   "claim": "Unilateral tinnitus with hearing loss may raise the possibility of a focal lesion, so MRI is often part of the work-up",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Given unilateral tinnitus and hearing loss may raise the possibility of a focal lesion, magnetic resonance imaging (MRI) is often part of the work-up."
+  },
+  {
+   "claim": "A history of occupational or social noise exposure can lead to hearing loss and tinnitus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is there a history of noise exposure, whether occupational or social? This can lead to hearing loss and tinnitus."
+  },
+  {
+   "claim": "A link between tinnitus and comorbid psychological disorder has been demonstrated, and a high prevalence of anxiety and depression is seen in tinnitus sufferers",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A link between tinnitus and comorbid psychological disorder has been demonstrated, 2 and a high prevalence of anxiety and depression is seen in tinnitus sufferers."
+  },
+  {
+   "claim": "Routine cranial nerve and otological examination is required, guided by the history",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Routine cranial nerve and otological examination is required. This is further guided by the history."
+  },
+  {
+   "claim": "A 512 Hz tuning fork is typically used, and in the Weber test it is placed in the middle of the forehead with a normal result being the sound heard equally in both ears",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For this test, a 512 Hz tuning fork is typically used. The GP should first conduct a Weber test, whereby the tuning fork is placed in the middle of the patient's forehead. A normal test is demonstrated when the patient hears the sound equally in both ears."
+  },
+  {
+   "claim": "If the Weber test lateralises to one ear the patient may have a conductive loss in that ear or a sensorineural loss in the contralateral ear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the sound lateralises to a specific ear, the patient may have a conductive loss in that ear or a sensorineural loss in the contralateral ear."
+  },
+  {
+   "claim": "In the Rinne test the fork is placed on the mastoid then in front of the auricle; a normal positive Rinne is air conduction louder than bone conduction, and louder on the mastoid indicates conductive hearing loss",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A Rinne test is then performed, whereby the tuning fork is placed first on the mastoid (bone conduction), then held vertically in front of the auricle (air conduction), and the patient is asked which is louder. A normal (positive Rinne) test is demonstrated when air conduction is louder than bone conduction. If the sound is louder with the tuning fork on the mastoid (bone conduction), this indicates a conductive hearing loss."
+  },
+  {
+   "claim": "The head and neck including the carotid and periauricular regions should be auscultated, especially if the patient reports pulsatile tinnitus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finally, areas of the head and neck, including the carotid and periauricular regions, should be auscultated, especially if the patient reports pulsatile tinnitus."
+  },
+  {
+   "claim": "A formal audiology assessment is recommended for all patients presenting with tinnitus because a large proportion have some degree of hearing loss",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A formal audiology assessment is recommended for all patients presenting with tinnitus. This is because a large proportion of patients with tinnitus have some degree of hearing loss."
+  },
+  {
+   "claim": "Conductive hearing loss on pure tone audiogram almost always indicates a secondary cause for tinnitus, while sensorineural loss may indicate a primary or secondary cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Conductive hearing loss almost always indicates a secondary cause for tinnitus. SNHL may indicate a primary or secondary cause."
+  },
+  {
+   "claim": "Imaging of the head and neck is indicated only for unilateral tinnitus, pulsatile tinnitus, asymmetrical hearing loss, focal neurological deficit or otosclerosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "suggest that imaging of the head and neck is indicated only if the patient has: - unilateral tinnitus, which may suggest a focal lesion; therefore imaging is warranted - pulsatile tinnitus, which may suggest a vascular anomaly; this is best investigated by computed tomography (CT) angiography in the general practice setting"
+  },
+  {
+   "claim": "Asymmetrical hearing loss is defined as 10 dB or more difference between the two sides in three or more frequencies, and warrants MRI of the cerebellopontine angle and internal acoustic meatus to rule out a vestibular schwannoma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "asymmetrical hearing loss, defined as ≥10 dB difference between the two sides in three or more frequencies; such patients will need an MRI of the cerebellopontine angle and internal acoustic meatus (MRI-CPA/IAM) to rule out a vestibular schwannoma"
+  },
+  {
+   "claim": "Otosclerosis often occurs in the third to fifth decade with slowly progressive hearing loss and coexisting tinnitus, and warrants CT of the temporal bone",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "otosclerosis, which often occurs in the third to fifth decade of life, and presents with a slowly progressive hearing loss and often with coexisting tinnitus - a tuning fork exam will suggest a conductive hearing loss, which can be confirmed by audiometry; in this situation, CT of the temporal bone is warranted."
+  },
+  {
+   "claim": "CT of the temporal bone may also be indicated after head trauma and if cholesteatoma is suspected",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CT of the temporal bone may also be indicated in the setting of trauma to the head and if cholesteatoma is suspected."
+  },
+  {
+   "claim": "Management of secondary tinnitus centres on identifying the underlying cause and reversing it where possible",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Management of secondary tinnitus is centred on identification of the underlying cause and, where possible, reversal of the underlying condition."
+  },
+  {
+   "claim": "If primary tinnitus is not bothersome and chronic, reassurance may be all that is needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the GP needs to determine whether the tinnitus is bothersome and chronic. If it is not, then reassurance may be all that is needed."
+  },
+  {
+   "claim": "In bothersome sensorineural hearing loss the GP should consider referral for hearing aid assessment, and even without marked hearing loss hearing aids can provide some relief",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the presence of SNHL that is bothersome, the GP should consider referring the patient for hearing aid assessment. Even in the absence of marked hearing loss, hearing aids can provide some relief."
+  },
+  {
+   "claim": "Sound therapy provides an external sound so the patient focuses on it and has reduced perception of tinnitus, and can be prescribed by an audiologist or by the GP",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sound therapy is normally prescribed by an audiologist, either alone or in combination with hearing aids, given some hearing aids have an inbuilt sound generator. Sound therapy alone can also be prescribed by the GP. The principle is that an external sound is provided to the auditory centre, the patient focuses on this sound and, therefore, has a reduced perception of tinnitus and a sense of relief."
+  },
+  {
+   "claim": "Tinnitus can cause emotional disturbance which stimulates the sympathetic nervous system and can increase the volume of tinnitus, with anxiety and depression resulting",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is widely recognised that tinnitus can cause emotional disturbance, which in turn stimulates the sympathetic nervous system and can increase the volume of tinnitus. 2 Anxiety and depression can result."
+  },
+  {
+   "claim": "Cognitive behavioural therapy can be effective in treating the patient's response to tinnitus, delivered by an appropriately trained GP or by referral to a psychologist with an interest in tinnitus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cognitive behavioural therapy (CBT) was originally structured to treat anxiety and depression, and therefore can be effective in treating a patient's response to tinnitus. … The GP, if appropriately trained, may provide such counselling or refer the patient to a psychologist with an interest in tinnitus."
+  },
+  {
+   "claim": "A combination of treatment options may be necessary to allow the patient to habituate, that is to not be bothered by the noise they hear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A combination of treatment options may be necessary to allow the patient to habituate - in other words, to not be bothered by the noise they hear."
+  },
+  {
+   "claim": "GPs should avoid prescribing antidepressants, anticonvulsants or anxiolytics for tinnitus because there is no evidence for their effectiveness and because of adverse effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GPs should avoid prescribing antidepressants, anticonvulsants or anxiolytics for tinnitus, as there is no evidence for their effectiveness in treating tinnitus, and because of adverse effects."
+  },
+  {
+   "claim": "A variety of complementary medicines have been trialled but there is no evidence for their use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A variety of complementary medicines have been trialled in patients, but again there is no evidence for their use."
+  },
+  {
+   "claim": "The goal for managing primary bothersome tinnitus is to implement strategies allowing the patient to habituate, while the aim for secondary tinnitus is to investigate and manage the underlying cause",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The goal for managing primary, bothersome tinnitus is to implement strategies to allow the patient to habituate. The aim for secondary tinnitus is to investigate and manage the underlying cause"
+  },
+  {
+   "claim": "Tinnitus may be idiopathic or associated with hearing loss, and can be a prominent feature of Meniere's disease",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Tinnitus may be associated with common and treatable conditions such as ear wax or otitis media",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If tinnitus is unilateral, refer to an ENT specialist to exclude retrocochlear pathology such as acoustic neuroma",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Drug associations to consider in tinnitus include aminoglycosides, cisplatin, NSAIDs and loop diuretics",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Drug treatment should be avoided because although many drugs have been tried, including carbamazepine and antidepressants such as TCAs and SSRIs, there is little evidence of benefit and a risk of adverse effects",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Consider the need for managing associated conditions such as depression, anxiety and insomnia",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Non-drug therapies patients may consider include tinnitus retraining therapy, cognitive behavioural therapy, hearing aids and masking devices which produce sound to cover the tinnitus",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Patient information is available from the Soundfair tinnitus support pages",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'Tinnitus' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 50,
+  "pass": 42,
+  "fail": 0
+ }
+}
