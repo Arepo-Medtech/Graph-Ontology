@@ -5,9 +5,11 @@
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
-  "https://nedc.com.au/eating-disorders/treatment-and-recovery/treatment-approaches",
+  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/antidepressants/eating-disorders",
+  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/antidepressants/ssris/fluoxetine",
+  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-attention-deficit-hyperactivity-disorder/psychostimulants/lisdexamfetamine",
   "https://nedc.com.au/eating-disorders/treatment-and-recovery/hospital-admission-guidelines",
-  "https://amhonline.amh.net.au/chapters/psychotropic-drugs/antidepressants/eating-disorders"
+  "https://nedc.com.au/eating-disorders/treatment-and-recovery/treatment-approaches"
  ],
  "retrieved_utc": "2026-09-22",
  "method": "MIXED SOURCES. S1 and S2 are open NEDC pages fetched with curl and every claim from them is verbatim-checked with scripts/verify.py. A1 is the AMH therapeutic topic and the fluoxetine and lisdexamfetamine monographs, read under subscription and PARAPHRASED, with no stored quote and verdict licensed_source_not_quoted; dose claims flagged dose:true. NEDC links to eight jurisdictional admission documents rather than stating criteria, and NONE was retrieved, so no weight, heart rate, electrolyte or ECG admission threshold appears in this guideline -- recorded as input_unavailable because that is the operational core of the topic.",
@@ -196,14 +198,14 @@
    "claim": "Fluoxetine for bulimia nervosa is oral 20 mg once daily increasing as indicated to 60 to 80 mg daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs fluoxetine and lisdexamfetamine, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Fluoxetine' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/antidepressants/ssris/fluoxetine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Lisdexamfetamine for binge eating disorder in adults is oral 30 mg once each morning, increased by 20 mg at intervals of at least a week to a usual dose of 50 or 70 mg daily, maximum 70 mg daily, with an initial treatment period of 12 weeks",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs fluoxetine and lisdexamfetamine, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Lisdexamfetamine' at https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-attention-deficit-hyperactivity-disorder/psychostimulants/lisdexamfetamine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   }
  ],

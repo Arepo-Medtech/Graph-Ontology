@@ -5,7 +5,12 @@
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
-  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/psoriasis"
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/acitretin",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/immunosuppressants-dermatology/apremilast",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/other-drugs-psoriasis/calcipotriol-betamethasone",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/psoriasis",
+  "https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/calcineurin-inhibitors/ciclosporin",
+  "https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/other-immunomodulators/methotrexate-immunomodulator"
  ],
  "retrieved_utc": "2026-09-22",
  "method": "Read under subscription in the operator's browser and PARAPHRASED. No AMH passage reproduced and no source_text stored; every claim carries a locator and verdict licensed_source_not_quoted. Dose claims flagged dose:true. The ten injectable cytokine modulators are named but none of their monographs was retrieved and no biological dose appears here. Ciclosporin carries no psoriasis-specific dose in AMH (seek specialist advice) and none is reconstructed. The apremilast renal dose reduction was truncated in retrieval and the reduced dose is NOT stated. Folate co-prescription with methotrexate was not covered in the retrieved sections and was not imported from elsewhere.",
@@ -164,56 +169,56 @@
    "claim": "Calcipotriol with betamethasone has a maximum daily dose of 15 g and maximum weekly dose of 100 g and should not be applied to more than 30 percent of body surface",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Calcipotriol with betamethasone' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/other-drugs-psoriasis/calcipotriol-betamethasone, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Calcipotriol with betamethasone cream is applied to affected scalp, trunk and limbs once a day for up to 8 weeks in adults, and the foam once a day for up to 4 weeks",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Calcipotriol with betamethasone' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/other-drugs-psoriasis/calcipotriol-betamethasone, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Methotrexate is taken once a week on the same day each week",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Methotrexate (immunomodulator)' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/other-immunomodulators/methotrexate-immunomodulator, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Methotrexate for adults is oral, subcutaneous or intramuscular, initially 10 to 15 mg once a week adjusted to response, with usual maintenance 10 to 25 mg once a week and maximum oral 30 mg or parenteral 25 mg",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Methotrexate (immunomodulator)' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/other-immunomodulators/methotrexate-immunomodulator, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "When changing methotrexate from oral to subcutaneous or intramuscular, consider reducing the dose and monitoring carefully especially for oral doses above 15 mg because parenteral bioavailability is higher",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Methotrexate (immunomodulator)' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/other-immunomodulators/methotrexate-immunomodulator, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Ciclosporin dose and duration differ by disease and specialist advice should be sought",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Ciclosporin' at https://amhonline.amh.net.au/chapters/immunomodulators-anti-inflammatories/calcineurin-inhibitors/ciclosporin, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Apremilast is oral, initially 10 mg once on day 1, then 10 mg twice on day 2, increasing by 10 mg each day to 30 mg twice a day, with treatment stopped if there is no response after 24 weeks and dose reduced if CrCl is under 30 mL per minute",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Apremilast' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/immunosuppressants-dermatology/apremilast, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Acitretin in adults is oral 25 to 30 mg once daily for 2 to 4 weeks then maintenance generally 25 to 50 mg once a day based on efficacy and tolerance, and in children 0.5 to 1 mg/kg once daily with a usual maximum of 35 mg daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs calcipotriol with betamethasone, methotrexate, ciclosporin, apremilast, acitretin, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Acitretin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/acitretin, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   }
  ],

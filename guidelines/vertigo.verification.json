@@ -5,12 +5,12 @@
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
-  "https://australianprescriber.tg.org.au/articles/dealing-with-dizziness.html",
-  "https://australianprescriber.tg.org.au/articles/cinnarizine-dimenhydrinate-for-vertigo.html",
-  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/vertigo",
   "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine",
   "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate",
-  "https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine"
+  "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/vertigo",
+  "https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine",
+  "https://australianprescriber.tg.org.au/articles/cinnarizine-dimenhydrinate-for-vertigo.html",
+  "https://australianprescriber.tg.org.au/articles/dealing-with-dizziness.html"
  ],
  "retrieved_utc": "2026-09-22",
  "method": "S1 and S2 are open Australian Prescriber articles, fetched and checked verbatim; S1 is 2005 and S2 is 2021, and the age of S1 is stated in the guideline wherever its content could have moved on. A1 is AMH, read under subscription and PARAPHRASED: no AMH passage is reproduced and no source_text is stored, so those claims carry a locator and the verdict licensed_source_not_quoted and cannot be machine re-checked from this repository. Doses are flagged dose:true. The betahistine trial figures in S2 are quoted from AP's own table; the betahistine dose in that table (12 mg) is BELOW the AMH adult range and this is stated in the guideline rather than left for the reader to notice.",
@@ -403,131 +403,131 @@
    "claim": "Betahistine is a histamine analogue and vasodilator thought to improve blood flow to the labyrinth and brain stem, indicated for Meniere's disease",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Betahistine adult oral dose is 24 to 48 mg daily in 2 or 3 doses",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Betahistine is contraindicated in phaeochromocytoma and in a history of peptic ulcer, and may exacerbate urticaria and asthma",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Betahistine commonly causes headache, nausea and dyspepsia, and GI adverse effects may be reduced by taking it with food or lowering the dose",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Betahistine should be taken with food and may take several weeks to reach full effect",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Betahistine has limited data in pregnancy and in breastfeeding, with no evidence of harm in breastfeeding",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Betahistine' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Betahistine' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Cinnarizine with dimenhydrinate is indicated for short-term treatment of vertigo and is not first line, to be considered when other vertigo treatments are ineffective or inappropriate",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "The cinnarizine with dimenhydrinate tablet contains cinnarizine 20 mg with dimenhydrinate 40 mg, and the adult dose is 1 tablet 3 times daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Cinnarizine with dimenhydrinate should not be used for more than 4 consecutive weeks or above the recommended dose, because the risk of extrapyramidal adverse effects increases with length of treatment and higher doses",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Cinnarizine with dimenhydrinate is contraindicated in angle-closure glaucoma and urinary retention, may worsen prostatic hypertrophy and GI obstruction, and should be avoided in Parkinson's disease as symptoms may worsen",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "In the elderly cinnarizine with dimenhydrinate carries an increased risk of adverse effects, particularly extrapyramidal effects, and the recommended dose should not be exceeded nor use continued beyond 4 consecutive weeks",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Cinnarizine with dimenhydrinate has no renal or hepatic data, with the manufacturer contraindicating use when creatinine clearance is under 25 mL/minute and in severe hepatic impairment, and not recommending use in pregnancy or breastfeeding",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Cinnarizine with dimenhydrinate commonly causes somnolence, abdominal pain, dry mouth and headache, and rarely extrapyramidal effects which may be irreversible, paradoxical excitation and urinary retention",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' (Ear, nose and throat drugs > Drugs for vestibular disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Cinnarizine with dimenhydrinate' at https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Prochlorperazine is indicated for nausea and vomiting and for vertigo",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "The adult oral dose of prochlorperazine for vertigo is 5 to 10 mg 2 or 3 times daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "The adult parenteral dose of prochlorperazine for vertigo is 12.5 mg IV or IM initially, then every 8 hours as needed, with IV doses given over 2 minutes",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Prochlorperazine is contraindicated in CNS depression and in children under 2 years, and the manufacturer contraindicates parenteral use in all children",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Prochlorperazine should be avoided if possible in Parkinson's disease as symptoms may worsen, and domperidone is preferred",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Prochlorperazine is safe to use in early pregnancy but carries a risk of neurological disturbance in infants when taken in late pregnancy, and is safe in breastfeeding",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Prochlorperazine commonly causes constipation, dry mouth, drowsiness, akathisia, parkinsonism, blurred vision, extrapyramidal effects especially in children, hypotension and hyperprolactinaemia, and rarely prolonged QT interval and tardive dyskinesia",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Prochlorperazine potentiates CNS depression and should be used short term only, because the risk of tardive dyskinesia increases with cumulative dose and length of treatment",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' (Gastrointestinal drugs > Antiemetics > Dopamine antagonists), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Prochlorperazine' at https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine, July 2026 release, read under subscription 2026-09-22"
   }
  ],
  "summary": {

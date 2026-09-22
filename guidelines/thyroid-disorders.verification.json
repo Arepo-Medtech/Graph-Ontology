@@ -5,8 +5,13 @@
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/propranolol",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/carbimazole",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/propylthiouracil",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/hyperthyroidism",
   "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/hypothyroidism",
-  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/hyperthyroidism"
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/liothyronine"
  ],
  "retrieved_utc": "2026-09-22",
  "method": "Read under subscription in the operator's browser and PARAPHRASED. No AMH passage is reproduced and no source_text is stored; every claim carries a locator and verdict licensed_source_not_quoted, so none can be machine re-checked from this repository. Dose claims are flagged dose:true for the attestation queue. No citation from any other work has been attached to these claims. The open Australian alternatives were checked first and are stale: Aust Prescr subclinical hypothyroidism 1999, thyroid function tests 2011, thyroid replacement 2008.",
@@ -189,7 +194,8 @@
    "claim": "In Graves' disease antithyroid drugs are usually given for 12 to 18 months",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
   },
   {
    "claim": "In the adjusted regimen treatment starts high for 3 to 4 weeks then reduces by about half according to response, with initial adjustment based on plasma T4 and T3 because TSH may remain suppressed for a few months, reviewing every 4 to 6 weeks to the lowest effective dose",
@@ -207,7 +213,8 @@
    "claim": "Antithyroid drugs given around radioactive iodine should be stopped at least 4 days before and restarted no sooner than 3 days after to allow iodine uptake, with effect assessed by tapering off 2 to 4 months after treatment",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22",
+   "dose": true
   },
   {
    "claim": "Remission on long-term antithyroid treatment for Graves' disease occurs in fewer than 50% of people after about 1 to 2 years and may be temporary",
@@ -243,84 +250,84 @@
    "claim": "Adult levothyroxine requirement is approximately 1.6 micrograms per kg once daily based on ideal weight, rounded to the nearest 25 micrograms",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "The usual adult levothyroxine range is oral 50 to 200 micrograms once daily, adjusted every 6 to 8 weeks according to TSH",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "In frail or elderly patients or those with ischaemic heart disease, levothyroxine starts at 25 to 50 micrograms once daily increasing by 25 micrograms every 6 to 8 weeks according to TSH",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "In very frail patients or severe ischaemic heart disease, levothyroxine may start at 12.5 micrograms once daily with specialist advice",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "In children levothyroxine requires paediatric endocrinologist advice and is adjusted every 2 to 4 weeks by 25 micrograms daily to keep serum thyroxine upper normal and TSH normal",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Liothyronine 20 to 25 micrograms is approximately equivalent in activity to levothyroxine 100 micrograms, with a usual oral range of 20 to 60 micrograms daily in 2 or 3 doses, on endocrinologist advice",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monographs 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine; 'Liothyronine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/liothyronine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Carbimazole starts at oral 10 to 45 mg daily, up to 60 mg daily in severe cases, in 2 or 3 doses for 3 to 4 weeks",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Carbimazole' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/carbimazole, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Carbimazole maintenance in the adjusted regimen is usually 5 to 15 mg daily but is highly variable with a range of 2.5 to 40 mg daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Carbimazole' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/carbimazole, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Propylthiouracil starts at oral 200 to 400 mg daily in 2 to 4 doses for 3 to 4 weeks, with maintenance 25 to 300 mg daily in divided doses",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Propylthiouracil' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/propylthiouracil, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "In the block-replace regimen the initial antithyroid dose continues and 100 to 150 micrograms of levothyroxine is added when T4 is in the normal range",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Levothyroxine' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/thyroid-hormones/levothyroxine, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "In thyroid storm carbimazole is oral 60 to 80 mg daily in divided doses gradually reduced, and propylthiouracil is oral 600 to 1200 mg daily in divided doses gradually reduced",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monographs 'Carbimazole' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/carbimazole; 'Propylthiouracil' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/antithyroid-drugs/propylthiouracil, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Propranolol for tachyarrhythmias including hyperthyroidism is oral 10 to 40 mg 3 or 4 times daily",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Propranolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/propranolol, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   }
  ],

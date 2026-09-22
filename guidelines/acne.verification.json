@@ -5,7 +5,20 @@
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/macrolides/erythromycin",
+  "https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/tetracyclines/doxycycline",
+  "https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/tetracyclines/minocycline",
   "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/acne",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/azelaic-acid",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/benzoyl-peroxide",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/clascoterone",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/clindamycin-benzoyl-peroxide",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/adapalene",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/adapalene-benzoyl-peroxide",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/clindamycin-tretinoin",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/tretinoin-skin",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/trifarotene",
   "https://www1.racgp.org.au/ajgp/2023/october/unique-considerations-in-skin-of-colour"
  ],
  "retrieved_utc": "2026-09-22",
@@ -297,132 +310,132 @@
    "claim": "Adapalene, tretinoin (topical) and trifarotene are each applied once a day at bedtime",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monographs 'Adapalene' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/adapalene; 'Tretinoin (skin)' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/tretinoin-skin; 'Trifarotene' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/trifarotene, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Adapalene with benzoyl peroxide is applied once a day at bedtime, starting with the 0.1% strength",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Adapalene with benzoyl peroxide' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/adapalene-benzoyl-peroxide, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Clindamycin with tretinoin is applied once a day at bedtime for up to 12 weeks",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Clindamycin with tretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-skin/clindamycin-tretinoin, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Clindamycin with benzoyl peroxide is applied once daily in the evening in adults and children",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Clindamycin with benzoyl peroxide' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/clindamycin-benzoyl-peroxide, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Benzoyl peroxide is started at the lower strength product and applied once or twice a day in adults and children",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Benzoyl peroxide' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/benzoyl-peroxide, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Azelaic acid is applied morning and night in adults and children",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Azelaic acid' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/azelaic-acid, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Clascoterone is applied twice a day in adults and children over 12 years",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs under Dermatological drugs > Drugs for acne, July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Clascoterone' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/other-drugs-acne/clascoterone, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Doxycycline for acne is oral 50 mg once daily for at least 6 weeks in adults and children over 8 years, increased to 100 mg once daily if necessary",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Doxycycline' at https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/tetracyclines/doxycycline, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Minocycline for acne is oral 50 mg once or twice daily, or 100 mg once daily, in adults and children over 8 years",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Minocycline' at https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/tetracyclines/minocycline, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Erythromycin for acne and rosacea is oral 250 to 500 mg twice daily in adults and children over 12 years",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Erythromycin' at https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials/macrolides/erythromycin, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Isotretinoin for acne is oral, initially 0.5 mg/kg daily in one or two doses in those over 12 years, adjusted after 4 weeks according to response and tolerance to a maximum of 1 mg/kg daily which may be poorly tolerated",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22",
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22",
    "dose": true
   },
   {
    "claim": "Isotretinoin requires liver function tests and lipids at baseline, after the first month of treatment, and then as clinically required",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Two effective contraceptive methods are recommended with isotretinoin, for example a combined oral contraceptive and a barrier method, and oral progestogen-only contraceptives are considered unsuitable",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Blood should not be donated during isotretinoin treatment and for 8 weeks after stopping",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Approximately 10 to 20% of patients relapse after isotretinoin; most remain disease-free after a single course or have long remissions, and repeat courses are recommended if recurrence is severe",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "At least 2 months should be allowed after completing an isotretinoin course before deciding on further treatment, because improvement may continue for several months after stopping",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Topical anti-acne preparations should be avoided during isotretinoin treatment because local irritation may increase",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Isotretinoin combined with tetracyclines may increase the risk of benign intracranial hypertension and the combination is contraindicated by manufacturers",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "An acne flare usually occurs in the first few weeks of isotretinoin; most are mild and improve with continued treatment, but severe cases need urgent dermatologist review and may require dose reduction and oral corticosteroids",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   },
   {
    "claim": "Evidence for an association between isotretinoin and psychiatric disorders is conflicting and acne itself has been associated with psychiatric disorders, so counselling and monitoring for psychological symptoms is prudent",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
-   "locator": "AMH Medicines, drug monographs: doxycycline and minocycline (Anti-infectives > Antibacterials > Tetracyclines), erythromycin (Macrolides), isotretinoin (Dermatological drugs > Drugs for acne > Retinoids (oral)), July 2026 release, read under subscription 2026-09-22"
+   "locator": "AMH Medicines, drug monograph 'Isotretinoin' at https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/retinoids-oral/isotretinoin, July 2026 release, read under subscription 2026-09-22"
   }
  ],
  "summary": {
