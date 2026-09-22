@@ -1,273 +1,277 @@
 {
-  "guideline": "guidelines/hepatitis-c.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-21",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ASHM hepatitis C page. Thresholds, intervals and ages compared character by character. DAA regimens are not on the source page and are recorded as input_unavailable, NOT reconstructed from model memory. The source's use of 'positive SVR' to denote treatment failure, and the incomplete unit 'AST 40/L', are transcribed as written and flagged rather than reinterpreted.",
-  "claims": [
-    {
-      "claim": "Almost all patients can be successfully cured with direct-acting antiviral therapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Almost all patients can be successfully cured with direct-acting antiviral (DAA) therapy."
-    },
-    {
-      "claim": "Current injecting drug use does not exclude a patient from treatment initiation",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Current injecting drug use | Current injecting drug use does not exclude patient from treatment initiation."
-    },
-    {
-      "claim": "All HCV PCR positive patients should be given the opportunity to be treated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "All HCV PCR positive patients should be given the opportunity to be treated."
-    },
-    {
-      "claim": "The auditable outcomes are that 100% of hepatitis C antibody positive patients have a hepatitis C RNA performed and 100% of antibody positive RNA positive patients are offered HCV treatment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "100% of hepatitis C antibody positive patients have a hepatitis C RNA performed. 100% of hepatitis C antibody positive/RNA positive patients are offered HCV treatment"
-    },
-    {
-      "claim": "Re-infection should be treated again",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Re-infection | Treat again."
-    },
-    {
-      "claim": "No dose adjustment is required for people over 65 years old",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Over 65 years old | No dose adjustment required."
-    },
-    {
-      "claim": "Treatment advice and initiation should be in collaboration with HCV treatment providers until the clinician is comfortable with the decision-making process and prescribing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Treatment advice and initiation in collaboration with HCV treatment providers until you are comfortable with the decision-making process and prescribing."
-    },
-    {
-      "claim": "A detected hepatitis C antibody indicates past or current infection, while not detected indicates no evidence of infection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Hepatitis C antibody (Hep C Ab) | Detected: Infection with hepatitis C (past or current) Not detected: no evidence of infection"
-    },
-    {
-      "claim": "Detected HCV RNA indicates active infection, not detected indicates past or cleared infection or never infected, and it is used for test of cure or test of re-infection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "HCV RNA (NAAT)/HCV PCR | Detected: active infection Not detected: past/cleared infection; never had infection NB: Use for test of cure or test of re-infection"
-    },
-    {
-      "claim": "Following successful treatment or natural clearance, HCV RNA will be negative although hepatitis C antibody will remain positive",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Following successful treatment or natural clearance of hepatitis C virus, HCV RNA will be negative although hepatitis C antibody will remain positive"
-    },
-    {
-      "claim": "Never repeat an HCV antibody test if initially positive",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Never repeat an HCV antibody test if initially positive."
-    },
-    {
-      "claim": "Only use HCV PCR on patients with previous HCV infection, and HCV PCR is required for patients with previously cleared or treated infection who require ongoing testing",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Only use HCV PCR on patients with previous HCV infection ... HCV PCR is required for patients with previously cleared or treated infection who require ongoing testing."
-    },
-    {
-      "claim": "Reflex testing is an HCV PCR done if an HCV antibody test is positive, allowing diagnosis without recalling the client; two EDTA samples need to be collected with the initial serum sample, and the local pathology service should be checked as sample preparation differs in metropolitan, regional and rural areas",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Reflex testing is an HCV PCR test done if an HCV antibody test is positive. The opportunity to diagnose HCV status is done without having to recall the client. Two EDTA samples need to be collected with the initial serum sample. Request HCV PCR if HCV antibody (anti-HCV) confirmed positive (ensure with the local pathology service if this test is possible, as sample preparation will differ in metropolitan, regional and rural areas)."
-    },
-    {
-      "claim": "A finger prick point-of-care HCV RNA test gives a result in 60 minutes and is useful for test and treat models of care",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Finger prick blood test | HCV RNA Point-of-care test | Result in 60 minutes - useful for test and treat models of care"
-    },
-    {
-      "claim": "Past cleared hepatitis C infection does not provide immunity against re-infection, and retesting is required if there is continued risk of re-exposure",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Past cleared hepatitis C infection does not provide immunity against re-infection. ... Clearance of hepatitis C does not provide immunity from re-infection. Retesting is required if there is a continued risk of re-exposure"
-    },
-    {
-      "claim": "If the patient has ongoing risk factors an annual HCV RNA test should be performed, and if re-infected offer re-treatment and harm reduction strategies",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If your patient has ongoing risk factors annual HCV RNA test. If re-infected offer re-treatment and harm reduction strategies"
-    },
-    {
-      "claim": "Ensure the patient uses new equipment if they continue to inject drugs",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Ensure your patient uses new equipment if they continue to inject drugs."
-    },
-    {
-      "claim": "For acute hepatitis, test for HCV PCR 6 months after the possible infection date as the patient may have cleared the infection, and speak to a specialist if the patient is unwell",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Acute hepatitis | Test for HCV PCR 6 months after possible infection date - the patient may have cleared the infection. | Speak to a specialist if the patient is unwell."
-    },
-    {
-      "claim": "For chronic infection all positive patients should be treated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Chronic infection | All positive patients should be treated."
-    },
-    {
-      "claim": "Referral to a specialist is recommended if complications such as cirrhosis are suspected, and the Hepatitis C Consensus Statement states all people with cirrhosis should be referred to and managed in consultation with a specialist familiar with the management of this condition",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Complications | Referral to specialist if complications suspected e.g. cirrhosis. The Hepatitis C Consensus Statement states: All people with cirrhosis should be referred to, and managed in consultation with, a specialist familiar with the management of this condition"
-    },
-    {
-      "claim": "An alternative for complications is to commence treatment and send the patient to a specialist or speak to a specialist",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Commence treatment and send the patient to a specialist or speak to a specialist."
-    },
-    {
-      "claim": "Upper limits of normal ALT are 30 IU/L for male sex and 19 IU/L for female sex, with AST 40 for the APRI calculator",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Liver function test (LFT) | Upper limits of normal ALT - male sex 30 IU/L; female sex 19 IU/L, AST 40/L for APRI calculator."
-    },
-    {
-      "claim": "The platelet count from a full blood count is important for the APRI score, and an APRI above 1 indicates increased likelihood of cirrhosis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Full blood count | Platelet count important for APRI score ... APRI | Above 1: increased likelihood of cirrhosis"
-    },
-    {
-      "claim": "Increasing AFP levels may indicate hepatocellular carcinoma, the upper limit of normal is 10 or below, and AFP may be elevated in other conditions",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "AFP | Increasing levels may indicate Hepatocellular carcinoma (HCC). Upper limit of normal <= 10 May be elevated in other conditions"
-    },
-    {
-      "claim": "HCV genotype is not required for treatment but is recommended as part of clinical assessment where possible",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "HCV genotype | Viral subtype: not required for treatment but is recommended as part of clinical assessment where possible"
-    },
-    {
-      "claim": "HCV resistance testing is done by a specialist to guide treatment if initial treatment has failed",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "HCV resistance testing | Done by a specialist to guide treatment if initial treatment has failed"
-    },
-    {
-      "claim": "The MBS schedule should be checked for pre-treatment, on-treatment and post-treatment item numbers and testing amounts per 12-month periods",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Medicare Benefits Schedule (MBS): check the schedule for pre-treatment, on-treatment and post-treatment item number and testing amounts per 12-month periods"
-    },
-    {
-      "claim": "Vaccinate for hepatitis A and B if susceptible, and screen for STIs and other blood borne viruses including HIV and syphilis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Vaccinate for hepatitis A and B, if susceptible. Screen for sexually transmitted infections (STIs) and other blood borne viruses (HIV and syphilis)."
-    },
-    {
-      "claim": "Notify the state or territory health department if required, only if HCV PCR is detected",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Notify the state/territory health department if required (only if HCV PCR detected)."
-    },
-    {
-      "claim": "All babies of HCV RNA positive women should be tested with an HCV PCR test at 8 weeks of age and then 4-6 weeks later, and if positive the baby will need specialist management",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "All babies of HCV RNA positive women should be tested with an HCV PCR test at 8 weeks of age and then 4-6 weeks later. If positive, the baby will need specialist management."
-    },
-    {
-      "claim": "Treatment with DAA is available for HCV PCR positive children from 12 years of age and older",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Treatment for HCV PCR positive children from >= 12 years old with DAA."
-    },
-    {
-      "claim": "Past failed treatment or current treatment failure should be referred to a specialist, and co-infection with HIV or HBV should be referred to specialist services",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Past failed treatment or current treatment failure (positive SVR) | Refer to a specialist. ... Co-infection with HIV, HBV | Refer to specialist services."
-    },
-    {
-      "claim": "Test of cure is an HCV PCR at 4 weeks after completion of treatment; if negative counsel about possible risk behaviour and re-infection, and if positive retest at 12 weeks post treatment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "TOC-HCV PCR at 4 weeks after completion of treatment, if negative, counsel about possible risk behaviour and re-infection; if positive, retest at 12 weeks post treatment."
-    },
-    {
-      "claim": "Sustained viral response is defined as test of cure 12 weeks after the completion of treatment",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "SVR- Sustained Viral Response (TOC 12 weeks after the completion of treatment)"
-    },
-    {
-      "claim": "Patients with chronic hepatitis C should be assessed for other causes of hepatitis such as alcohol and fatty liver and counselled to reduce these factors if relevant",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patients with chronic hepatitis C should be assessed for other causes of hepatitis (e.g. alcohol, fatty liver), and should be counselled to reduce these factors if relevant (e.g. reduced alcohol intake)"
-    },
-    {
-      "claim": "Populations at risk include people with current or a history of injecting drug use, previous incarceration, birth in HCV endemic countries and regions, receipt of blood products before 1990 or in developing countries, condomless anal sex with a partner with HCV infection, participation in group sex, and current HIV PrEP use",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Populations at risk include: people with current or history of injecting drug use; previous incarceration; born in hepatitis C virus (HCV) endemic countries and regions; received blood products before 1990 or in developing countries; engage in condomless anal sex with a partner with HCV infection, participate in group sex and current HIV pre-exposure prophylaxis (PrEP) use"
-    },
-    {
-      "claim": "About 75% of people with hepatitis C infection will progress to chronic hepatitis",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "About 75% of people with hepatitis C infection will progress to chronic hepatitis."
-    },
-    {
-      "claim": "Asymptomatic hepatitis C infection is common and acute hepatitis is uncommon",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Asymptomatic infection: common; Acute hepatitis: uncommon."
-    },
-    {
-      "claim": "Chronic HCV is defined as an HCV viral load detected in the absence of clinical features of acute hepatitis infection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Chronic HCV is defined as a HCV VL detected in the absence of clinical features of acute hepatitis infection."
-    },
-    {
-      "claim": "Disease progression is usually slow but may cause cirrhosis, liver failure and hepatocellular carcinoma, and is affected by age at infection, duration of infection, alcohol and other drug use, co-infection with HIV or HBV, male gender, stage of fibrosis, higher ALT levels and other comorbid conditions such as diabetes",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Disease progression is usually slow but may cause cirrhosis, liver failure and hepatocellular carcinoma. Disease progression can be affected by age at infection, duration of infection, alcohol and other drug use, co-infection with HIV or hepatitis B virus (HBV), male gender, stage of fibrosis and higher alanine aminotransferase (ALT) levels, other comorbid conditions e.g. diabetes."
-    },
-    {
-      "claim": "Hepatitis C is low risk for sexual exposure and contact tracing is not generally performed for sexual partners, while contacts via parenteral exposure such as shared needles or injecting equipment should be tested if possible",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Low risk for sexual exposure, contact tracing not generally performed for sexual partners. Contacts via parenteral exposure (shared needles, injecting equipment) should be tested if possible"
-    },
-    {
-      "claim": "Children of mothers who are HCV PCR positive and not tested in the post-natal period should be tested",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Children of mothers who are HCV PCR positive and not tested in the post-natal period should be tested."
-    },
-    {
-      "claim": "Hepatitis C is caused by infection with the single-stranded RNA hepatitis C virus",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Infection with the single-stranded RNA hepatitis C virus."
-    }
-  ],
-  "summary": {
-    "total": 43,
-    "pass": 43,
-    "fail": 0
+ "guideline": "guidelines/hepatitis-c.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-21",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ASHM hepatitis C page. Thresholds, intervals and ages compared character by character. DAA regimens are not on the source page and are recorded as input_unavailable, NOT reconstructed from model memory. The source's use of 'positive SVR' to denote treatment failure, and the incomplete unit 'AST 40/L', are transcribed as written and flagged rather than reinterpreted. RE-VERIFIED 2026-09-22: the page in retrieved_from was fetched again and every claim attributed to this source was re-checked against it. Quotes stored from the earlier scrape carried that scrape's table and list markup (pipes, numbered list markers) into the quoted string; each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py). No dose, duration or concentration changed: the set of numbers in every repaired quote was compared before and after, and the only difference across 156 repaired quotes was list numerals 1-4 becoming bullets. Where a reference superscript falls inside a quoted sentence the page renders it inline, so it appears in source_text; it is part of the retrieved text, not part of the assertion.",
+ "claims": [
+  {
+   "claim": "Almost all patients can be successfully cured with direct-acting antiviral therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Almost all patients can be successfully cured with direct-acting antiviral (DAA) therapy."
+  },
+  {
+   "claim": "Current injecting drug use does not exclude a patient from treatment initiation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Current injecting drug use Current injecting drug use does not exclude patient from treatment initiation"
+  },
+  {
+   "claim": "All HCV PCR positive patients should be given the opportunity to be treated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All HCV PCR positive patients should be given the opportunity to be treated."
+  },
+  {
+   "claim": "The auditable outcomes are that 100% of hepatitis C antibody positive patients have a hepatitis C RNA performed and 100% of antibody positive RNA positive patients are offered HCV treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "100% of hepatitis C antibody positive patients have a hepatitis C RNA performed - 100% of hepatitis C antibody positive/RNA positive patients are offered HCV treatment"
+  },
+  {
+   "claim": "Re-infection should be treated again",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Re-infection Treat again"
+  },
+  {
+   "claim": "No dose adjustment is required for people over 65 years old",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Over 65 years old No dose adjustment required"
+  },
+  {
+   "claim": "Treatment advice and initiation should be in collaboration with HCV treatment providers until the clinician is comfortable with the decision-making process and prescribing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment advice and initiation in collaboration with HCV treatment providers until you are comfortable with the decision-making process and prescribing."
+  },
+  {
+   "claim": "A detected hepatitis C antibody indicates past or current infection, while not detected indicates no evidence of infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hepatitis C antibody (Hep C Ab) Detected: Infection with hepatitis C (past or current) Not detected: no evidence of infection"
+  },
+  {
+   "claim": "Detected HCV RNA indicates active infection, not detected indicates past or cleared infection or never infected, and it is used for test of cure or test of re-infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HCV RNA (NAAT)/HCV PCR Detected: active infection Not detected: past/cleared infection; never had infection NB: Use for test of cure or test of re-infection"
+  },
+  {
+   "claim": "Following successful treatment or natural clearance, HCV RNA will be negative although hepatitis C antibody will remain positive",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Following successful treatment or natural clearance of hepatitis C virus, HCV RNA will be negative although hepatitis C antibody will remain positive"
+  },
+  {
+   "claim": "Never repeat an HCV antibody test if initially positive",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Never repeat an HCV antibody test if initially positive."
+  },
+  {
+   "claim": "Only use HCV PCR on patients with previous HCV infection, and HCV PCR is required for patients with previously cleared or treated infection who require ongoing testing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Only use HCV PCR on patients with previous HCV infection ... HCV PCR is required for patients with previously cleared or treated infection who require ongoing testing."
+  },
+  {
+   "claim": "Reflex testing is an HCV PCR done if an HCV antibody test is positive, allowing diagnosis without recalling the client; two EDTA samples need to be collected with the initial serum sample, and the local pathology service should be checked as sample preparation differs in metropolitan, regional and rural areas",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Reflex testing is an HCV PCR test done if an HCV antibody test is positive. The opportunity to diagnose HCV status is done without having to recall the client. Two EDTA samples need to be collected with the initial serum sample. Request HCV PCR if HCV antibody (anti-HCV) confirmed positive (ensure with the local pathology service if this test is possible, as sample preparation will differ in metropolitan, regional and rural areas)."
+  },
+  {
+   "claim": "A finger prick point-of-care HCV RNA test gives a result in 60 minutes and is useful for test and treat models of care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finger prick blood test HCV RNA Point-of-care test Result in 60 minutes - useful for test and treat models of care"
+  },
+  {
+   "claim": "Past cleared hepatitis C infection does not provide immunity against re-infection, and retesting is required if there is continued risk of re-exposure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Past cleared hepatitis C infection does not provide immunity against re-infection. ... Clearance of hepatitis C does not provide immunity from re-infection. Retesting is required if there is a continued risk of re-exposure"
+  },
+  {
+   "claim": "If the patient has ongoing risk factors an annual HCV RNA test should be performed, and if re-infected offer re-treatment and harm reduction strategies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If your patient has ongoing risk factors annual HCV RNA test. If re-infected offer re-treatment and harm reduction strategies"
+  },
+  {
+   "claim": "Ensure the patient uses new equipment if they continue to inject drugs",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure your patient uses new equipment if they continue to inject drugs."
+  },
+  {
+   "claim": "For acute hepatitis, test for HCV PCR 6 months after the possible infection date as the patient may have cleared the infection, and speak to a specialist if the patient is unwell",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute hepatitis Test for HCV PCR 6 months after possible infection date - the patient may have cleared the infection. Speak to a specialist if the patient is unwell"
+  },
+  {
+   "claim": "For chronic infection all positive patients should be treated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chronic infection All positive patients should be treated"
+  },
+  {
+   "claim": "Referral to a specialist is recommended if complications such as cirrhosis are suspected, and the Hepatitis C Consensus Statement states all people with cirrhosis should be referred to and managed in consultation with a specialist familiar with the management of this condition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complications Referral to specialist if complications suspected e.g. cirrhosis. The Hepatitis C Consensus Statement states: All people with cirrhosis should be referred to, and managed in consultation with, a specialist familiar with the management of this condition"
+  },
+  {
+   "claim": "An alternative for complications is to commence treatment and send the patient to a specialist or speak to a specialist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Commence treatment and send the patient to a specialist or speak to a specialist."
+  },
+  {
+   "claim": "Upper limits of normal ALT are 30 IU/L for male sex and 19 IU/L for female sex, with AST 40 for the APRI calculator",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Liver function test (LFT) Upper limits of normal ALT - male sex 30 IU/L; female sex 19 IU/L, AST 40/L for APRI calculator"
+  },
+  {
+   "claim": "The platelet count from a full blood count is important for the APRI score, and an APRI above 1 indicates increased likelihood of cirrhosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Full blood count Platelet count important for APRI score ... APRI Above 1: increased likelihood of cirrhosis"
+  },
+  {
+   "claim": "Increasing AFP levels may indicate hepatocellular carcinoma, the upper limit of normal is 10 or below, and AFP may be elevated in other conditions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "AFP Increasing levels may indicate Hepatocellular carcinoma (HCC). Upper limit of normal ≤ 10 May be elevated in other conditions"
+  },
+  {
+   "claim": "HCV genotype is not required for treatment but is recommended as part of clinical assessment where possible",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HCV genotype Viral subtype: not required for treatment but is recommended as part of clinical assessment where possible"
+  },
+  {
+   "claim": "HCV resistance testing is done by a specialist to guide treatment if initial treatment has failed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HCV resistance testing Done by a specialist to guide treatment if initial treatment has failed"
+  },
+  {
+   "claim": "The MBS schedule should be checked for pre-treatment, on-treatment and post-treatment item numbers and testing amounts per 12-month periods",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Medicare Benefits Schedule (MBS): check the schedule for pre-treatment, on-treatment and post-treatment item number and testing amounts per 12-month periods"
+  },
+  {
+   "claim": "Vaccinate for hepatitis A and B if susceptible, and screen for STIs and other blood borne viruses including HIV and syphilis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vaccinate for hepatitis A and B, if susceptible. - Screen for sexually transmitted infections (STIs) and other blood borne viruses (HIV and syphilis"
+  },
+  {
+   "claim": "Notify the state or territory health department if required, only if HCV PCR is detected",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Notify the state/territory health department if required (only if HCV PCR detected)."
+  },
+  {
+   "claim": "All babies of HCV RNA positive women should be tested with an HCV PCR test at 8 weeks of age and then 4-6 weeks later, and if positive the baby will need specialist management",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All babies of HCV RNA positive women should be tested with an HCV PCR test at 8 weeks of age and then 4-6 weeks later. If positive, the baby will need specialist management."
+  },
+  {
+   "claim": "Treatment with DAA is available for HCV PCR positive children from 12 years of age and older",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment for HCV PCR positive children from ≥ 12 years old with DAA"
+  },
+  {
+   "claim": "Past failed treatment or current treatment failure should be referred to a specialist, and co-infection with HIV or HBV should be referred to specialist services",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Past failed treatment or current treatment failure (positive SVR) Refer to a specialist ... Co-infection with HIV, HBV Refer to specialist services"
+  },
+  {
+   "claim": "Test of cure is an HCV PCR at 4 weeks after completion of treatment; if negative counsel about possible risk behaviour and re-infection, and if positive retest at 12 weeks post treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "TOC-HCV PCR at 4 weeks after completion of treatment, if negative, counsel about possible risk behaviour and re-infection; if positive, retest at 12 weeks post treatment."
+  },
+  {
+   "claim": "Sustained viral response is defined as test of cure 12 weeks after the completion of treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "SVR- Sustained Viral Response (TOC 12 weeks after the completion of treatment)"
+  },
+  {
+   "claim": "Patients with chronic hepatitis C should be assessed for other causes of hepatitis such as alcohol and fatty liver and counselled to reduce these factors if relevant",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with chronic hepatitis C should be assessed for other causes of hepatitis (e.g. alcohol, fatty liver), and should be counselled to reduce these factors if relevant (e.g. reduced alcohol intake)"
+  },
+  {
+   "claim": "Populations at risk include people with current or a history of injecting drug use, previous incarceration, birth in HCV endemic countries and regions, receipt of blood products before 1990 or in developing countries, condomless anal sex with a partner with HCV infection, participation in group sex, and current HIV PrEP use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Populations at risk include: people with current or history of injecting drug use; previous incarceration; born in hepatitis C virus (HCV) endemic countries and regions; received blood products before 1990 or in developing countries; engage in condomless anal sex with a partner with HCV infection, participate in group sex and current HIV pre-exposure prophylaxis (PrEP) use"
+  },
+  {
+   "claim": "About 75% of people with hepatitis C infection will progress to chronic hepatitis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "About 75% of people with hepatitis C infection will progress to chronic hepatitis."
+  },
+  {
+   "claim": "Asymptomatic hepatitis C infection is common and acute hepatitis is uncommon",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic infection: common - Acute hepatitis: uncommon"
+  },
+  {
+   "claim": "Chronic HCV is defined as an HCV viral load detected in the absence of clinical features of acute hepatitis infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chronic HCV is defined as a HCV VL detected in the absence of clinical features of acute hepatitis infection."
+  },
+  {
+   "claim": "Disease progression is usually slow but may cause cirrhosis, liver failure and hepatocellular carcinoma, and is affected by age at infection, duration of infection, alcohol and other drug use, co-infection with HIV or HBV, male gender, stage of fibrosis, higher ALT levels and other comorbid conditions such as diabetes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Disease progression is usually slow but may cause cirrhosis, liver failure and hepatocellular carcinoma. - Disease progression can be affected by age at infection, duration of infection, alcohol and other drug use, co-infection with HIV or hepatitis B virus (HBV), male gender, stage of fibrosis and higher alanine aminotransferase (ALT) levels, other comorbid conditions e.g. diabetes"
+  },
+  {
+   "claim": "Hepatitis C is low risk for sexual exposure and contact tracing is not generally performed for sexual partners, while contacts via parenteral exposure such as shared needles or injecting equipment should be tested if possible",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Low risk for sexual exposure, contact tracing not generally performed for sexual partners - Contacts via parenteral exposure (shared needles, injecting equipment) should be tested if possible"
+  },
+  {
+   "claim": "Children of mothers who are HCV PCR positive and not tested in the post-natal period should be tested",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children of mothers who are HCV PCR positive and not tested in the post-natal period should be tested."
+  },
+  {
+   "claim": "Hepatitis C is caused by infection with the single-stranded RNA hepatitis C virus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infection with the single-stranded RNA hepatitis C virus."
   }
+ ],
+ "summary": {
+  "total": 43,
+  "pass": 43,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/hepatitis-c/"
+ ],
+ "retrieved_utc": "2026-09-22"
 }

@@ -256,11 +256,19 @@ the situation where knowing *which page, when* matters.
 about *what against*. `scripts/verify.py --source` can machine-check a guideline **only if someone still has
 the retrieved text**, and for 48 of 61 nobody did.
 
-### Progress, 2026-09-22 — 18 closed, 37 outstanding
+### Progress, 2026-09-22 — 33 closed, 22 outstanding
 
-Eighteen guidelines were re-retrieved from their source page and every claim attributed to that source was
-re-checked against the fresh copy: **832 fragments, all verbatim, all whole-word**. `retrieved_from` now
-records the page actually fetched. The rest still cannot be machine-rechecked.
+Thirty-three guidelines were re-retrieved from their source page and every claim attributed to that source
+was re-checked against the fresh copy: **the 18 ACSQHC and Australian Prescriber files, then the 15 ASHM STI
+guidelines**. `retrieved_from` now records the page actually fetched. **22 remain**, almost all of them built
+on journal articles behind a DOI rather than an open web page — for those a stable identifier, not a fetch,
+is the realistic provenance.
+
+⚠️ **Safety check on the repairs.** Repairing a quote against a live page could in principle alter a dose. It
+did not: for every repaired claim the **multiset of numbers was compared before and after**. Across **375
+repaired quotes in 33 files**, the only differences were **list numerals 1–4 becoming bullets**, two rewritten
+adrenaline table fragments, and **reference superscripts and page cross-references that the page carries and
+the earlier quote had dropped**. No dose, duration or concentration changed anywhere.
 
 ⚠️ **One provenance error was made and corrected in the same pass.** `psychotropic-medicines-cognitive-disability.md`
 was given the ACSQHC standard's URL, but **all 50 of its claims cite the Australian Prescriber article**, not

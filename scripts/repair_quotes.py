@@ -76,16 +76,16 @@ def locate(frag, hay, hn, hidx):
             r = difflib.SequenceMatcher(None, fn, hn[lo:hi], autojunk=False).ratio()
             if r > best_r and hi > lo:
                 best_r = r
-                a, b = hidx[lo], hidx[hi - 1] + 1
+                c0, c1 = hidx[lo], hidx[hi - 1] + 1
                 # hidx points at alphanumeric characters, so a span can begin or
                 # end in the middle of a word. Grow outwards to whole words: a
                 # fragment stopping mid-word is still a substring of the page and
                 # would pass a naive check while being a truncated quote.
-                while a > 0 and hay[a - 1].isalnum():
-                    a -= 1
-                while b < len(hay) and hay[b].isalnum():
-                    b += 1
-                best = hay[a:b]
+                while c0 > 0 and hay[c0 - 1].isalnum():
+                    c0 -= 1
+                while c1 < len(hay) and hay[c1].isalnum():
+                    c1 += 1
+                best = hay[c0:c1]
     return (best, best_r) if best_r >= MIN_RATIO else (None, best_r)
 
 

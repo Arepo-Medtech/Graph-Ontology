@@ -1,219 +1,223 @@
 {
-  "guideline": "guidelines/anogenital-warts.md",
-  "edition": "1.0",
-  "verified_utc": "2026-09-21",
-  "verifier": "claude-opus-5",
-  "verifier_class": "single_verifier_uncalibrated",
-  "method": "Each claim checked against the retrieved text of the ASHM anogenital warts page. Regimens, cycle structures and durations compared character by character.",
-  "claims": [
-    {
-      "claim": "Treatment of anogenital warts is cosmetic rather than curative",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Treatment is cosmetic rather than curative."
-    },
-    {
-      "claim": "The auditable outcome is that 100% of patients diagnosed with genital warts are provided with information",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "100% of patients diagnosed with genital warts are provided with information."
-    },
-    {
-      "claim": "The long latent period, just as with herpes, means that the presence of warts in only one partner does not necessarily imply recent infidelity",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "The long latent period, just as with herpes, means that the presence of warts in only one partner does not necessarily imply recent infidelity."
-    },
-    {
-      "claim": "Warty growths cause little discomfort and are sometimes itchy, but psychological distress is often significant",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Warty growths in and around anogenital skin or mouth. Little discomfort (sometimes itchy) but often psychological distress is significant"
-    },
-    {
-      "claim": "Diagnosis is usually based on visual appearance",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Diagnosis is usually based on visual appearance."
-    },
-    {
-      "claim": "HPV PCR testing is not used to diagnose anogenital warts",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "HPV PCR testing is not used to diagnose Anogenital warts."
-    },
-    {
-      "claim": "Consider other potential causes such as syphilis presenting as condylomata lata",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider other potential causes (e.g. syphilis presenting as condylomata lata)."
-    },
-    {
-      "claim": "Most anogenital warts are caused by HPV types 6 and 11 and infection results in type-specific protection",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Most anogenital warts are caused by HPV types 6 and 11 and infection results in type-specific protection."
-    },
-    {
-      "claim": "Most HPV infections are asymptomatic",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Most HPV infections are asymptomatic."
-    },
-    {
-      "claim": "HPV transmission is from direct skin-to-skin contact with apparent or subclinical lesions and contact with genital secretions, with micro-abrasions in the recipient's skin allowing viral access to the basal cells of the epithelium",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Human papillomavirus (HPV) transmission is from direct skin-to-skin contact with apparent or subclinical lesions and contact with genital secretions. Micro-abrasions in the recipient's skin allow viral access to the basal cells of the epithelium."
-    },
-    {
-      "claim": "Atypical lesions, lesions with variable pigmentation or raised plaque-like lesions should be biopsied to exclude pre-cancerous change, especially in patients who are immunosuppressed or have HIV",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Atypical lesions, lesions with variable pigmentation or raised plaque-like lesions should be biopsied to exclude pre-cancerous change especially in patients who are immunosuppressed or have human immunodeficiency virus (HIV)"
-    },
-    {
-      "claim": "Consider referral and biopsy of atypical lesions or new lesions in elderly people to test for malignancy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Consider referral and biopsy of atypical lesions or new lesions in elderly people (to test for malignancy)."
-    },
-    {
-      "claim": "Malignancy of the penis, anus, oropharynx, vulva, vagina and cervix is possible with oncogenic HPV genotypes",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Malignancy (penile, anal, oropharynx) is possible with oncogenic HPV genotypes. Malignancy (vulvar, vaginal, cervical, anal, oropharynx) is possible with oncogenic HPV genotypes."
-    },
-    {
-      "claim": "Cervical lesions noted on vaginal examination should have cervical screening conducted as per national guidelines",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Cervical lesions noted on vaginal examination should have cervical screening conducted as per national guidelines"
-    },
-    {
-      "claim": "Recommended treatment is patient-applied podophyllotoxin paint topically twice a day for 3 days then 4 days off, repeated weekly for 4-6 cycles until resolution",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patient applied podophyllotoxin paint topically applied, twice a day for 3 days, then 4 days off, repeated weekly for 4-6 cycles until resolution."
-    },
-    {
-      "claim": "Alternatively patient-applied imiquimod 5% cream topically 3 times per week at bedtime, washed off after 6-10 hours, until resolution up to 16 weeks",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Patient applied imiquimod 5% cream topically, 3 times per week at bedtime (wash after 6-10 hours) until resolution (up to 16 weeks)."
-    },
-    {
-      "claim": "The alternative is clinician-initiated cryotherapy weekly, and rarely excision under local anaesthetic or ablative therapy under general anaesthetic with specialist advice",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Clinician initiated cryotherapy weekly. (Rarely may need excision under local anaesthetic or ablative therapy under general anaesthetic. Seek specialist advice.)"
-    },
-    {
-      "claim": "Meatal warts are treated with cryotherapy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Meatal warts: treat with cryotherapy"
-    },
-    {
-      "claim": "Intra-anal warts are treated with cryotherapy or referred for surgical management",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Intra-anal warts: treat with cryotherapy or refer for surgical management"
-    },
-    {
-      "claim": "Cervical warts require initial cervical cytology and referral to a gynaecologist for consideration of colposcopy, biopsy and treatment as indicated",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Cervical warts: initial cervical cytology and refer to gynaecologist for consideration of colposcopy, biopsy and treatment as indicated."
-    },
-    {
-      "claim": "In HIV infection genital warts can have a poor response to treatment, may require longer cycles of treatment and are more likely to recur",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "HIV infection: genital warts can have a poor response to treatment and may require longer cycles of treatment and are more likely to recur."
-    },
-    {
-      "claim": "Persistent intra-anal lesions in people living with HIV should be considered for surgical excision and HPV DNA typing to inform follow-up",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Persistent intra-anal lesions in people living with HIV should be considered for surgical excision and HPV DNA typing to inform follow-up."
-    },
-    {
-      "claim": "Complicated or disseminated infection should be considered for referral for laser or diathermy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Complicated or disseminated infection | Consider referral for laser or diathermy."
-    },
-    {
-      "claim": "If warts are in the pubic region, avoid shaving or waxing as this may facilitate local spread by autoinoculation of HPV into areas of microtrauma",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "If warts are in the pubic region avoid shaving or waxing as this may facilitate local spread by autoinoculation of HPV into areas of microtrauma."
-    },
-    {
-      "claim": "Offer HPV vaccination if not already vaccinated, noting that HPV vaccination is not a therapeutic vaccine but may protect from future acquisition of other HPV types",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Offer HPV vaccination if not already vaccinated. Note that HPV vaccination is not a therapeutic vaccine but may protect people from future acquisition of other HPV types."
-    },
-    {
-      "claim": "Genital warts is not a notifiable condition",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Genital warts is not a notifiable condition."
-    },
-    {
-      "claim": "Warts can grow rapidly in pregnancy and can be treated during pregnancy with cryotherapy or diathermy",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Warts can grow rapidly in pregnancy and can be treated during pregnancy with cryotherapy or diathermy."
-    },
-    {
-      "claim": "In pregnancy cryotherapy can have a poor response and lesions often resolve spontaneously postnatally when immune function returns to normal following delivery",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Pregnancy | Cryotherapy can have a poor response. Lesions often resolve spontaneously postnatally when immune function returns to normal following delivery."
-    },
-    {
-      "claim": "Pregnant people can undergo a normal vaginal delivery as the risk of transmission to the baby is extremely low",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Pregnant people can undergo a normal vaginal delivery as the risk of transmission to the baby is extremely low."
-    },
-    {
-      "claim": "Contact tracing is not recommended as the majority of partners have probably acquired the infection subclinically",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Not recommended. The majority of partners have probably acquired the infection subclinically."
-    },
-    {
-      "claim": "Follow-up is not required if symptoms resolve; review if the patient is anxious or the warts are difficult for the patient to visualise",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Not required if symptoms resolve. Review if patient anxious or warts are difficult for patient to visualise."
-    },
-    {
-      "claim": "Test of cure is not applicable and retesting is not required, though other STI testing should be considered if not undertaken at first presentation or post the window period",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Test of cure. Not applicable. Retesting. Not required. Consider testing for other STIs, if not undertaken at first presentation, or retesting post the window period."
-    },
-    {
-      "claim": "Urethral lesions can cause a distorted urinary stream or bleeding, and anal lesions can cause perianal itch and rectal bleeding after passage of stools",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Distorted urinary stream or bleeding with urethral lesions. Perianal itch. Rectal bleeding after passage of stools with anal lesions"
-    },
-    {
-      "claim": "Anogenital warts are caused by human papillomavirus",
-      "source": "S1",
-      "verdict": "pass",
-      "source_text": "Human papillomavirus"
-    }
-  ],
-  "summary": {
-    "total": 34,
-    "pass": 34,
-    "fail": 0
+ "guideline": "guidelines/anogenital-warts.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-21",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "method": "Each claim checked against the retrieved text of the ASHM anogenital warts page. Regimens, cycle structures and durations compared character by character. RE-VERIFIED 2026-09-22: the page in retrieved_from was fetched again and every claim attributed to this source was re-checked against it. Quotes stored from the earlier scrape carried that scrape's table and list markup (pipes, numbered list markers) into the quoted string; each was replaced with the text the page actually carries, located by alignment against the retrieved copy (scripts/repair_quotes.py). No dose, duration or concentration changed: the set of numbers in every repaired quote was compared before and after, and the only difference across 156 repaired quotes was list numerals 1-4 becoming bullets. Where a reference superscript falls inside a quoted sentence the page renders it inline, so it appears in source_text; it is part of the retrieved text, not part of the assertion.",
+ "claims": [
+  {
+   "claim": "Treatment of anogenital warts is cosmetic rather than curative",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment is cosmetic rather than curative."
+  },
+  {
+   "claim": "The auditable outcome is that 100% of patients diagnosed with genital warts are provided with information",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "100% of patients diagnosed with genital warts are provided with information."
+  },
+  {
+   "claim": "The long latent period, just as with herpes, means that the presence of warts in only one partner does not necessarily imply recent infidelity",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The long latent period, just as with herpes, means that the presence of warts in only one partner does not necessarily imply recent infidelity."
+  },
+  {
+   "claim": "Warty growths cause little discomfort and are sometimes itchy, but psychological distress is often significant",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Warty growths in and around anogenital skin or mouth. Little discomfort (sometimes itchy) but often psychological distress is significant"
+  },
+  {
+   "claim": "Diagnosis is usually based on visual appearance",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Diagnosis is usually based on visual appearance."
+  },
+  {
+   "claim": "HPV PCR testing is not used to diagnose anogenital warts",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HPV PCR testing is not used to diagnose Anogenital warts."
+  },
+  {
+   "claim": "Consider other potential causes such as syphilis presenting as condylomata lata",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider other potential causes (e.g. syphilis presenting as condylomata lata)."
+  },
+  {
+   "claim": "Most anogenital warts are caused by HPV types 6 and 11 and infection results in type-specific protection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most anogenital warts are caused by HPV types 6 and 11 and infection results in type-specific protection."
+  },
+  {
+   "claim": "Most HPV infections are asymptomatic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most HPV infections are asymptomatic."
+  },
+  {
+   "claim": "HPV transmission is from direct skin-to-skin contact with apparent or subclinical lesions and contact with genital secretions, with micro-abrasions in the recipient's skin allowing viral access to the basal cells of the epithelium",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Human papillomavirus (HPV) transmission is from direct skin-to-skin contact with apparent or subclinical lesions and contact with genital secretions. Micro-abrasions in the recipient's skin allow viral access to the basal cells of the epithelium."
+  },
+  {
+   "claim": "Atypical lesions, lesions with variable pigmentation or raised plaque-like lesions should be biopsied to exclude pre-cancerous change, especially in patients who are immunosuppressed or have HIV",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Atypical lesions, lesions with variable pigmentation or raised plaque-like lesions should be biopsied to exclude pre-cancerous change especially in patients who are immunosuppressed or have human immunodeficiency virus (HIV)"
+  },
+  {
+   "claim": "Consider referral and biopsy of atypical lesions or new lesions in elderly people to test for malignancy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider referral and biopsy of atypical lesions or new lesions in elderly people (to test for malignancy)."
+  },
+  {
+   "claim": "Malignancy of the penis, anus, oropharynx, vulva, vagina and cervix is possible with oncogenic HPV genotypes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Malignancy (penile, anal, oropharynx) is possible with oncogenic HPV genotypes. - Malignancy (vulvar, vaginal, cervical, anal, oropharynx) is possible with oncogenic HPV genotypes"
+  },
+  {
+   "claim": "Cervical lesions noted on vaginal examination should have cervical screening conducted as per national guidelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cervical lesions noted on vaginal examination should have cervical screening conducted as per national guidelines"
+  },
+  {
+   "claim": "Recommended treatment is patient-applied podophyllotoxin paint topically twice a day for 3 days then 4 days off, repeated weekly for 4-6 cycles until resolution",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patient applied podophyllotoxin paint topically applied, twice a day for 3 days, then 4 days off, repeated weekly for 4-6 cycles until resolution."
+  },
+  {
+   "claim": "Alternatively patient-applied imiquimod 5% cream topically 3 times per week at bedtime, washed off after 6-10 hours, until resolution up to 16 weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patient applied imiquimod 5% cream topically, 3 times per week at bedtime (wash after 6-10 hours) until resolution (up to 16 weeks)."
+  },
+  {
+   "claim": "The alternative is clinician-initiated cryotherapy weekly, and rarely excision under local anaesthetic or ablative therapy under general anaesthetic with specialist advice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinician initiated cryotherapy weekly. (Rarely may need excision under local anaesthetic or ablative therapy under general anaesthetic. Seek specialist advice.)"
+  },
+  {
+   "claim": "Meatal warts are treated with cryotherapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Meatal warts: treat with cryotherapy"
+  },
+  {
+   "claim": "Intra-anal warts are treated with cryotherapy or referred for surgical management",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intra-anal warts: treat with cryotherapy or refer for surgical management"
+  },
+  {
+   "claim": "Cervical warts require initial cervical cytology and referral to a gynaecologist for consideration of colposcopy, biopsy and treatment as indicated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cervical warts: initial cervical cytology and refer to gynaecologist for consideration of colposcopy, biopsy and treatment as indicated."
+  },
+  {
+   "claim": "In HIV infection genital warts can have a poor response to treatment, may require longer cycles of treatment and are more likely to recur",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HIV infection: genital warts can have a poor response to treatment and may require longer cycles of treatment and are more likely to recur."
+  },
+  {
+   "claim": "Persistent intra-anal lesions in people living with HIV should be considered for surgical excision and HPV DNA typing to inform follow-up",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Persistent intra-anal lesions in people living with HIV should be considered for surgical excision and HPV DNA typing to inform follow-up."
+  },
+  {
+   "claim": "Complicated or disseminated infection should be considered for referral for laser or diathermy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complicated or disseminated infection Consider referral for laser or diathermy"
+  },
+  {
+   "claim": "If warts are in the pubic region, avoid shaving or waxing as this may facilitate local spread by autoinoculation of HPV into areas of microtrauma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If warts are in the pubic region avoid shaving or waxing as this may facilitate local spread by autoinoculation of HPV into areas of microtrauma."
+  },
+  {
+   "claim": "Offer HPV vaccination if not already vaccinated, noting that HPV vaccination is not a therapeutic vaccine but may protect from future acquisition of other HPV types",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Offer HPV vaccination if not already vaccinated. Note that HPV vaccination is not a therapeutic vaccine but may protect people from future acquisition of other HPV types."
+  },
+  {
+   "claim": "Genital warts is not a notifiable condition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Genital warts is not a notifiable condition."
+  },
+  {
+   "claim": "Warts can grow rapidly in pregnancy and can be treated during pregnancy with cryotherapy or diathermy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Warts can grow rapidly in pregnancy and can be treated during pregnancy with cryotherapy or diathermy."
+  },
+  {
+   "claim": "In pregnancy cryotherapy can have a poor response and lesions often resolve spontaneously postnatally when immune function returns to normal following delivery",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pregnancy Cryotherapy can have a poor response. Lesions often resolve spontaneously postnatally when immune function returns to normal following delivery"
+  },
+  {
+   "claim": "Pregnant people can undergo a normal vaginal delivery as the risk of transmission to the baby is extremely low",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pregnant people can undergo a normal vaginal delivery as the risk of transmission to the baby is extremely low."
+  },
+  {
+   "claim": "Contact tracing is not recommended as the majority of partners have probably acquired the infection subclinically",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not recommended. The majority of partners have probably acquired the infection subclinically."
+  },
+  {
+   "claim": "Follow-up is not required if symptoms resolve; review if the patient is anxious or the warts are difficult for the patient to visualise",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not required if symptoms resolve. Review if patient anxious or warts are difficult for patient to visualise."
+  },
+  {
+   "claim": "Test of cure is not applicable and retesting is not required, though other STI testing should be considered if not undertaken at first presentation or post the window period",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Test of cure Not applicable. Retesting Not required. Consider testing for other STIs, if not undertaken at first presentation, or retesting post the window period"
+  },
+  {
+   "claim": "Urethral lesions can cause a distorted urinary stream or bleeding, and anal lesions can cause perianal itch and rectal bleeding after passage of stools",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Distorted urinary stream or bleeding with urethral lesions - Perianal itch - Rectal bleeding after passage of stools with anal lesions"
+  },
+  {
+   "claim": "Anogenital warts are caused by human papillomavirus",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Human papillomavirus"
   }
+ ],
+ "summary": {
+  "total": 34,
+  "pass": 34,
+  "fail": 0
+ },
+ "retrieved_from": [
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/anogenital-warts/"
+ ],
+ "retrieved_utc": "2026-09-22"
 }
