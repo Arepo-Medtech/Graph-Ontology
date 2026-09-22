@@ -26,7 +26,7 @@ checked:
 | Eye infections | *Eye infections* | ⚠️ **Aust Prescr 1994** |
 | Eating disorders | *Eating disorders* | ⚠️ **Aust Prescr 1998** |
 | Hypothyroidism | *Managing subclinical hypothyroidism* | ⚠️ **Aust Prescr 1999** |
-| Scabies | *The treatment of scabies* | ⚠️ **Aust Prescr 2000** |
+| Scabies | *The treatment of scabies* | ⚠️ **Aust Prescr 2000** — ✅ **superseded: ASHM *Ectoparasites*, modified 30 June 2026** |
 | Head lice | *Treating head lice* | ⚠️ **Aust Prescr 2001** |
 | Opioid dependence | *Drug treatment for opioid dependence* | ⚠️ **Aust Prescr 2001** |
 | Acne | *Drug treatment of acne* | **Aust Prescr 2013** |
@@ -61,7 +61,7 @@ working down the list in alphabetical order.
 | Source | Yield | Notes |
 |---|---|---|
 | **ACSQHC Clinical Care Standards** | 20 guidelines | exhausted — all published standards held |
-| **ASHM STI guidelines** | 15 guidelines | exhausted |
+| **ASHM STI guidelines** | 16 guidelines | ⚠️ **NOT exhausted — this entry was wrong.** The *Ectoparasites* page closes **Scabies** and **Lice, pubic** and was available all along. ASHM also publishes **syndrome** pages (anogenital lumps and ulcers, cervicitis, epididymo-orchitis, genital dermatology, PID, urethritis, vaginal discharge) and **population** pages that were never checked against the gap list |
 | **RCH clinical practice guidelines** | 5 guidelines this march, ~10 total | **499 topics in the A–Z**; paediatric only; dates range **2019–2025** |
 | **RACGP AJGP** | 1 guideline | open, current, continuously published, **no sitemap** — needs per-issue crawling or search |
 | **Australian Prescriber** | 2 guidelines | open, **but the back catalogue is stale for these topics**; good where recent |
@@ -91,3 +91,14 @@ working down the list in alphabetical order.
 
 **The honest end state for some of the 122 is a one-line entry saying which licensed source holds the
 current answer.** That is more useful than a guideline built on a twenty-year-old article.
+
+## ⚠️ Correction, same day
+
+The first version of this document said ASHM was exhausted. **It was not.** The *Ectoparasites* page —
+current, modified 30 June 2026, carrying full doses — closes two gap topics and was reachable the entire
+time. The error was mine: I treated "the 15 pages I fetched" as "the site", and never re-read the ASHM index
+I had already downloaded, which lists **ectoparasites plus a whole syndrome and population section**.
+
+**The lesson for the remaining 122 is the opposite of the finding above**: before concluding a topic is
+blocked, re-check the indexes already in hand. The stale-back-catalogue finding stands for Australian
+Prescriber, but **"no current open source" must be established, not assumed.**

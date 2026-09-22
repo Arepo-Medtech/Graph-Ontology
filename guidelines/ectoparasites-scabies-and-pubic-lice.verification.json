@@ -1,0 +1,217 @@
+{
+ "guideline": "guidelines/ectoparasites-scabies-and-pubic-lice.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://sti.guidelines.org.au/sexually-transmissible-infections/ectoparasites/"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text. Every claim is verbatim-checked against that file with scripts/verify.py. Prose paraphrases; source_text stays verbatim. Modification date read from the page metadata (2026-06-30). This page was available when docs/source-landscape.md recorded ASHM as exhausted; that entry was wrong and is corrected in the same commit.",
+ "claims": [
+  {
+   "claim": "Scabies and pubic lice are the commonest genital ectoparasites",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most common genital and pubic ectoparasite infestations are scabies and pubic lice (Pediculosis pubis or crabs)"
+  },
+  {
+   "claim": "Scabies associated with crowding and institutional outbreaks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Scabies is associated with crowded living and sleeping conditions and institutional outbreaks have been reported"
+  },
+  {
+   "claim": "Pubic lice typical in sexually active young people",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pubic lice is found typically in sexually active young people"
+  },
+  {
+   "claim": "Causative organisms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pubic lice is caused by Pthirus pubis. … Scabies is caused by Sarcoptes scabiei var hominis"
+  },
+  {
+   "claim": "Scabies transmission and fomites",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Close, prolonged (15-20 min) skin contact, person-to-person transmission. … Fomite transmission possible. … May survive > 3 days off host in tropics but < 36hours usually"
+  },
+  {
+   "claim": "Pubic lice transmission and survival",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Transmitted by close body contact. … Survive less than 24 hours off host. … Fomite transmission plays little role. … Not a vector for other diseases"
+  },
+  {
+   "claim": "Clinical signs are an allergic response to mite bites",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical signs are due to allergy to bites by the mite"
+  },
+  {
+   "claim": "Presenting symptoms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pubic or genital itch (especially at night with scabies) and/or rash … Scabies: genital (penile, scrotal, vulval) papulonodule … Crabs: debris in underwear"
+  },
+  {
+   "claim": "Complications of scabies and pubic lice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Scabies: complications uncommon and mostly in crusted scabies … Fever (children) … Pain on movement … Sleep disturbance … Secondary infection … Pubic lice: fever, lethargy, irritability (more common in the young and frail)"
+  },
+  {
+   "claim": "Pubic lice diagnosis by visualisation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Direct visualisation +/- magnification of crab or eggs (nits) … Adult lice infest strong hairs (pubic hair, trunk, chest and buttock; rarely eyebrows and eyelashes) … Eggs (nits) are strongly attached to the hairs"
+  },
+  {
+   "claim": "Scabies is a clinical diagnosis aided by dermatoscope",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Usually a clinical diagnosis. … A dermatoscope/magnifying glass can aid diagnosis"
+  },
+  {
+   "claim": "Definitive scabies methods are impractical in general practice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Multiple methods requiring moderate degree of skill and equipment. Not usually practical in general practice … not generally available in general practice, seek specialist advice"
+  },
+  {
+   "claim": "Characteristic scabies signs and burrow sites",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Characteristic nodule and silvery skin burrows sometimes seen e.g. nodule on glans penis and scrotum concurrently, labial fold nodule, burrows (inter-digital folds, wrists and elbows, around breast nipples in women)"
+  },
+  {
+   "claim": "Skin scraping technique",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Scabies: skin scraping taken from burrows with a fine needle to reveal the mite after examination under light microscopy"
+  },
+  {
+   "claim": "Permethrin 5% regimen for scabies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Apply permethrin cream 5% topically to dry skin from the neck down, especially hands and genitalia, and under the nails with a nailbrush. Leave on the skin for a minimum of 8 hours (usually overnight) and reapply to hands if they are washed. … The time may be increased to 24 hours if there has been a treatment failure. Repeat treatment in 1 week to improve success rate"
+  },
+  {
+   "claim": "Benzyl benzoate 25% alternative",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Apply benzyl benzoate 25% emulsion topically to dry skin from the neck down, paying particular attention to hands and genitalia, and under the nails with a nailbrush. Leave on for 24 hours and reapply to hands if they are washed. … Repeat treatment in 7 days"
+  },
+  {
+   "claim": "Pyrethrin with piperonyl butoxide for pubic lice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Apply pyrethrin 0.165% + piperonyl butoxide 1.65% topical foam to pubic and other hair infested with lice and wash off after 10 minutes. … Repeat treatment in 1 week"
+  },
+  {
+   "claim": "Shaving and egg removal not required",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Shaving pubic hair and removal of eggs is not required"
+  },
+  {
+   "claim": "No demonstrated permethrin resistance in pubic lice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Compared with head lice, resistance to permethrin treatment of pubic lice has not been demonstrated"
+  },
+  {
+   "claim": "Crusted scabies definition and populations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Crusted scabies (formerly called Norwegian scabies) occurs when the mite population is very high due to poor host immune response, such as in people with HIV infection, and also in people living in remote Aboriginal and Torres Strait Island communities. Seek specialist advice for treatment"
+  },
+  {
+   "claim": "Ivermectin for less severe crusted scabies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ivermectin 200mcg/kg PO on days 1, and second dose between day 8-14. … An additional dose maybe required for moderate -severe scabies but seek specialist advice"
+  },
+  {
+   "claim": "Pre-treat severe impetigo before antiscabetic treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If secondary bacterial infection (impetigo) is severe, pre-treat with antibiotics to cover S. aureus and/or S. pyogenes before administering antiscabetic treatment"
+  },
+  {
+   "claim": "Ivermectin for persistent infection after topical failure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ivermectin 200 mcg/kg PO on days 1 and 8-14, not before 4 weeks after failure of both topical permethrin and benzyl benzoate"
+  },
+  {
+   "claim": "Scabies treatment advice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid close body contact. … Patient and recent partner/s should complete treatment. … Apply cream at night, including finger webs and do not wash hands after applying cream. … Isolate clothes, towels and bed linen from previous 3 days and launder as usual the day after first treatment. Or simply isolate these items for > 1 week while mites die"
+  },
+  {
+   "claim": "Cap of two applications and two-week symptom persistence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid more than 2 applications of treatment to prevent persistent irritation. … Symptoms and signs may not clear for 2 weeks. … Antipruritic treatments (antihistamine oral medication; calamine lotion and topical steroid creams e.g. hydrocortisone 1%) can be helpful"
+  },
+  {
+   "claim": "Pubic lice laundering advice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Isolate clothes, towels and bed linen from previous 3 days and launder as usual the day after first treatment"
+  },
+  {
+   "claim": "No sexual contact for 7 days and contact tracing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advise no sexual contact for 7 days after treatment is commenced, or until the course is completed and symptoms resolved, whichever is later. … Contact tracing"
+  },
+  {
+   "claim": "Contact tracing scope for scabies and pubic lice",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Scabies: simultaneous treatment of sexual contacts and all household members of the past month. … Pubic lice: simultaneous treatment of recent sexual contacts and all household members"
+  },
+  {
+   "claim": "Permethrin safe in pregnancy and breastfeeding",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Permethrin is safe in pregnancy and during breast feeding"
+  },
+  {
+   "claim": "Whole community treatment may be required in remote settings",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No special differences. Scabies may affect entire small remote communities where a whole community treatment regimen may be required. Seek local advice"
+  },
+  {
+   "claim": "Eyelash infestation treatment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ophthalmic-grade petrolatum ointment bd for 10 days (prescription needed and compounding pharmacist to make)"
+  },
+  {
+   "claim": "One week review purpose",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Confirm patient adherence with treatment and assess for symptom resolution … Confirm contact tracing procedures have been undertaken or offer more contact tracing support … Educate about condom use, contraception, HIV PrEP/PEP, safe injecting practices, consent, CST and vaccinations for HAV, HBV and HPV as indicated"
+  },
+  {
+   "claim": "Seek specialist advice for complicated or persisting presentations",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider seeking specialist advice before treating any complicated or persisting presentation"
+  }
+ ],
+ "summary": {
+  "total": 33,
+  "pass": 33,
+  "fail": 0
+ }
+}
