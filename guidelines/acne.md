@@ -133,6 +133,72 @@ salicylic acid, resorcinol and allantoin** are **widely used, but their effectiv
 ⚠️ **Exfoliants may limit tolerance of other, more effective agents and have no effect on sebaceous gland
 activity** [A1].
 
+
+## Dosing
+
+> ⚠️ **These doses are paraphrased from AMH drug monographs and carry no stored quote** — they are
+> `licensed_source_not_quoted` and **cannot be machine re-checked from this repository**. Doses are the
+> highest-consequence content in this compendium and the least verifiable here: **check every one against
+> AMH before use.** They are flagged `dose: true` in the verification file so they can be filtered into an
+> attestation queue.
+
+### Topical
+
+| Agent | Dose [A1] |
+|---|---|
+| **Adapalene** | apply **once a day at bedtime** |
+| **Tretinoin (topical)** | apply **once a day at bedtime** |
+| **Trifarotene** | apply **once a day at bedtime** |
+| **Adapalene with benzoyl peroxide** | **once a day at bedtime, starting with the 0.1% strength** |
+| **Clindamycin with tretinoin** | **once a day at bedtime for up to 12 weeks** |
+| **Clindamycin with benzoyl peroxide** | adult and child, **once daily in the evening** |
+| **Benzoyl peroxide** | ⚠️ **begin treatment with the lower strength product**; adult and child, **once or twice a day** |
+| **Azelaic acid** | adult and child, **morning and night** |
+| **Clascoterone** | adult and child **>12 years**, **twice a day** |
+
+### Oral
+
+| Agent | Dose [A1] |
+|---|---|
+| **Doxycycline** | adult and child **>8 years**, oral **50 mg once daily for at least 6 weeks**; then if necessary **increase to 100 mg once daily** |
+| **Minocycline** | adult and child **>8 years**, oral **50 mg once or twice daily, or 100 mg once daily** |
+| **Erythromycin** | adult and child **>12 years**, oral **250–500 mg twice daily** |
+| ⚠️ **Isotretinoin** | age **>12 years**, oral, **initially 0.5 mg/kg daily in 1 or 2 doses**. **After 4 weeks the dose may be adjusted according to response and tolerance; maximum 1 mg/kg daily**, which **may be poorly tolerated** |
+
+⚠️ Note the **8-year floor on both tetracyclines** and the **12-year floor on erythromycin, clascoterone and
+isotretinoin** — the age limits differ by agent and are easy to conflate.
+
+⚠️ **Doxycycline starts at 50 mg, not 100 mg**, and is held there **for at least six weeks** before any
+increase. That is a lower and slower start than the dose often used.
+
+### Isotretinoin — the parts that are not the dose
+
+**Monitoring**: **liver function tests and lipids at baseline, after the first month of treatment, and then
+as clinically required** [A1].
+
+**Contraception**: **two effective methods are recommended, for example a COC and a barrier method**, and
+⚠️ **oral progestogen-only contraceptives are considered unsuitable** [A1]. Cover is required **during
+treatment and for 1 month after stopping** [A1].
+
+⚠️ **Do not donate blood during treatment and for 8 weeks after stopping** [A1].
+
+**Course and relapse**: **most patients remain disease-free after a single course or have long remissions;
+approximately 10–20% relapse, and repeat courses are recommended if recurrence is severe** [A1].
+⚠️ **Allow at least 2 months after completing a course before deciding whether further treatment is
+necessary, as improvement may continue for several months after stopping** [A1].
+
+**Do not combine with topical anti-acne preparations — local irritation may increase** [A1]. ⚠️ **Avoid
+combining with tetracyclines: the combination may increase the risk of benign intracranial hypertension and
+is contraindicated by manufacturers** [A1].
+
+**An acne flare usually occurs during the first few weeks of treatment; most cases are mild and improve with
+continued treatment, but severe cases require urgent dermatologist review — dose reduction and oral
+corticosteroids may be required** [A1].
+
+**Psychiatric monitoring**: **the evidence for an association between isotretinoin and psychiatric disorders
+is conflicting, and acne itself has been associated with psychiatric disorders; it is prudent to counsel
+patients and monitor for psychological symptoms** [A1].
+
 ## When to refer
 
 **Refer to a dermatologist** if acne is **severe or unresponsive to conventional treatment — for example
@@ -203,13 +269,13 @@ multiple areas of involvement to prevent irregular pigmentation** [S2].
 
 | Point | Kind | Detail |
 |---|---|---|
-| ⚠️ **No doses in this guideline** | **input_unavailable** | AMH's individual **drug monographs** carry the doses; this is the **therapeutic topic** only. Doses were **deliberately not transcribed** — see the licensing note below |
+| ⚠️ **Doses are not machine re-checkable** | **access** | the **Dosing** section above is paraphrased from AMH **drug monographs** and carries **no stored quote**. Doses are the highest-consequence content here and the least verifiable from this repository — **every one needs checking against AMH before use**. They are flagged `dose: true` in the verification file |
 | ⚠️ **Claims from [A1] are not machine re-checkable** | **access** | paraphrased from a subscriber source with **no stored quote**. A reader without an AMH subscription **cannot verify them from this repository**; a reader with one can, from the named topic |
-| **Topical retinoid agents** | **input_unavailable** | AMH's topic says **topical retinoids** as a class; **adapalene and tretinoin** are named only by the open AJGP source, and only for skin of colour |
+| ~~**Topical retinoid agents**~~ | ✅ **resolved** | the monographs name and dose **adapalene**, **tretinoin**, **trifarotene** and the fixed combinations — see **Dosing** |
 | **COC choice** | **evidence_unsettled** | **a systematic review showed little difference in efficacy, though further comparative data are needed** — so the choice is not evidence-driven |
-| **Cyproterone and spironolactone dosing** | **input_unavailable** | both described as **specialist** use, **cyproterone at higher doses than in the COC**; **no dose given** |
+| ⚠️ **Cyproterone and spironolactone dosing** | **input_unavailable** | **confirmed absent**: neither monograph carries an **acne** dose line, consistent with the topic describing both as specialist use. **Nothing is reconstructed** |
 | **Isotretinoin authorisation** | **input_unavailable** | **restricted to dermatologists or other authorised medical practitioners**, with the reader sent to a **state or territory health department** — the actual authorisation pathway **differs by jurisdiction and is not stated** |
-| **Isotretinoin monitoring** | **input_unavailable** | teratogenicity and the 1-month post-treatment window are stated; **no monitoring schedule, pregnancy testing interval or contraception requirement** appears in the topic |
+| ~~**Isotretinoin monitoring**~~ | ✅ **partly resolved** | the monograph gives **LFTs and lipids at baseline, after the first month, then as clinically required**, and **two effective contraceptive methods with oral progestogen-only unsuitable**. ⚠️ **A pregnancy testing interval is still not stated** |
 | **PIH treatments** | **input_unavailable** | **hydroquinone, chemical peels and laser** are named by [S2] with considerations but **no concentrations, regimens or course lengths** were retrieved |
 | **Hypopigmentation risk quantified** | **evidence_unsettled** | azelaic acid **may cause hypopigmentation** in dark complexions and that effect **may be useful** for hyperpigmented scars — **the same property presented as both risk and benefit**, unquantified |
 

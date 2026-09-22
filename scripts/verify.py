@@ -126,6 +126,14 @@ def check(path, source=None, only_source=None):
     if nlic:
         notes.append(f"{nlic} claim(s) read in a LICENSED source and paraphrased: "
                      f"not machine re-checkable here, verify against a subscription")
+    # Doses are the highest-consequence claims and, when they come from a licensed
+    # source, the least verifiable from this repository. Count them separately so
+    # they can be pulled into an attestation queue rather than lost in the total.
+    ndose = sum(1 for c in claims
+                if c.get("dose") and c.get("verdict") == "licensed_source_not_quoted")
+    if ndose:
+        notes.append(f"ATTESTATION QUEUE: {ndose} DOSE claim(s) from a licensed source, "
+                     f"unquoted - check each against the subscription before use")
     nunq = sum(1 for c in claims
                if c.get("verdict") not in ("pass", "fail", "pass_image_transcription"))
     if nunq:
