@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 68 guidelines · 2,837 claims · 441 `Unresolved` rows**
+**Generated 2026-09-22 · 69 guidelines · 2,938 claims · 453 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -274,8 +274,20 @@ and **one in development (Osteoporosis)**.
 | ~~**Cataract**~~ | ✅ **added 2026-09-22** — ophthalmology's first appearance |
 | ~~**Emergency Laparotomy**~~ | ✅ **added 2026-09-22** — acute surgery, and the first indicator set here that measures **mortality** |
 
-**Every published ACSQHC Clinical Care Standard is now represented.** The only one outstanding is
-**Osteoporosis**, which is still in development.
+**Correction (2026-09-22, same day).** The line first written here — *"every published ACSQHC Clinical Care
+Standard is now represented"* — **was wrong**, and the error was mine. It counted **domains covered**, not
+**standards held as sources**. A direct check of every source table found **three published standards that
+were the source of no guideline**: **Chronic Obstructive Pulmonary Disease**, **Osteoarthritis of the Knee**,
+and **Osteoporosis**.
+
+| Standard | Status |
+|---|---|
+| ~~**Chronic Obstructive Pulmonary Disease**~~ | ✅ **added 2026-09-22** as `copd-clinical-care-standard.md`, paired with `copd.md` |
+| **Osteoarthritis of the Knee** | outstanding — `osteoarthritis-knee-and-hip.md` leads on the RACGP guideline |
+| **Osteoporosis** | **not published.** Public consultation **Mar 2027**, approval **Sept–Oct 2027**, **launch early 2028** — correctly absent |
+
+**Eighteen of the twenty-one standards were held before today.** The gap was never in the domains; it was in
+which instrument each file was built on.
 
 **And two guidelines here lead on a non-ACSQHC source where an ACSQHC standard exists:**
 

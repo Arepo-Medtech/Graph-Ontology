@@ -1,0 +1,625 @@
+{
+ "guideline": "guidelines/copd-clinical-care-standard.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.safetyandquality.gov.au/clinical-care-standards/chronic-obstructive-pulmonary-disease"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text (no intermediate scraper), collapsing whitespace and removing the space left before punctuation where a link tag closes mid-sentence. Every claim below is verbatim-checked against that file with scripts/verify.py.",
+ "claims": [
+  {
+   "claim": "Ten quality statements",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ten quality statements describing the care that a patient should be offered, regardless of where they are treated in Australia"
+  },
+  {
+   "claim": "The Standard references COPD-X Version 2.75 (2024)",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The COPD-X plan: Australian and New Zealand guidelines for the management of chronic obstructive pulmonary disease 2024. Version 2.75"
+  },
+  {
+   "claim": "Statement 6 defers to the COPD-X stepwise approach",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "offer pharmacotherapy to manage symptoms and prevent exacerbations according to the COPD-X stepwise approach"
+  },
+  {
+   "claim": "Statement 7 defers to current COPD-X Guidelines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Manage COPD exacerbations in line with COPD-X Guidelines, and with consideration to patient comorbidities"
+  },
+  {
+   "claim": "Affects an estimated 1 in 13 Australians over 40 and is a leading cause of preventable hospitalisation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "COPD is a serious chronic condition, affecting an estimated 1 in 13 Australians over the age of 40 … It is a leading cause of potentially preventable hospitalisations (PPHs) in Australia"
+  },
+  {
+   "claim": "$832 million in 2020-21 and 50% of respiratory disease burden in 2023",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In 2020-21, an estimated $832 million was spent on COPD, and in 2023, it accounted for 50% of the total disease burden due to respiratory conditions in Australia"
+  },
+  {
+   "claim": "Up to 18-fold variation, and 4.8 times the rate for Aboriginal and Torres Strait Islander people",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The Fourth Australian Atlas of Healthcare Variation identified up to 18-fold variation in hospitalisation rates for COPD between local areas. … The rate for Aboriginal and Torres Strait Islander people was 4.8 times as high as the rate of other Australians"
+  },
+  {
+   "claim": "Almost 50% of antimicrobial prescriptions for COPD in admitted patients are inappropriate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the Fifth Australian Report on Antimicrobial Use and Resistance in Human Health highlighted that almost 50% of all antimicrobial prescriptions for COPD in admitted patients are inappropriate"
+  },
+  {
+   "claim": "47% past smokers and 25% currently smoke",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tobacco smoking is the most common risk factor for COPD - 47% of people with COPD are past smokers and 25% currently smoke"
+  },
+  {
+   "claim": "pMDI propellants have 1,300-3,350 times the potency of CO2",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Respiratory medicine is recognised as a significant contributor to the carbon footprint of health care. This is largely attributed to the manufacture, distribution and use of inhaler devices. In particular, there are specific concerns relating to the greenhouse gas effects of the propellants used in pressurised metered-dose inhalers (pMDIs), which have 1,300–3,350 times the potency of carbon dioxide (CO2)"
+  },
+  {
+   "claim": "Switching pMDI to DPI saves approximately 420 kg CO2 annually",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Switching a person from regular pMDI use to DPI use, where clinically appropriate, can save an equivalent of approximately 420 kg of CO2 emissions annually. This is similar to the effect of a person switching from a petrol to a hybrid car (equivalent to approximately 500 kg CO2 annually)"
+  },
+  {
+   "claim": "The most environmentally friendly inhaler is one used correctly",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Importantly, the most environmentally friendly inhaler is one used by the patient as prescribed and with the correct technique, as this minimises wastage and improves disease control"
+  },
+  {
+   "claim": "Statement 6 asks the clinician to consider environmental impact",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Also consider the environmental impact of different inhaler devices"
+  },
+  {
+   "claim": "Statement 1 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person over 35 years of age with a risk factor and one or more symptoms of chronic obstructive pulmonary disease (COPD) receives high-quality spirometry to enable diagnosis. Spirometry is also performed for a person with a recorded diagnosis of COPD that has not yet been confirmed with spirometry"
+  },
+  {
+   "claim": "COPD can only be diagnosed with spirometry",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A diagnosis of COPD can only be made with spirometry. COPD cannot be diagnosed based on clinical features or chest X-ray alone"
+  },
+  {
+   "claim": "FEV1/FVC less than 0.7 is diagnostic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A postbronchodilator forced expiratory volume in one second (FEV1) to forced vital capacity (FVC) ratio (FEV1/FVC) that is less than 0.7 confirms persistent airflow limitation and is diagnostic of COPD. If spirometry results are close to this threshold, spirometry should be repeated to confirm the results"
+  },
+  {
+   "claim": "Definition of high-quality spirometry",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "performed before and after administration of an inhaled bronchodilator … performed and interpreted by clinicians with appropriate training and competency … performed using spirometers that undergo regular quality control and calibration to meet current American Thoracic Society (ATS) and European Respiratory Society (ERS) Technical Statement specifications"
+  },
+  {
+   "claim": "Spirometry no later than eight weeks after a suspected exacerbation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the patient is too unwell to undergo spirometry at the time of an exacerbation, it should be arranged by the clinician responsible for the patient's ongoing care. Spirometry should be conducted once acute instability has resolved, and no later than eight weeks after a suspected exacerbation"
+  },
+  {
+   "claim": "Do not perform spirometry during active respiratory infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not perform spirometry in patients who are known or suspected to have an active respiratory infection (for example, COVID-19)"
+  },
+  {
+   "claim": "Overlap between COPD, asthma and bronchiectasis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is overlap in the clinical features of COPD and other respiratory conditions such as asthma (including adult-onset asthma) and bronchiectasis, and more than one condition can coexist in some patients. Some patients with asthma can also have persistent airflow limitation on spirometry"
+  },
+  {
+   "claim": "ICS central in asthma but limited in COPD",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Differentiating asthma from COPD is important for correct pharmacological management. For example, inhaled corticosteroids are important in asthma management, but in COPD should be limited to patients with severe symptoms and exacerbations"
+  },
+  {
+   "claim": "Statement 2 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with a confirmed COPD diagnosis receives a comprehensive assessment to determine their individual care needs. This includes assessing their symptoms and disease severity using a validated assessment tool, history and risk of exacerbations, and comorbidities. Follow-up assessment occurs at least annually"
+  },
+  {
+   "claim": "Spirometry alone does not indicate symptom severity",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although critical for determining the presence of airflow limitation, spirometry results alone do not accurately indicate the severity of COPD symptoms or their impact on the person"
+  },
+  {
+   "claim": "Components of comprehensive assessment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a detailed medical history that encompasses COPD risk factors … a review of symptoms, their severity and impact on daily living using a validated assessment tool … identifying risk of exacerbations, including the severity and frequency of past exacerbations … an assessment of general physical and mental health … a review of all current medicines, including whether any change (step up or step down) of therapy is required … an assessment of inhaler device technique for inhaled therapies and appropriateness of the inhaler device for the person"
+  },
+  {
+   "claim": "Common comorbidities named",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common comorbidities include heart failure, diabetes, anxiety and depression"
+  },
+  {
+   "claim": "Repeat spirometry after significant change or admission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although not required annually, repeat spirometry is warranted if there are significant changes in the person's health status, including after admission to hospital for a COPD exacerbation"
+  },
+  {
+   "claim": "Statement 3 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with COPD is supported to learn about their condition and treatment options. They participate in developing an individualised self-management plan that addresses their needs and treatment goals and includes an action plan for COPD exacerbations"
+  },
+  {
+   "claim": "Written COPD action plan contents",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure the person has an up-to-date written COPD action plan for exacerbations which clearly addresses how to recognise and respond to deteriorating symptoms. The COPD action plan should include clear instructions for using medicines (including their name, dose and how and when to use them), and when to seek medical attention"
+  },
+  {
+   "claim": "Non-pharmacological breathlessness strategies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss non‑pharmacological management strategies for episodes of breathlessness, such as handheld fans, breathing techniques, and breathlessness recovery positions"
+  },
+  {
+   "claim": "Plans reviewed after deterioration, medicine change or admission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Review the patient's self‑management plan and COPD action plan regularly, and whenever there is a deterioration in symptoms, a change in medicines is being considered, or if a patient has a hospital admission"
+  },
+  {
+   "claim": "Statement 4 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with COPD is offered recommended vaccinations for respiratory and other infections including influenza, pneumococcal disease and COVID-19. They are asked about their tobacco-smoking status and, if currently smoking, offered evidence-based tobacco-smoking cessation interventions"
+  },
+  {
+   "claim": "Ask about smoking status at every appointment including vapes and shisha",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ask the patient about their tobacco-smoking status at every appointment, including use of cigarettes, electronic cigarettes (vapes) or water pipes (shisha), and whether they smoke substances other than tobacco"
+  },
+  {
+   "claim": "Combination of behavioural strategies and pharmacotherapy is most effective",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Explain to the patient that the most effective way to manage nicotine dependence is through a combination of behavioural strategies and pharmacotherapy"
+  },
+  {
+   "claim": "Pharmacotherapy options named",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "behavioural support and counselling (for example, referral to Quitline) … pharmacotherapy (for example, nicotine replacement therapy, bupropion or varenicline)"
+  },
+  {
+   "claim": "Consider comorbidities when selecting cessation pharmacotherapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider comorbidities and current medicines when selecting pharmacotherapy"
+  },
+  {
+   "claim": "Ask, Advise, Help model named",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the three-step 'Ask, Advise, Help' model"
+  },
+  {
+   "claim": "Stigma named as a barrier in statement 4",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recognise that some patients who currently smoke (or have previously smoked) tobacco may experience stigma as a result of their COPD diagnosis. Always approach discussions about smoking cessation using careful and sensitive language"
+  },
+  {
+   "claim": "Stigma named again under statement 1 cultural safety",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "recognise that some people with COPD may feel stigmatised by the diagnosis, particularly people who have smoked, due to a perception that they are responsible for their condition"
+  },
+  {
+   "claim": "Not all vaccinations are free under the National Immunisation Program",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Explain to the patient that not all vaccinations may be available free of charge under the National Immunisation Program"
+  },
+  {
+   "claim": "NRT must be available during hospital admission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In hospital, ensure that patients have access to nicotine replacement therapy during admission"
+  },
+  {
+   "claim": "Statement 5 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with COPD is referred for pulmonary rehabilitation. If the person has been hospitalised for a COPD exacerbation, they are referred to a pulmonary rehabilitation program on discharge and commence the program within four weeks"
+  },
+  {
+   "claim": "Pulmonary rehabilitation described and its benefits",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "pulmonary rehabilitation is a structured six-to eight-week program that combines exercise, education and self‑management techniques designed for patients with COPD and demonstrated to … reduce breathlessness and fatigue … improve fitness levels and muscle strength … reduce anxiety and depression … reduce the likelihood of hospitalisation for exacerbations"
+  },
+  {
+   "claim": "Arranged on or before discharge and commenced within four weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any patient admitted for a COPD exacerbation should have access to pulmonary rehabilitation arranged on or before discharge, and commenced within four weeks. This reduces the short-term risk of readmission and improves exercise capacity and quality of life following an exacerbation"
+  },
+  {
+   "claim": "Exercise maintenance programs offered after completion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Once a patient has completed a pulmonary rehabilitation program, offer them access to exercise maintenance programs"
+  },
+  {
+   "claim": "Statement 6 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with a confirmed COPD diagnosis is offered individualised pharmacotherapy in line with the COPD-X stepwise approach. Inhaler technique is demonstrated, assessed and corrected when starting treatment and regularly thereafter, including after any change in treatment or a COPD exacerbation"
+  },
+  {
+   "claim": "Step 1 short-acting bronchodilator",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a short-acting inhaled bronchodilator – either a short-acting beta2-agonist (SABA*) or short-acting muscarinic antagonist (SAMA†) – for as-needed short-term relief of acute breathlessness"
+  },
+  {
+   "claim": "Step 2 long-acting bronchodilator",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "adding a long-acting bronchodilator – either a long-acting beta2-agonist (LABA‡) or long-acting muscarinic antagonist (LAMA§) – for regular use in patients with persistent troublesome dyspnoea despite SABA/SAMA use"
+  },
+  {
+   "claim": "Step 3 dual therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "dual therapy with a LABA and a LAMA for patients who remain symptomatic despite using either one alone, and after assessment of adherence and inhaler technique"
+  },
+  {
+   "claim": "LAMA contraindicated with SAMA but not SABA",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the use of a LAMA is contraindicated in patients using a SAMA, but not a SABA"
+  },
+  {
+   "claim": "ICS gate criterion one",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "history of a severe exacerbation (requiring hospitalisation) or at least two moderate exacerbations in the previous 12 months"
+  },
+  {
+   "claim": "ICS gate criterion two",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "experiencing severe symptoms despite dual long-acting bronchodilator therapy (LABA plus LAMA)"
+  },
+  {
+   "claim": "Macrolides require respiratory specialist review before starting",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Long-term, low-dose, oral macrolide antibiotics may be an option to reduce the frequency of exacerbations in patients with severe symptoms and recurrent exacerbations requiring hospitalisation despite maximal non‑pharmacological and pharmacological therapy. However, there are significant risks. Do not start treatment without review by a respiratory specialist"
+  },
+  {
+   "claim": "Macrolide risks and six-month review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "cardiac toxicity, ototoxicity or developing antibiotic resistance … Review the need for ongoing therapy after six months, and after each COPD exacerbation"
+  },
+  {
+   "claim": "Up to 90% of patients do not use inhalers correctly",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Up to 90% of patients do not use their inhalers correctly, and clinicians may also be unfamiliar with correct techniques. Ensure current knowledge of inhaler technique before discussing correct use with the patient"
+  },
+  {
+   "claim": "Pharmacists assess technique whenever a device is dispensed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inhaler technique should be assessed and corrected by pharmacists whenever an inhaler device is dispensed"
+  },
+  {
+   "claim": "Three mandatory technique checkpoints",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Before considering an escalation of therapy … After a change in treatment … After an exacerbation"
+  },
+  {
+   "claim": "HMR or RMMR considered",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider a Home Medicines Review (HMR) or a Residential Medication Management Review (RMMR) to support assessment of inhaler device technique and adherence"
+  },
+  {
+   "claim": "Statement 7 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person having a COPD exacerbation receives short-acting bronchodilator therapy at the onset of symptoms and, if indicated, oral corticosteroids in line with the current COPD-X Guidelines. Antibiotics are only considered if criteria for prescribing are met, and they are prescribed according to evidence-based guidelines"
+  },
+  {
+   "claim": "Oral corticosteroid for five days",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "an oral corticosteroid for five days if the response to the short-acting bronchodilator is inadequate; intravenous corticosteroids may be required if the person cannot take medicines orally"
+  },
+  {
+   "claim": "Antibiotics not routinely recommended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antibiotic therapy is not routinely recommended for COPD exacerbations; the benefit of antibiotic therapy is related to the likelihood of bacterial infection and severity of exacerbation"
+  },
+  {
+   "claim": "Oral amoxicillin or doxycycline first-line",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "prescribe oral amoxicillin or doxycycline according to the prescribing criteria in the current Therapeutic Guidelines or locally-endorsed evidence-based guidelines"
+  },
+  {
+   "claim": "Broad spectrum antibiotics not for initial therapy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "do not use broad spectrum antibiotics (for example, amoxicillin plus clavulanate, macrolides or cephalosporins) for initial therapy – these antibiotics are no more effective than amoxicillin or doxycycline, and unnecessarily expose the patient to harms from broad-spectrum treatment"
+  },
+  {
+   "claim": "No IV antibiotics unless oral cannot be taken",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "do not use intravenous antibiotic therapy unless oral medicines cannot be taken"
+  },
+  {
+   "claim": "48-hour review handed to the antimicrobial stewardship standard",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "manage antibiotic therapy as described in the Antimicrobial Stewardship Clinical Care Standard including reviewing the appropriateness of the antibiotic's microbial spectrum of activity, dose and route of administration within 48 hours of the first prescription"
+  },
+  {
+   "claim": "Differential diagnoses for an exacerbation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The clinical features of a COPD exacerbation may overlap with conditions such as heart failure, pulmonary embolism, pneumonia and sepsis"
+  },
+  {
+   "claim": "Indications for hospital attendance",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "hypoxaemia … deteriorating functional status … high‑risk comorbidities … patient concern about the severity of their symptoms or ability to cope"
+  },
+  {
+   "claim": "Statement 8 text with the 88 to 92 percent target",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person experiencing hypoxaemia during a COPD exacerbation receives controlled oxygen therapy, ensuring that oxygen saturation levels are maintained between 88% and 92%. Non-invasive ventilation is considered in anyone with hypercapnic respiratory failure with acidosis"
+  },
+  {
+   "claim": "Hypoxaemia defined as SpO2 under 88%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "hypoxaemia (oxygen saturation level [SpO2] < 88% on pulse oximetry)"
+  },
+  {
+   "claim": "Target applies in ambulance, ED and all wards, and rapid response criteria amended",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This applies to all acute care settings including during patient transfer in an ambulance, within hospital emergency departments and in all wards. In hospitals, calling criteria for rapid response (as provided by medical emergency teams) should be amended in line with these targets"
+  },
+  {
+   "claim": "Hypercapnic respiratory failure with acidosis defined",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypercapnic respiratory failure with acidosis is defined as partial pressure of carbon dioxide in arterial blood (PaCO2) above 45 mmHg and pH below 7.35"
+  },
+  {
+   "claim": "Arterial preferred, venous acceptable as a screening tool",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Arterial blood gas analysis is recommended as the most accurate method for excluding hypercapnia. However, venous blood gas analysis may be used as a screening tool for hypercapnic respiratory failure with acidosis in emergency care settings"
+  },
+  {
+   "claim": "Signs of hypercapnia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "drowsiness, confusion, bounding pulse, or flushed skin"
+  },
+  {
+   "claim": "NIV delivered by trained clinicians in a monitored hospital environment",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Non‑invasive ventilation should be delivered by clinicians trained and experienced in its use in a hospital environment where close monitoring can be undertaken. This is because intubation and invasive mechanical ventilation may subsequently be required"
+  },
+  {
+   "claim": "Escalation plan and ceilings of therapy before starting ventilation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An escalation plan addressing what to do in the event of deterioration and ceilings of therapy should be discussed with the patient or a nominated substitute decision-maker, before starting non‑invasive or invasive mechanical ventilation"
+  },
+  {
+   "claim": "Statement 9 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person who has been hospitalised for a COPD exacerbation is offered a follow-up assessment within seven days of discharge, facilitated by timely and effective communication between their hospital and primary care providers"
+  },
+  {
+   "claim": "Discharge summary records oximetry on room air and CO2 retainer status",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "documentation of the patient's oximetry on room air, and whether the patient is a carbon dioxide retainer"
+  },
+  {
+   "claim": "Discharge summary hands spirometry to primary care with an eight-week deadline",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "clear instructions for the managing primary care team that if spirometry is required but has not been arranged by hospital staff, this needs to be arranged within eight weeks of discharge"
+  },
+  {
+   "claim": "Telehealth acceptable for timely review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If face-to-face consultation is difficult, consider using telehealth services to enable a timely review"
+  },
+  {
+   "claim": "Statement 10 text",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A person with COPD is offered symptom support and palliative care that meets their individual needs and preferences"
+  },
+  {
+   "claim": "Palliative approach from the time of diagnosis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider a palliative approach to care from the time of diagnosis, not only for patients with severe symptoms or those at the end of life"
+  },
+  {
+   "claim": "Hospitalisation increases mortality risk and should prompt palliative consideration",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hospitalisation for an exacerbation, with or without admission to an intensive care unit, increases mortality risk and should prompt consideration of palliative care needs if not already established"
+  },
+  {
+   "claim": "Palliative care triggers listed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "poor respiratory status (for example, forced expiratory volume in one second [FEV1] less than 25% of predicted, hypoxaemia, hypercapnia or respiratory failure) … need for advanced respiratory therapy (for example, home oxygen therapy or domiciliary non‑invasive ventilation) … unintended weight loss or cachexia … increasing dependence on others … disease progression (for example, worsening cor pulmonale or more frequent hospital admissions)"
+  },
+  {
+   "claim": "All clinicians should be competent in providing palliative care",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All clinicians involved in the patient's care, including in primary care settings, should be competent in providing palliative care"
+  },
+  {
+   "claim": "Goals of care and ventilation and resuscitation plans documented on admission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When a patient is admitted for a COPD exacerbation, document their goals of care, and plans for ventilation and resuscitation"
+  },
+  {
+   "claim": "No benchmarks are set by the Commission",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No benchmarks are set for these indicators by the Commission"
+  },
+  {
+   "claim": "Indicator definitions specified at METEOR",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the definitions required to collect and calculate indicator data which are specified online at METEOR"
+  },
+  {
+   "claim": "Indicators 1a and 1b",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with a recorded diagnosis of COPD whose healthcare record documented their spirometry results … Proportion of admitted patients with a COPD exacerbation whose healthcare record documented their spirometry results"
+  },
+  {
+   "claim": "Indicators 2a and 2b",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD whose history of exacerbations was assessed and documented in their healthcare record in the previous 12 months … Proportion of patients with COPD whose symptom severity was assessed using a validated tool in the previous 12 months"
+  },
+  {
+   "claim": "Indicator 3a",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD who have a written COPD action plan"
+  },
+  {
+   "claim": "Indicators 4a and 4b",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD who were immunised against influenza in the previous 15 months … Proportion of patients with COPD who were immunised with at least one dose of pneumococcal vaccination"
+  },
+  {
+   "claim": "Indicators 4c to 4f",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD whose smoking status was recorded in their healthcare record in the previous 12 months … Proportion of patients with COPD who reported they currently smoke tobacco who were offered cessation advice … Proportion of patients with COPD who reported they currently smoke tobacco who were provided, or referred to, evidence-based behaviour supporting and counselling … Proportion of patients with COPD who reported they currently smoke tobacco who were prescribed pharmacotherapy for smoking cessation"
+  },
+  {
+   "claim": "Indicators 5a and 5b",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD who were referred to a pulmonary rehabilitation program … Proportion of patients discharged from hospital after a COPD exacerbation who started a pulmonary rehabilitation program within four weeks of discharge"
+  },
+  {
+   "claim": "Indicator 6a",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD prescribed an inhaled medicine whose inhaler technique was assessed at least once in the previous 12 months"
+  },
+  {
+   "claim": "Indicator 6b audits the ICS sequence",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with COPD prescribed an inhaled corticosteroid who were previously prescribed dual long-acting bronchodilators"
+  },
+  {
+   "claim": "Indicators 7a to 7c",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of antibiotic prescriptions for a COPD exacerbation that met the criteria for prescribing in the current Therapeutic Guidelines or evidence-based, locally endorsed guidelines … Proportion of antibiotic prescriptions for a COPD exacerbation where the prescription was for oral amoxicillin or doxycycline … Proportion of patients with a COPD exacerbation who were prescribed a corticosteroid where the prescription was for an oral corticosteroid for five days or less"
+  },
+  {
+   "claim": "Indicator 8a",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with a COPD exacerbation who received controlled oxygen therapy where the target oxygen saturation levels of 88% to 92% were documented in the patient's healthcare record"
+  },
+  {
+   "claim": "Indicators 8b and 8c",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients who presented to the emergency department with a COPD exacerbation who received a blood gas analysis to assess for hypercapnic respiratory failure with acidosis … Proportion of patients with hypercapnic respiratory failure with acidosis due to a COPD exacerbation who received non-invasive ventilation (NIV) or the reason for not using NIV was documented in their healthcare record"
+  },
+  {
+   "claim": "Indicators 9a and 9b",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of patients with a COPD exacerbation whose discharge summary was sent to their nominated primary care provider on discharge from hospital … Proportion of patients with a COPD exacerbation who were seen for a follow-up assessment within seven days of discharge from hospital"
+  },
+  {
+   "claim": "Indicators 10a to 10c",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Proportion of admitted patients with a COPD exacerbation whose healthcare record contained a copy of their advanced care plan … Proportion of patients who have been admitted to hospital for a COPD exacerbation whose healthcare record included documentation regarding advance care planning … Proportion of admitted patients with a COPD exacerbation whose healthcare record documented the patient's goals of care and their resuscitation plan for the episode of care"
+  },
+  {
+   "claim": "Out of scope items",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "screening for genetic disorders (for example, alpha-1 antitrypsin deficiency) … assessment and management of other respiratory conditions (for example, asthma or bronchiectasis) … surgical interventions for COPD management (for example, lung volume reduction surgery or lung transplantation) … long-term oxygen therapy (for example, home oxygen therapy)"
+  },
+  {
+   "claim": "Alpha-1 antitrypsin deficiency named as a risk factor",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "genetic factors (for example, alpha-1 antitrypsin deficiency)"
+  }
+ ],
+ "summary": {
+  "total": 101,
+  "pass": 101,
+  "fail": 0
+ }
+}

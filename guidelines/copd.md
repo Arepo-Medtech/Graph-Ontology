@@ -3,6 +3,10 @@
 **Edition:** 1.0 · 2026-09-21 · **Status:** drafted and source-verified; awaiting clinical attestation
 **Scope:** adults. Diagnosis, stable disease, and exacerbations.
 
+> **Paired with [`copd-clinical-care-standard.md`](copd-clinical-care-standard.md)** — the ACSQHC quality
+> instrument over this guideline. ⚠️ That Standard defers to **COPD-X Version 2.75 (2024)**; this file holds
+> **v2.78**. The Standard is measuring against a version that has since moved.
+
 > **Australian primary source throughout.** The COPD-X Plan is the Australian and New Zealand guideline,
 > developed by Lung Foundation Australia and endorsed by the Thoracic Society of Australia and New Zealand
 > [S1]. Recommendations carry **LoE** (NHMRC evidence hierarchy) and **SoR** (GRADE), reproduced below as
