@@ -1,12 +1,17 @@
 # Contraception, including emergency contraception
 
-**Edition:** 1.0 · 2026-09-22 · **Status:** drafted and source-verified; awaiting clinical attestation
+**Edition:** 1.1 · 2026-09-22 · **Status:** drafted and source-verified; awaiting clinical attestation
 **Scope:** adolescence to menopause, general practice. **Abortion care is out of scope.**
 
 > **Mixed sources.** **S1** is the **open** RACGP *AJGP* LARC review (**2022**), **quoted verbatim** — 29
 > claims, 4 of them figures that are machine re-checkable. **A1** is the **Australian Medicines Handbook**,
-> read under subscription and **paraphrased** across two topics — 47 claims, 18 doses, **no passage
+> read under subscription and **paraphrased** across three pages — 83 claims, 35 doses, **no passage
 > stored**.
+
+> **Edition 1.1** added the AMH **Combined oral contraceptives** monograph, retrieved while working on
+> dysmenorrhoea (for which COCs are first line). ⚠️ **It closes the two largest holes edition 1.0 recorded:
+> there is now COC dosing, and a full set of MISSED-PILL RULES** — which 1.0 named as the commonest
+> contraceptive question in general practice and could not answer.
 
 **AMH topics closed by this guideline (2):** *Contraception*, *Contraception, emergency*.
 
@@ -262,6 +267,149 @@ may occur**. **Most women will have their next period within 5–7 days of the e
 a pregnancy test if the period is delayed by >1 week or is unusually light or heavy** [A1]. ⚠️ **Neither
 increases the likelihood of ectopic pregnancy if emergency contraception fails** [A1].
 
+---
+
+## ⚠️ The combined oral contraceptive in detail
+
+*Added in edition 1.1.*
+
+### Which one to start
+
+> **In general, start with a monophasic COC containing ethinylestradiol (30 micrograms or less) and either
+> levonorgestrel or norethisterone** [A1].
+
+**Why those progestogens:** ⚠️ **the main difference between the progestogens used in COCs is the risk of
+VTE**, and **levonorgestrel or norethisterone are a good first choice for new users as they are associated
+with a lower risk than other COCs** [A1]. ⚠️ **There is no evidence that estrogen choice offers any clinical
+benefits**, and ⚠️ **no compelling evidence that lower or anti-androgenic progestogen activity provides any
+advantages** [A1].
+
+| Estrogen dose [A1] | | Note |
+|---|---|---|
+| **Low** | **20 micrograms ethinylestradiol or 1.5 mg estradiol** | **as effective as standard dose, with a slightly higher incidence of breakthrough bleeding, especially at first** |
+| **Standard** | **30–35 micrograms ethinylestradiol** | **as effective as high dose, but the lower estrogen reduces adverse effects** |
+| ⚠️ **High** | **50 micrograms ethinylestradiol** | ⚠️ **generally not used due to increased risk of adverse effects, eg VTE** |
+
+**Multiphasic COCs:** ⚠️ **no advantage over monophasic has been demonstrated, and the variable dose makes
+it difficult to change the timing of withdrawal bleeds** [A1].
+
+### ⚠️ VTE risk, quantified
+
+**Incidence of VTE per 10,000 women per year** [A1]:
+
+| | |
+|---|---|
+| **Non-pregnant non-users** | **1–5** |
+| ⚠️ **Levonorgestrel or norethisterone with ≤35 mcg ethinylestradiol** | ⚠️ **5–7 — the lowest of any COC** |
+| **Etonogestrel** | **6–12** |
+| **Dienogest** | **8–11** |
+| **Cyproterone, desogestrel, drospirenone or gestodene** | **9–12** |
+| ⚠️ **≥50 mcg ethinylestradiol** | **10–16** |
+| ⚠️ **Pregnancy** | ⚠️ **5–29 — and even higher in the first 6 weeks postpartum** |
+
+> ⚠️ **Pregnancy carries a higher VTE risk than any COC on this list.** **The absolute risk of VTE in COC
+> users is very small** [A1], and **risk is highest in the first year of use — including when restarting
+> after a break of 1 month or more** [A1].
+
+⚠️ **The incidence for COCs containing drospirenone with estetrol, or nomegestrol with estradiol, is
+unclear** [A1].
+
+### Regimens
+
+**Most COCs are 28-day regimens with active tablets for 21, 24 or 26 days followed by inactive tablets.**
+⚠️ **A hormone-free interval of <7 days is thought to reduce hormone withdrawal symptoms, and in some cases
+may increase contraceptive effectiveness by reducing the risk of ovulation** [A1].
+
+**Extended regimens** take active tablets of a **monophasic** COC continuously [A1]:
+- **for a fixed period (eg 9 weeks), then a hormone-free interval of 4 or 7 days**
+- **until breakthrough bleeding occurs for 3–4 days, then a hormone-free interval of 4 days**
+- **with no hormone-free interval**
+
+**Used to delay, minimise or eliminate withdrawal bleeds; avoid heavy or painful withdrawal bleeds; or
+avoid symptoms (eg headache, mood change) associated with the hormone-free interval** [A1]. ⚠️ **May cause
+irregular bleeding in some women** [A1].
+
+### When to start
+
+| Situation | [A1] |
+|---|---|
+| **No preceding hormonal contraception** | **start an active pill within the first 5 days of the period for immediate cover**; ⚠️ **if later, use additional contraception until 7 days of active pills** |
+| **Changing from another COC** | **start active pills the day after stopping the old pill, any day of the cycle** — ⚠️ **no additional contraception required** |
+| **Changing from a progestogen-only pill** | **start the day after stopping**; ⚠️ **additional contraception until 7 days of active pills** |
+| ⚠️ **After levonorgestrel emergency contraception** | ⚠️ **start active pills within 12 hours** |
+| ⚠️ **After ulipristal** | ⚠️ **wait at least 5 days before taking active pills** |
+
+### ⚠️ Missed pills, vomiting and diarrhoea
+
+*This is what edition 1.0 could not answer.*
+
+| Situation | What to do [A1] |
+|---|---|
+| **Vomiting within 2 hours of an active pill** | **take another active pill as soon as possible** |
+| **<24 hours late** | **take it as soon as you remember and take the next at the usual time** — ⚠️ **contraception will not be affected** |
+| ⚠️ **>24 hours late, OR vomiting/severe diarrhoea >24 hours** | **take the missed pill as soon as you remember** (**this may mean taking 2 pills on the same day**), **continue the daily pill**, and ⚠️ **use another method until you have taken active pills for 7 days in a row** |
+| ⚠️ **Missed pill in the LAST 7 days of active pills** | ⚠️ **finish the active pills in the present pack, then start a new pack's active pills WITHOUT any break** |
+| ⚠️ **Missed pill in the FIRST 7 days of active pills, with unprotected sex during or after** | ⚠️ **seek emergency contraception** |
+
+**What to expect:** **a withdrawal bleed should start during the inactive pills, but sometimes may not.
+Continue as normal, but consider pregnancy if pills have not been taken correctly or if 2 withdrawal bleeds
+in a row are missed** [A1]. **Irregular bleeding or spotting is common at first but usually settles after
+2–3 months** [A1].
+
+### Breakthrough bleeding after 3 months — the ladder
+
+**If another cause cannot be identified (eg missed pills, drug interaction), try in order** [A1]:
+
+1. **change to a monophasic COC if taking a multiphasic COC**
+2. **change the progestogen or increase the dose** (**especially if bleeding occurs late in cycle**)
+3. **change to a standard dose COC (30–35 mcg ethinylestradiol) if taking a low-dose COC**
+4. **change the progestogen again**
+5. **change to a high-dose COC (50 mcg ethinylestradiol)**
+
+### ⚠️ Contraindications and cautions
+
+⚠️ **Contraindicated:** **breast cancer**; ⚠️ **migraine WITH AURA (increased risk of stroke)**; **history
+of VTE**; **history of cerebrovascular or coronary artery disease**; **complicated valvular disease**;
+**compromised liver function** [A1].
+
+⚠️ **Avoid:** **smokers >35 years (unacceptable risk)**; **uncontrolled hypertension**; **other thrombosis
+risk factors**; **hereditary angioedema**; **breastfeeding** [A1]. ⚠️ **Generally not recommended in women
+>35 years with migraine WITHOUT aura** [A1].
+
+⚠️ **Surgery:** **stop the COC 4 weeks before major elective surgery where prolonged immobilisation is
+expected** — **consider a progestogen-only contraceptive** — and **restart at least 2 weeks after full
+mobilisation** [A1].
+
+**Postpartum:** **delay until at least 21 days if there are no other VTE risk factors, or until day 42 if
+other risk factors are present** [A1].
+
+### Benefits, and the cancer question
+
+**Benefits include prevention of pregnancy and its complications, regular and reduced menstrual loss
+(reducing the risk of iron deficiency anaemia), and reduced risk of ovarian cysts and PID.** ⚠️ **There is
+also a reduced risk of ovarian and endometrial carcinoma, which persists for 15 or more years after
+stopping** [A1].
+
+⚠️ **Against that:** **a small increased risk of breast cancer in some (but not all) studies, declining to
+that of never users within 10 years of stopping**, and **a small increased risk of cervical cancer that
+increases with duration of use and declines to never-user levels 10 years after stopping** [A1].
+
+### ⚠️ Stop and seek urgent advice
+
+> **Severe and sudden pain in the chest; severe headache; sudden blurred vision or loss of sight;
+> unexplained tenderness or pain and swelling in one leg** [A1].
+
+### Two practice points worth carrying
+
+⚠️ **Although indicated for premenstrual syndrome, COCs can also WORSEN OR CAUSE PMS — which may be more
+likely with multiphasic COCs. Using extended regimens may sometimes help** [A1].
+
+⚠️ **There is no evidence to support the belief that anti-infectives — other than rifampicin, rifabutin,
+griseofulvin and some antiretrovirals — alter the effectiveness of COCs** [A1]. **Most antibiotics do not
+require extra precautions.**
+
+**Ensure users of COCs are included in the cervical screening program** [A1].
+
 ## Where this connects in the compendium
 
 | Guideline here | Connection |
@@ -279,8 +427,10 @@ increases the likelihood of ectopic pregnancy if emergency contraception fails**
 |---|---|---|
 | ⚠️ **IUD duration: the open source is the stale one** | ⚠️ **time_sensitive** | **S1 (2022): both hormonal IUDs licensed for up to FIVE years.** **A1 (July 2026): levonorgestrel IUD 5 OR 8 years.** ⚠️ **A1 is current and S1 is not.** ⚠️ **This is the reverse of the usual pattern in this corpus, and a reader who preferred the quotable source would be wrong.** ⚠️ **Which device the 8 years applies to, and on what conditions, is NOT stated by A1 and is not inferred here** |
 | ⚠️ **S1 is 2022 throughout** | **time_sensitive** | four years old, and it **discusses COVID-19 service access** and describes a device as **"recently PBS-listed in March 2020"**. ⚠️ **Its device-comparison detail should be re-checked before use** |
-| ⚠️ **No COC, POP or ring dose anywhere** | ⚠️ **input_unavailable** | this guideline names **drospirenone, levonorgestrel, norethisterone, medroxyprogesterone and etonogestrel** and ⚠️ **gives a dose for NONE of the oral or injectable products.** A1's contraception topic is a **comparison of methods**, not a dosing page, and ⚠️ **the combined oral contraceptive, progestogen and other monographs were NOT retrieved.** ⚠️ **No dose supplied from memory** |
-| ⚠️ **No missed-pill rules** | ⚠️ **input_unavailable** | ⚠️ **the single commonest contraceptive question in general practice.** A1 notes **efficacy is affected by vomiting and severe diarrhoea** and that POPs need **the same time every day within 3 hours** — ⚠️ **but no source held gives what to do after a missed pill** |
+| ⚠️ **COC dosing — FILLED in 1.1** | **closed** | 1.0 recorded no dose for any product. ⚠️ **The AMH combined oral contraceptive monograph was retrieved for edition 1.1** and supplies formulation classes, starting choice, regimens and the VTE table |
+| ⚠️ **Missed-pill rules — FILLED in 1.1** | **closed** | 1.0 recorded this as the commonest contraceptive question it could not answer. ⚠️ **Now answered in full for COCs** |
+| ⚠️ **Still no PROGESTOGEN-ONLY or ring dose** | ⚠️ **input_unavailable** | edition 1.1 covers **COCs only**. ⚠️ **No dose or missed-pill rule is held for progestogen-only pills, the vaginal ring, depot medroxyprogesterone or the implant** — their monographs were **not retrieved**. ⚠️ **The 3-hour window for levonorgestrel/norethisterone POPs is the only timing rule held for them, and what to do once it is exceeded is NOT stated** |
+| ⚠️ **Qlaira is excluded from both rule sets** | ⚠️ **input_unavailable** | A1 states that its starting advice and its missed-pill advice ⚠️ **may not apply to Qlaira**, directing the reader to the product information — ⚠️ **which was not retrieved** |
 | ⚠️ **Medical eligibility criteria not retrieved** | ⚠️ **input_unavailable** | A1 directs the reader to the **UK and US medical eligibility criteria** for contraceptive use in particular medical conditions; ⚠️ **neither was retrieved.** ⚠️ **This guideline therefore contains NO systematic contraindication list** |
 | **The efficacy card is an image** | **input_unavailable** | S1's **Figure 1** is the **Family Planning Alliance Australia contraceptive efficacy card**, and **Figure 2** shows the implant insertion anatomy. ⚠️ **Neither was transcribed and nothing is claimed from them** |
 | **Depot medroxyprogesterone failure rate** | **observation** | ⚠️ **0.2–6%** [A1] is **a thirty-fold spread** between perfect and typical use for a method given by a clinician every 12 weeks; A1 does not explain it |
