@@ -55,6 +55,10 @@ lack the v4 attributes and appear in `product` but not in `transcode`.
   (international). The RF2 relationship file carries none of them, so `rel` never had them.
 - **strength_check**, **omop_strength**, **unit_bridge**, **amt_quantity**, **omop_quantity** — the comparison
   against OMOP's DRUG_STRENGTH; see [strength validation](docs/strength-validation.md).
+- **omop_drug_indirect**, **omop_drug_indirect_check** — the AMT concepts OMOP's 2021 snapshot never had, placed
+  through their generic (3,480 branded units) or through a unique ingredient-and-strength fingerprint (2,481), with
+  the method scored against the mappings already known (91.1 % and 96.2 %); branded units reaching a standard drug
+  rise from 19,208 to 22,760 of 24,634. See [the indirect bridge](docs/amt-indirect-bridge.md).
 - **atc**, **product_atc**, **product_atc_check** — an ATC class for 101,732 products: the PBS schedule's own for a
   listed item (15,757), and OMOP's ancestry over RxNorm for the 85,975 the PBS never lists. Where both speak they
   agree on the ATC 5th level for 8,870 of 9,056 products; see [ATC classification](docs/atc-classification.md).
@@ -88,6 +92,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/drug_strength.py extract     # AMT strengths out of the OWL axioms (~1 min)
 .venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
 .venv/bin/python scripts/atc_bridge.py               # ATC classes: the PBS listing, plus OMOP's ancestry for everything else
+.venv/bin/python scripts/amt_indirect.py             # reach OMOP for the AMT concepts its 2021 snapshot never had
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
