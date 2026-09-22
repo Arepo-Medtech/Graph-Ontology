@@ -1,0 +1,222 @@
+{
+ "guideline": "guidelines/topical-treatment-of-skin-conditions.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2021/september/selection-of-a-corticosteroid",
+  "https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "S1 is the open RACGP AJGP 2021 review of topical corticosteroid selection, fetched and checked verbatim (18 claims, 6 of them quantity or potency claims). A1 is AMH, paraphrased, no passage reproduced and no source_text stored (14 claims, 4 doses). THE TWO SOURCES SIZE THE SAME PRESCRIPTION DIFFERENTLY: A1 gives suggested WEEKLY quantities in grams by body area and age band; S1 gives FINGERTIP UNITS per application with 1 FTU = 0.5 g. Neither converts to the other and this guideline does not attempt the arithmetic, because the two methods rest on different assumptions -- A1's table assumes twice-daily application for a week, S1 recommends once daily. Both are presented with their own assumptions stated. AMH's vehicle and quantity tables are summarised rather than reproduced row by row.",
+ "claims": [
+  {
+   "claim": "S1 states that studies have shown steroid phobia exists among non-dermatologist professionals such as general practitioners and pharmacists as well as patients and parents, with evidence of non-adherence and unresolved outcomes of skin conditions affecting quality of life and healthcare costs",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, studies have shown the existence of steroid phobia among non-dermatologist professionals (eg general practitioners [GPs] and pharmacists) as well as patients and parents, evidence of non-adherence and unresolved outcomes of skin conditions affecting quality of life and healthcare costs."
+  },
+  {
+   "claim": "S1 states that topical corticosteroid agents have different formulations, percentages and molecular structures despite similar or near-similar names, and that these variations affect potency, efficacy and effect",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "TCS agents have different formulations, percentages and molecular structures despite similar or near-similar names. These variations affect the potency, efficacy and effect."
+  },
+  {
+   "claim": "S1 gives general principles that ointments penetrate skin slightly better than creams, that areas with thin skin such as the face and eyelid absorb medicine more readily than areas with thick skin such as trunk, limb, hand and foot, and that intertriginous areas such as axilla, groin and breast folds retain topical medications longer with increased absorption",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "- Ointments penetrate skin slightly better than creams. - Areas with thin skin (eg the face and eyelid) absorb medicine more readily than areas with thick skin (eg the trunk, limb, hand and foot). - Intertriginous areas (eg the axilla, groin and breast folds) retain topical medications longer, with increased absorption."
+  },
+  {
+   "claim": "S1 states that the World Health Organization introduced classes I to VII for topical corticosteroid potency in 1997 but some countries established a reversed order with ill-defined subdivisions leading to confusion, and that Australasian guidelines favour the categories of mild, moderate, potent and very potent with corresponding classes I to IV",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Regarding the classification of TCS potency, in 1997 the World Health Organization introduced class I (ultrahigh, the most potent) to VII (low, the least potent). 9 However, some countries established a reversed order as well as use of several subdivisions with ill-defined words (eg low, weak, mild and medium in potency), leading to confusion for practitioners in complicated cases. Australasian guidelines favour the categories of mild, moderate, potent and very potent with corresponding classes I to IV, as shown in Table 1."
+  },
+  {
+   "claim": "S1 gives mild potency class I as hydrocortisone 0.5 to 1% and hydrocortisone acetate 0.5 to 1%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild [Class I] - Hydrocortisone 0.5-1% - Hydrocortisone acetate 0.5-1%",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives moderate or mid-strength potency class II as clobetasone butyrate 0.05%, hydrocortisone butyrate 0.1%, betamethasone valerate 0.02 to 0.05%, triamcinolone acetonide 0.02 to 0.05% and methylprednisolone aceponate 0.1%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate (mid-strength) [Class II] - Clobetasone butyrate 0.05%* - Hydrocortisone butyrate 0.1%* - Betamethasone valerate 0.02-0.05% - Triamcinolone acetonide 0.02-0.05% - Methylprednisolone aceponate 0.1%",
+   "dose": true
+  },
+  {
+   "claim": "S1 states that the advice of applying topical corticosteroid agents sparsely is no longer applicable and instead liberally is encouraged, that the required amount is guided by location and extent of the lesion, and that the fingertip unit is a useful general guide",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The advice of applying TCS agents 'sparsely' is no longer applicable; instead, 'liberally' is encouraged. The required dose (amount) is guided by location and extent of the lesion (Box 1). The fingertip unit (FTU) is a useful general guide for the amount of topical agent (Figure 1).",
+   "dose": true
+  },
+  {
+   "claim": "S1 gives 1 fingertip unit as 0.5 g, with a child aged six years with face and neck involvement requiring 2 fingertip units or 1 g daily so that a 15 g tube would last two weeks, and an adult with one leg and foot involvement requiring 8 fingertip units or 4 g daily so that two 15 g tubes or one 30 g tube would last one week",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Box 1. Dosage calculation of topical corticosteroids (examples guide; 1 FTU = 0.5 g) - A child aged six years with face and neck involvement requires 2 FTU (1 g) daily, and a 15 g tube of topical corticosteroid (TCS) would last two weeks. - An adult with one leg and foot involvement requires 8 FTU (4 g) daily, and two tubes of 15 g TCS or one tube of 30 g would last one week.",
+   "dose": true
+  },
+  {
+   "claim": "S1 notes that greater quantities of the 15 g tube of potent topical corticosteroid can be prescribed under the Pharmaceutical Benefits Scheme streamlined authority with the repeat, depending on the percentage of body surface involvement calculated from the rule of nines",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Greater quantities of the 15 g tube of potent TCS can be prescribed under the Pharmaceutical Benefits Scheme streamlined authority with the repeat, depending on the percentage of body surface involvement, which is to be calculated from rule of nines (similarly for burns)."
+  },
+  {
+   "claim": "S1 highly recommends using adjunct moisturisers or emollients following application of topical corticosteroids, notes moisturiser alone is useful as a steroid-sparing agent in trivial dermatitis, and states that diluting the topical steroid with moisturiser does not change the potency of the medicine",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is highly recommended to use adjunct moisturisers/emollients following application of TCS agents to affected areas. The moisturiser can be applied locally or to the whole body to ease pruritus and irritation by maintaining optimum skin moisture. The moisture alone is also useful as a steroid-sparing agent in trivial dermatitis. Diluting the topical steroid with moisturiser does not change the potency of the medicine."
+  },
+  {
+   "claim": "S1 states application is usually encouraged in the evening or night after bathing to avoid incidental removal, that a once-daily regimen is generally recommended for better compliance, and that twice-daily application may be considered for the initial weeks for certain severe lesions reducing to daily or alternate-day depending on response",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Application is usually encouraged in the evening/night after bathing to avoid incidental removal of the medication as a result of day-to-day activities. In terms of frequency, a once-daily regimen is generally recommended for better compliance. Twice-daily application may be considered for the initial week(s) for certain severe lesions, reducing to daily or alternate-day application depending on the response.",
+   "dose": true
+  },
+  {
+   "claim": "S1 states an occlusive dressing such as a tubular bandage or plastic wrap is favourable for severe and thick, keratotic or lichenified lesions, that occlusion with a non-irritant glove or sock can be used for hand or foot lesions, and that close monitoring of occlusive or wet dressings is important to avoid undesirable effects from the reaction of occlusive materials and systemic absorption",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An occlusive dressing with appropriate cover, such as a tubular bandage or plastic wrap, is favourable for severe and thick/keratotic/lichenified lesions. Occlusion with a non-irritant glove or sock can also be used for lesions of the hand or foot, respectively. Close monitoring of occlusive or wet dressings is important to avoid undesirable effects from the reaction of occlusive materials and systemic absorption."
+  },
+  {
+   "claim": "S1 advises discontinuing or phasing out application from daily to alternate-day, twice-weekly or weekend use over weeks or months once the active inflammation or lesion has subsided, while continued application of moisture should be encouraged",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is advisable to discontinue or phase out application from daily to alternate-day, twice-weekly or weekend use over weeks or months (depending on the nature of residual lesion and recurrence) once the active inflammation/lesion has subsided. However, continued application of moisture should be encouraged.",
+   "dose": true
+  },
+  {
+   "claim": "S1 states that adverse effects such as skin atrophy, striae, telangiectasia, easy bruising and hypertrichosis are rare if topical corticosteroids are used correctly, that periorificial dermatitis, steroid rosacea, red skin syndrome, contact dermatitis and pigment alteration are uncommon, and that hypothalamic-pituitary-adrenal axis suppression is extremely rare",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adverse effects, such as skin atrophy, striae, telangiectasia, easy bruising and hypertrichosis, are rare if TCS agents are used correctly. 1,3,14 Periorificial dermatitis, steroid rosacea, red skin syndrome, contact dermatitis and pigment alteration are uncommon, and hypothalamic-pituitary-adrenal axis suppression is extremely rare."
+  },
+  {
+   "claim": "S1 states it is necessary to be mindful of iatrogenic Cushing's syndrome, growth retardation, cataract and glaucoma due to systemic absorption, which might be attributed to prolonged misuse of potent or ultrapotent agents over large skin areas and/or occlusion, especially in young children and elderly patients with thin skin",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nevertheless, it is necessary to be mindful of iatrogenic Cushing's syndrome, growth retardation, cataract and glaucoma due to systemic absorption; such occurrence might be attributed to prolonged misuse of potent or ultrapotent TCS agents over large skin areas and/or occlusion causing increased systemic absorption, especially in susceptible individuals (young children and elderly patients with thin skin)."
+  },
+  {
+   "claim": "S1 states adverse effects of topical corticosteroids are generally reversible by cessation of medication, that emerging evidence suggests methylprednisolone aceponate and mometasone furoate are associated with lesser local and systemic adverse effects than older formulations because of their lipophilic structure and pharmacokinetics, and that mild-to-moderate-potency steroids and short-term use of potent topical steroids are safe in pregnancy and lactation according to a systematic review",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adverse effects of TCS agents are generally reversible by cessation of medication. Emerging evidence suggests that methylprednisolone aceponate and mometasone furoate are associated with lesser local and systemic adverse effects than older formulations of TCS because of their lipophilic structure and pharmacokinetics. 22-25 Mild-to-moderate-potency steroids and short-term use of potent topical steroids are safe in pregnancy and lactation according to a systematic review (Chi et al)."
+  },
+  {
+   "claim": "S1 states that overall the benefits significantly outweigh any unwanted effects if topical corticosteroid agents are correctly prescribed, that undertreated conditions are more widespread than overtreatment, and that it is prudent for practitioners to properly educate users to avoid non-adherence from steroid phobia and undertreated conditions",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Overall, the benefits significantly outweigh any unwanted effects if TCS agents are correctly prescribed. Undertreated conditions are more widespread than overtreatment. 1,3,12,14 Therefore, it is prudent for practitioners to properly educate the users to avoid non-adherence from steroid phobia, and undertreated conditions."
+  },
+  {
+   "claim": "S1 states that complex or recalcitrant cases require referral to a dermatologist",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complex or recalcitrant cases require referral to a dermatologist."
+  },
+  {
+   "claim": "AMH states that systemic and topical drugs are used to treat dermatological conditions and that topical administration is often preferred as it allows direct contact between drug and tissue, minimising systemic adverse effects",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states that skin damage such as burns or eczema increases permeability while scale and crust such as in psoriasis may reduce drug penetration",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states permeability varies because of differences in the lipid structure of skin with facial skin more permeable, skin thickness with palms and soles able to resist treatment, and potential for occlusion with intertriginous areas more permeable",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states skin hydration may be increased by high humidity, occlusion or wet dressings which increases systemic drug absorption, and that raised skin temperature has a similar effect",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states children have a higher surface area to weight ratio and absorb a higher systemic dose based on weight than adults, that in preterm neonates the barrier function of the stratum corneum is less effective increasing skin permeability, and that elderly patients with thin or fragile skin may have increased permeability",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH states vehicles are important both in physical properties and in delivery of drugs, that ingredients include solvents, emollients, humectants, emulsifying agents, stabilisers and thickening agents, and that specific components such as dimethyl sulfoxide and propylene glycol can be added to increase percutaneous absorption",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH advises that when applying more than one product to the same area of skin, sufficient time should be allowed for absorption between applications",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's vehicle table describes ointments as occlusive and lubricating for dry scaly skin with better topical penetration than creams and lotions but greasy and difficult to wash off and possibly causing folliculitis",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's vehicle table describes creams as cooling and lubricating for moist or dry skin and preferred for face and flexures, noting preservatives can cause sensitisation and creams are less emollient and more irritant than ointments but are often preferred by patients",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's vehicle table describes lotions and solutions as drying and cooling for hairy and intertriginous regions and weeping surfaces able to be applied without friction, pastes as drying and protective for psoriasis and warts being more occlusive and absorptive and less greasy than ointments, aerosols and sprays as cooling where direct application is difficult or painful, and ethanol-based gels lotions and liquids as drying and cooling for moist areas where excessive drying can cause irritation and stinging on broken skin",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH's suggested weekly quantities table, based on twice daily application for 1 week, gives for patients over 10 years 20 g for face and neck, 30 g for arm and hand, 55 g for leg and foot, 50 g for front of trunk and 50 g for back and buttocks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH's suggested weekly quantities table gives for children aged 3 to 12 months 7 g for face and neck, 7 g for arm and hand, 10 g for leg and foot, 7 g for front of trunk and 10 g for back and buttocks, with quantities increasing through the 1 to 3, 3 to 6 and 6 to 10 year age bands",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states that for corticosteroids, calcipotriol and pimecrolimus the suggested weekly quantities should not be exceeded without specialist recommendation",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMH states some additives in topical products may cause sensitisation including lanolin, ethylenediamine, fragrances, propylene glycol and preservatives such as chlorocresol and hydroxybenzoates, that creams generally contain more additives than ointments and hence are more likely to cause sensitisation, and that some drugs may also cause sensitisation",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topic 'General principles: topical treatment of skin conditions' (Dermatological drugs), including the 'Comparison of vehicles' and 'Suggested weekly quantities of topical preparations' tables, at https://amhonline.amh.net.au/chapters/dermatological-drugs/general-principles-topical-treatment, July 2026 release, read under subscription 2026-09-22"
+  }
+ ],
+ "summary": {
+  "total": 32,
+  "pass": 18,
+  "fail": 0
+ }
+}
