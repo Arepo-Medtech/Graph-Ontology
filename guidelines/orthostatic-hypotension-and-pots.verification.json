@@ -1,0 +1,280 @@
+{
+ "guideline": "guidelines/orthostatic-hypotension-and-pots.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED, and the two halves cover DIFFERENT CONDITIONS. A1-A3 are AMH pages on ORTHOSTATIC HYPOTENSION, paraphrased, no passage stored. S1 is the OPEN RACGP AJGP case study 'A dizzying diagnosis' (December 2025) on POSTURAL ORTHOSTATIC TACHYCARDIA SYNDROME, quoted verbatim including its dose table. POTS is defined partly by the ABSENCE of orthostatic hypotension, so the two are placed side by side deliberately and their doses are NOT interchangeable -- AMH gives midodrine THREE times daily for orthostatic hypotension and S1 gives it TWICE daily for POTS. That difference is stated, not averaged.",
+ "summary": {
+  "total": 37,
+  "pass": 16,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "ORTHOSTATIC HYPOTENSION IS A RISK FACTOR FOR FALLS, particularly in the elderly",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Orthostatic hypotension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Management includes avoiding exacerbating factors: getting up quickly, prolonged standing still, hot showers, dehydration, prolonged bed rest, LOW SALT INTAKE, heavy meals, alcohol and many drugs",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Orthostatic hypotension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Drugs that exacerbate orthostatic hypotension include DIURETICS, ALPHA-BLOCKERS, TCAs, ANTIPSYCHOTICS, NITRATES, LEVODOPA and DOPAMINE AGONISTS",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Orthostatic hypotension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Non-drug treatments include sleeping with the head of the bed tilted up, increased fluid intake, salt supplements, crossing one leg in front of the other when standing or contracting calf muscles such as toe-raising, an abdominal binder or waist-high compression stockings, and exercise programs such as swimming or rowing",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Orthostatic hypotension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "SPECIFIC DRUG TREATMENT IS ONLY OCCASIONALLY NECESSARY and may include low-dose fludrocortisone, midodrine, caffeine, NSAIDs, pyridostigmine, phenylephrine, pseudoephedrine and, rarely, octreotide",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Orthostatic hypotension' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/orthostatic-hypotension, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Midodrine is an alpha1 agonist that increases BP by increasing peripheral resistance, indicated for SEVERE SYMPTOMATIC orthostatic hypotension due to autonomic dysfunction WHERE STANDARD TREATMENT IS INADEQUATE",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Midodrine, oral, initially 2.5 mg THREE TIMES DAILY; according to supine and standing BP measurements and tolerability, increase at weekly intervals up to a maximum of 10 mg three times daily",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "A slower midodrine titration, for example at 2 to 3 monthly intervals, may minimise adverse effects in some patients such as the elderly, for whom limited data means slower titration is recommended",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MIDODRINE CAN CAUSE OR WORSEN SUPINE HYPERTENSION: monitor supine and standing BP regularly, use it only when the patient is awake and likely to be upright, AVOID EVENING DOSING, and STOP TREATMENT if reducing the dose does not overcome supine hypertension",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Take the last daily midodrine dose AT LEAST 4 HOURS BEFORE BEDTIME, and tell the doctor immediately about symptoms of supine hypertension such as chest pain, palpitations, headache or blurred vision",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Midodrine is CONTRAINDICATED in phaeochromocytoma, hyperthyroidism or thyrotoxicosis, angle-closure glaucoma, proliferative diabetic retinopathy, urinary retention or serious prostate disorder, uncontrolled hypertension, severe heart disease, cerebro- or cardiovascular occlusive disease, blood vessel spasms, acute kidney injury, and CrCl below 30 mL/minute",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Common midodrine adverse effects are piloerection, paraesthesia, scalp itch, dysuria, urinary retention or urgency, bradycardia, headache, flushing, and DOSE-RELATED SUPINE HYPERTENSION",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "IN TWO PLACEBO-CONTROLLED TRIALS OVER 3 TO 4 WEEKS midodrine increased standing systolic BP and improved some symptoms such as syncope, HOWEVER THE EFFECT ON CLINICAL OUTCOMES SUCH AS FALLS AND QUALITY OF LIFE WAS NOT ASSESSED, and long-term safety and efficacy data are limited",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Midodrine is marketed in Australia as 2.5 mg and 5 mg tablets and AMH lists NO PBS LISTING for it",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Avoid midodrine in women of child-bearing potential who are using inadequate contraception; it is not recommended in pregnancy and breastfeeding should be avoided",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Midodrine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-orthostatic-hypotension/midodrine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Fludrocortisone's orthostatic hypotension indication is an ACCEPTED rather than an approved one; its approved indications are mineralocorticoid replacement in primary adrenal insufficiency and salt-losing congenital adrenal hyperplasia, both with a glucocorticoid",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Fludrocortisone for ORTHOSTATIC HYPOTENSION, adult, oral, initially 100 micrograms daily, increased if necessary to 200 micrograms daily",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Fludrocortisone's adrenal-replacement dose is different: initially 50 to 100 micrograms once daily in the morning, range 50 to 300 micrograms daily, for adults and children",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Common fludrocortisone adverse effects are sodium and water retention, oedema, HYPOKALAEMIA and HYPERTENSION; heart failure may be exacerbated by the electrolyte changes and fluid retention, and potassium supplementation may be needed",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Titrate fludrocortisone on symptoms, sitting and standing BP, plasma renin activity and serum sodium and potassium; PATIENTS SHOULD NOT RESTRICT THEIR SALT INTAKE",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The only fludrocortisone product listed is a 100 microgram scored tablet, so the 50 microgram adrenal starting dose is half a tablet",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Fludrocortisone' at https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-adrenal-insufficiency/corticosteroids-endocrine/fludrocortisone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "POTS is a multi-system disorder of orthostatic intolerance, particularly a rise in heart rate on standing, WITHOUT marked orthostatic hypotension or another cause for tachycardia; palpitations, weakness or lightheadedness improve on sitting",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "POTS is a multi-system disorder characterised by symptoms of orthostatic intolerance, particularly a rise in HR when standing, without marked orthostatic hypotension or concomitant cause for tachycardia. … Patients often experience palpitations, weakness or lightheadedness, which improve upon being seated.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Up to 80% of POTS patients are female, often from a White background, and the most common age of symptom onset is 14 years with a mean age of 21 plus or minus 12 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Up to 80% of POTS patients are female, often from a White background. The most common age of symptom onset is 14 years (mean age 21±12 years).",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Co-existing conditions commonly include hypermobility spectrum disorder, fibromyalgia and migraines, and onset can be precipitated by a stressful event, commonly a viral infection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common co-existing conditions include, but are not limited to, hyper-mobility spectrum disorder, fibromyalgia and migraines. … Symptom onset can be precipitated by a stressful event, commonly viral infections.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22"
+  },
+  {
+   "claim": "All FOUR of the 2015 Heart Rhythm Society criteria must be met to diagnose POTS: a sustained heart rate increase of at least 30 bpm, or at least 40 bpm if aged 12 to 19 years, within 10 minutes of upright posture; ABSENCE of an orthostatic BP drop of 20/10 mmHg or more; symptoms of orthostatic intolerance worse upright with rapid improvement on lying down, for more than 6 months; and absence of other conditions that could explain sinus tachycardia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "sustained HR increase of ≥30 bpm (or ≥40 bpm if the patient is aged 12-19 years) within 10 minutes of upright posture … absence of orthostatic BP drop ≥20/10 mmHg … symptoms of orthostatic intolerance that are worse while upright, with rapid improvement upon return to a supine position for > 6 months … absence of other conditions that could explain sinus tachycardia",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Three main pathophysiologies underlie POTS: autonomic neuropathy, hypovolaemia and a hyperadrenergic state; autonomic neuropathy of small postganglionic sudomotor fibres, mainly in the feet, is reported in up to 50% of POTS patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Three main pathophysiologies that underlie POTS are: (1) autonomic neuropathy; (2) hypovolemia; and (3) a hyperadrenergic state. … Autonomic neuropathy of small postganglionic sudomotor fibres, mainly in the feet, have been reported in up to 50% of POTS patients.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Hypovolaemic POTS is characterised by low plasma blood volume and a 24-hour urine sodium below 100 mmol/L; hyperadrenergic POTS by a rise in systolic BP above 10 mmHg during a 10-minute tilt table test and a plasma noradrenaline above 600 pg/mL",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypovolemic POTS is characterised by low plasma blood volume and a 24-hour urine sodium concentration < 100 mmol/L, caused by a dysfunctional renin-angiotensin-aldosterone system. … Hyperadrenergic POTS is characterised by a rise in systolic blood pressure (BP) of > 10 mmHg during a 10-minute TTT and a plasma noradrenaline level > 600 pg/mL.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Initial investigation of suspected POTS should include orthostatic vital signs, a 12-lead ECG and a 24-hour Holter monitor to exclude arrhythmia, plus full blood count, iron studies, active vitamin B12, electrolytes, renal function, thyroid function, plasma noradrenaline and morning cortisol",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial investigation of suspected POTS should include orthostatic vital sign measurements to confirm postural tachycardia, and a 12-lead electrocardiogram and a 24-hour Holter monitor to exclude an arrhythmia. … Pathology tests should screen for other causes of tachycardia/presenting symptoms, including a full blood count, iron studies, active vitamin B12, electrolytes, renal function, thyroid function tests, plasma noradrenaline and morning cortisol.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Non-drug management of POTS: exercise training and gradual reconditioning, class IIa; sodium intake above 10 g/day with fluid intake of at least 2.5 litres/day, class IIb; and class 2 compression garments giving over 30 mmHg of pressure",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Exercise training and gradual reconditioning Class IIa recommendation … Sodium intake >10 g/day and fluid intake of at least 2.5 litres/day Class IIb recommendation … Class 2 compression garments >30 mmHg of pressure",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "POTS beta-blocker doses: propranolol 10 to 40 mg three times a day, bisoprolol 2.5 to 5 mg twice a day, metoprolol 25 to 100 mg daily, atenolol 12.5 to 50 mg daily; adverse effects bradycardia, hypotension, fatigue and syncope, with caution in asthma",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "BBs (eg propranolol, 10-40 mg tid; bisoprolol, 2.5-5 mg bid; metoprolol, 25-100 mg daily; atenolol, 12.5-50 mg daily) … Bradycardia, hypotension, fatigue, syncope Caution recommended for patients with asthma",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Ivabradine 2.5 to 5 mg twice daily is NOT currently part of first- or second-line POTS guidelines but has been shown to improve symptoms with very few side effects and is effective when beta-blockers are not well tolerated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ivabradine (2.5-5 mg bd) … Not currently part of first- or second-line guidelines, shown to improve symptoms with very few side effects Effective when BBs not well tolerated",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Midodrine 2.5 to 10 mg TWICE A DAY is listed for POTS, with supine hypertension, paraesthesias and urinary retention as possible adverse effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Midodrine (2.5-10 mg bd) … Supine hypertension, paresthesias, urinary retention",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Clonidine 0.2 to 0.6 mg twice a day is a class IIb recommendation for the hyperadrenergic phenotype or for patients with hypertension on standing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clonidine (0.2-0.6 mg bd)",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Pyridostigmine 30 to 60 mg twice or three times daily can be considered in the possible neuropathic phenotype",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pyridostigmine (30-60 mg bd/tds)",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Fludrocortisone 0.1 to 0.2 mg once daily is a class IIb recommendation for POTS, possibly especially useful in the hypovolaemic subtype, with hypertension and hypokalaemia as possible adverse effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fludrocortisone (0.1-0.2 mg one daily) … Hypertension, hypokalaemia",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Desmopressin 0.1 to 0.4 mg twice a day has limited evidence but reported symptomatic improvement in tachycardia, with hyponatraemia as a possible adverse effect",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Desmopressin (0.1-0.4 mg bd) … Hyponatremia",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "POTS management is both non-pharmacological and pharmacological, aimed at expanding blood volume, enhancing venous return and reducing tachycardia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Management is both non-pharmacological and pharmacological, and is aimed at expanding blood volume, enhancing venous return and reducing tachycardia.",
+   "locator": "RACGP, Australian Journal of General Practice, 'A dizzying diagnosis', Sadhvi SS, Naresh B, Wu TT, Kwan A, Volume 54 Issue 12, December 2025, doi 10.31128/AJGP-03-25-7592, at https://www1.racgp.org.au/ajgp/2025/december/a-dizzying-diagnosis, retrieved 2026-09-22"
+  }
+ ]
+}
