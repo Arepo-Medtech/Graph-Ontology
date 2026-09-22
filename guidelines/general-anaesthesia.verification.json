@@ -1,0 +1,114 @@
+{
+ "guideline": "guidelines/general-anaesthesia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "ENTIRELY from AMH's General anaesthesia topic, read under subscription and PARAPHRASED: no passage reproduced, no source_text stored, so NOTHING here is machine re-checkable. A targeted search of RACGP's open AJGP for perioperative medication management returned no article that covered this page's content; that absence is recorded rather than filled. ⚠️ GENERAL ANAESTHESIA IS NOT A GENERAL-PRACTICE PROCEDURE AND THIS GUIDELINE DOES NOT PRETEND OTHERWISE. It is scoped to the parts of AMH's page that a non-anaesthetist acts on: which regular medicines to continue, the fasting intervals, and aspiration prophylaxis. NO INDUCTION, MAINTENANCE, NEUROMUSCULAR BLOCKER OR REVERSAL AGENT IS NAMED OR DOSED, because AMH's page does not dose them and no monograph was retrieved.",
+ "summary": {
+  "total": 15,
+  "pass": 0,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "General anaesthesia incorporates FIVE STAGES: preoperative assessment with or without premedication, to make the process as safe and smooth as possible; INDUCTION, to render the patient unconscious and unreactive to surgical stimuli using IV or inhaled drugs; MAINTENANCE, using IV and/or inhaled drugs with muscle relaxants and analgesics as necessary; REVERSAL, where drugs for reversing neuromuscular blockade are usually required if NON-DEPOLARISING neuromuscular blockers were used; and RECOVERY, which begins when the anaesthetic is stopped and lasts until the patient is fully conscious, has stable cardiovascular status, can maintain their own airway and is comfortable",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "PREMEDICATION may be given before induction to RELIEVE ANXIETY with benzodiazepines; PRODUCE SEDATION AND AMNESIA with benzodiazepines, clonidine or ketamine; RELIEVE PAIN with opioids or paracetamol; REDUCE SECRETIONS with glycopyrronium; HELP EMPTY THE STOMACH with metoclopramide; REDUCE THE VOLUME AND ACIDITY OF GASTRIC CONTENTS with H2 antagonists; and REDUCE PAIN DURING VENIPUNCTURE with a topical local anaesthetic, commonly applied preoperatively PARTICULARLY IN CHILDREN",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Some premedication objectives can be achieved by drugs given during induction or maintenance, and EXPLANATION AND REASSURANCE IS OFTEN SUFFICIENT TO RELIEVE ANXIETY",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MOST MEDICATIONS CAN AND SHOULD BE CONTINUED THROUGHOUT THE PERIOPERATIVE PERIOD, PARTICULARLY ANTIANGINAL, ANTIARRHYTHMIC, ANTIHYPERTENSIVE, ACID SUPPRESSION, ANTISEIZURE, BRONCHODILATOR AND CORTICOSTEROID TREATMENT",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Occasionally dosage and timing may need alteration because of fasting or the operation itself; HOWEVER ORAL PRODUCTS MAY BE SWALLOWED WITH A SMALL AMOUNT OF WATER UP TO 2 HOURS BEFORE SURGERY, and if oral administration is not possible, topical, inhaled or parenteral products are generally available",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The decision to STOP OR ALTER treatment needs to be INDIVIDUALISED, based on the patient's condition, the type of surgery and the possibility of interaction with anaesthetic or analgesic agents; CONSULTATION BETWEEN THE RELEVANT SPECIALISTS IS OFTEN NECESSARY, and the patient's medical condition should be monitored closely following any change in treatment",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The RISK OF ASPIRATION INCREASES in obesity, significant GORD, hiatus hernia, obstetric patients, and in EMERGENCY SURGERY WITHOUT AN ADEQUATE PERIOD OF FASTING",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In general, patients should fast before surgery for 6 HOURS FROM FOOD, INFANT MILK FORMULA AND ANIMAL MILK; for 4 HOURS FROM BREAST MILK; and for 2 TO 3 HOURS FROM CLEAR FLUIDS",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GASTRIC EMPTYING CAN BE DELAYED BY PAIN, TRAUMA, OPIOIDS, DISORDERS OF GASTRIC MOTILITY AND OBSTRUCTION -- so the fasting interval alone does not guarantee an empty stomach",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If the patient is on regular ACID SUPPRESSION treatment, CONTINUE IT throughout the perioperative period",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If at HIGH RISK OF ASPIRATION and time allows, give an H2 ANTAGONIST THE NIGHT BEFORE AND THE MORNING OF SURGERY",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Other aspiration measures may include METOCLOPRAMIDE, which is antiemetic and increases gastric motility, and/or 30 mL OF SODIUM CITRATE 0.3 MOLAR SOLUTION, a NON-PARTICULATE antacid, given just before induction",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AVOID PARTICULATE ANTACIDS BECAUSE THEY CAN CAUSE PNEUMONITIS IF ASPIRATED",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "PAIN RELIEF can be given at any stage during general anaesthesia; the type, timing and dose depend on the patient, the procedure and coadministered drugs",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "OPIOIDS ARE USED MOST COMMONLY for intraoperative analgesia: SHORT-ACTING agents AVOID DELAYED RECOVERY, while LONGER-ACTING agents PROVIDE POSTOPERATIVE PAIN RELIEF; other analgesics may be used including NSAIDs, paracetamol, ketamine, clonidine or local anaesthetics",
+   "source": "G1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'General anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/general-anaesthetics/general-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  }
+ ]
+}

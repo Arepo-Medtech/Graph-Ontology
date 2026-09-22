@@ -1,0 +1,430 @@
+{
+ "guideline": "guidelines/local-anaesthesia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice",
+  "https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia",
+  "https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia",
+  "https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED. L1 and L2 are AMH's Local anaesthesia topic and Local anaesthetics class page including its Comparison of some local anaesthetics table, paraphrased, no passage stored: the maximum doses, the vasoconstrictor rules and the toxicity picture. S1 is the OPEN RACGP AJGP article 'Skin procedures in general practice' (August 2024), quoted verbatim, for the setting in which an Australian GP most often gives a local anaesthetic. S2 is an OPEN RACGP AJGP PILOT STUDY from the same issue relating lignocaine dose and volume to wound complications -- quoted verbatim TOGETHER WITH THE AUTHORS' OWN STATEMENT THAT ITS SHORTCOMINGS LIMIT ATTRIBUTION OF FINDINGS TO CLINICAL PRACTICE, and with a limitation visible in its own data. NO CLAIM FROM S2 IS USED TO SET A DOSE OR A LIMIT; AMH's maxima are the only maxima here.",
+ "summary": {
+  "total": 62,
+  "pass": 13,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "CONCENTRATIONS OF LOCAL ANAESTHETICS ARE EXPRESSED AS A PERCENTAGE OR IN mg/mL: MULTIPLY BY 10 TO CONVERT FROM PERCENTAGE TO mg/mL, so 0.5% is 5 mg/mL",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Maximum single doses WITHOUT adrenaline: bupivacaine 2 mg/kg, cocaine 1.5 mg/kg, LIDOCAINE 3 mg/kg, prilocaine 6 mg/kg, ropivacaine 3 mg/kg, tetracaine 1 mg/kg",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Maximum single doses WITH adrenaline: bupivacaine 2 mg/kg (unchanged), LIDOCAINE 7 mg/kg, prilocaine 8 mg/kg; no with-adrenaline figure is given for cocaine, ropivacaine or tetracaine",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MAXIMUM DOSES ARE A GUIDE ONLY, because blood concentrations depend on the area anaesthetised, tissue vascularity, type of block, technique, and the age and physical condition of the individual, as well as the intensity of block, degree of muscle relaxation and duration required",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Onset and duration: bupivacaine 10 to 15 minutes topical/infiltration and 15 to 30 minutes nerve blockade, LONG duration; cocaine 1 to 5 minutes, SHORT; lidocaine 5 to 10 and 5 to 15 minutes, MEDIUM; prilocaine 5 to 10 and 5 to 15 minutes, MEDIUM; ropivacaine 10 to 15 and 15 to 30 minutes, LONG; tetracaine 30 to 60 minutes, LONG",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "THE MAXIMUM TOTAL DOSE OF ADRENALINE IN COMBINATION WITH LOCAL ANAESTHETICS IS 500 MICROGRAMS; concentrations above 5 micrograms/mL, that is 1 in 200,000, PRODUCE LITTLE ADDITIONAL BENEFIT and are not usually advised except in dentistry",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Dilute local anaesthetics with sodium chloride 0.9% injection when lower concentrations than those commercially available are required; MOST HAVE LIMITED SOLUBILITY IF pH IS ABOVE 6, so adding alkaline solutions such as sodium bicarbonate to increase speed of onset MAY RESULT IN PRECIPITATION",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Most local anaesthetics except cocaine cause VASODILATION; adding adrenaline slows vascular absorption and prolongs the local effect, with MOST effect on duration or intensity WITH LIDOCAINE, LESS with bupivacaine and MINIMAL with ropivacaine",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "VASOCONTRICTORS ARE CONTRAINDICATED in IV regional anaesthesia and with ERGOMETRINE, and are NOT RECOMMENDED in intrathecal anaesthesia",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "VASOCONSTRICTOR USE IN PENILE BLOCK IS CONTRAINDICATED, but vasoconstrictors MAY BE USED WITH CAUTION NEAR OTHER TERMINAL ARTERIES -- FINGERS, TOES, EARS, NOSE -- while being AVOIDED in Raynaud's phenomenon or peripheral vascular disease because of the risk of TISSUE ISCHAEMIA; seek specialist advice",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Use vasoconstrictors with CAUTION in heart disease, hypertension and hyperthyroidism because of the increased risk of arrhythmias",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "A VASOCONSTRICTOR REACTION presents as anxiety, pallor, tachycardia, hypertension, sweating or arrhythmias, and usually resolves on stopping administration",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "IN USUAL DOSES BUPIVACAINE IS MORE CARDIOTOXIC THAN ROPIVACAINE, and RESUSCITATION FROM CARDIAC ARREST CAUSED BY ROPIVACAINE HAS A HIGHER CHANCE OF SUCCESS than that caused by bupivacaine",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "A GIVEN DOSE OF LIDOCAINE IS LESS TOXIC THAN AN EQUIVALENT DOSE OF ROPIVACAINE OR BUPIVACAINE",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Bupivacaine and ropivacaine give good differentiation between sensory and motor block at the lowest concentration used; onset and duration of SENSORY block is similar, but MOTOR block may be slower in onset, shorter and less intense with ROPIVACAINE -- an advantage where motor block is not desired, such as obstetric epidural analgesia",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "PRILOCAINE is useful for IV regional anaesthesia because of rapid metabolism and lower toxicity, BUT METHAEMOGLOBINAEMIA MAY OCCUR, PARTICULARLY WITH HIGH DOSES",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "TETRACAINE HAS HIGH SYSTEMIC TOXICITY which restricts its use to TOPICAL applications; it is a particularly effective analgesic for venous cannulation, appearing to have faster onset, longer duration and greater vasodilation than topical lidocaine with prilocaine",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "TACHYPHYLAXIS occurs with lidocaine, prilocaine and bupivacaine",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Local anaesthetics used only in dentistry, such as articaine and mepivacaine, are NOT discussed in AMH",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Local anaesthetics are CONTRAINDICATED in allergic reaction to a local anaesthetic OF THE SAME GROUP -- ester or amide -- and in LOCAL INFLAMMATION OR INFECTION",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ACIDOSIS, HYPOXIA, HYPERKALAEMIA AND HYPOCALCAEMIA INCREASE THE RISK OF LOCAL ANAESTHETIC TOXICITY",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Allergy to local anaesthetics is RARE but relatively more common with ESTERS than amides, and THERE IS NO CROSS-REACTIVITY BETWEEN THE TWO GROUPS; it may present as localised oedema, urticaria, bronchospasm or anaphylaxis. PRESERVATIVES such as methylparaben and sodium metabisulfite, and ANTISEPTICS such as chlorhexidine, CAN ALSO CAUSE ALLERGIC REACTIONS",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In ANTICOAGULATED patients there is a risk of haematoma, WHICH CAN CAUSE PARALYSIS, with epidural or intrathecal administration -- consult local protocols",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Neuromuscular disease such as myasthenia gravis INCREASES SENSITIVITY to local anaesthetic and may increase muscle weakness and depress respiration with central neural blockade; neurological disease may be worsened -- assess risks and benefits before use",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "EARLY SIGNS OF LOCAL ANAESTHETIC TOXICITY MAY BE DIFFICULT TO DETECT IF A BLOCK IS GIVEN DURING GENERAL ANAESTHESIA",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Local anaesthetics ENHANCE CONDUCTION DEFECTS -- use carefully in severe bradycardia, heart block or impaired cardiac conduction -- and in cardiogenic shock or myocardial ischaemia there is a risk of increased cardiovascular depressant effects; the additive myocardial depressant effects of ANTIARRHYTHMICS may matter if significant systemic absorption occurs",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "REDUCE THE DOSE IN THE ELDERLY, who have increased sensitivity, and in CHILDREN UNDER 6 MONTHS, who are more sensitive to toxic effects; in renal or hepatic impairment toxicity may develop with prolonged or repeated administration, with increased risk for bupivacaine and ropivacaine in severe renal dysfunction",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Local anaesthetics are SAFE TO USE IN PREGNANCY at the lowest effective concentration, and are unlikely to cause problems in breastfeeding",
+   "source": "L2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthetics' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthetics, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "HIGH PLASMA CONCENTRATIONS may result from accidental intravascular injection, rapid absorption or rate of administration, excessive dosage or delayed elimination; systemic toxicity affects the CNS and cardiovascular systems, with LOWER concentrations producing CNS symptoms FIRST and cardiovascular effects at higher concentrations",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "OCCASIONALLY CARDIOVASCULAR COLLAPSE MAY PRECEDE CNS TOXICITY WITH LITTLE WARNING, PARTICULARLY WITH BUPIVACAINE",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "CNS toxicity is usually EXCITATION -- nervousness, CIRCUMORAL TINGLING, TINNITUS, tremor, dizziness, blurred vision, SEIZURES -- followed by DEPRESSION with drowsiness, loss of consciousness, respiratory depression and apnoea; THE EXCITATORY EFFECTS MAY BE VERY BRIEF OR EVEN ABSENT, AND CNS DEPRESSION MAY PRESENT FIRST",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cardiovascular toxicity is hypotension, bradycardia, arrhythmias and cardiac arrest, often due to hypoxaemia secondary to respiratory depression but sometimes from direct myocardial depression and vasodilation",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AMH directs readers to the Association of Anaesthetists guideline on Management of severe local anaesthetic toxicity, 2023 edition",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MONITOR respiratory, cardiovascular and neurological function including level of consciousness for AT LEAST THE FIRST 45 MINUTES after injection, longer for procedures with delayed absorption, and MAINTAIN VERBAL CONTACT during administration and the procedure",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "HIGH CONCENTRATIONS OF LOCAL ANAESTHETIC ARE RELATIVELY MORE TOXIC DOSE FOR DOSE THAN WEAKER ONES: USE THE LOWEST DOSE AT THE WEAKEST CONCENTRATION that produces the desired effect",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "To avoid toxicity, ADD UP THE TOTAL DOSE and CONSIDER HALF-LIVES ELAPSED before giving supplemental doses; where prolonged analgesia is required, consider a LONG-ACTING agent",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "RATE OF SYSTEMIC ABSORPTION IS RELATED TO VASCULARITY OF THE INJECTION SITE, in the order INTERCOSTAL greater than EPIDURAL greater than BRACHIAL PLEXUS greater than SUBCUTANEOUS; absorption through MUCOUS MEMBRANES may also be rapid",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AVOID APPLYING LOCAL ANAESTHETICS TO THE SKIN FOR PROLONGED PERIODS OR OVER EXTENSIVE AREAS; OCCLUSIVE DRESSINGS INCREASE ABSORPTION AND THE RISK OF SYSTEMIC EFFECTS",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "INJECT SLOWLY AND INCREMENTALLY, 3 TO 5 mL AT A TIME, aspirating gently and frequently to avoid intravascular injection -- AND SINCE NEGATIVE ASPIRATION DOES NOT PRECLUDE IT, ALLOW A SUFFICIENT PAUSE BETWEEN EACH BOLUS to identify systemic effects",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Establish LARGE BORE IV ACCESS for fluid administration BEFORE performing epidural or intrathecal anaesthesia, to manage hypotension and bradycardia; optimise the patient's condition before a major block",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Combination with other drugs such as opioids or clonidine can POTENTIATE ANALGESIA, allowing a LOWER CONCENTRATION of local anaesthetic, reducing motor block and the risk of adverse effects",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "LOCAL ANAESTHETICS AND TECHNIQUES SHOULD BE USED ONLY BY DOCTORS WITH APPROPRIATE TRAINING, AND AIRWAY MANAGEMENT AND RESUSCITATION EQUIPMENT MUST BE READILY AVAILABLE",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In general, SMALLER NERVE FIBRES ARE MORE SENSITIVE than large fibres, so loss of PAIN AND TEMPERATURE sensation is the FIRST sign of neural blockade, followed by loss of proprioception and touch, and finally loss of MOTOR activity, which requires the highest concentrations; increased skin temperature may occur early when sympathetic nerves are blocked",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Most adverse effects relate to TECHNIQUE, such as systemic toxicity, or to the EFFECTS OF THE BLOCK, such as hypotension during epidural or intrathecal anaesthesia, RATHER THAN TO THE DRUGS",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ACCIDENTAL INTRAVASCULAR OR SUBARACHNOID INJECTION FOLLOWING INJECTION OF SMALL DOSES INTO THE HEAD AND NECK AREA MAY PRODUCE ADVERSE REACTIONS SIMILAR TO THOSE SEEN WITH INADVERTENT INTRAVASCULAR INJECTION OF LARGER DOSES",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Intra-articular local anaesthetic infusions for 48 to 72 hours postoperatively, which is not a marketed indication, have been associated with CHONDROLYSIS, mostly after shoulder surgery",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "POST-DURAL PUNCTURE HEADACHE following accidental subarachnoid puncture during epidural block is the COMMONEST neurological complication of central neural blockade; inadvertent subarachnoid injection can lead to cardiovascular collapse, CNS depression and respiratory arrest",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Other neurological complications include paraesthesia, persistent anaesthesia, weakness or paralysis, loss of sphincter control, anterior spinal artery occlusion, cauda equina syndrome and arachnoiditis; pressure sores and nerve palsies may occur with dense blocks, and COMPARTMENT SYNDROME MAY BE MASKED IN ANAESTHETIC LIMBS",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Increasing MOTOR block is more likely with increasing CONCENTRATION; after central neural blockade DENSE MOTOR BLOCK MAY MASK DEVELOPMENT OF EPIDURAL HAEMATOMA OR ABSCESS, and urinary retention may also occur",
+   "source": "L1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Local anaesthesia' at https://amhonline.amh.net.au/chapters/anaesthetics/drugs-local-anaesthesia/local-anaesthesia, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "MOST SKIN CANCERS DIAGNOSED IN AUSTRALIA, INCLUDING MELANOMAS, ARE IDENTIFIED AND MANAGED IN A PRIMARY CARE SETTING, and procedures performed under local anaesthesia are a common and appropriate part of the general practice skill set",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most skin cancers diagnosed in Australia, including melanomas, are identified and managed in a primary care setting. … Procedures performed under local anaesthesia are a common and appropriate part of the general practice skill set.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Skin procedures in general practice', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Keratinocyte cancers, mainly basal cell and squamous cell carcinomas, have an estimated incidence of OVER 1% PER YEAR with a LIFETIME RISK OF 69%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Keratinocyte cancers (mainly basal cell carcinomas and squamous cell carcinomas) are estimated to have an incidence of over 1% per year, with a lifetime risk of 69%.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Skin procedures in general practice', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "FOR THE LESS EXPERIENCED CLINICIAN, AN EXCISIONAL BIOPSY OF THE ENTIRE LESION IS THE PREFERRED METHOD OF DIAGNOSTIC SAMPLE, and only with more experience should other methods be considered -- because ONE OF THE WORST OUTCOMES FOR A PATIENT IS A MISSED DIAGNOSIS OF MELANOMA DUE TO POOR SAMPLING TECHNIQUE",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For the less experienced clinician, an excisional biopsy of the entire lesion is the preferred method of diagnostic sample. Only with more experience should other methods of sampling be considered. … One of the worst outcomes for a patient is a missed diagnosis of melanoma due to poor sampling technique.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Skin procedures in general practice', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A SHAVE sample is usually appropriate for a pink macule or scaly non-indurated patch, while a NODULE OR INDURATED PLAQUE is usually more suited to a PUNCH biopsy; the question 'WHAT AM I TRYING TO EXCLUDE?' should influence the type of biopsy performed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A shave sample is usually appropriate for a pink macule or scaly non-indurated patch, while a nodule or indurated plaque is usually more suited to a punch biopsy. … The question of 'What am I trying to exclude?' should influence the type of biopsy performed.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Skin procedures in general practice', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A punch biopsy defect of 8 mm or less WILL CONTRACT OVER TIME, so the final scar is 20 TO 30% SMALLER than the initial defect created; good suturing technique affects the final scar, and TOO MUCH TENSION FROM THE SUTURE CAN CAUSE NECROSIS",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A punch biopsy defect of 8 mm or less will contract over time, so the final scar is 20-30% smaller than the initial defect created. … Good suturing technique impacts the final appearance of the scar, where too much tension from the suture can cause necrosis.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Skin procedures in general practice', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/skin-procedures-in-general-practice, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AN AUSTRALIAN PILOT STUDY found that BOTH THE DOSE AND VOLUME OF LIGNOCAINE ADMINISTERED WERE SIGNIFICANTLY ASSOCIATED WITH COMPLICATION RATES after excision of suspected skin cancers, with P values of 0.0084 and 0.0209 respectively",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Both the dose and volume of lignocaine administered were significantly associated with complication rates ( P =0.0084 and P =0.0209, respectively).",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ THE STUDY'S AUTHORS STATE ITS OWN LIMIT: 'This pilot study reported a relationship between lidocaine dose and volume and rates of complications. SHORTCOMINGS OF THIS STUDY LIMIT ATTRIBUTION OF FINDINGS TO CLINICAL PRACTICE. However, the results justify further rigorous research.'",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "This pilot study reported a relationship between lidocaine dose and volume and rates of complications. Shortcomings of this study limit attribution of findings to clinical practice. However, the results justify further rigorous research.",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22"
+  },
+  {
+   "claim": "After an education intervention there was a 43% REDUCTION IN THE DOSE of lignocaine administered and a 25% REDUCTION IN THE VOLUME, and clinician behaviour changed WITHOUT EPISODES OF INADEQUATE ANALGESIA",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "After the intervention there was a 43% reduction in the dose of lignocaine administered and a 25% reduction in the volume administered. … In the post-intervention period, clinician behaviour changed, with a reduction in the volume and dose of lignocaine administered ( P <0.001 and P <0.001, respectively) without episodes of inadequate analgesia.",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The most common complications of skin excision are WOUND DEHISCENCE AND/OR INFECTION, and well-described risk factors include PATIENT AGE OVER 80 YEARS AND EXCISIONS ON THE LIMBS; in this study, lesions on the LIMBS or MALIGNANT ON HISTOLOGY had a significant positive relationship with the complication rate",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "The most common complications are wound dehiscence and/or infection. … Significant risk factors for such complications are well described in the literature and include patient age >80 years and excisions on the limbs. … However, lesions either located on the limbs or malignant upon histology were found to have a significant positive relationship with the complication rate.",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "LIGNOCAINE DOSE OR VOLUME WERE NOT SIGNIFICANT RISK FACTORS FOR INFECTION in either period -- the association was with the overall complication rate and with DEHISCENCE",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Lignocaine dose or volume were not significant risk factors for infection in either the pre- or post-intervention period.",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The study notes it is a unique contribution because PREVIOUS RESEARCH INTO COMPLICATIONS AFTER SKIN CANCER EXCISION HAS NOT CONSIDERED LOCAL ANAESTHETIC AS A CONTRIBUTOR TO WOUND HEALING, while WOUND HEALING RESEARCH IS INCONCLUSIVE with regard to the effects of lignocaine",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "This represents a unique contribution to the literature because previous research into complications after skin cancer excision has not considered local anaesthetic as a contributor to wound healing. … research examining complications after skin cancer excisions does not consider lignocaine as a risk factor, whereas wound healing research is inconclusive with regard to the effects of lignocaine",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ A LIMIT VISIBLE IN THE STUDY'S OWN DATA: ONE PRACTITIONER PERFORMED 54% OF ALL PROCEDURES WHILE SIX PERFORMED FEWER THAN 1%",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "one practitioner performed 54% of all procedures, whereas six performed fewer than 1% of procedures",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Lignocaine is often co-administered with ADRENALINE, which induces vasoconstriction, DECREASING BLEEDING and PROLONGING THE ANALGESIC EFFECT by slowing systemic absorption",
+   "source": "S2",
+   "verdict": "pass",
+   "source_text": "Lignocaine is often co-administered with adrenaline, which induces vasoconstriction, decreasing bleeding and prolonging the analgesic effect by slowing systemic absorption.",
+   "locator": "RACGP, Australian Journal of General Practice, PILOT STUDY, 'Not just tachycardia: A pilot study examining wound-healing complications and local anaesthetic dose', Volume 53 Issue 8, August 2024, at https://www1.racgp.org.au/ajgp/2024/august/not-just-tachycardia, retrieved 2026-09-22"
+  }
+ ]
+}
