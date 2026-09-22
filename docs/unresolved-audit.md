@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 69 guidelines · 2,938 claims · 453 `Unresolved` rows**
+**Generated 2026-09-22 · 70 guidelines · 2,998 claims · 465 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -283,11 +283,12 @@ and **Osteoporosis**.
 | Standard | Status |
 |---|---|
 | ~~**Chronic Obstructive Pulmonary Disease**~~ | ✅ **added 2026-09-22** as `copd-clinical-care-standard.md`, paired with `copd.md` |
-| **Osteoarthritis of the Knee** | outstanding — `osteoarthritis-knee-and-hip.md` leads on the RACGP guideline |
+| ~~**Osteoarthritis of the Knee**~~ | ✅ **added 2026-09-22** as `osteoarthritis-knee-clinical-care-standard.md`, paired with `osteoarthritis-knee-and-hip.md`. ⚠️ **Knee only — the hip has no Clinical Care Standard** |
 | **Osteoporosis** | **not published.** Public consultation **Mar 2027**, approval **Sept–Oct 2027**, **launch early 2028** — correctly absent |
 
-**Eighteen of the twenty-one standards were held before today.** The gap was never in the domains; it was in
-which instrument each file was built on.
+**Eighteen of the twenty-one standards were held before today; twenty are held now.** The gap was never in
+the domains; it was in which instrument each file was built on. **Finding 6 is closed** — the only ACSQHC
+Clinical Care Standard not held in this compendium is **Osteoporosis, which does not yet exist**.
 
 **And two guidelines here lead on a non-ACSQHC source where an ACSQHC standard exists:**
 

@@ -3,6 +3,10 @@
 **Edition:** 1.0 · 2026-09-21 · **Status:** drafted and source-verified; awaiting clinical attestation
 **Scope:** adults, primary care.
 
+> **Paired with [`osteoarthritis-knee-clinical-care-standard.md`](osteoarthritis-knee-clinical-care-standard.md)**
+> — the ACSQHC quality instrument, which **defers to this guideline by name** for orthopaedic referral.
+> ⚠️ **That Standard covers the knee only.** For the hip, this file stands alone.
+
 > **Australian primary source.** RACGP. *Guideline for the management of knee and hip osteoarthritis*,
 > 2nd edition [S1]. Last revised **1 July 2018**. GRADE methodology.
 
