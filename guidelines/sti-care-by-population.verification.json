@@ -1,0 +1,373 @@
+{
+ "guideline": "guidelines/sti-care-by-population.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/",
+  "https://sti.guidelines.org.au/populations-and-situations/young-people/",
+  "https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/",
+  "https://sti.guidelines.org.au/populations-and-situations/women-who-have-sex-with-women/",
+  "https://sti.guidelines.org.au/populations-and-situations/trans-and-gender-diverse-people/",
+  "https://sti.guidelines.org.au/populations-and-situations/pregnant-people/",
+  "https://sti.guidelines.org.au/populations-and-situations/sex-workers/",
+  "https://sti.guidelines.org.au/populations-and-situations/people-who-use-drugs/",
+  "https://sti.guidelines.org.au/populations-and-situations/people-in-custodial-settings/",
+  "https://sti.guidelines.org.au/populations-and-situations/people-living-with-hiv/",
+  "https://sti.guidelines.org.au/populations-and-situations/regional-and-remote-populations/",
+  "https://sti.guidelines.org.au/populations-and-situations/refugees-and-migrants-to-australia/",
+  "https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/",
+  "https://sti.guidelines.org.au/sexual-history/"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "OPEN AND QUOTED. All THIRTEEN population-and-situation pages of ASHM's Australian STI Management Guidelines for Use in Primary Care, retrieved 2026-09-22 and QUOTED VERBATIM. Coverage was checked BEFORE retrieval -- no guideline in this compendium cited any of these pages. This closes the gap flagged as Unresolved #6 in sti-syndromes-and-screening. ⚠️ SCOPE IS WHO TO TEST, HOW OFTEN, AND WITH WHAT MODIFICATIONS. Organism-specific TREATMENT lives in the sixteen organism guidelines written 2026-09-21; syndrome management lives in sti-syndromes-and-screening. This guideline does not repeat either. ⚠️ TWO INTERNAL INCONSISTENCIES IN THE SOURCE ARE RECORDED RATHER THAN RECONCILED: the HIV window period is given as both 6 weeks and 45 days across pages, and the syphilis window period as both 90 days and 12 weeks. The Sexual History page was retrieved but is not claimed from. Every page's own dateModified is recorded in its locator.",
+ "summary": {
+  "total": 49,
+  "pass": 46,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "PAGE dateModified VALUES read from each page's JSON-LD on 2026-09-22: TWELVE of the thirteen population pages were modified 2026-06-29 OR 2026-06-30. ⚠️ THE ADULT SEXUAL ASSAULT PAGE IS THE ONLY EXCEPTION, MODIFIED 2026-07-29 -- a month later than the rest. ⚠️ A dateModified IS AN EDIT DATE, NOT EVIDENCE THAT A RECOMMENDATION WAS REVIEWED",
+   "source": "P14",
+   "verdict": "pass",
+   "source_text": "pop-atsi               2026-06-30T04:26:35Z … pop-assault            2026-07-29T00:21:16Z … pop-remote             2026-06-29T03:15:54Z … pop-young              2026-06-30T04:26:31Z … NOTE: a dateModified is an EDIT DATE. It is not evidence that a recommendation was reviewed.",
+   "locator": "Page dateModified values read from each ASHM population page's JSON-LD structured data on 2026-09-22; extraction expression and full table in src/pop-datemodified.txt"
+  },
+  {
+   "claim": "⚠️ ABORIGINAL AND TORRES STRAIT ISLANDER PEOPLE -- HIGHER RATES OF STIs AND BLOOD BORNE VIRUSES OCCUR, PARTICULARLY IN REMOTE AND VERY REMOTE COMMUNITIES. ⚠️ THE GUIDELINE NAMES THE CAUSES AS SOCIAL: STI RATES ARE LARGELY DRIVEN BY SOCIAL FACTORS INCLUDING POVERTY, LACK OF ACCESS TO HEALTH SERVICES, INCARCERATION AND INTERGENERATIONAL TRAUMA. People in URBAN settings with a connection to higher prevalence remote communities are ALSO at increased risk",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Higher rates of sexually transmitted infections and blood borne viruses occur among Aboriginal and Torres Strait Islander people, particularly in remote and very remote communities. … Routine testing is important as STI rates are largely driven by social factors including poverty, lack of access to health services, incarceration and intergenerational trauma. … People who live in urban settings and who have a connection to higher prevalence remote communities with poorer access to health care, are also at an increased risk of infection.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SCREENING INTERVAL -- ABORIGINAL AND TORRES STRAIT ISLANDER PEOPLE: REGULAR TESTING FOR CHLAMYDIA, GONORRHOEA, SYPHILIS AND HIV IS RECOMMENDED FOR THOSE UNDER THE AGE OF 30, OR 35 IN REMOTE COMMUNITIES, who are NOT KNOWN TO BE IN A STABLE, LONG-TERM MONOGAMOUS RELATIONSHIP. PEOPLE AT REDUCED RISK MAY BE TESTED LESS FREQUENTLY -- those less sexually active or in a monogamous relationship",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Regular testing for chlamydia , gonorrhoea , syphilis and HIV is recommended for Aboriginal and Torres Strait Islander people under the age of 30 (or 35 in remote communities) who are not known to be in a stable, long-term monogamous relationship, as per the Standard Asymptomatic Check-up Guideline. … People at a reduced risk may be tested less frequently. This includes those who are less sexually active or in a monogamous relationship.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ OFFER TESTING OPPORTUNISTICALLY OR AS PART OF AN ANNUAL MBS ITEM 715 HEALTH CHECK when seeing Aboriginal and Torres Strait Islander people who are asymptomatic, ESPECIALLY YOUNG PEOPLE AGED 15-30, OR FROM THE AGE OF FIRST SEXUAL EXPOSURE UP TO 34 YEARS IF FROM REMOTE AND VERY REMOTE AREAS. ALWAYS OFFER EXAMINATION AND TEST WHEN SYMPTOMS ARE PRESENT -- discharge, dysuria, pelvic or low abdominal pain, post-coital or intermenstrual bleeding, dyspareunia or genital lesions",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Offer testing opportunistically or as part of an annual MBS Item 715 Health Check when seeing Aboriginal and Torres Strait Islander people who are asymptomatic, especially young people aged 15-30 (or from age of first sexual exposure up to 34 years if from remote and very remote areas ). … Always offer examination and test when symptoms are present – discharge, dysuria, pelvic/low abdominal pain, post-coital or intermenstrual bleeding, dyspareunia or genital lesions.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ TRICHOMONIASIS IS ENDEMIC IN SOME RURAL AND REMOTE POPULATIONS and people should be tested according to local guidelines. ⚠️ IN REMOTE AREAS, CHECK FOR DONOVANOSIS WITH NAAT IN ANYONE WITH AN ANO-GENITAL ULCER. SYPHILIS INCIDENCE REMAINS DISPROPORTIONATELY HIGHER IN ABORIGINAL AND TORRES STRAIT ISLANDER PEOPLES, and testing should be offered to EVERYONE WHO IS PREGNANT, IN A DECLARED SYPHILIS OUTBREAK AREA, HAS SYMPTOMS, OR REQUESTS STI TESTING",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Trichomoniasis is endemic in some rural and remote populations and people should be tested according to local guidelines. … In remote areas, check for donovanosis with nucleic acid amplification test (NAAT) in anyone with an ano-genital ulcer. … Syphilis incidence remains disproportionately higher in Aboriginal and Torres Strait Islander peoples. Testing should be offered to everyone who is pregnant, in a declared syphilis outbreak area, has symptoms, or requests STI testing.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ ALTHOUGH RATES OF HIV ARE SIMILAR TO THE NON-INDIGENOUS POPULATION, A RECENT DIVERGING TREND IN HIV RATES, HIGH RATES OF UNTREATED STIs ENHANCING HIV TRANSMISSION, AND GREATER DIFFICULTIES IN ACCESS TO HIV TREATMENT MAKE THIS GROUP POTENTIALLY MORE VULNERABLE TO HIV",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Although rates of human immunodeficiency virus ( HIV ) are similar to the non-Indigenous population, a recent diverging trend in HIV rates, high rates of untreated STIs enhancing HIV transmission, and greater difficulties in access to HIV treatment make this group potentially more vulnerable to HIV.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "For Aboriginal and Torres Strait Islander people: INTERPRETATION OF SYPHILIS SEROLOGY IS COMPLEX -- SEEK EXPERT ADVICE IF SEROLOGY IS POSITIVE, and REPEAT THE TEST IF THERE IS POTENTIAL EXPOSURE WITHIN THE PREVIOUS 90 DAYS. REPEAT HIV TESTING IF EXPOSED WITHIN THE PREVIOUS 6 WEEKS. If a gonorrhoea NAAT is positive, TAKE A SWAB AT THE RELEVANT SITES FOR CULTURE BEFORE TREATMENT. ⚠️ SELF-COLLECTION IS ACCEPTABLE and helpful where the person is uncomfortable with clinician collection or consultation times are limited",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Interpretation of syphilis serology is complex. Seek expert advice if serology is positive. Repeat the test if there is potential exposure within the previous 90 days (window period) … Repeat test if patient exposed within previous 6 weeks (window period) … If NAAT test result is positive, take swab at relevant site(s) for culture, before treatment. … Self-collection of specimens is acceptable and can be helpful in situations where the person is uncomfortable with the clinician collecting the sample directly or where consultation times are limited.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CULTURAL SAFETY IN HEALTH CARE IS ESSENTIAL TO ACHIEVING GOOD HEALTH OUTCOMES FOR INDIVIDUALS AND REQUIRES INTEGRATION OF CULTURAL SAFETY STANDARDS WITHIN HEALTH CARE -- the guideline states this as a requirement, not an aspiration",
+   "source": "P1",
+   "verdict": "pass",
+   "source_text": "Cultural safety in health care is essential to achieving good health outcomes for individuals and requires integration of cultural safety standards within health care services",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Aboriginal and Torres Strait Islander People' at https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ RATES OF CHLAMYDIA AND GONORRHOEA DIAGNOSES IN AUSTRALIA ARE HIGHEST AMONG PEOPLE AGED 15-29 YEARS. The 9TH EDITION OF THE RACGP GUIDELINES FOR PREVENTIVE ACTIVITIES IN GENERAL PRACTICE RECOMMENDS OPPORTUNISTIC TESTING FOR CHLAMYDIA IN ALL SEXUALLY ACTIVE PEOPLE AGED 15-29 YEARS. ⚠️ CHLAMYDIA IS DETECTED IN APPROXIMATELY 1 IN 20 YOUNG AUSTRALIANS WHO HAVE SCREENING TESTS IN GENERAL PRACTICE",
+   "source": "P2",
+   "verdict": "pass",
+   "source_text": "Rates of chlamydia and gonorrhoea diagnoses in Australia are highest among people aged 15-29 years. … The 9 th edition of the RACGP Guidelines for Preventive Activities in General Practice recommends opportunistic testing for chlamydia infection in all sexually active people aged 15-29 years. Currently, chlamydia is detected in approximately 1 in 20 young Australians who have screening tests in general practice.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Young people' at https://sti.guidelines.org.au/populations-and-situations/young-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SCREENING INTERVAL -- YOUNG PEOPLE: OPPORTUNISTICALLY OFFER CHLAMYDIA AND OTHER STI SCREENING TO ALL YOUNG PEOPLE AT LEAST ANNUALLY, testing for chlamydia, gonorrhoea, hepatitis B, syphilis and HIV. ⚠️ NEGOTIATING TO SEE ALL YOUNG PEOPLE ALONE, DISCUSSING CONFIDENTIALITY, MINIMISING COSTS AND ROUTINELY OFFERING STI SCREENING using self-collected samples CAN HELP OVERCOME BARRIERS TO TESTING",
+   "source": "P2",
+   "verdict": "pass",
+   "source_text": "Opportunistically offer chlamydia and other STI screening to all young people at least annually. … Testing for chlamydia , gonorrhoea , hepatitis B , syphilis and human immunodeficiency virus ( HIV ) is recommended, as per the Standard Asymptomatic Check-up guideline. … Negotiating to see all young people alone, discussing confidentiality, minimising costs and routinely offering STI screening (using self-collected samples, when appropriate) to all young people can help overcome barriers to STI testing.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Young people' at https://sti.guidelines.org.au/populations-and-situations/young-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PROVIDING CARE TO ADOLESCENTS MAY INVOLVE A COMPLETE PSYCHOSOCIAL HEADSSS ASSESSMENT AND AN ASSESSMENT OF THE YOUNG PERSON'S CAPACITY FOR DECISION MAKING AND CONSENT, WHILE BEING AWARE OF CHILD PROTECTION ISSUES AND MANDATORY REPORTING REQUIREMENTS. ⚠️ CONSENT: YOUNG PEOPLE UNDER 18 MAY BE CAPABLE OF GIVING CONSENT PROVIDED THEY HAVE SUFFICIENT UNDERSTANDING OF THE NATURE AND EFFECT OF THE TREATMENT -- THERE IS SPECIFIC LEGISLATION IN NEW SOUTH WALES AND SOUTH AUSTRALIA, AND COMMON LAW APPLIES IN OTHER JURISDICTIONS",
+   "source": "P2",
+   "verdict": "pass",
+   "source_text": "Providing care to adolescents, particularly younger adolescents, may involve a complete psychosocial HEADSSS Assessment and an assessment of the young person’s capacity for decision making and consent while being aware of child protection issues and mandatory reporting requirements. … Young people under 18 years may be capable of giving consent to treatment provided they have sufficient understanding of the nature and effect of the treatment. There is specific legislation in New South Wales and South Australia that relates to the medical treatment of children and minors; common law applies in other jurisdictions.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Young people' at https://sti.guidelines.org.au/populations-and-situations/young-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PRIVACY FOR YOUNG PEOPLE: ASK THE YOUNG PERSON ABOUT THE BEST WAY TO CONTACT THEM WITH RESULTS AND REMINDERS. FROM THE AGE OF 15 YEARS, YOUNG PEOPLE CAN APPLY FOR THEIR OWN MEDICARE CARD. An endocervical swab for chlamydia NAAT MAY BE COLLECTED AT THE TIME OF CERVICAL CANCER SCREENING -- cervical cancer screening is advised FROM THE AGE OF 25 and has changed FROM 2-YEARLY TO 5-YEARLY",
+   "source": "P2",
+   "verdict": "pass",
+   "source_text": "Ask the young person about the best way to contact them with test results and reminders. From the age of 15 years, young people can apply for their own Medicare card. … An endocervical swab for nucleic acid amplification test (NAAT) for chlamydia may be collected at the time of cervical cancer screening . Currently in Australia, cervical cancer screening is advised from the age of 25 and has changed from 2-yearly screening to 5-yearly screening.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Young people' at https://sti.guidelines.org.au/populations-and-situations/young-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ SCREENING INTERVAL -- MEN WHO HAVE SEX WITH MEN: 3-MONTHLY TESTING IS RECOMMENDED IN ALL MEN WHO HAVE HAD ANY TYPE OF SEX WITH ANOTHER MAN IN THE PREVIOUS 3 MONTHS. Patients not sexually active or in a monogamous relationship may be tested less frequently, BUT AT LEAST ANNUALLY. ⚠️ ALL MEN WHO HAVE SEX WITH MEN LIVING WITH HIV SHOULD BE TESTED 3-MONTHLY INCLUDING A BLOOD TEST FOR SYPHILIS, EVEN IF THEY ARE ONLY HAVING 6-MONTHLY VIRAL LOAD MONITORING",
+   "source": "P3",
+   "verdict": "pass",
+   "source_text": "3-monthly testing for STI s is recommended in all men who have had any type of sex with another man in the previous 3 months. … Patients who are not sexually active or in a monogamous relationship may be tested less frequently, but at least annually. … All men who have sex with men living with HIV should be tested for STI s 3 monthly, including a blood test for syphilis (even if they are only having 6-monthly viral load monitoring) unless they are not sexually active or are at very low risk.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Men who have sex with men' at https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ THE MAIN BARRIERS TO STI CONTROL IN MEN WHO HAVE SEX WITH MEN ARE INSUFFICIENT FREQUENCY OF TESTING AND INCOMPLETE TESTING IN ASYMPTOMATIC PATIENTS. ⚠️ TESTING SHOULD BE PERFORMED AT ALL THREE SITES -- SWAB OF OROPHARYNX AND ANORECTUM, AND FIRST PASS URINE -- AND SYPHILIS SEROLOGY SHOULD BE PERFORMED EVERY TIME AN HIV TEST OR HIV TREATMENT MONITORING IS PERFORMED. MOST STIs IN THIS GROUP ARE ASYMPTOMATIC. ⚠️ ALL THREE SITE SWABS ARE SELF-COLLECTED",
+   "source": "P3",
+   "verdict": "pass",
+   "source_text": "Most STI s in men who have sex with men are asymptomatic. The main barriers to STI control are insufficient frequency of testing and incomplete testing in asymptomatic patients. Testing should be performed at all three sites (swab of oropharynx and anorectum, and first pass urine), and syphilis serology should be performed every time human immunodeficiency virus ( HIV ) test or HIV treatment monitoring is performed. … Oropharyngeal swab NAAT/PCR gonorrhoea/chlamydia Self -collected",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Men who have sex with men' at https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PrEP EFFECTIVELY PREVENTS HIV INFECTION AND ALL PATIENTS ELIGIBLE UNDER THE AUSTRALIAN GUIDELINES SHOULD BE ACTIVELY OFFERED IT. ⚠️ UNDETECTABLE EQUALS UNTRANSMITTABLE: PEOPLE WHO TAKE ANTIRETROVIRAL THERAPY DAILY AS PRESCRIBED, AND WHO ACHIEVE AND MAINTAIN AN UNDETECTABLE VIRAL LOAD, CANNOT SEXUALLY TRANSMIT THE VIRUS TO AN HIV-NEGATIVE PARTNER. ⚠️ THIS GUIDELINE IS INTENDED FOR ALL MEN WHO HAVE SEX WITH MEN, INCLUDING TRANS MEN WHO HAVE SEX WITH OTHER MEN",
+   "source": "P3",
+   "verdict": "pass",
+   "source_text": "Pre-exposure prophylaxis (PrEP) effectively prevents HIV infection. All patients who are eligible under the Australian guidelines should be actively offered PrEP. … people who take antiretroviral therapy for HIV daily as prescribed, and who achieve and maintain an undetectable viral load, cannot sexually transmit the virus to an HIV -negative partner. … This guideline is intended for all men who have sex with men, including trans men who have sex with other men.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Men who have sex with men' at https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ IN MEN WHO HAVE SEX WITH MEN, CONFIRMATION OF A POSITIVE N. GONORRHOEAE RESULT BY CULTURE IS NOT NECESSARY FOR DIAGNOSIS AND SHOULD NOT DELAY TREATMENT, BUT TO ASSIST SURVEILLANCE FOR ANTIMICROBIAL RESISTANCE, GONORRHOEA CULTURE SHOULD BE COLLECTED BEFORE ADMINISTERING ANTIBIOTICS",
+   "source": "P3",
+   "verdict": "pass",
+   "source_text": "Confirmation of positive N. gonorrhoeae result by culture is not necessary for diagnosis and should not delay treatment, but to assist surveillance for antimicrobial resistance, gonorrhoea culture should be collected before administering antibiotics.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Men who have sex with men' at https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ TESTING IS EXPLICITLY NOT RECOMMENDED in asymptomatic men who have sex with men for: LYMPHOGRANULOMA VENEREUM; HERPES SIMPLEX SEROLOGY, WHICH IS NOT RECOMMENDED IN ANY GROUP DUE TO UNCLEAR BENEFIT AND DIFFICULT INTERPRETATION OF RESULTS; MYCOPLASMA GENITALIUM, BECAUSE THE BENEFITS OF SCREENING HAVE NOT BEEN ESTABLISHED; and TRICHOMONAS VAGINALIS",
+   "source": "P3",
+   "verdict": "pass",
+   "source_text": "Lymphogranuloma venereum : asymptomatic testing not recommended. … Herpes simplex virus : serology is not recommended in any group due to unclear benefit and difficult interpretation of results. … testing in asymptomatic men who have sex with men is not recommended because the benefits of screening have not been established. … asymptomatic testing is not recommended.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Men who have sex with men' at https://sti.guidelines.org.au/populations-and-situations/men-who-have-sex-with-men/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ WOMEN WHO HAVE SEX WITH WOMEN ARE OFTEN PRESUMED TO BE AT LOW OR NO RISK FOR STIs BASED ON SEXUAL ORIENTATION, INCLUDING BEING REFUSED SCREENING IN SOME CASES, WHICH CAN CAUSE DISTRUST OF HEALTH CARE AND POOR HEALTH OUTCOMES. ⚠️ CURRENT EVIDENCE INDICATES CISGENDER WOMEN WHO HAVE SEX WITH WOMEN HAVE THE SAME RATE OF STIs AS HETEROSEXUAL WOMEN, though the prevalence of particular STIs differs. ⚠️ UP TO 90% OF THIS GROUP HAVE HAD OR CONTINUE TO HAVE SEXUAL PARTNERS WHO ARE MEN",
+   "source": "P4",
+   "verdict": "pass",
+   "source_text": "Current evidence indicates that cisgender women who have sex with women have the same rate of sexually transmitted infections ( STI s) as heterosexual women, however the prevalence of particular STI s differs between these groups. … Women who have sex with women are often presumed to be at low or no risk for STI s based on sexual orientation, including being refused screening in some cases, which can cause distrust of health care and poor health outcomes. … Up to 90% of this group of women have had or continue to have sexual partners who are men.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Women who have sex with women' at https://sti.guidelines.org.au/populations-and-situations/women-who-have-sex-with-women/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PREVALENCE OF BACTERIAL VAGINOSIS IS SIGNIFICANTLY HIGHER FOR WOMEN WHO HAVE SEX WITH WOMEN (20-50%) THAN EXCLUSIVELY HETEROSEXUAL WOMEN. For this group, CHLAMYDIA and GONORRHOEA WOMAN-TO-WOMAN TRANSMISSION IS UNCOMMON; TRICHOMONIASIS and BACTERIAL VAGINOSIS -- TEST IF SYMPTOMATIC; SYPHILIS -- NO DATA AVAILABLE ON WOMEN-TO-WOMEN TRANSMISSION; HIV -- consider the 45-day window period. ⚠️ ALL SEX PARTNERS SHOULD BE TESTED IF POSITIVE",
+   "source": "P4",
+   "verdict": "pass",
+   "source_text": "Prevalence of bacterial vaginosis estimates are significantly higher for women who have sex with women (20-50%) than exclusively heterosexual women. … Women-to-women transmission uncommon … Test if symptomatic … No data available on women-to-women transmission. All sex partners should be tested if positive. … Consider window period (45 days) and history",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Women who have sex with women' at https://sti.guidelines.org.au/populations-and-situations/women-who-have-sex-with-women/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ IT IS IMPORTANT NOT TO ASSUME THAT 'WOMEN WHO HAVE SEX WITH WOMEN' MEANS 2 PEOPLE WITH VAGINAS AND UTERUSES -- they may be cisgender or transgender, and may have internal or external genitals and use them in a variety of ways. ⚠️ FEW DATA ARE AVAILABLE ON THE RISK FOR STIs TRANSMITTED BY SEX BETWEEN WOMEN, but risk probably varies by the specific STI and sexual practice",
+   "source": "P4",
+   "verdict": "pass",
+   "source_text": "Women who have sex with women may be cisgender or transgender , and may have internal or external genitals, and use them in a variety of ways. It is important not to assume that women who have sex with women means 2 people with vaginas and uteruses. … Few data are available on the risk for STI s transmitted by sex between women, but risk probably varies by the specific STI and sexual practice",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Women who have sex with women' at https://sti.guidelines.org.au/populations-and-situations/women-who-have-sex-with-women/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ TRANS AND GENDER DIVERSE PEOPLE: ASK PATIENTS THEIR PREFERRED NAME, PRONOUNS AND PREFERRED NAMES FOR ANATOMICAL SITES -- WHICH COULD BE 'FRONT HOLE' RATHER THAN VAGINA OR GENITALS -- AND AVOID ASSUMPTIONS ABOUT SEXUAL PRACTICES AND PARTNERS. OFFER SCREENING BASED ON ANATOMY, SEXUAL PRACTICES AND PATIENT PREFERENCE, AND EXPLAIN WHY YOU ARE ASKING: people with a vagina may be offered a self-collected vaginal swab OR A FIRST PASS URINE WHICH MAY BE CONSIDERED LESS INVASIVE IF SOMEONE HAS GENITAL DYSPHORIA",
+   "source": "P5",
+   "verdict": "pass",
+   "source_text": "Ask patients their preferred name, pronouns and preferred names for anatomical sites which could be front hole rather than vagina or genitals; avoid assumptions about sexual practices and partners. … Offer screening based on anatomy, sexual practices and patient preference and explain why you are asking what you are asking e.g. people with a vagina may be offered a self-collected vaginal swab or a first pass urine which may be considered less invasive if someone has genital dysphoria.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Trans and gender diverse people' at https://sti.guidelines.org.au/populations-and-situations/trans-and-gender-diverse-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PEOPLE WITH A NEOVAGINA -- A SURGICALLY CREATED VAGINA -- SHOULD BE OFFERED FIRST PASS URINE TESTING. The guideline supplies wording: 'PEOPLE CAN GET CHLAMYDIA AND GONORRHOEA IN THE URINE, THROAT, BUM AND CERVIX. YOU CAN DO YOUR OWN SWABS OF THESE SITES IF NEEDED. WOULD YOU LIKE TESTING FOR ANY OF THESE SITES TODAY?'",
+   "source": "P5",
+   "verdict": "pass",
+   "source_text": "People with a neovagina (i.e. surgically created vagina) should be offered first pass urine testing. … People can get chlamydia and gonorrhoea in the urine, throat, bum and cervix. You can do your own swabs of these sites if needed. Would you like testing for any of these sites today?",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Trans and gender diverse people' at https://sti.guidelines.org.au/populations-and-situations/trans-and-gender-diverse-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ RATES OF STIs AMONG TRANS AND GENDER DIVERSE PEOPLE IN AUSTRALIA ARE LARGELY UNKNOWN: LIMITED DATA SUGGEST THESE RATES ARE HIGHER THAN THE GENERAL POPULATION and increase with other risk factors. ⚠️ WORLDWIDE, TRANS WOMEN ARE AT HIGHER RISK OF HIV AND PEOPLE AT RISK SHOULD BE OFFERED PrEP. ⚠️ TRANS AND GENDER DIVERSE PEOPLE EXPERIENCE HIGH RATES OF SEXUAL ASSAULT, THEREFORE SENSITIVE HISTORY TAKING IS IMPERATIVE",
+   "source": "P5",
+   "verdict": "pass",
+   "source_text": "Rates of sexually transmitted infections ( STI s) among trans and gender diverse people in Australia are largely unknown: limited data suggest these rates are higher than those of the general population and increase if there are other risk factors … Worldwide, trans women are at higher risk of human immunodeficiency virus ( HIV ) and people at risk of HIV should be offered pre-exposure prophylaxis (PREP). … Trans and gender diverse people experience high rates of sexual assault therefore sensitive history taking is imperative.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Trans and gender diverse people' at https://sti.guidelines.org.au/populations-and-situations/trans-and-gender-diverse-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ STIs AND BLOOD BORNE VIRUSES IN PREGNANCY ARE ASSOCIATED WITH SIGNIFICANT MORBIDITY AND MORTALITY, INCLUDING SPONTANEOUS ABORTION, FETAL DEMISE, PREMATURE LABOUR, LOW BIRTH WEIGHT AND NEONATAL INFECTION. ⚠️ PID CAN OCCUR IN PREGNANCY AND MAY BE MISDIAGNOSED -- DO STI TESTS IN A PREGNANT PERSON WITH NEW OR ABNORMAL GENITAL DISCHARGE, BLEEDING, OR PELVIC PAIN",
+   "source": "P6",
+   "verdict": "pass",
+   "source_text": "Sexually transmitted infections ( STI s) and blood borne viruses (BBVs) in pregnancy are associated with significant morbidity and mortality, including spontaneous abortion, fetal demise, premature labour, low birth weight and neonatal infection. … Pelvic inflammatory disease ( PID ) can occur in pregnancy and may be misdiagnosed. Do STI tests in a pregnant person with new or abnormal genital discharge, bleeding, or pelvic pain.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pregnant people' at https://sti.guidelines.org.au/populations-and-situations/pregnant-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ ANTENATAL SYPHILIS TESTING SCHEDULE: ROUTINELY OFFER AND RECOMMEND SYPHILIS TESTING AT THE FIRST ANTENATAL VISIT, AT 26-28 WEEKS, AND AT 36 WEEKS OR BIRTH, WHICHEVER IS EARLIER, ACCORDING TO CDNA NATIONAL GUIDELINES. FOR A PERSON AT HIGH RISK, A FURTHER TEST AT 6 WEEKS POSTPARTUM IS RECOMMENDED. ⚠️ UNTREATED SYPHILIS IN PREGNANCY IS ASSOCIATED WITH PRETERM BIRTH, NEONATAL DEATH AND CONGENITAL SYPHILIS, AND EARLY TREATMENT IMPROVES NEONATAL OUTCOMES. ⚠️ RECOMMENDATIONS FOR REPEAT TESTING VARY -- SEE LOCAL GUIDELINES, PARTICULARLY IN AN OUTBREAK DECLARED AREA",
+   "source": "P6",
+   "verdict": "pass",
+   "source_text": "Routinely offer and recommend syphilis testing at the first antenatal visit, at 26-28 weeks, and at 36 weeks or birth (whichever is earlier) according to CDNA National Guidelines . For a person at high risk of syphilis a further test at 6 weeks postpartum is recommended. Untreated syphilis in pregnancy is associated with significant complications including preterm birth, neonatal death and congenital syphilis . Early treatment in pregnancy improves neonatal outcomes. See local guidelines for further information, particularly in an outbreak declared area, as recommendations for repeat testing vary.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pregnant people' at https://sti.guidelines.org.au/populations-and-situations/pregnant-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "ANTENATAL CHLAMYDIA AND GONORRHOEA: ROUTINELY OFFER TESTING AT THE FIRST ANTENATAL VISIT TO ALL PREGNANT PEOPLE UNDER THE AGE OF 30. Testing REGARDLESS OF AGE should be considered for people who LIVE IN AREAS WHERE STI PREVALENCE IS HIGH, and CONSIDER TESTING FOR PEOPLE PRESENTING WITH ADVERSE OUTCOMES SUCH AS PRETERM RUPTURE OF MEMBRANES AND MISCARRIAGE. TREATMENT DURING PREGNANCY IS RECOMMENDED",
+   "source": "P6",
+   "verdict": "pass",
+   "source_text": "Routinely offer chlamydia testing at first antenatal visit to all pregnant people under the age of 30. Testing for chlamydia and other STI s regardless of age should be considered for people who live in areas where STI prevalence is high. Consider testing for people presenting with adverse outcomes such as preterm rupture of membranes and miscarriage. … Routinely offer gonorrhoea testing at first antenatal visit to all pregnant people under the age of 30. … Treatment during pregnancy is recommended.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pregnant people' at https://sti.guidelines.org.au/populations-and-situations/pregnant-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "ANTENATAL HEPATITIS B: routinely offer testing at the first antenatal visit. IF NOT HIGH-RISK, THE TESTING GUIDELINES RECOMMEND HBsAg TESTING ONLY, with further HBeAg and HEPATITIS B DNA IF HBsAg POSITIVE. ⚠️ DISCUSS THE NEED FOR THE INFANT TO RECEIVE HEPATITIS B IMMUNOGLOBULIN AND VACCINATION AT BIRTH TO PREVENT TRANSMISSION, and the need for follow-up testing for the infant. Any person diagnosed in pregnancy SHOULD BE ASSESSED BY AN EXPERIENCED CLINICIAN who will determine phase and stage, INCLUDING CONSIDERATION OF TREATMENT IN THE THIRD TRIMESTER",
+   "source": "P6",
+   "verdict": "pass",
+   "source_text": "If not high-risk, the testing guidelines recommend Hepatitis B surface antigen (HBsAg) testing only, with further testing with Hepatitis B e antigen (HBeAg) and Hepatitis B DNA if HBsAg positive. … Any person diagnosed with hepatitis B infection in pregnancy should be assessed by an experienced clinician who will determine the phase and stage of their hepatitis B , including consideration of treatment in the third trimester. Discuss need for the infant to receive hepatitis B immunoglobulin (HBIG) and vaccination at birth to prevent transmission, and need for follow-up testing for the infant.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pregnant people' at https://sti.guidelines.org.au/populations-and-situations/pregnant-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "ANTENATAL HIV: routinely offer and recommend testing at the first antenatal visit, and REPEAT IF THE PATIENT WAS EXPOSED WITHIN THE PREVIOUS 45 DAYS or has ongoing risk. ANTENATAL HEPATITIS C: the antibody test should be offered at the first antenatal visit, and PEOPLE WHO ARE HCV ANTIBODY POSITIVE NEED TO BE TESTED FOR HCV RNA, BECAUSE THE SMALL RISK OF PERINATAL TRANSMISSION IS CONDITIONAL ON THE PRESENCE OF PARENTAL HCV RNA. ⚠️ SCREENING FOR HSV IS NOT RECOMMENDED IN PREGNANCY WITH EITHER SEROLOGY OR SWABS",
+   "source": "P6",
+   "verdict": "pass",
+   "source_text": "Repeat test if patient exposed within previous 45 days (window period) or have ongoing risk of HIV acquisition. … HCV Antibody test should be offered at first antenatal visit and people who are HCV antibody positive need to be tested for HCV RNA because the small risk of perinatal transmission is conditional on the presence of parental HCV RNA. … Screening for herpes simplex virus ( HSV ) is not recommended in pregnancy with either serology or swabs.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Pregnant people' at https://sti.guidelines.org.au/populations-and-situations/pregnant-people/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CURRENTLY, THERE IS NO EVIDENCE THAT SEX WORKERS IN AUSTRALIA HAVE HIGHER RATES OF STIs THAN THE GENERAL POPULATION -- SUSTAINING LOW STI RATES REMAINS A PRIORITY. THERE HAS BEEN WIDESPREAD ADOPTION OF SAFER SEX PRACTICE IN THE AUSTRALIAN SEX INDUSTRY THROUGH SEX WORKER ADVOCACY, PEER-BASED EDUCATION AND SUPPORT AND OUTREACH SERVICES. ⚠️ FREQUENCY OF TESTING SHOULD BE DETERMINED IN CONSULTATION WITH THE SEX WORKER AND GUIDED BY RISK ASSESSMENT -- sex workers MAY REQUEST MORE FREQUENT TESTING TO COMPLY WITH JURISDICTIONAL-BASED LEGAL FRAMEWORKS AND WORKPLACE REQUIREMENTS",
+   "source": "P7",
+   "verdict": "pass",
+   "source_text": "Currently, there is no evidence that sex workers in Australia have higher rates of sexually transmitted infections ( STIs ) than the general population. Sustaining low STI rates remains a priority. … There has been widespread adoption of safer sex practice in the Australian sex industry through sex worker advocacy, peer-based education and support and outreach services. … Frequency of testing should be determined in consultation with the sex worker and guided by risk assessment. Sex workers may request more frequent testing to comply with jurisdictional-based legal frameworks and workplace requirements.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Sex workers' at https://sti.guidelines.org.au/populations-and-situations/sex-workers/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CONDOM BREAKAGE OR SLIPPAGE PROTOCOL, REGARDLESS OF WHETHER THERE HAS BEEN EJACULATION: if the sex worker HAS been testing regularly and uses condoms in personal and professional life, RECOMMEND STI TESTING 7 DAYS AFTER BREAKAGE or earlier if symptoms. If they have NOT had a recent test, OFFER BASELINE TESTING IMMEDIATELY THEN FOLLOW-UP 7 DAYS AFTER. ⚠️ INFORM THE SEX WORKER THAT STIs DETECTED ON BASELINE TESTING ARE NOT A RESULT OF THE BREAKAGE. CONSIDER EMERGENCY CONTRACEPTION, HIV PEP AND HEPATITIS B PEP, AND OFFER REPEAT SWABS IN 2 WEEKS AND REPEAT SEROLOGY IN 3 MONTHS",
+   "source": "P7",
+   "verdict": "pass",
+   "source_text": "If the sex worker has been testing regularly and uses condoms in their personal and professional lives, recommend STI testing 7 days after breakage or earlier if symptoms present. If the sex worker has not had a recent test, offer baseline testing immediately and then follow-up testing 7 days after breakage or earlier if symptoms present. If baseline testing performed: Inform the sex worker of incubation periods and that STI s detected on baseline testing are not a result of the breakage. … Consider emergency contraception and HIV post-exposure prophylaxis (PEP) and hepatitis B PEP , as appropriate. Offer repeat swabs in 2 weeks and repeat serology in 3 months (i.e. after appropriate window periods).",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Sex workers' at https://sti.guidelines.org.au/populations-and-situations/sex-workers/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "For sex workers: HIV -- REPEAT IF EXPOSED WITHIN THE PREVIOUS 45 DAYS; CONSIDER PEP IF EXPOSED IN THE LAST 72 HOURS, AND PrEP IF THERE IS ONGOING RISK. SYPHILIS -- REPEAT IF EXPOSED WITHIN THE PREVIOUS 12 WEEKS. HEPATITIS B VACCINATION IS FREE IN MOST STATES AND TERRITORIES FOR SEX WORKERS, and SEROLOGICAL TESTING (SURFACE ANTIBODY ONLY) IS RECOMMENDED 4-8 WEEKS AFTER COMPLETING THE PRIMARY COURSE for people at risk. ⚠️ OFFER TESTING MORE OFTEN IF CONDOM AND DENTAL DAM USE IS <100%",
+   "source": "P7",
+   "verdict": "pass",
+   "source_text": "Repeat test if patient exposed within previous 45 days (window period). Consider PEP if a patient was exposed in the last 72 hours, and consider PrEP if the patient has ongoing risk of human HIV exposure. … Repeat test if patient exposed within previous 12 weeks (window period). … Vaccination is free in most states and territories for sex workers. Serological testing ( hepatitis B surface antibody only) is recommended 4-8 weeks after completing the primary course of vaccination for people at risk of hepatitis B . … Offer testing more often if condom and dental dam use is < 100% (including history of condom breakages or slippages) or at the request of the person.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Sex workers' at https://sti.guidelines.org.au/populations-and-situations/sex-workers/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ INJECTING AND NON-INJECTING USE OF METHAMPHETAMINES AND GAMMA HYDROXYBUTYRATE (GHB) HAVE BEEN SHOWN TO CONFER A HIGHER RISK OF STIs AND HIV, DUE TO AN ASSOCIATION WITH CONDOMLESS SEX AND GROUP SEX. Illicit drug use among men who have sex with men, AND SEXUALISED DRUG USE IN PARTICULAR, HAS BEEN ASSOCIATED WITH HIV, SYPHILIS, LYMPHOGRANULOMA VENEREUM AND HEPATITIS C",
+   "source": "P8",
+   "verdict": "pass",
+   "source_text": "In particular, injecting and non-injecting use of methamphetamines and gamma hydroxybutyrate (GHB) have been shown to confer a higher risk of sexually transmitted infections ( STI s) and human immunodeficiency virus ( HIV ) due to an association with condomless sex and group sex. … Illicit drug use among men who have sex with men , and sexualised drug use in particular, has been associated with HIV , syphilis , lymphogranuloma venereum (LGV) and hepatitis C .",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People who use drugs' at https://sti.guidelines.org.au/populations-and-situations/people-who-use-drugs/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CURRENT INJECTING DRUG USE DOES NOT EXCLUDE A PATIENT FROM HEPATITIS C TREATMENT INITIATION. CURATIVE DIRECT-ACTING ANTIVIRALS ARE AVAILABLE AS A HIGHLY EFFECTIVE AND WELL-TOLERATED TREATMENT AND CAN BE PRESCRIBED BY ANY REGISTERED MEDICAL PRACTITIONER IN AUSTRALIA. OFFER ANNUAL HCV TESTING TO PATIENTS WHO CONTINUE TO INJECT DRUGS. ⚠️ PEOPLE WHO SHARE NEEDLES MAY ALSO NEED HIV PrEP OR PEP",
+   "source": "P8",
+   "verdict": "pass",
+   "source_text": "Curative direct-acting antivirals (DAAs) are now available as a highly effective and well-tolerated treatment and these can be prescribed by any registered medical practitioner in Australia. Current injecting drug use does not exclude patient for treatment initiation. Offer annual HCV testing to patients who continue to inject drugs, due to the risk of initial infection. … Note: People who share needles may also need HIV PrEP or post-exposure prophylaxis (PEP).",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People who use drugs' at https://sti.guidelines.org.au/populations-and-situations/people-who-use-drugs/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PEOPLE IN CUSTODIAL SETTINGS ARE OFTEN FROM MARGINALISED AND DISPROPORTIONALLY CRIMINALISED GROUPS. INJECTING DRUG USE AND UNSAFE TATTOOING OCCUR IN CUSTODIAL SETTINGS, AND GIVEN THE LACK OF APPROPRIATE AND ACCESSIBLE HARM REDUCTION MEASURES, INCARCERATION IS A RISK FACTOR FOR BLOOD BORNE VIRUS AND STI TRANSMISSION. ⚠️ UNWANTED SEX, INCLUDING SEXUAL ASSAULT, CAN OCCUR IN CUSTODIAL SETTINGS. THERE IS A HIGH PREVALENCE OF BBVs, ESPECIALLY HEPATITIS C",
+   "source": "P9",
+   "verdict": "pass",
+   "source_text": "Injecting drug use and unsafe tattooing occur in custodial settings. Given the lack of appropriate and accessible harm reduction measures, incarceration is a risk factor for blood borne virus (BBV) infection and sexually transmitted infection ( STI ) transmission. … Unwanted sex, including sexual assault , can occur in custodial settings; additionally people may engage in different sexual practices (prison sex, including sex between men ) from when they are in the general community. … There is a high prevalence of BBVs, especially hepatitis C , among people in custodial settings.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People in custodial settings' at https://sti.guidelines.org.au/populations-and-situations/people-in-custodial-settings/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In custodial settings, ⚠️ SYPHILIS IS INCREASINGLY PREVALENT AMONG ABORIGINAL AND TORRES STRAIT ISLANDER PEOPLE, AND AS THIS POPULATION MAKES UP A DISPROPORTIONATELY HIGH PERCENTAGE OF PRISON ENTRANTS, SYPHILIS SCREENING SHOULD BE CONSIDERED. CONFIRM HCV STATUS FOR ALL PEOPLE REPORTING A HISTORY OF INCARCERATION OR INJECTING DRUG USE. SEROLOGICAL TESTING AFTER HBV VACCINATION SHOULD BE CONSIDERED IN CUSTODIAL SETTINGS, to check surface antibody level",
+   "source": "P9",
+   "verdict": "pass",
+   "source_text": "Syphilis is increasingly prevalent among Aboriginal and Torres Strait Islander people . As this population makes up a disproportionately high percentage of prison entrants, syphilis screening should be considered. … Confirm HCV status for all people reporting a history of incarceration or injecting drug use . … Serological testing after HBV vaccination should be considered in custodial settings, to check HBV surface antibody level.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People in custodial settings' at https://sti.guidelines.org.au/populations-and-situations/people-in-custodial-settings/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SCREENING INTERVAL -- PEOPLE LIVING WITH HIV: MEN WHO HAVE SEX WITH MEN SHOULD BE TESTED FOR STIs EVERY 3 MONTHS, AND OTHER PEOPLE LIVING WITH HIV ANNUALLY, although patients not sexually active may be tested less frequently. SYPHILIS AT EACH CLINICAL BLOOD DRAW, 3-MONTHLY IN MEN WHO HAVE SEX WITH MEN. HEPATITIS C YEARLY IN MEN WHO HAVE SEX WITH MEN AND PEOPLE WHO INJECT DRUGS. ⚠️ HEPATITIS B, HEPATITIS C AND HERPES CO-INFECTION ARE COMMON",
+   "source": "P10",
+   "verdict": "pass",
+   "source_text": "Men who have sex with men should be tested for STI s every 3 months, and other people living with HIV annually, although patients who are not sexually active may be tested less frequently … At each clinical blood draw 3 monthly in men who have sex with men … Yearly in men who have sex with men and people who inject drugs … Hepatitis B , hepatitis C and herpes co-infection are common among people living with HIV",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People living with HIV' at https://sti.guidelines.org.au/populations-and-situations/people-living-with-hiv/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ UNDETECTABLE EQUALS UNTRANSMITTABLE, and TREATMENT SHOULD BE INITIATED AS SOON AS POSSIBLE AFTER DIAGNOSIS. AT DIAGNOSIS OF HIV, TESTING FOR OTHER STIs AND BLOOD BORNE VIRUSES SHOULD BE OFFERED. ⚠️ WOMEN WITH HIV SHOULD BE OFFERED 3-YEARLY CERVICAL SCREENING",
+   "source": "P10",
+   "verdict": "pass",
+   "source_text": "Treatment should be initiated as soon as possible after diagnosis … At diagnosis of HIV , testing for other STI s and blood borne viruses should be offered … Women with HIV should be offered 3-yearly cervical screening test",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'People living with HIV' at https://sti.guidelines.org.au/populations-and-situations/people-living-with-hiv/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SCREENING INTERVAL -- REGIONAL AND REMOTE: REGULAR ANNUAL STI AND BBV TESTING IS RECOMMENDED FOR PEOPLE 15-35 YEARS OLD, and ⚠️ MORE FREQUENT TESTING -- 6-MONTHLY -- IS RECOMMENDED IN MANY REMOTE COMMUNITIES WITH HIGHER PREVALENCE. ⚠️ DUE TO LESS FREQUENT ATTENDANCE, CONSIDER OPPORTUNISTIC STI TESTING AT EVERY CLINICAL ENCOUNTER. HIGHER RATES OF SYPHILIS OCCUR IN REGIONAL AND REMOTE AREAS -- CLINICIANS SHOULD HAVE A LOW THRESHOLD FOR TESTING",
+   "source": "P11",
+   "verdict": "pass",
+   "source_text": "Regular annual STI and BBV testing is recommended for people 15-35 yo in this population, as per the Standard Asymptomatic Check-up guideline . More frequent testing (6-monthly) is recommended in many remote communities with higher prevalence of STI s … Due to less frequent attendance consider opportunistic sexually transmitted infection ( STI ) testing at every clinical encounter. … Higher rates of syphilis occur in regional and remote areas. Clinicians should have a low threshold for testing in people with possible symptoms of syphilis .",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Regional and remote populations' at https://sti.guidelines.org.au/populations-and-situations/regional-and-remote-populations/, page dateModified 2026-06-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ CONGENITAL SYPHILIS IS A SERIOUS ADVERSE EVENT RESULTING FROM UNTREATED SYPHILIS IN PREGNANCY. IT CAN BE PREVENTED BY APPROPRIATE TESTING AND TREATMENT for people who are pregnant or planning a pregnancy. ⚠️ BARRIERS IN REGIONAL AND REMOTE PRACTICE INCLUDE HEALTH PROFESSIONALS KNOWING PATIENTS IN A SOCIAL CONTEXT, OR BEING LOCUMS with little opportunity to build a relationship, and GLBTI COMMUNITIES MAY BE LESS VISIBLE with people RELUCTANT TO IDENTIFY AS GLBTI",
+   "source": "P11",
+   "verdict": "pass",
+   "source_text": "Congenital syphilis is a serious adverse event resulting from untreated syphilis in pregnancy . It can be prevented by appropriate testing and treatment for people who are pregnant or planning a pregnancy . … Potential barriers include regional and remote health professionals knowing patients in a social context, or being locums and having little opportunity to build a relationship with patients. … communities may be less visible in rural and remote areas and people may be reluctant to identify as GLBTI.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Regional and remote populations' at https://sti.guidelines.org.au/populations-and-situations/regional-and-remote-populations/, page dateModified 2026-06-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PRE-MIGRATION STI AND BBV SCREENING VARIES ACCORDING TO ENTRY VISA STATUS. HIV SCREENING IS DONE AS PART OF THE HEALTH ASSESSMENT WHEN APPLYING FOR A PERMANENT VISA FOR PEOPLE AGED 15 AND OVER, unaccompanied humanitarian minors, international adoptees, clinical symptoms or if another BBV/STI is diagnosed -- ⚠️ THIS SCREENING MAY HAVE OCCURRED BEFORE ARRIVAL AND NO FURTHER TESTING POST ARRIVAL MAY HAVE OCCURRED. SYPHILIS SCREENING IS CONDUCTED FOR PEOPLE AGED 15 AND OVER APPLYING FOR OFFSHORE OR ONSHORE PROTECTION VISAS",
+   "source": "P12",
+   "verdict": "pass",
+   "source_text": "Pre-migration sexually transmitted infection ( STI ) and blood borne virus (BBV) screening varies according to entry visa status. … screening is done as part of the health assessment when applying for a permanent visa for people ≥ 15 years, unaccompanied humanitarian minors, international adoptees, clinical symptoms or if another BBV/ STI is diagnosed. This screening may have occurred before arrival and no further testing post arrival may have occurred. … Syphilis screening is conducted for people ≥ 15 years applying for offshore or onshore protection visas (Refugee entrants).",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Refugees and migrants to Australia' at https://sti.guidelines.org.au/populations-and-situations/refugees-and-migrants-to-australia/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ PUBLISHED DATA DO NOT SUPPORT UNIVERSAL STI SCREENING FOR NEWLY ARRIVED REFUGEES, defined as less than 6 months in Australia. ⚠️ APPLICANTS FOR TEMPORARY VISAS ARE NOT NORMALLY REQUIRED TO UNDERGO HIV TESTING OR OTHER STI SCREENING except for certain groups, such as applicants intending to work as, or studying to be, a doctor, dentist, nurse or paramedic. ⚠️ SCREENING SHOULD FOLLOW STANDARD RECOMMENDATIONS AND BE BASED ON ACCURATE HISTORY TAKING AND RISK ASSESSMENT, CAREFULLY AVOIDING ASSUMPTIONS ABOUT RISK BASED ON GENDER, ETHNICITY, RELIGIOUS BELIEFS OR CULTURAL BACKGROUND, VISA STATUS OR PRIOR ENTRY TESTING REQUIREMENTS",
+   "source": "P12",
+   "verdict": "pass",
+   "source_text": "Published data do not support universal STI screening for newly arrived refugees (less than 6 months in Australia). … Applicants for temporary visas to Australia are not normally required to undergo HIV testing or other STI screening except for certain groups (e.g. applicants intending to work as, or studying to be, a doctor, dentist, nurse or paramedic) or if clinically indicated. … Screening should follow standard recommendations and be based on accurate history taking and risk assessment, carefully avoiding assumptions about risk based on gender, ethnicity, religious beliefs or cultural background, visa status or prior entry testing requirements.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Refugees and migrants to Australia' at https://sti.guidelines.org.au/populations-and-situations/refugees-and-migrants-to-australia/, page dateModified 2026-06-30, retrieved 2026-09-22"
+  },
+  {
+   "claim": "ADULT SEXUAL ASSAULT: ⚠️ ALWAYS ASK THE CLIENT WHETHER THEY WANT TO INVOLVE THE LOCAL POLICE SERVICE OR SEXUAL ASSAULT RESPONSE TEAM. The guideline is to help the clinician provide care to a person who MAY OR MAY NOT WANT TO MAKE A COMPLAINT TO THE POLICE AT THE TIME OF THE CONSULTATION, and can be used BEFORE OR AFTER A FORENSIC EXAMINATION. ⚠️ ENSURE THE CLIENT IS OFFERED THE OPTION OF FORENSIC EVIDENCE COLLECTION -- AVAILABILITY OF MEDICAL-FORENSIC SERVICES AND TIMEFRAMES VARY FROM STATE TO STATE. ⚠️ ANYONE DISCLOSING RECENT OR PAST SEXUAL ASSAULT SHOULD BE OFFERED CRISIS COUNSELLING, WHICH CAN BE PROVIDED BY 1800 RESPECT",
+   "source": "P13",
+   "verdict": "pass",
+   "source_text": "Always ask the client whether they want to involve the local Police Service or Sexual Assault Response Team. … The following guideline is to help the clinician provide safe and comprehensive care to a person who has been sexually assaulted and may or may not want to make a complaint to the police at the time of the consultation. These guidelines can be used before or after a forensic examination. Ensure that the client is offered the option of forensic evidence collection; availability of medical-forensic services and timeframes vary from state to state. … Anyone disclosing recent or past sexual assault should be offered crisis counselling. This can be provided by 1800 RESPECT.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Adult sexual assault' at https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/, page dateModified 2026-07-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SEXUAL ASSAULT, UP TO 72 HOURS: assess the need for immediate care, FIRST AID OR INJURIES THAT NEED ATTENTION, ESPECIALLY HEAD INJURY. Offer forensic evidence collection -- IN MOST STATES THIS CAN OCCUR WITHOUT POLICE INVOLVEMENT, AND IN SOME STATES UP TO 120 HOURS POST ASSAULT. ⚠️ ASK ABOUT STRANGULATION -- 'WAS ANY PRESSURE PUT ON YOUR NECK DURING THE ASSAULT?' -- AND IF THE PATIENT HAS EXPERIENCED NON-FATAL STRANGULATION THEY SHOULD BE ASSESSED AND REFERRED TO AN EMERGENCY CARE PROVIDER",
+   "source": "P13",
+   "verdict": "pass",
+   "source_text": "Assess the need for immediate care; first aid or injuries that need attention, especially head injury. Ensure that the patient is offered the option of forensic evidence collection. In most states this can occur without police involvement (In some states this will be up to 120 hours post assault). … Ask about strangulation – e.g. “Was any pressure put on your neck during the assault?” If the patient has experienced a non-fatal strangulation, they should be assessed and referred to an emergency care provider for further assessment and management if required.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Adult sexual assault' at https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/, page dateModified 2026-07-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SEXUAL ASSAULT PROPHYLAXIS, UP TO 72 HOURS: ⚠️ HIV POST-EXPOSURE PROPHYLAXIS -- IF INDICATED, 30 DAYS OF ANTIRETROVIRAL MEDICATION IS REQUIRED, and A STARTER KIT IS AVAILABLE FROM MOST EMERGENCY DEPARTMENTS AND SEXUAL HEALTH SERVICES. HEPATITIS B -- CHECK SURFACE ANTIBODY, CORE ANTIBODY AND SURFACE ANTIGEN; OFFER VACCINATION TO ANYONE NOT IMMUNE AND VULNERABLE; ⚠️ HEPATITIS B IMMUNOGLOBULIN IF THE ASSAILANT IS KNOWN TO BE HBV Ag POSITIVE, WHICH IF INDICATED CAN BE ADMINISTERED UP TO 14 DAYS POST ASSAULT. EMERGENCY CONTRACEPTION: UNDERTAKE A PREGNANCY RISK ASSESSMENT AND OFFER THE MOST SUITABLE AND ACCESSIBLE METHOD",
+   "source": "P13",
+   "verdict": "pass",
+   "source_text": "Human immunodeficiency virus ( HIV ) post-exposure prophylaxis (PEP) – if indicated, 30 days of antiretroviral medication is required (see ASHM national guidelines for assessment of risk and prescribing this medication.) A starter kit for HIV PEP is available from most emergency departments and sexual health services. … Hepatitis B Virus ( HBV ) infection: check hepatitis B surface antibody, hepatitis B core antibody and hepatitis B surface antigen ; offer vaccination to anyone who is not immune and vulnerable to infection. Hepatitis B immunoglobulin (HBIg) if the assailant is known to be HBV Ag positive (if indicated, can be administered up to 14 days post assault). … Emergency contraception (EC): undertake pregnancy risk assessment and offer most suitable and accessible method of emergency contraception.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Adult sexual assault' at https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/, page dateModified 2026-07-29, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "SEXUAL ASSAULT, 72-120 HOURS: assess immediate safety and wellbeing including the need for psychosocial support; offer emergency contraception after a pregnancy risk assessment; ⚠️ TEST FOR CHLAMYDIA AND GONORRHOEA FROM EACH ORIFICE THAT HAD PENILE PENETRATION; CONSIDER TRICHOMONAS VAGINALIS TESTING IF THE PATIENT OR THE OFFENDER WAS FROM AN AT-RISK COMMUNITY. ⚠️ STI TESTING AND SCREENING ARE NOT REQUIRED FOR DIGITAL PENETRATION OR MOUTH-TO-VAGINA ASSAULT. AT 4 WEEKS: assess psychosocial wellbeing, STI SCREEN IF NOT DONE ALREADY, and PREGNANCY TEST",
+   "source": "P13",
+   "verdict": "pass",
+   "source_text": "Test for chlamydia and gonorrhoea from each orifice that had penile penetration. Consider Trichomonas vaginalis testing if patient or the offender was from an at-risk community. STI testing and screening are not required for digital penetration or mouth-to-vagina assault. … Assess psychosocial wellbeing and need for further support. STI screen if not done already. Pregnancy test (urine HCG)",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Adult sexual assault' at https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/, page dateModified 2026-07-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ MEDICAL NOTES INCLUDING AN ACCOUNT OF THE ASSAULT, INJURY DOCUMENTATION, STI TESTS AND THEIR RESULTS MAY BE SUBPOENAED. YOU MAY BE CALLED TO GIVE EVIDENCE IN COURT; THEREFORE YOUR NOTES NEED TO BE PRECISE. ⚠️ ASSESS PSYCHOSOCIAL WELLBEING AND NEED FOR FURTHER SUPPORT AT EACH VISIT",
+   "source": "P13",
+   "verdict": "pass",
+   "source_text": "Medical notes including an account of the assault, injury documentation, sexually transmitted infection ( STI ) tests and their results may be subpoenaed. You may be called to give evidence in court; therefore, your notes need to be precise. … Assess psychosocial wellbeing and need for further support at each visit.",
+   "locator": "ASHM, Australian STI Management Guidelines for Use in Primary Care, 'Adult sexual assault' at https://sti.guidelines.org.au/populations-and-situations/adult-sexual-assault/, page dateModified 2026-07-29, retrieved 2026-09-22"
+  },
+  {
+   "claim": "⚠️ THE HIV WINDOW PERIOD IS STATED INCONSISTENTLY ACROSS THIS GUIDELINE SET. The Aboriginal and Torres Strait Islander page says REPEAT IF EXPOSED WITHIN THE PREVIOUS 6 WEEKS [P1]; the sex workers [P7], people who use drugs [P8], people in custodial settings, women who have sex with women [P4] and pregnant people [P6] pages all say 45 DAYS; and the Standard Asymptomatic Check-up page says a 6-WEEK WINDOW PERIOD. 45 days is about 6.4 weeks. ⚠️ THE DIFFERENCE IS SMALL BUT IT IS A REAL DISCREPANCY WITHIN ONE GUIDELINE SET, AND NOTHING RETRIEVED RECONCILES IT.",
+   "source": "-",
+   "verdict": "not_asserted",
+   "locator": "see method"
+  },
+  {
+   "claim": "⚠️ THE SYPHILIS WINDOW PERIOD IS ALSO STATED TWO WAYS. The Aboriginal and Torres Strait Islander page says REPEAT IF THERE IS POTENTIAL EXPOSURE WITHIN THE PREVIOUS 90 DAYS [P1]; the sex workers page says WITHIN THE PREVIOUS 12 WEEKS [P7], which is 84 days. ⚠️ NOTHING RETRIEVED RECONCILES THEM.",
+   "source": "-",
+   "verdict": "not_asserted",
+   "locator": "see method"
+  },
+  {
+   "claim": "The SEXUAL HISTORY page was retrieved on 2026-09-22 but IS NOT CLAIMED FROM in this guideline: its content is interview technique rather than testing or treatment recommendation, and no claim here rests on it. It is listed in retrieved_from for completeness.",
+   "source": "-",
+   "verdict": "not_asserted",
+   "locator": "see method"
+  }
+ ]
+}
