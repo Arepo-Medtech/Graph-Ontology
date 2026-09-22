@@ -1,0 +1,229 @@
+{
+ "guideline": "guidelines/gord-and-dyspepsia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2022/november/deprescribing-proton-pump-inhibitors"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Page fetched directly with curl and converted from HTML to text. Every claim is verbatim-checked against that file with scripts/verify.py. Prose paraphrases; source_text stays verbatim. SCOPE LIMIT recorded rather than worked around: the source is a deprescribing article, and its first-line recommendation is attributed to Therapeutic Guidelines, which is licensed and cited by reference only. H. pylori eradication regimens and peptic ulcer management are NOT in this guideline and the corresponding AMH topics remain open. The two dose lists and the adverse-event effect sizes are quoted as contiguous blocks.",
+ "claims": [
+  {
+   "claim": "More than 15 million PBS PPI prescriptions in 2020-21",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More than 15 million PPI prescriptions were dispensed through the Australian Pharmaceutical Benefits Scheme in 2020-21"
+  },
+  {
+   "claim": "15% of Australian adults receive a PPI prescription each year",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fifteen per cent of Australian adults receive at least one PPI prescription each year, suggesting a large number of Australians are exposed to the risk of adverse events without additional benefit"
+  },
+  {
+   "claim": "22-63% continued longer than necessary",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recent reports suggest that 22-63% of PPIs are continued longer than is likely necessary (ie continued despite no indication for long-term therapy)"
+  },
+  {
+   "claim": "International review reported 11-84% overuse",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An international review reported PPIs were overused or improperly used by 11-84% of patients"
+  },
+  {
+   "claim": "GESA and RACGP recommend regular review with dose reduction and cessation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The Gastroenterological Society of Australia and The Royal Australian College of General Practitioners recommend regular review of long-term PPI use with the goal of dose reduction and cessation"
+  },
+  {
+   "claim": "Therapeutic Guidelines first-line trial for GORD and dyspepsia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The Australian Therapeutic guidelines recommend PPIs be trialled for GORD and dyspepsia if antacids, diet and lifestyle modifications fail to resolve symptoms. This trial involves prescribing a PPI once daily, to be taken 30 minutes before a meal, for a period of 4-8 weeks to allow the mucosa time to heal"
+  },
+  {
+   "claim": "Reassess if symptoms persist after 8 weeks",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If symptoms persist after 8 weeks, it is recommended to check adherence and dosing, before reassessing the need for continued treatment"
+  },
+  {
+   "claim": "Alarm symptoms warranting gastroscopy",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "patients should be referred for gastroscopy if they are experiencing alarm symptoms such as anaemia, dysphagia, odynophagia, haematemesis, melaena, vomiting or weight loss, particularly in older adults"
+  },
+  {
+   "claim": "Short-term indications",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Helicobacter pylori eradication … Treatment of aspirin or NSAID-related gastric and duodenal ulcers in patients at low risk … GORD … Dyspepsia"
+  },
+  {
+   "claim": "Long-term indications",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Barrett's oesophagus … Zollinger-Ellison syndrome … Clinically significant severe erosive oesophagitis (LA grade C/D) … Peptic strictures … Oesophageal scleroderma … Eosinophilic oesophagitis … Gastroprotection from NSAIDs or aspirin in patients at high risk of GI bleed … Prevention of pulmonary fibrosis progression"
+  },
+  {
+   "claim": "AGA high bleeding risk definition",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "AGA guidelines consider patients to be high risk if age >60 years, severe medical comorbidity, using multiple NSAIDs or aspirin, taking and antithrombotic or oral corticosteroid"
+  },
+  {
+   "claim": "Patients with a clear long-term indication are not deprescribing candidates",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When patients have a clear and current indication for long-term therapy, then the benefits are likely to outweigh any risk of harm. These patients are not candidates for deprescribing"
+  },
+  {
+   "claim": "Little evidence for double-dose PPIs outside Zollinger-Ellison",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "apart from patients with Zollinger-Ellison syndrome, there is a dearth of evidence to support the use of double-dose PPIs when compared with maintenance-dose PPIs"
+  },
+  {
+   "claim": "High-dose PPIs available in Australia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Esomeprazole 20 mg, 40 mg … Lansoprazole 30 mg … Omeprazole 20 mg … Pantoprazole 40 mg … Rabeprazole 20 mg"
+  },
+  {
+   "claim": "Low-dose maintenance PPIs available in Australia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Lansoprazole 15 mg … Omeprazole 10 mg … Pantoprazole 20 mg … Rabeprazole 10 mg"
+  },
+  {
+   "claim": "Short-term adverse effects",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Potential adverse events from short-term PPI use include headache, nausea, vomiting, diarrhoea, abdominal pain, constipation and flatulence"
+  },
+  {
+   "claim": "Acute interstitial nephritis with short-term use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Observational studies report short-term PPI use is associated with an increase in the risk of acute interstitial nephritis"
+  },
+  {
+   "claim": "Long-term observational associations with effect sizes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "enteric bacterial infections (eg Clostridium difficile infections, odds ratio [OR]: 1.74; 95% confidence interval [CI]: 1.47, 2.85), fractures (OR: 1.33; 95% CI: 1.15, 1.54), community acquired pneumonia (hazard ratio [HR]: 1.82; 95% CI: 1.27, 2.54) and reduced levels of magnesium (OR: 1.43; 95% CI: 1.08, 1.88) and vitamin B12 (HR: 1.83; 95% CI: 1.36, 2.46)"
+  },
+  {
+   "claim": "Causation cannot be inferred from these studies",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "it is not possible to directly infer causation from these studies"
+  },
+  {
+   "claim": "The randomised trial found only enteric infections at 0.4% absolute risk",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A large randomised controlled trial examined adverse events associated with PPI when compared with placebo use over three years. An increased risk of enteric infections was observed among PPI users (absolute risk = 0.4%); however, no other differences in adverse events were observed between groups. … While this was a large study, it may have been underpowered for detecting rare adverse events"
+  },
+  {
+   "claim": "Supplements initiated per guidelines regardless of PPI use",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Supplements including vitamin B12, calcium or vitamin D should be initiated in accordance with evidence-based guidelines regardless of PPI use"
+  },
+  {
+   "claim": "Investigate new B12 deficiency, enteric infection or fracture and review the PPI",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with newly diagnosed vitamin B12 deficiency, enteric infections or fractures should have their condition investigated, including a review of the necessity of their long-term PPI treatment"
+  },
+  {
+   "claim": "Two trial-supported deprescribing approaches",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "gradual dose tapering to the lowest available dose for a defined period of time prior to discontinuation (eg 4-8 weeks or shorter depending on patient preference … PPI discontinuation and switching to pro re nata (PRN; 'as needed') treatment"
+  },
+  {
+   "claim": "H2 antagonist switch carries greater symptom return",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A third approach is discontinuing the PPI and switching to an H2 antagonist. This may be trialled if it aligns with patient preferences; however, the likelihood of symptoms returning has been shown to be greater following a switch to a H2 antagonist when compared with dose tapering or switching to PRN treatment"
+  },
+  {
+   "claim": "Stepped approach and non-pharmacological measures",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Some healthcare providers find it practical to commence gradual dose tapering prior to discontinuation followed by switching to PRN treatment … Non-pharmacological interventions include changes in lifestyle factors such as diet, weight and avoiding stress"
+  },
+  {
+   "claim": "About 80% remain symptom free after tapering or discontinuation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Approximately 80% of patients with GORD remain symptom free after gradual dose tapering or discontination"
+  },
+  {
+   "claim": "Abrupt cessation causes rebound acid hypersecretion in 10-50%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "abrupt cessation can precipitate rebound acid hypersecretion in 10-50% of patients, which can be mistaken for a return of upper gastrointestinal symptoms, even in healthy adults without gastrointestinal disorders"
+  },
+  {
+   "claim": "Clinical significance of rebound remains unclear",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The clinical significance of rebound acid hypersecretion remains unclear, … and while rebound acid hypersecretion is not necessarily a failure of PPI deprescribing, it can be concerning for patients"
+  },
+  {
+   "claim": "Tapering and PRN manage rebound; alternate-day beats abrupt cessation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gradual dose tapering and switching to PRN use have been shown to be appropriate and effective ways of managing rebound acid hypersecretion … Alternate-day low-dose PPI use before discontinuation has been shown to be more effective than abrupt cessation for managing rebound acid hypersecretion"
+  },
+  {
+   "claim": "Reassure that rebound may last only a few days",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients should be reassured that rebound acid hypersecretion may only last a few days and can often be adequately managed with PRN PPIs or non-prescription antacids or H2 antagonists"
+  },
+  {
+   "claim": "State intended duration when initiating",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When initiating a PPI, it is prudent to provide information about the intended treatment duration and follow-up"
+  },
+  {
+   "claim": "Explain mucosal healing when proposing deprescribing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After confirming the patient's symptoms have resolved, it is important to explain that the gastrointestinal mucosa is likely to have healed, and they are a good candidate for deprescribing"
+  },
+  {
+   "claim": "Shared decision making increases success and the trial framing",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Engaging patients and carers in shared decision making increases deprescribing success … A useful phrase to gain patient acceptance is to talk about 'a trial of deprescribing'"
+  },
+  {
+   "claim": "Use beyond eight weeks is rarely indicated",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "use beyond eight weeks is rarely indicated and increases the risk of adverse events"
+  },
+  {
+   "claim": "Commissioned and externally peer reviewed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Commissioned, externally peer reviewed"
+  }
+ ],
+ "summary": {
+  "total": 35,
+  "pass": 35,
+  "fail": 0
+ }
+}
