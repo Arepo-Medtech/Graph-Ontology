@@ -1,0 +1,679 @@
+{
+ "guideline": "guidelines/angina.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2024/july/chest-pain",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-mononitrate",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-dinitrate",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/nicorandil",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/diltiazem",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/verapamil"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED. S1 is the OPEN RACGP AJGP article 'Chest pain' (July 2024), retrieved as HTML, tag-stripped and QUOTED VERBATIM: every S1 claim carries source_text re-checked here against the retrieved file, so all of it is machine re-checkable. A1-A11 are eleven AMH pages read under subscription and PARAPHRASED: no passage is stored, every claim carries its page's locator and the verdict licensed_source_not_quoted, and NONE of it is machine re-checkable. The division of labour is not accidental -- the open source covers ASSESSMENT of chest pain and carries none of the antianginal doses, so EVERY DOSE IN THIS GUIDELINE IS LICENSED AND UNQUOTED. S1 is a chest-pain article, not an angina management article; it is used for assessment, diagnosis and the differential, and is NOT used for drug choice.",
+ "summary": {
+  "total": 99,
+  "pass": 29,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "The preferred terminology for chest discomfort is 'cardiac', 'possibly cardiac' or 'non-cardiac'; 'atypical chest pain' is commonly used to mean non-cardiac pain but lacks specificity",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Using the terms 'cardiac,' 'possibly cardiac' or 'non-cardiac' is the preferred terminology. … Atypical chest pain is often used to describe non-cardiac chest pain, but it lacks specificity.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Angina is typically described as pain, discomfort, heaviness, tightness, pressure, constriction or squeezing, and is often perceived as retrosternal",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anginal symptoms are typically described as pain, discomfort, heaviness, tightness, pressure, constriction, squeezing in nature … Angina pectoris is often perceived as a retrosternal chest discomfort",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Anginal symptoms build gradually over a few minutes; pain lasting only a few seconds is unlikely to be ischaemic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anginal symptoms gradually build in intensity over a few minutes … Chest pain that lasts for only a few seconds is unlikely to be related to ischaemia",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Angina typically radiates to the left arm, neck or jaw; radiation into the lower extremities is unlikely to be ischaemic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Angina typically radiates to the left arm, neck, or jaw … Pain that radiates into the lower extremities is unlikely to be related to ischaemia",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Pain localised to a fingertip, over the left ventricular apex or a costochondral junction, or reproduced by movement or palpation of the chest wall or arms, is unlikely to be ischaemic",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pain localised at the tip of one finger, particularly over the left ventricular apex or a costochondral junction, or pain reproduced with movement or palpation of the chest wall or arms is unlikely to be caused by ischaemia",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Sharp chest pain that increases with inspiration and lying supine is unlikely to be angina and more likely pericarditis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sharp chest pain that increases with inspiration and lying supine is unlikely to be related to angina and more likely due to pericarditis",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Exercise typically brings on anginal symptoms which dissipate over a few minutes with rest; symptoms at rest or on minimal exertion usually indicate acute coronary syndrome",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Physical exercise typically exacerbates anginal symptoms and dissipates over a few minutes with rest. Occurrence at rest or with minimal exertion associated with anginal symptoms usually indicates acute coronary syndrome",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Symptoms commonly associated with myocardial ischaemia include dyspnoea, palpitations, diaphoresis, light-headedness, syncope or pre-syncope, upper abdominal symptoms or heartburn unrelated to meals, and nausea or vomiting",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common symptoms associated with myocardial ischaemia include dyspnoea, palpitations, diaphoresis, light-headedness, syncope or pre-syncope, upper abdominal symptoms or heartburn unrelated to meals and nausea or vomiting",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "RELIEF OF PAIN BY NITRATE IS NOT A DIAGNOSTIC CRITERION: it is not necessarily diagnostic of myocardial ischaemia and should not be used as one",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Relief of pain with nitroglycerin is not necessarily diagnostic of myocardial ischaemia and should not be used as a diagnostic criterion",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Women, elderly patients, those with dementia and people with diabetes may not exhibit typical symptoms of ischaemic chest pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Certain groups, such as women, elderly patients, those with dementia and individuals with diabetes, might not exhibit typical symptoms of ischaemic chest pain.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The severity of chest discomfort is not always a reliable indicator of how serious the underlying condition is",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The severity of chest discomfort symptoms is not always a reliable indicator of the seriousness of an underlying medical condition.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In one reported series the epidemiology of chest pain across primary care and emergency department settings was musculoskeletal including costochondritis 36%, gastrointestinal 19%, cardiac 16%, stable angina 10.5%, unstable angina or MI 1.5%, other cardiac 3.8%, psychiatric 8%, pulmonary 5% and other or unknown 16%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "musculoskeletal, including costochondritis in 36% of cases, gastrointestinal in 19%, cardiac in 16%, stable angina in 10.5%, unstable angina or myocardial infarction (MI) in 1.5%, other cardiac in 3.8%, psychiatric in 8%, pulmonary in 5% and other/unknown in 16%",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Among patients presenting to their primary care doctor with chest pain, the final diagnosis was NOT ischaemic heart disease in 83%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Among those presenting to their primary care doctor with chest pain, the final diagnosis was not ischaemic heart disease in 83%.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Non-cardiac chest pain frequently originates from gastrointestinal sources, with erosive and non-erosive gastro-oesophageal reflux disease the most common factors",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Frequently, non-cardiac chest pain originates from gastrointestinal sources, with both erosive and non-erosive gastroesophageal reflux disease being the most common factors.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Dual aetiologies occur: respiratory, musculoskeletal, gastrointestinal and cardiac causes of chest pain may co-exist simultaneously and must not be overlooked",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Care must be taken not to overlook the possibility of dual aetiologies of chest pain, where respiratory, musculoskeletal, gastrointestinal or cardiac causes of chest pain might co-exist simultaneously.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The ECG remains the best initial test for evaluating chest pain: rapid, inexpensive and diagnostically and prognostically informative",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ECG remains the best initial test for evaluation of chest pain because it is rapid, inexpensive and provides critical diagnostic and prognostic information.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In NSTEMI the ECG may be NORMAL in approximately one-third of cases",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "or the ECG might be normal in approximately one-third of cases.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Troponin is elevated in many conditions other than myocardial infarction, including pulmonary embolism and acute aortic dissection",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "troponin levels are also elevated in many conditions, including PE and acute aortic dissections.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A SINGLE serum troponin may be used only where the patient has been symptom free for at least 24 hours and has none of the high-risk features of ongoing chest pain, syncope, heart failure or an abnormal ECG",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients who present with a history of a possible ACS but have been symptom free for at least 24 hours and who have no high-risk features of ongoing chest pain, syncope, heart failure and abnormal ECG could be assessed with a single serum troponin test.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Where symptoms have occurred within the preceding 24 hours, or the troponin is positive, refer immediately to an emergency department",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If patients have had ongoing symptoms within the preceding 24 hours or the troponin result becomes positive, they should be referred immediately to an emergency department for assessment.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "High-sensitivity troponin has a limited role in the community setting, but enables safe rule-out of MI within one to two hours for most patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High-sensitivity troponin has a limited role in the community setting but remains an important biomarker in assessing and risk stratifying chest discomfort symptoms. … It also enables the safe exclusion or 'rule out' of MI within one to two hours for most patients, thereby reducing unnecessary hospitalisation and promoting efficient resource use.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "For acute or stable chest pain assessed as low risk, urgent diagnostic testing for suspected coronary artery disease is NOT needed",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients with acute or stable chest pain determined to be low risk, urgent diagnostic testing for suspected coronary artery disease is not needed.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Coronary artery calcium scoring is NOT useful in high-risk patients, in patients with documented coronary artery disease, or in symptomatic patients",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Not useful in high-risk patients, patients with documented CAD and in symptomatic patients",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "CT coronary angiography is difficult to interpret in the presence of coronary calcification, obesity, atrial fibrillation, or a heart rate above 65 beats per minute",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Difficult to interpret in the presence of coronary calcification, obesity, atrial fibrillation and heart rate >65 bpm.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Aortic dissection typically presents with abrupt, intense tearing pain spreading through the back; about 20% present with neurological deficits, and a blood pressure difference greater than 20 mmHg between the arms raises suspicion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The typical presentation of aortic dissections involves an abrupt and intense tearing pain that spreads through the back. … approximately 20% of cases might present with neurological deficits … Suspicions of aortic dissection might increase when there is a difference in blood pressure >20 mmHg between the two arms.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Pulmonary embolism symptoms and their reported frequencies are pleuritic chest pain 66%, dyspnoea 73%, cough 37% and haemoptysis 13%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptoms of PE might include pleuritic chest pain (66%), dyspnoea (73%), cough (37%) and haemoptysis (13%).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "D-dimer is useful to RULE OUT pulmonary embolism in low- or intermediate-risk patients because of high sensitivity and a low false-negative rate, but has low specificity and a high false-positive rate",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "D-Dimer tests are useful for ruling out PE in low- or intermediate-risk patients because they have a high sensitivity with a low false-negative rate. However, they also have low specificity with a high false-positive rate.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The classic examination findings in tension pneumothorax are reduced or absent breath sounds on the affected side with hyper-resonance on percussion",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The classic examination findings are reduced, or absent, breath sounds on the affected side and hyper-resonance on percussion.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Spontaneous oesophageal rupture classically presents as severe vomiting or retching followed by acute, severe chest or epigastric pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The classic presentation of spontaneous oesophageal rupture is severe vomiting or retching followed by acute, severe chest or epigastric pain.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Chest pain', Rahman A, Volume 53 Issue 7, July 2024, doi 10.31128/AJGP-04-23-6810, at https://www1.racgp.org.au/ajgp/2024/july/chest-pain, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The rationale for drug treatment of angina is to provide symptom relief and to reduce the risk of death or myocardial infarction",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Before starting antianginal treatment, evaluate and manage risk factors such as smoking and diabetes; low-dose aspirin and treatment of dyslipidaemia and hypertension reduce the risk of myocardial infarction",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Before starting treatment, consider causes needing specific treatment such as aortic stenosis, the need for myocardial revascularisation, and specific precipitants such as exertion, anaemia or thyrotoxicosis",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Antianginal drugs improve the balance between myocardial oxygen supply and demand and relieve symptoms; they may be used alone or in combination",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Short-acting nitrates, for example sublingual glyceryl trinitrate or isosorbide dinitrate, are used to relieve acute angina or prophylactically immediately before an activity likely to precipitate chest pain",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "BETA-BLOCKERS ARE RECOMMENDED AS INITIAL THERAPY for angina; calcium channel blockers, in particular verapamil and diltiazem, are the alternatives and are recommended when beta-blockers are contraindicated",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In VASOSPASTIC angina use calcium channel blockers or long-acting nitrates; beta-blockers may exacerbate symptoms because alpha-mediated vasoconstriction is left unopposed by beta-mediated vasodilation",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If a beta-blocker does not control symptoms, a dihydropyridine calcium channel blocker can be added; if that is inadequate, a third agent may be considered where revascularisation is not appropriate or while waiting for it, with specialist advice, noting there is limited evidence of improvement with three drugs",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Where neither beta-blockers nor calcium channel blockers can be used, consider long-acting nitrates, ivabradine, nicorandil or perhexiline",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Beta-blockers reduce the frequency of angina, prolong exercise capacity and decrease the risk of adverse cardiac events and mortality; carvedilol, bisoprolol or controlled-release metoprolol are particularly useful where heart failure coexists",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ABRUPT WITHDRAWAL of a beta-blocker may cause increased myocardial ischaemia, risk of infarction and sudden death; if withdrawal is required, reduce the dose gradually over 2 weeks, or over 4 to 6 weeks if the patient has been treated for many years",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Combine a beta-blocker with diltiazem cautiously, and AVOID combining a beta-blocker with verapamil because of the risk of severe bradycardia and heart block",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The symptomatic efficacy of calcium channel blockers in angina is similar to that of beta-blockers",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ONLY CONTROLLED-RELEASE VERAPAMIL has been shown to reduce the incidence of cardiovascular events in stable angina and may decrease the risk of reinfarction and death after myocardial infarction, but it is contraindicated in heart failure with reduced ejection fraction",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Diltiazem has less negative inotropic effect and less effect on impulse generation and conduction than verapamil, causes less reflex tachycardia than the dihydropyridines, and can be used safely with nitrates and cautiously with beta-blockers while monitoring for bradycardia",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Long-acting nitrates such as oral isosorbide mononitrate and transdermal glyceryl trinitrate are used to prevent angina in patients with more frequent symptoms, and may be used safely with other antianginals",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Angina' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/angina, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "TOLERANCE to nitrates, with loss of effect, occurs with frequent or continuous exposure; it is avoided by ensuring a nitrate-free interval each day, and short-acting sublingual nitrates can still be used during that interval",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nitrates provide an exogenous source of nitric oxide and are predominantly venodilators, reducing venous return and preload and so reducing myocardial oxygen requirement",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nitrates are CONTRAINDICATED with a phosphodiesterase 5 inhibitor such as sildenafil, or with riociguat, and also in hypovolaemia, raised intracranial pressure, significant anaemia, hypotension, hypertrophic obstructive cardiomyopathy, cardiac tamponade, aortic or mitral stenosis and cor pulmonale",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Common nitrate adverse effects, mostly from vasodilation, are headache, flushing, palpitations, orthostatic hypotension, fainting and peripheral oedema; contact dermatitis with topical use and REBOUND ANGINA are infrequent",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sublingual glyceryl trinitrate acts in under 5 minutes and lasts under 1 hour; sublingual isosorbide dinitrate acts in under 10 minutes and lasts 1 to 2 hours; a glyceryl trinitrate patch acts in 30 to 60 minutes and lasts as long as it is applied; controlled-release isosorbide mononitrate acts in 1 to 2 hours with prolonged duration",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Oral bioavailability differs markedly between the nitrates when swallowed: glyceryl trinitrate poor, isosorbide dinitrate 20 to 25%, isosorbide mononitrate 100%",
+   "source": "A2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nitrates' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For ACUTE angina, glyceryl trinitrate sublingual spray 400 to 800 micrograms, that is 1 or 2 sprays, repeated after 5 minutes if necessary to a maximum of 3 sprays",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "For acute angina, glyceryl trinitrate sublingual tablet 300 to 600 micrograms repeated every 3 to 4 minutes until pain resolves, to a maximum of 1800 micrograms",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "To PREVENT an attack before a precipitating activity, glyceryl trinitrate sublingual spray 400 micrograms, that is 1 spray, or sublingual tablet 300 to 600 micrograms, taken 5 to 10 minutes before the activity",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "For prevention of chronic angina, apply one glyceryl trinitrate 5 mg/24 hours patch once daily for approximately 12 to 14 hours each day, increasing if necessary to a maximum of two 10 mg/24 hours patches once daily",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "To avoid nitrate tolerance with a glyceryl trinitrate patch, ensure a patch-free period of at least 8 hours and ideally 10 to 12 hours in each 24 hours, usually overnight unless the angina is nocturnal",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "GLYCERYL TRINITRATE SUBLINGUAL TABLETS HAVE BEEN DISCONTINUED in Australia, although an alternative may be available via Section 19A approval; the PBS-listed glyceryl trinitrate products are the 400 microgram per dose sublingual spray and the 5 mg and 10 mg per 24 hours patches",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Counsel patients using sublingual glyceryl trinitrate to sit or lie down before use, and to CALL AN AMBULANCE if symptoms are severe, get worse quickly, or last 10 minutes",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "A glyceryl trinitrate sublingual spray must be primed before first use by pressing the nozzle 5 times into the air, primed with 1 spray if unused for 7 days, and primed with 5 sprays if unused for more than 4 months",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Glyceryl trinitrate tablets must be kept in their original glass bottle away from moisture, heat and light with the lid closed tightly, and must not be carried close to the body, or they may not work as well",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Remove glyceryl trinitrate patches before diathermy, defibrillation or cardioversion",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Glyceryl trinitrate is adsorbed onto some plastics such as PVC, so an infusion requires a glass bottle and a polyethylene giving set",
+   "source": "A3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Glyceryl trinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/glyceryl-trinitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Isosorbide dinitrate for treatment of acute angina, sublingual 5 to 10 mg; for prevention before a precipitating activity, sublingual 5 to 10 mg taken 10 minutes before the activity",
+   "source": "A5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Isosorbide dinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-dinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The only PBS-listed isosorbide dinitrate product is a 5 mg sublingual tablet, which may be taken sublingually, the most common route, or orally",
+   "source": "A5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Isosorbide dinitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-dinitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Isosorbide mononitrate for PREVENTION of angina, oral, initially 30 to 60 mg ONCE daily, increased if necessary up to 120 mg once daily; swallow whole, do not crush or chew",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Isosorbide mononitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-mononitrate, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "TWICE DAILY dosing of isosorbide mononitrate is NOT recommended, because there would be no nitrate-free interval and tolerance would be more likely to develop",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Isosorbide mononitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-mononitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Isosorbide mononitrate is NOT recommended for acute episodes of angina because of its slow onset of action, and should be taken at the time of day when angina is most frequent",
+   "source": "A4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Isosorbide mononitrate' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/nitrates/isosorbide-mononitrate, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Metoprolol for ANGINA, oral, initially 25 to 50 mg twice daily, maintenance 50 to 100 mg two or three times daily",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Beta-blockers are contraindicated in bradycardia of 45 to 50 beats per minute, second- or third-degree AV block, sick sinus syndrome without a pacemaker, severe hypotension, uncontrolled heart failure, cardiogenic or hypovolaemic shock, and in severe or poorly controlled asthma",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "There is a risk of WORSENING CORONARY ARTERY SPASM with beta-blockers in vasospastic angina",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Beta1-selective beta-blockers such as metoprolol may be considered for patients with well-controlled asthma on specialist advice, or with COPD, because of their morbidity and mortality benefits in heart failure and acute coronary syndromes",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Beta-blockers may mask signs of acute hypoglycaemia such as tachycardia and tremor; beta1-selective agents and those with alpha1-blocking activity are preferred in type 2 diabetes",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Continue beta-blocker treatment through the perioperative period, being aware of the increased risk of bradycardia and hypotension during surgery",
+   "source": "A9",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Metoprolol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/beta-blockers/metoprolol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Diltiazem for ANGINA, conventional product, oral, initially 30 mg three or four times daily, increased as required to a maximum of 360 mg daily in 3 or 4 doses; controlled-release products initially 180 mg once daily increased as required up to 360 mg once daily",
+   "source": "A10",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Diltiazem' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/diltiazem, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The only conventional diltiazem tablet listed is a 60 mg SCORED tablet, so the 30 mg starting dose for angina is half a tablet",
+   "source": "A10",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Diltiazem' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/diltiazem, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Diltiazem and verapamil are CONTRAINDICATED in heart failure with reduced ejection fraction unless under specialist supervision, and both are contraindicated in severe bradycardia, sick sinus syndrome, second- or third-degree AV block without a pacemaker, systolic BP below 90 mmHg, and AF or atrial flutter with an accessory pathway",
+   "source": "A10",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Diltiazem' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/diltiazem, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Verapamil for ANGINA, conventional tablet, oral, initially 80 mg two or three times daily with a maintenance dose of 160 mg two or three times daily; controlled-release tablet initially 180 to 240 mg once daily, increased if necessary to a maximum of 240 mg twice daily, with daily doses above 240 mg given in 2 doses",
+   "source": "A11",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Verapamil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/verapamil, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Verapamil with a beta-blocker increases the risk of severe bradycardia, heart block and left ventricular failure; AVOID the combination unless under specialist supervision",
+   "source": "A11",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Verapamil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/verapamil, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Constipation is a COMMON adverse effect of verapamil, and ileus is rare",
+   "source": "A11",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Verapamil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives/calcium-channel-blockers/verapamil, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nicorandil produces venous and arterial dilation through its nitrate moiety and its effect on potassium channels in vascular smooth muscle, and has similar efficacy to beta-blockers, nitrates and calcium channel blockers in reducing the frequency of angina attacks; it reduces the incidence of cardiovascular events in stable angina",
+   "source": "A6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nicorandil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/nicorandil, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nicorandil, oral, initially 5 mg twice daily, increased after 1 week to 10 to 20 mg twice daily; start at a low dose to reduce the risk of headache",
+   "source": "A6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nicorandil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/nicorandil, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "NICORANDIL CAUSES LARGE PAINFUL ULCERS, particularly oral and perianal, and fistulae in the GI and genital tracts, as well as ocular, cutaneous and peristomal ulcers and lesions at wounds or surgical sites; MISDIAGNOSIS IS COMMON and healing occurs only after stopping nicorandil",
+   "source": "A6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nicorandil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/nicorandil, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Nicorandil is associated with fistula formation in diverticular disease, and is contraindicated by the manufacturer with a phosphodiesterase 5 inhibitor or riociguat",
+   "source": "A6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Nicorandil' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/nicorandil, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Ivabradine inhibits a current regulating the interval between depolarisations of the sinoatrial node, reducing heart rate by about 10 beats per minute",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Ivabradine is indicated in stable angina only with NORMAL SINUS RHYTHM and a heart rate above 70 beats per minute, and is contraindicated if the heart rate is below 70 beats per minute before treatment",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Ivabradine, oral, usual starting dose 5 mg twice daily, adjusted after 2 to 4 weeks according to heart rate, range 2.5 to 7.5 mg twice daily, titrated to a resting heart rate of 50 to 60 beats per minute; start at 2.5 mg twice daily where particular care is needed",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "RESERVE ivabradine for angina in those who cannot tolerate beta-blockers and calcium channel blockers, as there is NO EVIDENCE that cardiovascular events or mortality are improved and there may be risks with long-term use such as atrial fibrillation",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Adding ivabradine to standard treatment for coronary artery disease without heart failure did not improve cardiovascular outcomes overall and INCREASED the combined risk of cardiovascular death and non-fatal MI in a subgroup with symptomatic angina, at a maximum dose higher than recommended",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Ivabradine is contraindicated with potent CYP3A4 inhibitors such as itraconazole or clarithromycin, and with diltiazem or verapamil",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Transient areas of enhanced brightness in the visual field, called phosphenes, are COMMON with ivabradine, especially in the first 2 months, and usually resolve spontaneously",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Stop ivabradine if the resting heart rate remains below 50 beats per minute at the lowest dose",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The PBS listing for ivabradine is for chronic heart failure, not for angina",
+   "source": "A8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Ivabradine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/ivabradine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Perhexiline is for angina refractory to other drugs or surgical procedures; it may be used with other antianginals and in patients with heart failure",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Perhexiline, oral, initially 200 mg once daily until metaboliser status is known, or 400 mg once daily for 3 days if rapid effect is required, then maintenance 100 to 250 mg once daily adjusted by concentration",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "POOR METABOLISERS may need perhexiline doses as low as 50 mg ONCE A WEEK, while ultrarapid metabolisers may need up to 600 mg daily; about 6 to 10% of Caucasians and 1 to 2% of Asians are poor metabolisers",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Perhexiline dose adjustments during chronic treatment should increase by no more than 50 mg daily, because its metabolism is saturable within the clinical dose range and dose changes can produce disproportionate changes in plasma concentration",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The perhexiline therapeutic range is 0.15 to 0.6 mg/L, that is 0.5 to 2 micromol/L; take a blood sample within 3 to 5 days of starting to identify poor metabolisers, then monthly until stable in range, then every 3 months",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Perhexiline can cause HYPOGLYCAEMIA, most likely in those using insulin or a sulfonylurea; monitor blood glucose carefully especially in the first few days and adjust the antidiabetic dose as required",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Perhexiline can cause hepatotoxicity including cirrhosis and hepatitis, and peripheral neuropathy; measure liver function at baseline and at regular intervals, and monitor weight, blood glucose and for signs of hepatotoxicity or neuropathy",
+   "source": "A7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Perhexiline' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-angina/other-antianginal-drugs/perhexiline, July 2026 release, read under subscription 2026-09-22"
+  }
+ ]
+}

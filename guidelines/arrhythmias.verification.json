@@ -1,0 +1,724 @@
+{
+ "guideline": "guidelines/arrhythmias.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/bradyarrhythmias",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine",
+  "https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "MIXED. S1 is the OPEN RACGP AJGP article 'Approach to palpitations' (April 2019), retrieved as HTML, tag-stripped and QUOTED VERBATIM. ITS DATE IS STATED IN THE GUIDELINE: it is seven years old and is used for the ASSESSMENT of palpitations, where it carries no drug doses, and not for drug choice. B1-B8 are eight AMH pages read under subscription and PARAPHRASED: no passage is stored and none of it is machine re-checkable. This guideline closes THREE AMH topics (Arrhythmias, Bradyarrhythmias, Tachyarrhythmias). Atrial fibrillation has its own guideline in this compendium built from the 2018 NHFA/CSANZ Australian guideline; the AF material here is AMH's and is recorded as a SECOND, INDEPENDENT source on the same questions, with the agreement on CHA2DS2-VA and on the rate-control target noted rather than merged.",
+ "summary": {
+  "total": 107,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "Palpitations account for an estimated 16% of general practice presentations and are the second most common presentation to cardiologists after chest pain",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Palpitations have been estimated to account for 16% of general practice presentations and are the second most common presentation to cardiologists after chest pain.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In patients presenting to a university medical centre with palpitations, 41% had an arrhythmic aetiology, 31% had palpitations in the context of a psychological disorder such as anxiety, and in 16% no cause was identified; in an emergency population a cardiac cause was identified in 34%",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In patients presenting to a university medical centre with palpitations, 41% had an arrhythmic aetiology, 31% had palpitations in the context of psychological disorder such as anxiety, and in 16% no cause was identified. … In an emergency population, a cardiac cause of palpitations was identified in 34% of patients.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "DO NOT LABEL PALPITATIONS AS ANXIETY OR PANIC: 54% of that group will eventually be diagnosed with an arrhythmic cause, and the delay to arrhythmia diagnosis is 3.3 years",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is important to caution labelling a patient's palpitations as being due to anxiety/panic disorder or stress, as 54% of this group will eventually be diagnosed with an arrhythmic cause, and the time delay until arrhythmia diagnosis is 3.3 years.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Young patients with rapid palpitations, particularly young women, may be misdiagnosed as having panic attacks; anxiety and distress may be a normal response to an episode of SVT, and the history clarifies which came first",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Young patients with rapid palpitations, particularly young women, may be misdiagnosed as having panic attacks. … Anxiety and distress may be a normal response to an episode of SVT, and the history will clarify whether the SVT or anxiety occurred first.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Sudden-onset regular sustained rapid palpitations signify episodes of supraventricular tachycardia in the vast majority of patients; sinus tachycardia has a more gradual onset",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the vast majority of patients, presenting with sudden-onset regular sustained rapid palpitations will signify episodes of supraventricular tachycardia (SVT); in contrast, patients with sinus tachycardia may have a more gradual onset.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "SVT may classically be induced by sudden movements, particularly bending; it may cause sudden light-headedness at onset but syncope is unusual",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "SVT may classically be induced by sudden movements, particularly bending. … While SVT may cause sudden light-headedness at onset, syncope is unusual.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Patients with SVT can frequently, but not universally, terminate an event with vagal manoeuvres such as the Valsalva technique or a cold stimulus to the face",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with SVT can frequently (but not universally) terminate an event with vagal manoeuvres. These include the Valsalva technique or cold stimulus to the face.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Sustained rapid palpitations of gradual onset and offset over minutes or longer may represent sinus tachycardia, which less often signifies an underlying disorder such as thyrotoxicosis or anaemia",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sustained rapid palpitations of gradual onset and offset over minutes or longer periods of time may represent sinus tachycardia. … Less often, sinus tachycardia may signify an underlying disorder such as thyrotoxicosis or anaemia.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "One cause of palpitations is simply increased awareness of normal sinus rhythm",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "One of the causes of palpitations is simply an increased awareness of normal sinus rhythm.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Up to 100 ventricular ectopic beats in a 24-hour Holter recording are within normal limits",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Previous studies suggest that up to 100 ventricular ectopic beats in a 24-hour period (24-hour Holter monitor) are within normal limits.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "More frequent ectopic beats require further investigation, but even thousands of ectopic beats per 24 hours will most usually be benign and not signify increased risk of adverse cardiovascular outcomes",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More frequent ectopic beats require further investigation; however, even when a patient has thousands of ectopic beats per 24-hour period, these will most usually be benign and not signify an increased risk of adverse cardiovascular outcomes.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "THE CAFFEINE ADVICE IS NOT SUPPORTED: although doctors frequently recommend patients with ectopic beats avoid caffeine, there is very little evidence that this is beneficial, and a recent study identified no increased risk of any arrhythmia with caffeine intake even after adjustment for confounders",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although doctors frequently recommend patients with ectopic beats to avoid caffeine, there is very little evidence that this is beneficial. … Although some patients describe palpitations associated with caffeine intake, a recent study identified no increased risk of any arrhythmia with caffeine intake, even after adjustment for confounders.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Alcohol history is important given the association of alcohol consumption with the risk of atrial fibrillation, and an exercise history is helpful because extreme endurance exercise can be associated with cardiomyopathy and arrhythmia such as atrial fibrillation",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Alcohol history is important given the association of alcohol consumption with the risk of atrial fibrillation. … An exercise history could be helpful given that extreme endurance exercise can be associated with the development of cardiomyopathy and cardiac arrhythmia such as atrial fibrillation.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "A systematic review identified only SIX history factors that significantly correlated with arrhythmia: age over 60 years, regular palpitations, palpitations affected by sleep, a regular pounding sensation in the neck, visible neck pulsations, and vasovagal symptoms of pallor or diaphoresis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A systematic review identified only six factors from the history that significantly correlated with arrhythmia: age of >60 years, regular palpitations, palpitations affected by sleep, regular pounding sensation in neck (atrial contraction against a closed tricuspid valve as in atrioventricular nodal re-entry tachycardia), visible neck pulsations, and vasovagal symptoms (pallor or diaphoresis).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "In that systematic review the ONLY clinical sign that significantly correlated with arrhythmia was an abnormal resting heart rate, below 60 or above 100 beats per minute",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a systematic review, the only clinical sign that significantly correlated with arrhythmia was abnormal resting heart rate (<60 beats per minute or >100 beats per minute).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The gold standard is a 12-lead ECG recorded AT THE TIME OF SYMPTOMS, and all patients presenting between symptoms should still have a 12-lead ECG because the sinus rhythm ECG can sometimes infer the arrhythmic mechanism",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The gold standard diagnostic technique for a patient with palpitations is to be monitored using a 12-lead electrocardiogram (ECG) at the time of symptoms. … All patients presenting between symptoms should have a 12-lead ECG, because the sinus rhythm ECG can sometimes infer an arrhythmic mechanism",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Sinus-rhythm ECG markers include pre-excitation or a delta wave indicating Wolff-Parkinson-White with AVRT, and long or short QT interval, Brugada pattern or early repolarisation pattern indicating genetic arrhythmia syndromes with a risk of sudden cardiac death",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pre-excitation/delta wave WPW … Long or short QT interval, Brugada pattern, early repolarisation pattern Genetic arrhythmia syndromes - risk of sudden cardiac death",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Hand-held ECG devices can be considered but are limited by patient cost, the time taken to activate the device before the arrhythmia terminates, and the volume of data produced with NO Medicare Benefits Schedule rebate for analysis",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "no Medicare Benefits Schedule rebate for analysis",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Heart-rate devices such as fitness trackers are prone to error, particularly during exercise, and can erroneously give very high or very low readings; the key clue to a genuine problem is the presence of associated symptoms",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These different devices are also prone to error, particularly during exercise, and can erroneously give very high or very low readings. … The key clue as to whether the heart rate recorded indicates a genuine health problem is the presence of associated symptoms.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Patients with sustained palpitations and significant associated symptoms such as pre-syncope, breathlessness or chest pain require early referral; those presenting with syncope or ongoing chest pain should be transferred to an emergency department BY AMBULANCE",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with sustained palpitations and significant associated symptoms (eg pre-syncope, breathlessness or chest pain) require early referral for evaluation. Patients presenting with syncope or ongoing chest pain should be transferred to an emergency department by ambulance.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Ventricular tachycardia infrequently presents with palpitations as an isolated symptom; it usually occurs with underlying structural heart disease, most commonly prior myocardial infarction, and presents with features of haemodynamic compromise",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with ventricular tachycardia infrequently present with palpitations as an isolated presenting symptom. … In most cases, ventricular tachycardia occurs in the context of underlying structural heart disease (most commonly prior myocardial infarction), and patients present with features of haemodynamic compromise.",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Syncope in paroxysmal atrial fibrillation is frequently due to a significant SINUS PAUSE at the time of spontaneous reversion, that is tachycardia-bradycardia syndrome",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When patients with paroxysmal atrial fibrillation have syncope, this is frequently due to a significant sinus pause at the time of spontaneous reversion (ie tachycardia-bradycardia syndrome).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "Polyuria may accompany paroxysmal atrial fibrillation because of associated release of atrial natriuretic peptide, and onset during the night may suggest a vagal mechanism or associated sleep-disordered breathing such as obstructive sleep apnoea",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Polyuria may be associated with paroxysmal atrial fibrillation because of the associated release of atrial natriuretic peptide. … Atrial fibrillation onset during the night may suggest a vagal mechanism or be a sign of associated sleep-disordered breathing (eg obstructive sleep apnoea).",
+   "locator": "RACGP, Australian Journal of General Practice, 'Approach to palpitations', McLellan AJA and Kalman JM, Volume 48 Issue 4, April 2019, doi 10.31128/AJGP-12-17-4436, at https://www1.racgp.org.au/ajgp/2019/april/approach-to-palpitations, retrieved 2026-09-22"
+  },
+  {
+   "claim": "The rationale for antiarrhythmic drug use is to prevent sudden cardiac death, prevent recurrence of life-threatening arrhythmias, restore haemodynamic stability, restore sinus rhythm, control ventricular rate in AF without restoring sinus rhythm, and provide symptom relief",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Before treating, make an accurate diagnosis with a 12-lead ECG together with LONG RHYTHM STRIPS FROM MULTIPLE LEADS",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Seek and if possible treat or remove underlying causes: heart disease including MI or ischaemia, electrolyte abnormalities, hypoxia, pneumonia, thyroid disease, caffeine or alcohol intake, and proarrhythmic drugs",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ALWAYS CONSIDER THE NO-TREATMENT OPTION: many antiarrhythmics have proarrhythmic activity and may worsen arrhythmias and cause sudden death, and many arrhythmias are benign, for example atrial premature contractions and ventricular ectopic beats",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "About 90% of adults have a QTc below 440 milliseconds, and women generally have a longer QTc",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Risk of torsades de pointes increases gradually with increasing QT interval, especially when QTc exceeds 500 milliseconds, or if a contributing factor such as a drug or electrolyte disturbance causes an increase over baseline of more than 60 milliseconds",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "An increase in QT over baseline of more than 20 milliseconds, and particularly more than 60 milliseconds, is considered proarrhythmic; the risk is uncertain for an increase of 5 to 20 milliseconds",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "QT interval can be prolonged by congenital long QT syndrome or by electrolyte disturbances (hypokalaemia, hypomagnesaemia, hypocalcaemia), testosterone suppression, bradycardia, structural heart disease including heart failure and coronary heart disease, and drugs",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Drugs AMH lists as able to prolong the QT interval at therapeutic doses include the antiarrhythmics amiodarone, disopyramide and sotalol; the antipsychotics amisulpride, droperidol, haloperidol and ziprasidone; anti-infectives including clarithromycin, erythromycin, fluconazole, moxifloxacin, quinine and voriconazole; and citalopram, escitalopram, fluoxetine, methadone, domperidone, donepezil, hydroxychloroquine, solifenacin and TCAs",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AVOID COMBINING drugs that prolong the QT interval, because the risk of arrhythmia is increased; combined use of proarrhythmic drugs, or use with other negatively inotropic or chronotropic drugs, may cause heart failure or significant bradyarrhythmia",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The decision to start treatment is influenced by the potentially life-threatening nature of the arrhythmia, symptoms and haemodynamic effects, and the presence of underlying heart disease",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The haemodynamic consequences of most arrhythmias depend on the resulting heart rate and underlying cardiac reserve rather than on their origin; dizziness, loss of consciousness, hypotension, shortness of breath, heart failure or angina indicate POOR TOLERANCE",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Implantable cardiac defibrillators are SUPERIOR to antiarrhythmic drugs in prolonging survival, although high cost limits use",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If an arrhythmia is secondary to a specific reversible event, for example AF after cardiac surgery or with pneumonia, or ventricular arrhythmia after MI or ischaemia, drugs may not be required in the long term",
+   "source": "B1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Arrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/arrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sinus bradycardia can be normal, or result from acute MI, sick sinus syndrome, drugs such as beta-blockers, digoxin and amiodarone, hypothyroidism, hypothermia or raised intracranial pressure; TREAT ONLY IF SYMPTOMATIC, which is uncommon at a heart rate above 40 to 45 beats per minute",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bradyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/bradyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Sick sinus syndrome covers persistent sinus bradycardia, sinoatrial block, sinus arrest, tachycardia-bradycardia syndrome and junctional or ventricular escape rhythms; it is usually due to idiopathic fibrosis of the node but is also associated with myocardial ischaemia and DIGOXIN TOXICITY",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bradyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/bradyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Atrioventricular block causes include myocardial ischaemia, infection and drugs such as digoxin, diltiazem, verapamil and beta-blockers",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bradyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/bradyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Atropine or isoprenaline may be used for bradyarrhythmias causing haemodynamic compromise; atropine is short-acting and isoprenaline is given by prolonged infusion; PACEMAKER INSERTION IS THE PREFERRED TREATMENT for persistent bradycardia",
+   "source": "B2",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Bradyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/bradyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sinus tachycardia is usually a physiological response to pain, hypovolaemia, fever or anxiety, but may be due to sympathomimetic drugs or thyrotoxicosis; with no obvious cause, drug treatment is unnecessary unless symptoms are troublesome, when a beta-blocker is recommended and verapamil or diltiazem are alternatives",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For ventricular rate control in AF, aim for a resting rate below 110 beats per minute, aiming lower if the patient remains symptomatic; some patients have a controlled rate because of associated AV nodal disease and need no specific treatment",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Use a beta-blocker, diltiazem or verapamil for rate control in AF; if the left ventricular ejection fraction is below 40%, AVOID diltiazem and verapamil because they may exacerbate heart failure",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Digoxin may be added if further rate control is needed, or used as monotherapy if first-line agents are unsuitable; digoxin alone is relatively ineffective against a rapid ventricular rate driven by increased sympathetic tone such as exercise, hyperthyroidism, fever or hypoxia, but may suit older, inactive people",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Amiodarone or flecainide can be used for cardioversion of AF; amiodarone is considered the safest agent in heart failure; if flecainide is used, RATE CONTROL IS ALSO NEEDED to avoid conversion to atrial flutter and ventricular tachyarrhythmia",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For maintenance of sinus rhythm in AF, flecainide with rate control, amiodarone or sotalol can be used",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In Australia the CHA2DS2-VA score is recommended for stroke risk in non-valvular AF: 2 points each for age over 75 years and previous stroke, TIA or systemic thromboembolism; 1 point each for heart failure, hypertension, diabetes, vascular disease and age 65 to 75 years",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "CHA2DS2-VA score 2 or more: an oral anticoagulant is recommended; score 1: benefit is unclear and the decision must be individualised; score 0: no antithrombotic is recommended",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Oral anticoagulants reduce the risk of stroke by about 60% in people with AF; NOACs are preferred to warfarin, and compared with warfarin reduce mortality and significantly lower the risk of intracranial haemorrhage",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "WARFARIN IS THE ONLY oral anticoagulant that should be used in valvular AF, meaning moderate-to-severe mitral stenosis or a mechanical heart valve",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "ANTIPLATELET TREATMENT IS NOT RECOMMENDED for stroke prevention in AF: aspirin alone or with clopidogrel is much less effective than oral anticoagulants but carries a similar risk of major bleeding",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In atrial flutter, catheter ablation is often more effective and lower risk than in AF and may be considered before antiarrhythmic treatment; DO NOT USE FLECAINIDE ALONE because one-to-one AV conduction may occur and increase the ventricular rate - add a beta-blocker, digoxin, verapamil or diltiazem",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "AV nodal re-entry tachycardia usually remits spontaneously or with vagotonic manoeuvres - Valsalva, swallowing ice-cold water, carotid sinus pressure - which are more effective if used early; AVOID CAROTID SINUS MASSAGE IN THE ELDERLY because of the risk of arterial emboli from a stenosed carotid artery",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If AV nodal re-entry tachycardia persists, use adenosine; radiofrequency catheter ablation is the TREATMENT OF CHOICE for prevention, being low risk, usually curative and avoiding long-term antiarrhythmic exposure",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "If catheter ablation is not possible for AVNRT, consider long-term prophylaxis with verapamil or a beta-blocker other than sotalol first, with diltiazem, flecainide, sotalol or amiodarone as alternatives; do not combine verapamil with a beta-blocker unless under specialist supervision",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "For tachycardia with pre-excitation such as Wolff-Parkinson-White, use DC cardioversion or flecainide; radiofrequency catheter ablation is the treatment of choice for prevention",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "DO NOT USE AV NODAL BLOCKERS - adenosine, verapamil, diltiazem, digoxin or beta-blockers other than sotalol - in patients with Wolff-Parkinson-White syndrome and AF, because of the RISK OF VENTRICULAR FIBRILLATION",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Wide complex tachycardia of unknown origin requires specialist supervision and it is SAFEST TO TREAT AS VENTRICULAR TACHYCARDIA, avoiding verapamil and diltiazem",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Multifocal atrial tachycardia usually occurs in hypoxia, electrolyte or acid-base disturbance, or with enlarged atria in chronic pulmonary disease or chronic heart failure; ATRIAL TACHYCARDIA WITH AV BLOCK IS TYPICALLY SEEN WITH DIGOXIN TOXICITY",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Premature ventricular ectopics without underlying structural heart disease are usually benign and reassurance may be sufficient; reduction or avoidance of caffeine or alcohol may help, and a beta-blocker may be considered if symptoms are troublesome",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Non-sustained ventricular tachycardia terminates spontaneously within 30 seconds and usually needs drug treatment only with symptoms or haemodynamic compromise, when beta-blockers or amiodarone may be used; management of ventricular tachycardias requires specialist supervision",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Torsades de pointes is more common in women and the elderly and is usually self-limiting, but can recur if the cause is not corrected and can deteriorate into ventricular fibrillation with sudden death; treatment includes stopping QT-prolonging drugs, correcting electrolytes especially potassium, cardiac pacing, IV magnesium sulfate and IV isoprenaline",
+   "source": "B3",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Tachyarrhythmias' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/tachyarrhythmias, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Amiodarone decreases sinus node and junctional automaticity, slows AV and bypass tract conduction and prolongs the refractory period of myocardial tissues, and has weak beta-blocker activity; it is indicated for serious tachyarrhythmias refractory to other treatment",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Amiodarone is the LEAST NEGATIVELY INOTROPIC antiarrhythmic and is usually well tolerated in heart failure",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Check that the QT interval is below 500 milliseconds before using amiodarone, and avoid it if risk factors for prolonged QT cannot be corrected",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Amiodarone oral loading is 200 mg three times daily for 1 week, then 200 mg twice daily for 1 week; maintenance is 100 to 200 mg once daily, with 400 mg daily sometimes required especially for ventricular arrhythmias; in non-urgent cases start with the maintenance dose and omit loading",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Amiodarone IV: emergency 150 to 300 mg over 1 to 3 minutes with very close clinical and ECG monitoring; loading 5 mg/kg over 20 minutes to 2 hours; maintenance 15 to 20 mg/kg over 24 hours to a maximum of 1.2 g in 24 hours, starting oral treatment as soon as possible with up to 2 days of overlap",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "AMIODARONE'S ADVERSE EFFECTS ARE SLOW TO RESOLVE AFTER STOPPING because of its very long half-life, and many are related to dose and duration and may not appear for weeks, months or even years",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Common amiodarone adverse effects include nausea and vomiting especially while loading, metallic taste or loss of taste, transient elevation of hepatic aminotransferases, thyroid dysfunction, photosensitivity, BLUE-GREY SKIN PIGMENTATION, corneal microdeposits, neurotoxicity including tremor, ataxia, paraesthesia and peripheral neuropathy, vivid dreams or nightmares, pulmonary toxicity and moderate bradycardia",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Amiodarone pulmonary toxicity takes two forms: an acute inflammatory disorder that can develop early or late, is reversible if the drug is withdrawn early and may respond to corticosteroids; and a chronic fibrotic form with prolonged exposure that is less reversible",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Amiodarone hypothyroidism occurs mainly WITHIN THE FIRST 2 YEARS and is more common with existing thyroid disease; thyrotoxicosis can occur even MONTHS AFTER STOPPING amiodarone, and a destructive thyroiditis can also occur",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Reversible benign corneal microdeposits occur in MOST patients on amiodarone and rarely affect vision, though photophobia and visual haloes may occur; STOP amiodarone if optic neuropathy or neuritis occurs",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Before starting amiodarone check baseline clinical status, serum electrolytes, thyroid and liver function, lung function including chest x-ray, and ECG; then monitor thyroid function, liver function and electrolytes EVERY 6 MONTHS and obtain a chest x-ray and ECG ANNUALLY",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The risk of thyroid function abnormalities and liver damage from amiodarone persists for UP TO A YEAR after stopping; continue monitoring",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Amiodarone contains iodine and affects thyroxine metabolism, complicating the diagnosis of thyroid dysfunction; notify the laboratory that the patient is taking amiodarone when requesting thyroid function tests",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Infuse amiodarone via a large or central vein in glucose 5% - it is INCOMPATIBLE with sodium chloride 0.9% - using giving sets free of DEHP and glass or rigid PVC bottles",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The amiodarone therapeutic range is 1 to 2.5 mg/L (1.6 to 4 micromol/L); concentration monitoring is rarely necessary, and the maximum effect of a dosage change is not seen for 1 to 3 months or more because of the long half-life",
+   "source": "B4",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Amiodarone' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/amiodarone, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Flecainide slows cardiac conduction particularly in the His-Purkinje system and has negative inotropic activity; it is indicated for SVT, paroxysmal AF or atrial flutter with disabling symptoms, maintenance of sinus rhythm after cardioversion, and serious ventricular arrhythmias refractory to other treatment",
+   "source": "B5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Flecainide' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Flecainide is CONTRAINDICATED in heart block, cardiogenic shock and a HISTORY OF MI, and increases the risk of ventricular arrhythmias in structural heart disease, particularly with impaired left ventricular function",
+   "source": "B5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Flecainide' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In atrial flutter, or in AF by conversion to atrial flutter, flecainide may cause ONE-TO-ONE AV CONDUCTION resulting in ventricular arrhythmia; combining it with an AV nodal blocker such as a beta-blocker, verapamil, diltiazem or digoxin lessens this risk",
+   "source": "B5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Flecainide' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Flecainide oral, 50 to 100 mg twice daily; if required increase by 50 mg twice daily at intervals of at least 4 days, to a maximum of 400 mg daily; IV 1 to 2 mg/kg to a maximum of 150 mg over at least 10 minutes",
+   "source": "B5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Flecainide' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The flecainide therapeutic range is 0.2 to 0.9 mg/L; dilute the IV injection with glucose 5% only, as it is incompatible with alkaline and chloride-containing solutions",
+   "source": "B5",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Flecainide' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/flecainide, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Sotalol is a nonselective beta-blocker that also prolongs the refractory period of atria, ventricles and bypass tract, indicated for treatment and prevention of atrial, supraventricular and serious ventricular arrhythmias",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sotalol is CONTRAINDICATED if the QT interval is prolonged, in asthma, in severe heart failure, in second- or third-degree heart block or sinus node dysfunction without a pacemaker, in sinus bradycardia without a pacemaker, and in cardiogenic shock or systolic BP below 90 mmHg",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Sotalol oral, initially 40 to 80 mg twice daily, increased gradually every 2 to 3 days if necessary up to 160 mg twice daily; specialists may use up to 640 mg daily for life-threatening refractory arrhythmias",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "MONITOR THE QT INTERVAL when starting sotalol and with each dose increase, particularly in older people, women and those with renal impairment",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sotalol ACCUMULATES IN RENAL IMPAIRMENT; increase the dosing interval and seek specialist advice in severe impairment",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Avoid abrupt withdrawal of sotalol in ischaemic heart disease: reduce the dose over 8 to 14 days to avoid exacerbation of angina and precipitation of MI and ventricular arrhythmias",
+   "source": "B6",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Sotalol' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/sotalol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Adenosine depresses sinus node activity and slows AV nodal conduction, with rapid onset and short duration; it is used for acute treatment of SVT and as a diagnostic aid for broad or narrow complex tachycardia",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Adenosine, rapid IV bolus, initially 6 mg; if unsuccessful within 1 to 2 minutes give 12 mg; if still unsuccessful within 1 to 2 minutes give 12 mg or 18 mg; flush the IV line with 20 mL sodium chloride 0.9% after each dose",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Adenosine is CONTRAINDICATED in reactive airways disease such as asthma, where it may cause bronchoconstriction LASTING UP TO 30 MINUTES, and in second- or third-degree heart block or sick sinus syndrome without a pacemaker",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Adenosine may rarely ACCELERATE the ventricular rate in AF or atrial flutter, especially with an accessory pathway such as Wolff-Parkinson-White",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Dipyridamole increases and prolongs the effect of adenosine: avoid the combination if possible, or use a quarter to a half of the usual adenosine dose; people with a heart transplant are more sensitive and need a reduced initial dose",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Adenosine's extremely short duration of action and short half-life make it the TREATMENT OF CHOICE IN PREGNANCY when indicated, and it is safe in breastfeeding",
+   "source": "B7",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Adenosine' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/adenosine, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Digoxin slows heart rate and reduces AV nodal conduction by increasing vagal tone and reducing sympathetic activity, and increases the force of myocardial contraction",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Digoxin is CONTRAINDICATED in second- or third-degree heart block without a pacemaker, SVT involving an accessory pathway such as Wolff-Parkinson-White, ventricular tachycardia and fibrillation, hypertrophic obstructive cardiomyopathy, acute or chronic cor pulmonale, and constrictive pericarditis",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Digoxin maintenance, oral, 125 to 250 micrograms once daily, rarely increased up to 500 micrograms daily; in the elderly 62.5 to 125 micrograms once daily",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Digoxin loading, oral or IV, 250 to 500 micrograms every 4 to 6 hours according to response up to a total of 1.5 mg; in the elderly 125 to 250 micrograms every 4 to 6 hours up to a total of 500 micrograms; HALVE THE LOADING DOSE if creatinine clearance is below 60 mL/minute",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Digoxin maintenance in renal impairment: CrCl 30 to 60 mL/minute, 62.5 to 250 micrograms once daily; CrCl 10 to 30 mL/minute, 62.5 to 125 micrograms once daily; CrCl below 10 mL/minute, 62.5 micrograms once daily or on alternate days",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The generally accepted digoxin therapeutic range is 0.5 to 2 micrograms/L (0.6 to 2.6 nanomol/L), but TOXIC EFFECTS CAN OCCUR AT LOWER CONCENTRATIONS, particularly in the elderly or with electrolyte disturbance, hypoxia or hypothyroidism; GI symptoms such as nausea and anorexia may PRECEDE cardiac symptoms",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In AF, and in heart failure with sinus rhythm, consider maintaining a LOWER digoxin concentration of 0.5 to 0.8 micrograms/L, because higher concentrations within the therapeutic range may be associated with increased mortality risk",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Take the digoxin blood sample AT LEAST 6 HOURS after a dose to allow for distribution; steady state is reached after about 7 days with normal renal function, as the half-life is 36 hours",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Hypokalaemia, hypomagnesaemia, hypercalcaemia, acidosis and hypoxia increase sensitivity to digoxin, especially hypokalaemia, so toxicity may occur at lower concentrations",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Digoxin increases the risk of arrhythmias after DC cardioversion: withhold it for 1 to 2 days before cardioversion or use the lowest effective energy",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Digoxin is NOT effective in converting AF to sinus rhythm or preventing recurrence after cardioversion, and routine measurement of pulse rate before the next dose is NOT necessary",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Check renal function and electrolyte concentrations BEFORE starting digoxin; about 70% is renally cleared so the dose must be reduced in renal impairment and in the elderly",
+   "source": "B8",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, 'Digoxin' at https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-arrhythmias/antiarrhythmics/digoxin, July 2026 release, read under subscription 2026-09-22"
+  }
+ ]
+}
