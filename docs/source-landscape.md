@@ -102,3 +102,48 @@ I had already downloaded, which lists **ectoparasites plus a whole syndrome and 
 **The lesson for the remaining 122 is the opposite of the finding above**: before concluding a topic is
 blocked, re-check the indexes already in hand. The stale-back-catalogue finding stands for Australian
 Prescriber, but **"no current open source" must be established, not assumed.**
+
+---
+
+## ⚠️ Update 2026-09-22 — RACGP opened, and it was on this list the whole time
+
+**RACGP's *Australian Journal of General Practice* and its predecessor *Australian Family Physician* are
+open access, current, peer-reviewed and Australian.** Three guidelines were built from them in one session:
+
+| Guideline | RACGP source | What it gave |
+|---|---|---|
+| **tinnitus** | *A review of tinnitus*, **AJGP 2018** | **42 of 50 claims quoted verbatim** — the whole clinical pathway. The AMH topic alone is five paragraphs |
+| **vertigo 1.1** | *An approach to vertigo in general practice*, **AFP 2016** | **the Epley manoeuvre step by step** and its **contraindications**, which no other source held gives at all |
+| **conjunctivitis and eye infections** | *Conjunctivitis: A review*, **AJGP 2024** | **9 AMH topics closed at once**, with **quotable doses** — ceftriaxone 1 g, azithromycin 1 g, chloramphenicol qid |
+
+### ⚠️ The process failure worth naming
+
+**Step 3 of the plan above already said to do this.** It was written, and then not done — the march went on
+mining Australian Prescriber's stale back catalogue and treating AMH-only guidelines as the only option for
+gap topics, while a current open masthead sat unqueried. ⚠️ **The ASHM correction above taught "establish,
+don't assume"; this is the same error one level up — a source I had already identified as productive and
+never opened.**
+
+**RACGP publishes no sitemap**, which is why it was skipped: it does not yield to the crawl-the-sitemap
+method that worked for Australian Prescriber. ⚠️ **A targeted search per gap topic finds its articles
+immediately.** That is the method to use for the remaining topics.
+
+### What RACGP changes about the remaining gap
+
+⚠️ **Assume nothing is blocked until RACGP has been searched for it.** The clusters most likely to yield:
+
+- **the rest of the eye cluster** — dry eye, the glaucomas, mydriasis/cycloplegia
+- **urology** — BPH, prostatitis, erectile dysfunction, urinary incontinence, kidney stones
+- **GI** — haemorrhoids, anal fissure, perianal disorders, diarrhoea, peptic ulcer, IBD
+- **women's health** — contraception, dysmenorrhoea, endometriosis, PMS, infertility
+- **mouth and dental** — dry mouth, gingivitis, oral ulcers, dental abscess
+- **skin** — tinea, onychomycosis, cutaneous warts, androgenetic alopecia
+
+### ⚠️ And what it does not change
+
+**RACGP articles are reviews, not drug references.** They carry **some** doses and **not a full regimen
+set**: the conjunctivitis review gives ceftriaxone and azithromycin and **no antiviral dose at all**, for
+either indication that needs one. ⚠️ **The pattern that works is RACGP for the pathway, quoted; AMH for the
+doses, paraphrased and queued for attestation** — and **where the two disagree, say so rather than
+choosing.** All three guidelines above found a disagreement worth recording; ⚠️ **the conjunctivitis one is
+a disagreement about a dose.**
