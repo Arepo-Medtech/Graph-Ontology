@@ -1,0 +1,332 @@
+{
+ "guideline": "guidelines/thyroid-disorders.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-22",
+ "verifier": "claude-opus-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/hypothyroidism",
+  "https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-thyroid-disorders/hyperthyroidism"
+ ],
+ "retrieved_utc": "2026-09-22",
+ "method": "Read under subscription in the operator's browser and PARAPHRASED. No AMH passage is reproduced and no source_text is stored; every claim carries a locator and verdict licensed_source_not_quoted, so none can be machine re-checked from this repository. Dose claims are flagged dose:true for the attestation queue. No citation from any other work has been attached to these claims. The open Australian alternatives were checked first and are stale: Aust Prescr subclinical hypothyroidism 1999, thyroid function tests 2011, thyroid replacement 2008.",
+ "claims": [
+  {
+   "claim": "Common causes of primary hypothyroidism are Hashimoto's thyroiditis, radioactive iodine treatment and thyroid surgery",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Hypothyroidism is confirmed by elevated TSH with low free T4, and where abnormalities are mild persistence should be confirmed over 2 to 3 months before starting treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Secondary hypothyroidism shows normal or low TSH with low free T4 from pituitary or hypothalamic disease, and the need for glucocorticoid replacement must be assessed first because adrenal crisis may be precipitated if thyroid hormone is given without it",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Lithium and amiodarone should be considered as drug precipitants of hypothyroidism",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Levothyroxine is the drug of choice for primary and secondary hypothyroidism because its long half-life gives stable serum concentrations and a long duration of effect",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Liothyronine has faster onset and shorter duration than levothyroxine, may be used in severe hypothyroidism such as myxoedema coma, and is not recommended in pregnancy because the developing brain preferentially uses T4",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In primary hypothyroidism TSH and T4 are monitored every 6 to 8 weeks with levothyroxine adjusted to a low to mid normal TSH, then annually and more often in children",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In hypothyroidism from hypothalamic or pituitary disease TSH cannot indicate adequacy of replacement, and the dose is adjusted to a mid to upper normal T4",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "At least 6 weeks should elapse after a levothyroxine dose change before checking TSH because of its long half-life",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In pregnancy thyroid function is monitored each trimester with an increased levothyroxine dose likely from the first trimester, and the maintenance dose is reassessed 6 to 8 weeks postpartum",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In congenital hypothyroidism replacement should begin as early as possible under careful supervision to prevent intellectual disability, with monitoring of intellectual and physical development and thyroid function",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Apparent failure of levothyroxine is most commonly due to lack of compliance, then impaired absorption by food or binding to drugs such as calcium and iron or small intestinal disease, then increased clearance by interacting drugs, then loss of tablet potency from inappropriate storage",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Levothyroxine replacement is lifelong except for some people whose hypothyroidism followed subacute or postpartum thyroiditis, radioactive iodine treatment or partial thyroidectomy",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "After a transient interruption with only minor symptoms it is usually unnecessary to reintroduce levothyroxine slowly at low doses, including in ischaemic heart disease or the elderly",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Overtreatment of hypothyroidism shown by suppressed TSH may increase the risk of bone density loss and fracture, particularly in elderly women",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Clearance of many drugs including digoxin, hypnotics, anaesthetic agents and analgesics is reduced in hypothyroidism, so lower doses may suffice and doses may need increasing as the person becomes euthyroid",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Subclinical hypothyroidism is mild TSH elevation with normal T4, often asymptomatic, with higher progression risk given thyroid peroxidase antibodies and rising TSH, monitored every 6 to 12 months",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The decision to start T4 replacement in subclinical hypothyroidism should be individualised, with TSH above 10 mIU/L generally accepted as an indication to start",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Evidence for levothyroxine in euthyroid goitre is conflicting, benefits must be weighed against harms of TSH suppression such as decreased bone density, there is a risk of inducing hyperthyroidism with autonomous nodules, and levothyroxine should be avoided if TSH is already suppressed",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The most common causes of hyperthyroidism are Graves' disease and toxic multinodular goitre, with toxic adenoma and sub-acute thyroiditis as other causes",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Hyperthyroidism is confirmed by suppressed TSH with high free T4 and or high free T3",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Sub-acute thyroiditis should be excluded because recovery is spontaneous and definitive treatment is usually not needed, and antithyroid drugs are ineffective in it",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Iodine-containing precipitants include amiodarone, IV contrast media and kelp, and iodine-induced hyperthyroidism may initially resist antithyroid drugs but may ultimately be self-limiting",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Carbimazole and propylthiouracil block thyroid hormone synthesis, propylthiouracil in high doses also inhibits peripheral conversion of T4 to T3, and both can cause agranulocytosis",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Carbimazole is generally preferred to propylthiouracil except in thyroid storm or the first trimester of pregnancy",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Beta-blockers are used short term for symptom relief such as tremor, tachycardia and sweating, particularly in hyperthyroidism secondary to sub-acute thyroiditis, with more experience with propranolol",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Iodine may be used short term in Graves' disease to prepare for thyroid surgery after control with antithyroid drugs, and long-term use may exacerbate hyperthyroidism",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Radioactive iodine is used in toxic multinodular goitre or Graves' disease relapsing after antithyroid drugs, with specialist advice",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The aim of antithyroid treatment is clinical and biochemical euthyroidism with T4 and or T3 about mid normal range and eventual normalisation of TSH over several months",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In Graves' disease antithyroid drugs are usually given for 12 to 18 months",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "In the adjusted regimen treatment starts high for 3 to 4 weeks then reduces by about half according to response, with initial adjustment based on plasma T4 and T3 because TSH may remain suppressed for a few months, reviewing every 4 to 6 weeks to the lowest effective dose",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "The block-replace regimen maintains the high antithyroid dose and adds levothyroxine after T4 and T3 normalise at about 6 weeks with euthyroidism confirmed every 3 months, is no longer indicated in Graves' disease, may occasionally be used by specialists in unstable disease or inoperable goitre, and is contraindicated in pregnancy",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Antithyroid drugs given around radioactive iodine should be stopped at least 4 days before and restarted no sooner than 3 days after to allow iodine uptake, with effect assessed by tapering off 2 to 4 months after treatment",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Remission on long-term antithyroid treatment for Graves' disease occurs in fewer than 50% of people after about 1 to 2 years and may be temporary",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Thyroid storm is a medical emergency with exaggerated hyperthyroid symptoms such as fever, tachycardia, CNS dysfunction and GI symptoms, usually with a precipitating event such as infection",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Thyroid storm is treated on specialist advice with IV fluids, high-dose antithyroid drugs, propranolol and corticosteroids, and iodide, lithium and paracetamol for fever may also be used",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Subclinical hyperthyroidism is persistently suppressed TSH with normal T4 and T3, associated with increased AF risk in older people and decreased bone density in postmenopausal women, with no consensus on treatment because evidence is limited, and iodine loads should be avoided",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Cigarette smoking is associated with increased risk of Graves' disease and its complications such as ophthalmopathy, more severe disease, lower response rates and possibly higher antithyroid doses, on limited data",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, therapeutic topics 'Hypothyroidism' and 'Hyperthyroidism' (Endocrine drugs > Drugs for thyroid disorders), July 2026 release, read under subscription 2026-09-22"
+  },
+  {
+   "claim": "Adult levothyroxine requirement is approximately 1.6 micrograms per kg once daily based on ideal weight, rounded to the nearest 25 micrograms",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "The usual adult levothyroxine range is oral 50 to 200 micrograms once daily, adjusted every 6 to 8 weeks according to TSH",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In frail or elderly patients or those with ischaemic heart disease, levothyroxine starts at 25 to 50 micrograms once daily increasing by 25 micrograms every 6 to 8 weeks according to TSH",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In very frail patients or severe ischaemic heart disease, levothyroxine may start at 12.5 micrograms once daily with specialist advice",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In children levothyroxine requires paediatric endocrinologist advice and is adjusted every 2 to 4 weeks by 25 micrograms daily to keep serum thyroxine upper normal and TSH normal",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Liothyronine 20 to 25 micrograms is approximately equivalent in activity to levothyroxine 100 micrograms, with a usual oral range of 20 to 60 micrograms daily in 2 or 3 doses, on endocrinologist advice",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Carbimazole starts at oral 10 to 45 mg daily, up to 60 mg daily in severe cases, in 2 or 3 doses for 3 to 4 weeks",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Carbimazole maintenance in the adjusted regimen is usually 5 to 15 mg daily but is highly variable with a range of 2.5 to 40 mg daily",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Propylthiouracil starts at oral 200 to 400 mg daily in 2 to 4 doses for 3 to 4 weeks, with maintenance 25 to 300 mg daily in divided doses",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In the block-replace regimen the initial antithyroid dose continues and 100 to 150 micrograms of levothyroxine is added when T4 is in the normal range",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "In thyroid storm carbimazole is oral 60 to 80 mg daily in divided doses gradually reduced, and propylthiouracil is oral 600 to 1200 mg daily in divided doses gradually reduced",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  },
+  {
+   "claim": "Propranolol for tachyarrhythmias including hyperthyroidism is oral 10 to 40 mg 3 or 4 times daily",
+   "source": "A1",
+   "verdict": "licensed_source_not_quoted",
+   "locator": "AMH Medicines, drug monographs levothyroxine, liothyronine, carbimazole, propylthiouracil, propranolol, July 2026 release, read under subscription 2026-09-22",
+   "dose": true
+  }
+ ],
+ "summary": {
+  "total": 50,
+  "pass": 0,
+  "fail": 0
+ }
+}
