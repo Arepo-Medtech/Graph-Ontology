@@ -1,6 +1,6 @@
 # What the compendium does not know
 
-**Generated 2026-09-22 · 65 guidelines · 2,647 claims · 413 `Unresolved` rows**
+**Generated 2026-09-22 · 66 guidelines · 2,692 claims · 421 `Unresolved` rows**
 
 > ⚠️ **Corrected 2026-09-22.** The first version of this audit counted **236** rows and asserted that the
 > sixteen earliest guidelines *"predate the taxonomy"*. **Both were wrong.** The counting regex required the
@@ -254,6 +254,35 @@ guidelines retrieved this session. **`verify.py` prints a note for every file la
 
 ⚠️ **This is the one finding in this audit that would have been cheap to prevent and is expensive to
 repair.**
+
+## ⚠️ Finding 6 — the ACSQHC standard set is not fully covered, and two files use a non-ACSQHC source where a standard exists
+
+**Checked against the Commission's own index, 2026-09-22.** There are **19 published Clinical Care Standards**
+and **one in development (Osteoporosis)**.
+
+**Still missing from this compendium:**
+
+| Standard | Note |
+|---|---|
+| **Cataract** | ophthalmology — a domain with no representation here at all |
+| **Emergency Laparotomy** | acute surgery — likewise |
+
+**And two guidelines here lead on a non-ACSQHC source where an ACSQHC standard exists:**
+
+- ⚠️ **`copd.md`** is built on the **COPD-X Plan**; the Commission also publishes a **Chronic Obstructive
+  Pulmonary Disease Clinical Care Standard**. COPD-X is the clinical guideline and the Standard is the
+  quality instrument over it — **but the compendium currently carries only one of the pair**, and COPD-X is
+  the one with **surveillance paused** (Finding 2).
+- ⚠️ **`osteoarthritis-knee-and-hip.md`** is built on the **RACGP** guideline; the Commission publishes an
+  **Osteoarthritis of the Knee Clinical Care Standard**. The RACGP guideline is the one recorded here as
+  **"currently being updated"** (Finding 2).
+
+**The pattern established elsewhere in this compendium is to hold both** — as with **stroke** (Stroke
+Foundation guideline *and* ACSQHC standard, in two files) and **sepsis** (RCH guideline *and* the ACSQHC
+standard *and* three state pathways). **These two topics are the exceptions and should be paired.**
+
+⚠️ **A correction to the working gap list**: *venous leg ulcers* was carried as a candidate ACSQHC standard.
+**No such standard exists.** The Commission's index does not list one, and the URL returns 404.
 
 ## What is genuinely unknowable
 
