@@ -1,19 +1,20 @@
 {
  "guideline": "guidelines/vertigo.md",
- "edition": "1.0",
+ "edition": "1.1",
  "verified_utc": "2026-09-22",
  "verifier": "claude-opus-5",
  "verifier_class": "single_verifier_uncalibrated",
  "retrieved_from": [
   "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/betahistine",
   "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/cinnarizine-dimenhydrinate",
+  "https://www.racgp.org.au/afp/2016/april/an-approach-to-vertigo-in-general-practice",
   "https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-vestibular-disorders/vertigo",
   "https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics/dopamine-antagonists/prochlorperazine",
   "https://australianprescriber.tg.org.au/articles/cinnarizine-dimenhydrinate-for-vertigo.html",
   "https://australianprescriber.tg.org.au/articles/dealing-with-dizziness.html"
  ],
  "retrieved_utc": "2026-09-22",
- "method": "S1 and S2 are open Australian Prescriber articles, fetched and checked verbatim; S1 is 2005 and S2 is 2021, and the age of S1 is stated in the guideline wherever its content could have moved on. A1 is AMH, read under subscription and PARAPHRASED: no AMH passage is reproduced and no source_text is stored, so those claims carry a locator and the verdict licensed_source_not_quoted and cannot be machine re-checked from this repository. Doses are flagged dose:true. The betahistine trial figures in S2 are quoted from AP's own table; the betahistine dose in that table (12 mg) is BELOW the AMH adult range and this is stated in the guideline rather than left for the reader to notice.",
+ "method": "S1, S2 and S3 are OPEN articles, fetched and checked verbatim. S1 is Australian Prescriber 2005, S2 Australian Prescriber 2021, S3 RACGP Australian Family Physician 2016. A1 is AMH, read under subscription and PARAPHRASED: no passage reproduced, no source_text stored, locator plus verdict licensed_source_not_quoted; doses flagged dose:true. Edition 1.1 added S3, which FILLED a hole 1.0 recorded (no description of the Epley manoeuvre) and SURFACED four disagreements between sources. Where sources disagree the guideline attributes each statement to the source that makes it and does NOT resolve the disagreement; claims that exist only to record what one source says are worded 'S3 states that ...' so the claim is true even where the underlying assertion is contested. S3 also contradicts ITSELF on Dix-Hallpike nystagmus (horizontal in its table, rotational in its BPPV text) and both statements are quoted separately.",
  "claims": [
   {
    "claim": "Dizziness covers a range of symptoms and is rarely a sign of a serious disorder",
@@ -328,6 +329,222 @@
    "source_text": "it is only indicated in Australia for adults who have not responded to other treatments. In view of the uncertainty about long-term safety, treatment should not usually exceed four weeks."
   },
   {
+   "claim": "Vertigo constitutes approximately 54% of cases of dizziness and classically presents as a sensation of movement of the environment around the patient",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Vertigo is a common, distressing presentation in general practice and constitutes approximately 54% of cases of dizziness. 1 Classically, vertigo presents as a sensation of movement of the environment around the patient."
+  },
+  {
+   "claim": "Dizziness can be classified into four groups: vertigo, disequilibrium, light-headedness and presyncope",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Dizziness can be classified into four groups: - vertigo (spinning sensation) - disequilibrium (feeling of imbalance) - light-headedness (sensation of giddiness) 3 - presyncope (sensation of feeling faint)."
+  },
+  {
+   "claim": "Vestibular symptoms originating in the cerebellum or brain stem are central; those arising in the inner ear or vestibular nerve are peripheral",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Vestibular symptoms originating from pathology in the cerebellum or brain stem are classified into the central type. Conversely, symptoms arising in the inner ear or from the vestibular nerve are classified as peripheral."
+  },
+  {
+   "claim": "Central causes are suspected if the patient has associated neurological symptoms such as weakness, dysarthria, sensory changes, ataxia or confusion, and it may be difficult to distinguish central from peripheral when vertigo is the only symptom",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Central causes are suspected if the patient presents with associated neurological symptoms such as weakness, dysarthria, sensory changes, ataxia or confusion. It may be difficult to distinguish between central and peripheral causes in patients who present with vertigo as their only symptom."
+  },
+  {
+   "claim": "Vascular risk factors including smoking, diabetes, obesity, hypertension and hypercholesterolaemia need to be assessed to rule out cerebrovascular accident",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Risk factors for vascular disease, including smoking, diabetes, obesity, hypertension and hypercholesterolaemia, need to be assessed to rule out CVAs, which can lead to vertigo from ischemia or infarction."
+  },
+  {
+   "claim": "Medications including frusemide, salicylates and antihypertensive agents can affect the vestibular system and cause vertigo, and perilymphatic fistula should be considered after recent head injury",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Medications, including frusemide, salicylates and antihypertensive agents, can affect the vestibular system, which in turn causes vertigo. 10,11 Perilymphatic fistula should be considered if there is a history of recent head injury."
+  },
+  {
+   "claim": "Vertigo with hearing loss is seen in labyrinthitis and Meniere's disease, whereas hearing loss is not seen in benign paroxysmal positional vertigo or vestibular neuronitis",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Vertigo with hearing loss is seen in labyrithitis and Ménière's disease, whereas hearing loss is not seen in benign paroxysmal positional vertigo (BPPV) and vestibular neuronitis (VN)."
+  },
+  {
+   "claim": "Otoscopy should look for vesicles seen in herpes zoster infection or retraction pockets seen in cholesteatoma, and vertigo triggered by pushing on the tragus or by Valsalva suggests a perilymphatic fistula",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "an otoscopic examination should be performed to visualise the tympanic membranes for any vesicles that can be seen in a Herpes zoster infection or retraction pockets as seen in cholesteotoma. 2 Vertigo triggered by pushing on the tragus or with the Valsalva manoeuvre is seen in a perilymphatic fistula."
+  },
+  {
+   "claim": "A gait and balance assessment using Romberg's sign and the heel-toe test, with examination for cerebellar signs, can exclude central causes",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "A gait and balance assessment (Romberg's sign and the heel-toe test), 12 and examination for cerebellar signs can exclude central causes."
+  },
+  {
+   "claim": "Vertical nystagmus is only seen if the cause is central; central nystagmus may be horizontal, rotational or vertical and does not disappear on fixing the gaze, while peripheral nystagmus disappears with fixation",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Vertical nystagmus is only seen if the cause is central. 7 Nystagmus due to central causes may be horizontal, rotational or vertical, and does not disappear on fixing the gaze. 13 Nystagmus in the peripheral type disappears with fixation of the gaze."
+  },
+  {
+   "claim": "Cardiovascular examination should check pulse, blood pressure, heart rate and rhythm, with carotid examination for bruits",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Cardiovascular examination: pulse, blood pressure, heart rate and rhythm should be checked. 14 Carotid examination to identify bruits (in the case of a CVA) is necessary."
+  },
+  {
+   "claim": "In the Dix-Hallpike manoeuvre the head is turned 30 to 45 degrees to the side being tested, the patient keeps their eyes open focused on a stable point, then quickly lies supine and hyperextends the neck, and patients should be warned the test can induce vertigo",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "The patient sits at the edge of the bed and the examiner turns the patient's head 30-45 degrees to the side being tested. The patient needs to keep their eyes open and focus on a stable point, and then quickly lie supine and hyperextend the neck. … This test can induce vertigo, so patients should be warned about this before the test is performed."
+  },
+  {
+   "claim": "S3 states that horizontal nystagmus denotes a positive Dix-Hallpike test",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Horizontal nystagmus denotes a positive test."
+  },
+  {
+   "claim": "S3 also states that the nystagmus seen in BPPV has a rotational nature",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Nystagmus seen in BPPV has a rotational nature."
+  },
+  {
+   "claim": "A drop in systolic blood pressure of more than 20 mmHg from lying to standing is significant for a postural drop, seen in dehydration or autonomic dysfunction",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "A drop in the systolic blood pressure by more than 20 mm/Hg from a lying down to standing position is significant for a postural drop. This is seen in patients who are dehydrated or who present with autonomic dysfunction."
+  },
+  {
+   "claim": "In S3's description of the head impulse test the examiner quickly turns the head 10 to 20 degrees and the test is abnormal if the eyes move rapidly and repetitively, failing to re-fixate on the examiner's nose, indicating a disrupted vestibulo-ocular reflex",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "The patient is asked to look at the examiner's nose and the examiner quickly turns the patient's head 10-20 degrees. It is abnormal if eyes move rapidly and repetitively, failing to re-fixate to the examiner's nose. A positive test indicates disrupted vestibule-ocular reflex."
+  },
+  {
+   "claim": "The most common causes of vertigo in primary care are BPPV, vestibular neuronitis and Meniere's disease",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "The most common causes of vertigo seen in primary care are BPPV, VN and Ménière's disease (Table 2)."
+  },
+  {
+   "claim": "BPPV is the most common cause of vertigo in clinical practice and is caused by accumulation of calcium crystals in the posterior semicircular canal",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "BPPV is the most common cause of vertigo in clinical practice. 15 It is caused by an accumulation of calcium crystals in the posterior semicircular canal."
+  },
+  {
+   "claim": "The Dix-Hallpike manoeuvre is used to diagnose BPPV while the Epley manoeuvre is used to treat it, attempting to dislodge the otoliths from the semicircular canals",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "The Dix−Hallpike manoeuvre is used to diagnose BPPV. In contrast, the Epley manoeuvre can be used to treat BPPV (Box 1). 1 This procedure is performed in an attempt to dislodge the otoliths from the semicircular canals."
+  },
+  {
+   "claim": "S3 reports the Epley manoeuvre has a 77% success rate on the initial attempt and 100% on further attempts",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "It has a 77% success rate on the initial attempt and 100% on further attempts."
+  },
+  {
+   "claim": "The Epley manoeuvre is performed by sitting the patient on the bed, lying them supine with the neck hyperextended and laterally rotated 45 degrees for one minute, turning the head to the opposite side at 45 degrees for one minute, tilting head chest and pelvis downwards to 135 degrees almost prone for one minute, then quickly sitting the patient upright with the head tilted to the affected side",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "- Sit the patient on the bed. - With the neck hyperextended and laterally rotated to 45 degrees, the patient is asked to lie supine. - The patient is required to maintain the supine position for one minute. - The head is turned to the opposite side with lateral rotation of 45 degrees, and remains in this position for one minute. - The head, chest and pelvis are tilted downwards to 135 degrees (almost prone), and this position is maintained for one minute. - Quickly sit the patient upright with their head tilted to the affected side."
+  },
+  {
+   "claim": "The Epley manoeuvre should not be performed in patients with neck injury, carotid stenosis or heart disease",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "This manoeuvre should not be performed in patients with neck injury, carotid stenosis and heart disease"
+  },
+  {
+   "claim": "Acute labyrinthitis presents with vertigo and hearing loss preceded by a viral infection, lasts days to weeks, and hearing loss is the main distinguishing factor from BPPV",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "It presents with vertigo and hearing loss, preceded by a viral infection. 16 Middle ear infections can spread to the inner ear and cause labyrithitis. The duration of symptoms ranges from days to weeks. Hearing loss is the main distinguishing factor between labyrithitis and BPPV."
+  },
+  {
+   "claim": "Typically no treatment is required for labyrinthitis, but if suppurative labyrinthitis is suspected the patient should be referred to the emergency department for drainage of otitis media",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Typically, no treatment is required for labyrithitis. However, if suppurative labyrinthitis is suspected, the patient should be referred to the emergency department for drainage of otitis media."
+  },
+  {
+   "claim": "Meniere's disease classically presents with episodes of vertigo lasting longer than 20 minutes, tinnitus, sensorineural hearing loss and aural fullness, and eventually hearing loss becomes permanent",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Ménière's disease classically presents with episodes of vertigo lasting longer than 20 minutes, tinnitus, sensorineural hearing loss and aural fullness. Eventually, hearing loss becomes permanent. Pure tone audiometry is the most useful test to assess sensorineural hearing loss."
+  },
+  {
+   "claim": "Meniere's disease is commonly seen in women and the incidence increases in men and women after the age of 60 years",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Ménière's disease is commonly seen in women, and the incidence increases in men and women after the age of 60 years."
+  },
+  {
+   "claim": "S3 states there is no known cure for Meniere's disease, treatment is primarily symptomatic, and betahistine is the current mainstay of treatment",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "There is no known cure for Ménière's disease and treatment is primarily symptomatic. 19 Betahistine is the current mainstay of treatment."
+  },
+  {
+   "claim": "Vestibular neuronitis follows a viral URTI or herpes zoster infection, presents with acute vertigo without hearing loss or tinnitus, and loss of balance is more prominent than in other causes so patients may present with falls",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "The main characteristic of VN is an acute onset of vertigo without hearing loss or tinnitus. … Loss of balance is more prominent in VN, compared with other causes of vertigo, and patients may commonly present with falls."
+  },
+  {
+   "claim": "In vestibular neuronitis the vertigo is initially severe, lasts two to three days and is followed by gradual recovery which may take two to six weeks, with bed rest and antiemetics used in the first 24 to 72 hours",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Initially, the vertigo is severe, lasts for two to three days and is followed by gradual recovery, which may take two to six weeks. 20 Bed rest and antiemetics can be used in the first 24-72 hours."
+  },
+  {
+   "claim": "Blood tests are not routinely ordered for vertigo, but it is recommended that glucose levels of all patients with vertigo should be checked",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Blood tests are not routinely ordered for patients presenting with vertigo. However, it is recommended that glucose levels of all patients with vertigo should be checked."
+  },
+  {
+   "claim": "Imaging with CT, MRI or MRA is indicated if the examination is not consistent with a peripheral lesion, prominent CVA risk factors are present, neurological signs and symptoms are present, or vertigo is accompanied by headache, and referral to a neurologist is recommended in these cases",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Radiological tests including computed tomography (CT), magnetic resonance imaging (MRI) or magnetic resonance angiography (MRA) are indicated if: - the examination is not consistent with a peripheral lesion - prominent risk factors for CVA are present - neurological signs and symptoms are present, or - symptoms of vertigo are accompanied by a headache. In these cases, referral to a neurologist is recommended."
+  },
+  {
+   "claim": "S3 describes betahistine as an antiemetic used for symptomatic management of acute vertigo, states these medications should not be used long term, and warns about drowsiness, dry mouth and blurred vision",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Antiemetic medications such as betahistine are used for symptomatic management of acute vertigo. These medications should not be used long term. Patients should be warned about the side effects of drowsiness, dry mouth and blurred vision."
+  },
+  {
+   "claim": "S3 states benzodiazepines are not indicated and should be avoided because of their addictive nature",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Benzodiazepines are not indicated and should be avoided because of their addictive nature."
+  },
+  {
+   "claim": "Lifestyle changes including salt restriction and avoiding alcohol and coffee are recommended, and assessment and management of the patient's risk of falls is important in vertigo",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Lifestyle changes including salt restriction and avoiding alcohol and coffee are recommended. 24 Assessment and management of the patient's risk of falls is important in vertigo."
+  },
+  {
+   "claim": "Referral to an experienced physiotherapist for vestibular rehabilitation can help prevent recurrences, with exercises involving moving the eyes up and down and sideways in a supine or sitting position and balance stabilisation exercises",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Referral to an experienced physiotherapist for vestibular rehabilitation can help prevent recurrences. 16 Exercises prescribed by physiotherapists involve moving the eye balls up and down and sideways in a supine or sitting position. Balance stabilisation exercises help to regain normal activities faster."
+  },
+  {
+   "claim": "Patients should be referred for specialist review if they have continuous vertigo, progressive hearing loss, severe ongoing headache, cerebellar signs or if the diagnosis is not clear",
+   "source": "S3",
+   "verdict": "pass",
+   "source_text": "Patients should be referred for specialist review if they have symptoms of continuous vertigo, progressive hearing loss, severe ongoing headache, cerebellar signs or if the diagnosis is not clear."
+  },
+  {
    "claim": "Distinguishing peripheral from CNS pathology matters, and hearing loss is usually present in peripheral disease and rare in CNS disease",
    "source": "A1",
    "verdict": "licensed_source_not_quoted",
@@ -531,8 +748,8 @@
   }
  ],
  "summary": {
-  "total": 85,
-  "pass": 52,
+  "total": 121,
+  "pass": 88,
   "fail": 0
  }
 }
