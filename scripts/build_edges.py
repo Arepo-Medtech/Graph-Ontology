@@ -175,12 +175,12 @@ EDGE_COLS = "s_vocab, s_code, predicate, o_vocab, o_code, source, source_locator
 
 
 def obo_terms(path: Path) -> list[dict]:
-    """Minimal OBO reader: id, name, is_a, obsolete. Enough for hierarchy and labels."""
+    """Minimal OBO reader: id, name, is_a, xref, obsolete. Enough for hierarchy, labels and cross-references."""
     terms, cur = [], None
     for line in open(path, encoding="utf-8"):
         line = line.rstrip("\n")
         if line == "[Term]":
-            cur = {"is_a": []}
+            cur = {"is_a": [], "xref": []}
             terms.append(cur)
         elif line.startswith("[") and line.endswith("]"):
             cur = None
@@ -192,6 +192,8 @@ def obo_terms(path: Path) -> list[dict]:
                 cur["name"] = v
             elif k == "is_a":
                 cur["is_a"].append(v.split(" ")[0])
+            elif k == "xref":
+                cur["xref"].append(v.split(" ")[0])
             elif k == "is_obsolete" and v.strip() == "true":
                 cur["obsolete"] = True
     return [t for t in terms if "id" in t and not t.get("obsolete")]
@@ -585,6 +587,11 @@ def main() -> int:
         ins_rows("HPO is-a", [("HP", t["id"], "hp:is_a", "HP", p, "HPO", "hp.obo", "native", "native", "asserted", PIN["hpo"], None)
                               for t in ht if t["id"].startswith("HP:") for p in t["is_a"] if p.startswith("HP:")])
         con.executemany("INSERT INTO name_hint VALUES ('HP', ?, ?)", [(t["id"], t.get("name")) for t in ht])
+        hx = {"NCIT": "NCIT", "ORPHA": "ORPHA", "ICD-10": "ICD10WHO"}      # HPO's own xrefs (MedDRA left out: MSSO-licensed)
+        ins_rows("HPO xref -> NCIT / Orphanet / ICD-10", sorted({("HP", t["id"], "hp:xref", hx[x.split(":")[0]], x.split(":", 1)[1], "HPO",
+                                                                  "hp.obo xref", x.split(":")[0], "native", "asserted", PIN["hpo"], None)
+                                                                 for t in ht if t["id"].startswith("HP:") for x in t["xref"]
+                                                                 if x.split(":")[0] in hx}))
     if HPOA.exists():
         dbv = {"OMIM": "OMIM", "ORPHA": "ORPHA", "DECIPHER": "DECIPHER"}
         rows_h, names = [], {}
@@ -740,6 +747,11 @@ def main() -> int:
             ("UBERON", r["subject_id"], "uberon:sct_narrow_match", "SCT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
              r["predicate_id"], "ungraded", "asserted", PIN["uberon"], json.dumps({"mapping_justification": r.get("mapping_justification")}))
             for r in ss if r["predicate_id"] == "skos:narrowMatch"])
+        ins_rows("Uberon -> NCI Thesaurus anatomy (narrowMatch)", [
+            ("UBERON", r["subject_id"], "uberon:ncit_narrow_match", "NCIT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
+             r["predicate_id"], "native", "asserted", PIN["uberon"], None)
+            for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
+            if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:") and r["predicate_id"] == "skos:narrowMatch"])
     if MONDO_OBO.exists():
         rows_m, cur = [], None
         for line in open(MONDO_OBO, encoding="utf-8"):

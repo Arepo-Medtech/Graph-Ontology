@@ -438,6 +438,21 @@
       "note": "Uberon is species-neutral, SNOMED CT is human, so Uberon curates every SNOMED link as narrowMatch, never exactMatch: the edge says the SNOMED concept is the human instance of the class, not that the two are the same concept. Hand-checked; graph_report.py earns the tier."
     },
     {
+      "id": "uberon:ncit_narrow_match",
+      "label": "this NCI Thesaurus anatomy concept is the human (narrower) form of the Uberon class",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "NCIT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "uberon.sssom.tsv (Uberon release v2026-06-23), skos:narrowMatch to NCIT",
+      "status": "built"
+    },
+    {
       "id": "sct:icdo_map",
       "label": "SNOMED CT concept maps to this ICD-O-3 code",
       "subject": [
@@ -1200,6 +1215,24 @@
       "source": "UMLS Metathesaurus crosswalk HPO -> SNOMEDCT_US (UTS REST API, licensed; derived data not redistributed)",
       "status": "built",
       "note": "Signs and symptoms to SNOMED findings through a shared UMLS CUI. Only edges whose SNOMED name equals the HPO label load (hand check 40/40, Wilson lower bound 0.912 -> Tier 2), edge by edge. Differently named links were right 34/40 (85%, lower bound ~0.71 -> inadmissible) and wrong by narrowing (Polycythemia -> Polycythemia vera; Retinal hole -> Retinal round hole; Tardive dyskinesia -> Neuroleptic-induced tardive dyskinesia), so they are candidates for a person in cache/umls/hpo_snomed_candidates.tsv, not edges. Hierarchy preservation (64% on active Australian targets) is a diagnostic: it measures two ontologies' structures agreeing, not whether a mapping is right. Measured 23 Sep 2026."
+    },
+    {
+      "id": "hp:xref",
+      "label": "HPO phenotype is cross-referenced by HPO to this concept",
+      "subject": [
+        "HP"
+      ],
+      "object": [
+        "NCIT",
+        "ORPHA",
+        "ICD10WHO"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "hp.obo (HPO 2026-09-02) xref",
+      "status": "built",
+      "note": "HPO's own xrefs; few, and not all exact (an xref can be a close match). MedDRA left out (MSSO licence)."
     },
     {
       "id": "loinc:sct_concept",
