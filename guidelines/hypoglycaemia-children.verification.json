@@ -1,0 +1,162 @@
+{
+ "guideline": "guidelines/hypoglycaemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Hypoglycaemia' (Last updated August 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 20,
+  "pass": 20,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Without diabetes, hypoglycaemia is a BGL under 3.0 mmol/L if symptomatic, or under 2.6 mmol/L regardless of symptoms.** In neonates under 48 hours it is under 2.6 mmol/L. Thresholds differ in diabetes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children without diabetes, hypoglycaemia is considered at a BGL of <3.0 mmol/L if symptomatic, or at a BGL of <2.6 mmol/L, irrespective of symptoms or signs. Hypoglycaemia in neonates <48 hours of age is defined as a BGL of <2.6 mmol/L … There are different BGL thresholds for children with diabetes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In children who cannot communicate, consider treating a BGL under 3.0 mmol/L.** Neonates are often asymptomatic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children who are unable to communicate, consider treatment if BGL is <3.0 mmol/L … This is irrespective of clinical signs and symptoms as neonates are often asymptomatic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severe hypoglycaemia** means serious cognitive dysfunction, eg convulsions or coma.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe hypoglycaemia refers to hypoglycaemia associated with serious cognitive dysfunction eg convulsions or coma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**An underlying condition is more likely** in infants under 1 year and with severe, recurrent or unexplained hypoglycaemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An underlying medical condition is more likely in: Infants <1 year old Severe hypoglycaemia Recurrent hypoglycaemia Unexplained hypoglycaemia (absence of prolonged fast or intercurrent illness)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Accelerated starvation is a diagnosis of exclusion**: a prolonged fast, low BGL with ketones, and normal BGL on feeding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Accelerated starvation is a diagnosis of exclusion. It requires a history of a prolonged fast (usually precipitated by a mild illness), with low BGL in association with ketonuria and/or ketonaemia and normalisation of BGL upon feeding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Symptoms:** palpitations, anxiety, hunger, paraesthesia, lethargy, irritability. **Neonates under 48 hours** may show apnoea, lethargy, seizures, hypotonia, jitteriness, poor feeding, a high-pitched cry, altered behaviour — or nothing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Palpitations, anxiety, hunger, paraesthesia, lethargy, irritability Neonates <48 hrs may have apnoea, lethargy, seizures, hypotonia, jitteriness, poor feeding, a high pitched cry, altered behaviour or be asymptomatic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about toxins** — alcohol, oral hypoglycaemics, aspirin, beta-blockers — and diet (prolonged fasting, dairy, juice, protein).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Toxin ingestion eg alcohol, oral hypoglycaemic agents, aspirin, beta-blockers … Prolonged fast or restrictive eating patterns Dairy intake (galactosemia) Juice (fructose intolerance) Protein (amino acid or organic acid disorders)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Look for clues to the cause:** poor growth, syndromic features, hyperpigmentation, midline defects, hepatomegaly and/or hypotonia (inborn error of metabolism).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Poor growth and nutrition Features suggestive of a genetic syndrome Hyperpigmentation (can involve scars, mucosa, creases or be generalised) Midline defects including cleft palate, differences of sex development Hepatomegaly and/or hypotonia (inborn error of metabolism)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take a point-of-care BGL and ketones, and keep the first urine after the event.** Confirm with a blood gas or laboratory glucose — meters can be inaccurate in the hypoglycaemic range.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Point of care BGL, ketone level and first urine sample following hypoglycaemic event … Confirm true BGL with blood gas or a formal (laboratory) glucose level as, in the hypoglycaemic range, point of care glucometers can be inaccurate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider a hypoglycaemia screen for unexplained, severe or recurrent hypoglycaemia — but do not delay correction** if access is difficult. Infants under 48 hours who respond to feeds rarely need extensive tests.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider formal hypoglycaemia screen if there is unexplained, severe or recurrent hypoglycaemia, but do not delay correction of hypoglycaemia if venepuncture/IV access is challenging … Infants <48 hours of age who respond appropriately to enteral feeds are unlikely to need extensive investigations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen bloods while hypoglycaemic:** glucose, ketones (beta-hydroxybutyrate), insulin and C-peptide, cortisol, growth hormone, lactate. Send on ice immediately.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ideally taken at the time of hypoglycaemia; send to lab immediately on ice … Prioritise the following whilst hypoglycaemic: glucose level ketones (beta-hydroxybutyrate) if point of care ketones not already obtained insulin and C-peptide cortisol growth hormone lactate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After treatment if blood was short:** LFTs, ammonia, free fatty acids, amino acids, acylcarnitine. **First urine:** organic and amino acids, reducing substances, glucose, ketones.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If insufficient blood, the following can be collected following hypoglycaemia treatment: liver function tests ammonia free fatty acids amino acids acylcarnitine … organic and amino acids reducing substances glucose ketones",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Any detectable insulin with a BGL under 2.6 mmol/L is inappropriate.** Consult metabolic or endocrinology for abnormal or unclear results.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any detectable insulin in the presence of BGL <2.6 mmol/L is inappropriate … Consult the Metabolic or Endocrinology team if there are any abnormal or unclear results",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Enteral glucose is preferred where conscious level allows**: apple juice, honey (over 12 months) or 10% glucose polymer.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Enteral glucose replacement is preferable where conscious level allows … Appropriate short acting carbohydrates include apple juice, honey (in children >12 months) or 10% glucose polymer",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Not oral rehydration solution or icy poles** — they contain minimal glucose. Consider NGT and antiemetics if vomiting.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Unsuitable options include oral rehydration solutions or icy poles … as these have minimal glucose content Consider NGT and antiemetics if vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Severe hypoglycaemia: glucose 10% 2 mL/kg IV bolus.** No or delayed IV access: consider intraosseous glucose or IM glucagon.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Give glucose 10% 2 mL/kg IV bolus in severe hypoglycaemia. If there is no IV access or this is delayed, intraosseous glucose or IM glucagon should be considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **IM glucagon may be ineffective after prolonged hypoglycaemia or fasting.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IM glucagon may be ineffective in prolonged hypoglycaemia or fasting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Always follow correction with slow-release carbohydrate (eg a sandwich) or ongoing IV fluids containing 5 or 10% glucose with normal saline.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Correction of hypoglycaemia must be followed by either administration of a slow-release carbohydrate (eg sandwich) or ongoing intravenous fluids (containing 5 or 10% glucose with normal saline)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Discharge when** the cause is known or accelerated starvation assumed; BGL over 3.0 on two occasions 3 hours apart with the child asymptomatic and eating; parents educated; follow-up arranged if a screen was sent.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cause of hypoglycaemia is known or accelerated starvation assumed BGL is >3.0 on 2 consecutive occasions 3 hours apart, the child is asymptomatic and tolerating adequate oral intake Parental education has been provided Follow up is arranged if a hypoglycaemia screen was taken",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** for any child not responding, **all neonates**, and unexplained hypoglycaemia or suspected underlying cause.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Child not responding to treatment All neonates Unexplained hypoglycaemia or suspicion for an underlying medical cause",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypoglycaemia' (Last updated August 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Hypoglycaemia/, retrieved 2026-09-23"
+  }
+ ]
+}

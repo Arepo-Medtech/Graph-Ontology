@@ -1,0 +1,177 @@
+{
+ "guideline": "guidelines/urinary-tract-infection-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Urinary tract infection' (Last updated October 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 22,
+  "pass": 22,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Symptoms are often non-specific in infants and young children**: fever, vomiting, poor feeding, jaundice, lethargy, faltering growth and irritability. Older children present more typically: dysuria, frequency, new daytime accidents, haematuria, abdominal or loin pain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infants and pre-verbal children often present with non-specific symptoms such as fever, vomiting, poor feeding, jaundice, lethargy, faltering growth (infants), and irritability … Older children may present with more typical signs and symptoms such as dysuria, hesitancy, urinary frequency or new daytime accidents, haematuria, lower abdominal and loin pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider UTI in any child whose fever without a focus persists beyond 48 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider UTI in any child if fever without focus persists after 48 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cystitis** suggests dysuria, frequency, urgency and lower abdominal discomfort; **pyelonephritis** suggests fever, rigors, malaise, vomiting and loin tenderness. The distinction is hard in younger children.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical distinction between cystitis and pyelonephritis can be difficult, especially in younger children … Cystitis is suggested by features such as dysuria, frequency, urgency and lower abdominal discomfort … Pyelonephritis is suggested by systemic features such as fever, rigors, malaise, vomiting and loin tenderness",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Atypical UTI** = seriously ill · septicaemia · no response to antibiotics within 48 hours · organism other than *E. coli* · raised creatinine · poor urine flow · abdominal or bladder mass.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Atypical UTI: seriously ill septicaemia lack of response to appropriate antibiotics within 48 hours infection with organisms other than E coli raised creatinine poor urine flow abdominal or bladder mass",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No urine is needed** if there is another clear focus of fever and the child is not systemically unwell.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Collecting urine to exclude UTI is not required if there is another clear focus of fever and the child is not systemically unwell",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Collect the sample before antibiotics**, unless the child is seriously unwell and needs immediate IV therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urine samples should be collected prior to starting antibiotics (unless the child is seriously unwell and requires immediate IV therapy)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Suprapubic aspirate is the gold standard up to 6 months.** Midstream urine for toilet-trained children; clean catch for pre-continent children who are not seriously unwell.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suprapubic aspirate (see SPA): gold standard in children up to 6 months (low risk of contamination) … Midstream urine (MSU): preferred method for toilet-trained children who can void on request (medium risk of contamination) … Clean catch: appropriate for pre-continent children who cannot void on request, but are not seriously unwell (medium risk of contamination)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Bag urine is not recommended for culture** — high false-positive rates.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bag urine: not recommended for culture due to high false positive rates (high risk of contamination)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Clean the perineum with saline-soaked gauze for 10 seconds; do not use antiseptic.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The perineal/genital area should be cleaned with saline-soaked gauze for 10 seconds before collecting clean catch urine. Do not use antiseptic solution.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dipstick screens; culture with pyuria confirms.** Dipstick is less reliable in neonates and young infants, mainly through false negatives.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urine dipstick is a useful screening test, but a positive urine culture with pyuria is required to confirm the diagnosis … Dipstick results are less reliable in neonates and young infants, particularly due to false negatives",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Send for culture if:** under 3 months · leukocyte esterase or nitrite positive · suspected upper UTI · recurrent UTI · not responding in 24–48 hours · clinical UTI despite an unremarkable dipstick.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Send urine samples for culture if: under 3 months old positive dipstick result for leukocyte esterase or nitrite child thought to have acute upper UTI recurrent UTI not responding to treatment within 24 to 48 hours clinical symptoms and signs of UTI without suggestive dipstick findings",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Absent nitrites do not exclude UTI**; blood and protein are not reliable markers.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood and protein are not reliable markers of UTI … Nitrites are not produced by all urinary organisms. Absence of nitrites on dipstick does not exclude UTI",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Febrile, unwell infants under 4 weeks:** FBE, blood culture and LP, and admit for IV antibiotics.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Febrile and unwell infants <4 weeks of age: FBE, blood culture, LP (and admit for IV antibiotics)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Admit any seriously unwell child and every infant under 3 months for initial IV antibiotics.** Oral antibiotics are usually appropriate for other children with uncomplicated UTI.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child who is seriously unwell and infants <3 months should be admitted for initial IV antibiotics. Oral antibiotics are usually appropriate for other children with uncomplicated UTI",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Duration: 3–5 days for cystitis; 7–10 days for pyelonephritis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "3-5 day course for children with cystitis … 7–10 day course for children with pyelonephritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Cystitis:** cefalexin 20 mg/kg (max 750 mg) orally three times daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cystitis: Cefalexin 20 mg/kg (max 750 mg) oral tds",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Pyelonephritis, oral:** under 12 months cefalexin 25 mg/kg (max 1 g) four times daily; 12 months and over cefalexin 45 mg/kg (max 1.5 g) three times daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "<12 months Cefalexin 25 mg/kg (max 1 g) oral qid … ≥12 months Cefalexin 45 mg/kg (max 1.5 g) oral tds",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not delay antibiotics in a seriously unwell child** to obtain urine. **Empiric IV: gentamicin**; check levels and renal function if continuing beyond 48 hours, and consider a 3rd-generation cephalosporin if IV therapy will be prolonged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not delay antibiotic therapy for a child who is seriously unwell, even if a urine sample has not been obtained … Recommended empiric IV antibiotics: gentamicin (check gentamicin levels and renal function as per local guidelines if continuing gentamicin beyond 48 hours - consider switching to 3rd generation cephalosporin if prolonged IV antis required)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Switch to oral when clinically improved or tolerating oral.** Local susceptibility patterns and prior microbiology should guide the empiric choice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Switch to oral antibiotics when clinically improved and/or tolerating oral … Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns; please refer to local guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Renal tract ultrasound:** all children with atypical UTI, and infants under 6 months with recurrent UTI or without antenatal monitoring. **Most children do not need an ultrasound for a first UTI.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Renal tract ultrasound in all children with atypical UTI (see criteria above) and infants <6 months of age with recurrent UTI, or those who have not had antenatal monitoring to exclude renal tract abnormalities … Most children do not require an ultrasound for a first UTI.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Routine antibiotic prophylaxis is not generally recommended.** Arrange specialist follow-up for recurrent UTI or known renal anomalies.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Routine antibiotic prophylaxis is not generally recommended. Specialist follow-up should be arranged for children with recurrent UTI or known renal anomalies",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider an STI screen in sexually active young people.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider STI screen in sexually active young people",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary tract infection' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_tract_infection/, retrieved 2026-09-23"
+  }
+ ]
+}

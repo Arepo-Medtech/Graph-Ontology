@@ -1,0 +1,150 @@
+{
+ "guideline": "guidelines/dehydration-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Dehydration' (Last updated April 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 18,
+  "pass": 18,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Serial weights are the best measure of acute change in fluid status**; clinical signs are often imprecise.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serial weights are the best measure of acute changes in fluid status. Clinical signs can help estimate the severity of dehydration but are often imprecise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most accurate: pre-morbid weight (within 2 weeks) minus current weight** — a 10 kg child now 9.5 kg has a 500 mL deficit and is 5% dehydrated. Without a recent weight, estimate from history and examination.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most accurate assessment of degree of dehydration is based on the difference between the pre-morbid body weight (within last 2 weeks) and current body weight (eg a 10 kg child who now weighs 9.5 kg has a 500 mL water deficit and is 5% dehydrated) … When a recent weight is not available, use the history and clinical examination to estimate the degree of dehydration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severity bands:** mild under 5% · moderate 5–9% (signs mildly to moderately abnormal) · severe 10% or more (signs markedly abnormal).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild dehydration (<5%) … Moderate dehydration (5-9%) Signs mildly to moderately abnormal … Severe dehydration (≥10%) Signs markedly abnormal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mild dehydration has no clinical signs** — perhaps thirst or reduced urine output. More numerous or pronounced signs mean greater severity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with mild dehydration have no clinical signs. They may have increased thirst and/or reduced urine output … More numerous/pronounced signs indicate greater severity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Shock** = one or more of reduced conscious state, tachycardia, tachypnoea, hypotension, weak peripheral pulses, mottled/cold peripheries, acidosis. **If in doubt, manage as severe dehydration.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For clinical shock, one or more of these signs will be present: reduced conscious state, tachycardia, tachypnoea, hypotension, weak peripheral pulses, mottled/cold peripheries, acidosis If in doubt, manage as per severe dehydration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Higher risk of severe dehydration and electrolyte disturbance:** infants under 6 months, GI pathology (short gut, stomas, Hirschsprung), cystic fibrosis, renal impairment, diuretics, metabolic disorders.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Risk factors for severe dehydration and electrolyte disturbances Infants <6 months old Gastrointestinal pathology (eg short gut syndrome, ileostomy, colostomy, Hirschsprung disease) Cystic fibrosis Renal impairment Use of diuretics Metabolic disorders",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dehydration is especially dangerous** with complex/cyanotic congenital heart disease (especially shunts), slow weight gain, post organ transplant, or nephrotoxic medications.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Conditions where dehydration carries a high risk for children Complex/cyanotic congenital heart disease (especially cardiac shunts) Slow weight gain Post organ transplant Use of nephrotoxic medications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about hypertonic or hypotonic fluids** — diluted formula, soft drinks, water only, fortified feeds.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recent use of potentially hypertonic/hypotonic fluids, eg diluted formula or soft drinks, water only, fortified feeds",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mild–moderate dehydration with a clear explanation usually needs no investigations.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If only mild to moderate dehydration is present and there is a clear explanation for dehydration (eg viral illness, reduced oral intake), investigations are not usually necessary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check electrolytes and BGL** in infants under 6 months with poor feeding or large losses, anyone needing IV fluids, severe dehydration, signs of electrolyte disturbance (hypertonia, hyperreflexia, convulsions, jitteriness, altered consciousness, irregular heart rate, doughy skin turgor), predisposing conditions, or hyper/hypotonic fluid intake.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Check electrolytes and blood glucose level (BGL) in children with age <6 months with poor feeding or large volume losses intravenous fluid requirements severe dehydration clinical signs of electrolyte disturbances eg hypertonia, hyperreflexia, convulsions, jittery movements, altered conscious state, irregular heart rate, doughy skin turgor (sign of hypernatremia) pre-existing medical conditions that predispose to electrolyte abnormalities (eg renal impairment, cystic fibrosis, metabolic disorders, diuretic use) history of hyper or hypotonic fluid administration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In shock, give prompt IV fluid boluses. Consider sepsis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a child is haemodynamically unstable (ie in shock), prompt fluid resuscitation with intravenous fluid boluses must be given. Sepsis must be considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild or moderate dehydration: enteral (oral or NG) rehydration is preferable.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For children with mild or moderate dehydration, enteral (oral or NG) rehydration is preferable",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**IV rehydration is required** for severe dehydration or when enteral rehydration is not tolerated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IV fluid rehydration is required in severe dehydration or children who cannot tolerate enteral rehydration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Rehydrate rapidly in most gastroenteritis, but more slowly** in respiratory infection, DKA, meningitis and electrolyte disturbance including hypernatraemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Replacement of fluids may be rapid in most cases of gastroenteritis but should be slower in other illnesses (eg respiratory infection, diabetic ketoacidosis, meningitis and electrolyte disturbances including hypernatremia)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Fluid management is set by the degree of dehydration, maintenance requirements and ongoing losses.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The mainstay of treatment is fluid management, determined by a combination of the degree of dehydration, maintenance fluid requirements and any ongoing losses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** for shock, electrolyte disturbance, or predisposing factors for severe or complicated dehydration.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Child presents with shock Child has electrolyte disturbance and/or predisposing factors for severe or complicated dehydration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider transfer if shock persists after a maximum of 40 mL/kg in boluses** — and look for another cause such as sepsis — or with severe electrolyte derangement.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical signs of shock persist after maximum of 40 mL/kg fluid given in boluses. Consider other possible causes of shock (eg sepsis and need for antibiotics) other than dehydration alone Severe electrolyte derangement",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Discharge** mild dehydration without a serious cause, with advice to continue rehydrating at home. **Consider review within 48 hours for young infants.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with mild dehydration and no serious underlying cause can be discharged with advice on continuing rehydration at home … Consider a review within 48 hours for young infants",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Dehydration' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Dehydration/, retrieved 2026-09-23"
+  }
+ ]
+}

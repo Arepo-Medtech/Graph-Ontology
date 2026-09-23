@@ -1,0 +1,200 @@
+{
+ "guideline": "guidelines/acute-meningococcal-disease-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Acute meningococcal disease' (Last updated May 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Meningococcal disease can be rapidly fatal, even with treatment.** Mortality is up to 10% despite prompt treatment; 10–20% have long-term morbidity including deafness, neurological deficits and amputations.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Meningococcal disease can be rapidly fatal, even with treatment … Despite prompt treatment, IMD is associated with a mortality rate of up to 10%. 10-20% have long-term morbidity, including deafness, neurological deficits, and partial or full amputations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**It presents as sepsis with DIC and a rapidly progressive non-blanching petechial/purpuric rash** (higher mortality), **or as meningitis with or without a rash**; more rarely septic arthritis, pneumonia, pharyngitis, conjunctivitis or occult bacteraemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "severe sepsis complicated by disseminated intravascular coagulation (DIC), with rapidly progressive non-blanching petechial/purpuric rash (higher mortality) meningitis with or without a rash more rarely, septic arthritis, pneumonia, pharyngitis, conjunctivitis, occult bacteraemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** rapid onset (<12 hours) of headache, loss of appetite, nausea, vomiting, sore throat and coryza; fever; leg pain or myalgia. **Infants may show only poor feeding, irritability, lethargy, mottling or a high-pitched moaning cry.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rapid onset (<12 hours) of headache, loss of appetite, nausea, vomiting, sore throat and coryza Fever Leg pain or myalgia … Infants can present with non-specific symptoms such as poor feeding, irritability, lethargy, mottling, and/or a high-pitched moaning cry",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examination:** pallor or mottling and/or cool peripheries, altered conscious state, neck stiffness, headache, photophobia, bulging fontanelle, **non-blanching petechiae/purpura**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Abnormal skin colour (pallor or mottling) and/or cool peripheries Altered conscious state Neck stiffness, headache, photophobia, bulging fontanelle Non-blanching rash: petechiae/purpura",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **A blanching rash does not exclude it**; the rash can initially be macular or maculopapular and blanch.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Note: a blanching rash does not exclude meningococcal disease; the rash can initially be a macular or maculopapular rash that blanches",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Risk factors:** Aboriginal and Torres Strait Islander; immunodeficiency (asplenia, immunoglobulin or complement deficiency, sickle cell disease, HSCT, HIV); cigarette smoke; crowded housing; prolonged contact with a carrier. **Ask about vaccination status, including MenB.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aboriginal and Torres Strait Islander Immunodeficiency such as asplenia, immunoglobulin deficiencies, complement deficiencies, sickle cell disease, haematopoietic stem cell transplant, HIV Exposure to cigarette smoke Crowded housing or living in 'close quarters' eg student dormitory Prolonged contact with a person carrying meningococcal bacteria … Vaccination status, including Men B",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Investigations must not delay antibiotics.** Blood (IV or intraosseous) for culture before antibiotics if possible, plus PCR in a separate EDTA tube.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Investigations should NOT delay antibiotic administration … Blood from IV or intraosseous Culture: should be obtained prior to antibiotic administration if possible PCR (separate EDTA tube)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**CSF only once stabilised and with no contraindication to LP:** Gram stain (Gram-negative diplococci), cell count, biochemistry, culture ± meningococcal PCR.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CSF, once initially stabilised and no contraindication to lumbar puncture Gram stain (Gram negative diplococci), cell count, biochemistry, culture +/- meningococcal PCR",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Until meningococcal infection is confirmed, treat and resuscitate as for sepsis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If meningococcal infection is not yet confirmed, treat as per Sepsis … Resuscitate as appropriate, see Sepsis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Give ceftriaxone/cefotaxime as soon as meningococcal disease is suspected, within 15 minutes**; if unavailable, give benzylpenicillin. Empiric treatment is a third-generation cephalosporin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Give ceftriaxone/cefotaxime as soon as meningococcal disease is suspected, within 15 min. If unavailable, give benzylpenicillin … Initial empiric treatment in suspected meningococcal disease is a third-generation cephalosporin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ceftriaxone 100 mg/kg (max 4 g) IV daily** (over 4 weeks of life).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ceftriaxone 100 mg/kg (max 4 g) IV daily for >4 weeks of life",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Or cefotaxime 50 mg/kg (max 2 g) IV** — 12-hourly in week 1 of life, 6–8-hourly in weeks 2–4, 6-hourly after week 4.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefotaxime 50 mg/kg (max 2 g) IV Week 1 of life: 12 hourly Week 2-4 of life: 6-8 hourly >Week 4 of life: 6 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**No IV or intraosseous access: give it IM** — may need two injections because of volume or muscle size — and repeat the dose once IV access is available.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If no IV/intraosseous access, give IM May need two injections due to volume/muscle size and repeat the dose once IV access available",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**If ceftriaxone/cefotaxime is unavailable: benzylpenicillin 60 mg/kg (max 2.4 g) IV** — 12-hourly in week 1, 6-hourly in weeks 2–4, 4-hourly after week 4.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If ceftriaxone/cefotaxime is unavailable Benzylpenicillin 60 mg/kg (max 2.4 g) IV Week 1 of life: 12 hourly Week 2-4 of life: 6 hourly >Week 4 of life: 4 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Children treated with benzylpenicillin also need contact-prophylaxis antibiotics** to eradicate carriage.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children treated with benzylpenicillin require concurrent treatment with contact prophylaxis antibiotics to eradicate meningococcal carriage",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Anticipate rapid deterioration.** Carefully titrated fluid resuscitation with repeated assessment, and **early consideration of inotropes**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anticipate rapid deterioration with close monitoring and repeated assessments … Fluid resuscitation as needed with early consideration of inotropes … Carefully titrated fluid resuscitation with repeated assessment of clinical condition is vital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Confirmed disease: 5 days of IV treatment.** Continue the third-generation cephalosporin until sensitivities are confirmed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Confirmed meningococcal disease requires 5 days of IV treatment … Continue a third-generation cephalosporin until sensitivities confirmed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**If benzylpenicillin susceptibility is confirmed, de-escalate to benzylpenicillin** 60 mg/kg (max 2.4 g) IV — 12-hourly in week 1, 6-hourly in weeks 2–4, 4-hourly after week 4.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If susceptibility of N meningitidis to benzylpenicillin is confirmed, de-escalate treatment: Benzylpenicillin 60 mg/kg (max 2.4 g) IV Week 1 of life: 12 hourly Week 2-4 of life: 6 hourly >Week 4 of life: 4 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dexamethasone given for empiric meningitis can be stopped once N. meningitidis is confirmed** — no clearly demonstrated benefit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If dexamethasone has been given for empiric meningitis management, this can be ceased once N meningitidis infection is confirmed as there is no clearly demonstrated benefit",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Isolate with droplet precautions** per local infection-control guidelines.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children should be isolated with droplet precautions according to local hospital infection control guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Notify every presumed or confirmed case immediately** to the local state authority.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute meningococcal disease is a notifiable disease with all cases (presumed or confirmed) requiring immediate notification to the local state authority",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give contact prophylaxis to at-risk contacts as soon as possible.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Contact prophylaxis involves the treatment of at-risk contacts to prevent further disease and should be given as soon as possible",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cases:** vaccination not recommended unless the case has underlying risk factors. **Contacts:** secondary-prevention vaccination may be offered to non-immunised contacts for serogroups A, C, W or Y; **a single first dose of MenB is unlikely to protect a contact during the risk period.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vaccination is not recommended unless the case has underlying risk factors (See above) … Secondary prevention vaccination may be offered to non-immunised contacts to reduce secondary cases for serogroups A, C, W or Y … A single (first) dose of MenB vaccine is unlikely to confer protection to the contact during the period of disease risk",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Manage every child with acute meningococcal disease in a facility that can provide intensive care**; if unavailable, stabilise and transfer. Consult the local paediatric team for all suspected cases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with acute meningococcal disease should be managed in a facility with the capacity to provide intensive care … If these facilities are unavailable, the child should be stabilised and transferred as appropriate … All children with suspected meningococcal disease",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** IV treatment can be completed through HITH once haemodynamically stable and afebrile, and after contact prophylaxis has been considered.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children can complete IV treatment through HITH services if available, once haemodynamically stable and afebrile Contact prophylaxis has been considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute meningococcal disease' (Last updated May 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_meningococcal_disease/, retrieved 2026-09-23"
+  }
+ ]
+}
