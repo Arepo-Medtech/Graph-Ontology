@@ -305,10 +305,29 @@ def main() -> int:
             con.execute(f"INSERT INTO name_hint SELECT 'DRUGCENTRAL', id, name FROM {dc('structures')}")
 
     # --- UMLS: HPO phenotype -> SNOMED, the bridge from signs and symptoms to SNOMED findings --------------------
+    # A shared UMLS CUI groups synonyms, and also near-synonyms: hand-checked 23 Sep 2026, links whose SNOMED name
+    # differs from the HPO label were right 34 of 40 (85%, Wilson lower bound ~0.71 -- inadmissible) and wrong by
+    # NARROWING (Polycythemia -> Polycythemia vera, Retinal hole -> Retinal round hole). Links whose SNOMED name equals
+    # the HPO label were right 40 of 40 (Wilson lower bound 0.912 -- Tier 2). So only those load as edges, EDGE by edge
+    # (a same-name term's other co-CUI targets are exactly the narrowings); the rest are written as candidates for a
+    # person to cache/umls/hpo_snomed_candidates.tsv (UMLS-derived, licensed, not committed).
     if UMLS_HPO.exists():
-        ins("HPO phenotype -> SNOMED (UMLS shared CUI)", f"""SELECT DISTINCT 'HP', hpo_id, 'hp:umls_snomed', 'SCT', snomed_code, 'UMLS',
-                'UTS crosswalk HPO -> SNOMEDCT_US', 'shared CUI', 'ungraded', 'asserted', '{PIN['umls']}', NULL
-            FROM read_csv('{UMLS_HPO}', delim='\t', header=true, all_varchar=true, quote='') WHERE snomed_code IS NOT NULL AND snomed_code <> ''""")
+        con.execute("""CREATE OR REPLACE MACRO nrm(x) AS
+                       regexp_replace(replace(replace(lower(coalesce(x, '')), 'ae', 'e'), 'oe', 'e'), '[^a-z0-9]', '', 'g')""")
+        con.execute(f"""CREATE TEMP TABLE umls_hp AS
+            SELECT u.hpo_id, u.snomed_code, u.snomed_name, hp.name AS hp_name, c.pt AS au_name,
+                   (nrm(hp.name) = nrm(c.pt) OR nrm(hp.name) = nrm(u.snomed_name)) AS same_name
+            FROM read_csv('{UMLS_HPO}', delim='\t', header=true, all_varchar=true, quote='') u
+            JOIN (SELECT code, any_value(name) AS name FROM name_hint WHERE vocab = 'HP' GROUP BY 1) hp ON hp.code = u.hpo_id
+            JOIN cmp.concept c ON c.id = u.snomed_code
+            WHERE u.snomed_code IS NOT NULL AND u.snomed_code <> ''""")
+        ins("HPO phenotype -> SNOMED (UMLS, same name only)", f"""SELECT DISTINCT 'HP', hpo_id, 'hp:umls_snomed', 'SCT', snomed_code, 'UMLS',
+                'UTS crosswalk HPO -> SNOMEDCT_US', 'shared CUI + same name', '2', 'asserted', '{PIN['umls']}',
+                json_object('calibrated_on', 'hand check 40/40 same-name edges, 23 Sep 2026')
+            FROM umls_hp WHERE same_name""")
+        con.execute(f"""COPY (SELECT hpo_id, hp_name, snomed_code, au_name, snomed_name FROM umls_hp WHERE NOT same_name ORDER BY 1)
+                        TO '{UMLS_HPO.parent / "hpo_snomed_candidates.tsv"}' (DELIMITER '\t', HEADER)""")
+        log["HPO -> SNOMED candidates for a person (not edges)"] = con.execute("SELECT count(*) FROM umls_hp WHERE NOT same_name").fetchone()[0]
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's

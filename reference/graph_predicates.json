@@ -644,7 +644,7 @@
       "strength_kind": "exact",
       "source": "UMLS Metathesaurus crosswalk HPO -> SNOMEDCT_US (UTS REST API, licensed; derived data not redistributed)",
       "status": "built",
-      "note": "The bridge from signs and symptoms to SNOMED findings. A shared CUI is synonymy by UMLS editors, not a SNOMED-HPO map. Scored for hierarchy preservation: where HP child is-a HP parent, is the child's SNOMED concept at or below the parent's?"
+      "note": "Signs and symptoms to SNOMED findings through a shared UMLS CUI. Only edges whose SNOMED name equals the HPO label load (hand check 40/40, Wilson lower bound 0.912 -> Tier 2), edge by edge. Differently named links were right 34/40 (85%, lower bound ~0.71 -> inadmissible) and wrong by narrowing (Polycythemia -> Polycythemia vera; Retinal hole -> Retinal round hole; Tardive dyskinesia -> Neuroleptic-induced tardive dyskinesia), so they are candidates for a person in cache/umls/hpo_snomed_candidates.tsv, not edges. Hierarchy preservation (64% on active Australian targets) is a diagnostic: it measures two ontologies' structures agreeing, not whether a mapping is right. Measured 23 Sep 2026."
     }
   ],
   "not_imported": {

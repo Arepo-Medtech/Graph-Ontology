@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**893,831 nodes, 4,031,867 edges, 142 edge types, 16 vocabularies — every edge validated against the register.**
+**894,992 nodes, 4,058,282 edges, 147 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*.)
 Written to `out/graph.duckdb` (144 MB, git-ignored), rebuilt from source in about two minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -79,10 +79,9 @@ fosfestrol — plus one plain error, *loteprednol etabonate → digoxin*. Patien
 
 ## What the sources could not give
 
-- **HPO phenotypes cannot be linked to SNOMED findings by lookup.** `hp.obo` (2026-09-02) carries no SNOMED or UMLS
-  cross-references — its top xrefs are Fyler, NCIT and MedDRA (92). HPO therefore joins the graph on the *disease*
-  side (OMIM / Orphanet ↔ MONDO, 12,772 of 12,867) but not the *phenotype* side. `hp:maps_to_snomed` is registered as
-  `needs_source`.
+- **HPO phenotypes have no SNOMED path of their own.** `hp.obo` (2026-09-02) carries no SNOMED or UMLS
+  cross-references — its top xrefs are Fyler, NCIT and MedDRA (92). They are now bridged through UMLS instead; see
+  *Signs and symptoms* above.
 - **HPO is rare-disease evidence.** Its annotation file describes itself as "HPO annotations for rare diseases"
   (OMIM, DECIPHER, Orphanet). Its frequency classes are the nearest thing to P(sign | disease) — sensitivity — but
   give no specificity and say little about primary-care conditions. `sign_suggests` stays `needs_source`.
@@ -126,6 +125,32 @@ arthritis* failed to reach *Rheumatoid arthritis*, and was fixed to strip repeat
 | PBS indications left as candidate frames for a person | 341 — `reference/pbs_indication_bindings.json` |
 | unbound corpus conditions that now bind exactly | 14 of 374 — recommendations in `reference/corpus_condition_candidates.json`, not applied: `snomed_bindings.json` belongs to the binder and its review loop |
 | check against the existing binder, over its 265 bound conditions | 257 bound by both, **257 on the same concept, 0 different** — agreement between two exact-match implementations, not a precision measurement |
+
+**Signs and symptoms — HPO phenotype → SNOMED CT-AU, through UMLS (built, Tier 2).** UMLS places an HPO term and a
+SNOMED concept under one CUI when its editors judge them synonymous; the UTS crosswalk (19,891 phenotypes, about an
+hour at a polite rate; key in `.env`, never printed) returned SNOMED concepts for **6,029**. A shared CUI groups
+near-synonyms as well as synonyms, so the links were split and hand-checked:
+
+| links | hand check | tier | handling |
+|---|---|:-:|---|
+| SNOMED name **equals** the HPO label | **40 / 40** (Wilson lower bound 0.912) | **2** | **2,754 edges**, 2,614 phenotypes, all on concepts active in SNOMED CT-AU |
+| SNOMED name **differs** | **34 / 40** (85%, lower bound ~0.71) | inadmissible | **4,533 candidates** for a person, in `cache/umls/` — not edges |
+
+The errors in the second class are almost all **narrowing**: *Polycythemia → Polycythemia vera*, *Retinal hole →
+Retinal round hole*, *Tardive dyskinesia → Neuroleptic-induced tardive dyskinesia*; a few are related but different
+(*Anorexia → Refusing food*). The filter works **edge by edge**, because a same-named term's other co-CUI targets are
+exactly those narrowings (*Supernumerary tooth* also landing on *Supplemental tooth*).
+
+*A test that measured the wrong thing.* The first score was hierarchy preservation — where HPO says A is-a B, is A's
+SNOMED concept at or below B's? It read 62%, "inadmissible". Read by hand, the failures were mostly correct mappings
+where SNOMED organises the same concepts differently (*Spastic paraparesis* is not under *Paraparesis* in SNOMED): it
+measures whether two ontologies agree in structure, not whether a mapping is right. It is kept as a diagnostic (71.7%
+on the loaded edges) and the tier comes from the hand check. It is the third time in this build that a first score was
+wrong about its own question — DrugCentral's salts, LOINC's synonyms, HPO's hierarchy — and each time reading the
+failures found it.
+
+UMLS is licensed: the crosswalk and the candidates stay in `cache/umls/` (git-ignored). **30% of HPO** is bridged by
+this route; the rest has no SNOMED concept under a shared CUI.
 
 ## Three walks
 

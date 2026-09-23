@@ -173,8 +173,11 @@ def main() -> int:
             SELECT count(*), count(*) FILTER (WHERE kept) FROM per""").fetchone()
         lo, _ = wilson(ok, n)
         report["route:hpo->snomed (UMLS, hierarchy preserved)"] = {"hpo_is_a_pairs_both_mapped": n, "hierarchy_kept": ok,
-            "rate": round(ok / n, 4) if n else None, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
-        con.execute("UPDATE edge SET tier = ? WHERE predicate = 'hp:umls_snomed'", [tier(lo, n)])
+            "rate": round(ok / n, 4) if n else None, "wilson_lo": round(lo, 4),
+            "use": "diagnostic -- two ontologies' structures agreeing, not mapping precision; tier set by hand check"}
+        # Diagnostic only. Read by hand, the pairs that fail are mostly CORRECT mappings where SNOMED organises the same
+        # concepts differently from HPO (Spastic paraparesis is not under Paraparesis in SNOMED) -- it measures agreement
+        # between two ontologies' structures, not mapping precision. The tier comes from the hand check (build_edges.py).
         report["coverage:HPO phenotypes bridged to SNOMED"] = dict(zip(("hpo_phenotypes", "bridged", "bridged_in_au_release"), con.execute("""
             SELECT (SELECT count(*) FROM node WHERE vocab = 'HP'),
                    (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'hp:umls_snomed'),
