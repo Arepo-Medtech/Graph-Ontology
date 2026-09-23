@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,050,986 nodes, 4,602,190 edges, 158 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM* and *How a drug works*.)
+**1,050,986 nodes, 4,602,210 edges, 158 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -239,8 +239,8 @@ alone makes 2,111 edges, Athena alone 10,325.
 
 ## Signs → diagnoses: likelihood ratios (Tier 2, awaiting sign-off)
 
-The evidence layer the design was built around: how much a finding moves the odds of a diagnosis. **232 edges, 131
-findings, 52 diagnoses**, from **85 published diagnostic-accuracy reviews** — the JAMA *Rational Clinical Examination*
+The evidence layer the design was built around: how much a finding moves the odds of a diagnosis. **252 edges, 145
+findings, 57 diagnoses** in the graph, from **154 published diagnostic-accuracy reviews** (837 records) — the JAMA *Rational Clinical Examination*
 series (1992–2026) and meta-analyses of bedside findings in primary care, emergency, paediatric and musculoskeletal
 journals, Cochrane among them. Heart failure, pneumonia (adults and children), meningitis, UTI, strep throat,
 influenza and COVID-19, ACS and MI, PE and DVT, aortic dissection, AAA, PAD, ACL, meniscus, rotator cuff, hip OA and
@@ -276,6 +276,45 @@ direction** of the LR, and none is merged.
 discharge, LR 0.3–0.65 across two reviews, for UTI; LR− is its own edge). 50 edges are derived from pooled
 sensitivity and specificity and marked so, with no invented interval. Every edge carries its population and setting
 (the design's `calibrated_on`) — an emergency-department LR is never silently a primary-care one.
+
+### Passes 2–4: scores, tests, prognosis and ranges
+
+The first pass took bedside findings only; every source it read was listed with what it held instead. Passes 2–4
+re-read **the whole canon** — all 318 cached abstracts, including the imaging- and laboratory-titled reviews the first
+pass filtered out (which is how six bedside findings from the JAMA headache review, filtered out by "neuroimaging" in
+its title, were found and added) — for everything else with a number: **837 records from 154 reviews, all 837
+verified** against their abstracts (the verifier caught a cut-off written as a word, "three").
+
+| kind | records | predicate | subject bound in |
+|---|---:|---|---|
+| bedside finding (incl. 38 range-only) | 471 | `finding_lr_if_present` / `_absent` | clinical finding, situation, event |
+| lab / imaging / ECG test (21 range-only) | 226 | `test_result_lr` — `attrs.result` is the threshold ("BNP < 100 pg/mL") | procedure, observable, result finding |
+| score, questionnaire, decision rule (5 range-only) | 120 | `score_result_lr` — `attrs.result` is the band ("HEART 7–10") | assessment scale, observable, staging and scales |
+| prognosis (a later outcome) | 20 | `finding_lr_for_outcome` | finding / scale; object is the outcome |
+
+A **range across studies** is stored as `attrs.lr_range` with no point estimate (method *LR range across studies*): it
+can be shown, never multiplied. Interval LRs (synovial white count 0–25, 25–50, 50–100 × 10⁹/L) are separate edges,
+one per band; an infinite band is left out. Duplicate publications (the same pooled numbers in PLoS One and HTA; in
+two athletics journals) are recorded once.
+
+**Binding decides what enters the graph.** Every distinct binding was read against the source's words, and the tier
+is set **per binding family**:
+
+| family | read | right first time | lower bound | tier | in the graph |
+|---|---:|---:|---:|:-:|---|
+| bedside findings | 203 | 186 | 0.870 | **2** | 252 edges |
+| tests, scores, prognosis | 79 | 65 | 0.724 | **inadmissible** | **held**: 130 records bound, kept as candidates |
+
+The test-and-score errors are specific: a combination bound to one of its parts ("fever *and* presentation within 3
+days" → Fever), a composite outcome narrowed ("death *or* poor neurological outcome" → Death; "severe alcohol
+withdrawal" → *delirium*), a specific test broadened (rheumatoid factor *IgA* → any RF; inhibin *B* → inhibin), a
+reading turned into a diagnosis (a systolic of 140 → *Systolic hypertension*), and the wrong route (four
+transcervical and point-of-care ultrasound records → *Ultrasound of oral cavity*). Because the family's first-pass
+precision is below Tier 2, none of its 130 bound records is an edge yet; each carries its proposed concept for a person
+(`reference/diagnostic_accuracy_bindings.json`), and the build admits the family automatically once its measured
+binding earns Tier 2. The terminology is already matched: 9 of the 41 proposed test procedures reach **60 LOINC codes**
+through the graph's `loinc:is_a_snomed` / `loinc:sct_concept` edges — BNP, CRP, ESR, troponin … — so an approved test
+edge arrives connected to the lab codes that report it.
 
 **Every edge is `corrected_pending_attestation`**: a clinician signs off before any of it is used. **Priors**
 (`prevalence_in`) are not built, so these LRs move odds no one has stated yet.
