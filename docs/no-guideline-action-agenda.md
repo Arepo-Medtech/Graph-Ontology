@@ -77,6 +77,11 @@ The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
    `reference/conditions.json` records the licence as "Commonwealth CC BY". **That is not what these pages say.** The health.gov.au
    commercial-use clause also bears on the 24 Immunisation Handbook guidelines already merged. Whether Track A can proceed, and on what
    footing, is the owner's call (and possibly legal advice), not an engineering one.
+1b. ⚠️ **RCH Melbourne terms (found 2026-09-23 during research; confirmed by reading the page):** clause 5.2 of
+   https://www.rch.org.au/terms-and-conditions/ grants a personal-use licence only, and bars reproduction or republication
+   without RCH's prior written consent. **171 guidelines already on `master` quote RCH verbatim**, authored on a
+   "quote with attribution" footing that was set without reading these terms. That was an error. Nothing has been removed.
+   A consent request is drafted in `docs/rch-permission-request.md` (**not sent**). Until decided, **no new RCH-sourced authoring.**
 2. **Non-commercial (NC) licences:** are CC BY-NC / NC-ND sources acceptable, given the project may be commercial?
 3. ~~Consensus access~~ **Done:** the account connector is signed in (10 results per search; Pro not yet reflected, and reconnecting should give 20).
 4. ~~International guidance: evidence layer only?~~ **Decided 2026-09-23:** international guidelines are first-line sources, labelled by origin, paired with the PBS access overlay (Track C).
@@ -84,3 +89,4 @@ The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
 ## 6. Progress log
 - 2026-09-23: triage complete (393 gaps / 37 near-miss / 45 duplicate / 9 admin / 9 artefact). Source research launched in 6 groups.
 - 2026-09-23: owner direction: international guidelines are first-line sources (Track C). Researchers told to add `origin` and to search Consensus with `country: au`.
+- 2026-09-23: RCH terms clause 5.2 found and confirmed (personal use only). New RCH authoring paused; consent request drafted.
