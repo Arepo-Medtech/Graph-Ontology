@@ -1,0 +1,424 @@
+{
+ "guideline": "guidelines/schizophrenia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://doi.org/10.1177/00048674251406058"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel) 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia' (published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404)). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: CC BY-NC 4.0 (read at Europe PMC fullTextXML <license> element for PMC13000005). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 24,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 24
+ },
+ "claims": [
+  {
+   "claim": "**The diagnosis is clinical.** No blood test, scan or cognitive test confirms it; it rests on a full psychiatric assessment, collateral history and ruling out conditions that mimic it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e242faac58cc889d",
+     "n": 321,
+     "p": "no objec"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Life expectancy is cut by about 15 to 20 years**, mostly from cardiometabolic disease tied to modifiable risks such as inactivity, diet and smoking.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "dfa69bfb40e3ed0a",
+     "n": 142,
+     "p": "People w"
+    },
+    {
+     "h": "c26107ced57c1402",
+     "n": 168,
+     "p": "The majo"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**About 5% of first presentations have an organic cause.** Reasonable initial bloods are electrolytes, kidney, liver and blood counts; metabolic measures are needed at baseline and ongoing, and fasting samples are usually not required.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b39b34356c1c5213",
+     "n": 129,
+     "p": "Secondar"
+    },
+    {
+     "h": "ed8ba93b95930496",
+     "n": 128,
+     "p": "it is re"
+    },
+    {
+     "h": "e2609b5d15d08876",
+     "n": 208,
+     "p": "Baseline"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Order thyroid tests only when the history or examination raises concern.** **Check prolactin at baseline, 3 months after starting or changing a drug or dose**, and whenever menstrual, sexual or neurological findings suggest it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c2034b33938716a5",
+     "n": 103,
+     "p": "Thus, th"
+    },
+    {
+     "h": "7c5c037e98547cc2",
+     "n": 221,
+     "p": "expert c"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Get an MRI brain if intracranial disease is possible:** headache, nausea or vomiting, seizure-like episodes, onset before 12 or after 40, abrupt or fluctuating psychosis, marked cognitive deficits, catatonia or abnormal neurological signs. Let the clinical picture decide on anti-neuronal antibodies and lumbar puncture.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ddc7d20ecb38d7cf",
+     "n": 388,
+     "p": "In the c"
+    },
+    {
+     "h": "476e5eb6def5a2c1",
+     "n": 154,
+     "p": "Clinical"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **First choice: a dopamine D2 partial agonist (oral aripiprazole, brexpiprazole or cariprazine) or lurasidone**, chosen because they are generally better tolerated, with less metabolic harm.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fb1c8791c618358f",
+     "n": 330,
+     "p": "we recom"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Start low and go slow:** raise the dose every 1–2 weeks only if response is inadequate and the drug is tolerated. Review mental state closely (for example weekly) at the start, and ask about adherence without judgement; taking under 80% of doses usually counts as non-adherence.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5b96b383ef978aac",
+     "n": 145,
+     "p": "Thus, we"
+    },
+    {
+     "h": "ef5357a0b91d2109",
+     "n": 262,
+     "p": "Assertiv"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Switch to another antipsychotic if:** there is no response at all after 2 weeks at a target-range dose with confirmed adherence; the response is still suboptimal after 2–4 weeks at the maximum recommended dose; or side effects are intolerable at any dose.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "42a991c1e3ed5ffa",
+     "n": 461,
+     "p": "Therefor"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pick the second drug from the other first-line options, or amisulpride, risperidone, or a long-acting injection of aripiprazole or paliperidone.** Prefer a different mechanism: after a partial agonist, try an antagonist such as lurasidone, amisulpride, risperidone or paliperidone depot.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "998a4f3f5cd8e634",
+     "n": 365,
+     "p": "Combined"
+    },
+    {
+     "h": "b2d75ef186d5cca0",
+     "n": 318,
+     "p": "In addit"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**For negative symptoms, first look for secondary causes** (untreated positive symptoms, depression, substance use, medical illness, extrapyramidal effects). Cariprazine, aripiprazole or low-dose amisulpride may work better, and adding an antidepressant helps some people.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6a0437e6bf22fb3e",
+     "n": 454,
+     "p": "It is th"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treatment resistance means inadequate response, with moderate to severe impairment, after two different antipsychotics each given at adequate dose and duration with confirmed adherence** (about 30% of people). Clozapine should then be considered, under tertiary mental health services.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b2f702d90ee8ff20",
+     "n": 359,
+     "p": "Treatmen"
+    },
+    {
+     "h": "3c3d0ae1ce212341",
+     "n": 151,
+     "p": "For thos"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Only around 40% respond to clozapine.** Adding ECT to standard treatment may improve response, at least over 8–12 weeks.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4abf55c17491b54c",
+     "n": 259,
+     "p": "found th"
+    },
+    {
+     "h": "fe945ef2836fad84",
+     "n": 117,
+     "p": "It is al"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If augmenting clozapine, aripiprazole at a medium dose (9 to <16.5 mg/day) was the only combination linked to fewer admissions.** High-dose olanzapine, quetiapine or risperidone added to clozapine was linked to more psychosis admissions.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3f671627b3ea0a1e",
+     "n": 187,
+     "p": "only clo"
+    },
+    {
+     "h": "fc3a82e8d0220cb0",
+     "n": 180,
+     "p": "In contr"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Avoid doses above the therapeutic range and antipsychotic polypharmacy** unless clinically necessary. If used, monitor benefit and tolerability closely, and stop the extra drug or return to a therapeutic dose if nothing has improved by 3 months.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "70d2401af25f7885",
+     "n": 385,
+     "p": "Thus, we"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen metabolic health at baseline and then every 6–12 months** from the start of antipsychotic treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ca8cea4985947784",
+     "n": 234,
+     "p": "numerous"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Metformin has the strongest evidence for preventing and treating antipsychotic weight gain; start it early, and start it together with clozapine or olanzapine.** A GLP-1 receptor agonist may be considered where accessible. Offer exercise, diet and medication review to everyone.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "26199de1f978dbc4",
+     "n": 160,
+     "p": "Adjuncti"
+    },
+    {
+     "h": "f33c28fc4bd0a83a",
+     "n": 207,
+     "p": "Early ut"
+    },
+    {
+     "h": "d885648eec572e1e",
+     "n": 168,
+     "p": "glucagon"
+    },
+    {
+     "h": "9da99a36f38e6845",
+     "n": 180,
+     "p": "non-phar"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Akathisia: first lower the dose or switch drug.** If that fails, propranolol or mirtazapine may help (low-certainty evidence).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "87ad02e9178c4981",
+     "n": 406,
+     "p": "akathisi"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Tardive dyskinesia: rationalise the antipsychotic first.** VMAT-2 inhibitors (valbenazine, deutetrabenazine) work, but they are not subsidised or routinely available in Australia or New Zealand; vitamin E has low-certainty evidence.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ab9c58d6d10d9399",
+     "n": 426,
+     "p": "The anti"
+    },
+    {
+     "h": "24de8464a37b1730",
+     "n": 137,
+     "p": "Otherwis"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hyperprolactinaemia: after rationalising, consider adding aripiprazole.** Weigh symptoms such as gynaecomastia and sexual dysfunction against the long-term risks of breast cancer and osteoporosis.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f95a89027fdd6f53",
+     "n": 154,
+     "p": "After at"
+    },
+    {
+     "h": "19d05463d3cf8697",
+     "n": 258,
+     "p": "The deci"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stopping raises relapse risk, even after 6 months to 2 years of stability in first-episode psychosis.** If a person chooses to try it after shared discussion, taper gradually over at least 3–6 months with close watch for early relapse, and keep support in place for 6–12 months after stopping, or longer.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5f348f4bd0579414",
+     "n": 197,
+     "p": "Even amo"
+    },
+    {
+     "h": "a79d66c4003fba98",
+     "n": 359,
+     "p": "we sugge"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Offer everyone psychoeducation, CBT for psychosis and relapse prevention** (learning early warning signs, symptom monitoring and a crisis plan).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7afcb6c21deb8588",
+     "n": 156,
+     "p": "relapse "
+    },
+    {
+     "h": "b4067d4da970e4dd",
+     "n": 94,
+     "p": "interven"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Add targeted therapy by need:** cognitive remediation for cognitive deficits with poor functioning; metacognitive therapy for persisting positive and negative symptoms.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "59ccb8015d9374b7",
+     "n": 144,
+     "p": "cognitiv"
+    },
+    {
+     "h": "d7d6bef237818a2e",
+     "n": 279,
+     "p": "For indi"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Strong recommendation: build lifestyle programmes into routine care from the first episode and first prescription**, with preventing weight gain as a key goal.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "447a3578c17914d2",
+     "n": 228,
+     "p": "we make "
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Smoking: varenicline, bupropion and nicotine replacement all beat placebo; varenicline has the best evidence.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1b65772aa9e46b84",
+     "n": 171,
+     "p": "multiple"
+    }
+   ],
+   "locator": "Suetani S, Siskind D et al., Australian & New Zealand Journal of Psychiatry (ANZJP-commissioned panel), 'Australian and New Zealand Journal of Psychiatry Grading of Recommendations, Assessment, Development and Evaluations (GRADE) guidelines for the management of schizophrenia', published 15 January 2026 (Aust N Z J Psychiatry 2026;60:367-404), https://doi.org/10.1177/00048674251406058, retrieved 2026-09-23"
+  }
+ ]
+}

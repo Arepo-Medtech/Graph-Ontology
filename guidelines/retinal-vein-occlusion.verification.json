@@ -1,0 +1,405 @@
+{
+ "guideline": "guidelines/retinal-vein-occlusion.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "international",
+ "method": "PARAPHRASED AND HASH-ANCHORED from American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)' (approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025)). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: © 2024 American Academy of Ophthalmology, all rights reserved. Site terms: 'This content may not be reproduced, copied, or put into any artificial intelligence program, including large language and generative AI models, without permission from the Academy.' Used in paraphrase mode under the owner decision of 2026-09-23 not to exclude sources for AI-use clauses. (read at PDF front matter (© notice) and the aao.org page footer / https://www.aao.org/terms-of-service). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 22,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 22
+ },
+ "claims": [
+  {
+   "claim": "**Outlook depends on where the vein is blocked and how ischaemic the retina is:** distal, less ischaemic occlusions do better. Central and hemi-central occlusions behave alike, are linked with glaucoma and carry more risk of anterior-segment new vessels and neovascular glaucoma than branch occlusions, so keep eye pressure controlled.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "8e9431cd7414b0e5",
+     "n": 515,
+     "p": "The prog"
+    },
+    {
+     "h": "200482ee713f5eb6",
+     "n": 77,
+     "p": "It is im"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The first examination and imaging should decide:** branch, hemi or central occlusion; whether there is macular oedema; how much ischaemia; and whether new vessels are present on the retina or iris.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e3efa0e539035d1c",
+     "n": 274,
+     "p": "Comprehe"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine for:** a relative afferent pupillary defect (reflects ischaemia and predicts new vessels); fine new iris vessels on slit lamp; pressure; and gonioscopy before dilating, above all in ischaemic central occlusion, raised pressure or high risk of iris new vessels.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "018d0e508a777458",
+     "n": 441,
+     "p": "Pupillar"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**OCT is the key test for finding and measuring macular oedema, and it drives decisions to re-inject or change treatment**, though retinal thickness does not always match visual acuity.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b34ea1286ba22b91",
+     "n": 210,
+     "p": "Optical "
+    },
+    {
+     "h": "14e5dd8d077268db",
+     "n": 81,
+     "p": "In clini"
+    },
+    {
+     "h": "106fe20cbd1bd3a9",
+     "n": 105,
+     "p": "Neverthe"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fluorescein angiography needs informed consent (death occurs in about 1 in 200,000).** Ask women of childbearing age about pregnancy and breastfeeding and use it only when truly needed.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4023541de2c097e4",
+     "n": 195,
+     "p": "An ophth"
+    },
+    {
+     "h": "0f4d5220bf01ee8f",
+     "n": 160,
+     "p": "women of"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Work with the GP:** RVO raises the risk of an occlusion in the other eye and of cardiovascular disease and stroke. **Under 50, consider haematology or general-medicine referral for a clotting work-up.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e01d611366eb9163",
+     "n": 222,
+     "p": "Discussi"
+    },
+    {
+     "h": "33bbb179aa5d7c96",
+     "n": 154,
+     "p": "Referral"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypertension accounts for about 48% of RVO, high lipids 20% and diabetes 5%.** Control them, although it is unproven that doing so improves vision or complications.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b7d4209f0027c6fe",
+     "n": 136,
+     "p": "A meta-a"
+    },
+    {
+     "h": "33503d07292d2bb4",
+     "n": 138,
+     "p": "Data are"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Intravitreal anti-VEGF is first-line for macular oedema in both branch and central occlusion.** Intravitreal steroids work but are second-line because they cause glaucoma and cataract; laser has a limited role in branch occlusion.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5c7ffde60582b6f1",
+     "n": 312,
+     "p": "The firs"
+    },
+    {
+     "h": "85407b4c7ead4bb4",
+     "n": 191,
+     "p": "Intravit"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Four anti-VEGF agents are in routine use:** ranibizumab, aflibercept 2 mg and faricimab (FDA-approved) and bevacizumab (off-label, with supporting evidence). In trials, 8 mg of aflibercept given 8-weekly was noninferior to 4-weekly 2 mg, after 3–5 monthly loading doses.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "bfc4dbc2f592a41d",
+     "n": 352,
+     "p": "Currentl"
+    },
+    {
+     "h": "2442ce6fb258076e",
+     "n": 125,
+     "p": "Afliberc"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not delay treatment.** In BRAVO, eyes first given sham and treated later never caught up with eyes treated from the start.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e4fec2ce3d0af892",
+     "n": 302,
+     "p": "Eyes ran"
+    },
+    {
+     "h": "a4d0aeccb33d8f22",
+     "n": 64,
+     "p": "Addition"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Faricimab:** in BALATON (branch) and COMINO (central), 6 monthly doses of faricimab 6 mg were noninferior to aflibercept 2 mg for vision at week 24; treatment then moved to treat-and-extend at intervals of up to 16 weeks.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c8505d99aa10f4a8",
+     "n": 255,
+     "p": "Patients"
+    },
+    {
+     "h": "0d64cdcbdf4004e6",
+     "n": 168,
+     "p": "The prim"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Expect long treatment:** about half of branch and 56% to 75% of central occlusions still need anti-VEGF for oedema more than 5 years after starting.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "eec067c2943dae0d",
+     "n": 194,
+     "p": "Approxim"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before every intravitreal injection, use a topical antiseptic such as povidone-iodine;** routine antibiotic drops are not advised. Serious injection harms are uncommon: endophthalmitis, cataract, retinal detachment, raised pressure.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2e1780d2c480b27f",
+     "n": 184,
+     "p": "In gener"
+    },
+    {
+     "h": "9a2abb8b704292e4",
+     "n": 160,
+     "p": "Severe a"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Systemic safety:** anti-VEGF drugs carry a theoretical risk of arterial clots, but meta-analyses have not shown more major cardiovascular events or deaths.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c20a0639e6af721f",
+     "n": 178,
+     "p": "All anti"
+    },
+    {
+     "h": "cba8a3665f50bc9b",
+     "n": 144,
+     "p": "A meta-a"
+    },
+    {
+     "h": "3a4c117836492f47",
+     "n": 146,
+     "p": "Another "
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Branch occlusion: start with anti-VEGF.** Consider steroids and/or grid laser when the response fails or falls short.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "103659891e9671c1",
+     "n": 295,
+     "p": "In concl"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Steroid options:** in SCORE (central occlusion), triamcinolone 1 mg was preferred to 4 mg, which caused the most cataract and pressure rise. The dexamethasone implant's benefit rose from day 30, peaked at 90 days and was gone by 6 months; COBALT re-treated as often as every 4 months in branch occlusion.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "765c4dc575fb5199",
+     "n": 162,
+     "p": "particip"
+    },
+    {
+     "h": "14ef08248eedfe8c",
+     "n": 95,
+     "p": "led to s"
+    },
+    {
+     "h": "8f7d08797b54e196",
+     "n": 172,
+     "p": "with ret"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Overall, pressure rise and cataract with steroids make anti-VEGF the better first treatment.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c366de7676acfd6a",
+     "n": 140,
+     "p": "Altogeth"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Grid laser can be considered in branch occlusion with a perfused macula, oedema and vision of 20/40 or worse,** but anti-VEGF gives more gain and is preferred unless contraindicated. Laser suits patients who cannot attend monthly (review 3 months later). Adding laser to anti-VEGF gives no extra benefit.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e08367006fc347f1",
+     "n": 135,
+     "p": "grid las"
+    },
+    {
+     "h": "ab88197a341e892e",
+     "n": 187,
+     "p": "However,"
+    },
+    {
+     "h": "7852fc09d2c2b5c8",
+     "n": 162,
+     "p": "Patients"
+    },
+    {
+     "h": "d3a250a273215a0e",
+     "n": 161,
+     "p": "A system"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Central occlusion: focal laser does not help the macular oedema** (CVOS).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "368dd03ea0fd4042",
+     "n": 128,
+     "p": "The Cent"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Neovascularisation:** in branch occlusion with retinal new vessels, laser the non-perfused area to cut the risk of vitreous haemorrhage. In central occlusion with retinal or iris new vessels, give dense peripheral panretinal laser. An anti-VEGF injection first gives short-term control and can make full laser easier.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "332588fe99df5c52",
+     "n": 475,
+     "p": "In patie"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Central occlusion: check the iris and angle (undilated slit lamp and gonioscopy) as often as monthly for 6 months,** and again in ischaemic central occlusion after anti-VEGF stops, to catch new vessels early.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e0a136405d2d71bc",
+     "n": 246,
+     "p": "Undilate"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer every patient to their GP for the systemic conditions, share the results, and tell both about the risk to the other eye.** Offer counselling, vision rehabilitation and social support when vision is lost despite treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "8f5018d1071b6538",
+     "n": 348,
+     "p": "The opht"
+    },
+    {
+     "h": "6144c9461a6d62f5",
+     "n": 261,
+     "p": "Patients"
+    }
+   ],
+   "locator": "American Academy of Ophthalmology PPP Retina/Vitreous Committee (Kovach JL et al.), Ophthalmology, 'Retinal Vein Occlusions Preferred Practice Pattern (2024, updated 2026)', approved 13 September 2024; published Feb 2025; updated June 2026 (doi 10.1016/j.ophtha.2024.12.025), https://www.aao.org/education/preferred-practice-pattern/retinal-vein-occlusions-ppp, retrieved 2026-09-23"
+  }
+ ]
+}

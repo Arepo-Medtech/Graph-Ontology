@@ -1,0 +1,199 @@
+{
+ "guideline": "guidelines/diabetic-macular-oedema.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "OPEN AND QUOTED from Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley) 'Diabetic Macular Oedema Guidelines: An Australian Perspective' (2023 (doi 10.1155/2023/6329819)). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC9943607). ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Screen everyone with diabetes for retinopathy at diagnosis, then every 2 years if none is found** (RANZCO, following the 2008 NHMRC guideline).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "RANZCO follows the NHMRC's 2008 recommendations [] that all patients with DM undergo DR screening at the time of diagnosis and then every 2 years if no retinopathy is detected.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen higher-risk patients every year, even with no retinopathy:** diabetes for more than 15 years, A1c >8% (64 mmol/mol), poorly controlled blood pressure or lipids, other diabetic complications, pregnancy, Aboriginal and Torres Strait Islander people, and people born in the South Pacific, Middle East, North Africa, Southern Asia or Southern Europe.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "patients at higher risk should be evaluated annually regardless of evidence of DR on examination. Clinical modifiers include duration of diabetes >15 years, suboptimal glycaemic control (A1c >8% or 64 mmol/mol), systemic disease, including poorly controlled hypertension or abnormal serum lipids, or other diabetic complications, pregnancy, and Aboriginal and Torres Strait Islanders and overseas-born Australians from South Pacific, the Middle East, North Africa, Southern Asia, and Southern Europe.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Aboriginal and Torres Strait Islander people carry more eye disease and are under-screened:** blindness is six times higher, fewer than 20% receive retinopathy screening and more than 35% have never been screened. NHMRC advises annual screening for Indigenous Australians.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blindness from ocular diseases is six times higher in Indigenous Australians than in non-Indigenous people, yet <20% receive DR screening, and more than 35% have never been screened … The NHMRC guidelines also recommend annual retinal screening and VA assessment for Indigenous Australians and biennial assessment for non-Indigenous Australians with diabetes but without significant risk factors for DR",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer on visual acuity:** 6/12 or worse should be referred, and 6/9 to 6/12 considered for referral. Send results to the GP, endocrinologist and ophthalmologist within 2 weeks.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Grade VA (6/12 or worse should be referred; 6/9 to 6/12 should be considered for referral) … Communicate results within 2 weeks to GPs, endocrinologists, and ophthalmologists",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Suspected DMO or proliferative retinopathy, or unexplained change in vision: consider ophthalmology referral within 4 weeks.** Once non-proliferative retinopathy is found, review up to 4 times a year (NHMRC).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The guidelines do recommend that exams be increased in frequency (to as many as 4 times annually) if NPDR is detected and that referral to an ophthalmologist within 4 weeks be considered when DMO or PDR is suspected, or when unexplained changes in vision occur.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**OCT is the most effective test for diagnosing DMO.** RANZCO does not mandate it for screening, but the authors advise offering it wherever available to detect centre-involving DMO.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "To date, OCT is considered the most effective tool for diagnosing DMO: it is able to identify anatomic/structural changes in the retina caused by DMO that other modalities cannot … While RANZCO does not mandate OCT as a part of routine screening [], we feel that it should be offered as a part of screening wherever available to help detect the presence of centre-involving DMO.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Centre-involving DMO** in the DRCR trials means an OCT central subfield thickness of 250 μm or more (Zeiss Stratus, or the spectral-domain equivalent).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the more recent landmark DRCR trials have focused on the presence of central-involved DMO defined by an OCT central subfoveal thickness of 250 μm or more on Zeiss Stratus or the equivalent on spectral-domain OCTs based on gender-specific cutoffs",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Control glucose, blood pressure and lipids.** The ADA target is an A1c as near normal as possible without significant hypoglycaemia, typically <7% (≤6.5% for some).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The ADA suggests that the goal is to achieve an A1c level as close to normal as possible without significant hypoglycaemia (which is typically a level of <7% and for some, ≤6.5%) … Optimising blood pressure and serum lipid control is recommended to reduce the risk of DR or to slow its progression",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fenofibrate slows retinopathy progression**, particularly in very mild non-proliferative disease. In 2013 Australia became the first country to recommend it for this.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients with dyslipidaemia, fenofibrate has been shown to slow DR progression, particularly in patients with very mild NPDR … In 2013, Australia became the first country in the world to recommend fenofibrate to slow DR progression",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In Australia, intravitreal anti-VEGF is first-line.** Laser or steroids (dexamethasone implant, or triamcinolone off-label) are second-line.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Australia, current treatment options include first-line intravitreal therapies with anti-VEGF drugs, with second-line treatments including laser therapy or steroids (dexamethasone implants and triamcinolone (off-label))",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**DMO that does not involve the centre:** consider focal or grid laser, especially if the oedema is far from the fovea. **Centre-involving DMO with vision of 6/7.5 or better:** watching without treatment is reasonable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In patients who present with non-CI-DMO, one may consider the use of focal/grid laser therapy, especially if oedema is far from the fovea centre. Once CI-DMO develops, the option to continue observing without treatment is reasonable if best-corrected vision remains at 6/7.5 or better",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Centre-involving DMO with vision of 6/9 (20/32) or worse: start with 3 loading doses of intravitreal ranibizumab or aflibercept.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Once a patient with CI-DMO develops a reduced vision of 20/32 (approximately 6/9) or worse, we suggest initiating treatment with 3 loading doses of either intravitreal ranibizumab or aflibercept.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**With presenting vision of 6/15 or worse, aflibercept may be preferred,** although its edge over ranibizumab in Protocol T held only in the first year; at 2 years it beat bevacizumab in eyes with worse vision. **Faricimab** (anti-VEGF-A and angiopoietin-2) is now PBS-listed and may act for longer.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is some data to suggest patients with a VA of 6/15 or worse at presentation may benefit from treatment with aflibercept []. However, this superiority of aflibercept over ranibizumab was only noted in the first year of treatment in DRCR Protocol T and did not extend to the second year of treatment []. However, in the same study, at 2 years, amongst eyes with worse baseline VA, aflibercept had superior 2-year VA outcomes to bevacizumab. Since the time our initial research was conducted, faricimab, a bi-specific antibody that binds to both VEGF-A and angiopoietin-2, has been PBS-listed and is another treatment option that may have potential for longer duration of action than existing anti-VEGF agents.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After loading, treat and extend:** when the macula is dry (no intraretinal or subretinal fluid), lengthen the interval by 1–2 weeks, up to 12–16 weeks. Trace fluid may be tolerated if vision stays good.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After the initial 3-loading doses, most of the authors would continue treatment by utilising a treat and extend-type regime until resolution of macula oedema is achieved. Generally, if there is absence of macula oedema (both IRF and SRF) at the clinical visit, the interval between injections would be increased by 1-2 weeks to a maximum interval of 12-16 weeks. Ideally, one would prefer absence of oedema prior to extending the intervals between injections, but trace amounts of IRF/SRF may be tolerated if vision remains good.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Suboptimal response after 3–6 injections: switch to another anti-VEGF agent or to an intravitreal steroid.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If response is suboptimal after 3-6 injections, a switch to a different anti-VEGF agent or steroids can be considered. … We recommend considering a switch from an intravitreal anti-VEGF agent to intravitreal corticosteroids after 3 to 6 anti-VEGF injections in nonresponsive or poorly responsive eyes.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**For centre-involving DMO, intravitreal therapy beats focal/grid laser.** Adding laser at the start of ranibizumab was no better than deferring it for at least 24 weeks.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, for patients with centre-involving DMO, intravitreal therapy has the advantage over focal/grid laser in improving vision and is the main modality of treatment. … Focal/grid laser treatment initiated with intravitreal ranibizumab was no better than deferring laser treatment for ≥24 weeks in eyes with centre-involving DMO with vision impairment.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not routinely combine intravitreal steroid with anti-VEGF;** the evidence does not support it, though it can be judged case by case.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In general, we believe that higher quality evidence does not support routinely combining intravitreal steroids and anti-VEGF therapy for DMO, but clinicians may deem this appropriate on a case-by-case basis.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **PBS: the dexamethasone implant is approved if the eye is pseudophakic or cataract surgery is scheduled.** The alternative is intravitreal triamcinolone 2 or 4 mg, which is off-label. Steroids suit especially patients with systemic contraindications to anti-VEGF, such as pregnancy or a recent stroke or myocardial infarction.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Australia, the use of dexamethasone implants is approved under the PBS system if the patient is pseudophakic or is scheduled for cataract surgery. Alternative options would be the use of intravitreal 2 or 4 mg of triamcinolone (Kenalog A-40 or Triesence). The use of intravitreal steroids would be considered especially in the presence of systemic contraindications to anti-VEGF including pregnancy or recent arterial thromboembolic events such as a recent stroke or myocardial infarction. … The use of intravitreal triamcinolone is considered off-label in Australia.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**A steroid implant first-line may suit** pseudophakic or vitrectomised eyes, eyes having cataract surgery, long-standing DMO, pregnant women, children, people with learning difficulties and people with recent thromboembolic events.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary treatment with corticosteroids may be of particular benefit in pseudophakic eyes, vitrectomised eyes, eyes with DMO undergoing cataract surgery, and eyes with long-standing DMO … In general, newer Australian guidelines and recommendations note that some patient groups-pregnant women, children, those with learning difficulties, and people who have had recent thromboembolic events-may benefit from the use of an intravitreal steroid implant as a first-line therapy rather than an anti-VEGF agent.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dexamethasone implant (Ozurdex) contains 700 μg.** In DMO trials most re-treatments came 4 to 7 months after the first; use beyond seven implants has not been studied in trials.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ozurdex is a biodegradable, sustained-release implant containing 700 μg dexamethasone … in clinical trials for DMO, the majority of retreatments were administered between 4 and 7 months after the initial treatment … the use of the dexamethasone implant beyond seven implants has not been studied in a clinical trial setting",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Monitor intraocular pressure regularly after any intravitreal steroid, whatever the baseline, and act at once on any rise.** Raised pressure and cataract are the main risks.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This group continues to support regular monitoring of IOP, irrespective of baseline IOP, after use of intravitreal corticosteroids and finds that immediate management is required when any elevation is noted. … of which ocular hypertension and cataract formation are the most significant",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Use caution with the dexamethasone implant in patients on anticoagulant or antiplatelet drugs.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "We, therefore, recommend caution when choosing the dexamethasone implant for patients on either anticoagulant or antiplatelet medications.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Manage endophthalmitis after triamcinolone as infectious:** vitreous and aqueous taps for microbiology, then intravitreal broad-spectrum antibiotics, promptly. Every injecting clinic should keep an endophthalmitis kit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "RANZCO guidance recommends that eyes developing endophthalmitis post-triamcinolone injection be managed as if the eye has infectious endophthalmitis, with management strategies to involve vitreous and aqueous taps for microbiology, followed by intravitreal broad-spectrum antibiotics; prompt treatment of suspected endophthalmitis is deemed essential. RANZCO further suggests that all clinics providing intravitreal injection therapy have an endophthalmitis kit available",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Vitrectomy only after laser, anti-VEGF and steroids have failed, and only when an epiretinal membrane, a taut thickened posterior hyaloid or vitreomacular traction is thickening the macula.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Our recommendation is that vitrectomy be used only after laser, intravitreal anti-VEGF agents, and intravitreal corticosteroid treatments are proved to be insufficient, and there is concurrent ERM, TTPH, or VMT contributing to macula thickening.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Vitrectomy is also indicated for persistent or recurrent vitreous haemorrhage that hides the macula, and for tractional retinal detachment involving the macula.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PPV with or without separation of the hyaloid, epiretinal membrane (ERM) peeling or tractional band division, intravitreal corticosteroid delivery, and or panretinal photocoagulation is indicated in the setting of diabetic eye disease with persistent or recurrent vitreous haemorrhage which makes monitoring of DMO difficult … Tractional retinal detachment (TRD) involving the macula is also an important indication for vitrectomy in the context of DMO.",
+   "locator": "Yuen YS et al., Journal of Ophthalmology (Hindawi/Wiley), 'Diabetic Macular Oedema Guidelines: An Australian Perspective', 2023 (doi 10.1155/2023/6329819), https://pmc.ncbi.nlm.nih.gov/articles/PMC9943607/, retrieved 2026-09-23"
+  }
+ ]
+}
