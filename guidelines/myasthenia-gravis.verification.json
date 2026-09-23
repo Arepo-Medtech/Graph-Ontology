@@ -1,0 +1,358 @@
+{
+ "guideline": "guidelines/myasthenia-gravis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS)"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from National Blood Authority (NBA), Australia 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0' (MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: Not stated on the criteria pages (NBA's site-wide CC BY 4.0 at blood.gov.au/copyright not confirmed for criteria.blood.gov.au) (read at https://www.blood.gov.au/copyright (read 2026-09-23); criteria pages carry no licence notice). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 21,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 21
+ },
+ "claims": [
+  {
+   "claim": "**MG is an autoimmune disorder of the neuromuscular junction** with antibodies to the acetylcholine receptor (AChR) or to MuSK; a minority of patients are seronegative.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "766b67c6cdf0c56e",
+     "n": 245,
+     "p": "Myasthen"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Suspect it in fatigable, fluctuating weakness** of the eyelids, eye movements, bulbar, limb and breathing muscles: ptosis, diplopia, dysphagia and proximal weakness. Respiratory muscle failure is the danger (myasthenic crisis).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0cd1663f082e9888",
+     "n": 487,
+     "p": "Clinical"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Reflexes and sensation are preserved.** Repetitive nerve stimulation shows a decrement at 2–3 Hz that recovers after brief exercise; antibody titres and single-fibre EMG help confirm. A neurologist must make the diagnosis for IVIg access.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "30a6bf816cabc7c8",
+     "n": 420,
+     "p": "Diagnosi"
+    },
+    {
+     "h": "26a0dd785ba29193",
+     "n": 42,
+     "p": "A diagno"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IVIg is funded for three MG situations, with clear evidence of benefit (Category 1):** myasthenic crisis and pre-operative or pre-thymectomy preparation (each as an alternative to plasma exchange), and maintenance of moderate to severe MG after other treatments have failed or were not tolerated.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a26284683733246f",
+     "n": 356,
+     "p": "Myasthen"
+    },
+    {
+     "h": "d46b469f3702835a",
+     "n": 38,
+     "p": "Clear ev"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IVIg and plasma exchange work about equally.** IVIg is simpler to give and plasma exchange is not offered everywhere; weigh line insertion, sepsis and haemodynamic risks of plasma exchange against the inflammatory and thrombotic risks of IVIg.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "cd5db25c2651d9e0",
+     "n": 348,
+     "p": "Effectiv"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In MuSK-antibody MG, plasma exchange is reported to work better than IVIg.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "60bf79d98099d149",
+     "n": 98,
+     "p": "Guptill "
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IVIg does not bring remission or change the course of MG,** so treat it as a bridge while symptomatic drugs such as pyridostigmine are used and definitive immunotherapy takes effect.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e477904f803b03d4",
+     "n": 333,
+     "p": "Hellman "
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pure ocular MG is excluded,** and IVIg was generally ineffective for diplopia in the main trial.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3b6d814b9700f6f3",
+     "n": 29,
+     "p": "Pure ocu"
+    },
+    {
+     "h": "c61ba790ac9261c8",
+     "n": 115,
+     "p": "An addit"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Maintenance IVIg is not steroid-sparing,** in either the placebo-controlled trial or observational data.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4cb1c5163b12fc44",
+     "n": 134,
+     "p": "IVIg sho"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Crisis:** respiratory insufficiency needing intubation and ventilation, or impending crisis (persistent trouble speaking, chewing or swallowing, or breathlessness on minimal exertion), plus severe disability with an MG Composite (MGC) score of 4 or more.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0ee248e88e023494",
+     "n": 437,
+     "p": "Myasthen"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before surgery or thymectomy:** an operation is planned and the patient has advanced disease, bulbar symptoms or respiratory involvement. Without those features, preparation is generally unnecessary.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e9d17d38688999f7",
+     "n": 106,
+     "p": "Surgery "
+    },
+    {
+     "h": "a446294ce27c81de",
+     "n": 94,
+     "p": "The coro"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Maintenance:** moderate to severe MG (MGC of 4 or more), at least two other treatments ineffective, contraindicated, unavailable or not tolerated, and the patient is not on a PBS-funded C5 inhibitor or FcRn inhibitor.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b1b3b637b7dfbab3",
+     "n": 351,
+     "p": "The pati"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Crisis or pre-surgery: 1–2 g/kg split over 2 to 5 doses,** using the lowest dose that achieves the clinical goal.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1040b87564c67756",
+     "n": 72,
+     "p": "Dose dur"
+    },
+    {
+     "h": "8bc033e40bfd0597",
+     "n": 59,
+     "p": "Pre-surg"
+    },
+    {
+     "h": "267cafda9cd257df",
+     "n": 114,
+     "p": "The aim "
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**1 g/kg is as effective as 2 g/kg,** so make 1 g/kg the usual dose for worsening MG and keep 2 g/kg for crisis, impending crisis or especially severe disease.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "006a9d6272e9a1de",
+     "n": 166,
+     "p": "This sug"
+    },
+    {
+     "h": "198be190dac7d453",
+     "n": 205,
+     "p": "Note: A "
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Maintenance: after an induction dose, give 0.4–1 g/kg every 4–6 weeks,** titrated to response, and no more than 1 g/kg in any 4 weeks (smaller, more frequent doses are allowed).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0ec741015c470fc7",
+     "n": 239,
+     "p": "Maintena"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Give maintenance IVIg a 4-month trial (the induction dose and then 3 maintenance cycles);** stop if there is no benefit. A neurologist reviews within 4 months and yearly after that, and continuation needs documented effectiveness.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e0fb7285a2636c49",
+     "n": 367,
+     "p": "IVIg sho"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Measure response with the MG Composite:** at first review the score should have fallen by at least 3 points from qualifying (or a severe patient shows benefit after each infusion that wears off by cycle end), with at least two other treatments running concurrently where possible. Stable patients should have a planned weaning trial to detect remission.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "62bfd4c6b080751f",
+     "n": 290,
+     "p": "Improvem"
+    },
+    {
+     "h": "01da37ae565ca907",
+     "n": 178,
+     "p": "A trial "
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The MGC is the practical clinical scale:** a 3-point or greater improvement is clinically meaningful. The longer Quantitative MG score, where above 11 predicts response to IVIg or plasma exchange, is mainly a research tool.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "87e6d0290e0c00d0",
+     "n": 548,
+     "p": "The Quan"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**LEMS is a presynaptic neuromuscular junction disorder,** first linked to lung cancer but also seen without a tumour. Look for proximal weakness that strengthens after exercise, mild eye signs, reduced reflexes and autonomic features (dry mouth, constipation, erectile failure). Confirm with voltage-gated calcium channel antibodies, electrophysiology or both.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "03c7ccab20f55042",
+     "n": 655,
+     "p": "Lambert-"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **First-line LEMS treatment is 3,4-DAP (amifampridine) with pyridostigmine; IVIg is second line** and gives temporary benefit. In paraneoplastic LEMS, treating the cancer often helps, and immunosuppression (unlike IVIg) is generally avoided.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4ae3d5bded559143",
+     "n": 159,
+     "p": "Treatmen"
+    },
+    {
+     "h": "fdd99dd3a15d641d",
+     "n": 134,
+     "p": "Expert c"
+    },
+    {
+     "h": "458a040286147b29",
+     "n": 58,
+     "p": "Treatmen"
+    },
+    {
+     "h": "f985991a1822c292",
+     "n": 105,
+     "p": "Accordin"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IVIg in LEMS qualifies when disease is severe** (MRC sum score 58 or lower, or major autonomic involvement) and other therapies have failed or fallen short. Dose: induction 2 g/kg over 2 to 5 doses, then 0.4–1 g/kg every 2–6 weeks.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "cf2b45d1621b1699",
+     "n": 245,
+     "p": "Severe L"
+    },
+    {
+     "h": "4f5d88b47a080e50",
+     "n": 104,
+     "p": "Inductio"
+    }
+   ],
+   "locator": "National Blood Authority (NBA), Australia, 'Criteria for the Clinical Use of Immunoglobulin in Australia: Myasthenia gravis (MG), version 3.2, and Lambert-Eaton myasthenic syndrome (LEMS), version 3.0', MG v3.2 published 22 May 2026; LEMS v3.0 published 20 October 2018, https://www.criteria.blood.gov.au/MedicalCondition/View/2765 (MG) and https://www.criteria.blood.gov.au/MedicalCondition/View/2563 (LEMS), retrieved 2026-09-23",
+   "dose": true
+  }
+ ]
+}

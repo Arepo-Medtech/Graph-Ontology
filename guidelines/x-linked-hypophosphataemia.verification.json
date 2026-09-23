@@ -1,0 +1,192 @@
+{
+ "guideline": "guidelines/x-linked-hypophosphataemia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "international",
+ "method": "OPEN AND QUOTED from APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS) 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care' (published 1 May 2023). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC10241092). ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Features usually appear at 1 to 2 years, but diagnosis tends to come later, at 2 to 3 years.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The age of onset of clinical features of XLH in the majority of cases is between 1 and 2 years … but diagnosis is established later between 2 and 3 years of age.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Short stature, bone deformities and radiological rickets are the commonest first signs** and should prompt biochemical testing and early treatment. Genetic testing is not mandatory to make the diagnosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most common initial manifestations of XLH include short stature, bone deformities, and radiologic signs of rickets … These clinical and radiologic features should prompt timely and appropriate referral for biochemical testing, early confirmation of the diagnosis, and initiation of treatment. Genetic testing is not mandatory to confirm the diagnosis, given the resource constraints in some APAC countries.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The main differential is nutritional rickets;** severe, chronic or persisting signs despite vitamin D and calcium point to XLH.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The major differential diagnosis for XLH is nutritional rickets that occurs due to vitamin D and/or dietary calcium deficiency. … The severity, chronicity, progression, or persistence of signs and symptoms despite vitamin D and calcium supplementation may help differentiate between the two conditions and suggest XLH as the more likely diagnosis.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Recurrent dental abscesses without caries or trauma are typical.** Hypophosphatasia also causes early tooth loss but has low ALP, whereas XLH in children has persistently high ALP.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In XLH, dental abscesses are often recurrent and may be associated with fistula formation and occur without dental decay or history of injury. … Differential diagnosis should be considered based on biochemical findings; hypophosphatasia is associated with reduced serum and bone alkaline phosphatase (ALP) activity, … whereas XLH in children is associated with persistently elevated ALP levels.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Craniosynostosis can be an early infant sign (abnormal head shape), and about 10% of children also have a Chiari malformation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specifically, craniosynostosis may be an early sign of XLH in infancy, presenting with an abnormal head shape. … About 10% of children with XLH also have a concomitant Chiari malformation",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Adults:** pseudofractures in 29%-52%, plus enthesopathies and osteoarthritis that become more common after 30-40 years.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In adults with XLH, pseudofractures are noted in 29%-52% of cases. … Other musculoskeletal manifestations frequently found in adults are enthesopathies (33%-100%) and osteoarthritis (55%-80%), which become more prevalent beyond 30-40 years of age.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypophosphataemia with renal phosphate wasting is the biochemical hallmark,** but low phosphate may not show in the first 3-6 months of life.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypophosphatemia with renal phosphate wasting is a biochemical hallmark of XLH. … However, hypophosphatemia may not be apparent in the first 3-6 months of life and may be missed because of varied age‐specific reference values and normal phosphate levels in some infants.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Measure TmP/GFR from fasting second-morning paired blood and urine samples,** and exclude generalised tubular wasting (Fanconi syndrome).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Renal phosphate wasting is ideally assessed by determining the tubular maximum reabsorption of phosphate per glomerular filtration rate (TmP/GFR). Age‐related reference ranges are available for this parameter, which is computed from fasted, second‐morning, paired plasma and urine phosphate and creatinine levels. … Nevertheless, XLH should be differentiated from non‐selective causes of renal phosphate wasting (ie, Fanconi syndrome) that present with other distinctive features such as bicarbonate and uric acid wasting, glucosuria, aminoaciduria, and low‐molecular‐weight proteinuria.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Use total ALP in children and bone-specific ALP in adults.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Because bone‐specific ALP constitutes ~90% of total ALP in children and only ~50% in adults, total ALP may be used for children, whereas bone‐specific ALP is recommended for adults.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Concurrent vitamin D deficiency is common in Asian cohorts and can mask XLH;** FGF23 assays are not widely available and need cautious interpretation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Notably, in Asian cohorts, because of the overall high prevalence of nutritional rickets due to vitamin D deficiency, XLH patients may also have concurrent vitamin D deficiency (43.6%-59.8%), which may in turn mask the diagnosis of XLH. … testing is not widely available, and results should be interpreted with caution because of lack of standardization and potential influence by treatment.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Single-gene PHEX sequencing is the first genetic test** (a pathogenic variant is found in about 90%-100%); if testing is unavailable, a positive family history supports the diagnosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PHEX sequencing suffices as the first step in genetic analysis because it detects the most common cause of hypophosphatemic rickets. … A confirmed pathogenic PHEX mutation is found in ~90%-100% of clinically diagnosed patients. … In case genetic testing is not available, a positive family history of XLH is generally accepted as supportive of the diagnosis.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Children: start oral phosphate with active vitamin D as soon as XLH is diagnosed.** Starting doses: elemental phosphorus 20-60 mg/kg given 4-6 times daily, plus calcitriol 20-40 ng/kg split into two doses a day or alfacalcidol 30-50 ng/kg once daily (doses as stated in the source).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The conventional medical therapy for XLH is oral phosphate supplementation, combined with active vitamin D (ie, calcitriol or alfacacidol) … Accordingly, international and national guidelines recommend starting combination therapy with oral phosphate and active vitamin D in children as soon as the diagnosis of XLH is established. The initial goal involves healing of rickets in affected children. Treatment is also aimed at reducing skeletal deformities, precluding surgery, facilitating growth, alleviating bone pain, and improving dental health. The generally recommended starting doses in children are 20-60 mg/kg body weight of elemental phosphorus given 4-6 times daily, and 20-40 ng/kg body weight of calcitriol given in two doses per day or 30-50 ng/kg body weight of alfacacidol given once daily.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Adults: treat only when symptomatic** (dental problems, musculoskeletal pain, pseudofractures, raised ALP, or planned orthopaedic or dental surgery). Doses: elemental phosphorus 750-2000 mg daily in 2-4 doses, with calcitriol 0.50-0.75 μg or alfacalcidol 0.75-1.5 μg daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, the evidence of clinical benefit is insufficient to support conventional treatment in asymptomatic adults. … Hence, contemporary guidelines recommend initiating or continuing combination therapy with oral phosphate and active vitamin D only in symptomatic adults, specifically those with dental problems, musculoskeletal pain, pseudofractures, elevated ALP, or planned orthopedic or dental surgery. … In general, the recommended doses of conventional treatment for adults are 750-2000 mg of elemental phosphorus divided into 2-4 doses daily, and 0.50-0.75 μg of calcitriol or 0.75-1.5 μg of alfacacidol daily.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Conventional therapy harms:** gastrointestinal upset (56%), hyperparathyroidism and nephrocalcinosis, the last linked to longer treatment and higher doses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Key adverse events include: (i) gastrointestinal discomfort (eg, diarrhea, bloating) in 56% of patients, (ii) hyperparathyroidism in 17%-47.5% of children and 15.6%-45% of adults, and (iii) nephrocalcinosis in 15.6%-25% of adults and 11.3%-68% of children. … Nephrocalcinosis results from the promotion of hypercalciuria by conventional therapy and has been associated with longer treatment durations and higher treatment dosages.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Burosumab (anti-FGF23) in children: for radiographically proven rickets refractory to conventional therapy, or intolerance or complications of it.** Start 0.8 mg/kg subcutaneously every 2 weeks; stop conventional therapy 2 weeks beforehand, and serum phosphate should be below the age-adjusted lower limit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Burosumab is a fully human monoclonal antibody against FGF23. … Most contemporary guidelines recommend initiation of burosumab in patients who have (i) rickets that is radiographically proven and refractory to conventional therapy or (ii) intolerance or complications with conventional therapy. The recommended starting dose of burosumab in children is 0.8 mg/kg body weight given subcutaneously every 2 weeks. Conventional therapy must be discontinued 2 weeks before burosumab therapy, and the child should have a serum phosphate level below the lower end of the age",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Burosumab in adults: for refractory symptoms or complications of conventional therapy,** starting at 1.0 mg/kg subcutaneously every 4 weeks. Never combine it with conventional therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "current guidelines recommend burosumab therapy for adults with refractory symptoms or those experiencing complications with conventional therapy. … In adults, the recommended initial dose of burosumab is 1.0 mg/kg body weight given subcutaneously every 4 weeks. … As with children, conventional therapy should not be used concurrently with burosumab therapy.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Burosumab does not cause nephrocalcinosis or hyperparathyroidism;** injection-site reactions are the commonest side effect, mostly mild and short-lived.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In contrast to conventional therapy, burosumab is not associated with adverse effects such as nephrocalcinosis and hyperparathyroidism. … The most common adverse effect was injection site reaction (eg, erythema, urticaria), which was mostly mild, limited to the skin, and resolved in a few days.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Growth hormone for short stature in XLH:** no clear recommendation can be made on current evidence.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Because of the low sample size and observational nature of these studies, no clear recommendation can be made for the use of growth hormone in children with XLH and short stature.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Pregnancy and lactation:** intensify monitoring. Burosumab labelling advises against use in pregnancy and in women of childbearing potential not using contraception.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Therefore, intensification of monitoring under these circumstances is essential. … The EMA labeling of burosumab does not recommend its use during pregnancy and in women of childbearing potential not using contraception.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The lead physician should build a team including at least orthopaedics, dentistry, rehabilitation and allied health,** and arrange formal audiology from age 8.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the lead physician should facilitate the development of a multidisciplinary management team including at least orthopedics, dentistry, rehabilitation medicine, and allied health for both children and adults with XLH. … necessitating a referral for formal audiologic assessment starting at 8 years of age.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Review children and adolescents about every 3 months and adults every 6-12 months.** Check head circumference, skull shape and headache at each childhood visit (craniosynostosis, Chiari), and monitor blood pressure on conventional therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, in general, children and adolescents should be seen every 3 months, especially during infancy and puberty, wherein growth is most rapid. Adults require less frequent visits (every 6-12 months). … Head circumference, skull shape, and neurologic symptoms (eg, headache) should be assessed at each visit during childhood to ensure that craniosynostosis or Chiari malformation are detected as early as possible. … Additionally, the blood pressure should be monitored, in line with some evidence pointing to a higher prevalence and early onset of hypertension in XLH versus the general population, while on conventional medical therapy.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ALP normalisation is the main biochemical treatment target** (some accept below 1.5 times the upper limit). Serum phosphate guides burosumab dosing; conventional therapy does not normalise phosphate.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most centers perceive ALP normalization as the primary biochemical parameter indicating satisfactory treatment. … some believe levels below 1.5‐times the upper limit of normal for age are acceptable. … Hence, serum phosphate levels should be monitored and used to adjust the dose of burosumab. … On the other hand, conventional therapy will not restore phosphate levels and is not intended for normalizing phosphatemia.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Renal ultrasound yearly for nephrocalcinosis; dental review twice a year at every age.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Accordingly, it is the preferred screening method for nephrocalcinosis and should be performed annually. … Because of the burden of dental disease in XLH, twice‐yearly dental evaluations are recommended, regardless of age.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transition to adult care:** introduce it to families 2-4 years before transfer, individualised to readiness.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Generally, introducing transition of care to families should begin 2-4 years before the actual initiation of care transition. … Notwithstanding, timelines should be individualized according to the patient's readiness for transition of care.",
+   "locator": "APAC XLH Working Group, JBMR Plus 7(6):e10744 (endorsed by 17 societies including ANZSPED and ANZBMS), 'Asia-Pacific Consensus Recommendations on X-Linked Hypophosphatemia: Diagnosis, Multidisciplinary Management, and Transition From Pediatric to Adult Care', published 1 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10241092/, retrieved 2026-09-23"
+  }
+ ]
+}

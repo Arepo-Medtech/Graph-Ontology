@@ -1,0 +1,507 @@
+{
+ "guideline": "guidelines/growth-hormone-therapy-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025' (last updated February 2026). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: No licence or reuse terms stated in the PDF (treated as all rights reserved) (read at the PDF itself (44 pages; no copyright or licence statement found in its text or metadata)). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 25,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 25
+ },
+ "claims": [
+  {
+   "claim": "**Subsidised GH is not an ordinary PBS item:** it is supplied through a section 100 special arrangement, whose legal basis is the Growth Hormone Program Special Arrangement 2015.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "924d2917f5e1c798",
+     "n": 271,
+     "p": "GH is av"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**For every paediatric category, the child must be under a paediatric endocrinologist, or a general paediatrician working with a named paediatric endocrinologist,** and may receive only one growth hormone at a time.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1ef844b2178b63a9",
+     "n": 347,
+     "p": "Must be "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Apply through the Online PBS Authorities system (via HPOS) for an immediate decision** (written applications are also accepted). The first script covers 16 weeks plus 1 repeat of 16 weeks; later scripts cover 13 weeks plus 1 repeat. Scripts last 6 months, and ongoing approval is re-sought every 6 months (acceptable window 4-8 months).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d2a4771425203df8",
+     "n": 226,
+     "p": "Applicat"
+    },
+    {
+     "h": "691394551faae631",
+     "n": 279,
+     "p": "The init"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Exclusions:** a condition carrying a known cancer risk (for example Down or Bloom syndrome), or any active tumour or sign of tumour activity. **Open epiphyses are required:** bone age under 15.5 years in boys and under 13.5 years in girls.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "963a2c4c2c385972",
+     "n": 202,
+     "p": "must not"
+    },
+    {
+     "h": "9be480f9f11eb8fc",
+     "n": 63,
+     "p": "Bone age"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A child with diabetes** needs confirmation that poor glycaemic control is not the cause of the growth failure, that control is adequate, and that complication screening (especially for retinopathy) is happening.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2e0e324bc69e55c0",
+     "n": 233,
+     "p": "In child"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First applications need recent auxology:** 12 months of height and weight data (2 measurements roughly a year apart), or 6 months (4-8 months apart) in an older child; the latest measurement no more than 3 months old; and a bone age from the past 12 months unless the child is 2.5 years or younger.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7540082c8e2fd131",
+     "n": 575,
+     "p": "12 month"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Biochemical GH deficiency (BGHD):** peak GH below 10 mU/L (3.3 µg/L) on 2 pharmacological stimulation tests, or on 1 pharmacological plus 1 physiological test, or on a single test backed by other evidence: a structural midline or pituitary abnormality, a genetic cause, or low IGF-1 or IGFBP-3.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f627f9c027d0293e",
+     "n": 252,
+     "p": "peak ser"
+    },
+    {
+     "h": "383c28206528b1b0",
+     "n": 174,
+     "p": "with oth"
+    },
+    {
+     "h": "638301cd585bc450",
+     "n": 172,
+     "p": "and low "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BGHD category auxology:** height at or below the 1st percentile, or below the 25th percentile with slow growth (velocity under the 25th percentile, or up to 14 cm/year at age 2 or under, or up to 8 cm/year at 2.5 or under). GH deficiency caused by an intracranial lesion or cranial irradiation has its own category, where the lesion (or the irradiated child) must be under ongoing observation and management.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "843ac3e087ee14ea",
+     "n": 383,
+     "p": "Height ≤"
+    },
+    {
+     "h": "2b36b0f4e33820a9",
+     "n": 148,
+     "p": "Biochemi"
+    },
+    {
+     "h": "26d1d985953c9d55",
+     "n": 247,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Short stature and slow growth (no GH deficiency needed):** height at or below the 1st percentile plus growth velocity under the 25th percentile for bone age (over 12 months, or 6 in an older child) or up to 8 cm/year at 2.5 years or under. Not eligible once height reaches 167.7 cm (boys) or 155.0 cm (girls), or with constitutional delay and a predicted adult height of at least 160.1 cm or 148.0 cm.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "30ccfe3c7fb2c755",
+     "n": 327,
+     "p": "Current "
+    },
+    {
+     "h": "0657c360e684eaf3",
+     "n": 206,
+     "p": "must not"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infants at risk of hypoglycaemia from GH deficiency:** under 2 years, with a documented hypoglycaemia risk attributed to BGHD. At age 5 the child should be moved (reclassified) to the BGHD short-stature category.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a77bd440893aed44",
+     "n": 293,
+     "p": "Patient "
+    },
+    {
+     "h": "7344a8628d1c859d",
+     "n": 248,
+     "p": "When a p"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Weekly (long-acting) GH is unsuitable for infants and young children prone to hypoglycaemia,** because GH levels may not stay high enough to support glucose.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b03e9a1918ee3065",
+     "n": 215,
+     "p": "Long-act"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BGHD with precocious puberty:** puberty starting before 9 years in boys (Tanner 2 or testes of 4 mL or more) or before 8 in girls, or menarche before 10, together with BGHD, and the child must be on a GnRH agonist to suppress puberty.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f551669fce059bf2",
+     "n": 461,
+     "p": "Patient "
+    },
+    {
+     "h": "96b3c6bc7ecb1bc7",
+     "n": 100,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypothalamic obesity after a structural lesion:** a non-neoplastic lesion, or a neoplastic one after a 12 month observation period (after all treatment, or from diagnosis if treatment is judged unsafe); plus BGHD, other hypothalamic-pituitary deficits and hypothalamic obesity. Here growth velocity must be **above** the 25th percentile, since obesity-driven growth masks GH deficiency.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "9f75fc261b065531",
+     "n": 501,
+     "p": "Patient "
+    },
+    {
+     "h": "6633e6175c09a549",
+     "n": 173,
+     "p": "Patient "
+    },
+    {
+     "h": "cd242ce245d2af5e",
+     "n": 159,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Turner syndrome:** genetically confirmed (45X in all cells, mosaicism, or loss or rearrangement of an X chromosome), raised as female; height below 155.0 cm and bone age below 13.5 years. **A higher dose is needed:** 9.5 mg/m²/week is recommended.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "9d79849ea7f2377c",
+     "n": 207,
+     "p": "Patient "
+    },
+    {
+     "h": "1737ba40925358ae",
+     "n": 137,
+     "p": "Patient "
+    },
+    {
+     "h": "3ac1d52f224d5766",
+     "n": 105,
+     "p": "Evidence"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**SHOX disorders:** a SHOX mutation or deletion on karyotype; if it comes with mixed gonadal dysgenesis (45X mosaic with Y material), a management plan for the raised gonadoblastoma risk must be in place. Height and growth criteria match the short-stature categories.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0e4438cb342cc6ea",
+     "n": 536,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Chronic renal insufficiency:** eGFR under 30 mL/min/1.73 m², either without a transplant or at least 12 months after one. If a transplanted child's eGFR is 30 or more at 12 months, reclassify to short stature and slow growth.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "38667ebc1e452bee",
+     "n": 546,
+     "p": "Patient "
+    },
+    {
+     "h": "f88b962b97e06495",
+     "n": 307,
+     "p": "If a pat"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Prader-Willi syndrome:** genetic or clinical-geneticist diagnosis; polysomnography within the previous 12 months, with any sleep-disordered breathing that needs treatment already treated, and repeated during the first 32 weeks; no uncontrolled morbid obesity (over 200% of ideal weight for height); younger than 18 years.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "914807342fd8f1b8",
+     "n": 148,
+     "p": "Patient "
+    },
+    {
+     "h": "cc44e83c971437cc",
+     "n": 102,
+     "p": "Patient "
+    },
+    {
+     "h": "e559d846f424df17",
+     "n": 65,
+     "p": "Patient "
+    },
+    {
+     "h": "e1533de900b78045",
+     "n": 133,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Daily somatropin: up to 7.5 mg/m²/week in most categories.** Older advice was 4.5-7.5 mg/m²/week; starting low and titrating is reasonable, but children without GH deficiency respond poorly at the low end, whereas truly GH-deficient children usually do well there.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ec5559c355b42bad",
+     "n": 292,
+     "p": "Previous"
+    },
+    {
+     "h": "8f7cd7077d47d7bf",
+     "n": 87,
+     "p": "Truly GH"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Weekly somatrogon: 0.66 mg/kg once a week.** Check IGF-1 on day 4 after a dose, and cut the dose by 15% if IGF-1 is more than 2 SDS above the age-sex mean. If growth does not pick up in year one, look at adherence and other causes (hypothyroidism, undernutrition, advanced bone age) and consider stopping.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3a9f4c706eeb4393",
+     "n": 798,
+     "p": "The reco"
+    },
+    {
+     "h": "9b4b7cbdc1f5f9eb",
+     "n": 307,
+     "p": "Monitor "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Continuing approval depends on response.** Each period (32 weeks initially, then 26 weeks) is renewed if the child was below the maximum dose (7.5 mg/m²/week); at the maximum, growth must reach the 50th velocity percentile, raise height SDS, reach at least 4 cm/year, or hold mid-parental height SDS. The ceiling is 9.5 mg/m²/week in the Turner, SHOX and renal categories.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "aebaaa2aff128c74",
+     "n": 442,
+     "p": "For the "
+    },
+    {
+     "h": "d016017df6461ada",
+     "n": 63,
+     "p": "Patient "
+    },
+    {
+     "h": "c9b5961dacbbc0f0",
+     "n": 145,
+     "p": "short st"
+    },
+    {
+     "h": "e0349f494d46678a",
+     "n": 279,
+     "p": "short st"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Late-onset or mature-skeleton GH deficiency is managed by an endocrinologist and needs severe deficiency:** peak GH below 2.5 µg/L on insulin tolerance, below 0.4 on arginine, or below 3 on glucagon testing; or, without testing, age 18 or over with hypothalamic-pituitary disease, at least three pituitary hormone deficits and a subnormal IGF-1. Adults with Prader-Willi syndrome (18 or older) are not subsidised unless childhood-onset GH deficiency is documented.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1554b8d3e164fd99",
+     "n": 643,
+     "p": "Patient "
+    },
+    {
+     "h": "84086c1ca71047bb",
+     "n": 159,
+     "p": "Somatrop"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Adult dosing is individual, typically 0.15 to 1 mg per day:** start at 0.15-0.3 mg/day and step up monthly, guided by response and IGF-1.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6c355f94bf3daf2f",
+     "n": 107,
+     "p": "There is"
+    },
+    {
+     "h": "8ab6d014726518d9",
+     "n": 113,
+     "p": "low dose"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mecasermin is for severe primary IGF-1 deficiency, ages 2 to 18:** basal IGF-1 below the 2.5th percentile, height at least 3 SD below the mean, slow growth, and normal GH secretion (latest GH above 6.6 mcg/L). Exclude GH deficiency and secondary causes first: malnutrition, hypopituitarism, hypothyroidism and medicines.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "913207f2fce3acfd",
+     "n": 269,
+     "p": "The cond"
+    },
+    {
+     "h": "c1dc6e5292d4a6ce",
+     "n": 51,
+     "p": "being at"
+    },
+    {
+     "h": "7d877d7b8c83cca1",
+     "n": 62,
+     "p": "The cond"
+    },
+    {
+     "h": "b2481de0952745ca",
+     "n": 268,
+     "p": "The cond"
+    },
+    {
+     "h": "228d059abc45918c",
+     "n": 42,
+     "p": "this fig"
+    },
+    {
+     "h": "718ae0ed6f176398",
+     "n": 63,
+     "p": "Patient "
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Mecasermin dose: begin at 0.04 mg/kg twice daily by subcutaneous injection,** and if tolerated for at least one week, step up by 0.04 mg/kg to a maximum of 0.12 mg/kg twice daily. Exceeding that ceiling may raise neoplasia risk, and higher doses cause more hypoglycaemia. Continue until the epiphyses fuse.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "57cad57e337d9277",
+     "n": 280,
+     "p": "The reco"
+    },
+    {
+     "h": "8f806ba24a40d445",
+     "n": 168,
+     "p": "Higher d"
+    },
+    {
+     "h": "449d113cd107b482",
+     "n": 74,
+     "p": "Treatmen"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**To continue mecasermin,** the child must show height-SDS catch-up on Laron syndrome charts and growth faster than 2 cm/year, unless the poor response is explained by under-dosing.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "703b97e8ce1d6202",
+     "n": 525,
+     "p": "The cond"
+    }
+   ],
+   "locator": "Australasian Paediatric Endocrine Group (ANZSPED), Child and Adolescent Growth Committee, 'Growth Hormone and IGF-1 PBS Eligibility and Prescribing Summary Guidelines 2025', last updated February 2026, https://media.anzsped.org/2026/05/18111028/26_05-Growth-Hormone-Eligibility-and-Prescribing-Summary-Guidelines.pdf, retrieved 2026-09-23"
+  }
+ ]
+}
