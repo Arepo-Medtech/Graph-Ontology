@@ -1,0 +1,201 @@
+{
+ "guideline": "guidelines/chest-pain-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Chest pain' (Last updated January 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 26,
+  "pass": 26,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most paediatric chest pain is unexplained or self-limiting** (e.g. musculoskeletal). A serious cardiac or respiratory cause is **highly unlikely** in a previously well child with new-onset pain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The cause of most paediatric chest pain is unknown or self-limiting causes eg musculoskeletal pain … A serious cardiac or respiratory condition is highly unlikely to be the cause of new-onset chest pain in a previously-well child",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The goal is to rule out serious causes.** Reassurance, with or without simple analgesia, is often all that is needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The goal of assessment is to rule out serious causes and manage appropriately … Reassurance with or without simple analgesia is often all that is necessary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cardiac causes account for as few as 1%.** Without risk factors, the common causes are musculoskeletal pain/costochondritis, precordial catch, respiratory infection or asthma, upper GI or biliary causes, and anxiety.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cardiac-related causes account for as few as 1% of children who present with chest pain … In children without risk factors for serious disease (see below), the most commonly identified causes of chest pain include: Musculoskeletal pain/costochondritis Precordial catch Respiratory infection or asthma Upper gastrointestinal or biliary Anxiety",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Reserve ECG, CXR and bloods for children with risk factors** on history and examination. Discuss echocardiogram or CT pulmonary angiogram with a senior clinician.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Investigations such as ECG, CXR and blood tests should be reserved for children with risk factors identified on history and examination. Others such as echocardiogram or CT pulmonary angiogram should be discussed with a senior clinician",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take a thorough history** — acute onset is more likely to have an identifiable cause. Ask about recent illness or vaccination (e.g. myopericarditis after COVID-19 mRNA vaccine), underlying conditions such as Duchenne muscular dystrophy, and a family history of arrhythmia, cardiomyopathy, pulmonary hypertension or sudden death.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A thorough history is key to identifying a likely cause and minimising unnecessary investigation … Timing of symptom onset (acute onset more likely to have identifiable cause) … Recent illness or vaccination (eg myopericarditis secondary to COVID-19 mRNA vaccination) … Underlying condition (eg Duchenne muscular dystrophy) … Family history of serious cardiac or pulmonary conditions (eg arrhythmia, cardiomyopathy, pulmonary hypertension, sudden death)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Risk factors for a serious or life-threatening cause include:** first episode of severe chest pain · pain radiating to arm or back · dizziness or syncope · congenital/acquired heart disease · family history of sudden cardiac death or arrhythmia · Kawasaki disease · connective tissue disease · longstanding diabetes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Risk factors for serious or life-threatening conditions Cardiac Pulmonary embolus Respiratory Gastrointestinal First episode severe chest pain Pain radiating to arm or back Associated dizziness or syncope Congenital/acquired cardiac disease Family history sudden cardiac death or arrhythmia History of Kawasaki disease Connective tissue disease Longstanding diabetes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Further listed risk factors:** immobility, recent surgery, hypercoagulability, a central venous catheter, haemoptysis; chronic respiratory disease; chest pain after vomiting, odynophagia, dysphagia, food impaction, recent heavy alcohol, an ingested foreign body — and **suspected button battery ingestion**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immobility Recent surgery Hypercoagulability Central venous catheter Pleuritic pain Haemoptysis … Chronic respiratory disease Chest pain after vomiting Recurrent vomiting Odynophagia Dysphagia Food impaction … Recent heavy alcohol consumption History of ingested foreign body Suspicion button battery ingestion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine for cardiorespiratory distress:** tachypnoea and increased work of breathing, hypoxia, abnormal pulse or BP, distended neck veins, muffled heart sounds, absent breath sounds, altered conscious state.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Should aim to identify signs of cardiorespiratory distress: tachypnoea and increased work of breathing hypoxia abnormal pulse or BP distended neck veins, muffled heart sounds … absent breath sounds altered conscious state",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Involve senior staff early** for trauma patients, the critically unwell, and anyone with clear cardiorespiratory compromise.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Trauma patients, those who are critically unwell or have clear signs of cardiorespiratory compromise should have senior staff involved early",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Offer simple analgesia (paracetamol and ibuprofen) while you assess.** Treatment is cause-specific.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Offer simple analgesia (eg Paracetamol and Ibuprofen) while you are assessing your patient … Treatment will be cause specific",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult cardiology** if an acute cardiac condition or abnormal investigation is found, if investigations are normal but concern persists, or if a child with known heart disease has chest pain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with cardiology team when Acute cardiac condition diagnosed or abnormal investigations Normal investigations but ongoing concern for underlying cardiac condition from history, exam or family history Known congenital or acquired cardiac condition with chest pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the relevant specialist team** for diagnosed acute pulmonary embolism, or PE risk factors needing shared decision-making.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with relevant specialist team when Acute pulmonary embolism diagnosed Risk factors for PE but requiring shared decision-making regarding investigations or follow up",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider discharge when** the pain has resolved or improved with simple analgesia and no serious cause is found, vital signs are normal, and GP or specialist follow-up is arranged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Chest pain has resolved or improved with simple analgesia and no serious cause has been identified Vital signs are normal Appropriate follow up planning is arranged with GP or specialist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Myocarditis** can mimic respiratory disease or sepsis. Look for a recent viral illness or an **mRNA vaccine 1–14 days earlier (higher risk in adolescent males and after the 2nd dose)**, dizziness, syncope or palpitations.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Myocarditis Non-specific symptoms mimicking respiratory disease or sepsis Recent viral illness eg coxsakie, parvovirus, influenza Recent (1-14 days post) mRNA vaccine received (higher risk adolescent males and after 2nd dose) Dizziness or syncope Feelings of palpitations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pericarditis:** retrosternal pain **improved by sitting upright or leaning forward**, tachycardia, pericardial rub; ECG may show diffuse ST elevation with PR depression.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pericarditis Retrosternal chest pain Pain improved by sitting upright or leaning forward … Tachycardia Pericardial rub ECG changes possible (eg diffuse ST elevation with PR depression; T wave flattening; deep symmetrical T wave inversion)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Aortic dissection:** acute 'tearing' pain radiating to the back, in a child with connective tissue disease (e.g. Marfan, Ehlers-Danlos), Kawasaki disease or known aortic root dilatation; check for a **difference in upper-limb BPs**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aortic dissection Acute onset ‘tearing’ chest pain Pain radiates to back Known connective tissue disease eg Marfan, Ehlers-Danlos History of Kawasaki disease Known aortic root dilatation New murmur with no alternative aetiology Difference in BP’s upper limbs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cardiac ischaemia:** pain radiating to arm or neck, blunt chest trauma, **cocaine, methamphetamine or synthetic cannabinoid use**, known heart disease or Kawasaki disease; ECG ST/T changes and raised troponin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cardiac ischaemia Pain radiating to arm or neck Blunt chest trauma Cocaine, methamphetamine or synthetic cannabinoids use Known cardiac disease or cardiac surgery Kawasaki disease history … ECG changes (ST and T wave changes) Raised troponin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Arrhythmia:** palpitations, **exertional chest pain**, syncope, dizziness, family history of arrhythmia (e.g. Brugada) or sudden cardiac death.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Arrhythmias Palpitations Exertional chest pain Syncope Dizziness Family history of arrhythmias eg Brugada Family history of sudden cardiac death",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Pulmonary embolus:** recent surgery or immobility, malignancy, hypercoagulability, a CVAD, with pleuritic pain, haemoptysis, dyspnoea, or hypoxia, tachycardia or tachypnoea with no other cause.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pulmonary embolus Recent surgery or immobility Malignancy Hyepercoagulability history CVAD in situ or recent Pleuritic pain Haemoptysis Dyspnoea Hypoxia with no other cause Tachycardia with no other cause Tachypnoea with no other cause",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pneumothorax:** tall, thin adolescents; acute severe stabbing pain or dyspnoea after cough or Valsalva; the examination can be normal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pneumothorax Tall/thin adolescents Acute pain or dyspnoea after cough/Valsalva manoeuvre Acute onset, severe, stabbing chest pain Can be pleuritic Can have normal exam",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Acute chest syndrome** in known sickle cell disease — with current or recent infection, dehydration, fever, hypoxia, sedatives or surgery.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute Chest Syndrome Known sickle cell disease Current or recent infection, dehydration, fever, hypoxia, sedatives or surgery",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Inhaled foreign body:** high suspicion under 4 years and in older children with developmental impairment; it may present days to weeks later, and the CXR can look normal — ask for inspiratory, expiratory and lateral decubitus views.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inhaled Foreign Body High degree suspicion children <4 years age High degree suspicion older children with developmental impairment Might present days to weeks after event … CXR might appear normal, look for air trapping Ask for inspiratory, expiratory and lateral decubitus views",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Precordial catch:** sudden sharp pain at the left lower sternal border or apex, never during sleep, **intense but brief (30 seconds to 3 minutes)**; normal examination, no investigations.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Precordial Catch Sudden and sharp onset chest pain Pain along left lower sternal border or cardiac apex area Onset can be during rest or activity but not during sleep … Episodes are intense but brief lasting 30 seconds to 3 minutes Normal exam No special investigations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Costochondritis:** pinpoint pain over 2 or 3 adjacent ribs, reproducible on palpation, movement or deep breathing, usually unilateral, usually ribs 2 to 5, no swelling.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Costochondritis Sharp or dull chest pain Gradual or rapid onset Pin point area to 2 or 3 adjacent ribs Reproducible with palpation, movement or deep breathing … Usually unilateral Usually ribs 2 to 5 No swelling",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Bony pain that wakes the child at night**, or persists after minor trauma, raises **osteomyelitis or bone neoplasm**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Osteomyelitis / Bone neoplasm Localised chest pain Can be subacute or chronic pain Night time pain or awakening from sleep Pain persisting after minor trauma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Psychogenic:** consider a HEEADSSS screen; transient hyperventilation with or without tachycardia, normal examination and normal ECG.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider HEEADSSS screen Transient hyperventilation +/- tachycardia Normal exam Normal ECG",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chest pain' (Last updated January 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Chest_pain/, retrieved 2026-09-23"
+  }
+ ]
+}

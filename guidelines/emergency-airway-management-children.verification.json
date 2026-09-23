@@ -1,0 +1,192 @@
+{
+ "guideline": "guidelines/emergency-airway-management-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Emergency airway management' (Last updated March 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Optimise physiology before every emergency intubation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specific measures to optimise physiology should be undertaken prior to every emergency intubation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Plan early:** consider calling for help, allocate team roles, agree a plan for failed intubation, and use strategies for situational awareness. **Use an emergency intubation checklist** and other cognitive aids.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Every emergency intubation should include early consideration of the need for help, clear team member role allocation, a clear plan for unsuccessful intubation, and strategies to help maintain situational awareness … An emergency intubation checklist and other cognitive aids should be used during emergency airway management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Use continuous waveform ETCO2 to confirm ETT position.** If the waveform is lost or the child arrests, reassess, start resuscitation and check the ETT position, including by direct visualisation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continuous wave-form end-tidal CO2 (ETCO2) should be used to confirm correct endotracheal tube (ETT) position … If ETCO2 waveform is lost or child goes into cardiac arrest, reassess the child, commence resuscitation measures and check ETT position (including direct visualisation)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Emergency airway problems are rarely anatomical** — usually physiological or situational. **The strongest predictors of adverse events are multiple attempts, and respiratory or cardiovascular failure as the indication.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In emergencies, problems with airway management are rarely due to anatomically difficult airways, and commonly due to physiologically or situationally difficult airways (operator experience or staffing numbers) … The strongest predictors of adverse events are multiple intubation attempts, and respiratory or cardiovascular failure as the indication for intubation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypoxia:** elevate the head of the bed up to 40 degrees and **pre-oxygenate with positive airway pressure/PEEP** (BVM with PEEP valve, T-piece, CPAP, BiPAP or HFNC).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypoxia Elevate head of bed to up to 40 degrees Pre-oxygenate with positive airway pressure / PEEP (BVM with PEEP valve, T-piece, CPAP, BiPAP or HFNC)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider apnoeic oxygenation** with nasal cannula oxygen 2 L/kg/min (max 15 L/min).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider providing apnoeic oxygenation with nasal cannula oxygen 2 L/kg/min (15 L/min maximum)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Abort the attempt if saturations fall below 93% or drop 10% from baseline.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Abort intubation attempt if saturations <93% or drop by 10% from baseline",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypotension:** fluid resuscitation 10–20 mL/kg; titrate the induction agent dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypotension Fluid resuscitation 10–20 mL/kg … Titrate induction agent dose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Consider push-dose adrenaline 1 microg/kg (max 50 microg) in the non-arrested child**, repeated as required, including after induction. **This is NOT the cardiac-arrest adrenaline dose.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider push dose adrenaline 1 microg/kg (max 50 microg)* in non-arrested child - can be repeated as required … Consider push dose adrenaline following induction … * Push dose adrenaline in the non-arrested child is NOT the same as the adrenaline dose given in cardiac arrest",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consult anaesthetics if a difficult airway is anticipated.** Congenital syndromes with micrognathia, macroglossia or midface hypoplasia, and some acquired conditions, are often associated with difficult airways.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consult anaesthetics for assistance if difficult airway anticipated … Congenital syndromes involving micrognathia, macroglossia or midface hypoplasia and some acquired conditions are often associated with difficult airways",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Higher risk of airway obstruction:** head injury or intoxication, trauma, airway debris, facial or neck burns, and **inhaled smoke or liquids even without facial burns**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is an increased risk of airway obstruction in the setting of: Head injury or intoxication (loss of pharyngeal tone) Trauma (injury to the airway or compression due to neck haematoma) Airway debris (teeth, vomitus, blood etc) Facial or neck burns Inhaled smoke or liquids even in the absence of burns to the face",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If the airway, physiology or team skillset raises concern, maintain oxygenation and call for help before giving any medication.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If your assessment of the child's airway, physiological condition, or the skillset of your team raises concerns, maintain oxygenation and call for help before administering any medications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Lay equipment out on an airway template before intubating**; items not on the template (T-piece, suction, video laryngoscope) must be at the bedside and checked.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Equipment should be laid out on the airway equipment template prior to emergency intubation. Equipment not on the template should be at the bedside and confirmed as functioning (T-piece, suction, video laryngoscope)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor saturations, heart rate, respiratory rate, BP (2-minute cycle) and ETCO2.** Draw up induction agent and muscle relaxant, and prepare post-intubation sedation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitoring should include: saturations, heart rate, respiratory rate, blood pressure (2-minute cycle) and ETCO2 … Induction agent and muscle relaxant should be chosen and drawn up (the dose administered may be titrated according to the child's condition). Post-intubation sedation should be prepared",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Every induction agent can cause acute hypotension at 'normal' doses in unwell children — reduce the dose significantly.** **Ketamine 0.5–2 mg/kg is the preferred default induction agent.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All induction agents can precipitate acute hypotension if used at \"normal\" doses in unwell children; significant dose reduction is required … Ketamine (0.5–2 mg/kg) is the preferred default induction agent for most emergency intubation scenarios",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Rocuronium 1.2–1.6 mg/kg is the preferred default muscle relaxant**; unwell children may need higher doses for normal onset.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Higher doses may be required in unwell children to achieve normal onset of action … Rocuronium (1.2–1.6 mg/kg) is the preferred default muscle relaxant for emergency intubation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**The Team Leader reads the checklist aloud, challenge-response, before every emergency intubation**, and reassesses after any failed attempt.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The emergency intubation checklist should be read aloud in a challenge-response format by the Team Leader prior to every emergency intubation, reassessing after any single failed attempt",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Cricoid force is not routinely used.** In children it compresses the trachea, displaces rather than compresses the oesophagus, and lowers sphincter tone, making regurgitation more likely.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cricoid force is not routinely used for emergency intubation … Cricoid force in children compresses the trachea, making oxygenation and intubation more difficult, results in oesophageal displacement and not compression, and decreases lower oesophageal sphincter tone, making regurgitation more likely",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If you cannot see the cords, do not pass the tube.** Remove the laryngoscope, reoxygenate, and replan with a different intubator, position or technique.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If you cannot see the cords, do not try to pass the ETT. Remove laryngoscope, reoxygenate, plan and perform subsequent attempts with a different intubator, position of the child, or intubation technique",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Unrecognised oesophageal intubation can be rapidly fatal**, and no single method is 100% reliable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Verification of correct endotracheal tube (ETT) placement is of vital importance as an unrecognised oesophageal intubation can prove rapidly fatal. There is no single method that is 100% reliable for the detection of correct placement of an ETT",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Waveform capnography is the best objective confirmation.** A zero reading means oesophageal placement or no cardiac output; in arrest or poor perfusion it is less accurate, so use other methods if inconclusive.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continuous waveform capnography (ETCO2) is the best objective method of confirmation of correct ETT placement. If the ETCO2 reads zero, the tube could be in the oesophagus or there is no cardiac output. Note that for children in cardiac arrest, or those with markedly reduced perfusion, ETCO2 determination may be less accurate. In these situations, if the ETCO2 determination is inconclusive, other methods of confirmation should be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If placement is still uncertain, remove the tube and reoxygenate.** Auscultation, chest rise, misting, oximetry and CXR are less reliable; **hypoxia is a late, ominous sign**, and CXR only assesses depth.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If correct placement of the ETT is uncertain despite these measures, it should be removed and reoxygenation commenced … Pulse Oximetry: hypoxia is a relatively late (and ominous) sign with regard to determining correct ETT position … CXR: only useful to assess the depth of insertion of the ETT",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Secure the tube, reconfirm its position, start ongoing sedation.** Debrief the team routinely — hot or cold, short (5–10 mins).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Secure ETT with tape / fastener (eg HollisterTM) Reconfirm ETT position as above Commence ongoing sedation … Post intubation debriefing for team members should routinely occur. This can be a \"hot\" (as soon as possible after the event) or \"cold\" (delayed) debrief This should be short (5–10 mins)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider transfer** if the local hospital cannot manage intubated children.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when No facility to manage intubated children is available at local hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Emergency airway management' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Emergency_airway_management/, retrieved 2026-09-23"
+  }
+ ]
+}
