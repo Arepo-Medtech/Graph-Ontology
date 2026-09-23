@@ -1,0 +1,167 @@
+{
+ "guideline": "guidelines/tricyclic-antidepressant-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **TCA poisoning can be fatal in relatively low doses**: cardiac instability (arrhythmias, reduced contractility) and neurological instability (CNS depression, seizures).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "TCA poisoning can be fatal in relatively low doses Its serious effects include Cardiac instability including arrhythmias and reduced cardiac contractility and neurological instability including CNS depression and seizures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Narrow therapeutic window; single-tablet fatalities have been reported; patients can deteriorate quickly.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "They have a narrow therapeutic window so can be fatal at relatively lower doses and single tablet fatalities have been reported. … Patients have the potential to deteriorate quickly.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Management is mainly supportive**, but **alkalinisation with sodium bicarbonate may be needed.** **There is no antidote.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Management is mainly supportive but alkalinisation with Sodium Bicarbonate may be needed … No antidote, treatment is supportive",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**TCAs covered:** amitriptyline, imipramine, nortriptyline, doxepin, dothiepin, clomipramine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tricyclic antidepressants Amitriptyline Imipramine Nortriptyline Doxepin Dothiepin Clomipramine",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Signs usually appear within an hour and most within 6 hours**, but anticholinergic slowing of gut transit can make absorption unpredictable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Onset: Signs usually within an hour of ingestion and most within 6 hours, however can have unpredictable absorption and half-life due to the anticholinergic effect causing delayed gastrointestinal transit time",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** all deliberate self-poisoning · any symptomatic patient · asymptomatic patients with cardiac or neurological disease. ⚠️ **Refer any child who took over 5 mg/kg to hospital.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with deliberate self-poisoning Any symptomatic patient Asymptomatic patients with underlying cardiac or neurological disease Doses >5 mg/kg in children should be referred to hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Over 10–15 mg/kg: intubate, ventilate and give charcoal.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with Doses >10-15 mg/kg should be intubated, ventilated and be given charcoal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Co-ingested serotonin reuptake inhibitors** may raise TCA levels and precipitate serotonin syndrome.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serotonin reuptake inhibitors may increase tricyclic levels in plasma and precipitate serotonin syndrome",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sodium-channel blockade:** reduced contractility and hypotension, **widened QRS predisposing to VT and VF**, prolonged QT. **Reuptake inhibition:** CNS depression/coma, seizures.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Myocardial Sodium channel antagonism: Reduced cardiac contractility and hypotension, widened QRS predisposing to VT and VF, Prolonged QT Inhibition of noradrenalin and serotonin reuptake: CNS depression/coma, seizures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Anticholinergic:** sinus tachycardia, vomiting, blurred vision, ataxia, delirium, urinary retention, ileus. **Antiadrenergic:** vasodilation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anticholinergic: Sinus tachycardia, Vomiting, Blurred vision, Ataxia, Delirium, Urinary retention, Ileus Antiadrenergic: Vasodilation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **ECG on admission, repeated if abnormal: QRS over 100 ms is associated with seizures; QRS over 160 ms with ventricular arrhythmias.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG on admission and repeated if abnormalities found: QRS >100ms associated with seizures, QRS>160ms associated with ventricular arrhythmias",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**TCA levels help only if the diagnosis is in doubt — they don't predict outcome.** Also: paracetamol level, glucose if GCS reduced, blood gas for acidosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "TCA levels useful if diagnosis in doubt, not useful as a predictor of outcome … Paracetamol level in case of co-ingestion Glucose level if reduced GCS Blood gas looking for acidosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider early intubation if GCS is reduced.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider intubation early in reduced GCS.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Charcoal is generally contraindicated (aspiration risk)** — except over 10–15 mg/kg, when it is given **after intubation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Charcoal is generally contraindicated due to risk of aspiration however patients with ingestion of doses >10-15 mg/kg should be given charcoal following intubation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Widened QRS or ventricular arrhythmia: sodium bicarbonate 2 mmol/kg bolus**, repeated as needed, with consideration of intubation and hyperventilation **to a pH of 7.5.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If QRS widened or Ventricular arrhythmia, commence alkalization with Sodium Bicarbonate bolus 2 mmol/kg. Repeat boluses may be given in addition to consideration to intubation and hyperventilation to optimise pH to 7.5.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Seizures: benzodiazepines.** ⚠️ **Avoid phenytoin** — it also blocks sodium channels.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treat seizures with benzodiazepines, avoid phenytoin as it has sodium channel blockade activity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cardiac monitoring and regular ECGs.** ⚠️ **Contact ICU for altered conscious state, GCS under 12, seizures, widened QRS or arrhythmia.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cardiac monitoring and regular ECGs If altered conscious state, GCS <12, seizures, widened QRS or arrhythmia, contact ICU",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic: investigate as above, observe 6 hours, and discharge if the ECG stays normal.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If Asymptomatic: Investigations as above, observe for 6 hours and discharge if ECG remains normal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission for:** all adolescents with intentional overdose · symptomatic patients · overdose with cardiovascular or neurological disease · co-ingestion of cardio-depressant drugs or MAO inhibitors. **Intentional overdose needs mental health review.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all adolescent patients with an intentional overdose, symptomatic patients those with an overdose in the presence of cardiovascular or neurological disease those with co-ingestion of cardio depressant medications or MAO inhibitors. Patients with an intentional overdose should have a mental health review.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transfer to a tertiary centre** for significant CNS depression/seizures or any cardiovascular instability. **PIPER: 1300 137 650.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patient with significant CNS depression/seizures or any cardiovascular instability. … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge criteria:** normal GCS · normal ECG · 6 hours' observation if stable · for deliberate ingestion, a risk assessment showing low risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discharge Criteria Normal GCS Normal ECG Period of observation for 6 hours if stable For deliberate ingestion, a risk assessment should indicate that the patient is at low risk of further self-harm in the discharge setting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Tricyclic Antidepressant (TCA) Poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Tricyclic_Antidepressant_(TCA)_Poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}
