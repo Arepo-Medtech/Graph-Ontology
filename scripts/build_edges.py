@@ -58,6 +58,8 @@ HP_GENES = Path("cache/hpo/genes_to_disease.txt")   # HPO release v2026-09-01, 1
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
+DX_ACC, DX_BIND, DX_VER = (Path("reference/diagnostic_accuracy.json"), Path("reference/diagnostic_accuracy_bindings.json"),
+                           Path("reference/diagnostic_accuracy_verification.json"))   # finding -> diagnosis LRs
 LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
     "~/Documents/ONTOLOGIES/SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
 LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
@@ -522,6 +524,36 @@ def main() -> int:
         con.execute(f"""COPY (SELECT hpo_id, hp_name, snomed_code, au_name, snomed_name FROM umls_hp WHERE NOT same_name ORDER BY 1)
                         TO '{UMLS_HPO.parent / "hpo_snomed_candidates.tsv"}' (DELIMITER '\t', HEADER)""")
         log["HPO -> SNOMED candidates for a person (not edges)"] = con.execute("SELECT count(*) FROM umls_hp WHERE NOT same_name").fetchone()[0]
+
+    # --- finding -> diagnosis likelihood ratios (reference/diagnostic_accuracy.json) ----------------------------------
+    # Numbers transcribed from diagnostic-accuracy review abstracts (PMID per edge), verified against the cached abstract;
+    # finding and diagnosis bound to SNOMED CT-AU by exact term. Only records whose number verified AND whose finding and
+    # diagnosis both bound become edges; the rest stay candidates in the reference files. Every edge is a clinical-safety
+    # edge, so it enters corrected_pending_attestation.
+    if DX_ACC.exists() and DX_BIND.exists():
+        recs = json.load(open(DX_ACC))["records"]
+        bound = {x["id"]: x for x in json.load(open(DX_BIND))["results"]}
+        verified = ({x["id"] for x in json.load(open(DX_VER))["rows"] if x["verified"]} if DX_VER.exists() else set())
+        rows_lr = []
+        for r in recs:
+            b = bound.get(r["id"], {})
+            if r["id"] not in verified or not b.get("finding") or not b.get("diagnosis"):
+                continue
+            derived = r.get("lr") is None
+            if derived:
+                s_, p_ = r["sens"], r["spec"]
+                lr = s_ / (1 - p_) if r["when"] == "present" else (1 - s_) / p_
+            else:
+                lr = r["lr"]
+            rows_lr.append(("SCT", b["finding"]["concept_id"], "finding_lr_if_" + r["when"], "SCT", b["diagnosis"]["concept_id"],
+                            "PubMed abstract (diagnostic-accuracy review)", f"PMID:{r['pmid']} record={r['id']}",
+                            "LR derived from pooled sensitivity and specificity" if derived else "LR as reported",
+                            "ungraded", "corrected_pending_attestation", "reference/diagnostic_accuracy.json",
+                            json.dumps({"lr": round(lr, 3), "lr_ci": None if derived else r.get("lr_ci"), "derived": derived,
+                                        "sens": r.get("sens"), "sens_ci": r.get("sens_ci"), "spec": r.get("spec"), "spec_ci": r.get("spec_ci"),
+                                        "population": r["population"], "setting": r["setting"], "pmid": r["pmid"],
+                                        "finding_text": r["finding_text"], "diagnosis_text": r["diagnosis_text"]})))
+        ins_rows("finding -> diagnosis likelihood ratio (transcribed, verified)", rows_lr)
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's

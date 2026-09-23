@@ -587,6 +587,38 @@
       "note": "attrs.association_type: MENDELIAN or POLYGENIC for OMIM; UNKNOWN for all Orphanet rows (HPO does not carry Orphanet's association type). The graph reaches phenotypes from genes by walking gene -> disease -> phenotype, so genes_to_phenotype.txt (HPO's own projection of the same) is not loaded."
     },
     {
+      "id": "finding_lr_if_present",
+      "label": "likelihood ratio for the diagnosis when the finding is PRESENT (LR+; below 1 means presence lowers the odds)",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "likelihood_ratio",
+      "source": "PubMed abstracts of diagnostic-accuracy reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
+      "status": "built",
+      "note": "Values transcribed from the abstract's numbers only (the abstract itself is not stored), verified number by number against the cached abstract (scripts/verify_diagnostic_accuracy.py); attrs: lr, lr_ci (when published), sens / spec and their intervals, derived (LR computed from pooled sensitivity and specificity: no interval is invented), population, setting (calibrated_on), pmid. Finding and diagnosis bind to SNOMED CT-AU by exact term only. A clinical-safety edge: state corrected_pending_attestation until a person signs off. LRs may pool across Western primary care; priors never pool (prevalence_in)."
+    },
+    {
+      "id": "finding_lr_if_absent",
+      "label": "likelihood ratio for the diagnosis when the finding is ABSENT (LR-)",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "likelihood_ratio",
+      "source": "PubMed abstracts of diagnostic-accuracy reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
+      "status": "built",
+      "note": "A separate edge: LR- is not 1/LR+. Same record, verification and attestation as finding_lr_if_present."
+    },
+    {
       "id": "sign_suggests",
       "label": "sign or symptom raises the odds of diagnosis (LR+)",
       "subject": [
@@ -601,8 +633,8 @@
       "derivation": "gap",
       "strength_kind": "likelihood_ratio",
       "source": null,
-      "status": "needs_source",
-      "note": "Tier 1 needs published sensitivity/specificity (JAMA Rational Clinical Examination, Cochrane DTA). Tier 3 recall is ordinal-only and lives in edge_authored as a look-up queue, never here"
+      "status": "superseded",
+      "note": "Tier 1 needs published sensitivity/specificity (JAMA Rational Clinical Examination, Cochrane DTA). Tier 3 recall is ordinal-only and lives in edge_authored as a look-up queue, never here -- SUPERSEDED 23 Sep 2026 by finding_lr_if_present / finding_lr_if_absent: a present finding can LOWER the odds (history of vaginal discharge, LR 0.3, for UTI), which 'suggests' / 'argues against' cannot say."
     },
     {
       "id": "sign_argues_against",
@@ -619,8 +651,8 @@
       "derivation": "gap",
       "strength_kind": "likelihood_ratio",
       "source": null,
-      "status": "needs_source",
-      "note": "A separate edge: LR- is not 1/LR+"
+      "status": "superseded",
+      "note": "A separate edge: LR- is not 1/LR+ -- SUPERSEDED 23 Sep 2026 by finding_lr_if_present / finding_lr_if_absent: a present finding can LOWER the odds (history of vaginal discharge, LR 0.3, for UTI), which 'suggests' / 'argues against' cannot say."
     },
     {
       "id": "prevalence_in",

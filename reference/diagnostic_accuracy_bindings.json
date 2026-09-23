@@ -1,0 +1,846 @@
+{
+ "_note": "Output of scripts/bind_diagnostic_accuracy.py. Exact matches only; null = no exact SNOMED CT-AU term (a candidate, not an edge).",
+ "edition": "http://snomed.info/sct/32506021000036107/version/20260831",
+ "server": "https://r4.ontoserver.csiro.au/fhir",
+ "bound_both": 36,
+ "records": 49,
+ "results": [
+  {
+   "id": "wang2005-hx-hf-present",
+   "finding": {
+    "concept_id": "161505003",
+    "display": "H/O: heart failure",
+    "matched_term": "History of heart failure",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "wang2005-hx-hf-absent",
+   "finding": {
+    "concept_id": "161505003",
+    "display": "H/O: heart failure",
+    "matched_term": "History of heart failure",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "wang2005-pnd",
+   "finding": {
+    "concept_id": "55442000",
+    "display": "Paroxysmal nocturnal dyspnoea",
+    "matched_term": "Paroxysmal nocturnal dyspnea",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "wang2005-s3",
+   "finding": {
+    "concept_id": "277455002",
+    "display": "Third heart sound",
+    "matched_term": "Third heart sound",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "wang2005-doe-absent",
+   "finding": {
+    "concept_id": "60845006",
+    "display": "Dyspnoea on exertion",
+    "matched_term": "Dyspnea on exertion",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "wang2005-rales-absent",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Rales",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-dysuria",
+   "finding": {
+    "concept_id": "49650001",
+    "display": "Dysuria",
+    "matched_term": "Dysuria",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-frequency",
+   "finding": {
+    "concept_id": "300471006",
+    "display": "Finding of frequency of urination",
+    "matched_term": "Frequency of micturition",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-haematuria",
+   "finding": {
+    "concept_id": "34436003",
+    "display": "Haematuria",
+    "matched_term": "Hematuria",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-backpain",
+   "finding": {
+    "concept_id": "161891005",
+    "display": "Backache",
+    "matched_term": "Backache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-cvat",
+   "finding": {
+    "concept_id": "102830001",
+    "display": "Renal angle tenderness",
+    "matched_term": "Costovertebral angle tenderness",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-dysuria-absent",
+   "finding": {
+    "concept_id": "49650001",
+    "display": "Dysuria",
+    "matched_term": "Dysuria",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-backpain-absent",
+   "finding": {
+    "concept_id": "161891005",
+    "display": "Backache",
+    "matched_term": "Backache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-hx-vaginal-discharge",
+   "finding": {
+    "concept_id": "271939006",
+    "display": "Vaginal discharge",
+    "matched_term": "Vaginal discharge",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-hx-vaginal-irritation",
+   "finding": {
+    "concept_id": "161816004",
+    "display": "Vaginal irritation",
+    "matched_term": "Vaginal irritation",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "bent2002-exam-vaginal-discharge",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "271939006",
+     "display": "Vaginal discharge"
+    },
+    {
+     "concept_id": "282332003",
+     "display": "NAD on examination"
+    },
+    {
+     "concept_id": "162157005",
+     "display": "Vaginal discharge absent"
+    },
+    {
+     "concept_id": "162158000",
+     "display": "Vaginal discharge present"
+    },
+    {
+     "concept_id": "162156001",
+     "display": "Vaginal discharge symptom"
+    }
+   ]
+  },
+  {
+   "id": "benjaminse2006-lachman-present",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "benjaminse2006-lachman-absent",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "benjaminse2006-pivot-present",
+   "finding": {
+    "concept_id": "299407001",
+    "display": "Pivot shift test positive",
+    "matched_term": "Pivot shift test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "benjaminse2006-pivot-absent",
+   "finding": {
+    "concept_id": "299407001",
+    "display": "Pivot shift test positive",
+    "matched_term": "Pivot shift test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "benjaminse2006-drawer-chronic-present",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "benjaminse2006-drawer-chronic-absent",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "hegedus2007-mcmurray-present",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "hegedus2007-mcmurray-absent",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "hegedus2007-apley-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "hegedus2007-apley-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "hegedus2007-jlt-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "hegedus2007-jlt-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "attia1999-jolt-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1366188001",
+     "display": "Vascular Ehlers-Danlos, polymicrogyria syndrome"
+    }
+   ]
+  },
+  {
+   "id": "attia1999-jolt-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1366188001",
+     "display": "Vascular Ehlers-Danlos, polymicrogyria syndrome"
+    }
+   ]
+  },
+  {
+   "id": "rothman2003-cloudy",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "3110003",
+    "display": "Acute otitis media",
+    "matched_term": "Acute otitis media",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "300152000",
+     "display": "Amber tympanic membrane"
+    },
+    {
+     "concept_id": "300151007",
+     "display": "Blue tympanic membrane"
+    },
+    {
+     "concept_id": "300140007",
+     "display": "Dull tympanic membrane"
+    },
+    {
+     "concept_id": "300150008",
+     "display": "Injected tympanic membrane"
+    },
+    {
+     "concept_id": "300149008",
+     "display": "Pink tympanic membrane"
+    }
+   ]
+  },
+  {
+   "id": "rothman2003-bulging",
+   "finding": {
+    "concept_id": "271742008",
+    "display": "Bulging tympanic membrane",
+    "matched_term": "Bulging tympanic membrane",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "3110003",
+    "display": "Acute otitis media",
+    "matched_term": "Acute otitis media",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "rothman2003-immobile",
+   "finding": {
+    "concept_id": "277179007",
+    "display": "Immobile tympanic membrane",
+    "matched_term": "Immobile tympanic membrane",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "3110003",
+    "display": "Acute otitis media",
+    "matched_term": "Acute otitis media",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "rothman2003-red",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "3110003",
+    "display": "Acute otitis media",
+    "matched_term": "Acute otitis media",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "300153005",
+     "display": "Bright red tympanic membrane"
+    },
+    {
+     "concept_id": "300151007",
+     "display": "Blue tympanic membrane"
+    },
+    {
+     "concept_id": "300140007",
+     "display": "Dull tympanic membrane"
+    },
+    {
+     "concept_id": "300150008",
+     "display": "Injected tympanic membrane"
+    },
+    {
+     "concept_id": "300149008",
+     "display": "Pink tympanic membrane"
+    }
+   ]
+  },
+  {
+   "id": "rothman2003-normal-colour",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "3110003",
+    "display": "Acute otitis media",
+    "matched_term": "Acute otitis media",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "300154004",
+     "display": "Normal colour tympanic membrane"
+    },
+    {
+     "concept_id": "300159009",
+     "display": "Tympanic membrane normal"
+    },
+    {
+     "concept_id": "300148000",
+     "display": "Finding of colour of tympanic membrane"
+    },
+    {
+     "concept_id": "300158001",
+     "display": "Normal light reflex at tympanic membrane"
+    },
+    {
+     "concept_id": "77775007",
+     "display": "Normal colour"
+    }
+   ]
+  },
+  {
+   "id": "goodacre2005-malignancy",
+   "finding": {
+    "concept_id": "363346000",
+    "display": "Malignant neoplastic disease",
+    "matched_term": "Malignant neoplastic disease",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "goodacre2005-prev-dvt",
+   "finding": {
+    "concept_id": "161508001",
+    "display": "H/O: deep vein thrombosis",
+    "matched_term": "History of deep vein thrombosis",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "goodacre2005-immobilisation",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "goodacre2005-calf-diameter",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "129808005",
+     "display": "Difference in location"
+    },
+    {
+     "concept_id": "129812004",
+     "display": "Difference in margin"
+    },
+    {
+     "concept_id": "129807000",
+     "display": "Difference in opacity"
+    },
+    {
+     "concept_id": "129811006",
+     "display": "Difference in shape"
+    },
+    {
+     "concept_id": "129806009",
+     "display": "Difference in size"
+    }
+   ]
+  },
+  {
+   "id": "goodacre2005-surgery",
+   "finding": {
+    "concept_id": "19585003",
+    "display": "Postoperative state",
+    "matched_term": "Postoperative state",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "goodacre2005-calf-swelling-absent",
+   "finding": {
+    "concept_id": "281792000",
+    "display": "Swollen calf",
+    "matched_term": "Swelling of calf",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "goodacre2005-calf-diameter-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "129808005",
+     "display": "Difference in location"
+    },
+    {
+     "concept_id": "129812004",
+     "display": "Difference in margin"
+    },
+    {
+     "concept_id": "129807000",
+     "display": "Difference in opacity"
+    },
+    {
+     "concept_id": "129811006",
+     "display": "Difference in shape"
+    },
+    {
+     "concept_id": "129806009",
+     "display": "Difference in size"
+    }
+   ]
+  },
+  {
+   "id": "steiner2004-crt",
+   "finding": {
+    "concept_id": "50427001",
+    "display": "Increased capillary filling time",
+    "matched_term": "Prolonged capillary refill time",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "34095006",
+    "display": "Dehydration",
+    "matched_term": "Dehydration",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "steiner2004-turgor",
+   "finding": {
+    "concept_id": "425244000",
+    "display": "Decreased skin turgor",
+    "matched_term": "Decreased skin turgor",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "34095006",
+    "display": "Dehydration",
+    "matched_term": "Dehydration",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "steiner2004-resp-pattern",
+   "finding": {
+    "concept_id": "386813002",
+    "display": "Abnormal breathing",
+    "matched_term": "Abnormal breathing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "34095006",
+    "display": "Dehydration",
+    "matched_term": "Dehydration",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "cts2023-phalen-present",
+   "finding": {
+    "concept_id": "299961008",
+    "display": "Phalen's test positive",
+    "matched_term": "Phalen's test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "cts2023-phalen-absent",
+   "finding": {
+    "concept_id": "299961008",
+    "display": "Phalen's test positive",
+    "matched_term": "Phalen's test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "cts2023-tinel-present",
+   "finding": {
+    "concept_id": "281632005",
+    "display": "Tinel's sign positive",
+    "matched_term": "Tinel's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "cts2023-tinel-absent",
+   "finding": {
+    "concept_id": "281632005",
+    "display": "Tinel's sign positive",
+    "matched_term": "Tinel's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  }
+ ]
+}

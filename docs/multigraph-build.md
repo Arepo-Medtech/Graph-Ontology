@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,050,986 nodes, 4,601,958 edges, 156 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Illnesses to ICD-10-CM* and *How a drug works*.)
+**1,050,986 nodes, 4,601,994 edges, 158 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -236,6 +236,44 @@ testosterone* under *Testosterone*.
 **Together: 3,114 LOINC terms reach 869 findings they define** (from 1,110 and 418). The two witnesses make 13,801 of
 the same edges; for the 882 LOINC terms both reach, **826 (93.7%) get exactly the same findings**. The analyte join
 alone makes 2,111 edges, Athena alone 10,325.
+
+## Signs → diagnoses: likelihood ratios (first tranche, Tier 2, awaiting sign-off)
+
+The evidence layer the design was built around: how much a finding moves the odds of a diagnosis. **36 edges, 27
+findings, 8 diagnoses**, from 9 published diagnostic-accuracy reviews (six JAMA *Rational Clinical Examination*, three
+meta-analyses) covering common Western primary-care and emergency questions.
+
+*Where the numbers come from.* The full texts are not open; their **PubMed abstracts** are, and most report pooled
+likelihood ratios or pooled sensitivity and specificity. `scripts/pubmed_fetch.py` caches each abstract
+(`cache/pubmed/`, git-ignored — it is the publisher's text); `reference/diagnostic_accuracy.json` keeps **only the
+numbers, the PMID, the population and the setting**. `scripts/verify_diagnostic_accuracy.py` checks every number
+against its cached abstract: **49/49** — after it caught one transcription (1.80 written as 1.8). That verification
+is the route's evidence: Wilson lower bound 0.927 → **Tier 2**. Tier 1 needs ≥ 0.99, i.e. several hundred verified
+records.
+
+*Two predicates, renamed from the design.* `finding_lr_if_present` and `finding_lr_if_absent` replace
+`sign_suggests` / `sign_argues_against`, because a **present** finding can lower the odds: in women with urinary
+symptoms, a history of vaginal discharge carries LR 0.3 for UTI. LR− is its own edge, never 1/LR+. Where an abstract
+gives only sensitivity and specificity (ACL, meniscus, carpal tunnel — 12 edges), LR+ = sens/(1−spec) and LR− =
+(1−sens)/spec are derived and marked `derived`; no interval is invented for them.
+
+*Binding.* Finding and diagnosis bind to SNOMED CT-AU by **exact term only**, on the live Ontoserver
+(`scripts/bind_diagnostic_accuracy.py`): **36 of 49** bound. The other 13 stay candidates with the Ontoserver's nearest
+concepts beside them (`reference/diagnostic_accuracy_bindings.json`) — *joint line tenderness* splits into medial and
+lateral in SNOMED; *distinctly red tympanic membrane* has *Bright red tympanic membrane* nearby; *jolt accentuation of
+headache*, *Apley's test* and *recent immobilisation* have no concept. Near-synonym fallbacks were removed where they
+merged findings the source keeps apart (calf swelling vs a *difference in calf diameter*; vaginal discharge reported vs
+seen).
+
+*What is in it:* Heart failure (S3 LR 11; absent rales 0.51), ACL rupture (Lachman 14.2 / 0.16), acute otitis media
+(bulging drum 51), meniscal tear, DVT, dehydration in children, UTI, carpal tunnel — every edge with its population
+(`attrs.population`, `attrs.setting` — the design's `calibrated_on`), so an LR from an emergency department is never
+silently used as a primary-care one.
+
+*Not yet:* **priors** (`prevalence_in`, keyed by population and never pooled) — without them an LR moves odds that
+have not been stated; composite rules (Centor, Wells, Ottawa) — they are scores, not findings; and the reviews whose
+abstracts give only ranges (Aalbers 2011 pharyngitis, Swap 2005 chest pain, Andersson 2004 appendicitis).
+**Every edge is `corrected_pending_attestation`**: a clinician signs off before any of it is used.
 
 ## Illnesses to ICD-10-CM: every code (built, Tier 2)
 
