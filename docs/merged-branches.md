@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `ecc0f6b`
+**Last verified:** 2026-09-23 · `master` at `56fe582`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -12,6 +12,7 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`monograph-foundry`** | `7b3ed46` | 13 | [#3](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/3) | 2026-09-21 | `9e78d5d` | ✅ yes |
 | ⚠️ **`attestation-loop`** | `e4114bc` | 1 | [#4](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/4) | 2026-09-23 | `25d5b24` | ✅ yes | 
 | **`binding-review-loop`** | `80380c9` | 4 | [#5](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/5) | 2026-09-23 | `ecc0f6b` | ✅ yes |
+| **`condition-guideline-tally`** | `0ec6aa3` | 2 | [#6](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/6) | 2026-09-23 | `56fe582` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -56,6 +57,13 @@ The SNOMED binding review worksheet and harvest, live NCTS validation, the editi
 `docs/snomed-edition-pin.md` · `reference/binding_validation.json` ·
 `reference/edition_diff_20260731_20260831.json` · `reference/snomed_bindings.json` ·
 `scripts/bind_ontoserver.mjs` · `scripts/binding_review.py` · `scripts/validate_bindings_ncts.py`
+
+### `condition-guideline-tally` — PR #6, 4 files ✅ *(retained)*
+The conditions × guidelines × verification × SNOMED tally, and the join of under-verified guidelines
+with SNOMED-bound conditions.
+
+`docs/condition-guideline-tally.md` · `docs/underverified-and-bound.md` ·
+`scripts/condition_guideline_tally.py` · `scripts/underverified_bound.py`
 
 ### `attestation-loop` — PR #4, 6 files ⚠️ *(ref deleted, see above)*
 Closed the attestation loop: the dose queue became a committed record, and a rejected dose fails the
