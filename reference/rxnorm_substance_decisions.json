@@ -1,0 +1,78 @@
+{
+  "_note": "Human decisions about AMT substance -> RxNorm ingredient, for rows scripts/rxnorm_resolve.py could not resolve. Read by scripts/rxnorm_review_queue.py so that improving the resolver never discards a review, exactly as reference/binding_corrections.json does for SNOMED bindings.",
+  "_states": {
+    "corrected_pending_attestation": "a reviewer chose this concept; awaiting named sign-off",
+    "attested": "signed off by a named person; carries attestor and date",
+    "rejected": "this substance must NOT map to this concept"
+  },
+  "_vocabulary": "OMOP Athena bundle v20260829; every target below was checked to be standard_concept=S and invalid_reason=NULL at decision time.",
+  "decisions": [
+    {
+      "substance_id": "1311551000168108",
+      "substance": "Lactobacillus rhamnosus",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5 (unattested)",
+      "rxcui": "100278",
+      "concept_id": "19000811",
+      "rxnorm_name": "Lacticaseibacillus rhamnosus",
+      "vocabulary": "RxNorm",
+      "products_unblocked": 18,
+      "why": "Pure taxonomic rename. Lactobacillus rhamnosus was reclassified to Lacticaseibacillus rhamnosus in the 2020 split of the Lactobacillus genus (Zheng et al.); the organism is unchanged. RxNorm carries no valid species-level 'Lactobacillus rhamnosus' ingredient -- only strain-level RxNorm Extension entries (HN001, SP1, R0011, CLR2) -- so the renamed species concept is the only correct species-level target.",
+      "evidence": "Athena: 100278 Lacticaseibacillus rhamnosus, RxNorm, Ingredient, standard=S, invalid=NULL. AMT product terms name the plain species with no strain, so a strain-level target would be an unjustified narrowing.",
+      "agrees_with_resolver_candidate_1": true
+    },
+    {
+      "substance_id": "1312381000168103",
+      "substance": "Bifidobacterium lactis",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5 (unattested)",
+      "rxcui": "1550045",
+      "concept_id": "45776867",
+      "rxnorm_name": "Bifidobacterium animalis",
+      "vocabulary": "RxNorm",
+      "products_unblocked": 14,
+      "why": "B. lactis is a subspecies of B. animalis (Bifidobacterium animalis subsp. lactis). RxNorm retired its own 'Bifidobacterium lactis' concept and points it at the species.",
+      "evidence": "RxNorm's own deprecation decides this, not inference: concept 40242566 'Bifidobacterium lactis' (rxcui 1150094) has invalid_reason=U and carries both 'Concept replaced by' and 'Maps to' -> 45776867 Bifidobacterium animalis (standard=S, invalid=NULL). AMT product terms name no strain.",
+      "agrees_with_resolver_candidate_1": true
+    },
+    {
+      "substance_id": "1391681000168103",
+      "substance": "Lactobacillus delbrueckii",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5 (unattested)",
+      "rxcui": "OMOP2721256",
+      "concept_id": "40798917",
+      "rxnorm_name": "Lactobacillus Delbrueckii",
+      "vocabulary": "RxNorm Extension",
+      "products_unblocked": 3,
+      "why": "The resolver's candidate was WRONG and is rejected here. It offered 100272 'Lactobacillus delbrueckii subsp. bulgaricus', which narrows a species to one of its subspecies. L. delbrueckii has other subspecies (delbrueckii, lactis, indicus), and nothing in AMT says which is in these products.",
+      "evidence": "All three AMT products name the plain species: 'Lactobacillus delbrueckii 250 million CFU' in a ten-organism capsule, its medicinal-product parent, and Probiotica (Nutra-Life) capsule. No AMT substance anywhere mentions bulgaricus or any delbrueckii subspecies (checked the whole substance table). Species-level target 40798917 is standard=S, invalid=NULL.",
+      "agrees_with_resolver_candidate_1": false,
+      "rejected_candidate": {
+        "rxcui": "100272",
+        "name": "Lactobacillus delbrueckii subsp. bulgaricus",
+        "why_rejected": "narrows species to subspecies without evidence"
+      }
+    },
+    {
+      "substance_id": "710318008",
+      "substance": "Lactobacillus",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5 (unattested)",
+      "rxcui": "OMOP5051433",
+      "concept_id": "36118942",
+      "rxnorm_name": "Lactobacillus",
+      "vocabulary": "RxNorm Extension",
+      "products_unblocked": 0,
+      "why": "Genus-level match, recorded for completeness rather than benefit. The resolver found no candidate; RxNorm's retired genus concept points at this one.",
+      "evidence": "Athena: deprecated RxNorm 6204 'Lactobacillus' (concept 987128, invalid_reason=D) 'Maps to' -> 36118942 Lactobacillus, RxNorm Extension, standard=S, invalid=NULL.",
+      "caveat": "This unblocks nothing real. The two 'products' behind this substance are AMT grouper concepts -- 'Lactobacillus only product' and 'Lactobacillus-containing product' -- not marketed goods. The row is arguably a substance grouper and could instead be classed not-applicable; it is recorded as decided so it stops consuming review attention either way.",
+      "trap": "Do NOT use 1147374 'Lactobacillus sp'. In this Athena bundle it is invalid (U) and both 'Concept replaced by' and 'Maps to' send it to 1310844 Bacillus coagulans, a different organism. Anything resolving genus-level Lactobacillus by following OMOP mappings blindly will land there.",
+      "agrees_with_resolver_candidate_1": null
+    }
+  ]
+}

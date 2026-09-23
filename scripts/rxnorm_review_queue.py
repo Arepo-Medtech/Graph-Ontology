@@ -26,10 +26,20 @@ from pathlib import Path
 import duckdb
 
 DB = Path("out/compendium.duckdb")
+DECISIONS = Path("reference/rxnorm_substance_decisions.json")
+
+
+def load_decisions(path: Path = DECISIONS) -> dict:
+    """Human choices already made, keyed by substance id. Rejections map to None."""
+    if not path.exists():
+        return {}
+    doc = json.load(open(path))
+    return {d["substance_id"]: d for d in doc.get("decisions", []) if d.get("state") != "rejected"}
 
 
 def build(review_path: str, out_path: str, log=print) -> dict:
     rows = list(csv.DictReader(open(review_path), delimiter="\t"))
+    decisions = load_decisions()
     con = duckdb.connect(str(DB))
     ids = sorted({r["sctid"] for r in rows})
     con.execute("CREATE OR REPLACE TEMP TABLE q AS SELECT * FROM (VALUES " + ",".join(f"('{i}')" for i in ids) + ") t(id)")
@@ -63,7 +73,11 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         e = evidence.get(r["sctid"], (None,) * 10)
         products, reaching = e[2] or 0, e[3] or 0
         blocked = products - reaching
-        if r["status"].startswith("not-applicable"):
+        decision = decisions.get(r["sctid"])
+        if decision:
+            # a person has already chosen; the resolver's opinion no longer matters
+            verdict = "decided by review"
+        elif r["status"].startswith("not-applicable"):
             verdict = "already classified: " + r["status"].split(":", 1)[1].strip()
         elif e[4]:
             verdict = "OMOP resolves it"
@@ -80,6 +94,9 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         out.append({
             "sctid": r["sctid"], "substance": r["pt"], "status": r["status"], "verdict": verdict,
             "products": products, "products_reaching_omop": reaching, "products_blocked": blocked,
+            "decided_rxcui": (decision or {}).get("rxcui", ""),
+            "decided_name": (decision or {}).get("rxnorm_name", ""),
+            "decided_state": (decision or {}).get("state", ""),
             "omop_rxcui": e[4] or "", "omop_rxnorm_name": e[5] or "", "omop_vs_rxnav": e[6] or "",
             "base_substance": e[7] or "", "base_rxcui": e[8] or "", "base_rxnorm_name": e[9] or "",
             "legacy_rxcui": r["legacy_rxcui"], "legacy_name": r["legacy_name"],
@@ -105,6 +122,9 @@ def build(review_path: str, out_path: str, log=print) -> dict:
     return {
         "rows": len(out),
         "by_verdict": dict(by_verdict.most_common()),
+        "decided_by_review": len(decisions),
+        "products_unblocked_by_decisions": sum(
+            x["products_blocked"] for x in out if x["verdict"] == "decided by review"),
         "needs_a_person": len(needs),
         "products_blocked_by_them": blocked_total,
         "rows_covering_half_the_blocked_products": half,
