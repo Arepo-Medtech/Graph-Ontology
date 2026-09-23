@@ -1,0 +1,87 @@
+{
+  "_note": "Evidence tiers for edges in the weighted directed multigraph. A tier is EARNED by measurement (scripts/route_scorer.py) or, for Tier 3, fixed by how the content was produced. No author may declare a tier. Every edge at every tier carries a trace to its source: 100%, no exceptions -- the contract all 145 guideline verification files already keep. See docs/weighted-graph-design.md.",
+  "_rule_zero": "An edge with no source trace is not an edge. It is not written, not displayed, and not used in traversal.",
+
+  "tiers": {
+    "1": {
+      "name": "lookup, clean result",
+      "source_class": "lookup",
+      "admission": "route Wilson 95% lower bound >= 0.99, fired >= 30, on a held-out truth set with two independent sources",
+      "may_emit": ["exact", "likelihood_ratio"],
+      "collapse": "allowed: the edge may be written as a single target",
+      "examples_measured_2026_09_23": {
+        "code:snomed-maps-to-ingredient": {"fired": 3074, "precision": 1.0, "wilson_lo": 0.9988}
+      },
+      "external_sources": [
+        "OMOP code mappings (Maps to) where the route has earned Tier 1",
+        "published diagnostic accuracy with sens/spec and confidence intervals: JAMA Rational Clinical Examination series, Cochrane Diagnostic Test Accuracy reviews"
+      ],
+      "clinical_display": "yes, with source cited"
+    },
+    "2": {
+      "name": "lookup, ambiguous but significant signal",
+      "source_class": "lookup",
+      "admission": "route Wilson 95% lower bound >= 0.80 and < 0.99, fired >= 30",
+      "may_emit": ["likelihood_ratio_interval", "belief_interval", "direction_only", "ordinal"],
+      "collapse": "not allowed: the edge carries its interval or candidate frame",
+      "examples_measured_2026_09_23": {
+        "deprecation:name-then-replaced-by": {"fired": 82, "precision": 0.951, "wilson_lo": 0.8812}
+      },
+      "external_sources": [
+        "single diagnostic-accuracy studies, wide intervals, or heterogeneous pooled estimates",
+        "vocabulary replacement chains where the scored route falls short of Tier 1"
+      ],
+      "clinical_display": "yes, with interval and source shown; never as a point estimate"
+    },
+    "3": {
+      "name": "authored from memory",
+      "source_class": "authored",
+      "admission": "fixed by provenance, not by score: anything produced from model recall rather than a retrieved source",
+      "may_emit": ["ordinal"],
+      "ordinal_scale": ["strong", "moderate", "weak", "no useful signal"],
+      "never_emits": "a numeric likelihood ratio, sensitivity, specificity or probability -- recall does not support that resolution, and a number from memory is indistinguishable in a column from a measured one",
+      "collapse": "not allowed",
+      "purpose": "QUEUE GENERATION. Ranks which of the ~10^4 plausible edges deserve a Tier 1 or 2 lookup. It is cheap to be wrong about a ranking; it is not cheap to be wrong about evidence.",
+      "namespace": "a separate table (edge_authored). Never merged into guidelines/, never into the main edge table, never combined multiplicatively with Tier 1 or 2 weights.",
+      "trace": "still 100%: the trace records the author (model + version), the date, and the prompt that produced it, so the claim is attributable even though it is not sourced",
+      "clinical_display": "never. Upgrading requires a Tier 1 or 2 lookup that supersedes it.",
+      "known_failure_modes_of_the_author": [
+        "produces plausible round numbers with false precision -- hence ordinal-only",
+        "cannot reliably distinguish recall from reconstruction",
+        "stronger on well-studied classics (Centor, Wells, Ottawa, Light's criteria) than on the long tail, where confabulation is most confident",
+        "knowledge cutoff: cannot know what has since been superseded or retracted"
+      ]
+    }
+  },
+
+  "non_tiers": {
+    "inadmissible": {
+      "meaning": "a lookup route that scored below Tier 2",
+      "examples_measured_2026_09_23": {
+        "name:exact-normalised": {"fired": 32, "precision": 0.75, "wilson_lo": 0.5789, "why": "common names agree by chance; u is high"}
+      },
+      "handling": "output goes to the review queue as CANDIDATES, never written as edges"
+    },
+    "ungraded": {
+      "meaning": "a route that fired fewer than 30 times on the truth set; the interval is too wide to grade",
+      "handling": "treated as inadmissible until more truth accumulates"
+    },
+    "ignorance": {
+      "meaning": "no route fired and no candidate exists -- all mass on the frame (Dempster-Shafer theta)",
+      "handling": "recorded as ignorance, which is NOT the same as 'no edge exists'. Conflating them manufactures silent false negatives.",
+      "measured_2026_09_23": {"rxnorm_review_queue_rows": 617}
+    }
+  },
+
+  "strength_kinds": {
+    "exact": "a lookup with no uncertainty worth recording (Tier 1 code mappings)",
+    "likelihood_ratio": "LR+ / LR- with interval; prevalence-independent, therefore TRANSPORTABLE between populations",
+    "belief_interval": "[Bel, Pl]; the width is the ignorance and must not be collapsed to a point",
+    "possibility": "non-additive: Pos(A or B) = max(Pos(A), Pos(B)), not a sum",
+    "rough_boundary": "membership as lower/upper approximation; the upper approximation is a BOUND, not an answer",
+    "ordinal": "ordered grade without arithmetic; Tier 3's only permitted kind",
+    "_rule": "strength kinds never combine with one another. A belief and a possibility of 0.8 are not the same claim."
+  },
+
+  "store_the_transportable_quantity": "Store likelihood ratios / log(m/u), not precision. Precision is a positive predictive value and depends on the base rate of the population it was measured in; it does not transport. The prior is stored separately, per population."
+}

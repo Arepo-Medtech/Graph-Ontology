@@ -25,6 +25,12 @@ TABLES = {
     "atc-codes": 10_000,
     "item-atc-relationships": 10_000,
     "restrictions": 10_000,
+    # the indication chain: item -> restriction -> treatment_of_code -> condition treated
+    "item-restriction-relationships": 10_000,
+    "indications": 10_000,
+    # restriction -> prescribing text; an indication IS a prescribing text (indication_prescribing_txt_id).
+    # treatment_of_code is NOT the indication key: it resolves for 69 of 3,043 restrictions (measured 2026-09-23).
+    "restriction-prescribing-text-relationships": 10_000,
 }
 
 
