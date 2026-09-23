@@ -21,7 +21,18 @@ differences pass but paraphrase does not. This does NOT check that a claim
 follows from its source_text -- that stays a human judgement, which is what
 verifier_class: single_verifier_uncalibrated records.
 """
-import json, re, sys
+import json, re, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from attestation import load as load_attestations, status_for
+
+_ATTEST = None
+def _attest():
+    # Read docs/attestation-queue.md once. Absent file -> empty, and every
+    # queued dose simply reports as outstanding; nothing breaks without it.
+    global _ATTEST
+    if _ATTEST is None:
+        _ATTEST = load_attestations()
+    return _ATTEST
 
 JOINER = " … "          # multi-fragment source_text separator
 # The earliest guidelines wrote the same elision as three ASCII dots. Both mark
@@ -144,6 +155,28 @@ def check(path, source=None, only_source=None):
     if ndose:
         notes.append(f"ATTESTATION QUEUE: {ndose} DOSE claim(s) from a licensed source, "
                      f"unquoted - check each against the subscription before use")
+        # A queued dose is only closed out by a PERSON ticking
+        # docs/attestation-queue.md. A rejected row is a real failure: the
+        # guideline asserts a dose a clinician read and found wrong, so the
+        # build stops until the guideline is fixed. A "stale" row is one
+        # whose claim text changed after sign-off -- reported, not trusted.
+        rec = _attest()
+        gname = path.split("/")[-1].replace(".verification.json", "")
+        tally = {"confirmed": 0, "rejected": 0, "stale": 0, "open": 0}
+        for i, c in enumerate(claims, 1):
+            if not (c.get("dose") and c.get("verdict") == "licensed_source_not_quoted"):
+                continue
+            ref = f"{gname}#{i}"
+            st = status_for(ref, c["claim"], rec)
+            tally[st] += 1
+            if st == "rejected":
+                errs.append(f"claim {i}: dose REJECTED by attestation "
+                            f"({rec[ref]['by']}) - fix the guideline")
+            elif st == "stale":
+                notes.append(f"claim {i}: attested earlier, but the claim text has "
+                             f"CHANGED since - back in the queue, sign-off not carried")
+        if tally["confirmed"]:
+            notes.append(f"  {tally['confirmed']}/{ndose} queued dose(s) ATTESTED by a person")
     nqdose = sum(1 for c in claims if c.get("dose") and c.get("verdict") == "pass")
     if nqdose:
         notes.append(f"{nqdose} DOSE claim(s) QUOTED from an open source: re-checkable "
