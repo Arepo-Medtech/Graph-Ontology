@@ -54,11 +54,14 @@ MONDO_OBO, MONDO_SSSOM = Path("cache/mondo/mondo.obo"), Path("cache/mondo/mondo.
 HP_OBO, HPOA = Path("cache/hpo/hp.obo"), Path("cache/hpo/phenotype.hpoa")
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
-PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
+PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
+LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
+    "~/Documents/ONTOLOGIES/SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
+LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
 
 PIN = {"sct": "SNOMED CT-AU 20260731", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)"}
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
               "SYSTEM": "loinc:has_system", "SCALE": "loinc:has_scale", "METHOD": "loinc:has_method"}
@@ -217,6 +220,88 @@ def main() -> int:
         JOIN C s ON s.concept_id = r.concept_id_2 AND s.vocabulary_id = 'SNOMED'
         WHERE r.relationship_id IN ('Is a', 'Maps to', 'Maps to value') AND (r.invalid_reason IS NULL OR r.invalid_reason = '')""")
 
+    # --- LOINC Ontology: LOINC lab terms as SNOMED CT observable entities (the extension, read in place) ------------
+    # Its observables are where SNOMED's Interprets points, so lab result -> finding becomes a lookup chain. The
+    # extension's relationships are ordinary SNOMED edges (same predicates); LOINC num <-> SCTID is the official
+    # identifier table; order groupers get their own predicate so they can never pass for result codes.
+    if LOINC_EXT.exists():
+        T, R = LOINC_EXT / "Terminology", LOINC_EXT / "Refset"
+        ext = lambda f: f"read_csv('{f}', delim='\\t', header=true, quote='', escape='', all_varchar=true)"
+        ins("LOINC Extension relationships", f"""SELECT 'SCT', sourceId, 'sct:' || typeId, 'SCT', destinationId,
+                'SNOMED CT LOINC Extension', 'sct2_Relationship_Snapshot', 'native', 'native', 'asserted', '{PIN['loinc_ext']}',
+                json_object('group', relationshipGroup)
+            FROM {ext(T / 'sct2_Relationship_Snapshot_LO1010000_20260321.txt')} WHERE active = '1'""")
+        con.execute(f"""CREATE TEMP TABLE lx_role AS SELECT referencedComponentId AS sct,
+                bool_or(refsetId = '635121010000106') AS observation, bool_or(refsetId = '635111010000100') AS orderable
+            FROM {ext(R / 'Content' / 'der2_Refset_SimpleSnapshot_LO1010000_20260321.txt')} WHERE active = '1' GROUP BY 1""")
+        con.execute(f"""CREATE TEMP TABLE lx_disc AS SELECT DISTINCT referencedComponentId AS sct FROM
+            {ext(R / 'Metadata' / 'der2_scsRefset_ComponentAnnotationStringValueSnapshot_LO1010000_20260321.txt')}
+            WHERE active = '1' AND value = 'Discouraged'""")
+        lt = (f"(SELECT LOINC_NUM, CLASS, CLASSTYPE, STATUS, LONG_COMMON_NAME FROM read_csv('{LOINC_TABLE}', header=true, all_varchar=true))"
+              if LOINC_TABLE.exists() else "(SELECT NULL AS LOINC_NUM, NULL AS CLASS, NULL AS CLASSTYPE, NULL AS STATUS, NULL AS LONG_COMMON_NAME)")
+        con.execute(f"CREATE TEMP TABLE lx_loinc AS SELECT * FROM {lt}")
+        ins("LOINC -> SNOMED observable (LOINC Ontology identifier)", f"""SELECT DISTINCT 'LOINC', i.alternateIdentifier,
+                CASE WHEN l.CLASS = 'LABORDERS.ONTOLOGY' THEN 'loinc:order_grouper_concept' ELSE 'loinc:sct_concept' END,
+                'SCT', i.referencedComponentId, 'SNOMED CT LOINC Extension', 'sct2_Identifier_Snapshot', 'official identifier',
+                'native', 'asserted', '{PIN['loinc_ext']}',
+                json_object('observation', r.observation, 'orderable', r.orderable, 'discouraged', d.sct IS NOT NULL,
+                            'loinc_class', l.CLASS, 'classtype', l.CLASSTYPE, 'loinc_status', l.STATUS)
+            FROM {ext(T / 'sct2_Identifier_Snapshot_LO1010000_20260321.txt')} i
+            LEFT JOIN lx_role r ON r.sct = i.referencedComponentId LEFT JOIN lx_disc d ON d.sct = i.referencedComponentId
+            LEFT JOIN lx_loinc l ON l.LOINC_NUM = i.alternateIdentifier
+            WHERE i.active = '1' AND i.identifierSchemeId = '30051010000102'""")
+        # names: the extension's preferred synonym (language refset 'preferred'), else its FSN; LOINC 2.83 names for LOINC codes
+        con.execute(f"""INSERT INTO name_hint
+            SELECT 'SCT', d.conceptId, any_value(d.term) FROM {ext(T / 'sct2_Description_Snapshot-en_LO1010000_20260321.txt')} d
+            JOIN {ext(R / 'Language' / 'der2_cRefset_LanguageSnapshot-en_LO1010000_20260321.txt')} g
+              ON g.referencedComponentId = d.id AND g.active = '1' AND g.acceptabilityId = '900000000000548007'
+            WHERE d.active = '1' AND d.typeId = '900000000000013009' GROUP BY 2""")
+        con.execute("INSERT INTO name_hint SELECT 'LOINC', LOINC_NUM, LONG_COMMON_NAME FROM lx_loinc WHERE LOINC_NUM IS NOT NULL")
+
+        # --- lab result -> finding, through the analyte (reference/interprets_handcheck.json) -------------------------
+        # SNOMED findings interpret measurement PROCEDURES; the LOINC Ontology puts LOINC terms under OBSERVABLES, so
+        # is-a never joins them (14 findings). They meet on the analyte: the observable and the Interprets target share a
+        # Component, and the LOINC specimen is the target's or below it. Each rule below answers a failure in the hand check.
+        IS_A, COMP, SPEC, SITE = "sct:116680003", "sct:246093002", "sct:116686009", "sct:704327008"
+        con.execute(f"""CREATE TEMP TABLE ix_tgt AS SELECT DISTINCT i.s_code AS finding, i.o_code AS tgt, c.o_code AS comp,
+                sp.o_code AS spec, h.o_code AS interp
+            FROM edge i JOIN edge c ON c.s_code = i.o_code AND c.predicate = '{COMP}'
+            JOIN edge sp ON sp.s_code = i.o_code AND sp.predicate = '{SPEC}'
+            JOIN edge h ON h.s_code = i.s_code AND h.predicate = 'sct:363713009'
+                        AND json_extract(h.attrs, '$.group') = json_extract(i.attrs, '$.group')
+            WHERE i.predicate = 'sct:363714003'""")
+        # the most general procedure for its (component, specimen) only: Random / Fasting / electrophoresis refinements of
+        # 'Blood glucose measurement' or 'Urine protein measurement' matched timed and plain LOINC terms they do not describe
+        con.execute(f"""CREATE TEMP TABLE ix_refined AS
+            WITH RECURSIVE u(s, n, d) AS (SELECT DISTINCT tgt, tgt, 0 FROM ix_tgt
+                UNION SELECT u.s, e.o_code, u.d + 1 FROM u JOIN edge e ON e.predicate = '{IS_A}' AND e.s_code = u.n WHERE u.d < 20)
+            SELECT DISTINCT t.tgt FROM ix_tgt t JOIN u ON u.s = t.tgt AND u.n <> t.tgt
+            JOIN edge c ON c.s_code = u.n AND c.predicate = '{COMP}' AND c.o_code = t.comp
+            JOIN edge sp ON sp.s_code = u.n AND sp.predicate = '{SPEC}' AND sp.o_code = t.spec""")
+        lx_axes = (f"(SELECT LOINC_NUM, PROPERTY, COMPONENT FROM read_csv('{LOINC_TABLE}', header=true, all_varchar=true))"
+                   if LOINC_TABLE.exists() else "(SELECT NULL AS LOINC_NUM, NULL AS PROPERTY, NULL AS COMPONENT)")
+        # ratios and differences are not levels; these component heads lose their refinement in the extension's Component
+        con.execute(f"""CREATE TEMP TABLE ix_lo AS SELECT l.s_code AS loinc, l.o_code AS obs, c.o_code AS comp, s.o_code AS site
+            FROM edge l JOIN edge c ON c.s_code = l.o_code AND c.predicate = '{COMP}'
+            JOIN edge s ON s.s_code = l.o_code AND s.predicate = '{SITE}' LEFT JOIN {lx_axes} x ON x.LOINC_NUM = l.s_code
+            WHERE l.predicate = 'loinc:sct_concept'
+              AND NOT EXISTS (SELECT 1 FROM edge r WHERE r.s_code = l.o_code AND r.predicate = 'sct:704325000')
+              AND coalesce(x.PROPERTY, '') NOT ILIKE '%diff%' AND coalesce(x.PROPERTY, '') NOT ILIKE '%rto%'
+              AND split_part(coalesce(x.COMPONENT, ''), '^', 1) NOT IN
+                  ('Protein.abnormal band', 'Other cells', 'Unidentified cells', 'Cells counted.total')""")
+        con.execute(f"""CREATE TEMP TABLE ix_site_up AS
+            WITH RECURSIVE u(s, n, d) AS (SELECT DISTINCT site, site, 0 FROM ix_lo
+                UNION SELECT u.s, e.o_code, u.d + 1 FROM u JOIN edge e ON e.predicate = '{IS_A}' AND e.s_code = u.n WHERE u.d < 25)
+            SELECT DISTINCT s, n FROM u""")
+        ins("LOINC result -> finding it defines (Interprets, by analyte)", f"""SELECT 'LOINC', lo.loinc,
+                'loinc:interpreted_in_finding', 'SCT', t.finding, 'SNOMED CT-AU + SNOMED CT LOINC Extension',
+                'Interprets ' || t.tgt || ' / Component ' || t.comp || ' / LOINC observable ' || lo.obs,
+                'same component, specimen at or below', 'ungraded', 'asserted', '{PIN['sct']} + {PIN['loinc_ext']}',
+                json_object('interpretation', t.interp, 'interprets', t.tgt, 'component', t.comp,
+                            'finding_specimen', t.spec, 'loinc_specimen', lo.site, 'loinc_observable', lo.obs)
+            FROM ix_lo lo JOIN ix_tgt t ON t.comp = lo.comp JOIN ix_site_up su ON su.s = lo.site AND su.n = t.spec
+            WHERE t.tgt NOT IN (SELECT tgt FROM ix_refined)""")
+
     # --- MONDO -------------------------------------------------------------------------------------------------------
     if MONDO_OBO.exists():
         mt = obo_terms(MONDO_OBO)
@@ -333,15 +418,19 @@ def main() -> int:
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
     # LOINC targets in other extensions). Only the nearest level is kept; ties keep all.
     con.execute(f"CREATE TEMP VIEW CA AS SELECT * FROM read_csv('{a.vocab_dir}/CONCEPT_ANCESTOR.csv', delim='\t', header=true, all_varchar=true)")
+    # an SCTID is "foreign" if neither SNOMED CT-AU nor an extension the graph loads (the LOINC Ontology) defines it
+    ext_ids = (f"UNION SELECT id FROM read_csv('{LOINC_EXT / 'Terminology' / 'sct2_Concept_Snapshot_LO1010000_20260321.txt'}', "
+               "delim='\\t', header=true, quote='', escape='', all_varchar=true)" if LOINC_EXT.exists() else "")
+    con.execute(f"CREATE TEMP TABLE native_sct AS SELECT id FROM cmp.concept {ext_ids}")
     con.execute("""CREATE TEMP TABLE foreign_sct AS SELECT DISTINCT code FROM (SELECT s_code AS code FROM edge WHERE s_vocab = 'SCT'
-                   UNION SELECT o_code FROM edge WHERE o_vocab = 'SCT') WHERE code NOT IN (SELECT id FROM cmp.concept)""")
+                   UNION SELECT o_code FROM edge WHERE o_vocab = 'SCT') WHERE code NOT IN (SELECT id FROM native_sct)""")
     ins("foreign SNOMED -> nearest SNOMED CT-AU ancestor", f"""
         WITH anc AS (
             SELECT f.code, a.concept_code AS anc, CAST(ca.min_levels_of_separation AS INT) AS lvl
             FROM foreign_sct f JOIN C d ON d.vocabulary_id = 'SNOMED' AND d.concept_code = f.code
             JOIN CA ca ON ca.descendant_concept_id = d.concept_id AND ca.min_levels_of_separation <> '0'
             JOIN C a ON a.concept_id = ca.ancestor_concept_id AND a.vocabulary_id = 'SNOMED'
-            WHERE a.concept_code IN (SELECT id FROM cmp.concept)),
+            WHERE a.concept_code IN (SELECT id FROM native_sct)),
         best AS (SELECT code, min(lvl) AS lvl FROM anc GROUP BY 1)
         SELECT DISTINCT 'SCT', anc.code, 'sct:au_nearest_ancestor', 'SCT', anc.anc, 'OMOP Athena', 'CONCEPT_ANCESTOR',
                'nearest ancestor in SNOMED CT-AU', 'native', 'asserted', '{PIN['athena']}', json_object('levels_up', anc.lvl)

@@ -185,6 +185,84 @@ def main() -> int:
                      WHERE e.predicate = 'hp:umls_snomed' AND e.o_code NOT IN
                            (SELECT s_code FROM edge WHERE predicate = 'sct:au_nearest_ancestor'))""").fetchone()))
 
+    # --- Interprets: does a lab term reach a finding that interprets it? Both LOINC routes, measured the same way ----
+    # A finding interprets an observable (Interprets), usually with an interpretation beside it in the same role group
+    # (Has interpretation: above / below reference range, abnormal ...). A LOINC term reaches that finding if its SNOMED
+    # concept, or any is-a ancestor of it, is what the finding interprets. Athena lands LOINC on measurement procedures;
+    # the LOINC Ontology lands it on observables -- which is where Interprets points.
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'loinc:sct_concept'").fetchone()[0]:
+        con.execute("""CREATE OR REPLACE TEMP TABLE interp AS
+            SELECT DISTINCT i.o_code AS target, i.s_code AS finding,
+                   EXISTS (SELECT 1 FROM edge h WHERE h.s_code = i.s_code AND h.predicate = 'sct:363713009'
+                             AND json_extract(h.attrs, '$.group') = json_extract(i.attrs, '$.group')) AS with_interpretation
+            FROM edge i WHERE i.predicate = 'sct:363714003'""")
+        def reach(route_preds: str) -> dict:
+            con.execute(f"""CREATE OR REPLACE TEMP TABLE start AS SELECT DISTINCT s_code AS loinc, o_code AS sct FROM edge
+                            WHERE predicate IN ({route_preds}) AND state <> 'rejected'""")
+            con.execute("""CREATE OR REPLACE TEMP TABLE up AS
+                WITH RECURSIVE u(loinc, node, depth) AS (
+                    SELECT loinc, sct, 0 FROM start
+                    UNION SELECT u.loinc, e.o_code, u.depth + 1 FROM u
+                    JOIN edge e ON e.predicate = 'sct:116680003' AND e.s_code = u.node WHERE u.depth < 25)
+                SELECT DISTINCT loinc, node FROM u""")
+            row = con.execute("""SELECT count(DISTINCT s.loinc),
+                   count(DISTINCT u.loinc) FILTER (WHERE i.target IS NOT NULL),
+                   count(DISTINCT u.loinc) FILTER (WHERE i.with_interpretation),
+                   count(DISTINCT i.finding) FILTER (WHERE i.with_interpretation)
+                FROM start s LEFT JOIN up u ON u.loinc = s.loinc LEFT JOIN interp i ON i.target = u.node""").fetchone()
+            # direct = the term's own SNOMED concept is what the finding interprets; through ancestors the count is
+            # inflated by generic targets ('Evaluation procedure', 'Measurement' reach ~20k terms and a few dozen findings)
+            direct = con.execute("""SELECT count(DISTINCT s.loinc), count(DISTINCT i.finding) FROM start s
+                JOIN interp i ON i.target = s.sct AND i.with_interpretation""").fetchone()
+            return dict(zip(("loinc_terms", "reach_an_interpreting_finding", "reach_one_with_an_interpretation",
+                             "distinct_findings_with_interpretation", "direct_loinc_terms", "direct_findings"), row + direct))
+        report["interprets:via Athena (LOINC -> measurement procedure)"] = reach("'loinc:is_a_snomed', 'loinc:maps_to_snomed'")
+        report["interprets:via LOINC Ontology (LOINC -> observable)"] = reach("'loinc:sct_concept'")
+
+        # --- the Athena bridge, re-checked by CODE against the LOINC Ontology: same analyte (Component)? ---------------
+        con.execute("""CREATE OR REPLACE TEMP TABLE cmp_pairs AS
+            SELECT a.s_code AS loinc, ca.o_code AS athena_comp, co.o_code AS ontology_comp
+            FROM edge a JOIN edge o ON o.s_code = a.s_code AND o.predicate = 'loinc:sct_concept'
+            JOIN edge ca ON ca.s_code = a.o_code AND ca.predicate = 'sct:246093002'
+            JOIN edge co ON co.s_code = o.o_code AND co.predicate = 'sct:246093002'
+            WHERE a.predicate = 'loinc:is_a_snomed'""")
+        con.execute("""CREATE OR REPLACE TEMP TABLE comp_up AS
+            WITH RECURSIVE u(start, node, depth) AS (
+                SELECT DISTINCT x, x, 0 FROM (SELECT athena_comp AS x FROM cmp_pairs UNION SELECT ontology_comp FROM cmp_pairs)
+                UNION SELECT u.start, e.o_code, u.depth + 1 FROM u JOIN edge e ON e.predicate = 'sct:116680003' AND e.s_code = u.node
+                WHERE u.depth < 25)
+            SELECT DISTINCT start, node FROM u""")
+        n, ex, co = con.execute("""WITH per AS (SELECT loinc, bool_or(athena_comp = ontology_comp) AS exact,
+                bool_or(athena_comp = ontology_comp
+                        OR EXISTS (SELECT 1 FROM comp_up WHERE start = ontology_comp AND node = athena_comp)
+                        OR EXISTS (SELECT 1 FROM comp_up WHERE start = athena_comp AND node = ontology_comp)) AS consistent
+              FROM cmp_pairs GROUP BY 1)
+            SELECT count(*), count(*) FILTER (WHERE exact), count(*) FILTER (WHERE consistent) FROM per""").fetchone()
+        lo, _ = wilson(co, n)
+        report["route:loinc->snomed (Athena, checked by component CODE against the LOINC Ontology)"] = {
+            "loinc_terms_both_routes": n, "same_component": ex, "exact_rate": round(ex / n, 4) if n else None,
+            "consistent": co, "consistent_rate": round(co / n, 4) if n else None, "consistent_wilson_lo": round(lo, 4),
+            "earned_tier": tier(lo, n), "contradicted": n - co}
+        con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:is_a_snomed'", [tier(lo, n)])
+
+        # --- lab result -> finding by analyte: tier earned from the hand check, reach measured here ------------------
+        hc = Path("reference/interprets_handcheck.json")
+        if hc.exists() and con.execute("SELECT count(*) FROM edge WHERE predicate = 'loinc:interpreted_in_finding'").fetchone()[0]:
+            scored = json.load(open(hc))["scored"]
+            k, n = sum(r["verdict"] == "correct" for r in scored), len(scored)
+            lo, _ = wilson(k, n)
+            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:interpreted_in_finding'", [tier(lo, n)])
+            e, terms, finds, interp = con.execute("""SELECT count(*), count(DISTINCT s_code), count(DISTINCT o_code),
+                    count(DISTINCT json_extract_string(attrs, '$.interpretation')) FROM edge
+                WHERE predicate = 'loinc:interpreted_in_finding'""").fetchone()
+            report["route:loinc result -> finding (Interprets, by analyte; hand check)"] = {
+                "edges": e, "loinc_terms": terms, "findings": finds, "interpretation_values": interp,
+                "hand_checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n),
+                "top_components": [f"{nm or c}: {x}" for c, nm, x in con.execute("""
+                    SELECT json_extract_string(e.attrs, '$.component') c, any_value(n.name), count(DISTINCT e.s_code) x
+                    FROM edge e LEFT JOIN node n ON n.vocab = 'SCT' AND n.code = json_extract_string(e.attrs, '$.component')
+                    WHERE e.predicate = 'loinc:interpreted_in_finding' GROUP BY 1 ORDER BY 3 DESC LIMIT 8""").fetchall()]}
+
     # --- health ------------------------------------------------------------------------------------------------------
     report["edges"] = con.execute("SELECT count(*) FROM edge").fetchone()[0]
     report["nodes"] = con.execute("SELECT count(*) FROM node").fetchone()[0]

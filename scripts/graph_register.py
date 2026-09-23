@@ -16,6 +16,7 @@ Run it deliberately when the SNOMED CT-AU pin moves; a new attribute in a new ed
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -23,17 +24,22 @@ from pathlib import Path
 import duckdb
 
 DB = Path("out/compendium.duckdb")
+LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
+    "~/Documents/ONTOLOGIES/SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))
 REGISTER = Path("reference/graph_predicates.json")
-IS_A, METHOD = "116680003", "260686004"
+IS_A = "116680003"
+ACTION = {"260686004", "246501002"}   # Method (procedures), Technique (observables: LOINC's METHOD axis)
 PART_OF = {"774160008"}                      # Contains clinical drug: a pack is made of units
-TIME = re.compile(r"occurrence|course|episodicity|temporal|during|after|before|onset|duration|timing", re.I)
-QUANTITY = re.compile(r"unit|quantity|size|count|value|strength|number", re.I)
+TIME = re.compile(r"occurrence|course|episodicity|temporal|during|after|before|onset|duration|timing|\btime\b", re.I)
+# "Property" (kind of quantity: mass concentration ...) and "Scale type" (quantitative / ordinal / nominal) are the
+# rationality axis -- LOINC's PROPERTY and SCALE -- even though their objects are qualifier values.
+QUANTITY = re.compile(r"unit|quantity|size|count|value|strength|number|^property$|scale", re.I)
 
 
 def category(type_id: str, label: str, top_tag: str | None) -> str:
     if type_id == IS_A or type_id in PART_OF:
         return "structure"
-    if type_id == METHOD:
+    if type_id in ACTION:
         return "action"
     if TIME.search(label):
         return "temporality"
@@ -46,8 +52,15 @@ def category(type_id: str, label: str, top_tag: str | None) -> str:
 
 def main() -> int:
     con = duckdb.connect(str(DB), read_only=True)
+    # the LOINC Extension's relationships join the release's: one attribute type, one predicate, whichever release uses it
+    ext = LOINC_EXT / "Terminology" / "sct2_Relationship_Snapshot_LO1010000_20260321.txt"
+    union = ("SELECT typ, dst, 'au' AS src FROM rel" + (
+        f" UNION ALL SELECT typeId, destinationId, 'loinc' FROM read_csv('{ext}', delim='\t', header=true, quote='', "
+        "escape='', all_varchar=true) WHERE active = '1'" if ext.exists() else ""))
+    con.execute(f"CREATE TEMP VIEW allrel AS {union}")
+    srcs = dict(con.execute("SELECT typ, string_agg(DISTINCT src, '+' ORDER BY src) FROM allrel GROUP BY 1").fetchall())
     rows = con.execute("""
-        WITH t AS (SELECT r.typ, c.tag, count(*) AS n FROM rel r LEFT JOIN concept c ON c.id = r.dst GROUP BY 1, 2),
+        WITH t AS (SELECT r.typ, c.tag, count(*) AS n FROM allrel r LEFT JOIN concept c ON c.id = r.dst GROUP BY 1, 2),
              tot AS (SELECT typ, sum(n) AS total FROM t GROUP BY 1),
              top AS (SELECT typ, arg_max(tag, n) AS top_tag, max(n) AS top_n FROM t GROUP BY 1)
         SELECT tot.typ, coalesce(lbl.pt, '?'), tot.total, top.top_tag, top.top_n
@@ -58,7 +71,10 @@ def main() -> int:
               "subject": ["SCT"], "object": ["SCT"],
               "category": category(typ, label, top_tag),
               "derivation": "lookup", "strength_kind": "exact",
-              "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)", "status": "built",
+              "source": {"au": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+                         "loinc": "SNOMED CT LOINC Extension 20260321 (module 11010000107)",
+                         "au+loinc": "SNOMED CT-AU RF2 20260731 and SNOMED CT LOINC Extension 20260321"}[srcs.get(typ, "au")],
+              "status": "built",
               "count": int(total), "object_tag": top_tag, "object_tag_share": round(top_n / total, 3)}
              for typ, label, total, top_tag, top_n in rows]
     reg = json.load(open(REGISTER))

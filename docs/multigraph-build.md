@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**894,992 nodes, 4,058,282 edges, 147 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*.)
-Written to `out/graph.duckdb` (144 MB, git-ignored), rebuilt from source in about two minutes.
+**940,684 nodes, 4,406,963 edges, 151 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges* and *Lab results → findings*.)
+Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -104,7 +104,7 @@ names. The check is conservative — read by hand, the "inconsistent" rows are a
 (*lutropin* / *luteinizing hormone*, *thyrotropin* / *TSH*, *9-hydroxyrisperidone* / *paliperidone*, which are the same
 molecule) because the compendium stores SNOMED preferred terms only. **It reaches 21,947 of 104,720 LOINC terms
 (21%)**: Athena bridges lab tests; surveys, clinical observations, radiology and document codes remain an island.
-SNOMED International's LOINC Ontology (module 11010000107) would bridge more, but is not on the public Ontoserver.
+SNOMED International's LOINC Ontology is not on the public Ontoserver; it is now loaded from the release itself — see *Lab results → findings*.
 
 **Foreign SNOMED ids → the Australian release (built).** 1,088 SCTIDs reached the graph from sources that are not
 Australian — DrugCentral's US conditions (177 of its 2,641 condition concepts), Athena's LOINC targets in other
@@ -165,6 +165,55 @@ this route; the rest has no SNOMED concept under a shared CUI.
 .venv/bin/python scripts/graph_walk.py SCT:6383011000036106 --follow sct:127489000,~drugcentral:snomed,drugcentral:indication --depth 3
 ```
 
+## Lab results → findings: the LOINC Ontology and *Interprets*
+
+**The LOINC Ontology (built).** The SNOMED CT LOINC Extension 20260321 (module 11010000107, the joint SNOMED
+International / Regenstrief release, read in place from `~/Documents/ONTOLOGIES`) models 46,024 LOINC terms as SNOMED
+observable entities, each defined by Component, Property, Time aspect, Direct site, Scale, Technique …: **287,753
+relationships**, loaded as ordinary `sct:` edges on the same predicates as SNOMED CT-AU (the register now takes its
+attribute types from both releases — 116, *Process agent* from the extension only). The LOINC number ↔ SCTID link is
+the release's identifier table, a lookup: **42,881 `loinc:sct_concept`** (42,239 in the Observation refset — result
+codes; 787 marked *Discouraged*) and **2,133 `loinc:order_grouper_concept`** — a separate predicate on purpose, since
+the release notes say order groupers must not be used as result codes. The two LOINC routes cross-check each other:
+Athena's placement of a LOINC term under a SNOMED measurement has the **same analyte, by code, as the LOINC Ontology
+for 94.8%** of the 17,338 terms both cover, and a consistent one (equal, or one subsumes the other) for 96.8% (Wilson
+lower bound 0.966) → Tier 2 now rests on codes, not names; 549 contradict.
+
+**Why is-a does not close the chain.** *Interprets* (363714003) joins a finding to what it reads, beside *Has
+interpretation* (above / below / within reference range, detected …) in the same role group. The expectation was that
+a LOINC term would reach its findings by climbing is-a from its observable. It reaches **14**. SNOMED's lab findings
+interpret measurement **procedures** (*Random blood sugar low* interprets *Random blood glucose measurement*); the
+LOINC Ontology places LOINC terms under **observables**. The two hierarchies meet only on the analyte.
+
+**The analyte bridge — `loinc:interpreted_in_finding` (built, Tier 2).** A LOINC term reaches a finding when its
+observable and the finding's *Interprets* target share a **Component** and the LOINC specimen is the target's or below
+it; the finding's interpretation in the same role group rides on the edge (`attrs.interpretation`), with the target,
+the component and both specimens. It is **definitional, not diagnostic**: diabetic ketoacidosis is *defined* partly by
+a raised glucose, not diagnosed by one. **15,912 edges, 1,110 LOINC terms, 418 findings, 18 interpretation values**
+(glucose 645 terms, calcium 83, protein and albumin 21 each, magnesium, *Treponema pallidum* antibody, the
+catecholamines …).
+
+The join as first written was wrong 12 times in 40, and each failure became a rule (`reference/interprets_handcheck.json`):
+
+| failure seen in the hand check | rule |
+|---|---|
+| a broader LOINC specimen (*Glucose in Specimen* → ketoacidosis; *Microalbumin in Body fluid* → microalbuminuria) | the LOINC specimen equals the target's or is below it; a specimen is required on both sides |
+| a refined target (*Random blood glucose measurement* for a timed or fasting term; *Urine protein electrophoresis* for a plain urine protein) | only the most general target for its component and specimen: none of its is-a ancestors carries both |
+| ratios and differences (*Calcium/Albumin*; a glucose concentration difference; a urea nitrogen mass ratio) | no *Relative to* on the observable, no LOINC PROPERTY of kind ratio or difference |
+| components the extension models lossily (*Protein.abnormal band* → Protein; *Other cells*, *Unidentified cells*, *Cells counted.total* → Cell) | those LOINC component heads are excluded, by name, as a reviewed list |
+
+Scored on **two fresh samples drawn after the rules were fixed**: 40 edges at random (40/40 — dominated by glucose ×
+diabetes findings, as the edges are) and one random edge from each of 40 random findings (39/40; the miss, *Unidentified
+cells*, is the lossy-component class and is now excluded too). **79/80, Wilson lower bound 0.933 → Tier 2**, earned by
+`graph_report.py` from the hand-check file.
+
+*The larger route not yet built.* Through Athena's placement, **4,357 LOINC terms land directly on a procedure that
+1,575 findings interpret** — more than the analyte bridge. `graph_report.py`'s first reach figure (20,317 terms, 2,297
+findings) was inflated: climbing is-a reaches generic targets (*Evaluation procedure*, *Measurement*), which ~20,000
+terms reach and which only a few dozen generic findings interpret; the report now shows the direct figure beside it.
+The direct Athena route is a chain of two lookups but needs its own hand check before it becomes edges — Athena's
+placement is Tier 2, not Tier 1.
+
 ## Rebuild
 
 ```bash
@@ -172,12 +221,15 @@ this route; the rest has no SNOMED concept under a shared CUI.
 # drugcentral.dump.11012023.sql.gz 1.40 GB -- URLs in scripts/build_edges.py and scripts/drugcentral_extract.py
 .venv/bin/python scripts/drugcentral_extract.py   # ~10 s: streams the dump, keeps 4 tables, no Postgres needed
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
-.venv/bin/python scripts/build_edges.py           # ~2 min: out/graph.duckdb, validated against the register
+.venv/bin/python scripts/build_edges.py           # ~2.5 min: out/graph.duckdb, validated against the register
+#   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
 .venv/bin/python scripts/graph_report.py          # scores the linkage routes, sets their tiers, writes out/graph_report.json
 ```
 
 ## Licences
 
 DrugCentral is CC BY-SA 4.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
-CT-AU, AMT and PBS data are used under the compendium's existing terms. DrugBank and SIDER (non-commercial) are not
+CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC and the SNOMED CT LOINC Extension are
+licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
+licence's notice terms. DrugBank and SIDER (non-commercial) are not
 imported. *These were stated from memory while designing and should be confirmed before any commercial use.*
