@@ -1,0 +1,55 @@
+{
+ "guideline": "guidelines/mumps.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Mumps' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 5,
+  "pass": 5,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**All children 12 months and over: 2 doses — MMR at 12 months, MMRV at 18 months.** NIP-funded.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children aged ≥12 months are recommended to receive 2 doses of mumps-containing vaccine. … 12 months of age - MMR 18 months of age - MMRV Mumps-containing vaccine is funded through the NIP for children aged ≥12 months.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Mumps', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Maximum infectiousness is from 2 days before illness onset to 5 days after.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Maximum infectiousness is between 2 days before onset of illness and 5 days afterwards.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Mumps', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **One-third of infections are asymptomatic.** Symptomatic disease ranges from **mild upper respiratory symptoms to widespread systemic involvement**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic infection occurs in one-third of cases. … Symptomatic disease ranges from mild upper respiratory symptoms to widespread systemic involvement.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Mumps', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Mumps vaccine does not protect people if given after exposure.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mumps-containing vaccine does not protect people if they receive it after they have been exposed to mumps.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Mumps', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Mumps is notifiable in every state and territory.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "notifiable disease in all states and territories in Australia.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Mumps', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/mumps, retrieved 2026-09-23"
+  }
+ ]
+}
