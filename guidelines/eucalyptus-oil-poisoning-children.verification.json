@@ -1,0 +1,128 @@
+{
+ "guideline": "guidelines/eucalyptus-oil-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Eucalyptus Oil Poisoning' (Last Updated July 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 15,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Eucalyptus oil is highly toxic: small ingestions of pure oil (5 mL or more) can cause severe symptoms.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Eucalyptus oil is highly toxic. Small ingestions of pure oil (≥5 mL) can lead to severe symptoms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Onset is usually rapid (within 30 minutes) but can be delayed up to 4 hours.** **Watch for CNS depression and respiratory compromise** — the main features.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptom onset is usually rapid (within 30 mins) but can be delayed up to 4 hours after exposure CNS depression and respiratory compromise are the main features of eucalyptus oil poisoning to monitor for",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Found as** essential oil, medicinal and cleaning products, inhalational/vaporiser fluid and topical preparations. Symptoms usually resolve within 24 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Eucalyptus oil is a popular household product, commonly presented as an essential oil, medicinal product, cleaning product, inhalational/vaporiser fluid or topical preparation … Duration of symptoms: usually resolve within 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **2–3 mL can cause mild CNS depression** (drowsiness, dizziness, ataxia); **5 mL or more can cause significant CNS depression with coma.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A dose of 2-3 mL can induce mild CNS depression with drowsiness and/or dizziness and ataxia. A dose of ≥5 mL can induce significant CNS depression with coma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Assess:** all deliberate self-poisoning or significant accidental ingestion · any symptomatic child · **single ingestion over 5 mL** · any child whose developmental age does not fit accidental poisoning.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with deliberate self-poisoning or significant accidental ingestion Any symptomatic patient Single dose ingestion of >5mL Children where developmental age is inconsistent with accidental poisoning, as non-accidental poisoning should be considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**History:** route (inhalation, ingestion, intranasal, topical — consider frequent repeated applications), the exact product and % solution (**2–3 mL is significant in a child; over 5 mL may mean severe toxicity**), and co-ingestants such as paracetamol or other oils.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Route of exposure: eg inhalation, ingestion, intranasal, topical (consider frequent, repeated topical applications) Preparation type: if possible determine the exact name and % solution (2-3 mL is significant in a child whilst >5 mL may be associated with severe toxicity). … Co-ingestants: eg paracetamol, other essential oils",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Examination:** miosis (more common) or mydriasis, myoclonus, CNS depression (ataxia, seizures, coma with 5 mL or more) · tachycardia, hypotension · ⚠️ respiratory depression, apnoea, bronchospasm, aspiration · early nausea, vomiting and diarrhoea.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CNS: Miosis or mydriasis (miosis more commonly), myoclonus, CNS depression (drowsiness and dizziness with small exposures, ataxia, seizures, coma with larger (≥5 mL) exposures) CVS: Tachycardia, hypotension Respiratory: Depression, apnoea, bronchospasm, signs of aspiration pneumonitis GIT: Nausea, vomiting and diarrhoea(early symptoms), epigastric pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations:** usually none for an asymptomatic child with a small ingestion. Consider CXR and blood gas for aspiration signs, **UEC and LFT for significant illness or ingestions of 5 mL or more**, and a paracetamol level in all intentional overdoses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic children with small ingestions do not usually require investigation Consider: Chest X-ray and blood gas if signs of aspiration pneumonitis UEC and LFT in children with significant illness or large ingestions (≥5 mL) Paracetamol level in all intentional overdoses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Aspiration pneumonitis is managed supportively** (oxygen, bronchodilators, NIV or intubation if severe); **no corticosteroids or prophylactic antibiotics.** Fever is common, so **withhold antibiotics until there is objective evidence of bacterial infection.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aspiration/chemical pneumonitis is managed supportively with oxygen and bronchodilators. May require non-invasive ventilation or intubation if severe. Corticosteroids and prophylactic antibiotics are not indicated Fever is common following aspiration with pneumonitis, therefore antibiotics should be withheld until there is objective evidence of bacterial infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Charcoal is contraindicated** (aspiration risk).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Charcoal is contraindicated due to risk of aspiration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Enhanced elimination is ineffective; there is no antidote.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Enhanced elimination: ineffective Antidote: Nil",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic after significant exposure, with normal vital signs and GCS: observe 4 hours before discharge.** Symptomatic: admit for longer observation ± supportive care.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic children with significant exposure and normal vital signs, including normal GCS, should be observed for 4 hours post exposure before discharge Symptomatic patients should be admitted for a longer period of observation +/- supportive care",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider mental health assessment and admission for all adolescents with an intentional overdose.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mental health assessment and admission should be considered for all adolescent patients with an intentional overdose.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transfer for significant CNS depression, seizures or respiratory compromise needing PICU.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Significant CNS depression, seizures or respiratory compromise requiring management in a paediatric intensive care unit",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** normal GCS · no respiratory symptoms · observation complete. Adolescents with deliberate ingestion need a self-harm risk assessment and drug and alcohol assessment first.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal GCS No respiratory symptoms Period of observation as above … Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm Assessment of other drug and alcohol use should be undertaken",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Eucalyptus Oil Poisoning' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Eucalyptus_Oil_Poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

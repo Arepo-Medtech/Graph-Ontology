@@ -1,0 +1,166 @@
+{
+ "guideline": "guidelines/ataxia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Ataxia' (Last updated August 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Assessment focuses on serious and treatable causes:** CNS infection or inflammation, trauma, stroke, toxin ingestion and mass lesions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assessment focuses on a thorough evaluation for serious and treatable causes including CNS infection or inflammation, trauma, stroke, toxin ingestion and mass lesions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Post-infectious acute cerebellar ataxia is the most common cause.** It is self-limiting and **a diagnosis of exclusion.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Post-infectious acute cerebellar ataxia is the most common cause, it is self-limiting and is a diagnosis of exclusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mimics:** weakness or pain can cause an unsteady gait, and a frightened or very unwell child may appear ataxic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Some conditions present with an unsteady gait due to weakness or pain. A frightened or very unwell child may also appear ataxic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ataxia** is unsteadiness, imbalance or clumsiness from uncoordinated muscle movement, affecting gait, speech or motor skills. **Acute = under 72 hours in a previously well child.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ataxia is defined as unsteadiness, imbalance or clumsiness due to uncoordinated muscle movements, and presents as abnormal gait, speech or motor skills … Acute (<72 hours duration, previously well child)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Vascular causes may need urgent lysis** — see the Stroke guideline.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vascular, may require urgent lysis see Stroke",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Post-infectious acute cerebellar ataxia** (viral — varicella, EBV, HHV6, enteroviruses — or *Mycoplasma*): most commonly **5–10 days after a prodromal illness**, typically in children **2–7 years**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Post- infectious acute cerebellar ataxia Viral (eg varicella, EBV, HHV6, Enteroviruses) Mycoplasma Most commonly occurs 5-10 days after a prodromal illness Commonly affects children 2-7 years of age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Its course:** cerebellar features are **maximal at onset** and usually improve within **48–72 hours**; full recovery usually within **10–21 days** (over 90% resolve by 2 months).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features of cerebellar ataxia which are maximal at onset and usually improve within 48-72 hours. Full recovery usually occurs within 10-21 days (>90% resolve by 2 months)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Toxins** (antihistamines, antiepileptics, ethanol/ethylene glycol/isopropyl, sedative-hypnotics): variable and dose-related; ask about access to medications, environmental exposure or a recent medication change; look for **altered GCS or a toxidrome.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Toxins Antihistamines Antiepileptics Ethanol, ethylene glycol or isopropyl Sedative-hypnotics Variable and dose related History of potential access to medications, environmental exposure or a recent change to medications Altered GCS or toxidrome",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Tumours** (oedema, obstructive hydrocephalus, haemorrhage): acute or acute-on-chronic; **usually a normal conscious level**, with raised ICP features, constitutional symptoms or focal deficits.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tumours Oedema Obstructive hydrocephalus Haemorrhage Acute or acute on chronic Usually present with normal conscious level Features of raised ICP Constitutional symptoms Focal neurological deficits",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Trauma** (haemorrhage, contusion, diffuse axonal injury, concussion): acute or chronic; look for a history or signs of head injury and **risk factors for non-accidental injury.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Trauma Haemorrhage Contusion Diffuse axonal injury Concussion Both acute and chronic History or clinical findings of head injury Risk factors for NAI",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ADEM** (autoimmune CNS demyelination): typically **1–4 weeks after a febrile illness**, with lethargy or irritability and multiple deficits — pyramidal signs, optic neuritis, hemiplegia, ataxia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ADEM Autoimmune condition leading to demyelination of the CNS Typically occurs 1-4 weeks after a febrile illness Lethargy or irritability associated with multiple neurological deficits including pyramidal signs, optic neuritis, hemiplegia, ataxia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** time course (acute under 72 hours); antecedent viral illness, rash, head trauma or earache; drug, toxin or environmental exposures.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Time course (acute <72 hours) Antecedents include recent viral illness rash head trauma earache … Drugs/toxins or environmental exposures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A thorough neurological examination is essential**, including conscious state; **exclude meningoencephalitis** (fever, meningism).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Conscious state, orientation … Thorough neurological examination is essential … Exclude signs of meningoencephalitis (fever, meningism)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Localise it.** Cerebellar: dysdiadochokinesis, dysmetria, dysarthria, tremor, nystagmus, staggering or wide-based gait. Sensory: positive Romberg, loss of light touch, vibration and proprioception, hyporeflexia. Vestibular: nystagmus without other cerebellar signs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cerebellar signs (dysdiadochokinesis, dysmetria, dysarthria, tremor, nystagmus) Gait abnormalities (staggering and/or wide-based) … Features suggestive of sensory ataxia Positive Romberg test Loss of light touch, vibration and proprioception Hyporeflexia … Features suggestive of vestibular ataxia Nystagmus without other cerebellar signs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Red flags:** raised intracranial pressure · altered conscious state · focal neurology · meningism · loss of proprioception, vibration or tactile discrimination · weakness · abnormal deep tendon reflexes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flag features Signs of raised intracranial pressure Altered conscious state Focal neurology Meningism Loss of proprioception, vibration sense or tactile discrimination Weakness Abnormal deep tendon reflexes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If features fit post-infectious acute cerebellar ataxia, no investigations may be needed.** Investigate if ataxia **does not resolve within 72 hours, worsens at any time**, or another cause is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If features are consistent with post-infectious acute cerebellar ataxia, then no investigations may be necessary … If ataxia does not resolve within 72 hours, worsens any time after onset or another cause is suspected, consider:",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Then consider:** blood glucose, venous blood gas, electrolytes, LFTs, anticonvulsant level and ethanol; CT or MRI; toxicology, metabolic screen, viral studies, vitamin B12, EEG — and **lumbar puncture only after neuroimaging.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood glucose Venous Blood gas Electrolytes Liver function tests Anticonvulsant level, ethanol Neuroimaging (CT or MRI depending on likely cause and availability) Toxicology Metabolic screening Viral studies Vitamin B12 levels Lumbar puncture (after neuroimaging) EEG",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Treatment depends on cause**; post-infectious acute cerebellar ataxia generally needs **no treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment will depend on cause, children with a presentation consistent with post-infectious acute cerebellar ataxia generally require no treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team** for acute ataxia of unclear cause, or any chronic or recurrent ataxia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when A child with an acute ataxia of unclear aetiology A child with chronic or recurrent ataxia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider transfer** for other focal neurological signs, raised ICP, a history atypical for post-infectious ataxia or unclear cause, or care beyond the hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Other focal neurological signs Raised ICP present History not typical of post-infectious acute cerebellar ataxia or aetiology is unclear Child requiring care beyond the comfort level of the hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider discharge** when the cause is clear, the child is clinically well and follow-up is arranged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when The cause of ataxia is clear, the child is clinically well and there is a follow up arranged",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Ataxia' (Last updated August 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Ataxia/, retrieved 2026-09-23"
+  }
+ ]
+}

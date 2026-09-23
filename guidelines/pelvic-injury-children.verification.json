@@ -1,0 +1,159 @@
+{
+ "guideline": "guidelines/pelvic-injury-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Trauma - Pelvic injury' (Last updated March 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 20,
+  "pass": 20,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Pelvic fractures are high-energy injuries, usually with multiple other injuries, and can bleed massively into the pelvis causing shock.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pelvic fractures are high energy injuries and are likely to be associated with multiple other injuries … Pelvic fractures can cause massive haemorrhage into the pelvis leading to shock",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "Pelvic fractures are **rare in children** and usually follow a high-energy mechanism; they can come with **life-threatening abdominal, genitourinary, spinal, thoracic and intracranial injuries.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pelvic fractures Rare in children Usually caused by high energy mechanism of injury … Can also be associated with life-threatening abdominal, genitourinary, spinal, thoracic and intracranial injuries",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Pelvic bleeding is mainly venous and often retroperitoneal** — hidden, so keep a high index of suspicion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pelvic bleeding Mainly venous Often retroperitoneal, requiring a high index of suspicion given occult location",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High-risk mechanisms:** crush injury · motor vehicle collision (especially ejection, lateral impact, rollover or a fatality in the same collision) · pedestrian or cyclist vs car · fall from height (typically over 3 m) · heavy object falling onto the child (e.g. horse, quad bike).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High risk mechanism, often involving crush injury Motor vehicle collision, additional risk features include ejection, lateral impact, rollover or fatalities in the same collision Pedestrian vs car, bicycle vs car collision Fall from height (typically >3 m, also consider mechanism and age) Heavy object fall onto patient eg horse, quad bike",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Haemodynamic compromise:** tachycardia (bradycardia is late), hypotension, prolonged capillary refill, end-organ hypoperfusion such as GCS under 15.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Haemodynamic compromise may present with the following signs: Tachycardia (bradycardia late sign), hypotension, prolonged capillary refill, evidence of end organ hypoperfusion eg GCS <15",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Signs of pelvic injury:** bruising, wounds, asymmetry or deformity of abdomen, pelvis or legs; tenderness over the iliac crests, pubic symphysis, sacroiliac joints, ischial tuberosities or lumbosacral spine; rectal or vaginal bleeding, blood at the urethral meatus, scrotal bruising.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess for signs of pelvic injury Bruising, wounds, asymmetry, deformity of abdomen, pelvis or lower limbs Tenderness along iliac crests, pubic symphysis, sacroiliac joints, ischial tuberosities, lumbosacral spine Rectal or vaginal bleeding, blood at the urethral meatus, scrotal bruising",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Test stability once only, by gentle iliac-crest compression, ideally by the most senior clinician** — skip it if instability is obvious or pelvic CT/X-ray is already planned. **Never 'spring' or rock the pelvis**; it can increase bleeding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess for pelvic instability by gentle compression of iliac crests. This should only be done once, preferably by the most senior clinician. Avoid if there is obvious pelvic instability, or if already planning imaging of the pelvis with CT or XR. “Springing” or rocking of the pelvis is contraindicated as it can increase bleeding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Log roll with caution — defer it if it risks worsening an unstable pelvis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use caution when log rolling the patient, defer if risk of worsening an unstable pelvis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Suspected unstable pelvic fracture: manual stabilisation while a pelvic binder is placed urgently.** Resuscitate if haemodynamically unstable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Resuscitate if haemodynamically unstable … If unstable pelvic fracture is suspected, commence manual stabilisation of pelvis whilst a pelvic binder is placed as a matter of urgency.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If a binder is indicated, apply it before intubation**, and have one ready in advance when the mechanism and pre-hospital findings suggest pelvic injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If binder placement is indicated, it should generally be applied before intubation … A binder should be available in advance if mechanism of injury and pre-hospital findings are suggestive of possible pelvic injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Apply at the level of the greater trochanters.** Too high (over the iliac crests) it won't work and may worsen the injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pelvic binder application Apply at level of greater trochanters … If placed too high (ie over iliac crests) the binder will not be effective and pelvic injury may be exacerbated",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No proprietary binder is clearly better.** If the available binders are too big for the child, use a sheet.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is little evidence favouring one proprietary binder over another. … If available binders are too large for the child, use a sheet",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If there are no lower-limb fractures, tie the feet together** with a figure-of-eight bandage or sling around the ankles — this internally rotates the hips and may help tamponade pelvic bleeding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there are no lower limb fractures, tie the feet together with a figure of eight knot around the ankles with a bandage or sling. This will increase internal rotation of the hip and may assist tamponading pelvic bleeding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sheet method:** folded sheet under the child at the greater trochanters, ends crossed and twisted over the pubic symphysis, pulled firmly by two team members; secure with clamps — **plastic rather than metal**, which can obscure X-ray and CT.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Circumferential sheet method Place folded sheet under child at the level of the greater trochanters Cross and twist the ends of the sheet over the pubic symphysis Two team members pull the sheet firmly, aiming to distribute force evenly over greater trochanters … Plastic clamps are preferable if available, as metal clamps can obscure X-rays and CT",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**AP pelvic X-ray.** FAST is controversial and of limited use for pelvic fractures — **don't delay the binder to do FAST.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Investigations AP pelvic X-ray … Point of care ultrasound (FAST) is controversial in paediatric trauma and of limited utility in diagnosis of pelvic fractures. Application of a pelvic binder should not be delayed to perform FAST",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **No haemodynamic improvement after binder and resuscitation → urgent angio-embolisation or surgery may be needed**; consider CT and get paediatric trauma specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urgent angio-embolisation or operative intervention may be required if child does not improve haemodynamically following application of pelvic binder and resuscitation, consider CT and seek advice from paediatric trauma specialist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**All children with major trauma should be transferred to a major trauma service**, following local transfer guidelines.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with major trauma should be transferred to a major trauma service for definitive management. This should be done in consultation with the local pre-hospital and inter-hospital transfer guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Unstable fracture: the binder stays on until definitive stabilisation.** If it seems to worsen instability by distracting the fracture (e.g. lateral compression fractures), loosening or removing it may help — **only with orthopaedics and senior oversight.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a child with an unstable pelvic fracture, a binder should remain in place until definitive stabilisation procedure. … On occasion the binder may worsen haemodynamic instability by increasing distraction at the fracture site (eg lateral compression fractures). If this is suspected, it may be beneficial to loosen or even remove the binder. This should be done in consultation with orthopaedics and with senior clinician oversight",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Remove a binder only where resuscitation is possible, and watch for deterioration** — a binder can fully reduce an unstable fracture so it doesn't show on X-ray or CT. **If the child deteriorates, reapply and re-image.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children need careful monitoring for deterioration on removal of pelvic binder, in an area capable of resuscitation. An unstable fracture can be fully reduced by the binder, causing it not to be seen on x-ray or CT. If deterioration occurs, reapplication of the binder and further imaging is required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Binders cause abrasions and pressure sores — remove at the earliest opportunity when there is no fracture.** With a stable fracture, consult orthopaedics before removal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Binders may cause abrasions and pressure sores, and should be removed at earliest opportunity when there is no evidence of fracture … Consultation with the orthopaedic team is recommended prior to removal of the binder in children with stable pelvic fractures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Trauma - Pelvic injury' (Last updated March 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Trauma_-_Pelvic_injury/, retrieved 2026-09-23"
+  }
+ ]
+}

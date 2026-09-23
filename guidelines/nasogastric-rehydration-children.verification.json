@@ -1,0 +1,195 @@
+{
+ "guideline": "guidelines/nasogastric-rehydration-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Nasogastric fluids' (Last updated April 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**For children beyond the newborn period.** Use specialised guidance for neonates, long-term NG feeding, and diabetes, cardiac, metabolic or renal conditions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nasogastric (NG) fluids for short term rehydration or maintenance fluids in children beyond the newborn period … Follow specialised fluid guidance for Neonates Long term nasogastric feeding Situations where specialised fluid management is required eg diabetes, cardiac, metabolic and renal conditions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Use the enteral route (oral or NG) whenever possible; shocked children need IV resuscitation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whenever possible, the enteral route (oral or nasogastric) should be used for fluids … Shocked children require intravenous resuscitation.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Serial weights are the best measure of acute fluid change**; clinical signs are often imprecise. **Rehydration does not treat the cause** — review regularly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serial weights are the best measure of acute changes in fluid status. Clinical signs can help estimate the severity of dehydration but are often imprecise … Rehydration treats dehydration, not the underlying cause. Careful and regular clinical review is required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**NG beats IV on safety**, electrolyte risk and recovery speed from gastroenteritis, and can deliver EBM or formula.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Advantages over IV fluids include safety, less risk of electrolyte derangement, more rapid recovery from gastroenteritis, and the option to give nutritional fluids eg expressed breast milk (EBM) or formula",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Indications:** rehydration after GI losses or sustained poor intake; replacing usual intake in acute illness (e.g. bronchiolitis, gingivostomatitis); replacing ongoing losses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rehydration in the setting of gastrointestinal losses, or a period of sustained inadequate intake … Replacing usual intake where acute illness interferes with usual intake eg bronchiolitis, gingivostomatitis, viral infection Replacement of ongoing losses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Contraindications:** nil by mouth/fasting · shock or critically unwell · possible bowel obstruction (bilious vomiting, severe distension, ileus) · altered conscious state or aspiration risk · facial trauma or suspected base-of-skull fracture.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Contraindications to NG fluids Child who is 'nil by mouth' or fasting Shock or the critically unwell child Possible bowel obstruction: bilious vomiting, severe abdominal distension, ileus Altered conscious state, or other risk of aspiration Facial trauma, suspected base of skull fracture",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discuss with a senior clinician:** age under 6 months · severe dehydration, electrolyte abnormality or hypoglycaemia · high ADH risk (acute CNS or significant pulmonary conditions) · short gut or chronic GI disorder · craniofacial abnormality.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with the following features should be discussed with a senior clinician: Age <6 months Severe dehydration, electrolyte abnormalities or hypoglycaemia High risk of increased anti-diuretic hormone secretion eg acute CNS and significant pulmonary conditions (although any unwell child is at risk) Short gut or other chronic gastrointestinal disorder Craniofacial abnormalities",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Usually no investigations.** Consider glucose and electrolytes in young infants, significant ongoing losses, or NG support beyond the initial 4–6 hour rehydration phase — **ORS is hypotonic and hyponatraemia can occur.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Usually no investigations are needed, unless required for the underlying condition … Consider blood glucose and electrolyte monitoring in young infants, and those with ongoing significant losses or NG fluid support requirement beyond the initial 4-6 hour rehydration phase. … are hypotonic; hyponatraemia can occasionally occur",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Rehydrate with ORS in all children over 1 month**; available ORS brands do not differ in a clinically significant way.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ORS should be used for rehydration in all children over 1 month of age … While electrolyte content and palatability may differ, there is no clinically significant difference between available ORS fluids",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After rehydration, milk-fed infants resume their usual EBM or formula** (orally or NG). **Stop fortification in GI illness** — the osmotic load can worsen diarrhoea.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An infant who is milk fed should resume their usual feed type (EBM or formula) once rehydration is complete, orally or via NGT if unable to drink … Cease any fortification (eg concentrated formula or additives) in gastrointestinal illness as higher osmotic load may lead to increased diarrhoeal losses.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **2/3 maintenance suits most unwell children needing hydration support**, especially respiratory and CNS infections. **Full maintenance** for well children not drinking enough (e.g. fasting for surgery) and the maintenance phase of gastroenteritis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "2/3 maintenance is appropriate for the majority of unwell children requiring hydration support, particularly in respiratory and CNS infections … Full maintenance fluids may be appropriate for well children who are not drinking adequately (eg fasting for surgery), and in the maintenance phase of gastroenteritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Full maintenance (4:2:1):** 3–10 kg 100 mL/kg/day (4 mL/kg/hr) · 10–20 kg 1000 + 50 × (weight − 10) mL/day [40 + 2 × (weight − 10) mL/hr] · 20–60 kg 1500 + 20 × (weight − 20) mL/day [60 + 1 × (weight − 20) mL/hr] · over 60 kg normal maximum 2400 mL/day (100 mL/hr).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Weight (kg) Full maintenance mL/day mL/hour 3 – 10 100 x weight 4 x weight 10 – 20 1000 + 50 x (weight-10) 40 + 2 x (weight-10) 20 – 60 1500 + 20 x (weight-20) 60 + 1 x (weight-20) >60 2400 mL/day is the normal maximum amount 100 mL/hour",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not prescribe maintenance from infant milk volumes (150–200 mL/kg/day)** — those meet growth needs in well babies, not fluid needs in unwell ones.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Younger babies need a higher volume of enteral milk (150-200 mL/kg/day. See table in Additional notes) to meet nutritional and growth requirements, but this higher volume should not be used as a basis for maintenance fluid prescribing in unwell children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**For moderate dehydration in common illnesses such as gastroenteritis**, to speed discharge home.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Used to correct moderate dehydration in common illnesses where the goal is to expedite clinical improvement for discharge to home care (eg gastroenteritis)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Not suitable for:** dehydration from lower respiratory infection, meningitis or significant electrolyte abnormality · **age under 6 months** · significant comorbidity · abdominal pain. **Severe dehydration needs IV fluid resuscitation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "dehydration from lower respiratory tract infections, meningitis or significant electrolyte abnormalities age <6 months significant comorbidities present abdominal pain Children with severe dehydration need IV fluid resuscitation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ORS 10–25 mL/kg/hr for 4 hours.** Evidence supports 25 mL/kg/hr; some centres use 10–12.5 mL/kg/hr.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use ORS at 10-25 mL/kg/hr for 4 hours … There is evidence for rapid rehydration at a rate of 25 mL/kg/hr. However, some centres recommend rates of 10-12.5 mL/kg/hr.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Many NG pumps max out at 300 mL/hr** — divide the target volume by 300 mL (e.g. 1800 mL for an 18 kg child runs as 300 mL/hr for 6 hours).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Maximum rate of many NG pumps is 300 mL/hr. If rate exceeds pump maximum rate, divide target volume of fluid by 300 mL, eg for 18 kg child, if aim is 450 mL/hr for 4 hours (1800 mL), this can be given as 300 mL/hr for 6 hrs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Preferred for moderate dehydration where rapid volumes are inappropriate.** First 24 hours: **replace a 5% deficit over the first 6 hours**, reassess, then give the daily maintenance volume over the next 18 hours; next 24 hours: remaining deficit if still needed, plus maintenance.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Preferred in children with moderate dehydration and conditions where high/rapid fluid volumes are not appropriate … In the first 24 hours: replace 5% fluid deficit over the first 6 hours. Clinically reassess, and if ongoing hydration support is required, give daily maintenance volume over the next 18 hours. … Subsequent 24 hours: Replace remaining deficit if still indicated, in addition to daily maintenance volume",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Slow NG rates (0–6 h deficit / 7–24 h maintenance), mL/hr:** 3 kg 25/15 · 4 kg 35/20 · 5 kg 40/25 · 6 kg 50/30 · 7 kg 60/40 · 8 kg 70/45 · 9 kg 75/50 · 10 kg 85/55 · 12 kg 100/60 · 15 kg 125/70 · 20 kg 165/80 · 30 kg 250/95.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "mL/hr 0-6 hrs (Deficit replacement – based on 5% deficit) mL/hr 7-24 hrs (Full 24-hour maintenance volume, over remaining 18 hours) 3 kg 25 mL/hr 15 mL/hr 4 kg 35 mL/hr 20 mL/hr 5 kg 40 mL/hr 25 mL/hr 6 kg 50 mL/hr 30 mL/hr 7 kg 60 mL/hr 40 mL/hr 8 kg 70 mL/hr 45 mL/hr 9 kg 75 mL/hr 50 mL/hr 10 kg 85 mL/hr 55 mL/hr 12 kg 100 mL/hr 60 mL/hr 15 kg 125 mL/hr 70 mL/hr 20 kg 165 mL/hr 80 mL/hr 30 kg 250 mL/hr 95 mL/hr",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Return quickly to normal fluids and food; keep breastfeeding.** No benefit from gradual milk reintroduction or dilute feeds. If diarrhoea worsens with lactose or fructose, consider 1–2 weeks of lactose-free milk and no fruit/juice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aim for a rapid return to age-appropriate fluids and nutrition. Breastfeeding should continue … There is no benefit to gradual reintroduction of milk after rehydration, nor to giving dilute milk or formula … If increased diarrhoeal losses after lactose-containing or high fructose fluid and foods, consider a 1-2 week period of lactose free milk/formula and avoidance of fruits/juice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Replace ongoing losses mL for mL with ORS**, on top of maintenance (e.g. 200 mL of diarrhoea over 4 hours → ORS 50 mL/hr for the next 4 hours).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Losses can be replaced mL for mL with ORS. … 200 mL of diarrhoea over 4 hours can be replaced with ORS at 50 mL/hr over the next 4-hour period",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Weigh at the start and at least daily**; document inputs and losses (including urine) with at least 12-hourly subtotals.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Weight should be taken at the start of treatment and then at least daily. In addition, document inputs and ongoing losses (including urine output), with at least 12 hourly subtotals",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Vomiting: slow the fluids temporarily and consider ondansetron if ≥6 months.** Significant abdominal pain or ongoing vomiting: senior review.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If vomiting occurs, slow fluids temporarily and consider ondansetron if ≥6 months age … If significant abdominal pain or ongoing vomiting, seek senior clinician review",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** for severe dehydration or electrolyte/glucose abnormalities.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Severe dehydration Electrolyte or glucose abnormalities",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasogastric fluids' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Nasogastric_fluids/, retrieved 2026-09-23"
+  }
+ ]
+}

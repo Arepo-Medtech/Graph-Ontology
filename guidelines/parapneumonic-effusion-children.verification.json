@@ -1,0 +1,153 @@
+{
+ "guideline": "guidelines/parapneumonic-effusion-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Parapneumonic effusion' (Last updated August 2022), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 19,
+  "pass": 19,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Suspect an effusion in any unwell child with pneumonia, or when fever persists despite 48 hours of appropriate antibiotics.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider the presence of a parapneumonic effusion in an unwell child with pneumonia or a child with pneumonia who has persistent fever despite 48 hrs of appropriate antibiotic treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Simple** effusion = sterile, non-loculated transudate. **Complicated** = loculated effusion or empyema, from bacterial invasion of the pleural space.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A simple parapneumonic effusion is a non loculated transudate which is sterile … A complicated parapneumonic effusion is a loculated effusion or empyema, with changes in the pleural fluid due to bacterial invasion of the pleural space",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Commonest empyema organisms:** *S. pneumoniae*, *S. aureus* and Group A Streptococcus.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Streptococcus pneumoniae, Staphylococcus aureus and Group A Streptococcus are the most common causes of an empyema",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**On examination:** localised absent breath sounds with a dull percussion note, alongside the adjacent pneumonia's bronchial breathing and crackles.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bronchial breath sounds and crackles (adjacent pneumonia) Localised absence of breath sounds and a dull percussion note",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Severity depends on the child's clinical state, not the size or look of the effusion.** Severe features: severe respiratory distress, severe hypoxaemia or cyanosis, marked tachycardia, altered mental state.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severity depends primarily on the clinical status of the child and may not correlate with the size or appearance of the effusion Severe respiratory distress Severe hypoxaemia or cyanosis Marked tachycardia Altered mental state",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other causes to consider:** TB or mycoplasma, malignancy, foreign body, congestive cardiac failure, rheumatological serositis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Atypical infection (tuberculosis, mycoplasma) Malignancy Foreign body Congestive cardiac failure Serositis from rheumatological causes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No laboratory test is diagnostic.** Consider FBE, UEC (think SIADH and atypical HUS), CRP (tracks treatment success) and blood culture.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No laboratory tests are diagnostic, but consider the following: Bloods FBE UEC (consider SIADH and atypical HUS) CRP (useful marker of treatment success) Blood culture",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severely unwell:** LFTs (albumin) and coagulation studies — consider toxic shock syndrome.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "LFTs (albumin) and coagulation studies may be indicated for severely unwell children (consider toxic shock syndrome)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If a drain goes in,** consider sending pleural fluid for Gram stain, MC&S and pneumococcal PCR.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If inserting a drain, consider sending pleural fluid for Gram stain, MC&S Pneumococcal PCR",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Imaging:** AP CXR; **chest ultrasound distinguishes simple from complicated.** CT is not routine — only for failure to respond or suspected malignancy or foreign body.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anteroposterior CXR Chest ultrasound: Can distinguish between a simple or complicated effusion … Chest CT is not routinely recommended. It may be considered in cases where the child fails to respond to treatment or suspecting alternate aetiology (malignancy, foreign body)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Outpatient management is possible** for a small simple effusion with no respiratory distress in a child tolerating oral antibiotics.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A child with a small simple effusion and no respiratory distress, who can tolerate oral antibiotics can be managed as an outpatient",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Admit** for respiratory support (hypoxia, moderate to severe work of breathing), hydration support, IV antibiotics, or to assess the effusion's severity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission to hospital is required for respiratory support (hypoxia, moderate to severe work of breathing), hydration support, IV antibiotics and for investigations to assess the severity of the effusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Restrict maintenance NG or IV fluids to 2/3rds of calculated requirement** to avoid fluid overload, with regular review of fluid status.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If giving NG or IV fluids as maintenance, limit to 2/3rds of child’s calculated fluid requirement to avoid fluid overload, with regular clinical review of fluid status",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Supportive care:** oxygen if required, analgesia, encourage mobilisation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Provide supplemental oxygen if required … Analgesia Encourage mobilisation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Antibiotics: a 3rd generation cephalosporin first line; consider MSSA and MRSA cover.** Definitive therapy follows investigation results and local specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suggest 3rd generation cephalosporin as first line Consider staphylococcal MSSA and MRSA coverage Definitive management should be based on investigation results and local specialist advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss with the local paediatric team** any child with an effusion who needs admission.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child with pleural effusion requiring admission",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discuss with respiratory and/or surgical team:** complicated effusion · severe respiratory distress · septic shock (drain may be needed for source control) · ongoing fever or respiratory distress after 48hrs of IV antimicrobials.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A complicated effusion Severe respiratory distress Septic shock (drain may be required for source control) Ongoing fever and/or respiratory distress after 48hrs of IV antimicrobials",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider transfer:** complicated effusion where surgery is anticipated · cardiac, chronic respiratory, immunodeficiency or immunosuppression comorbidity · high-level respiratory support · care beyond the local hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A complicated effusion where surgical intervention is anticipated Comorbidities such as cardiac disease, chronic respiratory disease, immunodeficiency or immunosuppression High level respiratory support required A child requiring care beyond the comfort level of local hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** tolerating oral antibiotics, afebrile, off oxygen and tolerating adequate oral intake.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tolerating oral antibiotics Afebrile Not requiring supplemental oxygen Tolerating adequate oral intake",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Parapneumonic effusion' (Last updated August 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Parapneumonic_effusion/, retrieved 2026-09-23"
+  }
+ ]
+}

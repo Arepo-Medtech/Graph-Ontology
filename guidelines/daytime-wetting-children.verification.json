@@ -1,0 +1,185 @@
+{
+ "guideline": "guidelines/daytime-wetting-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Urinary incontinence = day wetting over 5 years of age, more than once per month, for 3 months or more.** Daytime continence is usually achieved by 4 years.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinary incontinence is defined as day wetting in a child over 5 years of age that occurs more than once per month for ≥3 months … Daytime urinary continence is usually achieved by 4 years of age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The aim of evaluation is to distinguish neurological and anatomical causes from functional bladder dysfunction.** A voiding history and a **bladder diary** are essential.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The goal of evaluation of daytime incontinence is to distinguish neurological and anatomical causes from functional causes of bladder dysfunction … A thorough history of voiding symptoms and a Bladder diary are essential components to assessment, directing targeted investigation and treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Estimate normal bladder capacity before adolescence as (age + 2) × 30 mL.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal bladder capacity can be estimated prior to adolescence by the formula (age + 2) x 30 = capacity in mL",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Functional causes:** overactive bladder (urgency is the key feature) · voiding postponement · underactive bladder (infrequent voiding, overflow, large post-void residual) · non-neurogenic dysfunctional voiding (failure to relax the sphincter/pelvic floor, interrupted flow).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Over active bladder (OAB)- urgency being the most important feature Voiding postponement- habitually delayed urination, with overfilling and leakage Underactive bladder- infrequent urination and overfilling leading to overflow incontinence. A large post-void residual is common Dysfunctional voiding (non-neurogenic) - an inability to relax the urethral sphincter and/or pelvic floor musculature during voiding, resulting in an interrupted urinary flow and prolonged voiding time",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Never been dry by day, or continuous (not intermittent) incontinence/dribbling: strongly consider an anatomical abnormality.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there has never been a period of dryness noted, or child has continuous incontinence/dribbling (not intermittent) strongly consider anatomical abnormalities",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about** frequency, urgency, nocturia, polyuria, **holding manoeuvres** (tiptoes, leg-crossing, heel to perineum), straining, weak or interrupted stream, dysuria, and obtain a completed bladder diary.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptoms: voiding frequency, incontinence, urgency, nocturia, polyuria, holding manoeuvres (eg standing on tiptoes, crossing of the legs, or squatting with the heel pressed into the perineum), straining, weak stream, intermittency, dysuria Completed Bladder Diary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Girls:** consider urethro-vaginal reflux (leakage from the vagina on standing after voiding). **Boys:** consider incomplete emptying or dysfunctional voiding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Girls; consider urethral-vaginal reflux with leakage of urine from the vagina after voiding (when they stand up) Boys; consider incomplete emptying or dysfunctional voiding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Look for comorbidities:** constipation, UTI, night-time wetting. Tiredness or weight loss → chronic illness or renal impairment; polydipsia/polyuria → diabetes mellitus, diabetes insipidus, renal tubular disease or psychogenic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Constipation Urinary tract infection (UTI) Night-time wetting (enuresis) Excessive tiredness or loss of weight; consider an underlying chronic illness or renal impairment Polydipsia or polyuria; Consider possible causes (diabetes mellitus, diabetes insipidus, renal tubular disease, psychogenic)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine:** height, weight, BP; abdomen for bladder, renal or faecal mass; perineum and genitalia (**exclude epispadias**); **lower back/spine for occult dysraphism/tethered cord**; lower-limb neurology and gait.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Height, weight, BP – growth faltering / loss of weight / hypertension Abdomen – distended bladder, renal mass, faecal mass Inspection of perineum and external genitalia (and perianal area if constipation also present) Exclude epispadias … Lower Back/Spine – exclude occult spinal dysraphism/tethered cord Neurology - assessment of lower limbs, observation of gait",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Routine: urinalysis and culture**; repeat if previous UTIs or possible renal/metabolic disease.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinalysis and culture; repeat urinalysis if previous UTIs or concern about possible renal/metabolic disease",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Renal tract ultrasound with pre- and post-void residual** when initial behavioural management fails or there are red flags (e.g. continuous incontinence, recurrent UTIs).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Renal tract ultrasound (with pre and post void residual) Indicated when failing initial behavioural management, or if there are red flags present (e.g. continuous incontinence, recurrent UTIs)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Behavioural modification is standard initial management:** education about bladder function; timed voiding, no holding manoeuvres, good voiding posture; the bladder diary to track progress.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Behavioural modification is standard initial management including: Educating children/parents about LUT anatomy and function, demystification of pathophysiology and therapeutic approaches Micturition behaviour; timed voiding, avoidance of holding manoeuvers, optimal voiding posture Use the bladder diary as the reference source and documentation of progress",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fluids:** a drink with each meal and snack, spread over the day.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suggest a drink with each meal and snack, spread over the day",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Actively manage for 3 months** (about 2 cycles of re-education); **if unsuccessful, refer to a local paediatrician.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Active management for 3 months. This will allow for approximately 2 cycles of re-education. If unsuccessful, refer to a local paediatrician",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Treat constipation/soiling and UTI at the same time**; refer recurrent UTI to a paediatrician. **Combined day–night wetting: treat daytime symptoms first.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treat constipation and/or soiling simultaneously Treat UTI simultaneously, if recurrent UTIs refer on to local paediatrician Enuresis; treat daytime symptoms first for children with combined day-night wetting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Medication is second line**, started by the local paediatric team or continence service; **behavioural modification continues throughout.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pharmacological management is second line treatment. It should be commenced by local paediatric team or continence service. Behavioural modification should continue throughout treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Oxybutynin is the oral first-line option. 5–12 years:** 2.5 mg orally twice daily initially, increasing gradually if needed to 5 mg 2 or 3 times daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oxybutynin: Oral. First-line option. DitropanTM 5 mg Tablets* 5–12 years, oral, initially 2.5 mg twice daily; if needed, gradually increase to 5 mg 2 or 3 times daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Oxybutynin 12–18 years:** 5 mg orally 2 or 3 times daily initially, **max 5 mg 3 times daily.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oxybutynin: Oral. First-line option. … 12–18 years, oral, initially 5 mg 2 or 3 times daily; if needed, increase up to a maximum of 5 mg 3 times daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Transdermal patch** (off-label under 12) if the child cannot swallow or tolerate oral oxybutynin; **do not cut or divide patches.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Transdermal route (OxytrolTM patch- off label <12 yo) can be used if patient can’t swallow or can’t tolerate oral oxybutynin. Do not cut or divide patches as drug release characteristics may be affected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Monitor for constipation, dry mouth and flushing**, and for incomplete emptying and retention; consider laxatives, since constipation can worsen incontinence.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitor for adverse effects (eg constipation, dry mouth, flushing) and consider laxatives for constipation which may cause or worsen incontinence … Monitor for features of incomplete bladder emptying and urinary retention, if anticholinergic therapy is ongoing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Effect should appear within 2 months; continue for 3 to 6 months**, then wean gradually.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical effect should appear within 2 months Treatment will need to be continued for 3 to 6 months and weaned gradually reassessing regularly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Urology** if an anatomical abnormality is suspected (e.g. continuous wetting) or seen on imaging. **Nephrology/paediatrics** for significant haematuria and/or proteinuria, or polyuria/polydipsia once diabetes mellitus is excluded.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Refer to Urology if anatomical abnormality suspected on history (eg continuous wetting) or identified on imaging Refer to Nephrologist/ Paediatrician if: Significant haematuria and/or proteinuria Polyuria / Polydipsia (once diabetes mellitus excluded)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer to mental health services at the same time** if there are significant behavioural or psychological comorbidities.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Concurrently refer to mental health services if significant behaviour concerns or psychological comorbidities",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Urinary Incontinence - Daytime wetting' (Last revised July 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Urinary_Incontinence_-_Daytime_wetting/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "guideline": "guidelines/hypermagnesaemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Hypermagnesaemia' (Last Updated November 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 10,
+  "pass": 10,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Often an asymptomatic laboratory finding. Stop any magnesium-containing medicines or IV solutions, and ask about non-prescribed supplements.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypermagnesaemia is frequently an asymptomatic laboratory diagnosis finding Cease any magnesium-containing medications or intravenous solutions. Ask about non-prescribed supplements that may contain magnesium",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Seek specialist advice for any symptomatic child.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specialist advice should be sought for symptomatic children with hypermagnesaemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Serum level is a poor guide to body stores** (under 1% is extracellular). An asymptomatic high result is sometimes seen after IV magnesium. **Symptoms are unusual below 2 mmol/L.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serum magnesium levels can be a poor reflection of total body stores, as less than 1% of total body magnesium is in the extracellular fluid Asymptomatic laboratory diagnosis is sometimes observed following intravenous magnesium administration Symptomatic hypermagnesaemia usually not until >2 mmol/L",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Causes:** iatrogenic excess from IV infusion or PN (especially with renal impairment), tumour lysis syndrome, and renal impairment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Iatrogenic – excessive magnesium administration from intravenous infusion or parental nutrition (especially in presence of underlying renal impairment) Tumour lysis syndrome Renal impairment (particularly moderate-severe renal impairment along with magnesium administration)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After cardiac surgery the target may deliberately be the upper end of normal** to avoid arrhythmia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In some children with post-surgical cardiac conditions, the clinical target may be upper end of normal range to avoid arrhythmia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Check the sample:** timing against recent magnesium infusions, and whether it was drawn from the same IV access the infusion ran through.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Check timing of blood sampling in relation to recent magnesium infusions and whether sample was taken from the same intravenous access as where the was infusion administered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Signs:** loss of deep tendon reflexes · hypotension, ECG changes · **apnoea** · decreased consciousness, somnolence, paralysis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neurological: loss of deep tendon reflexes Cardiac: hypotension, ECG changes Respiratory: apnoea CNS: decreased consciousness level, somnolence, paralysis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stop any magnesium-containing medicines or IV solutions.** ⚠️ **Symptomatic: discuss with PICU** and consider calcium chloride or gluconate, furosemide, or haemodialysis if anuric.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cease any magnesium-containing medications or intravenous solutions For symptomatic children, discuss with PICU Consider role for calcium chloride or calcium gluconate, furosemide or haemodialysis (if anuric)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor closely**, clinically and with serum magnesium.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitor closely with clinical and biochemical (serum magnesium level) parameters",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** if symptomatic or significantly abnormal; **consider transfer** if symptomatic or needing monitoring your centre cannot provide.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when The child is symptomatic or there is a significant abnormality Consider transfer when The child is symptomatic or requires close monitoring not available in your centre",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypermagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypermagnesaemia/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "guideline": "guidelines/hypernatraemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Hypernatraemia' (Last updated October 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Start treatment early with IV sodium chloride 0.9% + glucose 5%.** ⚠️ **Do not exceed 0.5 mmol/L/hr (10–12 mmol/L per day)** — risk of cerebral oedema, seizures and permanent neurological injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Start treatment early with IV sodium chloride 0.9% + glucose 5% The rate of correction should not exceed 0.5 mmol/L/hr, ie 10-12 mmol/L per day, to avoid cerebral oedema, seizures and permanent neurological injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Paired serum and urine osmolality for all moderate or severe hypernatraemia — but do not delay treatment for it.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with moderate or severe hypernatraemia should have a paired serum and urine osmolality, but this should not delay treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severity:** mild 146–149 · moderate 150–169 · **severe 170 mmol/L or more.** Moderate to severe can cause brain shrinkage with vascular rupture, haemorrhage, demyelination and permanent injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild (146-149 mmol/L) Moderate (150-169 mmol/L) Severe (≥170 mmol/L) Moderate to severe hypernatraemia can cause acute brain shrinkage with vascular rupture, haemorrhage, demyelination and permanent neurological injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infants and small children are more vulnerable** (greater insensible losses; cannot ask for or reach fluids). **Chronic hypernatraemia (over 48 hours) is often well tolerated.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infants and small children are more vulnerable to hypernatraemia due to greater insensible losses and inability to communicate their need for fluids or access fluids independently Chronic hypernatraemia (>48 hours) is often well tolerated and asymptomatic due to cerebral compensation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Common water-deficit causes:** GI loss (diarrhoea, stoma), skin loss (sweating, burns), renal loss, and **inability to obtain water — including breastfed babies with inadequate milk supply.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gastrointestinal loss eg diarrhoea, stomal losses Skin loss (excess sweating/burns) Renal losses eg osmotic diuretics, diabetes mellitus, polyuria of acute tubular necrosis Inability to obtain water, including breastfed babies due to inadequate milk supply",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sodium excess:** wrongly concentrated formula, high-osmolality rehydration solutions, salt poisoning, or iatrogenic hypertonic saline or sodium bicarbonate.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ingestion of high sodium (inappropriate formula concentration, high osmolality rehydration solutions, salt poisoning) Iatrogenic (hypertonic saline, sodium bicarbonate)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** detailed feeding history — **check the feed concentration**; losses (GI, polyuria, skin); midline brain defect; renal disease; diuretics, desmopressin, hypertonic fluids.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fluid intake: detailed breast/formula/PEG feeding history – check feed concentration Fluid losses: GI, renal (polyuria), skin History of a midline brain defect History of renal disease Medications (consider diuretics, desmopressin, hypertonic fluids)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Weigh the bare child** against a recent (within 2 weeks) weight; serial weights up to every 6 hours are most helpful. **Oedema suggests sodium excess.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Weigh bare child and compare with recent (within 2 weeks) weight recording Serial weight measurements during treatment (up to every 6 hours depending on severity) are most helpful Hypervolaemia with signs of oedema (eg periorbital, genital, sacral, peripheral) suggests sodium excess",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Hydration assessment may underestimate hypovolaemia** in chronic or severe hypernatraemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "hydration assessment may be unreliable in chronic or severe hypernatraemia where clinical signs may underestimate degree of hypovolaemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Signs:** irritability, restlessness and weakness first, then vomiting, twitching, fever, doughy skin, high-pitched cry in infants. ⚠️ **Severe signs with an acute rise above 160 mmol/L:** altered mental state, lethargy, seizures, hyperreflexia, coma.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Irritability, restlessness, weakness Followed by: Vomiting, muscular twitching, fever, doughy skin High pitched crying and tachypnoea in infants Severe signs (develop with acute rise of sodium >160 mmol/L) Altered mental status Lethargy Seizures Hyperreflexia Coma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If Na is 150 mmol/L or more:** UEC, calcium, magnesium, phosphate and glucose. **Use a blood gas sodium if albumin is under 30 g/L.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recommended if sodium ≥150 mmol/L UEC, calcium, magnesium, phosphate and glucose. These may need concurrent management In the presence of hypoalbuminaemia (albumin <30 g/L), a blood gas sodium level is more reliable",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Paired serum and urine sodium, creatinine and osmolality are ideal;** if delayed, a **urine dipstick specific gravity** will do — **do not delay treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial paired serum and urine sodium, creatinine and osmolality is ideal, but if results will be delayed, a urine dipstick for specific gravity will give an indication of urinary concentration and treatment should not be delayed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat shock first.** Once circulating volume is restored, **correct slowly — no more than 0.5 mmol/L/hour.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treat shock as a priority … Once circulating volume is restored, the rate of sodium correction should be slow, no more than 0.5 mmol/L/hour",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Severe (170 mmol/L or more) is a medical emergency not covered by this guideline: refer to a tertiary centre and contact ICU.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe hypernatraemia (≥170 mmol/L) is a medical emergency and management is not discussed in this guideline. Refer to tertiary centre and contact ICU",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mild (146–149): manage the cause and repeat UEC in 4–6 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild hypernatraemia (146-149 mmol/L) Manage the underlying cause and repeat UEC in 4-6 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Moderate (150–169):** restrict and record oral intake, **stop feed fortifications**, weigh at least daily (up to 6-hourly), **repeat UEC 1–2 hours after starting then 4–6-hourly** if falling appropriately.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate hypernatraemia (150- 169 mmol/L) … Restrict and record oral fluid intake as thirst can be excessive Cease any feed fortifications such as extra scoops of formula or polyjoule Monitor fluid status with urine output and repeated weights (weigh at least daily, and up to 6-hourly) Repeat UEC 1-2 hours after initial management then 4-6 hourly if the sodium level is decreasing at an appropriate rate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If sodium falls faster than 0.5 mmol/L/hr, stop or slow the fluids and seek expert advice early.** If it rises or does not change, seek advice about hypotonic solutions. Monitor neurological status closely.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If decrease in sodium is too rapid (>0.5 mmol/L/hr), cease or reduce the rate of fluids and seek expert advice early If hypernatraemia worsens or is unchanged, seek expert advice about hypotonic solutions Monitor neurological status closely",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Water deficit:** total fluid = maintenance + deficit + ongoing losses. **Replace the deficit over 48 hours with IV sodium chloride 0.9% + glucose 5%**; replace ongoing losses (excluding urine) mL for mL with sodium chloride 0.9%; **add potassium once urine output is established.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Total fluid requirement = maintenance + replacement of deficit + replacement of ongoing losses Replace water deficit over 48 hours in addition to daily maintenance, with IV sodium chloride 0.9% and glucose 5% (see table for rates) In addition, replace ongoing losses mL for mL (excluding urine) with IV sodium chloride 0.9% Once urine output is established, add potassium to the IV fluid prescription",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Starting rates, sodium chloride 0.9% + glucose 5%, Na 150–169 (mL/hr):** 4 kg 22 · 10 kg 55 · 20 kg 90 · 30 kg 114 · 40 kg 138 · 50 kg 160 · 70 kg 200. They assume 7% dehydration, include maintenance plus the 48-hour deficit, **exclude ongoing losses**, and must be adjusted to the sodium trend.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The rates below include maintenance plus replacement of deficit over 48 hours, based on a presumption of 7% dehydration and moderate hypernatraemia These are starting rates only, and should be adjusted according to changes in sodium level on subsequent tests These rates do not include ongoing losses, which need to be added separately … Weight (kg) Rate sodium chloride 0.9% + glucose 5% (mL/hr) if sodium 150-169 mmol/L 4 22 5 27 6 33 7 38 8 44 10 55 12 62 14 68 16 75 18 82 20 90 22 96 24 100 26 105 28 110 30 114 32 120 34 124 36 128 38 133 40 138 45 150 50 160 55 175 60 187 65 195 70 200",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **If seizures occur:** consider venous sinus thrombosis or cerebral infarction, consider contrast CT, and **contact ICU — hypertonic saline may be needed to slow a rapid fall in sodium.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If seizures occur: consider venous sinus thrombosis or cerebral infarction consider imaging with a contrast CT scan contact ICU - may need hypertonic saline to slow a rapid decrease in sodium level",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sodium excess:** reduce sodium intake and **get expert advice** — hypotonic fluid (e.g. sodium chloride 0.45%) or dialysis if overloaded may be needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment of moderate hypernatraemia due to sodium excess Aim to reduce excess sodium intake Get expert advice, as may need hypotonic fluid (eg sodium chloride 0.45%), or dialysis if overloaded",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team for any moderate hypernatraemia (150 mmol/L or more).** ⚠️ **Consider transfer** if the cause is unclear, Na is 170 or more, there are neurological symptoms, or the response is not as expected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child with moderate hypernatraemia (≥150 mmol/L) Consider transfer when Hypernatraemia where the cause is unclear Hypernatraemia ≥170 mmol/L Displaying neurological symptoms Not responding to treatment as expected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge once the cause is identified and adequately treated.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Cause for hypernatraemia identified and treated adequately",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypernatraemia' (Last updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Hypernatraemia/, retrieved 2026-09-23"
+  }
+ ]
+}

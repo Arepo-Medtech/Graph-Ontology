@@ -1,0 +1,138 @@
+{
+ "guideline": "guidelines/haematuria-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Haematuria' (Last updated April 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 17,
+  "pass": 17,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most children have isolated asymptomatic microscopic haematuria**: they need follow-up with repeat urinalysis, not immediate investigation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The majority of children have isolated asymptomatic microscopic haematuria and do not need immediate investigation, but require follow up with repeat urinalysis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Microscopic haematuria = more than 10 RBC/microlitre**, detectable only on urinalysis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Microscopic haematuria (>10 RBC/microlitre) can only be detected by urinalysis as urine colour remains normal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Persistent microscopic haematuria = 3 positive samples at least 1 week apart**, not after exercise or during menstruation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Persistent microscopic haematuriais 3 positive separate samples that occur ≥1 week apart, without prior exercise nor during menstruation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Macroscopic haematuria** is visible blood, and is more likely to come from the bladder or urethra than the kidney.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Macroscopic haematuria is when blood is visible in urine without microscopy, and is more likely to come from the bladder or urethra rather than the kidney",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Red or brown urine is not always blood** — haemoglobin, myoglobin, medication or food can cause it; microscopy differentiates.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red or brown urine does not always indicate haematuria (may also be haemoglobinuria, myoglobinuria, medication, and food) and requires microscopy to differentiate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Newborn 'brick dust' in the nappy is usually urate crystals**, sometimes mistaken for blood. Blood may also come from outside the urinary tract (vaginal bleeding, rectal fissure).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urate crystals are commonly present in the urine of newborn babies. They can produce a red discolouration of the nappy (\"brick dust\" appearance) which is sometimes mistaken for blood … Blood in the urine may come from sources other than the urinary tract (eg vaginal bleeding, rectal fissure)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Common causes:** isolated asymptomatic microscopic haematuria, viral infection, UTI, trauma, HSP, hypercalciuria, inherited glomerular basement membrane disorders.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common causes include isolated asymptomatic microscopic haematuria, viral infections, UTI, trauma, HSP, hypercalciuria and inherited abnormalities of the glomerular basement membrane",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** previous haematuria, UTI symptoms, systemic symptoms (fatigue, oedema, rash, arthralgia, coryza), **recent surgery or trauma including non-accidental injury**, family history of haematuria, renal disease/stones or hearing loss, bleeding disorder or immunodeficiency.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Previous history of haematuria Symptoms of urinary infection: dysuria, frequency, pain, fever Systemic symptoms such as fatigue, oedema, rash, arthralgia, or coryza Recent surgery or trauma including non-accidental injury Family history of haematuria, renal disease/ stones or hearing loss History of underlying bleeding disorder or immunodeficiency",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about medicines** (e.g. NSAIDs, rifampicin, metronidazole, nitrofurantoin, cyclophosphamide), **food** (beetroot and berries colour urine) and **exercise**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Medication history (eg NSAIDs, rifampicin, metronidazole, nitrofurantoin, cyclophosphamide) Food intake (beetroot and berries can colour urine to pink or red) Exercise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine:** urinalysis, weight, eyes, skin, genitalia, joints, oedema, organomegaly, and **blood pressure**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinalysis Weight Physical exam particularly reviewing for eyes, skin, genitalia, joint tenderness or swelling, and signs of oedema or organomegaly Blood pressure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Red flags — haematuria AND any of:** proteinuria · hypertension · fluid overload (oedema, ascites) · flank/abdominal pain · immunocompromise.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flags Haematuria AND any of: Proteinuria Hypertension Fluid overload: oedema, ascites Flank/abdominal pain Immunocompromise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Isolated asymptomatic microscopic haematuria with no other abnormality: GP review and urinalysis on 2 further occasions at least 1 week apart** (not during menstruation, no exercise that day). No other interim tests; it commonly resolves.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children with isolated asymptomatic microscopic haematuria and no other abnormal findings: Send to GP for review and urinalysis on 2 further occasions, at least 1 week apart, ensuring the urine sample is not collected during menstruation and there has been no exercise that day No other investigations are necessary in the interim Commonly resolves spontaneously",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Persistent isolated microscopic haematuria:** urine microscopy, urine protein:creatinine and calcium:creatinine ratios, and urinalysis of immediate family.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children with isolated persistent microscopic haematuria: Urine microscopy Urine protein:creatinine and calcium:creatinine ratios Urinalysis of immediate family",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Macroscopic haematuria:** urine microscopy and culture, protein:creatinine and calcium:creatinine ratios, FBE, UEC, LFT, coagulation profile, CMP, renal ultrasound; **glomerulonephritis screen if painless**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Macroscopic haematuria Urine microscopy and culture Urine protein:creatinine and calcium:creatinine ratios FBE, UEC, LFT, coagulation profile, CMP If painless, glomerulonephritis screen as per flowchart Renal ultrasound",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consult the local paediatric team** if the child is systemically unwell, has any red flag, or **microscopic haematuria has not resolved after three consecutive tests**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Child is systemically unwell Haematuria is present with any red flag Microscopic haematuria has not resolved following three consecutive tests",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Nephritis or haemolytic uraemic syndrome: consider nephrology. Abdominal mass: consider surgery or urology.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical features of nephritis (consider consultation with nephrology team) Haemolytic uraemic syndrome (consider consultation with nephrology team) Abdominal mass (consider consultation with surgical or urology team)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge once an appropriate follow-up plan is in place.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when An appropriate follow up plan is in place",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Haematuria' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Haematuria/, retrieved 2026-09-23"
+  }
+ ]
+}

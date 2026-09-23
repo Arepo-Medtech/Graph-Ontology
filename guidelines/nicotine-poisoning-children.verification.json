@@ -1,0 +1,148 @@
+{
+ "guideline": "guidelines/nicotine-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Nicotine Poisoning' (Last Updated January 2019), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 18,
+  "pass": 18,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Mild exposures may cause GI symptoms only; larger doses are rapidly absorbed** and can cause seizures, cardiovascular collapse and coma.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild nicotine exposures may result in gastrointestinal symptoms only Larger doses may be rapidly absorbed and can cause severe toxicity resulting in seizures, cardiovascular collapse and coma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **E-cigarette liquid nicotine is often highly concentrated: small volumes may cause life-threatening toxicity in children.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Liquid nicotine solutions used in e-cigarette devices are often highly-concentrated. Small volumes may cause life-threatening toxicity in children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Biphasic:** stimulation within minutes (agitation, sweating, vomiting, tachycardia, bronchoconstriction, seizures); ⚠️ at higher doses a **second phase of bradycardia, hypotension, respiratory failure and coma 1 to 4 hours after exposure.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial stimulatory effects occur within minutes and may include agitation, diaphoresis, nausea and vomiting, tachycardia, bronchoconstriction and seizures. At higher doses, a second phase involving bradycardia, hypotension, respiratory failure and coma may supervene 1 to 4 hours after exposure.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Any ingestion may cause mild toxicity; the minimum potentially lethal dose is anything over 0.5 mg/kg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any ingestion may cause mild toxicity. The minimum potentially lethal dose is reported to be anything greater than 0.5 mg/kg.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Nicotine content:** filtered cigarette 13 to 30 mg · used butt 5 to 7 mg · gum/lozenge 2 to 4 mg · patch (total) 36 to 114 mg · e-cigarette liquid cartridge 0 to 36 mg/mL.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Filtered cigarettes 13 to 30 mg Used cigarette butt 5 to 7 mg Nicotine gum/lozenge 2 to 4 mg Nicotine patch (total content) 36 to 114 mg Liquid nicotine cartridge (used in e-cigarette)* 0 to 36 mg/mL",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **E-cigarette products were unregulated in Australia** (as at this page): **labels are unreliable** and true concentrations vary widely.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "note: e-cigarette devices and liquid nicotine solutions remain unregulated in Australia. As such, product labels are unreliable and true nicotine concentrations have been shown to vary widely.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Urgent assessment for:** ANY quantity of liquid nicotine · more than one whole cigarette · more than three butts · any symptomatic child · all deliberate self-poisoning or significant accidental ingestion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urgent assessment is required for all children who may have ingested the following: ANY quantity of liquid nicotine More than one whole cigarette More than three butts Any symptomatic patient All patients with deliberate self-poisoning or significant accidental ingestion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Calculate the likely dose in mg/kg** (true concentration of imported liquid nicotine may be hard to know) and consider co-ingestants such as paracetamol.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Calculate likely nicotine dose in mg/kg. (note: it may be difficult to determine true concentration of imported liquid nicotine products) Consider co-ingestants, eg: paracetamol",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Early signs (under 1 hour):** nausea, vomiting, abdominal pain, salivation · tachycardia, hypertension · breathlessness, bronchorrhoea, wheeze · agitation, fasciculation, seizures.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early clinical signs (<1 hour) Gastrointestinal – nausea and vomiting, abdominal pain, salivation CVS – tachycardia, hypertension Respiratory – shortness of breath, bronchorrhoea, bronchoconstriction / wheeze Neurologic – agitation, fasciculation, seizures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Late signs in larger exposures (1 to 4 hours):** bradycardia, arrhythmia, hypotension, shock · hypopnoea, apnoea · lethargy, muscle paralysis, stupor, coma.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Late clinical signs in larger exposures (1 to 4 hours) CVS – bradycardia, arrhythmia, hypotension, shock Respiratory – hypopnoea, apnoea Neurologic – lethargy, muscle paralysis, stupor, coma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Symptomatic: ECG initially and repeated at 4 hours until normal.** No specific pathology.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For all symptomatic patients: ECG: initially and repeat at 4 hours until normal. Pathology: nil specific",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most exposures are low-risk and management is supportive.** Higher-risk: cardiorespiratory monitoring, and treat hypotension, symptomatic bradycardia and respiratory failure by standard resuscitation guidelines.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most cases of exposure will be low-risk and management is supportive. … Standard procedures and supportive care, including cardiorespiratory monitoring. Hypotension, symptomatic bradycardia and respiratory failure should be treated as per standard resuscitation guidelines.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Activated charcoal is very rarely indicated: 1 g/kg may be recommended in high-risk cases presenting early — discuss with a toxicologist.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Activated charcoal is very rarely indicated. A dose of 1 g/kg may be recommended in high-risk cases who present early. Discuss with toxicologist.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Significant skin exposure: wash with soap and water.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For significant skin exposure – wash affected area with soap and water",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic, or recovering from GI symptoms only: monitor 4 hours before discharge.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients who are either asymptomatic following exposure or who are recovering from gastrointestinal symptoms only should be monitored for 4 hours prior to discharge.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission** for any child with signs or symptoms of a larger exposure and for adolescents with an intentional overdose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all children with signs or symptoms of a larger exposure and for adolescent patients with an intentional overdose.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transfer all significant ingestions and anyone who needed initial resuscitation.** **PIPER: 1300 137 650.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with significant ingestions or who have required initial resuscitation. … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** normal GCS · normal ECG · observation complete · after deliberate ingestion, low assessed risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal GCS Normal ECG Period of observation as above For deliberate ingestion. A risk assessment should indicate that the patient is at low risk of further self-harm in the discharge setting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nicotine Poisoning' (Last Updated January 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nicotine_Poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "guideline": "guidelines/intranasal-fentanyl-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Intranasal fentanyl' (Last updated October 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 19,
+  "pass": 19,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Intranasal fentanyl is a safe, non-invasive, effective analgesic for moderate to severe pain**, used alongside non-drug and other drug pain management.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intranasal (IN) fentanyl is a safe, non-invasive and effective analgesic for children with moderate to severe pain … Fentanyl should be used in combination with non-pharmacological and other pharmacological pain management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Onset within 5 minutes; lasts about 30–60 minutes.** Prescribe in consultation with a senior clinician.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fentanyl is a rapid acting synthetic opioid, with an onset of action within 5 minutes and a duration of action of approximately 30-60 minutes … It should be prescribed in consultation with a senior clinician.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Indication: initial analgesia for any child aged 12 months and older in moderate to severe pain without IV access** — fractures, dislocations, amputations, burns, significant lacerations, painful procedures under nitrous oxide, sickle cell crisis, surgical pain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial analgesia for any child (aged 12 months and older) in moderate to severe pain, without IV access. … Fractures, dislocations, amputations Burns Significant lacerations Painful procedures under nitrous oxide Medical causes of acute severe pain eg sickle cell crisis Surgical causes of pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not give it in isolation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IN fentanyl should not be given in isolation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Contraindications:** age under 12 months · known fentanyl hypersensitivity · altered conscious state · both nasal passages occluded · active epistaxis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Contraindications Age under 12 months Known fentanyl hypersensitivity Altered conscious state Bilateral occluded nasal passage Active epistaxis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**With nitrous oxide:** give fentanyl **5 minutes before** starting nitrous oxide sedation; the combination **increases the risk of vomiting**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It should be given 5 minutes before commencing nitrous oxide sedation. There is an increased risk of vomiting when fentanyl and nitrous oxide are used in combination.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Document a baseline pain score, sedation score and set of observations** before giving it.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to administration, all children require documented baseline: Pain score (see Acute pain management) Sedation score (see table below) Set of observations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**UMSS:** 0 awake and alert · 1 minimally sedated · 2 moderately sedated, easily roused by light touch or simple command · 3 deeply sedated, rousable only by significant physical stimulation · 4 unrousable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "University of Michigan Sedation Scale (UMSS) 0 Awake and alert 1 Minimally sedated: tired, sleepy, appropriate response to verbal conversation and/or sound 2 Moderately sedated: somnolent/sleeping, easily aroused with light, tactile stimulation or a simple verbal command 3 Deeply sedated: deep sleep, rousable only with significant physical stimulation 4 Unrousable",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **The child must be awake or easily roused to voice (UMSS 0–1) before each dose.** Monitor heart rate, respiratory rate, oxygen saturation, pain and sedation scores.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Heart rate, respiratory rate, oxygen saturation, pain score and sedation score … The child should be awake or easily roused to voice prior to each dose (UMSS 0-1)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If sedated or vital signs are abnormal**, tell the treating clinician and continue observations until back to baseline. **After the last dose, do two further sets of observations 5 minutes apart.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If sedated or abnormal vital signs, inform treating clinician and continue observations and sedation scores until return to baseline … After the last dose has been given, two further sets of observations at 5-minute intervals should be completed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First dose: 1.5 microg/kg, max 100 microg**, using the 300 microg/mL nasal solution. **Use ideal body weight for overweight children.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First dose: 1.5 microg/kg dose (max 100 microg) of 300 microg/mL nasal solution … For overweight children, use ideal bodyweight",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**The usual maximum is 75 micrograms** with the 100 microg/2 mL concentration (volume limits); **100 micrograms** only with the hospital-only 300 microg/mL solution.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Usual maximum is 75 micrograms due to volume limitations with 100 microg/2 mL concentration … A maximum of 100 micrograms may be given if using 300 microg/mL (available in hospitals only)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**A second dose may be given 5–10 minutes after the first: 0.75–1.5 microg/kg, max 75–100 microg.** After it, review and consider IV access for further analgesia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A second dose may be administered 5-10 minutes after the first to provide adequate analgesia Second dose: 0.75-1.5 microg/kg (max 75-100 microg) After second dose, review and consider IV access for additional analgesia if required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Draw up the dose plus 0.1 mL for the first dose** to prime the atomiser dead space; **not for the second dose** when re-using the device.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Draw up appropriate dose for weight plus 0.1 mL extra for the first dose, to account for priming the dead space in the device … Do not draw up 0.1 mL extra for second dose when re-using the MAD",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Sit the child at about 45 degrees** (or head to one side), **press the plunger quickly** so it atomises rather than drips, ask for only a gentle sniff, and **divide the dose between nostrils**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "With the child sitting at approximately 45 degrees or with head to one side, insert the device loosely into the nostril and press the plunger quickly (if depressed too slowly the medication will drip rather than atomise) … Ask the child to only gently sniff, as a vigorous inhalation will result in swallowing the medication rather than true intranasal administration … Dose should be divided between nostrils",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Side effects are uncommon:** sedation, respiratory depression, hypotension, nausea and vomiting (more with nitrous oxide), pruritus. Chest wall rigidity is reported only with large IV doses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Side effects are uncommon, but may include: Sedation Respiratory depression Hypotension Nausea and vomiting (increased risk when combined with nitrous oxide) Chest wall rigidity (only reported in large intravenous doses) Pruritus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Opioid toxicity:** immediate senior review and move to resuscitation · stop further opioid · support airway and oxygenate · assist ventilation as required · give naloxone.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immediate senior clinician review, move to resuscitation area Cease additional opioid administration Support airway and provide oxygenation Assist ventilation as required Administer naloxone bolus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Naloxone:** **excessive sedation (UMSS 3): 1–5 microg/kg, max 100 microg, IM or IV**, repeated every 2–3 minutes if needed · **acute overdose (UMSS 4): 10 microg/kg, max 400 microg** · **no response to 10 microg/kg: 100 microg/kg, max 2 mg**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "1-5 microg/kg (max 100 microg) IM or IV for excessive sedation (UMSS 3), repeat 2-3 minutely if required 10 microg/kg (max 400 microg) for acute overdose (UMSS 4) 100 microg/kg (maximum 2 mg) in an emergency if lack of response to 10 microg/kg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider discharge when sedation score and observations are back to baseline** and the pain score is minimal and manageable with simple analgesics.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Sedation score and observations have returned to baseline Minimal pain score, which can be managed with simple analgesics",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Intranasal fentanyl' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Intranasal_fentanyl/, retrieved 2026-09-23"
+  }
+ ]
+}

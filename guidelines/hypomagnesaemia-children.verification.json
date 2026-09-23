@@ -1,0 +1,142 @@
+{
+ "guideline": "guidelines/hypomagnesaemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Hypomagnesaemia' (Last Updated November 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 17,
+  "pass": 17,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Oral/enteral is the preferred route.** Consider oral replacement for **asymptomatic, mild** hypomagnesaemia without GI intolerance (diarrhoea, nausea, vomiting).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral/enteral is the preferred route of magnesium administration Consider oral magnesium replacement in asymptomatic children with mild hypomagnesaemia and no gastrointestinal intolerance present eg diarrhoea, nausea, vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IV is preferred for symptomatic hypomagnesaemia or significant GI intolerance.** ⚠️ **Seek specialist advice for any symptomatic child.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intravenous magnesium replacement is the preferred route in the setting of symptomatic hypomagnesaemia, significant gastrointestinal intolerance Seek specialist advice for symptomatic children with hypomagnesaemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Serum magnesium may not reflect body stores** — under 1% is extracellular. With normal renal function, 24-hour urinary magnesium may show earlier change.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serum magnesium levels may not reflect total body stores Less than 1% of total body magnesium stores are in extracellular fluid Earlier changes may be identified in urine levels in the context of normal renal function, using 24-hour urinary magnesium excretion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Interpret in context:** after cardiac surgery the target may be the **upper end of normal** to avoid arrhythmia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The clinical context of the child is required to interpret the significance of a low magnesium level eg post-surgical cardiac conditions, where clinical target may be the upper end of normal range to avoid arrhythmia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Drug causes:** loop and thiazide diuretics, cisplatin, tacrolimus and ciclosporin, **chronic proton pump inhibitors**, aminoglycosides.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Drug-induced Loop diuretics, thiazides Cisplatin Tacrolimus, ciclosporin Proton pump inhibitors [chronic use] Aminoglycosides",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GI causes:** reduced intake or absorption (malabsorption, short bowel), and losses (diarrhoea, laxative abuse, gastric suction or vomiting). Also DKA, burns and cardiopulmonary bypass.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Reduced intake Reduced absorption Malabsorption Short bowel syndrome Increased losses Diarrhoea Laxative abuse Excessive gastric suctioning or vomiting … Intracellular redistribution diabetic ketoacidosis hyperthyroidism Miscellaneous burns cardiopulmonary bypass",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Look for:** tremor, fasciculations, hyperreflexia, paraesthesia, weakness · **arrhythmia and PR/QT prolongation** · **hypokalaemia and hypocalcaemia** · nystagmus, seizures, confusion, irritability.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neuromuscular: muscle tremors, fasciculations, hyperreflexia, paraesthesia, muscle weakness, myalgia Cardiac: arrhythmias and ECG changes (PR/QT prolongation) Metabolic: hypokalaemia, hypocalcaemia Central nervous system: nystagmus, seizures, depression, agitation, confusion, irritability",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor magnesium at a frequency set by the degree of abnormality and symptoms;** identify and correct the cause.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Identify underlying cause and correct where possible … Serum magnesium levels should be monitored with frequency depending on the degree of abnormality and whether the child is symptomatic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Oral is for asymptomatic mild hypomagnesaemia** — ⚠️ **not with significant GI intolerance such as diarrhoea, which oral magnesium will exacerbate.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider oral magnesium replacement in asymptomatic children with mild hypomagnesaemia, unless significant gastrointestinal intolerance (eg diarrhoea) which oral magnesium will exacerbate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dose: 2.5–5 mg/kg (0.1–0.2 mmol/kg) orally 3 times daily,** increasing if required to **10–20 mg/kg (0.4–0.8 mmol/kg) up to 4 times daily.** Smaller, more frequent doses are better tolerated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "2.5 - 5 mg/kg (0.1 - 0.2 mmol/kg) 3 times daily orally Increase to 10 - 20 mg/kg (0.4 - 0.8 mmol/kg) up to 4 times daily orally if required Tolerance is better with smaller, more frequent dosing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Products:** magnesium complex solution **2.1 mmol/mL (50 mg/mL)** · magnesium aspartate tablet (MagMin, Mag-Sup) **1.55 mmol (37.4 mg)** · Cenovis magnesium tablet **13.5 mmol (325 mg)**, which also contains manganese and pyridoxine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Magnesium complex solution 2.1 mmol per mL (50 mg/mL) Magnesium aspartate tablet (MagMin@; Mag-Sup@) 1.55 mmol per tablet (37.4 mg per tablet) Cenovis@ Magnesium tablets (also contains 6 mg manganese and 49.36 mg pyridoxine per tablet) 13.5 mmol per tablet (325 mg per tablet)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Severe symptoms (tetany, arrhythmia, seizures): treat with IV magnesium. Seek specialist advice for IV replacement.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with severe symptoms (eg tetany, arrythmia, seizures) should be treated with intravenous magnesium … Seek specialist advice for IV magnesium replacement",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **IV magnesium 0.1–0.2 mmol/kg, up to 0.4 mmol/kg (max 8 mmol), over 2–4 hours** — reduces adverse effects and improves cellular uptake. **May be given faster with severe symptoms.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IV magnesium 0.1 - 0.2 mmol/kg up to 0.4 mmol/kg (max dose 8 mmol) Administer over 2-4 hours, (reduces risk of adverse effects, also improves cellular uptake of administered dose) In children with severe symptoms, can be given over shorter period of time",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Concentrated ampoules are 2 mmol/mL** — DBL magnesium sulfate 49.3% (493 mg/mL), **dilute before use**; magnesium sulfate heptahydrate 50% (500 mg/mL).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "DBL Magnesium Sulfate concentrated injection 49.3% 2 mmol/mL (493 mg/mL) Dilute before use Magnesium Sulfate Heptahydrate concentrated injection 50% 2 mmol/mL (500 mg/mL)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Involve the paediatric team** if symptomatic or severe. **Nutrition/gastroenterology/dietitian** for hypomagnesaemia on PN or with refeeding syndrome.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The child is symptomatic, or there is a severe abnormality Consider consultation with the clinical nutrition, gastroenterology team or local dietitian when Hypomagnesaemia in a child on parenteral nutrition Hypomagnesaemia in a child with refeeding syndrome",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Renal team** for unexplained hypomagnesaemia, or with moderate–severe renal impairment — **replacement risks hypermagnesaemia.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with renal team when Unexplained hypomagnesaemia Hypomagnesaemia with associated moderate-severe renal impairment (risk of hypermagnesemia with replacement)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider transfer** if symptomatic or needing monitoring your centre cannot provide. **Discharge** when stable with a plan and any acute or chronic abnormality has resolved.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when The child is symptomatic or requires close monitoring not available in your centre … Consider discharge when The child is clinically stable with an appropriate management plan in place Any acute or chronic abnormality has resolved",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypomagnesaemia' (Last Updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Hypomagnesaemia/, retrieved 2026-09-23"
+  }
+ ]
+}

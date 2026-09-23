@@ -1,0 +1,119 @@
+{
+ "guideline": "guidelines/antihistamine-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Antihistamine poisoning' (Last updated August 2017), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 14,
+  "pass": 14,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most antihistamine poisonings need only supportive care.** ⚠️ **Large H1-antihistamine overdoses are associated with cardiac arrhythmia** and may need close monitoring and specific treatment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The majority of antihistamine poisonings will only require supportive care. … Large overdoses of H1 Antihistamines are associated with cardiac arrhythmia and may require close monitoring and specific treatment.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check for co-ingestants in the formulation, such as paracetamol.** This page covers **H1 antagonists only**, not H2 antagonists such as cimetidine and ranitidine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider investigating for common co-ingestions depending on the formulation, such as paracetamol levels. … This guideline will only deal with H1 antagonists. H2 antagonists such as cimetidine and ranitidine are not covered by this guideline.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Sedating antihistamines** add alpha-adrenergic, anticholinergic and serotonergic effects: overdose brings sedation and anticholinergic signs, and **at higher doses sodium-channel blockade with QT prolongation and Torsades de Pointes.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "As well as their H1 effect, sedating antihistamines can have alpha adrenergic, anticholinergic and serotonergic effects. As well as sedation, overdose often presents with anticholinergic symptoms … At higher doses, they can also cause sodium channel blockade with subsequent cardiovascular effects including QT prolongations and Torsades de Pointes.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sedating examples:** cyproheptadine, dexchlorpheniramine, diphenhydramine, dimenhydrinate, doxylamine, pheniramine, promethazine, trimeprazine, brompheniramine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Examples Cyproheptadine Dexchlorpheniramine Diphenhydramine Dimenhydrinate-used in combination with hyoscine/caffeine for travel Doxylamine Pheniramine Promethazine Trimeprazine Brompheniramine",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Lesser-sedating antihistamines** (cetirizine, desloratadine, fexofenadine, loratadine) generally have less serious toxicity: dizziness, tachycardia, headache, drowsiness or agitation. They don't affect the QT at normal doses, but there is concern about some effect in overdose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In general, the lesser sedating antihistamines have less serious toxicity in overdose. … In overdose symptoms can include dizziness, tachycardia, headache drowsiness or agitation. While the current generation of lesser sedating antihistamines do not affect the QT interval at normal doses (unlike the previous generation of medicines), there are concerns there may be some effect in overdose. Examples Cetirizine Desloratadine Fexofenadine Loratadine",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** acute ingestion of **more than 3 times the maximum daily dose** · any intentional self-poisoning or significant accidental ingestion · any symptomatic child. ⚠️ **Consider non-accidental poisoning** if the developmental age doesn't fit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children requiring assessment Acute ingestion of >3 X maximum daily dose All children or young people with intentional self-poisoning or significant accidental ingestion Any symptomatic child or young person Any child whose developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Establish the formulation** (syrup, immediate or modified release), exact name and tablet size, and **calculate the maximum possible dose per kg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Presented as syrup, immediate or modified- release tablets If possible determine the exact name and tablet size. Calculate the maximum possible dose per kg Co-ingestants eg paracetamol",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations:** ECG at presentation and **repeated 4–6 hourly until normal**; **paracetamol level in all intentional overdoses.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG: initially and repeat 4-6 hourly until normal. Pathology: Paracetamol level in all intentional overdoses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor conscious level and breathing**, and support respiratory depression or depressed conscious state. In adolescents, look for co-ingestants such as paracetamol and alcohol.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Adolescents, consider investigating for common co-ingestions (paracetamol, alcohol, etc.) Monitor level of consciousness and respiratory status and institute supportive measures for respiratory depression or depressed conscious state",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Charcoal: consider only after a massive ingestion, within 1 hour or after the airway is protected — discuss with a toxicologist.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Decontamination - Consider activated charcoal after massive ingestion in older/sedating anti histamines, and within 1 hour / or after airway protection. Discuss with toxicologist.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Seizures or severe agitation: benzodiazepines.** ⚠️ **Start cardiac monitoring and do a 12-lead ECG** for long QT and arrhythmias; consider repeating it at 6 hours if symptomatic. **Discuss anticholinesterases with a toxicologist.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Seizures or severe agitation should be treated with benzodiazepines … Cardiac monitoring should be instituted and an initial 12 Lead ECG preformed and assessed for Long QT and arrhythmias. Consider repeat ECG at 6 hours if symptomatic. The use of anticholinesterases should be discussed with a toxicologist.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**12-lead ECG for long QT and arrhythmias**; cardiac monitoring may be needed after large overdoses. Otherwise treat symptoms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Lesser sedating antihistamines A 12 Lead ECG preformed and assessed for Long QT and arrhythmias. Cardiac monitoring may be necessary with large overdoses Treat any effects with symptomatic management.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission for every intentional poisoning.** **Transfer** for a significantly decreased or non-improving conscious state, or need for respiratory support — PIPER 1300 137 650.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all children or young people with an intentional poisoning. … Significantly decreased conscious stage or conscious state not improving as expected. Need for respiratory support For emergency advice and paediatric or neonatal ICU transfers, call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge** if no features of poisoning by **6 hours after ingestion**, with a normal GCS and normal ECG; after intentional poisoning, a risk assessment showing low risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If features of poisoning have not developed at 6 hours post-ingestion Normal GCS Normal ECG For intentional poisoning, a risk assessment should indicate that the child or young person is at low risk of further self harm in the discharge setting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antihistamine poisoning' (Last updated August 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Antihistamine_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

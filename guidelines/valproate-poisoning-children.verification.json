@@ -1,0 +1,177 @@
+{
+ "guideline": "guidelines/valproate-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Sodium valproate poisoning' (Last updated December 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 22,
+  "pass": 22,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Toxicity is dose-dependent; serious symptoms are unlikely below 400 mg/kg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Toxicity is dose-dependent and serious symptoms are unlikely with ingestions less than 400 mg/kg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Valproate levels and an ECG help assessment. Consider transfer to a tertiary centre early** — intensive care support such as haemodialysis may be needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sodium valproate concentrations and an ECG can be helpful in assessment … Early consideration of transfer to a tertiary centre due to need for intensive care support (eg enhanced elimination with haemodialysis)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Onset: within 4 hours for standard release, up to 12 hours for enteric-coated.** ⚠️ **Bone marrow suppression can appear 3 to 5 days after massive ingestion.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptom onset is usually within 4 hours for standard release preparations, and up to 12 hours following enteric-coated formulations … Bone marrow suppression may occur 3 to 5 days after massive ingestion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** any deliberate self-poisoning · accidental ingestion over 200 mg/kg in a drug-naïve child (or 50 mg/kg more than the usual single dose) · any symptomatic child · unknown quantity. **Consider non-accidental poisoning** if developmental age doesn't fit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with deliberate self-poisoning or significant accidental ingestion (>200 mg/kg in drug naïve children OR 50 mg/kg more than the child’s usual single therapeutic dose) Any symptomatic child Acute ingestion of unknown quantity Any child where the developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dose–response:** under 200 mg/kg — no more than mild sedation · 200–400 mg/kg — moderate toxicity with CNS depression · ⚠️ **over 400 mg/kg — multi-organ toxicity · over 1000 mg/kg — coma, multi-organ failure, cerebral oedema, potentially life-threatening.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "<200 mg/kg — unlikely to develop more than mild sedation 200 to 400 mg/kg — moderate toxicity with CNS depression >400 mg/kg — risk of multi-organ system toxicities >1000 mg/kg — coma, multi-organ failure, cerebral oedema, potentially life-threatening",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine for:** drowsiness, ataxia, seizures, coma · nausea, vomiting, abdominal pain · hypotension, QT prolongation, tachycardia · **metabolic: hypernatraemia, raised lactate, metabolic acidosis, hypocalcaemia, hypoglycaemia, hyperammonaemia, deranged LFTs** · late myelosuppression.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Central nervous system: drowsiness, ataxia, seizures, coma Gastrointestinal: nausea, vomiting, abdominal pain Cardiovascular: hypotension, arrhythmias (QT prolongation), tachycardia Metabolic: hypernatraemia, elevated lactate, metabolic acidosis, hypocalcaemia, hypoglycaemia, hyperammonaemia, deranged liver function tests Myelosuppression – late onset",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ECG at presentation and repeat at 6 hours until normal. Valproate level every 6 hours while conscious state is altered**, until normal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG: initially and repeat at 6 hours until normal … Measure every 6 hours in patients with altered conscious state until the concentration returns to normal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Therapeutic range 350 to 700 micromol/L (50 to 100 mg/L); ⚠️ over 6000 micromol/L (850 mg/L) indicates severe poisoning.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Therapeutic range (total valproic acid concentration): 350 to 700 micromol/L (50 to 100 mg/L or micrograms/mL) >6000 micromol/L (850 mg/L) is associated with severe poisoning",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also:** blood glucose, electrolytes, LFTs, blood gas, ammonia, calcium, and paracetamol in all intentional overdoses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood glucose concentration Electrolytes, liver function test, blood gas, ammonia, calcium Paracetamol concentration in all intentional overdoses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss every ingestion over 400 mg/kg with a toxicologist early** about decontamination.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All cases of ingestions >400 mg/kg should be discussed with a toxicologist early in regard to decontamination",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Support blood pressure and electrolytes: IV fluid 20 mL/kg for hypovolaemia or hypotension;** potassium and glucose as needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Supportive treatment to maintain adequate blood pressure and electrolyte balance is essential IV fluid resuscitation 20 mL/kg for hypovolaemia or hypotension Potassium and glucose administration as necessary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider charcoal for over 200 mg/kg presenting within 4 hours**, after discussion with toxicology. ⚠️ **Only if the child is not drowsy or the airway is secured (intubated).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider charcoal if large ingestion (>200 mg/kg ingested) and presentation within 4 hours of ingestion, after discussion with toxicology. Ensure patient is not drowsy or has secure airway (ie intubated)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider multi-dose activated charcoal for over 500 mg/kg or rising levels.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider multi-dose activated charcoal for ingestions >500 mg/kg or rising sodium valproate levels",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Haemodialysis is considered in life-threatening poisoning: over 1 g/kg or levels over 6000 micromol/L.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Enhanced elimination (eg haemodialysis) is considered in life-threatening poisoning – ingestions >1 g/kg or drug concentrations >6000 micromol/L",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Carnitine lacks strong evidence but has a reasonable biological basis, is cheap and low-risk.** Consider it for poisoning complicated by significant metabolic acidosis, cerebral oedema, hyperammonaemia or hepatotoxicity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The use of carnitine as an antidote for sodium valproate is not supported by strong evidence, but there is a reasonable biological bases for its use. It is inexpensive and has a low risk of harm … Consider using carnitine in patients with sodium valproate poisoning complicated by: significant metabolic acidosis cerebral oedema hyperammonaemia hepatotoxicity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Carnitine: 100 mg/kg IV, then 50 mg/kg every 8 hours until coma or acidosis resolve.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If indicated start with 100 mg/kg IV followed by 50 mg/kg every 8 hours until coma or acidosis resolve",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild symptoms (ataxia, GI upset): observe 6 hours for immediate-release, at least 12 hours for enteric-coated;** discharge if symptom-free.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild symptoms (eg ataxia, gastrointestinal symptoms) Observe for 6 hours if ingestion of immediate-release preparation or minimum of 12 hours if ingestion of enteric coated preparation Discharge if symptom-free",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Moderate–severe or persisting after 6 hours, OR any ingestion over 400 mg/kg: admit to a tertiary centre.** Take a level at 6 hours; discuss serial monitoring with a toxicologist if symptoms continue.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate-to-severe or persistent symptoms after 6 hours of observation OR ingestions >400 mg/kg (eg depressed conscious state or cardiac arrhythmias) Admit for observation and supportive management in a tertiary centre Serum sodium valproate concentration should be performed at 6 hours If ongoing symptoms, serial drug concentration monitoring should be discussed with a toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team** for any intentional overdose (consider admission) or symptoms persisting after 6 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child or young person presents with intentional overdose as admission should be considered Children have persisting symptoms after 6 hours observation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transfer to an ICU with dialysis if over 1 g/kg ingested or level over 6000 micromol/L**; also transfer for severe symptoms or care beyond the hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A child has ingested >1 g/kg sodium valproate or valproate serum concentrations >6000 micromol/L the child should be transferred to an intensive care unit with dialysis facilities … A child has severe symptoms with the potential to require intensive care review or care required is beyond the comfort level of the current hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when:** normal GCS, normal ECG, observation period complete.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Normal GCS Normal ECG Period of observation as above",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Adolescents with deliberate ingestion need a self-harm risk assessment and drug and alcohol assessment before discharge**, with links to services if needs are found.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm Assessment of other drug and alcohol use should also be undertaken If, after risk assessment, it is deemed safe to discharge a patient from hospital, but ongoing mental health or drug and alcohol needs are identified, the adolescent should be linked with appropriate services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sodium valproate poisoning' (Last updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Sodium_valproate_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

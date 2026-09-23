@@ -1,0 +1,125 @@
+{
+ "guideline": "guidelines/benzodiazepine-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Benzodiazepine poisoning' (Last Updated April 2019), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 15,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Pure benzodiazepine overdose usually causes mild to moderate CNS depression; deep coma needing ventilation is rare and should prompt a search for other toxins.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pure benzodiazepine overdoses usually induce a mild to moderate central nervous system depression; deep coma requiring assisted ventilation is rare, and should prompt a search for other toxic substances.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Close observation and supportive care are the mainstay.** **Every intentional overdose needs a mental health assessment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Close observation and supportive care are the mainstay of management. All intentional overdoses require a Mental Health Assessment.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sedation can last up to 36 hours.** Peak levels come 30–90 minutes after ingestion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sedation can be prolonged and last up to 36 hours … They are rapidly absorbed in the gastrointestinal tract, with peak plasma concentrations occurring 30 to 90 minutes after ingestion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Midazolam has a short half-life but active metabolites that accumulate with repeated doses**, prolonging sedation. **Diazepam is long-acting** (half-life over 24 hours) and clears poorly in children with liver disease.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Although midazolam possesses a short half-life, it has active metabolites that can accumulate with repeated dosing, leading to prolonged sedative effects … Long-acting(half-life >24 h) eg Diazepam, these generally have pharmacologically active metabolites, accumulate in tissues after multiple doses, and demonstrate impaired clearance in children with liver disease",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** every deliberate self-poisoning or significant accidental ingestion, **especially toddlers and younger children**, and any child with CNS impairment. ⚠️ **Consider non-accidental poisoning** if the developmental age doesn't fit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with deliberate self-poisoning or significant accidental ingestion, especially younger children and toddlers. Any symptoms of CNS impairment. Any child whose developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Always assume the maximum number of missing tablets was taken**, and calculate the maximum possible dose per kg of each drug.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Always assume maximum number of missing/unaccounted tablets have been ingested … Calculate the maximum possible dose per kg of each drug",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Look for:** confusion, dysarthria, nystagmus, ataxia, hypotonia, seizure · respiratory depression · hypotension · hypothermia · withdrawal or paradoxical reactions (agitation, aggression, hallucinations).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neurologic – confusion, dysarthria, nystagmus, lethargy, ataxia, areflexia, hypotonia, seizure Respiratory – depression Cardiovascular – hypotension Metabolic – hypothermia Other – withdrawal syndrome, paradoxical reactions (agitation, aggression, hallucinations and combativeness)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Accidental overdose: usually no tests.** **Intentional overdose: 12-lead ECG, paracetamol level and BSL** for co-ingestants. **Benzodiazepine levels don't help.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Usually none in accidental overdoses. In intentional overdoses, consider co-ingestion risk, therefore; 12 lead ECG Paracetamol concentration BSL Measurement of serum benzodiazepine concentration correlates poorly with clinical findings and will not aid management.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**With respiratory depression, suspect an opioid co-ingestant** — giving parenteral naloxone is reasonable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If respiratory depression, a concomitant opioid overdose may be present and it is reasonable to administer appropriate doses of parenteral naloxone",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Activated charcoal is contraindicated** (aspiration risk). **Enhanced elimination doesn't work** and isn't recommended.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gastrointestinal decontamination with activated charcoal is contraindicated because of the increased risk of aspiration Enhancement of benzodiazepine elimination is not effective and is not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Flumazenil is contraindicated in intentional overdose** — it can precipitate seizures in withdrawal or mixed overdoses. It **may be used in accidental or iatrogenic overdose**, and considered when CNS depression is severe. **Always discuss with a toxicologist** (13 11 26).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Flumazenil is contraindicated in intentional overdose (it can precipitate seizures in withdrawal or mixed overdoses) Flumazenil may be used in accidental or iatrogenic overdose If CNS depression is severe the use of Flumazenil may be considered Always discuss with a Toxicologist – call to the Victorian Poisons Information centre on 13 11 26",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Flumazenil: 0.01 mg/kg IV over 15 seconds, max 0.2 mg** (initial dose).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The initial dose is 0.01 mg/kg given IV over 15 seconds (maximum dose 0.2 mg)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Most isolated ingestions can go home if asymptomatic at 4 hours.** **Admit if still intoxicated beyond 4 hours**; consider admission for every intentional overdose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most children with an isolated Benzodiazepine ingestion can be safely discharged if asymptomatic at 4 hours Children with persistent signs of intoxication beyond 4 hours should be admitted … Admission should be considered for all children and young people with an intentional overdose.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transfer children with CNS depression needing airway protection** — PIPER 1300 137 650.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with CNS depression requiring airway protection For emergency advice and paediatric or neonatal ICU transfers, call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge: normal GCS after 4 hours' observation and able to walk.** Adolescents with deliberate ingestion need a self-harm risk assessment and a drug and alcohol assessment first.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal GCS after 4 hours observation Child able to ambulate … Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm. Assessment of other drug and alcohol use should also be undertaken.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Benzodiazepine poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Benzodiazepine_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

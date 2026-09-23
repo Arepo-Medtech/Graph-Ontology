@@ -1,0 +1,110 @@
+{
+ "guideline": "guidelines/toxidromes-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Toxidromes poisoning' (Last Updated October 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 13,
+  "pass": 13,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**A toxidrome is a classic cluster of symptoms and signs** — a 'clinical fingerprint' — and recognising it **focuses the differential** on the few chemicals with similar effects.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A toxic syndrome or toxidrome is a 'clinical fingerprint', characterised by a classic constellation of symptoms and signs due to toxic effects of chemicals in the body … Toxic syndrome or toxidrome recognition is important for rapid detection of the suspected cause and helps focus the differential diagnosis to those few chemicals which have similar toxic effects",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Manage each condition under its specific guideline.** For 24-hour advice, call the Poisons Information Centre on 13 11 26.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Management of individual conditions can be found under the specific guideline. … For 24 hour advice, contact the Poisons Information Centre 13 11 26",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Anticholinergic:** delirium, hallucinations, agitation · dilated pupils · dry flushed skin, urinary retention. **Agents:** sedating antihistamines (promethazine, doxylamine, cyproheptadine, pheniramine, alimemazine), TCAs, atropine, hyoscine, antispasmodics, atypical antipsychotics, plants (Angel's Trumpet). **Antidotes: physostigmine; sodium bicarbonate for TCAs.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anticholinergic ↑ ↑ - / ↑ ↑ Delirium Hallucinations Agitation Dilated Dry, flushed skin Urinary retention Sedating antihistamines (eg promethazine, doxylamine, cyproheptadine, pheniramine, alimemazine) Tricyclic antidepressants Atropine Hyoscine Antispasmodics Atypical antipsychotics (eg risperidone, quetiapine) Plants (eg Angels trumpet) Physostigmine Sodium bicarbonate (tricyclic antidepressants)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hallucinogen:** raised temperature, heart rate and BP · hallucinations, synaesthesia, agitation · dilated pupils · nystagmus. **Agents:** LSD, mescaline, psilocybe mushrooms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hallucinogen ↑ ↑ ↑ - Hallucinations Synaesthesia Agitation Dilated Nystagmus LSD Mescaline Psilocybe mushrooms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Neuroleptic malignant syndrome:** raised temperature, heart rate and respiratory rate · confusion · dilated pupils · **muscle rigidity**, sweating, metabolic acidosis, liver and renal failure, hyperkalaemia, rhabdomyolysis, clots. **Agents:** antipsychotics and antiemetics (domperidone, droperidol, metoclopramide, promethazine). **Antidote: dantrolene** (reduces rigidity).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neuroleptic Malignant syndrome ↑ ↑ - ↑ Confusion Dilated Muscle rigidity Diaphoretic Metabolic acidosis Liver failure Renal failure Hyperkalaemia Rhabdomyolysis Blood clots (veins and arteries) Antipsychotics (eg risperidone, quetiapine) Antiemetic agents (eg domperidone, droperidol, metoclopramide, promethazine) Dantrolene (decreases muscle rigidity)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sympathomimetic:** raised temperature, heart rate, BP and respiratory rate · agitation, hypervigilance, paranoia · dilated pupils · sweating, tremor, hyperreflexia, **seizures**. **Agents:** cocaine, amphetamine, pseudoephedrine, nicotine, caffeine, cold and flu medicines.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sympatho-mimetic ↑ ↑ ↑ ↑ Agitation Hypervigilance Paranoia Dilated Diaphoretic Tremors Hyperreflexia Seizures Cocaine, amphetamine, pseudoephedrine, nicotine, caffeine, cold and flu medications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Serotonin toxicity:** raised temperature, heart rate, BP and respiratory rate · confusion, agitation, coma · dilated pupils · tremor, **myoclonus**, sweating, **hyperreflexia**, trismus, rigidity. **Agents:** MAOIs, SSRIs, tramadol, tapentadol, MDMA, amphetamines, lamotrigine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serotonin Toxicity ↑ ↑ ↑ ↑ Confusion Agitation Coma Dilated Tremor Myoclonus Diaphoretic Hyperreflexia Trismus Rigidity Monoamine oxidase inhibitors Selective serotonin reuptake inhibitors Tramadol Tapentadol MDMA/ecstasy Amphetamines Lamotrigine",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Withdrawal from ethanol or sedative-hypnotics:** raised temperature, heart rate, BP and respiratory rate · agitated confusion · dilated pupils · sweating, diarrhoea, tremor, **seizure**. **Agents:** alcohol, benzodiazepines, barbiturates.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Withdrawal from ethanol /sedatives-hypnotics ↑ ↑ ↑ ↑ Agitated Confusion Dilated Diaphoretic Diarrhoea Tremor Seizure Alcohol Benzodiazepines Barbiturates (eg Phenobarbitone)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Opioid:** low temperature, heart rate, BP and respiratory rate · CNS depression, coma · **constricted pupils** · hyporeflexia, pulmonary oedema. **Agents:** heroin, morphine, methadone, fentanyl, oxycodone, codeine-derivative cough syrups. **Antidote: naloxone.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Opioid ↓ ↓ ↓ ↓ CNS depression Coma Constricted Hyporeflexia Pulmonary oedema Opioids (heroin, morphine, methadone, fentanyl, oxycodone) Cough syrups with codeine derivates (dihydrocodeine, pholcodine) Naloxone",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sedative-hypnotic / ethanol:** CNS depression, confusion, coma · constricted pupils · hyporeflexia. **Agents:** alcohol, benzodiazepines, barbiturates, GHB. **Antidote: flumazenil (benzodiazepines).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sedative-hypnotic Ethanol - /↓ ↓ ↓ ↓ CNS depression Confusion Coma Constricted Hyporeflexia Alcohol Benzodiazepines Barbiturates (eg Phenobarbitone) GHB Flumazenil (benzodiazepines)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cholinergic:** confusion, coma · constricted pupils · salivation, lacrimation, urination, diarrhoea, vomiting. **Agents include organophosphates and nerve agents.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cholinergic ± ± - / ↑ - Confusion Coma Constricted Salivation Lacrimation Urination Diarrhoea Vomiting Organophosphates Nerve agents",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission for every intentional overdose.** **Transfer** when care must escalate beyond the hospital and local paediatric team.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all children and young people with an intentional overdose. … Children requiring escalation of care beyond the comfort of the hospital and local paediatric team.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before discharge, adolescents with deliberate ingestion need a self-harm risk assessment and a drug and alcohol assessment**, and linkage to services if needs are found.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm Assessment of other drug and alcohol use should also be undertaken If, after risk assessment, it is deemed safe to discharge a patient from hospital, but ongoing mental health or drug and alcohol needs are identified, the adolescent should be linked with appropriate services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Toxidromes poisoning' (Last Updated October 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Toxidromes_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

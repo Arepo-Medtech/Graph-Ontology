@@ -1,0 +1,134 @@
+{
+ "guideline": "guidelines/camphor-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Camphor poisoning' (Last updated June 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 16,
+  "pass": 16,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Camphor is highly toxic.** Symptoms can begin within 15 minutes of ingesting more than 30 mg/kg; **seizures can occur within 90 minutes.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Camphor is highly toxic Onset of symptoms can be early, within 15 mins of ingestion of more than 30 mg/kg Neurologic complications are common. Seizures can occur within 90 minutes of ingestion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Sources:** Vicks inhaler · rubs such as Dencorub, Tiger Balm, emu oils, Vicks VapoRub · some mothballs (others contain naphthalene or paradichlorobenzene instead).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vicks inhaler Rubs including Dencorub, Tiger balm, Emu oils, Vicks VapoRub Mothballs (some mothballs instead contain naphthalene or paradichlorobenzene)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Readily absorbed through skin, but most toxic exposure is by ingestion.** Products may contain other toxins, e.g. **salicylates in muscle rubs.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While it is readily absorbed from the skin most toxic exposure is from ingestion … Camphor-containing products may have other ingredients which can also be toxic in their own right (eg salicylates in muscle rub products)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The Victorian Poisons Information Centre does not recommend camphor** — no proven health benefit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The Victorian Poisons Information Centre does not recommend the use of camphor, as it has no proven health benefits",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Onset 5–15 minutes after ingestion; peak levels at 1–3 hours; toxicity typically resolves within 24 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Onset of symptoms can be early, 5-15 minutes post ingestion; peak plasma concentrations occur 1-3 hours post ingestion Clinical toxicity typically resolves within 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **0.5–1 g is considered a lethal oral dose in children.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dose related toxicity: 0.5-1 g is considered a lethal oral dose in children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Assess:** all deliberate self-poisoning or significant accidental ingestion · any symptomatic child · **GI irritation and CNS depression over 10 mg/kg; serious toxicity reported over 30 mg/kg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with deliberate self-poisoning or significant accidental ingestion Any symptomatic patient Gastrointestinal irritation and CNS depression may occur at doses over 10 mg/kg. Serious toxicity has been reported in children who have ingested more than 30 mg/kg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Calculate the maximum possible dose per kg** and consider co-ingestants such as paracetamol.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Calculate the maximum possible dose per kg Consider co-ingestants eg paracetamol",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Seizures usually come within 90 minutes**, possibly preceded by fasciculation, confusion, delirium, hallucinations and restlessness. **Respiratory depression is common, often after a seizure.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute seizures usually occur within 90 minutes of ingestion. They may be preceded by muscle fasciculation, confusion, delirium, hallucinations, and restlessness Respiratory depression is common, often following seizure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A characteristic odour is often present.** Also oral/epigastric burning, nausea, vomiting; case reports of cardiomyopathy and prolonged QRS and QTc.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Often a characteristic odour is present … GIT: oral/epigastric burning, nausea, vomiting CVS: case reports of cardiomyopathy and prolonged QRS and QTc",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations:** paracetamol level in all intentional overdoses · ECG · CXR if symptomatic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Paracetamol level in all intentional overdoses ECG CXR if symptomatic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Resuscitate and manage any seizures.** **Wash contaminated skin and remove clothes if indicated.** ⚠️ **Charcoal is not recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Resuscitation Management of any seizures … Wash contaminated areas of skin and remove patient's clothes if indicated Charcoal is not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic: observe for 4 hours and discharge if no symptoms develop.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If asymptomatic; observe for 4 hours & discharge if no symptoms develop",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team if:** intentional overdose · significant or persistent vomiting or diarrhoea · seizures · decreased conscious state or respiratory depression.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An overdose is intentional There is significant vomiting or persistent vomiting or diarrhoea There are seizures There is decreased conscious state or respiratory depression",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transfer** for persistent seizures or decreased conscious state, or need for respiratory support. **PIPER: 1300 137 650.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Child has persistent seizures of a decreased conscious state Child requires respiratory support … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** normal conscious state · stable after a symptom-free 4 hours · after deliberate ingestion, low assessed risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Child has normal conscious state Stable following a symptom-free period of 4 hours A risk assessment following deliberate ingestion indicates that the patient is at low risk of further self-harm",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Camphor poisoning' (Last updated June 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Camphor_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}
