@@ -1,0 +1,180 @@
+{
+ "guideline": "guidelines/fever-in-returned-traveller-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Fever in the recently returned traveller' (Last updated April 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most infections are mild or self-limiting**, but their non-specific presentation makes them hard to tell apart from serious infection such as malaria.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most infections are mild or self-limiting, however their non-specific presentations make them challenging to distinguish from serious infections such as malaria",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Falciparum malaria is the most common serious infection and cause of death in returning travellers.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Falciparum malaria is the most common serious infection and cause of death in returning travellers",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Common non-travel diseases are more likely than exotic ones.** Children who visited friends and relatives are more likely to have a serious cause. Consider non-infectious causes too (e.g. DVT/PE).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Common diseases unrelated to travel are more likely than exotic ones acquired whilst overseas … Returned travellers who have been visiting friends and relatives whilst overseas are more likely to have a serious cause for illness upon return … When assessing a febrile child recently returned from overseas travel it is important to consider non-infectious causes for fever (eg DVT/PE)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Drug-resistant infection or colonisation may have been acquired**, especially if the child was hospitalised.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Drug-resistant infections or colonization may have been acquired, especially if hospitalised",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Ask whether this could be a disease of public health importance** needing immediate infection control; contact the local health department for advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Always consider whether the presentation may indicate a disease of public health importance, where immediate infection control and containment measures are indicated. (See Australian national notifiable diseases and contact local health department for advice)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Suspected measles: negative pressure room with airborne precautions.** Possible novel respiratory illness: appropriate precautions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child in whom measles is clinically suspected should be nursed in a negative pressure room with airborne precautions … Any child with respiratory symptoms who may have a novel respiratory illness should be seen using appropriate precautions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Haemorrhagic fevers (Ebola, Marburg, Lassa, Crimean-Congo): strict isolation and strict barrier nursing.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Haemorrhagic fevers (Ebola, Marburg, Lassa, Crimean-Congo) require strict isolation and strict barrier nursing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take a travel history:** location and type (country/region, urban/rural, living conditions, altitude) · timing (dates, seasons, duration) · exposures (animals, insect bites, water and food, activities including sexual contact, drug use, tattoos, sick contacts).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Travel location and type (country/regions, urban/rural, living conditions, altitude) Timing of travel (dates, seasons, duration) Exposure to risk factors contact with animals, insect bites drinking water and food sources activities (including sexual contacts, illicit drug use, tattoos) sick contacts",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check immunisation history** — routine and travel-specific; typhoid vaccine is only about 70% effective. Ask about prophylaxis adherence, nets and repellent, and any healthcare or medicines abroad.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immunisation history (routine childhood and travel specific, noting Salmonella typhi vaccination only has ~70% efficacy) Prophylaxis medication use and adherence mosquito nets/insect repellent Symptom onset, duration and course Healthcare while away including any medications taken",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever is the only finding in most.** ⚠️ **Altered consciousness, haemorrhage or hypotension suggest cerebral malaria or haemorrhagic fever with shock.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever (only clinical finding in majority) Tachypnoea Rash Altered consciousness* Haemorrhage* Hypotension* *Suggestive of cerebral malaria or hemorrhagic fever with shock",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Eschar:** rickettsial infection, borrelia, Crimean-Congo haemorrhagic fever. **Petechiae:** meningococcal disease, viral haemorrhagic fever, rickettsia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Eschar Rickettsial infections, borrelia, Crimean-Congo haemorrhagic fever … Petechiae Meningococcal disease, viral haemorrhagic fever, rickettsia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Altered conscious state, lethargy or meningism:** cerebral malaria, meningitis, African trypanosomiasis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Altered conscious state, lethargy, Meningism Cerebral malaria, meningitis, African trypanosomiasis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever persisting over 2 weeks:** malaria, enteric fever, EBV, CMV, toxoplasmosis, acute HIV, acute schistosomiasis, brucellosis, TB, Q fever. **Fever starting over 6 weeks after travel:** *P. vivax* or *P. ovale*, acute hepatitis (B, C or E), TB, amoebic liver abscess.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever persisting >2 weeks Malaria, enteric fever, EBV, CMV, toxoplasmosis, acute HIV, acute schistosomiasis, brucellosis, TB, Q fever Fever with onset >6 weeks after travel Plasmodium vivax or P ovale, acute hepatitis (B, C or E), TB, amoebic liver abscess",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever alone** (think malaria, typhoid, dengue, hepatitis A): **FBE with thick and thin film**, blood culture, LFT if jaundiced, BGL, serum to store; discuss specific tests with Infectious Diseases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever alone Malaria* Typhoid Dengue Hepatitis A FBE thick and thin film* Blood culture LFT if jaundiced BGL Serum to store (Specific tests should be discussed with Infectious Diseases team)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also consider:** measles serology ± throat or nose PCR · urine microscopy and culture · **CSF in severely unwell children with meningism, encephalopathy or seizures**, after considering whether neuroimaging is needed first.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "measles serology +/- throat or nose swabs for PCR urine microscopy and culture CSF microscopy and culture in severely unwell patients with meningism, encephalopathy or seizures (after consideration of need for further neuroimaging first)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever with diarrhoea** (think malaria, typhoid, dengue, hepatitis, travellers' diarrhoea, cholera, dysentery): as for fever alone, plus stool MCS and OCP (the latter particularly if prolonged beyond 10 days).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever + diarrhoea Malaria* Typhoid Dengue Hepatitis Travellers’ diarrhoea** Cholera Dysentery (bloody diarrhoea) As for fever alone plus Stool MCS + OCP (latter, particularly if prolonged >10 days)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever with respiratory symptoms** (think malaria, pneumonia, influenza, TB): as for fever alone, plus CXR and a respiratory virus swab including influenza and COVID; discuss TB investigations with Infectious Diseases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever + respiratory Malaria* Pneumonia Influenza Tuberculosis (TB) As for fever alone plus CXR Swab for respiratory viruses, including influenza and COVID If Tuberculosis considered, discuss investigations with Infectious Diseases team",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider malaria in any child with undifferentiated fever up to two years after returning from an endemic region.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Malaria should be considered in any child with undifferentiated fever up to two years after returning from an endemic region",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Travellers' diarrhoea** = more than 3 diarrhoeal episodes in 24 hours after travel, plus cramping, abdominal pain, nausea, vomiting or fever.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Travellers’ diarrhoea: >3 diarrhoeal episodes in a 24-hour period after travel plus one of the following: cramping, abdominal pain, nausea, vomiting, fever",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most children need no empiric treatment** and can be managed as outpatients with GP follow-up.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most children will not require empiric treatment and will be suitable for outpatient management with GP follow-up",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In a sick child, empiric therapy for sepsis, malaria and/or typhoid may be warranted** — see the individual guidelines or local antimicrobial guidance, and discuss with Infectious Diseases when needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In a sick child, empiric therapy for sepsis, malaria and/or typhoid may be warranted: Refer to individual CPGs or local antimicrobial guidelines for appropriate details Discuss with Infectious Diseases team when necessary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team** for suspected sepsis, malaria or typhoid, or an unclear diagnosis with clinical concern.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when suspected sepsis malaria, typhoid unclear diagnosis with clinical concern",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider transfer** for severe malaria, a sick child with persistent fever despite basic empiric therapy, or care beyond the local hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when severe malaria sick child with persistent fever/symptoms despite basic empiric therapy and advice child requires care above the level of comfort of the local hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever in the recently returned traveller' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_in_the_recently_returned_traveller/, retrieved 2026-09-23"
+  }
+ ]
+}
