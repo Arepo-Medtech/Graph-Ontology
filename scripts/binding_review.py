@@ -35,16 +35,19 @@ QUEUE  = os.path.join("docs", "binding-review-queue.md")
 # condition -- not from string similarity, so they are the rows a person can
 # close fastest and most safely.
 TIERS = [
+    ("QUARANTINE",
+     "A. ⚠️ QUARANTINED — pregnancy or reproductive, MANUAL REVIEW REGARDLESS OF SIGNAL",
+     "review by hand; do not trust any signal"),
     ("REJECT — neither hit nor any parent shares a concept with the condition",
-     "A. Reject on hierarchy — no shared concept", "confirm the rejection"),
+     "B. Reject on hierarchy — no shared concept", "confirm the rejection"),
     ("REJECT — hit looks related but its parents share nothing with the condition",
-     "B. Reject on hierarchy — parents unrelated", "confirm the rejection"),
+     "C. Reject on hierarchy — parents unrelated", "confirm the rejection"),
     ("REJECT — wrong hierarchy for this wording; re-search under <<71388002 Procedure",
-     "C. Wrong hierarchy — re-search as Procedure", "re-search, do not bind"),
-    ("consider parent instead", "D. Parent concept suggested instead", "judge parent vs hit"),
+     "D. Wrong hierarchy — re-search as Procedure", "re-search, do not bind"),
+    ("consider parent instead", "E. Parent concept suggested instead", "judge parent vs hit"),
     ("hit is narrower — check it is not a sub-type",
-     "E. Hit is narrower than the condition", "check it is not a sub-type"),
-    ("plausible — confirm", "F. ⚠️ 'Plausible' — THIS TIER IS NOT SAFE", "verify against the terminology"),
+     "F. Hit is narrower than the condition", "check it is not a sub-type"),
+    ("plausible — confirm", "G. ⚠️ 'Plausible' — THIS TIER IS NOT SAFE", "verify against the terminology"),
 ]
 
 def sha(condition, top):
@@ -84,7 +87,7 @@ def tier_of(action):
     for key, title, todo in TIERS:
         if action.startswith(key):
             return title, todo
-    return "G. Untriaged", "review"
+    return "H. Untriaged", "review"
 
 def build():
     rev = json.load(open(REVIEW))
@@ -106,6 +109,8 @@ def build():
         sig = c.get("signals") or {}
         flags = ", ".join(k for k in ("off_domain", "parents_unrelated", "parent_better", "narrower")
                           if sig.get(k)) or "—"
+        if c.get("quarantine"):
+            flags = "⚠️ QUARANTINED: " + c["quarantine"].get("reason", "") + (", " + flags if flags != "—" else "")
         parents = "; ".join(p.get("display", "") for p in (c.get("parents") or [])[:2]) or "—"
         others = len(c.get("other_hits") or [])
         title, todo = tier_of(c.get("suggested_action", ""))

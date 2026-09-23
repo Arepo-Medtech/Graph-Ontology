@@ -39,16 +39,26 @@ rather than binding to a hit nobody saw.
 
 | tier | rows | the job |
 |---|---:|---|
-| **A** Reject on hierarchy — no shared concept | 33 | confirm the rejection |
-| **B** Reject on hierarchy — parents unrelated | 60 | confirm the rejection |
-| **C** Wrong hierarchy — re-search as Procedure | 6 | re-search, do not bind |
-| **D** Parent concept suggested instead | 1 | judge parent vs hit |
-| **E** Hit is narrower than the condition | 87 | check it is not a sub-type |
-| **F** ⚠️ *"Plausible"* — **THIS TIER IS NOT SAFE** | 130 | verify against the terminology |
+| **A** ⚠️ **QUARANTINED** — pregnancy or reproductive | **15** | **manual review regardless of signal** |
+| **B** Reject on hierarchy — no shared concept | 33 | confirm the rejection |
+| **C** Reject on hierarchy — parents unrelated | 60 | confirm the rejection |
+| **D** Wrong hierarchy — re-search as Procedure | 6 | re-search, do not bind |
+| **E** Parent concept suggested instead | 15 | judge parent vs hit |
+| **F** Hit is narrower than the condition | 93 | check it is not a sub-type |
+| **G** ⚠️ *"Plausible"* — **THIS TIER IS NOT SAFE** | 128 | verify against the terminology |
 
-**Tiers A–C were derived from the SNOMED hierarchy** — parents sharing no concept with the condition —
+**Tiers B–D were derived from the SNOMED hierarchy** — parents sharing no concept with the condition —
 **not** from lexical agreement. **99 rows** are rejections a person confirms rather than judgements a
-person makes, which is the cheapest and safest end of the queue.
+person makes.
+
+> ### ⚠️ TIER A IS FIRST FOR A REASON
+> Quarantine fires on the condition name, **the hit's display, OR any of the hit's parents** — so
+> *Septicaemia* is quarantined because its top hit is *Antepartum septicaemia*, and *Mixed episodes*
+> because its hit is *Neonatal antiphospholipid syndrome*. **The dangerous case is a non-pregnancy
+> condition being offered a pregnancy concept**, and a name-only check would miss every one of those.
+>
+> *"AMH teratogen classifications and gestational windows attach BY CONDITION; a wrong binding attaches
+> a pregnancy-safety record to the wrong clinical object."*
 
 ## Run order
 
