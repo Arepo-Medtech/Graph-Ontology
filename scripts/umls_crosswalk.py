@@ -8,6 +8,9 @@ scores the rest.
 
     scripts/umls_crosswalk.py --source SNOMEDCT_US --target NCBI --ids cache/umls/sct_organisms.txt --out sct_ncbi
 
+--source CUI reads the target vocabulary's atoms under each CUI instead (for sources that are not UMLS vocabularies but
+assert CUIs themselves -- RadLex's ExternalRefID "UMLS:C..."). Obsolete atoms are skipped.
+
 Original HPO notes follow.
 
 Bridge HPO phenotypes (signs and symptoms) to SNOMED CT through UMLS, the one source that joins them.
@@ -41,6 +44,7 @@ from pathlib import Path
 
 OUT = Path("cache/umls")
 API = "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/{}/{}"
+ATOMS = "https://uts-ws.nlm.nih.gov/rest/content/current/CUI/{}/atoms"
 
 
 def api_key() -> str:
@@ -111,12 +115,19 @@ def main() -> int:
     lim, lock, stats = Limiter(a.rate), threading.Lock(), {"hit": 0, "miss": 0, "error": 0}
 
     def one(hid: str):
-        url = API.format(a.source, urllib.parse.quote(hid)) + "?" + urllib.parse.urlencode({"targetSource": a.target, "apiKey": key})
+        if a.source == "CUI":
+            url = ATOMS.format(urllib.parse.quote(hid)) + "?" + urllib.parse.urlencode({"sabs": a.target, "pageSize": 200, "apiKey": key})
+        else:
+            url = API.format(a.source, urllib.parse.quote(hid)) + "?" + urllib.parse.urlencode({"targetSource": a.target, "apiKey": key})
         for attempt in range(4):
             lim.wait()
             try:
                 d = json.load(urllib.request.urlopen(url, timeout=60))
-                rows = [(hid, r.get("ui", ""), (r.get("name") or "").replace("\t", " ")) for r in d.get("result", [])]
+                if a.source == "CUI":
+                    rows = sorted({(hid, (r.get("code") or "").rsplit("/", 1)[-1], (r.get("name") or "").replace("\t", " "))
+                                   for r in d.get("result", []) if str(r.get("obsolete")).lower() != "true"})
+                else:
+                    rows = [(hid, r.get("ui", ""), (r.get("name") or "").replace("\t", " ")) for r in d.get("result", [])]
                 with lock:
                     if rows:
                         with open(HITS, "a") as fh:

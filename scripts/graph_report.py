@@ -357,6 +357,53 @@ def main() -> int:
         e, u, sct = con.execute("SELECT count(*), count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'uberon:sct_narrow_match'").fetchone()
         report["route:uberon->snomed (narrowMatch; hand check)"] = {"edges": e, "uberon_classes": u, "snomed_structures": sct,
             "hand_checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'radlex:anatomy_sct'").fetchone()[0]:
+        # three code routes from RadLex to SNOMED CT, each tiered by its own hand check; the LOINC edges built on a route
+        # (loinc:part_maps_to_sct, method 'RadLex anatomy: <route>') take that route's tier -- LOINC's own step is native
+        sc = []
+        for f in (Path("reference/radlex_handcheck.json"), Path("cache/umls/radlex_handcheck.json")):   # the UMLS half is git-ignored
+            if f.exists():
+                sc += json.load(open(f))["scored"]
+        entry = {"edges_by_method": {m: {"edges": e, "radlex_terms": r, "snomed_structures": o} for m, e, r, o in con.execute(
+                     "SELECT method, count(*), count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'radlex:anatomy_sct' GROUP BY 1 ORDER BY 1").fetchall()},
+                 "hand_check": {}}
+        for m in sorted({r["method"] for r in sc}):
+            rs = [r for r in sc if r["method"] == m]
+            k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+            lo, _ = wilson(k, n)
+            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'radlex:anatomy_sct' AND method = ?", [tier(lo, n), m])
+            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:part_maps_to_sct' AND method = ?", [tier(lo, n), "RadLex anatomy: " + m])
+            entry["hand_check"][m] = {"checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+        # witness: where two routes answer for one RadLex term, is it the same SNOMED concept, or one is-a the other
+        # ("Entire kidney" is-a "Structure of kidney")?
+        con.execute("""CREATE TEMP TABLE rx AS SELECT DISTINCT s_code rid, o_code sct, method FROM edge WHERE predicate = 'radlex:anatomy_sct'""")
+        con.execute("""CREATE TEMP TABLE rx_isa AS WITH RECURSIVE up(d, a) AS (
+                SELECT DISTINCT sct, sct FROM rx
+                UNION SELECT up.d, e.o_code FROM up JOIN edge e ON e.predicate = 'sct:116680003' AND e.s_code = up.a)
+            SELECT * FROM up""")
+        entry["witness"] = [dict(zip(("route_a", "route_b", "radlex_terms_in_both", "same_concept", "is_a_related", "unrelated"), r))
+                            for r in con.execute("""WITH p AS (SELECT DISTINCT a.method ma, b.method mb, a.rid FROM rx a JOIN rx b ON a.rid = b.rid AND a.method < b.method),
+                  f AS (SELECT p.ma, p.mb, p.rid,
+                          bool_or(a.sct = b.sct) same,
+                          bool_or(EXISTS (SELECT 1 FROM rx_isa i WHERE (i.d = a.sct AND i.a = b.sct) OR (i.d = b.sct AND i.a = a.sct))) rel
+                        FROM p JOIN rx a ON a.rid = p.rid AND a.method = p.ma JOIN rx b ON b.rid = p.rid AND b.method = p.mb GROUP BY 1, 2, 3)
+                SELECT ma, mb, count(*), count(*) FILTER (WHERE same), count(*) FILTER (WHERE rel AND NOT same), count(*) FILTER (WHERE NOT rel)
+                FROM f GROUP BY 1, 2 ORDER BY 1, 2""").fetchall()]
+        anat = """json_extract_string(attrs, '$.part_type') LIKE 'Rad.Anatomic Location.%' AND json_extract_string(attrs, '$.part_type') NOT LIKE '%Laterality%'"""
+        entry["coverage"] = dict(zip(("loinc_radiology_terms", "with_an_anatomy_part", "reach_snomed_through_an_anatomy_part",
+                                      "every_anatomy_part_reaches_snomed", "rsna_procedures", "rsna_procedures_reaching_snomed"), con.execute(f"""
+            WITH lp AS (SELECT s_code, o_code FROM edge WHERE predicate = 'loinc:radlex_part' AND {anat}),
+                 ok AS (SELECT DISTINCT s_code rid FROM edge WHERE predicate = 'radlex:anatomy_sct'),
+                 rp AS (SELECT s_code, o_code FROM edge WHERE predicate = 'rsna:radlex_part'
+                        AND (json_extract_string(attrs, '$.field') LIKE 'BODY_REGION%' OR json_extract_string(attrs, '$.field') LIKE 'ANATOMIC_FOCUS%'))
+            SELECT (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'loinc:radlex_part'),
+                   (SELECT count(DISTINCT s_code) FROM lp),
+                   (SELECT count(DISTINCT s_code) FROM lp WHERE o_code IN (SELECT rid FROM ok)),
+                   (SELECT count(*) FROM (SELECT s_code FROM lp GROUP BY 1 HAVING bool_and(o_code IN (SELECT rid FROM ok)))),
+                   (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'rsna:radlex_part'),
+                   (SELECT count(DISTINCT s_code) FROM rp WHERE o_code IN (SELECT rid FROM ok))""").fetchone()))
+        entry["not_loaded"] = dict(con.execute("SELECT family, edges FROM build_log WHERE family LIKE 'RadLex -> SNOMED CT not loaded%' OR family LIKE 'RadLex anatomy%'").fetchall())
+        report["route:radiology LOINC / RSNA -> RadLex -> SNOMED CT body structure"] = entry
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent'").fetchone()[0]:
         by = dict(con.execute("SELECT method, count(*) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent' GROUP BY 1").fetchall())
         # the LOINC route is the witness: where both give an answer for a SNOMED organism, is it the same taxon?
@@ -398,9 +445,9 @@ def main() -> int:
     # --- LOINC reach by class, and MBS ------------------------------------------------------------------------------
     lt_path = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv"))
     if lt_path.exists():
-        rows = con.execute(f"""WITH b AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM')
+        rows = con.execute(f"""WITH b AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM', 'RADLEX', 'RPID')
                                     UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'LOINC' AND s_vocab <> 'LOINC'),
-                 bp AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM')
+                 bp AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM', 'RADLEX', 'RPID')
                           AND predicate <> 'loinc:part_maps_to_sct'
                         UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'LOINC' AND s_vocab <> 'LOINC')
             SELECT CLASSTYPE, count(*), count(*) FILTER (WHERE LOINC_NUM IN (SELECT c FROM bp)), count(*) FILTER (WHERE LOINC_NUM IN (SELECT c FROM b))
