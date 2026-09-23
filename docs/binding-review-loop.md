@@ -76,7 +76,7 @@ the application. Nothing here bypasses it, and pre-existing corrections are merg
 ## Live validation
 
 `scripts/validate_bindings_ncts.py` checks each distinct candidate code against the **live NCTS**, pinned
-to **SNOMED CT-AU 20260731**, and records whether it resolves and whether the display this repo holds
+to **SNOMED CT-AU 20260831**, and records whether it resolves and whether the display this repo holds
 matches the terminology's.
 
 > ⚠️ **FAIL-SAFE:** `validated: false` means **UNVALIDATED, never invalid.** A code that does not resolve
@@ -84,12 +84,17 @@ matches the terminology's.
 
 It validates; it does not decide. Results in `reference/binding_validation.json`.
 
-### Result, 2026-09-23
+### Result, 2026-09-23 — at the bumped pin `20260831`
 
-**301 distinct candidate codes checked · 301 validated · 0 unresolved · 0 display drift · all on
-`20260731`.**
+**301 distinct candidate codes · 301 validated · 0 unresolved · 1 display drift.**
 
-⚠️ **`20260731` is one release behind the server's default.** A newer edition, `20260831`, is live. Re-validating all 301 against both changes **one display and retires nothing** — see [`snomed-edition-pin.md`](snomed-edition-pin.md).
+The pin was bumped from `20260731` to `20260831` on 2026-09-23; see [`snomed-edition-pin.md`](snomed-edition-pin.md). The one drift is the one the edition diff predicted, and the validation now surfaces it:
+
+| code | repo records | NCTS `20260831` returns |
+|---|---|---|
+| `254637007` | Non-small cell lung **cancer** | Non-small cell lung **carcinoma** |
+
+⚠️ **The recorded display was left as-is.** It is what the binder returned at the old pin, and rewriting it without re-running the binder would misstate the provenance. The drift is recorded in `reference/binding_validation.json`, which is where it belongs.
 
 > ### ⚠️ READ THAT NARROWLY
 > **301/301 does NOT mean the bindings are good.** It means the candidate data is *internally* sound:
