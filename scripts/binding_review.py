@@ -89,8 +89,17 @@ def tier_of(action):
             return title, todo
     return "H. Untriaged", "review"
 
+DEV = "reference/quarantine_development.json"
+
+def developed():
+    """Alternatives found by develop_quarantined.mjs, keyed by condition."""
+    if not os.path.exists(DEV):
+        return {}
+    return {r["condition"]: r for r in json.load(open(DEV))["results"]}
+
 def build():
     rev = json.load(open(REVIEW))
+    dev = developed()
     prior = load_queue()
     groups, kept, dropped = {}, 0, 0
     for c in rev["candidates"]:
@@ -111,6 +120,14 @@ def build():
                           if sig.get(k)) or "—"
         if c.get("quarantine"):
             flags = "⚠️ QUARANTINED: " + c["quarantine"].get("reason", "") + (", " + flags if flags != "—" else "")
+        d = dev.get(cond)
+        if d:
+            if d.get("conditionIsReproductive"):
+                others = "⚠️ **STAYS QUARANTINED** — the condition itself is reproductive"
+            elif d.get("clean_alternatives"):
+                others = "**re-searched:** " + " · ".join(a.split("  [")[0] for a in d["clean_alternatives"][:2])
+            else:
+                others = "⚠️ re-searched, **no clean alternative**"
         parents = "; ".join(p.get("display", "") for p in (c.get("parents") or [])[:2]) or "—"
         others = len(c.get("other_hits") or [])
         title, todo = tier_of(c.get("suggested_action", ""))
