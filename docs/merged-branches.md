@@ -1,9 +1,12 @@
-# Merged branches — keep, do not delete
+# Merged branches
 
-**Policy: these branches are retained.** They are fully merged into `main` (named `master` until 2026-09-23) and hold no unique commits,
-but they are **not** to be deleted. This file is the single list of them.
+**Policy (changed by Ken on 2026-09-23): a branch is deleted when its PR merges** — `gh pr merge --merge --delete-branch`.
+New merges are not added to this list.
 
-**Last verified:** 2026-09-23 · `main` at `0ea9628` · repository renamed `au-medicines-compendium` → `Graph-Ontology`
+**The branches listed below were retained under the earlier policy and are still kept.** They are fully merged into `main`
+(named `master` until 2026-09-23) and hold no unique commits. The new rule does not delete them; that needs its own decision.
+
+**Last verified:** 2026-09-23 · `main` at `e7a2f08` (all 16 retained branches in `main`) · repository renamed `au-medicines-compendium` → `Graph-Ontology`
 
 | branch | tip | commits | PR | merged | merge commit | in `main`? |
 |---|---|---|---|---|---|---|
@@ -23,6 +26,7 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`no-guideline-pbs-list`** | `0f6e448` | 1 | [#14](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/14) | 2026-09-23 | `b89bf11` | ✅ yes |
 | **`move-guidelines-out`** | `6ad94b8` | 1 | [#15](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/15) | 2026-09-23 | `90d7d8d` | ✅ yes |
 | **`remove-guideline-duplicates`** | `eb3e227` | 1 | [#16](https://github.com/Arepo-Medtech/Graph-Ontology/pull/16) | 2026-09-23 | `0ea9628` | ✅ yes |
+| **`interprets-athena-direct`** | `02e4278` | 1 | [#17](https://github.com/Arepo-Medtech/Graph-Ontology/pull/17) | 2026-09-23 | `e7a2f08` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -95,6 +99,14 @@ quarantine promoted to the first tier of the review worksheet.
 `docs/binding-review-loop.md` · `docs/binding-review-queue.md` ·
 `reference/snomed_candidates_review.json` · `scripts/binding_review.py`
 
+### `interprets-athena-direct` — PR #17, 5 files ✅ *(retained)*
+The second route for lab result → finding (`loinc:interpreted_in_finding`): Athena's placement of a LOINC term under the
+procedure a finding interprets, restricted by the LOINC Ontology's specimen and tiered per route (39/40 and 40/40 → Tier 2).
+3,114 LOINC terms now reach 869 findings.
+
+`docs/multigraph-build.md` · `reference/graph_predicates.json` · `reference/interprets_handcheck.json` ·
+`scripts/build_edges.py` · `scripts/graph_report.py`
+
 ### `remove-guideline-duplicates` — PR #16, 25 files ✅ *(retained)*
 Removed the 20 guideline-tooling files duplicated in GUIDELINES (7 scripts, 9 docs, 4 reference files). Repointed the tally,
 underverified and `run_batch.py` (foundry attestations) to read the moved reference files from the GUIDELINES checkout,
@@ -150,11 +162,11 @@ build.
 
 ```bash
 git fetch --prune origin
-for b in conditions-snomed-binding conditions-primary-care monograph-foundry binding-review-loop condition-guideline-tally enrich-candidates-rerun quarantine-development restore-lost-bindings aih-guidelines rch-guidelines cancer-council-guidelines rch-guidelines-2 no-guideline-pbs-list move-guidelines-out remove-guideline-duplicates; do
+for b in conditions-snomed-binding conditions-primary-care monograph-foundry binding-review-loop condition-guideline-tally enrich-candidates-rerun quarantine-development restore-lost-bindings aih-guidelines rch-guidelines cancer-council-guidelines rch-guidelines-2 no-guideline-pbs-list move-guidelines-out remove-guideline-duplicates interprets-athena-direct; do
   printf "%-28s %s  in-main:%s\n" "$b" "$(git rev-parse --short origin/$b)" \
     "$(git merge-base --is-ancestor origin/$b origin/main && echo YES || echo NO)"
 done
 ```
 
-⚠️ **Do not pass `--delete-branch` to `gh pr merge` on this repository.** That flag is what removed
-`attestation-loop`.
+Merging with `--delete-branch` is now the rule (above). It is what removed `attestation-loop` before the retention policy existed; the
+branches in the table predate the change and are kept.
