@@ -1,7 +1,10 @@
-# Merged branches — keep, do not delete
+# Merged branches
 
-**Policy: these branches are retained.** They are fully merged into `main` (named `master` until 2026-09-23) and hold no unique commits,
-but they are **not** to be deleted. This file is the single list of them.
+**Policy (changed by Ken on 2026-09-23): a branch is deleted when its PR merges** — `gh pr merge --merge --delete-branch`.
+New merges are not added to this list.
+
+**The branches listed below were retained under the earlier policy and are still kept.** They are fully merged into `main`
+(named `master` until 2026-09-23) and hold no unique commits. The new rule does not delete them; that needs its own decision.
 
 **Last verified:** 2026-09-23 · `main` at `e7a2f08` (all 16 retained branches in `main`) · repository renamed `au-medicines-compendium` → `Graph-Ontology`
 
@@ -165,5 +168,5 @@ for b in conditions-snomed-binding conditions-primary-care monograph-foundry bin
 done
 ```
 
-⚠️ **Do not pass `--delete-branch` to `gh pr merge` on this repository.** That flag is what removed
-`attestation-loop`.
+Merging with `--delete-branch` is now the rule (above). It is what removed `attestation-loop` before the retention policy existed; the
+branches in the table predate the change and are kept.
