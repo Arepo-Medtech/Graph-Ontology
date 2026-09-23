@@ -1,0 +1,128 @@
+{
+ "guideline": "guidelines/chloral-hydrate-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Chloral hydrate poisoning' (Last Updated August 2018), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 15,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Chloral hydrate has caused deaths, mainly in outpatient use and usually at doses over 10 g**, although it is used safely for in-hospital sedation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chloral hydrate is used safely for in-hospital sedation but it has been associated with deaths, particularly when used in the outpatient setting, usually in doses >10g,",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Narrow therapeutic index: recommended dose 10–50 mg/kg, max 2 g. Severe toxicity is seen over 100 mg/kg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chloral hydrate has a narrow therapeutic index. Recommended dose is 10-50 mg/kg up to 2g. Severe toxicity is seen at >100 mg/kg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Toxicity is rapid (under 30 minutes): CNS depression and cardiac dysrhythmias.** It can be corrosive to mucosa at high doses. Peak levels at 30–60 minutes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Toxicity is rapid onset (<30 min) with CNS depression and cardiac dysrhythmias. It can be corrosive to mucosal surfaces in high doses … Peak serum concentration occurs in 30-60 mins.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Take care with repeated doses over a short period: no more than 100 mg/kg per procedure and no more than 200 mg/kg in 24 hours.** Higher doses are associated with coma and dysrhythmias.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Care should be taken with giving multiple doses over a short period of time. No more than 100 mg/kg should be given per procedure No more than 200 mg/kg should be given over a 24 hour period. Doses higher than the above are associated with coma and cardiac dysrhythmias.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Acute overdose over 10 g can cause gastric haemorrhage, perforation and strictures.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute overdose >10 g can cause gastric haemorrhage, perforation and strictures.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** any deliberate self-poisoning or significant accidental ingestion · any symptomatic patient · **any dose over 50 mg/kg.** Consider non-accidental poisoning if the developmental age doesn't fit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with deliberate self-poisoning or significant accidental ingestion Any symptomatic patient Dose >50 mg/kg Non-accidental poisoning should be considered in any patient whose developmental age is inconsistent with accidental poisoning,",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Look for:** drowsiness and ataxia **progressing rapidly to coma** · respiratory depression · hypotension · hypothermia · GI corrosive injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CNS depression: drowsiness and ataxia progressing rapidly to coma Respiratory depression Hypotension Hypothermia GI corrosive injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ECG** for multifocal PVCs, AF, SVT or VT. **Consider endoscopy within 24 hours** after ingestions over 10 g with signs of corrosive injury. Paracetamol level in all intentional overdoses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG: Multifocal PVC, AF, SVT, VT Consider endoscopy within 24 hours in ingestions >10g showing clinical signs of corrosive injury. Paracetamol level in all intentional overdoses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Intubate early if CNS depression is progressing or there is cardiovascular toxicity.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early intubation if progressive CNS depression or CVS toxicity.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dysrhythmias: beta blocker (esmolol or propranolol).** Torsades: add MgSO₄, though it may not work. VT: lignocaine may work.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dysrhythmias Beta blocker: esmolol or propranolol Torsades add MgSO4, though this may be ineffective VT lignocaine may be effective",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypotension: IV 0.9% saline 20 mL/kg.** ⚠️ **Catecholamine inotropes are contraindicated** — they may precipitate arrhythmias.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IV fluids: 20 mL/kg 0.9% saline. Catecholamine inotropes are contraindicated as they may precipitate arrhythmias",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **No charcoal unless the airway is protected.** **Consider haemodialysis** for ongoing haemodynamic instability or arrhythmias.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Charcoal contraindicated unless airway protected. Enhanced elimination Haemodialysis - consider if ongoing haemodynamic instability or arrhythmias",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission for every adolescent with an intentional overdose**; assess self-harm risk before ward transfer, but **don't let it delay urgent care such as ICU.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all adolescent patients with an intentional overdose. … Adolescent must be assessed for ongoing risk of deliberate self harm on the ward before transfer to the ward to enable appropriate supervision and support. However, this should not delay urgent care, such as ICU admission.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Cardiovascular depression or arrhythmias: manage in a paediatric ICU** — PIPER 1300 137 650.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with CVS depression or CVS arrhythmias should be managed in a paediatric ICU. For emergency advice and paediatric or neonatal ICU transfers, call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** observe symptomatic patients until asymptomatic; normal GCS; normal ECG; **at least 2 hours of cardiac monitoring**; after deliberate ingestion, a risk assessment showing low risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All symptomatic patients should be observed until asymptomatic Normal GCS Normal ECG Post at least 2 hours of cardiac monitoring For deliberate ingestion a risk assessment should indicate that the patient is at low risk of further self-harm in the discharge setting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Chloral hydrate poisoning' (Last Updated August 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Chloral_hydrate_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}
