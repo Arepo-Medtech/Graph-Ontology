@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `04a95b0`
+**Last verified:** 2026-09-23 · `master` at `b89bf11`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -19,6 +19,8 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`aih-guidelines`** | `7cc9f24` | 4 | [#10](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/10) | 2026-09-23 | `96dc8a8` | ✅ yes |
 | **`rch-guidelines`** | `ffdb728` | 13 | [#11](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/11) | 2026-09-23 | `ad40850` | ✅ yes |
 | **`cancer-council-guidelines`** | `455b02c` | 4 | [#12](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/12) | 2026-09-23 | `04a95b0` | ✅ yes |
+| **`rch-guidelines-2`** | `c7c77e8` | 17 | [#13](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/13) | 2026-09-23 | `e751336` | ✅ yes |
+| **`no-guideline-pbs-list`** | `0f6e448` | 1 | [#14](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/14) | 2026-09-23 | `b89bf11` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -90,6 +92,17 @@ quarantine promoted to the first tier of the review worksheet.
 
 `docs/binding-review-loop.md` · `docs/binding-review-queue.md` ·
 `reference/snomed_candidates_review.json` · `scripts/binding_review.py`
+
+### `no-guideline-pbs-list` — PR #14, 3 files ✅ *(retained)*
+The 493 no-guideline PBS conditions matched to their PBS restrictions, items and drugs (schedule 4333).
+
+`docs/no-guideline-pbs-listings.md` · `reference/no_guideline_pbs.json` · `scripts/no_guideline_pbs.py`
+
+### `rch-guidelines-2` — PR #13, 225 files ✅ *(retained)*
+112 more RCH paediatric guidelines (batches 4–5), completing the RCH run; corpus 383. Stacked on
+`cancer-council-guidelines`.
+
+`guidelines/*` (224 files) · `docs/guideline-status.md`
 
 ### `cancer-council-guidelines` — PR #12, 27 files ✅ *(retained)*
 12 Cancer Council / COSA guidelines under a 200-word quote budget with no table content, plus the source
