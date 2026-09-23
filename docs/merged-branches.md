@@ -1,11 +1,11 @@
 # Merged branches — keep, do not delete
 
-**Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
+**Policy: these branches are retained.** They are fully merged into `main` (named `master` until 2026-09-23) and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `90d7d8d`
+**Last verified:** 2026-09-23 · `main` at `0ea9628` · repository renamed `au-medicines-compendium` → `Graph-Ontology`
 
-| branch | tip | commits | PR | merged | merge commit | in `master`? |
+| branch | tip | commits | PR | merged | merge commit | in `main`? |
 |---|---|---|---|---|---|---|
 | **`conditions-snomed-binding`** | `d083591` | 9 | [#1](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/1) | 2026-09-21 | `4c610db` | ✅ yes |
 | **`conditions-primary-care`** | `ee71e33` | 10 | [#2](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/2) | 2026-09-21 | `2e239bf` | ✅ yes |
@@ -22,12 +22,13 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`rch-guidelines-2`** | `c7c77e8` | 17 | [#13](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/13) | 2026-09-23 | `e751336` | ✅ yes |
 | **`no-guideline-pbs-list`** | `0f6e448` | 1 | [#14](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/14) | 2026-09-23 | `b89bf11` | ✅ yes |
 | **`move-guidelines-out`** | `6ad94b8` | 1 | [#15](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/15) | 2026-09-23 | `90d7d8d` | ✅ yes |
+| **`remove-guideline-duplicates`** | `eb3e227` | 1 | [#16](https://github.com/Arepo-Medtech/Graph-Ontology/pull/16) | 2026-09-23 | `0ea9628` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
 > given.** The branch ref is gone from `origin` and locally.
 >
-> **Nothing is lost.** Its single commit `e4114bc` is in `master`'s history and its merge commit is
+> **Nothing is lost.** Its single commit `e4114bc` is in `main`'s history and its merge commit is
 > `25d5b24`. **To restore the ref:**
 >
 > ```bash
@@ -94,6 +95,11 @@ quarantine promoted to the first tier of the review worksheet.
 `docs/binding-review-loop.md` · `docs/binding-review-queue.md` ·
 `reference/snomed_candidates_review.json` · `scripts/binding_review.py`
 
+### `remove-guideline-duplicates` — PR #16, 25 files ✅ *(retained)*
+Removed the 20 guideline-tooling files duplicated in GUIDELINES (7 scripts, 9 docs, 4 reference files). Repointed the tally,
+underverified and `run_batch.py` (foundry attestations) to read the moved reference files from the GUIDELINES checkout,
+failing loudly if it is absent.
+
 ### `move-guidelines-out` — PR #15, 772 files ✅ *(retained)*
 Removed `guidelines/` (383 guidelines, 766 files), which now live in
 [Arepo-Medtech/GUIDELINES](https://github.com/Arepo-Medtech/GUIDELINES) with full history. Repointed the tally, underverified
@@ -144,9 +150,9 @@ build.
 
 ```bash
 git fetch --prune origin
-for b in conditions-snomed-binding conditions-primary-care monograph-foundry; do
-  printf "%-28s %s  in-master:%s\n" "$b" "$(git rev-parse --short origin/$b)" \
-    "$(git merge-base --is-ancestor origin/$b origin/master && echo YES || echo NO)"
+for b in conditions-snomed-binding conditions-primary-care monograph-foundry binding-review-loop condition-guideline-tally enrich-candidates-rerun quarantine-development restore-lost-bindings aih-guidelines rch-guidelines cancer-council-guidelines rch-guidelines-2 no-guideline-pbs-list move-guidelines-out remove-guideline-duplicates; do
+  printf "%-28s %s  in-main:%s\n" "$b" "$(git rev-parse --short origin/$b)" \
+    "$(git merge-base --is-ancestor origin/$b origin/main && echo YES || echo NO)"
 done
 ```
 
