@@ -112,7 +112,8 @@ def near_misses(condition, slugs):
 
 def render(rows, copyright_, schedule):
     import glob, os
-    slugs = sorted(os.path.basename(f)[:-3] for f in glob.glob("guidelines/*.md"))
+    from guidelines_source import guidelines_dir
+    slugs = sorted(os.path.basename(f)[:-3] for f in glob.glob(os.path.join(guidelines_dir(), "*.md")))
     acc = collections.Counter()
     for r in rows:
         for k, v in r["access"].items():

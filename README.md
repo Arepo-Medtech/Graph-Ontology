@@ -1,5 +1,10 @@
 # AU medicines transcode compendium
 
+> **Guidelines have moved** to their own repository, [Arepo-Medtech/GUIDELINES](https://github.com/Arepo-Medtech/GUIDELINES)
+> (2026-09-23, with full history). Scripts here that read them (`condition_guideline_tally.py`, `underverified_bound.py`,
+> `no_guideline_pbs.py`) find them through `scripts/guidelines_source.py`: set `GUIDELINES_DIR`, or clone GUIDELINES next to this repository.
+
+
 One local database that joins every level of the Australian Medicines Terminology to brand,
 generic, ingredient, PBS listing, clinical-evidence and RxNorm identity. Built offline with DuckDB from four
 sources; nothing is fuzzy-matched and every link carries its method.

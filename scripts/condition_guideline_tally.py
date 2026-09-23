@@ -11,13 +11,16 @@ for, and it is unfinished.
   python3 scripts/condition_guideline_tally.py
 """
 import json, glob, os, re, collections
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from guidelines_source import guidelines_dir, guideline_url
+G = guidelines_dir()
 def norm(s):
     s=s.lower().replace("’","'"); s=re.sub(r"'s\b","",s)
     return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",s)).strip()
 conds=json.load(open("reference/conditions.json"))["conditions"]
 binds={r["condition"]:r for r in json.load(open("reference/snomed_bindings.json"))["results"]}
 cover=json.load(open("reference/amh-topic-coverage.json"))
-slugs={os.path.basename(f)[:-3] for f in glob.glob("guidelines/*.md")}
+slugs={os.path.basename(f)[:-3] for f in glob.glob(os.path.join(G, "*.md"))}
 # every name that identifies a guideline
 names={}
 for s in slugs: names.setdefault(norm(s.replace("-"," ")),s)
@@ -25,7 +28,7 @@ for t,sl in cover.items():
     if sl in slugs:
         for p in re.split(r" = | / ",t): names.setdefault(norm(p),sl)
 prof={}
-for f in glob.glob("guidelines/*.verification.json"):
+for f in glob.glob(os.path.join(G, "*.verification.json")):
     d=json.load(open(f)); sl=os.path.basename(f).replace(".verification.json","")
     cl=d["claims"]; prof[sl]=(sum(1 for c in cl if c["verdict"] in ("pass","pass_image_transcription")),len(cl))
 def match(cond):

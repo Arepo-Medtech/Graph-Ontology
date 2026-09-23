@@ -14,20 +14,23 @@ verify most of what we say about it. Those rows are listed first.
   python3 scripts/underverified_bound.py > docs/underverified-and-bound.md
 """
 import json, glob, os, re, sys
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+from guidelines_source import guidelines_dir, guideline_url
+G = guidelines_dir()
 def norm(s):
     s=s.lower().replace("’","'"); s=re.sub(r"'s\b","",s)
     return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",s)).strip()
 conds=json.load(open("reference/conditions.json"))["conditions"]
 binds={r["condition"]:r for r in json.load(open("reference/snomed_bindings.json"))["results"]}
 cover=json.load(open("reference/amh-topic-coverage.json"))
-slugs={os.path.basename(f)[:-3] for f in glob.glob("guidelines/*.md")}
+slugs={os.path.basename(f)[:-3] for f in glob.glob(os.path.join(G, "*.md"))}
 names={}
 for s in slugs: names.setdefault(norm(s.replace("-"," ")),s)
 for t,sl in cover.items():
     if sl in slugs:
         for p in re.split(r" = | / ",t): names.setdefault(norm(p),sl)
 prof={}
-for f in glob.glob("guidelines/*.verification.json"):
+for f in glob.glob(os.path.join(G, "*.verification.json")):
     d=json.load(open(f)); sl=os.path.basename(f).replace(".verification.json","")
     cl=d["claims"]; prof[sl]=(sum(1 for c in cl if c["verdict"] in ("pass","pass_image_transcription")),len(cl))
 def match(cond):
@@ -82,6 +85,6 @@ for r in rows:
         o.append("| condition | PBS restr. | guideline | verified | SNOMED | concept display |")
         o.append("|---|---:|---|---:|---|---|")
     v=f"{r['pass']}/{r['total']} ({r['pct']*100:.0f}%)" if r["total"] else "—"
-    g=f"[{r['guideline']}](../guidelines/{r['guideline']}.md)" if r["guideline"] else ""
+    g=f"[{r['guideline']}]({guideline_url(r['guideline'])})" if r["guideline"] else ""
     o.append(f"| {r['condition']} | {r['restr']} | {g} | {v} | `{r['concept']}` | {r['display']} |")
 sys.stdout.write("\n".join(o)+"\n")
