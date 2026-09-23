@@ -13,12 +13,13 @@ from pathlib import Path
 import foundry, ledger
 
 CONDITIONS = pathlib.Path("reference/conditions.json")
-ATTESTATIONS = pathlib.Path("reference/attestations.json")
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from guidelines_source import guidelines_file
+# reference/attestations.json moved to Arepo-Medtech/GUIDELINES. It is resolved there and loudly: attestations are
+# clinically load-bearing, so a missing GUIDELINES checkout must stop the run, not silently match nothing.
 
 def load_attestations():
-    if not ATTESTATIONS.exists():
-        return []
-    return json.loads(ATTESTATIONS.read_text())["attestations"]
+    return json.loads(pathlib.Path(guidelines_file("reference/attestations.json")).read_text())["attestations"]
 
 def match_attestations(condition, atts):
     """Word-boundary match. A substring match on a short key is a false-positive
