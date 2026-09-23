@@ -1,0 +1,145 @@
+{
+ "guideline": "guidelines/primary-spontaneous-pneumothorax.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Primary spontaneous pneumothorax' (Last updated November 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 18,
+  "pass": 18,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**The degree of clinical compromise, not the size of the pneumothorax, determines management.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The size of the pneumothorax is less important than the degree of clinical compromise, as this determines management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Severe respiratory distress suggests tension pneumothorax — a medical emergency needing urgent needle thoracocentesis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe symptoms and signs of respiratory distress suggest the presence of tension pneumothorax. Tension pneumothorax is a medical emergency and requires urgent needle thoracocentesis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Primary spontaneous pneumothorax (PSP)** occurs without underlying lung disease and without provoking factors such as trauma, surgery or mechanical ventilation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary spontaneous pneumothorax (PSP) is a pneumothorax occurring in children without underlying lung disease and in the absence of provoking factors such as trauma, surgery or mechanical ventilation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Secondary pneumothoraces** (e.g. cystic fibrosis) are harder to manage — seek respiratory or surgical advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Secondary pneumothoraces may be harder to manage and have greater consequences eg cystic fibrosis. Seek advice from a respiratory specialist or surgeon",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PSP recurs in 30-40%**, typically on the same side and within 1 year (median 2 months).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PSP recurrence rate is 30-40%, typically on the same side and within 1 year (median 2 months)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acute pleuritic chest pain** radiating to the ipsilateral shoulder — ⚠️ **it can subside over 24 hours even though the pneumothorax persists** — with sudden shortness of breath.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute onset chest pain: severe and/or stabbing pain, radiating to ipsilateral shoulder and increasing with inspiration (pleuritic), can subside over 24 hours despite a persistent pneumothorax Sudden shortness of breath",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A small pneumothorax may give a normal examination.** Look for tachycardia, tachypnoea, hyperresonance, reduced air entry and vocal fremitus on the affected side, asymmetric expansion and mediastinal shift; consider transillumination in young infants.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with a small pneumothorax may have a normal examination Tachycardia and tachypnoea Hyperresonance on percussion Ipsilateral decreased or absent air entry and decreased vocal fremitus Asymmetric lung expansion Mediastinal shift Consider transillumination in young infants",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Tension pneumothorax:** trachea deviated to the opposite side, tachycardia, hypotension, cyanosis — **urgent needle thoracocentesis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tension Pneumothorax Deviation of the trachea to the contralateral side Tachycardia Hypotension Cyanosis Tension pneumothorax is a medical emergency requiring urgent needle thoracocentesis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Chest X-ray confirms it: a standard erect film in inspiration.** Expiratory films are not required.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chest x-ray (CXR): confirms pneumothorax. Standard erect film in inspiration. Expiratory films are not required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**CXR signs:** a linear visceral pleural line with no lung markings beyond it · flattened or inverted hemidiaphragm · mediastinal shift away from the affected side · small effusions are common.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A linear shadow of visceral pleura with lack of lung markings peripheral to it indicates collapsed lung Flattening or inversion of the diaphragm on the affected side Mediastinal shift toward the contralateral side Small pleural effusions are commonly present",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**On a supine film** look for the deep sulcus sign and hyperlucency of the affected side.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If CXR is taken in supine position, signs of pneumothorax include: Deep sulcus sign, lucency along the costophrenic angle is abnormally deepened Hyperlucency of the affected side",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider point-of-care ultrasound if available. CT is not routinely recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider point of care US if available CT scan is not routinely recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Size measurement is controversial and not age-specific**; clinical compromise matters more.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Measurement of pneumothorax size is controversial and not age-specific The size of the pneumothorax is less important than the degree of clinical compromise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Over 12 years only — 'large' if** the apical lung-to-thoracic-cage distance is over 3 cm, **or** the lateral lung edge-to-chest wall distance at the hilum is over 2 cm (at least 50%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For children >12 years only, a pneumothorax is considered 'large' based on the following measurements … Measurement of the vertical distance between the lung and thoracic cage at the apex (a). If >3 cm, pneumothorax is large OR Measurement of the distance between the lateral lung edge and chest wall at the level of the hilum (b); >2 cm = (at least 50%)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Younger children:** no validated method exists; the Light method may be used.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For younger children, there is no validated method for measuring pneumothorax volume. The Light method may be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team for:** a large pneumothorax · significant breathlessness, pain or hypoxia · age under 12 · secondary pneumothorax (CF, chronic neonatal lung disease, asthma) · trauma or thoracic surgery · positive-pressure ventilation · foreign body inhalation · tension · recurrence.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when All children with: Large pneumothorax Significant symptoms (significant breathlessness, pain or hypoxia) Age <12 years: may have less reliable reporting of symptoms and size calculations may not be applicable Secondary pneumothorax from underlying lung disease eg cystic fibrosis, chronic neonatal lung disease, asthma Trauma or thoracic surgery Positive pressure ventilation Foreign body inhalation Evidence of tension pneumothorax Recurrence",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transfer if** ongoing or underwater-seal drainage is needed or the child deteriorates during observation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Need for ongoing drainage or underwater seal drainage Deterioration during observation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** symptoms are minimal with no deterioration during observation, follow-up is arranged within 24-48 hours, and the family understands the recurrence risk and warning symptoms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Minimal symptoms and no deterioration during period of observation Appropriate follow up arranged (24-48 hours) Appropriate education regarding recurrence rate and recognition of symptoms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary spontaneous pneumothorax' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_spontaneous_pneumothorax/, retrieved 2026-09-23"
+  }
+ ]
+}

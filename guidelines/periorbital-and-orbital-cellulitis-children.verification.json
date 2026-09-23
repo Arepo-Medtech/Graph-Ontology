@@ -1,0 +1,171 @@
+{
+ "guideline": "guidelines/periorbital-and-orbital-cellulitis-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Periorbital and orbital cellulitis' (Last updated December, 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Orbital cellulitis is an emergency** with complications including intracranial infection, cavernous sinus thrombosis and vision loss.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Orbital cellulitis is an emergency with serious complications including intracranial infection, cavernous sinus thrombosis and vision loss",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Orbital = postseptal** (behind the orbital septum), and over 80% relate to local sinus disease. **Periorbital = preseptal** — eyelids and surrounding skin, not the orbit. **The globe is not involved in either.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "infection within the orbit, (ie postseptal, the structures posterior to the orbital septum) … the majority (>80%) of cases relate to local sinus disease … infection of the eye lids and surrounding skin not involving the orbit (ie preseptal, the structures anterior to the orbital septum) … The globe is not involved in either infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The two overlap clinically and can be hard to tell apart.** Typical presentation: unilateral eyelid swelling and erythema, with unilateral eye pain or tenderness.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Periorbital and orbital cellulitis are distinct clinical diseases, though have overlapping clinical features and therefore can be difficult to differentiate … Unilateral eyelid swelling and erythema Unilateral eye pain or tenderness",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Red flags for orbital cellulitis:** painful or restricted eye movements · reduced acuity, relative afferent pupil defect or diplopia · proptosis · severe headache or other signs of intracranial involvement.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flags concerning for orbital cellulitis Painful or restricted eye movements Visual impairment: reduced acuity relative afferent pupil defect diplopia Proptosis Severe headache or other features of intracranial involvement",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Neonates: consider gonorrhoea and *Chlamydia*** and send PCR swabs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider gonorrhoea and Chlamydia infections in neonatal presentation (send PCR swabs)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bilateral or painless (non-tender) swelling in a well child is more likely allergic.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilateral findings and/or painless (or non-tender) swelling in a well looking child is more likely to be an allergic reaction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Admit, keep fasted until the need for surgery is clear, and seek ENT and ophthalmology advice urgently.** Consider urgent contrast CT of orbits and sinuses ± brain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission Keep fasted until need for surgery clarified Seek ENT and Ophthalmology advice urgently Consider urgent contrast enhanced CT scan of orbits, sinuses +/- brain … Urgent imaging and surgical consultation (ENT and ophthalmology) should be considered for any child with suspected orbital cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**FBE and blood culture.** ⚠️ **Lumbar puncture is contraindicated** — risk of raised intracranial pressure from possible intracranial extension.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "FBE and blood culture … Lumbar puncture is contraindicated due to risk of raised intracranial pressure secondary to possible intracranial extension",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Treat underlying sinus disease** (e.g. nasal decongestants, steroids), often guided by ENT.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treat underlying sinus disease eg nasal decongestants, steroids (often guided by ENT)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Orbital cellulitis IV: cefotaxime 50 mg/kg (max 2 g) 6-hourly or ceftriaxone 100 mg/kg (max 4 g) daily**; add vancomycin if MRSA is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefotaxime 50 mg/kg (max 2 g) IV 6 hourly OR Ceftriaxone 100 mg/kg (max 4 g) IV daily If suspected MRSA, add vancomycin (see link for dosing)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**IV usually for at least 3–4 days, then oral amoxicillin/clavulanate 22.5 mg/kg (amoxicillin component, max 875 mg) twice daily — 10–14 days total.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Duration based on clinical severity and improvement. Usually at least 3-4 days, then switch to oral Amoxicillin with clavulanic acid (doses based on amoxicillin component) 22.5 mg/kg (max 875 mg) oral bd 10–14 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Inadequate Hib vaccination: treat as severe periorbital cellulitis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If inadequate Haemophilus influenzae type B (Hib) vaccination, treat as severe periorbital cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severe:** investigate and manage as an inpatient, as for orbital cellulitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe Inpatient investigations and management as per orbital cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Moderate:** inpatient or hospital-in-the-home; blood culture if febrile and unwell. Change to oral once improving; **if not improving or worse within 24–48 hours, manage as severe.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate Inpatient management or consider Hospital In The Home (HITH) admission if available locally Consider blood culture if febrile and unwell … Once improving change to oral antibiotics If not improving or deteriorating within 24–48 hours, consider managing as severe periorbital cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Moderate or severe, IV:** cefazolin 50 mg/kg (max 2 g) 8-hourly **or** ceftriaxone 50 mg/kg (max 2 g) daily (HITH) **or**, if MRSA suspected, clindamycin 15 mg/kg (max 600 mg) IV 8-hourly or oral. IV usually 1–2 days, then oral.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefazolin 50 mg/kg (max 2 g) IV 8 hourly OR Ceftriaxone 50 mg/kg (max 2 g) IV daily (HITH) OR If suspected MRSA, Clindamycin 15 mg/kg (max 600 mg) IV 8 hourly OR oral … Duration based on clinical severity and improvement. Usually 1-2 days, then switch to oral",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Moderate or severe, oral step-down:** as for mild periorbital cellulitis; if MRSA suspected, clindamycin 15 mg/kg (max 600 mg) three times daily. **Total 7–10 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When improving, switch to oral antibiotics as per mild periorbital cellulitis If suspected MRSA: Clindamycin 15 mg/kg (max 600 mg) oral TDS … 7–10 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild periorbital cellulitis in a well child can often be treated orally if follow-up is assured: cefalexin 20 mg/kg (max 750 mg) three times daily for 7–10 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Periorbital cellulitis in a well child can often be treated with oral antibiotics if follow-up is assured … Mild periorbital cellulitis Not applicable Cefalexin 20 mg/kg (max 750 mg) oral TDS … 7-10 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Follow local susceptibility guidance**, including on community-acquired MRSA.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns; please refer to local guidelines; these may include advice regarding community acquired MRSA",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss with the paediatric team** for suspected orbital cellulitis, moderate–severe periorbital cellulitis, or no improvement or deterioration after 24–48 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Orbital cellulitis suspected Moderate-severe periorbital cellulitis present No improvement or deterioration after 24–48 hrs of therapy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider transfer** for severe periorbital or orbital cellulitis, or suspected intracranial involvement (altered conscious state, seizures, focal neurological signs).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Severe periorbital cellulitis or orbital cellulitis present Suspecting intracranial involvement with altered conscious state, seizures or focal neurological signs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge — mild:** oral course prescribed and follow-up assured. **Moderate:** after 24–48 hours of IV antibiotics with improvement, tolerating oral, follow-up assured.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Mild periorbital cellulitis: oral antibiotic course prescribed follow-up assured Moderate periorbital cellulitis: after 24–48 hrs of IV antibiotics and with improvement able to tolerate oral antibiotics follow-up assured",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Periorbital and orbital cellulitis' (Last updated December, 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Periorbital_and_orbital_cellulitis/, retrieved 2026-09-23"
+  }
+ ]
+}

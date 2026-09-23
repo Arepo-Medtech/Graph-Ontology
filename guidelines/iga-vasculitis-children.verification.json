@@ -1,0 +1,147 @@
+{
+ "guideline": "guidelines/iga-vasculitis-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'IgA Vasculitis' (Last Updated January 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 18,
+  "pass": 18,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Urinalysis and blood pressure are mandatory when HSP is suspected.** Most cases are self-limiting; **close follow-up is critical** because renal involvement is usually asymptomatic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinalysis and blood pressure measurement must be done when Henoch-Schönlein purpura (HSP) is suspected … Most cases are self-limiting and only require symptomatic management Close follow-up is critical to identify significant renal involvement requiring intervention. Renal involvement is usually asymptomatic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**HSP is the commonest childhood vasculitis**, most often at 2–8 years. **It is a clinical diagnosis:** rash plus one or more of arthritis/arthralgia (50–75%), abdominal pain (50%), nephritis (25–50%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HSP is the most common vasculitis of childhood. It most commonly affects children 2-8 years of age … HSP is a clinical diagnosis The features include rash, and one or more of: Arthritis/arthralgia (50-75%) Abdominal pain (50%) Nephritis (25-50%)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Features can take days to weeks to appear**, in any order. Purpura occurs in everyone but presents first in only 75%; a recent URTI (viral or group A strep) precedes 50% of cases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The clinical manifestations of HSP can take days to weeks to fully develop and may vary in order of appearance Purpura occurs in all patients but is the presenting complaint in only 75% of cases Recent upper respiratory tract infection is present in 50% of HSP cases, commonly viral or Group A streptococcus infections",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Rash:** palpable purpura, petechiae and ecchymoses, usually symmetrical, on gravity/pressure-dependent areas (buttocks and legs in walking children); **painful non-pitting subcutaneous oedema**. **Joints:** usually large lower-limb joints, without significant effusion or warmth.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Palpable purpura, petechiae and ecchymoses … Usually symmetrical Located on gravity/pressure-dependent areas (eg buttocks & lower limbs in ambulatory children) Painful non-pitting subcutaneous oedema … Usually affects large joints of lower limbs. Rarely upper limbs. Usually no significant effusion or warmth",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Abdomen: intussusception is the commonest complication**; others are GI haemorrhage, bowel ischaemia, necrosis or perforation, protein-losing enteropathy and pancreatitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most common complication is intussusception Others include GI haemorrhage, bowel ischaemia, necrosis or perforation, protein-losing enteropathy, pancreatitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Testicular pain: exclude testicular torsion.** Rare: respiratory distress or diffuse alveolar haemorrhage; mental-state change or focal signs — **consider intracranial haemorrhage.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Testicular pain +/- orchitis +/- necrosis Cord haematoma Exclude testicular torsion … Respiratory distress Diffuse alveolar haemorrhage … Focal neurological signs Consider intracranial haemorrhage",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Urinalysis is usually the only test needed in a classic presentation.** With hypertension, macroscopic haematuria or significant proteinuria add **urine microscopy, UPCR, UEC and albumin.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinalysis is usually the only investigation needed in a classic presentation of HSP If there is hypertension, macroscopic haematuria or significant proteinuria, also perform: Formal urine microscopy and urinary protein-creatinine ratio (UPCR) UEC and albumin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If the diagnosis is unclear** (e.g. ITP, leukaemia, meningococcal infection) or to find complications: FBE, UEC, albumin, blood and urine cultures, abdominal imaging, ASOT and anti-DNase B; ANA, dsDNA, ANCA, C3, C4 if significant renal involvement with an unclear diagnosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Additional investigations may be required to rule out differentials if the diagnosis is unclear (eg ITP, leukaemia, meningococcal infection) or to identify potential complications of HSP: FBE, UEC, albumin Blood and urine cultures Abdominal imaging ASOT and anti-DNAse B ANA, dsDNA, ANCA, C3, C4 if significant renal involvement with an unclear diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Subcutaneous oedema: bed rest and elevation.** **Mild pain:** regular paracetamol plus a short NSAID course — **ibuprofen 10 mg/kg (max 400 mg) TDS or naproxen 10 mg/kg (max 500 mg) BD** — unless contraindicated (e.g. GI bleeding, renal impairment).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Subcutaneous oedema is managed with bed rest and elevation of the affected area Regular paracetamol and a short course of NSAIDs such as ibuprofen 10 mg/kg (max 400 mg) TDS or naproxen 10 mg/kg (max 500 mg) BD can be used if not contraindicated (eg GI bleeding or renal impairment)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Moderate–severe abdominal or joint pain: consider steroids** (may shorten symptoms). **Steroids do not change long-term renal outcome.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider the use of steroids (glucocorticoids) in children with moderate to severe abdominal and joint pain (may reduce duration of symptoms) Steroids do not impact the rate of long-term renal complications of HSP",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Oral prednisolone 1–2 mg/kg/day (max 60 mg/day)** or **IV methylprednisolone 0.8–1.6 mg/kg/day (max 1 g/day)** while symptoms persist, then wean appropriately.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If prescribing oral prednisolone, give 1-2 mg/kg/day (maximum 60 mg/day) or IV methylprednisolone 0.8-1.6 mg/kg/day (maximum 1 g/day) while symptoms persist. Once symptoms have resolved, an appropriate weaning regimen should be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **If initial urinalysis is normal or shows only microscopic haematuria, check BP and urinalysis:** weekly for the first month · fortnightly from weeks 5–12 · single reviews at 6 and 12 months. Return to weekly reviews for a flare or new renal signs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If initial urinalysis is normal or only reveals microscopic haematuria, review clinically and check BP/urinalysis: Weekly for the first month after disease onset Fortnightly from weeks 5-12 Single reviews at 6 and 12 months Return to weekly reviews if there is a clinical disease flare or additional signs of renal involvement",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No significant renal involvement and normal urinalysis at 12 months → no further follow-up.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there is no significant renal involvement and normal urinalysis at 12 months, no further follow-up is required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **New hypertension, proteinuria or macroscopic haematuria at any point → paediatric review** and the extended investigations.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The development of hypertension, proteinuria or macroscopic haematuria at any point should prompt a paediatric review and the investigations as outlined above",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider admission for:** serious abdominal complications · severe debilitating pain · severe renal involvement · neurological or pulmonary involvement · if prednisolone is being considered.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider admission Serious abdominal complications Severe debilitating pain Severe renal involvement (see UPCR values below) Neurological or pulmonary involvement If treatment with prednisolone is considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Refer to a renal specialist for:** hypertension · abnormal renal function · macroscopic haematuria for 5 days · nephrotic or acute nephritic syndrome · persistent proteinuria — **UPCR over 250 mg/mmol for 4 weeks, over 100 for 3 months, or over 50 for 6 months.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with a renal specialist when Hypertension Abnormal renal function Macroscopic haematuria for 5 days Nephrotic syndrome Acute nephritic syndrome Persistent proteinuria UPCR >250 mg/mmol for 4 weeks UPCR >100 mg/mmol for 3 months UPCR >50 mg/mmol for 6 months",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A first episode without significant renal disease usually resolves within 4 weeks**; rash is often last to go. Joint pain usually settles within 72 hours, uncomplicated abdominal pain within 24–48 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A first episode of HSP, in the absence of significant renal disease, usually resolves within 4 weeks. Rash is often the last symptom to remit Joint pain usually resolves spontaneously within 72 hours Uncomplicated abdominal pain usually resolves spontaneously within 24-48 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**HSP recurs at least once in 25–35%, within 4 months**, usually more mildly. **90% of renal complications appear within 2 months of onset, 97% within 6 months.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In 25-35% of patients, HSP recurs at least once, within 4 months of the initial presentation. Subsequent episodes are usually associated with milder symptoms that are shorter in duration than previous episodes 90% of those who develop renal complications do so within 2 months of the onset, and 97% within 6 months",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'IgA Vasculitis' (Last Updated January 2021), at https://www.rch.org.au/clinicalguide/guideline_index/HenochSchonlein_Purpura/, retrieved 2026-09-23"
+  }
+ ]
+}

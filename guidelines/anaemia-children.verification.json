@@ -1,0 +1,145 @@
+{
+ "guideline": "guidelines/anaemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Anaemia' (Last updated November 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 18,
+  "pass": 18,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Iron deficiency is the most common cause of anaemia in children.** Anaemia = Hb below the lower limit of the reference range for age.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Iron deficiency is the most common cause of anaemia in children … Anaemia is defined as haemoglobin (Hb) less than the lower limit of the reference range for age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Lower limit of normal Hb (g/L):** 2 months 90 · 2–6 months 95 · 6–24 months 105 · 2–11 years 115 · over 12 years female 120, male 130.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Age Lower limit of normal range Hb (g/L) 2 months 90 2-6 months 95 6-24 months 105 2-11 years 115 >12 years Female: 120, male: 130",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** ethnic background (guides testing for haemoglobinopathies and G6PD deficiency); medications, especially those that can cause haemolysis in G6PD deficiency; diet — iron-rich foods, breastfeeding, cow's milk, B12 and recent fava bean ingestion; family history of anaemia, jaundice, gallstones or splenomegaly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ethnic background (can be helpful in guiding investigation for haemoglobinopathies and G6PD deficiency) … Medication history: past and current, particularly those that may cause haemolysis in children with G6PD deficiency … Dietary history: iron intake (with particular attention to iron-rich foods, breast feeding and cow milk intake), vitamin B12 intake, recent fava/broad bean ingestion (may precipitate haemolysis in children with G6PD deficiency) … Family history: anaemia, jaundice, gallstones or splenomegaly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine for** poor growth, pallor, tachycardia, murmur, **signs of cardiac failure**, and **signs of haemolysis** (jaundice, scleral icterus, splenomegaly, dark urine).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Poor growth … Tachycardia Cardiac murmur Signs of cardiac failure … Signs of haemolysis (jaundice, scleral icterus, splenomegaly and dark urine)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First-line: FBC and film, reticulocyte count, ferritin.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "FBC and film Reticulocyte count Ferritin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not request iron studies or serum iron to diagnose iron deficiency** — serum iron reflects recent intake, not stores.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Iron studies or serum iron should not be requested to diagnose iron deficiency. Serum iron reflects recent iron intake and does not provide a measure of the iron stores",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Classify first by MCV** (microcytic, normocytic, macrocytic).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The initial classification is based on the mean corpuscular volume (MCV)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider admission for:** Hb under 60 g/L (including iron deficiency) · tachycardia, murmur or cardiac failure · haemolysis (dark urine, jaundice, scleral icterus) · reticulocytopenia · nucleated red cells on the film · thrombocytopenia or neutropenia (possible malignancy or infiltration) · severe B12 or folate deficiency · need for transfusion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flags (consider admission) Hb <60g/L (including iron deficiency) Tachycardia, cardiac murmur or signs of cardiac failure Features of haemolysis eg dark urine, jaundice, scleral icterus Associated reticulocytopenia Presence of nucleated red blood cells on blood film Associated thrombocytopenia or neutropenia, may indicate malignancy or an infiltrative disorder Severe vitamin B12 or folate deficiency Need for red cell transfusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Where possible, defer transfusion until a definitive diagnosis is made.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Need for red cell transfusion (where possible defer transfusion until a definitive diagnosis is made)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team for red-flag features.** Discharge when the cause is identified and follow-up is arranged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider admission and discussion with local paediatrician or haematologist for children with red flag features … Consider discharge when Cause for anaemia is identified and follow up is arranged",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Beta thalassaemia trait:** usually asymptomatic, microcytic hypochromic cells with normal or borderline-low Hb; diagnosed on HPLC or Hb electrophoresis (HbA2 over 3.5%, often raised HbF).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Usually asymptomatic Microcytic hypochromic red cells with normal or borderline low Hb Diagnosed on high-performance liquid chromatography (HPLC) or Hb electrophoresis (HbA2 >3.5%, often elevated Hb F)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Concurrent iron deficiency can mask a raised HbA2** — if ferritin is low, **treat the iron first, then test.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HbA2 may not be elevated in the presence of concomitant iron deficiency, therefore give iron treatment (if ferritin low) before ordering test",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Alpha thalassaemia trait cannot be diagnosed on HPLC or electrophoresis** — DNA testing is needed, but not first-line; exclude other causes first. **Pre-pregnancy partner carrier testing matters** for both traits.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cannot be diagnosed on HPLC or Hb electrophoresis. DNA testing required for formal diagnosis (not a first-line investigation, exclude other causes first) … Pre-pregnancy carrier testing of partner is important, ensure parents have been tested if likely to have more children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Acute haemolysis can be life-threatening: discuss every case with a haematologist and admit for observation**, with frequent heart-rate monitoring for a further Hb fall.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute haemolysis in childhood can be a life-threatening illness and all cases should be discussed with a haematologist … Admit children with haemolytic anaemia for observation. Frequent heart rate monitoring is required to identify tachycardia which may indicate a further drop in Hb",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Repeat the FBC within 6–12 hours** to detect ongoing haemolysis; monitor reticulocytes and bilirubin. Further tests (DAT, BGAB, G6PD assay, EMA staining) follow the film.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Repeat FBC within 6-12 hours to detect ongoing haemolysis … Monitor reticulocyte count and bilirubin … Additional investigations will be guided by blood film findings eg Coombs test (direct antiglobulin test), blood group and antibody screening (BGAB), G6PD assay and Eosin-5 maleimide red cell staining (diagnosis of hereditary spherocytosis)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypoplastic/aplastic:** reticulocytes usually low. **Neutrophils or platelets also low → consider marrow infiltration.** Isolated anaemia with low reticulocytes and normal counts → consider TEC or congenital forms (e.g. Diamond-Blackfan). Bone marrow aspirate is usually required.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider bone marrow infiltration if neutrophils and/or platelets also decreased … If isolated anaemia with low reticulocyte count with normal platelet and neutrophil counts, consider transient erythroblastopenia of childhood (TEC) or congenital forms (eg Diamond-Blackfan anaemia) … Bone marrow aspirate is usually required for diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**B12 and folate deficiency** can cause failure to thrive or neurodevelopmental problems (regression, seizures, irritability, poor feeding). **B12 risk:** exclusively breastfed infants of B12-deficient mothers, vegan or vegetarian diets, pernicious anaemia, metabolic disorders.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Can be associated with failure to thrive or neurodevelopmental problems (regression, seizures, irritability, poor feeding) … Vitamin B12 deficiency may be seen in exclusively breast-fed infants of mothers with vitamin B12 deficiency, children with a vegan or vegetarian diet, pernicious anaemia and metabolic disorders",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Investigate urgently** (red cell folate, active B12; if active B12 low, add homocysteine and urine methylmalonic acid) and **start treatment urgently, especially with neurological symptoms or regression.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Requires urgent investigation with red cell folate and active vitamin B12 … If low active vitamin B12 suggest serum homocysteine and urine methylmalonic acid … Treatment must be commenced urgently, particularly if neurological symptoms or regression",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Anaemia' (Last updated November 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Anaemia/, retrieved 2026-09-23"
+  }
+ ]
+}

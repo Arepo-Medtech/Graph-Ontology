@@ -1,0 +1,154 @@
+{
+ "guideline": "guidelines/serotonin-toxicity-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Serotonin toxicity' (Last Updated July 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 19,
+  "pass": 19,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Severe serotonin toxicity is a medical emergency**; untreated it can progress to multi-organ failure and death. **Severe cases belong in a paediatric ICU.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe serotonin toxicity is a medical emergency. Untreated, serotonin toxicity can progress to multi-organ failure and death. Severe cases should be managed in a Paediatric ICU",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A triad of CNS, autonomic and neuromuscular dysfunction**, on a spectrum from mild to life-threatening. Seek senior advice and discuss with a toxicologist if suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It manifests as a wide variety of signs reflecting the triad of CNS, autonomic and neuromuscular dysfunction … If serotonin toxicity is suspected please seek senior advice and discuss with toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Settings:** interaction of two serotonergic drugs (**most common**) · starting or increasing one · switching without adequate washout · interaction with an illicit drug or herbal · deliberate self-poisoning · accidental ingestion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Drug interaction between two serotonergic agents (most common) On introduction or increase in dose of a single serotonergic drug Change in therapy from one serotonergic drug to another without adequate washout period Interaction between a serotonergic agent and an illicit drug or herbal preparation Deliberate self-poisoning with serotonergic agents Accidental ingestion of serotonergic agents",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** any symptomatic patient · all deliberate self-poisoning or significant accidental ingestion of serotonergic agents. ⚠️ **Co-ingesting several serotonergic agents carries significantly greater risk.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any symptomatic patients All patients with deliberate self-poisoning or significant accidental ingestion of serotonergic agents Patients who have co-ingested a number of serotonergic agents are at significantly greater risk of serotonin toxicity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Antidepressants implicated:** MAOIs, TCAs, SSRIs, SNRIs, lithium, bupropion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antidepressants Monoamine oxidase inhibitors (MAOIs) Tricyclic antidepressants (TCAs) Selective serotonin re-uptake inhibitors (SSRIs) Serotonin and noradrenaline re-uptake inhibitors (SNRIs) Lithium Bupropion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **High-risk analgesics/antitussives: tramadol, pethidine, dextromethorphan**; also methadone, tapentadol, fentanyl.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tramadol* Pethidine* Dextromethorphan* Methadone Tapentadol Fentanyl",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also implicated:** MDMA, LSD, amphetamines, cocaine · ondansetron, granisetron, metoclopramide · sumatriptan · St John's wort, ginseng, nutmeg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "MDMA (ecstasy) LSD Amphetamines Cocaine Antiemetics Ondansetron Granisetron Metoclopramide 5-HT1 agonists Sumatriptan Herbs St John's Wort Ginseng Nutmeg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Diagnosis rests on ingestion of one or more serotonergic agents plus characteristic signs.** Clarify recent prescriptions, illicit drugs and herbals, amounts and timing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A history of ingestion of one or more serotonergic agents Clarify the drugs recently prescribed and if any illicit drugs or herbal preparations ingested Ascertain the amounts ingested and when the ingestion occurred The presence of characteristic symptoms and physical signs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Exclude mimics:** neuroleptic malignant syndrome · withdrawal syndromes · malignant hyperthermia · non-convulsive seizures · CNS infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neuroleptic malignant syndrome Withdrawal syndromes Malignant hyperthermia Non-convulsive seizures CNS infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Deliberate self-poisoning: 12-lead ECG, blood glucose and paracetamol level.** Depending on severity: urea, creatinine, electrolytes, **creatine kinase**, troponin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "12 lead ECG, blood glucose and paracetamol concentration in deliberate self-poisoning Depending on severity further investigations may be necessary to exclude significant complications including urea, creatinine, electrolytes, creatinine kinase, troponin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stop any causative agent.** Supportive care, monitoring **temperature, muscle tone and mental status.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cease any causative agents Supportive care and monitoring of temperature, muscle tone and mental status",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First line: titrated IV benzodiazepines**, with a toxicologist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serotonin toxicity can be treated with titrated intravenous benzodiazepines in discussion with toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refractory symptoms:** consider a serotonin antagonist — **cyproheptadine or chlorpromazine** — with a toxicologist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If symptoms are refractory a serotonin antagonist such as cyproheptadine or chlorpromazine may be considered in discussion with a toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cyproheptadine, oral: under 7 years 2 mg; 7 years and over 4 mg.** For prolonged symptoms repeat the same dose 3 times a day until resolved — usually within 24 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cyproheptadine Oral <7 years: 2 mg ≥7 years: 4 mg If continuing treatment for prolonged symptoms use the same dose 3 times a day until symptoms are resolved - usually within 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Chlorpromazine 0.5 mg/kg (max 25 mg) IV in sodium chloride 0.9% 10 mL/kg (max 500 mL) over 30–60 minutes**; repeat every 6–8 hours until resolved, **provided the patient is not hypotensive.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Chlorpromazine 0.5 mg/kg (max 25 mg) in sodium chloride 0.9% 10 mL/kg (max 500 mL) IV, over 30 to 60 minutes. Repeat the dose every 6 to 8 hours until symptoms resolve, provided the patient is not hypotensive",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Symptomatic child: admit for monitoring and treatment.** ⚠️ **At-risk children (deliberate self-poisoning or significant accidental ingestion): observe for at least 12 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Child is symptomatic: requires admission for monitoring and treatment if necessary Children at risk of serotonin toxicity with deliberate self-poisoning or significant accidental ingestion should be observed for symptoms for a minimum of 12 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider admission for any child or adolescent with intentional overdose.** **Severe toxicity → PICU.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child or adolescent presenting with intentional overdose as admission should be considered … Patients who develop severe serotonin toxicity should be managed in PICU",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge:** normal GCS · normal ECG · observation period complete. **Expect full recovery in 24–48 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Normal GCS Normal ECG Period of observation as above Resolution of symptoms with complete recovery can be expected in 24-48 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before discharge, adolescents with deliberate ingestion need a self-harm risk assessment and drug and alcohol assessment**, with linkage to services where needs are identified.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm Assessment of other drug and alcohol use should also be undertaken",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Serotonin toxicity' (Last Updated July 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Serotonin_toxicity/, retrieved 2026-09-23"
+  }
+ ]
+}

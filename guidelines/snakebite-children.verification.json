@@ -1,0 +1,204 @@
+{
+ "guideline": "guidelines/snakebite-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Snakebite' (Last updated January 2018), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 26,
+  "pass": 26,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Do not use this guideline outside Victoria** — snake species differ by region.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This guideline should not be used outside Victoria due to regional differences in Snake species.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Seek a clinical toxicologist's advice early** (Poisons Information Centre 13 11 26, 24 hours a day), especially for bites from snake-handlers' or other exotic snakes, or bites outside Victoria or Tasmania.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specific advice about children with potential snakebite should be sought early from a clinical toxicologist (Poisons Information Centre 13 11 26, 24 hrs/day). This should particularly occur with envenomation by snakes of snake-handlers or other sources of exotic snakes, as well as by those bitten by snakes in locations other than Victoria or Tasmania.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Victoria has 3 venomous snakes — brown, tiger and red-bellied black. Brown and tiger antivenom cover all Victorian snakes.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Victoria, there are 3 venomous snakes – Brown, Tiger and Red-Bellied Black. … Brown and tiger antivenom will cover all Victorian snakes.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most people bitten by snakes in Australia are not significantly envenomed.** The bite site may show fang marks or scratches, but is **usually not painful, swollen or bruised** with Victorian snakes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most people bitten by snakes in Australia do not become significantly envenomed. … The bite site may be evidenced by fang marks, one or multiple scratches. The bite site may be painful, swollen or bruised, but usually is not for snakes in Victoria.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Envenomation is decided on circumstances, symptoms, examination and laboratory results together** — that decides the need for antivenom.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "it is important to determine whether a child has been envenomed to establish the need for antivenom. This is usually done taking into consideration the combination of circumstances, symptoms, examination and laboratory test results.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about:** headache, sweating, nausea or vomiting, abdominal pain, diarrhoea, blurred or double vision, slurred speech, weakness, respiratory distress, bleeding, dark or red urine, local pain, muscle pain, painful draining lymph nodes, collapse or convulsions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Headache Diaphoresis Nausea or vomiting Abdominal pain Diarrhoea Blurred or double vision Slurring of speech Muscle weakness Respiratory distress Bleeding from the bite site or elsewhere Passing dark or red urine Local pain or swelling at bite site Muscle pain Pain in lymph nodes draining the bite area Loss of consciousness / collapse and/or convulsions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Examine for:** venom movement (swollen or tender draining nodes) · **neurotoxic paralysis** (ptosis, ophthalmoplegia, diplopia, dysarthria, limb or respiratory weakness) · **coagulopathy** (bleeding gums, oozing from venepuncture or wounds) · **muscle damage** (tenderness, weakness, dark or red urine).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Evidence of venom movement (eg swollen or tender draining lymph nodes) Neurotoxic paralysis (ptosis, ophthalmoplegia, diplopia, dysarthria, limb weakness, respiratory muscle weakness) Coagulopathy (bleeding gums, prolonged bleeding from venepuncture sites or other wounds, including the bite site) Muscle damage (muscle tenderness, pain on movement, weakness, dark or red urine indicating myoglobinuria)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Initial and serial bloods:** coagulation screen (INR, APTT, fibrinogen, D-dimer), FBE and film, CK, and EUC.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial blood tests: coagulation screen (INR, APTT, fibrinogen, D-dimer), FBE and film, Creatine Kinase (CK), Electrolytes, Urea and Creatinine (EUC). … Serial blood tests: coagulation screen (INR, APTT, fibrinogen, D-dimer), FBE and film, CK, EUC.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not use point-of-care coagulation devices** — they are inaccurate in snakebite envenomation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not use point of care devices for coagulation profile as they are inaccurate in the setting of snakebite envenomation.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A venom detection kit (VDK) is rarely indicated and is NOT used to diagnose envenomation.** Both Victorian antivenoms can be given without identifying the snake; **never rely on a witness's identification.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A VDK is rarely indicated as: … There are only two types of antivenom required for Victorian snakes (tiger and brown) and both can be given to treat envenomation without identifying the snake … A VDK is NOT used to diagnose envenomation … Attempted identification of snakes by witnesses should never be relied upon as snakes of different species may have the same colouring or banding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If a VDK is used:** bite-site swab (urine if no bite is apparent, **never blood**); it takes 20–30 minutes, so **omit it in the unwell or arrested child**; results never override clinical and geographical data.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If used, a VDK should be used on a bite site swab … This takes 20-30 minutes, and as such should be omitted in the unwell or arrested child. … If there is no apparent bite, a VDK may be done on urine, but never blood … The results should not override clinical and geographical data.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Pressure immobilisation:** a broad, preferably elastic bandage, **as firm as for a sprained ankle**, from the bite site over the **entire limb**; splint the joints either side and **lay the child down.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Apply a broad pressure immobilisation bandage, Preferably elastic rather than crepe, as firm as you would for a sprained ankle; … The aim is to prevent lymphatic spread of venom, not to stop blood supply. Start at the bite site and bandage the entire limb. Immobilise the joints either side of the bite site (use a splint), Immobilise the entire child as well (lay the child down).",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not remove the bandage until the child is in a centre with full treatment facilities; if envenomed, not until antivenom has been given.** Remove it once antivenom is in.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "DO NOT remove the bandage until in a centre with full treatment facilities, as discussed above. If envenomed, do not remove until antivenom has been given. Once the antivenom has been given, remove the pressure immobilisation bandage.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not wash or clean the bite site** in case a VDK is needed; wash it once a VDK is clearly not required or has been done.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not wash or clean the bite site in any way (in case the use of a Venom Detection Kit is required). … Wound care: the wound can be washed after it is clear that a VDK is not required or has been used.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Antivenom for every child with evidence of envenomation**, in consultation with a clinical toxicologist: **one vial of tiger and one vial of brown snake antivenom without delay.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antivenom is indicated in all children where there is evidence of envenomation. … Giving antivenom should occur in consultation with a clinical toxicologist. Give one vial of tiger and one vial of brown snake antivenom without delay.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dilute each vial in 100 mL 0.9% saline and give IV over 15–30 min.** ⚠️ **In cardiac arrest thought due to envenomation: undiluted, rapid IV push.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dilute one vial in 100mls of 0.9% saline and give IV over 15-30 min. … If the child is in cardiac arrest and this is thought to be due to envenomation, then give undiluted antivenom via rapid IV push.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**No weight-based calculation** — one vial neutralises what one snake can deliver, and **extra vials do not speed recovery.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is no weight based calculation for antivenom (the snake delivers the same amount of venom regardless of the size of the child). One vial of antivenom is enough to neutralize the venom that can be delivered by one snake. Clinical recovery takes time after antivenom administration and multiple vials do not speed recovery.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Coagulopathy is slow to reverse: 10–20 hours to start improving, 24–30 hours to resolve.** More antivenom will not help; **FFP or cryoprecipitate** is controversial — discuss with a toxicologist, generally only if the child is bleeding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It takes 10 – 20 hours to start to improve and 24 – 30 hours for complete resolution. More antivenom than recommended will not aid recovery of clotting factors. The role of FFP or cryoprecipitate is controversial and should be discussed with a clinical toxicologist; generally it is indicated if the child is bleeding.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Critical care environment with monitoring; 2 IV lines, at least one large bore.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The child should be in a critical care environment with monitoring. Gain 2 points of intravenous access, with at least one large bore cannula.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Be prepared to treat anaphylaxis** to antivenom (per the anaphylaxis guideline, with a toxicologist). Because coagulopathy risks intracerebral haemorrhage and adrenaline can raise blood pressure, **a titratable IV adrenaline infusion may be considered** with an expert.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is a risk of anaphylaxis with antivenom administration – be prepared to treat. If anaphylaxis occurs, treat as per the anaphylaxis guideline and consult with a clinical toxicologist. … Given the risk of intracerebral haemorrhage with coagulopathy and the possible elevation of blood pressure with adrenaline, a more easily titratable intravenous adrenaline infusion may be considered in discussion with an expert experienced in its use.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check tetanus status is up to date.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure that the child’s tetanus status is up to date",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A regional centre can manage uncomplicated snakebite** only with a doctor available 24 hours, immediate critical care, immediate antivenom and a 24-hour laboratory.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated snakebites can be managed at a regional centre as long as the following resources are available: A doctor who is willing and able to care for the child 24 hours a day, Immediate access to critical care facilities, Immediate access to the required antivenom, and Access to a 24 hour pathology laboratory that can perform the required blood tests.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Serial bloods and examinations for a minimum of 12 hours after the bite.** **Admit every child with evidence of envenomation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serial blood tests and clinical examinations take a minimum of 12 hours after the time of the bite … All children with evidence of envenomation should be admitted to hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss envenomed children with a toxicologist and consider tertiary transfer;** transfer complicated bites or where resources are lacking. ⚠️ **Significantly unwell with no antivenom on site: the retrieval team brings antivenom** to give before transfer. PIPER: 1300 137 650.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Envenomed children should be discussed with a clinical toxicologist (Poisons Information Centre 13 11 26, 24 hrs/day) and considered for transfer to a tertiary centre depending on clinical signs. … In complicated snakebites or where the above resources are not available to manage snakebite, the child should be transferred to a tertiary paediatric centre. … If the child is significantly unwell (eg cardiac arrest, shock, bleeding) and there is no antivenom available, the retrieval team should bring the antivenom to the regional centre to be administered there prior to transfer. … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discharge a child with suspected snakebite only in daylight hours** — neurological signs can be subtle and only evident when awake.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with suspected snakebite should only be discharged in daylight hours (neurological signs can be subtle and only evident when children are awake).",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After antivenom, warn about serum sickness:** about 30% of children, **4–14 days later**, with flu-like symptoms, fever, myalgia, arthralgia and rash. Write to the GP.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If antivenom was administered, ensure that the family is given advice on how to recognise serum sickness: Occurs in about 30% of children given antivenom. Tends to occur 4 – 14 days following antivenom administration. Consists of flu-like symptoms, fever, myalgia, arthralgia and rash. A letter should also be written to the child’s GP regarding this.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Snakebite' (Last updated January 2018), at https://www.rch.org.au/clinicalguide/guideline_index/Snakebite/, retrieved 2026-09-23"
+  }
+ ]
+}

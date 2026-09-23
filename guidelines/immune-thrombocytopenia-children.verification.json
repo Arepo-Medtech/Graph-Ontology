@@ -1,0 +1,192 @@
+{
+ "guideline": "guidelines/immune-thrombocytopenia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Immune thrombocytopenic purpura' (Last updated December 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**ITP is a diagnosis of exclusion**: isolated thrombocytopenia in a well child with no concerning features and an otherwise normal FBE and film. There is no confirmatory test, and other causes of petechiae and purpura must be excluded.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ITP is an autoimmune bleeding disorder characterised by all three of Isolated thrombocytopenia … Well child with no concerning features on clinical history or examination Otherwise normal FBE and blood film … It is a diagnosis of exclusion as there is no specific laboratory test to confirm the diagnosis … Alternative causes for petechiae and purpura need to be excluded",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Decide on treatment from clinical features, not the platelet count; most children need none.** The risk of intracranial haemorrhage is very low (under 1%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The decision to treat a child should be based on clinical features and not the platelet count; the majority do not require treatment … The risk of intracranial haemorrhage (ICH) in ITP is very low ( <1%)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Newly diagnosed ITP** is most common at 2–6 years, often follows a viral infection, starts suddenly, is typically self-limiting and usually recovers within 3–6 months. **Persistent** = 3–12 months; **chronic** = over 12 months, more common in adolescents (20–30%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Newly diagnosed ITP most common in young children (2-6 years) typically self-limiting often follows a viral infection typically presents with sudden onset of symptoms spontaneous recovery within 3-6 months of diagnosis … Persistent ITP -- thrombocytopenia lasting 3-12 months from time of diagnosis Chronic ITP -- persistent thrombocytopenia >12 months. More common in adolescents (20-30% of adolescents)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Typical story:** sudden petechial rash and easy bruising in an often well-looking child; epistaxis, gum, GI bleeding, haematuria or menorrhagia; a preceding viral infection or recent live vaccine (e.g. MMR).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sudden onset petechial rash; easy bruising in an otherwise often well looking child … Epistaxis, gingival or gastrointestinal bleeding, haematuria or menorrhagia … Preceding viral infection (eg CMV, EBV, VZV) or recent live virus immunisation (eg MMR)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Intracranial haemorrhage is rare (under 1%)**: headache, nausea, vomiting, lethargy, irritability, reduced consciousness or neurological symptoms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ICH (rare <1%): headache, nausea, vomiting, lethargy, irritability, decreased consciousness or neurological symptoms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Red flags for another diagnosis:** bone pain, limp, anorexia, weight loss, jaundice, fever, sweats or infection · rash, arthritis, myalgia, dry eyes, mouth ulcers, recurrent infections · family or personal bleeding history · recent NSAIDs, anticoagulants or antiplatelet drugs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flags for alternative diagnosis Bone pain, limp, anorexia, weight loss, jaundice, fever, sweats or infective symptoms Rash, arthritis, myalgias, dry eyes, mouth ulcers, recurrent infections or fever Family or personal history of bleeding disorders Recent medication use (NSAIDs, anticoagulants or other anti-platelet medications)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Differentials:** leukaemia · bacterial or viral infection · inflicted injury · marrow disorders such as aplastic anaemia · SLE · drug-induced thrombocytopenia · TTP or HUS · localised SVC-distribution petechiae after vomiting or Valsalva.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Differential diagnoses Leukaemia Bacterial or viral infection Inflicted injury Bone marrow disorders eg aplastic anaemia Systemic lupus erythematosus Drug-induced thrombocytopenia Thrombotic thrombocytopenic purpura or haemolytic uraemic syndrome Localised petechiae in an SVC distribution following vomiting/valsalva",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**0** none · **1 minor**: 100 or fewer petechiae and/or 5 or fewer small bruises (3 cm or less), no mucosal bleeding · **2 mild**: over 100 petechiae and/or over 5 bruises over 3 cm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "0 None No new haemorrhage 1 Minor Few petechiae (≤100) and/or ≤5 small bruises (≤3 cm diameter), no mucosal bleeding 2 Mild Petechiae (>100) and/or >5 bruises (>3 cm diameter)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**3a moderate, low risk**: blood in nares, painless oral purpura, oral or palatal petechiae, buccal purpura along molars only, epistaxis 5 minutes or less · **3b moderate, high risk**: epistaxis over 5 minutes, haematuria, haematochezia, painful oral purpura, significant menorrhagia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "3a Moderate Low risk Blood in nares, painless oral purpura, oral/palatal petechiae, buccal purpura along molars only, epistaxis ≤5 mins 3b Moderate high risk Epistaxis >5 min, haematuria, haematochezia, painful oral purpura, significant menorrhagia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **4 severe**: mucosal bleeding or suspected internal haemorrhage (brain, lung, joint, muscle) · **5 life-threatening**: documented ICH or life-threatening bleeding at any site.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "4 Severe Mucosal bleeding or suspected internal haemorrhage (brain, lung, joint, muscle etc) 5 Life-threatening Documented ICH or life-threatening bleeding of any site",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**FBE and blood film are the only initial tests needed**; the film must be reviewed to exclude another diagnosis, and other tests are targeted to the differential or complications.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "FBE and blood film is the only initial investigation required Film must be reviewed to exclude an alternative diagnosis Other investigations should be targeted based on likely differential diagnosis or any complications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The goal is to stop active bleeding, not to normalise the platelet count.** Weigh active bleeding, future bleeding risk (e.g. impending surgery) and psychosocial factors.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Treatment decisions also need to take into consideration the presence of active bleeding, the risk of future bleeding (eg impending surgery) and psychosocial factors The goal of treatment is to stop active bleeding, not to normalise platelet count",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low risk (grades 0–3a): outpatient, no medical treatment** unless significant psychosocial or safety concerns; **repeat FBE and review in 1 week**, and educate the family.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Low (0-3a) Petechiae/bruising Painless oral/palatal petechiae or purpura Blood crusting in nares Outpatient without medical treatment (unless significant psychosocial or safety concerns) Repeat FBE and review in 1 week Provide family education (see below)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Moderate (3b): often needs admission.** A haematologist must review or discuss the film before treatment starts; raise the platelet count enough to stop bleeding, not to normal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate (3b) Epistaxis >5 mins Haematuria Haematochezia Painful oral purpura Significant menorrhagia Often requires hospital admission Film must be manually reviewed by or discussed with a haematologist prior to starting treatment Increase platelet count to stop bleeding (not to normal level)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First line: oral prednisolone 2–4 mg/kg (max 100 mg) for 4–7 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First line: oral prednisolone 2-4 mg/kg (max 100 mg) for 4–7 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Second line** (poor response, or a rapid rise needed, e.g. before surgery): **IVIg 0.8–1 g/kg**, discussed with Haematology.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Second line, if poor response or rapid platelet rise is required (eg prior to surgery): IVIg 0.8–1 g/kg (discuss with Haematology)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Epistaxis: oral tranexamic acid 25 mg/kg (max 1.5 g)**, possibly with ENT; heavy menstrual bleeding is also listed for additional treatment. ⚠️ **Never give tranexamic acid if there is haematuria.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Additional treatments (consider referral to specialty teams as appropriate): epistaxis: oral tranexamic acid 25 mg/kg (max 1.5 g), may need ENT intervention heavy menstrual bleeding Tranexamic acid must not be used if haematuria present",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Severe (4)** — suspected internal haemorrhage or mucosal bleeding needing immediate intervention: **urgent Haematology consultation; IVIg 0.8–1 g/kg plus pulse IV methylprednisolone 30 mg/kg (max 1 g) daily for 3 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe (4) Suspected internal haemorrhage (brain, lung, muscle, joint, etc) OR mucosal bleeding that requires immediate intervention Urgent consultation with Haematology Combination IVIg 0.8–1 g/kg and pulse IV methylprednisolone 30 mg/kg (max 1 g) daily for 3 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Also in severe bleeding: platelet transfusion 20 mL/kg** (continuous if required) · **IV tranexamic acid 15 mg/kg (max 1–1.5 g)** · thrombopoietin receptor agonists (romiplostim or eltrombopag) if life-threatening · urgent surgery or referral depending on the bleeding site.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Platelet transfusion 20 mL/kg, continuous if required Tranexamic acid 15 mg/kg (max 1-1.5g) IV If life threatening, thrombopoietin receptor agonists (e.g. Romiplostin or Eltrombopag) Urgent surgical intervention or referral depending on site of bleeding",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consult Haematology for:** severe or life-threatening bleeding · age under 1 or over 14 · any film abnormality · any concern for another diagnosis · chronic ITP · head injury or signs of ICH.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consult Haematology for: Severe or life-threatening bleeding <1 year or>14 years of age Any abnormality on blood film Any concern for possible alternative diagnosis Chronic ITP Head injury or signs of ICH",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give written information and a letter documenting the diagnosis.** Restrict activities to limit head injury: **no contact sports** (football, rugby, soccer, hockey, martial arts); limit horse-riding, skiing, scooters, skateboards, bikes, climbing equipment and trampolines. **Any head injury: present to ED.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Provide written information and letter to document diagnosis Restrict activities to minimise the risk of head injury: Avoid contact sports eg football, rugby, soccer, hockey and martial arts If any head injury is sustained, patients are advised to present to ED Limit activities with risk for traumatic injury eg horse-riding, skiing, scooter, skateboard or bike riding, climbing on play-ground equipment including trampolines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Avoid antiplatelet drugs, NSAIDs, anticoagulants and intramuscular injections.** Significant bleeding or signs of ICH need emergency department review.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid anti-platelet, non-steroidal and anticoagulant medications Avoid intramuscular injections Monitor for significant bleeding symptoms; requires emergency department review Monitor for signs of ICH; requires emergency department review",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** for diagnostic uncertainty, red flags, follow-up arrangements, or concern about the family's ability to follow the plan. Ongoing care: Haematology, General Paediatrics or GP depending on context.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Uncertainty about diagnosis, any red flags, or to arrange follow up Significant concern about family's ability to enact management plan or attend follow up Referral for ongoing management: Haematology, General Paediatrics or GP depending on clinical context and local practice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider transfer** for severe or life-threatening haemorrhage or care beyond the local service. **Discharge when the family understands** the condition, restrictions and when to go to ED, with a **specific follow-up plan including when to repeat the FBE.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Level of care exceeds the comfort of the local health service Severe or life-threatening haemorrhage … Consider discharge when Family understands the condition, management, activity restrictions, follow-up plan and when to go to the emergency department Follow up plan needs to be specific, including timing of repeat FBE",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Immune thrombocytopenic purpura' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Immune_thrombocytopenic_purpura/, retrieved 2026-09-23"
+  }
+ ]
+}

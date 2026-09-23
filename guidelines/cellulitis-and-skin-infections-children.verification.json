@@ -1,0 +1,211 @@
+{
+ "guideline": "guidelines/cellulitis-and-skin-infections-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 26,
+  "pass": 26,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Cellulitis spreads through skin into subcutaneous tissue; many conditions mimic it** — always consider the differential.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cellulitis is a spreading infection of the skin extending to involve the subcutaneous tissues. Many conditions present similarly to cellulitis — always consider differential diagnoses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Itch without tenderness makes cellulitis unlikely**; allergic reactions and contact dermatitis are often misdiagnosed as cellulitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Allergic reactions and contact dermatitis are frequently misdiagnosed as cellulitis. If there is itch and no tenderness, cellulitis is unlikely",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Large local insect-bite reactions are a common mimic**: a punctum, prominent itch, redness and induration but rarely pain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Large local reactions to insect bites are a common mimic of cellulitis. Features include: a punctum at the site itch as a prominent feature redness and induration, but rarely pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Usual organisms: group A streptococcus and *S. aureus*.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most common causes are Group A streptococcus (GAS) and Staphylococcus aureus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Grade severity.** Mild: no systemic features or significant comorbidity. Moderate: moderate swelling and tenderness with systemic features (e.g. fever, tachycardia). Severe: severe swelling or tenderness, a large area (bigger than the patient's handprint), or marked systemic features — hypotension is a late sign.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild cellulitis Features above No systemic features No significant co-morbidities Moderate cellulitis Features above with moderate swelling and tenderness Systemic features (eg fever, tachycardia) Severe cellulitis Features above with severe swelling or tenderness Large body surface area involved (eg larger than the patient’s handprint) Marked systemic features (eg fever or hypothermia, tachycardia, tachypnoea, altered conscious state, unwell appearance, hypotension — this is a late sign)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Necrotising fasciitis:** pain out of keeping with apparent severity, rapid progression, marked systemic features (high fever with rigors, tachycardia, tachypnoea, hypotension, confusion, vomiting). Mortality is about 25%; recent varicella is a risk factor.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features suggestive of necrotising fasciitis include: severe pain out of keeping with apparent severity of infection rapid progression marked systemic features (eg high fever with rigors, tachycardia, tachypnoea, hypotension, confusion, vomiting) … It causes severe illness with a high mortality rate (~25%) … Recent infection with varicella is a risk factor",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Red flags:** abscess or suppuration · animal or human bite · deep structure involvement · foreign body · immunosuppression · lymphangitis · MRSA · multiple comorbidities · periorbital, facial or hand involvement · varicella-associated infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Red flags Abscess or suppuration Animal or human bite Deep structure involvement Foreign body Immunosuppression Lymphangitis MRSA infection Multiple comorbidities Periorbital/facial/hand involvement Varicella associated infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Impetigo** is a highly contagious epidermal infection (GAS, *S. aureus*), common in young children and may accompany scabies. **SSSS** is a toxin-mediated blistering disorder of neonates and young children.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Highly contagious infection of the epidermis, particularly common in young children. Causative organisms are GAS and S. aureus … May be associated with scabies … Blistering skin disorder induced by the exfoliative (epidermolytic) toxins of S. aureus. Primarily affects neonates and young children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Swab for Gram stain and culture only if there is discharge. Blood culture is not useful in mild or moderate cellulitis.** Consider ultrasound for suspected abscess, deep infection or foreign body.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Swab for Gram stain (charcoal / gel / bacterial transport swab and slide) and culture if discharge present … Blood culture is not useful in mild/moderate cellulitis … Consider imaging (eg ultrasound) if abscess, deep infection or foreign body suspected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Treat sepsis if present, and control the source** — remove foreign bodies, drain abscesses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Manage sepsis if features present … Manage source if identifiable — ie remove foreign body, drain abscess",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cellulitis often looks worse after 24 hours of treatment; consider waiting 48 hours before changing therapy.** Follow local susceptibility guidance.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cellulitis frequently looks worse after 24 hours of treatment; consider waiting 48 hours to change therapies … Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns; please refer to local guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Young unvaccinated children are at risk of Hib.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Young, unvaccinated children are at risk of Haemophilus influenzae type B (Hib)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Impetigo:** topical mupirocin 2% to crusted areas three times daily, **or** cefalexin 20 mg/kg (max 750 mg) orally three times daily if widespread or large lesions — **5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Impetigo Topical Mupirocin 2% ointment or cream to crusted areas tds OR Cefalexin 20 mg/kg (max 750 mg) oral tds if widespread or large lesions 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild cellulitis: cefalexin 20 mg/kg (max 750 mg) orally three times daily for 5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild cellulitis Cefalexin 20 mg/kg (max 750 mg) oral tds 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Moderate cellulitis:** a trial of oral cefalexin 20 mg/kg (max 750 mg) three times daily with close review, or ceftriaxone 50 mg/kg (max 2 g) IV daily via ambulatory care/HITH — **5–10 days.** If oral is not tolerated or there is no improvement after 48 hours, manage as severe.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A trial of oral antibiotics with close review may be considered: Cefalexin 20 mg/kg (max 750 mg) oral tds Consider Ambulatory/Hospital-in-the-Home (HITH) if available: Ceftriaxone 50 mg/kg (max 2g) IV daily 5–10 days … If oral antibiotics not tolerated or no improvement after 48 hours, manage as per severe cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Severe cellulitis or SSSS: cefazolin 50 mg/kg (max 2 g) IV 8-hourly**, adding clindamycin 10 mg/kg (max 600 mg) IV 6-hourly if rapidly progressive — **5–10 days.** Consider early HITH once stable; switch to oral as for mild cellulitis when improving.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefazolin 50 mg/kg (max 2g) IV 8H (if rapidly progressive consider adding Clindamycin 10 mg/kg (max 600 mg) IV 6H) 5–10 days Consider early discharge to HITH once stable. When improving, switch to oral antibiotics as per mild cellulitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Necrotising fasciitis: vancomycin and meropenem 20 mg/kg IV (max 1 g) 8-hourly, AND clindamycin 10 mg/kg (max 600 mg) IV 6-hourly.** **Urgent surgical referral for debridement**; seek specialist antibiotic advice; consider IVIg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vancomycin and Meropenem 20 mg/kg IV (max 1 g) 8H AND Clindamycin 10 mg/kg (max 600 mg) IV 6H Urgent referral to surgical team for debridement Seek specialist advice for antibiotics Consider IVIg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Uninfected mammalian bites often need no prophylaxis.** When indicated: amoxicillin/clavulanate (7:1 liquid, 80 mg/mL amoxicillin) 22.5 mg/kg (max 875 mg) orally twice daily for **5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mammalian bites (uninfected / prophylactic) Often do not need prophylactic antibiotics. When indicated*: Amoxicillin/Clavulanate 80 mg/mL amoxicillin oral liquid (7:1) 22.5 mg/kg (max 875 mg) oral bd 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Bite prophylaxis is indicated for:** presentation delayed >8 hours · puncture wound that cannot be adequately debrided · bites on hands, feet or face · deep tissue involvement (bone, joint, tendon) · open fracture · immunocompromise · cat bites.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Presentation delayed by >8 hours Puncture wound unable to be adequately debrided Bite on hands, feet, face Involves deep tissues (eg bones, joints, tendons) Involves an open fracture Immunocompromised patient Cat bites",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infected animal or human bite:** amoxicillin/clavulanate 22.5 mg/kg (max 875 mg) orally twice daily, or 25 mg/kg (max 1 g) IV 6–8-hourly if oral is not tolerated — **5 days**, longer if severe, penetrating or deep. Seek specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Animal/human bites (established infection) Amoxicillin/Clavulanate 80 mg/mL amoxicillin oral liquid (7:1) 22.5 mg/kg (max 875 mg) oral bd If unable to tolerate oral antibiotics: 25 mg/kg (max 1g) IV 6–8H 5 days (extend if severe, penetrating, involving deep tissues) Seek specialist advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Waterborne (sea or fresh water) infection:** cefalexin 20 mg/kg (max 750 mg) three times daily **plus** ciprofloxacin 10 mg/kg (max 500 mg) twice daily, **or** trimethoprim/sulfamethoxazole 8/40 mg/kg (max 320/1600 mg) twice daily, all oral — **5–10 days.** Clean and debride as needed; prophylaxis is not recommended.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefalexin 20 mg/kg (max 750 mg) oral tds and Ciprofloxacin 10 mg/kg (max 500 mg) oral bd OR Trimethoprim/sulfamethoxazole 8/40 mg/kg (max 320/1600 mg) oral bd 5–10 days Clean and debride wound as needed Prophylactic antibiotics are not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**MRSA risk factors:** living in a high-prevalence area (e.g. Northern Territory, remote northern Queensland) · previous MRSA colonisation or infection · Aboriginal and Torres Strait Islander or Pacific Islander child.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Risk factors for MRSA infection Residence in an area with high prevalence of MRSA, eg Northern Territory, remote communities in northern Queensland Previous colonisation or infection with MRSA (particularly recent) Aboriginal and Torres Strait Islander or Pacific Islander child",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mild cellulitis, MRSA suspected:** trimethoprim/sulfamethoxazole 4/20 mg/kg (max 160/800 mg) twice daily **or** clindamycin 10 mg/kg (max 450 mg) four times daily, oral — **5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild cellulitis Trimethoprim/sulfamethoxazole 4/20 mg/kg (max 160/800 mg) oral bd OR Clindamycin 10 mg/kg (max 450 mg) oral qid 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Moderate:** oral trial with close review, or vancomycin IV. **Severe or SSSS:** vancomycin IV **or** clindamycin 10 mg/kg (max 600 mg) IV 6-hourly. Switch to oral as for mild when improving.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate cellulitis A trial of oral antibiotics with close review may be considered OR Vancomycin IV When improving, switch to oral antibiotics as per mild cellulitis … Vancomycin IV OR Clindamycin 10 mg/kg (max 600 mg) IV 6H",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Discuss with the paediatric team** if there is no improvement or deterioration after 24–48 hours; **get a surgical opinion** if deep abscess or necrotising fasciitis is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No improvement or deterioration after 24–48 hours of therapy Deep abscess or necrotising fasciitis suspected — consider surgical opinion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when oral antibiotics are tolerated.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Able to tolerate oral antibiotics",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cellulitis and other bacterial skin infections' (Last Updated March 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Cellulitis_and_other_bacterial_skin_infections/, retrieved 2026-09-23"
+  }
+ ]
+}

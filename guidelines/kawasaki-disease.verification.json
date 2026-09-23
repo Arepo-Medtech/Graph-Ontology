@@ -1,0 +1,184 @@
+{
+ "guideline": "guidelines/kawasaki-disease.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Kawasaki disease' (Last updated January 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**KD is an acute medium-vessel vasculitis with a predilection for the coronary arteries**; untreated, about 25% develop coronary artery aneurysms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "KD is an acute, idiopathic, medium-sized vessel vasculitis with a predilection for the coronary arteries … Self-limited course, typically resolves by 2-3 weeks, but ~25% of cases develop CAAs if untreated",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Complete KD = fever ≥4 days (day 1 = fever onset) AND at least 4 principal features at any point** (not necessarily together) **AND no better alternative explanation.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever ≥4 days (day 1 = day of fever onset) AND At least 4 principal clinical features at ANY point during illness (do NOT need to be present simultaneously) AND Illness cannot be better explained by an alternative cause",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Features appear sequentially — ask about ones that have already resolved.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clinical features can present sequentially over several days. Thus, history should include asking about diagnostic features that may have resolved by the time of presentation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Principal features:** bilateral non-exudative painless conjunctival injection, often limbal-sparing; polymorphous erythematous rash (not bullous, vesicular or haemorrhagic); palmar/plantar erythema with painful oedema and/or periungual desquamation at 2–3 weeks; unilateral tender anterior cervical nodes ≥1.5 cm; lip, tongue ('strawberry') or oropharyngeal erythema (not exudative or ulcerated).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilateral, non-exudative and painless. Often with peri-limbic sparing … Polymorphous, erythematous typically involving the trunk, perineum (may desquamate during fevers) and extremities NOT typically bullous, vesicular or haemorrhagic … Palmar and plantar erythema usually accompanied by painful oedema AND/OR Periungual desquamation, typically 2-3 weeks from onset of illness … Cluster of anterior cervical triangle lymph nodes ≥1.5 cm in diameter, usually unilateral and tender … Erythematous, fissuring, desquamating or haemorrhagic lips Erythematous tongue with prominent papillae (\"strawberry\" tongue) Erythematous oropharynx NOT typically exudative pharynx or ulcerated mucosa",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Incomplete KD:** suggestive presentation with fewer than 4 principal features; needs abnormal investigations to support it. **Infants and adolescents often present incompletely and have higher cardiac risk.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider in a child with a clinical presentation suggestive of KD but <4 principal clinical features Requires abnormal investigation results to support the diagnosis … Infants and adolescents often present with an incomplete picture and are at a higher risk for cardiac complications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Infants under 12 months with prolonged unexplained fever — even with normal inflammatory markers — should have an echocardiogram.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In infants <12 months with prolonged unexplained fever including those with normal inflammatory markers, echocardiogram is recommended as part of diagnostic assessment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Differentials:** a positive respiratory virus PCR does not exclude KD (about 1/3 are positive); consider KD when GAS infection fails to improve after 24–48 hours of antibiotics, and in an infant with prolonged fever and unexplained irritability or aseptic meningitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Positive respiratory virus PCR does not exclude a diagnosis of KD (~1/3 of KD cases will be positive) … Group A streptococcal (GAS) infections Pharyngitis, scarlet fever, acute rheumatic fever, retropharyngeal or parapharyngeal abscess Consider KD in children who show no clinical improvement after 24-48 hours of appropriate antibiotics … Consider KD in an infant with prolonged fever and unexplained irritability/aseptic meningitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High risk of CAA:** age ≤6 months, or right coronary or LAD Z-score ≥2.5.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "≤6 months old Right CA or left anterior descending Z-score ≥2.5",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other factors that may increase IVIg resistance or CAA risk:** age 6–12 months; coronary Z-score ≥2; IVIg ≥10 days after fever onset; IVIg resistance; KD shock syndrome or MAS; CRP ≥130 mg/L; East/South/mixed Asian ethnicity; anaemia; hypoalbuminaemia; hyponatraemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "6-12 months old Coronary artery Z-score ≥2 Delayed IVIg administration (≥10 days after fever onset) IVIg resistance (fever ≥38°C present at 36 hours or more after completion of first dose of IVIg)) KD shock syndrome (KDSS, see Additional notes) or macrophage activation syndrome (MAS) … CRP ≥130 mg/L East/South/mixed Asian ethnicity Anaemia for age Hypoalbuminaemia Hyponatraemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No single test diagnoses KD.** In all children consider FBE, CRP, ESR, UEC, LFTs, blood culture, urine microscopy and culture, ECG, and serum stored before IVIg. **Do not repeat ESR after IVIg** — it is falsely raised.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is no single diagnostic test for KD … FBE, CRP, ESR, UEC, LFTs (avoid repeating ESR after IVIg as is falsely raised) Blood culture Urine microscopy and culture (sterile pyuria) ECG Serum to store (prior to IVIg administration)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **A normal echocardiogram does not exclude KD, and waiting for one should not delay treatment.** Suggested schedule: baseline at presentation, follow-up at 4–6 weeks.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "May be normal, especially early in the course of the disease and does not exclude a diagnosis of KD. The availability of echocardiography should not delay treatment … Baseline at presentation Follow-up at 4-6 weeks",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **All children with KD: IVIg 2 g/kg as a single infusion**, usually at incrementing rates over 8–12 hours. Early treatment improves coronary outcomes; timing per senior advice and local protocol.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary therapy (all children with KD) Intravenous immunoglobulin (IVIg): 2 g/kg as a single infusion, usually given at incrementing rates over 8-12 hours … Early treatment improves coronary artery (CA) outcomes. Timing of delivery should be determined by senior clinician advice and aligned with local protocols",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Give IVIg without delay when clinically safe; still give it beyond 10 days of fever if inflammation is active** (fever, raised markers, abnormal coronaries).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Administer without delay when clinically safe. IVIg should still be given >10 days of fever if there is evidence of active inflammation, ie fever, elevated inflammatory markers, abnormal CA",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Aspirin 5 mg/kg orally daily** to prevent thrombosis, until follow-up cardiology review (~6 weeks post onset). Higher doses do not improve coronary outcomes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aspirin: to prevent thrombosis, 5 mg/kg orally daily Continue until follow-up cardiology review (~6 weeks post onset) … Higher aspirin doses have not been shown to improve CA outcomes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Avoid NSAIDs while on aspirin** — ibuprofen may reduce its cardioprotective effect.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid NSAIDs whilst on aspirin as ibuprofen may reduce cardioprotective effects",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High CAA risk (or clinician discretion): add corticosteroids** — example regimen 2 mg/kg once daily IV methylprednisolone or oral prednisolone (max 50 mg), tapered over 2–4 weeks by response; follow local protocols or subspecialty advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary intensification therapy (for children high-risk of CAAs or at clinician discretion) … Corticosteroids: refer to local protocols or subspecialty advice, example regimen: 2mg/kg once daily, IV methylprednisolone or PO prednisolone (max 50mg) tapered over 2-4 weeks depending on response",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**IVIg resistance** (fever ≥38°C 36 hours or more after the first IVIg finishes): consider other causes and consult local KD experts; options include a **second IVIg dose** and adding **infliximab or corticosteroids**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there is IVIg resistance (fever ≥38°C present at 36 hours or more after completion of first dose of IVIg) consider alternative causes and consultation with local KD experts … Further treatment may include a second dose of IVIg. Consider addition of infliximab or corticosteroids if not already given",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Antithrombotic therapy for CAAs is managed with cardiology.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antithrombotic therapy for CAAs should be managed in consultation with local cardiology services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Resolving KD** (convalescent, no fever, normal markers): start aspirin and refer for echocardiography.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suspected previous KD illness in convalescent phase ie no evidence of active inflammation (no fever, normal inflammatory markers) … Commence aspirin (see dosing above) and refer for echocardiogram",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**KD shock syndrome** (hypotension, poor perfusion or myocardial dysfunction): consider a slower IVIg infusion. **Fever during infusion may be KD activity** — consider paracetamol 30 minutes before and regularly during.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "KD Shock Syndrome (KDSS): severe form presenting with hypotension, poor perfusion or myocardial dysfunction. Consider slower IVIg infusion time … Fever during infusion may reflect KD activity rather than a transfusion reaction. Consider paracetamol 30 mins prior and regularly during infusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Delay live vaccines (MMR, MMRV, varicella, rotavirus) for 11 months after IVIg**; if measles exposure risk is high, vaccinate and repeat after 11 months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Live vaccine immunisation (eg MMR, MMRV, Varicella, Rotavirus) should be delayed for 11 months post IVIg administration … If there is high risk of measles exposure, vaccinate and repeat immunisation after 11 months",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the paediatric team whenever KD is suspected. Transfer** if there is cardiac involvement or timely echocardiography is unavailable locally.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "KD is suspected … Child has cardiac involvement, or timely echocardiography is unavailable locally",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when afebrile and well ≥36 hours after treatment**, with daily aspirin, a follow-up plan including repeat echo, and education to re-present with fever or returning symptoms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Afebrile and well ≥36 hours after treatment and daily aspirin provided Follow-up plan is in place, including a repeat echocardiogram … KD education provided (represent if febrile or return of KD symptoms)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Kawasaki disease' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Kawasaki_disease/, retrieved 2026-09-23"
+  }
+ ]
+}

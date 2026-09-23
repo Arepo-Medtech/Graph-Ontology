@@ -1,0 +1,349 @@
+{
+ "guideline": "guidelines/empiric-antimicrobials-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Antimicrobial guidelines' (Last updated February 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 42,
+  "pass": 42,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**These are for choosing initial empiric treatment.** Except where specified they **do not apply to neonates or immunocompromised patients**. **Always ask about previous antibiotic hypersensitivity.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These guidelines have been developed to assist doctors with their choice of initial empiric treatment … Except where specified, they do not apply to neonates or immunocompromised patients … Always ask about previous hypersensitivity reactions to antibiotic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Change to narrow-spectrum agents once sensitivities are known.** Doses may need adjusting for neonates and for renal or hepatic impairment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antibiotics should be changed to narrow spectrum agents once sensitivities are known … Dose adjustments may be necessary for neonates, and for children with renal or hepatic impairment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Durations are a guide**, and generally mean the **minimum total IV plus oral** course; stepping down from IV to oral is appropriate in many cases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Duration of treatment is given as a guide only and may vary with the clinical situation … 'Step down' from intravenous to oral treatment is appropriate in many cases … Durations given generally refer to the minimum total intravenous plus oral treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ceftriaxone:** standard 50 mg/kg (max 2 g) IV daily; **severe infection — including meningitis, brain abscess and orbital cellulitis — 100 mg/kg (max 4 g) IV daily.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ceftriaxone: standard dose 50 mg/kg (2 g) IV daily; severe infection (including meningitis, brain abscess and orbital cellulitis) 100 mg/kg (4 g) IV daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Cefotaxime:** 50 mg/kg (max 2 g) IV 12-hourly in week 1 of life, 6–8-hourly in weeks 2–4, 6-hourly after week 4.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cefotaxime: 50 mg/kg (2 g) IV 12H (week 1 of life), 6-8H (week 2-4 of life), 6H (>week 4 of life)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Avoid ceftriaxone where possible in neonates under 41 weeks' gestation**, particularly if jaundiced or receiving calcium-containing solutions, including TPN.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where possible, ceftriaxone should be avoided in neonates <41 weeks gestation, particularly if jaundiced or receiving calcium containing solutions, including TPN",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Gentamicin, once daily:** birth–1 month 5 mg/kg IV daily; under 10 years 7.5 mg/kg (max 320 mg) IV daily; 10 years and over 6 mg/kg (max 560 mg) IV daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gentamicin Birth - 1 month: 5 mg/kg IV daily <10 years: 7.5 mg/kg (320 mg) IV daily ≥10 years: 6 mg/kg (560 mg) IV daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Gentamicin monitoring (normal renal function):** if more than 3 doses are needed, check the trough before the third dose and then every 3 days, **target under 1 mg/L**. In renal failure, check before every dose and discuss with a specialist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal renal function – if more than 3 doses required, the trough level (pre-dose) should be checked before the third dose and then every 3 days (target level <1 mg/L) … Renal failure – levels should be checked prior to each dose and the results should be discussed with a specialist familiar with therapeutic drug monitoring before the next dose is given",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Vancomycin trough targets:** 10–15 mg/L for cellulitis; 15–20 mg/L for severe infection (bacteraemia, endocarditis, pneumonia, osteomyelitis, meningitis) or a known high MIC.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Target trough level 10–15 mg/L for cellulitis, 15-20 mg/L for severe infection (bacteraemia, endocarditis, pneumonia, osteomyelitis, meningitis) or known high MIC",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Penicillin allergy or MRSA risk:** substitute cefazolin or flucloxacillin with vancomycin 15 mg/kg (max 750 mg) IV 6-hourly, **or** clindamycin 10 mg/kg (max 450 mg) oral tds, **or** trimethoprim/sulfamethoxazole 4/20 mg/kg (max 320/1600 mg) oral bd. **MRSA risk:** high-prevalence areas such as the NT and remote northern Queensland, prior MRSA, Aboriginal and Torres Strait Islander or Pacific Islander child.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If penicillin hypersensitivity or risk of MRSA: substitute Cefazolin or Flucloxacillin with Vancomycin 15 mg/kg (750 mg) IV 6H or Clindamycin 10 mg/kg (450 mg) oral tds or Trimethoprim with sulfamethoxazole (8/40 mg/mL) 4/20 mg/kg bd (320/1600 mg) oral bd … Residence in an area with high prevalence of MRSA, eg Northern Territory, remote communities in northern Queensland Previous colonisation or infection with MRSA (particularly recent) Aboriginal and Torres Strait Islander or Pacific Islander child",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Meningitis over 2 months:** high-dose 3rd-generation cephalosporin. Duration: *S. pneumoniae* 10 days, *N. meningitidis* 5–7 days, Hib 7–10 days. **Consider dexamethasone 0.15 mg/kg (max 10 mg) IV 6-hourly for 4 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Meningitis Over 2 months of age S. pneumoniae5 N. meningitidis H. influenzae type b6 3rd gen cephalosporin (high dose)4 S. pneumoniae 10 days N. meningitidis 5–7 days H. influenzae type b 7–10 days Consider addition of Dexamethasone 0.15 mg/kg (max 10 mg) IV 6H for 4 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Add vancomycin 15 mg/kg (max 750 mg) IV 6-hourly if *S. pneumoniae* is suspected** (e.g. Gram-positive cocci on CSF). Stop it once cephalosporin sensitivity is confirmed or another cause is found.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Over 2 months of age and possibility of penicillin-resistant pneumococci5 As above 3rd gen cephalosporin (high dose)4 and Vancomycin 15 mg/kg (750 mg) IV 6H … Vancomycin should be added if S. pneumoniae is suspected (eg Gram-positive cocci on CSF microscopy). This should be stopped if S. pneumoniae sensitivity to a third-generation cephalosporin is confirmed, as will be the case with most isolates, or once an alternative aetiology is confirmed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Meningitis under 2 months:** benzylpenicillin 60 mg/kg (max 2.4 g) IV — 12-hourly in week 1, 6-hourly in weeks 2–4, 4-hourly after week 4 — **plus** high-dose 3rd-generation cephalosporin. Gram-negative 3 weeks; GBS/Listeria 2–3 weeks.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Benzylpenicillin 60 mg/kg (2.4 g) IV 12H (week 1 of life) 6H (week 2–4 of life) 4H (>week 4 of life) and 3rd gen cephalosporin (high dose)4 Gram-negative 3 weeks GBS/Listeria 2–3 weeks",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Encephalitis — aciclovir:** 500 mg/m² IV 8-hourly (3 months–12 years); 10 mg/kg IV 8-hourly (over 12 years); 3 weeks minimum.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aciclovir 20 mg/kg IV 12H (<30 weeks gestation), 8H (>30 weeks gestation to <3 months corrected age) 500 mg/m2 IV 8H (3 months – 12 years) 10 mg/kg IV 8H (>12 years) 3 weeks minimum",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Meningococcal contact prophylaxis:** ciprofloxacin 250 mg (5–12 years) or 500 mg (12 years and over) orally, single dose. If unable to take tablets, rifampicin 5 mg/kg (under 1 month) or 10 mg/kg (1 month and over) (max 600 mg) orally bd for 2 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ciprofloxacin 250 mg (5–12 years) 500 mg (≥12 years) oral single dose Unable to take tablets: Rifampicin 5 mg/kg ( <1 month) or 10 mg/kg (≥1 month) (max 600 mg) oral bd for 2 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Hib contact prophylaxis:** rifampicin 20 mg/kg (max 600 mg) orally daily for 4 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "H. influenzae type b Rifampicin 20 mg/kg (600 mg) oral daily 4 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Orbital (postseptal) cellulitis:** high-dose 3rd-generation cephalosporin IV, usually 3–4 days, then amoxicillin/clavulanate 22.5 mg/kg (max 875 mg amoxicillin) orally bd; **10 days minimum in total.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anaerobes 3rd gen cephalosporin (high dose)4 IV duration based on severity and improvement (usually 3-4 days) Switch to Amoxicillin/clavulanate (400/57 mg per 5 mL) 22.5 mg/kg (max 875 mg) (Amoxicillin component) = 0.3 mL/kg (max 11 mL) oral bd 10 days minimum total duration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild periorbital (preseptal) cellulitis:** cefalexin 20 mg/kg (max 750 mg) orally tds for 7–10 days. Bilateral, painless or non-tender swelling in a well child is more likely allergy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild Group A streptococci S. aureus H. influenzae spp. Cefalexin 20 mg/kg (750 mg) oral tds 7–10 days Bilateral findings and/or painless or non-tender swelling in a well looking child is more likely to be an allergic reaction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Otitis media:** consider no antibiotics for 48 hours if over 6 months. If treating: amoxicillin 30 mg/kg (max 1 g) orally bd for 5 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Otitis media Viruses S. pneumoniae M. catarrhalis H. influenzae spp. Group A streptococci Consider no antibiotics for 48 hours if over 6 months of age If treatment indicated Amoxicillin 30 mg/kg (1 g) oral bd 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Pneumonia, mild (outpatient):** amoxicillin 30 mg/kg (max 1 g) orally tds for 3–5 days. **Moderate (inpatient):** the same for 5 days; consider benzylpenicillin 60 mg/kg (max 2.4 g) IV 6-hourly if unable to tolerate oral intake.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild (outpatient) Viruses S. pneumoniae H. influenzae spp. Amoxicillin 30 mg/kg (1 g) oral tds 3-5 days Moderate (inpatient) As above Amoxicillin 30 mg/kg (1 g) oral tds 5 days Consider Benzylpenicillin 60 mg/kg (max 2.4 g) IV 6 H if unable to tolerate oral intake or vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Severe pneumonia** (2 or more of: severe respiratory distress, severe hypoxaemia or cyanosis, marked tachycardia, altered mental state; or empyema needing ICU): 3rd-generation cephalosporin, 10 days minimum; consider azithromycin 10 mg/kg (max 500 mg) IV daily and oseltamivir.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe (≥2 of: severe respiratory distress, severe hypoxaemia or cyanosis, marked tachycardia, altered mental state OR empyema ie requiring ICU care) As above plus S. aureus Group A streptococci Gram-negatives 3rd gen cephalosporin4 10 days minimum2 … Consider adding Azithromycin 10 mg/kg (max 500 mg) IV daily to cover M. pneumoniae and other atypical pathogens and Oseltamivir to cover influenza virus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Tonsillitis — treat only features of GAS in a child 4 years or older AND a high-risk group or suppurative complications:** phenoxymethylpenicillin 250 mg bd (under 20 kg) or 500 mg bd (20 kg and over) orally for 10 days, **or** benzathine benzylpenicillin 450 mg IM (under 20 kg) / 900 mg IM (over 20 kg) once.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features of GAS infection in child ≥4 years AND high-risk group or suppurative complications: Phenoxymethylpenicillin (Penicillin V) 250 mg oral bd (<20 kg) 500 mg oral bd (≥20 kg) or Benzathine benzylpenicillin 450mg (600 000 units) IM (<20 kg), 900 mg (1.2 million units) IM (>20 kg) as a single dose 10 days oral treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**High-risk groups for GAS:** Indigenous Australians · Māori and Pacific Islander · personal or family history of rheumatic fever or rheumatic heart disease · immunosuppressed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High-risk groups: Indigenous Australians Maori and Pacific Islander Personal history of rheumatic fever or rheumatic heart disease Family history of rheumatic fever or rheumatic heart disease Immunosuppressed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pertussis:** azithromycin 10 mg/kg (max 500 mg) daily from birth to 6 months; 10 mg/kg on day 1 then 5 mg/kg (max 250 mg) daily from 6 months; 5 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pertussis B. pertussis Azithromycin 10 mg/kg (500 mg) oral daily (Birth – 6 months), 10 mg/kg oral on Day 1, then 5 mg/kg (250 mg) daily (≥6 months) 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Influenza — oseltamivir orally bd for 5 days:** 3 mg/kg (birth–12 months); 30 mg (over 12 months and under 15 kg); 45 mg (15–23 kg); 60 mg (23–40 kg); 75 mg (over 40 kg).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Influenza Influenza A, B Oseltamivir 3 mg/kg oral bd (Birth – 12 months) 30 mg oral bd (>12 months and <15 kg) 45 mg oral bd (15-23 kg) 60 mg oral bd (23-40 kg) 75 mg oral bd (>40 kg) 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Epiglottitis:** ceftriaxone 50 mg/kg (max 1 g) IV daily for 5 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Epiglottitis H. influenzae type b6 Ceftriaxone 50 mg/kg (1 g) IV daily 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**UTI over 3 months and not sick:** cefalexin 20 mg/kg (max 750 mg) orally tds, **or** trimethoprim 4 mg/kg (max 150 mg) orally bd, **or** trimethoprim/sulfamethoxazole 0.5 mL/kg (max 20 mL) orally bd; 5 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Over 3 months of age and not sick E. coli P. mirabilis K. oxytoca Other Gram-negatives Cefalexin 20 mg/kg (750 mg) oral tds or Trimethoprim 4 mg/kg (150 mg) oral bd or Trimethoprim/Sulfamethoxazole (8/40 mg/mL) 0.5 mL/kg (20 mL) oral bd 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**UTI under 3 months, sick, or acute pyelonephritis:** gentamicin (as above); 5–7 days for UTI, 7–10 days for pyelonephritis; consider early switch to cefalexin 25 mg/kg (max 1 g) qid under 12 months or 45 mg/kg (max 1.5 g) tds from 12 months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Under 3 months of age or sick or acute pyelonephritis Gentamicin Birth - 1 month: 5 mg/kg IV daily <10 years: 7.5 mg/kg (320 mg) IV daily ≥10 years: 6 mg/kg (560 mg) IV daily 5–7 days for UTI 7–10 days for pyelonephritis. Consider early switch to Cefalexin: <12 months: 25 mg/kg (max 1 g) oral qid ≥12 months: 45 mg/kg (max 1.5 g) oral tds",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**UTI prophylaxis is not routinely recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Routine prophylaxis is not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cellulitis, mild/moderate (outpatient):** cefalexin 20 mg/kg (max 750 mg) orally tds for 5–10 days; if rapidly progressive consider adding clindamycin 15 mg/kg (max 600 mg) IV 8-hourly. **Moderate/severe (inpatient):** cefazolin 50 mg/kg (max 2 g) IV 8-hourly, or ceftriaxone 50 mg/kg (max 2 g) IV daily for hospital-in-the-home.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild/moderate (outpatient) Group A streptococci S. aureus Cefalexin 20 mg/kg (750 mg) oral tds 5–10 days If rapidly progressive consider adding Clindamycin 15 mg/kg (max 600 mg) IV 8H Moderate/severe (inpatient) Cefazolin 50 mg/kg (2 g) IV 8H or Ceftriaxone 50 mg/kg (2 g) IV daily (for hospital-in-the-home)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Necrotising fasciitis:** vancomycin 15 mg/kg (max 750 mg) IV 6-hourly **and** meropenem 20 mg/kg (max 1 g) IV 8-hourly **and** clindamycin 15 mg/kg (max 600 mg) IV 8-hourly; consider IVIg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Necrotising fasciitis As above Vancomycin 15 mg/kg (750 mg) IV 6H and Meropenem 20 mg/kg (1 g) IV 8H and Clindamycin 15 mg/kg (600 mg) IV 8H Consider IVIg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Bites — established infection:** amoxicillin/clavulanate 22.5 mg/kg (max 875 mg amoxicillin) orally bd for 5 days. **Prophylaxis generally not required, except:** presentation after 8 hours · puncture wound that can't be debrided · hands, feet or face · deep tissue · open fracture · immunocompromised · cat bites. Check tetanus.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Amoxicillin/Clavulanate (400/57 mg/5 mL) 22.5 mg/kg (875 mg) (Amoxicillin component) 0.3 mL/kg (11 mL) oral bd 5 days Treat established infection Prophylaxis generally not required, except: Presentation delayed >8 hours Puncture wound unable to be adequately debrided Bite on hands, feet, face Bite involves deep tissues (e.g. bones, joints, tendons) Bite involves an open fracture Immunocompromised patient Cat bites Check tetanus immunisation status",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Impetigo:** mupirocin 2% ointment tds if localised, or cefalexin 20 mg/kg (max 750 mg) orally tds; 5 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Impetigo Group A streptococci S. aureus Mupirocin 2% ointment top tds if localised or Cefalexin 20 mg/kg (750 mg) oral tds 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Uncomplicated osteomyelitis:** cefazolin 50 mg/kg (max 2 g) IV 8-hourly; switch to cefalexin 45 mg/kg (max 1.5 g) orally tds once afebrile, clinically improving and inflammatory markers falling; **3 weeks** for uncomplicated cases. **Septic arthritis: as for osteomyelitis — always consider surgical drainage.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated S. aureus Group A streptococci Kingella kingae (partic ≤4y) S. pneumoniae Cefazolin 50 mg/kg (2 g) IV 8H Switch to oral Cefalexin 45 mg/kg (max 1.5 g) oral tds once afebrile plus clinical improvement plus inflammatory markers decreasing 3 weeks for uncomplicated cases2 … Septic arthritis As for osteomyelitis As for osteomyelitis 3 weeks for uncomplicated cases2 Always consider surgical drainage",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Scabies:** permethrin 5% cream from the neck down, left on at least 8 hours (usually overnight); may need repeating after 7 days; treat the whole family. Consider ivermectin 200 micrograms/kg orally with fatty food, repeated in 7 days, as an alternative.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Scabies Sarcoptes scabiei Permethrin 5% cream top One application from neck down; leave on for minimum of 8H (usually overnight) May need to repeat after 7 days Treat whole family Consider Ivermectin as alternative to topical therapy: 200 micrograms/kg oral with fatty food. Repeat treatment in 7 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dental abscess:** amoxicillin 25 mg/kg (max 500 mg) orally tds or benzylpenicillin 60 mg/kg (max 2.4 g) IV 6-hourly, 7 days — **dental/surgical management is required.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dental abscess Often polymicrobial Viridans and anginosus group streptococci Oral anaerobes S. aureus Amoxicillin 25 mg/kg (500 mg) oral tds or Benzylpenicillin 60 mg/kg (2.4 g) IV 6H 7 days Dental/surgical management required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Antibiotics are generally unnecessary for diarrhoea**, except *Salmonella* in an infant under 3 months or an immunocompromised child (3rd-generation cephalosporin, 5–7 days).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Salmonella spp. isolated in infant under 3 months of age or in immunocompromised Salmonella spp. 3rd gen cephalosporin4 5–7 days Antibiotic treatment is generally unnecessary for most other organisms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "***C. difficile*:** metronidazole 7.5 mg/kg (max 400 mg) orally tds for 7–10 days. **Giardiasis:** metronidazole 30 mg/kg (max 2 g) orally daily for 3 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antibiotic-associated C. difficile Metronidazole 7.5 mg/kg (400 mg) oral tds 7–10 days Giardiasis G. lamblia Metronidazole 30 mg/kg (2 g) oral daily 3 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Appendicitis:** uncomplicated, including non-perforated gangrenous — **stop antibiotics immediately after appendicectomy**; complicated — **4 days total** after adequate source control.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated appendicitis, including non-perforated gangrenous appendicitis: stop immediately post appendicectomy Complicated appendicitis including perforation, peri-appendicular abscess peritonitis): total duration (IV + oral) after adequate surgical source control is 4 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Sepsis over 2 months, CSF unknown (meningitis not excluded):** high-dose 3rd-generation cephalosporin; add vancomycin 15 mg/kg (max 750 mg) IV 6-hourly if a central line is in situ or MRSA is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "SEPSIS (OVER 2 MONTHS OF AGE) Sepsis with unknown CSF Meningitis not excluded S. pneumoniae5 N. meningitidis S. aureus Group A streptococci Gram-negatives 3rd gen cephalosporin (high dose)4 … If central line in situ (non-oncology) or suspected MRSA infection As above plus S. epidermidis Add Vancomycin 15 mg/kg (750 mg) IV 6H",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Sepsis over 2 months with meningitis excluded:** cefazolin 50 mg/kg (max 2 g) IV 8-hourly **and** gentamicin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sepsis with normal CSF Meningitis excluded: clinically (and LP therefore not performed) or normal CSF As above Cefazolin 50 mg/kg (2 g) IV 8H and Gentamicin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Toxic shock syndrome:** high-dose 3rd-generation cephalosporin **and** vancomycin 15 mg/kg IV 6-hourly **and** clindamycin 15 mg/kg (max 600 mg) IV 8-hourly **and** IVIg 2 g/kg. GAS contact prophylaxis: cefalexin 25 mg/kg (max 1 g) orally bd for 10 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Toxic shock syndrome S. aureus Group A streptococci 3rd gen cephalosporin (high dose)4 and Vancomycin 15 mg/kg (750 mg) IV 6H and Clindamycin 15 mg/kg (600 mg) IV 8H and Intravenous immunoglobulin 2 g/kg IV GAS contact prophylaxis: Cefalexin 25 mg/kg (max 1 g) oral bd for 10 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antimicrobial guidelines' (Last updated February 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antimicrobial_guidelines/, retrieved 2026-09-23",
+   "dose": true
+  }
+ ]
+}

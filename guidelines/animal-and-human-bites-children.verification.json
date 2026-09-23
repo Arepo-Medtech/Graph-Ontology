@@ -1,0 +1,199 @@
+{
+ "guideline": "guidelines/animal-and-human-bites-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Animal and human bites' (Last updated March 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Skin-breaking bites are contaminated wounds at high risk of infection and need prompt, thorough washout**, with enough analgesia, anaesthesia or sedation to wash out and explore them.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Animal and human bite injuries in which the skin is broken pose a high risk of infection and are considered contaminated wounds; prompt thorough washout is required … Adequate analgesia/anaesthesia/sedation is important to facilitate washout and wound exploration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dog bites are mostly crush injuries, lacerations and abrasions. Cat bites are almost always punctures** that look small but can penetrate deeply and damage bone, joints and tendons.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dog bite wounds are most often crush injuries, lacerations and abrasions … Cats almost always inflict puncture wounds, which can appear small at the surface but can penetrate deeply and damage bone, joints and tendons",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Clenched-fist injury (\"fight bite\")**: a closed fist striking teeth, leaving a laceration over the dorsum and MCP joints of the hand.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A clenched-fist injury occurs when a closed fist impacts the teeth of another person (eg resulting from a punch), also known as a “fight bite” … A clenched-fist injury involves laceration over the dorsum and MCP joints of the hand",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infection is the commonest complication, especially after cat and human bites**; it can show within 24 hours of a dog bite and within 12 hours of a cat bite.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infection is the most common complication of bite injuries, especially cat and human bites … Infection can be clinically evident in dog bites within 24 hours and in cat bites as quickly as 12 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about tetanus immunisation status**, and look for associated injuries: c-spine and head after a fall, long bone, limb or spine if dragged, eye if the face is bitten.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immunisation status (particularly tetanus) … Associated injuries C-spine/head if fall has occurred Long bone/limb/spinal if child has been dragged Eye injury if face is involved",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess depth — cat bites and clenched-fist injuries often go deep. Check nerves, vessels and tendons before infiltrating local anaesthetic**, and examine a joint wound through a range of positions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess depth of wound (subcutaneous, breach of muscle fascia) Cat bites and clenched-fist injuries often penetrate deep tissues Look for evidence of neurovascular or tendon injury prior to local anaesthetic infiltration (altered sensation, haemorrhage, loss of function) If joint involved, examine the wound in a range of positions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check the perfusion of the wound edges and distal skin**; if concerned, refer to plastic surgery for exploration in theatre.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assess viability/perfusion of skin edges of wound and skin distal to the injury If concerned about perfusion refer to plastic surgery for further exploration and assessment in theatre",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider child abuse if a bite may be from a human adult.** **Fast the child from arrival** in case sedation or surgery is needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider child abuse if there is any suspicion that bite is from a human adult … Children presenting with bite injuries should be fasted from arrival, in case they require sedation +/- surgical intervention",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not culture wounds that are not clinically infected** — early cultures correlate poorly with later infection. Swab for MCS only when infection is evident.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cultures should not be taken for wounds that are not clinically infected, as there is poor correlation between early culture results and subsequent infections Collect wound swabs for MCS only where there is clinical evidence of infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**X-ray** for suspected bony injury, joint involvement or a foreign body; **ultrasound** for a suspected collection in an infected wound.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Xray of the area may be indicated if there is suspicion of underlying bony injury, joint involvement or foreign body in wound … Ultrasound: if suspected collection associated with an infected wound",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **CT head for a dog bite to the scalp of uncertain depth, or bite marks on opposite sides of the skull**, to look for skull fracture or penetrating injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CT head: in children who have sustained a dog bite of uncertain depth to the scalp, or bite marks on opposing sides of the skull, a CT should be performed to evaluate for associated skull fracture or penetrating injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer to the surgical team any bite in a special location (face, hand, foot, genitalia) or with extensive skin loss** (a defect over 1 cm when the edges are brought together).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any bite injury which involves a “special location” (face, hand, foot or genitalia), or has extensive skin loss (>1cm defect present on attempts to oppose skin edges), requires referral to relevant surgical team for assessment and management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Wash out and explore every skin-breaking bite under anaesthesia with or without sedation.** Remove foreign bodies (teeth, debris); irrigate with 0.9% sodium chloride under pressure through a 20 mL syringe and large-bore cannula until all visible dirt is gone — **generally at least 250 mL.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All animal and human bite wounds with broken skin require washout and exploration with anaesthesia +/- sedation … Remove any foreign bodies (teeth, debris) Irrigate the wound using 0.9% sodium chloride under pressure with a 20mL syringe and large-bore cannula Use enough fluid to remove all visible dirt and foreign material At least 250mL generally required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If in doubt about the wound's extent or the ability to wash it out in ED, refer to Plastics or Orthopaedics.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If any doubt regarding extent of wound or associated injuries, or concerns regarding ability to perform adequate washout or exploration in the Emergency Department, refer to specialty surgical unit (Plastics or Orthopaedics)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Leave most bite wounds open to heal by secondary intention.** Primary closure only for low-risk wounds that can be fully explored and irrigated, are under 12 hours old and where cosmesis matters (face, neck). **Elevate the limb for 48–72 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most animal and human bite wounds should be allowed to close by secondary intention (ie left open) … Primary closure may be considered in select wounds: low infection risk injuries which can be adequately explored and irrigated, are <12 hours old and where cosmesis is an issue ie face/neck … Elevation of affected limb for 48-72 hours is recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give prophylaxis to a non-infected bite with any high-risk feature:** primary closure · presentation over 8 hours · deep puncture or laceration · hand (including clenched fist), face, foot or genitals · near bone or joint · crush injury · open fracture · immunocompromised child · **any cat bite.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antibiotic prophylaxis is recommended in clinically non-infected bite wounds with the following high-risk features Wounds undergoing primary closure Delayed presentation (wound > 8 hours old) Deep puncture wounds or lacerations Bite on hands (including clenched-fist injuries), face, feet or genital area Close proximity to bone or joint Associated crush injury Involving an open fracture Immunocompromised child Cat bites",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Oral prophylaxis: amoxicillin/clavulanate 22.5 mg/kg (max 875 mg, amoxicillin component) twice daily for 5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Amoxicillin/clavulanate 22.5mg/kg (max 875mg) (amoxicillin component) oral BD for 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Penicillin hypersensitivity: metronidazole 10 mg/kg (max 400 mg) twice daily PLUS trimethoprim-sulfamethoxazole 4/20 mg/kg (max 160/800 mg) twice daily, both oral for 5 days.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In penicillin hypersensitivity: Metronidazole 10mg/kg (max 400mg) oral BD for 5 days PLUS Trimethoprim-sulfamethoxazole 4/20mg/kg (max 160/800mg) oral BD for 5 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Grossly contaminated or infected, or admitted for surgical washout: IV antibiotics** — amoxicillin/clavulanate 25 mg/kg (max 1 g, amoxicillin component) 6–8 hourly, **or** ceftriaxone 50 mg/kg (max 1 g) daily plus oral metronidazole 10 mg/kg (max 400 mg) three times daily, **or** piperacillin-tazobactam 100 mg/kg (max 4 g, piperacillin component) 8 hourly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If wound appears grossly contaminated or infected, or if admission is required for surgical washout and repair, IV antibiotics are recommended: Amoxicillin/clavulanate 25mg/kg (max 1g) (amoxicillin component) IV 6-8 hourly OR Ceftriaxone 50mg/kg (max 1g) IV daily + oral metronidazole 10mg/kg (max 400mg) TDS OR Piperacillin-tazobactam 100mg/kg (max 4g) (piperacillin component) IV 8 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Infected wounds: at least 14 days of antibiotics in total**, longer for deep tissue, bone or joint infection; consider Infectious Diseases advice on duration and the IV-to-oral switch.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recommend minimum 14 days total antibiotic therapy for infected wounds Longer duration of therapy likely to be required for infections involving deeper tissues, bone or joint Consider Infectious Diseases consult for advice on duration of therapy and IV to oral switch",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Animal and human bites are tetanus-prone wounds.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Animal and human bites are considered tetanus prone wounds.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Any suspected or high-risk bat bite: lyssavirus post-exposure prophylaxis regardless of time since injury**, with Infectious Diseases and the local Public Health unit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients in whom there is a suspicion or high risk of bite from a bat should receive post-exposure prophylaxis to protect against Lyssaviruses (ie rabies and Australian bat lyssavirus), regardless of time since injury. Seek advice from Infectious Diseases team and local Public Health unit.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Human bite with blood exposure: consider blood-borne virus prophylaxis** (e.g. hepatitis B, HIV) and discuss with Infectious Diseases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In human bite injuries with associated blood exposure, consider the need for post-exposure prophylaxis against blood borne viruses (eg hepatitis B, HIV). Suggest discussing with Infectious Diseases team",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Seek specialist surgical input** for special locations, poor perfusion, cosmetic risk or extensive skin loss; **discuss exotic-animal bites with Infectious Diseases.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Animal bite injuries in special locations eg face, hand, foot, genitals Poor perfusion associated with the injury Cosmetic risk Extensive skin loss … Consider discussion with Infectious Diseases team for management of bites from exotic animals",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** the wound has been irrigated and assessed with no associated injuries and oral antibiotics are prescribed where indicated. **GP wound review in 2–3 days**; report dangerous animals to the local council where required.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Wound has been adequately irrigated and assessed with no evidence of associated injuries Oral antibiotics prescribed where indicated GP follow up for wound review can be arranged in 2-3 days Dangerous animals have been reported to local councils where required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Animal and human bites' (Last updated March 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Animal_and_human_bites/, retrieved 2026-09-23"
+  }
+ ]
+}

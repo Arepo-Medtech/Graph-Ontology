@@ -1,0 +1,195 @@
+{
+ "guideline": "guidelines/gord-in-infants.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**GOR is common in healthy, thriving infants and needs no investigation or treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gastro-oesophageal reflux (GOR) is common in healthy, thriving infants and does not require investigation or treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GORD = troublesome symptoms** from GOR that adversely affect feeding, growth or respiratory status.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gastro-oesophageal reflux disease (GORD) is defined as troublesome symptoms (adversely affecting feeding, growth or respiratory status) related to GOR",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GOR affects at least 40–65% of healthy infants**, usually starts before 8 weeks, peaks at 4 months and mostly resolves by 1 year. **It does not cause crying and irritability in healthy infants.** It rarely needs investigation and is usually managed with education, support and anticipatory guidance.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GOR is common, affecting at least 40-65% of otherwise healthy infants usually begins before 8 weeks of age, peaks at 4 months and resolves by 1 year of age in the majority of cases does not cause crying and irritability in healthy infants … rarely requires investigations can usually be managed with parental education, support and anticipatory guidance",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**There is insufficient evidence to support diagnosing or managing \"silent reflux\".**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is insufficient evidence to support the diagnosis or management of \"silent reflux\"",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider cow milk protein allergy (CMPA)** in infants with GORD symptoms — more likely with blood or mucus in the stool, chronic diarrhoea, or personal or family atopy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider cow milk protein allergy in infants with GORD symptoms … CMPA is more likely in patients with blood/mucous in their stool, chronic diarrhea or a personal or family history of atopy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **General:** vomiting starting under 1 week or over 6 months of age · increasing or persisting beyond 12–18 months · lethargy or fever · excessive irritability · weight loss or faltering growth · feeding problems or oral aversion · respiratory symptoms.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Reconsider diagnosis if any of the following red flag features are present General signs/symptoms Onset of vomiting <1 week or >6 months of age Vomiting increasing or persisting beyond 12-18 months of age Lethargy or fever Excessive irritability Weight loss or faltering growth Feeding problems or oral aversion Respiratory symptoms (aspiration, chronic cough, wheezing, recurrent pneumonia)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Neurological:** seizures · micro- or macrocephaly · developmental delay · nocturnal vomiting (possible raised ICP).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neurological signs/symptoms Seizures Micro- or macrocephaly Developmental delay Nocturnal vomiting: may suggest increased ICP",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Gastrointestinal:** bilious vomiting or abdominal rigidity/distension → intestinal obstruction · forceful vomiting → pyloric stenosis · haematemesis → possible severe upper GI bleed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bilious vomiting and/or abdominal rigidity/distension: may indicate intestinal obstruction Forceful vomiting: may indicate pyloric stenosis Haematemesis: may indicate potentially severe upper GI bleed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations are rarely indicated.** Barium studies, pH-impedance or endoscopy only on an individual basis after paediatrician or paediatric gastroenterologist assessment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Investigations for GORD are rarely indicated, and there is insufficient evidence to support the routine use of these modalities for a primary diagnosis of GORD. … Investigations such as barium contrast studies, pH-impedance monitoring, upper gastrointestinal endoscopy may be considered on an individual basis after the patient has been assessed by a paediatrician/paediatric gastroenterologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hold the infant head-up for 20–30 minutes after feeds.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Holding the infant in a head elevated position for 20–30 minutes after feeding may reduce GOR",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Never recommend prone or side sleeping, or inclining the sleep surface** — SIDS risk.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not recommend prone/side sleeping or inclining the sleep surface due to the risk of SIDS",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Continue direct breastfeeding** — thickening brings only modest benefit and expressing is a significant burden. In bottle-fed babies, thickened feeds may reduce vomiting.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continue direct breast feeding. The benefit of thickening feeds is only modest, and the burden of expressing and bottle feeding is significant … In bottle fed babies, thickened feeds may reduce frequency of vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not thicken breast milk with cereal-based thickeners** — breast milk amylases digest them.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Note that breast milk should not be thickened with cereal-based thickeners given it is digested by amylases in breast milk",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Thickened feeds can cause abdominal pain, diarrhoea or constipation. Make sure the infant is not also getting alginate (Gaviscon Infant®)** — co-administration may increase the risk of bowel obstruction.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Thickened feeds may occasionally cause gastrointestinal symptoms such as abdominal pain and altered bowel habits, both diarrhoea and constipation have been reported … Ensure the infant is not being given alginate product (Gaviscon Infant®) as co-administration may increase the risk of bowel obstruction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Try smaller, more frequent feeds**, and reduce the volume if total intake is excessive for weight.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider a trial of smaller, more frequent feeds … If total feed volume is excessive for infant's weight, consider reducing feed volume.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GOR alone is no reason to change formula or stop breastfeeding**; no brand of standard cow milk formula is better than another.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GOR alone is not an indication to change formula or stop breast feeding. There is no benefit of any brand of standard cow milk formula over another, nor do they vary in their content of dairy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prebiotics, probiotics and herbal medicines are not recommended** for GOR or GORD.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complementary treatments such as prebiotics, probiotics or herbal medications are not recommended as a treatment for GOR or GORD",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Suspected CMPA: 2–4 week trial of strict cow milk protein elimination, and refer to a paediatrician.** Breastfed infants: strict maternal avoidance. Formula-fed: specialised formula.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where CMPA is suspected, the infant should have a 2-4 week trial of strict cow milk protein elimination from their diet and referral to a paediatrician arranged … Breast fed infants require strict maternal cow milk protein avoidance Formula fed infants require specialised formula",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acid suppression: first-line PPI (e.g. omeprazole or lansoprazole) as a 2–4 week trial.** If it helps, continue 4–8 weeks, then consider weaning; review the need for ongoing therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "1st line proton pump inhibitor (PPI), eg omeprazole or lansoprazole - as a 2-4 week trial … It is important to review need for ongoing therapy If clinical benefit seen continue for 4-8 weeks then consider weaning",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **PPIs carry risk** — community-acquired pneumonia, gastroenteritis, future fractures, micronutrient deficiencies. **Do not use acid suppression as a diagnostic trial for irritable infants.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Studies have indicated that PPI therapy may lead to increased risk of community acquired pneumonia, gastroenteritis, future fractures and micronutrient deficiencies … Do not use acid suppressant therapy as a diagnostic trial for irritable infants",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Alginate (Gaviscon Infant®)** may reduce visible regurgitation, with limited evidence; **long-term use in infants is not recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Alginate product (Gaviscon Infant®) increases viscosity of gastric contents and there is evidence suggesting may reduce episodes of visible regurgitation, limited evidence regarding effectiveness Long-term use in infants is not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prokinetics only under specialist direction**, possibly before surgery when other drugs have failed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prokinetic agents Only under specialist direction, may be considered prior to surgery in patients where other pharmacological treatment has failed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Surgery (e.g. fundoplication) is reserved** for intractable GORD unresponsive to optimal medical therapy, or significant complications.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Surgical approaches eg fundoplication are reserved for children who have intractable GORD symptoms unresponsive to optimal medical therapy or with significant complications",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** if red flags are present or GORD does not respond to initial management.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Red flag features present GORD not responding to initial management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GOR and GORD can almost always be managed as outpatients** — ensure carer support and handouts, and arrange timely follow-up to assess response.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GOR and GORD can almost always be managed as an outpatient Ensure caregiver has adequate support and appropriate parent handouts provided Timely follow-up to assess effectiveness of interventions and therapy is arranged",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Gastrooesophageal reflux disease in infants' (Last updated April 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Gastrooesophageal_reflux_disease_in_infants/, retrieved 2026-09-23"
+  }
+ ]
+}

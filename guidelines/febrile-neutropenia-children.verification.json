@@ -1,0 +1,219 @@
+{
+ "guideline": "guidelines/febrile-neutropenia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Fever and suspected or confirmed neutropenia' (undated page), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 27,
+  "pass": 27,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Fever with suspected or confirmed neutropenia is a medical emergency.** Signs of sepsis = Triage Category 2; at risk of imminent cardiovascular collapse = Category 1; everyone else starts treatment within 30 minutes of arrival (Category 3).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever and suspected or confirmed neutropenia (FN) is a medical emergency. … Children with FN and signs of sepsis require urgent treatment (Triage Category 2) and those at risk of imminent cardiovascular collapse should be seen immediately (Triage category 1). All other children should commence treatment within 30 minutes of hospital arrival (Triage Category 3).",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fever** = a single temperature ≥38.5°C, or ≥38.0°C sustained over 1 hour.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever A single temperature ≥38.5°C or a sustained temperature ≥38.0°C over 1 hour.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Neutropenia** = absolute neutrophil count <500/mm³, or <1000/mm³ with a predicted fall to <500/mm³ over the next 48 hours. **Suspect it** in any oncology patient given oral or IV chemotherapy in the last 14 days, and in other children with recurrent neutropenia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neutropenia An absolute neutrophil count <500/mm3 OR <1000/mm3 with predicted decline to <500/mm3 over the next 48 hours … Neutropenia should be suspected in any oncology patient that has received chemotherapy (oral or intravenous) within the last 14 days and other children with recurrent neutropenia.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High-risk cancer treatment protocols:** AML treatment · ALL induction, ALL delayed intensification, infant ALL · lymphoma induction · allogeneic transplant (day-14 to day+356, as printed) · autologous transplant (day-7 to day +30) · re-induction for any relapse.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High risk cancer treatment protocols Acute myeloid leukaemia (AML) treatment; Acute lymphoblastic leukaemia (ALL) induction, ALL delayed intensification, infant ALL; lymphoma induction; allogeneic transplant (day-14 to day+356); autologous transplant (day-7 to day +30); re-induction chemotherapy for any relapse.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Systemic compromise** = needing a fluid bolus or inotrope, any respiratory support, and/or altered conscious state.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Systemic compromise Fluid bolus or inotrope requirement, need for any respiratory support and/or altered conscious state",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask for the patient's Febrile Neutropenia Treatment Card or Letter** — it carries the diagnosis, risk status and recommended antibiotics.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Request to see patient's Febrile Neutropenia Treatment Card or Letter. This will have important information regarding cancer diagnosis, risk status and recommended antibiotics",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**CVAD or IV access within 30 minutes of arrival.** If accessing the CVAD is delayed, insert a peripheral line. ⚠️ **With signs of sepsis, do not wait for anaesthetic cream to work.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prompt CVAD or IV access (within 30 minutes of arrival): … If there is a delay in accessing the CVAD, a peripheral intravenous line should be inserted … If patient has signs of sepsis, do not delay CVAD or IV access while waiting for anaesthetic cream (ie, EMLA or AnGel) to work",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bloods:** FBE and differential, electrolytes and creatinine, 2 sets of blood cultures, group and hold, venous gas and lactate; urine M/C/S. ⚠️ **Do not delay antibiotics waiting for the neutrophil count or the urine.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "FBE & differential (do not delay antibiotics while awaiting neutrophil count) Electrolytes and creatinine Blood cultures (2 sets) … Group and hold Venous blood gas and lactate Urine for M/C/S (do not delay antibiotics while awaiting specimen)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Give the first antibiotic within 60 minutes (30 minutes if systemic compromise/sepsis), and make it the broadest — piperacillin-tazobactam.** With a double-lumen CVAD, divide doses down both lumens, or alternate if that is not possible.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients must be given the first antibiotic within 60 minutes (30 minutes if systemic compromise/sepsis) … The first antibiotic should be the most broad-spectrum (ie Piperacillin-Tazobactam) … Patients with a double lumen CVAD should have antibiotics divided and administered down both lumens (preferred option). If not possible, doses should be alternated between the lumens.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Clinically stable:** piperacillin-tazobactam 100 mg/kg (max 4 g) IV 6-hourly (dose is the piperacillin component).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients who are clinically stable Piperacillin-tazobactam* 100 mg/kg (max 4 g) iv 6H … Doses refer to piperacillin component.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Non-life-threatening penicillin allergy (rash):** cefepime 50 mg/kg (max 2 g) IV 8-hourly (preferred), **or** ceftazidime 50 mg/kg (max 2 g) IV 8-hourly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Non-life threatening penicillin hypersensitivity (rash): Cefepime 50 mg/kg (max 2 g) iv 8H (preferred) OR Ceftazidime** 50 mg/kg (max 2 g) iv 8H",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Ceftazidime is weaker against viridans streptococci** — avoid it with extensive mucositis, recent high-dose methotrexate or cytarabine, or ciprofloxacin prophylaxis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ceftazidime has reduced activity against viridans group streptococci. It should be avoided in patients with extensive mucositis, recent high dose methotrexate or cytarabine and ciprofloxacin prophylaxis.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Life-threatening (immediate) penicillin or beta-lactam allergy:** ciprofloxacin 10 mg/kg (max 400 mg) IV 12-hourly **and** vancomycin 15 mg/kg (max 500 mg) IV 6-hourly, target trough 10–15 mg/L before the 5th dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Life-threatening (immediate) penicillin or beta-lactam hypersensitivity: Ciprofloxacin 10 mg/kg (max 400 mg) iv 12H AND Vancomycin 15 mg/kg (max 500 mg) iv 6H (target trough 10-15 mg/L pre 5th dose)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Add amikacin for systemic compromise/sepsis, high-risk cancer treatment, or FN starting as an inpatient:** 22.5 mg/kg (18 mg/kg if over 10 years) (max 1.5 g) IV 24-hourly, target trough <2 mg/L before the 3rd dose. Regional centres may use another aminoglycoside such as gentamicin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients who have any of: (i) Systemic compromise/sepsis (ii) High risk cancer treatment (ii) Inpatient onset FN As for patients who are clinically stable AND Amikacin*** 22.5 mg/kg (18 mg/kg if >10y) (max 1.5 g) iv 24H (Target trough <2 mg/L pre 3rd dose) … Regional centres may choose alternate aminoglycoside (ie gentamicin) depending on local susceptibility data",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Never give an aminoglycoside through the same line at the same time as piperacillin-tazobactam** (or another IV penicillin); flush well with sodium chloride 0.9% before and after each.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IV aminoglycoside antibiotics (ie amikacin and gentamicin) should not be given simultaneously through the same line as IV penicillins including piperacillin-tazobactam and ticarcillin-clavulanate. The line should be flushed well with sodium chloride 0.9%, before and after giving each medication.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Suspected resistant Gram-positive infection** (cellulitis, obviously infected line, proven Gram-positive bacteraemia, MRSA colonisation with extensive skin breaks): **add vancomycin 15 mg/kg (max 500 mg) IV 6-hourly**, trough 10–15 mg/L before the 5th dose. **Prolonged fever in a stable child is not an indication for vancomycin.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with suspected resistant Gram-positive infection (Including patients with cellulitis, obviously infected vascular devices, proven Gram-positive bacteraemia, and known MRSA colonisation with extensive skin breaks) As for patients who are clinically stable AND vancomycin 15 mg/kg (max 500 mg) iv 6H (target trough 10-15 mg/L pre 5th dose) … NB. Prolonged fever in a clinically stable patient is NOT an indication to commence vancomycin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Abdominal or perineal infection:** add metronidazole 7.5 mg/kg (max 500 mg) IV/oral 8-hourly **only if on cefepime, ceftazidime or ciprofloxacin** — piperacillin-tazobactam already covers anaerobes, except for suspected *C. difficile* colitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with features of abdominal or perineal infection As for patients who are clinically stable AND metronidazole 7.5 mg/kg (max 500 mg) iv/oral 8H if receiving cefepime, ceftazidime or ciprofloxacin as first line antibiotic … NB. Piperacillin-tazobactam will provide adequate anaerobic cover, other than for suspected Clostridium difficile colitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Signs of sepsis: 20 mL/kg normal saline IV over no more than 10 minutes (not through a pump).** If improvement is only transient, further boluses up to 40 mL/kg; discuss more than 40 mL/kg with a senior clinician; if no improvement, consider inotropes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If patient has signs of sepsis: Give initial 20 mL/kg Normal Saline IV bolus over a maximum of 10 minutes (not through an infusion pump) … If only transient improvement occurs, consider additional fluid boluses to a maximum volume of 40 mL/kg Total volumes >40 mL/kg should be discussed with senior clinician If no improvement, consider inotropic support",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Discuss every patient with the on-call oncology consultant/fellow (or consultant paediatrician in regional centres) — after the 1st IV antibiotic dose**, so the call does not delay it.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients must be discussed with the on-call oncology consultant/fellow (or consultant paediatrician in regional centres) after the 1st dose of intravenous antibiotic. … To avoid antibiotic delays, this should be done after the 1st dose of antibiotic has been given.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider transfer to the Primary Treatment Centre** for severe sepsis, deterioration despite broad-spectrum antibiotics, or FN lasting more than 72 hours despite them.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer to the patient's Primary Treatment Centre (PTC) if: Severe sepsis Clinical deterioration despite broad spectrum antibiotics Prolonged (>72 hours) FN despite broad spectrum antibiotics",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**New CNS symptoms or signs:** CT brain and LP may be indicated — discuss with the on-call oncologist first. ⚠️ **Correct thrombocytopenia and/or coagulopathy before LP.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CT brain and lumbar puncture may be indicated if there are new CNS symptoms or signs. Please discuss with on call oncologist first. … Correction of thrombocytopenia and/or coagulopathy must occur prior to LP.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No routine daily blood cultures in a well, afebrile child.** Repeat one set on Day 2 (± Day 3) only if still febrile.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Routine daily blood cultures are not recommended in patients who are well and afebrile. A blood culture set should only be repeated on Day 2 (+/- Day 3) in patients who remain febrile.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stop amikacin and/or vancomycin after 24–48 hours** unless the child is clinically unstable or a resistant organism needs them (discuss with Infectious Diseases). **Do not broaden the regimen for persistent fever alone in a stable child.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After 24-48 hours, discontinue Amikacin and/or Vancomycin (if initiated) unless patient is clinically unstable … a resistant organism has been identified that requires Amikacin or Vancomyin (Discuss with Infectious Diseases) … Do not broaden initial empiric antibiotic regimen based solely on persistent fever in children who are clinically stable",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Stop empiric antibiotics with marrow recovery** once blood cultures are negative at 48 hours and the child has been afebrile for at least 24 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Evidence of marrow recovery – Discontinue empiric antibiotics in patients who have negative blood cultures at 48 hours and who have been afebrile for at least 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Low-risk FN:** consider stopping at 72 hours if cultures are negative and afebrile for at least 24 hours, **irrespective of marrow recovery**, provided careful follow-up is ensured. Discuss every change, including stopping, with the primary oncology team.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discontinuation of empiric antibiotics at 72 hours in low-risk patients (as judged by the treating oncologist) who have negative blood cultures and who have been afebrile for at least 24 hours, irrespective of marrow recovery status, provided careful follow-up is ensured … All treatment modifications, including cessation of antibiotics, should be discussed with the patient's primary oncology team.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Fever beyond 72 hours or recurrent despite broad-spectrum antibiotics: evaluate for invasive fungal infection.** Empiric antifungal: **amphotericin** (caspofungin or voriconazole if contraindicated). IFI high risk — start it; IFI low risk — consider it.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prolonged (>72 hours) or recurrent fever despite broad-spectrum antibiotic/s Evaluate and consider treatment for invasive fungal infection (IFI) … Recommended empiric antifungal agent is amphotericin (caspofungin or voriconazole if amphotericin contraindicated). … IFI high risk – initiate empiric antifungal treatment for prolonged or recurrent fever of unclear etiology that is unresponsive to broad-spectrum antibacterial agents IFI low risk – consider empiric antifungal therapy in setting of persistent FN",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High risk for IFI:** relapsed acute leukaemia · AML · GvHD · allogeneic HSCT · severe aplastic anaemia · prolonged corticosteroids · prolonged ICU stay.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients considered high-risk for IFI include those with (i) relapsed acute leukemia; (ii) AML; (iii) Graft versus Host Disease (GvHD); (iv) allogeneic HSCT; (v) severe aplastic anaemia; (vi) prolonged corticosteroid use and (vii) prolonged ICU admission.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Fever and suspected or confirmed neutropenia' (undated page), at https://www.rch.org.au/clinicalguide/guideline_index/Fever_and_suspected_or_confirmed_neutropenia/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "guideline": "guidelines/acute-behavioural-disturbance-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Acute behavioural disturbance: Acute management' (Last updated December 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Focus on verbal and non-verbal de-escalation**, emphasising the child's safety and using existing behaviour or communication plans.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Management should focus on verbal and non-verbal de-escalation; emphasise the child's safety and use existing behaviour or communication plans where appropriate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Exclude organic causes — pain, encephalopathy, delirium** — and consider an underlying neurodevelopmental condition or adverse childhood experiences.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider if the child has an underlying neurodevelopmental condition or history of adverse childhood experiences … Consider and exclude organic causes including pain, encephalopathy or delirium",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Physical restraint is a last resort**, used only to facilitate rapidly effective pharmacological treatment by appropriately trained staff.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pharmacological treatment may be required to ensure the safety of the child and staff … Physical restraint is a last resort, only used to facilitate rapidly effective pharmacological treatment by appropriately trained staff",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The first job is to reduce the child's distress**; assess and treat the underlying cause once distress is addressed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most important initial action is to reduce the child’s distress to reduce the behaviour and risk of harm … Once the distress has been addressed, further assessment and specific management of the underlying cause should occur",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** previous episodes and what worked · neurodevelopmental, intellectual, communication or mental health issues · existing behaviour plans or aids · adverse childhood experiences — **a calm child may be frozen or dissociated** · triggers · pain · medications and reactions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Previous episodes and what constructive management was used Underlying neurodevelopmental conditions, intellectual disability, communication barriers or any mental health concerns Pre-existing behaviour management plans, communication aids or sensory considerations History of adverse childhood experiences which may impact on the flight-fight-freeze response. Children may appear calm when in a frozen or dissociated state … Consider if the child is in pain Current and previous medications and any adverse reactions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider intoxication** with alcohol, illicit drugs or prescribed medication. **Briefly exclude** focal neurology, acute pain, altered conscious state or a toxidrome; examine fully once calmer.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider intoxication with alcohol, illicit drugs or prescribed medication … Briefly exclude obvious focal neurology, acute pain, altered conscious state or evidence of a toxidrome A more comprehensive examination should occur once level of distress is reduced",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations are not routine** — only as needed to exclude organic causes of altered conscious state.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Investigations are not routine but may be necessary to exclude organic causes of altered conscious state",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**De-escalation is first line.** Treat the cause, **involve senior staff early and consider a Code Response**, and debrief child, family and staff.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Verbal and non-verbal de-escalation is the first line intervention Treat the underlying causes Involve senior staff early and consider the need for a Code Response Debrief the child, family and staff",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Environment:** a private, calm, quiet room with soft lighting; remove triggers and dangerous items; know the exits.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A private, calm, quiet room with soft lighting. Eliminate triggers for agitation … Remove dangerous items, be aware of exits and ensure own safety",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Child:** respect personal space; consider their needs (language, neurodevelopment, trauma); offer analgesia, food and drink; involve mental health early; **offer planned 'collaborative' sedation, eg oral medication.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Respect personal space Consider child's individual needs including language, neurodevelopmental conditions, cognitive ability or trauma history … Consider physical needs and offers of analgesia, food, drink etc Anticipate and identify early escalating behaviour Consider involving mental health expertise early Offer planned 'collaborative' sedation eg ask the child if they would take oral medication where appropriate",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Staff:** agree one plan before approaching; **one person talks** to the child and family; concise non-judgemental language in a calm voice; clear limits and choices, no bargaining; ignore insults.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure all staff have an aligned plan before approaching child One staff member communicates with the child and family … Use concise non-judgemental language and set expectations in a calm voice … Set clear limits on behaviour for child and family Avoid bargaining, but offer clear choices and negotiate realistic options Maintain professionalism at all times. Ignore insults and challenging questions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Oral or IM sedation only if de-escalation fails or safety is at risk**; a safe environment without physical restraint is the priority. Use a **stepwise** approach, escalating faster if safety demands.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Providing a safe environment to calmly de-escalate a child without the use of physical restraint is the priority … Consider oral or intramuscular sedation only if de-escalation strategies are unsuccessful or there are concerns for safety … A stepwise approach should be used if pharmacological treatment is required, but always consider child and staff safety, and whether more rapid escalation is needed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Seek consent wherever possible**; a young person with capacity can consent. **If the child is a danger to self or others, no consent is needed**, but know your duty of care and your jurisdiction's Mental Health Act.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain consent (ideally from child and/or guardians) for any medical procedures, including sedation, wherever possible Common law recognises that a young person can give consent if they have capacity In an unsafe situation, when the child is a danger to themselves or others, no consent is necessary, but clinicians should be aware of the relevant duty of care and Mental Health Act in their jurisdiction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A child who needs no acute medical or psychiatric care should be discharged to a safe environment rather than restrained** chemically or physically.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After appropriate assessment, a child who does not need acute medical or psychiatric care should be discharged from the hospital to a safe environment, rather than be chemically or physically restrained",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Benzodiazepines:** airway support; consider flumazenil. ⚠️ **No flumazenil for a child on frequent or long-term benzodiazepines, or who may have taken seizure-causing substances**; always involve senior staff.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Benzodiazepines ✔ – – ✔* Airway support Consider Flumazenil** … ** Do not give to child taking frequent or long-term benzodiazepines or to a child who may have taken substances associated with causing seizures. Always involve senior staff",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Paradoxical reactions** (more agitation and anxiety) may occur in children with autism or developmental delay.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "*Paradoxical reactions, such as increased agitation and anxiety, may occur in children with autism or developmental delay",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Droperidol (typical antipsychotic) — listed management: benzatropine 0.02 mg/kg (max 1 mg) IV or IM, repeat in 15 min if required.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Typical antipsychotics (Droperidol) If used with opioids ✔ ✔ – Benzatropine 0.02 mg/kg (max 1 mg) IV or IM Repeat in 15 min if required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Olanzapine-associated dystonic reactions: benzatropine 0.02 mg/kg (max 1 mg) IV or IM, repeat in 15 min if required.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Benzatropine 0.02 mg/kg (max 1mg) IV or IM for olanzapine-associated dystonic reactions Repeat in 15 min if required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Ketamine:** airway support — the row is marked 'with rapid administration'.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ketamine With rapid administration – – – Airway support",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor in a safe clinical area without waking the child unnecessarily**, using a local sedation scale.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitoring should be performed in a safe environment within the clinical setting, assessing for side-effects as listed above Do not unnecessarily wake or irritate the child further to permit sufficient rest Consider using an appropriate local sedation assessment scale",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Alert: observations 30-minutely for 2 hours. Agitated: continuous observation and regular vital signs. Altered conscious state: 1:1 support, continuous pulse oximetry and regular medical review.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An alert child should have 30 minutely observations for 2 hours post sedation medication An agitated child needs continuous clinical observation and regular vital signs A child with altered conscious state should have 1:1 clinical support, continuous pulse oximetry and regular medical review",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After medication, every child needs a medical and mental health assessment.** Document reasons, drugs, doses and routes, and which interventions worked.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Following medication, the child must undergo a medical and mental health assessment to guide subsequent management … Reasons for sedation Medications used, dose and route Which interventions (including non-pharmacological) were used, which were effective and which were unsuccessful",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** if admission is needed to treat a medical cause or observe until drug toxicity resolves. **Transfer** for tertiary inpatient mental health care, sedation complications, or care beyond the hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when The child requires admission for treatment of a medical problem causing behavioural disturbance, or for observation until drug toxicity has resolved … Consider transfer when The child requires a tertiary inpatient mental health facility or ongoing care (to be facilitated by local mental health clinicians) There are complications from sedation The care required is beyond the comfort level of the hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** distress has settled, significant medical or psychiatric illness is excluded or addressed, the cause is treated, carers are able and willing (consider crisis care), and **follow-up is planned.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Behavioural distress has reduced or resolved Significant medical or psychiatric illness is excluded and/or addressed Any identified underlying cause has been treated Carers are capable of and willing to take the child home; consider crisis care where required A clear plan for medical and/or mental health follow-up is in place",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute behavioural disturbance: Acute management' (Last updated December 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_behavioural_disturbance__Acute_management/, retrieved 2026-09-23"
+  }
+ ]
+}

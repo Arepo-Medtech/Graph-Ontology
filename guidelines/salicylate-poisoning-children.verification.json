@@ -1,0 +1,155 @@
+{
+ "guideline": "guidelines/salicylate-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Salicylates poisoning' (Last updated June 2017), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 19,
+  "pass": 19,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Symptoms may be minimal at first, with severe toxicity not evident until 6–12 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The symptoms of acute salicylate poisoning may be minimal initially with severe toxicity not evident until 6-12 hours.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Serum concentration correlates poorly with toxicity; deterioration can occur as the serum level falls**, because CNS concentration is rising.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is a poor correlation between salicylate concentration and toxicity and deterioration may still occur with falling serum concentrations due to rising CNS concentration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Classic acute features:** vomiting, tinnitus, hyperventilation, respiratory alkalosis and metabolic acidosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute intoxication presents with classical symptoms of vomiting, tinnitus, hyperventilation, respiratory alkalosis and metabolic acidosis.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Hidden sources:** aspirin-containing compounds · **oil of wintergreen (1 teaspoon of 98% salicylate = 7000 mg)** · Dencorub · some teething gels · willow bark.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Medications - Aspirin and aspirin containing drug compounds Topical - Oil of Wintergreen (1 tsp 98% salicylate = 7000 mg), Dencorub, some teething gels Alternative medicine - Willow bark",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Under 150 mg/kg:** minimal symptoms. **150–300 mg/kg:** mild–moderate (tinnitus, vomiting, hyperventilation). ⚠️ **Over 300 mg/kg: severe (acidosis, seizures, hyperthermia).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "<150 mg/kg Minimal symptoms 150-300 mg/kg Mild-moderate symptoms: Tinnitus, vomiting, hyperventilation >300 mg/kg Severe symptoms: Acidosis, seizures, hyperthermia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Hyperventilation is not always present in children — its absence does not exclude significant toxicity.** Assess dehydration carefully.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hyperventilation - not always present in children, absence does not exclude significant toxicity. CVS: Dehydration - careful assessment should be performed.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History:** immediate or sustained release, dose, time, co-ingestants, accidental or intentional.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Formulation -immediate release or sustained release Dose Time Co-ingestants Accidental or intentional",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Blood gases indicate severity:** phase 1 respiratory alkalosis with alkaluria → phase 2 paradoxical aciduria (pH under 6) with respiratory alkalosis → **phase 3 metabolic acidosis and hypokalaemia.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood gases may indicate severity of poisoning Phase 1: Respiratory stimulation - hyperventilation and respiratory alkalosis with alkaluria Phase 2: Paradoxical aciduria (pH <6) and respiratory alkalosis. Phase 3: Metabolic acidosis & hypokalaemia (± ongoing respiratory alkalosis)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Salicylate level at presentation, then 2–4-hourly if symptomatic or enteric-coated, until declining.** Also U&E, creatinine and glucose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urea & electrolytes, creatinine Hypoglycaemia Serum salicylate concentration At presentation 2-4 hourly if symptomatic or enteric coated preparation, until declining",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat (and admit/consult):** acute ingestion of 150 mg/kg or more · all symptomatic patients · unknown quantity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients Requiring Treatment: Acute ingestion ≥150 mg/kg All symptomatic patients Ingestion of unknown quantity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Intubation apnoea can worsen acidosis and cause cardiac arrest.** Consider pre-loading with sodium bicarbonate and get senior help. **If ventilated, keep pH 7.45–7.5** — which may mean matching the pre-intubation respiratory rate.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Apnoea associated with intubation may worsen acidosis and lead to cardiac arrest. Consider pre-loading with sodium bicarbonate and obtain senior help. If ventilated, maintain alkalaemia (pH 7.45 - 7.5) to prevent redistribution of salicylate into the CNS. This may require setting the initial ventilator respiratory rate to the pre-intubation respiratory rate.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Activated charcoal 1 g/kg** may be indicated in massive overdose, ideally within 1 hour — **discuss with toxicology (13 11 26) first.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Activated charcoal 1 g/kg. May be indicated in massive overdose, ideally within 1 hour of ingestion. Discuss with toxicology (13 11 26) before use as risks are associated with administration.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Rehydrate to euvolaemia; correct electrolytes and hypoglycaemia.** ⚠️ **Correcting metabolic acidosis is critical to limit CNS penetration.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rehydrate to euvolaemia Correct electrolyte imbalance Correct hypoglycaemia … Correction of metabolic acidosis is critical to limit CNS penetration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Urinary alkalinisation: slow IV bicarbonate bolus 2 mmol/kg, then infusion 1 mmol/kg/hr, keeping urine pH above 7.5.** Needs a catheter to monitor urine pH. For mild–moderate salicylism.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinary alkalisation: IV bicarbonate infusion 1 mmol/kg/hr, after initial slow bolus of 2 mmol/kg, (keep urine pH >7.5). Urinary alkalinisation requires a catheter, otherwise it is very difficult to monitor urinary pH in real time. This is to be considered in cases with symptoms of mild-moderate salicylism.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Alkalinisation is not possible with hypokalaemia and itself causes urinary potassium loss — replace potassium IV to keep a mid-range level.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Urinary alkalinisation is not possible in the presence of hypokalaemia. Urinary alkalinisation will also produce urinary potassium loss. Therefore potassium must be replaced via intravenous administration to maintain a mid-range concentration.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Consider haemodialysis early in moderate–severe poisoning.** Indications include: alkalinisation not feasible (renal failure, pulmonary oedema) · **level over 7.2 mmol/L (100 mg/dL), or rising above 4.4 mmol/L (60 mg/dL) despite alkalinisation** · altered mental state, refractory acidaemia or electrolyte imbalance, hyperthermia over 39 °C despite cooling, or renal failure.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Haemodialysis should be considered early in moderate to severe salicylate poisoning as urinary alkalisation can be difficult to achieve and may not be effective. … If urinary alkalisation is not feasible (eg renal failure, pulmonary oedema) Serum concentration >7.2 mmol/L (100 mg/dL) or rising to >4.4 mmol/l (60 mg/dL) despite alkalinisation Severe toxicity: Altered mental state, refractory acidaemia or electrolyte imbalance, hyperthermia (temperature >39 °C despite active cooling measures) or renal failure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge after 6 hours' observation** if still asymptomatic with normal acid–base status and a level in the therapeutic range.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Observe for 6 hours and if remains asymptomatic, normal acid base status and concentration is within therapeutic range, discharge",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Refer to an ICU capable of haemodialysis** if symptomatic after more than 300 mg/kg and/or meeting dialysis criteria. **PIPER: 1300 137 650.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Refer patients to an ICU capable of haemodialysis if symptomatic and history of ingestion of >300 mg/kg and/or meeting haemodialysis criteria. … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Intentional self-harm → local mental health services** (e.g. Orygen 1800 888 320); **recreational → YoDAA** (1800 458 685).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intentional self-harm: Referral to local mental health services e.g. Orygen Youth Health: 1800 888 320 Recreational poisoning: Referral to YoDAA, Victoria's Youth Drug and Alcohol Advice service: 1800 458 685",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Salicylates poisoning' (Last updated June 2017), at https://www.rch.org.au/clinicalguide/guideline_index/Salicylates_Posioning/, retrieved 2026-09-23"
+  }
+ ]
+}
