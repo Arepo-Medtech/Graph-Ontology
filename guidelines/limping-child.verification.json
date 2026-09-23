@@ -1,0 +1,166 @@
+{
+ "guideline": "guidelines/limping-child.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'The limping or non-weight bearing child' (Last updated October 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most limping children need no investigation**; watching the gait helps localise the problem.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most children presenting with a limp do not require investigation Observing the child's gait may help localise the problem and narrow the differential diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Acute inability to walk or weight bear is a red flag.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute inability to walk or weight bear is a red flag",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Septic arthritis is an orthopaedic emergency** — suspect it in any child with limp, swelling and reduced range of motion, especially with fever.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Septic arthritis is an orthopaedic emergency and should be suspected in any child presenting with limp, swelling and reduced range of motion (especially with fever)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transient synovitis, acute myositis and minor trauma are common**, but always consider serious pathology. **Pain can be referred** — examine the joints above and below (including the spine) and the abdomen.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Transient synovitis, acute myositis and minor trauma are common causes of limp in children, but serious pathology should always be considered … Pain causing limp can be referred. Assess the joints above and below (including spine) and abdomen to accurately localise the source",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**At all ages consider:** infection (osteomyelitis, septic arthritis, sepsis, bursitis, discitis, epidural collection) · trauma including inflicted injury · malignancy (haematological, bone, soft tissue).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All ages Infections: osteomyelitis/septic arthritis, sepsis, bursitis, discitis, epidural collection Trauma (see Fractures) including child abuse/inflicted injury Malignancy: haematological, bone, soft tissue",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also:** rheumatological causes including reactive arthritis, HSP and acute rheumatic fever · **appendicitis and ovarian or testicular torsion** · sickle-cell crisis or haemophilia · **vitamin C deficiency** with a restricted diet · functional limp.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rheumatological/immunological disorders: reactive arthritis, autoimmune arthritis, Henoch-Schönlein purpura (HSP), vasculitis, serum sickness, post infectious arthritis, Guillain-Barre syndrome, acute rheumatic fever (ARF) Intra-abdominal or genitourinary pathology: appendicitis, ovarian or testicular torsion Haematological: vaso-occlusive crisis (sickle cell), haemophilia Vitamin C deficiency (restricted diet eg neurodiverse child, ARFID) Functional limp",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History red flags to ask about:** symptoms over 7 days or repeated presentations · severe localised joint pain · pain waking from sleep · inability to walk or weight bear · fever, night sweats, rigors · weight loss, lethargy, anorexia (consider malignancy).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Duration of symptoms, >7 days, repeated presentations in same illness … Pattern and severity of pain and limp, severe localised joint pain, pain waking from sleep … Functional limitations, inability to walk or weight bear Symptoms of infection: fever, night sweats, chills, rigors, rash Constitutional symptoms: unexplained weight loss, lethargy, anorexia (consider malignancy/haematological cause)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Absence of fever does not exclude infection.** Pallor, petechiae, purpura or ecchymosis should raise HSP, malignancy or inflicted injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fever (absence does not exclude infection) Pallor or petechiae/purpura/ecchymosis (consider HSP, malignancy/haematological or inflicted injury)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hip pain may localise to the knee.** Examine with Look, Feel, Move, including the joints above and below.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Identify joint(s) involved (note that hip pain may localise to knee) Joint examination using \"Look, Feel, and Move\" including joints above and below area of pain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **A marked reduction in range of motion suggests significant pathology such as septic arthritis** — compare active and passive movement on both sides.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Compare active and passive range of movement on both sides. A marked reduction in range of motion suggests significant pathology eg septic arthritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also examine** neurology and neurovascular status of the limb, the heart where ARF is possible, and the abdomen, scrotum, back and hips.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neurological exam including tone, power, and reflexes and neurovascular assessment of affected limb Cardiac examination where ARF is a possibility Other systems: Abdomen, scrotum, back/spine and hips",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No investigations are needed if all apply:** no red flags · walking with mild or no discomfort on simple analgesia · a working diagnosis and/or a plan for review within 7 days of onset if the limp persists.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No investigations are indicated if all the following apply: no red flags in the history and physical examination ambulating with mild or no discomfort with simple analgesia a working diagnosis and/or a plan for review within 7 days of onset of limp if persists",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**X-ray the area of suspicion.** A pelvis AP or frog-leg view helps identify SUFE, DDH (over 6 months), Perthes disease and pelvic avulsions. ⚠️ **A normal X-ray does not exclude septic arthritis or early osteomyelitis**, and signs of inflicted injury may be subtle.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "X-ray (area of suspicion) pelvis AP or frog leg view is useful for identifying SUFE, DDH (>6 mths), Perthes disease and common pelvic avulsions normal x-ray does not exclude septic arthritis or early osteomyelitis signs of inflicted injury may be subtle",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hip ultrasound** looks for an effusion when septic arthritis is suspected, but **an effusion often cannot distinguish septic arthritis from transient synovitis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ultrasound (hip) assess for presence of an effusion when septic arthritis of the hip is suspected presence of an effusion often does not differentiate between septic arthritis and transient hip synovitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bone scan or localised MRI** if the limp is ongoing at 7 days or there are features of osteomyelitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Other eg bone scan or localised MRI if ongoing at 7 days or if features of osteomyelitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Raised inflammatory markers** (platelets, WCC, CRP, ESR) suggest infection or inflammation, but **may be normal in contained or chronic infection.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Raised inflammatory markers (platelets, WCC, CRP, ESR) suggest infective or inflammatory cause. May be normal in contained or chronic infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Blood cultures before antibiotics if possible** when osteomyelitis, septic arthritis or septic bursitis is suspected. FBE and film if malignancy is a concern; vitamin C level with a restricted diet; streptococcal serology and ECG if ARF is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood cultures (pre-antibiotics if possible) if osteomyelitis, septic arthritis or septic bursitis suspected FBE and film if concern for haematological malignancy Vitamin C level (restricted diet) Streptococcal serology (and ECG) if ARF suspected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Simple analgesia (paracetamol and an NSAID) and child-directed limitation of activity.** ⚠️ **Needing stronger analgesia should prompt reassessment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Simple analgesia (paracetamol and NSAID) and child-directed limitation of activity. Need for escalation of analgesia should prompt reassessment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Septic arthritis: consult the local orthopaedic specialist ASAP**; refer to the right sub-specialty and follow local antibiotic guidelines.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Septic arthritis is an orthopaedic emergency - consult local orthopaedic specialist ASAP Refer to appropriate sub-specialist team and consult local antibiotic guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team** if symptoms last more than 7 days or the child cannot bear weight or permit movement after analgesia · systemically unwell · features of malignancy · concern for abuse · suspected inflammatory arthritis. **Suspected septic arthritis: consult orthopaedics.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Symptoms last more than 7 days or child unable to weight bear or permit movement after analgesia Systemically unwell Clinical or laboratory features of malignancy Concern for child abuse or inflicted injury Suspecting septic arthritis - consult with orthopaedic team Suspecting inflammatory arthritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** the cause has been found and managed, **or** the child walks comfortably (with or without analgesia) **and** high-risk diagnoses are unlikely **and** follow-up is arranged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when The cause of the limp has been identified and managed OR Child is ambulating comfortably with or without analgesia AND High risk diagnoses are considered unlikely AND Follow up plan in place",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'The limping or non-weight bearing child' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/, retrieved 2026-09-23"
+  }
+ ]
+}
