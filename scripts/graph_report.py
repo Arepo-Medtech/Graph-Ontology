@@ -245,23 +245,32 @@ def main() -> int:
             "earned_tier": tier(lo, n), "contradicted": n - co}
         con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:is_a_snomed'", [tier(lo, n)])
 
-        # --- lab result -> finding by analyte: tier earned from the hand check, reach measured here ------------------
+        # --- lab result -> finding: a tier per route (the edge's method), earned from the hand check ----------------
         hc = Path("reference/interprets_handcheck.json")
         if hc.exists() and con.execute("SELECT count(*) FROM edge WHERE predicate = 'loinc:interpreted_in_finding'").fetchone()[0]:
             scored = json.load(open(hc))["scored"]
-            k, n = sum(r["verdict"] == "correct" for r in scored), len(scored)
-            lo, _ = wilson(k, n)
-            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:interpreted_in_finding'", [tier(lo, n)])
-            e, terms, finds, interp = con.execute("""SELECT count(*), count(DISTINCT s_code), count(DISTINCT o_code),
-                    count(DISTINCT json_extract_string(attrs, '$.interpretation')) FROM edge
-                WHERE predicate = 'loinc:interpreted_in_finding'""").fetchone()
-            report["route:loinc result -> finding (Interprets, by analyte; hand check)"] = {
-                "edges": e, "loinc_terms": terms, "findings": finds, "interpretation_values": interp,
-                "hand_checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n),
-                "top_components": [f"{nm or c}: {x}" for c, nm, x in con.execute("""
-                    SELECT json_extract_string(e.attrs, '$.component') c, any_value(n.name), count(DISTINCT e.s_code) x
-                    FROM edge e LEFT JOIN node n ON n.vocab = 'SCT' AND n.code = json_extract_string(e.attrs, '$.component')
-                    WHERE e.predicate = 'loinc:interpreted_in_finding' GROUP BY 1 ORDER BY 3 DESC LIMIT 8""").fetchall()]}
+            for method, e, terms, finds in con.execute("""SELECT method, count(*), count(DISTINCT s_code), count(DISTINCT o_code)
+                    FROM edge WHERE predicate = 'loinc:interpreted_in_finding' GROUP BY 1 ORDER BY 2 DESC""").fetchall():
+                rows = [r for r in scored if r.get("method") == method]
+                k, n = sum(r["verdict"] == "correct" for r in rows), len(rows)
+                lo, _ = wilson(k, n)
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:interpreted_in_finding' AND method = ?", [tier(lo, n), method])
+                report[f"route:loinc result -> finding ({method})"] = {"edges": e, "loinc_terms": terms, "findings": finds,
+                    "hand_checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+            # two witnesses: where both the analyte join and Athena's placement make an edge, do they make the same one?
+            report["parallel:loinc result -> finding (analyte vs Athena)"] = dict(zip(
+                ("distinct_edges", "by_both", "analyte_only", "athena_only", "loinc_terms_by_both", "same_findings"), con.execute("""
+                WITH e AS (SELECT s_code, o_code, json_extract_string(attrs, '$.interpretation') i,
+                                  bool_or(method = 'same component, specimen at or below') a, bool_or(method LIKE 'Athena%') t
+                           FROM edge WHERE predicate = 'loinc:interpreted_in_finding' GROUP BY 1, 2, 3),
+                     f AS (SELECT s_code, list(DISTINCT o_code ORDER BY o_code) FILTER (WHERE a) fa,
+                                  list(DISTINCT o_code ORDER BY o_code) FILTER (WHERE t) ft FROM e GROUP BY 1)
+                SELECT (SELECT count(*) FROM e), (SELECT count(*) FROM e WHERE a AND t), (SELECT count(*) FROM e WHERE a AND NOT t),
+                       (SELECT count(*) FROM e WHERE t AND NOT a),
+                       (SELECT count(*) FROM f WHERE fa IS NOT NULL AND ft IS NOT NULL),
+                       (SELECT count(*) FROM f WHERE fa IS NOT NULL AND ft IS NOT NULL AND fa = ft)""").fetchone()))
+            report["coverage:lab results reaching a finding they define"] = dict(zip(("loinc_terms", "findings"), con.execute("""
+                SELECT count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'loinc:interpreted_in_finding'""").fetchone()))
 
     # --- health ------------------------------------------------------------------------------------------------------
     report["edges"] = con.execute("SELECT count(*) FROM edge").fetchone()[0]

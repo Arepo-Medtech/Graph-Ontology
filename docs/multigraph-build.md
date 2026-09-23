@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**940,684 nodes, 4,406,963 edges, 151 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges* and *Lab results → findings*.)
+**940,684 nodes, 4,431,089 edges, 151 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges* and *Lab results → findings*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -207,12 +207,35 @@ diabetes findings, as the edges are) and one random edge from each of 40 random 
 cells*, is the lossy-component class and is now excluded too). **79/80, Wilson lower bound 0.933 → Tier 2**, earned by
 `graph_report.py` from the hand-check file.
 
-*The larger route not yet built.* Through Athena's placement, **4,357 LOINC terms land directly on a procedure that
-1,575 findings interpret** — more than the analyte bridge. `graph_report.py`'s first reach figure (20,317 terms, 2,297
-findings) was inflated: climbing is-a reaches generic targets (*Evaluation procedure*, *Measurement*), which ~20,000
-terms reach and which only a few dozen generic findings interpret; the report now shows the direct figure beside it.
-The direct Athena route is a chain of two lookups but needs its own hand check before it becomes edges — Athena's
-placement is Tier 2, not Tier 1.
+**The same bridge through Athena — parallel edges, a second witness (built, Tier 2).** Athena files a LOINC term
+under a SNOMED measurement procedure; where a finding interprets **that procedure itself** (never an is-a ancestor —
+*Evaluation procedure* and *Measurement* reach ~20,000 terms and a few dozen generic findings, which is what inflated the
+first reach figure to 20,317 terms), the term reaches the finding. These are `loinc:interpreted_in_finding` edges too,
+told apart by `method`, each route with its own tier — as `in_atc_class` keeps PBS and OMOP side by side.
+
+Unrestricted, the route failed: **53/80**. Where it agreed with the analyte join it was right 26 times in 27; on the
+edges only Athena makes, **27 in 53**. Athena's procedures are often specimen-less (*Sodium measurement*, *ANA
+measurement*), so sodium in breast milk reached chronic hyponatraemia, pleural-fluid pH reached ketoacidosis and urine
+red cells reached haemolytic anaemia; ratios and HEDIS value-set codes came through too. What was built is restricted
+by the LOINC Ontology: result codes only (Observation refset, ACTIVE, not Discouraged), the analyte join's ratio rules,
+a reviewed list of **fraction analytes** (free and bioavailable testosterone, indirect bilirubin … — a fraction's level
+is not the whole's) where the LOINC component differs from the target's, and the specimen:
+
+| route (`method`) | edges | LOINC terms | findings | hand check, new edges only | tier |
+|---|---:|---:|---:|---|:-:|
+| same component, specimen at or below (the analyte join) | 15,912 | 1,110 | 418 | 79 / 80 (lower bound 0.933) | 2 |
+| Athena placement, specimen at or below the target's | 15,724 | 969 | 390 | 39 / 40 (0.871) | 2 |
+| Athena placement, **specimen-less target, blood-family LOINC specimen** | 8,402 | 1,917 | 475 | 40 / 40 (0.912) | 2 |
+
+The third row rests on an assumption the route supplies — that a finding on a specimen-less *Cortisol measurement*
+reads blood — so it is scored alone; it held on all 40. The one miss in the second was free testosterone reaching
+*Serum testosterone below reference range*, which is why fractions are excluded. A rule by is-a was tried first and
+dropped: SNOMED files *Sodium electrolyte* under *Sodium* (126 correct edges would have gone) and does not file *Free
+testosterone* under *Testosterone*.
+
+**Together: 3,114 LOINC terms reach 869 findings they define** (from 1,110 and 418). The two witnesses make 13,801 of
+the same edges; for the 882 LOINC terms both reach, **826 (93.7%) get exactly the same findings**. The analyte join
+alone makes 2,111 edges, Athena alone 10,325.
 
 ## Rebuild
 

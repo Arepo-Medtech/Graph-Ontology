@@ -302,6 +302,53 @@ def main() -> int:
             FROM ix_lo lo JOIN ix_tgt t ON t.comp = lo.comp JOIN ix_site_up su ON su.s = lo.site AND su.n = t.spec
             WHERE t.tgt NOT IN (SELECT tgt FROM ix_refined)""")
 
+        # --- the same, through Athena's placement: parallel edges, a second witness ------------------------------------
+        # Athena files a LOINC term under a SNOMED measurement procedure; a finding that interprets that procedure is
+        # reached directly (never through is-a ancestors: 'Evaluation procedure' reaches 20,000 terms). Unrestricted, the
+        # new edges were right about half the time -- Athena's procedures are often specimen-less ('Sodium measurement'),
+        # so sodium in breast milk reached hyponatraemia. Kept only where the LOINC Ontology's specimen agrees:
+        # at or below the target's, or blood / serum / plasma where the target states none. Result codes only (Observation
+        # refset, active, not Discouraged), the ratio rules above, and a reviewed list of FRACTION analytes whose level is
+        # not the whole's (free testosterone is not testosterone) where the LOINC component differs from the target's.
+        con.execute(f"""CREATE TEMP TABLE ax_lo AS SELECT l.s_code AS loinc, l.o_code AS obs, s.o_code AS site
+            FROM edge l JOIN edge s ON s.s_code = l.o_code AND s.predicate = '{SITE}' LEFT JOIN {lx_axes} x ON x.LOINC_NUM = l.s_code
+            JOIN lx_loinc st ON st.LOINC_NUM = l.s_code
+            WHERE l.predicate = 'loinc:sct_concept' AND json_extract_string(l.attrs, '$.observation') = 'true'
+              AND json_extract_string(l.attrs, '$.discouraged') = 'false' AND st.STATUS = 'ACTIVE'
+              AND NOT EXISTS (SELECT 1 FROM edge r WHERE r.s_code = l.o_code AND r.predicate = 'sct:704325000')
+              AND coalesce(x.PROPERTY, '') NOT ILIKE '%diff%' AND coalesce(x.PROPERTY, '') NOT ILIKE '%rto%'
+              AND split_part(coalesce(x.COMPONENT, ''), '^', 1) NOT IN
+                  ('Protein.abnormal band', 'Other cells', 'Unidentified cells', 'Cells counted.total')""")
+        con.execute(f"""CREATE TEMP TABLE ax_site_up AS
+            WITH RECURSIVE u(s, n, d) AS (SELECT DISTINCT site, site, 0 FROM ax_lo
+                UNION SELECT u.s, e.o_code, u.d + 1 FROM u JOIN edge e ON e.predicate = '{IS_A}' AND e.s_code = u.n WHERE u.d < 25)
+            SELECT DISTINCT s, n FROM u""")
+        fractions = "'259355006', '710118001', '708043004', '73828001', '37852002', '540101010000101', '115333008', '1382094000'"
+        ins("LOINC result -> finding it defines (Interprets, via Athena)", f"""
+            WITH ap AS (SELECT DISTINCT a.s_code AS loinc, a.o_code AS proc, i.s_code AS finding, h.o_code AS interp
+                  FROM edge a JOIN edge i ON i.o_code = a.o_code AND i.predicate = 'sct:363714003'
+                  JOIN edge h ON h.s_code = i.s_code AND h.predicate = 'sct:363713009'
+                              AND json_extract(h.attrs, '$.group') = json_extract(i.attrs, '$.group')
+                  WHERE a.predicate IN ('loinc:is_a_snomed', 'loinc:maps_to_snomed') AND a.state <> 'rejected'),
+            kept AS (SELECT ap.*, lo.obs, lo.site,
+                    (SELECT any_value(sp.o_code) FROM edge sp WHERE sp.s_code = ap.proc AND sp.predicate = '{SPEC}') AS spec
+                  FROM ap JOIN ax_lo lo USING (loinc)
+                  WHERE NOT EXISTS (SELECT 1 FROM edge lc JOIN edge pc ON pc.s_code = ap.proc AND pc.predicate = '{COMP}'
+                                    WHERE lc.s_code = lo.obs AND lc.predicate = '{COMP}' AND lc.o_code IN ({fractions})
+                                      AND lc.o_code <> pc.o_code))
+            SELECT DISTINCT 'LOINC', k.loinc, 'loinc:interpreted_in_finding', 'SCT', k.finding,
+                'OMOP Athena + SNOMED CT-AU + SNOMED CT LOINC Extension',
+                'Athena Is a / Maps to ' || k.proc || ' / Interprets ' || k.proc || ' / LOINC observable ' || k.obs,
+                CASE WHEN k.spec IS NULL THEN 'Athena placement, specimen-less target, blood-family LOINC specimen'
+                     ELSE 'Athena placement, specimen at or below' END,
+                'ungraded', 'asserted', '{PIN['athena']} + {PIN['sct']} + {PIN['loinc_ext']}',
+                json_object('interpretation', k.interp, 'interprets', k.proc, 'finding_specimen', k.spec,
+                            'loinc_specimen', k.site, 'loinc_observable', k.obs)
+            FROM kept k
+            WHERE (k.spec IS NOT NULL AND EXISTS (SELECT 1 FROM edge sp JOIN ax_site_up su ON su.s = k.site AND su.n = sp.o_code
+                                                   WHERE sp.s_code = k.proc AND sp.predicate = '{SPEC}'))
+               OR (k.spec IS NULL AND EXISTS (SELECT 1 FROM ax_site_up su WHERE su.s = k.site AND su.n = '119297000'))""")
+
     # --- MONDO -------------------------------------------------------------------------------------------------------
     if MONDO_OBO.exists():
         mt = obo_terms(MONDO_OBO)

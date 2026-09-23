@@ -1,5 +1,5 @@
 {
- "_note": "Hand check of loinc:interpreted_in_finding (LOINC result term -> the SNOMED CT finding whose definition interprets that result). An edge is CORRECT when the LOINC term measures what the finding's Interprets target measures -- same analyte, same or narrower specimen -- so the finding's Has interpretation value (above / below / within range, detected ...) applied to a result of that term is the observation SNOMED uses to define the finding. It does NOT claim the result diagnoses the finding: DKA is defined partly by a raised glucose, not diagnosed by one. Graded 23 Sep 2026 on the rules as built. Two samples, drawn after the rules were fixed: 40 edges at random, and one random edge from each of 40 random findings (the first is dominated by glucose x diabetes findings; the second is not). graph_report.py earns the tier from this file.",
+ "_note": "Hand check of loinc:interpreted_in_finding (LOINC result term -> the SNOMED CT finding whose definition interprets that result). An edge is CORRECT when the LOINC term measures what the finding's Interprets target measures -- same analyte, same or narrower specimen -- so the finding's Has interpretation value (above / below / within range, detected ...) applied to a result of that term is the observation SNOMED uses to define the finding. It does NOT claim the result diagnoses the finding: DKA is defined partly by a raised glucose, not diagnosed by one. Graded 23 Sep 2026 on the rules as built. Two samples, drawn after the rules were fixed: 40 edges at random, and one random edge from each of 40 random findings (the first is dominated by glucose x diabetes findings; the second is not). graph_report.py earns a tier for each route (the row's `method`, which is the edge's `method`) from this file.",
  "_licence": "This material contains content from LOINC (http://loinc.org). LOINC is copyright Regenstrief Institute, Inc. and the LOINC Committee and is available at no cost under the license at http://loinc.org/license. SNOMED CT content is used under the compendium's SNOMED CT-AU licence.",
  "history": [
   {
@@ -19,6 +19,18 @@
    "n": 40,
    "correct": 37,
    "failures": "'Other cells' and 'Protein.abnormal band' (the LOINC Extension's Component drops the refinement); a urea nitrogen mass ratio -> rule 4 and 5 added"
+  },
+  {
+   "sample": "Athena-direct, unrestricted (not counted; rows in history_scored)",
+   "n": 80,
+   "correct": 53,
+   "failures": "edges shared with the analyte bridge 26/27; edges only Athena makes 27/53 -- Athena's procedures are often specimen-less, so sodium in breast milk, pleural-fluid pH and urine red cells reached serum and blood findings; ratios; HEDIS value-set and deprecated codes. Restricted to the LOINC Ontology's specimen, result codes and the ratio rules."
+  },
+  {
+   "sample": "narrower-analyte rule by is-a (tested, not adopted)",
+   "n": null,
+   "correct": null,
+   "failures": "SNOMED files 'Sodium electrolyte' under 'Sodium' (126 correct edges would go) and does not file 'Free testosterone' under 'Testosterone' -- so fractions are a reviewed list of component codes instead"
   }
  ],
  "rules": [
@@ -39,7 +51,8 @@
    "finding_name": "Severe hyperglycemia due to diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -50,7 +63,8 @@
    "finding_name": "Uremic acidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -61,7 +75,8 @@
    "finding_name": "Hyperglycaemia due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -72,7 +87,8 @@
    "finding_name": "Malnutrition-related diabetes with ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -83,7 +99,8 @@
    "finding_name": "Diabetic ketoacidosis without coma",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -94,7 +111,8 @@
    "finding_name": "Ketoacidotic coma due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -105,7 +123,8 @@
    "finding_name": "Ketoacidosis due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -116,7 +135,8 @@
    "finding_name": "Post hypoglycaemic hyperglycaemia due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -127,7 +147,8 @@
    "finding_name": "Ketoacidotic coma due to type 1 diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -138,7 +159,8 @@
    "finding_name": "Ketoacidotic coma due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -149,7 +171,8 @@
    "finding_name": "Malnutrition-related diabetes with ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -160,7 +183,8 @@
    "finding_name": "Hyperglycemia due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -171,7 +195,8 @@
    "finding_name": "Hyperosmolar hyperglycaemic coma due to diabetes without ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -182,7 +207,8 @@
    "finding_name": "Steroid sensitive nephrotic syndrome of childhood",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -193,7 +219,8 @@
    "finding_name": "Blood glucose below reference range",
    "interpretation": "281300000",
    "interpretation_name": "Below reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -204,7 +231,8 @@
    "finding_name": "Nephrogenous proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -215,7 +243,8 @@
    "finding_name": "Hyperglycemia due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -226,7 +255,8 @@
    "finding_name": "Malnutrition-related diabetes with ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -237,7 +267,8 @@
    "finding_name": "Blood glucose below reference range",
    "interpretation": "281300000",
    "interpretation_name": "Below reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -248,7 +279,8 @@
    "finding_name": "Severe hyperglycemia due to diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -259,7 +291,8 @@
    "finding_name": "Hyperosmolar hyperglycaemic coma due to diabetes without ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -270,7 +303,8 @@
    "finding_name": "Ketoacidosis due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -281,7 +315,8 @@
    "finding_name": "Hyperglycaemia due to type 1 diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -292,7 +327,8 @@
    "finding_name": "Blood glucose outside reference range",
    "interpretation": "394844007",
    "interpretation_name": "Outside reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -303,7 +339,8 @@
    "finding_name": "Hyperglycaemia due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -314,7 +351,8 @@
    "finding_name": "Ketoacidotic coma due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -325,7 +363,8 @@
    "finding_name": "Persistent proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -336,7 +375,8 @@
    "finding_name": "Ketoacidosis due to type 1 diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -347,7 +387,8 @@
    "finding_name": "Blood glucose below reference range",
    "interpretation": "281300000",
    "interpretation_name": "Below reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -358,7 +399,8 @@
    "finding_name": "Hyperglycaemia due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -369,7 +411,8 @@
    "finding_name": "Ketoacidosis due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -380,7 +423,8 @@
    "finding_name": "Malnutrition-related diabetes with ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -391,7 +435,8 @@
    "finding_name": "Ketoacidotic coma due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -402,7 +447,8 @@
    "finding_name": "CKD G5A3 - chronic kidney disease with glomerular filtration rate category G5 and albuminuria category A3",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -413,7 +459,8 @@
    "finding_name": "Glycosuria",
    "interpretation": "52101004",
    "interpretation_name": "Present",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -424,7 +471,8 @@
    "finding_name": "CKD G2A3 - chronic kidney disease with glomerular filtration rate category G2 and albuminuria category A3",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -435,7 +483,8 @@
    "finding_name": "Post hypoglycaemic hyperglycaemia due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -446,7 +495,8 @@
    "finding_name": "Blood glucose below reference range",
    "interpretation": "281300000",
    "interpretation_name": "Below reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -457,7 +507,8 @@
    "finding_name": "Blood glucose within reference range",
    "interpretation": "281301001",
    "interpretation_name": "Within reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_edge",
@@ -468,7 +519,8 @@
    "finding_name": "Ketoacidosis due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -479,7 +531,8 @@
    "finding_name": "Persistent proteinuria due to type 2 diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -490,7 +543,8 @@
    "finding_name": "Persistent albuminuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -501,7 +555,8 @@
    "finding_name": "Familial hematuria",
    "interpretation": "52101004",
    "interpretation_name": "Present",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -512,7 +567,8 @@
    "finding_name": "Grade A2 albuminuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -523,7 +579,8 @@
    "finding_name": "Uremic acidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -534,7 +591,8 @@
    "finding_name": "Urine 17 ketogenic steroid above reference range",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -545,7 +603,8 @@
    "finding_name": "Sporadic primary amyloidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -556,7 +615,8 @@
    "finding_name": "Alpha heavy chain disease, respiratory form",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -567,7 +627,8 @@
    "finding_name": "Light chain nephropathy due to multiple myeloma",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -578,7 +639,8 @@
    "finding_name": "Nephrotic syndrome in polyarteritis nodosa",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -589,7 +651,8 @@
    "finding_name": "Postrenal proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -600,7 +663,8 @@
    "finding_name": "Urobilinogenuria",
    "interpretation": "52101004",
    "interpretation_name": "Present",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -611,7 +675,8 @@
    "finding_name": "IgD monoclonal gammopathy of uncertain significance",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -623,7 +688,8 @@
    "interpretation": "281301001",
    "interpretation_name": "Within reference range",
    "verdict": "wrong",
-   "why": "the LOINC Extension models 'Unidentified cells' with Component = Cell, so it matches a finding about total CSF cell content; a count of unidentified cells is not the cell content. Same class as 'Other cells' and 'Cells counted.total'; now excluded by rule"
+   "why": "the LOINC Extension models 'Unidentified cells' with Component = Cell, so it matches a finding about total CSF cell content; a count of unidentified cells is not the cell content. Same class as 'Other cells' and 'Cells counted.total'; now excluded by rule",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -634,7 +700,8 @@
    "finding_name": "Urine adrenalin above reference range",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -645,7 +712,8 @@
    "finding_name": "Hyperosmolar non-ketotic state due to diabetes",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -656,7 +724,8 @@
    "finding_name": "Cerebrospinal fluid chloride within reference range",
    "interpretation": "281301001",
    "interpretation_name": "Within reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -667,7 +736,8 @@
    "finding_name": "Recurrent proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -678,7 +748,8 @@
    "finding_name": "Rapidly progressive nephritic syndrome due to diffuse crescentic glomerulonephritis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -689,7 +760,8 @@
    "finding_name": "CKD G3bA3 - chronic kidney disease with glomerular filtration rate category G3b and albuminuria category A3",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -700,7 +772,8 @@
    "finding_name": "Proliferative glomerulonephritis with monoclonal immune deposits",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -711,7 +784,8 @@
    "finding_name": "Chronic kidney disease stage 3B with proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -722,7 +796,8 @@
    "finding_name": "Myoglobinuria",
    "interpretation": "260373001",
    "interpretation_name": "Detected",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -733,7 +808,8 @@
    "finding_name": "Myeloma-associated primary systemic amyloidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -744,7 +820,8 @@
    "finding_name": "Amniotic fluid AFP equivocal",
    "interpretation": "42425007",
    "interpretation_name": "Equivocal",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -755,7 +832,8 @@
    "finding_name": "Hematogenous proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -766,7 +844,8 @@
    "finding_name": "Rapidly progressive nephritic syndrome, diffuse membranous glomerulonephritis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -777,7 +856,8 @@
    "finding_name": "Uremia due to inadequate renal perfusion",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -788,7 +868,8 @@
    "finding_name": "Hyperglycemia due to type 2 diabetes mellitus",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -799,7 +880,8 @@
    "finding_name": "Hyperosmolar hyperglycaemic coma due to diabetes without ketoacidosis",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -810,7 +892,8 @@
    "finding_name": "Hyperglobulinaemia",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -821,7 +904,8 @@
    "finding_name": "Congenital nephrotic syndrome due to congenital infection",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -832,7 +916,8 @@
    "finding_name": "Congenital nephrotic syndrome, interstitial lung disease, epidermolysis bullosa syndrome",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -843,7 +928,8 @@
    "finding_name": "Normocalcemic primary hyperparathyroidism",
    "interpretation": "17621005",
    "interpretation_name": "Normal",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -854,7 +940,8 @@
    "finding_name": "Catecholamine in urine specimen above reference range",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -865,7 +952,8 @@
    "finding_name": "Persistent proteinuria",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -876,7 +964,8 @@
    "finding_name": "Cerebrospinal fluid chloride below reference range",
    "interpretation": "281300000",
    "interpretation_name": "Below reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -887,7 +976,8 @@
    "finding_name": "Grade A1 albuminuria",
    "interpretation": "281301001",
    "interpretation_name": "Within reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -899,7 +989,8 @@
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
    "verdict": "correct",
-   "why": "correct: the finding's name says indoleacetic acid but it interprets 82552000 5-Hydroxyindoleacetic acid measurement, urine -- the loose name is SNOMED's"
+   "why": "correct: the finding's name says indoleacetic acid but it interprets 82552000 5-Hydroxyindoleacetic acid measurement, urine -- the loose name is SNOMED's",
+   "method": "same component, specimen at or below"
   },
   {
    "sample": "per_finding",
@@ -910,7 +1001,2285 @@
    "finding_name": "CKD G2A3 - chronic kidney disease with glomerular filtration rate category G2 and albuminuria category A3",
    "interpretation": "281302008",
    "interpretation_name": "Above reference range",
-   "verdict": "correct"
+   "verdict": "correct",
+   "method": "same component, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 1,
+   "loinc": "6874-2",
+   "loinc_name": "Calcium [Mass/time] in 24 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "1187063009",
+   "finding_name": "Urine calcium above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 2,
+   "loinc": "18488-7",
+   "loinc_name": "Calcium [Mass/volume] in 24 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "717787005",
+   "finding_name": "Familial hypomagnesemia hypercalciuria nephrocalcinosis with severe ocular involvement",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 3,
+   "loinc": "40663-7",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --upright",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "1142097006",
+   "finding_name": "Intermittent gestational proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 4,
+   "loinc": "26801-1",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "1081801000112104",
+   "finding_name": "Acute nephrotic syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 5,
+   "loinc": "25873-1",
+   "loinc_name": "Calcium [Moles/volume] in Urine --pre 500 mg calcium PO",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "1187063009",
+   "finding_name": "Urine calcium above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 6,
+   "loinc": "40662-9",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --resting",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "295111000119108",
+   "finding_name": "Nephrotic syndrome due to systemic lupus erythematosus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 7,
+   "loinc": "53121-0",
+   "loinc_name": "Protein [Mass/time] in 1 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "61135002",
+   "finding_name": "Residual proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 8,
+   "loinc": "50563-6",
+   "loinc_name": "Urobilinogen [Mass/volume] in Urine by Automated test strip",
+   "athena_target": "167321001",
+   "athena_target_name": "Urine dipstick for urobilinogen",
+   "finding": "167326006",
+   "finding_name": "Urine urobilinogen = ++",
+   "interpretation": "260348001",
+   "interpretation_name": "++",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 9,
+   "loinc": "38544-3",
+   "loinc_name": "Spermatozoa [#/volume] in Semen --pre washing",
+   "athena_target": "252047007",
+   "athena_target_name": "Spermatozoa measurement",
+   "finding": "300539002",
+   "finding_name": "Spermatozoa present",
+   "interpretation": "52101004",
+   "interpretation_name": "Present",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 10,
+   "loinc": "26801-1",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "1148866004",
+   "finding_name": "Intermittent orthostatic proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 11,
+   "loinc": "27091-8",
+   "loinc_name": "Calcium [Mass/time] in 4 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "707742001",
+   "finding_name": "Bartter syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 12,
+   "loinc": "2889-4",
+   "loinc_name": "Protein [Mass/time] in 24 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "243421000119104",
+   "finding_name": "Proteinuria due to type 1 diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 13,
+   "loinc": "40663-7",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --upright",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "328244661000119106",
+   "finding_name": "Isolated proteinuria due to crescentic glomerulonephritis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 14,
+   "loinc": "26552-0",
+   "loinc_name": "Glucose [Presence] in Urine by Test strip --6 hours post dose glucose",
+   "athena_target": "269879003",
+   "athena_target_name": "Urine dipstick for glucose",
+   "finding": "167261002",
+   "finding_name": "Urine glucose not detected",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 15,
+   "loinc": "71790-0",
+   "loinc_name": "Calcium [Moles/volume] in Urine collected for unspecified duration",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "707742001",
+   "finding_name": "Bartter syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 16,
+   "loinc": "25584-4",
+   "loinc_name": "Calcium [Moles/volume] in Urine --5 hours post 500 mg calcium PO",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "707742001",
+   "finding_name": "Bartter syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 17,
+   "loinc": "35675-8",
+   "loinc_name": "Calcium [Mass/volume] in Urine collected for unspecified duration",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "700107006",
+   "finding_name": "Bartter syndrome antenatal type 1",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 18,
+   "loinc": "53124-4",
+   "loinc_name": "Calcium [Moles/time] in 1 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "1304111007",
+   "finding_name": "Familial primary hypomagnesemia with hypercalciuria and nephrocalcinosis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 19,
+   "loinc": "16521-7",
+   "loinc_name": "Calcium [Moles/volume] in Urine --3rd specimen post XXX challenge",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "237886009",
+   "finding_name": "Familial idiopathic hypercalciuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_edge",
+   "n": 20,
+   "loinc": "58992-9",
+   "loinc_name": "Protein [Mass/time] in 18 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "197597003",
+   "finding_name": "Nephrotic syndrome, diffuse endocapillary proliferative glomerulonephritis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 21,
+   "loinc": "33792-3",
+   "loinc_name": "Calcium [Moles/volume] in Urine --6th specimen post XXX challenge",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "717787005",
+   "finding_name": "Familial hypomagnesemia hypercalciuria nephrocalcinosis with severe ocular involvement",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 22,
+   "loinc": "60025-4",
+   "loinc_name": "Urobilinogen [Moles/volume] in Urine by Automated test strip",
+   "athena_target": "167321001",
+   "athena_target_name": "Urine dipstick for urobilinogen",
+   "finding": "167326006",
+   "finding_name": "Urine urobilinogen = ++",
+   "interpretation": "260348001",
+   "interpretation_name": "++",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 23,
+   "loinc": "58992-9",
+   "loinc_name": "Protein [Mass/time] in 18 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "230970001",
+   "finding_name": "Isolated non-nephrotic proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 24,
+   "loinc": "40663-7",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --upright",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "263808002",
+   "finding_name": "Microproteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 25,
+   "loinc": "6874-2",
+   "loinc_name": "Calcium [Mass/time] in 24 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "700111000",
+   "finding_name": "Bartter syndrome type 3",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 26,
+   "loinc": "51610-4",
+   "loinc_name": "Calcium [Moles/time] in 12 hour Urine",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "1304111007",
+   "finding_name": "Familial primary hypomagnesemia with hypercalciuria and nephrocalcinosis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 27,
+   "loinc": "18373-1",
+   "loinc_name": "Protein [Mass/time] in 6 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "197596007",
+   "finding_name": "Nephrotic syndrome, diffuse mesangial proliferative glomerulonephritis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 28,
+   "loinc": "53121-0",
+   "loinc_name": "Protein [Mass/time] in 1 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "1142097006",
+   "finding_name": "Intermittent gestational proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 29,
+   "loinc": "2889-4",
+   "loinc_name": "Protein [Mass/time] in 24 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "197691006",
+   "finding_name": "Rapidly progressive nephritic syndrome, focal and segmental glomerular lesions",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 30,
+   "loinc": "100798-8",
+   "loinc_name": "Testosterone Free [Mass/volume] in Serum --2nd specimen post XXX challenge",
+   "athena_target": "270973006",
+   "athena_target_name": "Serum testosterone measurement",
+   "finding": "1153574000",
+   "finding_name": "Serum testosterone below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "wrong",
+   "method": "Athena placement, specimen at or below",
+   "why": "free testosterone is a fraction; its level is not the serum testosterone level the finding is defined by. Fraction analytes are now excluded where the LOINC component differs from the target's"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 31,
+   "loinc": "40662-9",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --resting",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "34165000",
+   "finding_name": "Gestational proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 32,
+   "loinc": "2889-4",
+   "loinc_name": "Protein [Mass/time] in 24 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "445170001",
+   "finding_name": "Macroalbuminuric nephropathy due to diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 33,
+   "loinc": "18373-1",
+   "loinc_name": "Protein [Mass/time] in 6 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "722369003",
+   "finding_name": "Congenital nephrotic syndrome due to diffuse mesangial sclerosis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 34,
+   "loinc": "2642-7",
+   "loinc_name": "Myoglobin [Mass/time] in 24 hour Urine",
+   "athena_target": "32375007",
+   "athena_target_name": "Myoglobin measurement, urine",
+   "finding": "5523002",
+   "finding_name": "Idiopathic myoglobinuria",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 35,
+   "loinc": "40662-9",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --resting",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "48796009",
+   "finding_name": "Congenital nephrotic syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 36,
+   "loinc": "40396-4",
+   "loinc_name": "Porphyrins [Moles/time] in 24 hour Urine",
+   "athena_target": "22031009",
+   "athena_target_name": "Porphyrin, quantitative measurement, urine",
+   "finding": "275776005",
+   "finding_name": "Porphyrins in urine - finding",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 37,
+   "loinc": "40663-7",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --upright",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "723449004",
+   "finding_name": "Pierson syndrome",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 38,
+   "loinc": "58992-9",
+   "loinc_name": "Protein [Mass/time] in 18 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "421986006",
+   "finding_name": "Persistent proteinuria due to type 2 diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 39,
+   "loinc": "74990-3",
+   "loinc_name": "Alpha 1 antitrypsin [Mass/time] in 24 hour Stool",
+   "athena_target": "313955008",
+   "athena_target_name": "Fecal A1 antitrypsin measurement",
+   "finding": "1389000000",
+   "finding_name": "Alpha-1-antitrypsin in stool above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v1_new_per_finding",
+   "n": 40,
+   "loinc": "26801-1",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "1187040004",
+   "finding_name": "Familial steroid-resistant nephrotic syndrome with adrenal insufficiency",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen at or below"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 1,
+   "loinc": "19254-2",
+   "loinc_name": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Blood",
+   "athena_target": "123820005",
+   "athena_target_name": "Partial pressure of oxygen in blood",
+   "finding": "123821009",
+   "finding_name": "Partial pressure of oxygen in blood outside reference range",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 2,
+   "loinc": "1639-4",
+   "loinc_name": "Testosterone [Mass/volume] in Serum or Plasma --pre 5000 U HCG IM",
+   "athena_target": "104957004",
+   "athena_target_name": "Testosterone measurement",
+   "finding": "1172390008",
+   "finding_name": "Testosterone within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 3,
+   "loinc": "2862-1",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma by Electrophoresis",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "197607004",
+   "finding_name": "Nephrotic syndrome in polyarteritis nodosa",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 4,
+   "loinc": "40340-2",
+   "loinc_name": "Somatotropin [Mass/volume] in Serum or Plasma --3 hours post dose triple bolus",
+   "athena_target": "80874005",
+   "athena_target_name": "Growth hormone measurement",
+   "finding": "1172505009",
+   "finding_name": "Human growth hormone within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 5,
+   "loinc": "40655-3",
+   "loinc_name": "Nuclear Ab [Titer] in Serum by Immunoassay",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "1156765006",
+   "finding_name": "Persistent onset antinuclear antibody negative juvenile idiopathic oligoarthritis",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 6,
+   "loinc": "16671-0",
+   "loinc_name": "Cortisol [Mass/volume] in Serum or Plasma --1 minute post XXX challenge",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131081008",
+   "finding_name": "Cortisol level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 7,
+   "loinc": "5048-4",
+   "loinc_name": "Nuclear Ab [Titer] in Serum by Immunofluorescence",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "165850001",
+   "finding_name": "Anti-nuclear factor detected",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 8,
+   "loinc": "10332-5",
+   "loinc_name": "Cortisol [Mass/volume] in Serum or Plasma --pre 250 ug corticotropin IM",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131081008",
+   "finding_name": "Cortisol level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 9,
+   "loinc": "57854-2",
+   "loinc_name": "Thyrotropin [Units/volume] in Serum or Plasma --5 minutes post XXX challenge",
+   "athena_target": "61167004",
+   "athena_target_name": "Thyroid stimulating hormone measurement",
+   "finding": "36241006",
+   "finding_name": "Non-toxic multinodular goiter",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 10,
+   "loinc": "83120-6",
+   "loinc_name": "Thyroxine (T4) [Moles/volume] in Serum or Plasma by Immunoassay",
+   "athena_target": "72765002",
+   "athena_target_name": "Thyroxine measurement",
+   "finding": "1186905006",
+   "finding_name": "Thyroxine within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 11,
+   "loinc": "40063-0",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma --4 days post XXX challenge",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "713695001",
+   "finding_name": "Nephrotic syndrome co-occurrent with HIV infection",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 12,
+   "loinc": "57588-6",
+   "loinc_name": "Aldosterone [Mass/volume] in Serum or Plasma --15 minutes post XXX challenge",
+   "athena_target": "83679004",
+   "athena_target_name": "Aldosterone measurement",
+   "finding": "778064009",
+   "finding_name": "Ectopic aldosterone-producing neoplasm",
+   "interpretation": "35105006",
+   "interpretation_name": "Increased",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 13,
+   "loinc": "27972-9",
+   "loinc_name": "Histidine [Units/volume] in Serum or Plasma",
+   "athena_target": "104730008",
+   "athena_target_name": "Histidine measurement",
+   "finding": "124064007",
+   "finding_name": "Histidine below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 14,
+   "loinc": "61152-5",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma by Bromocresol purple (BCP) dye binding method",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "197593004",
+   "finding_name": "Nephrotic syndrome, minor glomerular abnormality",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 15,
+   "loinc": "3020-5",
+   "loinc_name": "Thyroxine binding globulin [Mass/volume] in Blood",
+   "athena_target": "38929004",
+   "athena_target_name": "Thyroxine binding globulin measurement",
+   "finding": "1169375009",
+   "finding_name": "Thyroid binding globulin below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 16,
+   "loinc": "55392-5",
+   "loinc_name": "Insulin [Moles/volume] in Serum or Plasma --1 minute post XXX challenge",
+   "athena_target": "16890009",
+   "athena_target_name": "Insulin measurement",
+   "finding": "1172506005",
+   "finding_name": "Insulin within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 17,
+   "loinc": "27828-3",
+   "loinc_name": "Insulin [Units/volume] in Serum or Plasma --3 hours post XXX challenge",
+   "athena_target": "16890009",
+   "athena_target_name": "Insulin measurement",
+   "finding": "1172506005",
+   "finding_name": "Insulin within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 18,
+   "loinc": "77937-1",
+   "loinc_name": "Cortisol [Moles/volume] in Serum or Plasma --12 hours post XXX challenge",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131081008",
+   "finding_name": "Cortisol level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 19,
+   "loinc": "40057-2",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma --6.5 hours post XXX challenge",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "773647007",
+   "finding_name": "Nephrotic syndrome, deafness, pretibial epidermolysis bullosa syndrome",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_edge",
+   "n": 20,
+   "loinc": "2857-1",
+   "loinc_name": "Prostate specific Ag [Mass/volume] in Serum or Plasma",
+   "athena_target": "63476009",
+   "athena_target_name": "Prostate specific antigen measurement",
+   "finding": "396152005",
+   "finding_name": "Prostate specific antigen above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 21,
+   "loinc": "88019-5",
+   "loinc_name": "N-Acetylgalactosamine-6-Sulfatase [Enzymatic activity/volume] in DBS",
+   "athena_target": "104824002",
+   "athena_target_name": "N-acetylgalactosamine-6-sulfatase measurement",
+   "finding": "130197005",
+   "finding_name": "Deficiency of N-acetylgalactosamine-6-sulfatase",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 22,
+   "loinc": "54211-8",
+   "loinc_name": "Cortisol [Moles/volume] in Serum or Plasma --24 hours post dose dexamethasone",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "166479009",
+   "finding_name": "Cortisol level outside reference range",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 23,
+   "loinc": "53028-7",
+   "loinc_name": "Cyclic citrullinated peptide Ab [Presence] in Serum",
+   "athena_target": "408200008",
+   "athena_target_name": "Cyclic citrullinated peptide antibody measurement",
+   "finding": "1162313005",
+   "finding_name": "Rheumatoid factor and anti-citrullinated protein antibody positive rheumatoid arthritis",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 24,
+   "loinc": "29747-3",
+   "loinc_name": "Tocopherols [Moles/volume] in Serum or Plasma",
+   "athena_target": "7557006",
+   "athena_target_name": "Vitamin E measurement",
+   "finding": "1187029007",
+   "finding_name": "Vitamin E within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 25,
+   "loinc": "17583-6",
+   "loinc_name": "Sjogrens syndrome-A extractable nuclear Ab [Presence] in Serum by Immunofluorescence",
+   "athena_target": "59260005",
+   "athena_target_name": "Antibody to SS-A measurement",
+   "finding": "310257006",
+   "finding_name": "Ro antibody not detected",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 26,
+   "loinc": "25381-5",
+   "loinc_name": "Corticosterone [Moles/volume] in Serum or Plasma",
+   "athena_target": "104604003",
+   "athena_target_name": "Corticosterone measurement",
+   "finding": "1172438003",
+   "finding_name": "Corticosterone within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 27,
+   "loinc": "89520-1",
+   "loinc_name": "Actin smooth muscle Ab [Presence] in Serum by Line blot",
+   "athena_target": "50744001",
+   "athena_target_name": "Smooth muscle antibody measurement",
+   "finding": "310290006",
+   "finding_name": "Smooth muscle antibodies detected",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 28,
+   "loinc": "33254-4",
+   "loinc_name": "pH of Arterial blood adjusted to patient's actual temperature",
+   "athena_target": "81065003",
+   "athena_target_name": "pH measurement",
+   "finding": "735539005",
+   "finding_name": "Metabolic acidosis due to diabetes",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 29,
+   "loinc": "58523-2",
+   "loinc_name": "Corticosterone [Moles/volume] in Serum or Plasma --30 minutes post 250 ug corticotropin",
+   "athena_target": "104604003",
+   "athena_target_name": "Corticosterone measurement",
+   "finding": "131087007",
+   "finding_name": "Corticosterone level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 30,
+   "loinc": "29953-7",
+   "loinc_name": "Nuclear Ab [Titer] in Serum",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "1156819003",
+   "finding_name": "Extended oligoarticular onset antinuclear antibody negative juvenile idiopathic arthritis",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 31,
+   "loinc": "5330-6",
+   "loinc_name": "Rubella virus Ab [Units/volume] in Serum by Hemagglutination inhibition",
+   "athena_target": "134238004",
+   "athena_target_name": "Rubella virus antibody level",
+   "finding": "1285608004",
+   "finding_name": "Rubella virus antibody detected",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 32,
+   "loinc": "17085-2",
+   "loinc_name": "Lipoproteins [Presence] in Serum or Plasma",
+   "athena_target": "104789001",
+   "athena_target_name": "Lipoproteins measurement",
+   "finding": "124040006",
+   "finding_name": "Lipoprotein above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 33,
+   "loinc": "50610-5",
+   "loinc_name": "Alpha-1-Fetoprotein [Multiple of the median] adjusted for multiple gestations in Serum or Plasma",
+   "athena_target": "80152001",
+   "athena_target_name": "Alpha-1-Fetoprotein measurement",
+   "finding": "441772009",
+   "finding_name": "Abnormal presence of alpha-fetoprotein",
+   "interpretation": "43261007",
+   "interpretation_name": "Abnormal presence of",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 34,
+   "loinc": "16409-5",
+   "loinc_name": "Ascorbate [Mass/volume] in Serum or Plasma --post dose",
+   "athena_target": "27709003",
+   "athena_target_name": "Ascorbic acid measurement",
+   "finding": "131128002",
+   "finding_name": "Ascorbic acid above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 35,
+   "loinc": "1421-7",
+   "loinc_name": "Cortisol [Mass/volume] in Serum or Plasma --32 hours post 40 ug corticotropin IM BID 3 day",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131081008",
+   "finding_name": "Cortisol level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 36,
+   "loinc": "48421-2",
+   "loinc_name": "C reactive protein [Mass/volume] in Capillary blood",
+   "athena_target": "55235003",
+   "athena_target_name": "C-reactive protein measurement",
+   "finding": "166583007",
+   "finding_name": "C-reactive protein within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 37,
+   "loinc": "48421-2",
+   "loinc_name": "C reactive protein [Mass/volume] in Capillary blood",
+   "athena_target": "55235003",
+   "athena_target_name": "C-reactive protein measurement",
+   "finding": "166584001",
+   "finding_name": "C-reactive protein outside reference range",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 38,
+   "loinc": "96422-1",
+   "loinc_name": "Cortisone [Mass/volume] in DBS",
+   "athena_target": "121759002",
+   "athena_target_name": "Cortisone measurement",
+   "finding": "131084000",
+   "finding_name": "Decreased cortisone level",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 39,
+   "loinc": "1624-6",
+   "loinc_name": "Retinol [Mass/volume] in Serum or Plasma --3 hours post 5000 units",
+   "athena_target": "76609004",
+   "athena_target_name": "Vitamin A measurement",
+   "finding": "131110004",
+   "finding_name": "Vitamin A below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
+  },
+  {
+   "sample": "athena_v2_per_finding",
+   "n": 40,
+   "loinc": "40056-4",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma --6 hours post XXX challenge",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "721297008",
+   "finding_name": "Galloway Mowat syndrome",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "verdict": "correct",
+   "method": "Athena placement, specimen-less target, blood-family LOINC specimen"
   }
+ ],
+ "history_scored": [
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 1,
+   "loinc": "35663-4",
+   "loinc_name": "Protein [Mass/volume] in Urine collected for unspecified duration",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "324501000000107",
+   "finding_name": "Chronic kidney disease stage 5 with proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 2,
+   "loinc": "2888-6",
+   "loinc_name": "Protein [Mass/volume] in Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "445170001",
+   "finding_name": "Macroalbuminuric nephropathy due to diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 3,
+   "loinc": "58670-1",
+   "loinc_name": "Cortisol [Mass/volume] in Saliva (oral fluid) --45 minutes post 1 ug/kg CRH IV",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131081008",
+   "finding_name": "Cortisol level below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 4,
+   "loinc": "54213-4",
+   "loinc_name": "Cortisol [Moles/volume] in Serum or Plasma --4 days post dose corticotropin",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131080009",
+   "finding_name": "Cortisol level above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 5,
+   "loinc": "95232-5",
+   "loinc_name": "Microalbumin [Presence] in Urine by Test strip",
+   "athena_target": "271000000",
+   "athena_target_name": "Urine albumin measurement",
+   "finding": "950251000000106",
+   "finding_name": "CKD G5A1 - chronic kidney disease with glomerular filtration rate category G5 and albuminuria category A1",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 6,
+   "loinc": "60220-1",
+   "loinc_name": "Sodium [Moles/volume] in Mother's milk",
+   "athena_target": "25197003",
+   "athena_target_name": "Sodium measurement",
+   "finding": "50327002",
+   "finding_name": "Chronic hyponatremia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: sodium in breast milk is not the serum sodium hyponatraemia is defined by"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 7,
+   "loinc": "59797-1",
+   "loinc_name": "Glucose [Molar concentration difference] in Serum or Plasma --5 hours post XXX challenge",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "395204000",
+   "finding_name": "Hyperosmolar non-ketotic state due to type 2 diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "a concentration difference is not a level"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 8,
+   "loinc": "35675-8",
+   "loinc_name": "Calcium [Mass/volume] in Urine collected for unspecified duration",
+   "athena_target": "73668004",
+   "athena_target_name": "Calcium measurement, urine",
+   "finding": "50029007",
+   "finding_name": "Familial hypomagnesaemia-hypercalciuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 9,
+   "loinc": "1527-1",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --30 minutes post 75 g glucose PO",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "367991000119101",
+   "finding_name": "Hyperglycemia due to type 1 diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 10,
+   "loinc": "102026-2",
+   "loinc_name": "Cortisol [Mass/volume] in Serum or Plasma --2 hours post dose glucagon",
+   "athena_target": "62037009",
+   "athena_target_name": "Cortisol measurement",
+   "finding": "131080009",
+   "finding_name": "Cortisol level above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 11,
+   "loinc": "68374-8",
+   "loinc_name": "Nuclear Ab [Titer] in Pleural fluid by Immunofluorescence",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "1156765006",
+   "finding_name": "Persistent onset antinuclear antibody negative juvenile idiopathic oligoarthritis",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: pleural-fluid ANA; the finding is about serum ANA"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 12,
+   "loinc": "40193-5",
+   "loinc_name": "Glucose [Moles/volume] in Serum or Plasma --pre-meal",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "822995009",
+   "finding_name": "Hyperglycaemia due to diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 13,
+   "loinc": "40029-1",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --14 minutes post XXX challenge",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "1371421001",
+   "finding_name": "Fluctuation of blood glucose",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "also_by_analyte": true,
+   "verdict": "wrong",
+   "why": "Fluctuation needs a series; one timed value cannot show it (graded the same way for the analyte bridge)"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 14,
+   "loinc": "47794-3",
+   "loinc_name": "Tyrosine/Amino acids.total in Amniotic fluid",
+   "athena_target": "84796003",
+   "athena_target_name": "Tyrosine measurement",
+   "finding": "124066009",
+   "finding_name": "Decreased tyrosine",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "ratio (tyrosine / total amino acids), and amniotic fluid"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 15,
+   "loinc": "54271-2",
+   "loinc_name": "Glucose [Moles/volume] in Serum or Plasma --15 minutes post dose ornithine alpha-ketoglutarate",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "368051000119109",
+   "finding_name": "Hyperglycaemia due to type 2 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 16,
+   "loinc": "104647-3",
+   "loinc_name": "Erythrocyte [#/area] in Urine by Computer assisted method",
+   "athena_target": "14089001",
+   "athena_target_name": "Red blood cell count",
+   "finding": "82003006",
+   "finding_name": "G-6-PD class IV variant anaemia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: red cells counted in urine are not the blood red-cell count anaemia is defined by"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 17,
+   "loinc": "40662-9",
+   "loinc_name": "Protein [Mass/time] in 12 hour Urine --resting",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "199139003",
+   "finding_name": "Pregnancy-induced edema and proteinuria without hypertension",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 18,
+   "loinc": "2642-7",
+   "loinc_name": "Myoglobin [Mass/time] in 24 hour Urine",
+   "athena_target": "32375007",
+   "athena_target_name": "Myoglobin measurement, urine",
+   "finding": "359565003",
+   "finding_name": "Myoglobinuria following ingestion of eel",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 19,
+   "loinc": "1522-2",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --30 minutes post 0.5 g/kg glucose IV",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "421075007",
+   "finding_name": "Ketoacidotic coma due to type 1 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 20,
+   "loinc": "20010-5",
+   "loinc_name": "Oxygen [Partial pressure] (Maximum value during study) Capillary blood Transcutaneous O2 monitor --on low flow oxygen and awake",
+   "athena_target": "123820005",
+   "athena_target_name": "Partial pressure of oxygen in blood",
+   "finding": "1157021003",
+   "finding_name": "Partial pressure of oxygen in blood within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "an aggregate (maximum during a study), not a level"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 21,
+   "loinc": "35706-1",
+   "loinc_name": "Albumin/Protein.total in Serum or Plasma",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "197601003",
+   "finding_name": "Finnish congenital nephrotic syndrome",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "ratio (albumin / total protein)"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 22,
+   "loinc": "40183-6",
+   "loinc_name": "Glucose [Moles/volume] in Serum or Plasma --17.5 hours post XXX challenge",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "420422005",
+   "finding_name": "Diabetic ketoacidosis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 23,
+   "loinc": "1501-6",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --1 hour post 100 g glucose PO",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "421075007",
+   "finding_name": "Ketoacidotic coma due to type 1 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 24,
+   "loinc": "12648-2",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --15 minutes post dose lactose PO",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "26298008",
+   "finding_name": "Ketoacidotic coma due to diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 25,
+   "loinc": "12643-3",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --8 hours post XXX challenge",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "420270002",
+   "finding_name": "Ketoacidosis due to type 1 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 26,
+   "loinc": "2862-1",
+   "loinc_name": "Albumin [Mass/volume] in Serum or Plasma by Electrophoresis",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "197606008",
+   "finding_name": "Nephrotic syndrome in malaria",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 27,
+   "loinc": "27874-7",
+   "loinc_name": "Insulin [Units/volume] in Serum or Plasma --5th specimen post XXX challenge",
+   "athena_target": "16890009",
+   "athena_target_name": "Insulin measurement",
+   "finding": "131103005",
+   "finding_name": "Insulin level above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 28,
+   "loinc": "12842-1",
+   "loinc_name": "Protein [Mass/volume] in 12 hour Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "325955007",
+   "finding_name": "Recurrent proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 29,
+   "loinc": "12624-3",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --12th specimen post XXX challenge",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "166921001",
+   "finding_name": "Blood glucose within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 30,
+   "loinc": "56949-1",
+   "loinc_name": "Insulin [Units/volume] in Serum or Plasma --40 hours post XXX challenge",
+   "athena_target": "16890009",
+   "athena_target_name": "Insulin measurement",
+   "finding": "1172506005",
+   "finding_name": "Insulin within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 31,
+   "loinc": "105081-4",
+   "loinc_name": "Rheumatoid factor [Units/volume] in Specimen",
+   "athena_target": "54921001",
+   "athena_target_name": "Rheumatoid factor measurement",
+   "finding": "318931000119100",
+   "finding_name": "Seropositive rheumatoid arthritis of right hand",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen unstated ('in Specimen'); graded as the analyte bridge graded 'Glucose in Specimen'"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 32,
+   "loinc": "48076-4",
+   "loinc_name": "Somatotropin [Units/volume] in Serum or Plasma --2.5 hours post dose glucagon",
+   "athena_target": "80874005",
+   "athena_target_name": "Growth hormone measurement",
+   "finding": "1172505009",
+   "finding_name": "Human growth hormone within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 33,
+   "loinc": "34058-8",
+   "loinc_name": "Glucose [Moles/volume] in Serum or Plasma --pre or post dose glucagon",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "420270002",
+   "finding_name": "Ketoacidosis due to type 1 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 34,
+   "loinc": "14175-4",
+   "loinc_name": "Protoporphyrin [Mass/mass] in 24 hour Stool",
+   "athena_target": "33264001",
+   "athena_target_name": "Protoporphyrin measurement",
+   "finding": "1186890005",
+   "finding_name": "Protoporphyrin within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 35,
+   "loinc": "25382-3",
+   "loinc_name": "Cortisone [Moles/volume] in Serum or Plasma",
+   "athena_target": "121759002",
+   "athena_target_name": "Cortisone measurement",
+   "finding": "131084000",
+   "finding_name": "Decreased cortisone level",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 36,
+   "loinc": "5041-9",
+   "loinc_name": "Adenovirus Ab [Titer] in Serum by Complement fixation",
+   "athena_target": "1335901007",
+   "athena_target_name": "Detection of Adenovirus antibody",
+   "finding": "1335900008",
+   "finding_name": "Antibody to Adenovirus detected",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 37,
+   "loinc": "11558-4",
+   "loinc_name": "pH of Blood",
+   "athena_target": "81065003",
+   "athena_target_name": "pH measurement",
+   "finding": "26298008",
+   "finding_name": "Ketoacidotic coma due to diabetes",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 38,
+   "loinc": "35207-0",
+   "loinc_name": "Estradiol (E2) [Mass or Moles/volume] in Serum or Plasma",
+   "athena_target": "166448005",
+   "athena_target_name": "Serum oestradiol measurement",
+   "finding": "166449002",
+   "finding_name": "Serum estradiol levels below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 39,
+   "loinc": "14613-4",
+   "loinc_name": "Nuclear Ab [Titer] in Body fluid",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "165851002",
+   "finding_name": "Anti-nuclear factor not detected",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_edge",
+   "n": 40,
+   "loinc": "17865-7",
+   "loinc_name": "Glucose [Mass/volume] in Serum or Plasma --8 hours fasting",
+   "athena_target": "33747003",
+   "athena_target_name": "Glucose measurement, blood",
+   "finding": "420270002",
+   "finding_name": "Ketoacidosis due to type 1 diabetes",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 1,
+   "loinc": "35019-9",
+   "loinc_name": "Deprecated Monocytes+Macrophages/100 lymphocytes",
+   "athena_target": "767002",
+   "athena_target_name": "White blood cell count",
+   "finding": "165544003",
+   "finding_name": "Immature white blood cells not detected",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "deprecated ratio term (monocytes+macrophages per 100 lymphocytes) -> immature white cells"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 2,
+   "loinc": "1750-9",
+   "loinc_name": "Albumin [Mass/volume] in Semen",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "713695001",
+   "finding_name": "Nephrotic syndrome co-occurrent with HIV infection",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: albumin in semen"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 3,
+   "loinc": "17534-9",
+   "loinc_name": "Rheumatoid factor [Units/volume] in Body fluid by Immunoassay",
+   "athena_target": "54921001",
+   "athena_target_name": "Rheumatoid factor measurement",
+   "finding": "15691921000119100",
+   "finding_name": "Bilateral seropositive rheumatoid arthritis of hip joints",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: rheumatoid factor in body fluid"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 4,
+   "loinc": "27298-9",
+   "loinc_name": "Protein [Units/volume] in Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "724485008",
+   "finding_name": "Gestational proteinuria without hypertension",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 5,
+   "loinc": "15089-6",
+   "loinc_name": "Phospholipid [Moles/volume] in Serum or Plasma",
+   "athena_target": "18284006",
+   "athena_target_name": "Phospholipid measurement",
+   "finding": "124047009",
+   "finding_name": "Sphingomyelin above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 6,
+   "loinc": "2887-8",
+   "loinc_name": "Protein [Presence] in Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "73014008",
+   "finding_name": "Pyogenic proteinuria",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 7,
+   "loinc": "22702-5",
+   "loinc_name": "Ketones [Moles/volume] in Urine by Test strip",
+   "athena_target": "25164004",
+   "athena_target_name": "Ketone bodies measurement, quantitative",
+   "finding": "123984002",
+   "finding_name": "Ketone bodies above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 8,
+   "loinc": "35201-3",
+   "loinc_name": "Cobalamin (Vitamin B12) [Mass or Moles/volume] in Serum",
+   "athena_target": "271216009",
+   "athena_target_name": "Serum vitamin B12 measurement",
+   "finding": "165644008",
+   "finding_name": "Serum vitamin B12 within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 9,
+   "loinc": "17593-5",
+   "loinc_name": "Smooth muscle Ab [Presence] in Sweat",
+   "athena_target": "50744001",
+   "athena_target_name": "Smooth muscle antibody measurement",
+   "finding": "310290006",
+   "finding_name": "Smooth muscle antibodies detected",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: smooth muscle antibody in sweat"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 10,
+   "loinc": "2336-6",
+   "loinc_name": "Globulin [Mass/volume] in Serum",
+   "athena_target": "270994009",
+   "athena_target_name": "Serum globulin measurement",
+   "finding": "373604002",
+   "finding_name": "Light chain deposition disease",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 11,
+   "loinc": "4666-4",
+   "loinc_name": "Deprecated Osmotic fragility",
+   "athena_target": "113039000",
+   "athena_target_name": "Osmotic fragility",
+   "finding": "37253000",
+   "finding_name": "Decreased osmotic fragility",
+   "interpretation": "62482003",
+   "interpretation_name": "Low",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 12,
+   "loinc": "104647-3",
+   "loinc_name": "Erythrocyte [#/area] in Urine by Computer assisted method",
+   "athena_target": "14089001",
+   "athena_target_name": "Red blood cell count",
+   "finding": "707480001",
+   "finding_name": "Chronic hemolytic anemia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: urine red cells -> haemolytic anaemia"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 13,
+   "loinc": "55221-6",
+   "loinc_name": "Carbohydrates [Presence] in Stool",
+   "athena_target": "5638008",
+   "athena_target_name": "Carbohydrate measurement",
+   "finding": "124012001",
+   "finding_name": "Decreased glycogen",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen and analyte: carbohydrates in stool -> decreased glycogen"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 14,
+   "loinc": "35234-4",
+   "loinc_name": "Urea nitrogen [Mass or Moles/volume] in Serum or Plasma",
+   "athena_target": "105011006",
+   "athena_target_name": "Blood urea nitrogen measurement",
+   "finding": "44730006",
+   "finding_name": "Uraemia",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 15,
+   "loinc": "71847-8",
+   "loinc_name": "Oxygen saturation [Pure mass fraction] in Venous cord blood",
+   "athena_target": "104847001",
+   "athena_target_name": "Oxygen saturation measurement",
+   "finding": "448225001",
+   "finding_name": "Oxygen saturation within reference range",
+   "interpretation": "281301001",
+   "interpretation_name": "Within reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 16,
+   "loinc": "67764-1",
+   "loinc_name": "HEDIS 2012, 2013 Codes to identify physiologic monitoring tests - Serum creatinine (SCr) (MPM-A)",
+   "athena_target": "113075003",
+   "athena_target_name": "Creatinine measurement, serum",
+   "finding": "166714005",
+   "finding_name": "Serum creatinine outside reference range",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "not a result code: a HEDIS value-set code"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 17,
+   "loinc": "2336-6",
+   "loinc_name": "Globulin [Mass/volume] in Serum",
+   "athena_target": "270994009",
+   "athena_target_name": "Serum globulin measurement",
+   "finding": "166787006",
+   "finding_name": "Serum gamma globulin raised",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 18,
+   "loinc": "73576-1",
+   "loinc_name": "Anion gap in Venous cord blood by Calculated.4Ions",
+   "athena_target": "79301008",
+   "athena_target_name": "Electrolytes measurement",
+   "finding": "870578004",
+   "finding_name": "Persistent abnormal electrolytes",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "anion gap is derived, not an electrolyte measurement"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 19,
+   "loinc": "10834-0",
+   "loinc_name": "Globulin [Mass/volume] in Serum by calculation",
+   "athena_target": "270994009",
+   "athena_target_name": "Serum globulin measurement",
+   "finding": "402454000",
+   "finding_name": "Primary systemic amyloidosis due to occult plasma cell dyscrasia",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 20,
+   "loinc": "27298-9",
+   "loinc_name": "Protein [Units/volume] in Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "363234001",
+   "finding_name": "Nephrotic syndrome secondary to systemic disease",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 21,
+   "loinc": "97016-0",
+   "loinc_name": "Fibrinogen [Mass/volume] in Blood by calculation",
+   "athena_target": "250346004",
+   "athena_target_name": "Fibrinogen measurement",
+   "finding": "131177005",
+   "finding_name": "Fibrinogen below reference range",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 22,
+   "loinc": "47796-8",
+   "loinc_name": "Tyrosine/Amino acids.total in DBS",
+   "athena_target": "84796003",
+   "athena_target_name": "Tyrosine measurement",
+   "finding": "124066009",
+   "finding_name": "Decreased tyrosine",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "ratio (tyrosine / total amino acids)"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 23,
+   "loinc": "15013-6",
+   "loinc_name": "Alkaline phosphatase.bone/Alkaline phosphatase.total in Serum or Plasma",
+   "athena_target": "271052004",
+   "athena_target_name": "Alkaline phosphatase - bone isoenzyme measurement",
+   "finding": "310885000",
+   "finding_name": "Alkaline phosphatase bone isoenzyme raised",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "ratio (bone ALP / total ALP)"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 24,
+   "loinc": "34466-3",
+   "loinc_name": "Carbohydrates [Presence] in Specimen",
+   "athena_target": "5638008",
+   "athena_target_name": "Carbohydrate measurement",
+   "finding": "124011008",
+   "finding_name": "Glycogen above reference range",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen unstated; carbohydrates -> glycogen"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 25,
+   "loinc": "1980-2",
+   "loinc_name": "Biotin [Mass/volume] in Serum or Plasma",
+   "athena_target": "104558003",
+   "athena_target_name": "Biotin measurement",
+   "finding": "131131001",
+   "finding_name": "Decreased biotin",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 26,
+   "loinc": "108681-8",
+   "loinc_name": "Zinc [Measurement] in Serum or Plasma",
+   "athena_target": "271284001",
+   "athena_target_name": "Blood zinc measurement",
+   "finding": "441897002",
+   "finding_name": "Abnormal zinc level in blood",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 27,
+   "loinc": "2750-8",
+   "loinc_name": "pH of Pleural fluid",
+   "athena_target": "81065003",
+   "athena_target_name": "pH measurement",
+   "finding": "420270002",
+   "finding_name": "Ketoacidosis due to type 1 diabetes",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: pH of pleural fluid -> ketoacidosis"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 28,
+   "loinc": "39791-9",
+   "loinc_name": "Sodium [Moles/volume] in Venous blood",
+   "athena_target": "25197003",
+   "athena_target_name": "Sodium measurement",
+   "finding": "84937002",
+   "finding_name": "Cerebral hyponatremia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 29,
+   "loinc": "2336-6",
+   "loinc_name": "Globulin [Mass/volume] in Serum",
+   "athena_target": "270994009",
+   "athena_target_name": "Serum globulin measurement",
+   "finding": "285430002",
+   "finding_name": "Light chain monoclonal gammopathy of uncertain significance",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 30,
+   "loinc": "35226-0",
+   "loinc_name": "Thyroxine (T4) [Mass or Moles/volume] in Serum or Plasma",
+   "athena_target": "313862000",
+   "athena_target_name": "Serum total T4 measurement",
+   "finding": "69329005",
+   "finding_name": "Toxic uninodular goiter with thyrotoxic crisis",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 31,
+   "loinc": "32717-1",
+   "loinc_name": "Sodium [Moles/volume] in Arterial blood",
+   "athena_target": "25197003",
+   "athena_target_name": "Sodium measurement",
+   "finding": "307201006",
+   "finding_name": "Dilutional hyponatraemia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 32,
+   "loinc": "31542-4",
+   "loinc_name": "Nuclear Ab [Units/volume] in Pleural fluid",
+   "athena_target": "359788000",
+   "athena_target_name": "ANA measurement",
+   "finding": "1156765006",
+   "finding_name": "Persistent onset antinuclear antibody negative juvenile idiopathic oligoarthritis",
+   "interpretation": "260415000",
+   "interpretation_name": "Not detected",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: pleural-fluid ANA"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 33,
+   "loinc": "2887-8",
+   "loinc_name": "Protein [Presence] in Urine",
+   "athena_target": "57378007",
+   "athena_target_name": "Urine protein measurement",
+   "finding": "71721000119101",
+   "finding_name": "Nephrotic syndrome due to type 1 diabetes mellitus",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 34,
+   "loinc": "74238-7",
+   "loinc_name": "HEDIS 2014 Value Set - Blood Urea Nitrogen",
+   "athena_target": "105011006",
+   "athena_target_name": "Blood urea nitrogen measurement",
+   "finding": "1263948001",
+   "finding_name": "Uraemia following ectopic pregnancy",
+   "interpretation": "281302008",
+   "interpretation_name": "Above reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "not a result code: a HEDIS value-set code"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 35,
+   "loinc": "1928-1",
+   "loinc_name": "Immunoglobulin light chains [Presence] in Urine",
+   "athena_target": "412813009",
+   "athena_target_name": "Urine light chain measurement",
+   "finding": "17928001",
+   "finding_name": "Light-chain proteinuria",
+   "interpretation": "260373001",
+   "interpretation_name": "Detected",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 36,
+   "loinc": "35019-9",
+   "loinc_name": "Deprecated Monocytes+Macrophages/100 lymphocytes",
+   "athena_target": "767002",
+   "athena_target_name": "White blood cell count",
+   "finding": "28975000",
+   "finding_name": "Constitutional aplastic anemia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "deprecated ratio term -> aplastic anaemia"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 37,
+   "loinc": "47152-4",
+   "loinc_name": "EPINEPHrine [Moles/volume] in Urine --7th specimen post XXX challenge",
+   "athena_target": "271249000",
+   "athena_target_name": "Urine epinephrine measurement",
+   "finding": "167404009",
+   "finding_name": "Urine adrenalin level outside reference range",
+   "interpretation": "394844007",
+   "interpretation_name": "Outside reference range",
+   "also_by_analyte": true,
+   "verdict": "correct"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 38,
+   "loinc": "72598-6",
+   "loinc_name": "Albumin/Protein.total [Pure mass fraction] in Serum or Plasma by Electrophoresis",
+   "athena_target": "26758005",
+   "athena_target_name": "Albumin measurement",
+   "finding": "1260198000",
+   "finding_name": "Idiopathic steroid-sensitive nephrotic syndrome with secondary steroid resistance",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "ratio (albumin / total protein)"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 39,
+   "loinc": "104647-3",
+   "loinc_name": "Erythrocyte [#/area] in Urine by Computer assisted method",
+   "athena_target": "14089001",
+   "athena_target_name": "Red blood cell count",
+   "finding": "51071000",
+   "finding_name": "Microangiopathic haemolytic anaemia",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: urine red cells -> haemolytic anaemia"
+  },
+  {
+   "sample": "athena_unrestricted_per_finding",
+   "n": 40,
+   "loinc": "104647-3",
+   "loinc_name": "Erythrocyte [#/area] in Urine by Computer assisted method",
+   "athena_target": "14089001",
+   "athena_target_name": "Red blood cell count",
+   "finding": "76366001",
+   "finding_name": "Haemolytic anaemia caused by Bartonella",
+   "interpretation": "281300000",
+   "interpretation_name": "Below reference range",
+   "also_by_analyte": false,
+   "verdict": "wrong",
+   "why": "specimen: urine red cells -> haemolytic anaemia"
+  }
+ ],
+ "rules_athena": [
+  "the LOINC term's Athena procedure is itself the finding's Interprets target (no is-a climbing)",
+  "LOINC term in the LOINC Ontology's Observation refset, ACTIVE in LOINC 2.83, not Discouraged",
+  "the analyte bridge's ratio / difference / lossy-component rules",
+  "specimen: the LOINC Direct site is at or below one of the target's Has specimen values; where the target states no specimen, the LOINC Direct site is at or below Blood specimen (119297000) -- an assumption this route supplies, scored on its own",
+  "fraction analytes (free and bioavailable testosterone, unconjugated estriol, bilirubin-albumin complex, indirect bilirubin, anion gap, HDL sub-fraction III, small LDL) are excluded where the LOINC component differs from the target's"
  ]
 }
