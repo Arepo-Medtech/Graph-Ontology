@@ -1,0 +1,206 @@
+{
+ "guideline": "guidelines/hypokalaemia-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Hypokalaemia' (Last updated October 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**The oral/enteral route is preferred.** ⚠️ **IV potassium is high-risk** — inadvertent hyperkalaemia, fluid overload, extravasation and thrombophlebitis; rapid IV administration or overdose may cause arrhythmia or arrest.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The oral/enteral route is preferred for potassium administration Intravenous potassium is a high-risk medication and carries risks of inadvertent hyperkalaemia, fluid overload, and peripheral vein extravasation and thrombophlebitis. Rapid intravenous administration or overdose may cause cardiac arrhythmia or arrest",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Monitor fluid status and electrolytes in every child on replacement. Cardiac monitoring if initial K is under 3.0 mmol/L or the child is on IV replacement.** Seek specialist advice for critical (K under 2.0 mmol/L) or symptomatic hypokalaemia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitor fluid status and electrolytes in all children receiving potassium replacement. Children with an initial serum potassium <3.0 mmol/L should have cardiac monitoring, as should those receiving IV replacement Specialist advice should be sought for critical (K <2.0 mmol/L) or symptomatic hypokalaemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypokalaemia = plasma potassium under 3.5 mmol/L.** **Severity (mmol/L):** mild 3.0–3.4 · moderate 2.5–3.0 · severe 2.0–2.4 · **critical under 2.0.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypokalaemia is defined as a plasma potassium level less than 3.5 mmol/L Severity Serum potassium (mmol/L) Mild 3.0-3.4 Moderate 2.5-3.0 Severe 2.0-2.4 Critical <2.0",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A 1 mmol/L fall in serum K represents a whole-body deficit of at least 200 mmol** (normal acid–base). Metabolic acidosis may falsely raise serum K and hide the deficit; alkalosis does the opposite.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In normal acid-base status, a 1 mmol/L decrease in serum potassium concentration represents a whole-body deficit of at least 200 mmol. Concurrent metabolic acidosis may falsely elevate the serum potassium and lead to an underestimation of total body deficit. Metabolic alkalosis can have the opposite effect",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hypokalaemia commonly comes with hypomagnesaemia — measure magnesium and replace as required.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypokalaemia is commonly associated with hypomagnesaemia. Serum magnesium should be measured and replaced as required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prevention:** children eating a variety of foods meet their needs (about 2–4 mmol/kg/day); consider potassium-containing maintenance fluids for children nil by mouth for prolonged periods.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In general, children eating a variety of foods will meet their daily potassium requirements (approximately 2-4 mmol/kg/day) Consider maintenance fluids containing potassium (see Intravenous fluids) for children who are Nil by mouth and not receiving enteral fluids for prolonged periods, particularly if associated with increased losses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Often asymptomatic;** symptoms are more likely with a rapid fall below 3 mmol/L — weakness or paralysis, ileus, constipation, lethargy, confusion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hypokalaemia is often asymptomatic Symptoms of hypokalaemia are more likely when serum levels rapidly decrease to below 3 mmol/L Skeletal muscle weakness, paralysis (in severe cases) Smooth muscle weakness: ileus, constipation, nausea, vomiting Lethargy Fatigue Confusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Repeat K to verify the first result;** haemolysed or finger-prick samples can falsely raise K, so **take a venous sample** if hypokalaemia is suspected. Also UEC, BGL, venous gas, and magnesium (especially if refractory).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Repeat potassium to verify initial result Serum potassium level can be falsely elevated in haemolysed/finger prick samples. A venous sample should be taken if clinical suspicion of hypokalaemia Urea, creatinine and electrolytes BGL Venous blood gas Magnesium, especially if hypokalaemia is refractory to treatment (hypomagnesaemia promotes potassium wasting)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ECG if symptomatic, at risk of arrhythmia, or K under 3 mmol/L.** Look for reduced T-wave amplitude (usually earliest), T flattening/inversion, ST depression, U waves, QT prolongation, ectopics.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG: if signs/symptoms of hypokalaemia, risk of cardiac arrhythmia, or serum potassium <3 mmol/L … Decreased T wave amplitude (usually earliest manifestation) Increased P wave amplitude T wave changes (flattening, inversion) ST changes (usually depression) Appearance of U wave QT prolongation Ventricular ectopic beats Arrhythmia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Make sure the child is passing urine before starting potassium.** **Replace if K under 3.0 mmol/L, or under 3.5 mmol/L with symptoms, signs or ECG changes.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure child is passing urine before commencing potassium replacement Potassium replacement is indicated if Serum potassium <3.0 mmol/L or Serum potassium <3.5 mmol/L with symptoms, signs and/or ECG changes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Mild (3.0–3.5 mmol/L): depends on context** — no acute treatment with monitoring, a higher maintenance dose, or oral/IV replacement if ongoing losses or poor intake. **Stable, no ECG change: correct gradually over 24–48 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In mild hypokalaemia (serum levels 3.0-3.5 mmol/L), optimal treatment depends on clinical situation. Consider: No acute treatment, monitor electrolytes Increasing maintenance potassium dose Replacing orally/IV if anticipated ongoing losses or inadequate intake In children with stable haemodynamics and no ECG changes, aim for a gradual correction over 24-48 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider IV** if the child cannot tolerate enteral medication, the initial K is under 2.5 mmol/L, or there are ECG changes. Oral potassium is best taken with or soon after food.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "It is best taken with or soon after food to reduce gastrointestinal irritation Intravenous potassium replacement should be considered in a child who is unable to tolerate enteral medication an initial serum potassium <2.5 mmol/L presence of ECG changes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acute oral dose: 1–2 mmol/kg/dose (max 20 mmol per dose).** Repeat after checking K, **to max 5 mmol/kg/day (max 50 mmol/day).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute replacement dose 1-2 mmol/kg/dose orally (maximum 20 mmol per dose) Dose may be repeated, after checking serum potassium level, to a maximum of 5 mmol/kg/day (maximum total daily dose 50 mmol)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Maintenance, if required: 2–5 mmol/kg/day orally in divided doses (max 20 mmol per dose).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Maintenance dose (if required) 2-5 mmol/kg/day orally in divided doses (maximum 20 mmol per dose)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Products:** KCl oral mixture 1.33 mmol/mL (rise after about 2 hours) · effervescent tablet (e.g. Chlorvescent) 14 mmol, dissolve completely (about 2 hours) · controlled-release Slow K 8 mmol, for mild or chronic hypokalaemia, swallow whole (about 4 hours).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Potassium chloride oral mixture (where available) 1.33 mmol/mL Rapid absorption Expected serum potassium rise after approximately 2 hours Effervescent tablet eg Chlorvescent® 14 mmol per tablet Rapid absorption Ensure tablets are completely dissolved before administration Expected serum potassium rise after approximately 2 hours Controlled release enteric coated eg Slow K® (for maintenance dosing) 8 mmol per tablet Slow release, delayed absorption Use for mild or chronic hypokalaemia Tablets must be swallowed whole Expected serum potassium rise after approximately 4 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Use an infusion pump with dose-error-reduction software where available; concentrated potassium only in critical care.** **Count every potassium source** (maintenance additives, PN, enteral supplements); other potassium-containing fluids may need pausing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Administer via an infusion pump using Dose Error Reduction Software (DERS) where available. Note that concentrated potassium solutions should only be administered in critical care settings Include all sources of potassium when calculating replacement doses and infusion rates, eg additives to maintenance fluids, parenteral nutrition, oral/enteral supplements Potassium-containing fluids, including parenteral nutrition, may need to be paused during acute replacement to ensure the maximum rate of potassium administration is not exceeded",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**General ward: 0.2 mmol/kg/hour for 3 hours (max 10 mmol/hour)** — likely needs a fluid rate above maintenance. ECG monitoring only if K under 3 mmol/L or arrhythmia risk. **Repeat K 1 hour after completion**, and before any further dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "General ward 0.2 mmol/kg/hour for 3 hours (max 10 mmol/hour) Note: Dose likely to require intravenous fluid rate greater than maintenance fluid rate Only required if serum potassium <3 mmol/L or risk of cardiac arrhythmia 1 hour after replacement completion Check serum potassium level before administering further replacement",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Critical care: 0.4 mmol/kg/hour for 1–2 hours (max 20 mmol/hour)** — likely concentrated infusion and central line; **ECG monitoring required; repeat K 1 hour after starting and 1 hour after completion.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Critical care area 0.4 mmol/kg/hour for 1-2 hours (max 20 mmol/hour) Note: Likely to require concentrated potassium infusion (see below) and central line Yes 1 hour after replacement commencement and 1 hour after replacement completion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**IV maintenance, if required: 1–4 mmol/kg/day (max 10 mmol/hour).** Discuss doses above 4 mmol/kg/day with a senior clinician or retrieval service.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Maintenance dose (if required): 1-4 mmol/kg/day (max 10 mmol/hour) Doses greater than 4 mmol/kg/day should be discussed with a senior clinician or local retrieval service",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Give potassium chloride IV by infusion only. Never flush after a potassium chloride infusion.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Only administer potassium chloride IV by infusion. Never flush after potassium chloride infusions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Peripheral line: usual max 40 mmol/L** (discuss 40–60 mmol/L with a senior clinician). Use premixed bags; if adding KCl, invert at least 10 times; label everything to prevent flushing. The premixed **10 mmol KCl in 100 mL 0.29% sodium chloride** may run peripherally because it is isotonic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Peripheral line Usual maximum 40 mmol/L (discuss with senior clinician if giving 40-60 mmol/L) Use premixed fluid bags where possible (various concentrations available) When adding potassium chloride to an IV fluid bag, mix well by inverting the bag at least 10 times Clearly label all bags, syringes, pumps and lines that contain potassium to avoid inadvertent flushing Premixed product 10 mmol potassium chloride in 100 mL 0.29% sodium chloride can be administered via a peripheral line as the product is isotonic due to the reduced sodium content",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Over 60 mmol/L: central line only, max 0.4 mmol/kg/hour**, in areas with a clear protocol, senior approval and ECG monitoring.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Central line Concentrations >60 mmol/L must be given via a central line only (maximum rate 0.4 mmol/kg/hour) … Only administer in areas where there is a clear protocol for administration and monitoring Contact local retrieval service for further advice Use should be approved by a senior clinician ECG monitoring required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Monitor** vital signs, fluid status and urine output, signs of hyperkalaemia, and the IV site for phlebitis or extravasation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure regular monitoring of: vital signs clinical and fluid status including urine output any signs of hyperkalaemia (see Hyperkalaemia) IV site for phlebitis or Extravasation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider transfer:** K under 2.0 mmol/L · symptomatic (especially paralysis) · significant ECG changes · renal impairment including oliguria · arrhythmia risk · fluid overload · neonates · complex medical conditions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Serum potassium <2.0 mmol/L Symptomatic hypokalaemia especially paralysis Significant ECG changes such as arrhythmia, ventricular or supraventricular ectopic beats, ST changes, T wave inversion Renal impairment, including oliguria or high/rising creatinine Risk of arrhythmia Fluid overload Neonates Child with complex medical condition",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** asymptomatic, **K over 3.0 mmol/L and stable**, losses replaced with ongoing replacement possible, and repeat levels are planned.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Asymptomatic Potassium >3.0 mmol/L and stable Fluid losses replaced and ongoing replacement possible Plan for ongoing monitoring (ie repeat levels) in place",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Hypokalaemia' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Hypokalaemia/, retrieved 2026-09-23"
+  }
+ ]
+}
