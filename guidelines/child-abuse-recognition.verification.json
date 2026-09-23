@@ -1,0 +1,180 @@
+{
+ "guideline": "guidelines/child-abuse-recognition.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Child abuse' (Last updated November 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Discuss all concerns with a senior clinician. Report all suspected cases in line with mandatory reporting obligations.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss all concerns about possible child abuse with a senior clinician. Report all suspected cases in accordance with mandatory reporting obligations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Abuse can underlie many presentations. Assess every child with injury or suspected abuse top-to-toe.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Child abuse is a possible cause for many different presentations. Children who attend with injury or suspected abuse must be assessed top-to-toe",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Time-critical: suspected inflicted head injury, recent (under 72 hours) sexual assault, and poisoning — consult specialist services urgently.** Child sexual assault needs trained medical forensic examiners.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suspected inflicted head injury, recent (<72 hours) sexual assault and poisoning often require time-critical investigations. Consult specialist services urgently … Child sexual assault requires specialist service responses with trained medical forensic examiners",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Abuse is common and can be missed or misdiagnosed** — diagnosis needs a high index of suspicion. Categories: physical assault, sexual assault, emotional maltreatment, neglect.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Is common Can be missed and misdiagnosed. Diagnosis requires a high-index of suspicion together with careful investigation and interpretation of injuries Categorised as physical assault, sexual assault, emotional maltreatment and neglect",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider abuse when:** no history accounts for the injury · unwitnessed trauma · family violence · a mechanism incompatible with age or development · inconsistent or changing histories · unreasonable delay in seeking care.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider abuse in the following circumstances No history to account for the injury History of unwitnessed trauma History of family violence Mechanism incompatible with the child’s age or developmental capabilities History does not easily account for the findings Inconsistent or changing histories without reasonable explanation Unreasonable delay in seeking medical attention",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Also consider it for:** any injury in a non-ambulatory infant · another child said to have caused significant injury · **high-specificity injuries (ear bruising, posteromedial rib fractures, immersion-pattern scald, genital injury)** · an infant with unexplained encephalopathy · problematic or harmful sexual behaviours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any injury in a non-ambulatory infant History of another child causing significant injury Certain injuries with high specificity for abuse eg ear bruising, posteromedial rib fractures, scald pattern suggesting immersion, injury to genitalia An infant with an unexplained encephalopathy (suspect abusive head injury and/or poisoning) Child or young person has problematic or harmful sexual behaviours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Unexplained encephalopathy:** any altered conscious state, collapse or arrest — consider abusive head trauma, ingestion or poisoning, toxins and suffocation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Unexplained encephalopathy Any altered conscious state, collapse or arrest. Consider abusive head trauma, ingestion/poisoning, toxins and suffocation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other red-flag injuries:** immersion (near drowning in a bath) · strangulation or suffocation · harm from fabricated or induced illness · harm from ingested poisons or medications · female genital mutilation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Other injury • Immersion (near drowning in bath or similar) • Strangulation or suffocation • Injury or serious health consequences as a result of fabricated and induced illness (FII) • Injury or serious health consequences as a result of ingestion of poisons/substances/medications • Female genital mutilation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Inflicted injuries can be occult** and may not be reported or detected by the carer.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inflicted injuries can be occult and might not be reported (or detected) by the child's carer",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take history from multiple sources, including the child, with open-ended questions limited to what is clinically necessary.** Formal interviewing of the child is for the specialist service.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Information regarding witnessed events, mechanism of injury, previous health and social history should be sought from multiple sources including the child. Questions should be open-ended and limited to information that is clinically necessary Formal interviewing of the child should be done by the relevant specialist service.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about** personal and family bleeding disorders, connective tissue disease and developmental disorders, prior child protection or police contact, and protective orders. **Identify and document every child in the household and their ages.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Personal and family history of bleeding disorders, connective tissue disease, developmental disorders Prior contact with child protection agencies and police Protective orders and other court orders applicable to the child’s safety and wellbeing All children within the household/s and their ages must also be identified and documented",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Top-to-toe for every child:** height, weight and head circumference on percentile charts · ENT including ear drums, nostrils, frenulum, teeth · **fundoscopy** · a complete skin check including neck and joint creases, palms, soles, inside the mouth and under the nappy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children require a top-to-toe physical examination This includes: Recording height, weight, head circumference on percentile charts ENT examination (including ear drums, nostrils, frenulum, teeth) Fundoscopy Complete skin check including neck and joint creases, palms of the hands, soles of the feet, inside the mouth, and areas underneath the nappy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Document child–carer interactions**, and where possible examine with a colleague present (e.g. social worker).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Behaviours observed between the child and carer during the consultation should be documented When possible, the assessment should be performed with a colleague present (eg specialist counsellor, social worker) who can support the patient and family",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Genital inspection only once, with the child's cooperation, when needed for medical care.** Forensic genital examination to decide whether sexual abuse occurred **only by an appropriately trained clinician**; seek specialist consultation for perineal injuries or sexual abuse concerns.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Genital inspection may be required for medical care and should be performed only once with the cooperation of the child … Forensic genital examination for the purpose of determining whether or not sexual abuse has occurred, should only be performed by an appropriately trained clinician … For perineal injuries or concerns about possible child sexual abuse, seek specialist service consultation.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consent must be voluntary, informed, specific and given by someone with capacity** — a legal guardian and/or a Gillick-competent child. Child protection services may help if consent is refused.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consent must be voluntary, informed, specific to the act to be performed and given by a person with capacity. Either: A child’s legal guardian and/or A Gillick competent child Child protection services may be able to assist when consent is refused or cannot be obtained in the usual way",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Without consent, examine only in a medical emergency**, with senior advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If consent is unobtainable the child should only be examined if a medical emergency exists. Seek senior clinician advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Documentation has significant legal weight — use a proforma.** Clinical photographs (respecting legal and privacy rules) and body diagrams help; **always describe injuries.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The legal implications of a medical assessment conducted for possible child abuse are significant. Accurate and complete documentation is essential. Use of a proforma is strongly recommended Clinical photographs (with consideration to legal and privacy requirements) are an excellent way of recording visible injuries. Injuries must always be described. Body diagrams are a useful adjunct",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discuss with a senior clinician or specialist service before giving opinions** on whether abuse occurred, injury causation or timing. **Do not label injuries 'old' or 'new'.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discussing with a senior clinician or specialist service before stating: opinions about whether child abuse has occurred or not opinions about injury causation opinions about timing of injuries. Do not label injuries as \"old\" or \"new\"",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not delay urgent treatment** (e.g. bleeding, fracture) while seeking specialist consultation. Give analgesia and psychological support.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not delay urgent treatment of medical problems while seeking specialist service consultation eg bleeding, fracture … Provide analgesia as required Provide psychological support for the child and carers",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discuss any infant with unexplained encephalopathy or head injury with a senior clinician and specialist services** — shaking or direct head trauma can cause delayed deterioration; urgent investigation and ICU monitoring may be needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any infant with unexplained encephalopathy or head injury should be discussed with a senior clinician and specialist services. Injury from shaking or direct head trauma may result in delayed deterioration. Urgent investigations and in-hospital/ICU monitoring may be required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Early discussion with specialist services is recommended, e.g. for suspected poisoning** — some forensic investigations are time-critical. Hold a **multidisciplinary, multiagency meeting, if possible within 24 hours of admission.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early discussion with relevant specialist services is recommended eg when poisoning or ingestion are suspected. Some forensic investigations are time critical … An early multidisciplinary, multiagency meeting, if possible within 24 hours of admission, is recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the paediatric team for:** all children with unexplained encephalopathy or head injury · children admitted under surgeons with suspected abuse · children or siblings needing assessment for cumulative harm. **Transfer to a tertiary hospital for suspected abusive head injury.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with unexplained encephalopathy or head injury All children admitted to hospital under a surgical team with suspected abuse or assault eg burns, fractures, sharp force trauma All children and/or siblings requiring admission or further assessment for cumulative harms … Consider transfer to a tertiary paediatric hospital when Suspected abusive head injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discharge only with a safe discharge plan approved by a senior clinician** — the joint responsibility of the health service and child protection — and ongoing supports in place.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Safe discharge plan for the child and their family (children and carers) has been approved by a senior clinician Safe discharge is the joint responsibility of the health service and the child protection services Children and their carers have been linked with ongoing supports",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Child abuse' (Last updated November 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Child_abuse/, retrieved 2026-09-23"
+  }
+ ]
+}
