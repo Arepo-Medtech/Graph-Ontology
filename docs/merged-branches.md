@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `f299086`
+**Last verified:** 2026-09-23 · `master` at `e878c81`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -15,6 +15,7 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`condition-guideline-tally`** | `0ec6aa3` | 2 | [#6](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/6) | 2026-09-23 | `56fe582` | ✅ yes |
 | **`enrich-candidates-rerun`** | `6786077` | 1 | [#7](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/7) | 2026-09-23 | `ae64446` | ✅ yes |
 | **`quarantine-development`** | `d020a71` | 2 | [#8](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/8) | 2026-09-23 | `f299086` | ✅ yes |
+| **`restore-lost-bindings`** | `69ff084` | 1 | [#9](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/9) | 2026-09-23 | `e878c81` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -66,6 +67,12 @@ with SNOMED-bound conditions.
 
 `docs/condition-guideline-tally.md` · `docs/underverified-and-bound.md` ·
 `scripts/condition_guideline_tally.py` · `scripts/underverified_bound.py`
+
+### `restore-lost-bindings` — PR #9, 3 files ✅ *(retained)*
+Restored the 4 bindings lost to the 20260831 rename. Bound 261 → 265.
+
+`docs/binding-review-queue.md` · `reference/binding_corrections.json` ·
+`reference/snomed_bindings.json` · `reference/snomed_candidates_review.json`
 
 ### `quarantine-development` — PR #8, 4 files ✅ *(retained)*
 Re-searched the 15 quarantined rows and surfaced clean alternatives inline. The rule was not weakened;
