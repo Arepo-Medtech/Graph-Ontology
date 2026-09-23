@@ -1,0 +1,214 @@
+{
+ "guideline": "guidelines/sti-adolescents.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Sexually transmitted infections (STIs)' (Last updated November 2022), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 26,
+  "pass": 26,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Offer STI screening and prevention counselling opportunistically to every sexually active adolescent who presents for healthcare.** Many STIs are asymptomatic but cause serious complications.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Many STIs are asymptomatic, but can cause serious complications … STI screening and counselling about prevention should be offered opportunistically to all sexually active adolescents who present for healthcare",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Confidentiality holds unless the adolescent cannot be considered a mature minor and/or there is significant risk** — harm to self or others, physical or sexual abuse. If abuse is suspected, **urgent referral** to local services.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adolescents have the legal right to confidential health care unless they cannot be considered mature minors and/or there is significant concern regarding risk ie harm to self or others, physical or sexual abuse … If concerns of sexual abuse, urgent referral to appropriate local services is needed, as time-critical samples may be required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Also assess pregnancy risk (test where appropriate), the need for emergency contraception, and ongoing contraception.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Risk of pregnancy and test where appropriate Need for emergency contraception Ongoing contraceptive needs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Test:** first-pass urine, self-collected vaginal swab or clinician-collected endocervical swab for NAAT; anorectal and pharyngeal swabs for MSM. **50% of men and 75% of women have no symptoms.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First pass urine OR self-collected vaginal swab OR clinician-collected endocervical swab for chlamydia Nucleic Acid Amplification Test (NAAT) … Anorectal and pharyngeal swabs for NAAT for MSM … 50% of men and 75% of women have no symptoms",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Uncomplicated genital or asymptomatic rectal:** doxycycline 2 mg/kg (max 100 mg) PO bd for 7 days (generally not for children 8 years or under) **or** azithromycin 20 mg/kg (max 1 g) PO single dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated genital infection or asymptomatic rectal infection doxycycline 2 mg/kg (max 100 mg) PO bd for 7 days (generally not recommended for children ≤8 years) OR azithromycin 20 mg/kg (max 1 g) PO single dose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Symptomatic anorectal:** doxycycline for 21 days **or** azithromycin 1 g stat, repeated in 12–24 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptomatic anorectal infection requires treatment with doxycycline for 21 days OR azithromycin 1 g stat followed by repeat dose in 12-24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**If suspicion is high, treat without waiting for results.** No sex for 7 days after treatment, and none with partners from the last 6 months until they are tested and treated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If high index of suspicion, treat without waiting for lab results … No sexual contact for 7 days after treatment is administered No sexual contact with partners from the last 6 months, until the partners have been tested and treated if necessary",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Follow up after 1 week.** Test of cure is not routinely recommended; **retest for re-infection at 3 months.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Follow-up after 1 week with GP or other health professional to confirm symptom resolution and contact tracing complete … Test of cure not routinely recommended, however, re-testing to detect re-infection at 3 months is recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Always collect gonococcal culture before treatment, but do not delay treatment for the result.** Symptomatic: NAAT and MCS. **Co-infection with chlamydia is common.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Always collect samples for gonococcal culture prior to treatment, however do not delay treatment to wait for these culture results … Symptomatic: NAAT and MCS … Co-infection with chlamydia is common",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Uncomplicated genital and anorectal:** ceftriaxone 50 mg/kg (max 500 mg) IM single dose **and** azithromycin 20 mg/kg (max 1 g) PO single dose — **2 g azithromycin for pharyngeal infection.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Uncomplicated genital and anorectal infection Ceftriaxone 50 mg/kg (max 500 mg) IM single dose AND Azithromycin 20 mg/kg (max 1 g) PO single dose (2 g in pharyngeal infection)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**No sex for 7 days after treatment**, and none with partners from the last 2 months until tested and treated. **Test of cure by NAAT at each infected site 2 weeks after treatment**; retest at 3 months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No sexual contact for 7 days after treatment is administered No sexual contact with partners from the last 2 months, until the partners have been tested and treated if necessary … Test of cure (NAAT for each site of infection) should be performed 2 weeks after treatment is completed. Re-testing to detect re-infection at 3 months is recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Refer to gynaecology and begin treatment without waiting for results.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Refer to gynaecology Begin treatment without waiting for results",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Outpatient:** ceftriaxone 50 mg/kg (max 500 mg) IM single dose **plus** doxycycline 2 mg/kg (max 100 mg) PO bd for 14 days **plus** metronidazole 10 mg/kg (max 400 mg) PO bd for 14 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Outpatient Ceftriaxone 50 mg/kg (max 500 mg) IM single dose PLUS doxycycline 2 mg/kg (max 100 mg) PO bd for 14 days PLUS metronidazole 10 mg/kg (max 400 mg) PO bd for 14 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Admit for:** surgical emergency not excluded (e.g. appendicitis) · pregnancy · failure or intolerance of oral treatment · severe illness, vomiting or high fever · tubo-ovarian abscess · immunodeficiency.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inpatient Indications: surgical emergency (such as appendicitis cannot be excluded), pregnancy, not responding or unable to tolerate to oral treatment regimen, severe illness/nausea/vomiting/high fever, tubo-ovarian abscess, immunodeficiency",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IV regimen (for admitted patients):** ceftriaxone 100 mg/kg (max 2 g) IV daily **or** cefotaxime 50 mg/kg (max 2 g) IV 8-hourly, **plus** azithromycin 10 mg/kg (max 500 mg) IV daily, **plus** metronidazole 12.5 mg/kg (max 500 mg) IV 12-hourly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ceftriaxone 100 mg/kg (max 2 g) IV daily OR cefotaxime 50mg/kg (max 2g) IV 8-hourly PLUS azithromycin 10 mg/kg (max 500 mg) IV daily PLUS metronidazole 12.5 mg/kg (max 500 mg) IV 12-hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Do not delay treatment for results, particularly if severe.** Swab the ulcer base or de-roofed vesicle for HSV NAAT; **serological screening of asymptomatic people is not recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not delay treatment waiting for lab results, particularly if severe … HSV NAAT swab base of ulcer or deroofed vesicle (require visible lesions) Screening asymptomatic individual with serological tests is not recommended",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First episode:** valaciclovir 20 mg/kg (max 500 mg) PO bd for 5–10 days **or** aciclovir 10 mg/kg (max 400 mg) PO tds for 5–10 days.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First episode: valaciclovir 20 mg/kg (max 500 mg) PO bd for 5-10 days OR aciclovir 10mg/kg (max 400 mg) PO tds for 5-10 days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Episodic recurrence:** valaciclovir 20 mg/kg (max 500 mg) PO bd for 3 days **or** famciclovir 1 g PO bd for 1 day (over 12 years). **Suppression:** valaciclovir 20 mg/kg (max 500 mg) PO daily for 6 months **or** famciclovir 250 mg PO bd for 6 months (over 12 years).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recurrence episodic: valaciclovir 20 mg/kg (max 500 mg) PO bd for 3 days OR famciclovir 1 g PO bd for 1 day (>12 years old) Recurrence suppressive: valaciclovir 20 mg/kg (max 500 mg) PO daily for 6 months OR famciclovir 250 mg PO bd for 6 months (>12 years old)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Contact tracing is not recommended.** GP follow-up in 1 week.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Contact tracing is not recommended Follow-up in 1 week with GP",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bacterial vaginosis:** metronidazole 10 mg/kg (max 400 mg) PO bd for 7 days **or** metronidazole 0.75% gel intravaginally nocte for 5 nights (not on PBS) **or** clindamycin 2% vaginal cream nocte for 7 days (not on PBS).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vaginal secretion pH test using pH paper or urine dipstick (>4.5 indicative of bacterial vaginosis) Treatment metronidazole 10 mg/kg (max 400 mg) PO bd for 7 days OR metronidazole 0.75% gel, intravaginally nocte for 5 nights (not on PBS) OR clindamycin 2% vaginal cream, intravaginally nocte for 7 days (not on PBS)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Trichomoniasis:** metronidazole 2 g PO single dose (over 12 years) **or** metronidazole 10 mg/kg (max 400 mg) PO bd for 7 days. **Topical treatment is not advised**; no sex for 7 days; **treat the current partner.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Trichomoniasis Caused by Trichomonas vaginalis … Metronidazole 2 g PO single dose (>12 years old) OR Metronidazole 10mg/kg (max 400 mg) PO bd for 7 days Topical treatment is not advised No sexual contact for 7 days after treatment Current sexual partner should be treated",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Primary, secondary and early latent syphilis:** benzathine penicillin G 50 000 units/kg IM (max 2.4 million units) single dose, given as 2 injections (max 1.2 million units each).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary, secondary and early latent syphilis: Benzathine penicillin G 50 000 units/kg IM (max 2.4 million units) single dose given as 2 injections (max 1.2 million units each)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Late latent (over 2 years) or unknown duration:** the same dose, weekly for 3 doses. **Refer to infectious diseases; repeat RPR at 3, 6 and possibly 12 months.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Late latent syphilis (>2 years) or syphilis of unknown duration: Benzathine penicillin G 50 000 units/kg IM (max 2.4 million units) given as 2 injections (max 1.2 million units each), weekly for 3 doses Refer to infectious diseases Review with repeat RPR at 3 months, 6 months +/- 12 months after completing treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Genital warts:** treatment is cosmetic, not curative; avoid shaving or waxing the area; **refer to gynaecology** for imiquimod, cryotherapy or excision. **Prevent with HPV vaccination.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Genital warts Caused by Human Papillomavirus (HPV) … Prevention: HPV vaccination as per National Immunisation Program Treatment is cosmetic rather than curative Avoid shaving or waxing in the area as this may facilitate local spread by autoinoculation Refer to gynaecology for consideration of Imiquimod Cryotherapy, excision under local anaesthetic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consult gynaecology when inpatient PID management is needed.** If sexual assault is suspected, follow local guidelines — **early specialist consultation is vital.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Inpatient management of PID is required If sexual assault is suspected, please refer to local guidelines. Early consultation with specialist services is vital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge with a clear plan for following up results and any further treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Clear plan for follow up of testing results and any further treatment made",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Sexually transmitted infections (STIs)' (Last updated November 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Sexually_transmitted_infections_STIs/, retrieved 2026-09-23"
+  }
+ ]
+}
