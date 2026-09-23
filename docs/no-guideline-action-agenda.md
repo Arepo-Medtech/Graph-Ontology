@@ -65,6 +65,11 @@ anchor in a fresh copy of the page, checks every number in the claim against the
 8+ consecutive words** (i.e. that is not really a paraphrase). #FOAM sources (LITFL, Don't Forget the Bubbles, Deranged Physiology,
 WikEM…) are added as `source_type: foam`, graded below society guidelines.
 
+**AI-use prohibitions override everything (default set 2026-09-23; owner may override).** Some publishers forbid putting
+their content into AI systems. So far: the American Academy of Ophthalmology, including EyeWiki ("any artificial intelligence program"),
+and the ESC (a licence is required for generative-AI use). Authoring here is AI-assisted, so paraphrase does not cure this.
+Those sources are **unusable**, whatever their other terms.
+
 **Track D — attestation.** New dose claims from quotable sources are machine-checked. Anything paraphrased joins the existing attestation queue.
 
 ## 4. Sequencing
@@ -99,3 +104,4 @@ WikEM…) are added as `source_type: foam`, graded below society guidelines.
 - 2026-09-23: owner direction: international guidelines are first-line sources (Track C). Researchers told to add `origin` and to search Consensus with `country: au`.
 - 2026-09-23: RCH terms clause 5.2 found and confirmed (personal use only). New RCH authoring paused; consent request drafted.
 - 2026-09-23: owner direction: paraphrase where you can; add open-access and #FOAM. Built the hash-anchored paraphrase verdict (`anchor.py`, `verify.py`, tests).
+- 2026-09-23: AI-use prohibitions found (AAO/EyeWiki, ESC). Default: unusable. Consensus quota spent (resets 1 October); research continues via Europe PMC and Crossref.
