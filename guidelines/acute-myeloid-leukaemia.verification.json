@@ -1,0 +1,571 @@
+{
+ "guideline": "guidelines/acute-myeloid-leukaemia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ) 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)' (v1.0, February 2025). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: © 2025 Haematology Society of Australia & New Zealand. All Rights Reserved. (site-wide footer; the PDF itself carries a disclaimer but no reuse statement) (read at https://www.hsanz.org.au/AML-Guidelines (page footer)). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 25,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 25
+ },
+ "claims": [
+  {
+   "claim": "**Refer every patient who might be a transplant candidate to a transplant centre early;** this guideline does not cover transplant selection or timing. Offer trials at every stage, and remember palliative care can be the right pathway for some.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0181a065069052ea",
+     "n": 161,
+     "p": "All pati"
+    },
+    {
+     "h": "de78225fb05be256",
+     "n": 326,
+     "p": "Particip"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Partial response** means marrow blasts down by at least 50% from baseline, usually to 5–15%, after the first induction; these patients get a second induction. Those without that response after induction 1 go to relapsed/refractory treatment, because ELN 2022's two-cycle definition of refractory disease does not fit Australian single-induction practice.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e63af2c6d29ef790",
+     "n": 256,
+     "p": "We have "
+    },
+    {
+     "h": "662aba7b6cb54b9a",
+     "n": 358,
+     "p": "The ELN "
+    },
+    {
+     "h": "2888c98a39f34910",
+     "n": 246,
+     "p": "For pati"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low or intermediate risk (WCC ≤10 ×10⁹/L): ATRA plus arsenic trioxide (ATRA-ATO) for induction, then 4 cycles of ATRA-ATO consolidation and no maintenance**. APL0406 found ATRA-ATO at least as good as ATRA-chemotherapy, with the gap widening over time; the trial enrolled only those ≤70 years with performance status 0–2.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4b6e06c40165e36b",
+     "n": 120,
+     "p": "For pati"
+    },
+    {
+     "h": "cff768273ef5db35",
+     "n": 78,
+     "p": "consolid"
+    },
+    {
+     "h": "d8eeb467e7bf19b0",
+     "n": 611,
+     "p": "reported"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **High risk (WCC >10 ×10⁹/L): add idarubicin to ATRA-ATO for induction,** age-adjusted at 12 mg/m² (≤60 years), 9 mg/m² (61–69) or 6 mg/m² (≥70); if the count is easily controlled and differentiation syndrome is not a problem, the first two doses usually suffice. Then 4 cycles of ATRA-ATO consolidation without maintenance (APOLLO, patients under 65, unpublished at the time).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d8b4a56d9d3b21f7",
+     "n": 60,
+     "p": "For pati"
+    },
+    {
+     "h": "d314dcf165eb4406",
+     "n": 155,
+     "p": "Based on"
+    },
+    {
+     "h": "a35aa13d6beab1e3",
+     "n": 327,
+     "p": "For pati"
+    },
+    {
+     "h": "2231f53aaf60c8fe",
+     "n": 574,
+     "p": "The pane"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Where 4 cycles of intravenous ATO cannot be delivered locally,** give 2 cycles of ATRA-ATO, then eight 3-month maintenance cycles: ATRA 45 mg/m²/day orally on days 1–14, methotrexate from 5 mg/m² weekly on days 15–90 and 6-MP from 50 mg/m²/day on days 15–90, starting 3–4 weeks after consolidation cycle 2.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6a55d087a7a7f51f",
+     "n": 538,
+     "p": "For pati"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **FLT3-ITD or FLT3-TKD: 7+3 plus midostaurin.** Cytarabine 200 mg/m² daily by continuous infusion on days 1–7 with idarubicin 12 mg/m² (or daunorubicin 60 mg/m², as in RATIFY) on days 1–3, then midostaurin 50 mg twice daily on days 8–21. No minimum allelic ratio is required. Idarubicin is suggested because daunorubicin is costly and sometimes short. With idarubicin, cytarabine 100 mg/m² a day is acceptable at ≥60 years.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5148d3d60ead24dd",
+     "n": 225,
+     "p": "mutation"
+    },
+    {
+     "h": "3a1c445443a26240",
+     "n": 555,
+     "p": "The Phas"
+    },
+    {
+     "h": "304772b513174ac7",
+     "n": 210,
+     "p": "To addre"
+    },
+    {
+     "h": "e1a0e273758f9d60",
+     "n": 144,
+     "p": "Therefor"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**FLT3 AML after the first induction:** a partial response gets a second induction with intermediate-dose cytarabine plus midostaurin (repeating 7+3 with midostaurin often fails). An inadequate response means switching to gilteritinib, which beat further chemotherapy in ADMIRAL and COMMODORE and got more patients to transplant.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "40e94a8d0c2d13d9",
+     "n": 432,
+     "p": "For pati"
+    },
+    {
+     "h": "cf3b437a4ef434ad",
+     "n": 484,
+     "p": "Therefor"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**FLT3 consolidation and maintenance:** cytarabine 1.5 g/m² twice daily on days 1–3 (1 g/m² if ≥60 years), then midostaurin 50 mg twice daily on days 8–21, for 3–4 cycles. Then midostaurin 50 mg twice daily on days 1–28, for a maximum of 12 cycles or until allograft. High-dose cytarabine gives no survival gain over intermediate dose except in CBF AML.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2129a8253901613b",
+     "n": 129,
+     "p": "with Ara"
+    },
+    {
+     "h": "24095d0ac266a4d4",
+     "n": 100,
+     "p": "maintena"
+    },
+    {
+     "h": "05eb572d2d643bfd",
+     "n": 179,
+     "p": "A meta-a"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Core-binding factor (CBF) AML: 7+3 plus GO** at 3 mg/m² (capped at one 5 mg vial per dose), on day 1 or on days 1, 4 and 7; in AML15 a single day-1 dose raised 5-year survival (79% v 51%). Do not give GO in consolidation; use high-dose cytarabine 3 g/m² twice daily on days 1–3 (1 g/m² if 60 or older) for 3–4 cycles, and monitor MRD.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "54580a001088a814",
+     "n": 292,
+     "p": "In the M"
+    },
+    {
+     "h": "dc3b0da645868af5",
+     "n": 55,
+     "p": "up to on"
+    },
+    {
+     "h": "0e4c690e8335852e",
+     "n": 246,
+     "p": "For this"
+    },
+    {
+     "h": "a9bbd8c6b71e9572",
+     "n": 77,
+     "p": "The pane"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**AML after MDS or CMML, with MDS-related cytogenetics, or after prior chemo/radiotherapy: CPX-351** 100 units/m² (cytarabine 100 mg/m² with daunorubicin 44 mg/m²) on days 1, 3 and 5; a second induction for partial response is on days 1 and 3. Consolidation: in older patients, 2 cycles of CPX-351 65 units/m² given on days 1 and 3, or cytarabine 1.5 g/m² twice daily on days 1–3 for 3–4 cycles in younger ones.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f1044abc8fb1790e",
+     "n": 81,
+     "p": "with CPX"
+    },
+    {
+     "h": "8f147fe9eae62371",
+     "n": 60,
+     "p": "units/m2"
+    },
+    {
+     "h": "4aebf8963417be03",
+     "n": 76,
+     "p": "consolid"
+    },
+    {
+     "h": "a648dfb4bf3c6486",
+     "n": 62,
+     "p": "therapy "
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**CPX-351 funding:** the PBS covers therapy-related AML and AML with prior MDS or MDS-related changes, including adults under 60. Antecedent CMML is not PBS-listed but was in the trial, so still consider it. There are not enough data after an antecedent MPN. The biggest survival gain was in patients who went on to allograft. ⚠️ CPX-351 and GO are mostly given to inpatients, yet the PBS does not fund inpatient use, so each hospital must approve other funding and access varies.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "70fce94c00f8fe6d",
+     "n": 866,
+     "p": "CPX-351 "
+    },
+    {
+     "h": "106eb7d8d4d2f6c8",
+     "n": 349,
+     "p": "The EWG "
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**All other fit patients: 7+3** (cytarabine 200 mg/m² daily by infusion on days 1–7 with idarubicin 12 mg/m² or daunorubicin 60 mg/m² on days 1–3); more intense induction adds toxicity without proven survival benefit. For partial response, a second induction of cytarabine 1 g/m² twice daily on days 1–6 with amsacrine 120 mg/m² over 1 hour on days 4–6. Consolidate with cytarabine 1.5 g/m² twice daily (1 g/m² if ≥60) on days 1–3 for 3–4 cycles.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "acabfbdf5bf3685e",
+     "n": 453,
+     "p": "For pati"
+    },
+    {
+     "h": "c1002d836e5dee40",
+     "n": 123,
+     "p": "panel su"
+    },
+    {
+     "h": "0708326a0ea80132",
+     "n": 102,
+     "p": "the expe"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Oral azacitidine maintenance** (300 mg daily for 14 days each cycle) for non-CBF AML in CR/CRi after intensive therapy when no transplant is planned. It is not curative and is usually continued until progression. Evidence is lacking under age 55, and it is not for CBF AML (excluded from QUAZAR and not PBS-funded there).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "421820e17901c6c0",
+     "n": 128,
+     "p": "oral AZA"
+    },
+    {
+     "h": "558e513486491358",
+     "n": 187,
+     "p": "This rec"
+    },
+    {
+     "h": "f809bc377c20f7e9",
+     "n": 193,
+     "p": "Most pat"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Standard: azacitidine 75 mg/m² subcutaneously or intravenously on days 1–7 with venetoclax (AZA-VEN),** which improved response and survival over azacitidine alone in VIALE-A. CBF AML and AML after MPN were excluded, so no firm advice for them. Safe use needs close monitoring by staff experienced with the regimen.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "751646dc26debae9",
+     "n": 64,
+     "p": "expert p"
+    },
+    {
+     "h": "89634f54925d920f",
+     "n": 502,
+     "p": "These re"
+    },
+    {
+     "h": "bd4e86abdbe48f95",
+     "n": 168,
+     "p": "It is wi"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**'Unfit' in VIALE-A** meant age 75 or older, or 18–74 with a comorbidity: ECOG 2 or 3; treated heart failure, chronic stable angina or an ejection fraction ≤50%; FEV1 or DLCO ≤65%; creatinine clearance 30 to under 45 mL/min; moderate liver impairment (bilirubin >1.5 to ≤3.0 × ULN); or another comorbidity the physician judges incompatible with intensive chemotherapy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c7a687ed6961c6ab",
+     "n": 575,
+     "p": "The crit"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IDH1-mutated: azacitidine with ivosidenib is preferred when obtainable** (better tolerated and simpler; AGILE median survival 29.3 v 7.0 months), but ivosidenib is not PBS-funded, so AZA-VEN is the effective alternative.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a0a054988fd8a639",
+     "n": 153,
+     "p": "With a m"
+    },
+    {
+     "h": "487842790cac42f8",
+     "n": 496,
+     "p": "If IVO i"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Too frail for AZA-VEN:** oral decitabine-cedazuridine, azacitidine alone or best supportive care. The PBS limits azacitidine and decitabine-cedazuridine to higher-risk MDS or AML with 20-30% marrow blasts. Very poor-risk disease (such as TP53-mutated) in patients not headed for transplant may also be spared myelosuppressive therapy. Refer early to palliative care.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1b2adcce11141f94",
+     "n": 407,
+     "p": "These op"
+    },
+    {
+     "h": "9da6a5684e54ce24",
+     "n": 193,
+     "p": "For SC/I"
+    },
+    {
+     "h": "d1fc755230960239",
+     "n": 71,
+     "p": "Early re"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Re-test FLT3 in every relapsed or refractory patient, including after allograft; if FLT3-ITD or -TKD is present, use gilteritinib** (better survival and fewer adverse events than salvage chemotherapy in ADMIRAL and COMMODORE). In FLT3-mutated disease failing to reach partial response after induction, move to gilteritinib then, not after more chemotherapy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "244f29400dcd9e29",
+     "n": 363,
+     "p": "The reco"
+    },
+    {
+     "h": "f75e56cfd39e96ff",
+     "n": 245,
+     "p": "the pane"
+    },
+    {
+     "h": "aee45833d0e6463f",
+     "n": 257,
+     "p": "It shoul"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fit, without FLT3: FLAG-Ida, or FLAG-Ida with venetoclax** (no evidence the addition is better; venetoclax is neither TGA-approved nor PBS-funded here). Both are highly myelosuppressive: use them only as a bridge to allograft and do not repeat them in remission without a planned transplant.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5c35df35b8fcd874",
+     "n": 503,
+     "p": "For fit,"
+    },
+    {
+     "h": "4a69283bad38255c",
+     "n": 143,
+     "p": "It shoul"
+    },
+    {
+     "h": "9f05c69eee2c454c",
+     "n": 286,
+     "p": "Both of "
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Unfit for intensive salvage:** AZA-VEN (expert opinion; unfunded for relapse; poor responses with adverse cytogenetics). For IDH1-mutated relapse, ivosidenib 500 mg daily (CR/CRh 30%), TGA-approved but not PBS-funded.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3fd098e311768218",
+     "n": 63,
+     "p": "suggests"
+    },
+    {
+     "h": "f63469b004d8930d",
+     "n": 201,
+     "p": "Addition"
+    },
+    {
+     "h": "716a0754f329135e",
+     "n": 89,
+     "p": "reported"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**After non-intensive salvage fails:** low-dose cytarabine with or without thioguanine, or best supportive care. Outcomes after AZA-VEN failure are dismal, so discuss goals of care early, involve palliative care, and state the toxicity risks plainly before any further chemotherapy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5a0590ddc86292a9",
+     "n": 387,
+     "p": "The goal"
+    },
+    {
+     "h": "8dd203b2e4e6f12a",
+     "n": 234,
+     "p": "Regardin"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**At diagnosis, screen for hepatitis B (HBsAg, anti-HBc, anti-HBs), hepatitis C and HIV;** tailor screening for fungal infection, TB and strongyloides to exposure and geography.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "99cea17c87cc6a03",
+     "n": 342,
+     "p": "At diagn"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Antifungal prophylaxis:** give routine mould-active prophylaxis during intensive induction or re-induction, and in intensive consolidation when fungal risk is high. With venetoclax-based non-intensive therapy, use it only when risk is high, and cut the venetoclax dose alongside an azole (posaconazole, itraconazole and voriconazole inhibit CYP3A4 and raise venetoclax exposure).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f5ef979785730007",
+     "n": 152,
+     "p": "the pane"
+    },
+    {
+     "h": "a71c3324c0ee5b13",
+     "n": 169,
+     "p": "Mould-ac"
+    },
+    {
+     "h": "f1c3ec4002d7c3ce",
+     "n": 333,
+     "p": "Azole an"
+    },
+    {
+     "h": "8f45ab5f5ebb90a9",
+     "n": 173,
+     "p": "Based on"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No routine antibacterial prophylaxis while neutropenic after intensive chemotherapy,** and fluoroquinolones are not advised for everyone (C. difficile and resistance risk). Neutropenic outpatients should be in a comprehensive care programme with access to emergency antibiotics.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "55a96c2b849120f6",
+     "n": 85,
+     "p": "panel re"
+    },
+    {
+     "h": "1f28fd5d855f4170",
+     "n": 322,
+     "p": "general "
+    },
+    {
+     "h": "7c85d5da433f8a44",
+     "n": 189,
+     "p": "The expe"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PJP and herpes prophylaxis:** trimethoprim-sulfamethoxazole with fludarabine-based intensive regimens (and other T-cell-impairing therapy); valaciclovir against HSV/VZV for all patients on active treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ffceacf33c1d2302",
+     "n": 130,
+     "p": "PJP prop"
+    },
+    {
+     "h": "b1636ca264164738",
+     "n": 68,
+     "p": "prophyla"
+    }
+   ],
+   "locator": "Blood Cancer Taskforce, Leukaemia Foundation and Haematology Society of Australia and New Zealand (HSANZ), 'Australian clinical guidelines: National treatment guidelines for adults with acute myeloid leukaemia (Version 1.0)', v1.0, February 2025, https://www.hsanz.org.au/resources/Documents/LF%20Clinical%20Guidelines%20AML%202024_WEB_R.pdf, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "guideline": "guidelines/chronic-myeloid-leukaemia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "international",
+ "method": "OPEN AND QUOTED from European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature) '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia' (published 11 July 2025). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC12310532). ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**At diagnosis:** marrow morphology and chromosome banding analysis, plus RT-PCR on blood or marrow to stage the disease, find additional chromosomal abnormalities and identify the transcript type for later monitoring. Do not test for BCR::ABL1 kinase mutations at diagnosis in chronic phase; use targeted NGS for patients presenting in or progressing to blast phase.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "We continue to recommend morphology and CBA on bone marrow (BM) and RT-PCR on peripheral blood (PB) or BM at diagnosis, so as to accurately stage the disease, detect variant translocations, cryptic BCR::ABL1 rearrangements and additional chromosomal abnormalities (ACA) and to precisely identify the BCR::ABL1 transcript type to facilitate future monitoring of response to treatment … BCR::ABL1 point mutations associated with resistance (hereafter called BCR::ABL1 mutations) are very rarely detected at diagnosis in chronic phase (CP) and testing is not recommended. … targeted panel next generation sequencing (NGS) is recommended for patients presenting in or progressing to BP.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Use the ELTS score** (it replaces Sokal, Euro and EUTOS) and treat high-risk additional chromosomal abnormalities as a warning sign in chronic phase. WHO 2022 dropped accelerated phase and defines blast phase as >20% blasts; the ELN panel could not fully endorse either the WHO or the older classification.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The previous risk scores, Sokal, Euro, and EUTOS, have been replaced by the EUTOS Long Term Survival (ELTS) score, which was developed to predict the probability of dying from CML in patients treated with a TKI, because most patients now die of unrelated causes … We continue to consider the presence of high-risk ACA as a warning sign in chronic phase. … In 2022 the WHO revised the classification of disease phase in CML, omitting the concept of AP, and defining BP as the presence of >20% blasts … The controversy is reflected in the opinions of our panel such that we cannot fully endorse either classification.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitoring schedule:** blood counts every 2 weeks until complete haematologic response; BCR::ABL1 at least every 3 months until MMR is reached and confirmed, then every 4–6 months while in stable MMR or deeper, and more often if levels fluctuate or rise or around TKI discontinuation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood cell counts and differentials are required every 2 weeks until complete hematologic response (CHR) is achieved or more frequently in the event of hematologic toxicity. This applies not only to firstline treatment but also after switching TKI. Molecular monitoring to assess BCR::ABL1 mRNA levels in blood cells is recommended at least every 3 months until major molecular remission is achieved and confirmed. Thereafter 4-6 monthly intervals between testing are justified if the patient remains in stable MMR or deeper response levels. More frequent molecular monitoring is advised if transcript levels fluctuate or rise, and when assessing eligibility for, and follow-up of, treatment discontinuation in selected patients.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Report on the International Scale** (BCR::ABL1IS). Deep molecular response means MR4 or deeper; tests should be able to detect MR4.5 routinely. Atypical fusions (2% of patients) need personalised RT-qPCR or RT-ddPCR.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Molecular response must be assessed according to the International Scale (BCR::ABL1IS) using ABL1, BCR, or GUSB as internal reference genes for patients expressing standard e13a2 and/or e14a2 BCR::ABL1 mRNA variants (98% of CML patients) … Deep molecular response (DMR) is defined as MR4 or deeper, irrespective of whether BCR::ABL1 is detected or not. Tests should be optimized to enable the routine detection of MR4.5 in clinical samples. … Patients expressing atypical BCR::ABL1 fusions (2% of CML patients) should ideally be monitored by personalized RT-qPCR and results expressed as individual molecular responses compared to baseline levels [] or by RT-ddPCR assays",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Milestones at 3, 6 and 12 months judge TKI efficacy** (not side effects) and are now labelled favourable, warning and unfavourable. Never switch on a single result: read the trend. A rise in RT-qPCR with no obvious explanation (such as missed doses) should trigger chromosome banding, kinase-domain mutation analysis and a TKI switch.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The monitoring milestones of BCR::ABL1IS at 3, 6, and 12 months specifically refer to the efficacy of the TKI and the advisability of switching treatment to achieve deeper responses: they do not address the need to change TKI because of the side effects of treatment. … The phrases 'optimal', 'warning' and 'failure' are replaced by 'favorable' (treatment switch unnecessary), 'warning' (treatment switch may become necessary) and 'unfavorable' (treatment switch preferred). … First, no decision to switch treatment should be made on a single estimate of BCR::ABL1IS. … In contrast a rising RT-qPCR without an obvious explanation such as dose cessation/reduction, non-compliance etc should trigger CBA, kinase domain mutation analysis and a switch of TKI.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BCR::ABL1IS >10% at 3 months (confirmed at least 4 weeks later) stays 'unfavourable',** but check response kinetics, comorbidities, dose changes and adherence before switching.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A change of TKI at 3 months due to BCR::ABL1IS >10% (lack of early molecular response (EMR)), if confirmed by a subsequent sample at least 4 weeks later … We have maintained the lack of confirmed EMR at 3 months in the unfavorable category but emphasize the importance of addressing the caveats mentioned above (kinetics of RT-qPCR responses, co-morbidities) plus any dose modifications in those 3 months and/or lack of compliance, before switching the TKI.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Unfavourable milestones in older or comorbid patients** may justify a more conservative approach, but for fit patients (including many over 60) and those pursuing treatment-free remission, mutation analysis and a TKI switch remain the recommendation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These findings need confirmation in other settings but might suggest a more conservative approach in those with co-morbidities (usually the more elderly), whose BCR::ABL1IS are in the unfavorable categories, but in whom a switch to a drug with more troublesome side effects may cause harm. We are reluctant to recommend different approaches simply because of patient age as management should be individualized and many patients >60 years will be in good health and without co-morbidities. For these and younger patients who can tolerate more potent drugs without toxicity, and who may be pursuing treatment free remission, a BCR::ABL1 mutation analysis and a switch of TKI remain our recommended approach.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**About 15–20% respond unfavourably to first-line TKI** (up to 50% in later lines). Always consider poor adherence first.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An unfavorable response to TKI therapy occurs in approximately 15-20% of patients treated in first line, and in up to 50% of patients in later lines. Multiple factors, not necessarily mutually exclusive, can contribute to TKI resistance []. In some patients however, less than favorable responses may be related to poor compliance with treatment and this should always be considered whenever response is unsatisfactory.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Test for BCR::ABL1 mutations** on resistance or a 'warning' response, on progression to or presentation in blast phase, and on relapse after allograft if a mutation was present before; **not** after loss of MMR following a TFR attempt. cDNA-based NGS is preferred; Sanger sequencing is acceptable where NGS is unavailable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "BCR::ABL1 mutation testing is indicated in the case of TKI resistance or early signs that resistance may be developing (warning in Table 4), progression to or presentation in, BP and in the case of relapse after alloSCT if a mutation was detectable prior to transplant. In contrast, recurrence after TFR has almost never been associated with selection of mutations and BCR::ABL1 mutation testing is not recommended in patients who lose MMR after a TFR attempt. … We recommend cDNA-based NGS testing for BCR::ABL1 mutation screening, provided that a reliable and validated assay has been established (although commercial myeloid gene panels frequently include ABL1, their use is not recommended). Given that implementation of routine NGS-based BCR::ABL1 mutation testing may be challenging, the use of Sanger sequencing is acceptable whenever NGS is not available or accessible and does not represent inappropriate patient management.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Approved first-line TKIs:** imatinib; the second-generation dasatinib, nilotinib and bosutinib; asciminib (some countries); radotinib (South Korea only). Second-generation TKIs give faster, deeper responses and less transformation but no trial has shown an overall survival benefit over imatinib.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Six TKI are currently approved for first-line therapy, the first generation TKI imatinib, three 2GTKI, dasatinib, nilotinib, and bosutinib, the 4th generation drug, asciminib, in some countries and radotinib in South Korea. … The rates of CCyR, MMR, DMR and transformation to AP or BP all favor 2GTKI but none of the studies showed an OS benefit",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Asciminib 80 mg daily first line** (ASC4FIRST, 405 patients) gave higher MMR at week 48 than investigator-chosen TKI (67.7% v 49%) with fewer discontinuations; survival data are pending. It is a useful first-line choice where available and affordable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the ASC4FIRST study, 405 newly diagnosed patients were randomized to asciminib 80 mg daily or a TKI of investigators choice. At a median follow-up of approximately 15-16 months, the rates of MMR at weeks 48 and 96 were superior with asciminib (67.7%/74.1%) versus investigator selected TKI (49%/52%) … Long-term survival rates are not yet available but these data have resulted in FDA approval for first line therapy in the USA in 2024. Availability and affordability is preventing the uptake of first-line asciminib elsewhere but where these are no obstacles asciminib presents a further useful choice in first-line therapy.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Labelled starting doses:** imatinib 400 mg daily, dasatinib 100 mg daily, bosutinib 400 mg daily, nilotinib 300 mg twice daily. Dasatinib 50 mg daily looks promising but is not formally recommended.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The TKI labels recommend starting doses of imatinib of 400 mg daily, dasatinib 100 mg daily, bosutinib 400 mg daily, and nilotinib 300 mg twice daily. … dasatinib 50 mg daily resulted in similar or perhaps better rates of responses and reduced the rates of pleural effusions and myelosuppression []. This particular dosing regimen has not yet been tested in a prospective randomized study and cannot be formally recommended.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Bosutinib step-up** to limit early diarrhoea and dropout: 100–200 mg daily for 1–2 weeks, 300 mg daily for 1–2 months, then 400 mg daily as tolerance and response allow.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Starting bosutinib at 400 mg daily results in a high rate of gastro-intestinal side-effects (early self-resolving diarrhea in the first 2-4 weeks) and early discontinuation. Commencing treatment at a lower dose may reduce the rate of treatment discontinuation and improve compliance. A suggested dose-adjusted bosutinib schedule might comprise 100-200 mg daily for 1-2 weeks, 300 mg daily for 1-2 months, increasing to 400 mg daily as indicated by the side effects and treatment response",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Choosing the TKI:** a second-generation TKI is reasonable in younger patients seeking TFR and in high ELTS risk. Avoid dasatinib with lung disease; consider avoiding bosutinib with gastrointestinal, renal or liver problems; nilotinib is inadvisable with diabetes, high cardiovascular risk (including past vaso-occlusive events) or pancreatitis. Transcript type should not drive the choice, and interferon should not be added routinely.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Thus an argument can be made for starting a 2GTKI as first-line therapy in younger individuals. Secondly, patients with high ELTS scores may benefit from a more potent TKI upfront. Thirdly, some co-morbidities might be exacerbated by specific TKI. Patients with pulmonary disease should avoid dasatinib. Patients with gastro-intestinal problems or with renal or liver dysfunction may chose to avoid bosutinib. Nilotinib is inadvisable in patients with diabetes mellitus, high or very high cardiovascular risk including a history of vaso-occlusive events (VOEs) or pancreatitis. … transcript type should not influence therapeutic decisions … Improvements were offset by an increase in toxicity often necessitating IFN dose reduction or cessation, such that the addition of IFN cannot be routinely recommended.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Side effects in responding patients (at least MMR): reduce the dose, then monitor closely.** Imatinib 400 mg to 100–300 mg daily; dasatinib 100 mg to 20–50 mg daily; nilotinib 300 mg twice daily to 150–200 mg twice or once daily. Switch TKI instead for recurrent pleural effusion, pulmonary hypertension, venous or arterial occlusive events, enterocolitis, serious neurological disease or immune-mediated myocarditis, hepatitis or nephritis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Imatinib can be reduced from 400 mg to a range of 100-300 mg daily; dasatinib from 100 mg daily to a range of 20-50 mg daily and nilotinib from 300 mg twice daily to 150-200 mg twice daily or even 150-200 mg once daily … After dose reduction, patients should be monitored closely to be certain that the level of response is maintained. There are however particular side effects which are serious and prohibitive and require a change of TKI therapy rather than dose reduction. These include recurrent pleural effusions despite dose reductions, pulmonary hypertension, venous or arterial occlusive events (VOE or AOE), enterocolitis, serious neurologic conditions (e.g. dementia, Parkinsonism) and immune-mediated myocarditis, hepatitis or nephritis.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**After imatinib,** any suitable second-generation TKI, guided by mutations and comorbidity. **After resistance to a first-line second-generation TKI,** another one rarely works: move early to ponatinib or asciminib. Asciminib beat bosutinib after at least 2 prior TKIs (ASCEMBL MMR at 96 weeks 37.6 v 15.8%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After first-line imatinib and in the absence of specific BCR::ABL1 mutations any suitable 2GTKI can be used as they appear equally effective in second-line … After resistance to a first-line 2GTKI and in the absence of specific BCR::ABL1 mutations, the use of an alternative 2GTKI is rarely successful in achieving molecular responses [, ] and consideration should be given to early use of ponatinib or asciminib (although the latter is not currently licensed for second-line therapy in all countries). … The superiority of asciminib over a 2nd or subsequent 2GTKI was clearly demonstrated in ASCEMBL, a randomized study of bosutinib vs. asciminib in patients who had failed (intolerance and/or resistance) at least 2 prior TKI. The rates of CCyR and MMR following asciminib compared to bosutinib at 96 weeks were 39.8% vs. 16.1%, and 37.6 vs. 15.8% respectively; and adverse events were fewer after asciminib treatment",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Ponatinib dosing (OPTIC):** start at 45 mg and reduce to 15 mg once BCR::ABL1IS falls below 1%; 45 mg is the preferred start with a BCR::ABL1 mutation (especially T315I) or BCR::ABL1IS >10%. With T315I, asciminib has been used at 150–200 mg twice daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with BCR::ABL1IS > 1% were randomized one of three doses of ponatinib, 45 mg, 30 mg or 15 mg, with mandatory dose reduction to 15 mg in the 45 mg and 30 mg arms once transcript levels dropped below 1%IS. … Sub-group analyses suggest that where possible, for patients with a BCR::ABL1 mutation, particularly T315I, or for those with BCR::ABL1IS >10%, the starting dose should be 45 mg … A further report described 45 evaluable patients with T315I mutations who received higher doses of asciminib (150-200 mg bd)",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Blast phase:** intensive combination chemotherapy with a TKI (ideally dasatinib or ponatinib), then allograft; check for CNS involvement in lymphoid blast phase. Aim to regain chronic phase before transplant; transplanting resistant blast phase outside a study is not recommended.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Flow cytometry to determine the BP phenotype may inform treatment as lymphoblastic transformation has more treatment options and a better outcome, although attention to any possible central nervous system involvement is required. Treatment for eligible patients in BP is by intensive combination chemotherapy with a TKI, ideally dasatinib or ponatinib [, ], followed by alloSCT. … Every possible effort should be made to regain a second chronic phase and offer alloSCT promptly thereafter … Transplant of resistant BP patients, unless on study, is not recommended.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Plan transplant in chronic phase:** start a donor search at resistance to a second-generation TKI and refer at resistance to ponatinib and/or asciminib. Use myeloablative conditioning where possible; after allograft, monitor BCR::ABL1 at least 3-monthly early on and lifelong.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In patients in chronic phase who are eligible for alloSCT, donor searches should be commenced at the time of resistance to a 2GTKI and referral for transplant made at the time of resistance to ponatinib and/or asciminib. … Where possible we recommend myeloablative conditioning. … Following alloSCT we recommend molecular monitoring at least 3 monthly in the first years post-transplant. The frequency can be reduced to 6 monthly if the patient has molecularly undetectable disease but should continue lifelong.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**TFR is safe only with high-quality molecular monitoring and careful selection.** Trials mostly required at least 3 years of TKI and sustained deep molecular response for at least 1 year; about 40–50% stay off treatment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Stopping treatment for an attempt at TFR is usually a safe procedure at centers with access to high-quality molecular monitoring and with careful patient selection … approximately 40-50% of patients can remain off treatment []. Consistent inclusion criteria in most studies were a minimum duration of TKI therapy of 3 years and a sustained DMR of at least 1 year.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Restart the TKI on loss of MMR,** without waiting for confirmation; over 80% of losses happen in the first 6–8 months, so monitor often then. About 90–95% regain their prior deep response. Late loss (up to 14% after 2 years) means monitoring must continue long term. A withdrawal syndrome (muscle and joint pain) affects 20–30%.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Loss of MMR has been the trigger for restarting therapy in most studies [] and for more than 80% this will occur in the first 6-8 months after stopping, emphasizing the need for frequent monitoring and structured follow-up during this early period (Table 6). Confirmation of loss of MMR on a second occasion is not usually necessary and could delay restarting therapy. … About 90-95% of patients who experience molecular recurrence regain their previous DMR after restarting TKI therapy. … Late loss of MMR has been reported in up to 14% of patients more than 2 years after stopping [, ] such that long-term monitoring is recommended. … A 'withdrawal syndrome' comprising polymyalgia and/or arthralgia occurs in 20-30% of patients on TKI cessation.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Men should continue their TKI while trying to conceive.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "We recommend that men taking TKI should continue treatment when attempting conception.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Women: in general, no TKI during pregnancy or breastfeeding;** interferon (including pegylated) is safe for count control. Women in chronic phase with regular cycles may continue the TKI until the first positive pregnancy test (about 4 weeks' gestation). Avoid dasatinib throughout pregnancy. Obstetric collaboration is essential.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "We continue to recommend that, in general, TKI should not be used during pregnancy. IFN, including pegylated forms, can be used safely during pregnancy and can be given for count control, recognizing that IFN is slow acting. … it is also reasonable for women in CP with regular menstrual cycles and access to pregnancy tests, to continue their TKI until the first positive pregnancy test, approximately 4 weeks from their last menstrual period and defined as 4 weeks of gestation. … Dasatinib should be avoided throughout pregnancy and data are too limited for the remaining drugs to support their use. TKI should not be used during breast feeding … Access to and collaboration with, informed obstetric advice is essential.",
+   "locator": "European LeukemiaNet (Apperley JF, Milojkovic D, Cross NCP, et al.), Leukemia (Springer Nature), '2025 European LeukemiaNet recommendations for the management of chronic myeloid leukemia', published 11 July 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12310532/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "guideline": "guidelines/myeloma-transplant-ineligible.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H) 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation' (2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026)). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: Copyright © 2026 Myeloma Foundation of Australia Inc. All Rights Reserved. (site-wide footer; the PDF itself carries no reuse statement) (read at https://myeloma.org.au/health-professionals/guidelines-education/clinical-practice-guidelines/ (page footer)). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 16,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 16
+ },
+ "claims": [
+  {
+   "claim": "**Transplant-ineligible patients are mostly older (usually over 70) or at higher risk of toxicity from comorbidity and frailty,** so gentler regimens suit them. A fixed age cut-off of 65 is no longer thought appropriate.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e6cf8a79810a997f",
+     "n": 224,
+     "p": "TIE pati"
+    },
+    {
+     "h": "63639c55678354a9",
+     "n": 93,
+     "p": "A cut of"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider 'rainy day' stem-cell collection in patients aged 70 or under who are judged transplant-ineligible,** especially those 65 or under. Renal impairment alone does not rule out a transplant.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7832a2b1f8dcd3f7",
+     "n": 133,
+     "p": "Recommen"
+    },
+    {
+     "h": "19df59d6a467ab07",
+     "n": 64,
+     "p": "Note tha"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Every transplant-ineligible patient should have a frailty assessment at diagnosis,** and MSAG's preferred tool is the IMWG Frailty Index. It sorts patients into three groups (fit, intermediate-fit, frail) and independently predicts adverse events, early drug discontinuation and survival.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "eae2c467f970c8a5",
+     "n": 158,
+     "p": "All pati"
+    },
+    {
+     "h": "59259877c7878a8c",
+     "n": 257,
+     "p": "We recom"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Match intensity to frailty:** fit patients get treatment chosen for efficacy; intermediate-fit and frail patients get dose-reduced treatment weighing benefit against toxicity. Offer a clinical trial wherever one is available.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "36e833077e60932e",
+     "n": 193,
+     "p": "Fit pati"
+    },
+    {
+     "h": "17f763a6d030860c",
+     "n": 102,
+     "p": "In all p"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Dara-Rd (daratumumab, lenalidomide, dexamethasone) is the standard induction for all transplant-ineligible patients, frail ones included** (Grade A, Level 1A). In MAIA it lengthened PFS (61.9 v 34.4 months) and overall survival compared with Rd. PBAC recommended it and it was on the PBS as of March 2025.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b27d2384f52a9bc6",
+     "n": 212,
+     "p": "Combinat"
+    },
+    {
+     "h": "2c56acbbe0257158",
+     "n": 163,
+     "p": "longer P"
+    },
+    {
+     "h": "8481af40a208c355",
+     "n": 216,
+     "p": "As of Ma"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IMWG-fit patients: a CD38-antibody triplet aimed at deep remission** (Grade A, Level 1A). Quadruplets now have supporting evidence in this group but cannot be accessed through the PBS.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "947730527bde85f1",
+     "n": 326,
+     "p": "should r"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Quadruplet caveat:** IMROZ, CEPHEUS and BENEFIT all left out patients aged 80 or more, and 72% of IMROZ patients were non-frail, so how well quadruplets apply to truly frail older people is uncertain.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "93d562e961ed1ef2",
+     "n": 46,
+     "p": "all thre"
+    },
+    {
+     "h": "3732b0b4dd4a1fa6",
+     "n": 216,
+     "p": "majority"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Intermediate-fit and frail patients: a CD38-antibody triplet, or a doublet built on an IMiD or proteasome inhibitor,** with doses reduced and avoiding toxicity as the priority.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "54b9e12cef4beea7",
+     "n": 189,
+     "p": "patients"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**VRd-lite is the other main triplet:** bortezomib is given subcutaneously once a week (1.3mg/m2 on days 1,8,15,22 of a 35-day cycle), to keep patients on treatment and limit neuropathy (Grade B, Level 2A). It has not been compared head-to-head with Rd. VCD with weekly subcutaneous bortezomib is a further option.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "29a6f5c7ad0489c4",
+     "n": 70,
+     "p": "weekly s"
+    },
+    {
+     "h": "0d4240fddb078e84",
+     "n": 257,
+     "p": "with wee"
+    },
+    {
+     "h": "8d287c7c202236e3",
+     "n": 93,
+     "p": "It is ho"
+    },
+    {
+     "h": "ea4d198d18a3e5dd",
+     "n": 46,
+     "p": "VCD (uti"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Twice-weekly intravenous bortezomib causes a lot of neuropathy:** in SWOG S0777, 80% had some neuropathy and 33% grade 3 or worse, and truly transplant-ineligible patients would fare worse. Prefer subcutaneous over intravenous, and weekly over twice-weekly.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1edf0e17847728a2",
+     "n": 317,
+     "p": "Rates of"
+    },
+    {
+     "h": "7e8c5c2a2f306f3a",
+     "n": 144,
+     "p": "Subcutan"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Doublets:** Rd, planning to stop dexamethasone after 9 cycles (Grade A, Level 1A); or, with renal impairment, Vd (Grade B, Level 1B). Frail older patients often do better on a doublet than a triplet, Dara-Rd excepted.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0b9a76c61004dbaf",
+     "n": 201,
+     "p": "Rd (with"
+    },
+    {
+     "h": "270c1c0ed88e7e95",
+     "n": 148,
+     "p": "such pat"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not add an alkylating agent to Rd.** In EMN01, melphalan-based and cyclophosphamide-based triplets gave no PFS or survival gain over Rd in intermediate-fit and frail patients.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "da181d6a78380b6d",
+     "n": 332,
+     "p": "The addi"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After lenalidomide-based induction, continue lenalidomide alone as maintenance:** it is well tolerated and prolongs PFS (Grade A, Level 1A). In the Rd-R study, dropping dexamethasone after 9 cycles of Rd and continuing lenalidomide 10mg on days 1 to 21 of each 28 days matched continuous Rd.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f6549c40d3bc407f",
+     "n": 198,
+     "p": "For pati"
+    },
+    {
+     "h": "9afe7c55fe9e71e1",
+     "n": 229,
+     "p": "demonstr"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Proteasome-inhibitor maintenance is not PBS-funded.** The benefit of bortezomib maintenance is unclear; ixazomib improves PFS but not overall survival.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d1c1c0c1e0838f46",
+     "n": 325,
+     "p": "The bene"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Maintenance must never cost the patient unacceptable toxicity or quality of life.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e637e30ac060a1fb",
+     "n": 877,
+     "p": "maintena"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Care should be multidisciplinary from the start,** with early allied health input and early palliative care for symptom control where it fits.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "19d4e13e8d328fa8",
+     "n": 210,
+     "p": "Adequate"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Sim S, Quach H), 'Clinical practice guideline: Treatment of patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplantation', 2026 (evidence current to January 2026; due for review after January 2028; file dated March 2026), https://myeloma.org.au/wp-content/uploads/2026/04/Newly-Diagnosed-Transplant-Ineligible-Guidelines-MAR2026.pdf, retrieved 2026-09-23"
+  }
+ ]
+}

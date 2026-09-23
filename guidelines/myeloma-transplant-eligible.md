@@ -1,7 +1,7 @@
 # Newly diagnosed multiple myeloma — transplant-eligible patients
 
 **Edition:** 1.0 · 2026-09-23 · **Status:** drafted and source-anchored; awaiting clinical attestation
-**Scope:** induction, stem-cell mobilisation, high-dose melphalan with autologous transplant, consolidation, maintenance and follow-up for adults with newly diagnosed myeloma judged fit for transplant. Transplant-ineligible patients are covered by a separate MSAG statement (not yet authored). PBS access for each drug is in `docs/no-guideline-pbs-listings.md`.
+**Scope:** induction, stem-cell mobilisation, high-dose melphalan with autologous transplant, consolidation, maintenance and follow-up for adults with newly diagnosed myeloma judged fit for transplant. Transplant-ineligible and relapsed/refractory myeloma: see `myeloma-transplant-ineligible` and `myeloma-relapsed-refractory`. PBS access for each drug is in `docs/no-guideline-pbs-listings.md`.
 
 > ✅ **PARAPHRASED, HASH-ANCHORED.** 20 claims paraphrased from **Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal — *Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia*** (published 4 August 2025; origin: AU). **32 anchors re-checkable by machine; 2 doses.** The source's words are not reproduced: its licence is *CC BY-NC 4.0*.
 
@@ -62,7 +62,7 @@ Derived from PBS Public API data: counts of current restrictions, access type an
 |---|---|---|
 | 1 | **Drug doses and schedules for induction and maintenance** (RVD cycle doses, lenalidomide maintenance dose) are in a table, which was stripped, and are not stated here. | `input_unavailable` |
 | 2 | **The CD34+ collection target** reads '2 × 106 cells/kg' after extraction (superscript lost), so it was not anchored. | `input_unavailable` |
-| 3 | **Transplant-ineligible myeloma** has its own MSAG statement (2026, journal version paywalled; the web PDF is free). It is not yet authored. | `out_of_scope` |
+| 3 | **Transplant-ineligible myeloma** is covered separately in `myeloma-transplant-ineligible` (MSAG 2026). | `out_of_scope` |
 | 4 | **International comparison:** ASCO–Ontario Health (2026) and NCCN recommend CD38-antibody quadruplet induction; the Australian difference is PBS funding, not evidence. | `observation` |
 | 5 | **Licence:** CC BY-NC 4.0. The claims are paraphrased and hash-anchored; the source's words are not reproduced. | `observation` |
 

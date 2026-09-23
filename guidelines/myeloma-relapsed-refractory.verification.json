@@ -1,0 +1,363 @@
+{
+ "guideline": "guidelines/myeloma-relapsed-refractory.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H) 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma' (2026 (evidence current to January 2026)). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: Copyright © 2026 Myeloma Foundation of Australia Inc. All Rights Reserved. (site-wide footer; the PDF itself carries no reuse statement) (read at https://myeloma.org.au/health-professionals/guidelines-education/clinical-practice-guidelines/ (page footer)). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 22,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 22
+ },
+ "claims": [
+  {
+   "claim": "**Refractory myeloma** means progression while on treatment, or within 60 days of stopping it, in a patient who had reached at least a minor response.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "46436cc7d7ba848b",
+     "n": 188,
+     "p": "Refracto"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Not every relapse needs treatment at once.** Start promptly for clinical relapse, and also for a fast rise in paraprotein or serum free light chains even without new CRAB features. Slow, symptom-free biochemical relapse can be watched, but closely: registry data suggest organ damage that appears while relapse is only biochemical may not recover as well as once thought.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "30b9c7940646096f",
+     "n": 775,
+     "p": "While no"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Clinical relapse (treat):** new plasmacytomas or bone lesions; existing ones growing by ≥50%; calcium ≥11.5 mg/dl (2.875 mmol/l); haemoglobin falling by ≥20 g/L or below 100 g/L; or creatinine up by >177 μmol/L, where due to myeloma.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b950fcbe96ab60f3",
+     "n": 312,
+     "p": "Developm"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Significant biochemical relapse (treat before organ damage):** paraprotein doubling on two consecutive tests under two months apart with an absolute rise of at least 5 g/L; or, on two consecutive tests, paraprotein up by ≥10 g/L, urine Bence Jones protein up by ≥0.5 g per 24 hours, or the involved free light chain up by ≥200 mg/L (abnormal ratio) or 25%, whichever is greater.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "b0d74a7d0a4c0d02",
+     "n": 417,
+     "p": "Doubling"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**There is no standard sequence.** Tailor therapy to earlier treatments and their toxicity, the depth and length of past responses, disease tempo and current fitness; use the most effective available option early rather than saving it. A clinical trial is strongly preferred when one is open.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ba99e53386dfbe48",
+     "n": 359,
+     "p": "There is"
+    },
+    {
+     "h": "f9a69caf3bb8f595",
+     "n": 64,
+     "p": "Clinical"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Change drug class where possible;** another agent from the same class can be reasonable if paired with a different class. Re-using an earlier regimen is an option only if the patient was not refractory to it, stayed off therapy for about 12 months or more, and tolerated it; expect a shorter, shallower response (Grade C).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d0c8fa0ff76f3dd2",
+     "n": 476,
+     "p": "Switchin"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A second autologous transplant** can be considered in selected patients who reached at least a partial response lasting over 3 years (over 2 years if they had no maintenance after the first transplant) (Grade B, Level 4).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "eb1135bfacca5b0b",
+     "n": 255,
+     "p": "A second"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Match intensity to relapse tempo.** Rapid progression: a triplet pairing an IMiD and/or proteasome inhibitor with an antibody or chemotherapy, plus debulking chemotherapy or radiotherapy for bulky, proliferative disease. Slow progression: limit side effects; a doublet with dexamethasone, or watchful waiting in frail or elderly patients without organ damage.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "dce1c91cd1765a8c",
+     "n": 319,
+     "p": "Rapidly "
+    },
+    {
+     "h": "8e45ca0f27339531",
+     "n": 434,
+     "p": "Slow Pro"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**When novel agents are exhausted,** older options remain: cyclophosphamide at moderate dose, melphalan at non-myeloablative dose, or low-dose steroids, and palliative care should be offered to those unfit for more treatment (Grade C).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f99d38031e17c77e",
+     "n": 286,
+     "p": "If novel"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Neuropathy and clots:** use bortezomib or thalidomide with caution, or avoid them, in pre-existing neuropathy. Anyone with past VTE or high VTE risk on an IMiD needs prophylactic or full anticoagulation; risk peaks with high-dose dexamethasone or anthracycline regimens.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5e44471a723654d7",
+     "n": 343,
+     "p": "Pre-exis"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Renal impairment:** proteasome inhibitors are usable, carfilzomib even on dialysis with close monitoring. Lenalidomide, cleared mainly by the kidney, needs dose reduction in moderate to severe impairment; thalidomide and pomalidomide are less affected. CD38 antibodies and BCMA T-cell engagers can be used, dialysis included, with careful monitoring.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5667d695bb3c6949",
+     "n": 643,
+     "p": "Renal Im"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Carfilzomib:** get blood pressure controlled (about 140/90 mmHg) before starting and keep monitoring it; be cautious with pulmonary hypertension or uncontrolled heart disease. Grade ≥3 hypertension affected 14%, and heart failure was about 6% v 2% with Vd in Endeavor.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "dc55a7800c1e1bbe",
+     "n": 313,
+     "p": "Uncontro"
+    },
+    {
+     "h": "015e95458155accb",
+     "n": 284,
+     "p": "The most"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Drug-class exposure now matters more than the number of prior lines.** In LocoMMotion, triple-class-exposed patients on standard salvage had median PFS of 4.6 months and overall survival of 12.4 months.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c8109abe7e7b82e5",
+     "n": 625,
+     "p": "Traditio"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PBS-funded options after first-line therapy:** Dara-Vd (second line only), Kd, KRd, KTd, PVd, Pd, and SVd or Sd. Most Australians relapsing for the first time have had lenalidomide and many are refractory to it, which worsens outcomes with current salvage options and must shape the choice.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3a81656c8ea4984d",
+     "n": 525,
+     "p": "In Austr"
+    },
+    {
+     "h": "f9980d926ca84571",
+     "n": 279,
+     "p": "In Austr"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dara-Vd** is PBS-funded only after 1 prior line. In CASTOR it beat Vd on PFS (16.7 v 7.1 months). Bortezomib-refractory patients were excluded and it is not the choice for them; give bortezomib weekly and subcutaneously to limit neuropathy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c393bf4cd73e5d1c",
+     "n": 212,
+     "p": "Dara-Vd "
+    },
+    {
+     "h": "59431a759f2fb44a",
+     "n": 260,
+     "p": "Thus, as"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Kd** is funded after at least one prior line; Endeavor showed better PFS and survival than Vd. Endeavor gave carfilzomib twice weekly at 20/56 mg/m²; the once-weekly ARROW schedule (20/70 mg/m²) matched the twice-weekly regimen for response and PFS and was safer.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6ad69ba05019fce2",
+     "n": 878,
+     "p": "Kd is re"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**KRd** is funded from second line, but ASPIRE excluded lenalidomide-refractory patients, who make up most Australians with relapsed disease. **KTd** suits patients in whom renal impairment limits lenalidomide (ALLG MM018: median PFS 23 months).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6ceb3eaae3646d83",
+     "n": 309,
+     "p": "KRd is r"
+    },
+    {
+     "h": "278df96b20daa3b9",
+     "n": 220,
+     "p": "KTd is a"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PVd** is funded after at least 1 lenalidomide-containing line. In OPTIMISMM (all lenalidomide-exposed, 70% refractory, like Australian first relapses) it beat Vd on PFS (12.2 v 7.1 months); bortezomib-refractory patients were excluded. About 25% stopped for side effects, mostly neuropathy. PCd (median PFS 13 months) is an option when neuropathy rules out bortezomib.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fbd6a3e4a8dbbabe",
+     "n": 260,
+     "p": "PVd is r"
+    },
+    {
+     "h": "8dd3324aac0eefed",
+     "n": 699,
+     "p": "all pati"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pd alone gives only modest control** (median PFS about 4 months). **SVd** is PBS-funded: in BOSTON it lengthened median PFS (13.93 v 9.46 months) with weekly bortezomib and less neuropathy, at the cost of manageable gastrointestinal effects that may need dose changes.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1ad42974cddbb38e",
+     "n": 107,
+     "p": "The use "
+    },
+    {
+     "h": "9de97001aa97f556",
+     "n": 364,
+     "p": "SVd sign"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**For triple-class-exposed disease:** PBAC recommended elranatamab (as of July 2025) after at least three prior lines, and MSAC recommended funding cilta-cel CAR-T after at least four. Teclistamab is TGA-approved but not yet PBS-funded.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "39b82ba254aa38b5",
+     "n": 539,
+     "p": "As of Ju"
+    },
+    {
+     "h": "7ced7b64ea5217bf",
+     "n": 75,
+     "p": "Teclista"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Bispecific T-cell engagers carry a high risk of low immunoglobulins and infection** (nearly 70% had infections with elranatamab). Plan immunoglobulin replacement, Pneumocystis prophylaxis with trimethoprim-sulfamethoxazole and varicella-zoster prophylaxis with valaciclovir.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2124f9b79dec2dcd",
+     "n": 90,
+     "p": "Infectio"
+    },
+    {
+     "h": "190e351fea123d43",
+     "n": 343,
+     "p": "Due to t"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Unfunded drugs:** if neither TGA-approved nor PBS-listed, only private purchase through the Special Access Scheme; if TGA-approved but not listed, ordinary private purchase. Compassionate-access programs may also supply some.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d7cced2b3ef2e105",
+     "n": 268,
+     "p": "For agen"
+    },
+    {
+     "h": "adb053502557030c",
+     "n": 277,
+     "p": "Compassi"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Quach H), 'Clinical practice guideline: Treatment of patients with relapsed refractory multiple myeloma', 2026 (evidence current to January 2026), https://myeloma.org.au/wp-content/uploads/2026/01/Treatment-of-patients-with-relapsed-refractory-multiple-myeloma.pdf, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,367 @@
+{
+ "guideline": "guidelines/waldenstrom-macroglobulinaemia.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.) 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)' (June 2022). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: Copyright © 2026 Myeloma Foundation of Australia Inc. All Rights Reserved. (site-wide footer; the PDF itself carries no reuse statement) (read at https://myeloma.org.au/health-professionals/guidelines-education/clinical-practice-guidelines/ (page footer)). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 20,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 20
+ },
+ "claims": [
+  {
+   "claim": "**Treat only symptomatic disease or disease complications:** cytopenias due to WM (haemoglobin below 100 g/L or a platelet count below 100), bulky lymph nodes or organomegaly, hyperviscosity causing symptoms, WM-related neuropathy that is moderate, severe or getting worse, amyloidosis, cryoglobulinaemia, nephropathy or cold-agglutinin disease.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2e1f0cddf0a5bb89",
+     "n": 375,
+     "p": "Patients"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic patients: follow IgM serially.** Consider treating when IgM rises quickly or exceeds 60 g/L, to head off hyperviscosity, which develops in about two thirds of people above that level (Level IV, grade C). Enrol in trials wherever possible.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "dec686881e3ee3de",
+     "n": 284,
+     "p": "Asymptom"
+    },
+    {
+     "h": "689a0b337442632f",
+     "n": 184,
+     "p": "Treatmen"
+    },
+    {
+     "h": "ae427acc37fac015",
+     "n": 65,
+     "p": "Patients"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Measure IgM at the same laboratory each time.** Use both methods (electrophoresis with densitometry, and total IgM by nephelometry) at diagnosis, before treatment and when confirming the final response, then stick to one method for surveillance and during treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f176f50f2383776c",
+     "n": 457,
+     "p": "We recom"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**IgM can lag behind the real response,** falling months or even years after treatment. Do not call a persistently high IgM treatment failure on its own; weigh haemoglobin recovery, marrow clearance and symptom relief too.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1096fc985afaff31",
+     "n": 520,
+     "p": "It is im"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **IgM flare:** a rapid rise of more than 25% can follow rituximab (especially alone) and stopping or pausing a BTK inhibitor. About 54% of rituximab-treated patients flare, usually in the first 8 weeks, settling within 4 months in most. A raised IgM after restarting ibrutinib is not necessarily failure: if unsure, keep the BTK inhibitor going and monitor, and use plasmapheresis for the rare hyperviscosity symptoms.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a3edb70a21547e30",
+     "n": 222,
+     "p": "A phenom"
+    },
+    {
+     "h": "7e127cb9d0a730c5",
+     "n": 206,
+     "p": "Approxim"
+    },
+    {
+     "h": "87519bcff5e86281",
+     "n": 374,
+     "p": "persiste"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PBS-funded chemoimmunotherapy is bendamustine-rituximab (B-R) or dexamethasone-rituximab-cyclophosphamide (DRC),** and B-R is funded for first-line use only. At publication, PBAC had just recommended zanubrutinib for listing.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e22dfe0e9b3d61a6",
+     "n": 205,
+     "p": "chemoimm"
+    },
+    {
+     "h": "77b96aa6aab72939",
+     "n": 109,
+     "p": "noting t"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**B-R is a preferred first-line option,** beating R-CHOP with less toxicity (Level IB, grade A); in StiL, PFS in the WM subgroup was 69.5 v 28.1 months. DRC is also reasonable (Level III, grade B). R-CHOP is not recommended: the anthracycline and vincristine add little.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7e58976f223c3e85",
+     "n": 51,
+     "p": "includin"
+    },
+    {
+     "h": "4a6fe16ebb968c65",
+     "n": 151,
+     "p": "Reasonab"
+    },
+    {
+     "h": "43972eb8475aad03",
+     "n": 203,
+     "p": "There is"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**DRC** gave a 74% response rate, median PFS of 35 months and survival of 95 months in a phase II study. It works slowly (median 4.1 months to partial response), so it is a poor choice when IgM must come down fast, but it spares stem cells and suits frailer, older patients for whom bendamustine is too immunosuppressive.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "76bfdb0f31a558ba",
+     "n": 171,
+     "p": "ORR of 7"
+    },
+    {
+     "h": "b2f5703a8955c095",
+     "n": 626,
+     "p": "The long"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Rituximab maintenance is not recommended:** in StiL MAINTAIN (218 patients) PFS of 83 v 101 months was not a significant difference.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "99e7d9b932ad49f1",
+     "n": 299,
+     "p": "The StiL"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BTK inhibitors where available** (not PBS-funded for WM when this guideline was written): ibrutinib alone for MYD88-mutated disease, ibrutinib plus rituximab for MYD88 wild-type, and zanubrutinib alone whatever the MYD88 result, with fewer off-target effects (each Level 1B, grade A). They are preferred especially when age or comorbidity rules out chemoimmunotherapy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "147e745d8b05216e",
+     "n": 356,
+     "p": "Ibrutini"
+    },
+    {
+     "h": "0aaf802d205c9d51",
+     "n": 157,
+     "p": "Where av"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Zanubrutinib dose:** 160 mg twice daily is preferred, but 320 mg once daily shows the same activity, so patient preference can decide. In ASPEN it caused less atrial fibrillation, hypertension and treatment stopping than ibrutinib, though more neutropenia.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e2f6d6a4c1407264",
+     "n": 301,
+     "p": "Although"
+    },
+    {
+     "h": "2ee290b3c7e5db2b",
+     "n": 209,
+     "p": "cardiova"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Avoid fludarabine up front** (toxic in older and renally impaired patients, harms stem-cell collection, raises MDS/AML risk; grade C). Chlorambucil is not recommended. Single-agent rituximab is reserved for elderly or frail patients who cannot tolerate anything else (grade C).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "00cf3c3789baf7e1",
+     "n": 759,
+     "p": "Fludarab"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bortezomib lowers paraprotein fast,** useful with hyperviscosity or familial WM (grade C), but it can worsen WM neuropathy: grade 3-4 in 20–30% with twice-weekly intravenous dosing. Weekly dosing or carfilzomib lowers that risk; subcutaneous use is extrapolated from myeloma. Proteasome inhibitors are not registered or funded for WM in Australia.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e7f809d04171334a",
+     "n": 194,
+     "p": "Proteaso"
+    },
+    {
+     "h": "b8232092737b82c2",
+     "n": 539,
+     "p": "bortezom"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Indolent, symptom-free relapse can be watched** (grade C). Offer trials, especially when earlier chemotherapy responses lasted under 12 months, and do not repeat a regimen whose response lasted less than 12 months (grade C). BTK inhibitor choices mirror frontline.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "eca48dc68615bd33",
+     "n": 452,
+     "p": "Patients"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Avoid fludarabine with persistent myelosuppression and bortezomib with unresolved neuropathy** (grade B).",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "acd6253c25687d6f",
+     "n": 228,
+     "p": "Patients"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Autologous transplant is not a frontline option,** but fit younger patients should be considered for it at first or second relapse, ideally before stem-cell-toxic drugs such as fludarabine (grade B). Allogeneic transplant is rare, for young fit patients with aggressive or transformed disease and a donor.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e1a96f3bdfa56da3",
+     "n": 59,
+     "p": "ASCT is "
+    },
+    {
+     "h": "048e7caaea19bec7",
+     "n": 218,
+     "p": "Younger "
+    },
+    {
+     "h": "b6f86e6619876693",
+     "n": 227,
+     "p": "Allogene"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Symptomatic hyperviscosity needs urgent plasmapheresis,** which is also advised when IgM is above 60 g/L. Avoid red-cell transfusion; if unavoidable, give it after plasmapheresis, and manage fluids carefully to avoid worsening viscosity or pulmonary oedema.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "68c59ec1853ebdf6",
+     "n": 458,
+     "p": "Urgent m"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infection:** give antibacterial, antiviral and antifungal prophylaxis to patients with recurrent or life-threatening infections or on intensive or immunosuppressive treatment, and consider intravenous or subcutaneous immunoglobulin for them.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1a955caf0906465d",
+     "n": 455,
+     "p": "Treatmen"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Bing-Neel syndrome** (about 1%) is lymphoma infiltrating the central nervous system: headache, cognitive change, weakness or psychiatric features. Diagnose by finding the clonal cells in CSF or a biopsy, with MYD88 testing of CSF and brain/spine imaging. A BTK inhibitor is the recommended treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3216226b34e073cf",
+     "n": 273,
+     "p": "is a rar"
+    },
+    {
+     "h": "02b8b2cb768dbe61",
+     "n": 412,
+     "p": "Diagnost"
+    },
+    {
+     "h": "8742c5402543609d",
+     "n": 56,
+     "p": "Based on"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transformation to DLBCL** occurs in 5-10%, more often after nucleoside analogues: suspect it with fast-growing nodes, extranodal disease and rising LDH. Confirm with a biopsy tested for EBV; treat intensively as for de-novo DLBCL.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "90b1ab5e9d05590b",
+     "n": 286,
+     "p": "Histolog"
+    },
+    {
+     "h": "4c1176ab17d7e572",
+     "n": 135,
+     "p": "A tissue"
+    },
+    {
+     "h": "2e604772b34cb929",
+     "n": 126,
+     "p": "It is re"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) to Myeloma Australia (Talaulikar D et al.), 'Consensus clinical practice guidelines for the treatment of patients with Waldenström Macroglobulinaemia (MSAG Guidelines, version 2)', June 2022, https://myeloma.org.au/wp-content/uploads/2026/01/MSAG-waldenstrom-guidelines-2022pdf.pdf, retrieved 2026-09-23"
+  }
+ ]
+}
