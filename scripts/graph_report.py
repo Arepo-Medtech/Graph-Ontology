@@ -116,6 +116,72 @@ def main() -> int:
                                               "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
         con.execute("UPDATE edge SET tier = ? WHERE predicate = 'drugcentral:rxnorm'", [tier(lo, n)])
 
+    # --- route 3: LOINC -> SNOMED measurement, checked by component --------------------------------------------------
+    # Independent check: the LOINC term's COMPONENT part (LOINC's own axis) against the SNOMED target's Component
+    # (246093002, from the SNOMED CT-AU release). Names only -- there is no code link between LOINC parts and SNOMED
+    # substances -- so this is a consistency test, stated as such: consistent = the analyte names share a significant
+    # word. Exact = the names are equal once normalised.
+    rows = con.execute("""
+        SELECT b.s_code, lower(pn.name), lower(sn.name)
+        FROM edge b
+        JOIN edge lc ON lc.s_code = b.s_code AND lc.predicate = 'loinc:has_component'
+        JOIN node pn ON pn.vocab = 'LOINC' AND pn.code = lc.o_code
+        JOIN edge sc ON sc.s_code = b.o_code AND sc.predicate = 'sct:246093002'
+        JOIN node sn ON sn.vocab = 'SCT' AND sn.code = sc.o_code
+        WHERE b.predicate = 'loinc:is_a_snomed'""").fetchall()
+    import re
+    STOP = {"measurement", "level", "total", "free", "serum", "plasma", "blood", "urine", "substance", "antibody", "antigen",
+            "species", "with", "and", "the", "type", "ratio", "mass", "volume", "concentration"}
+    tok = lambda s: {w for w in re.findall(r"[a-z0-9]{3,}", s or "") if w not in STOP}
+    norm = lambda s: re.sub(r"[^a-z0-9]", "", s or "")
+    per = {}
+    for lid, part, comp in rows:
+        e, c = per.get(lid, (False, False))
+        per[lid] = (e or norm(part) == norm(comp), c or norm(part) == norm(comp) or bool(tok(part) & tok(comp)))
+    n = len(per); ex = sum(1 for e, _ in per.values() if e); co = sum(1 for _, c in per.values() if c)
+    lo, _ = wilson(co, n)
+    report["route:loinc->snomed (component check)"] = {"loinc_terms_checked": n, "exact": ex, "exact_rate": round(ex / n, 4) if n else None,
+        "consistent": co, "consistent_rate": round(co / n, 4) if n else None, "consistent_wilson_lo": round(lo, 4),
+        "earned_tier": tier(lo, n), "note": "a names-based consistency test, not a precision measurement"}
+    con.execute("UPDATE edge SET tier = ? WHERE predicate = 'loinc:is_a_snomed'", [tier(lo, n)])
+    report["coverage:LOINC terms bridged to SNOMED"] = dict(zip(("loinc_terms", "bridged"), con.execute("""
+        SELECT (SELECT count(DISTINCT s_code) FROM edge WHERE predicate LIKE 'loinc:has_%'),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate IN ('loinc:is_a_snomed', 'loinc:maps_to_snomed'))""").fetchone()))
+    report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"] = dict(zip(("foreign_ids", "lifted"), con.execute("""
+        SELECT (SELECT edges FROM build_log WHERE family LIKE 'foreign SNOMED ids%'),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:au_nearest_ancestor')""").fetchone()))
+
+    # --- route 4: HPO -> SNOMED via a shared UMLS CUI, checked by hierarchy preservation ----------------------------
+    # Where HPO says child is-a parent and both cross to SNOMED, the child's SNOMED concept should be the parent's or
+    # below it in SNOMED CT-AU. A crossing that keeps HPO's structure is evidence the two concepts mean the same thing;
+    # one that inverts or scatters it is evidence they do not.
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'hp:umls_snomed'").fetchone()[0]:
+        con.execute("""CREATE OR REPLACE TEMP TABLE hp_pairs AS
+            SELECT h.s_code AS child, h.o_code AS parent, mc.o_code AS c_sct, mp.o_code AS p_sct
+            FROM edge h JOIN edge mc ON mc.s_code = h.s_code AND mc.predicate = 'hp:umls_snomed'
+            JOIN edge mp ON mp.s_code = h.o_code AND mp.predicate = 'hp:umls_snomed'
+            WHERE h.predicate = 'hp:is_a'""")
+        con.execute("""CREATE OR REPLACE TEMP TABLE hp_up AS
+            WITH RECURSIVE up(start, node, depth) AS (
+                SELECT DISTINCT c_sct, c_sct, 0 FROM hp_pairs
+                UNION SELECT u.start, e.o_code, u.depth + 1 FROM up u
+                JOIN edge e ON e.predicate = 'sct:116680003' AND e.s_code = u.node WHERE u.depth < 25)
+            SELECT DISTINCT start, node FROM up""")
+        n, ok = con.execute("""
+            WITH per AS (SELECT child, parent, bool_or(c_sct = p_sct OR EXISTS (SELECT 1 FROM hp_up WHERE start = c_sct AND node = p_sct)) AS kept
+                         FROM hp_pairs GROUP BY 1, 2)
+            SELECT count(*), count(*) FILTER (WHERE kept) FROM per""").fetchone()
+        lo, _ = wilson(ok, n)
+        report["route:hpo->snomed (UMLS, hierarchy preserved)"] = {"hpo_is_a_pairs_both_mapped": n, "hierarchy_kept": ok,
+            "rate": round(ok / n, 4) if n else None, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+        con.execute("UPDATE edge SET tier = ? WHERE predicate = 'hp:umls_snomed'", [tier(lo, n)])
+        report["coverage:HPO phenotypes bridged to SNOMED"] = dict(zip(("hpo_phenotypes", "bridged", "bridged_in_au_release"), con.execute("""
+            SELECT (SELECT count(*) FROM node WHERE vocab = 'HP'),
+                   (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'hp:umls_snomed'),
+                   (SELECT count(DISTINCT e.s_code) FROM edge e JOIN node n ON n.vocab = 'SCT' AND n.code = e.o_code
+                     WHERE e.predicate = 'hp:umls_snomed' AND e.o_code NOT IN
+                           (SELECT s_code FROM edge WHERE predicate = 'sct:au_nearest_ancestor'))""").fetchone()))
+
     # --- health ------------------------------------------------------------------------------------------------------
     report["edges"] = con.execute("SELECT count(*) FROM edge").fetchone()[0]
     report["nodes"] = con.execute("SELECT count(*) FROM node").fetchone()[0]

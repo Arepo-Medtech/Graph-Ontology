@@ -158,10 +158,10 @@
       ],
       "category": "identity",
       "derivation": "gap",
-      "strength_kind": "belief_interval",
-      "source": "the binder, with its attestation loop",
-      "status": "needs_binding",
-      "note": "The one gap in the indication chain: 'Metastatic (Stage IV)' is a condition, a staging ordinal and a severity in one string"
+      "strength_kind": "exact",
+      "source": "scripts/bind_indications.py on the live Ontoserver, SNOMED CT-AU 20260831 -> reference/pbs_indication_bindings.json",
+      "status": "built",
+      "note": "Only EXACT matches are edges: the normalised text equals a SNOMED CT-AU preferred term or synonym, after removing parentheticals and leading severity / course words, which are kept as the edge's stripped_qualifier (the adjective and temporality ride on the edge, the condition is the noun). Everything else carries up to five candidates for a person in the same file -- a frame, not an edge."
     },
     {
       "id": "corpus:binds_to",
@@ -402,7 +402,7 @@
       "strength_kind": "belief_interval",
       "source": null,
       "status": "needs_source",
-      "note": "hp.obo 2026-09-02 carries NO SNOMEDCT or UMLS xrefs (top xrefs: Fyler, NCIT, MedDRA 92). There is no lookup path from HPO phenotypes to SNOMED findings; name matching would be a gap route, and the substance-level name route scored inadmissible"
+      "note": "hp.obo 2026-09-02 carries NO SNOMEDCT or UMLS xrefs (top xrefs: Fyler, NCIT, MedDRA 92). There is no lookup path from HPO phenotypes to SNOMED findings; name matching would be a gap route, and the substance-level name route scored inadmissible -- superseded by hp:umls_snomed (UMLS crosswalk) once the UMLS key is configured."
     },
     {
       "id": "drugcentral:rxnorm",
@@ -582,6 +582,69 @@
       "source": null,
       "status": "needs_source",
       "note": "A clinical claim, distinct from same_substance_as_analyte: ibuprofen is measurable, not routinely monitored"
+    },
+    {
+      "id": "loinc:is_a_snomed",
+      "label": "LOINC term is a SNOMED measurement (OMOP's placement of LOINC under SNOMED)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena v5.0 29-AUG-26 CONCEPT_RELATIONSHIP 'Is a'",
+      "status": "built",
+      "note": "The bridge that ends LOINC's isolation (0 edges out before it). Scored by graph_report.py against an independent check: the LOINC COMPONENT part against the SNOMED target's own Component (246093002) attribute."
+    },
+    {
+      "id": "loinc:maps_to_snomed",
+      "label": "LOINC term or pair maps to SNOMED concept / value",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena v5.0 29-AUG-26 'Maps to' / 'Maps to value'",
+      "status": "built"
+    },
+    {
+      "id": "sct:au_nearest_ancestor",
+      "label": "SNOMED concept absent from SNOMED CT-AU -> its nearest ancestor that is present",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_ANCESTOR (SNOMED)",
+      "status": "built",
+      "note": "For SNOMED ids arriving from foreign sources (DrugCentral's US conditions, Athena's LOINC targets in other extensions) that the Australian release does not carry. The same move item 17 made in the other direction. Only the nearest level is kept; ties keep all."
+    },
+    {
+      "id": "hp:umls_snomed",
+      "label": "HPO phenotype shares a UMLS concept (CUI) with a SNOMED CT concept",
+      "subject": [
+        "HP"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS Metathesaurus crosswalk HPO -> SNOMEDCT_US (UTS REST API, licensed; derived data not redistributed)",
+      "status": "built",
+      "note": "The bridge from signs and symptoms to SNOMED findings. A shared CUI is synonymy by UMLS editors, not a SNOMED-HPO map. Scored for hierarchy preservation: where HP child is-a HP parent, is the child's SNOMED concept at or below the parent's?"
     }
   ],
   "not_imported": {

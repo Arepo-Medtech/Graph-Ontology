@@ -7,3 +7,6 @@ __pycache__/
 # Durable artefacts live in reference/ instead: the condition set, the SNOMED
 # binding queue (which accumulates human confirmations), validated splits and
 # verification verdicts. Those are work products, not build output.
+
+# secrets: API keys live here, never in git (UMLS_API_KEY, ...)
+.env

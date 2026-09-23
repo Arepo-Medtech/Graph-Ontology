@@ -89,6 +89,44 @@ fosfestrol — plus one plain error, *loteprednol etabonate → digoxin*. Patien
 - **Sign → diagnosis likelihood ratios, priors, therapeutic drug monitoring** — registered, not loadable, each with
   the reason in the register.
 
+## Non-pharmacological bridges
+
+A vocabulary-to-vocabulary matrix of the first build showed three families that touched nothing else: **LOINC**
+(183,785 nodes, 0 edges out), **HPO phenotypes** (19,894 — joined to SNOMED only through their diseases), and the
+**653 PBS indications** (a dead end at free text). Each is a different kind of bridge.
+
+**Measurements — LOINC → SNOMED (built, Tier 2).** Athena already places LOINC lab tests under SNOMED measurement
+concepts: 22,003 `Is a` (21,278 terms under 3,615 concepts), 562 `Maps to`, 107 `Maps to value`. It is a lookup from a
+source already on disk; it had simply not been loaded. From the SNOMED measurement, SNOMED CT-AU's own attributes
+carry the chain onward — its *Component* (the analyte), the observable it measures, and *Interprets*, which joins an
+observable to the findings that read it. Scored by comparing the LOINC term's COMPONENT with the SNOMED target's
+*Component*: 86.5% share a significant word over 19,653 terms (Wilson lower bound 0.860) → **Tier 2**; 45% are equal
+names. The check is conservative — read by hand, the "inconsistent" rows are almost all synonyms the check cannot see
+(*lutropin* / *luteinizing hormone*, *thyrotropin* / *TSH*, *9-hydroxyrisperidone* / *paliperidone*, which are the same
+molecule) because the compendium stores SNOMED preferred terms only. **It reaches 21,947 of 104,720 LOINC terms
+(21%)**: Athena bridges lab tests; surveys, clinical observations, radiology and document codes remain an island.
+SNOMED International's LOINC Ontology (module 11010000107) would bridge more, but is not on the public Ontoserver.
+
+**Foreign SNOMED ids → the Australian release (built).** 1,088 SCTIDs reached the graph from sources that are not
+Australian — DrugCentral's US conditions (177 of its 2,641 condition concepts), Athena's LOINC targets in other
+extensions (482 of 3,847). `sct:au_nearest_ancestor` joins each to its nearest ancestor that SNOMED CT-AU carries;
+**499 are lifted**, and the other 589 have no ancestry in Athena at all.
+
+**Conditions — PBS indication text → SNOMED CT-AU (built, exact matches only).** Text to concept is a gap, so only an
+exact match becomes an edge: the normalised text equals a SNOMED CT-AU 20260831 preferred term or synonym, found on
+the live Ontoserver, after removing parentheticals and leading severity or course words — which are kept on the edge
+as `stripped_qualifier`, beside PBS's own severity and episodicity. The condition is the noun; the adjective rides on
+the edge. (`scripts/bind_indications.py`; the stripper first removed only one qualifier, so *Severe active rheumatoid
+arthritis* failed to reach *Rheumatoid arthritis*, and was fixed to strip repeatedly.)
+
+| | |
+|---|---:|
+| PBS indications bound exactly | **312 of 653** (204 preferred term, 68 synonym, 40 after stripping qualifiers) |
+| AMT products whose PBS indication now reaches a SNOMED condition | **5,899** |
+| PBS indications left as candidate frames for a person | 341 — `reference/pbs_indication_bindings.json` |
+| unbound corpus conditions that now bind exactly | 14 of 374 — recommendations in `reference/corpus_condition_candidates.json`, not applied: `snomed_bindings.json` belongs to the binder and its review loop |
+| check against the existing binder, over its 265 bound conditions | 257 bound by both, **257 on the same concept, 0 different** — agreement between two exact-match implementations, not a precision measurement |
+
 ## Three walks
 
 ```bash

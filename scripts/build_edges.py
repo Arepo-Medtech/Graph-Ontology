@@ -53,10 +53,12 @@ PBS = Path("cache/pbs")
 MONDO_OBO, MONDO_SSSOM = Path("cache/mondo/mondo.obo"), Path("cache/mondo/mondo.sssom.tsv")
 HP_OBO, HPOA = Path("cache/hpo/hp.obo"), Path("cache/hpo/phenotype.hpoa")
 DC = Path("cache/drugcentral")
+UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
+PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
 
 PIN = {"sct": "SNOMED CT-AU 20260731", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json"}
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
               "SYSTEM": "loinc:has_system", "SCALE": "loinc:has_scale", "METHOD": "loinc:has_method"}
@@ -178,6 +180,17 @@ def main() -> int:
     con.execute(f"""INSERT INTO name_hint SELECT 'PBS_ITEM', pbs_code, any_value(li_drug_name || coalesce(' (' || brand_name || ')', ''))
                     FROM {rows('items')} GROUP BY pbs_code""")
 
+    # --- PBS indication text -> SNOMED: exact matches only (scripts/bind_indications.py); the rest stay candidates -----
+    if PBS_BIND.exists():
+        pb = json.load(open(PBS_BIND))["results"]
+        ins_rows("PBS indication -> SNOMED (exact matches only)", [
+            ("PBS_INDICATION", str(r["indication_prescribing_txt_id"]), "pbs:indication_is", "SCT", r["bound"]["concept_id"],
+             "reference/pbs_indication_bindings.json", r["text"], r["bound"]["method"], "ungraded", "asserted",
+             "SNOMED CT-AU 20260831 (live Ontoserver)",
+             json.dumps({k: v for k, v in (("stripped_qualifier", r["bound"].get("stripped_qualifier")),
+                                           ("pbs_severity", r.get("pbs_severity")), ("pbs_episodicity", r.get("pbs_episodicity"))) if v}))
+            for r in pb if r.get("bound")])
+
     # --- corpus condition bindings ----------------------------------------------------------------------------------
     b = json.load(open(BINDINGS))["results"]
     ins_rows("corpus condition -> SNOMED", [("CORPUS", r["condition"], "corpus:binds_to", "SCT", r["snomed"]["concept_id"],
@@ -195,6 +208,14 @@ def main() -> int:
     con.execute("INSERT INTO name_hint SELECT 'LOINC', code, concept_name FROM sp.loinc_omop")
     con.execute("INSERT INTO name_hint SELECT 'LOINC', part_code, any_value(part_name) FROM sp.loinc_axis GROUP BY part_code")
     con.execute("INSERT INTO name_hint SELECT 'LOINC', answer_code, any_value(answer_name) FROM sp.loinc_answer GROUP BY answer_code")
+
+    # --- LOINC -> SNOMED: the bridge out of LOINC's island (Athena places lab tests under SNOMED measurements) -----
+    ins("LOINC -> SNOMED (Is a / Maps to)", f"""SELECT DISTINCT 'LOINC', l.concept_code,
+            CASE r.relationship_id WHEN 'Is a' THEN 'loinc:is_a_snomed' ELSE 'loinc:maps_to_snomed' END, 'SCT', s.concept_code,
+            'OMOP Athena', 'CONCEPT_RELATIONSHIP', r.relationship_id, 'ungraded', 'asserted', '{PIN['athena']}', NULL
+        FROM CR r JOIN C l ON l.concept_id = r.concept_id_1 AND l.vocabulary_id = 'LOINC'
+        JOIN C s ON s.concept_id = r.concept_id_2 AND s.vocabulary_id = 'SNOMED'
+        WHERE r.relationship_id IN ('Is a', 'Maps to', 'Maps to value') AND (r.invalid_reason IS NULL OR r.invalid_reason = '')""")
 
     # --- MONDO -------------------------------------------------------------------------------------------------------
     if MONDO_OBO.exists():
@@ -282,6 +303,31 @@ def main() -> int:
                   AND relationship_name IN ({','.join(repr(k) for k in rel)})""")
         if (DC / "structures.tsv").exists():
             con.execute(f"INSERT INTO name_hint SELECT 'DRUGCENTRAL', id, name FROM {dc('structures')}")
+
+    # --- UMLS: HPO phenotype -> SNOMED, the bridge from signs and symptoms to SNOMED findings --------------------
+    if UMLS_HPO.exists():
+        ins("HPO phenotype -> SNOMED (UMLS shared CUI)", f"""SELECT DISTINCT 'HP', hpo_id, 'hp:umls_snomed', 'SCT', snomed_code, 'UMLS',
+                'UTS crosswalk HPO -> SNOMEDCT_US', 'shared CUI', 'ungraded', 'asserted', '{PIN['umls']}', NULL
+            FROM read_csv('{UMLS_HPO}', delim='\t', header=true, all_varchar=true, quote='') WHERE snomed_code IS NOT NULL AND snomed_code <> ''""")
+
+    # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
+    # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
+    # LOINC targets in other extensions). Only the nearest level is kept; ties keep all.
+    con.execute(f"CREATE TEMP VIEW CA AS SELECT * FROM read_csv('{a.vocab_dir}/CONCEPT_ANCESTOR.csv', delim='\t', header=true, all_varchar=true)")
+    con.execute("""CREATE TEMP TABLE foreign_sct AS SELECT DISTINCT code FROM (SELECT s_code AS code FROM edge WHERE s_vocab = 'SCT'
+                   UNION SELECT o_code FROM edge WHERE o_vocab = 'SCT') WHERE code NOT IN (SELECT id FROM cmp.concept)""")
+    ins("foreign SNOMED -> nearest SNOMED CT-AU ancestor", f"""
+        WITH anc AS (
+            SELECT f.code, a.concept_code AS anc, CAST(ca.min_levels_of_separation AS INT) AS lvl
+            FROM foreign_sct f JOIN C d ON d.vocabulary_id = 'SNOMED' AND d.concept_code = f.code
+            JOIN CA ca ON ca.descendant_concept_id = d.concept_id AND ca.min_levels_of_separation <> '0'
+            JOIN C a ON a.concept_id = ca.ancestor_concept_id AND a.vocabulary_id = 'SNOMED'
+            WHERE a.concept_code IN (SELECT id FROM cmp.concept)),
+        best AS (SELECT code, min(lvl) AS lvl FROM anc GROUP BY 1)
+        SELECT DISTINCT 'SCT', anc.code, 'sct:au_nearest_ancestor', 'SCT', anc.anc, 'OMOP Athena', 'CONCEPT_ANCESTOR',
+               'nearest ancestor in SNOMED CT-AU', 'native', 'asserted', '{PIN['athena']}', json_object('levels_up', anc.lvl)
+        FROM anc JOIN best USING (code, lvl)""")
+    log["foreign SNOMED ids (not in the AU release)"] = con.execute("SELECT count(*) FROM foreign_sct").fetchone()[0]
 
     # --- the contract ------------------------------------------------------------------------------------------------
     reg = json.load(open(REGISTER))
