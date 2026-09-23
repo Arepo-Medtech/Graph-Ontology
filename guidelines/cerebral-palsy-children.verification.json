@@ -1,0 +1,182 @@
+{
+ "guideline": "guidelines/cerebral-palsy-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Cerebral palsy' (Last updated November 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**CP is a non-progressive motor disorder with many different causes. Every child needs investigation** to find the underlying cause and exclude progressive conditions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "CP is a non-progressive motor disorder with many different causes. Children with CP require investigation to determine the underlying cause and exclude progressive conditions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The diagnosis is clinical, typically before 12–24 months**, though it can be made as early as 3 months corrected gestational age.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Diagnosis is made clinically, typically before 12-24 months of age, though early diagnosis may be made as early as 3 months corrected gestational age (CGA)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The cause is non-progressive but clinical features evolve — review regularly for complications.** Infants with, or at high risk of, CP benefit from **early intervention**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whilst the underlying cause is non-progressive, clinical features may evolve. Monitor with regular reviews for complications … Infants with (or at high risk of) CP benefit from early intervention to optimise functional outcomes and to screen for and manage comorbidities",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer (using corrected age) for:** persistent hand fisting or head lag beyond 4 months · unable to sit unsupported beyond 9 months · leg stiffness at 6–12 months · hand preference before 12 months · not walking by 18 months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features suggestive of motor impairment, warranting referral (use corrected age): Persistent fisting of the hands beyond 4 months Persistent head lag beyond 4 months Unable to sit without support beyond 9 months of age Stiffness or tightness in the legs between 6--12 months (eg unable to bring toes to mouth during nappy change) Handedness before 12 months Not walking by 18 months of age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider referral for:** a persistent Moro reflex beyond 6 months · consistent asymmetric or toe-walking beyond 12 months · persisting primitive reflexes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider referral if Persistent startle (Moro) reflex beyond 6 months of age Consistent asymmetric or toe-walking beyond 12 months of age Persistence of primitive reflexes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Think of another diagnosis (metabolic, neurodegenerative) if there is:** loss of skills or progressive symptoms · dysmorphic features · marked worsening with fasting or illness · muscle atrophy · sensory loss · a family history of another genetic condition.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features suggestive of an alternate diagnosis (ie metabolic, neurodegenerative, etc) Loss of previously acquired skills or progressive symptoms Dysmorphic features Marked worsening during fasting periods or illness Muscle atrophy Sensory loss Family history of alternative genetic condition",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**MRI brain at term equivalent if impairment is severe or progressive**; consider repeating **after 2 years** if the first was normal, inconclusive or not done. About 10–15% of children with clinical CP have a normal MRI at 2 years.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "MRI brain At term equivalent if severe impairment or progressive symptoms, though subtle lesions may be difficult to detect at this age … Consider after 2 years of age (when cerebral myelination complete) if initial MRI normal/inconclusive or not done at term equivalent … Approx 10-15% of children with clinically diagnosed CP have a normal MRI at 2 years of age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Genetics: microarray first line**; if normal, consider whole exome sequencing (ideally trio) with or without genetics referral — 25% or more may have a genetic cause.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Genetic testing Microarray is generally first line Consider whole exome sequence (ideally trio) +/- genetics referral if microarray normal (25% or more may have a genetic cause and this can coexist with other risk factors)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other tests with the relevant specialist** where infection, metabolic or genetic causes are suggested — eg blood gas, CK, ammonia, urine metabolic screen; **thrombophilia screen for hemiplegia, infarct on imaging or a family history**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider other investigations in consultation with relevant specialist when assessment is suggestive of underlying infectious, metabolic or genetic causes or when neuroimaging is suggestive of a specific cause or is non-diagnostic … Metabolic tests eg blood gas, creatine kinase, ammonia, urine metabolic screen … Thrombophilia screen if hemiplegia or evidence of cerebral infarct on imaging or family history",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A multidisciplinary team is essential** — physiotherapy, occupational therapy and speech pathology, with dietitians, orthotists, social work, psychology, education and nursing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assessment and management by a multidisciplinary team is essential … Other team members may include dietitians, orthotists, social workers, psychologists, special education teachers and nurses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Spasticity:** focal/segmental — **injected botulinum toxin**; generalised — **oral baclofen first line**. Intrathecal baclofen or selective dorsal rhizotomy are for rare cases, by rehab services.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Spasticity In focal/segmental spasticity, consider injected botulinum toxin Generalised spasticity Oral medications such as baclofen are first line … Other interventions such as intrathecal baclofen pump (ITB) or selective dorsal rhizotomy may be considered in rare cases by rehab services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dystonia (weak evidence):** focal — botulinum toxin; generalised — **oral baclofen first line**, adding **oral/transdermal clonidine or oral gabapentin** if insufficient.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whilst evidence for dystonia management is lacking, some specialists may consider below options … In focal/segmental dystonia, consider injected botulinum toxin Generalised dystonia Oral baclofen is generally first line Oral/transdermal clonidine or oral gabapentin can be added if baclofen is insufficient",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Every child with CP needs hip surveillance.** Start with a clinical assessment at **12 months**, with or without an AP hip X-ray (not needed in GMFCS I); concerns prompt orthopaedic referral.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with CP should undergo hip surveillance to monitor for early signs of hip displacement … Initial clinical assessment (pain, change in function, examination of hip and spine) at 12 months of age +/- AP hip radiograph (not required in GMFCS I) … Concerns identified on surveillance prompt orthopaedic referral, for consideration of preventative and reconstructive surgery",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Greater motor impairment means greater risk** of hip dislocation and scoliosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Increasing motor impairment correlates with increasing risk of hip dislocation and scoliosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Knee surveillance:** monitor for knee flexion deformity in GMFCS I–III from 5 years to skeletal maturity — it can cost the child walking.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitor for knee flexion deformity in those with GMFSC I-III from 5 years until skeletal maturity … Can cause functional impairment, crouched gait, pain, and loss of walking ability",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Saliva control:** anterior drooling causes skin breakdown and social difficulty; posterior drooling causes choking and aspiration. **Consider anticholinergics**; botulinum toxin to the salivary glands or surgery in some.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "May be anterior (may cause skin breakdown, social challenges) or posterior (causing choking and aspiration) … Consider anticholinergic agents … Botulinum toxin injections of salivary glands and/or surgical management may be considered in some children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Growth and feeding:** monitor growth and micronutrients; **consider enteral tube feeding** for weight gain, deficiencies, a medication route and to reduce aspiration.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Monitor growth and micronutrients and provide dietary advice … Consider enteral tube feeding for weight gain, to reduce nutritional deficiencies, provide a route for medication administration and reduce aspiration risk",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Respiratory:** increased risk of aspiration, restrictive lung disease, recurrent chest infection and sleep apnoea. **Immunise, including yearly influenza vaccine.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Increased risk of aspiration, restrictive lung disease due to chest wall deformity and/or scoliosis, recurrent chest infections, central and/or obstructive sleep apnoea … Immunisation, including yearly influenza vaccines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**How common:** hearing loss about 10% · vision loss 30–50% · intellectual disability up to 45% · epilepsy up to 50%. Arrange regular audiology and ophthalmology.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hearing loss In approx 10% … Regular audiology assessments guided by clinical features … Vision loss In 30-50% Regular ophthalmological assessments … Intellectual disability In up to 45% … Epilepsy In up to 50%",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Formal cognitive assessment and educational support**, ideally in the year before school.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most children benefit from formal cognitive assessment (appropriate for their motor or communication impairments) and educational support ideally in the year prior to commencing school",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low bone density:** increased pathological fracture risk. **Check vitamin D yearly**; optimise calcium, exercise and sunlight.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Increased risk of pathological fractures Check Vitamin D yearly Optimise calcium intake, exercise (swimming, recumbent bikes etc) and environmental sunlight exposure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Urinary incontinence** may need medical management or clean intermittent catheterisation for neurogenic bladder; consider urology referral.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "May require medical management, and/or clean intermittent catheterisation if neurogenic bladder. Consider urology referral",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the local paediatric team** for an infant with risk factors or features of CP, or a child needing admission.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Infant with risk factors or clinical features of CP Child requiring admission",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cerebral palsy' (Last updated November 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Cerebral_palsy/, retrieved 2026-09-23"
+  }
+ ]
+}
