@@ -22,6 +22,7 @@ compendium's RxNorm ingredients.
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import math
 import os
@@ -527,6 +528,39 @@ def main() -> int:
     report["sct_multi_parent"] = dict(zip(("concepts_with_parents", "with_more_than_one_parent"), con.execute("""
         SELECT count(*), count(*) FILTER (WHERE n > 1) FROM (SELECT s_code, count(*) n FROM edge
         WHERE predicate = 'sct:116680003' GROUP BY 1)""").fetchone()))
+
+    # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
+    # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
+    keys = [k for (k,) in con.execute("SELECT key FROM node").fetchall()]
+    idx = {k: i for i, k in enumerate(keys)}
+    par = list(range(len(keys)))
+    def find(x):
+        while par[x] != x:
+            par[x] = par[par[x]]
+            x = par[x]
+        return x
+    for s_, o_ in con.execute("""SELECT s_vocab || ':' || s_code, o_vocab || ':' || o_code FROM edge
+                                 WHERE state <> 'rejected' AND tier <> 'inadmissible'""").fetchall():
+        x, y = find(idx[s_]), find(idx[o_])
+        if x != y:
+            par[x] = y
+    root = [find(i) for i in range(len(keys))]
+    size = collections.Counter(root)
+    giant = size.most_common(1)[0][0]
+    con.execute("CREATE TEMP TABLE comp (key VARCHAR, c BIGINT, sz BIGINT)")
+    con.executemany("INSERT INTO comp VALUES (?, ?, ?)", [(k, root[i], size[root[i]]) for i, k in enumerate(keys) if root[i] != giant])
+    report["islands"] = {
+        "components": len(size), "main_component_nodes": size[giant], "nodes_outside_it": len(keys) - size[giant],
+        "outside_by_vocabulary": dict(con.execute("""SELECT n.vocab, count(*) FROM comp JOIN node n USING (key)
+                                                     GROUP BY 1 ORDER BY 2 DESC""").fetchall()),
+        "largest_outside": [{"nodes": sz, "vocabularies": v} for sz, v in con.execute("""
+            SELECT any_value(sz), list(DISTINCT n.vocab ORDER BY n.vocab) FROM comp JOIN node n USING (key)
+            GROUP BY c ORDER BY 1 DESC LIMIT 8""").fetchall()],
+        "reach_outside_own_vocabulary": {v: {"nodes": n, "with_a_link_to_another_vocabulary": b, "share": round(b / n, 3)}
+            for v, n, b in con.execute("""WITH x AS (SELECT s_vocab v, s_code k FROM edge WHERE s_vocab <> o_vocab
+                                                     UNION SELECT o_vocab, o_code FROM edge WHERE s_vocab <> o_vocab)
+                SELECT n.vocab, count(*), count(x.k) FROM node n LEFT JOIN x ON x.v = n.vocab AND x.k = n.code
+                GROUP BY 1 ORDER BY count(x.k) * 1.0 / count(*), 1""").fetchall()}}
 
     # --- parallel edges: product -> ATC 5th level, PBS vs OMOP -------------------------------------------------------
     report["parallel:product->atc5 (PBS vs OMOP)"] = dict(zip(("products_with_both", "same_class", "no_class_in_common"), con.execute("""
