@@ -10,7 +10,7 @@ traversal. 100%, at every tier, including Tier 3 — where the trace names the a
 document, so the claim is attributable even when it is not sourced. This is the contract all 145
 `guidelines/*.verification.json` files already keep; the graph inherits it rather than inventing a weaker one.
 
-Every count in this document is traced to the query or table it came from. Two assertions I made while drafting
+Every count in this document is traced to the query or table it came from. Three assertions I made while drafting
 were wrong and were caught by that rule; they are recorded in [What drafting corrected](#what-drafting-corrected).
 
 ---
@@ -176,7 +176,7 @@ Widest scope, every class traced. Counts are from the Athena bundle (`v5.0 29-AU
 | SNOMED Qualifier Value (adjectives) | 15,747 obs · 6,017 meas-value · 1,376 unit · 478 drug · 210 route | `CONCEPT.csv` |
 | SNOMED Staging / Scales (ordinals) | 3,084 | `CONCEPT.csv` |
 | PBS indication (condition + severity + episodicity) | 653 | `cache/pbs/indications.json` |
-| Corpus condition, SNOMED-bound | 639 | `reference/snomed_bindings.json` |
+| Corpus condition | 639, of which **265 carry a SNOMED binding** | `reference/snomed_bindings.json` (`results[].snomed` non-null) |
 | LOINC term | 103,225 | `spine.duckdb` `loinc_axis` |
 | LOINC component (analyte) | 62,317 parts | `CONCEPT.csv` |
 | LOINC answer (coded value) | 22,146 | `CONCEPT.csv` |
@@ -384,13 +384,13 @@ Read with its limits:
 
 **Next routes to add:** `Has marketed form` against the AMT tag heuristic; salt→base against OMOP
 `Basis str subst of`; the 985 substance↔analyte name join (expected inadmissible for the reason the name route is);
-condition-text → SNOMED against the 639 already-bound conditions.
+condition-text → SNOMED against the 265 conditions that already carry a binding (of 639 in the file).
 
 ---
 
 ## What drafting corrected
 
-The 100%-trace rule caught two errors in this design before they were published. Both are left here because the
+The 100%-trace rule caught three errors in this design before they were published. All three are left here because the
 method is only worth anything if it is seen to work.
 
 1. **A declared tier.** The first scorer draft let each route declare its tier. I declared the deprecation route
@@ -401,6 +401,10 @@ method is only worth anything if it is seen to work.
    indication *is* a prescribing text. Through `restriction-prescribing-text-relationships` the chain is complete —
    3,043 of 3,043, all 653 indications, 16,929 edges. Had the first join been published, the bridge the whole
    design leans on would have looked like a failure.
+3. **A count I had repeated all session.** I described the corpus as "639 SNOMED-bound conditions". The bindings
+   file holds 639 conditions; **265** carry a SNOMED binding. So the indication bridge's gap hop is *not* already
+   done by the binder for most conditions — 374 are unbound, and PBS condition texts will add more. Caught by
+   re-verifying the figure after rebasing onto a commit that restored bindings lost to the 20260831 rename.
 
 ## Build order
 
