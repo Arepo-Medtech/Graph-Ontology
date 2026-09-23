@@ -5,15 +5,15 @@
 | | count |
 |---|---:|
 | ✅ **Completed — merged to `master`** | **271** |
-| ✅ **Completed — committed on `rch-guidelines-2`, PR not yet opened** | **59** |
-| ⏳ **Planned — in progress (RCH batch 5)** | **53** of 59 |
+| ✅ **Completed — committed on `rch-guidelines-2`, PR not yet opened** | **71** |
+| ⏳ **Planned — in progress (RCH batch 5)** | **41** of 59 |
 | **Total when batch 5 lands** | **383** |
 
 ## Completed, by source
 
 | source | merged | on branch | total |
 |---|---:|---:|---:|
-| RCH Melbourne Clinical Practice Guidelines | 104 | 59 | 163 |
+| RCH Melbourne Clinical Practice Guidelines | 104 | 71 | 175 |
 | RACGP | 33 | 0 | 33 |
 | Australian Medicines Handbook (paraphrased) | 31 | 0 | 31 |
 | Other Australian sources (Stroke Foundation, KHA, NHFA/CSANZ, state health, society guidelines, etc.) | 27 | 0 | 27 |
@@ -22,15 +22,15 @@
 | ASHM STI guidelines | 18 | 0 | 18 |
 | Cancer Council Australia / COSA (≤200-word budget) | 12 | 0 | 12 |
 | Australian Prescriber | 3 | 0 | 3 |
-| **total** | **271** | **59** | **330** |
+| **total** | **271** | **71** | **342** |
 
 ## Planned — in progress (RCH batch 5)
 
 | group | guidelines | status |
 |---|---|---|
-| R1 trauma | `major-trauma-primary-survey-children` · `pelvic-injury-children` · `cervical-spine-assessment-children` · `straddle-injuries-children` · `pulled-elbow` · `nasal-fracture-children` | 0/6 committed |
+| R1 trauma | `major-trauma-primary-survey-children` · `pelvic-injury-children` · `cervical-spine-assessment-children` · `straddle-injuries-children` · `pulled-elbow` · `nasal-fracture-children` | 6/6 committed |
 | R2 eye, dental, wounds | `acute-eye-injury-children` · `penetrating-eye-injury-children` · `dental-trauma-children` · `wound-dressings-children` · `burns-post-acute-care-children` · `penis-and-foreskin-conditions` | 6/6 committed |
-| R3 neuro, functional | `altered-conscious-state-children` · `ataxia-children` · `brief-resolved-unexplained-event` · `acquired-torticollis-children` · `positional-plagiocephaly` · `functional-somatic-symptoms-children` | 0/6 committed |
+| R3 neuro, functional | `altered-conscious-state-children` · `ataxia-children` · `brief-resolved-unexplained-event` · `acquired-torticollis-children` · `positional-plagiocephaly` · `functional-somatic-symptoms-children` | 6/6 committed |
 | R4 cerebral palsy, resuscitation | `cerebral-palsy-children` · `cerebral-palsy-chest-infection` · `cerebral-palsy-increased-seizures` · `cerebral-palsy-pain-and-irritability` · `seriously-unwell-child-resuscitation` · `cardiopulmonary-arrest-children` | 0/6 committed |
 | R5 diabetes, metabolic, fluids | `diabetes-and-surgery-children` · `diabetes-unwell-in-hospital-children` · `metabolic-disorders-children` · `micronutrient-deficiency-children` · `nasogastric-rehydration-children` · `neonatal-intravenous-fluids` | 0/6 committed |
 | R6 haematology, oncology, infection | `blood-product-prescription-children` · `antifungal-prophylaxis-paediatric-oncology` · `hyperleukocytosis-children` · `mediastinal-mass-children` · `vancomycin-dosing-children` · `primary-immunodeficiencies` | 0/6 committed |
@@ -51,10 +51,11 @@
 
 ## Completed — full list
 
-### RCH Melbourne Clinical Practice Guidelines (163)
+### RCH Melbourne Clinical Practice Guidelines (175)
 
 | guideline | title | claims | quoted | status |
 |---|---|---:|---:|---|
+| `acquired-torticollis-children` | Acquired torticollis in children | 17 | 17 | branch |
 | `activated-charcoal-children` | Activated charcoal in poisoning in children | 15 | 15 | branch |
 | `acute-abdominal-pain-children` | Acute abdominal pain in children | 21 | 21 | merged |
 | `acute-asthma-children` | Acute asthma in children | 66 | 43 | merged |
@@ -67,6 +68,7 @@
 | `acute-upper-airway-obstruction-children` | Acute upper airway obstruction in children | 24 | 24 | merged |
 | `adrenal-crisis-children` | Adrenal crisis and acute adrenal insufficiency in children | 24 | 24 | merged |
 | `alkali-poisoning-children` | Alkali poisoning in children | 10 | 10 | branch |
+| `altered-conscious-state-children` | Altered conscious state in children | 22 | 22 | branch |
 | `anaemia-children` | Anaemia in children | 18 | 18 | merged |
 | `anaphylaxis-children` | Anaphylaxis in children | 62 | 46 | merged |
 | `animal-and-human-bites-children` | Animal and human bites in children | 25 | 25 | merged |
@@ -77,9 +79,11 @@
 | `anxiety-children` | Anxiety in children | 25 | 25 | merged |
 | `asthma-adolescents` | Asthma in adolescents (12 years and over) | 21 | 21 | merged |
 | `asthma-primary-school-children` | Asthma in primary school-aged children (6–11 years) | 22 | 22 | merged |
+| `ataxia-children` | Acute ataxia in children | 21 | 21 | branch |
 | `benzodiazepine-poisoning-children` | Benzodiazepine poisoning in children | 15 | 15 | branch |
 | `big-black-spider-bite-children` | Big black spider (funnel-web) bite in children | 11 | 11 | branch |
 | `bone-and-joint-infection-children` | Bone and joint infection in children | 25 | 25 | merged |
+| `brief-resolved-unexplained-event` | Brief resolved unexplained event (BRUE) in infants | 24 | 24 | branch |
 | `bronchiolitis` | Bronchiolitis | 52 | 40 | merged |
 | `burns-acute-management-children` | Burns in children — acute management | 24 | 24 | merged |
 | `burns-post-acute-care-children` | Burns in children: post-acute care and dressings | 22 | 22 | branch |
@@ -89,6 +93,7 @@
 | `caustic-poisoning-children` | Caustic (corrosive) poisoning in children | 21 | 21 | branch |
 | `cellulitis-and-skin-infections-children` | Cellulitis and other bacterial skin infections in children | 26 | 26 | merged |
 | `cervical-lymphadenopathy-children` | Cervical lymphadenopathy in children | 16 | 16 | merged |
+| `cervical-spine-assessment-children` | Cervical spine assessment in children | 26 | 26 | branch |
 | `chickenpox-management-children` | Chickenpox (varicella) in children — clinical management | 26 | 26 | merged |
 | `chloral-hydrate-poisoning-children` | Chloral hydrate poisoning in children | 15 | 15 | branch |
 | `community-acquired-pneumonia-children` | Community-acquired pneumonia in children | 24 | 24 | merged |
@@ -116,6 +121,7 @@
 | `fever-and-petechiae-children` | Fever with petechiae or purpura in children | 16 | 16 | merged |
 | `fever-in-returned-traveller-children` | Fever in the recently returned traveller (children) | 23 | 23 | merged |
 | `foreign-body-ingestion-children` | Foreign body ingestion in children (including button batteries) | 22 | 22 | merged |
+| `functional-somatic-symptoms-children` | Functional somatic symptoms in children | 28 | 28 | branch |
 | `gastroenteritis-children` | Gastroenteritis in children | 24 | 24 | merged |
 | `gord-in-infants` | Gastro-oesophageal reflux disease in infants | 25 | 25 | merged |
 | `haemophilia-children` | Haemophilia in children: acute bleeding | 20 | 20 | merged |
@@ -156,11 +162,13 @@
 | `lacerations-children` | Lacerations in children | 27 | 27 | merged |
 | `limping-child` | The limping or non-weight-bearing child | 21 | 21 | merged |
 | `local-anaesthetic-toxicity-children` | Local anaesthetic toxicity in children | 24 | 24 | branch |
+| `major-trauma-primary-survey-children` | Major trauma in children: the primary survey | 26 | 26 | branch |
 | `malaria-children` | Malaria in children | 21 | 21 | merged |
 | `meningitis-and-encephalitis-children` | Meningitis and encephalitis in children | 33 | 33 | merged |
 | `meningococcal-and-hib-contact-prophylaxis` | Contact prophylaxis for invasive meningococcal or Hib disease (children) | 20 | 20 | merged |
 | `molluscum-contagiosum` | Molluscum contagiosum in children | 13 | 13 | merged |
 | `nappy-rash` | Nappy rash | 20 | 20 | merged |
+| `nasal-fracture-children` | Nasal fracture in children | 21 | 21 | branch |
 | `needlestick-injury-children` | Community-acquired needlestick injury in children | 17 | 17 | branch |
 | `neonatal-empiric-antimicrobials` | Neonatal empiric antimicrobial therapy | 21 | 21 | merged |
 | `nephrotic-syndrome-children` | Nephrotic syndrome in children | 29 | 29 | merged |
@@ -173,6 +181,7 @@
 | `otitis-media` | Otitis media | 34 | 34 | merged |
 | `paracetamol-poisoning-children` | Paracetamol poisoning in children | 29 | 29 | merged |
 | `parapneumonic-effusion-children` | Parapneumonic effusion in children | 19 | 19 | branch |
+| `pelvic-injury-children` | Pelvic injury in children | 20 | 20 | branch |
 | `penetrating-eye-injury-children` | Penetrating eye injury in children | 15 | 15 | branch |
 | `penis-and-foreskin-conditions` | Penis and foreskin conditions in children | 23 | 23 | branch |
 | `periorbital-and-orbital-cellulitis-children` | Periorbital and orbital cellulitis in children | 21 | 21 | merged |
@@ -180,11 +189,13 @@
 | `phenobarbitone-poisoning-children` | Phenobarbitone poisoning in children | 16 | 16 | branch |
 | `phenytoin-poisoning-children` | Phenytoin poisoning in children | 17 | 17 | branch |
 | `poisoning-initial-management-children` | Acute poisoning in children: initial management | 26 | 26 | merged |
+| `positional-plagiocephaly` | Positional plagiocephaly in infants | 27 | 27 | branch |
 | `post-streptococcal-glomerulonephritis` | Post-streptococcal glomerulonephritis (PSGN) in children | 25 | 25 | merged |
 | `preschool-asthma` | Preschool asthma (1–5 years) | 23 | 23 | merged |
 | `primary-spontaneous-pneumothorax` | Primary spontaneous pneumothorax in children | 18 | 18 | merged |
 | `procedural-sedation-children` | Procedural sedation in children | 20 | 20 | merged |
 | `prolonged-fever-children` | Prolonged fever in children | 23 | 23 | merged |
+| `pulled-elbow` | Pulled elbow | 15 | 15 | branch |
 | `pyloric-stenosis` | Pyloric stenosis | 17 | 17 | merged |
 | `quetiapine-poisoning-children` | Quetiapine poisoning in children | 15 | 15 | branch |
 | `rabies-lyssavirus-pep-children` | Rabies and Australian bat lyssavirus post-exposure prophylaxis in children | 21 | 21 | branch |
@@ -204,6 +215,7 @@
 | `sore-throat-children` | Sore throat in children | 24 | 24 | merged |
 | `ssri-poisoning-children` | SSRI poisoning in children | 17 | 17 | branch |
 | `sti-adolescents` | Sexually transmitted infections in adolescents | 26 | 26 | branch |
+| `straddle-injuries-children` | Straddle injuries in children | 15 | 15 | branch |
 | `stroke-children` | Stroke in children | 18 | 18 | merged |
 | `substance-use-adolescents` | Substance use in children and adolescents: acute presentations | 17 | 17 | merged |
 | `supraventricular-tachycardia-children` | Supraventricular tachycardia in children | 25 | 25 | merged |
