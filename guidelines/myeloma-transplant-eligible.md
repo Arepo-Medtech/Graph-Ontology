@@ -46,6 +46,16 @@
 
 ---
 
+## PBS listings (Australian access, schedule 4333)
+
+Derived from PBS Public API data: counts of current restrictions, access type and listed drugs. The restriction criteria themselves are not reproduced (see `docs/no-guideline-action-agenda.md`, Decision 1).
+
+| PBS condition | restrictions | authority / streamlined / restricted | drugs | PBS items |
+|---|---:|---|---|---:|
+| Multiple myeloma | 42 | 28 / 13 / 1 | Lenalidomide, Pomalidomide, Daratumumab, Carfilzomib, Selinexor, Elranatamab, Thalidomide, Bortezomib +3 | 132 |
+
+---
+
 ## Unresolved
 
 | # | Item | Class |
