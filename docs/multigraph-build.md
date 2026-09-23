@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**940,684 nodes, 4,431,089 edges, 151 edge types, 16 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges* and *Lab results → findings*.)
+**954,396 nodes, 4,474,223 edges, 156 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -237,12 +237,52 @@ testosterone* under *Testosterone*.
 the same edges; for the 882 LOINC terms both reach, **826 (93.7%) get exactly the same findings**. The analyte join
 alone makes 2,111 edges, Athena alone 10,325.
 
+## How a drug works: drug → target → protein → gene → disease
+
+Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
+tables (already in the dump on disk) and HPO's gene file add the mechanism layer — the one PrimeKG, the template this
+graph reused, is built around. All four hops are lookups from their sources; every edge keeps its DrugCentral `act_id`
+or HPO row, and through it ChEMBL, the drug label, the paper (PMID / DOI) or NCBI.
+
+| hop | predicate | edges | |
+|---|---|---:|---|
+| drug → target, **the mechanism** | `drugcentral:mechanism_target` | 2,866 | 1,933 drugs, 733 targets (606 human); the verb rides on the edge — *inhibitor*, *agonist*, *antagonist*, *blocker* … |
+| drug → target, measured activity | `drugcentral:bioactivity` | 18,112 | a Ki or IC50 — binding, **not** a claim about why the drug is used; kept as a separate predicate for that reason |
+| target → protein | `drugcentral:target_component` | 4,167 | a complex (a GABA-A receptor) has several; a drug on the complex is not asserted to act on each subunit |
+| protein → gene | `uniprot:encoded_by` | 1,890 | target proteins only |
+| gene → disease | `hpo:gene_disease` | 16,099 | OMIM (Mendelian / polygenic, via NCBI mim2gene) and Orphanet; HPO release v2026-09-01 |
+
+Targets include bacterial, viral and fungal proteins (`attrs.organism`): that is where an antibiotic acts.
+
+**Two witnesses.** These are native assertions, so they carry no earned tier; they were checked instead.
+*ChEMBL, for mechanisms DrugCentral did not take from ChEMBL* (the label, papers, IUPHAR, KEGG — 1,187 rows;
+`scripts/chembl_moa_witness.py`, ChEMBL's public API): ChEMBL records the same protein for **838**, differs for 197,
+is silent for 152 — 81% where it speaks; the verdict rides on each edge as `attrs.chembl_witness`. Read by hand (40
+rows), the differences are of two kinds: the same target recorded for another strain or as a coarser group (*Candida
+inhibitor* for rezafungin's glucan synthase), and a **secondary target labelled as mechanism** — lorlatinib → NTRK3,
+an in-vitro activity from the label, where its mechanism is ALK / ROS1; epoprostenol → EP1, where it is the IP
+receptor. Treat `differs` as "check before relying on it". The 1,679 rows DrugCentral took from ChEMBL cannot be
+checked against ChEMBL. *HPO, for the gene ids*: of 936 NCBI gene ids both sources use, **921 carry the same symbol**;
+13 of the 15 others are HGNC renames since DrugCentral's 2023 release (GBA → GBA1, SEPT9 → SEPTIN9) and 2 are
+DrugCentral naming the paralogue (HBA1 on HBA2's id).
+
+**Reach.** Of 1,933 drugs with a mechanism, 1,686 reach a gene, **1,266 reach a genetic disease** through it and
+1,001 reach SNOMED CT-AU through MONDO; **40,387 of the 59,649 SNOMED CT-AU products** with an active ingredient
+(68%) now reach a mechanism. *Imatinib* inhibits ABL1, KIT and PDGFRB, whose genes lead to chronic myeloid
+leukaemia, mastocytosis and hypereosinophilic syndrome — its indications, reached from its mechanism alone.
+
+**What the chain does not say.** Drug → target gene → disease is *mechanistic proximity*, not an indication: the
+disease is one a mutation in that gene causes. It is where a drug's effects and side effects can be reasoned about,
+and where repurposing is looked for; the indication edges are still `drugcentral:indication` and the PBS chain.
+
 ## Rebuild
 
 ```bash
 # sources (cache/, git-ignored): mondo.obo 53.1 MB, mondo.sssom.tsv 13.1 MB, phenotype.hpoa 35.8 MB, hp.obo 10.9 MB,
+# genes_to_disease.txt 1.5 MB (HPO release v2026-09-01),
 # drugcentral.dump.11012023.sql.gz 1.40 GB -- URLs in scripts/build_edges.py and scripts/drugcentral_extract.py
-.venv/bin/python scripts/drugcentral_extract.py   # ~10 s: streams the dump, keeps 4 tables, no Postgres needed
+.venv/bin/python scripts/drugcentral_extract.py   # ~10 s: streams the dump, keeps 9 tables, no Postgres needed
+.venv/bin/python scripts/chembl_moa_witness.py    # ~3 min, once per DrugCentral release: ChEMBL's verdict on each mechanism
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~2.5 min: out/graph.duckdb, validated against the register
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
@@ -251,7 +291,7 @@ alone makes 2,111 edges, Athena alone 10,325.
 
 ## Licences
 
-DrugCentral is CC BY-SA 4.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
+DrugCentral is CC BY-SA 4.0; ChEMBL (the witness answers in cache/chembl/) is CC BY-SA 3.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
 CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC and the SNOMED CT LOINC Extension are
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not

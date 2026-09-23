@@ -30,7 +30,10 @@
     "DECIPHER": "DECIPHER, keyed by number",
     "HP": "Human Phenotype Ontology, keyed by HP id",
     "DRUGCENTRAL": "DrugCentral structure, keyed by struct_id",
-    "CORPUS": "a condition of this compendium's guideline corpus, keyed by its name"
+    "CORPUS": "a condition of this compendium's guideline corpus, keyed by its name",
+    "DC_TARGET": "DrugCentral target, keyed by target_id: one protein, or a complex of several (a GABA-A receptor), as DrugCentral curates it",
+    "UNIPROT": "UniProtKB protein, keyed by accession (P35354)",
+    "NCBIGENE": "NCBI Gene, keyed by Entrez gene id (5743); the id HPO and DrugCentral both use"
   },
   "predicates": [
     {
@@ -498,6 +501,90 @@
       "source": "DrugCentral omop_relationship",
       "status": "built",
       "primekg_relation": "off-label use"
+    },
+    {
+      "id": "drugcentral:mechanism_target",
+      "label": "drug works by acting on this target (its mechanism of action)",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "DC_TARGET"
+      ],
+      "category": "action",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral act_table_full (moa = 1), with its moa_source and reference",
+      "status": "built",
+      "primekg_relation": "drug_protein (target)",
+      "note": "The verb rides on the edge: attrs.action_type (INHIBITOR, AGONIST, ANTAGONIST, BLOCKER ...). DrugCentral marks the target(s) by which the drug has its therapeutic effect -- from ChEMBL, the drug label, the literature, IUPHAR or KEGG (attrs.moa_source). Targets include bacterial and viral proteins (attrs.organism): that is where an antibiotic acts."
+    },
+    {
+      "id": "drugcentral:bioactivity",
+      "label": "drug has measured activity on this target (binding or potency; not a claim about how it works)",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "DC_TARGET"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral act_table_full (moa not set), with act_source",
+      "status": "built",
+      "primekg_relation": "drug_protein",
+      "note": "Kept apart from mechanism_target on purpose: a Ki of 10 nM at a receptor is not the reason a drug is prescribed. The measurement (act_type, act_value as DrugCentral stores it -- mostly -log10 molar, act_unit, relation) rides as attrs; the value is not an edge."
+    },
+    {
+      "id": "drugcentral:target_component",
+      "label": "DrugCentral target is (or contains) this protein",
+      "subject": [
+        "DC_TARGET"
+      ],
+      "object": [
+        "UNIPROT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral td2tc + target_component",
+      "status": "built",
+      "note": "A complex target has several components; a drug acting on the complex is not asserted to act on each subunit alone."
+    },
+    {
+      "id": "uniprot:encoded_by",
+      "label": "protein is encoded by this gene",
+      "subject": [
+        "UNIPROT"
+      ],
+      "object": [
+        "NCBIGENE"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral target_component (accession -> geneid)",
+      "status": "built",
+      "note": "Only the proteins DrugCentral carries, and only where it gives an NCBI gene id (nearly all human; rarely other species)."
+    },
+    {
+      "id": "hpo:gene_disease",
+      "label": "gene is associated with this disease",
+      "subject": [
+        "NCBIGENE"
+      ],
+      "object": [
+        "OMIM",
+        "ORPHA"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "HPO genes_to_disease.txt, release v2026-09-01 (OMIM via NCBI mim2gene_medgen; Orphanet via orphadata product 6)",
+      "status": "built",
+      "primekg_relation": "disease_protein",
+      "note": "attrs.association_type: MENDELIAN or POLYGENIC for OMIM; UNKNOWN for all Orphanet rows (HPO does not carry Orphanet's association type). The graph reaches phenotypes from genes by walking gene -> disease -> phenotype, so genes_to_phenotype.txt (HPO's own projection of the same) is not loaded."
     },
     {
       "id": "sign_suggests",
