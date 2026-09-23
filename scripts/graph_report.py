@@ -272,6 +272,30 @@ def main() -> int:
             report["coverage:lab results reaching a finding they define"] = dict(zip(("loinc_terms", "findings"), con.execute("""
                 SELECT count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'loinc:interpreted_in_finding'""").fetchone()))
 
+    # --- how a drug works: drug -> target -> protein -> gene -> disease ------------------------------------------
+    # Native assertions (DrugCentral, HPO), so no earned tier; two independent witnesses are measured instead.
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'drugcentral:mechanism_target'").fetchone()[0]:
+        report["witness:drug mechanism vs ChEMBL (independently sourced rows only)"] = dict(con.execute("""
+            SELECT coalesce(json_extract_string(attrs, '$.chembl_witness'), 'not checked'), count(*) FROM edge
+            WHERE predicate = 'drugcentral:mechanism_target' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+        n, same = con.execute("""
+            WITH d AS (SELECT DISTINCT o_code g, upper(json_extract_string(attrs, '$.gene_symbol')) s FROM edge WHERE predicate = 'uniprot:encoded_by'),
+                 h AS (SELECT DISTINCT s_code g, upper(json_extract_string(attrs, '$.gene_symbol')) s FROM edge WHERE predicate = 'hpo:gene_disease')
+            SELECT count(DISTINCT d.g), count(DISTINCT d.g) FILTER (WHERE d.s = h.s) FROM d JOIN h USING (g)""").fetchone()
+        report["witness:gene id -> symbol, DrugCentral vs HPO"] = {"shared_gene_ids": n, "same_symbol": same,
+            "note": "most differences are HGNC renames since DrugCentral 2023-11 (GBA -> GBA1)"}
+        report["coverage:drug -> mechanism -> gene -> disease"] = dict(zip(
+            ("drugs_with_mechanism", "reach_a_gene", "reach_a_genetic_disease", "reach_snomed_via_mondo"), con.execute("""
+            WITH m AS (SELECT DISTINCT s_code drug, o_code tgt FROM edge WHERE predicate = 'drugcentral:mechanism_target'),
+                 tg AS (SELECT DISTINCT c.s_code tgt, g.o_code gene FROM edge c JOIN edge g ON g.s_code = c.o_code
+                        AND g.predicate = 'uniprot:encoded_by' WHERE c.predicate = 'drugcentral:target_component'),
+                 gd AS (SELECT DISTINCT s_code gene, o_vocab dv, o_code dis FROM edge WHERE predicate = 'hpo:gene_disease'),
+                 ms AS (SELECT DISTINCT x.o_vocab dv, x.o_code dis FROM edge x JOIN edge s ON s.s_code = x.s_code
+                        AND s.predicate = 'mondo:exact_match' AND s.o_vocab = 'SCT' WHERE x.predicate = 'mondo:exact_match')
+            SELECT (SELECT count(DISTINCT drug) FROM m), (SELECT count(DISTINCT drug) FROM m JOIN tg USING (tgt)),
+                   (SELECT count(DISTINCT drug) FROM m JOIN tg USING (tgt) JOIN gd USING (gene)),
+                   (SELECT count(DISTINCT drug) FROM m JOIN tg USING (tgt) JOIN gd USING (gene) JOIN ms USING (dv, dis))""").fetchone()))
+
     # --- health ------------------------------------------------------------------------------------------------------
     report["edges"] = con.execute("SELECT count(*) FROM edge").fetchone()[0]
     report["nodes"] = con.execute("SELECT count(*) FROM node").fetchone()[0]

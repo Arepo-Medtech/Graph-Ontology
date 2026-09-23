@@ -12,6 +12,11 @@ Kept, as TSV under cache/drugcentral/ (git-ignored):
     struct2atc         struct_id -> ATC code
     omop_relationship  struct_id -> condition: indication / contraindication / off-label use, with SNOMED and UMLS ids
     structures         id and name only (the molfile column is dropped -- it is most of the table's size)
+    act_table_full     struct_id -> target: activity (Ki, IC50 ...), mechanism-of-action flag, action type, organism, sources
+    target_dictionary  target id, name, class (a target may be a complex of several proteins)
+    target_component   protein: UniProt accession, gene symbol, NCBI gene id, organism
+    td2tc              target -> its protein components
+    reference          id, PMID, DOI, URL, title -- what act_ref_id / moa_ref_id point at, for the source trace
 
     scripts/drugcentral_extract.py [--dump cache/drugcentral/drugcentral.dump.11012023.sql.gz]
 """
@@ -24,7 +29,9 @@ import sys
 from pathlib import Path
 
 OUT = Path("cache/drugcentral")
-KEEP = {"identifier": None, "struct2atc": None, "omop_relationship": None, "structures": ["id", "name"]}
+KEEP = {"identifier": None, "struct2atc": None, "omop_relationship": None, "structures": ["id", "name"],
+        "act_table_full": None, "target_dictionary": None, "target_component": None, "td2tc": None,
+        "reference": ["id", "pmid", "doi", "url", "title"]}
 COPY = re.compile(r"^COPY (?:public\.)?(\w+) \(([^)]*)\) FROM stdin;$")
 
 

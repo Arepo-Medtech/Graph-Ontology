@@ -25,8 +25,9 @@ Families loaded (those the register marks `built`):
     corpus         guideline condition -> SNOMED binding
     LOINC          term -> component / property / time / system / scale / method, question -> answer (spine.duckdb)
     MONDO          is-a, and exactMatch to SNOMED / ICD-10-CM / OMIM / Orphanet (+ OMOP ICD-10-CM -> SNOMED, to score it)
-    HPO            is-a, and disease -> phenotype (present / absent) with frequency, onset, sex
-    DrugCentral    drug -> RxNorm / SNOMED / ATC, and indication / contraindication / off-label use  (if extracted)
+    HPO            is-a, disease -> phenotype (present / absent) with frequency, onset, sex, and gene -> disease
+    DrugCentral    drug -> RxNorm / SNOMED / ATC, indication / contraindication / off-label use, and
+                   drug -> target (mechanism / measured activity) -> protein -> gene  (if extracted)
 
 Writes out/graph.duckdb. Pins recorded on every edge.
 
@@ -52,6 +53,7 @@ BINDINGS = Path("reference/snomed_bindings.json")
 PBS = Path("cache/pbs")
 MONDO_OBO, MONDO_SSSOM = Path("cache/mondo/mondo.obo"), Path("cache/mondo/mondo.sssom.tsv")
 HP_OBO, HPOA = Path("cache/hpo/hp.obo"), Path("cache/hpo/phenotype.hpoa")
+HP_GENES = Path("cache/hpo/genes_to_disease.txt")   # HPO release v2026-09-01, 1.5 MB
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
@@ -435,6 +437,55 @@ def main() -> int:
                   AND relationship_name IN ({','.join(repr(k) for k in rel)})""")
         if (DC / "structures.tsv").exists():
             con.execute(f"INSERT INTO name_hint SELECT 'DRUGCENTRAL', id, name FROM {dc('structures')}")
+        # --- how a drug works: drug -> target -> protein -> gene (DrugCentral's activity tables) -------------------
+        # Mechanism (moa = 1: the target the drug's effect is attributed to) and measured activity (a Ki, an IC50 --
+        # binding, not a reason to prescribe) are two predicates. Every edge keeps its act_id, so it traces to the row
+        # and through it to ChEMBL / the label / the paper (act_source, moa_source, their URLs, PMID or DOI).
+        if (DC / "act_table_full.tsv").exists():
+            con.execute(f"""CREATE TEMP TABLE dc_ref AS SELECT id, pmid, doi, url FROM {dc('reference')}""")
+            # ChEMBL as a second witness for mechanisms DrugCentral did not take from ChEMBL (scripts/chembl_moa_witness.py)
+            wit = Path("cache/chembl/moa_witness.tsv")
+            wit_src = (f"read_csv('{wit}', delim='\\t', header=true, all_varchar=true, quote='')" if wit.exists()
+                       else "(SELECT NULL AS act_id, NULL AS verdict)")
+            con.execute(f"CREATE TEMP TABLE dc_wit AS SELECT act_id, verdict FROM {wit_src}")
+            ins("DrugCentral drug -> target (mechanism / activity)", f"""SELECT 'DRUGCENTRAL', a.struct_id,
+                    CASE WHEN a.moa = '1' THEN 'drugcentral:mechanism_target' ELSE 'drugcentral:bioactivity' END,
+                    'DC_TARGET', a.target_id, 'DrugCentral', 'act_table_full act_id=' || a.act_id,
+                    CASE WHEN a.moa = '1' THEN coalesce(a.moa_source, 'unstated') ELSE coalesce(a.act_source, 'unstated') END,
+                    'native', 'asserted', '{PIN['dc']}',
+                    json_object('action_type', a.action_type, 'organism', a.organism, 'act_type', a.act_type,
+                                'act_value', a.act_value, 'act_unit', a.act_unit, 'relation', a.relation,
+                                'act_source', a.act_source, 'act_source_url', a.act_source_url,
+                                'moa_source', a.moa_source, 'moa_source_url', a.moa_source_url,
+                                'act_pmid', ra.pmid, 'act_doi', ra.doi, 'moa_pmid', rm.pmid, 'moa_doi', rm.doi,
+                                'first_in_class', a.first_in_class, 'tdl', a.tdl, 'chembl_witness', w.verdict)
+                FROM {dc('act_table_full')} a LEFT JOIN dc_ref ra ON ra.id = a.act_ref_id LEFT JOIN dc_ref rm ON rm.id = a.moa_ref_id
+                LEFT JOIN dc_wit w ON w.act_id = a.act_id AND a.moa = '1'""")
+            ins("DrugCentral target -> protein component", f"""SELECT DISTINCT 'DC_TARGET', t.target_id, 'drugcentral:target_component',
+                    'UNIPROT', c.accession, 'DrugCentral', 'td2tc + target_component', 'native', 'native', 'asserted', '{PIN['dc']}',
+                    json_object('organism', c.organism, 'swissprot', c.swissprot)
+                FROM {dc('td2tc')} t JOIN {dc('target_component')} c ON c.id = t.component_id
+                WHERE c.accession IS NOT NULL AND c.accession <> ''""")
+            ins("protein -> gene (DrugCentral)", f"""SELECT DISTINCT 'UNIPROT', accession, 'uniprot:encoded_by', 'NCBIGENE', geneid,
+                    'DrugCentral', 'target_component', 'native', 'native', 'asserted', '{PIN['dc']}',
+                    json_object('gene_symbol', gene, 'organism', organism)
+                FROM {dc('target_component')} WHERE geneid IS NOT NULL AND geneid <> '' AND accession IS NOT NULL AND accession <> ''
+                  AND id IN (SELECT component_id FROM {dc('td2tc')})""")   # target proteins only, not DrugCentral's whole protein list
+            con.execute(f"""INSERT INTO name_hint SELECT 'DC_TARGET', id, name FROM {dc('target_dictionary')}""")
+            con.execute(f"""INSERT INTO name_hint SELECT 'UNIPROT', accession, any_value(name) FROM {dc('target_component')} GROUP BY 2""")
+            con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', geneid, any_value(gene) FROM {dc('target_component')}
+                            WHERE geneid IS NOT NULL AND geneid <> '' GROUP BY 2""")
+
+    # --- genes -> diseases (HPO genes_to_disease, the release hp.obo came from) --------------------------------------
+    if HP_GENES.exists():
+        ins("HPO gene -> disease (OMIM, Orphanet)", f"""SELECT DISTINCT 'NCBIGENE', split_part(ncbi_gene_id, ':', 2), 'hpo:gene_disease',
+                split_part(disease_id, ':', 1), split_part(disease_id, ':', 2), 'HPO', 'genes_to_disease.txt',
+                association_type, 'native', 'asserted', '{PIN['hpo']}',
+                json_object('association_type', association_type, 'gene_symbol', gene_symbol, 'upstream', source)
+            FROM read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='')
+            WHERE split_part(disease_id, ':', 1) IN ('OMIM', 'ORPHA')""")
+        con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', split_part(ncbi_gene_id, ':', 2), any_value(gene_symbol)
+            FROM read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='') GROUP BY 2""")
 
     # --- UMLS: HPO phenotype -> SNOMED, the bridge from signs and symptoms to SNOMED findings --------------------
     # A shared UMLS CUI groups synonyms, and also near-synonyms: hand-checked 23 Sep 2026, links whose SNOMED name
