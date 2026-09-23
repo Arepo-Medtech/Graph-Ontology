@@ -229,7 +229,7 @@ Widest scope, every class traced. Counts are from the Athena bundle (`v5.0 29-AU
 | Clinical evidence claim (pregnancy safety etc.) | 34 | `reference/amh_clinical_evidence.json` |
 | Human decision | 10 | `reference/rxnorm_substance_decisions.json` |
 | Source document / schedule / bundle / study | one per trace | the `source` column |
-| Pin | 7 active | RF2 `REL="20260731"` in `build_compendium.py`, `rxnorm_resolve.py`, `rxnorm_enrich.py`, `drug_strength.py`; NCTS edition `20260831` at `bind_ontoserver.mjs:116`; Athena `v5.0 29-AUG-26` in `VOCABULARY.csv`; PBS `schedule_code 4333` in `cache/pbs/*.json`; AMH `REL` in `resolve_locators.py`; foundry versions in `foundry.py`; RxNav **unpinned**. Two SNOMED CT-AU editions are live at once. To be consolidated as `reference/pins.json` |
+| Pin | 7 active | RF2 `REL="20260831"` (moved from 20260731 on 2026-09-24) in `build_compendium.py`, `rxnorm_resolve.py`, `rxnorm_enrich.py`, `drug_strength.py`; NCTS edition `20260831` at `bind_ontoserver.mjs:116`; Athena `v5.0 29-AUG-26` in `VOCABULARY.csv`; PBS `schedule_code 4333` in `cache/pbs/*.json`; AMH `REL` in `resolve_locators.py`; foundry versions in `foundry.py`; RxNav **unpinned**. Two SNOMED CT-AU editions are live at once. To be consolidated as `reference/pins.json` |
 
 ---
 

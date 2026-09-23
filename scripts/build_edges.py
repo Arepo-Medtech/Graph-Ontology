@@ -162,7 +162,7 @@ LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
     "~/Documents/ONTOLOGIES/SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
 LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
 
-PIN = {"sct": "SNOMED CT-AU 20260731", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
+PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
        "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}

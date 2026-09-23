@@ -37,8 +37,8 @@ from pathlib import Path
 import duckdb
 
 RF2 = os.environ.get("AU_RF2_SNAPSHOT",
-                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260731/Snapshot")
-REL = "20260731"
+                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")
+REL = "20260831"
 CACHE = Path("cache")
 OUT = Path("out")
 SUBS_OUT = CACHE / "rxnorm_substances.json"

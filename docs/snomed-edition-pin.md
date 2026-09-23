@@ -1,6 +1,6 @@
 # Which SNOMED CT-AU edition, and should the pin move?
 
-**Checked 2026-09-23 against the live server. ✅ PIN BUMPED TO `20260831` the same day.**
+**Checked 2026-09-23 against the live server. ✅ PIN BUMPED TO `20260831` the same day; the local RF2 release followed on 2026-09-24.**
 
 ## They are not two things
 
@@ -76,16 +76,20 @@ That string describes **what was actually produced**, and the file's contents we
 > **Not run** — it rewrites all 639 bindings over the wire, and `apply_corrections.py` exists precisely
 > so that doing it later loses nothing.
 
-**2. The local RF2 release paths were not touched.**
-`build_compendium.py`, `rxnorm_enrich.py`, `rxnorm_resolve.py` and `drug_strength.py` point at
-`/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260731/Snapshot`.
+**2. The local RF2 release — moved to `20260831` on 2026-09-24.**
+The downloaded bundle is now SNOMED CT-AU 20260831 (`NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip`, Snapshot
+only unpacked to `~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/`), and `REL` / the default `AU_RF2_SNAPSHOT`
+in `build_compendium.py`, `rxnorm_enrich.py`, `rxnorm_resolve.py` and `drug_strength.py`, the graph's `PIN["sct"]` and
+`graph_register.py` all say `20260831`. The compendium, the register and the graph were rebuilt on it; the July release
+is no longer on this machine (the July build is kept in `cache/backup-20260731/`).
 
-⚠️ **That path does not exist on this machine** — it is under a different user (`ken-lee-arepo`, not
-`sleekjazz`). Those are **downloaded release bundles, not a server pin**: editing the string would not
-make an August bundle appear, and would leave a path that is wrong in a new way. They are a separate
-problem, and `bind_ontoserver.mjs` exists because of it — *"the offline binder needs sct2_Description
-and sct2_Relationship from an RF2 release. Both SNOMED releases available at time of writing ship
-neither."*
+What moved, July → August: **+1,783 concepts, 385 retired** (278 substances, 35 disorders, 55 AMT products and
+packs), 56 preferred terms renamed; +1,015 products, +7,009 SNOMED relationships; no SNOMED attribute type added or
+removed; **no hand-checked route changed tier**, and **no committed reference file cites a retired code**.
+343 graph edges from sources dated before the release (OMOP ancestry and maps, PBS schedule 4333, one RxNav resolution)
+now point at 56 retired AMT products — the "Clexane with Automatic Safety Lock System" packs among them. They are right
+for their sources and will clear as those sources move; the build names them rather than dropping them.
+`rxnorm_enrich.py` / `rxnorm_resolve.py` (optional, networked) were **not** re-run: their pins moved for the next run.
 
 ## Reproduce
 
