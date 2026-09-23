@@ -1,6 +1,6 @@
 # SNOMED binding review queue
 
-**330 candidates at `snomed: null`.** Source `reference/snomed_candidates_review.json`. Nothing here is bound.
+**349 candidates at `snomed: null`.** Source `reference/snomed_candidates_review.json`. Nothing here is bound.
 
 > ### ⚠️ THE 'PLAUSIBLE' TIER IS NOT SAFE
 > The review file's own warning: *"Signals are LEXICAL triage, not verdicts. The 'plausible' tier
@@ -23,7 +23,7 @@
 **Order is by what evidence settles, cheapest first.** Tiers A–C were derived from the SNOMED
 hierarchy — parents sharing no concept with the condition — **not** from string similarity.
 
-**0 decided · 330 outstanding.**
+**0 decided · 349 outstanding.**
 
 ## Run order
 ```bash
@@ -33,7 +33,29 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 ```
 
 
-## A. Reject on hierarchy — no shared concept
+## A. ⚠️ QUARANTINED — pregnancy or reproductive, MANUAL REVIEW REGARDLESS OF SIGNAL
+
+*15 rows — review by hand; do not trust any signal.*
+
+| decision | condition | sha | top hit | its parents | flags | other hits |
+|---|---|---|---|---|---|---|
+|  | Contraception | `988afb96` | `308419002` Contraception call | Patient call procedure | ⚠️ QUARANTINED: pregnancy_or_reproductive, parents_unrelated, narrower | 2 |
+|  | Diarrhoea of greater than 2 weeks duration | `1507c98a` | `429715006` Gestation greater than 20 weeks | Finding of length of gestation | ⚠️ QUARANTINED: pregnancy_or_reproductive, parents_unrelated | 2 |
+|  | Facial lipoatrophy | `44b40364` | `773331001` Nestor Guillermo progeria syndrome | Autosomal recessive hereditary disorder; Fetal and/or neonatal disorder of integument | ⚠️ QUARANTINED: pregnancy_or_reproductive, off_domain, parents_unrelated | 0 |
+|  | Maternal hyperphenylalaninaemia due to phenylketonuria | `43bc9f6b` | `713187004` Polyhydramnios due to maternal disease | Polyhydramnios | ⚠️ QUARANTINED: pregnancy_or_reproductive, parents_unrelated | 2 |
+|  | Mixed episodes | `92298448` | `774084003` Neonatal antiphospholipid syndrome | Antiphospholipid syndrome; Neonatal disorder | ⚠️ QUARANTINED: pregnancy_or_reproductive, off_domain, parents_unrelated | 0 |
+|  | Preterm birth | `15ec004f` | `773691007` Congenital erosive and vesicular dermatosis | Congenital anomaly of skin; Idiopathic disease | ⚠️ QUARANTINED: pregnancy_or_reproductive, off_domain, parents_unrelated | 2 |
+|  | Septicaemia | `89afe845` | `137701000119106` Antepartum septicaemia | Complication occurring during pregnancy; Sepsis | ⚠️ QUARANTINED: pregnancy_or_reproductive, parents_unrelated, narrower | 2 |
+|  | Termination of an intra-uterine pregnancy | `ad8c3ff1` | `18302006` Hysterotomy and termination of pregnancy | Obstetrical hysterotomy; Operation on gravid uterus | ⚠️ QUARANTINED: pregnancy_or_reproductive | 2 |
+|  | The onset of lactation | `b994b60b` | `1172841001` Combined oxidative phosphorylation defect type 30 | Autosomal recessive hereditary disorder; Disorder of skeletal muscle | ⚠️ QUARANTINED: pregnancy_or_reproductive, off_domain, parents_unrelated | 2 |
+|  | Secondarily infected traumatic skin lesions | `4a6a7c96` | `715223009` Fetal varicella syndrome | Embryofetopathy due to infection; Varicella-zoster virus infection | ⚠️ QUARANTINED: pregnancy_or_reproductive, parent_better | 2 |
+|  | Upper and lower respiratory tract infections | `22c99bf8` | `763532008` Familial nasal acilia | Congenital disease; Familial disease | ⚠️ QUARANTINED: pregnancy_or_reproductive, parent_better | 2 |
+|  | Complicated urinary tract infection | `556788e0` | `609491002` Induced termination of pregnancy complicated by urinary tract infection | Infectious disease in mother complicating pregnancy, childbirth AND/OR puerperium; Procedure related finding | ⚠️ QUARANTINED: pregnancy_or_reproductive, narrower | 0 |
+|  | Anaemia associated with intrinsic renal disease | `5302bc38` | `472326004` Fetal hypertrophic cardiomyopathy associated with renal disease | Cardiomyopathy associated with another disorder; Fetal hypertrophic cardiomyopathy | ⚠️ QUARANTINED: pregnancy_or_reproductive | 2 |
+|  | Patients undergoing in-vitro fertilisation | `1bdc71d2` | `52637005` In vitro fertilisation | Assisted fertilisation | ⚠️ QUARANTINED: pregnancy_or_reproductive | 2 |
+|  | Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants | `f5cc8e80` | `1231283007` Congenital isolated adrenocorticotropic hormone deficiency | Autosomal recessive hereditary disorder; Congenital disease | ⚠️ QUARANTINED: pregnancy_or_reproductive | 2 |
+
+## B. Reject on hierarchy — no shared concept
 
 *33 rows — confirm the rejection.*
 
@@ -55,7 +77,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Growth retardation secondary to an intracranial lesion, or cranial irradiation | `e286a4ed` | `763630007` Satoyoshi syndrome | Alopecia; Autoimmune skin disease | off_domain, parents_unrelated | 2 |
 |  | High risk and intermediate-2 risk myelofibrosis | `92cadde0` | `1229871006` Primary squamous cell carcinoma of nasal cavity and paranasal sinus | Primary squamous cell carcinoma of accessory sinus; Primary squamous cell carcinoma of nasal cavity | off_domain, parents_unrelated | 1 |
 |  | Hookworm infestation | `6c2470a7` | `105694003` Disease caused by Ancylostomatoidea | Infection caused by Nematoda | off_domain, parents_unrelated | 0 |
-|  | Hyperphenylalaninaemia due to phenylketonuria | `221e8eef` | `1197675002` Duodenitis due to vasculitis | Duodenitis; Gastrointestinal complication | off_domain, parents_unrelated | 2 |
+|  | Hyperphenylalaninaemia due to phenylketonuria | `7df60135` | `16021003` Artefact due to freezing | Artefact | off_domain, parents_unrelated | 2 |
 |  | Hypogonadism or delayed puberty | `ed85f8c4` | `770941005` Alopecia, progressive neurological defect, endocrinopathy syndrome | Developmental hereditary disorder; Genetic intellectual disability | off_domain, parents_unrelated | 2 |
 |  | Infection suspected or proven to be due to a susceptible organism | `9948374c` | `1296950006` Fear of own body smell | Fear of body smell | off_domain, parents_unrelated | 2 |
 |  | Infection where positive bacteriological evidence confirms that this antibiotic is an appropriate therapeutic agent | `521c10d3` | `1149448005` AAP/EFP 2017 Classification of Periodontal and Peri‐implant Diseases and Conditions generalised periodontitis Stage 4 Grade C | Generalised periodontitis | off_domain, parents_unrelated | 0 |
@@ -73,7 +95,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Unresectable, well-differentiated malignant pancreatic neuroendocrine tumour or extra-pancreatic neuroendocrine tumour | `574a0d9c` | `768937006` Extragonadal teratoma | Teratoma | off_domain, parents_unrelated | 1 |
 |  | Whipworm infestation | `6bb6e440` | `3752003` Trichuriasis | Disease caused by Trichinelloidea; Intestinal nematode infection | off_domain, parents_unrelated | 0 |
 
-## B. Reject on hierarchy — parents unrelated
+## C. Reject on hierarchy — parents unrelated
 
 *60 rows — confirm the rejection.*
 
@@ -140,7 +162,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | WHO Class III, IV or V lupus nephritis | `fd424b31` | `76521009` SLE glomerulonephritis syndrome, WHO class III | Focal AND segmental proliferative glomerulonephritis; SLE glomerulonephritis syndrome | parents_unrelated | 2 |
 |  | Wounds | `31f61e01` | `284752001` Damaging own wounds | Deliberate self-harm | parents_unrelated, narrower | 2 |
 
-## C. Wrong hierarchy — re-search as Procedure
+## D. Wrong hierarchy — re-search as Procedure
 
 *6 rows — re-search, do not bind.*
 
@@ -153,13 +175,13 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Patients requiring administration of fluorouracil by intravenous injection | `a1579b02` | `1230099001` Preparation of injection for self administration by subject | Preparation for procedure | parents_unrelated | 1 |
 |  | Stimulation of follicular development | `20f9ec6b` | `723544007` Trichodysplasia spinulosa caused by Polyomavirus | Disease caused by Polyomavirus; Hair follicle disorder | parent_better | 2 |
 
-## D. Parent concept suggested instead
+## E. Parent concept suggested instead
 
 *14 rows — judge parent vs hit.*
 
 | decision | condition | sha | top hit | its parents | flags | other hits |
 |---|---|---|---|---|---|---|
-|  | Bone or joint infection | `7978f7f9` | `1197494003` Hyaline fibromatosis syndrome | Fibromatosis; Genetic disease | parent_better | 0 |
+|  | Bone or joint infection | `7978f7f9` | `1197494003` Hyaline fibromatosis syndrome | Benign neoplasm of bone; Fibromatosis | parent_better | 0 |
 |  | Bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease | `05e4a681` | `106001000119101` COPD co-occurrent with acute bronchitis | Acute bronchitis; Acute exacerbation of chronic obstructive airways disease | parent_better | 2 |
 |  | Chronic severe atopic dermatitis | `ff832b02` | `1336113009` CADINS disease | Atopic dermatitis; Autosomal dominant hereditary disorder | parent_better | 0 |
 |  | Chronic severe pain | `176246df` | `230648001` Abdominal cutaneous nerve entrapment syndrome | Abdominal wall pain; Chronic abdominal pain | parent_better | 2 |
@@ -171,12 +193,12 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Mycobacterium ulcerans infection | `a84eb61e` | `15845006` Buruli ulcer | Atypical mycobacterial infection; Cutaneous infectious disease caused by Mycobacteria | parent_better | 0 |
 |  | Nausea or gastric stasis | `51096051` | `235675006` Gastroparesis syndrome | Dysmotility of stomach; Gastric motor function disorder | parent_better | 2 |
 |  | Oesophageal cancer or gastro-oesophageal junction cancer | `e07d66ed` | `230314007` Sandifer syndrome | Gastro-oesophageal reflux disease; Intermittent torticollis | parent_better | 0 |
-|  | Scleroderma oesophagus | `b067d670` | `31848007` CREST syndrome | Calcinosis cutis; Degenerative disorder of extremity | parent_better | 0 |
+|  | Scleroderma oesophagus | `b067d670` | `31848007` CREST syndrome | Degenerative disorder of extremity; Disorder of digit | parent_better | 0 |
 |  | Systemic light chain amyloidosis | `ff6ac794` | `23132008` AL amyloidosis | Amyloidosis; Light chain disease | parent_better | 2 |
 
-## E. Hit is narrower than the condition
+## F. Hit is narrower than the condition
 
-*87 rows — check it is not a sub-type.*
+*93 rows — check it is not a sub-type.*
 
 | decision | condition | sha | top hit | its parents | flags | other hits |
 |---|---|---|---|---|---|---|
@@ -188,7 +210,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Anaemias associated with vitamin B12 deficiency | `60468ad3` | `191142007` Vitamin B12 deficiency anaemia due to malabsorption with proteinuria | Megaloblastic anaemia due to vitamin B>12< deficiency | narrower | 2 |
 |  | Anaerobic infections | `f2adbb3b` | `264575002` Superadded anaerobic infection | Infection caused by anaerobic bacteria; Superimposed infection | narrower | 2 |
 |  | Basal cell carcinoma | `abbb8735` | `402524007` Basal cell carcinoma - adamantinoid | Basal cell carcinoma of skin | narrower | 2 |
-|  | Bone | `324ee8c1` | `409778008` Bone abscess | Abscess; Lesion of bone | narrower | 2 |
+|  | Bone | `324ee8c1` | `409778008` Bone abscess | Abscess; Bone inflammatory disease | narrower | 2 |
 |  | Bone metastases | `3a96f3fc` | `91281000119103` Metastatic adenocarcinoma to bone | Metastatic adenocarcinoma; Metastatic malignant neoplasm to bone | narrower | 2 |
 |  | Bordetella pertussis | `53f24034` | `122206002` Bordetella pertussis culture | Bordetella culture | narrower | 2 |
 |  | Cancer pain | `ba023699` | `879973007` Breakthrough cancer pain | Breakthrough pain; Pain due to neoplastic disease | narrower | 2 |
@@ -240,6 +262,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Myelodysplastic or myeloproliferative disorder | `c716493b` | `445738007` Myelodysplastic/myeloproliferative disease | Malignant haematopoietic neoplasm; Myeloproliferative disorder | narrower | 2 |
 |  | Myoclonic epilepsy | `90177632` | `6204001` Juvenile myoclonic epilepsy | Idiopathic generalised epilepsy | narrower | 2 |
 |  | Non-infectious uveitis | `b551484b` | `267619000` Non-infectious anterior uveitis | Anterior uveitis | narrower | 2 |
+|  | Non-small cell lung cancer | `3347f0f5` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | narrower | 2 |
 |  | Opioid-induced constipation | `a8cd94fb` | `136801000119102` Therapeutic opioid induced constipation | Drug-induced constipation | narrower | 0 |
 |  | Oral herpes | `27c1581f` | `235058001` Oral mucosal herpes | Infection of skin and/or mucous membrane caused by Herpes simplex virus; Oral infection caused by herpes simplex virus | narrower | 2 |
 |  | Oral or labial herpes | `4a6b3b3c` | `235058001` Oral mucosal herpes | Infection of skin and/or mucous membrane caused by Herpes simplex virus; Oral infection caused by herpes simplex virus | narrower | 2 |
@@ -250,11 +273,14 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Proliferative diabetic retinopathy and/or Diabetic macular oedema | `f390efcd` | `399862001` High risk proliferative retinopathy without macular oedema due to diabetes | High risk proliferative retinopathy due to diabetes | narrower | 2 |
 |  | Pseudomonas aeruginosa infection | `a7cea46b` | `11218009` Infection caused by Pseudomonas aeruginosa | Bacterial infection caused by Pseudomonas | narrower | 2 |
 |  | Renal allograft rejection | `4ac39c67` | `314002005` Corneal allograft rejection | Corneal graft disorder; Corneal graft rejection | narrower | 2 |
+|  | Resected non-small cell lung cancer | `b6c93bf7` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | narrower | 2 |
 |  | SARS-CoV-2 infection | `3bcc4e98` | `1217296006` SARS-CoV-2 breakthrough infection | COVID-19; Infection following immunisation | narrower | 2 |
 |  | Short stature associated with Turner syndrome | `0b877e07` | `205808005` Congenital malformation syndromes associated with short stature | Congenital malformation syndrome; Short stature disorder | narrower | 2 |
-|  | Squamous cell cancer of the larynx | `8ae1f50c` | `405822008` Squamous cell carcinoma of larynx | Malignant neoplasm of larynx; Squamous cell carcinoma of head and/or neck | narrower | 0 |
+|  | Squamous cell cancer of the hypopharynx | `333884ee` | `1260021004` Adenoid squamous cell carcinoma of hypopharynx | Acantholytic squamous cell carcinoma; Malignant epithelial neoplasm of hypopharynx | narrower | 2 |
+|  | Squamous cell cancer of the larynx | `8ae1f50c` | `405822008` Squamous cell carcinoma of larynx | Malignant neoplasm of larynx; Squamous cell carcinoma of head and/or neck | narrower | 2 |
 |  | Squamous cell cancer of the oropharynx | `f61fc4d6` | `423464009` Squamous cell carcinoma of oropharynx | Malignant epithelial neoplasm of oropharynx; Squamous cell carcinoma of pharynx | narrower | 2 |
 |  | Squamous cell carcinoma of the oral cavity | `efffd23d` | `733343005` Primary squamous cell carcinoma of oral cavity | Primary malignant neoplasm of oral cavity; Squamous cell carcinoma of mouth | narrower | 2 |
+|  | Stage IV non-small cell lung cancer | `d8c72226` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | narrower | 2 |
 |  | Stage Parkinson disease | `c1ced39c` | `49049000` Parkinson's disease | Cerebral degeneration; Chronic brain syndrome | narrower | 2 |
 |  | Stroke embolism | `7adaa70f` | `788881005` Cerebral ischaemic stroke due to aortic arch embolism | Embolic infarction; Embolic stroke | narrower | 2 |
 |  | Subfoveal choroidal neovascularisation | `8ebcc881` | `75971007` Choroidal retinal neovascularisation | Disorder of choroid of eye; Disorder of ocular blood vessel | narrower | 2 |
@@ -263,14 +289,16 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Terminal disease | `72c087c0` | `196977009` Crohn's disease of terminal ileum | Crohn's disease of ileum; Terminal ileitis | narrower | 2 |
 |  | Terminal malignant neoplasia | `5f6d3a30` | `94281000119101` Malignant multiple endocrine neoplasia type 2a | Multiple endocrine neoplasia, type 2 | narrower | 2 |
 |  | Transthyretin amyloid cardiomyopathy | `03a336dd` | `715655000` Transthyretin related familial amyloid cardiomyopathy | Cardiac familial non-neuropathic amyloidosis; Cardiovascular system hereditary disorder | narrower | 0 |
+|  | Triple negative breast cancer | `0d044a4e` | `706970001` Triple negative malignant neoplasm of breast | Hormone receptor negative malignant neoplasm of breast; Human epidermal growth factor 2 negative carcinoma of breast | narrower | 2 |
+|  | Triple-negative breast cancer | `461afe3d` | `706970001` Triple negative malignant neoplasm of breast | Hormone receptor negative malignant neoplasm of breast; Human epidermal growth factor 2 negative carcinoma of breast | narrower | 2 |
 |  | Uveal melanoma | `8698602f` | `1197334002` Malignant melanoma of uveal tract | Malignant melanoma of eye; Neoplasm of uveal tract | narrower | 1 |
 |  | Venous thromboembolism | `d0f013f9` | `1258883002` Thromboembolus of vein following surgical procedure | Postoperative complication; Thromboembolism of vein | narrower | 2 |
 |  | Venous ulcer | `94b0e26b` | `1332169003` Venous ulcer of ankle | Ankle ulcer; Venous ulcer of lower limb | narrower | 2 |
 |  | X-linked hypophosphataemia | `867e06c0` | `237655001` Hypoparathyroidism - X-linked | Hereditary disorder of endocrine system; Hypoparathyroidism | narrower | 2 |
 
-## F. ⚠️ 'Plausible' — THIS TIER IS NOT SAFE
+## G. ⚠️ 'Plausible' — THIS TIER IS NOT SAFE
 
-*130 rows — verify against the terminology.*
+*128 rows — verify against the terminology.*
 
 | decision | condition | sha | top hit | its parents | flags | other hits |
 |---|---|---|---|---|---|---|
@@ -313,7 +341,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Chronic lymphocytic leukaemia or small lymphocytic lymphoma | `77d439e8` | `92814006` Chronic lymphocytic leukaemia | Lymphoid leukaemia | — | 1 |
 |  | Chronic pulmonary histoplasmosis infection | `b014aafa` | `26427008` Chronic pulmonary histoplasmosis | Chronic infectious disease; Chronic lung disease | — | 2 |
 |  | Chronic severe disabling pain | `1035ca48` | `82423001` Chronic pain | Pain | — | 2 |
-|  | Chronic severe dry eye disease with keratitis | `8629a63f` | `785298001` Muscle eye brain disease with bilateral multicystic leukodystrophy | Combined malformation of central nervous system and skeletal muscle; Congenital anomaly of eye | — | 2 |
+|  | Chronic severe dry eye disease with keratitis | `8629a63f` | `785298001` Muscle eye brain disease with bilateral multicystic leukodystrophy | Congenital anomaly of eye; Congenital hereditary muscular dystrophy | — | 2 |
 |  | Chronic stable plaque type psoriasis vulgaris | `eb0a1b63` | `402310007` Chronic stable plaque psoriasis | Plaque psoriasis | — | 2 |
 |  | Chronic treatment of hereditary angioedema Types 1 or 2 | `c85e431d` | `234619000` Hereditary angioedema - type 1 | Angioedema due to disorder of kinin metabolism; Autosomal dominant hereditary disorder | — | 2 |
 |  | Clear cell variant renal cell carcinoma | `cde254ef` | `254915003` Clear cell carcinoma of kidney | Malignant neoplasm of kidney parenchyma; Renal cell carcinoma | — | 2 |
@@ -322,6 +350,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Cows' milk protein enteropathy and intolerance to soy protein | `5e91a6bf` | `773579007` Congenital chronic diarrhoea with protein-losing enteropathy | Chronic diarrhoea of infants AND/OR young children; Congenital disease | — | 2 |
 |  | Cows' milk protein enteropathy with failure to thrive | `0cb55fe4` | `782555009` Cow's milk protein allergy | Allergy to cattle protein; Food allergy | — | 2 |
 |  | Cryopyrin associated periodic syndromes | `64cd72a5` | `430079001` Cryopyrin associated periodic syndrome | Hereditary periodic fever | — | 2 |
+|  | Differentiated thyroid cancer | `636b3e9b` | `786038001` Familial nonmedullary primary thyroid carcinoma | Familial neoplastic disease; Hereditary disorder of endocrine system | — | 0 |
 |  | Disorders of keratinisation | `111fd669` | `277905003` Disorder of keratinisation | Abnormal keratinisation; Disorder of body system | — | 2 |
 |  | Disseminated pulmonary histoplasmosis infection | `28226cd4` | `187054003` Pulmonary histoplasmosis | Fungal infection of lung; Histoplasmosis | — | 2 |
 |  | Drug interactions occurring with all of the base-priced drugs | `7f969307` | `404204005` Drug interaction with drug | Medicine interaction | — | 2 |
@@ -349,7 +378,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Intermediate-1 risk myelofibrosis | `9c7da3f7` | `1363261009` Cytochrome P450 family 2 subfamily C member 9 *1/*11 intermediate metaboliser | CYP2C9 intermediate metaboliser | — | 2 |
 |  | Intestinal malabsorption including short bowel syndrome | `7b480409` | `26629001` Short bowel syndrome | Disorder of small intestine; Malabsorption syndrome | — | 2 |
 |  | Lichen planus hypertrophic | `b455d20a` | `68266006` Hypertrophic lichen planus | Lichen planus | — | 2 |
-|  | Limited-stage small cell lung cancer | `49558bbe` | `254632001` Small cell carcinoma of lung | Malignant epithelial neoplasm of lung; Neuroendocrine neoplasm of lung | — | 2 |
+|  | Limited-stage small cell lung cancer | `b5c047db` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | — | 2 |
 |  | Locally advanced, metastatic or recurrent biliary tract cancer | `fe88e0bb` | `787091002` Adenocarcinoma of liver and intrahepatic biliary tract | Adenocarcinoma of liver; Malignant neoplasm of biliary tract | — | 0 |
 |  | Long chain fatty acid oxidation disorders | `c52409e2` | `426387005` Long-chain fatty acid transport deficiency | Disorder of fatty acid metabolism; Metabolic disorder of transport | — | 2 |
 |  | Major depressive disorders | `98d8dacb` | `370143000` Major depressive disorder | Depression | — | 2 |
@@ -376,9 +405,8 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Reduction of breast cancer risk | `f693ac8b` | `866242004` At increased risk of malignant neoplasm of breast | At risk of malignancy | — | 2 |
 |  | Rehydration in intestinal failure | `38ea958e` | `440295211000119108` Failure of intestine | Intestinal disease | — | 2 |
 |  | Rejection in patients following organ or tissue transplantation | `d244c8a6` | `213148006` Transplanted organ rejection | Disorder affecting transplanted structure; Disorder following clinical procedure | — | 2 |
-|  | Resected early stage non-small cell lung cancer | `c8f2bb27` | `254637007` Non-small cell lung cancer | Malignant epithelial neoplasm of lung | — | 2 |
+|  | Resected early stage non-small cell lung cancer | `1ae2d552` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | — | 2 |
 |  | Resected gastric and gastroesophageal junction adenocarcinoma | `a642edb2` | `771474005` Gastric adenocarcinoma and proximal polyposis of stomach | Autosomal dominant hereditary disorder; Digestive system hereditary disorder | — | 2 |
-|  | Resected non-small cell lung cancer | `8c225304` | `254637007` Non-small cell lung cancer | Malignant epithelial neoplasm of lung | — | 2 |
 |  | Seizures associated with tuberous sclerosis complex | `a67f7956` | `698626001` Dementia associated with multiple sclerosis | Dementia associated with another disease | — | 2 |
 |  | Short stature and poor body composition due to Prader-Willi syndrome | `bd5100a4` | `1229943004` SIM1-related Prader-Willi-like syndrome | Genetic syndromic childhood obesity; Prader-Willi-like syndrome | — | 2 |
 |  | Short stature associated with biochemical growth hormone deficiency | `db727099` | `234533006` X-linked agammaglobulinaemia with growth hormone deficiency | Congenital agammaglobulinaemia; Developmental hereditary disorder | — | 2 |
@@ -388,12 +416,10 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Spasticity of the lower limb following an acute event | `2fea8957` | `132111000119107` Acute deep venous thrombosis of lower limb due to and following coronary artery bypass grafting | Acute deep venous thrombosis of lower limb as complication of procedure; Complication of bypass graft | — | 2 |
 |  | Spasticity of the upper limb | `5f460abe` | `783764008` Autosomal recessive spastic paraplegia type 56 | Autosomal recessive hereditary spastic paraplegia | — | 2 |
 |  | Spasticity of the upper limb following an acute event | `10135c9c` | `134424008` Disorder due to and following burn of upper limb | Disorder due to and following burn; Disorder due to and following injury of upper limb | — | 2 |
-|  | Squamous cell cancer of the hypopharynx | `63d2d4c2` | `423464009` Squamous cell carcinoma of oropharynx | Malignant epithelial neoplasm of oropharynx; Squamous cell carcinoma of pharynx | — | 2 |
 |  | Squamous cell cancer of the larynx, oropharynx or hypopharynx | `d09db900` | `423464009` Squamous cell carcinoma of oropharynx | Malignant epithelial neoplasm of oropharynx; Squamous cell carcinoma of pharynx | — | 2 |
 |  | Squamous cell carcinoma of the larynx | `f4a8bd39` | `405822008` Squamous cell carcinoma of larynx | Malignant neoplasm of larynx; Squamous cell carcinoma of head and/or neck | — | 2 |
 |  | Squamous cell carcinoma of the oral cavity, pharynx or larynx | `5c795225` | `733343005` Primary squamous cell carcinoma of oral cavity | Primary malignant neoplasm of oral cavity; Squamous cell carcinoma of mouth | — | 2 |
 |  | Squamous cell carcinoma of the pharynx | `499b2ccc` | `408649007` Squamous cell carcinoma of pharynx | Malignant epithelial neoplasm of pharynx; Squamous cell carcinoma of head and/or neck | — | 2 |
-|  | Stage IV non-small cell lung cancer | `23bbcdab` | `254637007` Non-small cell lung cancer | Malignant epithelial neoplasm of lung | — | 2 |
 |  | Stroke or systemic embolism | `e44ce43a` | `48601000119107` Hemiplegia and/or hemiparesis following stroke | Late effect of nervous system injury; Paralytic syndrome on one side of the body | — | 2 |
 |  | Suspected Plasmodium falciparum malaria | `2fb6999a` | `62676009` Falciparum malaria | Malaria | — | 2 |
 |  | Treatment refractory generalised myasthenia gravis | `4cb7b572` | `770596007` Rippling muscle disease with myasthenia gravis | Myasthenia gravis; Rippling muscle disease | — | 2 |
