@@ -1,0 +1,171 @@
+{
+ "guideline": "guidelines/asthma-adolescents.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Asthma in adolescents (12 years and over)' (Last updated September 2022), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Every adolescent with asthma should be on a regimen that includes an ICS; SABA (salbutamol) alone is no longer recommended.** High SABA use (more than 3 MDI canisters a year) with low preventer use is associated with more severe exacerbations and death.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any adolescent with asthma should be on a treatment regimen that includes an ICS. Prescribing SABA treatment (ie salbutamol) alone is no longer recommended … High use of SABA alone (>3 MDI canisters per year) and low use of preventer/anti-inflammatory is associated with more severe asthma exacerbation and death",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most adolescents can start on an as-needed ICS/LABA combination as reliever.** **Budesonide/formoterol is currently the only combination that can be prescribed as a reliever** — other combination inhalers (eg Seretide) should not be used.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For most adolescents with asthma, treatment can be started with as-needed (reliever) combination of an ICS and a LABA … At present budesonide/formoterol is the only combination that can be prescribed as a reliever. Other combination inhalers (eg Seretide) should not be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Traditional daily ICS preventer plus as-needed SABA is also effective**, and may be preferred if the current regimen is working or DPI/Turbuhaler technique is difficult. **If already established on it, discuss with the long-term care provider** before changing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Traditional management with daily inhaled corticosteroid (ICS) as a preventer and SABA as needed is also effective. It may be preferred for those already on a regimen that is working or if there are difficulties with DPI/Turbuhaler® technique … If an adolescent is already established on a traditional reliever plus preventer regimen, it is more appropriate to discuss with their long-term care provider",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **The risk of fatal anaphylaxis is higher in adolescents with poorly controlled asthma.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The risk of fatal anaphylaxis is higher in adolescents with poorly controlled asthma",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess control by:** daytime symptoms · reliever doses per week · activity limitation · symptoms at night or on waking. **Examine inhaler technique** and look for allergic rhinitis and eczema.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Assessment of asthma control: Daytime symptoms Need for reliever (doses per week) Limitation of activities Symptoms at night or on waking … Review inhaler technique Look for signs of comorbidity, including allergic rhinitis and eczema",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The diagnosis is usually clinical.** Investigate only if another diagnosis is being considered or treatment is to be stepped up beyond Step 3, and consider a respiratory physician.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In most adolescents, the diagnosis can be made clinically based on symptoms and response to treatment … Investigations should only be performed if other diagnoses are being considered, or if treatment is to be stepped up beyond Step 3 (see management below). Consider consultation with a respiratory physician",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Spirometry belongs in an accredited respiratory function laboratory**, with bronchodilator response, ± exercise or other challenge tests.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Spirometry should be performed in a respiratory function laboratory accredited to test adolescents. It should include bronchodilator response and may include exercise or other challenge tests if required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**An anti-inflammatory reliever regimen can start after an acute presentation (eg on ED discharge) or at routine outpatient review.** Most adolescents start at step one.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The decision to commence an anti-inflammatory reliever-based regimen can be made either following an acute presentation (eg on discharge from emergency), or on routine review in an outpatient setting … Most adolescents will start at step one, based on the stepladder approaches shown below",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The anti-inflammatory reliever regimen uses budesonide/formoterol 200 mcg/6 mcg.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anti-inflammatory reliever-based regimen (budesonide/formoterol 200 mcg/6 mcg)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Turbuhaler (200/6)** is more portable with a lower carbon footprint but needs adequate technique. **Alternative: budesonide/formoterol MDI (Rapihaler) with spacer, 100 mcg/3 mcg, 2 puffs twice daily.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Turbuhaler® (200/6) has the advantages of being more portable and carrying a lower carbon footprint but requires adequate technique. … An alternative is to continue using budesonide/formoterol MDI (Rapihaler®) with spacer in 100 mcg/3 mcg dosing. This should be 2 puffs twice daily.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Common ICS:** fluticasone from 125 mcg twice daily up to a total daily dose of 500 mcg; ciclesonide from 80 mcg once daily up to 320 mcg as required.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fluticasone, start at 125 mcg twice daily and increase until total daily dose 500 mcg … Ciclesonide, start at 80 mcg once daily and increase to 320 mcg as required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Lower the MDI carbon footprint:** good control to reduce SABA need, switch to DPI when possible, and prescribe 1 puff of a stronger preventer instead of 2 puffs of a weaker one.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "MDI have a large carbon footprint. The best way to decrease the impact is to achieve good asthma control to reduce need for SABA and/or switch to DPI when possible … prescribing 1 puff of a stronger dose preventer instead of 2 puffs of a weaker dose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Good control = all of:** daytime symptoms and reliever need ≤2 days per week, no activity limitation, no night or waking symptoms. **Partial = one or two** of the uncontrolled features; **poor = three or more:** daytime symptoms or reliever need >2 days per week, activity limitation, night or waking symptoms. Pre-exercise doses don't count.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Good control (All of) Partial control (One or two of) Poor control (Three or more of) Daytime symptoms ≤2 days per week >2 days per week >2 days per week Need for reliever* ≤2 days per week >2 days per week >2 days per week Limitation to activity none present present Night time symptoms (or on waking) none present present … Reliever frequency does not include doses taken prophylactically before exercise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Poor control → step up the preventer**, but first check technique and adherence and consider other diagnoses. **After a severe exacerbation, review and consider stepping up.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Poor control suggests preventer medication should be stepped up according to the figures above … Always check correct technique and adherence prior to stepping up. Consider alternate diagnoses … If a severe exacerbation occurs, review and consider stepping up",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Good control for about 3 months → consider stepping down.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Good control for a period of approximately 3 months suggest preventer treatment could be stepped down",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Never cease an adolescent's ICS completely.** Stepping down to reliever only means an ICS/LABA combination reliever.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Never cease an adolescent's ICS completely … If stepping down to reliver use only, use combination ICS and LABA as reliever",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Every adolescent needs a written asthma action plan** saying when to seek medical attention — generally at **12 budesonide/formoterol actuations a day by DPI, or 24 inhalations a day by MDI.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A written asthma action plan is a core part of asthma management. … The written asthma action plan should clearly communicate when medical attention should be sought. This is generally when: DPI: a total of 12 actuations of budesonide/formoterol in a day MDI: a total of 24 inhalations of budesonide/formoterol in a day",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Exacerbation needing hospital: treat with SABA as standard** (see acute asthma). At home, if only SABA is available, use it while awaiting the ambulance. **On discharge, resume budesonide/formoterol for symptom relief.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For exacerbations requiring hospital presentation, treat with SABA as per standard practice (see acute asthma) … If reliever treatment is needed at home and only SABA is available, this should be used whilst awaiting an ambulance … On discharge resume budesonide/formoterol for symptom relief",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before escalating:** check the diagnosis, adherence and inhaler technique, and contributing factors — allergic rhinitis, obesity, OSA, reflux, dysfunctional breathing (including vocal cord dysfunction), depression/anxiety (chest tightness without wheeze), smoking and vaping, damp or crowded housing, aeroallergens, and insufficient income to access healthcare.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Review if asthma is correct diagnosis Review adherence Review inhaler technique Consider contributing factors Allergic rhinitis Obesity Obstructive sleep apnoea Gastro-oesophageal reflux Dysfunctional breathing (including vocal cord dysfunction) Depression/anxiety (may present as chest tightness without wheeze) Smoking and vaping (passive or active) Damp, mouldy, cold or crowded housing Aeroallergens (in particular house dust mite, cat and dog hair) Insufficient income to access healthcare",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Refer severe, uncontrolled asthma** (step 3 with ongoing poor response) **to a respiratory physician or specialist asthma service**; also consult if the diagnosis is unclear.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adolescents with severe, uncontrolled asthma (step 3 and ongoing poor response to treatment) should be referred to a respiratory physician or specialist asthma service … Consider consultation with respiratory/ specialist asthma service when Inadequate asthma control achieved at Step 3 It is unclear if asthma is the correct diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Add-on options for that group:** oral prednisolone 1 mg/kg (max 50 mg) daily for 2 weeks · tiotropium 2.5 mcg 2 puffs daily · montelukast 5 mg daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Additional treatment that may be considered for this group are: Oral prednisolone 1 mg/kg (max 50 mg) daily for 2 weeks Tiotropium 2.5 mcg 2 puffs daily Montelukast 5 mg daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Asthma in adolescents (12 years and over)' (Last updated September 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Asthma_in_adolescents_(12_years_and_over)/, retrieved 2026-09-23",
+   "dose": true
+  }
+ ]
+}
