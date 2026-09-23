@@ -1,0 +1,187 @@
+{
+ "guideline": "guidelines/brief-resolved-unexplained-event.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 24,
+  "pass": 24,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most infants with a BRUE do not have a serious underlying diagnosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most infants presenting with a brief resolved unexplained event (BRUE) do not have a serious underlying diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BRUE** = an event in an infant **under 12 months** that is sudden, brief and now resolved, with one or more of: cyanosis or pallor · absent, decreased or irregular breathing · marked change in tone · altered responsiveness — **and no alternative diagnosis after history and examination.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A BRUE is defined as an event occurring in an infant less than 12 months old where the following is observed Sudden, brief and now resolved Characterised by one or more of the following cyanosis or pallor absent, decreased or irregular breathing marked change in tone (hypertonia or hypotonia) altered level of responsiveness Where alternative differential diagnoses have been excluded after history and physical examination",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The commonest cause is thought to be exaggerated airway reflexes** from poor suck/swallow coordination or vagal stimulation — with feeding, reflux or upper respiratory infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The most common cause of these events is thought to be exaggerated airway reflexes secondary to poor suck/swallow coordination or vagal stimulation; in the setting of feeding, gastro-oesophageal reflux or increased upper respiratory tract infections.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If the infant needs ongoing acute treatment, the event is not a BRUE.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the infant requires ongoing acute treatment, the event is not a BRUE",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take the history from an adult who saw the event.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "History should be taken from an adult who observed the event",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider inflicted injury** when there are multiple or changing versions of the history, or the circumstances do not fit the child's developmental stage.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider inflicted injury when multiple or changing versions of the history are provided or circumstances are inconsistent with the child's developmental stage",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Describe the event:** choking or gagging; breathing difficulty, pauses or apnoea; colour (cyanosis, pallor, plethora); distress; responsiveness; tone (stiff, floppy, normal); movements including eyes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Choking, gagging Breathing: difficulty breathing, pauses, apnoea Colour and colour distribution: normal, cyanosis, pallor, plethora Distress Conscious state: responsive to voice, touch, or visual stimulus Tone: stiff, floppy, or normal Movement (including eyes): purposeful, repetitive",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Circumstances:** awake or asleep, relation to feeding and vomiting, position, **sleeping arrangement, co-sleeping, temperature and bedding**, nearby objects that could be swallowed or suffocate, recent illness.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Awake or asleep Relationship of the event to feeding and history of vomiting Position (prone/supine/side) Environment: sleeping arrangement, co-sleeping, temperature, bedding Objects nearby that could be swallowed, cause choking or suffocation Illness in preceding days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**End of the event:** duration; how it stopped — self-resolved, repositioning, stimulation, or mouth-to-mouth/chest compressions; rapid or gradual recovery.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Duration of event Circumstances of cessation: self-resolved, repositioned, stimulation, mouth to mouth and/or chest compressions Recovery phase: rapid or gradual",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other history:** previous or clustered events, baseline stridor/stertor/vomiting or GORD, sick contacts, **family history of sudden death**, medications or drugs in the home, social supports.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Previous similar event or multiple events/clusters Preceding/intercurrent illness Baseline stridor/stertor/vomiting or symptoms of GORD Sick contacts Family history of sudden death or significant childhood illness Patient medications or other drugs within the home Social history: parental supports, psychosocial assessment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Fully expose every infant.** Bruising, subconjunctival haemorrhage, full fontanelle, head circumference crossing centiles, epistaxis, oral injury or irritability/drowsiness should **raise suspicion of inflicted injury.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children should be completely exposed for a complete examination … Any bruising, subconjunctival haemorrhage, full fontanelle, head circumference crossing centiles, epistaxis, oral injury or irritability/drowsiness should raise suspicion for inflicted injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Less serious, more common:** laryngospasm, choking, gagging; reflux; normal infant movement or periodic breathing; lower respiratory infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Less serious (more common) Laryngospasm, choking, gagging Gastro-oesophageal reflux Normal infant movement, periodic breathing Lower respiratory tract infection",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **More serious, less common:** seizure/infantile spasms; airway abnormality or obstruction; central or obstructive apnoea; head or other inflicted injury; pertussis or bacterial infection; congenital heart disease or arrhythmia; electrolyte or metabolic disorders, toxins, intussusception.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "More serious (less common) Seizure/infantile spasms Airway abnormalities or obstruction Apnoea (central/obstructive) Head injury/other inflicted injuries Infections: pertussis, bacterial infection Cardiac: congenital heart disease, arrhythmias Other: electrolyte abnormality, inborn errors of metabolism, toxin/ingestion, intussusception",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stratify only once the infant has recovered and the examination is benign.** A low-risk BRUE is very unlikely to reflect a serious disorder and unlikely to recur.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If the infant has recovered and examination is benign, the event can be risk stratified … A low-risk BRUE is very unlikely to represent presentation of a serious underlying disorder and is unlikely to recur",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Low-risk BRUE = no concerning history or examination features AND all of:** age over 60 days · born at ≥32 weeks with corrected gestational age ≥45 weeks · no CPR by a trained healthcare professional · first event · lasted under 1 minute. **Anything else is higher-risk.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A low-risk BRUE has no concerning features on history or examination AND all the following criteria age >60 days born ≥32 weeks gestation and corrected gestational age ≥45 weeks no CPR by trained healthcare professional first event event lasted <1 minute Patients not meeting these criteria have a higher-risk BRUE",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**4–8% of higher-risk BRUE** have a serious underlying diagnosis, **most commonly seizure or apnoea.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "4-8% of infants with higher-risk BRUE will have a serious underlying diagnosis, most commonly seizure or apnoea",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low-risk BRUE: no investigations.** In higher-risk BRUE testing is low-yield — investigations contribute to diagnosis in only 1–7% of tests.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A low-risk BRUE does not require any investigations … Diagnostic testing in higher-risk BRUE is low-yield and rarely contributes to an explanation. Recent studies show investigations contribute to diagnosis in only 1-7% of tests performed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Higher-risk, targeted:** **ECG with QT measurement** for dysmorphology or a family history of arrhythmia or sudden death; **nasopharyngeal sample** for pertussis exposure, respiratory symptoms or apnoea.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "ECG (measure QT interval) Dysmorphology or family history of arrhythmia or sudden death … Nasopharyngeal sample History of pertussis exposure, respiratory symptoms, apnoea",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**EEG/neurology** for abnormal movements, eye deviation, altered neurology or recurrence; **ENT** for stridor, epistaxis, obstructive symptoms or apnoea.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "EEG/ Neurology consultation Abnormal movements, eye deviation or altered neurology, event recurrence … ENT consultation Stridor, epistaxis, obstructive symptoms or apnoea",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acknowledge the carer's distress**, educate, and reassure that these infants are **not at increased risk of death**; still offer **infant CPR training** resources.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acknowledge the distress that this event may have caused carer. Provide education and reassure them that these infants are not at an increased risk of death … Although the infant is not at increased risk of premature death, families should be offered resources for infant CPR training",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low-risk BRUE may be discharged** if parents feel reassured and capable; decide with the family whether observation helps. **Admission with cardiorespiratory monitoring reassures but uncommonly finds a diagnosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infants who have had a low-risk BRUE may be discharged safely if their parents feel reassured and capable of caring for their infant at home … Admission for observation and cardiorespiratory monitoring can provide reassurance but uncommonly leads to a diagnosis … For low-risk BRUE, shared decision making with families regarding whether an admission for observation is of benefit",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**On discharge, give clear advice about when to return** and a safety net for re-presentation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If discharged, it is recommended that families of these children receive clear advice about when to return and that there is a safety net in place about when to re-present",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the local paediatric team** if the event is not low-risk or there is any concern for inflicted injury; **consider transfer** if a serious disorder is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when The event does not meet low-risk BRUE criteria Any concerns for inflicted injury Consider transfer when A serious underlying disorder is suspected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider discharge** after a period of observation when suspicion of a serious disorder is low and the carer is reassured.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when After a period of observation if there is a low clinical suspicion of a serious underlying disorder Carer is reassured",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Brief resolved unexplained event (BRUE)' (Last updated January 2026), at https://www.rch.org.au/clinicalguide/guideline_index/Brief_resolved_unexplained_event_(BRUE)/, retrieved 2026-09-23"
+  }
+ ]
+}

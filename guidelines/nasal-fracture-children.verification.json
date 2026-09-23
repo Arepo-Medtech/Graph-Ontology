@@ -1,0 +1,166 @@
+{
+ "guideline": "guidelines/nasal-fracture-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Nasal fracture' (Last updated October 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Septal haematoma must be excluded on the day of presentation**; delayed management causes significant complications.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Septal haematoma must be excluded on the day of presentation. Delayed management is associated with significant complication",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Suspected deformity → ENT review once swelling settles, usually 3–7 days after injury.** No deformity → GP review at 3–5 days; any deformity found then → urgent ENT referral.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with any suspected nasal deformity should be reviewed by ENT once the swelling has reduced, usually 3-7 days post injury … Suspected nasal fractures without deformity can be reviewed 3-5 days post injury by a GP. If any deformity is suspected on GP review, urgent referral to ENT is required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Fractures with nasal deformity should be reduced within 14 days of injury.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fractures with nasal deformity should be reduced within 14 days of injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Untreated septal haematoma** can cause septal necrosis or growth-centre disruption (classically a saddle-nose deformity), and septal abscess with possible CNS infection or cavernous sinus thrombosis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Untreated septal haematoma can result in septal necrosis or growth-centre disruption … This can in turn cause deformity (classically \"saddle nose\" deformity) … This may also lead to septal abscess formation, which may be further complicated by central nervous system infection or cavernous sinus thrombosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Midline and high-energy injuries risk instability and complex fractures**; a lateral blow (often assault) is more likely to injure the septum.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Midline injuries and high-energy mechanisms confer risk of instability and of complex fracture patterns … A lateral blow to the nose (often in the context of assault) is more likely to result in septal injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **High-energy central facial trauma can cause an NOE fracture**, which may bring lacrimal duct injury, dural tears and traumatic brain injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High-energy central facial trauma may cause posterior telescoping of the nasal root, resulting in a naso-orbito-ethmoid (NOE) fracture … may be associated with lacrimal duct injury, dural tears, and traumatic brain injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Check the mechanism matches the injury; consider inflicted injury, especially in a non-mobile child.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ensure the reported mechanism of injury matches the injury pattern Consider inflicted injury, especially in the non-mobile child",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about** clear nasal discharge (possible CSF rhinorrhoea) and facial paraesthesia, vision changes or malocclusion (other regional injury). Review pre-injury photos of the face if available.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Clear nasal discharge (may suggest CSF rhinorrhoea) … Facial paraesthesia, vision changes, altered bite/malocclusion (suggesting additional regional injury) … Review recent (pre-injury) photographs of the child's face in profile and frontal views if available",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Signs of nasal fracture:** gross deformity of nasal bones or septum, local oedema, tenderness, step-off or bony crepitus, nasal bone mobility, ecchymosis, epistaxis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features suggesting nasal fracture: gross deformity of nasal bones or septum local oedema tenderness, step-off deformity, or bony crepitus nasal bone mobility ecchymosis epistaxis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Open fracture:** a laceration of the overlying skin or of the nasal mucosa on rhinoscopy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Additional features suggesting \"open\" fracture Laceration to the overlying skin or (on bedside rhinoscopy) the nasal mucosa",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Look for septal haematoma** — deviation, swelling or discolouration of the septum — by anterior rhinoscopy with a light source and nasal speculum after suctioning clots (consider Co-Phenylcaine spray), and by gently palpating the septum for fluctuance or bogginess.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nasal septal haematoma Suggested by deviation/asymmetry, swelling, or discolouration of the septum Assess via direct visualisation of septum by anterior rhinoscopy with otoscope/headlamp/loupes and nasal speculum Suction away clots Consider use of Co-Phenylcaine spray (vasoconstriction) Assess by gentle palpation of nasal septum between two fingers or with a cotton applicator, feeling for fluctuance/bogginess",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Screen for septal haematoma at the first assessment** — delay can erode cartilage and cause significant deformity. **A septal haematoma mandates emergent ENT referral.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Must be screened for on initial assessment, delays to diagnosis can lead to erosion/necrosis of cartilage and significant deformity Identification of septal haematoma mandates emergent ENT referral",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **NOE fracture:** telecanthus and a flattened nasal dorsum (in young children, an 'open book' nasal fracture) — **consult a senior clinician or ENT.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Naso-orbito-ethmoid fractures Suggested by increased inner canthal distance (telecanthus) and flattening of the nasal dorsum In young children, these findings can represent \"open book\" nasal fracture Where NOE complex injuries are suspected, consult a senior clinician or ENT",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Associated fractures:** maxillary/zygomatic (tenderness, crepitus, numb cheek or upper lip) · orbital/ocular (proptosis, gaze palsy, altered acuity) · cribriform plate/NOE (clear nasal discharge, CSF rhinorrhoea) · mandibular (altered jaw movement) · base of skull (raccoon eyes, Battle's sign, haemotympanum, blood in the ear canal).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Maxillary or zygomatic fracture Maxillary or zygomatic tenderness or crepitus, numbness of cheek/upper lip Orbital or ocular injury Proptosis, gaze palsy, altered visual acuity Skull fracture through cribriform plate/NOE complex Clear nasal discharge, CSF rhinorrhoea Mandibular fracture Altered mandibular freedom of movement Base of skull fracture \"Raccoon eyes\", Battle's sign, hemotympanum, blood in external auditory canal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Isolated nasal fractures are clinical diagnoses — X-rays are not required.** CT may be needed for suspected associated fractures or intracranial injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Isolated nasal fractures are usually diagnosed clinically. X-rays are not required. CT may be needed for suspected associated fractures or intracranial injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ENT for** NOE fracture, clinical septal haematoma or abscess, or where local practice requires. **Maxillofacial/plastics for** non-nasal facial fractures or a possible open nasal fracture.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with ENT when NOE fracture Clinical evidence of septal haematoma or abscess At time of referral if required by local practices … Consider consultation with maxillofacial surgery/plastics team when Non-nasal maxillofacial fracture Concern for \"open\" nasal fracture",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Transfer a septal haematoma if there is no ENT surgeon on site.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Septal haematoma (if no ENT surgeon onsite)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** septal haematoma, open fracture and other significant injury needing admission are excluded, and follow-up is arranged.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Nasal septal haematoma, open fracture, and other significant injury warranting admission have been excluded The child has appropriate follow-up organised",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No sport until reviewed by the GP or ENT**, who will advise on further restrictions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children discharged with nasal fractures should avoid all sporting activities until seen by their GP or an ENT team who can then advise on ongoing restrictions",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cold compress to the nasal bridge for 10–15 minutes, several times a day, for the first 24 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children should receive cold therapy - a cold compress applied to nasal bridge for 10-15 minutes several times a day - for the first 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Return if** nasal obstruction progresses, pain persists or worsens, or rhinorrhoea or fever develop — these can mean an evolving septal haematoma or abscess needing urgent review.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Parents should seek medical attention if their child develops progressive nasal obstruction, persistent or worsening pain, rhinorrhoea, or fever These features can suggest evolving nasal septal haematoma or abscess and require urgent review and possible discussion with an ENT team",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nasal fracture' (Last updated October 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Nasal_fracture/, retrieved 2026-09-23"
+  }
+ ]
+}
