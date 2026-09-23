@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `ae64446`
+**Last verified:** 2026-09-23 · `master` at `f299086`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -14,6 +14,7 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`binding-review-loop`** | `80380c9` | 4 | [#5](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/5) | 2026-09-23 | `ecc0f6b` | ✅ yes |
 | **`condition-guideline-tally`** | `0ec6aa3` | 2 | [#6](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/6) | 2026-09-23 | `56fe582` | ✅ yes |
 | **`enrich-candidates-rerun`** | `6786077` | 1 | [#7](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/7) | 2026-09-23 | `ae64446` | ✅ yes |
+| **`quarantine-development`** | `d020a71` | 2 | [#8](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/8) | 2026-09-23 | `f299086` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -65,6 +66,13 @@ with SNOMED-bound conditions.
 
 `docs/condition-guideline-tally.md` · `docs/underverified-and-bound.md` ·
 `scripts/condition_guideline_tally.py` · `scripts/underverified_bound.py`
+
+### `quarantine-development` — PR #8, 4 files ✅ *(retained)*
+Re-searched the 15 quarantined rows and surfaced clean alternatives inline. The rule was not weakened;
+the input that tripped it was repaired. 7 stay quarantined, 3 got a clean alternative.
+
+`docs/quarantine-development.md` · `docs/binding-review-queue.md` ·
+`reference/quarantine_development.json` · `scripts/develop_quarantined.mjs` · `scripts/binding_review.py`
 
 ### `enrich-candidates-rerun` — PR #7, 4 files ✅ *(retained)*
 Re-ran the triage enricher after the binder re-run: queue 330 → 349, quarantine restored by rule, and
