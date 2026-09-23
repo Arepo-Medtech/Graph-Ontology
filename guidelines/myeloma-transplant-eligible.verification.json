@@ -1,0 +1,343 @@
+{
+ "guideline": "guidelines/myeloma-transplant-eligible.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia' (published 4 August 2025). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: CC BY-NC 4.0 (read at Europe PMC fullTextXML <license> element for PMC12515471). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 20,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 20
+ },
+ "claims": [
+  {
+   "claim": "**Transplant eligibility is an individual judgement:** age, comorbidity, frailty, disability and the patient's wishes all count. Frailty and comorbidity indices can help, but none is validated for this decision.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "aeac8929b65aea8d",
+     "n": 137,
+     "p": "Assessme"
+    },
+    {
+     "h": "a3a0acc1f64193ba",
+     "n": 127,
+     "p": "which ma"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Selected fit patients up to age 75 can be transplanted.** Trials mostly capped age at 65, yet data show transplant can be done safely in chosen older patients without a significant rise in transplant-related harm.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "657179fdd0bfd1d9",
+     "n": 159,
+     "p": "AuSCT sh"
+    },
+    {
+     "h": "4d0e7c0767077989",
+     "n": 84,
+     "p": "Clinical"
+    },
+    {
+     "h": "c19c6b371d5ea392",
+     "n": 133,
+     "p": "AuSCT ca"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give 3 to 6 induction cycles before transplant, aiming for at least a partial response.** (Grade A, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f5a4d6a19d484758",
+     "n": 197,
+     "p": "Transpla"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **RVD (lenalidomide, bortezomib, dexamethasone) is the recommended induction for most Australian patients**, because a CD38 antibody is not funded upfront. (Grade A, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5af0ae7c5e287154",
+     "n": 248,
+     "p": "Lenalido"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bortezomib by subcutaneous injection where possible.** A modified **weekly** schedule reduces neuropathy; keep **twice-weekly** dosing for when fast control matters, such as renal failure from cast nephropathy. (Grade B, Level III-3)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "9063461c57cb98aa",
+     "n": 56,
+     "p": "Bortezom"
+    },
+    {
+     "h": "02e0aaae4446758e",
+     "n": 430,
+     "p": "A twice "
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In acute severe renal impairment**, another bortezomib-based regimen (VD, VCD or VTD) can be used for induction instead. (Grade B, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c4c87ed1df8896b4",
+     "n": 203,
+     "p": "For pati"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**With systemic AL amyloidosis**, where full-dose lenalidomide is poorly tolerated, use **daratumumab with cyclophosphamide, bortezomib and dexamethasone**, which the PBS funds for this. (Grade A, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7c2b3a9e801ce521",
+     "n": 307,
+     "p": "For pati"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Without a partial response to RVD, the best next step is uncertain.** Proceeding to transplant is reasonable; trials or salvage can be considered, but the PBS funds a new regimen only on proven progression.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "da10aa0434aed4c8",
+     "n": 216,
+     "p": "The opti"
+    },
+    {
+     "h": "53dc78f168c123bf",
+     "n": 161,
+     "p": "However,"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Collect stem cells after 3–4 cycles of RVD, whether transplant is planned now or deferred.** (Grade A, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "453e444b08566423",
+     "n": 166,
+     "p": "Stem cel"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Three ways to mobilise:** G-CSF (10 mcg/kg) on its own; G-CSF plus plerixafor; or G-CSF plus cyclophosphamide (1.5–2 g/m²). When chemotherapy is part of it, choose the **intermediate** cyclophosphamide range over high doses (>2 g/m²): yields are much the same. (Grade B, Level III-3)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e6fa6f35bc9fbca4",
+     "n": 124,
+     "p": "Stem cel"
+    },
+    {
+     "h": "d9909f4c26c8d34b",
+     "n": 237,
+     "p": "If chemo"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Use plerixafor when G-CSF alone or cyclophosphamide with G-CSF fails;** the PBS funds it only after failed chemo-mobilisation. (Grade B, Level II)",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "48f990521069a070",
+     "n": 236,
+     "p": "Plerixaf"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Melphalan 200 mg/m² for patients with normal kidney function.** Consider 140 mg/m² when eGFR is below 30 mL/min/1.73m². If a patient is judged unfit for 200 mg/m², reconsider whether transplant is appropriate at all.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "42bd6f7aac78c161",
+     "n": 110,
+     "p": "All pati"
+    },
+    {
+     "h": "e5d7dbb475a36169",
+     "n": 154,
+     "p": "hence if"
+    },
+    {
+     "h": "81f3bc30132d44b1",
+     "n": 142,
+     "p": "but a do"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Upfront transplant after induction is still the standard of care.** Deferral is reasonable in standard-risk disease, because overall survival was equal in both major trials.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6e0141347eccd636",
+     "n": 71,
+     "p": "Upfront "
+    },
+    {
+     "h": "4a2a94f34bab1ba4",
+     "n": 135,
+     "p": "transpla"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Tandem (second) transplant may still suit eligible high-risk patients, particularly with del17p;** consider it in young high-risk patients, then give maintenance.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1b3624e62ecd9560",
+     "n": 155,
+     "p": "Currentl"
+    },
+    {
+     "h": "33b8a4b20835e9b0",
+     "n": 126,
+     "p": "we recom"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consolidation has uncertain benefit.** Discuss it; offering it is reasonable if induction was well tolerated and there is no peripheral neuropathy.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "8cf26c451dc85d1f",
+     "n": 218,
+     "p": "The unce"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Lenalidomide maintenance improves survival and is standard after transplant.** Continue until progression or unacceptable toxicity.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "56492b851ff9721f",
+     "n": 119,
+     "p": "Maintena"
+    },
+    {
+     "h": "c7427b98bd7a9364",
+     "n": 69,
+     "p": "We recom"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Warn patients about second cancers**, especially after 2–3 years from transplant, and keep up age-appropriate cancer screening.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fba38fa02ab1d0d6",
+     "n": 160,
+     "p": "Patients"
+    },
+    {
+     "h": "415658a9ca141057",
+     "n": 57,
+     "p": "Age‐appr"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In Australia, dual maintenance is not funded,** so lenalidomide stays the standard even in high-risk disease.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "15a2b5d1efde9723",
+     "n": 91,
+     "p": "In Austr"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess response 3 months after transplant.** Bone marrow biopsy is needed to confirm complete response. MRD testing is possible but not funded in Australia.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7a9ee7964d45f704",
+     "n": 297,
+     "p": "The post"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Allogeneic transplant has a limited role outside trials;** if considered, it belongs in an experienced centre.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7bdfe27f32efbe4c",
+     "n": 239,
+     "p": "there is"
+    }
+   ],
+   "locator": "Medical and Scientific Advisory Group (MSAG) of Myeloma Australia, Internal Medicine Journal, 'Management of patients with newly diagnosed multiple myeloma who are eligible for autologous stem cell transplantation: position statement of the Medical and Scientific Advisory Group of Myeloma Australia', published 4 August 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC12515471/, retrieved 2026-09-23"
+  }
+ ]
+}
