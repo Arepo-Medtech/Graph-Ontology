@@ -111,6 +111,11 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/route_and_salt.py           # route per product, and the salt-to-base map SNOMED does not state
 .venv/bin/python scripts/au_snomed_omop.py           # the nearest standard OMOP concept above each Australian one
 .venv/bin/python scripts/omop_drug_audit.py           # check every product mapping against RxNav, brand and strength witnesses
+
+# the medical multigraph (docs/multigraph-build.md): sources in cache/, graph in out/graph.duckdb
+.venv/bin/python scripts/drugcentral_extract.py      # DrugCentral's 4 needed tables out of its SQL dump, no Postgres
+.venv/bin/python scripts/build_edges.py              # nodes + edges from every source, validated against reference/graph_predicates.json
+.venv/bin/python scripts/graph_report.py             # score the linkage routes, set their tiers, report health and coverage
 .venv/bin/python scripts/rxnorm_review_queue.py      # rank the unresolved substances by what they actually block
 ```
 

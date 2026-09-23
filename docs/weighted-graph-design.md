@@ -15,6 +15,44 @@ were wrong and were caught by that rule; they are recorded in [What drafting cor
 
 ---
 
+## 0. Findings the design rests on
+
+Established while designing, 23 September 2026, and measured where a number is given.
+
+- **Five kinds of meaning, three mechanisms.** Edges carry nouns joined by verbs, and some carry adjectives
+  (qualifiers), temporality or rationality (quantity). But the five are carried by three different mechanisms, and
+  conflating them would sink an implementation: **graph edges**; **typed tables** for quantities (`DRUG_STRENGTH`'s
+  2,966,568 rows are a join, never traversed); and **free-text fields** in sources (PBS severity on 192 of 653
+  indications, "Severe" and "severe" distinct strings), which ride as edge attributes until bound. The register gives
+  every edge type a `category` on this frame.
+- **Signs and symptoms are nouns, not adjectives.** In SNOMED they are clinical findings — entities asserted present
+  or absent. The adjective layer is the Qualifier Value hierarchy (15,747 in the Observation domain, 6,017 as
+  measurement answers) that modifies them.
+- **An examination finding is one concept with two value slots**: `value_as_number` + unit (rationality) or
+  `value_as_concept_id` drawn from the answer qualifiers (adjective). LOINC's SCALE axis declares in advance which slot
+  a term uses.
+- **The edge-type funnel.** `RELATIONSHIP.csv` defines 724 relationship types; 328 carry any data in this bundle (55%
+  of the catalogue is empty — every indication type among them); 62 are reachable from the compendium's own concepts;
+  the compendium used one (`Maps to`). It used OMOP to arrive and never to travel onward.
+- **OMOP flattens the poly-hierarchy at the domain boundary.** Every concept gets exactly one `domain_id`, and 4,875
+  standard SNOMED concepts have parents in more than one domain — for those OMOP chose, and the losing parentage is
+  invisible in the CDM.
+
+## Reuse: what was taken rather than rebuilt
+
+PrimeKG (Harvard MIMS; 129,375 nodes, 4,050,249 relationships, 30 relation types, 20 sources, December 2023) was
+the reference design. Its relation names are used in the register where they match (`indication`,
+`contraindication`, `off-label use`, `disease_phenotype_positive / _negative`, `disease_disease`,
+`phenotype_phenotype`). Its **data** was not taken, for three reasons: it merged 22,205 MONDO concepts into 17,080 by
+embedding similarity (the upper-approximation error), its edges are undirected, and it drops HPO's frequency data.
+The primary sources were imported instead — MONDO, HPO and DrugCentral — at their own granularity. PrimeKG's
+DrugBank (drug–drug) and SIDER (side-effect) layers are non-commercial and were not imported.
+
+The graph-neural-network half of the reference pipeline (PyTorch Geometric, heterogeneous GAT) is downstream of
+linkage: the edge table maps directly onto PyG's `HeteroData` (node type = vocabulary, edge type = subject
+vocabulary × predicate × object vocabulary) when it is wanted. A learned link prediction would be a hypothesis in
+this scheme — Tier 3 in kind — and would enter the look-up queue, never the edge table.
+
 ## 1. Tier schema
 
 Full definitions: `reference/graph_tiers.json`. In brief:
@@ -418,9 +456,11 @@ method is only worth anything if it is seen to work.
 
 ## Build order
 
-1. Land the 153 code-route resolutions with a hand-checked sample (Tier 1, earned).
-2. Create the `edge` table and move the existing implicit edges into it — including the `_check` tables, which are
-   parallel edges in disguise.
-3. The indication bridge (§5D): 16,929 edges, one gap hop, attestation for the condition binding.
+1. ~~Land the 153 code-route resolutions with a hand-checked sample~~ — done; see `docs/rxnorm-review-queue.md`.
+2. ~~Create the `edge` table~~ — done; see `docs/multigraph-build.md`. 4,031,867 edges, all validated against the
+   register.
+3. Bind the 653 PBS indication texts to SNOMED (`pbs:indication_is`, registered as `needs_binding`) — the one gap in
+   the indication chain.
 4. `Has marketed form` — it audits a heuristic already shipped.
-5. The diagnostic layer (§5E), Tier 1 sources first, Tier 3 only as the lookup queue.
+5. The diagnostic layer (§5E): `sign_suggests` / `sign_argues_against` stay `needs_source` until Tier 1 sources are
+   retrieved. HPO frequency gives P(sign | disease) for rare diseases only; HPO → SNOMED has no lookup path.

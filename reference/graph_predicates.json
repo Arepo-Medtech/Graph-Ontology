@@ -1,0 +1,2780 @@
+{
+  "_note": "The register of every edge type the medical multigraph may hold. It is a CONTRACT, not documentation: scripts/build_edges.py refuses any edge whose predicate is not registered here, whose subject or object vocabulary is not the one registered, or which has no source (rule zero, docs/weighted-graph-design.md). A new SNOMED CT-AU attribute in a later edition therefore fails the build until someone registers it on purpose. The snomed_attributes section is generated from the release by scripts/graph_register.py; everything else is authored.",
+  "_taxonomy": {
+    "_note": "Every edge is a verb joining two nouns (concepts). `category` says what kind of meaning the edge carries, after the five-way frame worked out on 23 Sep 2026 -- nouns, verbs, adjectives, temporality, rationality -- extended with the kinds a cross-vocabulary graph needs. Signs and symptoms are NOUNS (SNOMED clinical findings), not adjectives; the adjective layer is the qualifier values that modify them.",
+    "structure": "is-a and part-of hierarchy between concepts of one vocabulary (the poly-hierarchy: 42% of standard SNOMED concepts have more than one parent)",
+    "relation": "a defining attribute joining two nouns: finding site, associated morphology, causative agent, due to, active ingredient",
+    "action": "the 'doing' verb: SNOMED procedure Method (excision, injection ...). LOINC's only verb axis, METHOD, is also action",
+    "adjective": "the object is a qualifier value: severity, laterality, interpretation (high/low/normal)",
+    "temporality": "occurrence, clinical course, episodicity, temporal context, LOINC TIME",
+    "rationality": "quantity: units, pack sizes, LOINC PROPERTY and SCALE. Numeric values themselves are NOT edges -- they live in typed tables (DRUG_STRENGTH, strength); only the unit or the kind of quantity is an edge",
+    "identity": "a cross-vocabulary equivalence or mapping: Maps to, exactMatch, xref. Never merges nodes -- the same substance in SNOMED and RxNorm stays two nodes and one identity edge",
+    "classification": "membership of a classification: ATC",
+    "commercial": "listing and subsidy: PBS item, restriction",
+    "evidence": "a clinical assertion from a source: indication, contraindication, off-label use, disease-phenotype. Safety-relevant; defaults to corrected_pending_attestation where a person must sign off"
+  },
+  "_mechanisms": "The five meanings are carried by three different mechanisms, and conflating them is what would sink an implementation: GRAPH EDGES (this register); TYPED TABLES for quantities (DRUG_STRENGTH's 2,966,568 rows, the compendium's strength table -- joins, never traversed); FREE-TEXT FIELDS in sources (PBS severity on 192 of 653 indications, episodicity on 42, 'Severe' and 'severe' distinct strings) which ride as edge attributes until bound.",
+  "vocabularies": {
+    "SCT": "SNOMED CT, keyed by SCTID. One vocabulary for international and AU-extension concepts (AMT included): SCTIDs are globally unique, so an AMT substance and the same SNOMED substance are ONE node",
+    "RXN": "RxNorm, keyed by RxCUI",
+    "RXE": "OMOP RxNorm Extension, keyed by its OMOP concept_code",
+    "ATC": "WHO ATC, keyed by code",
+    "LOINC": "LOINC terms (e.g. 2345-7), parts (LP...) and answers (LA...), keyed by code",
+    "ICD10CM": "ICD-10-CM, keyed by code (used to score MONDO -> SNOMED independently)",
+    "PBS_ITEM": "PBS item, keyed by pbs_code",
+    "PBS_RESTRICTION": "PBS restriction, keyed by res_code",
+    "PBS_INDICATION": "PBS indication, keyed by indication_prescribing_txt_id; its name is the free-text condition",
+    "MONDO": "MONDO disease, keyed by MONDO id",
+    "OMIM": "OMIM, keyed by number",
+    "ORPHA": "Orphanet, keyed by number",
+    "DECIPHER": "DECIPHER, keyed by number",
+    "HP": "Human Phenotype Ontology, keyed by HP id",
+    "DRUGCENTRAL": "DrugCentral structure, keyed by struct_id",
+    "CORPUS": "a condition of this compendium's guideline corpus, keyed by its name"
+  },
+  "predicates": [
+    {
+      "id": "omop:maps_to",
+      "label": "AMT product maps to standard drug",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "RXN",
+        "RXE",
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena v5.0 29-AUG-26 via omop_drug",
+      "status": "built",
+      "note": "110 set aside as rejected (docs/omop-drug-audit.md); they are loaded with state=rejected, keeping the refused answer, and are skipped by traversal"
+    },
+    {
+      "id": "omop:maps_to_indirect",
+      "label": "AMT product reaches standard drug through its generic or strength fingerprint",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "RXN",
+        "RXE",
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "scripts/amt_indirect.py (omop_drug_indirect)",
+      "status": "built"
+    },
+    {
+      "id": "std_ingredient",
+      "label": "substance has standard ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "RXN",
+        "RXE"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "substance_standard_ingredient (review decision > scored route > RxNav resolver)",
+      "status": "built"
+    },
+    {
+      "id": "in_atc_class",
+      "label": "product is in ATC class",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ATC"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "product_atc: source 'pbs' (PBS item-atc) and source 'omop' (CONCEPT_ANCESTOR) -- PARALLEL edges, never merged",
+      "status": "built",
+      "primekg_relation": null
+    },
+    {
+      "id": "pbs:lists",
+      "label": "AMT concept is listed as PBS item",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "PBS_ITEM"
+      ],
+      "category": "commercial",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "PBS API v3 amt-items, schedule 4333",
+      "status": "built"
+    },
+    {
+      "id": "pbs:has_restriction",
+      "label": "PBS item has restriction",
+      "subject": [
+        "PBS_ITEM"
+      ],
+      "object": [
+        "PBS_RESTRICTION"
+      ],
+      "category": "commercial",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "PBS API v3 item-restriction-relationships, schedule 4333",
+      "status": "built"
+    },
+    {
+      "id": "pbs:restricted_to",
+      "label": "PBS restriction is restricted to indication",
+      "subject": [
+        "PBS_RESTRICTION"
+      ],
+      "object": [
+        "PBS_INDICATION"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "PBS API v3 restriction-prescribing-text-relationships + indications, schedule 4333",
+      "status": "built",
+      "note": "An indication IS a prescribing text; treatment_of_code is NOT the key (resolves for 69 of 3,043). Severity and episodicity ride as attrs: free text, not yet bound. NOT on-label: PBS subsidy criteria, not the TGA label",
+      "primekg_relation": "indication (analogous; PrimeKG's comes from DrugCentral)"
+    },
+    {
+      "id": "pbs:indication_is",
+      "label": "PBS indication text denotes SNOMED condition",
+      "subject": [
+        "PBS_INDICATION"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "gap",
+      "strength_kind": "belief_interval",
+      "source": "the binder, with its attestation loop",
+      "status": "needs_binding",
+      "note": "The one gap in the indication chain: 'Metastatic (Stage IV)' is a condition, a staging ordinal and a severity in one string"
+    },
+    {
+      "id": "corpus:binds_to",
+      "label": "corpus condition is bound to SNOMED concept",
+      "subject": [
+        "CORPUS"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "gap",
+      "strength_kind": "exact",
+      "source": "reference/snomed_bindings.json (+ binding_corrections.json)",
+      "status": "built",
+      "note": "265 of 639 corpus conditions carry a binding (measured 23 Sep 2026)"
+    },
+    {
+      "id": "loinc:has_component",
+      "label": "LOINC term measures component (analyte)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis (Athena LOINC 2.82)",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_property",
+      "label": "LOINC term's kind of quantity",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_time_aspect",
+      "label": "LOINC term's time aspect",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_system",
+      "label": "LOINC term's system (specimen / site)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_scale",
+      "label": "LOINC term's scale: declares whether the value is quantitative (Qn) or adjectival (Ord / Nom / Nar)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_method",
+      "label": "LOINC term's method -- LOINC's only verb axis",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "action",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_axis",
+      "status": "built"
+    },
+    {
+      "id": "loinc:has_answer",
+      "label": "LOINC question has answer (the value_as_concept_id layer)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "spine.duckdb loinc_answer",
+      "status": "built"
+    },
+    {
+      "id": "mondo:is_a",
+      "label": "MONDO disease is a MONDO disease",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "MONDO"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "mondo.obo releases/2026-09-01",
+      "status": "built",
+      "primekg_relation": "disease_disease"
+    },
+    {
+      "id": "mondo:exact_match",
+      "label": "MONDO disease exactly matches a concept in another vocabulary",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "SCT",
+        "ICD10CM",
+        "OMIM",
+        "ORPHA"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "mondo.sssom.tsv (skos:exactMatch)",
+      "status": "built",
+      "note": "MONDO -> SCT scored against the independent path MONDO -> ICD10CM -> OMOP 'Maps to' -> SCT, over 1,769 diseases where both fire: same concept 81.1%; same concept or on one is-a line in SNOMED CT-AU 92.2% (Wilson lower bound 0.909) -> Tier 2; 138 contradicted. ICD-10-CM categories are broader than SNOMED concepts by design, so landing one level up is not an error; landing elsewhere is. Measured 23 Sep 2026. The tier is set on the edges by scripts/graph_report.py; the OMIM / Orphanet / ICD10CM targets are not yet scored."
+    },
+    {
+      "id": "icd10cm:maps_to",
+      "label": "ICD-10-CM code maps to SNOMED concept",
+      "subject": [
+        "ICD10CM"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena v5.0 29-AUG-26",
+      "status": "built",
+      "note": "Loaded for the MONDO codes only; it exists to score MONDO -> SNOMED by a second path"
+    },
+    {
+      "id": "hp:is_a",
+      "label": "HPO phenotype is a phenotype",
+      "subject": [
+        "HP"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "hp.obo 2026-09-02",
+      "status": "built",
+      "primekg_relation": "phenotype_phenotype"
+    },
+    {
+      "id": "hpo:has_phenotype",
+      "label": "disease presents with phenotype (sign / symptom)",
+      "subject": [
+        "OMIM",
+        "ORPHA",
+        "DECIPHER"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "ordinal",
+      "source": "phenotype.hpoa 2026-09-02 (aspect P)",
+      "status": "built",
+      "note": "frequency rides as attrs: an HPO frequency class (HP:0040281 very frequent 80-99% ...) or a count (1/2) or a percentage -- the nearest thing to P(sign | disease), i.e. sensitivity. No specificity. HPO describes itself as 'annotations for rare diseases'",
+      "primekg_relation": "disease_phenotype_positive"
+    },
+    {
+      "id": "hpo:lacks_phenotype",
+      "label": "disease is annotated as NOT presenting with phenotype",
+      "subject": [
+        "OMIM",
+        "ORPHA",
+        "DECIPHER"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "ordinal",
+      "source": "phenotype.hpoa (qualifier NOT)",
+      "status": "built",
+      "primekg_relation": "disease_phenotype_negative"
+    },
+    {
+      "id": "hp:maps_to_snomed",
+      "label": "HPO phenotype denotes SNOMED finding",
+      "subject": [
+        "HP"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "gap",
+      "strength_kind": "belief_interval",
+      "source": null,
+      "status": "needs_source",
+      "note": "hp.obo 2026-09-02 carries NO SNOMEDCT or UMLS xrefs (top xrefs: Fyler, NCIT, MedDRA 92). There is no lookup path from HPO phenotypes to SNOMED findings; name matching would be a gap route, and the substance-level name route scored inadmissible"
+    },
+    {
+      "id": "drugcentral:rxnorm",
+      "label": "DrugCentral drug is RxNorm ingredient",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral dump 2023-11-01, identifier (id_type RXNORM)",
+      "status": "built",
+      "note": "DrugCentral's RXNORM ids are lifted to the standard RxNorm ingredient before loading: 815 are precise ingredients (salts) and 368 brand names, lifted via 'Form of' / 'Brand name of'. Scored against DrugCentral -> SNOMEDCT_US -> OMOP 'Maps to' -> RxNorm: 98.4% (2,899 / 2,946), Wilson lower bound 0.979, Tier 2. Of the 47 disagreements most are one substance with two RxNorm concepts; a systematic exception is that DrugCentral records several PRODRUGS as their active metabolite (ramipril -> ramiprilat, and perindopril, quinapril, trandolapril, fosinopril, moexipril, oseltamivir, hetacillin -> ampicillin, fosfestrol -> diethylstilbestrol), and loteprednol etabonate -> digoxin is plainly wrong. Measured 23 Sep 2026."
+    },
+    {
+      "id": "drugcentral:snomed",
+      "label": "DrugCentral drug is SNOMED substance",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral identifier (id_type SNOMEDCT_US)",
+      "status": "built"
+    },
+    {
+      "id": "drugcentral:in_atc_class",
+      "label": "DrugCentral drug is in ATC class",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "ATC"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral struct2atc",
+      "status": "built"
+    },
+    {
+      "id": "drugcentral:indication",
+      "label": "drug is indicated for condition (label-derived)",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral omop_relationship",
+      "status": "built",
+      "note": "US/EU label-derived; a PARALLEL source to pbs:restricted_to, never merged with it",
+      "primekg_relation": "indication"
+    },
+    {
+      "id": "drugcentral:contraindication",
+      "label": "drug is contraindicated in condition",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral omop_relationship",
+      "status": "built",
+      "primekg_relation": "contraindication"
+    },
+    {
+      "id": "drugcentral:off_label_use",
+      "label": "drug is used off-label for condition",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral omop_relationship",
+      "status": "built",
+      "primekg_relation": "off-label use"
+    },
+    {
+      "id": "sign_suggests",
+      "label": "sign or symptom raises the odds of diagnosis (LR+)",
+      "subject": [
+        "SCT",
+        "HP"
+      ],
+      "object": [
+        "SCT",
+        "MONDO"
+      ],
+      "category": "evidence",
+      "derivation": "gap",
+      "strength_kind": "likelihood_ratio",
+      "source": null,
+      "status": "needs_source",
+      "note": "Tier 1 needs published sensitivity/specificity (JAMA Rational Clinical Examination, Cochrane DTA). Tier 3 recall is ordinal-only and lives in edge_authored as a look-up queue, never here"
+    },
+    {
+      "id": "sign_argues_against",
+      "label": "absence of sign lowers the odds of diagnosis (LR-)",
+      "subject": [
+        "SCT",
+        "HP"
+      ],
+      "object": [
+        "SCT",
+        "MONDO"
+      ],
+      "category": "evidence",
+      "derivation": "gap",
+      "strength_kind": "likelihood_ratio",
+      "source": null,
+      "status": "needs_source",
+      "note": "A separate edge: LR- is not 1/LR+"
+    },
+    {
+      "id": "prevalence_in",
+      "label": "condition's prior in a population",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "CORPUS"
+      ],
+      "category": "evidence",
+      "derivation": "gap",
+      "strength_kind": "belief_interval",
+      "source": null,
+      "status": "needs_source",
+      "note": "Priors are keyed by population and never pooled; LRs may pool across Western primary care"
+    },
+    {
+      "id": "same_substance_as_analyte",
+      "label": "drug substance is also a LOINC measured component",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "identity",
+      "derivation": "gap",
+      "strength_kind": "belief_interval",
+      "source": "name join (985 substances)",
+      "status": "needs_scoring",
+      "note": "The name route class scored inadmissible for substances; score before admitting"
+    },
+    {
+      "id": "therapeutic_drug_monitoring",
+      "label": "drug is monitored by measuring analyte",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "evidence",
+      "derivation": "gap",
+      "strength_kind": "exact",
+      "source": null,
+      "status": "needs_source",
+      "note": "A clinical claim, distinct from same_substance_as_analyte: ibuprofen is measurable, not routinely monitored"
+    }
+  ],
+  "not_imported": {
+    "drug_drug (DrugBank)": "PrimeKG's drug-drug layer is from DrugBank, whose open data is non-commercial. Not imported.",
+    "drug_effect (SIDER)": "PrimeKG's side-effect layer is from SIDER, non-commercial. Not imported.",
+    "omics layers": "protein, gene, pathway, GO and anatomy-expression layers are outside the compendium's scope.",
+    "PrimeKG's grouped diseases": "PrimeKG collapsed 22,205 MONDO concepts into 17,080 by embedding similarity -- a union of concepts, the upper approximation that scored worst in the pregnancy work. MONDO is used at its own granularity instead."
+  },
+  "snomed_attributes": [
+    {
+      "id": "sct:116680003",
+      "type_id": "116680003",
+      "label": "Is a",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 819451,
+      "object_tag": "disorder",
+      "object_tag_share": 0.251
+    },
+    {
+      "id": "sct:774163005",
+      "type_id": "774163005",
+      "label": "Has pack size unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 129270,
+      "object_tag": "unit of presentation",
+      "object_tag_share": 0.847
+    },
+    {
+      "id": "sct:774158006",
+      "type_id": "774158006",
+      "label": "Has product name",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 125901,
+      "object_tag": "product name",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:774160008",
+      "type_id": "774160008",
+      "label": "Contains clinical drug",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 117986,
+      "object_tag": "branded clinical drug",
+      "object_tag_share": 0.842
+    },
+    {
+      "id": "sct:363698007",
+      "type_id": "363698007",
+      "label": "Finding site",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 109878,
+      "object_tag": "body structure",
+      "object_tag_share": 0.981
+    },
+    {
+      "id": "sct:116676008",
+      "type_id": "116676008",
+      "label": "Associated morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 82154,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 0.999
+    },
+    {
+      "id": "sct:260686004",
+      "type_id": "260686004",
+      "label": "Method",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "action",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 74459,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:127489000",
+      "type_id": "127489000",
+      "label": "Has active ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 63413,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:30465011000036106",
+      "type_id": "30465011000036106",
+      "label": "Has container type",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 61841,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:732943007",
+      "type_id": "732943007",
+      "label": "Has BoSS",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 55605,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:411116001",
+      "type_id": "411116001",
+      "label": "Has manufactured dose form",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 48326,
+      "object_tag": "dose form",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:405813007",
+      "type_id": "405813007",
+      "label": "Procedure site - Direct",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 43328,
+      "object_tag": "body structure",
+      "object_tag_share": 0.999
+    },
+    {
+      "id": "sct:363714003",
+      "type_id": "363714003",
+      "label": "Interprets",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 42105,
+      "object_tag": "observable entity",
+      "object_tag_share": 0.801
+    },
+    {
+      "id": "sct:999000051000168108",
+      "type_id": "999000051000168108",
+      "label": "Has total quantity unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 38594,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:370135005",
+      "type_id": "370135005",
+      "label": "Pathological process",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 29328,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:272741003",
+      "type_id": "272741003",
+      "label": "Laterality",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 25985,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:246454002",
+      "type_id": "246454002",
+      "label": "Occurrence",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 23494,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363713009",
+      "type_id": "363713009",
+      "label": "Has interpretation",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 20823,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:42752001",
+      "type_id": "42752001",
+      "label": "Due to",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 20148,
+      "object_tag": "event",
+      "object_tag_share": 0.638
+    },
+    {
+      "id": "sct:762949000",
+      "type_id": "762949000",
+      "label": "Has precise active ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 19407,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:999000031000168102",
+      "type_id": "999000031000168102",
+      "label": "Has concentration strength unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 18925,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:246075003",
+      "type_id": "246075003",
+      "label": "Causative agent",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 18850,
+      "object_tag": "substance",
+      "object_tag_share": 0.516
+    },
+    {
+      "id": "sct:363700003",
+      "type_id": "363700003",
+      "label": "Direct morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 10533,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:726542003",
+      "type_id": "726542003",
+      "label": "Has disposition",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 9929,
+      "object_tag": "disposition",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:246093002",
+      "type_id": "246093002",
+      "label": "Component",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 9243,
+      "object_tag": "substance",
+      "object_tag_share": 0.918
+    },
+    {
+      "id": "sct:405814001",
+      "type_id": "405814001",
+      "label": "Procedure site - Indirect",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 9168,
+      "object_tag": "body structure",
+      "object_tag_share": 0.998
+    },
+    {
+      "id": "sct:424226004",
+      "type_id": "424226004",
+      "label": "Using device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 8588,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:732947008",
+      "type_id": "732947008",
+      "label": "Has presentation strength denominator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 6724,
+      "object_tag": "unit of presentation",
+      "object_tag_share": 0.991
+    },
+    {
+      "id": "sct:732945000",
+      "type_id": "732945000",
+      "label": "Has presentation strength numerator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 6724,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:263502005",
+      "type_id": "263502005",
+      "label": "Clinical course",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 6426,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363699004",
+      "type_id": "363699004",
+      "label": "Direct device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 5993,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:763032000",
+      "type_id": "763032000",
+      "label": "Has unit of presentation",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 5615,
+      "object_tag": "unit of presentation",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363702006",
+      "type_id": "363702006",
+      "label": "Has focus",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 5586,
+      "object_tag": "disorder",
+      "object_tag_share": 0.417
+    },
+    {
+      "id": "sct:408732007",
+      "type_id": "408732007",
+      "label": "Subject relationship context",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 5173,
+      "object_tag": "person",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:408731000",
+      "type_id": "408731000",
+      "label": "Temporal context",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 5158,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363701004",
+      "type_id": "363701004",
+      "label": "Direct substance",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 4739,
+      "object_tag": "substance",
+      "object_tag_share": 0.938
+    },
+    {
+      "id": "sct:424361007",
+      "type_id": "424361007",
+      "label": "Using substance",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 4449,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363703001",
+      "type_id": "363703001",
+      "label": "Has intent",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 4247,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:255234002",
+      "type_id": "255234002",
+      "label": "Following",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 3718,
+      "object_tag": "procedure",
+      "object_tag_share": 0.609
+    },
+    {
+      "id": "sct:116686009",
+      "type_id": "116686009",
+      "label": "Has specimen",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 3586,
+      "object_tag": "specimen",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363704007",
+      "type_id": "363704007",
+      "label": "Procedure site",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 3186,
+      "object_tag": "body structure",
+      "object_tag_share": 0.999
+    },
+    {
+      "id": "sct:733722007",
+      "type_id": "733722007",
+      "label": "Has concentration strength denominator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 3180,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:733725009",
+      "type_id": "733725009",
+      "label": "Has concentration strength numerator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 3180,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:738774007",
+      "type_id": "738774007",
+      "label": "Is modification of",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2737,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:408729009",
+      "type_id": "408729009",
+      "label": "Finding context",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2651,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:246090004",
+      "type_id": "246090004",
+      "label": "Associated finding",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2642,
+      "object_tag": "disorder",
+      "object_tag_share": 0.662
+    },
+    {
+      "id": "sct:260507000",
+      "type_id": "260507000",
+      "label": "Access",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2595,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:363589002",
+      "type_id": "363589002",
+      "label": "Associated procedure",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2581,
+      "object_tag": "procedure",
+      "object_tag_share": 0.968
+    },
+    {
+      "id": "sct:408730004",
+      "type_id": "408730004",
+      "label": "Procedure context",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2482,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:418775008",
+      "type_id": "418775008",
+      "label": "Finding method",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2465,
+      "object_tag": "procedure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:116688005",
+      "type_id": "116688005",
+      "label": "Procedure approach",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2457,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:999000011000168107",
+      "type_id": "999000011000168107",
+      "label": "Contains packaged clinical drug",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2179,
+      "object_tag": "containerized branded clinical drug package",
+      "object_tag_share": 0.375
+    },
+    {
+      "id": "sct:370130000",
+      "type_id": "370130000",
+      "label": "Property",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2178,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:47429007",
+      "type_id": "47429007",
+      "label": "Associated with",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1713,
+      "object_tag": "physical object",
+      "object_tag_share": 0.612
+    },
+    {
+      "id": "sct:719722006",
+      "type_id": "719722006",
+      "label": "Has realisation",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1697,
+      "object_tag": "qualifier value",
+      "object_tag_share": 0.816
+    },
+    {
+      "id": "sct:704319004",
+      "type_id": "704319004",
+      "label": "Inheres in",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1618,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 0.603
+    },
+    {
+      "id": "sct:704321009",
+      "type_id": "704321009",
+      "label": "Characterizes",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1600,
+      "object_tag": "qualifier value",
+      "object_tag_share": 0.693
+    },
+    {
+      "id": "sct:425391005",
+      "type_id": "425391005",
+      "label": "Using access device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1600,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:370132008",
+      "type_id": "370132008",
+      "label": "Scale type",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1485,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:118169006",
+      "type_id": "118169006",
+      "label": "Specimen source topography",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1458,
+      "object_tag": "body structure",
+      "object_tag_share": 0.985
+    },
+    {
+      "id": "sct:246513007",
+      "type_id": "246513007",
+      "label": "Revision status",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1261,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:370134009",
+      "type_id": "370134009",
+      "label": "Time aspect",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1148,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:999000081000168101",
+      "type_id": "999000081000168101",
+      "label": "Contains device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1115,
+      "object_tag": "branded physical object",
+      "object_tag_share": 0.746
+    },
+    {
+      "id": "sct:370133003",
+      "type_id": "370133003",
+      "label": "Specimen substance",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1075,
+      "object_tag": "substance",
+      "object_tag_share": 0.902
+    },
+    {
+      "id": "sct:118171006",
+      "type_id": "118171006",
+      "label": "Specimen procedure",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1034,
+      "object_tag": "procedure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:424244007",
+      "type_id": "424244007",
+      "label": "Using energy",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1014,
+      "object_tag": "physical force",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:836358009",
+      "type_id": "836358009",
+      "label": "Has device intended site",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 925,
+      "object_tag": "body structure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:718497002",
+      "type_id": "718497002",
+      "label": "Inherent location",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 822,
+      "object_tag": "body structure",
+      "object_tag_share": 0.993
+    },
+    {
+      "id": "sct:246501002",
+      "type_id": "246501002",
+      "label": "Technique",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 675,
+      "object_tag": "qualifier value",
+      "object_tag_share": 0.876
+    },
+    {
+      "id": "sct:363709002",
+      "type_id": "363709002",
+      "label": "Indirect morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 670,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704327008",
+      "type_id": "704327008",
+      "label": "Direct site",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 624,
+      "object_tag": "specimen",
+      "object_tag_share": 0.941
+    },
+    {
+      "id": "sct:736474004",
+      "type_id": "736474004",
+      "label": "Has dose form intended site",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 492,
+      "object_tag": "intended site",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1003735000",
+      "type_id": "1003735000",
+      "label": "Process acts on",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 485,
+      "object_tag": "substance",
+      "object_tag_share": 0.998
+    },
+    {
+      "id": "sct:736475003",
+      "type_id": "736475003",
+      "label": "Has dose form release characteristic",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 428,
+      "object_tag": "release characteristic",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:371881003",
+      "type_id": "371881003",
+      "label": "During",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 420,
+      "object_tag": "procedure",
+      "object_tag_share": 0.955
+    },
+    {
+      "id": "sct:736472000",
+      "type_id": "736472000",
+      "label": "Has dose form administration method",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 419,
+      "object_tag": "administration method",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:736476002",
+      "type_id": "736476002",
+      "label": "Has basic dose form",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 411,
+      "object_tag": "basic dose form",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:736473005",
+      "type_id": "736473005",
+      "label": "Has dose form transformation",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 407,
+      "object_tag": "transformation",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:840560000",
+      "type_id": "840560000",
+      "label": "Has compositional material",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 373,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:999000061000168105",
+      "type_id": "999000061000168105",
+      "label": "Has device type",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 358,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704323007",
+      "type_id": "704323007",
+      "label": "Process duration",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 345,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:410675002",
+      "type_id": "410675002",
+      "label": "has Route of administration",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 308,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:260870009",
+      "type_id": "260870009",
+      "label": "Priority",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 269,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1148965004",
+      "type_id": "1148965004",
+      "label": "Is sterile",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 254,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:405815000",
+      "type_id": "405815000",
+      "label": "Procedure device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 244,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:766939001",
+      "type_id": "766939001",
+      "label": "Plays role",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 238,
+      "object_tag": "role",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:405816004",
+      "type_id": "405816004",
+      "label": "Procedure morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 189,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704325000",
+      "type_id": "704325000",
+      "label": "Relative to",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 185,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 0.876
+    },
+    {
+      "id": "sct:118168003",
+      "type_id": "118168003",
+      "label": "Specimen source morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 176,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1148969005",
+      "type_id": "1148969005",
+      "label": "Has absorbability",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 175,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1445121000168107",
+      "type_id": "1445121000168107",
+      "label": "Developed by",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 137,
+      "object_tag": "foundation metadata concept",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1003703000",
+      "type_id": "1003703000",
+      "label": "Process extends to",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 135,
+      "object_tag": "body structure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:419066007",
+      "type_id": "419066007",
+      "label": "Finding informer",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 134,
+      "object_tag": "person",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:370131001",
+      "type_id": "370131001",
+      "label": "Recipient category",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 122,
+      "object_tag": "social concept",
+      "object_tag_share": 0.615
+    },
+    {
+      "id": "sct:363710007",
+      "type_id": "363710007",
+      "label": "Indirect device",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 119,
+      "object_tag": "physical object",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1445111000168100",
+      "type_id": "1445111000168100",
+      "label": "Has licence",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 116,
+      "object_tag": "foundation metadata concept",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:726633004",
+      "type_id": "726633004",
+      "label": "Temporally related to",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 83,
+      "object_tag": "procedure",
+      "object_tag_share": 0.518
+    },
+    {
+      "id": "sct:700000071000036103",
+      "type_id": "700000071000036103",
+      "label": "Has denominator units",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 71,
+      "object_tag": "qualifier value",
+      "object_tag_share": 0.549
+    },
+    {
+      "id": "sct:700000091000036104",
+      "type_id": "700000091000036104",
+      "label": "Has numerator units",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 71,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:736518005",
+      "type_id": "736518005",
+      "label": "Has state of matter",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 70,
+      "object_tag": "state of matter",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704326004",
+      "type_id": "704326004",
+      "label": "Precondition",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 60,
+      "object_tag": "procedure",
+      "object_tag_share": 0.467
+    },
+    {
+      "id": "sct:733930001",
+      "type_id": "733930001",
+      "label": "Regional part of",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 53,
+      "object_tag": "cell structure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:118170007",
+      "type_id": "118170007",
+      "label": "Specimen source identity",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 52,
+      "object_tag": "physical object",
+      "object_tag_share": 0.692
+    },
+    {
+      "id": "sct:246514001",
+      "type_id": "246514001",
+      "label": "Units",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 51,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1148967007",
+      "type_id": "1148967007",
+      "label": "Has coating material",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 35,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704324001",
+      "type_id": "704324001",
+      "label": "Process output",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 21,
+      "object_tag": "qualifier value",
+      "object_tag_share": 0.667
+    },
+    {
+      "id": "sct:1149367008",
+      "type_id": "1149367008",
+      "label": "Has target population",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 19,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:246112005",
+      "type_id": "246112005",
+      "label": "Severity",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 18,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:370129005",
+      "type_id": "370129005",
+      "label": "Measurement method",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 17,
+      "object_tag": "procedure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:827081001",
+      "type_id": "827081001",
+      "label": "Has filling",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 7,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1149366004",
+      "type_id": "1149366004",
+      "label": "Has ingredient qualitative strength",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 7,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:1148968002",
+      "type_id": "1148968002",
+      "label": "Has surface texture",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 4,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:704320005",
+      "type_id": "704320005",
+      "label": "Towards",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2,
+      "object_tag": "substance",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:719715003",
+      "type_id": "719715003",
+      "label": "Relative to part of",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 2,
+      "object_tag": "body structure",
+      "object_tag_share": 1.0
+    },
+    {
+      "id": "sct:288556008",
+      "type_id": "288556008",
+      "label": "Before",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "temporality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+      "status": "built",
+      "count": 1,
+      "object_tag": "procedure",
+      "object_tag_share": 1.0
+    }
+  ]
+}
