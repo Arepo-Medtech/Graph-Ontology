@@ -1,0 +1,89 @@
+{
+ "guideline": "guidelines/human-papillomavirus-vaccination.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Human papillomavirus (HPV)' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 9,
+  "pass": 9,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Adolescents and young adults are recommended HPV vaccine from 9 years of age.** ⚠️ **The optimal age is around 12–13, before exposure.** Anyone not vaccinated by 14 **can still receive it up to 25**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adolescents and young adults are recommended to receive HPV vaccine from 9 years of age and onwards. The optimal age for HPV vaccination is around 12-13 years prior to exposure to HPV. People who have not received HPV vaccine by 14 years of age can still receive the vaccine up to 25 years of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Funded through the NIP from 12 to 25**, usually given in **School Year 7** (about 12–13).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HPV vaccine is funded through the NIP for adolescents and young adults from 12 to 25 years of age. It is usually given to adolescents in School Year 7 (approximately 12-13 years).",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **It may be considered under 9 in children at risk of exposure** — for example **a history of sexual abuse** or a diagnosed STI.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HPV vaccine may be considered in children aged <9 years who are at risk of exposure to HPV (for example, have a history of sexual abuse or have been diagnosed with a sexually transmitted infection).",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "✅ **ONE DOSE for immunocompetent people who start at 9–25** — that is, before their 26th birthday.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A single dose is recommended for immunocompetent people who start the HPV vaccination course at 9-25 years of age (that is, before their 26th birthday).",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Starting at 26 or older: 3 doses — 8 weeks between doses 1 and 2, 16 weeks between doses 2 and 3.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People who receive their 1st HPV vaccine dose at ≥26 years of age (that is, on or after their 26th birthday) are recommended to receive 3 doses, with an interval of 8 weeks between dose 1 and dose 2, and 16 weeks between dose 2 and dose 3.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Immunocompromising conditions: 9vHPV, regardless of starting age** — a lower immune response and a higher risk of persistent infection and HPV-related disease. Includes **inborn errors of immunity, HIV, malignancy, haematopoietic stem cell or solid organ transplant, and immunosuppressive therapy**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "9vHPV vaccine is recommended for people with immunocompromising conditions, regardless of their age when they started vaccination. This is because their immune response is likely to be lower than for immunocompetent people. They are also more likely to develop a persistent HPV infection and HPV-related disease. … Inborn errors of immunity, including primary immunodeficiency disorders HIV infection malignancy haematopoietic stem cell transplant solid organ transplant immunosuppressive therapy",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Asplenia does NOT raise the risk** — people without a spleen get the **1-dose schedule** at 9–25.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People without a spleen are not considered at higher risk of persistent HPV infection and disease and are recommended to receive a 1-dose schedule if they are aged 9-25 years.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **HPV types not in the vaccines can also cause cervical cancer — so both cervical screening AND vaccination are recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HPV types other than those included in the HPV vaccines can cause cervical cancer. Therefore, both cervical screening and HPV vaccination are recommended.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Low-risk types 6, 11, 40, 42, 43, 44, 54, 61, 70, 72, 81 and 89** are mostly associated with **non-malignant lesions such as genital warts**. **Anogenital HPV is mainly transmitted through sex.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HPV types 6, 11, 40, 42, 43, 44, 54, 61, 70, 72, 81 and 89 are low risk. These are mostly associated with non-malignant lesions such as genital warts. … Anogenital HPV is mainly transmitted through sex.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Human papillomavirus (HPV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/human-papillomavirus-hpv, retrieved 2026-09-23"
+  }
+ ]
+}

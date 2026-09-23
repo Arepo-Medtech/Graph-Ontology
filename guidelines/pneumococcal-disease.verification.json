@@ -1,0 +1,118 @@
+{
+ "guideline": "guidelines/pneumococcal-disease.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Pneumococcal disease' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 13,
+  "pass": 13,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**20vPCV for children (under 18); 21vPCV for adults.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "20vPCV for children (i.e. aged <18 years) and 21vPCV for adults.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Non-Indigenous children without a risk condition: 20vPCV at 2, 4 and 12 months** — 3 doses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommended schedule for non-Indigenous children without a risk condition is a dose of 20-valent pneumococcal conjugate vaccine ( 20vPCV ) at 2, 4 and 12 months of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Aboriginal and Torres Strait Islander children, and all children under 12 months with a risk condition: 20vPCV at 2, 4, 6 AND 12 months** — **4 doses, one more than the standard schedule.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aboriginal and Torres Strait Islander children and all children aged <12 months with a risk condition is a dose of 20vPCV at 2, 4, 6 and 12 months of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**From 12 months to under 18 with a risk condition: a dose of 20vPCV at diagnosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommended schedule for people aged ≥12months to <18 years with a risk condition is a dose of 20vPCV at diagnosis.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "The **first dose can be given as early as 6 weeks**; if so, the next dose stays **at 4 months**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Infants can receive their 1st dose of pneumococcal vaccine as early as 6 weeks of age. If the 1st dose is given at the age of 6 weeks, infants should still receive their next scheduled dose at 4 months of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Non-Indigenous adults without a risk condition: one dose of 21vPCV at 65 or older.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommended schedule for non-Indigenous adults without a risk condition is a dose of 21-valent pneumococcal conjugate vaccine (21vPCV) at age ≥65 years.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Aboriginal and Torres Strait Islander adults without a risk condition: one dose of 21vPCV at 25 or older — 40 years earlier than for non-Indigenous adults.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommended schedule for Aboriginal and Torres Strait Islander adults without a risk condition is a dose of 21vPCV at age ≥25 years.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Adults 18–64 who get 21vPCV for a risk condition do not need another dose at 65.** Anyone previously vaccinated with 23vPPV, 13vPCV, 15vPCV or 20vPCV gets **21vPCV at least 12 months after their last dose**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "recommended to receive the dose of 21vPCV at least 12 months after their last dose. … Adults aged 18-64 years who receive a dose of 21vPCV due to a risk condition do not need another dose at 65 years of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **In 2026, 21vPCV replaced 13vPCV as the funded and recommended vaccine** under the NIP for non-Indigenous adults 65 and over and Aboriginal and Torres Strait Islander adults 25 and over.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In 2026, 21vPCV replaced 13vPCV as the funded and recommended vaccine under the NIP for non-Indigenous adults ≥65 years and Aboriginal and Torres Strait Islander adults ≥25 years.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23"
+  },
+  {
+   "claim": "*Streptococcus pneumoniae* causes **invasive disease — meningitis, pneumonia, bacteraemia —** and non-invasive disease including **otitis media**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pneumococcal disease is caused by the bacterium Streptococcus pneumoniae . It can cause severe invasive disease , including meningitis, pneumonia and bacteraemia, and non- invasive disease , including otitis media.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In children the commonest form is bacteraemia without a focus — about 70% of invasive disease.** **Meningitis is the least common but most severe.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children, the most common manifestation is bacteraemia without focus. This accounts for approximately 70% of IPD , followed by pneumonia with bacteraemia. Meningitis is the least common but most severe category of IPD .",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23"
+  },
+  {
+   "claim": "Higher risk or severity with **household crowding, cigarette smoke, childcare attendance, excess alcohol** and some chronic conditions. ⚠️ **Aboriginal and Torres Strait Islander people carry a disproportionately high burden.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "household crowding exposure to cigarette smoke childcare attendance excessive alcohol consumption … Indigenous populations in high-incomes countries, including Aboriginal and Torres Strait Islander people in Australia, have a disproportionately high burden of IPD .",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Invasive pneumococcal disease is notifiable in every state and territory.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Invasive pneumococcal disease is a notifiable disease in all states and territories in Australia.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Pneumococcal disease', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/pneumococcal-disease, retrieved 2026-09-23"
+  }
+ ]
+}

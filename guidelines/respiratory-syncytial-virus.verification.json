@@ -1,0 +1,65 @@
+{
+ "guideline": "guidelines/respiratory-syncytial-virus.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Respiratory syncytial virus (RSV)' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 6,
+  "pass": 6,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **A single dose of Abrysvo in each pregnancy from 28 weeks gestation** — the first opportunity to protect the infant. **Funded under the NIP for pregnant women.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A single dose of the RSV vaccine Abrysvo is recommended for all women in each pregnancy from 28 weeks gestation, as the first opportunity to protect their infant. … Abrysvo is funded under the National Immunisation Program (NIP) for pregnant women.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Infants under 8 months whose mothers were NOT vaccinated at least 2 weeks before birth, or who are at increased risk of severe disease, are recommended a long-acting RSV monoclonal antibody.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Neonates and infants aged <8 months whose mothers were not vaccinated at least 2 weeks before giving birth, or who are at increased risk of severe disease, are recommended to receive passive immunisation with a long-acting RSV-specific monoclonal antibody",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Nirsevimab before the first RSV season** for infants whose mothers weren't vaccinated ≥2 weeks before birth, where maternal protection may be reduced, with medical risk factors, or who need extra protection. It **can be given year-round** — timing at birth versus pre-season is **weighed on individual risk and local seasonality**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "nirsevimab - a long-acting RSV-specific monoclonal antibody - is recommended before their 1st RSV season in certain young infants: whose mothers who were not vaccinated at least 2 weeks before giving birth where protection from maternal vaccination may be reduced because of maternal or infant conditions who have medical risk factors for severe RSV who may need additional protection Whilst nirsevimab can be given year-round, the benefits of administration immediately after birth versus just prior to the first RSV season should be considered based on individual risk and jurisdictional RSV seasonality.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Monoclonal antibodies are funded by states and territories** for certain infants and young children.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "States and territories have funding for RSV specific monoclonal antibodies for certain groups of infants and young children.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Arexvy is NIP-funded for all adults 75 and over, and Aboriginal and Torres Strait Islander adults 60 and over.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Arexvy is funded under the National Immunisation Program for all adults aged ≥75 years and Aboriginal and Torres Strait Islander adults aged ≥60 years.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Primary infection, often at 0–2 years, is generally more severe than later infections.** It starts as an upper respiratory infection — **congestion, cough, sore throat, fever, otitis media** — and may progress to lower respiratory tract infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary infection with RSV, often seen in infants and young children aged 0-2 years, is generally more severe than subsequent infections at older ages. … nasal congestion and discharge cough scratchy or sore throat fever otitis media It may then progress to lower respiratory tract infection , which can present differently depending on age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Respiratory syncytial virus (RSV)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/respiratory-syncytial-virus-rsv, retrieved 2026-09-23"
+  }
+ ]
+}

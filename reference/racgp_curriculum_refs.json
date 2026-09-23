@@ -1,0 +1,2581 @@
+{
+ "_note": "External references harvested from the 41 RACGP curriculum unit pages. A domain appearing on every unit is site chrome and is excluded.",
+ "harvested_utc": "2026-09-23",
+ "units": 41,
+ "domains": 252,
+ "references": {
+  "aihw.gov.au": {
+   "units": [
+    "addiction-medicine",
+    "child-and-youth-health",
+    "disability-care",
+    "doctors-health",
+    "ear-nose-throat-and-oral-health",
+    "eye-presentations",
+    "gastrointestinal-health",
+    "haematological-presentations",
+    "infectious-diseases",
+    "justice-system-health",
+    "kidney-and-urinary-health",
+    "mens-health",
+    "mental-health",
+    "metabolic-and-endocrine-health",
+    "military-and-veteran-health",
+    "musculoskeletal-presentations",
+    "neurological-presentations",
+    "older-person-s-health",
+    "pain-management",
+    "palliative-care",
+    "pregnancy-and-reproductive-health",
+    "respiratory-health",
+    "rural-health",
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.aihw.gov.au",
+    "http://www.aihw.gov.au/getmedia/48ee92a8-d373-4354-8df2-d664a974034f/ah16-3-15-vision-hearing-disorders.pdf.aspx",
+    "http://www.aihw.gov.au/getmedia/61521da0-9892-44a5-85af-857b3eef25c1/aihw-aus-221-chapter-5-5.pdf.aspx"
+   ]
+  },
+  "health.gov.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health",
+    "addiction-medicine",
+    "disability-care",
+    "domain-3",
+    "domain-5",
+    "ear-nose-throat-and-oral-health",
+    "education-in-general-practice",
+    "infectious-diseases",
+    "mental-health",
+    "older-person-s-health",
+    "pain-management",
+    "palliative-care",
+    "pregnancy-and-reproductive-health",
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.health.gov.au/health-topics/aged-care/about-aged-care/what-is-aged-care",
+    "http://www.health.gov.au/health-topics/cancer/cancer-screening",
+    "http://www.health.gov.au/health-topics/ear-health"
+   ]
+  },
+  "tg.org.au": {
+   "units": [
+    "cardiovascular-health",
+    "child-and-youth-health",
+    "disability-care",
+    "ear-nose-throat-and-oral-health",
+    "haematological-presentations",
+    "infectious-diseases",
+    "mental-health",
+    "metabolic-and-endocrine-health",
+    "neurological-presentations",
+    "older-person-s-health",
+    "palliative-care",
+    "pregnancy-and-reproductive-health",
+    "respiratory-health",
+    "travel-medicine"
+   ],
+   "licensed": true,
+   "sample_urls": [
+    "http://www.tg.org.au",
+    "http://www.tg.org.au/",
+    "https://www.tg.org.au"
+   ]
+  },
+  "rch.org.au": {
+   "units": [
+    "child-and-youth-health",
+    "dermatological-presentations",
+    "domain-2",
+    "ear-nose-throat-and-oral-health",
+    "emergency-medicine",
+    "eye-presentations",
+    "gastrointestinal-health",
+    "haematological-presentations",
+    "kidney-and-urinary-health",
+    "metabolic-and-endocrine-health",
+    "migrant-refugee-and-asylum-seeker-health",
+    "musculoskeletal-presentations",
+    "neurological-presentations",
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.rch.org.au",
+    "http://www.rch.org.au/clinicalguide",
+    "http://www.rch.org.au/clinicalguide/guideline_index/Acute_otitis_media"
+   ]
+  },
+  "doi.org": {
+   "units": [
+    "gastrointestinal-health",
+    "haematological-presentations",
+    "infectious-diseases",
+    "integrative-medicine",
+    "justice-system-health",
+    "mens-health",
+    "metabolic-and-endocrine-health",
+    "musculoskeletal-presentations",
+    "occupational-and-environmental-medicine",
+    "pain-management",
+    "palliative-care",
+    "pregnancy-and-reproductive-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://doi.org/10.1002/art.39113",
+    "https://doi.org/10.1016/S2214-109X(19)30172-X",
+    "https://doi.org/10.1016/j.diabres.2020.108524"
+   ]
+  },
+  "nps.org.au": {
+   "units": [
+    "cardiovascular-health",
+    "domain-5",
+    "ear-nose-throat-and-oral-health",
+    "infectious-diseases",
+    "justice-system-health",
+    "kidney-and-urinary-health",
+    "metabolic-and-endocrine-health",
+    "neurological-presentations",
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nps.org.au",
+    "http://www.nps.org.au/assets/Report-2018-19-GPIR.pdf",
+    "http://www.nps.org.au/australian-prescriber/articles/how-to-adjust-drug-doses-in-chronic-kidney-disease"
+   ]
+  },
+  "abs.gov.au": {
+   "units": [
+    "dermatological-presentations",
+    "justice-system-health",
+    "mental-health",
+    "migrant-refugee-and-asylum-seeker-health",
+    "occupational-and-environmental-medicine",
+    "pain-management",
+    "respiratory-health",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.abs.gov.au/AUSSTATS/abs%40.nsf/Lookup/4102.0Main%2BFeatures30Mar%2B2011",
+    "http://www.abs.gov.au/articles/covid-19-mortality-0",
+    "http://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/4364.0.55.001~2014-15~Main%20Features~Psychological%20distress~16"
+   ]
+  },
+  "murtagh.mhmedical.com": {
+   "units": [
+    "cardiovascular-health",
+    "disaster-health",
+    "domain-1",
+    "metabolic-and-endocrine-health",
+    "musculoskeletal-presentations",
+    "neurological-presentations",
+    "respiratory-health"
+   ],
+   "licensed": true,
+   "sample_urls": [
+    "https://murtagh.mhmedical.com/book.aspx?bookid=2471",
+    "https://murtagh.mhmedical.com/content.aspx?bookid=2471&amp;sectionid=198745131",
+    "https://murtagh.mhmedical.com/content.aspx?bookid=2471&amp;sectionid=199051857"
+   ]
+  },
+  "who.int": {
+   "units": [
+    "domain-3",
+    "integrative-medicine",
+    "musculoskeletal-presentations",
+    "occupational-and-environmental-medicine",
+    "older-person-s-health",
+    "sexual-health-and-gender-diversity",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.who.int/health-topics/health-promotion",
+    "http://www.who.int/health-topics/sexual-health#tab=tab_1",
+    "http://www.who.int/health-topics/social-determinants-of-health#tab=tab_1"
+   ]
+  },
+  "medicalboard.gov.au": {
+   "units": [
+    "doctors-health",
+    "domain-1",
+    "domain-4",
+    "domain-5",
+    "education-in-general-practice",
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.medicalboard.gov.au/Codes-Guidelines-Policies/Code-of-conduct.aspx",
+    "http://www.medicalboard.gov.au/Codes-Guidelines-Policies/Guidelines-for-mandatory-notifications.aspx",
+    "http://www.medicalboard.gov.au/News/2016-11-10-media-statement.aspx"
+   ]
+  },
+  "ahpra.gov.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health",
+    "doctors-health",
+    "domain-4",
+    "domain-5",
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ahpra.gov.au",
+    "http://www.ahpra.gov.au/About-Ahpra/Aboriginal-and-Torres-Strait-Islander-Health-Strategy/health-and-cultural-safety-strategy.aspx",
+    "http://www.ahpra.gov.au/News/2020-07-02--Regulatory-guide.aspx"
+   ]
+  },
+  "healthinfonet.ecu.edu.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health",
+    "eye-presentations",
+    "justice-system-health",
+    "kidney-and-urinary-health",
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://healthinfonet.ecu.edu.au/",
+    "https://healthinfonet.ecu.edu.au/learn/determinants-of-health/community-capacity/justice",
+    "https://healthinfonet.ecu.edu.au/learn/health-topics/eye-health/"
+   ]
+  },
+  "ncbi.nlm.nih.gov": {
+   "units": [
+    "addiction-medicine",
+    "domain-4",
+    "haematological-presentations",
+    "musculoskeletal-presentations",
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ncbi.nlm.nih.gov/books/NBK424846",
+    "http://www.ncbi.nlm.nih.gov/books/NBK541050",
+    "http://www.ncbi.nlm.nih.gov/books/NBK559512/"
+   ]
+  },
+  "mja.com.au": {
+   "units": [
+    "disability-care",
+    "disaster-health",
+    "metabolic-and-endocrine-health",
+    "occupational-and-environmental-medicine",
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.mja.com.au/journal/2016/205/4/managing-thyroid-disease-general-practice",
+    "http://www.mja.com.au/journal/2021/215/9/2021-report-mja-lancet-countdown-health-and-climate-change-australia",
+    "http://www.mja.com.au/system/files/issues/210_07/mja250067.pdf"
+   ]
+  },
+  "healthdirect.gov.au": {
+   "units": [
+    "domain-3",
+    "eye-presentations",
+    "mens-health",
+    "metabolic-and-endocrine-health",
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.healthdirect.gov.au/blog/rural-men-face-greater-risk-of-health-problems-including-suicide",
+    "http://www.healthdirect.gov.au/metabolic-syndrome",
+    "http://www.healthdirect.gov.au/rural-and-remote-health"
+   ]
+  },
+  "immunisationhandbook.health.gov.au": {
+   "units": [
+    "child-and-youth-health",
+    "disability-care",
+    "infectious-diseases",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://immunisationhandbook.health.gov.au",
+    "https://immunisationhandbook.health.gov.au/"
+   ]
+  },
+  "onlinelibrary.wiley.com": {
+   "units": [
+    "dermatological-presentations",
+    "education-in-general-practice",
+    "infectious-diseases",
+    "rural-health"
+   ],
+   "licensed": true,
+   "sample_urls": [
+    "https://onlinelibrary.wiley.com/doi/10.1002/jmv.27163",
+    "https://onlinelibrary.wiley.com/doi/10.1111/ajd.13630",
+    "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119373780"
+   ]
+  },
+  "ama.com.au": {
+   "units": [
+    "domain-1",
+    "domain-4",
+    "infectious-diseases",
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ama.com.au/articles/10-minimum-standards-communication-between-health-services-and-general-practitioners-and",
+    "http://www.ama.com.au/articles/guide-social-media-and-medical-professionalism",
+    "http://www.ama.com.au/position-statement/blood-borne-viruses-bbvs-2017"
+   ]
+  },
+  "ruralhealth.org.au": {
+   "units": [
+    "domain-4",
+    "mental-health",
+    "rural-health",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://ruralhealth.org.au/sites/default/files/documents/nrha-policy-document/policy-development/nrha-medicines-discussion-paper-january-2014.pdf",
+    "http://www.ruralhealth.org.au/11nrhc/papers/11th%20NRHC%20Anderson_Rosemary_E6.pdf",
+    "http://www.ruralhealth.org.au/sites/default/files/publications/nrha-mental-health-factsheet-july2021.pdf"
+   ]
+  },
+  "tga.gov.au": {
+   "units": [
+    "integrative-medicine",
+    "pain-management",
+    "pregnancy-and-reproductive-health",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.tga.gov.au/australian-categorisation-system-prescribing-medicines-pregnancy",
+    "http://www.tga.gov.au/prescription-opioids-information-health-professionals",
+    "https://www.tga.gov.au/database-adverse-event-notifications-daen"
+   ]
+  },
+  "equityhealthj.biomedcentral.com": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health",
+    "justice-system-health",
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-017-0627-6",
+    "https://equityhealthj.biomedcentral.com/articles/10.1186/s12939-019-1082-3"
+   ]
+  },
+  "emergingminds.com.au": {
+   "units": [
+    "abuse-and-violence",
+    "disaster-health",
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://emergingminds.com.au/online-course/a-gp-framework-for-child-mental-health-assessment-5-12-years/",
+    "https://emergingminds.com.au/resources/a-general-practitioners-guide-to-common-reactions-to-trauma-and-loss-by-children-aged-0-5-years/",
+    "https://emergingminds.com.au/resources/a-general-practitioners-guide-to-common-reactions-to-trauma-and-loss-by-children-aged-6-8-years/"
+   ]
+  },
+  "adhdguideline.aadpa.com.au": {
+   "units": [
+    "child-and-youth-health",
+    "mental-health",
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://adhdguideline.aadpa.com.au/"
+   ]
+  },
+  "cancer.org.au": {
+   "units": [
+    "dermatological-presentations",
+    "mens-health",
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.cancer.org.au/cancer-information/causes-and-prevention/sun-safety/check-for-signs-of-skin-cancer",
+    "http://www.cancer.org.au/cancer-information/types-of-cancer/lung-cancer",
+    "http://www.cancer.org.au/health-professionals/optimal-cancer-care-pathways.html"
+   ]
+  },
+  "wiki.cancer.org.au": {
+   "units": [
+    "dermatological-presentations",
+    "gastrointestinal-health",
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://wiki.cancer.org.au/australia/Guidelines:Colorectal_cancer",
+    "https://wiki.cancer.org.au/australia/Guidelines:Keratinocyte_carcinoma#_ga=2.175940386.1884696168.1629983305-237136010.1629983305",
+    "https://wiki.cancer.org.au/australia/Guidelines:Melanoma"
+   ]
+  },
+  "safetyandquality.gov.au": {
+   "units": [
+    "domain-1",
+    "domain-2",
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.safetyandquality.gov.au/sites/default/files/migrated/Australian-Open-Disclosure-Framework-Feb-2014.pdf",
+    "http://www.safetyandquality.gov.au/sites/default/files/migrated/PCC_Paper_August.pdf",
+    "http://www.safetyandquality.gov.au/standards/nsqhs-standards/communicating-safety-standard"
+   ]
+  },
+  "www1.health.gov.au": {
+   "units": [
+    "domain-3",
+    "migrant-refugee-and-asylum-seeker-health",
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www1.health.gov.au/internet/main/publishing.nsf/Content/cdna-casedefinitions.htm",
+    "http://www1.health.gov.au/internet/main/publishing.nsf/Content/healthassessmentforadf",
+    "http://www1.health.gov.au/internet/main/publishing.nsf/Content/mbsprimarycare_mbsitem_refugees"
+   ]
+  },
+  "soniceducation.com.au": {
+   "units": [
+    "haematological-presentations",
+    "musculoskeletal-presentations",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.soniceducation.com.au/clinical-resources/sonic-edu",
+    "http://www.soniceducation.com.au/cpd-education/e-learning-workshops",
+    "https://www.soniceducation.com.au/clinical-resources/sonic-edu/"
+   ]
+  },
+  "nhmrc.gov.au": {
+   "units": [
+    "infectious-diseases",
+    "integrative-medicine",
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nhmrc.gov.au/about-us/publications/australian-guidelines-prevention-and-control-infection-healthcare-2019#block-views-block-file-attachments-content-block-1",
+    "http://www.nhmrc.gov.au/about-us/publications/talking-your-patients-about-complementary-medicine-resource-clinicians#block-views-block-file-attachments-content-block-1",
+    "http://www.nhmrc.gov.au/research-policy/ethics/national-statement-ethical-conduct-human-research"
+   ]
+  },
+  "austroads.com.au": {
+   "units": [
+    "metabolic-and-endocrine-health",
+    "occupational-and-environmental-medicine",
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.austroads.com.au/drivers-vehicles/assessing-fitness-to-drive",
+    "https://austroads.com.au/drivers-and-vehicles/assessing-fitness-to-drive",
+    "https://austroads.com.au/publications/assessing-fitness-to-drive/ap-g56"
+   ]
+  },
+  "publish.csiro.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health",
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.publish.csiro.au/py/py16051",
+    "https://www.publish.csiro.au/py/py17082"
+   ]
+  },
+  "safeworkaustralia.gov.au": {
+   "units": [
+    "abuse-and-violence",
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.safeworkaustralia.gov.au/resources-and-publications/corporate-publications/national-return-work-strategy-2020-2030",
+    "http://www.safeworkaustralia.gov.au/system/files/documents/1705/bullying-and-harassment-in-australian-workplaces-australian-workplace-barometer-results.pdf"
+   ]
+  },
+  "headspace.org.au": {
+   "units": [
+    "addiction-medicine",
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://headspace.org.au/health-professionals/gps-and-general-practice-at-headspace",
+    "https://headspace.org.au/health-professionals/information-and-guidelines/",
+    "https://headspace.org.au/professionals-and-educators/health-professionals/resources/alcohol-and-other-drugs/"
+   ]
+  },
+  "heartfoundation.org.au": {
+   "units": [
+    "cardiovascular-health",
+    "domain-3"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.heartfoundation.org.au",
+    "http://www.heartfoundation.org.au/activities-finding-or-opinion/key-stats-cardiovascular-disease",
+    "http://www.heartfoundation.org.au/conditions/fp-acs-guidelines"
+   ]
+  },
+  "litfl.com": {
+   "units": [
+    "cardiovascular-health",
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://litfl.com",
+    "https://litfl.com/foam-free-open-access-medical-education/"
+   ]
+  },
+  "aci.health.nsw.gov.au": {
+   "units": [
+    "disability-care",
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0013/155011/eye_manual.pdf",
+    "https://aci.health.nsw.gov.au/resources/intellectual-disability"
+   ]
+  },
+  "creativespirits.info": {
+   "units": [
+    "disability-care",
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.creativespirits.info/aboriginalculture/health/aboriginal-people-with-disability",
+    "http://www.creativespirits.info/aboriginalculture/health/hospitals-doctors-health-aboriginal-people"
+   ]
+  },
+  "wma.net": {
+   "units": [
+    "disaster-health",
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.wma.net/policies-post/wma-statement-on-medical-ethics-in-the-event-of-disasters",
+    "https://www.wma.net/policies-post/wma-declaration-of-geneva/"
+   ]
+  },
+  "insightplus.mja.com.au": {
+   "units": [
+    "disaster-health",
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://insightplus.mja.com.au/2019/45/sandpiper-australia-a-rallying-point-for-rural-trauma-care",
+    "https://insightplus.mja.com.au/2020/3/building-gp-capacity-in-times-of-disaster"
+   ]
+  },
+  "blackdoginstitute.org.au": {
+   "units": [
+    "doctors-health",
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.blackdoginstitute.org.au/education-services/health-professionals/psychological-toolkit/",
+    "http://www.blackdoginstitute.org.au/resources-support/digital-tools-apps/ibobbly",
+    "https://www.blackdoginstitute.org.au/the-essential-network"
+   ]
+  },
+  "gpmhsc.org.au": {
+   "units": [
+    "domain-1",
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gpmhsc.org.au/getattachment/f30b23b9-086b-4f48-a1cf-55721cd0cc3b/gpmhsc-suicide-prevention-and-first-aid-resource-for-gps.pdf",
+    "https://gpmhsc.org.au/guidelinessection/index/fd093e3b-ceff-4e0d-81c0-b04dfba936d1/suicide-prevention-and-first-aid"
+   ]
+  },
+  "rcpa.edu.au": {
+   "units": [
+    "domain-2",
+    "haematological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.rcpa.edu.au/Library/Publications/Common-Sense-Pathology",
+    "https://www.rcpa.edu.au/Manuals/RCPA-Manual/Clinical-Problems",
+    "https://www.rcpa.edu.au/getattachment/13421292-28ae-4a1d-bdb4-3c91c073d7f2/Making-Sense-of-Inflammatory-Markers.aspx"
+   ]
+  },
+  "beyondblue.org.au": {
+   "units": [
+    "domain-4",
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.beyondblue.org.au",
+    "http://www.beyondblue.org.au/who-does-it-affect/aboriginal-and-torres-strait-islander-people/risk-factors",
+    "https://www.beyondblue.org.au/about-us/our-work-in-improving-workplace-mental-health/health-services-program/national-mental-health-survey-of-doctors-and-medical-students"
+   ]
+  },
+  "pubmed.ncbi.nlm.nih.gov": {
+   "units": [
+    "domain-4",
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/18239754/",
+    "https://pubmed.ncbi.nlm.nih.gov/25477194/",
+    "https://pubmed.ncbi.nlm.nih.gov/28776473/"
+   ]
+  },
+  "dva.gov.au": {
+   "units": [
+    "domain-5",
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.dva.gov.au/civilian-life/support-ex-service-organisations-and-advocates",
+    "http://www.dva.gov.au/financial-support/income-support/eligibility-benefits-and-payments",
+    "http://www.dva.gov.au/providers/become-dva-health-care-provider"
+   ]
+  },
+  "sti.guidelines.org.au": {
+   "units": [
+    "infectious-diseases",
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://sti.guidelines.org.au/"
+   ]
+  },
+  "classic.austlii.edu.au": {
+   "units": [
+    "justice-system-health",
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://classic.austlii.edu.au/au/journals/CICrimJust/2016/23.html",
+    "http://classic.austlii.edu.au/au/journals/IntJlSSWC/2011/2.html"
+   ]
+  },
+  "canceraustralia.gov.au": {
+   "units": [
+    "mens-health",
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.canceraustralia.gov.au/cancer-types/prostate-cancer/statistics",
+    "https://www.canceraustralia.gov.au/ISLCreport"
+   ]
+  },
+  "monash.edu": {
+   "units": [
+    "metabolic-and-endocrine-health",
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.monash.edu/__data/assets/pdf_file/0004/1412644/PCOS_Evidence-Based-Guidelines_20181009.pdf",
+    "http://www.monash.edu/medicine/sphpm/general-practice/engagement/clinical-guidelines"
+   ]
+  },
+  "www2.deloitte.com": {
+   "units": [
+    "neurological-presentations",
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www2.deloitte.com/au/en/pages/economics/articles/cost-pain-australia.html",
+    "http://www2.deloitte.com/content/dam/Deloitte/au/Documents/Economics/deloitte-au-dae-economic-burden-of-epilepsy-260220.pdf"
+   ]
+  },
+  "pepaeducation.com": {
+   "units": [
+    "pain-management",
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://pepaeducation.com/support-and-education/cultural-considerations-providing-end-of-life-care-for-aboriginal-peoples-and-torres-strait-islander-peoples",
+    "https://pepaeducation.com/wp-content/uploads/2020/12/PEPA_CulturalConsiderationsFlipbook_Web.pdf"
+   ]
+  },
+  "bettersafercare.vic.gov.au": {
+   "units": [
+    "pain-management",
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.bettersafercare.vic.gov.au/clinical-guidance/palliative/opioid-conversion",
+    "http://www.bettersafercare.vic.gov.au/clinical-guidance/palliative/syringe-driver-compatibility"
+   ]
+  },
+  "journals.lww.com": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://journals.lww.com/academicmedicine/fulltext/2019/04000/educating_for_indigenous_health_equity__an.28.aspx"
+   ]
+  },
+  "bmcmededuc.biomedcentral.com": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bmcmededuc.biomedcentral.com/articles/10.1186/1472-6920-14-167"
+   ]
+  },
+  "oxfordre.com": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://oxfordre.com/publichealth/view/10.1093/acrefore/9780190632366.001.0001/acrefore-9780190632366-e-86"
+   ]
+  },
+  "humanrights.gov.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.humanrights.gov.au/social_justice/health/index.html"
+   ]
+  },
+  "healingfoundation.org.au": {
+   "units": [
+    "aboriginal-and-torres-strait-islander-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://healingfoundation.org.au/working-stolen-generations/"
+   ]
+  },
+  "pactsproject.org": {
+   "units": [
+    "abuse-and-violence"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.pactsproject.org/"
+   ]
+  },
+  "racgp.foliogrc.com": {
+   "units": [
+    "abuse-and-violence"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://racgp.foliogrc.com/refdocs/411/public_show",
+    "https://racgp.foliogrc.com/refdocs/412/public_show",
+    "https://racgp.foliogrc.com/refdocs/413/public_show"
+   ]
+  },
+  "aitsl.edu.au": {
+   "units": [
+    "abuse-and-violence"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.aitsl.edu.au/tools-resources/resource/spotlight-bullying-in-australian-schools"
+   ]
+  },
+  "aifs.gov.au": {
+   "units": [
+    "abuse-and-violence"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://aifs.gov.au/cfca/publications/effects-child-abuse-and-neglect-adult-survivors"
+   ]
+  },
+  "s3-ap-southeast-2.amazonaws.com": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://s3-ap-southeast-2.amazonaws.com/turning-point-website-prod/drupal/inline-files/Alcohol-and-Drug-Withdrawal-Guidelines-2018.pdf"
+   ]
+  },
+  "aconhealth.org.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.aconhealth.org.au/pivot_towards_better_health_new_resource_addresses_substance_use_in_lgbtiq_community"
+   ]
+  },
+  "insight.qld.edu.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://insight.qld.edu.au/training/elearning"
+   ]
+  },
+  "oxfordmedicine.com": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://oxfordmedicine.com/view/10.1093/med/9780198714750.001.0001/med-9780198714750"
+   ]
+  },
+  "connections.edu.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.connections.edu.au/news/aodconnect-new-app-link-aboriginal-and-torres-strait-islanders-aod-treatment-services"
+   ]
+  },
+  "comorbidityguidelines.org.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://comorbidityguidelines.org.au"
+   ]
+  },
+  "adf.org.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://adf.org.au/insights/stigma-people-who-use-drugs/"
+   ]
+  },
+  "dacas.org.au": {
+   "units": [
+    "addiction-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.dacas.org.au/"
+   ]
+  },
+  "australianprescriber.tg.org.au": {
+   "units": [
+    "cardiovascular-health"
+   ],
+   "licensed": true,
+   "sample_urls": [
+    "https://australianprescriber.tg.org.au/articles/diagnosis-and-management-of-acute-coronary-syndromes.html"
+   ]
+  },
+  "csanz.edu.au": {
+   "units": [
+    "cardiovascular-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.csanz.edu.au/for-professionals/position-statements-and-practice-guidelines"
+   ]
+  },
+  "snaicc.org.au": {
+   "units": [
+    "child-and-youth-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.snaicc.org.au"
+   ]
+  },
+  "blueknot.org.au": {
+   "units": [
+    "child-and-youth-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://blueknot.org.au/resources/understanding-trauma-and-abuse/"
+   ]
+  },
+  "believe-nd.org": {
+   "units": [
+    "child-and-youth-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.believe-nd.org/what-is-neurodiversity"
+   ]
+  },
+  "health.nsw.gov.au": {
+   "units": [
+    "child-and-youth-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.health.nsw.gov.au/kidsfamilies/youth/Pages/gp-resource-kit.aspx"
+   ]
+  },
+  "dermnetnz.org": {
+   "units": [
+    "dermatological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://dermnetnz.org/assets/Uploads/Chaos-and-Clues-Landscape-reduced-ilovepdf-compressed.pdf",
+    "https://dermnetnz.org/cme",
+    "https://dermnetnz.org/cme/dermoscopy-course/"
+   ]
+  },
+  "blackandbrownskin.co.uk": {
+   "units": [
+    "dermatological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.blackandbrownskin.co.uk/mindthegap"
+   ]
+  },
+  "melanomarisk.org.au": {
+   "units": [
+    "dermatological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.melanomarisk.org.au"
+   ]
+  },
+  "academic.oup.com": {
+   "units": [
+    "dermatological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://academic.oup.com/ije/article/48/6/1741/5530732"
+   ]
+  },
+  "dftbskindeep.com": {
+   "units": [
+    "dermatological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://dftbskindeep.com"
+   ]
+  },
+  "healthbulletin.org.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://healthbulletin.org.au/articles/twelve-factors-that-can-influence-the-participation-of-aboriginal-people-in-disability"
+   ]
+  },
+  "idhealtheducation.mygo1.com": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://idhealtheducation.mygo1.com/p/#/app/course-view/14807160/overview?instance=14793423"
+   ]
+  },
+  "disability.royalcommission.gov.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://disability.royalcommission.gov.au/publications/research-report-nature-and-extent-violence-abuse-neglect-and-exploitation-against-people-disability-australia"
+   ]
+  },
+  "servicesaustralia.gov.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.servicesaustralia.gov.au/disability-support-pension-information-for-health-professionals"
+   ]
+  },
+  "3dn.unsw.edu.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.3dn.unsw.edu.au/education-resources/health-mental-health-professionals/positive-cardiometabolic-health-people-id/responsible-psychotropic-prescribing-people-intellectual-disability-podcasts"
+   ]
+  },
+  "accessforall-checkup.talentlms.com": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://accessforall-checkup.talentlms.com/"
+   ]
+  },
+  "apo.org.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://apo.org.au/node/34290"
+   ]
+  },
+  "ndis.gov.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.ndis.gov.au/providers/working-participants/gps-and-health-professionals/guide-ndis-gps-and-health-professionals"
+   ]
+  },
+  "melbournechildpsychology.com.au": {
+   "units": [
+    "disability-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.melbournechildpsychology.com.au/blog/rethinking-disability"
+   ]
+  },
+  "nctsn.org": {
+   "units": [
+    "disaster-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nctsn.org/resources/skills-for-psychological-recovery"
+   ]
+  },
+  "psychology.org.au": {
+   "units": [
+    "disaster-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://psychology.org.au/getmedia/c1846704-2fa3-41ae-bf53-7a7451af6246/red-cross-psychological-first-aid-disasters.pdf"
+   ]
+  },
+  "earlytraumagrief.anu.edu.au": {
+   "units": [
+    "disaster-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://earlytraumagrief.anu.edu.au/"
+   ]
+  },
+  "sciencedirect.com": {
+   "units": [
+    "disaster-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.sciencedirect.com/science/article/abs/pii/S0168851011001497?via%3Dihub"
+   ]
+  },
+  "healthpathwayscommunity.org": {
+   "units": [
+    "disaster-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.healthpathwayscommunity.org"
+   ]
+  },
+  "drs4drs.com.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.drs4drs.com.au/",
+    "http://www.drs4drs.com.au/resource-hub",
+    "https://www.drs4drs.com.au/"
+   ]
+  },
+  "training.drs4drs.com.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://training.drs4drs.com.au/login/index.php"
+   ]
+  },
+  "gpra.org.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gpra.org.au/wellbeing"
+   ]
+  },
+  "crana.org.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://crana.org.au/mental-health-wellbeing/overview"
+   ]
+  },
+  "aida.org.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.aida.org.au"
+   ]
+  },
+  "uq.edu.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.uq.edu.au/search/?q=national+mental+health+survey+of+doctors&submit=%25EF%2580%2582&output=xml_no_dtd&client=ws&proxystylesheet=ws&as_sitesearch=https%253A%252F%252Fmedicine.uq.edu.au"
+   ]
+  },
+  "handnhand.org.au": {
+   "units": [
+    "doctors-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.handnhand.org.au"
+   ]
+  },
+  "doctorsspeakup.com": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.doctorsspeakup.com/home"
+   ]
+  },
+  "journals.sagepub.com": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://journals.sagepub.com/doi/full/10.1177/1755738013475436"
+   ]
+  },
+  "gapssimulation.com": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gapssimulation.com/wp-content/uploads/2016/03/spikes-breaking-bad-news-paper.pdf"
+   ]
+  },
+  "gpnotebook.com": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gpnotebook.com/en-au/simplepage.cfm?&amp;trip=1&amp;ID=53805126"
+   ]
+  },
+  "vitaltalk.org": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.vitaltalk.org"
+   ]
+  },
+  "vic.gov.au": {
+   "units": [
+    "domain-1"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.vic.gov.au/inclusive-language-guide"
+   ]
+  },
+  "gpsa.org.au": {
+   "units": [
+    "domain-2"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gpsa.org.au/managing-uncertainty-in-general-practice/"
+   ]
+  },
+  "cdc.gov.au": {
+   "units": [
+    "domain-3"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.cdc.gov.au/diseases/surveillance-systems-and-networks/national-notifiable-diseases-surveillance-system-nndss#the-national-notifiable-diseases-list"
+   ]
+  },
+  "rhdaustralia.org.au": {
+   "units": [
+    "domain-3"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.rhdaustralia.org.au/arf-rhd-guideline"
+   ]
+  },
+  "ipsos.com": {
+   "units": [
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ipsos.com/ipsos-mori/en-uk/doctors-become-worlds-most-trusted-profession"
+   ]
+  },
+  "sites.google.com": {
+   "units": [
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://sites.google.com/medportal.ca/macemerg-cpd/podcast"
+   ]
+  },
+  "tandfonline.com": {
+   "units": [
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.tandfonline.com/doi/full/10.3402/meo.v19.25141"
+   ]
+  },
+  "rcgp.org.uk": {
+   "units": [
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.rcgp.org.uk/training-exams/practice/gp-wellbeing.aspx"
+   ]
+  },
+  "gmc-uk.org": {
+   "units": [
+    "domain-4"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.gmc-uk.org/-/media/documents/case-study-social-media_pdf-83354775.pdf",
+    "http://www.gmc-uk.org/gmpinaction/case-studies/dr-walker/scenario-02/",
+    "https://www.gmc-uk.org/education/standards-guidance-and-curricula/guidance/reflective-practice/the-reflective-practitioner---a-guide-for-medical-students"
+   ]
+  },
+  "pbs.gov.au": {
+   "units": [
+    "domain-5"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_2_Explanatory_Notes"
+   ]
+  },
+  "mbsonline.gov.au": {
+   "units": [
+    "domain-5"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.mbsonline.gov.au/",
+    "http://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/Home"
+   ]
+  },
+  "fairwork.gov.au": {
+   "units": [
+    "domain-5"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.fairwork.gov.au/"
+   ]
+  },
+  "bumc.bu.edu": {
+   "units": [
+    "education-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.bumc.bu.edu/facdev-medicine/files/2010/06/AMEE-guide-paper.pdf"
+   ]
+  },
+  "nwpgmd.nhs.uk": {
+   "units": [
+    "education-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nwpgmd.nhs.uk/resources/teaching-run-tips-series"
+   ]
+  },
+  "njms.rutgers.edu": {
+   "units": [
+    "education-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://njms.rutgers.edu/education/office_education/community_preceptorship/documents/TheGoodTeacher.pdf"
+   ]
+  },
+  "gpsupervisorsaustralia.org.au": {
+   "units": [
+    "education-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://gpsupervisorsaustralia.org.au/educational-resources"
+   ]
+  },
+  "mdcalc.com": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.mdcalc.com/"
+   ]
+  },
+  "surgeons.org": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.surgeons.org/en/Education/skills-training-courses/early-management-of-severe-trauma-emst"
+   ]
+  },
+  "resus.org.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://resus.org.au",
+    "https://resus.org.au/"
+   ]
+  },
+  "aph.gov.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Education_and_Employment/Mentalhealth/Report"
+   ]
+  },
+  "sahealth.sa.gov.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/regional+health+services/rural+emergency+responders+network+rern/rural+emergency+responders+network+-+rern"
+   ]
+  },
+  "boneschool.com": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.boneschool.com/"
+   ]
+  },
+  "austin.org.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.austin.org.au/clinical-toxicology-guidelines"
+   ]
+  },
+  "medscape.com": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.medscape.com/emergencymedicine"
+   ]
+  },
+  "amare.org.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.amare.org.au/advanced-life-support-in-obstetrics-also-history-in-australia/aims-course-information"
+   ]
+  },
+  "apls.org.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.apls.org.au",
+    "https://www.apls.org.au/"
+   ]
+  },
+  "phtls.com.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.phtls.com.au"
+   ]
+  },
+  "thewomens.org.au": {
+   "units": [
+    "emergency-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.thewomens.org.au/health-professionals/clinical-resources/clinical-guidelines-gps"
+   ]
+  },
+  "eyeandear.org.au": {
+   "units": [
+    "eye-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://eyeandear.org.au/health-professionals/for-gps/primary-care-management-guidelines/"
+   ]
+  },
+  "vision2020australia.org.au": {
+   "units": [
+    "eye-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.vision2020australia.org.au/wp-content/uploads/2019/06/National-Eye-Health-Survey_Summary-Report_FINAL.pdf"
+   ]
+  },
+  "ibs4gps.com": {
+   "units": [
+    "gastrointestinal-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ibs4gps.com"
+   ]
+  },
+  "tgldcdp.tg.org.au": {
+   "units": [
+    "gastrointestinal-health"
+   ],
+   "licensed": true,
+   "sample_urls": [
+    "https://tgldcdp.tg.org.au/viewTopic?topicfile=disorders-oesophagus&amp;guidelineName=Gastrointestinal#toc_d1e47",
+    "https://tgldcdp.tg.org.au/viewTopic?topicfile=nonalcoholic-fatty-liver&amp;guidelineName=Liver%20Disorders&amp;topicNavigation=navigateTopic"
+   ]
+  },
+  "imagingpathways.health.wa.gov.au": {
+   "units": [
+    "gastrointestinal-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.imagingpathways.health.wa.gov.au/index.php/imaging-pathways/gastrointestinal/gastrointestinal/chronic-abdominal-pain#pathway"
+   ]
+  },
+  "hepatitisb.org.au": {
+   "units": [
+    "gastrointestinal-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.hepatitisb.org.au"
+   ]
+  },
+  "blood.gov.au": {
+   "units": [
+    "haematological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.blood.gov.au/system/files/ABDR-Annual-Report-2018-19-FINAL.pdf",
+    "http://www.blood.gov.au/system/files/documents/pbm-module-2.pdf"
+   ]
+  },
+  "bloodsafelearning.org.au": {
+   "units": [
+    "haematological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bloodsafelearning.org.au/resource-centre/other-resources/practice-guidelines"
+   ]
+  },
+  "ncirs.org.au": {
+   "units": [
+    "infectious-diseases"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://ncirs.org.au/new-ncirs-report-vaccine-preventable-diseases-and-vaccination-coverage-aboriginal-and-torres-strait",
+    "https://www.ncirs.org.au/health-professionals"
+   ]
+  },
+  "health.vic.gov.au": {
+   "units": [
+    "infectious-diseases"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.health.vic.gov.au/public-health/infectious-diseases"
+   ]
+  },
+  "mumbubvax.org.au": {
+   "units": [
+    "infectious-diseases"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://mumbubvax.org.au"
+   ]
+  },
+  "choosingwisely.org.au": {
+   "units": [
+    "infectious-diseases"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.choosingwisely.org.au/"
+   ]
+  },
+  "amr.gov.au": {
+   "units": [
+    "infectious-diseases"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.amr.gov.au/resources/aura-2021-fourth-australian-report-antimicrobial-use-and-resistance-human-health"
+   ]
+  },
+  "mskcc.org": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.mskcc.org/cancer-care/diagnosis-treatment/symptom-management/integrative-medicine"
+   ]
+  },
+  "nccih.nih.gov": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nccih.nih.gov/health/providers"
+   ]
+  },
+  "imconsortium.org": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://imconsortium.org/about/introduction/"
+   ]
+  },
+  "nccam.nih.gov": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://nccam.nih.gov/health/whatiscam"
+   ]
+  },
+  "aima.net.au": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.aima.net.au/wp-content/uploads/2021/05/AIMA-Best-practice-for-IM-in-Australian-Medical-Practice-Jan-2014.pdf"
+   ]
+  },
+  "fammed.wisc.edu": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.fammed.wisc.edu/integrative"
+   ]
+  },
+  "aronah.org": {
+   "units": [
+    "integrative-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.aronah.org/"
+   ]
+  },
+  "bocsar.nsw.gov.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.bocsar.nsw.gov.au/Pages/bocsar_publication/Pub_Summary/CJB/cjb104-The-economic-and-social-factors-underpinning-Indigenous-contact-with-the-justice-system-Results-from-the-2002-NATSIS.aspx"
+   ]
+  },
+  "justicehealth.nsw.gov.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.justicehealth.nsw.gov.au/publications/2015NPHSReportAboriginalPeoplesHealthReport.pdf",
+    "http://www.justicehealth.nsw.gov.au/publications/2015YPICHSReportwebreadyversion.PDF"
+   ]
+  },
+  "reset.org.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.reset.org.au"
+   ]
+  },
+  "indigenousjustice.gov.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.indigenousjustice.gov.au/resources/bridges-and-barriers-addressing-indigenous-incarceration-and-health"
+   ]
+  },
+  "bmcinthealthhumrights.biomedcentral.com": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bmcinthealthhumrights.biomedcentral.com/articles/10.1186/s12914-018-0180-4"
+   ]
+  },
+  "wephren.tghn.org": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://wephren.tghn.org"
+   ]
+  },
+  "shineforkids.org.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://shineforkids.org.au"
+   ]
+  },
+  "vacro.org.au": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.vacro.org.au/"
+   ]
+  },
+  "bmcprimcare.biomedcentral.com": {
+   "units": [
+    "justice-system-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bmcprimcare.biomedcentral.com/articles/10.1186/s12875-015-0303-0"
+   ]
+  },
+  "medicinetoday.com.au": {
+   "units": [
+    "kidney-and-urinary-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://medicinetoday.com.au/2018/february/feature-article/promoting-urinary-continence-older-people-proactive-primary-care"
+   ]
+  },
+  "kidney.org.au": {
+   "units": [
+    "kidney-and-urinary-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://kidney.org.au/health-professionals/ckd-management-handbook"
+   ]
+  },
+  "ausdoc.com.au": {
+   "units": [
+    "kidney-and-urinary-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.ausdoc.com.au/howtotreat"
+   ]
+  },
+  "continence.org.au": {
+   "units": [
+    "kidney-and-urinary-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.continence.org.au"
+   ]
+  },
+  "prostate.org.au": {
+   "units": [
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.prostate.org.au/media/612113/PSA-Testing-Guidelines.pdf"
+   ]
+  },
+  "healthymale.org.au": {
+   "units": [
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.healthymale.org.au/health-professionals/engaging-men-primary-health-care"
+   ]
+  },
+  "cdn-s3-nrspp-2020.s3.ap-southeast-1.amazonaws.com": {
+   "units": [
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://cdn-s3-nrspp-2020.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/sites/4/2018/08/23133845/Road-Trauma-and-Young-Drivers-%E2%80%93-Does-Gender-Make-a-Difference-v41.pdf"
+   ]
+  },
+  "blog.rvts.org.au": {
+   "units": [
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://blog.rvts.org.au/mens-business"
+   ]
+  },
+  "www1.health.nsw.gov.au": {
+   "units": [
+    "mens-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www1.health.nsw.gov.au/pds/ActivePDSDocuments/GL2019_008.pdf"
+   ]
+  },
+  "emhprac.org.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.emhprac.org.au/resources/"
+   ]
+  },
+  "betterhealth.vic.gov.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.betterhealth.vic.gov.au/health/healthyliving/Mental-health-first-aid#bhc-content"
+   ]
+  },
+  "headtohealth.gov.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.headtohealth.gov.au"
+   ]
+  },
+  "thinkgp.com.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.thinkgp.com.au/education/mental-health-skills-training"
+   ]
+  },
+  "mentalhealthcommission.gov.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.mentalhealthcommission.gov.au/getmedia/0209d27b-1873-4245-b6e5-49e770084b81/Fifth-National-Mental-Health-and-Suicide-Prevention-Plan.pdf"
+   ]
+  },
+  "mindspot.org.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://mindspot.org.au/indigenous-wellbeing"
+   ]
+  },
+  "learning.emergingminds.com.au": {
+   "units": [
+    "mental-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://learning.emergingminds.com.au/"
+   ]
+  },
+  "diabetessociety.com.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://diabetessociety.com.au/documents/Type1guidelines14Nov2011.pdf",
+    "https://diabetessociety.com.au/documents/ObesityManagementAlgorithm18.10.2016FINAL.pdf"
+   ]
+  },
+  "garvan.org.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.garvan.org.au/news-events/files/osteoporosis-national-action-plan-2016.pdf"
+   ]
+  },
+  "anzbms.org.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.anzbms.org.au/policies.asp"
+   ]
+  },
+  "diabetesaustralia.com.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.diabetesaustralia.com.au/about-diabetes/diabetes-in-australia/",
+    "http://www.diabetesaustralia.com.au/wp-content/uploads/Available-here.pdf",
+    "https://www.diabetesaustralia.com.au/health-professional-resources/"
+   ]
+  },
+  "rarediseases.org": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://rarediseases.org/rare-diseases/addisons-disease"
+   ]
+  },
+  "healthybonesaustralia.org.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://healthybonesaustralia.org.au/health-care-professionals/guidelines-statements/"
+   ]
+  },
+  "endocrinesociety.org.au": {
+   "units": [
+    "metabolic-and-endocrine-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.endocrinesociety.org.au/guidelines.asp"
+   ]
+  },
+  "refugeehealthguide.org.au": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://refugeehealthguide.org.au",
+    "http://refugeehealthguide.org.au/referrals",
+    "https://refugeehealthguide.org.au"
+   ]
+  },
+  "ranzcog.edu.au": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://ranzcog.edu.au/wp-content/uploads/2022/05/Female-Genital-Mutilation-FGM.pdf"
+   ]
+  },
+  "unhcr.org": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.unhcr.org/3b66c2aa10.html",
+    "http://www.unhcr.org/en-au/asylum-seekers.html"
+   ]
+  },
+  "culturaldiversityhealth.org.au": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://culturaldiversityhealth.org.au/wp-content/uploads/2019/10/Guide-for-clinicians-working-with-interpreters-in-healthcare-settings-Jan2019.pdf"
+   ]
+  },
+  "foundationhouse.org.au": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://foundationhouse.org.au/news/australian-refugee-health-practice-guide-launched"
+   ]
+  },
+  "easidose.com": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://easidose.com"
+   ]
+  },
+  "healthtranslations.vic.gov.au": {
+   "units": [
+    "migrant-refugee-and-asylum-seeker-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.healthtranslations.vic.gov.au/bhcv2/bhcht.nsf/pages/topics"
+   ]
+  },
+  "phoenixaustralia.org": {
+   "units": [
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.phoenixaustralia.org/australian-guidelines-for-ptsd",
+    "http://www.phoenixaustralia.org/for-practitioners/working-with-veterans/dva-practitioner-support-service"
+   ]
+  },
+  "openarms.gov.au": {
+   "units": [
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.openarms.gov.au",
+    "http://www.openarms.gov.au/who-we-help/family",
+    "https://www.openarms.gov.au/health-professionals/about-veterans-and-their-families/understanding-veteran-experience"
+   ]
+  },
+  "www1.defence.gov.au": {
+   "units": [
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www1.defence.gov.au/about/publications/defence-annual-reports",
+    "http://www1.defence.gov.au/adf-members-families/health-well-being"
+   ]
+  },
+  "amma.asn.au": {
+   "units": [
+    "military-and-veteran-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.amma.asn.au"
+   ]
+  },
+  "arthritisaustralia.com.au": {
+   "units": [
+    "musculoskeletal-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://arthritisaustralia.com.au/wordpress/wp-content/uploads/2019/06/190612-Final_Evidence-to-Support-the-NSAPA_Word-Refs.pdf"
+   ]
+  },
+  "orthobullets.com": {
+   "units": [
+    "musculoskeletal-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.orthobullets.com"
+   ]
+  },
+  "www2.health.vic.gov.au": {
+   "units": [
+    "musculoskeletal-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www2.health.vic.gov.au/hospitals-and-health-services/patient-care/specialist-clinics/specialist-clinics-program/vpon/resources-health-professionals"
+   ]
+  },
+  "epilepsyfoundation.org.au": {
+   "units": [
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://epilepsyfoundation.org.au/understanding-epilepsy/about-epilepsy/what-is-epilepsy/"
+   ]
+  },
+  "brainfoundation.org.au": {
+   "units": [
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://brainfoundation.org.au/disorders/meningitis"
+   ]
+  },
+  "ses.library.usyd.edu.au": {
+   "units": [
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://ses.library.usyd.edu.au/handle/2123/15514"
+   ]
+  },
+  "dta.com.au": {
+   "units": [
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://dta.com.au/general-practitioners/"
+   ]
+  },
+  "concussioninsport.gov.au": {
+   "units": [
+    "neurological-presentations"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.concussioninsport.gov.au"
+   ]
+  },
+  "lowitja.org.au": {
+   "units": [
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.lowitja.org.au/content/Image/Lowitja_ClimateChangeHealth_1021_D10.pdf",
+    "http://www.lowitja.org.au/page/services/resources/Cultural-and-social-determinants/climate-health/climate-change-and-aboriginal-and-torres-strait-islander-health"
+   ]
+  },
+  "racp.edu.au": {
+   "units": [
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.racp.edu.au//docs/default-source/trainees/advanced-training/occupational-and-environmental-medicine/occupational-environmental-medicine-training-curriculum.pdf?sfvrsn=e23c2c1a_14",
+    "http://www.racp.edu.au/docs/default-source/advocacy-library/realising-the-health-benefits-of-work.pdf"
+   ]
+  },
+  "ento.com": {
+   "units": [
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://ento.com/how-labour-hire-will-drive-australias-economic-recovery/"
+   ]
+  },
+  "sira.nsw.gov.au": {
+   "units": [
+    "occupational-and-environmental-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.sira.nsw.gov.au/resources-library/workers-compensation-resources/publications/health-professionals-for-workers-compensation/sira-nsw-medical-guide"
+   ]
+  },
+  "veteransmates.net.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.veteransmates.net.au/topics/complex-medicines/therapeutic-brief/"
+   ]
+  },
+  "myagedcare.gov.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.myagedcare.gov.au",
+    "http://www.myagedcare.gov.au/sites/default/files/2020-01/charter-of-aged-care-rights-booklet-english.pdf"
+   ]
+  },
+  "kams.org.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://kams.org.au/wp-content/uploads/2015/04/KICA-Tool-2006.pdf"
+   ]
+  },
+  "theadvanceproject.com.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.theadvanceproject.com.au/tabid/5218/Default.aspx"
+   ]
+  },
+  "maturitas.org": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.maturitas.org/article/S0378-5122(19)30072-6/fulltext"
+   ]
+  },
+  "palliativecareeducation.com.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://palliativecareeducation.com.au/course/index.php?categoryid=5&amp;utm_source=HomeBanner&amp;utm_medium=HomeBanner&amp;utm_campaign=Online_Module"
+   ]
+  },
+  "ihpa.gov.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ihpa.gov.au/what-we-do/standardised-mini-mental-state-examination-smmse"
+   ]
+  },
+  "closingthegap.gov.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.closingthegap.gov.au/national-agreement"
+   ]
+  },
+  "gpcog.com.au": {
+   "units": [
+    "older-person-s-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://gpcog.com.au"
+   ]
+  },
+  "msk.org.au": {
+   "units": [
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.msk.org.au/wp-content/uploads/2018/07/APWS.pdf"
+   ]
+  },
+  "painaustralia.org.au": {
+   "units": [
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.painaustralia.org.au",
+    "http://www.painaustralia.org.au/about-pain/painaustralia-who-does-pain-affect"
+   ]
+  },
+  "healthdata.org": {
+   "units": [
+    "pain-management"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.healthdata.org/policy-report/findings-global-burden-disease-study-2017"
+   ]
+  },
+  "cancervic.org.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.cancervic.org.au/for-health-professionals/training-education/elearning-modules",
+    "https://www.cancervic.org.au/get-support/facing-end-of-life/facing-end-of-life-introduction"
+   ]
+  },
+  "health.qld.gov.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.health.qld.gov.au/__data/assets/pdf_file/0023/151736/sorry_business.pdf"
+   ]
+  },
+  "caresearch.com.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.caresearch.com.au/tabid/7015/Default.aspx"
+   ]
+  },
+  "thewhpca.org": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.thewhpca.org/resources/global-atlas-on-end-of-life-care"
+   ]
+  },
+  "palliativecare.org.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://palliativecare.org.au/im-a-health-professional/",
+    "https://palliativecare.org.au/wp-content/uploads/2015/08/PCA-Palliative-care-and-Indigenous-Australians-position-statement-updated-16-8-11.pdf",
+    "https://palliativecare.org.au/wp-content/uploads/dlm_uploads/2019/02/Palliative-Care-2030-public.pdf"
+   ]
+  },
+  "reconciliation.org.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.reconciliation.org.au/wp-content/uploads/2018/05/language-guide.pdf"
+   ]
+  },
+  "advancecareplanning.org.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.advancecareplanning.org.au/understand-advance-care-planning/advance-care-planning-in-specific-health-settings/advance-care-planning-in-general-practice",
+    "http://www.advancecareplanning.org.au/understand-advance-care-planning/health-professionals-roles-and-responsibilities"
+   ]
+  },
+  "caringathomeproject.com.au": {
+   "units": [
+    "palliative-care"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.caringathomeproject.com.au/tabid/5159/Default.aspx"
+   ]
+  },
+  "s4be.cochrane.org": {
+   "units": [
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://s4be.cochrane.org"
+   ]
+  },
+  "dynamed.com": {
+   "units": [
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.dynamed.com/"
+   ]
+  },
+  "digital.library.adelaide.edu.au": {
+   "units": [
+    "research-in-general-practice"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://digital.library.adelaide.edu.au/dspace/bitstream/2440/43554/1/hdl_43554.pdf"
+   ]
+  },
+  "nationalasthma.org.au": {
+   "units": [
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.nationalasthma.org.au/news/2016/ninety-per-cent-of-australians-with-asthma-use-their-inhalers-incorrectly",
+    "https://www.nationalasthma.org.au/health-professionals/asthma-action-plans"
+   ]
+  },
+  "lungfoundation.com.au": {
+   "units": [
+    "respiratory-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://lungfoundation.com.au/events/a-systematic-approach-to-investigating-symptoms-of-lung-cancer"
+   ]
+  },
+  "journalofethics.ama-assn.org": {
+   "units": [
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://journalofethics.ama-assn.org/article/overlapping-roles-rural-doctor/2011-05"
+   ]
+  },
+  "bmchealthservres.biomedcentral.com": {
+   "units": [
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bmchealthservres.biomedcentral.com/articles/10.1186/1472-6963-10-50"
+   ]
+  },
+  "farmerhealth.org.au": {
+   "units": [
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://farmerhealth.org.au/page/health-wellbeing-safety-fact-sheets"
+   ]
+  },
+  "rrh.org.au": {
+   "units": [
+    "rural-health"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.rrh.org.au/journal/article/2517/"
+   ]
+  },
+  "fpnsw.org.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.fpnsw.org.au/research/publications/clinical-handbooks"
+   ]
+  },
+  "fsrh.org": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.fsrh.org/documents/ukmec-2016/",
+    "https://www.fsrh.org/ukmec/"
+   ]
+  },
+  "auspath.org.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://auspath.org.au/",
+    "https://auspath.org.au/resources"
+   ]
+  },
+  "contacttracing.ashm.org.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://contacttracing.ashm.org.au/"
+   ]
+  },
+  "ashm.org.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.ashm.org.au/HIV/PrEP",
+    "http://www.ashm.org.au/products/product/978-1-920773-47-2"
+   ]
+  },
+  "rainbowwelcome.org": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.rainbowwelcome.org/uploads/pdfs/Creating%20a%20Welcome%20Clinical%20Environment%20for%20LGBT%20Patients.pdf"
+   ]
+  },
+  "bmcresnotes.biomedcentral.com": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-020-05383-w"
+   ]
+  },
+  "lgbtiqhealth.org.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.lgbtiqhealth.org.au/gps_role_in_supporting_lgbti_mental_health"
+   ]
+  },
+  "latrobe.edu.au": {
+   "units": [
+    "sexual-health-and-gender-diversity"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.latrobe.edu.au/__data/assets/pdf_file/0004/1031899/National-Survey-of-Secondary-Students-and-Sexual-Health-2018.pdf"
+   ]
+  },
+  "wwwnc.cdc.gov": {
+   "units": [
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://wwwnc.cdc.gov/travel/yellowbook/2020/travel-for-work-other-reasons/visiting-friends-and-relatives-vfr-travel",
+    "https://wwwnc.cdc.gov/travel/page/yellowbook-home"
+   ]
+  },
+  "smartraveller.gov.au": {
+   "units": [
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.smartraveller.gov.au/before-you-go/health/medical-tourism",
+    "http://www.smartraveller.gov.au/destinations"
+   ]
+  },
+  "istm.org": {
+   "units": [
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://www.istm.org/"
+   ]
+  },
+  "travelhealthpro.org.uk": {
+   "units": [
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "https://travelhealthpro.org.uk"
+   ]
+  },
+  "iamat.org": {
+   "units": [
+    "travel-medicine"
+   ],
+   "licensed": false,
+   "sample_urls": [
+    "http://www.iamat.org/general-resources"
+   ]
+  }
+ }
+}

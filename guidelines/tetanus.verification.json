@@ -1,0 +1,78 @@
+{
+ "guideline": "guidelines/tetanus.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Tetanus' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 8,
+  "pass": 8,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Children: 5 doses at 2, 4, 6 and 18 months and 4 years**, given as **DTPa-containing** vaccine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tetanus-toxoid vaccine is recommended in a 5-dose schedule at 2, 4, 6 and 18 months, and 4 years of age. Infants and children receive tetanus toxoid in combination with diphtheria toxoid and acellular pertussis, as DTPa (diphtheria-tetanus-acellular pertussis)-containing vaccines.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Adolescents at 11–13.** ⚠️ **All adults: a booster at 50, and at 65 if more than 10 years since the last dose.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tetanus-toxoid vaccines are recommended for children at 2, 4, 6 and 18 months, and 4 years of age, and adolescents at 11-13 years of age. A tetanus-toxoid vaccine booster is recommended for all adults at 50 years of age and at 65 years of age if it is more than 10 years since the last dose.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Tetanus-toxoid vaccines are only available in Australia as combination vaccines** — with pertussis and diphtheria.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tetanus-toxoid vaccines are only available in Australia as combination vaccines that include other antigens such as pertussis and diphtheria.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Adolescents and adults who have never had tetanus toxoid: 3 doses at least 4 weeks apart, then boosters at 10 and 20 years after the primary course.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adolescents and adults who have never had a tetanus-toxoid vaccine are recommended to receive 3 doses of tetanus-toxoid vaccine with at least 4 weeks between doses, and booster doses at 10 years and 20 years after the primary course.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "Post-exposure management — **with or without tetanus immunoglobulin — depends on the nature of the wound and the vaccination history.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "tetanus immunoglobulin , depends on the nature of the wound and the person's vaccination history.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Tetanus is acute and can be fatal.** The neurotoxin causes **muscle rigidity with painful spasms**. **Generalised tetanus is the most common form.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tetanus is an acute disease and can be fatal. The neurotoxin acts on the central nervous system to cause muscle rigidity with painful spasms. … Generalised tetanus is the most common form of the disease.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Early signs: trismus (lockjaw), dysphagia, and stiffness or pain in the neck, shoulder and back.** Some develop **paroxysmal, violent, painful generalised spasms**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "increased tone in the masseter muscles (trismus, or lockjaw) dysphagia stiffness or pain in the neck, shoulder and back muscles Some patients develop generalised muscle spasms that are paroxysmal, violent and painful.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Rare in Australia because of high vaccination coverage** — and ⚠️ **notifiable in every state and territory.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tetanus is rare in Australia because of high vaccination coverage. … notifiable disease in all states and territories in Australia.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tetanus', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tetanus, retrieved 2026-09-23"
+  }
+ ]
+}
