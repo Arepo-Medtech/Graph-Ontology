@@ -1,0 +1,116 @@
+{
+ "guideline": "guidelines/influenza.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Influenza (flu)' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 13,
+  "pass": 12,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Everyone aged 6 months and over is recommended annual influenza vaccine.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All people ≥6 months of age are recommended to receive annual influenza vaccine.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**A single annual dose for most people.** Two doses in one season is usually **not recommended, but not contraindicated**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A single annual dose of influenza vaccine is recommended for most people. Usually, receiving 2 separate doses in the same season is not recommended, but not contraindicated.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Two doses, 4 weeks apart, in the first year for:** children 6 months to under 2 receiving it for the first time; children 6 months to under 9 **with a medical risk condition** receiving it for the first time; and **anyone receiving it for the first time after a haematopoietic stem cell or solid organ transplant or CAR T-cell therapy**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "2 doses, given 4 weeks apart: children aged 6 months to <2 years receiving influenza vaccine for the first time children aged 6 months to <9 years with a medical risk condition receiving influenza vaccine for the first time people of any age receiving influenza vaccine for the first time after haematopoietic stem cell or solid organ transplant or CAR T-cell therapy.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **The disease burden is significantly higher among Aboriginal and Torres Strait Islander people than non-Indigenous Australians in every age group.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The disease burden from influenza is significantly higher among Aboriginal and Torres Strait Islander people than among non-Indigenous Australians in all age groups.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Children 2 to under 18** may have either the **intramuscular inactivated** vaccine or the **intranasal live attenuated (LAIV)** vaccine, unless contraindicated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children aged 2 to <18 years may receive either intramuscularly-administered inactivated influenza vaccine or intranasally-administered live attenuated influenza vaccine (LAIV), except where contraindicated.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**50 to under 65:** standard-dose **or** adjuvanted.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People aged 50 to <65 years may receive either standard-dose or adjuvanted influenza vaccine.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **65 and over: adjuvanted (NIP-funded) or high-dose** — standard-dose only if those are unavailable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People aged ≥65 years should receive adjuvanted (NIP-funded) or high-dose influenza vaccine, but may receive standard-dose influenza vaccine if the adjuvanted or high-dose vaccine is unavailable.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Inactivated vaccine at any stage of pregnancy.** Pregnant women should have inactivated rather than live attenuated vaccine — **though there is no evidence of risk from LAIV in pregnancy**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pregnant women should receive inactivated influenza vaccines rather than live attenuated influenza vaccines (LAIV). However, there is no evidence of risk associated with LAIV use in pregnancy. … Pregnant women can receive inactivated influenza vaccine during any stage of pregnancy.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**A past GBS episode that was NOT after influenza vaccination carries an extremely low risk of recurrence — vaccination is recommended.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People with a history of Guillain-Barré syndrome ( GBS ) whose first episode was not after influenza vaccination have an extremely low risk of recurrence of GBS after vaccination. Influenza vaccination is recommended for these people.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **A GBS episode within 6 weeks of a vaccine may carry a higher recurrence risk** — discuss before vaccinating.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People with a history of GBS whose episode occurred within 6 weeks of receiving a vaccine may have a higher risk of GBS recurrence than if the previous GBS episode was unrelated to vaccination.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23"
+  },
+  {
+   "claim": "Infection ranges from **no or minimal symptoms** to respiratory illness with systemic features, to **multisystem complications and death from primary viral or secondary bacterial pneumonia**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Influenza virus infection causes a wide spectrum of disease. People may have: no or minimal symptoms respiratory illness with systemic features multisystem complications and death from primary viral or secondary bacterial pneumonia",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Influenza is notifiable in every state and territory.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "notifiable in all states and territories in Australia.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Influenza (flu)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/influenza-flu, retrieved 2026-09-23"
+  },
+  {
+   "claim": "Antiviral treatment and prophylaxis are not covered by the retrieved chapter.",
+   "source": "-",
+   "verdict": "not_asserted",
+   "locator": "see method"
+  }
+ ]
+}
