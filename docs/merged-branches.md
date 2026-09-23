@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `ad40850`
+**Last verified:** 2026-09-23 · `master` at `04a95b0`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -18,6 +18,7 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`restore-lost-bindings`** | `69ff084` | 1 | [#9](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/9) | 2026-09-23 | `e878c81` | ✅ yes |
 | **`aih-guidelines`** | `7cc9f24` | 4 | [#10](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/10) | 2026-09-23 | `96dc8a8` | ✅ yes |
 | **`rch-guidelines`** | `ffdb728` | 13 | [#11](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/11) | 2026-09-23 | `ad40850` | ✅ yes |
+| **`cancer-council-guidelines`** | `455b02c` | 4 | [#12](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/12) | 2026-09-23 | `04a95b0` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -89,6 +90,12 @@ quarantine promoted to the first tier of the review worksheet.
 
 `docs/binding-review-loop.md` · `docs/binding-review-queue.md` ·
 `reference/snomed_candidates_review.json` · `scripts/binding_review.py`
+
+### `cancer-council-guidelines` — PR #12, 27 files ✅ *(retained)*
+12 Cancer Council / COSA guidelines under a 200-word quote budget with no table content, plus the source
+inventory and the (unsent) permission request.
+
+`guidelines/*` (25 files) · `docs/cancer-council-sources.md` · `docs/cancer-council-permission-request.md`
 
 ### `rch-guidelines` — PR #11, 181 files ✅ *(retained)*
 90 paediatric guidelines quoted verbatim from RCH Melbourne Clinical Practice Guidelines (2,001 claims, 420
