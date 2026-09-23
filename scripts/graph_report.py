@@ -463,6 +463,33 @@ def main() -> int:
         names = {"1": "laboratory", "2": "clinical", "3": "claims attachment", "4": "survey"}
         report["coverage:LOINC active terms bridged, by class"] = {names.get(c, c): {"terms": n, "before_part_route": b0, "with_part_route": b1}
                                                                   for c, n, b0, b1 in rows}
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'loinc:part_xref'").fetchone()[0] and lt_path.exists():
+        # a medicine meets the test that measures it: LOINC's own RxNorm code for the analyte, and -- the witness -- LOINC's
+        # ChEBI / UNII / PubChem code for it carried to RxNorm by DrugCentral's identifiers
+        con.execute(f"""CREATE TEMP TABLE drug_test AS
+            WITH au AS (SELECT DISTINCT o_code rxn FROM edge WHERE predicate = 'std_ingredient' AND o_vocab = 'RXN' AND state <> 'rejected'),
+                 d AS (SELECT DISTINCT s_code loinc, o_code rxn, 'LOINC RxNorm code' AS route FROM edge WHERE predicate = 'loinc:part_xref' AND o_vocab = 'RXN'),
+                 v AS (SELECT DISTINCT lx.s_code loinc, r.o_code rxn, 'LOINC ChEBI/UNII/PubChem -> DrugCentral' AS route
+                       FROM edge lx JOIN edge x ON x.predicate = 'drugcentral:xref' AND x.o_vocab = lx.o_vocab AND x.o_code = lx.o_code
+                       JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = x.s_code
+                       WHERE lx.predicate = 'loinc:part_xref' AND lx.o_vocab IN ('CHEBI', 'UNII', 'PUBCHEM'))
+            SELECT t.*, l.CLASS AS loinc_class, t.rxn IN (SELECT rxn FROM au) AS au_medicine
+            FROM (SELECT * FROM d UNION SELECT * FROM v) t
+            JOIN read_csv('{lt_path}', header=true, all_varchar=true) l ON l.LOINC_NUM = t.loinc""")
+        both, agree = con.execute("""SELECT count(DISTINCT d.loinc), count(DISTINCT d.loinc) FILTER (WHERE EXISTS (SELECT 1 FROM drug_test v
+                WHERE v.route <> 'LOINC RxNorm code' AND v.loinc = d.loinc AND v.rxn = d.rxn))
+            FROM drug_test d WHERE d.route = 'LOINC RxNorm code' AND d.loinc IN (SELECT loinc FROM drug_test WHERE route <> 'LOINC RxNorm code')""").fetchone()
+        report["coverage:medicines and the tests that measure them"] = {
+            "au_rxnorm_ingredients_with_a_test": con.execute("SELECT count(DISTINCT rxn) FROM drug_test WHERE au_medicine").fetchone()[0],
+            "loinc_tests": con.execute("SELECT count(DISTINCT loinc) FROM drug_test WHERE au_medicine").fetchone()[0],
+            "by_loinc_class": dict(con.execute("""SELECT loinc_class, count(DISTINCT loinc) FROM drug_test WHERE au_medicine
+                                                 GROUP BY 1 ORDER BY 2 DESC LIMIT 10""").fetchall()),
+            "drug_level_tests_only (class DRUG/TOX)": dict(zip(("au_ingredients", "loinc_tests"), con.execute("""SELECT count(DISTINCT rxn),
+                count(DISTINCT loinc) FROM drug_test WHERE au_medicine AND loinc_class = 'DRUG/TOX'""").fetchone())),
+            "witness: tests both routes answer": both, "same drug": agree,
+            "note": "the component is the drug for drug-level tests (DRUG/TOX) and also for susceptibility tests (ABXBACT: the organism against the drug); filter by class for levels"}
+        report["coverage:analyte codes LOINC gives its terms"] = dict(con.execute("""SELECT o_vocab, count(DISTINCT s_code) FROM edge
+            WHERE predicate = 'loinc:part_xref' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
     mc = Path("reference/mbs_procedure_candidates.json")
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0]:
         m = {"items": con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0], "snomed_edges": 0}

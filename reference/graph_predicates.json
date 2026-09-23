@@ -44,7 +44,25 @@
     "NCBITAXON": "NCBI Taxonomy, keyed by taxon id (9606 = Homo sapiens)",
     "MBS": "Medicare Benefits Schedule item, keyed by item number (Department of Health, MBS XML)",
     "MBS_GROUP": "MBS group, keyed by category/group code (e.g. 5/I1)",
-    "MBS_CATEGORY": "MBS category, keyed by number (1 professional attendances ... 6 pathology)"
+    "MBS_CATEGORY": "MBS category, keyed by number (1 professional attendances ... 6 pathology)",
+    "DOID": "Human Disease Ontology, keyed by DOID number",
+    "NCIT": "NCI Thesaurus, keyed by NCIt code (C...)",
+    "MESH": "Medical Subject Headings (NLM), keyed by descriptor or supplementary record id (D..., C...) -- how PubMed indexes articles",
+    "ICD11": "WHO ICD-11 foundation entity, keyed by foundation id",
+    "EFO": "Experimental Factor Ontology, keyed by EFO number",
+    "UMLS": "UMLS Metathesaurus concept, keyed by CUI (identifier only; UMLS content is not loaded)",
+    "MEDGEN": "NCBI MedGen concept, keyed by MedGen UID",
+    "ICD10WHO": "WHO ICD-10, keyed by code (codes only; WHO labels not loaded)",
+    "OMIMPS": "OMIM phenotypic series, keyed by PS number",
+    "CHEBI": "ChEBI (Chemical Entities of Biological Interest), keyed by ChEBI number",
+    "UNII": "FDA Unique Ingredient Identifier (GSRS)",
+    "PUBCHEM": "PubChem compound, keyed by CID",
+    "CHEMBL": "ChEMBL compound, keyed by CHEMBL id",
+    "IUPHAR": "IUPHAR/BPS Guide to Pharmacology ligand id",
+    "KEGG": "KEGG DRUG entry (D.....)",
+    "INN": "WHO International Nonproprietary Name id",
+    "HGNC": "HGNC gene, keyed as HGNC:n",
+    "CLINVAR": "ClinVar variation id"
   },
   "predicates": [
     {
@@ -355,14 +373,23 @@
         "SCT",
         "ICD10CM",
         "OMIM",
-        "ORPHA"
+        "ORPHA",
+        "DOID",
+        "NCIT",
+        "MESH",
+        "ICD11",
+        "EFO",
+        "UMLS",
+        "MEDGEN",
+        "ICD10WHO",
+        "OMIMPS"
       ],
       "category": "identity",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "mondo.sssom.tsv (skos:exactMatch)",
+      "source": "mondo.sssom.tsv (MONDO releases/2026-09-01), skos:exactMatch",
       "status": "built",
-      "note": "MONDO -> SCT scored against the independent path MONDO -> ICD10CM -> OMOP 'Maps to' -> SCT, over 1,769 diseases where both fire: same concept 81.1%; same concept or on one is-a line in SNOMED CT-AU 92.2% (Wilson lower bound 0.909) -> Tier 2; 138 contradicted. ICD-10-CM categories are broader than SNOMED concepts by design, so landing one level up is not an error; landing elsewhere is. Measured 23 Sep 2026. The tier is set on the edges by scripts/graph_report.py; the OMIM / Orphanet / ICD10CM targets are not yet scored."
+      "note": "MONDO -> SCT scored against the independent path MONDO -> ICD10CM -> OMOP 'Maps to' -> SCT, over 1,769 diseases where both fire: same concept 81.1%; same concept or on one is-a line in SNOMED CT-AU 92.2% (Wilson lower bound 0.909) -> Tier 2; 138 contradicted. ICD-10-CM categories are broader than SNOMED concepts by design, so landing one level up is not an error; landing elsewhere is. Measured 23 Sep 2026. The tier is set on the edges by scripts/graph_report.py; the OMIM / Orphanet / ICD10CM targets are not yet scored. From 24 Sep 2026 every exactMatch target MONDO curates is loaded except MedDRA (MSSO licence): DOID, NCIT, MeSH, ICD-11 foundation, EFO, UMLS CUI, MedGen, WHO ICD-10 and OMIM phenotypic series, beside SNOMED, ICD-10-CM, OMIM and Orphanet."
     },
     {
       "id": "uberon:is_a",
@@ -774,6 +801,30 @@
       "strength_kind": "exact",
       "source": "DrugCentral identifier (id_type SNOMEDCT_US)",
       "status": "built"
+    },
+    {
+      "id": "drugcentral:xref",
+      "label": "DrugCentral drug is identified in this vocabulary by this code",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "CHEBI",
+        "UNII",
+        "PUBCHEM",
+        "CHEMBL",
+        "MESH",
+        "UMLS",
+        "IUPHAR",
+        "KEGG",
+        "INN"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral 2023-11-01 identifier table",
+      "status": "built",
+      "note": "DrugCentral's own cross-references. DRUGBANK_ID is not loaded (the graph excludes DrugBank), nor the US formulary ids (MMSL, NDDF, VANDF, VUID, NUI)."
     },
     {
       "id": "drugcentral:in_atc_class",
@@ -1197,6 +1248,29 @@
       "source": "LOINC 2.83 LoincPartLink_Primary (term -> part) joined to PartRelatedCodeMapping (part -> SNOMED CT); for radiology terms, LoincRsnaRadiologyPlaybook (term -> RadLex) joined to radlex:anatomy_sct",
       "status": "built",
       "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed. Radiology terms have no SNOMED part map; their region-imaged and imaging-focus parts reach SNOMED through radlex:anatomy_sct instead, method 'RadLex anatomy: <route>', attrs.rid and attrs.route, and the tier of that route."
+    },
+    {
+      "id": "loinc:part_xref",
+      "label": "a LOINC term's analyte part (component, divisor, gene, challenge) is coded by LOINC to this concept",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "CHEBI",
+        "RXN",
+        "PUBCHEM",
+        "UNII",
+        "NCBITAXON",
+        "NCBIGENE",
+        "HGNC",
+        "CLINVAR"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 LoincPartLink_Primary and LoincPartLink_Supplementary (DetailedModel links) joined to PartRelatedCodeMapping",
+      "status": "built",
+      "note": "What the test measures, in the analyte's own vocabulary. RxNorm and NCBI Gene are vocabularies the drug and gene sides already hold, so a drug-level test meets its drug and a genotype test its gene with no matching. attrs.link_type (Primary / DetailedModel), part_type, equivalence (equivalent / relatedto) as LOINC states it. Search links are not loaded."
     },
     {
       "id": "loinc:unit_counterpart",

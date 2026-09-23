@@ -65,6 +65,7 @@ LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/Accessor
 RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
 LOINC_PARTS = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
 LOINC_PARTLINK = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
+LOINC_PARTLINK_SUPP = LOINC_PARTLINK.with_name("LoincPartLink_Supplementary.csv")
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
@@ -205,7 +206,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "HPO annotations": HPOA, "HPO genes": HP_GENES, "MBS XML": MBS_XML, "Uberon obo": UBERON_OBO,
             "Uberon sssom": UBERON_SSSOM, "DrugCentral": DC, "PBS indication bindings": PBS_BIND,
             "LOINC Extension": LOINC_EXT, "LOINC table": LOINC_TABLE, "LOINC part mapping": LOINC_PARTS,
-            "LOINC part links": LOINC_PARTLINK, "LOINC/RSNA playbook": LOINC_RSNA, "RSNA playbook": RSNA_PLAYBOOK,
+            "LOINC part links": LOINC_PARTLINK, "LOINC supplementary part links": LOINC_PARTLINK_SUPP, "LOINC/RSNA playbook": LOINC_RSNA, "RSNA playbook": RSNA_PLAYBOOK,
             "RadLex (scripts/radlex_prepare.py)": RADLEX_JSON, "RCPA units (scripts/rcpa_units.py)": RCPA_UNITS,
             "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
@@ -547,14 +548,17 @@ def main() -> int:
         con.executemany("INSERT INTO name_hint VALUES ('MONDO', ?, ?)", [(t["id"], t.get("name")) for t in mt if t["id"].startswith("MONDO:")])
         con.executemany("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)",      # the taxa MONDO cites carry their names in mondo.obo
                         [(t["id"].split(":", 1)[1], t.get("name")) for t in mt if t["id"].startswith("NCBITaxon:")])
-        prefix = {"SCTID": "SCT", "ICD10CM": "ICD10CM", "OMIM": "OMIM", "Orphanet": "ORPHA"}
+        prefix = {"SCTID": "SCT", "ICD10CM": "ICD10CM", "OMIM": "OMIM", "Orphanet": "ORPHA",
+                  # MONDO's other exact matches (MedDRA left out: MSSO-licensed)
+                  "DOID": "DOID", "NCIT": "NCIT", "mesh": "MESH", "icd11.foundation": "ICD11", "EFO": "EFO", "UMLS": "UMLS",
+                  "MEDGEN": "MEDGEN", "ICD10WHO": "ICD10WHO", "OMIMPS": "OMIMPS"}
         sssom = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
                  if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
         con.executemany("INSERT INTO name_hint VALUES (?, ?, ?)",
                         [("MONDO", r["subject_id"], r.get("subject_label")) for r in sssom] +
                         [(prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1], r.get("object_label")) for r in sssom
                          if prefix[r["object_id"].split(":")[0]] != "SCT"])   # SNOMED names come from the SNOMED CT-AU release
-        ins_rows("MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet",
+        ins_rows("MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet / DOID / NCIT / MeSH / ICD-11 / EFO / UMLS / MedGen / ICD-10",
                  [("MONDO", r["subject_id"], "mondo:exact_match", prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1],
                    "MONDO SSSOM", "mondo.sssom.tsv", r.get("mapping_justification"), "ungraded", "asserted", PIN["mondo"], None)
                   for r in sssom])
@@ -622,6 +626,13 @@ def main() -> int:
                 json_object('id_rxcui', identifier, 'id_class', id_class, 'lifted_via', via) FROM dc_rx""")
         ins("DrugCentral -> SNOMED", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:snomed', 'SCT', identifier, 'DrugCentral',
                 'identifier', 'SNOMEDCT_US', 'ungraded', 'asserted', '{PIN['dc']}', NULL FROM {dc('identifier')} WHERE id_type = 'SNOMEDCT_US'""")
+        dx = {"CHEBI": "CHEBI", "UNII": "UNII", "PUBCHEM_CID": "PUBCHEM", "ChEMBL_ID": "CHEMBL", "MESH_DESCRIPTOR_UI": "MESH",
+              "MESH_SUPPLEMENTAL_RECORD_UI": "MESH", "UMLSCUI": "UMLS", "IUPHAR_LIGAND_ID": "IUPHAR", "KEGG_DRUG": "KEGG", "INN_ID": "INN"}
+        dcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in dx.items())
+        ins("DrugCentral -> ChEBI / UNII / PubChem / ChEMBL / MeSH / UMLS / IUPHAR / KEGG / INN", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
+                'drugcentral:xref', CASE id_type {dcase} END, replace(identifier, 'CHEBI:', ''), 'DrugCentral', 'identifier', id_type,
+                'native', 'asserted', '{PIN['dc']}', NULL
+            FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""")
         if (DC / "struct2atc.tsv").exists():
             ins("DrugCentral -> ATC", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:in_atc_class', 'ATC', atc_code, 'DrugCentral',
                     'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""")
@@ -762,6 +773,34 @@ def main() -> int:
             JOIN lpm pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
             WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""")
+    if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
+        # what a lab test measures, in the analyte's own vocabularies: LOINC maps its component parts to ChEBI, RxNorm,
+        # PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC and ClinVar. RxNorm and NCBI Gene are vocabularies the drug and gene
+        # sides already hold, so "serum vancomycin" meets vancomycin, and a genotype test its gene, with no matching at all.
+        # Primary links (the term's own axis) and DetailedModel links (the component decomposed); Search links are for
+        # finding terms, not for what a term measures, and are not loaded.
+        xs = {"https://www.ebi.ac.uk/chebi": "CHEBI", "http://www.nlm.nih.gov/research/umls/rxnorm": "RXN",
+              "http://pubchem.ncbi.nlm.nih.gov": "PUBCHEM", "http://fdasis.nlm.nih.gov": "UNII",
+              "https://www.ncbi.nlm.nih.gov/taxonomy": "NCBITAXON", "https://www.ncbi.nlm.nih.gov/gene": "NCBIGENE",
+              "http://www.genenames.org": "HGNC", "https://www.ncbi.nlm.nih.gov/clinvar": "CLINVAR"}
+        xcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in xs.items())
+        links = (f"SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true)"
+                 + (f" UNION SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK_SUPP}', header=true, "
+                    "all_varchar=true) WHERE LinkTypeName = 'DetailedModel'" if LOINC_PARTLINK_SUPP.exists() else ""))
+        ins("LOINC term -> analyte code (ChEBI / RxNorm / PubChem / UNII / taxon / gene / ClinVar)", f"""SELECT DISTINCT 'LOINC', pl.LoincNumber,
+                'loinc:part_xref', CASE pm.ExtCodeSystem {xcase} END,
+                CASE WHEN pm.ExtCodeSystem = 'http://www.genenames.org' THEN pm.ExtCodeId ELSE replace(pm.ExtCodeId, 'CHEBI:', '') END,
+                'LOINC 2.83 part mapping', 'part ' || pl.PartNumber, pl.LinkTypeName || ' ' || pl.PartTypeName || ' ' || pm.Equivalence,
+                'native', 'asserted', '{PIN['loinc_table']}',
+                json_object('part_type', pl.PartTypeName, 'link_type', pl.LinkTypeName, 'part', pl.PartNumber, 'part_name', pm.PartName,
+                            'equivalence', pm.Equivalence, 'ext_name', pm.ExtCodeDisplayName)
+            FROM ({links}) pl JOIN lpm pm ON pm.PartNumber = pl.PartNumber
+            JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
+            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')""")
+        con.execute(f"""INSERT INTO name_hint SELECT DISTINCT CASE ExtCodeSystem {xcase} END,
+                CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
+                any_value(ExtCodeDisplayName) FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs if xs[k] not in ('RXN', 'NCBITAXON', 'NCBIGENE'))})
+            GROUP BY 1, 2""")
     if UMLS_SCT_NCBI.exists():
         # UMLS shared CUI, admitted where the NCBI name equals the SNOMED preferred term -- as written, or once rank words are
         # set aside ("Salmonella species" = Salmonella, "Order Strigiformes" = Strigiformes). Truly different names (renamed
@@ -1073,6 +1112,10 @@ def main() -> int:
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
+    con.execute("""INSERT INTO name_hint SELECT vocab, code, vocab || ':' || code FROM keys
+                   WHERE vocab IN ('CHEBI', 'UNII', 'PUBCHEM', 'CHEMBL', 'MESH', 'UMLS', 'IUPHAR', 'KEGG', 'INN', 'HGNC', 'CLINVAR', 'MEDGEN',
+                                   'ICD11', 'ICD10WHO', 'OMIMPS', 'EFO', 'DOID', 'NCIT')
+                     AND (vocab, code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> '')""")   # an identifier with no loaded label is named by itself
     con.execute("""CREATE TABLE node AS SELECT k.vocab, k.code, k.vocab || ':' || k.code AS key,
                           (SELECT any_value(h.name) FROM name_hint h WHERE h.vocab = k.vocab AND h.code = k.code
                            AND h.name IS NOT NULL AND trim(h.name) <> '') AS name
