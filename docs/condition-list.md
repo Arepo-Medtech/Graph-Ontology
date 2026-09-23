@@ -22,7 +22,7 @@
 | 2 | Ablation of thyroid remnant tissue | 1 | 1 | *3 cand.* |  |  |  |
 | 3 | Above pressure injury | 1 | 1 | *3 cand.* |  |  |  |
 | 4 | Achondroplasia | 2 | 1 | `` |  |  |  |
-| 5 | Acne | 8 | 1 | `` | [acne](../guidelines/acne.md) |  |  |
+| 5 | Acne | 8 | 1 | `` | [acne](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/acne.md) |  |  |
 | 6 | Acne vulgaris | 3 | 1 | `` |  |  |  |
 | 7 | Acromegaly | 15 | 1 | `` |  |  |  |
 | 8 | Acute allergic reaction with anaphylaxis | 6 | 1 | *3 cand.* |  |  |  |
@@ -56,7 +56,7 @@
 | 36 | Analgesia or fever | 2 | 1 | *3 cand.* |  |  |  |
 | 37 | Androgen deficiency | 8 | 1 | `` |  |  |  |
 | 38 | Androgenisation | 2 | 1 | *3 cand.* |  |  |  |
-| 39 | Angina | 1 | 1 | `` | [angina](../guidelines/angina.md) |  |  |
+| 39 | Angina | 1 | 1 | `` | [angina](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/angina.md) |  |  |
 | 40 | Ankylosing spondylitis | 49 | 1 | `` |  |  |  |
 | 41 | Anorectal congenital abnormalities | 4 | 1 | *3 cand.* |  |  |  |
 | 42 | Anovulatory infertility | 4 | 1 | `` |  |  |  |
@@ -69,7 +69,7 @@
 | 49 | Aplastic anaemia | 3 | 1 | `` |  |  |  |
 | 50 | Assisting autologous peripheral blood progenitor cell transplantation | 2 | 1 |  |  |  |  |
 | 51 | Assisting bone marrow transplantation | 2 | 1 | *3 cand.* |  |  |  |
-| 52 | Asthma | 82 | 4 | `` | [asthma](../guidelines/asthma.md) |  |  |
+| 52 | Asthma | 82 | 4 | `` | [asthma](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/asthma.md) |  |  |
 | 53 | Atopic dermatitis | 4 | 2 | `` |  |  |  |
 | 54 | Attention deficit hyperactivity disorder | 10 | 1 | `` |  |  |  |
 | 55 | Atypical haemolytic uraemic syndrome | 16 | 1 | `` |  |  |  |
@@ -83,7 +83,7 @@
 | 63 | Benign prostatic hyperplasia | 6 | 1 | `` |  |  |  |
 | 64 | Biliary atresia | 1 | 1 | `` |  |  |  |
 | 65 | Biochemical growth hormone deficiency and precocious puberty | 10 | 1 | *3 cand.* |  |  |  |
-| 66 | Bipolar disorder | 2 | 1 | `` | [bipolar-disorder](../guidelines/bipolar-disorder.md) |  |  |
+| 66 | Bipolar disorder | 2 | 1 | `` | [bipolar-disorder](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/bipolar-disorder.md) |  |  |
 | 67 | Bipolar I disorder | 3 | 1 | `` |  |  |  |
 | 68 | Blepharospasm | 1 | 1 | `` |  | ✓ | Blepharospasm or hemifacial spasm |
 | 69 | Blepharospasm or hemifacial spasm | 2 | 1 | *3 cand.* |  |  |  |
@@ -143,7 +143,7 @@
 | 123 | Chronic hepatitis C infection | 7 | 1 | *3 cand.* |  |  |  |
 | 124 | Chronic hyperkalaemia | 2 | 1 | `` |  |  |  |
 | 125 | Chronic iron overload | 9 | 1 | *3 cand.* |  |  |  |
-| 126 | Chronic kidney disease | 2 | 1 | `` | [chronic-kidney-disease](../guidelines/chronic-kidney-disease.md) |  |  |
+| 126 | Chronic kidney disease | 2 | 1 | `` | [chronic-kidney-disease](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/chronic-kidney-disease.md) |  |  |
 | 127 | Chronic kidney disease with Type 2 diabetes | 1 | 1 | *3 cand.* |  |  |  |
 | 128 | Chronic liver failure with fat malabsorption | 1 | 1 | *3 cand.* |  |  |  |
 | 129 | Chronic lymphocytic leukaemia | 3 | 1 | `` |  | ✓ | Chronic lymphocytic leukaemia or small lymphocytic lymphoma |
@@ -183,11 +183,11 @@
 | 163 | Community acquired pneumonia | 1 | 1 | `` |  |  |  |
 | 164 | Complicated urinary tract infection | 1 | 1 | *1 cand.* |  |  |  |
 | 165 | Congenital neutropenia | 2 | 1 | `` |  |  |  |
-| 166 | Constipation | 27 | 1 | `` | [constipation](../guidelines/constipation.md) |  |  |
+| 166 | Constipation | 27 | 1 | `` | [constipation](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/constipation.md) |  |  |
 | 167 | Constitutional delay of growth | 4 | 0 | *1 cand.* |  | ✓ | Constitutional delay of growth or puberty |
 | 168 | Constitutional delay of growth or puberty | 4 | 1 | *3 cand.* |  |  |  |
 | 169 | Constitutional delay of puberty | 4 | 0 | *1 cand.* |  | ✓ | Constitutional delay of growth or puberty |
-| 170 | Contraception | 1 | 1 | *3 cand.* | [contraception](../guidelines/contraception.md) |  |  |
+| 170 | Contraception | 1 | 1 | *3 cand.* | [contraception](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/contraception.md) |  |  |
 | 171 | Corneal grafts | 1 | 1 | *3 cand.* |  |  |  |
 | 172 | Coronary artery disease | 1 | 1 | *3 cand.* |  |  |  |
 | 173 | Corticosteroid-induced osteoporosis | 8 | 1 | *3 cand.* |  |  |  |
@@ -220,7 +220,7 @@
 | 200 | Detrusor overactivity | 4 | 1 | `` |  |  |  |
 | 201 | Diabetes mellitus type 2 | 19 | 1 | `` |  |  |  |
 | 202 | Diabetic macular oedema | 5 | 1 | `` |  | ✓ | Proliferative diabetic retinopathy and/or Diabetic macular oedema |
-| 203 | Diarrhoea | 2 | 1 | `` | [diarrhoea](../guidelines/diarrhoea.md) |  |  |
+| 203 | Diarrhoea | 2 | 1 | `` | [diarrhoea](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/diarrhoea.md) |  |  |
 | 204 | Diarrhoea of greater than 2 weeks duration | 1 | 1 | *3 cand.* |  |  |  |
 | 205 | Dietary management of conditions requiring a highly restrictive therapeutic diet | 3 | 1 | *1 cand.* |  |  |  |
 | 206 | Dietary management of conditions requiring a source of medium chain triglycerides | 3 | 1 |  |  |  |  |
@@ -235,23 +235,23 @@
 | 215 | Dry eye syndrome | 6 | 1 | `` |  |  |  |
 | 216 | Dynamic equinus foot deformity | 2 | 1 | *3 cand.* |  |  |  |
 | 217 | Dysmenorrhoea | 1 | 1 | `` |  |  |  |
-| 218 | Eczema | 1 | 1 | `` | [eczema](../guidelines/eczema.md) |  |  |
+| 218 | Eczema | 1 | 1 | `` | [eczema](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/eczema.md) |  |  |
 | 219 | Elevated intra-ocular pressure | 3 | 1 | *3 cand.* |  |  |  |
 | 220 | Endocarditis | 2 | 1 | `` |  |  |  |
 | 221 | Endogenous Cushing's syndrome | 2 | 1 | *3 cand.* |  |  |  |
 | 222 | Endometrial cancer | 2 | 1 | *1 cand.* |  |  |  |
-| 223 | Endometriosis | 8 | 1 | `` | [endometriosis](../guidelines/endometriosis.md) |  |  |
+| 223 | Endometriosis | 8 | 1 | `` | [endometriosis](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/endometriosis.md) |  |  |
 | 224 | Endophthalmitis | 1 | 1 | `` |  |  |  |
 | 225 | Enterokinase deficiency | 1 | 1 | *2 cand.* |  |  |  |
 | 226 | Enthesitis/spondylitis related juvenile idiopathic arthritis | 4 | 1 | *3 cand.* |  |  |  |
 | 227 | Eosinophilic oesophagitis | 9 | 1 | `` |  |  |  |
 | 228 | Epididymo-orchitis | 1 | 1 | *3 cand.* |  |  |  |
-| 229 | Epilepsy | 2 | 1 | `` | [epilepsy](../guidelines/epilepsy.md) |  |  |
+| 229 | Epilepsy | 2 | 1 | `` | [epilepsy](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/epilepsy.md) |  |  |
 | 230 | Epileptic seizures | 6 | 1 | *3 cand.* |  |  |  |
 | 231 | Epithelial ovarian cancer | 14 | 0 | *3 cand.* |  | ✓ | Epithelial ovarian, fallopian tube or primary peritoneal cancer |
 | 232 | Epithelial ovarian, fallopian tube or primary peritoneal cancer | 14 | 2 | *3 cand.* |  |  |  |
 | 233 | Eradication of Helicobacter pylori | 1 | 1 | *3 cand.* |  |  |  |
-| 234 | Erectile dysfunction | 1 | 1 | `` | [erectile-dysfunction](../guidelines/erectile-dysfunction.md) |  |  |
+| 234 | Erectile dysfunction | 1 | 1 | `` | [erectile-dysfunction](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/erectile-dysfunction.md) |  |  |
 | 235 | Erythrodermic stage III-IVa T4 M0 Cutaneous T-cell lymphoma | 4 | 1 | *3 cand.* |  |  |  |
 | 236 | Established atherosclerotic cardiovascular disease with hypertriglyceridaemia | 2 | 1 | *3 cand.* |  |  |  |
 | 237 | Established osteoporosis | 22 | 2 |  |  |  |  |
@@ -283,9 +283,9 @@
 | 263 | Gastro-oesophageal junction cancer | 1 | 0 | *3 cand.* |  | ✓ | Oesophageal cancer or gastro-oesophageal junction cancer |
 | 264 | Gastro-oesophageal reflux disease | 10 | 2 | `` |  |  |  |
 | 265 | Gastrointestinal stromal tumour | 2 | 1 | `` |  |  |  |
-| 266 | Generalised anxiety disorder | 8 | 1 | `` | [generalised-anxiety-disorder](../guidelines/generalised-anxiety-disorder.md) |  |  |
+| 266 | Generalised anxiety disorder | 8 | 1 | `` | [generalised-anxiety-disorder](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/generalised-anxiety-disorder.md) |  |  |
 | 267 | Generalized convulsive status epilepticus | 2 | 1 | `` |  |  |  |
-| 268 | Genital herpes | 7 | 1 | *3 cand.* | [genital-herpes](../guidelines/genital-herpes.md) |  |  |
+| 268 | Genital herpes | 7 | 1 | *3 cand.* | [genital-herpes](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/genital-herpes.md) |  |  |
 | 269 | Germ cell neoplasms | 1 | 1 | *3 cand.* |  |  |  |
 | 270 | Giant cell arteritis | 2 | 1 | `` |  |  |  |
 | 271 | Giant cell tumour of bone | 1 | 1 | `` |  |  |  |
@@ -303,7 +303,7 @@
 | 283 | Haemodialysis | 1 | 1 | *3 cand.* |  |  |  |
 | 284 | Haemophilus influenzae type B | 1 | 1 | *3 cand.* |  |  |  |
 | 285 | Hairy cell leukaemia | 1 | 1 | `` |  |  |  |
-| 286 | Heart failure | 2 | 1 | `` | [heart-failure](../guidelines/heart-failure.md) |  |  |
+| 286 | Heart failure | 2 | 1 | `` | [heart-failure](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/heart-failure.md) |  |  |
 | 287 | Hemifacial spasm | 2 | 0 | `` |  | ✓ | Blepharospasm or hemifacial spasm |
 | 288 | Hepatic encephalopathy | 1 | 1 | `` |  |  |  |
 | 289 | HER2 positive adenocarcinoma of the gastro-oesophageal junction | 2 | 0 | *1 cand.* |  | ✓ | HER2 positive adenocarcinoma of the stomach or gastro-oesophageal junction |
@@ -339,7 +339,7 @@
 | 319 | Hyperphenylalaninaemia due to phenylketonuria | 3 | 1 | *3 cand.* |  |  |  |
 | 320 | Hyperphenylalaninaemia due to tetrahydrobiopterin deficiency | 2 | 1 | *3 cand.* |  |  |  |
 | 321 | Hyperphosphataemia | 8 | 1 | `` |  |  |  |
-| 322 | Hypertension | 8 | 2 | `` | [hypertension](../guidelines/hypertension.md) |  |  |
+| 322 | Hypertension | 8 | 2 | `` | [hypertension](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/hypertension.md) |  |  |
 | 323 | Hypocalcaemia | 4 | 1 | `` |  |  |  |
 | 324 | Hypogonadism | 1 | 0 | `` |  | ✓ | Hypogonadism or delayed puberty |
 | 325 | Hypogonadism or delayed puberty | 1 | 1 | *3 cand.* |  |  |  |
@@ -362,10 +362,10 @@
 | 342 | Infection where positive bacteriological evidence confirms that this antibiotic is an appropriate therapeutic agent | 2 | 1 | *1 cand.* |  |  |  |
 | 343 | Infection where resistance to amoxicillin is suspected | 3 | 1 | *3 cand.* |  |  |  |
 | 344 | Infections where resistance to amoxicillin is proven | 3 | 1 | *3 cand.* |  |  |  |
-| 345 | Infertility | 4 | 1 | *3 cand.* | [infertility](../guidelines/infertility.md) |  |  |
+| 345 | Infertility | 4 | 1 | *3 cand.* | [infertility](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/infertility.md) |  |  |
 | 346 | Infertility indications other than that of Assisted Reproductive Technology | 1 | 1 |  |  |  |  |
 | 347 | Initial moderate to severe genital herpes | 2 | 1 | *3 cand.* |  |  |  |
-| 348 | Insomnia | 6 | 1 | `` | [insomnia](../guidelines/insomnia.md) |  |  |
+| 348 | Insomnia | 6 | 1 | `` | [insomnia](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/insomnia.md) |  |  |
 | 349 | Intermediate | 1 | 0 | *3 cand.* |  | ✓ | Intermediate or high risk of recurrence clear cell variant renal cell carcinoma |
 | 350 | Intermediate or high risk of recurrence clear cell variant renal cell carcinoma | 1 | 1 | *3 cand.* |  |  |  |
 | 351 | Intermediate-1 risk myelofibrosis | 3 | 1 | *3 cand.* |  |  |  |
@@ -415,13 +415,13 @@
 | 395 | Merkel Cell Carcinoma | 2 | 1 | `` |  |  |  |
 | 396 | Methylmalonic acidaemia | 2 | 1 | `` |  |  |  |
 | 397 | Micropenis | 4 | 1 | `` |  |  |  |
-| 398 | Migraine | 4 | 2 | `` | [migraine](../guidelines/migraine.md) |  |  |
+| 398 | Migraine | 4 | 2 | `` | [migraine](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/migraine.md) |  |  |
 | 399 | Migraine attack | 7 | 1 | *1 cand.* |  |  |  |
 | 400 | Mixed episodes | 2 | 0 | *1 cand.* |  | ✓ | Acute mania or mixed episodes |
 | 401 | Moderately severe Alzheimer disease | 6 | 2 | *3 cand.* |  |  |  |
 | 402 | Mucositis | 2 | 1 | `` |  |  |  |
 | 403 | Multiple myeloma | 42 | 3 | `` |  |  |  |
-| 404 | Multiple sclerosis | 17 | 1 | `` | [multiple-sclerosis](../guidelines/multiple-sclerosis.md) |  |  |
+| 404 | Multiple sclerosis | 17 | 1 | `` | [multiple-sclerosis](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/multiple-sclerosis.md) |  |  |
 | 405 | Mycobacterium avium complex infection | 5 | 1 | *3 cand.* |  |  |  |
 | 406 | Mycobacterium ulcerans infection | 1 | 1 | *1 cand.* |  |  |  |
 | 407 | Mycosis fungoides cutaneous T-cell lymphoma | 2 | 1 | *1 cand.* |  |  |  |
@@ -460,7 +460,7 @@
 | 440 | Oligodendroglioma | 3 | 0 | `` |  | ✓ | Adult-type IDH-mutant astrocytoma or oligodendroglioma |
 | 441 | Onchocerciasis | 1 | 1 | `` |  |  |  |
 | 442 | Onychomycosis | 3 | 1 | `` |  |  |  |
-| 443 | Opioid dependence | 5 | 1 | `` | [opioid-dependence](../guidelines/opioid-dependence.md) |  |  |
+| 443 | Opioid dependence | 5 | 1 | `` | [opioid-dependence](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/opioid-dependence.md) |  |  |
 | 444 | Opioid-induced constipation | 1 | 1 | *1 cand.* |  |  |  |
 | 445 | Oral | 3 | 0 | *3 cand.* |  | ✓ | Oral or labial herpes |
 | 446 | Oral herpes | 3 | 0 | *3 cand.* |  | ✓ | Oral or labial herpes |
@@ -468,7 +468,7 @@
 | 448 | Oropharyngeal candidiasis | 5 | 1 | *1 cand.* |  |  |  |
 | 449 | Osteoarthritis | 1 | 1 | `` |  |  |  |
 | 450 | Osteomyelitis | 3 | 1 | `` |  |  |  |
-| 451 | Osteoporosis | 11 | 1 | `` | [osteoporosis](../guidelines/osteoporosis.md) |  |  |
+| 451 | Osteoporosis | 11 | 1 | `` | [osteoporosis](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/osteoporosis.md) |  |  |
 | 452 | Paediatric high grade glioma | 3 | 1 | *3 cand.* |  |  |  |
 | 453 | Paediatric low grade glioma | 3 | 1 | *3 cand.* |  |  |  |
 | 454 | Paget disease of bone | 3 | 1 | `` |  |  |  |
@@ -520,10 +520,10 @@
 | 500 | Proven | 2 | 0 | *3 cand.* |  | ✓ | Septicaemia, proven |
 | 501 | Pruritus associated with chronic kidney disease | 2 | 1 | *3 cand.* |  |  |  |
 | 502 | Pseudomonas aeruginosa infection | 6 | 2 | *3 cand.* |  |  |  |
-| 503 | Psoriasis | 4 | 2 | `` | [psoriasis](../guidelines/psoriasis.md) |  |  |
+| 503 | Psoriasis | 4 | 2 | `` | [psoriasis](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/psoriasis.md) |  |  |
 | 504 | Psoriatic arthritis | 76 | 2 | `` |  |  |  |
 | 505 | Pubertal induction | 4 | 1 |  |  |  |  |
-| 506 | Pulmonary arterial hypertension | 45 | 1 | `` | [pulmonary-arterial-hypertension](../guidelines/pulmonary-arterial-hypertension.md) |  |  |
+| 506 | Pulmonary arterial hypertension | 45 | 1 | `` | [pulmonary-arterial-hypertension](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/pulmonary-arterial-hypertension.md) |  |  |
 | 507 | Pulmonary embolism | 5 | 1 | `` |  |  |  |
 | 508 | Pyridoxine dependent epilepsy | 1 | 1 | `` |  |  |  |
 | 509 | Pyridoxine non-responsive homocystinuria | 3 | 1 | *3 cand.* |  |  |  |
@@ -538,7 +538,7 @@
 | 518 | Resected non-small cell lung cancer | 1 | 1 | *3 cand.* |  |  |  |
 | 519 | Resected Stage IIIB, Stage IIIC or Stage IIID malignant melanoma | 5 | 1 |  |  |  |  |
 | 520 | Respiratory tract infection | 1 | 1 | `` |  |  |  |
-| 521 | Rheumatoid arthritis | 66 | 2 | `` | [rheumatoid-arthritis](../guidelines/rheumatoid-arthritis.md) |  |  |
+| 521 | Rheumatoid arthritis | 66 | 2 | `` | [rheumatoid-arthritis](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/rheumatoid-arthritis.md) |  |  |
 | 522 | Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants | 7 | 1 | *3 cand.* |  |  |  |
 | 523 | SARS-CoV-2 infection | 8 | 1 | *3 cand.* |  |  |  |
 | 524 | Scalp psoriasis | 1 | 1 | `` |  |  |  |
@@ -588,7 +588,7 @@
 | 568 | Staphylococcus aureus infection | 1 | 1 | `` |  |  |  |
 | 569 | Stimulation of follicular development | 2 | 1 | *3 cand.* |  |  |  |
 | 570 | Streptococcal infections | 2 | 1 | *3 cand.* |  |  |  |
-| 571 | Stroke | 2 | 0 | `` | [stroke](../guidelines/stroke.md) | ✓ | Stroke or systemic embolism |
+| 571 | Stroke | 2 | 0 | `` | [stroke](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/stroke.md) | ✓ | Stroke or systemic embolism |
 | 572 | Stroke embolism | 2 | 0 | *3 cand.* |  | ✓ | Stroke or systemic embolism |
 | 573 | Stroke or systemic embolism | 2 | 1 | *3 cand.* |  |  |  |
 | 574 | Strongyloidiasis | 2 | 1 | `` |  |  |  |
@@ -633,7 +633,7 @@
 | 613 | Upper and lower respiratory tract infections | 1 | 1 | *3 cand.* |  |  |  |
 | 614 | Urea cycle disorders | 6 | 1 | *3 cand.* |  |  |  |
 | 615 | Urethritis | 2 | 1 | `` |  |  |  |
-| 616 | Urinary incontinence | 2 | 1 | `` | [urinary-incontinence](../guidelines/urinary-incontinence.md) |  |  |
+| 616 | Urinary incontinence | 2 | 1 | `` | [urinary-incontinence](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/guidelines/urinary-incontinence.md) |  |  |
 | 617 | Urinary symptoms | 1 | 1 | `` |  |  |  |
 | 618 | Urinary tract infection | 1 | 1 | `` |  |  |  |
 | 619 | Urothelial cancer | 5 | 1 |  |  |  |  |
