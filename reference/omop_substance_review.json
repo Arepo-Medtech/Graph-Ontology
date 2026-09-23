@@ -1,0 +1,472 @@
+{
+  "_note": "Review of the review queue's 'OMOP resolves it' rows (23 Sep 2026). These rows were presented as resolved on OMOP's word alone: omop_substance.agreement = 'omop-only', one source, never confirmed by RxNav. All 61 are answers where OMOP changed the substance's name -- the risk signal measured on the code route (right 40/40 when the name is kept, wrong 6/18 when it changes). A 'flagged' row goes back to a person; this file assigns NO replacement concepts. Flags whose basis is reviewer recall are Tier 3 and are pointers for a person, not evidence.",
+  "_measured": {
+    "rows": 61,
+    "flagged": 16,
+    "flagged_evident_from_names": 7,
+    "flagged_on_recall": 6,
+    "real_products_behind_flagged": 16
+  },
+  "_not_done": "omop_substance itself is not edited: it faithfully records what OMOP asserts. What changes is that the queue stops calling a flagged row resolved, and substance_standard_ingredient never included omop-only rows.",
+  "review": [
+    {
+      "substance_id": "1353261000168100",
+      "substance": "Anemarrhena asphodeloides extract",
+      "omop_answer": "1544272 Anemarrhena asphodeloides whole extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "73638011000036103",
+      "substance": "Antithymocyte immunoglobulin equine",
+      "omop_answer": "1011 lymphocyte immune globulin, anti-thymocyte globulin",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1380311000168105",
+      "substance": "Ban xia extract",
+      "omop_answer": "1547571 Piellia ternata whole extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "30817011000036109",
+      "substance": "Benzoin Sumatra",
+      "omop_answer": "1406 benzoin resin",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1385031000168108",
+      "substance": "Bupleurum falcatum extract",
+      "omop_answer": "1309412 Bupleurum falcatum root extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1423881000168104",
+      "substance": "Celery extract",
+      "omop_answer": "1309989 celery seed extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1383211000168108",
+      "substance": "Chinese privet extract",
+      "omop_answer": "1309353 Ligusticum sinense root extract",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Privet is Ligustrum; the target, Ligusticum sinense, is a different genus (the names differ by two letters)."
+    },
+    {
+      "substance_id": "30998011000036100",
+      "substance": "Citrus bioflavonoid extract",
+      "omop_answer": "1536070 flavone",
+      "real_products_blocked": 6,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "A mixed extract mapped to a single compound (flavone)."
+    },
+    {
+      "substance_id": "1974011000036105",
+      "substance": "Clostridium botulinum type A toxin-haemagglutinin complex",
+      "omop_answer": "1712 botulinum toxin type A",
+      "real_products_blocked": 2,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31010011000036102",
+      "substance": "Clove bud oil",
+      "omop_answer": "7624 clove oil",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2835011000036103",
+      "substance": "Coal tar solution",
+      "omop_answer": "2635 coal tar",
+      "real_products_blocked": 2,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1423081000168106",
+      "substance": "Common hawthorn extract",
+      "omop_answer": "21716 crataegus extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1380221000168109",
+      "substance": "Common jujube extract",
+      "omop_answer": "1426423 Ziziphus extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31034011000036102",
+      "substance": "Copper amino acid chelate",
+      "omop_answer": "2837 copper",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1383181000168109",
+      "substance": "Crataegus cuneata extract",
+      "omop_answer": "21716 crataegus extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "425504006",
+      "substance": "Crotalidae polyvalent immune fab",
+      "omop_answer": "2101271 Crotalidae immune F(ab')2",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "hand-checked; see reference/rxnorm_route_resolutions.json",
+      "why": "route answer rejected"
+    },
+    {
+      "substance_id": "31054011000036103",
+      "substance": "Cupric sulfate pentahydrate",
+      "omop_answer": "21579 copper sulfate",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "73639011000036106",
+      "substance": "Cytomegalovirus immunoglobulin",
+      "omop_answer": "22178 cytomegalovirus immune globulin",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "85241011000036104",
+      "substance": "Dimeticone-100000",
+      "omop_answer": "1426417 dimethicone 1000",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2798011000036103",
+      "substance": "Dimeticone-350",
+      "omop_answer": "324072 dimethicone",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "920902011000036102",
+      "substance": "Dried green lipped mussel",
+      "omop_answer": "1306118 New Zealand green mussel extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1383191000168107",
+      "substance": "Epimedium sagittatum extract",
+      "omop_answer": "1673375 Epimedium sagittatum top extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "143141000036106",
+      "substance": "Eucalyptus radiata",
+      "omop_answer": "1483423 Eucalyptus radiata leaf oil",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1381021000168108",
+      "substance": "Formosan sweetgum extract",
+      "omop_answer": "1724427 Liquidambar formosana fruit extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1380401000168104",
+      "substance": "Foxtail millet extract",
+      "omop_answer": "1310040 millet extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31286011000036105",
+      "substance": "Gentiana lutea",
+      "omop_answer": "1307945 Gentiana lutea root extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31309011000036105",
+      "substance": "Glycylglutamine monohydrate",
+      "omop_answer": "4885 glutamine",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "A dipeptide mapped to one of its constituent amino acids."
+    },
+    {
+      "substance_id": "31310011000036101",
+      "substance": "Glycyltyrosine dihydrate",
+      "omop_answer": "10962 tyrosine",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "A dipeptide mapped to one of its constituent amino acids."
+    },
+    {
+      "substance_id": "1383221000168101",
+      "substance": "Goji berry extract",
+      "omop_answer": "2048129 Berberis lycium whole extract",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Goji is Lycium barbarum / L. chinense; the target, Berberis lycium, is a barberry. A collision on the epithet 'lycium'."
+    },
+    {
+      "substance_id": "1461071000168104",
+      "substance": "Grindelia extract",
+      "omop_answer": "1492939 Grindelia hirsutula whole extract",
+      "real_products_blocked": 3,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "A genus narrowed to one species (Grindelia hirsutula) with nothing in the source to say which."
+    },
+    {
+      "substance_id": "31331011000036104",
+      "substance": "Hamamelis water",
+      "omop_answer": "89821 witch hazel",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "73640011000036101",
+      "substance": "Hepatitis B virus immunoglobulin",
+      "omop_answer": "1491862 hepatitis A virus",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "Hepatitis B immunoglobulin mapped to hepatitis A virus: the wrong virus, and an immunoglobulin mapped to a virus. HBIG is given to neonates of HBsAg-positive mothers; this edge is a clinical-safety defect."
+    },
+    {
+      "substance_id": "2826011000036107",
+      "substance": "High amylose maize starch",
+      "omop_answer": "1039062 corn starch",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1358021000168107",
+      "substance": "Irish moss",
+      "omop_answer": "1311477 Chondrus crispus extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31474011000036105",
+      "substance": "Lemon tea tree oil",
+      "omop_answer": "1309253 lemon oil",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Lemon tea tree is Leptospermum petersonii; the target, lemon oil, is Citrus limon."
+    },
+    {
+      "substance_id": "2821011000036102",
+      "substance": "Maize starch",
+      "omop_answer": "1039062 corn starch",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31530011000036109",
+      "substance": "Manganese amino acid chelate",
+      "omop_answer": "6623 manganese",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31547011000036109",
+      "substance": "Melaleuca oil",
+      "omop_answer": "1422485 Melaleuca ericifolia leaf oil",
+      "real_products_blocked": 5,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Melaleuca oil is tea tree oil, Melaleuca alternifolia; the target is Melaleuca ericifolia, a different species."
+    },
+    {
+      "substance_id": "1381991000168109",
+      "substance": "Membranous milk vetch extract",
+      "omop_answer": "319818 Astragalus preparation",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31592011000036101",
+      "substance": "Mint oil dementholised",
+      "omop_answer": "33094 peppermint oil",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Mint oil is Mentha arvensis; the target, peppermint oil, is Mentha x piperita."
+    },
+    {
+      "substance_id": "1402731000168107",
+      "substance": "Mixed (low-alpha type) tocopherols concentrate",
+      "omop_answer": "237099 alpha tocopherol",
+      "real_products_blocked": 2,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "The source names LOW-alpha mixed tocopherols; the target is alpha tocopherol. The mapping contradicts its own source."
+    },
+    {
+      "substance_id": "927566011000036100",
+      "substance": "Omega-3-acid ethyl esters-90",
+      "omop_answer": "484348 omega-3 acid ethyl esters (USP)",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "87051011000036106",
+      "substance": "Peppermint water",
+      "omop_answer": "33094 peppermint oil",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "64913011000036102",
+      "substance": "Picosulfate",
+      "omop_answer": "1546458 picosulfurate",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31764011000036109",
+      "substance": "Pine oil pumilio",
+      "omop_answer": "1360627 pine needle oil (pinus mugo)",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "33619005",
+      "substance": "Plasminogen activator",
+      "omop_answer": "11055 urokinase",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "hand-checked; see reference/rxnorm_route_resolutions.json",
+      "why": "route answer rejected"
+    },
+    {
+      "substance_id": "2836011000036105",
+      "substance": "Prepared coal tar",
+      "omop_answer": "2635 coal tar",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31424011000036106",
+      "substance": "Prepared ipecacuanha",
+      "omop_answer": "317824 Cephaelis ipecacuanha preparation",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2824011000036104",
+      "substance": "Purified talc",
+      "omop_answer": "10323 talc",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31012011000036103",
+      "substance": "Refined coal tar",
+      "omop_answer": "2635 coal tar",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2555011000036100",
+      "substance": "Rhamnus frangula",
+      "omop_answer": "1309934 Frangula californica bark extract",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "reviewer recall (Tier 3): a flag for a person, never a decision",
+      "why": "Rhamnus frangula is Frangula alnus; the target is Frangula californica, a different species."
+    },
+    {
+      "substance_id": "31762011000036100",
+      "substance": "Scotch pine needle oil",
+      "omop_answer": "1305670 pine needle oil (pinus sylvestris)",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2823011000036101",
+      "substance": "Senega root",
+      "omop_answer": "1310087 Polygala senega root extract",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1422981000168102",
+      "substance": "Soy phosphatidylserine-enriched soy lecithin powder",
+      "omop_answer": "579598 soybean lecithin",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "427004002",
+      "substance": "Tetanus antitoxin",
+      "omop_answer": "798306 tetanus toxoid vaccine, inactivated",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "hand-checked; see reference/rxnorm_route_resolutions.json",
+      "why": "route answer rejected"
+    },
+    {
+      "substance_id": "925495011000036104",
+      "substance": "Tolu syrup",
+      "omop_answer": "1116238 tolu balsam",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "2694011000036104",
+      "substance": "Undecylenamide dea",
+      "omop_answer": "314881 undecylenate",
+      "real_products_blocked": 0,
+      "status": "flagged",
+      "basis": "evident from the two names; no specialist knowledge needed",
+      "why": "A diethanolamide mapped to the acid's salt (undecylenate); different substances."
+    },
+    {
+      "substance_id": "75904011000036108",
+      "substance": "Valerian",
+      "omop_answer": "253206 valerian root extract",
+      "real_products_blocked": 4,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "73644011000036106",
+      "substance": "Varicella-zoster virus immunoglobulin",
+      "omop_answer": "39385 varicella-zoster immune globulin",
+      "real_products_blocked": 0,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "31704011000036108",
+      "substance": "White soft paraffin",
+      "omop_answer": "8091 petrolatum",
+      "real_products_blocked": 6,
+      "status": "no problem seen"
+    },
+    {
+      "substance_id": "1468651000168107",
+      "substance": "White willow extract",
+      "omop_answer": "1307749 Salix alba bark extract",
+      "real_products_blocked": 2,
+      "status": "no problem seen"
+    }
+  ]
+}

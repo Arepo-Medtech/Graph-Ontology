@@ -186,6 +186,66 @@
       "real_products_unblocked": 0,
       "why": "Not a substance. This is a pharmacological class and must not be mapped to an RxNorm ingredient; it belongs with the 370 rows already classified as substance groupers.",
       "evidence": "Its single ingredient row points at product 1144611009, which is not present in the product table at all — so even the count of 1 is a dangling reference, not a good."
+    },
+    {
+      "substance_id": "86447006",
+      "substance": "Glycerophosphoric acid",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5-5 (unattested)",
+      "rxcui": "OMOP2721197",
+      "concept_id": "40798855",
+      "rxnorm_name": "Glycerophosphoric Acid",
+      "vocabulary": "RxNorm Extension",
+      "products_unblocked": 6,
+      "real_products_unblocked": 2,
+      "why": "OMOP maps the acid to glyceryl phosphate; an exact standard 'Glycerophosphoric Acid' exists. AMT names the acid. Behind 2 real products (Smofkabiven parenteral nutrition).",
+      "evidence": "Found while hand-checking the code-route resolutions: every row where the route changed the name was checked, and this was one of 6 of 18 it got wrong. Target is standard=S, invalid=NULL in Athena v5.0 29-AUG-26.",
+      "rejected_candidate": {
+        "rxcui": "1423803",
+        "name": "glyceryl phosphate",
+        "why_rejected": "OMOP's own Maps to, narrowed or substituted"
+      }
+    },
+    {
+      "substance_id": "387566002",
+      "substance": "Clopenthixol",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5-5 (unattested)",
+      "rxcui": "OMOP5166493",
+      "concept_id": "36848877",
+      "rxnorm_name": "CLOPENTHIXOL",
+      "vocabulary": "RxNorm Extension",
+      "products_unblocked": 6,
+      "real_products_unblocked": 0,
+      "why": "OMOP maps it to zuclopenthixol, the (Z)-isomer; clopenthixol is the cis/trans mixture and an exact standard concept exists. The same narrowing as delbrueckii to subsp. bulgaricus, but inside OMOP's own mapping.",
+      "evidence": "Found while hand-checking the code-route resolutions: every row where the route changed the name was checked, and this was one of 6 of 18 it got wrong. Target is standard=S, invalid=NULL in Athena v5.0 29-AUG-26.",
+      "rejected_candidate": {
+        "rxcui": "114176",
+        "name": "zuclopenthixol",
+        "why_rejected": "OMOP's own Maps to, narrowed or substituted"
+      }
+    },
+    {
+      "substance_id": "37433002",
+      "substance": "Polycarbophil",
+      "state": "corrected_pending_attestation",
+      "decided": "2026-09-23",
+      "by": "claude-opus-5-5 (unattested)",
+      "rxcui": "OMOP5556428",
+      "concept_id": "1254559",
+      "rxnorm_name": "Polycarbophil",
+      "vocabulary": "RxNorm Extension",
+      "products_unblocked": 4,
+      "real_products_unblocked": 0,
+      "why": "OMOP maps the polymer to calcium polycarbophil, a specific salt (the laxative). An exact standard 'Polycarbophil' exists; the non-calcium polymer is a different preparation.",
+      "evidence": "Found while hand-checking the code-route resolutions: every row where the route changed the name was checked, and this was one of 6 of 18 it got wrong. Target is standard=S, invalid=NULL in Athena v5.0 29-AUG-26.",
+      "rejected_candidate": {
+        "rxcui": "20063",
+        "name": "calcium polycarbophil",
+        "why_rejected": "OMOP's own Maps to, narrowed or substituted"
+      }
     }
   ]
 }

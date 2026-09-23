@@ -102,6 +102,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
 .venv/bin/python scripts/omophub_bridge.py athena ~/code/spine/out/omop-vocab   # AMT → OMOP standard drugs, offline from the Athena bundle installed by `spine omop vocab --athena` (~1 min)
 .venv/bin/python scripts/build_compendium.py
+.venv/bin/python scripts/apply_standard_ingredients.py   # re-apply review decisions + scored-route resolutions; run after EVERY build
 .venv/bin/python scripts/drug_strength.py extract     # AMT strengths out of the OWL axioms (~1 min)
 .venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
 .venv/bin/python scripts/atc_bridge.py               # ATC classes: the PBS listing, plus OMOP's ancestry for everything else

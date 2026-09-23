@@ -19,16 +19,19 @@ evidence the compendium did not have when the file was written.
 | already classified: medical food or formula | 61 | " |
 | already classified: cell, gene or tissue therapy | 10 | " |
 | already classified: excipient or vehicle | 2 | " |
-| **OMOP resolves it** | **67** | OMOP's own SNOMED-to-RxNorm mapping answers the question the resolver could not |
+| **OMOP resolves it** | **45** | OMOP's own mapping, one source, reviewed and no problem seen — see the third pass below |
 | **every product using it already reaches OMOP** | **52** | the substance is unresolved but nothing downstream is blocked |
 | **a salt whose base resolves and carries the strength** | **31** | item 16's salt-to-base pairs: the products are reachable through the basis of strength |
-| **decided by review** | **10** | a person chose; recorded in `reference/rxnorm_substance_decisions.json` |
-| choose among candidates | 366 | the resolver found names; a person picks one |
-| no candidate found | 617 | nothing to choose between; needs a fresh lookup, not a judgement |
+| **resolved by scored route** | **147** | the OMOP code route, Tier 1 on the truth set, hand-checked wherever it renamed — `reference/rxnorm_route_resolutions.json` |
+| **decided by review** | **13** | a person chose; recorded in `reference/rxnorm_substance_decisions.json` |
+| OMOP's answer flagged: needs a person | 13 | OMOP's answer looks wrong on review — `reference/omop_substance_review.json` |
+| route answer rejected: needs a person | 3 | the scored route's answer was refused on hand check |
+| choose among candidates | 335 | the resolver found names; a person picks one |
+| no candidate found | 504 | nothing to choose between; needs a fresh lookup, not a judgement |
 
-**983 rows still need a person.** They block 2,030 products by raw count — but only **329 of those are things
-anyone dispenses**; see *What "blocked" was counting* below. The evidence removed 1,070 rows from the queue, not the
-majority, and the two review passes below removed 10 more.
+**855 rows still need a person**, blocking **239 real products** (things anyone dispenses; see *What "blocked" was
+counting* below). The evidence removed 1,070 rows from the queue, not the majority; the review passes and the scored
+route below removed 144 more — and put 16 back that the queue had wrongly been calling resolved.
 
 ## Why the queue is short even so
 
@@ -36,10 +39,10 @@ The blocked products are concentrated. The file is sorted by how many products e
 
 | reading down the queue | covers |
 |---|---|
-| the first **28** rows | half the blocked **real** products |
-| the first **72** rows | 80 % |
+| the first **19** rows | half the blocked **real** products |
+| the first **50** rows | 80 % |
 
-(Ranked by `real_products_blocked`. On the old raw count the same thresholds were 216 and 576 rows — the change is
+(Ranked by `real_products_blocked`. Before the scored route landed they were 28 and 72; on the old raw count, 216 and 576 — the change is
 explained below, and it is the single biggest improvement to this queue's usefulness.)
 
 And the two actions are different work, so the `verdict` column separates them:
@@ -173,3 +176,62 @@ the first 28 rows instead of 216**, and 80 % by 72 instead of 576.
 
 One consequence worth stating: a row whose products are all groupers now sorts to the bottom rather than the top.
 Four of the six contrast rows above are exactly that, and are recorded as decided anyway so they stop being read.
+
+## Third pass: the 153 code-route resolutions, and what checking them found (23 September 2026)
+
+The OMOP code route — SNOMED concept → `Maps to` → standard Ingredient — earned **Tier 1** on the truth set
+(3,074 / 3,074, Wilson lower bound 0.9988; `scripts/route_scorer.py`). It answers 153 rows of this queue. They were
+landed with a hand-checked sample, not blind.
+
+**Why RxNav never found them: 144 of the 153 are RxNorm Extension concepts.** RxNorm Extension is OMOP's vocabulary
+for drugs RxNorm never covered, and non-US substances are exactly what fills it. It also means they cannot go into
+`rxnorm.rxcui_ingredient`, a column holding only genuine RxCUIs (0 of 4,530 rows are OMOP codes).
+`scripts/apply_standard_ingredients.py` writes them to a new table, `substance_standard_ingredient`, where vocabulary
+is a column. Run it after every build, as `apply_corrections.py` is run after every bind.
+
+**The check** (stratified; `reference/rxnorm_route_resolutions.json` records which rows were read): every row where
+the route disagreed with the resolver's candidate (32, a census); the 8 with most real products blocked; 8 seeded
+random; then **every row where the route changed the substance's name** (18, a census) — because both errors the
+first three strata found had that signature.
+
+| | checked | wrong |
+|---|---:|---:|
+| route kept the name | 40 | **0** |
+| route changed the name | 18 | **6** |
+
+**The Tier 1 score did not transport to the hard population.** That was the covariate-shift risk stated before the
+check; this measures it. For this route a changed name is the risk signal, and such answers are gaps that carry a
+frame, not lookups that may collapse. The six:
+
+| substance | route's answer | outcome |
+|---|---|---|
+| Tetanus antitoxin | tetanus toxoid **vaccine** | rejected — opposite interventions (passive vs active immunisation) |
+| Plasminogen activator | urokinase | rejected — a class narrowed to one agent |
+| Crotalidae polyvalent immune Fab | Crotalidae immune F(ab')2 | rejected — a different product; CroFab's ingredient is deprecated with no replacement |
+| Clopenthixol | zuclopenthixol | overridden → `CLOPENTHIXOL` |
+| Glycerophosphoric acid | glyceryl phosphate | overridden → `Glycerophosphoric Acid` (2 real products) |
+| Polycarbophil | calcium polycarbophil | overridden → `Polycarbophil` |
+
+Landed: **147** accepted (135 with the name kept — 40 read, 95 resting on code and name agreeing — and 12 renamed
+but checked), 3 overrides as review decisions, 3 back with a person. Substances with a standard ingredient:
+**4,530 → 4,689**.
+
+**And the queue had been hiding some of it.** All six bad answers were already in `omop_substance` from the OMOP
+bridge, marked `omop-only`, and this queue presented three of them — the tetanus toxoid one included — as **"OMOP
+resolves it"**. That verdict trusted OMOP's single, unconfirmed answer unconditionally. Every one of the 61 rows
+under it was an answer in which OMOP had changed the name, so all 61 were read:
+
+| | rows |
+|---|---:|
+| no problem seen | 45 |
+| flagged, wrong on the face of the names | 7 — including *Hepatitis **B** immunoglobulin → hepatitis **A** virus* and *mixed **low-alpha** tocopherols → **alpha** tocopherol* |
+| flagged on reviewer recall (Tier 3) | 6 — e.g. *Chinese privet → **Ligusticum*** (privet is *Ligustrum*), *goji berry → **Berberis** lycium* |
+| already rejected above | 3 |
+
+**About a quarter of what this queue called resolved was wrong.** Flagged rows go back to a person with the reason
+attached; `reference/omop_substance_review.json` assigns **no** replacement concepts, because recall-based flags are
+Tier 3 and may point but not decide. `omop_substance` is left as a faithful record of what OMOP asserts; the queue
+simply stops calling a flagged row resolved.
+
+Finding recorded, not acted on: **OMOP carries two standard ingredients for edotreotide** — RxNorm Extension
+`EDOTREOTIDE` and RxNorm `2199392`, which RxNorm itself spells *edotreotr**i**de*; probably why they were never linked.

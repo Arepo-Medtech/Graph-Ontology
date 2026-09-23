@@ -367,7 +367,7 @@ marks its own work. **Hard set:** 1,143 review-queue rows.
 
 | route | fired | precision | Wilson lower | log(m/u) | hard fired | **earned** |
 |---|---:|---:|---:|---:|---:|:-:|
-| `code:snomed-maps-to-ingredient` | 3,074 | 1.000 | 0.9988 | 8.01 | 153 | **1** |
+| `code:snomed-maps-to-ingredient` | 3,074 | 1.000 | 0.9988 | 8.01 | 153 | **1** *(name kept)* · gap *(renamed)* |
 | `deprecation:name-then-replaced-by` | 82 | 0.951 | 0.8812 | 4.32 | 8 | **2** |
 | `name:exact-normalised` | 32 | 0.750 | 0.5789 | 3.16 | 66 | **inadmissible** |
 
@@ -377,10 +377,14 @@ Read with its limits:
   stored value is a lower bound, which is the safe direction.
 - **m as computed includes coverage.** For the strength of a route *when it fires*, read precision and its
   interval; log(m/u) is the transportable weight across populations.
-- **The code route fired on none of the 9 hand-decided rows.** Those rows needed a person because no OMOP mapping
-  existed. So the route's failure mode is **silence, not error** — the property that justifies applying it
-  unsupervised — but its 153 hard-set answers sit between the two populations and have no gold standard. They are
-  landed with a hand-checked sample, not blind.
+- **The code route fired on none of the 9 hand-decided rows**, and I read that as "its failure mode is silence,
+  not error". **The hand check disproved it.** On the 153 hard-population answers it was right 40 of 40 where it kept
+  the substance's name and **wrong 6 of 18 where it changed it** — including *tetanus antitoxin → tetanus toxoid
+  vaccine*. The Tier 1 score did not transport. The route's earned tier must therefore be read **conditionally**:
+  Tier 1 when the name is kept, a gap that carries its frame when the name changes. See
+  `docs/rxnorm-review-queue.md` (third pass) and `reference/rxnorm_route_resolutions.json`.
+- The same reading applies to everything already relying on OMOP's single answer: of the review queue's 61
+  "OMOP resolves it" rows — all renamed — 16 were flagged on review.
 
 **Next routes to add:** `Has marketed form` against the AMT tag heuristic; salt→base against OMOP
 `Basis str subst of`; the 985 substance↔analyte name join (expected inadmissible for the reason the name route is);

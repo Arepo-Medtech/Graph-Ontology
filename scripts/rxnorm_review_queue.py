@@ -27,6 +27,11 @@ import duckdb
 
 DB = Path("out/compendium.duckdb")
 DECISIONS = Path("reference/rxnorm_substance_decisions.json")
+ROUTES = Path("reference/rxnorm_route_resolutions.json")
+OMOP_REVIEW = Path("reference/omop_substance_review.json")
+# verdicts that put a row in front of a person
+HUMAN = ("choose among candidates", "no candidate found",
+         "route answer rejected: needs a person", "OMOP's answer flagged: needs a person")
 # AMT levels that are groupers rather than goods: nobody dispenses an MP or an MPF.
 ABSTRACT_TAGS = ("medicinal product", "medicinal product form", "product name")
 
@@ -43,9 +48,20 @@ def load_decisions(path: Path = DECISIONS) -> dict:
     return {d["substance_id"]: d for d in doc.get("decisions", [])}
 
 
+def load_routes(path: Path = ROUTES) -> dict:
+    """Scored-route resolutions, keyed by substance id. Only `accepted` ones resolve a row; a rejected route answer
+    leaves the row with a person, carrying what was refused so nobody accepts it by accident."""
+    if not path.exists():
+        return {}
+    return {r["substance_id"]: r for r in json.load(open(path)).get("resolutions", [])}
+
+
 def build(review_path: str, out_path: str, log=print) -> dict:
     rows = list(csv.DictReader(open(review_path), delimiter="\t"))
     decisions = load_decisions()
+    routes = load_routes()
+    flagged = ({x["substance_id"]: x for x in json.load(open(OMOP_REVIEW))["review"] if x["status"] == "flagged"}
+               if OMOP_REVIEW.exists() else {})
     con = duckdb.connect(str(DB))
     ids = sorted({r["sctid"] for r in rows})
     con.execute("CREATE OR REPLACE TEMP TABLE q AS SELECT * FROM (VALUES " + ",".join(f"('{i}')" for i in ids) + ") t(id)")
@@ -92,10 +108,17 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         blocked = products - reaching
         real_products, real_blocked = e[10] or 0, e[11] or 0
         decision = decisions.get(r["sctid"])
+        route = routes.get(r["sctid"])
         if decision:
             # a person has already chosen; the resolver's opinion no longer matters
             verdict = ("decided by review: not applicable" if decision["state"] == "rejected"
                        else "decided by review")
+        elif route and route["status"] == "accepted":
+            verdict = "resolved by scored route"     # Tier 1 on the truth set, then hand-checked where it renamed
+        elif route and route["status"] == "route_answer_rejected":
+            verdict = "route answer rejected: needs a person"   # OMOP's answer IS the refused one
+        elif r["sctid"] in flagged:
+            verdict = "OMOP's answer flagged: needs a person"   # omop-only, and it looks wrong on review
         elif r["status"].startswith("not-applicable"):
             verdict = "already classified: " + r["status"].split(":", 1)[1].strip()
         elif e[4]:
@@ -117,12 +140,14 @@ def build(review_path: str, out_path: str, log=print) -> dict:
             "decided_rxcui": (decision or {}).get("rxcui", ""),
             "decided_name": (decision or {}).get("rxnorm_name", ""),
             "decided_state": (decision or {}).get("state", ""),
+            "route_status": (route or {}).get("status", ""),
+            "route_answer": f"{route['rxcui']} {route['name']}" if route else "",
+            "flag_reason": (flagged.get(r["sctid"]) or {}).get("why", "") or (route or {}).get("why", ""),
             "omop_rxcui": e[4] or "", "omop_rxnorm_name": e[5] or "", "omop_vs_rxnav": e[6] or "",
             "base_substance": e[7] or "", "base_rxcui": e[8] or "", "base_rxnorm_name": e[9] or "",
             "legacy_rxcui": r["legacy_rxcui"], "legacy_name": r["legacy_name"],
             "candidate_1": r["cand1"], "candidate_2": r["cand2"], "candidate_3": r["cand3"],
         })
-    HUMAN = ("choose among candidates", "no candidate found")
     out.sort(key=lambda x: (x["verdict"] not in HUMAN, -x["real_products_blocked"], -x["products_blocked"], -x["products"]))
     with open(out_path, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(out[0]), delimiter="\t")
@@ -144,8 +169,10 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         "rows": len(out),
         "by_verdict": dict(by_verdict.most_common()),
         "decided_by_review": len(decisions),
+        "resolved_by_scored_route": sum(1 for x in out if x["verdict"] == "resolved by scored route"),
+        "route_answers_rejected_left_for_a_person": sum(1 for x in out if x["route_status"] == "route_answer_rejected"),
         "products_unblocked_by_decisions": sum(
-            x["products_blocked"] for x in out if x["verdict"].startswith("decided by review")),
+            x["products_blocked"] for x in out if x["verdict"].startswith(("decided by review", "resolved by scored route"))),
         "needs_a_person": len(needs),
         "products_blocked_by_them": blocked_total,
         "real_products_blocked_by_them": real_blocked_total,
