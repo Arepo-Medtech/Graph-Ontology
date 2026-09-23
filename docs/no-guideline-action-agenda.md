@@ -47,10 +47,15 @@ treatment guidance and would be labelled as such. ⛔ **Blocked on Decision 1.**
 proven pipeline: verbatim fragments, `verify.py`, `number_guard.py`, and a licence footing per source (open / quote-with-attribution /
 capped like Cancer Council).
 
-**Track C — international evidence layer (where no Australian source exists).** Consensus and PubMed searches for current international
-guidelines and trials (EULAR, BSR, ESMO, NICE…). Used as an **evidence pack** attached to the gap: citation, design, grade, licence.
-International guidance is not presented as Australian practice, and verbatim quoting is only done where its licence allows
-(e.g. EULAR 2023 is CC BY-NC-ND).
+**Track C — international guidelines (owner direction, 2026-09-23: "Australian guidelines always follow UK/US/EU lead anyway").**
+Current major international guidelines (NICE, ESMO, EULAR, ASCO, NCCN, EHA, KDIGO…) are **first-line sources for the clinical
+recommendation** where no Australian guideline exists, and a cross-check where one does. Each page pairs:
+(a) the international recommendation, labelled `origin: international` with body and year; with
+(b) the **Australian access overlay**: what the PBS actually funds, and in what order.
+The overlay is where Australia genuinely diverges. Example: ASCO 2026 recommends quadruplet induction for myeloma, while Australian
+practice is >90% bortezomib-based induction because that is what the PBS lists (ALLG MM21, Br J Haematol 2024).
+Found via the signed-in Consensus connector (`country: "au"` for the Australian layer; unfiltered for international).
+The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
 
 **Track D — attestation.** New dose claims from quotable sources are machine-checked. Anything paraphrased joins the existing attestation queue.
 
@@ -73,8 +78,9 @@ International guidance is not presented as Australian practice, and verbatim quo
    commercial-use clause also bears on the 24 Immunisation Handbook guidelines already merged. Whether Track A can proceed, and on what
    footing, is the owner's call (and possibly legal advice), not an engineering one.
 2. **Non-commercial (NC) licences:** are CC BY-NC / NC-ND sources acceptable, given the project may be commercial?
-3. **Consensus:** the free tier returns 3 results per search. Connecting an account raises that.
-4. **International guidance:** evidence layer only (as proposed), or also authored as clearly-labelled non-Australian guidelines?
+3. ~~Consensus access~~ **Done:** the account connector is signed in (10 results per search; Pro not yet reflected, and reconnecting should give 20).
+4. ~~International guidance: evidence layer only?~~ **Decided 2026-09-23:** international guidelines are first-line sources, labelled by origin, paired with the PBS access overlay (Track C).
 
 ## 6. Progress log
 - 2026-09-23: triage complete (393 gaps / 37 near-miss / 45 duplicate / 9 admin / 9 artefact). Source research launched in 6 groups.
+- 2026-09-23: owner direction: international guidelines are first-line sources (Track C). Researchers told to add `origin` and to search Consensus with `country: au`.
