@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,050,986 nodes, 4,602,210 edges, 158 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM* and *How a drug works*.)
+**1,051,107 nodes, 4,605,462 edges, 160 edge types, 20 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -341,6 +341,51 @@ tubulo-interstitial diseases* narrowed to nephritis; J05 (croup *and* epiglottit
 14.4%. These are **US** codes: Australia's ICD-10-AM is licensed from IHACPA and is not held, so an Australian coded
 diagnosis still needs ICD-10-AM → SNOMED from its own source.
 
+## Pathology units: US conventional against Australian SI
+
+The likelihood-ratio thresholds were published mostly in US units (cholesterol 55 mg/dL, uric acid 5.5 mg/dL), and
+LOINC keeps a US mass-unit code and an SI molar code for the same measurement. Australian laboratories report in their
+own units — mostly molar for small molecules, but **g/L** for haemoglobin, albumin and protein — so the Australian unit
+cannot be inferred; it has to come from the Australian authority.
+
+**The authority: the RCPA SPIA reference sets** (NCTS release RCPA_v20260831, read in place — RCPA copyright, so what is
+derived from them stays in the git-ignored `cache/rcpa/`). `scripts/rcpa_units.py` loads the chemical pathology,
+haematology, immunopathology, microbiology-serology and blood-gas **reporting** sets: **2,053 rows, 1,803 LOINC codes**,
+each with its Australian preferred unit (display and UCUM).
+
+**Three layers, all by code:**
+
+| layer | how | result |
+|---|---|---|
+| `loinc:au_preferred_unit` (LOINC → UCUM) | the RCPA row's unit, beside LOINC's own example unit (the US convention) | **1,207 edges**: 667 identical, 258 spelling only, **188 differ in scale** and carry the factor (Hb g/dL → g/L ×10, cells /µL → 10⁹/L ×0.001, haematocrit % → L/L ×0.01), 67 assay-specific arbitrary units, **24 differ in kind** (a review list) |
+| `loinc:unit_counterpart` (LOINC mass ↔ molar) | same LOINC axes, MCnc against SCnc; the analyte's **molecular weight from PubChem by the component's LOINC-asserted PubChem / ChEBI code** — no name matching (`scripts/unit_reconcile.py`) | **2,045 pairs**, 1,042 with a factor mg/dL → mmol/L; where the RCPA lists either side, Australia reports the **molar side 170 times, the mass side 59**, both 24 |
+| threshold units (`reference/threshold_units.json`) | every unit-bearing LR threshold keeps its value **as published** (the source trace) beside the **Australian value** | 35 thresholds: 23 already Australian, 8 relabels (BNP pg/mL = ng/L, procalcitonin ng/mL = µg/L, base deficit mEq/L = mmol/L), 2 molar conversions (**urate 5.5 mg/dL → 0.327 mmol/L**; pleural cholesterol 55 mg/dL → 1.42 mmol/L) |
+
+**The local unit takes primacy only once corrected.** A threshold's Australian value becomes primary when the conversion
+is by code (or a pure relabel) **and** an RCPA row for the **same analyte in the same specimen** confirms the unit
+(`reference/threshold_rcpa_map.json` names the row; the check is mechanical): **13 thresholds now read Australian first**
+(BNP 100 ng/L, NT-proBNP 135 ng/L, procalcitonin 2 µg/L, urate 0.327 mmol/L, CRP, calprotectin, fluid LDH …). 10 keep the
+published unit first with the Australian value beside it, because no RCPA row covers that analyte and specimen —
+pleural-fluid cholesterol (serum only), PlGF, quantitative FIT (the RCPA lists faecal occult blood as qualitative) and
+the synovial white count, where borrowing the *blood* row (10⁹/L) would be wrong: fluid counts are commonly reported in
+10⁶/L. Two BNP thresholds are flagged at source: the abstract says "100 ng/mL" where the convention is 100 pg/mL.
+
+**Conversions are checked against the clinical factors.** The first molecular-weight pass got **phosphate wrong by a
+factor of three** (0.105 instead of 0.3229): LOINC maps the analyte to the phosphate ion (95 g/mol), but laboratories
+report phosphate *as phosphorus* (31 g/mol). Seven reporting conventions — phosphate as P, urea nitrogen as N₂,
+triglyceride as triolein, HDL / LDL / VLDL / non-HDL cholesterol as cholesterol — are now explicit, cited to Young DS,
+*Ann Intern Med* 1987 (PMID 3789557), with the molecular weight still PubChem's by CID; the choice of reference substance
+is authored, so those factors carry `convention` and await sign-off, and the reconciler refuses to run if a convention is
+keyed to the wrong LOINC part (two were, on the first try). Against the standard table: **13 of 14 factors match**
+(glucose 0.0555, creatinine 0.0884, cholesterol 0.02586, calcium 0.2495, urea nitrogen 0.357, phosphate 0.3229 …);
+direct bilirubin has no chemical code and gets no factor rather than a guess.
+
+**What the RCPA data itself needs** (reported, not corrected): **47 unit strings in 6 forms are not valid UCUM** —
+`[IU]mL` (no operator) across the coagulation-factor rows, a typographic apostrophe in `[beth’U]`, `KU/L` (K is not a
+UCUM prefix), `mmHg` for `mm[Hg]` — and the 24 kind differences include clashes with the LOINC code's own property:
+methaemoglobin *fraction* in g/L, mixed-venous base deficit in %, stone weight in g/L, hepatitis C core antigen in pg/mL
+on an arbitrary-unit code, "Non HDL cholesterol" in nmol/L.
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -387,6 +432,9 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 # drugcentral.dump.11012023.sql.gz 1.40 GB -- URLs in scripts/build_edges.py and scripts/drugcentral_extract.py
 .venv/bin/python scripts/drugcentral_extract.py   # ~10 s: streams the dump, keeps 9 tables, no Postgres needed
 .venv/bin/python scripts/chembl_moa_witness.py    # ~3 min, once per DrugCentral release: ChEMBL's verdict on each mechanism
+.venv/bin/python scripts/rcpa_units.py            # RCPA SPIA preferred units, read in place (RCPA_DIR); derived data to cache/rcpa/
+.venv/bin/python scripts/unit_reconcile.py        # ~10-25 min first run (PubChem, cached): LOINC mass <-> molar pairs and factors
+.venv/bin/python scripts/threshold_units.py       # LR thresholds: as published + Australian value, primacy once RCPA confirms
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~2.5 min: out/graph.duckdb, validated against the register
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
@@ -399,4 +447,5 @@ DrugCentral is CC BY-SA 4.0; ChEMBL (the witness answers in cache/chembl/) is CC
 CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC and the SNOMED CT LOINC Extension are
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not
-imported. *These were stated from memory while designing and should be confirmed before any commercial use.*
+imported. The RCPA SPIA reference sets are RCPA copyright (NCTS terms of use): read in place, derived data in cache/rcpa/
+only, and a graph built with them is not for redistribution. *These were stated from memory while designing and should be confirmed before any commercial use.*
