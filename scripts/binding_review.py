@@ -120,19 +120,20 @@ def build():
                           if sig.get(k)) or "—"
         if c.get("quarantine"):
             flags = "⚠️ QUARANTINED: " + c["quarantine"].get("reason", "") + (", " + flags if flags != "—" else "")
+        research = ""
         d = dev.get(cond)
         if d:
             if d.get("conditionIsReproductive"):
-                others = "⚠️ **STAYS QUARANTINED** — the condition itself is reproductive"
+                research = "⚠️ **STAYS QUARANTINED** — the condition itself is reproductive"
             elif d.get("clean_alternatives"):
-                others = "**re-searched:** " + " · ".join(a.split("  [")[0] for a in d["clean_alternatives"][:2])
+                research = "**re-searched:** " + " · ".join(a.split("  [")[0] for a in d["clean_alternatives"][:2])
             else:
-                others = "⚠️ re-searched, **no clean alternative**"
+                research = "⚠️ re-searched, **no clean alternative**"
         parents = "; ".join(p.get("display", "") for p in (c.get("parents") or [])[:2]) or "—"
         others = len(c.get("other_hits") or [])
         title, todo = tier_of(c.get("suggested_action", ""))
         groups.setdefault((title, todo), []).append(
-            f"| {cell} | {cond} | `{s}` | `{code}` {top.get('display','')} | {parents} | {flags} | {others} |")
+            f"| {cell} | {cond} | `{s}` | `{code}` {top.get('display','')} | {parents} | {flags} | {research} | {others} |")
     return rev, groups, kept, dropped
 
 def write():
@@ -165,8 +166,8 @@ def write():
      "python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json\n```\n"]
     for (title, todo), rows in sorted(groups.items()):
         o += [f"\n## {title}\n", f"*{len(rows)} rows — {todo}.*\n",
-              "| decision | condition | sha | top hit | its parents | flags | other hits |",
-              "|---|---|---|---|---|---|---|"] + rows
+              "| decision | condition | sha | top hit | its parents | flags | re-search | other hits |",
+              "|---|---|---|---|---|---|---|---|"] + rows
     os.makedirs(os.path.dirname(QUEUE), exist_ok=True)
     open(QUEUE, "w", encoding="utf-8").write("\n".join(o) + "\n")
     print(f"{QUEUE}: {n} candidates, {kept} decided, {n - kept} outstanding"
