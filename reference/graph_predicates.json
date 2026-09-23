@@ -33,7 +33,8 @@
     "CORPUS": "a condition of this compendium's guideline corpus, keyed by its name",
     "DC_TARGET": "DrugCentral target, keyed by target_id: one protein, or a complex of several (a GABA-A receptor), as DrugCentral curates it",
     "UNIPROT": "UniProtKB protein, keyed by accession (P35354)",
-    "NCBIGENE": "NCBI Gene, keyed by Entrez gene id (5743); the id HPO and DrugCentral both use"
+    "NCBIGENE": "NCBI Gene, keyed by Entrez gene id (5743); the id HPO and DrugCentral both use",
+    "UCUM": "A unit of measure, keyed by its UCUM code (mmol/L, g/L, 10*9/L); reached only by unit edges -- numbers are never nodes"
   },
   "predicates": [
     {
@@ -844,6 +845,38 @@
       "source": "SNOMED CT LOINC Extension 20260321, sct2_Identifier; class from LOINC 2.83",
       "status": "built",
       "note": "A separate predicate on purpose: the release notes say these groupers 'are not intended for and must not be used as result codes', so a traversal over results must not be able to reach them by accident."
+    },
+    {
+      "id": "loinc:unit_counterpart",
+      "label": "LOINC mass-concentration term (US convention, mg/dL) and its substance-concentration counterpart (SI, mmol/L) -- the same measurement in the other unit",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "LOINC"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 axes (MCnc and SCnc, every other axis equal); molecular weight from PubChem by the component part's LOINC-asserted equivalent PubChem / ChEBI id",
+      "status": "built",
+      "note": "attrs.factor_mg_per_dL_to_mmol_per_L = 10 / MW, with the MW and its PubChem CID; null where the analyte has no equivalent chemical code (proteins, lipoprotein fractions) -- the pair is still an edge, the factor is not guessed. attrs.au_preferred (which of the two Australian laboratories report) comes from the RCPA SPIA Preferred Units Table and is null until it is loaded: Australian practice is not always molar (haemoglobin, albumin in g/L). scripts/unit_reconcile.py; reference/loinc_unit_counterparts.json."
+    },
+    {
+      "id": "loinc:au_preferred_unit",
+      "label": "Australian laboratories report this LOINC term in this unit (RCPA SPIA preferred unit)",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "UCUM"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RCPA SPIA Reporting Terminology Reference Sets (chemical pathology, haematology, immunopathology, microbiology serology, blood gases), NCTS release RCPA_v20260831 -- read in place, RCPA copyright",
+      "status": "built",
+      "note": "attrs: the RCPA display unit, LOINC's example (US-convention) UCUM unit for the same code, and factor_us_example_to_au where the two differ only in scale (haemoglobin g/dL -> g/L, x10); null where they differ in kind. Which of a mass / molar pair Australia reports is read off these edges (loinc:unit_counterpart attrs.au_preferred is filled from them at build time). The graph built from this is not for redistribution, as the RCPA content it carries is licensed."
     },
     {
       "id": "loinc:interpreted_in_finding",

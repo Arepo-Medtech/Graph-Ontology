@@ -1,0 +1,18 @@
+{
+ "_note": "Which RCPA SPIA reporting row confirms each threshold analyte's Australian unit: the LOINC code of the RCPA row for the SAME analyte in the SAME specimen, or null with the reason. scripts/threshold_units.py then checks, mechanically, that the RCPA row's unit equals the converted Australian unit; only then does the local unit take primacy. A row for another specimen never confirms (Australian fluid cell counts are reported in 10^6/L, blood counts in 10^9/L).",
+ "map": {
+  "serum B-type natriuretic peptide": {"rcpa_loinc": "30934-4"},
+  "plasma B-type natriuretic peptide": {"rcpa_loinc": "30934-4"},
+  "point-of-care NT-proBNP": {"rcpa_loinc": "33762-6"},
+  "procalcitonin": {"rcpa_loinc": "75241-0"},
+  "base deficit": {"rcpa_loinc": "1922-4", "why": "the source does not name the blood specimen; RCPA base deficit rows for arterial (1922-4), venous (1924-0) and capillary (1923-2) blood all give mmol/L"},
+  "serum uric acid": {"rcpa_loinc": "14933-6"},
+  "C-reactive protein": {"rcpa_loinc": "1988-5"},
+  "faecal calprotectin": {"rcpa_loinc": "38445-3"},
+  "pleural fluid lactate dehydrogenase": {"rcpa_loinc": "14803-1"},
+  "pleural fluid cholesterol": {"rcpa_loinc": null, "why": "the RCPA lists cholesterol for serum/plasma only (14647-2, mmol/L); no fluid row"},
+  "placental growth factor": {"rcpa_loinc": null, "why": "not in the RCPA SPIA reporting sets"},
+  "faecal immunochemical test": {"rcpa_loinc": null, "why": "the RCPA lists faecal occult blood as qualitative only (2335-8); no quantitative faecal haemoglobin row"},
+  "synovial fluid white cell count": {"rcpa_loinc": null, "why": "the RCPA lists white cell count for blood only (6690-2, 10^9/L); fluid counts are commonly reported in 10^6/L, so the blood row cannot confirm"}
+ }
+}

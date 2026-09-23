@@ -58,6 +58,94 @@ HP_GENES = Path("cache/hpo/genes_to_disease.txt")   # HPO release v2026-09-01, 1
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
+UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path("reference/threshold_units.json")   # US <-> AU units
+RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
+RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
+UCUM_PREFIX = {"k": 1e3, "h": 1e2, "da": 1e1, "": 1.0, "d": 1e-1, "c": 1e-2, "m": 1e-3, "u": 1e-6, "n": 1e-9, "p": 1e-12, "f": 1e-15}
+
+
+def ucum_malformed(u: str) -> list:
+    """Ways a unit string breaks UCUM (reported, not silently fixed): '[IU]mL' (no operator), a typographic apostrophe,
+    'KU' (K is not a UCUM prefix), 'mmHg' for mm[Hg], a bare 'IU' for [IU]."""
+    import re as _re
+    probs = []
+    if _re.search(r"\][A-Za-z]", u or ""):
+        probs.append("missing operator after a bracketed unit")
+    if "\u2019" in (u or ""):
+        probs.append("typographic apostrophe")
+    if _re.search(r"(^|/)KU", u or ""):
+        probs.append("'K' is not a UCUM prefix")
+    if "mmHg" in (u or ""):
+        probs.append("mmHg for mm[Hg]")
+    if _re.search(r"(^|[^\[])IU", u or ""):
+        probs.append("IU without brackets")
+    return probs
+
+
+def _ucum_norm(u: str) -> str:
+    """Spelling-level normalisation for COMPARISON only: annotations dropped ({creat}), malformed forms repaired, titre / titer,
+    [IU] / U, mmHg = mm[Hg], mosm = mmol for osmolality."""
+    import re as _re
+    u = (u or "").strip().replace("\u2019", "'").replace(" ", "")
+    u = _re.sub(r"\](?=[A-Za-z])", "]/", u)
+    u = _re.sub(r"(^|/)KU", r"\1kU", u)
+    u = _re.sub(r"(^|[^\[])IU", r"\1[IU]", u)
+    u = _re.sub(r"\{[^}]*\}", "", u).replace("[IU]", "U").replace("mmHg", "mm[Hg]").replace("mosm", "mmol")
+    return u or "{titre}"
+
+
+ARBITRARY = ("[arb'U]", "[IU]", "U", "[beth'U]", "[APL'U]", "[GPL'U]", "[MPL'U]")
+COUNT = {"10*9/L": 1e9, "10*12/L": 1e12, "10*6/L": 1e6, "10*3/uL": 1e9, "10*6/uL": 1e12, "/uL": 1e6, "/L": 1.0, "/mm3": 1e6}
+FRACTION = {"%": 0.01, "L/L": 1.0, "/1": 1.0, "{ratio}": 1.0, "": 1.0}
+
+
+def ucum_scale(us: str, au: str):
+    """Factor taking a value in `us` to `au` when they differ only in scale: metric prefix (g/dL -> g/L = 10), a count per
+    volume (/uL -> 10*9/L = 0.001), a fraction (% -> L/L = 0.01). None otherwise."""
+    import re as _re
+    nu, na = _ucum_norm(us), _ucum_norm(au)
+    cu, ca = COUNT.get(_re.sub(r"\{[^}]*\}", "", us.replace(" ", ""))), COUNT.get(_re.sub(r"\{[^}]*\}", "", au.replace(" ", "")))
+    if cu and ca:
+        return round(cu / ca, 12)
+    if us.strip() in FRACTION and au.strip() in FRACTION and us.strip() != au.strip() and "{ratio}" not in (us, au):
+        return round(FRACTION[us.strip()] / FRACTION[au.strip()], 9)
+    def parse(u):
+        parts = u.split("/")
+        if len(parts) != 2:
+            return None
+        out = []
+        for p_ in parts:
+            m = _re.fullmatch(r"(da|[khdcmunpf]?)(g|mol|L|U)", p_.strip())
+            if not m:
+                return None
+            out.append((UCUM_PREFIX[m.group(1)], m.group(2)))
+        return out
+    a, b = parse(nu), parse(na)
+    if not a or not b or a[0][1] != b[0][1] or a[1][1] != b[1][1]:
+        return None
+    return round((a[0][0] / a[1][0]) / (b[0][0] / b[1][0]), 9)
+
+
+def unit_difference(us_examples: str | None, au: str):
+    """Compare LOINC's example unit(s) (US convention; may list several, 'mg/dL;g/L') with the Australian preferred unit:
+    ('none' | 'spelling' | 'scale' | 'arbitrary' | 'kind' | 'no US example', factor). 'arbitrary': assay-specific units
+    (arbitrary, international, Bethesda) that no factor converts."""
+    import re as _re
+    if not us_examples:
+        return "no US example", None
+    ex = [x.strip() for x in us_examples.split(";") if x.strip()]
+    if au in ex:
+        return "none", 1.0
+    if any(_ucum_norm(x) == _ucum_norm(au) for x in ex):
+        return "spelling", 1.0
+    for x in ex:
+        f = ucum_scale(x, au)
+        if f is not None:
+            return "scale", f
+    stem = lambda u: _re.split(r"/", _ucum_norm(u).replace("[arb'U]", "U").replace("[beth'U]", "U"))[0].lstrip("kmun")
+    if any(stem(x) in ("U", "") for x in ex) and stem(au) in ("U", ""):
+        return "arbitrary", None
+    return "kind", None
 DX_ACC, DX_BIND, DX_VER = (Path("reference/diagnostic_accuracy.json"), Path("reference/diagnostic_accuracy_bindings.json"),
                            Path("reference/diagnostic_accuracy_verification.json"))   # finding -> diagnosis LRs
 LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
@@ -262,6 +350,40 @@ def main() -> int:
               ON g.referencedComponentId = d.id AND g.active = '1' AND g.acceptabilityId = '900000000000548007'
             WHERE d.active = '1' AND d.typeId = '900000000000013009' GROUP BY 2""")
         con.execute("INSERT INTO name_hint SELECT 'LOINC', LOINC_NUM, LONG_COMMON_NAME FROM lx_loinc WHERE LOINC_NUM IS NOT NULL")
+
+        # --- US <-> Australian units ---------------------------------------------------------------------------------
+        # The Australian preferred unit per LOINC code (RCPA SPIA reporting sets, scripts/rcpa_units.py) against LOINC's own
+        # example unit (the US convention); and the mass (MCnc) <-> molar (SCnc) counterpart pairs (scripts/unit_reconcile.py),
+        # each marked with which side Australia reports.
+        rcpa_codes = set()
+        if RCPA_UNITS.exists():
+            ex = dict(con.execute("SELECT LOINC_NUM, EXAMPLE_UCUM_UNITS FROM read_csv(?, header=true, all_varchar=true)", [str(LOINC_TABLE)]).fetchall())
+            seen, rows_u = set(), []
+            for x in json.load(open(RCPA_UNITS))["rows"]:
+                ucum = (x["ucum"] or "").strip()
+                if not ucum or ucum.lower() == "no unit" or (x["loinc"], ucum) in seen:
+                    continue
+                seen.add((x["loinc"], ucum))
+                rcpa_codes.add(x["loinc"])
+                us = (ex.get(x["loinc"]) or "").strip() or None
+                diff, f = unit_difference(us, ucum)
+                rows_u.append(("LOINC", x["loinc"], "loinc:au_preferred_unit", "UCUM", ucum, "RCPA SPIA", f"{x['set']} / {x['rcpa_term']}",
+                               "RCPA preferred unit", "native", "asserted", RCPA_UNITS_PIN,
+                               json.dumps({"au_display": x["unit"], "us_example_ucum": us, "difference": diff,
+                                           "rcpa_ucum_malformed": ucum_malformed(ucum) or None,
+                                           "differs_from_us_example": diff in ("scale", "kind"),
+                                           "factor_us_example_to_au": f, "rcpa_property": x["property"]})))
+            ins_rows("LOINC -> Australian preferred unit (RCPA SPIA)", rows_u)
+        if UNIT_PAIRS.exists():
+            def au_side(c):
+                a, b = c["mass_loinc"] in rcpa_codes, c["molar_loinc"] in rcpa_codes
+                return "both" if a and b else "mass" if a else "molar" if b else None
+            ins_rows("LOINC mass <-> molar unit counterpart", [
+                ("LOINC", c["mass_loinc"], "loinc:unit_counterpart", "LOINC", c["molar_loinc"], "LOINC 2.83 + PubChem",
+                 "reference/loinc_unit_counterparts.json", "same axes, MCnc / SCnc", "native", "asserted", f"{PIN['loinc_table']}",
+                 json.dumps({**{k: c[k] for k in ("factor_mg_per_dL_to_mmol_per_L", "molecular_weight", "pubchem_cid", "analyte_code",
+                                                  "mass_unit_example", "molar_unit_example")}, "au_preferred": au_side(c)}))
+                for c in json.load(open(UNIT_PAIRS))["counterparts"]])
 
         # --- lab result -> finding, through the analyte (reference/interprets_handcheck.json) -------------------------
         # SNOMED findings interpret measurement PROCEDURES; the LOINC Ontology puts LOINC terms under OBSERVABLES, so
@@ -545,6 +667,8 @@ def main() -> int:
         admitted = {fam for fam, v in ver_doc.get("binding_review", {}).items() if isinstance(v, dict) and v.get("distinct_bindings_read", 0) >= 30
                     and wilson_lo(v["distinct_bindings_read"] - v["read_as_wrong"], v["distinct_bindings_read"]) >= 0.80}
         family = lambda r: "finding" if r.get("kind", "finding") == "finding" else "test_score_prognosis"
+        units = ({x["id"]: {k: v for k, v in x.items() if k not in ("id", "pmid")} for x in json.load(open(THRESH_UNITS))["thresholds"]}
+                 if THRESH_UNITS.exists() else {})
         held = 0
         rows_lr = []
         for r in recs:
@@ -572,7 +696,8 @@ def main() -> int:
                                         "lr_range": r.get("lr_range"), "derived": derived, "kind": kind, "result": r.get("result"), "when": r["when"],
                                         "sens": r.get("sens"), "sens_ci": r.get("sens_ci"), "spec": r.get("spec"), "spec_ci": r.get("spec_ci"),
                                         "population": r["population"], "setting": r["setting"], "pmid": r["pmid"],
-                                        "finding_text": r["finding_text"], "diagnosis_text": r["diagnosis_text"]})))
+                                        "finding_text": r["finding_text"], "diagnosis_text": r["diagnosis_text"],
+                                        "units": units.get(r["id"])})))
         ins_rows("finding -> diagnosis likelihood ratio (transcribed, verified)", rows_lr)
         log["likelihood-ratio records bound but held as candidates (family not admitted)"] = held
         print(f"  {'LR records held (binding family not admitted)':<44} {held:>10,}   admitted: {sorted(admitted)}", flush=True)

@@ -1,0 +1,935 @@
+{
+ "_note": "Give every unit-bearing likelihood-ratio threshold an Australian value beside the published (mostly US) one.",
+ "summary": {
+  "same": 23,
+  "relabel": 8,
+  "molar": 2,
+  "flagged": 2
+ },
+ "primacy": {
+  "same": 12,
+  "au": 13,
+  "as_published": 10
+ },
+ "rcpa_reference_sets_loaded": true,
+ "thresholds": [
+  {
+   "id": "pmid20974781-fever-40",
+   "pmid": "20974781",
+   "analyte": "fever of more than 40 C",
+   "as_published": {
+    "value": 40.0,
+    "value_to": null,
+    "unit": "C",
+    "text": "fever of more than 40 C"
+   },
+   "au": {
+    "value": 40.0,
+    "value_to": null,
+    "unit": "C"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid41729549-jvd",
+   "pmid": "41729549",
+   "analyte": "jugular venous distention more than 3 cm above the sternal angle",
+   "as_published": {
+    "value": 3.0,
+    "value_to": null,
+    "unit": "cm",
+    "text": "jugular venous distention more than 3 cm above the sternal angle"
+   },
+   "au": {
+    "value": 3.0,
+    "value_to": null,
+    "unit": "cm"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "x-bnp-low",
+   "pmid": "16234501",
+   "analyte": "serum B-type natriuretic peptide",
+   "as_published": {
+    "value": 100.0,
+    "value_to": null,
+    "unit": "pg/mL",
+    "text": "BNP < 100 pg/mL"
+   },
+   "au": {
+    "value": 100.0,
+    "value_to": null,
+    "unit": "ng/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "30934-4",
+    "rcpa_unit": [
+     "ng/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid18159059-temp40-range",
+   "pmid": "18159059",
+   "analyte": "temperature higher than 40 C",
+   "as_published": {
+    "value": 40.0,
+    "value_to": null,
+    "unit": "C",
+    "text": "temperature higher than 40 C"
+   },
+   "au": {
+    "value": 40.0,
+    "value_to": null,
+    "unit": "C"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid19074757-crp-high",
+   "pmid": "19074757",
+   "analyte": "C-reactive protein",
+   "as_published": {
+    "value": 20.0,
+    "value_to": null,
+    "unit": "mg/L",
+    "text": "CRP above 20 mg/L"
+   },
+   "au": {
+    "value": 20.0,
+    "value_to": null,
+    "unit": "mg/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "1988-5",
+    "rcpa_unit": [
+     "mg/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid19074757-crp-low",
+   "pmid": "19074757",
+   "analyte": "C-reactive protein",
+   "as_published": {
+    "value": 20.0,
+    "value_to": null,
+    "unit": "mg/L",
+    "text": "CRP 20 mg/L or less"
+   },
+   "au": {
+    "value": 20.0,
+    "value_to": null,
+    "unit": "mg/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "1988-5",
+    "rcpa_unit": [
+     "mg/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid21653621-pct2-a",
+   "pmid": "21653621",
+   "analyte": "procalcitonin",
+   "as_published": {
+    "value": 2.0,
+    "value_to": null,
+    "unit": "ng/mL",
+    "text": "2 ng/mL or more (study 1)"
+   },
+   "au": {
+    "value": 2.0,
+    "value_to": null,
+    "unit": "ug/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "75241-0",
+    "rcpa_unit": [
+     "ug/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid21653621-pct2-b",
+   "pmid": "21653621",
+   "analyte": "procalcitonin",
+   "as_published": {
+    "value": 2.0,
+    "value_to": null,
+    "unit": "ng/mL",
+    "text": "2 ng/mL or more (study 2)"
+   },
+   "au": {
+    "value": 2.0,
+    "value_to": null,
+    "unit": "ug/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "75241-0",
+    "rcpa_unit": [
+     "ug/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid21653621-crp80",
+   "pmid": "21653621",
+   "analyte": "C-reactive protein",
+   "as_published": {
+    "value": 80.0,
+    "value_to": null,
+    "unit": "mg/L",
+    "text": "80 mg/L or more"
+   },
+   "au": {
+    "value": 80.0,
+    "value_to": null,
+    "unit": "mg/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "1988-5",
+    "rcpa_unit": [
+     "mg/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid21843213-swbc-0-25",
+   "pmid": "21843213",
+   "analyte": "synovial fluid white cell count",
+   "as_published": {
+    "value": 0.0,
+    "value_to": 25.0,
+    "unit": "x 10^9/L",
+    "text": "synovial WBC 0-25 x 10^9/L (interval LR)"
+   },
+   "au": {
+    "value": 0.0,
+    "value_to": 25.0,
+    "unit": "x 10^9/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists white cell count for blood only (6690-2, 10^9/L); fluid counts are commonly reported in 10^6/L, so the blood row cannot confirm"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid21843213-swbc-25-50",
+   "pmid": "21843213",
+   "analyte": "synovial fluid white cell count",
+   "as_published": {
+    "value": 25.0,
+    "value_to": 50.0,
+    "unit": "x 10^9/L",
+    "text": "synovial WBC 25-50 x 10^9/L (interval LR)"
+   },
+   "au": {
+    "value": 25.0,
+    "value_to": 50.0,
+    "unit": "x 10^9/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists white cell count for blood only (6690-2, 10^9/L); fluid counts are commonly reported in 10^6/L, so the blood row cannot confirm"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid21843213-swbc-50-100",
+   "pmid": "21843213",
+   "analyte": "synovial fluid white cell count",
+   "as_published": {
+    "value": 50.0,
+    "value_to": 100.0,
+    "unit": "x 10^9/L",
+    "text": "synovial WBC 50-100 x 10^9/L (interval LR)"
+   },
+   "au": {
+    "value": 50.0,
+    "value_to": 100.0,
+    "unit": "x 10^9/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists white cell count for blood only (6690-2, 10^9/L); fluid counts are commonly reported in 10^6/L, so the blood row cannot confirm"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid22496266-base-deficit",
+   "pmid": "22496266",
+   "analyte": "base deficit",
+   "as_published": {
+    "value": -6.0,
+    "value_to": null,
+    "unit": "mEq/L",
+    "text": "base deficit less than -6 mEq/L"
+   },
+   "au": {
+    "value": -6.0,
+    "value_to": null,
+    "unit": "mmol/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "1922-4",
+    "rcpa_unit": [
+     "mmol/L"
+    ],
+    "why": "the source does not name the blood specimen; RCPA base deficit rows for arterial (1922-4), venous (1924-0) and capillary (1923-2) blood all give mmol/L"
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid24286461-fc50-present",
+   "pmid": "24286461",
+   "analyte": "faecal calprotectin",
+   "as_published": {
+    "value": 50.0,
+    "value_to": null,
+    "unit": "ug/g",
+    "text": "50 ug/g or more"
+   },
+   "au": {
+    "value": 50.0,
+    "value_to": null,
+    "unit": "ug/g"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "38445-3",
+    "rcpa_unit": [
+     "ug/g"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid24286461-fc50-absent",
+   "pmid": "24286461",
+   "analyte": "faecal calprotectin",
+   "as_published": {
+    "value": 50.0,
+    "value_to": null,
+    "unit": "ug/g",
+    "text": "below 50 ug/g"
+   },
+   "au": {
+    "value": 50.0,
+    "value_to": null,
+    "unit": "ug/g"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "38445-3",
+    "rcpa_unit": [
+     "ug/g"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid24938565-chol55-range",
+   "pmid": "24938565",
+   "analyte": "pleural fluid cholesterol",
+   "as_published": {
+    "value": 55.0,
+    "value_to": null,
+    "unit": "mg/dL",
+    "text": "above 55 mg/dL (range across studies)"
+   },
+   "au": {
+    "value": 1.422,
+    "value_to": null,
+    "unit": "mmol/L"
+   },
+   "conversion": {
+    "kind": "molar",
+    "factor": 0.02586,
+    "molecular_weight": 386.7,
+    "pubchem_cid": 5997
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists cholesterol for serum/plasma only (14647-2, mmol/L); no fluid row"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid24938565-ldh200",
+   "pmid": "24938565",
+   "analyte": "pleural fluid lactate dehydrogenase",
+   "as_published": {
+    "value": 200.0,
+    "value_to": null,
+    "unit": "U/L",
+    "text": "above 200 U/L"
+   },
+   "au": {
+    "value": 200.0,
+    "value_to": null,
+    "unit": "U/L"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "14803-1",
+    "rcpa_unit": [
+     "U/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid28763554-fever-range",
+   "pmid": "28763554",
+   "analyte": "fever (temperature above 37.5 C)",
+   "as_published": {
+    "value": 37.5,
+    "value_to": null,
+    "unit": "C",
+    "text": "fever (temperature above 37.5 C)"
+   },
+   "au": {
+    "value": 37.5,
+    "value_to": null,
+    "unit": "C"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid29785952-ntprobnp135-present",
+   "pmid": "29785952",
+   "analyte": "point-of-care NT-proBNP",
+   "as_published": {
+    "value": 135.0,
+    "value_to": null,
+    "unit": "pg/mL",
+    "text": "135 pg/mL or more"
+   },
+   "au": {
+    "value": 135.0,
+    "value_to": null,
+    "unit": "ng/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "33762-6",
+    "rcpa_unit": [
+     "ng/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid29785952-ntprobnp135-absent",
+   "pmid": "29785952",
+   "analyte": "point-of-care NT-proBNP",
+   "as_published": {
+    "value": 135.0,
+    "value_to": null,
+    "unit": "pg/mL",
+    "text": "below 135 pg/mL"
+   },
+   "au": {
+    "value": 135.0,
+    "value_to": null,
+    "unit": "ng/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "33762-6",
+    "rcpa_unit": [
+     "ng/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid31522621-plgf-pos",
+   "pmid": "31522621",
+   "analyte": "placental growth factor",
+   "as_published": {
+    "value": 80.0,
+    "value_to": 120.0,
+    "unit": "pg/mL",
+    "text": "PlGF 80-120 pg/mL threshold, positive"
+   },
+   "au": {
+    "value": 80.0,
+    "value_to": 120.0,
+    "unit": "ng/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "not in the RCPA SPIA reporting sets"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid31522621-plgf-neg",
+   "pmid": "31522621",
+   "analyte": "placental growth factor",
+   "as_published": {
+    "value": 80.0,
+    "value_to": 120.0,
+    "unit": "pg/mL",
+    "text": "PlGF 80-120 pg/mL threshold, negative"
+   },
+   "au": {
+    "value": 80.0,
+    "value_to": 120.0,
+    "unit": "ng/L"
+   },
+   "conversion": {
+    "kind": "relabel",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "not in the RCPA SPIA reporting sets"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid34004036-fit10-present",
+   "pmid": "34004036",
+   "analyte": "faecal immunochemical test",
+   "as_published": {
+    "value": 10.0,
+    "value_to": null,
+    "unit": "ug/g",
+    "text": "10 ug/g or more"
+   },
+   "au": {
+    "value": 10.0,
+    "value_to": null,
+    "unit": "ug/g"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists faecal occult blood as qualitative only (2335-8); no quantitative faecal haemoglobin row"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid34004036-fit10-absent",
+   "pmid": "34004036",
+   "analyte": "faecal immunochemical test",
+   "as_published": {
+    "value": 10.0,
+    "value_to": null,
+    "unit": "ug/g",
+    "text": "below 10 ug/g"
+   },
+   "au": {
+    "value": 10.0,
+    "value_to": null,
+    "unit": "ug/g"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "no RCPA row for this analyte and specimen",
+    "why": "the RCPA lists faecal occult blood as qualitative only (2335-8); no quantitative faecal haemoglobin row"
+   },
+   "au_unit_confirmed": false,
+   "primacy": "as_published"
+  },
+  {
+   "id": "pmid34313682-office-pos",
+   "pmid": "34313682",
+   "analyte": "conventional office oscillometric blood pressure",
+   "as_published": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "140/90 mm Hg or more"
+   },
+   "au": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid34313682-office-neg",
+   "pmid": "34313682",
+   "analyte": "conventional office oscillometric blood pressure",
+   "as_published": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "below 140/90 mm Hg"
+   },
+   "au": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid34313682-hbpm-pos",
+   "pmid": "34313682",
+   "analyte": "home blood pressure monitoring, mean",
+   "as_published": {
+    "value": 85.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "135/85 mm Hg or more"
+   },
+   "au": {
+    "value": 85.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid34313682-hbpm-neg",
+   "pmid": "34313682",
+   "analyte": "home blood pressure monitoring, mean",
+   "as_published": {
+    "value": 85.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "below 135/85 mm Hg"
+   },
+   "au": {
+    "value": 85.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid34313682-attended-auto-present",
+   "pmid": "34313682",
+   "analyte": "attended automated mean office blood pressure",
+   "as_published": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "140/90 mm Hg or more"
+   },
+   "au": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid34313682-attended-auto-absent",
+   "pmid": "34313682",
+   "analyte": "attended automated mean office blood pressure",
+   "as_published": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg",
+    "text": "below 140/90 mm Hg"
+   },
+   "au": {
+    "value": 90.0,
+    "value_to": null,
+    "unit": "mm Hg"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid36976276-uric-acid-range",
+   "pmid": "36976276",
+   "analyte": "serum uric acid",
+   "as_published": {
+    "value": 5.5,
+    "value_to": null,
+    "unit": "mg/dL",
+    "text": "5.5 mg/dL or lower (range)"
+   },
+   "au": {
+    "value": 0.327,
+    "value_to": null,
+    "unit": "mmol/L"
+   },
+   "conversion": {
+    "kind": "molar",
+    "factor": 0.059485,
+    "molecular_weight": 168.11,
+    "pubchem_cid": 1175
+   },
+   "au_unit_confirmation": {
+    "status": "confirmed",
+    "rcpa_loinc": "14933-6",
+    "rcpa_unit": [
+     "mmol/L"
+    ]
+   },
+   "au_unit_confirmed": true,
+   "primacy": "au"
+  },
+  {
+   "id": "pmid41729549-us-jvp",
+   "pmid": "41729549",
+   "analyte": "ultrasonographic jugular venous pressure",
+   "as_published": {
+    "value": 8.0,
+    "value_to": null,
+    "unit": "cm",
+    "text": "above 8 cm"
+   },
+   "au": {
+    "value": 8.0,
+    "value_to": null,
+    "unit": "cm"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid41729549-us-jvp-absent",
+   "pmid": "41729549",
+   "analyte": "ultrasonographic jugular venous pressure",
+   "as_published": {
+    "value": 8.0,
+    "value_to": null,
+    "unit": "cm",
+    "text": "8 cm or less"
+   },
+   "au": {
+    "value": 8.0,
+    "value_to": null,
+    "unit": "cm"
+   },
+   "conversion": {
+    "kind": "same",
+    "factor": 1.0
+   },
+   "au_unit_confirmation": {
+    "status": "not a pathology unit"
+   },
+   "au_unit_confirmed": null,
+   "primacy": "same"
+  },
+  {
+   "id": "pmid41729549-bnp",
+   "pmid": "41729549",
+   "analyte": "plasma B-type natriuretic peptide",
+   "as_published": {
+    "text": "100 or higher",
+    "unit": "ng/mL (abstract)"
+   },
+   "au": null,
+   "conversion": null,
+   "au_unit_confirmed": false,
+   "primacy": "as_published",
+   "flag": "the abstract gives BNP 100 ng/mL; the conventional threshold is 100 pg/mL (= 100 ng/L) -- not converted until checked"
+  },
+  {
+   "id": "pmid41729549-bnp-absent",
+   "pmid": "41729549",
+   "analyte": "plasma B-type natriuretic peptide",
+   "as_published": {
+    "text": "normal",
+    "unit": "ng/mL (abstract)"
+   },
+   "au": null,
+   "conversion": null,
+   "au_unit_confirmed": false,
+   "primacy": "as_published",
+   "flag": "the abstract gives BNP 100 ng/mL; the conventional threshold is 100 pg/mL (= 100 ng/L) -- not converted until checked"
+  }
+ ]
+}

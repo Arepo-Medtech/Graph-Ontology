@@ -347,6 +347,35 @@ def main() -> int:
                                  LEFT JOIN node nf ON nf.vocab = 'SCT' AND nf.code = e.s_code LEFT JOIN node nd ON nd.vocab = 'SCT' AND nd.code = e.o_code
                                  WHERE e.predicate IN ({LRP}) ORDER BY nd.name, json_extract(e.attrs, '$.lr')::DOUBLE DESC""").fetchall()]}
 
+    # --- US <-> Australian pathology units --------------------------------------------------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate IN ('loinc:au_preferred_unit', 'loinc:unit_counterpart')").fetchone()[0]:
+        a = con.execute("""SELECT count(*), count(DISTINCT s_code),
+                count(*) FILTER (WHERE json_extract(attrs, '$.differs_from_us_example')::BOOLEAN),
+                count(*) FILTER (WHERE json_extract(attrs, '$.factor_us_example_to_au') IS NOT NULL
+                                 AND json_extract_string(attrs, '$.factor_us_example_to_au') <> 'null'
+                                 AND json_extract(attrs, '$.differs_from_us_example')::BOOLEAN)
+            FROM edge WHERE predicate = 'loinc:au_preferred_unit'""").fetchone()
+        side = dict(con.execute("""SELECT coalesce(json_extract_string(attrs, '$.au_preferred'), 'not in RCPA sets'), count(*)
+            FROM edge WHERE predicate = 'loinc:unit_counterpart' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+        f = con.execute("""SELECT count(*), count(*) FILTER (WHERE json_extract_string(attrs, '$.factor_mg_per_dL_to_mmol_per_L') <> 'null'
+                AND json_extract(attrs, '$.factor_mg_per_dL_to_mmol_per_L') IS NOT NULL) FROM edge WHERE predicate = 'loinc:unit_counterpart'""").fetchone()
+        diffs = dict(con.execute("""SELECT json_extract_string(attrs, '$.difference'), count(*) FROM edge
+            WHERE predicate = 'loinc:au_preferred_unit' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+        mal = con.execute("""SELECT count(*), count(DISTINCT o_code) FROM edge WHERE predicate = 'loinc:au_preferred_unit'
+            AND json_extract_string(attrs, '$.rcpa_ucum_malformed') IS NOT NULL AND json_extract_string(attrs, '$.rcpa_ucum_malformed') <> 'null'""").fetchone()
+        kinds = [f"{c} {n} (LOINC {us} / RCPA {au})" for c, n, us, au in con.execute("""SELECT e.s_code, n.name, json_extract_string(e.attrs, '$.us_example_ucum'), e.o_code
+            FROM edge e LEFT JOIN node n ON n.vocab = 'LOINC' AND n.code = e.s_code WHERE e.predicate = 'loinc:au_preferred_unit'
+              AND json_extract_string(e.attrs, '$.difference') = 'kind' ORDER BY 1""").fetchall()]
+        report["units:US vs Australian (RCPA SPIA)"] = {"difference_from_loinc_us_example": diffs,
+            "rcpa_ucum_malformed": {"edges": mal[0], "distinct_units": mal[1]}, "kind_differences_to_review": kinds,
+            "loinc_au_preferred_unit_edges": a[0], "loinc_codes_with_au_unit": a[1],
+            "au_unit_differs_from_loinc_us_example": a[2], "of_which_scale_only_with_factor": a[3],
+            "mass_molar_pairs": f[0], "pairs_with_conversion_factor": f[1], "pairs_by_side_australia_reports": side}
+        tu = Path("reference/threshold_units.json")
+        if tu.exists():
+            t = json.load(open(tu))
+            report["units:likelihood-ratio thresholds"] = {"thresholds_with_units": len(t["thresholds"]), "conversion": t["summary"], "primacy": t.get("primacy")}
+
     # --- how a drug works: drug -> target -> protein -> gene -> disease ------------------------------------------
     # Native assertions (DrugCentral, HPO), so no earned tier; two independent witnesses are measured instead.
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'drugcentral:mechanism_target'").fetchone()[0]:
