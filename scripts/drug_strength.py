@@ -174,7 +174,7 @@ def validate(vocab_dir: str, log=print) -> dict:
                    ing.concept_id AS our_ingredient_concept, os2.omop_rxnorm_name AS our_ingredient_name
             FROM amt_quantity a
             JOIN omop_drug od ON od.product_id=a.product_id AND od.standard_concept_id IS NOT NULL
-            LEFT JOIN omop_substance os2 ON os2.substance_id=a.boss_substance_id
+            LEFT JOIN omop_substance os2 ON os2.substance_id=a.boss_substance_id AND os2.review_status IS NULL
             LEFT JOIN omop_concept ing ON ing.vocabulary_id='RxNorm' AND ing.concept_class_id='Ingredient'
                                       AND ing.concept_code=os2.omop_rxcui)
         SELECT o.*, t.amount_base AS omop_amount_base, t.ratio_base AS omop_ratio_base, t.unit_name AS omop_unit,

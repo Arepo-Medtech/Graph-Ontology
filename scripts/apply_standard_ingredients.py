@@ -38,6 +38,7 @@ import duckdb
 DB = Path("out/compendium.duckdb")
 DECISIONS = Path("reference/rxnorm_substance_decisions.json")
 ROUTES = Path("reference/rxnorm_route_resolutions.json")
+OMOP_REVIEW = Path("reference/omop_substance_review.json")
 
 
 def standard_ingredients(vocab_dir: str, codes: set[tuple[str, str]]) -> dict:
@@ -92,13 +93,33 @@ def main() -> int:
     con.executemany("INSERT INTO substance_standard_ingredient VALUES (?, ?, NULL, 'RxNorm', ?, ?, NULL, 'asserted', ?)",
                     [(s, rx, nm, f"resolver:{src}", f"RxNav ({tty})") for s, rx, nm, src, tty in resolver
                      if s not in overlaid])
+    # mark OMOP's own substance answers where review has objected, so readers that build product edges skip them
+    review = json.load(open(OMOP_REVIEW))["review"] if OMOP_REVIEW.exists() else []
+    status = {x["substance_id"]: "flagged" for x in review if x["status"] == "flagged"}
+    status.update({r["substance_id"]: "rejected" for r in routes if r["status"] == "route_answer_rejected"})
+    omop_answer = dict(con.execute("SELECT substance_id, omop_rxcui FROM omop_substance").fetchall())
+    for d in decisions:
+        if d["state"] == "rejected":
+            status[d["substance_id"]] = "rejected"
+        elif d.get("rxcui") and omop_answer.get(d["substance_id"]) not in (None, d["rxcui"]):
+            status[d["substance_id"]] = "superseded"
+    con.execute("ALTER TABLE omop_substance ADD COLUMN IF NOT EXISTS review_status VARCHAR")
+    con.execute("UPDATE omop_substance SET review_status = NULL")
+    con.executemany("UPDATE omop_substance SET review_status = ? WHERE substance_id = ?",
+                    [(v, k) for k, v in status.items()])
+    marked = dict(con.execute("SELECT review_status, count(*) FROM omop_substance WHERE review_status IS NOT NULL "
+                              "GROUP BY 1").fetchall())
     by = dict(con.execute("SELECT split_part(source, ':', 1), count(DISTINCT substance_id) FROM substance_standard_ingredient "
                           "GROUP BY 1").fetchall())
     vocab = dict(con.execute("SELECT vocabulary, count(DISTINCT substance_id) FROM substance_standard_ingredient GROUP BY 1").fetchall())
     total = con.execute("SELECT count(DISTINCT substance_id) FROM substance_standard_ingredient").fetchone()[0]
+    # the shipped files must agree with the database: omop_substance changed, and the new table ships too
+    for table in ("omop_substance", "substance_standard_ingredient"):
+        con.execute(f"COPY {table} TO 'out/{table}.parquet' (FORMAT PARQUET)")
     con.close()
     print(json.dumps({"substances_with_a_standard_ingredient": total, "by_source": by, "by_vocabulary": vocab,
                       "resolver_rows_superseded": len(superseded),
+                      "omop_substance_review_status": marked,
                       "route_rows_rejected_or_overridden": collections.Counter(
                           r["status"] for r in routes if r["status"] != "accepted")}, indent=1))
     return 0

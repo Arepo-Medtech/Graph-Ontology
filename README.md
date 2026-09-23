@@ -102,6 +102,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
 .venv/bin/python scripts/omophub_bridge.py athena ~/code/spine/out/omop-vocab   # AMT → OMOP standard drugs, offline from the Athena bundle installed by `spine omop vocab --athena` (~1 min)
 .venv/bin/python scripts/build_compendium.py
+.venv/bin/python scripts/apply_omop_drug_review.py     # set aside rejected OMOP product mappings (docs/omop-drug-audit.md); run after EVERY build, before anything reads omop_drug
 .venv/bin/python scripts/apply_standard_ingredients.py   # re-apply review decisions + scored-route resolutions; run after EVERY build
 .venv/bin/python scripts/drug_strength.py extract     # AMT strengths out of the OWL axioms (~1 min)
 .venv/bin/python scripts/drug_strength.py validate    # and what OMOP's DRUG_STRENGTH says about the same products
@@ -109,6 +110,7 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
 .venv/bin/python scripts/amt_indirect.py             # reach OMOP for the AMT concepts its 2021 snapshot never had
 .venv/bin/python scripts/route_and_salt.py           # route per product, and the salt-to-base map SNOMED does not state
 .venv/bin/python scripts/au_snomed_omop.py           # the nearest standard OMOP concept above each Australian one
+.venv/bin/python scripts/omop_drug_audit.py           # check every product mapping against RxNav, brand and strength witnesses
 .venv/bin/python scripts/rxnorm_review_queue.py      # rank the unresolved substances by what they actually block
 ```
 

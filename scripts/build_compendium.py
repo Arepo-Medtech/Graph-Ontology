@@ -296,7 +296,9 @@ if ps.exists():
 # explicit column types: an all-null placeholder row would otherwise be inferred as JSON and break the summary filters
 con.execute("""CREATE TABLE omop_drug AS SELECT * FROM read_json_auto('out/_omop_drug.json', columns={product_id:'VARCHAR', level:'VARCHAR', amt_concept_id:'BIGINT',
     amt_concept_class:'VARCHAR', standard_concept_id:'BIGINT', standard_name:'VARCHAR', standard_vocabulary:'VARCHAR', standard_code:'VARCHAR', in_omop:'BOOLEAN'})""")
-con.execute("""CREATE TABLE omop_substance AS SELECT * FROM read_json_auto('out/_omop_substance.json', columns={substance_id:'VARCHAR', omop_concept_id:'BIGINT',
+# review_status is filled by scripts/apply_standard_ingredients.py: flagged | rejected | superseded, NULL = no objection.
+# Readers that turn a substance mapping into a product edge must use only rows where it is NULL.
+con.execute("""CREATE TABLE omop_substance AS SELECT *, CAST(NULL AS VARCHAR) AS review_status FROM read_json_auto('out/_omop_substance.json', columns={substance_id:'VARCHAR', omop_concept_id:'BIGINT',
     omop_vocabulary:'VARCHAR', omop_concept_class:'VARCHAR', omop_rxcui:'VARCHAR', omop_rxnorm_name:'VARCHAR', rxnav_rxcui:'VARCHAR', agreement:'VARCHAR'})""")
 
 # --- the wide transcode table: one row per TPUU ---------------------------------------------

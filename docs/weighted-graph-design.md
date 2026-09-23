@@ -386,6 +386,12 @@ Read with its limits:
 - The same reading applies to everything already relying on OMOP's single answer: of the review queue's 61
   "OMOP resolves it" rows — all renamed — 16 were flagged on review.
 
+- **Product level, the same route:** 108,727 AMT → OMOP product mappings checked against three witnesses
+  independent of OMOP (ingredient via RxNav, brand, strength). 88.9% fully confirmed; 110 rejected, 36 of them from
+  a single cross-wired OMOP release (`Maps to` valid from 2026-02-03, 37% wrong). The lesson generalises: **a
+  witness drawn from the same source is not a witness** — OMOP's product and substance mappings agreed with each
+  other on 65 wrong strength checks. See `docs/omop-drug-audit.md`.
+
 **Next routes to add:** `Has marketed form` against the AMT tag heuristic; salt→base against OMOP
 `Basis str subst of`; the 985 substance↔analyte name join (expected inadmissible for the reason the name route is);
 condition-text → SNOMED against the 265 conditions that already carry a binding (of 639 in the file).

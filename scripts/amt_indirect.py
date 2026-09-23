@@ -79,7 +79,7 @@ def build(vocab_dir: str, log=print) -> dict:
                    coalesce(q.amount_base, q.ratio_base) AS value
             FROM strength s
             JOIN amt_quantity q ON q.product_id=s.product_id AND q.boss_substance_id=s.boss_substance_id AND q.style=s.style
-            JOIN omop_substance os ON os.substance_id=s.boss_substance_id
+            JOIN omop_substance os ON os.substance_id=s.boss_substance_id AND os.review_status IS NULL   -- flagged/rejected/superseded answers never become product edges
             JOIN omop_concept ing ON ing.vocabulary_id='RxNorm' AND ing.concept_class_id='Ingredient'
                                  AND ing.concept_code=os.omop_rxcui
             WHERE coalesce(q.amount_base, q.ratio_base) IS NOT NULL)
