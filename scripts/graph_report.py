@@ -22,6 +22,7 @@ compendium's RxNorm ingredients.
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import math
 import os
@@ -147,9 +148,16 @@ def main() -> int:
     report["coverage:LOINC terms bridged to SNOMED"] = dict(zip(("loinc_terms", "bridged"), con.execute("""
         SELECT (SELECT count(DISTINCT s_code) FROM edge WHERE predicate LIKE 'loinc:has_%'),
                (SELECT count(DISTINCT s_code) FROM edge WHERE predicate IN ('loinc:is_a_snomed', 'loinc:maps_to_snomed'))""").fetchone()))
-    report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"] = dict(zip(("foreign_ids", "lifted"), con.execute("""
+    report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"] = dict(zip(("foreign_ids", "nearest_ancestor_via_athena",
+            "successor_via_au_historical_association", "successor_by_association", "either"), con.execute("""
         SELECT (SELECT edges FROM build_log WHERE family LIKE 'foreign SNOMED ids%'),
-               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:au_nearest_ancestor')""").fetchone()))
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:au_nearest_ancestor'),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:historical_association'),
+               (SELECT json_group_object(m, n) FROM (SELECT method m, count(DISTINCT s_code) n FROM edge
+                  WHERE predicate = 'sct:historical_association' GROUP BY 1 ORDER BY 2 DESC)),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate IN ('sct:au_nearest_ancestor', 'sct:historical_association'))""").fetchone()))
+    fs = report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"]
+    fs["successor_by_association"] = json.loads(fs["successor_by_association"] or "{}")
 
     # --- route 4: HPO -> SNOMED via a shared UMLS CUI, checked by hierarchy preservation ----------------------------
     # Where HPO says child is-a parent and both cross to SNOMED, the child's SNOMED concept should be the parent's or
@@ -455,6 +463,33 @@ def main() -> int:
         names = {"1": "laboratory", "2": "clinical", "3": "claims attachment", "4": "survey"}
         report["coverage:LOINC active terms bridged, by class"] = {names.get(c, c): {"terms": n, "before_part_route": b0, "with_part_route": b1}
                                                                   for c, n, b0, b1 in rows}
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'loinc:part_xref'").fetchone()[0] and lt_path.exists():
+        # a medicine meets the test that measures it: LOINC's own RxNorm code for the analyte, and -- the witness -- LOINC's
+        # ChEBI / UNII / PubChem code for it carried to RxNorm by DrugCentral's identifiers
+        con.execute(f"""CREATE TEMP TABLE drug_test AS
+            WITH au AS (SELECT DISTINCT o_code rxn FROM edge WHERE predicate = 'std_ingredient' AND o_vocab = 'RXN' AND state <> 'rejected'),
+                 d AS (SELECT DISTINCT s_code loinc, o_code rxn, 'LOINC RxNorm code' AS route FROM edge WHERE predicate = 'loinc:part_xref' AND o_vocab = 'RXN'),
+                 v AS (SELECT DISTINCT lx.s_code loinc, r.o_code rxn, 'LOINC ChEBI/UNII/PubChem -> DrugCentral' AS route
+                       FROM edge lx JOIN edge x ON x.predicate = 'drugcentral:xref' AND x.o_vocab = lx.o_vocab AND x.o_code = lx.o_code
+                       JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = x.s_code
+                       WHERE lx.predicate = 'loinc:part_xref' AND lx.o_vocab IN ('CHEBI', 'UNII', 'PUBCHEM'))
+            SELECT t.*, l.CLASS AS loinc_class, t.rxn IN (SELECT rxn FROM au) AS au_medicine
+            FROM (SELECT * FROM d UNION SELECT * FROM v) t
+            JOIN read_csv('{lt_path}', header=true, all_varchar=true) l ON l.LOINC_NUM = t.loinc""")
+        both, agree = con.execute("""SELECT count(DISTINCT d.loinc), count(DISTINCT d.loinc) FILTER (WHERE EXISTS (SELECT 1 FROM drug_test v
+                WHERE v.route <> 'LOINC RxNorm code' AND v.loinc = d.loinc AND v.rxn = d.rxn))
+            FROM drug_test d WHERE d.route = 'LOINC RxNorm code' AND d.loinc IN (SELECT loinc FROM drug_test WHERE route <> 'LOINC RxNorm code')""").fetchone()
+        report["coverage:medicines and the tests that measure them"] = {
+            "au_rxnorm_ingredients_with_a_test": con.execute("SELECT count(DISTINCT rxn) FROM drug_test WHERE au_medicine").fetchone()[0],
+            "loinc_tests": con.execute("SELECT count(DISTINCT loinc) FROM drug_test WHERE au_medicine").fetchone()[0],
+            "by_loinc_class": dict(con.execute("""SELECT loinc_class, count(DISTINCT loinc) FROM drug_test WHERE au_medicine
+                                                 GROUP BY 1 ORDER BY 2 DESC LIMIT 10""").fetchall()),
+            "drug_level_tests_only (class DRUG/TOX)": dict(zip(("au_ingredients", "loinc_tests"), con.execute("""SELECT count(DISTINCT rxn),
+                count(DISTINCT loinc) FROM drug_test WHERE au_medicine AND loinc_class = 'DRUG/TOX'""").fetchone())),
+            "witness: tests both routes answer": both, "same drug": agree,
+            "note": "the component is the drug for drug-level tests (DRUG/TOX) and also for susceptibility tests (ABXBACT: the organism against the drug); filter by class for levels"}
+        report["coverage:analyte codes LOINC gives its terms"] = dict(con.execute("""SELECT o_vocab, count(DISTINCT s_code) FROM edge
+            WHERE predicate = 'loinc:part_xref' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
     mc = Path("reference/mbs_procedure_candidates.json")
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0]:
         m = {"items": con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0], "snomed_edges": 0}
@@ -527,6 +562,39 @@ def main() -> int:
     report["sct_multi_parent"] = dict(zip(("concepts_with_parents", "with_more_than_one_parent"), con.execute("""
         SELECT count(*), count(*) FILTER (WHERE n > 1) FROM (SELECT s_code, count(*) n FROM edge
         WHERE predicate = 'sct:116680003' GROUP BY 1)""").fetchone()))
+
+    # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
+    # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
+    keys = [k for (k,) in con.execute("SELECT key FROM node").fetchall()]
+    idx = {k: i for i, k in enumerate(keys)}
+    par = list(range(len(keys)))
+    def find(x):
+        while par[x] != x:
+            par[x] = par[par[x]]
+            x = par[x]
+        return x
+    for s_, o_ in con.execute("""SELECT s_vocab || ':' || s_code, o_vocab || ':' || o_code FROM edge
+                                 WHERE state <> 'rejected' AND tier <> 'inadmissible'""").fetchall():
+        x, y = find(idx[s_]), find(idx[o_])
+        if x != y:
+            par[x] = y
+    root = [find(i) for i in range(len(keys))]
+    size = collections.Counter(root)
+    giant = size.most_common(1)[0][0]
+    con.execute("CREATE TEMP TABLE comp (key VARCHAR, c BIGINT, sz BIGINT)")
+    con.executemany("INSERT INTO comp VALUES (?, ?, ?)", [(k, root[i], size[root[i]]) for i, k in enumerate(keys) if root[i] != giant])
+    report["islands"] = {
+        "components": len(size), "main_component_nodes": size[giant], "nodes_outside_it": len(keys) - size[giant],
+        "outside_by_vocabulary": dict(con.execute("""SELECT n.vocab, count(*) FROM comp JOIN node n USING (key)
+                                                     GROUP BY 1 ORDER BY 2 DESC""").fetchall()),
+        "largest_outside": [{"nodes": sz, "vocabularies": v} for sz, v in con.execute("""
+            SELECT any_value(sz), list(DISTINCT n.vocab ORDER BY n.vocab) FROM comp JOIN node n USING (key)
+            GROUP BY c ORDER BY 1 DESC LIMIT 8""").fetchall()],
+        "reach_outside_own_vocabulary": {v: {"nodes": n, "with_a_link_to_another_vocabulary": b, "share": round(b / n, 3)}
+            for v, n, b in con.execute("""WITH x AS (SELECT s_vocab v, s_code k FROM edge WHERE s_vocab <> o_vocab
+                                                     UNION SELECT o_vocab, o_code FROM edge WHERE s_vocab <> o_vocab)
+                SELECT n.vocab, count(*), count(x.k) FROM node n LEFT JOIN x ON x.v = n.vocab AND x.k = n.code
+                GROUP BY 1 ORDER BY count(x.k) * 1.0 / count(*), 1""").fetchall()}}
 
     # --- parallel edges: product -> ATC 5th level, PBS vs OMOP -------------------------------------------------------
     report["parallel:product->atc5 (PBS vs OMOP)"] = dict(zip(("products_with_both", "same_class", "no_class_in_common"), con.execute("""

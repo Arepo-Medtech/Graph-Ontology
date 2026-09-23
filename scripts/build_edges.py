@@ -65,10 +65,12 @@ LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/Accessor
 RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
 LOINC_PARTS = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
 LOINC_PARTLINK = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
+LOINC_PARTLINK_SUPP = LOINC_PARTLINK.with_name("LoincPartLink_Supplementary.csv")
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
 UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path("reference/threshold_units.json")   # US <-> AU units
+AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
 UCUM_PREFIX = {"k": 1e3, "h": 1e2, "da": 1e1, "": 1.0, "d": 1e-1, "c": 1e-2, "m": 1e-3, "u": 1e-6, "n": 1e-9, "p": 1e-12, "f": 1e-15}
@@ -173,12 +175,12 @@ EDGE_COLS = "s_vocab, s_code, predicate, o_vocab, o_code, source, source_locator
 
 
 def obo_terms(path: Path) -> list[dict]:
-    """Minimal OBO reader: id, name, is_a, obsolete. Enough for hierarchy and labels."""
+    """Minimal OBO reader: id, name, is_a, xref, obsolete. Enough for hierarchy, labels and cross-references."""
     terms, cur = [], None
     for line in open(path, encoding="utf-8"):
         line = line.rstrip("\n")
         if line == "[Term]":
-            cur = {"is_a": []}
+            cur = {"is_a": [], "xref": []}
             terms.append(cur)
         elif line.startswith("[") and line.endswith("]"):
             cur = None
@@ -190,15 +192,45 @@ def obo_terms(path: Path) -> list[dict]:
                 cur["name"] = v
             elif k == "is_a":
                 cur["is_a"].append(v.split(" ")[0])
+            elif k == "xref":
+                cur["xref"].append(v.split(" ")[0])
             elif k == "is_obsolete" and v.strip() == "true":
                 cur["obsolete"] = True
     return [t for t in terms if "id" in t and not t.get("obsolete")]
 
 
+def sources(vocab_dir: str) -> dict[str, Path]:
+    """Every input a full build reads. The loaders below skip a source that is absent, so without this check a deleted
+    folder (24 Sep 2026: the unpacked LOINC, RadLex and SNOMED releases) would rebuild a smaller graph without failing."""
+    return {"compendium": CMP, "spine": SPINE, "Athena CONCEPT": Path(vocab_dir) / "CONCEPT.csv",
+            "Athena CONCEPT_RELATIONSHIP": Path(vocab_dir) / "CONCEPT_RELATIONSHIP.csv", "PBS cache": PBS,
+            "snomed bindings": BINDINGS, "MONDO obo": MONDO_OBO, "MONDO sssom": MONDO_SSSOM, "HPO obo": HP_OBO,
+            "HPO annotations": HPOA, "HPO genes": HP_GENES, "MBS XML": MBS_XML, "Uberon obo": UBERON_OBO,
+            "Uberon sssom": UBERON_SSSOM, "DrugCentral": DC, "PBS indication bindings": PBS_BIND,
+            "LOINC Extension": LOINC_EXT, "LOINC table": LOINC_TABLE, "LOINC part mapping": LOINC_PARTS,
+            "LOINC part links": LOINC_PARTLINK, "LOINC supplementary part links": LOINC_PARTLINK_SUPP, "LOINC/RSNA playbook": LOINC_RSNA, "RSNA playbook": RSNA_PLAYBOOK,
+            "RadLex (scripts/radlex_prepare.py)": RADLEX_JSON, "RCPA units (scripts/rcpa_units.py)": RCPA_UNITS,
+            "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
+            "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
+            "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
+            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI,
+            "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset"}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--vocab-dir", default=os.path.expanduser("~/code/spine/out/omop-vocab"))
+    ap.add_argument("--allow-missing", action="append", default=[], metavar="NAME",
+                    help="build without this source (repeatable; 'all' for any) -- the build log names each one skipped")
     a = ap.parse_args()
+    missing = {k: v for k, v in sources(a.vocab_dir).items() if not v.exists()}
+    refused = {k: v for k, v in missing.items() if "all" not in a.allow_missing and k not in a.allow_missing}
+    if refused:
+        print("REFUSED -- sources missing (restore them, or pass --allow-missing NAME to build without one on purpose):",
+              file=sys.stderr)
+        for k, v in refused.items():
+            print(f"  {k:<36} {v}", file=sys.stderr)
+        return 1
     opts = "delim='\t', header=true, quote='', escape='', all_varchar=true"
     if GRAPH.exists():
         GRAPH.unlink()
@@ -230,6 +262,28 @@ def main() -> int:
     # --- SNOMED CT-AU: the whole relationship snapshot ------------------------------------------------------------
     ins("SNOMED CT-AU relationships", f"""SELECT 'SCT', src, 'sct:' || typ, 'SCT', dst, 'SNOMED CT-AU RF2', 'compendium rel',
             'native', 'native', 'asserted', '{PIN['sct']}', json_object('group', grp) FROM cmp.rel""")
+    # --- SNOMED CT-AU's own maps and associations (the release's Refset/Map and Refset/Content) -----------------------
+    ref = lambda sub, name: f"read_csv('{AU_RF2 / 'Refset' / sub / name}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
+    rel_ = PIN["sct"].split()[-1]
+    if (AU_RF2 / "Refset").exists():
+        ins("SNOMED CT -> ICD-O-3 (ICD-O simple map)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:icdo_map', 'ICDO', mapTarget,
+                'SNOMED CT-AU RF2', 'ICD-O simple map reference set 446608001', 'simple map', 'native', 'asserted', '{PIN['sct']}',
+                json_object('axis', CASE WHEN mapTarget LIKE 'C%' THEN 'topography' ELSE 'morphology' END)
+            FROM {ref('Map', f'der2_sRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId = '446608001' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        ins("AMT product -> ARTG id (ARTG Id reference set)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:artg_id', 'ARTG', mapTarget,
+                'SNOMED CT-AU RF2', 'ARTG Id reference set 11000168105', 'simple map', 'native', 'asserted', '{PIN['sct']}', NULL
+            FROM {ref('Map', f'der2_iRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId = '11000168105' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        ins("SNOMED anatomy structure -> entire / part (association refsets)", f"""SELECT DISTINCT 'SCT', referencedComponentId,
+                CASE refsetId WHEN '734138000' THEN 'sct:anatomy_structure_entire' ELSE 'sct:anatomy_structure_part' END,
+                'SCT', targetComponentId, 'SNOMED CT-AU RF2', 'association reference set ' || refsetId, 'association', 'native', 'asserted',
+                '{PIN['sct']}', NULL
+            FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId IN ('734138000', '734139008')""")
+        con.execute("INSERT INTO name_hint SELECT DISTINCT 'ICDO', o_code, 'ICD-O-3 ' || o_code FROM edge WHERE predicate = 'sct:icdo_map'")
+        con.execute("INSERT INTO name_hint SELECT DISTINCT 'ARTG', o_code, 'ARTG ' || o_code FROM edge WHERE predicate = 'sct:artg_id'")
+
 
     # --- OMOP product mappings (concept ids resolved to (vocabulary, code) once) -----------------------------------
     con.execute("""CREATE TEMP TABLE want AS SELECT DISTINCT CAST(id AS VARCHAR) AS id FROM (
@@ -496,14 +550,17 @@ def main() -> int:
         con.executemany("INSERT INTO name_hint VALUES ('MONDO', ?, ?)", [(t["id"], t.get("name")) for t in mt if t["id"].startswith("MONDO:")])
         con.executemany("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)",      # the taxa MONDO cites carry their names in mondo.obo
                         [(t["id"].split(":", 1)[1], t.get("name")) for t in mt if t["id"].startswith("NCBITaxon:")])
-        prefix = {"SCTID": "SCT", "ICD10CM": "ICD10CM", "OMIM": "OMIM", "Orphanet": "ORPHA"}
+        prefix = {"SCTID": "SCT", "ICD10CM": "ICD10CM", "OMIM": "OMIM", "Orphanet": "ORPHA",
+                  # MONDO's other exact matches (MedDRA left out: MSSO-licensed)
+                  "DOID": "DOID", "NCIT": "NCIT", "mesh": "MESH", "icd11.foundation": "ICD11", "EFO": "EFO", "UMLS": "UMLS",
+                  "MEDGEN": "MEDGEN", "ICD10WHO": "ICD10WHO", "OMIMPS": "OMIMPS"}
         sssom = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
                  if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
         con.executemany("INSERT INTO name_hint VALUES (?, ?, ?)",
                         [("MONDO", r["subject_id"], r.get("subject_label")) for r in sssom] +
                         [(prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1], r.get("object_label")) for r in sssom
                          if prefix[r["object_id"].split(":")[0]] != "SCT"])   # SNOMED names come from the SNOMED CT-AU release
-        ins_rows("MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet",
+        ins_rows("MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet / DOID / NCIT / MeSH / ICD-11 / EFO / UMLS / MedGen / ICD-10",
                  [("MONDO", r["subject_id"], "mondo:exact_match", prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1],
                    "MONDO SSSOM", "mondo.sssom.tsv", r.get("mapping_justification"), "ungraded", "asserted", PIN["mondo"], None)
                   for r in sssom])
@@ -530,6 +587,11 @@ def main() -> int:
         ins_rows("HPO is-a", [("HP", t["id"], "hp:is_a", "HP", p, "HPO", "hp.obo", "native", "native", "asserted", PIN["hpo"], None)
                               for t in ht if t["id"].startswith("HP:") for p in t["is_a"] if p.startswith("HP:")])
         con.executemany("INSERT INTO name_hint VALUES ('HP', ?, ?)", [(t["id"], t.get("name")) for t in ht])
+        hx = {"NCIT": "NCIT", "ORPHA": "ORPHA", "ICD-10": "ICD10WHO"}      # HPO's own xrefs (MedDRA left out: MSSO-licensed)
+        ins_rows("HPO xref -> NCIT / Orphanet / ICD-10", sorted({("HP", t["id"], "hp:xref", hx[x.split(":")[0]], x.split(":", 1)[1], "HPO",
+                                                                  "hp.obo xref", x.split(":")[0], "native", "asserted", PIN["hpo"], None)
+                                                                 for t in ht if t["id"].startswith("HP:") for x in t["xref"]
+                                                                 if x.split(":")[0] in hx}))
     if HPOA.exists():
         dbv = {"OMIM": "OMIM", "ORPHA": "ORPHA", "DECIPHER": "DECIPHER"}
         rows_h, names = [], {}
@@ -571,6 +633,13 @@ def main() -> int:
                 json_object('id_rxcui', identifier, 'id_class', id_class, 'lifted_via', via) FROM dc_rx""")
         ins("DrugCentral -> SNOMED", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:snomed', 'SCT', identifier, 'DrugCentral',
                 'identifier', 'SNOMEDCT_US', 'ungraded', 'asserted', '{PIN['dc']}', NULL FROM {dc('identifier')} WHERE id_type = 'SNOMEDCT_US'""")
+        dx = {"CHEBI": "CHEBI", "UNII": "UNII", "PUBCHEM_CID": "PUBCHEM", "ChEMBL_ID": "CHEMBL", "MESH_DESCRIPTOR_UI": "MESH",
+              "MESH_SUPPLEMENTAL_RECORD_UI": "MESH", "UMLSCUI": "UMLS", "IUPHAR_LIGAND_ID": "IUPHAR", "KEGG_DRUG": "KEGG", "INN_ID": "INN"}
+        dcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in dx.items())
+        ins("DrugCentral -> ChEBI / UNII / PubChem / ChEMBL / MeSH / UMLS / IUPHAR / KEGG / INN", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
+                'drugcentral:xref', CASE id_type {dcase} END, replace(identifier, 'CHEBI:', ''), 'DrugCentral', 'identifier', id_type,
+                'native', 'asserted', '{PIN['dc']}', NULL
+            FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""")
         if (DC / "struct2atc.tsv").exists():
             ins("DrugCentral -> ATC", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:in_atc_class', 'ATC', atc_code, 'DrugCentral',
                     'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""")
@@ -678,6 +747,11 @@ def main() -> int:
             ("UBERON", r["subject_id"], "uberon:sct_narrow_match", "SCT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
              r["predicate_id"], "ungraded", "asserted", PIN["uberon"], json.dumps({"mapping_justification": r.get("mapping_justification")}))
             for r in ss if r["predicate_id"] == "skos:narrowMatch"])
+        ins_rows("Uberon -> NCI Thesaurus anatomy (narrowMatch)", [
+            ("UBERON", r["subject_id"], "uberon:ncit_narrow_match", "NCIT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
+             r["predicate_id"], "native", "asserted", PIN["uberon"], None)
+            for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
+            if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:") and r["predicate_id"] == "skos:narrowMatch"])
     if MONDO_OBO.exists():
         rows_m, cur = [], None
         for line in open(MONDO_OBO, encoding="utf-8"):
@@ -711,6 +785,34 @@ def main() -> int:
             JOIN lpm pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
             WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""")
+    if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
+        # what a lab test measures, in the analyte's own vocabularies: LOINC maps its component parts to ChEBI, RxNorm,
+        # PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC and ClinVar. RxNorm and NCBI Gene are vocabularies the drug and gene
+        # sides already hold, so "serum vancomycin" meets vancomycin, and a genotype test its gene, with no matching at all.
+        # Primary links (the term's own axis) and DetailedModel links (the component decomposed); Search links are for
+        # finding terms, not for what a term measures, and are not loaded.
+        xs = {"https://www.ebi.ac.uk/chebi": "CHEBI", "http://www.nlm.nih.gov/research/umls/rxnorm": "RXN",
+              "http://pubchem.ncbi.nlm.nih.gov": "PUBCHEM", "http://fdasis.nlm.nih.gov": "UNII",
+              "https://www.ncbi.nlm.nih.gov/taxonomy": "NCBITAXON", "https://www.ncbi.nlm.nih.gov/gene": "NCBIGENE",
+              "http://www.genenames.org": "HGNC", "https://www.ncbi.nlm.nih.gov/clinvar": "CLINVAR"}
+        xcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in xs.items())
+        links = (f"SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true)"
+                 + (f" UNION SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK_SUPP}', header=true, "
+                    "all_varchar=true) WHERE LinkTypeName = 'DetailedModel'" if LOINC_PARTLINK_SUPP.exists() else ""))
+        ins("LOINC term -> analyte code (ChEBI / RxNorm / PubChem / UNII / taxon / gene / ClinVar)", f"""SELECT DISTINCT 'LOINC', pl.LoincNumber,
+                'loinc:part_xref', CASE pm.ExtCodeSystem {xcase} END,
+                CASE WHEN pm.ExtCodeSystem = 'http://www.genenames.org' THEN pm.ExtCodeId ELSE replace(pm.ExtCodeId, 'CHEBI:', '') END,
+                'LOINC 2.83 part mapping', 'part ' || pl.PartNumber, pl.LinkTypeName || ' ' || pl.PartTypeName || ' ' || pm.Equivalence,
+                'native', 'asserted', '{PIN['loinc_table']}',
+                json_object('part_type', pl.PartTypeName, 'link_type', pl.LinkTypeName, 'part', pl.PartNumber, 'part_name', pm.PartName,
+                            'equivalence', pm.Equivalence, 'ext_name', pm.ExtCodeDisplayName)
+            FROM ({links}) pl JOIN lpm pm ON pm.PartNumber = pl.PartNumber
+            JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
+            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')""")
+        con.execute(f"""INSERT INTO name_hint SELECT DISTINCT CASE ExtCodeSystem {xcase} END,
+                CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
+                any_value(ExtCodeDisplayName) FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs if xs[k] not in ('RXN', 'NCBITAXON', 'NCBIGENE'))})
+            GROUP BY 1, 2""")
     if UMLS_SCT_NCBI.exists():
         # UMLS shared CUI, admitted where the NCBI name equals the SNOMED preferred term -- as written, or once rank words are
         # set aside ("Salmonella species" = Salmonella, "Order Strigiformes" = Strigiformes). Truly different names (renamed
@@ -952,6 +1054,25 @@ def main() -> int:
     con.execute(f"CREATE TEMP TABLE native_sct AS SELECT id FROM cmp.concept {ext_ids}")
     con.execute("""CREATE TEMP TABLE foreign_sct AS SELECT DISTINCT code FROM (SELECT s_code AS code FROM edge WHERE s_vocab = 'SCT'
                    UNION SELECT o_code FROM edge WHERE o_vocab = 'SCT') WHERE code NOT IN (SELECT id FROM native_sct)""")
+    if (AU_RF2 / "Refset").exists():
+        # a retired SCTID the AU release still describes: SNOMED's own historical association (REPLACED BY, SAME AS,
+        # POSSIBLY EQUIVALENT TO ...) and the AU substance map, to an active concept -- the release's answer, not a guess
+        ins("retired SNOMED -> current (historical association)", f"""SELECT DISTINCT 'SCT', a.referencedComponentId, 'sct:historical_association',
+                'SCT', a.targetComponentId, 'SNOMED CT-AU RF2', 'association reference set ' || a.refsetId, t.pt, 'native', 'asserted',
+                '{PIN['sct']}', json_object('association', t.pt)
+            FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')} a
+            JOIN cmp.concept t ON t.id = a.refsetId
+            WHERE a.active = '1' AND a.refsetId NOT IN ('734138000', '734139008')
+              AND a.referencedComponentId IN (SELECT code FROM foreign_sct) AND a.targetComponentId IN (SELECT id FROM native_sct)
+            UNION SELECT DISTINCT 'SCT', m.referencedComponentId, 'sct:historical_association', 'SCT', m.targetSnomedCtSubstance,
+                'SNOMED CT-AU RF2', 'Substance to SNOMED CT-AU mapping reference set 281000036105', 'Substance map: ' || t.pt, 'native',
+                'asserted', '{PIN['sct']}', json_object('association', 'substance map ' || lower(t.pt))
+            FROM {ref('Map', f'der2_csRefset_AttributeValueMapSnapshot_AU1000036_{rel_}.txt')} m JOIN cmp.concept t ON t.id = m.mapType
+            WHERE m.active = '1' AND m.referencedComponentId IN (SELECT code FROM foreign_sct)
+              AND m.targetSnomedCtSubstance IN (SELECT id FROM native_sct)""")
+        # the release still carries the retired concepts' descriptions: name them from it
+        con.execute(f"""INSERT INTO name_hint SELECT 'SCT', d.conceptId, any_value(d.term) FROM {ref('../Terminology', f'sct2_Description_Snapshot-en-au_AU1000036_{rel_}.txt')} d
+            WHERE d.active = '1' AND d.conceptId IN (SELECT code FROM foreign_sct) AND d.typeId = '900000000000003001' GROUP BY 2""")
     ins("foreign SNOMED -> nearest SNOMED CT-AU ancestor", f"""
         WITH anc AS (
             SELECT f.code, a.concept_code AS anc, CAST(ca.min_levels_of_separation AS INT) AS lvl
@@ -1003,6 +1124,10 @@ def main() -> int:
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
+    con.execute("""INSERT INTO name_hint SELECT vocab, code, vocab || ':' || code FROM keys
+                   WHERE vocab IN ('CHEBI', 'UNII', 'PUBCHEM', 'CHEMBL', 'MESH', 'UMLS', 'IUPHAR', 'KEGG', 'INN', 'HGNC', 'CLINVAR', 'MEDGEN',
+                                   'ICD11', 'ICD10WHO', 'OMIMPS', 'EFO', 'DOID', 'NCIT')
+                     AND (vocab, code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> '')""")   # an identifier with no loaded label is named by itself
     con.execute("""CREATE TABLE node AS SELECT k.vocab, k.code, k.vocab || ':' || k.code AS key,
                           (SELECT any_value(h.name) FROM name_hint h WHERE h.vocab = k.vocab AND h.code = k.code
                            AND h.name IS NOT NULL AND trim(h.name) <> '') AS name
@@ -1010,6 +1135,8 @@ def main() -> int:
     con.execute("CREATE TABLE edge_final AS SELECT row_number() OVER () AS edge_id, * FROM edge")
     con.execute("DROP TABLE edge")
     con.execute("ALTER TABLE edge_final RENAME TO edge")
+    for k in missing:
+        log[f"SOURCE MISSING (built without it on purpose): {k}"] = 0
     con.execute("CREATE TABLE build_log (family VARCHAR, edges BIGINT)")
     con.executemany("INSERT INTO build_log VALUES (?, ?)", list(log.items()))
 

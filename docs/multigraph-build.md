@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,184,379 nodes, 5,040,871 edges, 177 edge types, 28 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology* and *How a drug works*.)
-Written to `out/graph.duckdb` (205 MB, git-ignored), rebuilt from source in under four minutes.
+**1,335,431 nodes, 5,311,149 edges, 186 edge types, 48 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references* and *How a drug works*.)
+Written to `out/graph.duckdb` (213 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -499,6 +499,46 @@ body structure has the same name ("internal jugular vein" → *Structure of inte
 in `cache/radlex/radlex_sct_candidates.tsv` for a person, never edges — a name match is a gap-crossing. Modality,
 contrast, view and timing parts stay RadLex-only: SNOMED models them as qualifier values, and no map joins them.
 
+## Cross-references the sources already assert (24 Sep 2026)
+
+Asked whether the cross-vocabulary links were maximised, the answer was no: several sources carried mappings the graph had
+not loaded. Every one below is a code a publisher asserts — no matching.
+
+| from | to | edges | predicate |
+|---|---|---:|---|
+| SNOMED CT-AU release (Refset/Map) | ICD-O-3 topography / morphology | 23,514 | `sct:icdo_map` |
+| AMT product (Refset/Map) | ARTG entry — the TGA registration | 51,981 (50,056 products) | `sct:artg_id` |
+| SNOMED "Structure of X" (Refset/Content) | "Entire X" / "Part of X" | 16,171 | `sct:anatomy_structure_entire` / `_part` |
+| retired SNOMED id in the graph (Refset/Content, Map) | its active successor | 1,288 | `sct:historical_association` |
+| MONDO (SSSOM exactMatch) | DOID, NCIT, MeSH, ICD-11, EFO, UMLS, MedGen, WHO ICD-10, OMIM PS | +78,635 (109,623 in all) | `mondo:exact_match` |
+| DrugCentral (identifier table) | ChEMBL, UNII, PubChem, ChEBI, MeSH, UMLS, INN, KEGG, IUPHAR | 42,163 | `drugcentral:xref` |
+| LOINC term's analyte part | ChEBI, RxNorm, PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC, ClinVar | 53,683 | `loinc:part_xref` |
+| Uberon (SSSOM narrowMatch) | NCI Thesaurus anatomy | 2,578 | `uberon:ncit_narrow_match` |
+| HPO (hp.obo xref) | NCIT, Orphanet, WHO ICD-10 | 265 | `hp:xref` |
+
+**Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
+the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
+tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /
+UNII / PubChem code for the same analyte, carried to RxNorm by DrugCentral's identifiers, names **the same drug for 5,824
+of 5,913 tests** (98.5%). A "vancomycin" component is also the drug in a *susceptibility* test (class ABXBACT: the
+organism against the drug), so a query for levels filters by class.
+
+**Retired SNOMED ids now lead somewhere.** Of 1,794 SNOMED ids that other sources use and the AU release does not
+define as active, 1,034 now have the release's own successor (REPLACED BY 243, SAME AS 293, POSSIBLY EQUIVALENT TO 326,
+MOVED TO 135, …) — the August "Clexane with Automatic Safety Lock System" packs → their "Eris Safety Lock System"
+replacements — and with Athena's nearest ancestor **1,741 of 1,794** are reachable (775 before). POSSIBLY EQUIVALENT TO and
+ALTERNATIVE are weaker than REPLACED BY and SAME AS; the edge's method says which.
+
+**Not loaded, and why:** MedDRA (MSSO licence), DrugBank ids (excluded throughout), the US formulary ids in DrugCentral
+(MMSL, NDDF, VANDF, VUID, NUI), LOINC's *Search* part links (they help people find terms, they do not say what a term
+measures), the CTV3 map (UK Read codes), and the SNOMED refsets of AU clinical subsets (1.4 M memberships — a possible
+next step, not a cross-vocabulary link).
+
+**Islands.** `graph_report.py` now reports connected components on every run: 1,317,597 of 1,335,431 nodes (98.7%) are
+one component. MBS (6,046 items, no published map) is the one true island; the rest are pairs and small clusters —
+MONDO's obsoleted terms with their old xrefs, and ~930 DrugCentral drugs no Australian source uses, now carrying their
+own identifiers.
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -557,6 +597,8 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register
+#   refuses to run if any source is missing (a deleted folder used to rebuild a smaller graph silently);
+#   --allow-missing NAME builds without one on purpose and records it in build_log
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
 .venv/bin/python scripts/graph_report.py          # scores the linkage routes, sets their tiers, writes out/graph_report.json
 ```
@@ -568,4 +610,4 @@ CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC an
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not
 imported. The RCPA SPIA reference sets are RCPA copyright (NCTS terms of use): read in place, derived data in cache/rcpa/
-only, and a graph built with them is not for redistribution. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*
+only, and a graph built with them is not for redistribution. ICD-O-3, ICD-11 and WHO ICD-10 are WHO's: only codes are loaded, never labels. MeSH is NLM's (public domain); UMLS CUIs are loaded as identifiers only. ARTG ids are TGA identifiers shipped in SNOMED CT-AU. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*
