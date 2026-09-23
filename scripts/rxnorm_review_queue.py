@@ -27,14 +27,20 @@ import duckdb
 
 DB = Path("out/compendium.duckdb")
 DECISIONS = Path("reference/rxnorm_substance_decisions.json")
+# AMT levels that are groupers rather than goods: nobody dispenses an MP or an MPF.
+ABSTRACT_TAGS = ("medicinal product", "medicinal product form", "product name")
 
 
 def load_decisions(path: Path = DECISIONS) -> dict:
-    """Human choices already made, keyed by substance id. Rejections map to None."""
+    """Human choices already made, keyed by substance id.
+
+    A `rejected` decision — this substance must not map to an ingredient at all — is still a decision, and the row
+    leaves the queue on it just as a chosen concept does.
+    """
     if not path.exists():
         return {}
     doc = json.load(open(path))
-    return {d["substance_id"]: d for d in doc.get("decisions", []) if d.get("state") != "rejected"}
+    return {d["substance_id"]: d for d in doc.get("decisions", [])}
 
 
 def build(review_path: str, out_path: str, log=print) -> dict:
@@ -44,16 +50,26 @@ def build(review_path: str, out_path: str, log=print) -> dict:
     ids = sorted({r["sctid"] for r in rows})
     con.execute("CREATE OR REPLACE TEMP TABLE q AS SELECT * FROM (VALUES " + ",".join(f"('{i}')" for i in ids) + ") t(id)")
 
-    # how many of this substance's products reach OMOP, directly or through the indirect routes
-    con.execute("""CREATE OR REPLACE TEMP TABLE reach AS
+    # how many of this substance's products reach OMOP, directly or through the indirect routes.
+    # `real` excludes the abstract levels: an MP or MPF is a grouper, not something anyone dispenses, and a
+    # product_id absent from the AMT product table is a plain SNOMED grouper ('Beta-lactam-containing product').
+    # Counting those made the queue rank substances by how many groupers mention them. See docs.
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE reach AS
         WITH used AS (
-            SELECT q.id AS substance_id, i.product_id
-            FROM q JOIN ingredient i ON q.id IN (i.active_substance_id, i.precise_substance_id, i.boss_substance_id))
-        SELECT u.substance_id, count(DISTINCT u.product_id) AS products,
-               count(DISTINCT CASE WHEN EXISTS (SELECT 1 FROM omop_drug d WHERE d.product_id=u.product_id AND d.standard_concept_id IS NOT NULL)
-                                     OR EXISTS (SELECT 1 FROM omop_drug_indirect x WHERE x.product_id=u.product_id)
-                              THEN u.product_id END) AS products_reaching_omop
-        FROM used u GROUP BY 1""")
+            SELECT q.id AS substance_id, i.product_id, p.tag,
+                   coalesce(p.tag NOT IN ({','.join(repr(t) for t in ABSTRACT_TAGS)}), false) AS is_real
+            FROM q JOIN ingredient i ON q.id IN (i.active_substance_id, i.precise_substance_id, i.boss_substance_id)
+                   LEFT JOIN product p ON p.id = i.product_id),
+        flagged AS (
+            SELECT u.*, (EXISTS (SELECT 1 FROM omop_drug d WHERE d.product_id=u.product_id AND d.standard_concept_id IS NOT NULL)
+                         OR EXISTS (SELECT 1 FROM omop_drug_indirect x WHERE x.product_id=u.product_id)) AS reaches
+            FROM used u)
+        SELECT substance_id,
+               count(DISTINCT product_id) AS products,
+               count(DISTINCT CASE WHEN reaches THEN product_id END) AS products_reaching_omop,
+               count(DISTINCT CASE WHEN is_real THEN product_id END) AS real_products,
+               count(DISTINCT CASE WHEN is_real AND NOT reaches THEN product_id END) AS real_products_blocked
+        FROM flagged GROUP BY 1""")
     # is this substance a salt whose base is the one carrying the strength?
     con.execute("""CREATE OR REPLACE TEMP TABLE as_salt AS
         SELECT b.salt_id, any_value(b.base) AS base_name, any_value(b.base_id) AS base_id,
@@ -61,7 +77,8 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         FROM substance_salt_base b LEFT JOIN omop_substance ob ON ob.substance_id=b.base_id GROUP BY b.salt_id""")
     evidence = {r[0]: r for r in con.execute("""
         SELECT q.id, s.substance, coalesce(r.products,0), coalesce(r.products_reaching_omop,0),
-               o.omop_rxcui, o.omop_rxnorm_name, o.agreement, a.base_name, a.base_rxcui, a.base_rxnorm
+               o.omop_rxcui, o.omop_rxnorm_name, o.agreement, a.base_name, a.base_rxcui, a.base_rxnorm,
+               coalesce(r.real_products,0), coalesce(r.real_products_blocked,0)
         FROM q LEFT JOIN substance s ON s.substance_id=q.id
         LEFT JOIN reach r ON r.substance_id=q.id
         LEFT JOIN omop_substance o ON o.substance_id=q.id
@@ -70,13 +87,15 @@ def build(review_path: str, out_path: str, log=print) -> dict:
 
     out = []
     for r in rows:
-        e = evidence.get(r["sctid"], (None,) * 10)
+        e = evidence.get(r["sctid"], (None,) * 12)
         products, reaching = e[2] or 0, e[3] or 0
         blocked = products - reaching
+        real_products, real_blocked = e[10] or 0, e[11] or 0
         decision = decisions.get(r["sctid"])
         if decision:
             # a person has already chosen; the resolver's opinion no longer matters
-            verdict = "decided by review"
+            verdict = ("decided by review: not applicable" if decision["state"] == "rejected"
+                       else "decided by review")
         elif r["status"].startswith("not-applicable"):
             verdict = "already classified: " + r["status"].split(":", 1)[1].strip()
         elif e[4]:
@@ -94,6 +113,7 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         out.append({
             "sctid": r["sctid"], "substance": r["pt"], "status": r["status"], "verdict": verdict,
             "products": products, "products_reaching_omop": reaching, "products_blocked": blocked,
+            "real_products": real_products, "real_products_blocked": real_blocked,
             "decided_rxcui": (decision or {}).get("rxcui", ""),
             "decided_name": (decision or {}).get("rxnorm_name", ""),
             "decided_state": (decision or {}).get("state", ""),
@@ -103,7 +123,7 @@ def build(review_path: str, out_path: str, log=print) -> dict:
             "candidate_1": r["cand1"], "candidate_2": r["cand2"], "candidate_3": r["cand3"],
         })
     HUMAN = ("choose among candidates", "no candidate found")
-    out.sort(key=lambda x: (x["verdict"] not in HUMAN, -x["products_blocked"], -x["products"]))
+    out.sort(key=lambda x: (x["verdict"] not in HUMAN, -x["real_products_blocked"], -x["products_blocked"], -x["products"]))
     with open(out_path, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(out[0]), delimiter="\t")
         w.writeheader()
@@ -111,12 +131,13 @@ def build(review_path: str, out_path: str, log=print) -> dict:
     by_verdict = collections.Counter(x["verdict"] for x in out)
     needs = [x for x in out if x["verdict"] in HUMAN]
     blocked_total = sum(x["products_blocked"] for x in needs)
+    real_blocked_total = sum(x["real_products_blocked"] for x in needs)
     running, half, eighty = 0, None, None
     for i, x in enumerate(needs, 1):
-        running += x["products_blocked"]
-        if half is None and running >= blocked_total * 0.5:
+        running += x["real_products_blocked"]
+        if half is None and running >= real_blocked_total * 0.5:
             half = i
-        if eighty is None and running >= blocked_total * 0.8:
+        if eighty is None and running >= real_blocked_total * 0.8:
             eighty = i
             break
     return {
@@ -124,12 +145,15 @@ def build(review_path: str, out_path: str, log=print) -> dict:
         "by_verdict": dict(by_verdict.most_common()),
         "decided_by_review": len(decisions),
         "products_unblocked_by_decisions": sum(
-            x["products_blocked"] for x in out if x["verdict"] == "decided by review"),
+            x["products_blocked"] for x in out if x["verdict"].startswith("decided by review")),
         "needs_a_person": len(needs),
         "products_blocked_by_them": blocked_total,
-        "rows_covering_half_the_blocked_products": half,
-        "rows_covering_eighty_per_cent": eighty,
-        "the_first_ten": [{"substance": x["substance"], "products_blocked": x["products_blocked"],
+        "real_products_blocked_by_them": real_blocked_total,
+        "abstract_share_of_blocked": f"{1 - real_blocked_total / blocked_total:.0%}",
+        "rows_covering_half_the_real_blocked": half,
+        "rows_covering_eighty_per_cent_real": eighty,
+        "the_first_ten": [{"substance": x["substance"], "real_products_blocked": x["real_products_blocked"],
+                           "products_blocked": x["products_blocked"],
                            "action": x["verdict"], "candidate_1": x["candidate_1"][:52]} for x in needs[:10]],
         "written": out_path,
     }
