@@ -1,0 +1,176 @@
+{
+ "guideline": "guidelines/acute-pain-management-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Acute pain management' (Last updated October 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 21,
+  "pass": 21,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Assess pain regularly and after every intervention; combine non-drug and drug methods; use a graded drug approach.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The key to effective acute pain management is regular assessment of pain and response to interventions Strategies combining non-pharmacological and pharmacological methods are most effective A graded pharmacological approach should be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Undertreated pain has lasting effects** on the child's experience of pain and later medical encounters, and can harm healing and development.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Undertreated pain has a lasting impact on a child’s experience of pain and subsequent medical encounters and can negatively impact healing and developmental outcomes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A child in pain may be very quiet.** Reassess behaviour, physiology and pain after the predicted onset of each drug.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Evaluation of behaviour and level of activity, note that a child in pain may be very quiet … Behaviour, physiology and pain should be reassessed after intervention, ie review after predicted onset of action for pharmacological management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pain tools:** FPS-R 3–18 years (self-rated); numeric rating scale over 7 years (self-rated); NIPS under 3 months (clinician); FLACC 2 months to 7 years (clinician, score 0–10); revised FLACC for all non-verbal children.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Faces pain scale revised (FPS-R) 3-18 years Child self-rates their pain (not clinician or parent assessment) … Numeric rating scale >7 years Child self-rates their pain (not clinician or parent assessment) … Neonatal/infant pain scale (NIPS) <3 months Clinician assessment … Faces legs activity cry consolability (FLACC) 2 months to 7 years Clinician assessment Add scores of five assessments (faces, legs, activity, cry, consolability) for a score 0-10 … Revised FLACC (R-FLACC) All non-verbal children Clinician assessment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Constant pain: prescribe regularly, not PRN.** Give paracetamol and ibuprofen together where appropriate. **Treat moderate to severe pain with opioids early.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "When pain is constant, prescribe analgesics at regular intervals as opposed to PRN Utilise the synergistic effects of paracetamol and ibuprofen and give together as appropriate … Treat moderate to severe pain with opioids early",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Injuries:** splint or backslab suspected fractures immediately, ice (if age appropriate) and elevate, dress burns promptly, and consider a regional nerve block for limb or finger injuries.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immediate immobilisation of potential fractures with a splint or backslab Applying ice (if age appropriate) and elevating injured limbs Prompt dressing of burns (see Burns) For limb or finger injuries consider regional local anaesthesia/nerve block",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infants:** swaddling, feeding, skin-to-skin care and a dummy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Swaddling, feeding, skin to skin care and dummy use for infants",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Topical anaesthetic eye drops are for examination only — they interfere with healing.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Eye pain/corneal abrasions Topical anaesthetic eye drops (only for examination, interferes with healing)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severe acute ear pain:** short-term topical 2% lignocaine or Auralgan®, 1–2 drops, **only onto an intact tympanic membrane**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severe, acute ear pain Short-term use of topical 2% lignocaine or Auralgan®, apply 1-2 drops to intact tympanic membrane",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Sucrose (any concentration, e.g. 24%, 33%) orally per procedure:** preterm (32–40 weeks corrected) 0.2–0.5 mL; under 1 month 0.5–1 mL; 1–18 months 1–2 mL. Daily max: preterm 2.5 mL; under 3 months 5 mL; 3 months and over 10 mL. Give a quarter of the dose to the anterior tongue 2 minutes before the procedure.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sucrose (any concentration eg 24%, 33%) PO Preterm (corrected age 32-40/40 weeks): 0.2-0.5 mL per procedure <1 month: 0.5-1 mL per procedure 1-18 months: 1-2 mL per procedure Preterm: max 2.5 mL/day <3 months: max 5 mL/day ≥3 months: max 10 mL/day … Provide one-quarter of dose to anterior tongue 2 minutes prior to painful procedure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Paracetamol** (dose on ideal body weight; oral preferred). **Oral:** 15 mg/kg (max 1 g) 4–6-hourly; daily max birth–1 month 60 mg/kg; over 1 month 90 mg/kg (max 4 g) for severe pain for up to 48 hours, then 60 mg/kg/day. **Rectal:** 15–20 mg/kg (max 1 g) 6-hourly, same daily limits; absorption delayed and erratic; avoid in immunocompromised children. **IV:** under 1 month 10 mg/kg 6-hourly (max 40 mg/kg/day); over 1 month 15 mg/kg (max 1 g) 6-hourly (max 60 mg/kg/day, max 4 g). ⚠️ **mg/mL errors have caused significant overdoses in young children.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Paracetamol PO 15 mg/kg (max 1 g) 4-6 hourly Birth-1 month: 60 mg/kg/day >1 month: 90 mg/kg/day (max 4 g) for severe pain for max 48 hours, then 60 mg/kg/day subsequently Onset of action 30 minutes Oral route is preferred Dose on ideal body weight Administer commercial syrup carefully as available in several concentrations PR 15-20 mg/kg (max 1 g) 6 hourly <1 month: 60 mg/kg/day >1 month: 90 mg/kg/day (max 4 g) for max 48 hours, then 60 mg/kg/day subsequently If not tolerated orally Rectal absorption can be delayed and erratic Dose on ideal body weight 125 mg, 250 mg, 500 mg suppositories available PR medication should be avoided in immunocompromised children IV <1 month: 10 mg/kg 6 hourly >1 month: 15 mg/kg (max 1 g) 6 hourly <1 month: 40 mg/kg/day >1 month: 60 mg/kg/day (max 4 g) Onset of action 5-10 minutes If PO/PR not tolerated More expensive Dose on ideal body weight Dose (mg) and volume (mL) errors have caused significant overdoses in young children",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Ibuprofen orally, over 3 months:** 10 mg/kg (max 400 mg) 6–8-hourly with food; max 30 mg/kg/day (max 2.4 g). Caution in renal impairment, dehydration, bleeding or anticoagulation. **Asthma is not a contraindication.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ibuprofen PO >3 months: 10 mg/kg (max 400 mg) 6-8 hourly with food 30 mg/kg/day (max 2.4 g) Onset of action 30 minutes Precautions include renal impairment, dehydration, bleeding, anticoagulant use Asthma is not a contraindication",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Oxycodone orally:** 1–12 months 0.05–0.1 mg/kg 4-hourly (max 0.6 mg/kg/day); over 12 months 0.1–0.2 mg/kg (adult 5–10 mg) 4-hourly (max 1.2 mg/kg/day). Short-term use; **do not prescribe for outpatients without a clear diagnosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oxycodone PO 1–12 months: 0.05-0.1 mg/kg 4 hourly >12 months: 0.1-0.2 mg/kg (adult dose 5-10 mg) 4 hourly 1-12 months: max 0.6 mg/kg/day >12 months: max 1.2 mg/kg/day Onset of action 10-30 minutes Higher/more frequent dosing can be used in hospital settings For short term use Do not prescribe for outpatient use if no clear diagnosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Morphine IV/subcut:** under 1 month 0.025 mg/kg; 1–12 months 0.05 mg/kg; over 12 months up to 0.2 mg/kg (max 5–10 mg). Cumulative max: under 1 month 0.1 mg/kg 4–6-hourly (0.6 mg/kg/day); 1–12 months 0.1 mg/kg 2–4-hourly (1.2 mg/kg/day); over 12 months 0.2 mg/kg 2–4-hourly (2.4 mg/kg/day).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Morphine IV/subcut <1 month: 0.025 mg/kg, repeat as needed 1-12 months: 0.05 mg/kg >12 months: up to 0.2 mg/kg (max 5-10 mg) Cumulative maximum: <1 month: 0.1 mg/kg 4-6 hourly (max 0.6 mg/kg/day) 1-12 months: 0.1 mg/kg 2-4 hourly (max 1.2 mg/kg/day) >12 months: 0.2 mg/kg 2-4 hourly (max 2.4 mg/kg/day)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Intranasal fentanyl, over 12 months:** 1.5 microg/kg (max 100 microg) first dose, then 0.75 microg/kg after 10 minutes; total 3 microg/kg/day; split between nostrils by atomiser. **Not recommended under 12 months.** Consider other ongoing analgesia after the second dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fentanyl Intra-nasal >12 months: 1.5 microg/kg (max 100 microg) for first dose 0.75 microg/kg for subsequent doses after 10 minutes Total dose of 3 microg/kg/day Rapid onset (5 minutes) Divide dose between nostrils using atomiser Consider alternative ongoing analgesics after second dose Not recommended <12 months of age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Tramadol oral/IV, over 12 years:** 0.5–1 mg/kg (max 100 mg) 6-hourly; max 4 mg/kg/day (max 400 mg); up to 2 mg/kg if no sleep-apnoea or respiratory-depression risk. ⚠️ **Avoid in epilepsy and in young people on SSRIs.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tramadol PO/IV >12 years 0.5-1 mg/kg (max 100 mg) 6 hourly 4 mg/kg/day (max 400 mg) Onset of action 30-60 minutes Can give up to 2 mg/kg if no risk of sleep apnoea/risk factors for respiratory depression Avoid in epilepsy (lowers seizure threshold) Avoid in young people on SSRIs (risk of serotonin syndrome)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Never give opioids as the sole analgesic** — combine with regular simple analgesia. Consider causes of ongoing severe pain such as **compartment syndrome**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Opiates should not be given as the sole analgesic agent, ensure in combination with regular simple analgesia Consider causes for ongoing severe pain eg compartment syndrome",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Renal impairment:** prefer fentanyl over morphine, reduce oxycodone dose and frequency, and watch for opioid accumulation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Renal impairment See renal dosing guidelines for impaired renal function Prefer fentanyl over morphine Reduce dose and frequency of oxycodone Closely monitor for signs of opiate accumulation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Opioid toxicity:** airway support, oxygen, assist ventilation; **naloxone IM or IV 10 microg/kg (max 400 microg)**, then **100 microg/kg (max 2 mg)** if no response. Repeat doses may be needed for long-acting opioids.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Opiate toxicity/overdose Airway support and oxygen (see Resuscitation) Assist ventilation Consider naloxone bolus IM or IV: 10 microg/kg (max 400 microg) initially. Further 100 microg/kg (max 2 mg) may be given if there is a lack of response to the initial 10 microg/kg dose. Repeat naloxone doses may be required in long-acting opiate overdose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Prescribing:** involve the GP for courses over 1 week; keep courses short; **prescribe aperients with ongoing opioids**; check safe-prescribing databases before prescribing opioids.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For safe prescribing, involve GP in prolonged pain management courses (>1 week) Keep pain management courses short to maintain the proactive regular reassessment approach Prescribe aperients along with ongoing opioids When prescribing regulated medications (eg opioids) check safe prescribing databases for the child’s prescription history",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consult the paediatric team** if analgesia is inadequate despite a regular oral/IV regimen. **Discharge** when pain or distress is managed and anticipated pain has been planned for.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Inadequate analgesia achieved despite regular oral/IV regimen … Consider discharge when Pain or distress is appropriately managed Anticipated pain is appropriately considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Acute pain management' (Last updated October 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/, retrieved 2026-09-23"
+  }
+ ]
+}
