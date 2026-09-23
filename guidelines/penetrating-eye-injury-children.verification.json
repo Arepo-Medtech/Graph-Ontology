@@ -1,0 +1,126 @@
+{
+ "guideline": "guidelines/penetrating-eye-injury-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Penetrating eye injury' (Last updated October 2022), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 15,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Open globe = a full-thickness injury to the cornea or sclera**, from rupture (usually blunt) or laceration (sharp object or high-velocity projectile). **It is a serious threat to vision.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An open globe, or penetrating eye injury is a serious threat to vision … An open globe injury is defined as a full thickness injury to the cornea or sclera resulting in either globe rupture or laceration … Globe rupture is more common in blunt injury, and laceration as a result of trauma from a sharp object or high velocity projectile",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**It may accompany multiple trauma or serious head injury.** Ask about mechanism and the composition of any possible intraocular foreign body (soil, dirt, metal).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Open globe injuries may accompany multiple trauma or serious head injury … Composition of any possible intraocular foreign body eg soil/dirt/metal",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Signs of perforation:** protruding missile (**do not remove or touch it**) · severe loss of vision · loss of red reflex · RAPD · squashed or distorted globe · swollen haemorrhagic lids · chemosis · **360 degree subconjunctival haemorrhage** · distorted, irregular or peaked pupil · extruding ocular contents · altered anterior chamber depth.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Signs suggestive of globe perforation Missile protruding from the eye: do not remove it or touch it Severe loss of vision Loss of red reflex Relative Afferent Pupillary Defect Squashed or distorted appearance to globe Swollen, haemorrhagic eyelids Chemosis (bulging of the conjunctiva) 360 degree subconjunctival haemorrhage Distorted, irregular or peaked pupil Ocular contents extruding from globe (iris and retina are pigmented, vitreous is a clear jelly) Increased or decreased anterior chamber depth",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A cursory examination may be enough**, but attempt visual acuity and check for a relative afferent pupillary defect.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Examination may only need to be cursory but should include an attempt at determining visual acuity and assess for a Relative Afferent Pupillary Defect",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Avoid any pressure on the globe** — through examination or padding — because eye contents may be extruded. **Do not force the eyelids open.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In penetrating eye injury, avoid any pressure on the eyeball through examination or padding, as eye contents may be extruded … Do not force eyelids open - pressure on the lids may cause extrusion of ocular contents",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In young children with a highly suggestive mechanism, an ophthalmologist examines under procedural sedation or GA.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In young children examination facilitated by procedural sedation or general anaesthesia should be performed by an ophthalmologist whenever the mechanism of injury is highly suggestive of an open globe",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Urgently notify ophthalmology, place an eye shield and fast the child from the time they are seen.** Do not remove a protruding foreign body.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not attempt to remove a protruding foreign body from the globe Urgently notify ophthalmology for all suspected penetrating eye injuries Place an eye shield Fast the child from the time they are seen",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not give any eye drops.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not give any eye drops",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Analgesia — consider NSAIDs — plus an antiemetic such as ondansetron**, because vomiting raises intraocular pressure and can expel ocular contents.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use appropriate analgesia. Consider NSAIDs. Consider concurrent antiemetic (eg ondansetron) as vomiting increases intraocular pressure and may cause expulsion of ocular contents",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bed rest with the head of the bed at 30 degrees** if haemodynamically able. **Check tetanus status.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Place the child on bed rest with head of bed elevated to 30 degrees if haemodynamic condition allows … Check tetanus status",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prophylaxis, no signs of infection:** oral ciprofloxacin 20 mg/kg (max 750 mg) twice daily.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If prophylaxis without signs of infection: oral ciprofloxacin 20mg/kg (maximum 750mg) BD",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Suspected endophthalmitis or signs of infection:** IV ceftazidime 50 mg/kg (max 2 g) 8-hourly **and** vancomycin 15 mg/kg (max 750 mg) 6-hourly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If endophthalmitis is suspected or signs of infection: give IV ceftazidime 50mg/kg (maximum 2g) 8 hourly and vancomycin 15mg/kg (maximum 750mg) 6 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Image the orbit (X-ray or CT) after discussion with ophthalmology** when an intraocular foreign body is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After discussion with ophthalmology, image the orbit (X-ray or CT) in cases where an intraocular foreign body is suspected",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team if child abuse is suspected; transfer** if open-globe management is beyond local capability.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when A child with suspected child abuse … Consider transfer when A child with penetrating/open globe injury and management beyond the capability of local services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** the open-globe injury has been treated or excluded **and** the child is symptom-free or has a clear follow-up plan with early-review criteria.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Penetrating or open globe injury has been treated or excluded AND The child is symptom free, or clear follow up plan in place with criteria for early review identified",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Penetrating eye injury' (Last updated October 2022), at https://www.rch.org.au/clinicalguide/guideline_index/Penetrating_eye_injury/, retrieved 2026-09-23"
+  }
+ ]
+}
