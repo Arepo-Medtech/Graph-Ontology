@@ -71,9 +71,9 @@ def main() -> int:
               "subject": ["SCT"], "object": ["SCT"],
               "category": category(typ, label, top_tag),
               "derivation": "lookup", "strength_kind": "exact",
-              "source": {"au": "SNOMED CT-AU RF2 snapshot, REL 20260731 (compendium `rel`)",
+              "source": {"au": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
                          "loinc": "SNOMED CT LOINC Extension 20260321 (module 11010000107)",
-                         "au+loinc": "SNOMED CT-AU RF2 20260731 and SNOMED CT LOINC Extension 20260321"}[srcs.get(typ, "au")],
+                         "au+loinc": "SNOMED CT-AU RF2 20260831 and SNOMED CT LOINC Extension 20260321"}[srcs.get(typ, "au")],
               "status": "built",
               "count": int(total), "object_tag": top_tag, "object_tag_share": round(top_n / total, 3)}
              for typ, label, total, top_tag, top_n in rows]

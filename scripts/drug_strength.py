@@ -25,7 +25,7 @@ from pathlib import Path
 import duckdb
 
 RF2 = os.environ.get("AU_RF2_SNAPSHOT",
-                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260731/Snapshot")
+                     "/Users/ken-lee-arepo/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")
 DB = Path("out/compendium.duckdb")
 ROLE_GROUP = "609096000"
 BOSS, PRECISE = "732943007", "762949000"

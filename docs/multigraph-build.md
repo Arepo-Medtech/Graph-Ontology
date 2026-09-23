@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,182,914 nodes, 5,033,763 edges, 177 edge types, 28 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology* and *How a drug works*.)
-Written to `out/graph.duckdb` (201 MB, git-ignored), rebuilt from source in under four minutes.
+**1,184,379 nodes, 5,040,871 edges, 177 edge types, 28 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology* and *How a drug works*.)
+Written to `out/graph.duckdb` (205 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -26,7 +26,7 @@ Written to `out/graph.duckdb` (201 MB, git-ignored), rebuilt from source in unde
 
 | family | source (pin) | edges |
 |---|---|---:|
-| SNOMED CT-AU: poly-hierarchy, AMT structure, finding site, morphology, method, laterality, occurrence, clinical course … (115 attribute types) | RF2 snapshot 20260731 | 2,168,500 |
+| SNOMED CT-AU: poly-hierarchy, AMT structure, finding site, morphology, method, laterality, occurrence, clinical course … (115 attribute types) | RF2 snapshot 20260831 | 2,175,509 |
 | LOINC axes (component, property, time, system, scale, method) and answers | LOINC 2.82 via Athena | 687,434 |
 | product → ATC, **PBS and OMOP as parallel edges** | PBS 4333 / Athena 29-AUG-26 | 573,569 |
 | HPO disease → phenotype, present and absent, with frequency / onset / sex | HPO 2026-09-02 | 268,906 |

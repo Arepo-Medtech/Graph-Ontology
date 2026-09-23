@@ -101,7 +101,7 @@ source it used:
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260731/Snapshot"
+export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260831/Snapshot"
 .venv/bin/python scripts/pbs_pull.py        # public tier: 1 request / 20 s
 .venv/bin/python scripts/rxnorm_enrich.py   # optional, ~1–2 h; first pass, by name via RxNav
 .venv/bin/python scripts/rxnorm_resolve.py  # optional, ~20 min; second pass, id map + ancestor + verified names
