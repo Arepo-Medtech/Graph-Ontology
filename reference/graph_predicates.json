@@ -516,6 +516,22 @@
       "status": "built"
     },
     {
+      "id": "sct:in_refset",
+      "label": "SNOMED CT concept is a member of this SNOMED CT-AU reference set",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 Refset/Content der2_Refset_SimpleSnapshot (139 simple reference sets)",
+      "status": "built",
+      "note": "Active memberships of active concepts. method is the reference set's preferred term. Families: clinical subsets (Problem/Diagnosis, Australian emergency department sets incl. principal diagnosis for ED funding, RACS MALT surgical procedures, Queensland allied health); foundation sets by hierarchy; AMT structure (TPP, CTPP, TPUU, MP ...); medicines regulation (each state's reportable/monitored Schedule 4 list, Schedule 8, Black Triangle Scheme, List of Medicines for Brand Consideration, List of Excluded Medicinal Items); requesting (RCPA SPIA pathology, RANZCR radiology, RCPA microbiology organisms); and small answer lists (smoking, housing, food security ...). Membership is the set owner's curation for a purpose, not a property of the concept."
+    },
+    {
       "id": "sct:historical_association",
       "label": "retired SNOMED CT id -> the active concept SNOMED CT-AU says succeeds it",
       "subject": [

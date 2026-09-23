@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,335,431 nodes, 5,311,149 edges, 186 edge types, 48 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references* and *How a drug works*.)
-Written to `out/graph.duckdb` (213 MB, git-ignored), rebuilt from source in under four minutes.
+**1,335,431 nodes, 6,563,829 edges, 187 edge types, 48 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets* and *How a drug works*.)
+Written to `out/graph.duckdb` (240 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -531,13 +531,38 @@ ALTERNATIVE are weaker than REPLACED BY and SAME AS; the edge's method says whic
 
 **Not loaded, and why:** MedDRA (MSSO licence), DrugBank ids (excluded throughout), the US formulary ids in DrugCentral
 (MMSL, NDDF, VANDF, VUID, NUI), LOINC's *Search* part links (they help people find terms, they do not say what a term
-measures), the CTV3 map (UK Read codes), and the SNOMED refsets of AU clinical subsets (1.4 M memberships — a possible
-next step, not a cross-vocabulary link).
+measures), the CTV3 map (UK Read codes), and the SNOMED refsets of AU clinical subsets (loaded next — see *Reference sets*).
 
 **Islands.** `graph_report.py` now reports connected components on every run: 1,317,597 of 1,335,431 nodes (98.7%) are
 one component. MBS (6,046 items, no published map) is the one true island; the rest are pairs and small clusters —
 MONDO's obsoleted terms with their old xrefs, and ~930 DrugCentral drugs no Australian source uses, now carrying their
 own identifiers.
+
+## Reference sets: the AU release's curated subsets (built)
+
+`sct:in_refset` — **1,252,680 memberships of 138 simple reference sets** in SNOMED CT-AU 20260831 (1,589 members that are
+not active concepts are counted, not loaded). A reference set is a SNOMED concept, so a membership is an edge from the
+member to it; `method` is the set's name. Membership is the owner's curation for a purpose — "in the emergency department
+principal diagnosis set" says the concept may be coded as an ED principal diagnosis, not anything about the disease.
+
+| family | examples |
+|---|---|
+| clinical subsets | Problem/Diagnosis (133,027), Australian ED (99,699) and ED principal diagnosis for funding (93,171), RACS MALT surgical procedures (16,041), Queensland allied health |
+| foundation, by hierarchy | clinical finding, procedure, body structure, organism, substance, qualifier … |
+| AMT structure | TP, TPUU, TPP, CTPP, MP, MPUU, MPP |
+| medicines regulation | each state and territory's reportable / monitored Schedule 4 list, Schedule 8, Black Triangle Scheme, List of Medicines for Brand Consideration, List of Excluded Medicinal Items |
+| requesting | RCPA SPIA requesting pathology, RCPA microbiology organisms, RANZCR radiology requesting, request / result test names |
+| answer lists | smoking, vaping, alcohol, housing, food security, pregnancy assertion … |
+
+**Regulation meets the PBS.** At the product level the PBS lists: 482 PBS-listed products are **Schedule 8**, 21 are under
+the **Black Triangle Scheme** (all recently approved biologics — Rybrevant, Libtayo, Padcev, Imjudo, Vyxeos …), 942 are on
+the **List of Medicines for Brand Consideration**, and 274–386 are on each state's monitored Schedule 4 list.
+
+**What the sets show about the graph** (`graph_report.py`, share of each set's members with a link outside SNOMED): the
+AMT pack sets 77–97% and the state Schedule 4 lists ~92% (the drug side is well bridged); ED diagnosis sets 57%; the
+national ED sets 22%, Problem/Diagnosis 17%; foundation procedures 6%; **RACS MALT surgical procedures 0.3%** and imaging
+procedures 0.8% — procedures are the least-bridged part of SNOMED, the same gap MBS sits in, and the MALT set (the
+surgical audit list) is the natural target for the MBS candidate frames.
 
 ## How a drug works: drug → target → protein → gene → disease
 

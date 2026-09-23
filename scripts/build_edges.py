@@ -281,6 +281,18 @@ def main() -> int:
                 '{PIN['sct']}', NULL
             FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')}
             WHERE active = '1' AND refsetId IN ('734138000', '734139008')""")
+        # membership of the AU release's simple reference sets: clinical subsets (Problem/Diagnosis, the emergency
+        # department sets, RACS MALT procedures, allied health), foundation sets by hierarchy, AMT structure, the
+        # medicines-regulation lists (each state's monitored Schedule 4 list, Schedule 8, Black Triangle, brand
+        # consideration) and the RCPA / RANZCR requesting sets. A reference set is itself a SNOMED concept, so a membership
+        # is an edge from the member to that concept; method names the set.
+        ins("SNOMED CT-AU reference set membership", f"""SELECT 'SCT', r.referencedComponentId, 'sct:in_refset', 'SCT', r.refsetId,
+                'SNOMED CT-AU RF2', 'simple reference set ' || r.refsetId, coalesce(n.pt, r.refsetId), 'native', 'asserted', '{PIN['sct']}', NULL
+            FROM {ref('Content', f'der2_Refset_SimpleSnapshot_AU1000036_{rel_}.txt')} r LEFT JOIN cmp.concept n ON n.id = r.refsetId
+            WHERE r.active = '1' AND r.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        log["SNOMED CT-AU reference set members not loaded (member not an active concept)"] = con.execute(f"""SELECT count(*)
+            FROM {ref('Content', f'der2_Refset_SimpleSnapshot_AU1000036_{rel_}.txt')} WHERE active = '1'
+              AND referencedComponentId NOT IN (SELECT id FROM cmp.concept)""").fetchone()[0]
         con.execute("INSERT INTO name_hint SELECT DISTINCT 'ICDO', o_code, 'ICD-O-3 ' || o_code FROM edge WHERE predicate = 'sct:icdo_map'")
         con.execute("INSERT INTO name_hint SELECT DISTINCT 'ARTG', o_code, 'ARTG ' || o_code FROM edge WHERE predicate = 'sct:artg_id'")
 
