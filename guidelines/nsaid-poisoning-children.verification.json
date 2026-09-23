@@ -1,0 +1,124 @@
+{
+ "guideline": "guidelines/nsaid-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 15,
+  "pass": 15,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most NSAID overdoses are benign at lower doses.** ⚠️ **Large overdoses can cause shock, coma, seizures and acute renal failure.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The majority of NSAID overdoses are generally benign in lower doses … Large overdoses can cause shock, coma, seizures & acute renal failure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Mefenamic acid overdose is associated with seizures — over 3.5 g can cause them.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Overdose of mefenamic acid has been associated with seizures. … Mefenamic acid ingestion of >3.5 g can cause seizures.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Covers** celecoxib, diclofenac, etoricoxib, ibuprofen, indomethacin, ketoprofen, ketorolac, mefenamic acid, meloxicam, naproxen, parecoxib, piroxicam, sulindac, tiaprofenic acid — **not aspirin** (see salicylate poisoning).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "NSAIDs include celecoxib, diclofenac, etoricoxib, ibuprofen, indomethacin, ketoprofen, ketorolac, mefenamic acid, meloxicam, naproxen, parecoxib, piroxicam, sulindac, tiaprofenic acid. … Note: this guideline does not cover aspirin. Please see Salicylate poisoning",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** any deliberate self-poisoning or significant accidental ingestion · any symptomatic child. **Consider non-accidental poisoning** if developmental age doesn't fit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with deliberate self-poisoning or significant accidental ingestion. Any symptomatic child. Any child whose developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine for:** epigastric pain, nausea, vomiting · drowsiness, lethargy, seizures, coma · acute renal failure · shock.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GIT: Epigastric pain, nausea, vomiting CNS: Drowsiness, lethargy, seizures, coma Metabolic: acute renal failure CVS: Shock",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ibuprofen severity:** under 200 mg/kg asymptomatic · 200–400 mg/kg mild GI and CNS effects · ⚠️ **over 400 mg/kg risk of multi-organ dysfunction.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Severity: Ibuprofen dosage Clinical effects <200 mg/kg Asymptomatic 200-400 mg/kg Mild GI and CNS effects >400 mg/kg Risk of multi-organ dysfunction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Symptomatic or concurrently ill children: FBC, UEC, LFTs.** Consider paracetamol in all intentional overdoses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Symptomatic children or those with concurrent illness: FBC UEC LFTs Consider paracetamol concentration in all intentional overdoses.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Supportive care. Ensure adequate hydration after large overdoses** to reduce the risk of acute renal failure.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Standard procedures and supportive care. Ensure adequate hydration after large overdoses to reduce the likelihood of acute renal failure.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Activated charcoal is not indicated.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Activated charcoal is not indicated.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss with a toxicologist**, particularly for symptomatic children and abnormal pathology.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Discuss with toxicologist, particularly in symptomatic children and those with abnormal pathology results",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Proton pump inhibitor for epigastric pain; treat seizures as for afebrile seizures.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use a proton pump inhibitor for epigastric pain Treat seizures as per afebrile seizure",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Admit for observation:** all symptomatic children · ⚠️ **ibuprofen 200 mg/kg or more** · all intentional overdoses. Poisons Information Centre 131126.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Specific Indications for admission for observation: All symptomatic children Acute ingestion of ibuprofen ≥200 mg/kg All intentional overdoses Consult Victorian Poisons Information Centre 131126 for advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transfer** when care exceeds the local centre's capacity. PIPER: 1300 137 650.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children requiring care outside the capacity of the local centre. … call the Paediatric Infant Perinatal Emergency Retrieval (PIPER) Service: 1300 137 650.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge asymptomatic children with normal vital signs 4 hours after ingestion.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic children with normal vital signs 4 hours post-ingestion may be discharged.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Adolescents with deliberate ingestion need a self-harm risk assessment and drug and alcohol assessment before discharge**, with links to services if needs are found.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm. Assessment of other drug and alcohol use should also be undertaken. If, after risk assessment, it is deemed safe to discharge a patient from hospital, but ongoing mental health or drug and alcohol needs are identified, the adolescent should be linked with appropriate services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Nonsteroidal Anti-inflammatory Drug NSAID poisoning' (Last Updated April 2019), at https://www.rch.org.au/clinicalguide/guideline_index/Nonsteroidal_Anti-inflammatory_Drug_NSAID_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}

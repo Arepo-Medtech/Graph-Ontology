@@ -1,0 +1,159 @@
+{
+ "guideline": "guidelines/oral-hypoglycaemic-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 19,
+  "pass": 19,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **A single sulfonylurea tablet can cause life-threatening hypoglycaemia in a toddler** — a pill as small as 2 mg is enough.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A single sulfonylurea pill (as small as 2 mg) can cause hypoglycaemia in young children … A single tablet in a toddler can cause life-threatening hypoglycaemia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Observe any possible sulfonylurea exposure for 24 hours**: onset of hypoglycaemia can be delayed up to 18 hours, and large overdoses may need several days of treatment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child with possible sulfonylurea exposure should be observed for 24 hours, as delayed hypoglycaemia may occur … Onset of hypoglycaemia may be delayed up to 18 hours after ingestion … Large overdoses may require treatment for several days",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** every deliberate self-poisoning or significant accidental ingestion · any symptomatic child · any ingestion of unknown quantity · **any child whose developmental age doesn't fit accidental poisoning — consider non-accidental poisoning.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children with deliberate self-poisoning or significant accidental ingestion Any symptomatic child Acute ingestion of unknown quantity Any child whose developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Metformin does not cause hypoglycaemia in normal patients**, but large overdoses can cause life-threatening lactic acidosis when there is renal or cardiac failure or a co-ingestant impairing renal perfusion.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Metformin ingestion is not associated with hypoglycaemia in normal patients, but may cause life-threatening lactic acidosis in large overdoses in the presence of renal or cardiac failure, or when there are co-ingestants impairing renal perfusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Asymptomatic accidental metformin exposure needs no hospital assessment, decontamination or investigation** — including unintentional ingestions of up to 1700 mg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Asymptomatic patients following accidental exposure to metformin do not require hospital assessment, decontamination or investigation … Children who have taken an unintentional ingestion of up to 1700 mg do not require hospital assessment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Hypoglycaemia features:** autonomic (tachycardia, sweating, anxiety) and CNS (drowsiness, altered mental status, coma, seizures).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Autonomic: tachycardia, sweating, anxiety CNS: drowsiness, altered mental status, coma, seizures",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigate with serial BSLs and UEC**; consider a paracetamol level and ECG for possible co-ingestants. Insulin levels may help in sulfonylurea overdose, on toxicology advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serial BSLs UEC … Insulin levels may have some role (if available) for sulfonylurea overdoses on the advice of toxicology services … For possible co-ingestants consider paracetamol level and ECG",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Metformin overdose: blood gas with lactate** to confirm lactic acidosis and monitor any unwell or deteriorating patient. **Haemodialysis** resolves the acidosis and removes metformin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "VBG/ABG (including lactate) should be done in metformin overdoses to confirm lactic acidosis and monitor progress in any unwell patient or following clinical deterioration … Haemodialysis therapy resolves the acidosis and removes metformin from the blood",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat sulfonylurea overdose with symptomatic hypoglycaemia with both IV dextrose and octreotide.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sulfonylurea overdose and symptomatic hypoglycaemia should be treated with both intravenous dextrose and octreotide",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**If hypoglycaemic: 10% glucose 5 mL/kg IV bolus, then a 10% glucose infusion at 1–2 mL/kg/hour**; check BSL hourly, send bloods including serum insulin, and start octreotide.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Obtain IV access and administer concentrated IV glucose solutions if the patient is hypoglycemic … 5 mL/kg of 10% glucose IV bolus Then commence 1-2 mL/kg/hour 10% glucose IV infusion Check BSL hourly Send other bloods including serum insulin level Commence octreotide infusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Octreotide, children:** 1 microgram/kg IV bolus (max 50 microgram), then 1 microgram/kg/hour continuous infusion (up to 25 microgram) **for at least 24 hours**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children - 1 microgram/kg IV bolus (maximum 50 microgram) followed by 1 microgram/kg/hour continuous infusion (up to 25 microgram) for at least 24 hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Octreotide, adolescents or adults:** 50 microgram IV bolus, then 25 microgram/hour infusion **for at least 24 hours**; 50 microgram SC 8-hourly is an alternative.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adolescents or adults - 50 microgram IV bolus followed by 25 microgram/hour continuous infusion for at least 24 hours. (Alternatively, 50 microgram SC 8 hourly may be preferred)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Once octreotide is running, glucose is usually no longer needed.** If hypoglycaemia recurs, **correct it with glucose and double the octreotide infusion rate.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Once octreotide infusion is running, normoglycaemia will likely be achieved without glucose supplementation. If hypoglycaemia recurs, it should be corrected with glucose and the infusion rate of octreotide doubled",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Charcoal only for a massive ingestion within 1 hour, or after airway protection** — discuss with a toxicologist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider charcoal if massive ingestion and within 1 hour, or after airway protection Discuss with toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stop octreotide only when all are met:** 10% glucose stopped at least 4 hours earlier · no hypoglycaemic symptoms · bedside BSL >2.5 mmol/L for more than 4 hours · **daylight hours — never on evening or night shifts.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Octreotide infusion may be ceased when all the following criteria have been met: 10% glucose infusion ceased at least 4 hours prior No symptoms of hypoglycaemia Bedside BSLs >2.5 mmol/L for more than 4 hours Daylight hours - octreotide should not be ceased during evening or night shifts",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **After stopping, check BSL hourly for at least 12 hours before discharge.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Following cessation of octroetide, BSLs should be checked every hour for a minimum of 12 hours post cessation of octerotide/dextrose before discharge.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Admit any sulfonylurea exposure for at least 12–24 hours** of glucose monitoring, and consider admitting any intentional overdose. **Discharge in daylight hours only.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child or young person presents with intentional overdose as admission should be considered … Any child with sulfonylurea exposure as admission for a minimum of 12–24 hours is indicated for blood glucose monitoring … discharge from hospital should only occur in daylight hours",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when:** BSLs stay normal for 12 hours after octreotide stops on a normal diet · plasma insulin (if available) is normal 6 hours after stopping · daylight hours only for sulfonylurea exposure.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Normal BSLs are maintained for 12 hours post cessation of octreotide infusion and the patient is on a normal diet Plasma insulin level (if available) is within the normal range at 6 hours post cessation of octreotide infusion During daylight hours only for children exposed to sulfonylureas",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before discharging an adolescent after a deliberate ingestion**, assess self-harm risk and other drug and alcohol use.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm … Assessment of other drug and alcohol use should also be undertaken",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Oral Hypoglycaemic Poisoning' (Last Updated December 2020), at https://www.rch.org.au/clinicalguide/guideline_index/Oral_Hypoglycaemic_Poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}
