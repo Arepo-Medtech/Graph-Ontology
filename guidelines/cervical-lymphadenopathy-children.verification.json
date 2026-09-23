@@ -1,0 +1,133 @@
+{
+ "guideline": "guidelines/cervical-lymphadenopathy-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Cervical lymphadenopathy' (Last updated April 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 16,
+  "pass": 16,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Common: found in more than a third of healthy children.** A well-appearing child usually needs observation and reassurance, without investigation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cervical lymphadenopathy is common and may be found in more than one third of otherwise healthy children … Observation and reassurance without investigation is usually appropriate for the well appearing child with cervical lymphadenopathy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Lymphadenopathy means abnormally enlarged head and neck nodes, usually over 1 cm.** Viral URTI is the commonest cause, and reactive nodes may persist for weeks to months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cervical lymphadenopathy is abnormal enlargement of lymph nodes (LNs) in the head and neck usually >1 cm … Viral upper respiratory tract infection is the most common cause of cervical lymphadenopathy in children. These enlarged \"reactive\" nodes may persist for weeks to months",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ask about** travel and possible TB exposure, animals such as cats, immunisation status, dental disease, response to antibiotics, and features of deep neck infection (e.g. trismus, muffled voice).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Features of deep tissue head and neck infection (eg trismus, muffled voice) … Overseas travel, including possible exposure to tuberculosis Exposure to animals (eg cats) Immunisation status (diphtheria, measles, mumps, rubella) Dental disease Response to antibiotic treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acute bacterial lymphadenitis:** usually unilateral, anterior neck, with fever; firm and tender with overlying erythema; may be fluctuant. Causes: *S. aureus*, group B strep (neonates), group A strep, anaerobes with dental disease.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acute bacterial lymphadenitis is characterised by enlarged nodes, which are tender, usually unilateral and may be fluctuant … Acute bacterial cervical lymphadenitis Common, usually unilateral and in the anterior part of the neck Associated with fever and neck swelling May be firm and tender with overlying erythema, limited neck range of motion … Common bacterial causes: Staphylococcus aureus, group B streptococcus (in neonates), group A streptococcus, and anaerobic infections (associated with dental disease)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Rarely linked to a deep neck infection such as retropharyngeal abscess.** Kawasaki disease can present with unilateral tender cervical nodes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Cervical lymphadenitis may rarely be associated with serious deep head and neck infections such a retropharyngeal abscess … Kawasaki disease may present with unilateral tender cervical lymphadenopathy and associated features",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Subacute (2–6 weeks): usually viral. Chronic (over 6 weeks): several possible causes.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Subacute cervical lymphadenopathy (2–6 weeks) – commonest cause viral infection … Chronic cervical lymphadenopathy (>6 weeks) - has a number of possible cause",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider malignancy if nodes are prolonged, painless and firm**, especially with weight loss, night sweats, easy bruising, hepatosplenomegaly or a mediastinal mass.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Malignancy (lymphoma, leukaemia) Consider if prolonged, painless, firm lymphadenopathy. May be associated loss of appetite, weight loss, night sweats, easy bruising, hepatosplenomegaly, mediastinal mass",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**TB:** non-tender nodes, exposure history, fever, malaise, weight loss. **Atypical mycobacteria:** indolent, chronic unilateral nodes with a violaceous hue, usually under 5 years.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mycobacterium tuberculosis Non-tender nodes. History of exposure. Systemic symptoms of fever, malaise, weight loss … Atypical mycobacterial infections Indolent, chronic unilateral cervical lymphadenopathy, violaceous hue, usually in children <5 yo",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Cat scratch disease:** usually tender nodes in the axilla. **Head and neck eczema** can cause prominent posterior cervical nodes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bartonella henselae (cat scratch disease) Enlarged nodes are usually tender and located in the axillary region … Persistent head and neck eczema may cause prominent posterior cervical LNs",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If investigating:** TB skin test or QuantiFERON if TB is suspected; chest X-ray if malignancy is suspected; neck ultrasound; CT or MRI may be needed before surgery. **Excisional biopsy is the gold standard; FNA is less helpful.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tuberculin skin test, Quantiferon Gold (if TB suspected) Chest X-ray (if malignancy suspected) Neck USS CT or MRI may be required pre-operatively Biopsy (excisional biopsy remains gold standard; FNA less helpful)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most cases are self-limited and need no treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most cases of cervical lymphadenopathy will be self-limited and do not require treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bacterial lymphadenitis (unilateral, tender, fluctuant), well child: cefalexin 20 mg/kg (max 750 mg) orally tds for 7 days, reviewed at 48 hours.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there are signs of bacterial lymphadenitis (unilateral, tender, fluctuant), consider the following: Well - oral antibiotics for 7 days, with review in 48 hours Cefalexin 20 mg/kg (max 750 mg) oral tds",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Unwell, or failed oral treatment: cefazolin 50 mg/kg (max 2 g) IV 8-hourly.** Follow local susceptibility patterns.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Unwell, or failed oral treatment - IV antibiotics Cefazolin 50 mg/kg (max 2 g) IV 8H … Antimicrobial recommendations may vary according to local antimicrobial susceptibility patterns; please refer to local guidelines",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**A fluctuant node not responding to IV antibiotics: consult surgeons about incision and drainage.** ⚠️ **Suspected mycobacterial infection: excise the whole node**, since incision and drainage may leave a sinus.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For fluctuant nodes not responding to IV antibiotics, consider consultation with relevant surgical team for incision and drainage … Excision of whole node is preferred in suspected mycobacterial infection as incision and drainage may result in sinus formation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve the paediatric team for:** a neonate, an unwell child, nodes persisting despite oral antibiotics, or features of systemic disease (Kawasaki, malignancy, rheumatological).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Neonate, unwell child, or persistent cervical lymphadenopathy despite oral antibiotics Features suggestive of systemic disease (Kawasaki Disease, malignancy, rheumatologic condition)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Transfer** a child needing care beyond the hospital's comfort level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider transfer when Child requiring care beyond the comfort level of the hospital",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Cervical lymphadenopathy' (Last updated April 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Cervical_lymphadenopathy/, retrieved 2026-09-23"
+  }
+ ]
+}
