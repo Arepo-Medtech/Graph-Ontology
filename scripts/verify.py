@@ -51,7 +51,7 @@ def split_frags(s):
 # count toward total but not toward pass, which is the 6-claim gap in the totals.
 VERDICTS = {"pass", "fail", "not_quoted", "not_asserted", "searched_not_found",
             "attested_not_sourced", "pass_image_transcription",
-            "licensed_source_not_quoted"}
+            "licensed_source_not_quoted", "pass_paraphrase_anchored"}
 
 # "pass" means the quote was checked against RETRIEVED TEXT and can be re-checked
 # here. "pass_image_transcription" means a human-or-model read it off a diagram:
@@ -122,6 +122,16 @@ def check(path, source=None, only_source=None):
             if not (c.get("locator") or "").strip():
                 errs.append(f"claim {i}: licensed_source_not_quoted requires a "
                             f"locator (which topic, retrieved when)")
+        if v == "pass_paraphrase_anchored":
+            # Paraphrase of a read-but-not-reproducible source, backed by hash anchors
+            # (scripts/anchor.py). The source's words are NOT stored; --source re-proves them.
+            if (c.get("source_text") or "").strip():
+                errs.append(f"claim {i}: pass_paraphrase_anchored must NOT carry source_text")
+            if not (c.get("locator") or "").strip():
+                errs.append(f"claim {i}: pass_paraphrase_anchored requires a locator")
+            an = c.get("anchors")
+            if not an or not all(isinstance(a, dict) and {"h", "n", "p"} <= set(a) for a in an):
+                errs.append(f"claim {i}: pass_paraphrase_anchored requires anchors [{{h,n,p}}]")
         for k in need:
             if not (c.get(k) or "").strip():
                 errs.append(f"claim {i}: missing or empty {k}")
@@ -198,7 +208,31 @@ def check(path, source=None, only_source=None):
     checked = skipped = 0
     if source:
         hay = ws(open(source, encoding="utf-8", errors="replace").read())
+        from anchor import find, copied_run
+        NUM = re.compile(r"(?<![\w.])\d+(?:[.,]\d+)?")
         for i, c in enumerate(claims, 1):
+            if c.get("verdict") == "pass_paraphrase_anchored":
+                if only_source and c.get("source") != only_source:
+                    skipped += 1
+                    continue
+                spans = []
+                for a in c.get("anchors") or []:
+                    checked += 1
+                    sp = find(a, hay)
+                    if sp is None:
+                        errs.append(f"claim {i}: ANCHOR NOT FOUND in source (h={a.get('h')})")
+                    else:
+                        spans.append(sp)
+                if spans:
+                    have = {n.replace(",", "") for sp in spans for n in NUM.findall(sp)}
+                    extra = {n.replace(",", "") for n in NUM.findall(c.get("claim", ""))} - have
+                    if extra:
+                        errs.append(f"claim {i}: number(s) {sorted(extra)} not in the anchored source span")
+                    for sp in spans:
+                        run = copied_run(c.get("claim", ""), sp)
+                        if run:
+                            errs.append(f"claim {i}: NOT A PARAPHRASE - copies 8+ words of the source: {run[:60]!r}")
+                continue
             if c.get("verdict") != "pass":
                 continue
             if only_source and c.get("source") != only_source:

@@ -57,6 +57,14 @@ practice is >90% bortezomib-based induction because that is what the PBS lists (
 Found via the signed-in Consensus connector (`country: "au"` for the Australian layer; unfiltered for international).
 The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
 
+**Paraphrase where you can (owner direction, 2026-09-23).** Any free-to-read source is usable. Where its terms don't allow
+reproduction (©/all rights reserved, personal use only, NC), claims are **paraphrased** and backed by **hash anchors**. Each anchor
+stores a fingerprint of the exact supporting source span (sha256, its length, an 8-character locator), never the words themselves
+(`scripts/anchor.py`). The new verdict `pass_paraphrase_anchored` keeps machine re-checkability: `verify.py --source` re-finds every
+anchor in a fresh copy of the page, checks every number in the claim against the anchored span, and **rejects any claim that copies
+8+ consecutive words** (i.e. that is not really a paraphrase). #FOAM sources (LITFL, Don't Forget the Bubbles, Deranged Physiology,
+WikEM…) are added as `source_type: foam`, graded below society guidelines.
+
 **Track D — attestation.** New dose claims from quotable sources are machine-checked. Anything paraphrased joins the existing attestation queue.
 
 ## 4. Sequencing
@@ -82,7 +90,7 @@ The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
    without RCH's prior written consent. **216 guidelines on `master` quote RCH verbatim as their primary source**, authored on a
    "quote with attribution" footing that was set without reading these terms. That was an error. Nothing has been removed.
    A consent request is drafted in `docs/rch-permission-request.md` (**not sent**). Until decided, **no new RCH-sourced authoring.**
-2. **Non-commercial (NC) licences:** are CC BY-NC / NC-ND sources acceptable, given the project may be commercial?
+2. **Non-commercial (NC) licences:** *(largely moot under paraphrase-where-you-can; the same applies to RCH, see 1b)* are CC BY-NC / NC-ND sources acceptable, given the project may be commercial?
 3. ~~Consensus access~~ **Done:** the account connector is signed in (10 results per search; Pro not yet reflected, and reconnecting should give 20).
 4. ~~International guidance: evidence layer only?~~ **Decided 2026-09-23:** international guidelines are first-line sources, labelled by origin, paired with the PBS access overlay (Track C).
 
@@ -90,3 +98,4 @@ The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
 - 2026-09-23: triage complete (393 gaps / 37 near-miss / 45 duplicate / 9 admin / 9 artefact). Source research launched in 6 groups.
 - 2026-09-23: owner direction: international guidelines are first-line sources (Track C). Researchers told to add `origin` and to search Consensus with `country: au`.
 - 2026-09-23: RCH terms clause 5.2 found and confirmed (personal use only). New RCH authoring paused; consent request drafted.
+- 2026-09-23: owner direction: paraphrase where you can; add open-access and #FOAM. Built the hash-anchored paraphrase verdict (`anchor.py`, `verify.py`, tests).
