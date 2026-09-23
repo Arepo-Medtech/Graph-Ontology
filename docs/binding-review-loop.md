@@ -89,6 +89,8 @@ It validates; it does not decide. Results in `reference/binding_validation.json`
 **301 distinct candidate codes checked · 301 validated · 0 unresolved · 0 display drift · all on
 `20260731`.**
 
+⚠️ **`20260731` is one release behind the server's default.** A newer edition, `20260831`, is live. Re-validating all 301 against both changes **one display and retires nothing** — see [`snomed-edition-pin.md`](snomed-edition-pin.md).
+
 > ### ⚠️ READ THAT NARROWLY
 > **301/301 does NOT mean the bindings are good.** It means the candidate data is *internally* sound:
 > every code is a real, current concept in the pinned release, and every display this repo holds matches

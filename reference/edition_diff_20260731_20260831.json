@@ -1,0 +1,22 @@
+{
+  "_note": "Candidate top-hit codes validated against BOTH SNOMED CT-AU editions held by the NCTS on 2026-09-23.",
+  "_failsafe": "unvalidated is never reported as invalid.",
+  "checked_utc": "2026-09-23",
+  "editions": [
+    "20260731",
+    "20260831"
+  ],
+  "codes_checked": 301,
+  "retired_or_absent_in_august": 0,
+  "new_in_august": 0,
+  "display_changed": 1,
+  "unvalidated_either": 0,
+  "differences": [
+    {
+      "code": "254637007",
+      "change": "display changed",
+      "v20260731": "Non-small cell lung cancer",
+      "v20260831": "Non-small cell lung carcinoma"
+    }
+  ]
+}
