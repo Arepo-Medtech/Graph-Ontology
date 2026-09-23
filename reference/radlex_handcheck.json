@@ -1,0 +1,567 @@
+{
+ "_note": "Hand check of radlex:anatomy_sct. CORRECT when the SNOMED CT body structure is the RadLex structure -- its 'Entire' or 'Structure of' form, or a synonym (optic foramen = optic canal); wrong when it is another structure, a part of it, or something broader. 80 edges per method at random (seed 20260924), graded 24 Sep 2026 against RadLex labels, synonyms, definitions and parents and SNOMED CT-AU preferred terms. Codes and verdicts only: RadLex is RSNA's, so its labels are not committed.",
+ "scored": [
+  {
+   "n": 1,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6472",
+   "sct": "279201009",
+   "verdict": "correct"
+  },
+  {
+   "n": 2,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID13867",
+   "sct": "314147009",
+   "verdict": "correct"
+  },
+  {
+   "n": 3,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6548",
+   "sct": "279299004",
+   "verdict": "correct"
+  },
+  {
+   "n": 4,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2710",
+   "sct": "181687007",
+   "verdict": "correct"
+  },
+  {
+   "n": 5,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID20454",
+   "sct": "426465002",
+   "verdict": "correct"
+  },
+  {
+   "n": 6,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID15572",
+   "sct": "361593004",
+   "verdict": "correct"
+  },
+  {
+   "n": 7,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID619",
+   "sct": "369324002",
+   "verdict": "correct"
+  },
+  {
+   "n": 8,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2664",
+   "sct": "361791000",
+   "verdict": "correct"
+  },
+  {
+   "n": 9,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID168",
+   "sct": "181255000",
+   "verdict": "correct"
+  },
+  {
+   "n": 10,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID35895",
+   "sct": "314305001",
+   "verdict": "correct"
+  },
+  {
+   "n": 11,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID31081",
+   "sct": "362185005",
+   "verdict": "correct"
+  },
+  {
+   "n": 12,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID39703",
+   "sct": "272704004",
+   "verdict": "correct"
+  },
+  {
+   "n": 13,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID58",
+   "sct": "181268008",
+   "verdict": "correct"
+  },
+  {
+   "n": 14,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID909",
+   "sct": "244263001",
+   "verdict": "correct"
+  },
+  {
+   "n": 15,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6607",
+   "sct": "279155003",
+   "verdict": "correct"
+  },
+  {
+   "n": 16,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30007",
+   "sct": "362725002",
+   "verdict": "correct"
+  },
+  {
+   "n": 17,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30817",
+   "sct": "76519004",
+   "verdict": "correct"
+  },
+  {
+   "n": 18,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID25752",
+   "sct": "278777000",
+   "verdict": "correct"
+  },
+  {
+   "n": 19,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID400",
+   "sct": "36051002",
+   "verdict": "correct"
+  },
+  {
+   "n": 20,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2125",
+   "sct": "181951002",
+   "verdict": "correct"
+  },
+  {
+   "n": 21,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID33728",
+   "sct": "243482002",
+   "verdict": "correct"
+  },
+  {
+   "n": 22,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1058",
+   "sct": "151501009",
+   "verdict": "correct"
+  },
+  {
+   "n": 23,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID21067",
+   "sct": "280176007",
+   "verdict": "correct"
+  },
+  {
+   "n": 24,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1209",
+   "sct": "278029005",
+   "verdict": "correct"
+  },
+  {
+   "n": 25,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30469",
+   "sct": "362080002",
+   "verdict": "correct"
+  },
+  {
+   "n": 26,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6503",
+   "sct": "279199007",
+   "verdict": "correct"
+  },
+  {
+   "n": 27,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30616",
+   "sct": "90132000",
+   "verdict": "correct"
+  },
+  {
+   "n": 28,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID20503",
+   "sct": "369171001",
+   "verdict": "correct"
+  },
+  {
+   "n": 29,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2872",
+   "sct": "182080006",
+   "verdict": "correct"
+  },
+  {
+   "n": 30,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID25732",
+   "sct": "278759005",
+   "verdict": "correct"
+  },
+  {
+   "n": 31,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID12053",
+   "sct": "280211001",
+   "verdict": "correct"
+  },
+  {
+   "n": 32,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID13408",
+   "sct": "361919005",
+   "verdict": "correct"
+  },
+  {
+   "n": 33,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID29789",
+   "sct": "298225002",
+   "verdict": "correct"
+  },
+  {
+   "n": 34,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID33641",
+   "sct": "362196002",
+   "verdict": "correct"
+  },
+  {
+   "n": 35,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6255",
+   "sct": "30180000",
+   "verdict": "correct"
+  },
+  {
+   "n": 36,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID16999",
+   "sct": "361691006",
+   "verdict": "wrong",
+   "why": "a segment of cerebral white matter -> the entire cerebral white matter: broader"
+  },
+  {
+   "n": 37,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID223",
+   "sct": "279371005",
+   "verdict": "correct"
+  },
+  {
+   "n": 38,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID35823",
+   "sct": "340163004",
+   "verdict": "correct"
+  },
+  {
+   "n": 39,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID7127",
+   "sct": "362314009",
+   "verdict": "correct"
+  },
+  {
+   "n": 40,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID7098",
+   "sct": "32967008",
+   "verdict": "correct"
+  },
+  {
+   "n": 41,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID19952",
+   "sct": "244451008",
+   "verdict": "correct"
+  },
+  {
+   "n": 42,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6510",
+   "sct": "279208003",
+   "verdict": "correct"
+  },
+  {
+   "n": 43,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1905",
+   "sct": "182168000",
+   "verdict": "correct"
+  },
+  {
+   "n": 44,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID13450",
+   "sct": "360498003",
+   "verdict": "correct"
+  },
+  {
+   "n": 45,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID38854",
+   "sct": "245466000",
+   "verdict": "correct"
+  },
+  {
+   "n": 46,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6524",
+   "sct": "361483008",
+   "verdict": "correct"
+  },
+  {
+   "n": 47,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID12043",
+   "sct": "280228003",
+   "verdict": "correct"
+  },
+  {
+   "n": 48,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID32242",
+   "sct": "244836009",
+   "verdict": "correct"
+  },
+  {
+   "n": 49,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID932",
+   "sct": "265391008",
+   "verdict": "correct"
+  },
+  {
+   "n": 50,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2048",
+   "sct": "182394000",
+   "verdict": "correct"
+  },
+  {
+   "n": 51,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6810",
+   "sct": "369034000",
+   "verdict": "correct"
+  },
+  {
+   "n": 52,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6467",
+   "sct": "362356008",
+   "verdict": "correct"
+  },
+  {
+   "n": 53,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2358",
+   "sct": "181651000",
+   "verdict": "correct"
+  },
+  {
+   "n": 54,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1863",
+   "sct": "181912007",
+   "verdict": "correct"
+  },
+  {
+   "n": 55,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID835",
+   "sct": "244242003",
+   "verdict": "correct"
+  },
+  {
+   "n": 56,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID3184",
+   "sct": "181705009",
+   "verdict": "correct"
+  },
+  {
+   "n": 57,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID27568",
+   "sct": "362427009",
+   "verdict": "correct"
+  },
+  {
+   "n": 58,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID431",
+   "sct": "243983004",
+   "verdict": "correct"
+  },
+  {
+   "n": 59,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID20947",
+   "sct": "369128005",
+   "verdict": "correct"
+  },
+  {
+   "n": 60,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID14757",
+   "sct": "280300006",
+   "verdict": "correct"
+  },
+  {
+   "n": 61,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30008",
+   "sct": "362696003",
+   "verdict": "correct"
+  },
+  {
+   "n": 62,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6804",
+   "sct": "369240002",
+   "verdict": "correct"
+  },
+  {
+   "n": 63,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID19268",
+   "sct": "362316006",
+   "verdict": "correct"
+  },
+  {
+   "n": 64,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1301",
+   "sct": "181216001",
+   "verdict": "correct"
+  },
+  {
+   "n": 65,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID6610",
+   "sct": "279146001",
+   "verdict": "wrong",
+   "why": "ventral lateral nucleus of thalamus -> nucleus ventralis intermedius, one of its parts: narrower"
+  },
+  {
+   "n": 66,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID32308",
+   "sct": "245994002",
+   "verdict": "correct"
+  },
+  {
+   "n": 67,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID29287",
+   "sct": "362144000",
+   "verdict": "correct"
+  },
+  {
+   "n": 68,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID2876",
+   "sct": "302528006",
+   "verdict": "correct"
+  },
+  {
+   "n": 69,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID38963",
+   "sct": "362231000",
+   "verdict": "correct"
+  },
+  {
+   "n": 70,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID1973",
+   "sct": "181934009",
+   "verdict": "correct"
+  },
+  {
+   "n": 71,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID13864",
+   "sct": "314157005",
+   "verdict": "correct"
+  },
+  {
+   "n": 72,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID21078",
+   "sct": "280179000",
+   "verdict": "correct"
+  },
+  {
+   "n": 73,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID31699",
+   "sct": "27579002",
+   "verdict": "correct"
+  },
+  {
+   "n": 74,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID30146",
+   "sct": "362131005",
+   "verdict": "correct"
+  },
+  {
+   "n": 75,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID7091",
+   "sct": "362879001",
+   "verdict": "correct"
+  },
+  {
+   "n": 76,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID25735",
+   "sct": "278750009",
+   "verdict": "correct"
+  },
+  {
+   "n": 77,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID870",
+   "sct": "181333006",
+   "verdict": "correct"
+  },
+  {
+   "n": 78,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID31602",
+   "sct": "244949003",
+   "verdict": "correct"
+  },
+  {
+   "n": 79,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID39840",
+   "sct": "263459008",
+   "verdict": "correct"
+  },
+  {
+   "n": 80,
+   "method": "FMA -> Uberon -> SNOMED CT",
+   "rid": "RID7133",
+   "sct": "369271006",
+   "verdict": "correct"
+  }
+ ]
+}

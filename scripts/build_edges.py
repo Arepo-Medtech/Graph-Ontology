@@ -37,6 +37,7 @@ Writes out/graph.duckdb. Pins recorded on every edge.
 from __future__ import annotations
 
 import argparse
+import collections
 import csv
 import json
 import os
@@ -58,6 +59,10 @@ HP_GENES = Path("cache/hpo/genes_to_disease.txt")   # HPO release v2026-09-01, 1
 MBS_XML = Path("cache/mbs/MBS-XML-20260801.XML")          # MBS Online, Department of Health
 UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/uberon/uberon.sssom.tsv")   # Uberon v2026-06-23
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
+RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
+UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
+LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
+RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
 LOINC_PARTS = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
 LOINC_PARTLINK = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
 DC = Path("cache/drugcentral")
@@ -159,7 +164,8 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 
 PIN = {"sct": "SNOMED CT-AU 20260731", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801"}
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801",
+       "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
               "SYSTEM": "loinc:has_system", "SCALE": "loinc:has_scale", "METHOD": "loinc:has_method"}
@@ -738,6 +744,113 @@ def main() -> int:
             fh.writelines("\t".join(x) + "\n" for x in cands)
         log["SNOMED organism <-> NCBI Taxonomy candidates (different names; cache/umls/)"] = len(cands)
 
+    # --- radiology: LOINC and the RSNA playbook -> RadLex -> FMA -> SNOMED CT body structure ----------------------
+    # LOINC codes its radiology terms' parts to RadLex (the LOINC/RSNA Radiology Playbook) and to nothing in SNOMED CT.
+    # RadLex carries FMA ids and some UMLS CUIs, so three code routes reach a SNOMED body structure, kept apart by method:
+    # FMA -> Uberon -> SNOMED (Uberon's own maps), FMA -> SNOMED (UMLS shared CUI), RadLex's CUI -> SNOMED (UMLS atoms).
+    # Each is tiered by its own hand check (graph_report.py); they witness one another through SNOMED's is-a, since
+    # Uberon maps to "Entire kidney" and UMLS to "Structure of kidney" -- one structure, two SNOMED forms.
+    if RADLEX_JSON.exists() and LOINC_RSNA.exists():
+        rl = json.load(open(RADLEX_JSON))
+        con.executemany("INSERT INTO name_hint VALUES ('RADLEX', ?, ?)", [(r, d.get("name")) for r, d in rl.items()])
+        rsrc = lambda pred, o_vocab, key: [("RADLEX", r, pred, o_vocab, o, "RadLex", "RadLex.owl", "native", "native", "asserted",
+                                            PIN["radlex"], None) for r, d in rl.items() for o in d[key] if o.startswith("RID")]
+        ins_rows("RadLex is-a", rsrc("radlex:is_a", "RADLEX", "is_a"))
+        ins_rows("RadLex part-of", rsrc("radlex:part_of", "RADLEX", "part_of"))
+        ins_rows("RadLex -> FMA (ExternalRefID)", [("RADLEX", r, "radlex:fma_xref", "FMA", e[4:], "RadLex", "RadLex.owl ExternalRefID",
+                                                    "native", "native", "asserted", PIN["radlex"], None)
+                                                   for r, d in rl.items() for e in d["ext"] if e.startswith("FMA:")])
+        ub_fma = [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
+                  if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("FMA:")] if UBERON_SSSOM.exists() else []
+        ins_rows("Uberon <-> FMA (cross-species exact match)", [
+            ("UBERON", r["subject_id"], "uberon:fma_match", "FMA", r["object_id"][4:], "Uberon SSSOM", "uberon.sssom.tsv",
+             r["predicate_id"], "native", "asserted", PIN["uberon"], None) for r in ub_fma])
+        ins("LOINC radiology term -> RadLex part (LOINC/RSNA playbook)", f"""SELECT DISTINCT 'LOINC', p.LoincNumber, 'loinc:radlex_part',
+                'RADLEX', p.RID, 'LOINC 2.83 LoincRsnaRadiologyPlaybook', 'part ' || p.PartNumber, p.PartTypeName, 'native', 'asserted',
+                '{PIN['loinc_table']}', json_object('part_type', p.PartTypeName, 'part', p.PartNumber, 'part_name', p.PartName)
+            FROM read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p
+            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RID IS NOT NULL AND p.RID <> ''""")
+        ins("LOINC radiology term -> RSNA playbook procedure (RPID)", f"""SELECT DISTINCT 'LOINC', p.LoincNumber, 'loinc:rsna_rpid',
+                'RPID', p.RPID, 'LOINC 2.83 LoincRsnaRadiologyPlaybook', 'RPID column', 'LOINC/RSNA harmonised', 'native', 'asserted',
+                '{PIN['loinc_table']}', NULL
+            FROM read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p
+            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RPID IS NOT NULL AND p.RPID <> ''""")
+        if RSNA_PLAYBOOK.exists():
+            pb = list(csv.DictReader(open(RSNA_PLAYBOOK, encoding="utf-8")))
+            cols = list(pb[0].keys())
+            i0 = cols.index("MODALITY")                         # RIDS holds one RID (or 0) per column from MODALITY onward
+            live = [r for r in pb if r["STATUS"] in ("ACTIVE", "TRIAL")]
+            con.executemany("INSERT INTO name_hint VALUES ('RPID', ?, ?)", [(r["RPID"], r["LONG_NAME"].strip() or r["AUTOMATED_LONG_NAME"].strip().lower() or None)
+                                                                          for r in pb])
+            ins_rows("RSNA playbook procedure -> RadLex part", sorted({
+                ("RPID", r["RPID"], "rsna:radlex_part", "RADLEX", rid, "RSNA Radiology Playbook", RSNA_PLAYBOOK.name + " RIDS", c,
+                 "native", "asserted", PIN["rsna"], json.dumps({"field": c, "status": r["STATUS"]}))
+                for r in live for c, rid in zip(cols[i0:], r["RIDS"].split("|")) if rid.startswith("RID") and c}))
+        act = dict(con.execute("SELECT id, tag FROM cmp.concept").fetchall())
+        fma_ub = collections.defaultdict(set)
+        for r in ub_fma:
+            fma_ub[r["object_id"][4:]].add(r["subject_id"])
+        ub_sct = collections.defaultdict(set)
+        for s_, o_ in con.execute("SELECT s_code, o_code FROM edge WHERE predicate = 'uberon:sct_narrow_match'").fetchall():
+            ub_sct[s_].add(o_)
+        def umls(p):
+            d = collections.defaultdict(set)
+            if p.exists():
+                for r in csv.DictReader(open(p, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE):
+                    d[r["source_code"]].add(r["target_code"])
+            return d
+        fma_sct, cui_sct = umls(UMLS_FMA_SCT), umls(UMLS_RADLEX_CUI)
+        rows_a, dropped = {}, collections.Counter()
+        def add(rid, sct, method, source, locator, pin, attrs):
+            if act.get(sct) != "body structure":
+                dropped[f"{method}: {'not active in SNOMED CT-AU' if sct not in act else 'not a body structure'}"] += 1
+                return
+            rows_a.setdefault((rid, sct, method), ("RADLEX", rid, "radlex:anatomy_sct", "SCT", sct, source, locator, method,
+                                                   "ungraded", "asserted", pin, json.dumps(attrs)))
+        for rid, d in rl.items():
+            for e in d["ext"]:
+                if e.startswith("FMA:"):
+                    for u in sorted(fma_ub.get(e[4:], ())):
+                        for sct in sorted(ub_sct.get(u, ())):
+                            add(rid, sct, "FMA -> Uberon -> SNOMED CT", "RadLex + Uberon SSSOM", "ExternalRefID; crossSpeciesExactMatch; narrowMatch",
+                                PIN["uberon"], {"fma": e[4:], "uberon": u})
+                    for sct in sorted(fma_sct.get(e[4:], ())):
+                        add(rid, sct, "FMA -> UMLS shared CUI", "RadLex + UMLS", "ExternalRefID; UTS crosswalk FMA -> SNOMEDCT_US",
+                            PIN["umls"], {"fma": e[4:]})
+                elif e.startswith("UMLS:"):
+                    for sct in sorted(cui_sct.get(e[5:], ())):
+                        add(rid, sct, "RadLex CUI -> UMLS atoms", "RadLex + UMLS", "ExternalRefID; UTS CUI atoms SNOMEDCT_US",
+                            PIN["umls"], {"cui": e[5:]})
+        ins_rows("RadLex -> SNOMED CT body structure (three code routes)", sorted(rows_a.values()))
+        for k, v in sorted(dropped.items()):
+            log[f"RadLex -> SNOMED CT not loaded ({k})"] = v
+        ins("LOINC radiology term -> SNOMED via its RadLex anatomy part", """SELECT DISTINCT 'LOINC', p.s_code, 'loinc:part_maps_to_sct',
+                'SCT', a.o_code, 'LOINC 2.83 LoincRsnaRadiologyPlaybook + ' || a.source, 'part ' || json_extract_string(p.attrs, '$.part') || ' -> ' || p.o_code,
+                'RadLex anatomy: ' || a.method, 'ungraded', 'asserted', a.pin,
+                json_object('part_type', json_extract_string(p.attrs, '$.part_type'), 'part', json_extract_string(p.attrs, '$.part'),
+                            'part_name', json_extract_string(p.attrs, '$.part_name'), 'rid', p.o_code, 'route', a.method)
+            FROM edge p JOIN edge a ON a.predicate = 'radlex:anatomy_sct' AND a.s_code = p.o_code
+            WHERE p.predicate = 'loinc:radlex_part' AND json_extract_string(p.attrs, '$.part_type') LIKE 'Rad.Anatomic Location.%'
+              AND json_extract_string(p.attrs, '$.part_type') NOT LIKE '%Laterality%'""")
+        # playbook anatomy with no code route at all (head, neck, hand...): name-matched SNOMED body structures are
+        # candidates for a person, never edges -- a gap-crossing by name. RadLex- and SNOMED-derived: cache/, not committed.
+        bridged = {r for (r, _, _) in rows_a}
+        used = {r for (r,) in con.execute("""SELECT DISTINCT o_code FROM edge WHERE predicate IN ('loinc:radlex_part', 'rsna:radlex_part')
+                 AND (json_extract_string(attrs, '$.part_type') LIKE 'Rad.Anatomic Location.%' AND json_extract_string(attrs, '$.part_type') NOT LIKE '%Laterality%'
+                      OR json_extract_string(attrs, '$.field') LIKE 'BODY_REGION%' OR json_extract_string(attrs, '$.field') LIKE 'ANATOMIC_FOCUS%')""").fetchall()}
+        bnorm = lambda x: re.sub(r"\s+", " ", re.sub(r"^(entire |structure of |bone structure of )|( structure| region structure)$", "",
+                                                         re.sub(r"\s*\(body structure\)$", "", (x or "").lower().strip()))).strip()
+        by_name = collections.defaultdict(set)
+        for i, pt in con.execute("SELECT id, pt FROM cmp.concept WHERE tag = 'body structure'").fetchall():
+            by_name[bnorm(pt)].add((i, pt))
+        cands = [(r, rl[r].get("name") or "", i, pt) for r in sorted(used - bridged) if r in rl
+                 for i, pt in sorted({x for n in [rl[r].get("name")] + rl[r]["syn"] if n for x in by_name.get(bnorm(n), ())})]
+        with open(RADLEX_JSON.with_name("radlex_sct_candidates.tsv"), "w", encoding="utf-8") as fh:
+            fh.write("rid\tradlex_name\tsct\tsct_name\n")
+            fh.writelines("\t".join(x) + "\n" for x in cands)
+        log["RadLex anatomy with no code route (playbook)"] = len(used - bridged)
+        log["RadLex anatomy candidates by name (cache/radlex/, not edges)"] = len({c[0] for c in cands})
+
     # --- genes -> diseases (HPO genes_to_disease, the release hp.obo came from) --------------------------------------
     if HP_GENES.exists():
         ins("HPO gene -> disease (OMIM, Orphanet)", f"""SELECT DISTINCT 'NCBIGENE', split_part(ncbi_gene_id, ':', 2), 'hpo:gene_disease',
@@ -889,6 +1002,7 @@ def main() -> int:
     con.execute("""INSERT INTO name_hint SELECT 'SCT', k.code, any_value(c.concept_name) FROM keys k
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
+    con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
     con.execute("""CREATE TABLE node AS SELECT k.vocab, k.code, k.vocab || ':' || k.code AS key,
                           (SELECT any_value(h.name) FROM name_hint h WHERE h.vocab = k.vocab AND h.code = k.code
                            AND h.name IS NOT NULL AND trim(h.name) <> '') AS name

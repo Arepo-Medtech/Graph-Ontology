@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,094,982 nodes, 4,830,267 edges, 169 edge types, 25 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS* and *How a drug works*.)
-Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
+**1,182,914 nodes, 5,033,763 edges, 177 edge types, 28 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology* and *How a drug works*.)
+Written to `out/graph.duckdb` (201 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -434,7 +434,9 @@ loaded — they name an axis value, not the thing observed. 164,022 edges (`loin
 
 That is the honest ceiling of code-to-code bridging for non-laboratory LOINC today. Radiology (7,045 of the clinical terms)
 maps its anatomy parts to **RadLex**, which has no published SNOMED map; survey instruments (PHQ-9, AUDIT …) have no SNOMED
-map in LOINC, Athena or the LOINC Extension. Closing either is a gap-crossing, not a lookup.
+map in LOINC, Athena or the LOINC Extension. Closing either is a gap-crossing, not a lookup. *(24 Sep: radiology is now
+bridged by codes after all, through RadLex's own FMA and UMLS cross-references — see* Radiology *below; clinical reach
+1,460 → 7,303.)*
 
 **MBS — structure built, SNOMED only as candidates.** The MBS XML (MBS Online, release 20260801): 6,046 items → 99
 groups → 9 categories (`mbs:in_group`, `mbs:group_in_category`), each item's schedule fee and benefit on its edge. **No MBS
@@ -447,6 +449,55 @@ and the sample shows why exact is not enough: dozens of MRI items match only the
 imaging*, not the scan the item funds; "amputation of 4 digits of one foot" comes back as *Amputation of left fourth toe*,
 an imaging item headed "Hand" as *Hand closure*. The candidates are a work list, and MBS stays reachable only through its
 own structure until a person confirms them.
+
+## Radiology: LOINC and the RSNA playbook → RadLex → SNOMED CT (built, Tier 2)
+
+LOINC codes the parts of its ~7,000 radiology terms (modality, region imaged, imaging focus, contrast, view, timing) to
+**RadLex** — the LOINC/RSNA Radiology Playbook in LOINC's accessory files — and to nothing in SNOMED CT; RadLex has no
+published SNOMED map. What RadLex *does* carry is where its anatomy came from: it was built from the Foundational Model of
+Anatomy (Mejino, Rubin & Brinkley, AMIA 2008 — the lead from Overton & Romagnoli's *Radiology, Philosophy, and
+Ontology*), and 33,404 of its 46,898 classes state their FMA id; 1,376 state a UMLS CUI. RadLex.owl spreads a class
+over three blocks (the class axioms, the OWL pun, and an `rdf:Description` holding the annotations), so
+`scripts/radlex_prepare.py` merges them — read naively, only 16 of the playbook's 431 anatomy terms appear to have an
+FMA id; merged, 127 do.
+
+Every step is a code someone else asserted, and three routes are kept apart by method on **`radlex:anatomy_sct`**:
+
+| route | edges | RadLex terms | hand check | lower bound | tier |
+|---|---:|---:|---:|---:|---:|
+| RadLex → FMA → Uberon (crossSpeciesExactMatch) → SNOMED (narrowMatch) | 1,509 | 1,496 | 78/80 | 0.913 | 2 |
+| RadLex → FMA → SNOMED (UMLS shared CUI) | 133 | 124 | 75/80 | 0.862 | 2 |
+| RadLex's own CUI → SNOMED (UMLS atoms) | 123 | 119 | 78/80 | 0.913 | 2 |
+
+Only active SNOMED CT-AU body structures load (95 targets not in the AU release and 12 non-body-structures are counted,
+not loaded). The errors: UMLS joins "hip" (the limb region) to the hip *joint*, "pelvis" to the cavity of the true
+pelvis, a gland to its whole salivary apparatus, a node to its node group, "muscle organ" to the skeletal muscle system;
+Uberon broadens a segment of cerebral white matter and narrows the ventral lateral thalamic nucleus to one of its parts;
+and RadLex itself gives "arm" (defined as the upper arm) the CUI of the whole upper limb and "lateral wall of orbit" the
+CUI of the sella turcica. Verdicts: `reference/radlex_handcheck.json` (Uberon route; codes only — RadLex labels are
+RSNA's) and `cache/umls/radlex_handcheck.json` (UMLS routes; not committed).
+
+*The witness.* Uberon names SNOMED's "Entire kidney", UMLS its "Structure of kidney" — one structure, two SNOMED forms —
+so agreement is counted through SNOMED's own is-a. Where the Uberon and UMLS-FMA routes both answer (104 terms), 98 give
+the same concept or an is-a pair; the two UMLS routes agree 53/53. Of the 8 unrelated answers across all route pairs,
+4 are UMLS-side mistakes (pelvis → cavity of the true pelvis, knee → bone of the knee region, bone organ → the skeletal
+system, large intestine → colon) and 4 are SNOMED near-duplicates its is-a does not join ("Structure of prostate gland" /
+"Entire prostate" twice, "Bone structure of sacrum" / "Entire sacrum", popliteal fossa / popliteal region).
+
+**The LOINC side.** `loinc:radlex_part` (48,227 edges: every coded part of every active radiology term),
+`loinc:rsna_rpid` (1,008 LOINC ↔ playbook-procedure pairs) and — through `radlex:anatomy_sct` — 17,713 new
+`loinc:part_maps_to_sct` edges (method `RadLex anatomy: <route>`, attrs.rid, the route's tier). Of 6,717 radiology terms
+with an anatomy part, **5,932 now reach a SNOMED body structure** (3,039 through every anatomy part they have). The
+**RSNA Radiology Playbook** itself (`complete-playbook-dev.csv`, 4,772 orderable procedures, 3,762 never exported to
+LOINC) loads as `rsna:radlex_part` (23,666 edges, ACTIVE and TRIAL only): 3,324 of its 4,403 live procedures reach
+SNOMED through their body region or anatomic focus. RadLex's own is-a (46,898) and part-of (24,764), its FMA
+cross-references (33,404) and Uberon's FMA matches (6,051) load as the native steps of the chain.
+
+*What stays open.* 302 playbook anatomy terms carry neither an FMA id nor a CUI — among them the commonest regions,
+**head, neck, shoulder, ankle, hand, foot, lumbar spine, whole body** — so no code route exists. For 99 of them a SNOMED
+body structure has the same name ("internal jugular vein" → *Structure of internal jugular vein*); those are candidates
+in `cache/radlex/radlex_sct_candidates.tsv` for a person, never edges — a name match is a gap-crossing. Modality,
+contrast, view and timing parts stay RadLex-only: SNOMED models them as qualifier values, and no map joins them.
 
 ## How a drug works: drug → target → protein → gene → disease
 
@@ -499,9 +550,13 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/threshold_units.py       # LR thresholds: as published + Australian value, primacy once RCPA confirms
 .venv/bin/python scripts/umls_crosswalk.py --source SNOMEDCT_US --target NCBI --ids cache/umls/sct_organisms.txt --out sct_ncbi   # ~1.7 h, resumable
 .venv/bin/python scripts/mbs_candidates.py       # ~25 min (Ontoserver): MBS -> SNOMED procedure candidate frames
+.venv/bin/python scripts/radlex_prepare.py       # ~20 s: RadLex.owl (RADLEX_OWL) -> cache/radlex/, and the ids UMLS needs
+.venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
+.venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
+#   read in place: ~/Documents/ONTOLOGIES/PunRadLex_Owl4.3/RadLex.owl (RadLex 4.3) and complete-playbook-dev.csv (RSNA_PLAYBOOK)
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
-.venv/bin/python scripts/build_edges.py           # ~2.5 min: out/graph.duckdb, validated against the register
+.venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
 .venv/bin/python scripts/graph_report.py          # scores the linkage routes, sets their tiers, writes out/graph_report.json
 ```
@@ -513,4 +568,4 @@ CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC an
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not
 imported. The RCPA SPIA reference sets are RCPA copyright (NCTS terms of use): read in place, derived data in cache/rcpa/
-only, and a graph built with them is not for redistribution. *These were stated from memory while designing and should be confirmed before any commercial use.*
+only, and a graph built with them is not for redistribution. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*

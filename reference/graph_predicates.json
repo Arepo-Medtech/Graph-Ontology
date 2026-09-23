@@ -36,6 +36,9 @@
     "NCBIGENE": "NCBI Gene, keyed by Entrez gene id (5743); the id HPO and DrugCentral both use",
     "UCUM": "A unit of measure, keyed by its UCUM code (mmol/L, g/L, 10*9/L); reached only by unit edges -- numbers are never nodes",
     "UBERON": "Uberon multi-species anatomy ontology, keyed by UBERON id",
+    "FMA": "Foundational Model of Anatomy, keyed by FMA id (numeric part). Reached only as a cross-reference (RadLex, Uberon); FMA itself is not loaded",
+    "RADLEX": "RadLex (RSNA radiology lexicon), keyed by RID. RSNA licence: read in place from RadLex.owl, never committed",
+    "RPID": "RSNA Radiology Playbook orderable procedure, keyed by RPID",
     "NCBITAXON": "NCBI Taxonomy, keyed by taxon id (9606 = Homo sapiens)",
     "MBS": "Medicare Benefits Schedule item, keyed by item number (Department of Health, MBS XML)",
     "MBS_GROUP": "MBS group, keyed by category/group code (e.g. 5/I1)",
@@ -404,6 +407,130 @@
       "source": "uberon.sssom.tsv (Uberon release v2026-06-23), skos:narrowMatch to SCTID",
       "status": "built",
       "note": "Uberon is species-neutral, SNOMED CT is human, so Uberon curates every SNOMED link as narrowMatch, never exactMatch: the edge says the SNOMED concept is the human instance of the class, not that the two are the same concept. Hand-checked; graph_report.py earns the tier."
+    },
+    {
+      "id": "radlex:is_a",
+      "label": "RadLex class is a kind of RadLex class",
+      "subject": [
+        "RADLEX"
+      ],
+      "object": [
+        "RADLEX"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RadLex.owl (RadLex 4.3) rdfs:subClassOf",
+      "status": "built"
+    },
+    {
+      "id": "radlex:part_of",
+      "label": "RadLex anatomical entity is part of RadLex anatomical entity",
+      "subject": [
+        "RADLEX"
+      ],
+      "object": [
+        "RADLEX"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RadLex.owl (RadLex 4.3) Part_Of / Regional_Part_Of / Constitutional_Part_Of",
+      "status": "built"
+    },
+    {
+      "id": "radlex:fma_xref",
+      "label": "RadLex class is cross-referenced by RadLex to this FMA class",
+      "subject": [
+        "RADLEX"
+      ],
+      "object": [
+        "FMA"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RadLex.owl (RadLex 4.3) ExternalRefID 'FMA:'",
+      "status": "built",
+      "note": "RadLex's anatomy was built from the FMA (Mejino, Rubin & Brinkley, AMIA 2008), and RadLex states the FMA id it came from. 33,404 classes carry one."
+    },
+    {
+      "id": "uberon:fma_match",
+      "label": "Uberon class is the cross-species form of this FMA (human) class",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "FMA"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "uberon.sssom.tsv (Uberon release v2026-06-23), semapv:crossSpeciesExactMatch to FMA",
+      "status": "built"
+    },
+    {
+      "id": "loinc:radlex_part",
+      "label": "a LOINC radiology term's part (modality, region imaged, imaging focus, pharmaceutical, view, timing...) is this RadLex concept",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "RADLEX"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 AccessoryFiles/LoincRsnaRadiologyPlaybook (the LOINC/RSNA Radiology Playbook)",
+      "status": "built",
+      "note": "The only code LOINC gives its radiology parts: PartRelatedCodeMapping maps them to RadLex and to nothing else. attrs.part_type is LOINC's Rad.* part type; method repeats it."
+    },
+    {
+      "id": "loinc:rsna_rpid",
+      "label": "LOINC radiology term and RSNA Playbook procedure (RPID) are the harmonised pair",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "RPID"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 LoincRsnaRadiologyPlaybook, RPID column",
+      "status": "built"
+    },
+    {
+      "id": "rsna:radlex_part",
+      "label": "RSNA Playbook procedure's field (modality, body region, anatomic focus, pharmaceutical, view...) is this RadLex concept",
+      "subject": [
+        "RPID"
+      ],
+      "object": [
+        "RADLEX"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RSNA Radiology Playbook complete-playbook-dev.csv, RIDS column (one RID per field, from MODALITY on)",
+      "status": "built",
+      "note": "ACTIVE and TRIAL procedures only; attrs.field names the playbook column. 3,762 of the 4,772 procedures were never exported to LOINC, so this reaches radiology orderables LOINC does not."
+    },
+    {
+      "id": "radlex:anatomy_sct",
+      "label": "RadLex anatomical entity reaches this SNOMED CT body structure by a chain of asserted codes",
+      "subject": [
+        "RADLEX"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RadLex.owl ExternalRefID, then Uberon SSSOM (crossSpeciesExactMatch, narrowMatch) or the UMLS UTS (FMA crosswalk; RadLex's own CUI) -- PARALLEL edges, told apart by method",
+      "status": "built",
+      "note": "No map between RadLex and SNOMED CT is published. Three routes, every step a code someone else asserted: 'FMA -> Uberon -> SNOMED CT', 'FMA -> UMLS shared CUI', 'RadLex CUI -> UMLS atoms'. Only active SNOMED CT-AU body structures load. Uberon tends to name the 'Entire X' concept and UMLS the 'Structure of X' concept; SNOMED's is-a joins the two, and graph_report.py counts agreement through it. Each method is tiered by its own hand check. UMLS-derived pairs are not redistributed."
     },
     {
       "id": "mondo:disease_has_location",
@@ -976,7 +1103,7 @@
     },
     {
       "id": "loinc:part_maps_to_sct",
-      "label": "a LOINC term's component, system or method part is mapped by LOINC to this SNOMED CT concept",
+      "label": "a LOINC term's component, system or method part -- or, for a radiology term, its RadLex anatomy part -- maps to this SNOMED CT concept",
       "subject": [
         "LOINC"
       ],
@@ -986,9 +1113,9 @@
       "category": "relation",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "LOINC 2.83 LoincPartLink_Primary (term -> part) joined to PartRelatedCodeMapping (part -> SNOMED CT)",
+      "source": "LOINC 2.83 LoincPartLink_Primary (term -> part) joined to PartRelatedCodeMapping (part -> SNOMED CT); for radiology terms, LoincRsnaRadiologyPlaybook (term -> RadLex) joined to radlex:anatomy_sct",
       "status": "built",
-      "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed."
+      "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed. Radiology terms have no SNOMED part map; their region-imaged and imaging-focus parts reach SNOMED through radlex:anatomy_sct instead, method 'RadLex anatomy: <route>', attrs.rid and attrs.route, and the tier of that route."
     },
     {
       "id": "loinc:unit_counterpart",
