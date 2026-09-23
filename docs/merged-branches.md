@@ -3,7 +3,7 @@
 **Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
 but they are **not** to be deleted. This file is the single list of them.
 
-**Last verified:** 2026-09-23 · `master` at `e878c81`
+**Last verified:** 2026-09-23 · `master` at `ad40850`
 
 | branch | tip | commits | PR | merged | merge commit | in `master`? |
 |---|---|---|---|---|---|---|
@@ -16,6 +16,8 @@ but they are **not** to be deleted. This file is the single list of them.
 | **`enrich-candidates-rerun`** | `6786077` | 1 | [#7](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/7) | 2026-09-23 | `ae64446` | ✅ yes |
 | **`quarantine-development`** | `d020a71` | 2 | [#8](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/8) | 2026-09-23 | `f299086` | ✅ yes |
 | **`restore-lost-bindings`** | `69ff084` | 1 | [#9](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/9) | 2026-09-23 | `e878c81` | ✅ yes |
+| **`aih-guidelines`** | `7cc9f24` | 4 | [#10](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/10) | 2026-09-23 | `96dc8a8` | ✅ yes |
+| **`rch-guidelines`** | `ffdb728` | 13 | [#11](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/11) | 2026-09-23 | `ad40850` | ✅ yes |
 
 > ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
 > It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
@@ -87,6 +89,19 @@ quarantine promoted to the first tier of the review worksheet.
 
 `docs/binding-review-loop.md` · `docs/binding-review-queue.md` ·
 `reference/snomed_candidates_review.json` · `scripts/binding_review.py`
+
+### `rch-guidelines` — PR #11, 181 files ✅ *(retained)*
+90 paediatric guidelines quoted verbatim from RCH Melbourne Clinical Practice Guidelines (2,001 claims, 420
+quoted doses), and `scripts/number_guard.py`, which flags any number in a claim that its own quote lacks.
+Stacked on `aih-guidelines`.
+
+`guidelines/*` (180 files) · `scripts/number_guard.py`
+
+### `aih-guidelines` — PR #10, 50 files ✅ *(retained)*
+24 guidelines quoted from the Australian Immunisation Handbook, plus Handbook answers and two AMH
+disagreements (pneumococcal 21vPCV; RSV from 28 weeks) added to `immunisation.md`.
+
+`guidelines/*` (49 files) · `reference/racgp_curriculum_refs.json`
 
 ### `attestation-loop` — PR #4, 6 files ⚠️ *(ref deleted, see above)*
 Closed the attestation loop: the dose queue became a committed record, and a rejected dose fails the
