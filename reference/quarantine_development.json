@@ -1,0 +1,272 @@
+{
+  "_note": "Re-search of the quarantined rows. Reports better candidates; binds NOTHING.",
+  "_rule_unchanged": "The pregnancy quarantine rule is not weakened. Rows whose CONDITION is reproductive stay quarantined whatever is found.",
+  "checked_utc": "2026-09-23",
+  "count": 15,
+  "results": [
+    {
+      "condition": "Contraception",
+      "conditionIsReproductive": true,
+      "terms": [
+        "Contraception"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "308419002 Contraception call",
+      "searched": [
+        "Contraception"
+      ],
+      "total_hits": 10,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Diarrhoea of greater than 2 weeks duration",
+      "conditionIsReproductive": false,
+      "terms": [
+        "Diarrhoea",
+        "Diarrhoea of greater than 2 weeks duration"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "429715006 Gestation greater than 20 weeks",
+      "searched": [
+        "Diarrhoea",
+        "Diarrhoea of greater than 2 weeks duration"
+      ],
+      "total_hits": 20,
+      "clean_alternatives": [
+        "62315008 Diarrhoea  [via \"Diarrhoea\"; parents: Digestive system finding]",
+        "236071009 Chronic diarrhoea  [via \"Diarrhoea\"; parents: Chronic digestive system disorder / Diarrhoea]",
+        "11003002 Nervous diarrhoea  [via \"Diarrhoea\"; parents: Diarrhoeal disorder]",
+        "2946003 Osmotic diarrhoea  [via \"Diarrhoea\"; parents: Non-infective diarrhoea]"
+      ]
+    },
+    {
+      "condition": "Facial lipoatrophy",
+      "conditionIsReproductive": false,
+      "terms": [
+        "Facial lipoatrophy"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "773331001 Nestor Guillermo progeria syndrome",
+      "searched": [
+        "Facial lipoatrophy"
+      ],
+      "total_hits": 1,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Maternal hyperphenylalaninaemia due to phenylketonuria",
+      "conditionIsReproductive": true,
+      "terms": [
+        "Maternal hyperphenylalaninaemia",
+        "Maternal hyperphenylalaninaemia due to phenylketonuria"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "713187004 Polyhydramnios due to maternal disease",
+      "searched": [
+        "Maternal hyperphenylalaninaemia",
+        "Maternal hyperphenylalaninaemia due to phenylketonuria"
+      ],
+      "total_hits": 10,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Mixed episodes",
+      "conditionIsReproductive": false,
+      "terms": [
+        "Mixed episodes"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "774084003 Neonatal antiphospholipid syndrome",
+      "searched": [
+        "Mixed episodes"
+      ],
+      "total_hits": 1,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Preterm birth",
+      "conditionIsReproductive": true,
+      "terms": [
+        "Preterm birth"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "773691007 Congenital erosive and vesicular dermatosis",
+      "searched": [
+        "Preterm birth"
+      ],
+      "total_hits": 3,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Septicaemia",
+      "conditionIsReproductive": false,
+      "terms": [
+        "Septicaemia"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "137701000119106 Antepartum septicaemia",
+      "searched": [
+        "Septicaemia"
+      ],
+      "total_hits": 10,
+      "clean_alternatives": [
+        "10001005 Bacterial sepsis  [via \"Septicaemia\"; parents: Sepsis]",
+        "272006008 Gonococcal arthritis dermatitis syndrome  [via \"Septicaemia\"; parents: Cutaneous gonorrhoea / Gonococcal infection of joint]",
+        "1201760007 Sepsis caused by Bacteroides  [via \"Septicaemia\"; parents: Sepsis caused by anaerobic bacteria / Sepsis caused by Gram negative bacteria]",
+        "448417001 Sepsis caused by Staphylococcus aureus  [via \"Septicaemia\"; parents: Sepsis caused by Staphylococcus]"
+      ]
+    },
+    {
+      "condition": "Termination of an intra-uterine pregnancy",
+      "conditionIsReproductive": true,
+      "terms": [
+        "Termination of an intra-uterine pregnancy"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "18302006 Hysterotomy and termination of pregnancy",
+      "searched": [
+        "Termination of an intra-uterine pregnancy"
+      ],
+      "total_hits": 10,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "The onset of lactation",
+      "conditionIsReproductive": true,
+      "terms": [
+        "The onset of lactation"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "1172841001 Combined oxidative phosphorylation defect type 30",
+      "searched": [
+        "The onset of lactation"
+      ],
+      "total_hits": 0,
+      "clean_alternatives": []
+    },
+    {
+      "condition": "Secondarily infected traumatic skin lesions",
+      "conditionIsReproductive": false,
+      "terms": [
+        "infected traumatic skin lesions",
+        "Secondarily infected traumatic skin lesions"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "715223009 Fetal varicella syndrome",
+      "searched": [
+        "infected traumatic skin lesions",
+        "Secondarily infected traumatic skin lesions"
+      ],
+      "total_hits": 20,
+      "clean_alternatives": [
+        "95324001 Skin lesion  [via \"infected traumatic skin lesions\"; parents: Disorder of skin / Lesion of skin and/or skin-associated mucous membrane]",
+        "83070001 Friction blister with infection  [via \"infected traumatic skin lesions\"; parents: Blister with infection / Superficial injury with infection]",
+        "2622007 Infected ulcer of skin  [via \"infected traumatic skin lesions\"; parents: Infection of skin / Skin ulcer]",
+        "19824006 Infection of skin and/or subcutaneous tissue  [via \"infected traumatic skin lesions\"; parents: Disorder of skin and/or subcutaneous tissue / Soft tissue infection]"
+      ]
+    },
+    {
+      "condition": "Upper and lower respiratory tract infections",
+      "conditionIsReproductive": false,
+      "terms": [
+        "respiratory tract infections",
+        "Upper and lower respiratory tract infections"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "763532008 Familial nasal acilia",
+      "searched": [
+        "respiratory tract infections",
+        "Upper and lower respiratory tract infections"
+      ],
+      "total_hits": 11,
+      "clean_alternatives": [
+        "239050000 Hypohidrotic ectodermal dysplasia, hypothyroidism, ciliary dyskinesia syndrome  [via \"respiratory tract infections\"; parents: Autosomal recessive hereditary disorder / Developmental hereditary disorder]",
+        "1351853000 Familial hyperinflammatory lymphoproliferative immunodeficiency  [via \"respiratory tract infections\"; parents: Autoinflammatory disease / Genetic disease]",
+        "719011002 X-linked intellectual disability Pai type  [via \"respiratory tract infections\"; parents: Congenital malformation syndrome / Developmental hereditary disorder]",
+        "784340000 Combined immunodeficiency due to interleukin 21 receptor deficiency  [via \"respiratory tract infections\"; parents: Autosomal recessive hereditary disorder / Combined immunodeficiency disease]"
+      ]
+    },
+    {
+      "condition": "Complicated urinary tract infection",
+      "conditionIsReproductive": false,
+      "terms": [
+        "urinary tract infection",
+        "Complicated urinary tract infection"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "609491002 Induced termination of pregnancy complicated by urinary tract infection",
+      "searched": [
+        "urinary tract infection",
+        "Complicated urinary tract infection"
+      ],
+      "total_hits": 11,
+      "clean_alternatives": [
+        "68566005 Urinary tract infection  [via \"urinary tract infection\"; parents: Disorder of urinary system / Infectious disease of genitourinary system]",
+        "431309003 Acute urinary tract infection  [via \"urinary tract infection\"; parents: Acute genitourinary disorder / Acute infectious disease]",
+        "197928006 Chronic urinary tract infection  [via \"urinary tract infection\"; parents: Chronic disease of genitourinary system / Chronic infectious disease]",
+        "301010001 Coliform urinary tract infection  [via \"urinary tract infection\"; parents: Bacterial urinary infection / Disease caused by Gram-negative bacillus]"
+      ]
+    },
+    {
+      "condition": "Anaemia associated with intrinsic renal disease",
+      "conditionIsReproductive": false,
+      "terms": [
+        "Anaemia",
+        "Anaemia associated with intrinsic renal disease"
+      ],
+      "verdict": "candidate may be replaceable",
+      "current_hit": "472326004 Fetal hypertrophic cardiomyopathy associated with renal disease",
+      "searched": [
+        "Anaemia",
+        "Anaemia associated with intrinsic renal disease"
+      ],
+      "total_hits": 20,
+      "clean_alternatives": [
+        "271737000 Anaemia  [via \"Anaemia\"; parents: Blood disease]",
+        "306058006 Aplastic anaemia  [via \"Anaemia\"; parents: Anaemia due to decreased red cell production / Bone marrow disorder]",
+        "191268006 Chronic anaemia  [via \"Anaemia\"; parents: Anaemia / Chronic disease]",
+        "14379009 Dimorphic anaemia  [via \"Anaemia\"; parents: Anaemia due to multiple mechanisms]"
+      ]
+    },
+    {
+      "condition": "Patients undergoing in-vitro fertilisation",
+      "conditionIsReproductive": true,
+      "terms": [
+        "in-vitro fertilisation",
+        "Patients undergoing in-vitro fertilisation"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "52637005 In vitro fertilisation",
+      "searched": [
+        "in-vitro fertilisation",
+        "Patients undergoing in-vitro fertilisation"
+      ],
+      "total_hits": 7,
+      "clean_alternatives": [
+        "717255008 Secondary intestinal lymphangiectasis  [via \"Patients undergoing in-vitro fertilisation\"; parents: Intestinal lymphangiectasis]",
+        "1230290005 Cytokine release syndrome due to chimeric antigen receptor T-cell immunotherapy  [via \"Patients undergoing in-vitro fertilisation\"; parents: Complication of introduction procedure / Cytokine storm syndrome]"
+      ]
+    },
+    {
+      "condition": "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+      "conditionIsReproductive": true,
+      "terms": [
+        "hypoglycaemia",
+        "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants"
+      ],
+      "verdict": "STAYS QUARANTINED",
+      "current_hit": "1231283007 Congenital isolated adrenocorticotropic hormone deficiency",
+      "searched": [
+        "hypoglycaemia",
+        "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants"
+      ],
+      "total_hits": 20,
+      "clean_alternatives": [
+        "302866003 Hypoglycaemia  [via \"hypoglycaemia\"; parents: Disorder of endocrine system / Hypoglycaemic disorder]",
+        "237639008 Alimentary hypoglycaemia  [via \"hypoglycaemia\"; parents: Endocrine system complication of procedure / Post gastrointestinal tract surgery hypoglycaemia]",
+        "16966009 Factitious hypoglycaemia  [via \"hypoglycaemia\"; parents: Endocrine injury / Factitious illness]",
+        "12905008 Hypoglycaemia diet  [via \"hypoglycaemia\"; parents: Test AND/OR disease related diet / Therapeutic diet]"
+      ]
+    }
+  ]
+}
