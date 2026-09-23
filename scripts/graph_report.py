@@ -563,6 +563,25 @@ def main() -> int:
         SELECT count(*), count(*) FILTER (WHERE n > 1) FROM (SELECT s_code, count(*) n FROM edge
         WHERE predicate = 'sct:116680003' GROUP BY 1)""").fetchone()))
 
+    # --- SNOMED CT-AU reference sets: how much of each set reaches beyond SNOMED ----------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:in_refset'").fetchone()[0]:
+        con.execute("""CREATE TEMP TABLE sct_out AS SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT'
+                       UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'SCT' AND s_vocab <> 'SCT'""")
+        rs = con.execute("""SELECT method, count(*), count(*) FILTER (WHERE s_code IN (SELECT c FROM sct_out))
+                            FROM edge WHERE predicate = 'sct:in_refset' GROUP BY 1 ORDER BY 2 DESC""").fetchall()
+        # medicines regulation, on the products the compendium carries and the PBS lists
+        reg = con.execute("""WITH m AS (SELECT s_code, method FROM edge WHERE predicate = 'sct:in_refset'
+                                 AND (method LIKE '%Schedule 8%' OR method LIKE '%Black Triangle%' OR method LIKE '%Brand Consideration%'
+                                      OR method LIKE '%Excluded Medicinal Items%' OR method LIKE '%Schedule 4%')),
+                  pbs AS (SELECT DISTINCT s_code c FROM edge WHERE predicate = 'pbs:lists')
+            SELECT method, count(DISTINCT s_code), count(DISTINCT s_code) FILTER (WHERE s_code IN (SELECT c FROM pbs))
+            FROM m GROUP BY 1 ORDER BY 1""").fetchall()
+        report["refsets:SNOMED CT-AU reference set membership"] = {
+            "reference_sets": len(rs), "memberships": sum(r[1] for r in rs),
+            "not_loaded_inactive_members": con.execute("SELECT edges FROM build_log WHERE family LIKE 'SNOMED CT-AU reference set members not loaded%'").fetchone(),
+            "members_reaching_another_vocabulary": {m: {"members": n, "reach_outside_snomed": k, "share": round(k / n, 3)} for m, n, k in rs},
+            "medicines_regulation_on_pbs": {m: {"concepts": n, "pbs_listed": k} for m, n, k in reg}}
+
     # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
     # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
     keys = [k for (k,) in con.execute("SELECT key FROM node").fetchall()]
