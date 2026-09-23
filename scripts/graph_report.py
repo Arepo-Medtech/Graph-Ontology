@@ -289,6 +289,23 @@ def main() -> int:
             "snomed_concepts_with_no_other_cross_vocabulary_edge": only, "hand_checked": n, "correct": k,
             "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
 
+    # --- finding -> diagnosis likelihood ratios: tier from transcription verification; every edge awaits a person -----
+    ver = Path("reference/diagnostic_accuracy_verification.json")
+    if ver.exists() and con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'finding_lr_if_%'").fetchone()[0]:
+        v = json.load(open(ver))
+        k, n = v["verified"], v["records"]
+        lo, _ = wilson(k, n)
+        con.execute("UPDATE edge SET tier = ? WHERE predicate LIKE 'finding_lr_if_%'", [tier(lo, n)])
+        e, dx, fi, dv = con.execute("""SELECT count(*), count(DISTINCT o_code), count(DISTINCT s_code),
+                count(*) FILTER (WHERE json_extract(attrs, '$.derived')::BOOLEAN) FROM edge WHERE predicate LIKE 'finding_lr_if_%'""").fetchone()
+        report["evidence:finding -> diagnosis likelihood ratios"] = {"records_transcribed": n, "numbers_verified_against_abstract": k,
+            "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n), "edges": e, "diagnoses": dx, "findings": fi, "derived_from_sens_spec": dv,
+            "candidates_not_bound": n - e, "state": "corrected_pending_attestation (a person signs off each)",
+            "edges_listed": [f"{fn} [{'present' if p.endswith('present') else 'absent'}] -> {dn}: LR {json.loads(a)['lr']}"
+                             for p, fn, dn, a in con.execute("""SELECT e.predicate, nf.name, nd.name, e.attrs FROM edge e
+                                 LEFT JOIN node nf ON nf.vocab = 'SCT' AND nf.code = e.s_code LEFT JOIN node nd ON nd.vocab = 'SCT' AND nd.code = e.o_code
+                                 WHERE e.predicate LIKE 'finding_lr_if_%' ORDER BY nd.name, json_extract(e.attrs, '$.lr')::DOUBLE DESC""").fetchall()]}
+
     # --- how a drug works: drug -> target -> protein -> gene -> disease ------------------------------------------
     # Native assertions (DrugCentral, HPO), so no earned tier; two independent witnesses are measured instead.
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'drugcentral:mechanism_target'").fetchone()[0]:

@@ -1,0 +1,1550 @@
+{
+ "_note": "Sign / symptom / history finding -> diagnosis: likelihood ratios transcribed from the ABSTRACTS of published diagnostic-accuracy reviews (PubMed; PMID is the trace). Only the numbers are kept here -- the abstracts are the publishers' text and stay in cache/pubmed/ (git-ignored); scripts/verify_diagnostic_accuracy.py checks that every number in `as_written` appears in the cached abstract. `when` is present (LR if the finding is present) or absent (LR if absent); a present finding may LOWER the odds (history of vaginal discharge, LR 0.3, for UTI). Where the abstract gives only pooled sensitivity and specificity, build_edges.py derives LR+ = sens/(1-spec) and LR- = (1-sens)/spec and marks the edge derived; no interval is invented for a derived LR. `finding_terms` / `diagnosis_terms` are the SNOMED CT-AU terms tried, exact match only, on the live Ontoserver (scripts/bind_diagnostic_accuracy.py); the terms are chosen by the transcriber, so each is a proposal and never a near-synonym fallback that would merge findings the source keeps apart (calf swelling vs a difference in calf diameter; vaginal discharge reported vs seen); a record whose finding or diagnosis does not bind exactly stays here as a candidate, never an edge. Reviews whose abstracts give only ranges across several findings (Aalbers 2011 pharyngitis, Swap 2005 chest pain, Andersson 2004 appendicitis) or no per-finding numbers (Metlay 1997 pneumonia; Williams 1992 ascites has no abstract) contributed nothing. Transcribed 23 Sep 2026; every edge is corrected_pending_attestation.",
+ "sources_without_usable_numbers": {
+  "21631919": "ranges only (+LR 1.45-2.33)",
+  "16304077": "ranges only",
+  "14716790": "ROC areas only",
+  "9356004": "no numbers",
+  "1573754": "no abstract"
+ },
+ "records": [
+  {
+   "id": "wang2005-hx-hf-present",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "past history of heart failure",
+   "finding_terms": [
+    "History of heart failure"
+   ],
+   "when": "present",
+   "lr": 5.8,
+   "lr_ci": [
+    4.1,
+    8.0
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "5.8",
+    "4.1",
+    "8.0"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "wang2005-hx-hf-absent",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "past history of heart failure",
+   "finding_terms": [
+    "History of heart failure"
+   ],
+   "when": "absent",
+   "lr": 0.45,
+   "lr_ci": [
+    0.38,
+    0.53
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.45",
+    "0.38",
+    "0.53"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "wang2005-pnd",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "paroxysmal nocturnal dyspnoea",
+   "finding_terms": [
+    "Paroxysmal nocturnal dyspnea",
+    "Paroxysmal nocturnal dyspnoea"
+   ],
+   "when": "present",
+   "lr": 2.6,
+   "lr_ci": [
+    1.5,
+    4.5
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.6",
+    "1.5",
+    "4.5"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "wang2005-s3",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "third heart sound (S3) gallop",
+   "finding_terms": [
+    "Third heart sound",
+    "Gallop rhythm",
+    "Third heart sound gallop"
+   ],
+   "when": "present",
+   "lr": 11,
+   "lr_ci": [
+    4.9,
+    25.0
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "11",
+    "4.9",
+    "25.0"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "wang2005-doe-absent",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "dyspnoea on exertion",
+   "finding_terms": [
+    "Dyspnea on exertion",
+    "Dyspnoea on exertion"
+   ],
+   "when": "absent",
+   "lr": 0.48,
+   "lr_ci": [
+    0.35,
+    0.67
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.48",
+    "0.35",
+    "0.67"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "wang2005-rales-absent",
+   "pmid": "16234501",
+   "diagnosis_text": "heart failure",
+   "diagnosis_terms": [
+    "Heart failure"
+   ],
+   "finding_text": "rales",
+   "finding_terms": [
+    "Crackles",
+    "Rales",
+    "Pulmonary crackles"
+   ],
+   "when": "absent",
+   "lr": 0.51,
+   "lr_ci": [
+    0.37,
+    0.7
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.51",
+    "0.37",
+    "0.70"
+   ],
+   "population": "adults presenting with dyspnoea",
+   "setting": "emergency department"
+  },
+  {
+   "id": "bent2002-dysuria",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "dysuria",
+   "finding_terms": [
+    "Dysuria"
+   ],
+   "when": "present",
+   "lr": 1.5,
+   "lr_ci": [
+    1.2,
+    2.0
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.5",
+    "1.2",
+    "2.0"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-frequency",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "frequency",
+   "finding_terms": [
+    "Frequency of micturition",
+    "Urinary frequency"
+   ],
+   "when": "present",
+   "lr": 1.8,
+   "lr_ci": [
+    1.1,
+    3.0
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.8",
+    "1.1",
+    "3.0"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-haematuria",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "hematuria",
+   "finding_terms": [
+    "Hematuria",
+    "Haematuria",
+    "Blood in urine"
+   ],
+   "when": "present",
+   "lr": 2.0,
+   "lr_ci": [
+    1.3,
+    2.9
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.0",
+    "1.3",
+    "2.9"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-backpain",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "back pain",
+   "finding_terms": [
+    "Backache",
+    "Back pain"
+   ],
+   "when": "present",
+   "lr": 1.6,
+   "lr_ci": [
+    1.2,
+    2.1
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.6",
+    "1.2",
+    "2.1"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-cvat",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "costovertebral angle tenderness",
+   "finding_terms": [
+    "Costovertebral angle tenderness",
+    "Renal angle tenderness",
+    "Tenderness of costovertebral angle"
+   ],
+   "when": "present",
+   "lr": 1.7,
+   "lr_ci": [
+    1.1,
+    2.5
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.7",
+    "1.1",
+    "2.5"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-dysuria-absent",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "dysuria",
+   "finding_terms": [
+    "Dysuria"
+   ],
+   "when": "absent",
+   "lr": 0.5,
+   "lr_ci": [
+    0.3,
+    0.7
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.5",
+    "0.3",
+    "0.7"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-backpain-absent",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "back pain",
+   "finding_terms": [
+    "Backache",
+    "Back pain"
+   ],
+   "when": "absent",
+   "lr": 0.8,
+   "lr_ci": [
+    0.7,
+    0.9
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.8",
+    "0.7",
+    "0.9"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-hx-vaginal-discharge",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "history of vaginal discharge",
+   "finding_terms": [
+    "Vaginal discharge"
+   ],
+   "when": "present",
+   "lr": 0.3,
+   "lr_ci": [
+    0.1,
+    0.9
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.3",
+    "0.1",
+    "0.9"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-hx-vaginal-irritation",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "history of vaginal irritation",
+   "finding_terms": [
+    "Vaginal irritation",
+    "Irritation of vagina"
+   ],
+   "when": "present",
+   "lr": 0.2,
+   "lr_ci": [
+    0.1,
+    0.9
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.2",
+    "0.1",
+    "0.9"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "bent2002-exam-vaginal-discharge",
+   "pmid": "12020306",
+   "diagnosis_text": "acute uncomplicated urinary tract infection",
+   "diagnosis_terms": [
+    "Urinary tract infection",
+    "Urinary tract infectious disease",
+    "Acute urinary tract infection"
+   ],
+   "finding_text": "vaginal discharge on examination",
+   "finding_terms": [
+    "Vaginal discharge on examination",
+    "O/E - vaginal discharge"
+   ],
+   "when": "present",
+   "lr": 0.7,
+   "lr_ci": [
+    0.5,
+    0.9
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.7",
+    "0.5",
+    "0.9"
+   ],
+   "population": "women presenting with 1 or more symptoms of urinary tract infection",
+   "setting": "not stated (clinical history and examination)"
+  },
+  {
+   "id": "benjaminse2006-lachman-present",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "Lachman test",
+   "finding_terms": [
+    "Lachman test positive",
+    "Positive Lachman test"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.85,
+   "sens_ci": [
+    0.83,
+    0.87
+   ],
+   "spec": 0.94,
+   "spec_ci": [
+    0.92,
+    0.95
+   ],
+   "as_written": [
+    "85",
+    "83",
+    "87",
+    "94",
+    "92",
+    "95"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "benjaminse2006-lachman-absent",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "Lachman test",
+   "finding_terms": [
+    "Lachman test positive",
+    "Positive Lachman test"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.85,
+   "sens_ci": [
+    0.83,
+    0.87
+   ],
+   "spec": 0.94,
+   "spec_ci": [
+    0.92,
+    0.95
+   ],
+   "as_written": [
+    "85",
+    "83",
+    "87",
+    "94",
+    "92",
+    "95"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "benjaminse2006-pivot-present",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "pivot shift test",
+   "finding_terms": [
+    "Pivot shift test positive",
+    "Positive pivot shift test"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.24,
+   "sens_ci": [
+    0.21,
+    0.27
+   ],
+   "spec": 0.98,
+   "spec_ci": [
+    0.96,
+    0.99
+   ],
+   "as_written": [
+    "24",
+    "21",
+    "27",
+    "98",
+    "96",
+    "99"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "benjaminse2006-pivot-absent",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "pivot shift test",
+   "finding_terms": [
+    "Pivot shift test positive",
+    "Positive pivot shift test"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.24,
+   "sens_ci": [
+    0.21,
+    0.27
+   ],
+   "spec": 0.98,
+   "spec_ci": [
+    0.96,
+    0.99
+   ],
+   "as_written": [
+    "24",
+    "21",
+    "27",
+    "98",
+    "96",
+    "99"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "benjaminse2006-drawer-chronic-present",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "anterior drawer test",
+   "finding_terms": [
+    "Anterior drawer test positive",
+    "Positive anterior drawer sign",
+    "Anterior drawer sign positive"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.92,
+   "sens_ci": [
+    0.88,
+    0.95
+   ],
+   "spec": 0.91,
+   "spec_ci": [
+    0.87,
+    0.94
+   ],
+   "as_written": [
+    "92",
+    "88",
+    "95",
+    "91",
+    "87",
+    "94"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI; chronic conditions only (not valid in acute)",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "benjaminse2006-drawer-chronic-absent",
+   "pmid": "16715828",
+   "diagnosis_text": "anterior cruciate ligament rupture",
+   "diagnosis_terms": [
+    "Rupture of anterior cruciate ligament",
+    "Tear of anterior cruciate ligament",
+    "Anterior cruciate ligament rupture"
+   ],
+   "finding_text": "anterior drawer test",
+   "finding_terms": [
+    "Anterior drawer test positive",
+    "Positive anterior drawer sign",
+    "Anterior drawer sign positive"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.92,
+   "sens_ci": [
+    0.88,
+    0.95
+   ],
+   "spec": 0.91,
+   "spec_ci": [
+    0.87,
+    0.94
+   ],
+   "as_written": [
+    "92",
+    "88",
+    "95",
+    "91",
+    "87",
+    "94"
+   ],
+   "population": "patients with suspected ACL rupture; reference arthroscopy, arthrotomy or MRI; chronic conditions only (not valid in acute)",
+   "setting": "mixed (28 studies)"
+  },
+  {
+   "id": "hegedus2007-mcmurray-present",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "McMurray's test",
+   "finding_terms": [
+    "McMurray test positive",
+    "Positive McMurray test",
+    "McMurray's sign positive"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.7,
+   "sens_ci": null,
+   "spec": 0.71,
+   "spec_ci": null,
+   "as_written": [
+    "70",
+    "71"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "hegedus2007-mcmurray-absent",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "McMurray's test",
+   "finding_terms": [
+    "McMurray test positive",
+    "Positive McMurray test",
+    "McMurray's sign positive"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.7,
+   "sens_ci": null,
+   "spec": 0.71,
+   "spec_ci": null,
+   "as_written": [
+    "70",
+    "71"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "hegedus2007-apley-present",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "Apley's test",
+   "finding_terms": [
+    "Apley test positive",
+    "Positive Apley test",
+    "Apley's grinding test positive"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.6,
+   "sens_ci": null,
+   "spec": 0.7,
+   "spec_ci": null,
+   "as_written": [
+    "60",
+    "70"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "hegedus2007-apley-absent",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "Apley's test",
+   "finding_terms": [
+    "Apley test positive",
+    "Positive Apley test",
+    "Apley's grinding test positive"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.6,
+   "sens_ci": null,
+   "spec": 0.7,
+   "spec_ci": null,
+   "as_written": [
+    "60",
+    "70"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "hegedus2007-jlt-present",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "joint line tenderness",
+   "finding_terms": [
+    "Joint line tenderness",
+    "Tenderness of knee joint line",
+    "Knee joint line tenderness"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.63,
+   "sens_ci": null,
+   "spec": 0.77,
+   "spec_ci": null,
+   "as_written": [
+    "63",
+    "77"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "hegedus2007-jlt-absent",
+   "pmid": "17939613",
+   "diagnosis_text": "torn meniscus of the knee",
+   "diagnosis_terms": [
+    "Tear of meniscus of knee",
+    "Meniscus tear of knee",
+    "Tear of meniscus"
+   ],
+   "finding_text": "joint line tenderness",
+   "finding_terms": [
+    "Joint line tenderness",
+    "Tenderness of knee joint line",
+    "Knee joint line tenderness"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.63,
+   "sens_ci": null,
+   "spec": 0.77,
+   "spec_ci": null,
+   "as_written": [
+    "63",
+    "77"
+   ],
+   "population": "patients with suspected torn tibial meniscus",
+   "setting": "mixed (18 studies)"
+  },
+  {
+   "id": "attia1999-jolt-present",
+   "pmid": "10411200",
+   "diagnosis_text": "acute meningitis",
+   "diagnosis_terms": [
+    "Meningitis"
+   ],
+   "finding_text": "jolt accentuation of headache",
+   "finding_terms": [
+    "Jolt accentuation of headache",
+    "Headache worse with head movement"
+   ],
+   "when": "present",
+   "lr": 2.2,
+   "lr_ci": null,
+   "sens": 1.0,
+   "sens_ci": null,
+   "spec": 0.54,
+   "spec_ci": null,
+   "as_written": [
+    "2.2",
+    "100",
+    "54"
+   ],
+   "population": "adults with fever and headache",
+   "setting": "not stated"
+  },
+  {
+   "id": "attia1999-jolt-absent",
+   "pmid": "10411200",
+   "diagnosis_text": "acute meningitis",
+   "diagnosis_terms": [
+    "Meningitis"
+   ],
+   "finding_text": "jolt accentuation of headache",
+   "finding_terms": [
+    "Jolt accentuation of headache",
+    "Headache worse with head movement"
+   ],
+   "when": "absent",
+   "lr": 0,
+   "lr_ci": null,
+   "sens": 1.0,
+   "sens_ci": null,
+   "spec": 0.54,
+   "spec_ci": null,
+   "as_written": [
+    "0",
+    "100",
+    "54"
+   ],
+   "population": "adults with fever and headache",
+   "setting": "not stated"
+  },
+  {
+   "id": "rothman2003-cloudy",
+   "pmid": "14506123",
+   "diagnosis_text": "acute otitis media",
+   "diagnosis_terms": [
+    "Acute otitis media"
+   ],
+   "finding_text": "cloudy tympanic membrane",
+   "finding_terms": [
+    "Cloudy tympanic membrane",
+    "Opaque tympanic membrane",
+    "Tympanic membrane opaque"
+   ],
+   "when": "present",
+   "lr": 34,
+   "lr_ci": [
+    28,
+    42
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "34",
+    "28",
+    "42"
+   ],
+   "population": "children; one study with tympanocentesis as reference, adjusted for verification bias",
+   "setting": "not stated"
+  },
+  {
+   "id": "rothman2003-bulging",
+   "pmid": "14506123",
+   "diagnosis_text": "acute otitis media",
+   "diagnosis_terms": [
+    "Acute otitis media"
+   ],
+   "finding_text": "bulging tympanic membrane",
+   "finding_terms": [
+    "Bulging tympanic membrane",
+    "Tympanic membrane bulging"
+   ],
+   "when": "present",
+   "lr": 51,
+   "lr_ci": [
+    36,
+    73
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "51",
+    "36",
+    "73"
+   ],
+   "population": "children; one study with tympanocentesis as reference, adjusted for verification bias",
+   "setting": "not stated"
+  },
+  {
+   "id": "rothman2003-immobile",
+   "pmid": "14506123",
+   "diagnosis_text": "acute otitis media",
+   "diagnosis_terms": [
+    "Acute otitis media"
+   ],
+   "finding_text": "distinctly immobile tympanic membrane",
+   "finding_terms": [
+    "Immobile tympanic membrane",
+    "Tympanic membrane immobile",
+    "Reduced mobility of tympanic membrane"
+   ],
+   "when": "present",
+   "lr": 31,
+   "lr_ci": [
+    26,
+    37
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "31",
+    "26",
+    "37"
+   ],
+   "population": "children; one study with tympanocentesis as reference, adjusted for verification bias",
+   "setting": "not stated"
+  },
+  {
+   "id": "rothman2003-red",
+   "pmid": "14506123",
+   "diagnosis_text": "acute otitis media",
+   "diagnosis_terms": [
+    "Acute otitis media"
+   ],
+   "finding_text": "distinctly red tympanic membrane",
+   "finding_terms": [
+    "Red tympanic membrane",
+    "Tympanic membrane red",
+    "Erythema of tympanic membrane"
+   ],
+   "when": "present",
+   "lr": 8.4,
+   "lr_ci": [
+    6.7,
+    11
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "8.4",
+    "6.7",
+    "11"
+   ],
+   "population": "children; one study with tympanocentesis as reference, adjusted for verification bias",
+   "setting": "not stated"
+  },
+  {
+   "id": "rothman2003-normal-colour",
+   "pmid": "14506123",
+   "diagnosis_text": "acute otitis media",
+   "diagnosis_terms": [
+    "Acute otitis media"
+   ],
+   "finding_text": "normal colour of tympanic membrane",
+   "finding_terms": [
+    "Tympanic membrane normal colour",
+    "Tympanic membrane normal color",
+    "Normal tympanic membrane"
+   ],
+   "when": "present",
+   "lr": 0.2,
+   "lr_ci": [
+    0.19,
+    0.21
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.2",
+    "0.19",
+    "0.21"
+   ],
+   "population": "children; one study with tympanocentesis as reference, adjusted for verification bias",
+   "setting": "not stated"
+  },
+  {
+   "id": "goodacre2005-malignancy",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "malignancy",
+   "finding_terms": [
+    "Malignant neoplastic disease",
+    "Malignant neoplasm",
+    "Cancer"
+   ],
+   "when": "present",
+   "lr": 2.71,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.71"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-prev-dvt",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "previous DVT",
+   "finding_terms": [
+    "History of deep venous thrombosis",
+    "History of deep vein thrombosis"
+   ],
+   "when": "present",
+   "lr": 2.25,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.25"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-immobilisation",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "recent immobilization",
+   "finding_terms": [
+    "Immobile",
+    "Immobility",
+    "Recent immobilisation"
+   ],
+   "when": "present",
+   "lr": 1.98,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.98"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-calf-diameter",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "difference in calf diameter",
+   "finding_terms": [
+    "Difference in calf circumference",
+    "Asymmetry of calf circumference"
+   ],
+   "when": "present",
+   "lr": 1.8,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.80"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-surgery",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "recent surgery",
+   "finding_terms": [
+    "Recent surgery",
+    "History of recent surgery",
+    "Postoperative state"
+   ],
+   "when": "present",
+   "lr": 1.76,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "1.76"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-calf-swelling-absent",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "calf swelling",
+   "finding_terms": [
+    "Swelling of calf",
+    "Calf swelling"
+   ],
+   "when": "absent",
+   "lr": 0.67,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.67"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "goodacre2005-calf-diameter-absent",
+   "pmid": "16027455",
+   "diagnosis_text": "deep venous thrombosis",
+   "diagnosis_terms": [
+    "Deep venous thrombosis",
+    "Deep vein thrombosis"
+   ],
+   "finding_text": "difference in calf diameter",
+   "finding_terms": [
+    "Difference in calf circumference",
+    "Asymmetry of calf circumference"
+   ],
+   "when": "absent",
+   "lr": 0.57,
+   "lr_ci": null,
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "0.57"
+   ],
+   "population": "patients with suspected deep venous thrombosis",
+   "setting": "mixed cohorts"
+  },
+  {
+   "id": "steiner2004-crt",
+   "pmid": "15187057",
+   "diagnosis_text": "dehydration (5% or more)",
+   "diagnosis_terms": [
+    "Dehydration"
+   ],
+   "finding_text": "abnormal capillary refill time",
+   "finding_terms": [
+    "Capillary refill time prolonged",
+    "Prolonged capillary refill time",
+    "Delayed capillary refill"
+   ],
+   "when": "present",
+   "lr": 4.1,
+   "lr_ci": [
+    1.7,
+    9.8
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "4.1",
+    "1.7",
+    "9.8"
+   ],
+   "population": "children 1 month to 5 years; predicting 5% dehydration",
+   "setting": "not stated"
+  },
+  {
+   "id": "steiner2004-turgor",
+   "pmid": "15187057",
+   "diagnosis_text": "dehydration (5% or more)",
+   "diagnosis_terms": [
+    "Dehydration"
+   ],
+   "finding_text": "abnormal skin turgor",
+   "finding_terms": [
+    "Decreased skin turgor",
+    "Reduced skin turgor",
+    "Poor skin turgor",
+    "Skin turgor decreased"
+   ],
+   "when": "present",
+   "lr": 2.5,
+   "lr_ci": [
+    1.5,
+    4.2
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.5",
+    "1.5",
+    "4.2"
+   ],
+   "population": "children 1 month to 5 years; predicting 5% dehydration",
+   "setting": "not stated"
+  },
+  {
+   "id": "steiner2004-resp-pattern",
+   "pmid": "15187057",
+   "diagnosis_text": "dehydration (5% or more)",
+   "diagnosis_terms": [
+    "Dehydration"
+   ],
+   "finding_text": "abnormal respiratory pattern",
+   "finding_terms": [
+    "Abnormal breathing",
+    "Abnormal respiratory pattern",
+    "Abnormal breathing pattern"
+   ],
+   "when": "present",
+   "lr": 2.0,
+   "lr_ci": [
+    1.5,
+    2.7
+   ],
+   "sens": null,
+   "sens_ci": null,
+   "spec": null,
+   "spec_ci": null,
+   "as_written": [
+    "2.0",
+    "1.5",
+    "2.7"
+   ],
+   "population": "children 1 month to 5 years; predicting 5% dehydration",
+   "setting": "not stated"
+  },
+  {
+   "id": "cts2023-phalen-present",
+   "pmid": "37366626",
+   "diagnosis_text": "carpal tunnel syndrome",
+   "diagnosis_terms": [
+    "Carpal tunnel syndrome"
+   ],
+   "finding_text": "Phalen test",
+   "finding_terms": [
+    "Phalen's test positive",
+    "Positive Phalen's test",
+    "Phalen sign positive"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.57,
+   "sens_ci": [
+    0.44,
+    0.68
+   ],
+   "spec": 0.67,
+   "spec_ci": [
+    0.52,
+    0.79
+   ],
+   "as_written": [
+    "0.57",
+    "0.44",
+    "0.68",
+    "0.67",
+    "0.52",
+    "0.79"
+   ],
+   "population": "patients assessed for carpal tunnel syndrome",
+   "setting": "mixed (meta-analysis of 7 studies each)"
+  },
+  {
+   "id": "cts2023-phalen-absent",
+   "pmid": "37366626",
+   "diagnosis_text": "carpal tunnel syndrome",
+   "diagnosis_terms": [
+    "Carpal tunnel syndrome"
+   ],
+   "finding_text": "Phalen test",
+   "finding_terms": [
+    "Phalen's test positive",
+    "Positive Phalen's test",
+    "Phalen sign positive"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.57,
+   "sens_ci": [
+    0.44,
+    0.68
+   ],
+   "spec": 0.67,
+   "spec_ci": [
+    0.52,
+    0.79
+   ],
+   "as_written": [
+    "0.57",
+    "0.44",
+    "0.68",
+    "0.67",
+    "0.52",
+    "0.79"
+   ],
+   "population": "patients assessed for carpal tunnel syndrome",
+   "setting": "mixed (meta-analysis of 7 studies each)"
+  },
+  {
+   "id": "cts2023-tinel-present",
+   "pmid": "37366626",
+   "diagnosis_text": "carpal tunnel syndrome",
+   "diagnosis_terms": [
+    "Carpal tunnel syndrome"
+   ],
+   "finding_text": "Tinel sign",
+   "finding_terms": [
+    "Tinel's sign positive",
+    "Positive Tinel's sign",
+    "Tinel sign positive"
+   ],
+   "when": "present",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.45,
+   "sens_ci": [
+    0.34,
+    0.57
+   ],
+   "spec": 0.78,
+   "spec_ci": [
+    0.6,
+    0.89
+   ],
+   "as_written": [
+    "0.45",
+    "0.34",
+    "0.57",
+    "0.78",
+    "0.60",
+    "0.89"
+   ],
+   "population": "patients assessed for carpal tunnel syndrome",
+   "setting": "mixed (meta-analysis of 7 studies each)"
+  },
+  {
+   "id": "cts2023-tinel-absent",
+   "pmid": "37366626",
+   "diagnosis_text": "carpal tunnel syndrome",
+   "diagnosis_terms": [
+    "Carpal tunnel syndrome"
+   ],
+   "finding_text": "Tinel sign",
+   "finding_terms": [
+    "Tinel's sign positive",
+    "Positive Tinel's sign",
+    "Tinel sign positive"
+   ],
+   "when": "absent",
+   "lr": null,
+   "lr_ci": null,
+   "sens": 0.45,
+   "sens_ci": [
+    0.34,
+    0.57
+   ],
+   "spec": 0.78,
+   "spec_ci": [
+    0.6,
+    0.89
+   ],
+   "as_written": [
+    "0.45",
+    "0.34",
+    "0.57",
+    "0.78",
+    "0.60",
+    "0.89"
+   ],
+   "population": "patients assessed for carpal tunnel syndrome",
+   "setting": "mixed (meta-analysis of 7 studies each)"
+  }
+ ]
+}
