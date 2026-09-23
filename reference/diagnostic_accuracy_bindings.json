@@ -2,8 +2,8 @@
  "_note": "Output of scripts/bind_diagnostic_accuracy.py. Exact matches only; null = no exact SNOMED CT-AU term (a candidate, not an edge).",
  "edition": "http://snomed.info/sct/32506021000036107/version/20260831",
  "server": "https://r4.ontoserver.csiro.au/fhir",
- "bound_both": 36,
- "records": 49,
+ "bound_both": 232,
+ "records": 398,
  "results": [
   {
    "id": "wang2005-hx-hf-present",
@@ -841,6 +841,6341 @@
     "matched_term": "Carpal tunnel syndrome",
     "method": "exact_display"
    }
+  },
+  {
+   "id": "pmid10086438-dry-axilla",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "816082000",
+    "display": "Hypovolaemia",
+    "matched_term": "Hypovolaemia",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "766812005",
+     "display": "Trichodysplasia xeroderma syndrome"
+    },
+    {
+     "concept_id": "773700005",
+     "display": "Leukonychia totalis, acanthosis-nigricans-like lesions, abnormal hair syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid10086438-dry-mucosa-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "816082000",
+    "display": "Hypovolaemia",
+    "matched_term": "Hypovolaemia",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid10086438-furrowed-tongue-absent",
+   "finding": {
+    "concept_id": "52368004",
+    "display": "Plicated tongue",
+    "matched_term": "Furrowed tongue",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "816082000",
+    "display": "Hypovolaemia",
+    "matched_term": "Hypovolaemia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid10376577-edm-absent",
+   "finding": {
+    "concept_id": "9559002",
+    "display": "Early diastolic murmur",
+    "matched_term": "Early diastolic murmur",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "60234000",
+    "display": "Aortic valve regurgitation",
+    "matched_term": "Aortic valve regurgitation",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid10376577-occlusion-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "60234000",
+    "display": "Aortic valve regurgitation",
+    "matched_term": "Aortic valve regurgitation",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "87224000",
+     "display": "Transient arterial retinal occlusion"
+    },
+    {
+     "concept_id": "721834007",
+     "display": "Hyperinsulinism due to uncoupling protein 2 deficiency"
+    },
+    {
+     "concept_id": "1169365006",
+     "display": "Aquagenic palmoplantar keratoderma"
+    }
+   ]
+  },
+  {
+   "id": "pmid10376577-occlusion-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "60234000",
+    "display": "Aortic valve regurgitation",
+    "matched_term": "Aortic valve regurgitation",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "87224000",
+     "display": "Transient arterial retinal occlusion"
+    },
+    {
+     "concept_id": "721834007",
+     "display": "Hyperinsulinism due to uncoupling protein 2 deficiency"
+    },
+    {
+     "concept_id": "1169365006",
+     "display": "Aquagenic palmoplantar keratoderma"
+    }
+   ]
+  },
+  {
+   "id": "pmid10517431-cbe-present",
+   "finding": {
+    "concept_id": "1000701000112100",
+    "display": "Breast examination abnormal",
+    "matched_term": "Breast examination abnormal",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "254837009",
+    "display": "Malignant neoplasm of breast",
+    "matched_term": "Malignant neoplasm of breast",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid10517431-cbe-absent",
+   "finding": {
+    "concept_id": "1000701000112100",
+    "display": "Breast examination abnormal",
+    "matched_term": "Breast examination abnormal",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "254837009",
+    "display": "Malignant neoplasm of breast",
+    "matched_term": "Malignant neoplasm of breast",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid10865306-weak-abduction",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "366694002",
+     "display": "Range of thumb abduction - finding"
+    },
+    {
+     "concept_id": "299165003",
+     "display": "Decreased active range of thumb abduction"
+    },
+    {
+     "concept_id": "299164004",
+     "display": "Increased active range of thumb abduction"
+    },
+    {
+     "concept_id": "299166002",
+     "display": "No active range of thumb abduction"
+    },
+    {
+     "concept_id": "299163005",
+     "display": "Normal active range of thumb abduction"
+    }
+   ]
+  },
+  {
+   "id": "pmid10865306-weak-abduction-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid11147989-tonsillar-exudate",
+   "finding": {
+    "concept_id": "301791008",
+    "display": "Exudate on tonsils",
+    "matched_term": "Exudate on tonsils",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid11147989-pharyngeal-exudate",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid11147989-strep-exposure",
+   "finding": {
+    "concept_id": "444400000",
+    "display": "Exposure to Streptococcus",
+    "matched_term": "Exposure to Streptococcus",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid11147989-tender-nodes-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "127090004",
+     "display": "Anterior cervical lymphadenopathy"
+    },
+    {
+     "concept_id": "298477006",
+     "display": "Cervical spine tender"
+    },
+    {
+     "concept_id": "300942003",
+     "display": "Tenderness of lymph node"
+    },
+    {
+     "concept_id": "54084005",
+     "display": "Cervical tuberculous lymphadenitis"
+    },
+    {
+     "concept_id": "687761000119100",
+     "display": "Reticulosarcoma of lymph nodes of neck"
+    }
+   ]
+  },
+  {
+   "id": "pmid11147989-tonsil-enlargement-absent",
+   "finding": {
+    "concept_id": "46689006",
+    "display": "Hypertrophy of tonsils",
+    "matched_term": "Tonsillar hypertrophy",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid11147989-exudate-absent",
+   "finding": {
+    "concept_id": "301791008",
+    "display": "Exudate on tonsils",
+    "matched_term": "Exudate on tonsils",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid11368703-hx-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "91936005",
+    "display": "Allergy to penicillin",
+    "matched_term": "Allergy to penicillin",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "91936005",
+     "display": "Allergy to penicillin"
+    },
+    {
+     "concept_id": "294494002",
+     "display": "Benethamine penicillin allergy"
+    },
+    {
+     "concept_id": "160469004",
+     "display": "FH: Allergy"
+    },
+    {
+     "concept_id": "160268005",
+     "display": "No FH: Allergy"
+    },
+    {
+     "concept_id": "294497009",
+     "display": "Phenoxymethylpenicillin allergy"
+    }
+   ]
+  },
+  {
+   "id": "pmid11368703-hx-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "91936005",
+    "display": "Allergy to penicillin",
+    "matched_term": "Allergy to penicillin",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "91936005",
+     "display": "Allergy to penicillin"
+    },
+    {
+     "concept_id": "294494002",
+     "display": "Benethamine penicillin allergy"
+    },
+    {
+     "concept_id": "160469004",
+     "display": "FH: Allergy"
+    },
+    {
+     "concept_id": "160268005",
+     "display": "No FH: Allergy"
+    },
+    {
+     "concept_id": "294497009",
+     "display": "Phenoxymethylpenicillin allergy"
+    }
+   ]
+  },
+  {
+   "id": "pmid11466101-clubbing-lung-ca",
+   "finding": {
+    "concept_id": "30760008",
+    "display": "Finger clubbing",
+    "matched_term": "Finger clubbing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "363358000",
+    "display": "Malignant neoplasm of lung",
+    "matched_term": "Malignant neoplasm of lung",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11466101-clubbing-crohn",
+   "finding": {
+    "concept_id": "30760008",
+    "display": "Finger clubbing",
+    "matched_term": "Finger clubbing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "34000006",
+    "display": "Crohn's disease",
+    "matched_term": "Crohn's disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11466101-clubbing-uc",
+   "finding": {
+    "concept_id": "30760008",
+    "display": "Finger clubbing",
+    "matched_term": "Finger clubbing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "64766004",
+    "display": "Ulcerative colitis",
+    "matched_term": "Ulcerative colitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-drawer-present",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-drawer-absent",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-lachman-present",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-lachman-absent",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-mcmurray-present",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-mcmurray-absent",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11585485-jlt-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid11585485-jlt-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid11980527-sudden-onset-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233994002",
+    "display": "Dissection of thoracic aorta",
+    "matched_term": "Dissection of thoracic aorta",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1296686009",
+     "display": "Delayed onset muscle pain"
+    },
+    {
+     "concept_id": "427128002",
+     "display": "Gradual onset of pain"
+    },
+    {
+     "concept_id": "428926002",
+     "display": "Pain onset at rest"
+    },
+    {
+     "concept_id": "429038000",
+     "display": "Pain onset during sleep"
+    },
+    {
+     "concept_id": "429742007",
+     "display": "Pain onset during moderate exercise"
+    }
+   ]
+  },
+  {
+   "id": "pmid11980527-diastolic-murmur",
+   "finding": {
+    "concept_id": "30782001",
+    "display": "Diastolic murmur",
+    "matched_term": "Diastolic murmur",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233994002",
+    "display": "Dissection of thoracic aorta",
+    "matched_term": "Dissection of thoracic aorta",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid11980527-pulse-differential",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233994002",
+    "display": "Dissection of thoracic aorta",
+    "matched_term": "Dissection of thoracic aorta",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid12588275-night-sweats",
+   "finding": {
+    "concept_id": "42984000",
+    "display": "Night sweats",
+    "matched_term": "Night sweats",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "161541000119104",
+    "display": "Perimenopausal state",
+    "matched_term": "Perimenopausal state",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15014046-rigors",
+   "finding": {
+    "concept_id": "38880002",
+    "display": "Rigor",
+    "matched_term": "Rigors",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15014046-sweating",
+   "finding": {
+    "concept_id": "415690000",
+    "display": "Sweating",
+    "matched_term": "Sweating",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15014046-systemic-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "702809001",
+     "display": "Drug reaction with eosinophilia and systemic symptoms"
+    },
+    {
+     "concept_id": "702811005",
+     "display": "Drug reaction with eosinophilia and systemic symptoms caused by strontium ranelate"
+    },
+    {
+     "concept_id": "707436001",
+     "display": "Isolated pulmonary capillaritis"
+    },
+    {
+     "concept_id": "1335868004",
+     "display": "Idiopathic catatonia"
+    },
+    {
+     "concept_id": "1335905003",
+     "display": "Skeeter syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid15014046-cough-absent",
+   "finding": {
+    "concept_id": "49727002",
+    "display": "Cough",
+    "matched_term": "Cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15014046-bedbound-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "160684002",
+     "display": "Confined to chair"
+    },
+    {
+     "concept_id": "52231000",
+     "display": "Chronic ulcerative proctitis"
+    },
+    {
+     "concept_id": "80353004",
+     "display": "Enamel caries"
+    },
+    {
+     "concept_id": "286173008",
+     "display": "Able to make bed"
+    },
+    {
+     "concept_id": "286174002",
+     "display": "Unable to make bed"
+    }
+   ]
+  },
+  {
+   "id": "pmid15162113-phalen-present",
+   "finding": {
+    "concept_id": "299961008",
+    "display": "Phalen's test positive",
+    "matched_term": "Phalen's test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15162113-phalen-absent",
+   "finding": {
+    "concept_id": "299961008",
+    "display": "Phalen's test positive",
+    "matched_term": "Phalen's test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15162113-tinel-present",
+   "finding": {
+    "concept_id": "281632005",
+    "display": "Tinel's sign positive",
+    "matched_term": "Tinel's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15162113-tinel-absent",
+   "finding": {
+    "concept_id": "281632005",
+    "display": "Tinel's sign positive",
+    "matched_term": "Tinel's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid15162113-compression-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298699009",
+     "display": "Head compression test negative"
+    },
+    {
+     "concept_id": "298698001",
+     "display": "Head compression test positive"
+    },
+    {
+     "concept_id": "366607003",
+     "display": "Patellar compression test - finding"
+    },
+    {
+     "concept_id": "299400004",
+     "display": "Patellar compression test negative"
+    },
+    {
+     "concept_id": "299399006",
+     "display": "Patellar compression test positive"
+    }
+   ]
+  },
+  {
+   "id": "pmid15162113-compression-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57406009",
+    "display": "Carpal tunnel syndrome",
+    "matched_term": "Carpal tunnel syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298699009",
+     "display": "Head compression test negative"
+    },
+    {
+     "concept_id": "298698001",
+     "display": "Head compression test positive"
+    },
+    {
+     "concept_id": "366607003",
+     "display": "Patellar compression test - finding"
+    },
+    {
+     "concept_id": "299400004",
+     "display": "Patellar compression test negative"
+    },
+    {
+     "concept_id": "299399006",
+     "display": "Patellar compression test positive"
+    }
+   ]
+  },
+  {
+   "id": "pmid16449619-claudication",
+   "finding": {
+    "concept_id": "63491006",
+    "display": "Intermittent claudication",
+    "matched_term": "Intermittent claudication",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-femoral-bruit",
+   "finding": {
+    "concept_id": "418869005",
+    "display": "Femoral bruit",
+    "matched_term": "Femoral bruit",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-pulse-abn-asym",
+   "finding": {
+    "concept_id": "73155008",
+    "display": "Abnormal peripheral pulse",
+    "matched_term": "Abnormal peripheral pulse",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-cool-skin",
+   "finding": {
+    "concept_id": "703883009",
+    "display": "Cold skin",
+    "matched_term": "Cold skin",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-bruit-any",
+   "finding": {
+    "concept_id": "30846001",
+    "display": "Arterial bruit",
+    "matched_term": "Arterial bruit",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-pulse-abn-sym",
+   "finding": {
+    "concept_id": "73155008",
+    "display": "Abnormal peripheral pulse",
+    "matched_term": "Abnormal peripheral pulse",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-bruit-absent",
+   "finding": {
+    "concept_id": "30846001",
+    "display": "Arterial bruit",
+    "matched_term": "Arterial bruit",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid16449619-pulse-abn-absent",
+   "finding": {
+    "concept_id": "73155008",
+    "display": "Abnormal peripheral pulse",
+    "matched_term": "Abnormal peripheral pulse",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid17720798-neer-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid17720798-neer-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid17720798-hawkins-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid17720798-hawkins-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid17720798-speed-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202332000",
+    "display": "Glenoid labrum tear",
+    "matched_term": "Tear of glenoid labrum",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid17720798-speed-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202332000",
+    "display": "Glenoid labrum tear",
+    "matched_term": "Tear of glenoid labrum",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid18089542-syncope",
+   "finding": {
+    "concept_id": "271594007",
+    "display": "Syncope",
+    "matched_term": "Syncope",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-shock",
+   "finding": {
+    "concept_id": "27942005",
+    "display": "Shock",
+    "matched_term": "Shock",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-thrombophlebitis",
+   "finding": {
+    "concept_id": "64156001",
+    "display": "Thrombophlebitis",
+    "matched_term": "Thrombophlebitis",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-current-dvt",
+   "finding": {
+    "concept_id": "128053003",
+    "display": "Deep venous thrombosis",
+    "matched_term": "Deep venous thrombosis",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-leg-swelling",
+   "finding": {
+    "concept_id": "449614009",
+    "display": "Swelling of lower limb",
+    "matched_term": "Swelling of lower limb",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-sudden-dyspnoea",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "763129001",
+     "display": "Dermoid cyst of neck"
+    },
+    {
+     "concept_id": "771236000",
+     "display": "Visceral calciphylaxis"
+    }
+   ]
+  },
+  {
+   "id": "pmid18089542-active-cancer",
+   "finding": {
+    "concept_id": "363346000",
+    "display": "Malignant neoplastic disease",
+    "matched_term": "Malignant neoplastic disease",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-recent-surgery",
+   "finding": {
+    "concept_id": "19585003",
+    "display": "Postoperative state",
+    "matched_term": "Postoperative state",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-haemoptysis",
+   "finding": {
+    "concept_id": "66857006",
+    "display": "Haemoptysis",
+    "matched_term": "Haemoptysis",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-leg-pain",
+   "finding": {
+    "concept_id": "10601006",
+    "display": "Pain in lower limb",
+    "matched_term": "Pain in lower limb",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-sudden-dyspnoea-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "763129001",
+     "display": "Dermoid cyst of neck"
+    },
+    {
+     "concept_id": "771236000",
+     "display": "Visceral calciphylaxis"
+    }
+   ]
+  },
+  {
+   "id": "pmid18089542-dyspnoea-absent",
+   "finding": {
+    "concept_id": "267036007",
+    "display": "Dyspnoea",
+    "matched_term": "Dyspnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18089542-tachypnoea-absent",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "59282003",
+    "display": "Pulmonary embolism",
+    "matched_term": "Pulmonary embolism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18159059-suprapubic",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid18159059-uncircumcised",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid18159059-circumcised",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "184002001",
+     "display": "Circumcision requested"
+    },
+    {
+     "concept_id": "428075003",
+     "display": "H/O: circumcision"
+    },
+    {
+     "concept_id": "428864001",
+     "display": "Complication of neonatal circumcision"
+    },
+    {
+     "concept_id": "78331000119108",
+     "display": "Excess foreskin after circumcision"
+    },
+    {
+     "concept_id": "1379261000168104",
+     "display": "H/O: repair of type 3 female genital mutilation"
+    }
+   ]
+  },
+  {
+   "id": "pmid18159059-abdo-pain",
+   "finding": {
+    "concept_id": "21522001",
+    "display": "Abdominal pain",
+    "matched_term": "Abdominal pain",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18159059-back-pain",
+   "finding": {
+    "concept_id": "161891005",
+    "display": "Backache",
+    "matched_term": "Backache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18159059-new-incontinence",
+   "finding": {
+    "concept_id": "165232002",
+    "display": "Urinary incontinence",
+    "matched_term": "Urinary incontinence",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18177783-major-trauma-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1254774007",
+     "display": "Traumatic tear of pectoralis tendon"
+    },
+    {
+     "concept_id": "11794401000119105",
+     "display": "Traumatic tear of left pectoralis tendon"
+    },
+    {
+     "concept_id": "11794361000119101",
+     "display": "Traumatic tear of right pectoralis tendon"
+    },
+    {
+     "concept_id": "1396770008",
+     "display": "Type 2 intestinal failure"
+    }
+   ]
+  },
+  {
+   "id": "pmid18177783-major-trauma-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1254774007",
+     "display": "Traumatic tear of pectoralis tendon"
+    },
+    {
+     "concept_id": "11794401000119105",
+     "display": "Traumatic tear of left pectoralis tendon"
+    },
+    {
+     "concept_id": "11794361000119101",
+     "display": "Traumatic tear of right pectoralis tendon"
+    },
+    {
+     "concept_id": "1396770008",
+     "display": "Type 2 intestinal failure"
+    }
+   ]
+  },
+  {
+   "id": "pmid18177783-pain-tenderness-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1397014009",
+     "display": "Levator ani syndrome"
+    },
+    {
+     "concept_id": "230648001",
+     "display": "Abdominal cutaneous nerve entrapment syndrome"
+    },
+    {
+     "concept_id": "405266003",
+     "display": "Acute somatic dysfunction"
+    },
+    {
+     "concept_id": "1234828008",
+     "display": "Osteofibrous dysplasia"
+    },
+    {
+     "concept_id": "1222676004",
+     "display": "Mueller Weiss syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid18177783-pain-tenderness-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1397014009",
+     "display": "Levator ani syndrome"
+    },
+    {
+     "concept_id": "230648001",
+     "display": "Abdominal cutaneous nerve entrapment syndrome"
+    },
+    {
+     "concept_id": "405266003",
+     "display": "Acute somatic dysfunction"
+    },
+    {
+     "concept_id": "1234828008",
+     "display": "Osteofibrous dysplasia"
+    },
+    {
+     "concept_id": "1222676004",
+     "display": "Mueller Weiss syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid18177783-distracting-injury-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "127278005",
+     "display": "Injury of upper limb"
+    },
+    {
+     "concept_id": "284554003",
+     "display": "Avulsion - injury"
+    },
+    {
+     "concept_id": "276464002",
+     "display": "Injury of anus"
+    },
+    {
+     "concept_id": "242056005",
+     "display": "Accidental injury"
+    },
+    {
+     "concept_id": "125603006",
+     "display": "Injury of ankle"
+    }
+   ]
+  },
+  {
+   "id": "pmid18177783-distracting-injury-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "50448004",
+    "display": "Fracture of vertebral column",
+    "matched_term": "Fracture of vertebra",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "127278005",
+     "display": "Injury of upper limb"
+    },
+    {
+     "concept_id": "284554003",
+     "display": "Avulsion - injury"
+    },
+    {
+     "concept_id": "276464002",
+     "display": "Injury of anus"
+    },
+    {
+     "concept_id": "242056005",
+     "display": "Accidental injury"
+    },
+    {
+     "concept_id": "125603006",
+     "display": "Injury of ankle"
+    }
+   ]
+  },
+  {
+   "id": "pmid18307844-sweating",
+   "finding": {
+    "concept_id": "415690000",
+    "display": "Sweating",
+    "matched_term": "Sweating",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18842141-displaced-apex",
+   "finding": {
+    "concept_id": "248661003",
+    "display": "Apex beat displaced",
+    "matched_term": "Apex beat displaced",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "134401001",
+    "display": "Left ventricular systolic dysfunction",
+    "matched_term": "Left ventricular systolic dysfunction",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18854541-mucus",
+   "finding": {
+    "concept_id": "271864008",
+    "display": "Mucus in faeces",
+    "matched_term": "Mucus in stool",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "10743008",
+    "display": "Irritable bowel syndrome",
+    "matched_term": "Irritable bowel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18854541-mucus-absent",
+   "finding": {
+    "concept_id": "271864008",
+    "display": "Mucus in faeces",
+    "matched_term": "Mucus in stool",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "10743008",
+    "display": "Irritable bowel syndrome",
+    "matched_term": "Irritable bowel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid18854541-looser-stools",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "10743008",
+    "display": "Irritable bowel syndrome",
+    "matched_term": "Irritable bowel syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "428926002",
+     "display": "Pain onset at rest"
+    },
+    {
+     "concept_id": "1197489003",
+     "display": "Familial chylomicronemia syndrome"
+    },
+    {
+     "concept_id": "716685003",
+     "display": "Solitary rectal ulcer syndrome"
+    },
+    {
+     "concept_id": "766977007",
+     "display": "Severe early-onset axonal neuropathy due to mitofusin 2 deficiency"
+    },
+    {
+     "concept_id": "1279841001",
+     "display": "Undifferentiated carcinoma with osteoclast-like giant cells of pancreas"
+    }
+   ]
+  },
+  {
+   "id": "pmid18854541-lower-abdo-pain-absent",
+   "finding": {
+    "concept_id": "54586004",
+    "display": "Lower abdominal pain",
+    "matched_term": "Lower abdominal pain",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "10743008",
+    "display": "Irritable bowel syndrome",
+    "matched_term": "Irritable bowel syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-dyspnoea-present",
+   "finding": {
+    "concept_id": "267036007",
+    "display": "Dyspnoea",
+    "matched_term": "Dyspnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-dyspnoea-absent",
+   "finding": {
+    "concept_id": "267036007",
+    "display": "Dyspnoea",
+    "matched_term": "Dyspnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-oedema-present",
+   "finding": {
+    "concept_id": "267038008",
+    "display": "Oedema",
+    "matched_term": "Oedema",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-oedema-absent",
+   "finding": {
+    "concept_id": "267038008",
+    "display": "Oedema",
+    "matched_term": "Oedema",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-added-sounds-present",
+   "finding": {
+    "concept_id": "248690009",
+    "display": "Added heart sounds",
+    "matched_term": "Added heart sounds",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19586584-added-sounds-absent",
+   "finding": {
+    "concept_id": "248690009",
+    "display": "Added heart sounds",
+    "matched_term": "Added heart sounds",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "84114007",
+    "display": "Heart failure",
+    "matched_term": "Heart failure",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19960176-thessaly-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid19960176-thessaly-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid19960176-mcmurray-present",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19960176-mcmurray-absent",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid19960176-jlt-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid19960176-jlt-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid19960176-apley-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "716005004",
+     "display": "Fetal diethylstilbestrol syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid19960176-apley-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "716005004",
+     "display": "Fetal diethylstilbestrol syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid19960176-ege-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid19960176-ege-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid20132979-parental-concern",
+   "finding": null,
+   "diagnosis": null,
+   "finding_candidates": [
+    {
+     "concept_id": "401141001",
+     "display": "Parental concern about child"
+    }
+   ],
+   "diagnosis_candidates": [
+    {
+     "concept_id": "1172895006",
+     "display": "Mendelian susceptibility to mycobacterial disease"
+    }
+   ]
+  },
+  {
+   "id": "pmid20132979-clinician-instinct",
+   "finding": null,
+   "diagnosis": null,
+   "finding_candidates": [
+    {
+     "concept_id": "1251556002",
+     "display": "Belief that hinders food and/or nutrition behaviour change"
+    },
+    {
+     "concept_id": "1365930008",
+     "display": "Behaviour arrest epileptic seizure of unknown onset"
+    },
+    {
+     "concept_id": "1365928006",
+     "display": "Epileptic spasms of unknown onset"
+    },
+    {
+     "concept_id": "1365929003",
+     "display": "Impaired awareness epileptic seizure of unknown onset"
+    },
+    {
+     "concept_id": "1365927001",
+     "display": "Tonic epileptic seizure of unknown onset"
+    }
+   ],
+   "diagnosis_candidates": [
+    {
+     "concept_id": "1172895006",
+     "display": "Mendelian susceptibility to mycobacterial disease"
+    }
+   ]
+  },
+  {
+   "id": "pmid20969801-dysuria",
+   "finding": {
+    "concept_id": "49650001",
+    "display": "Dysuria",
+    "matched_term": "Dysuria",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20969801-frequency",
+   "finding": {
+    "concept_id": "300471006",
+    "display": "Finding of frequency of urination",
+    "matched_term": "Frequency of micturition",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20969801-haematuria",
+   "finding": {
+    "concept_id": "34436003",
+    "display": "Haematuria",
+    "matched_term": "Haematuria",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20969801-nocturia",
+   "finding": {
+    "concept_id": "139394000",
+    "display": "Nocturia",
+    "matched_term": "Nocturia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20969801-urgency",
+   "finding": {
+    "concept_id": "75088002",
+    "display": "Urgent desire to urinate",
+    "matched_term": "Urgent desire to urinate",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20969801-vaginal-discharge",
+   "finding": {
+    "concept_id": "271939006",
+    "display": "Vaginal discharge",
+    "matched_term": "Vaginal discharge",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "68566005",
+    "display": "Urinary tract infection",
+    "matched_term": "Urinary tract infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-hx-seizures",
+   "finding": {
+    "concept_id": "91175000",
+    "display": "Seizure",
+    "matched_term": "Seizure",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-hx-reduced-feeds",
+   "finding": {
+    "concept_id": "299698007",
+    "display": "Poor feeding",
+    "matched_term": "Poor feeding",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-jaundice",
+   "finding": {
+    "concept_id": "18165001",
+    "display": "Jaundice",
+    "matched_term": "Jaundice",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-toxic",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "48088006",
+     "display": "Chlorinated hydrocarbon toxicity"
+    },
+    {
+     "concept_id": "8260003",
+     "display": "Organophosphate poisoning"
+    },
+    {
+     "concept_id": "233775004",
+     "display": "Pulmonary mycotoxicosis"
+    },
+    {
+     "concept_id": "241894006",
+     "display": "Car shampoo or wax causing toxic effect"
+    },
+    {
+     "concept_id": "241797005",
+     "display": "Triazine or triazole herbicide causing toxic effect"
+    }
+   ]
+  },
+  {
+   "id": "pmid20974781-meningeal-signs",
+   "finding": {
+    "concept_id": "437986008",
+    "display": "Meningism",
+    "matched_term": "Meningism",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-neck-stiffness",
+   "finding": {
+    "concept_id": "161882006",
+    "display": "Stiff neck",
+    "matched_term": "Neck stiffness",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-bulging-fontanelle",
+   "finding": {
+    "concept_id": "103019006",
+    "display": "Bulging fontanelle",
+    "matched_term": "Bulging fontanelle",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-kernig",
+   "finding": {
+    "concept_id": "124743003",
+    "display": "Kernig's sign positive",
+    "matched_term": "Kernig's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-tone-up",
+   "finding": {
+    "concept_id": "56731001",
+    "display": "Hypertonia",
+    "matched_term": "Increased muscle tone",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-fever-40",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "699716008",
+     "display": "Age more than 40 years"
+    },
+    {
+     "concept_id": "426000000",
+     "display": "Fever greater than 38 Celsius"
+    },
+    {
+     "concept_id": "1363046001",
+     "display": "Iridotrabecular contact for more than 180 degrees"
+    },
+    {
+     "concept_id": "254282004",
+     "display": "Female with more than three X chromosomes"
+    },
+    {
+     "concept_id": "110442003",
+     "display": "Barr body, more than one present per cell"
+    }
+   ]
+  },
+  {
+   "id": "pmid20974781-brudzinski",
+   "finding": {
+    "concept_id": "124744009",
+    "display": "Brudzinski's sign positive",
+    "matched_term": "Brudzinski's sign positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-meningeal-signs-absent",
+   "finding": {
+    "concept_id": "437986008",
+    "display": "Meningism",
+    "matched_term": "Meningism",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid20974781-fever-absent",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "7180009",
+    "display": "Meningitis",
+    "matched_term": "Meningitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid21843213-joint-surgery",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "396234004",
+    "display": "Infective arthritis",
+    "matched_term": "Septic arthritis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid21843213-skin-infection-prosthesis",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "396234004",
+    "display": "Infective arthritis",
+    "matched_term": "Septic arthritis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "213121005",
+     "display": "Prosthetic joint infection"
+    },
+    {
+     "concept_id": "1303941004",
+     "display": "Infection associated with prosthetic joint of wrist region"
+    },
+    {
+     "concept_id": "12199761000119106",
+     "display": "Infection associated with prosthesis of left ankle joint"
+    },
+    {
+     "concept_id": "12204391000119104",
+     "display": "Infection associated with prosthesis of right ankle joint"
+    },
+    {
+     "concept_id": "12199561000119104",
+     "display": "Infection associated with prosthesis of left knee joint"
+    }
+   ]
+  },
+  {
+   "id": "pmid22048053-scarlatiniform",
+   "finding": {
+    "concept_id": "65036008",
+    "display": "Erythema scarlatiniforme",
+    "matched_term": "Scarlatiniform rash",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid22048053-petechiae",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22048053-exudates",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22048053-vomiting",
+   "finding": {
+    "concept_id": "422400008",
+    "display": "Vomiting",
+    "matched_term": "Vomiting",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid22048053-tender-nodes",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "43878008",
+    "display": "Streptococcal sore throat",
+    "matched_term": "Streptococcal pharyngitis",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298477006",
+     "display": "Cervical spine tender"
+    },
+    {
+     "concept_id": "300942003",
+     "display": "Tenderness of lymph node"
+    },
+    {
+     "concept_id": "54084005",
+     "display": "Cervical tuberculous lymphadenitis"
+    },
+    {
+     "concept_id": "94397007",
+     "display": "Metastatic malignant neoplasm to lymph nodes of neck"
+    },
+    {
+     "concept_id": "687761000119100",
+     "display": "Reticulosarcoma of lymph nodes of neck"
+    }
+   ]
+  },
+  {
+   "id": "pmid22496266-rebound",
+   "finding": {
+    "concept_id": "35611005",
+    "display": "Rebound tenderness",
+    "matched_term": "Rebound tenderness",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128069005",
+    "display": "Injury of abdomen",
+    "matched_term": "Injury of abdomen",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid22496266-hypotension",
+   "finding": {
+    "concept_id": "45007003",
+    "display": "Hypotension",
+    "matched_term": "Hypotension",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128069005",
+    "display": "Injury of abdomen",
+    "matched_term": "Injury of abdomen",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid22496266-distension",
+   "finding": {
+    "concept_id": "41931001",
+    "display": "Distension of abdomen",
+    "matched_term": "Abdominal distension",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "128069005",
+    "display": "Injury of abdomen",
+    "matched_term": "Injury of abdomen",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid22496266-guarding",
+   "finding": {
+    "concept_id": "249545003",
+    "display": "Abdominal guarding",
+    "matched_term": "Abdominal guarding",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128069005",
+    "display": "Injury of abdomen",
+    "matched_term": "Injury of abdomen",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid22496266-tenderness-absent",
+   "finding": {
+    "concept_id": "43478001",
+    "display": "Abdominal tenderness",
+    "matched_term": "Abdominal tenderness",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128069005",
+    "display": "Injury of abdomen",
+    "matched_term": "Injury of abdomen",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid22773322-neer-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22773322-neer-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22773322-hawkins-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22773322-hawkins-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid22773322-painful-arc-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298858000",
+     "display": "Shoulder joint - painful arc"
+    }
+   ]
+  },
+  {
+   "id": "pmid22773322-painful-arc-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298858000",
+     "display": "Shoulder joint - painful arc"
+    }
+   ]
+  },
+  {
+   "id": "pmid23076954-wheeze",
+   "finding": {
+    "concept_id": "56018004",
+    "display": "Wheezing",
+    "matched_term": "Wheezing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid23076954-wheeze-absent",
+   "finding": {
+    "concept_id": "56018004",
+    "display": "Wheezing",
+    "matched_term": "Wheezing",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid23076954-crepitations",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Respiratory crackles",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid23076954-crepitations-absent",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Respiratory crackles",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid23085794-tachypnoea",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23085794-tachypnoea-absent",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23085794-subcostal",
+   "finding": {
+    "concept_id": "8453006",
+    "display": "Subcostal recession",
+    "matched_term": "Subcostal recession",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23085794-subcostal-absent",
+   "finding": {
+    "concept_id": "8453006",
+    "display": "Subcostal recession",
+    "matched_term": "Subcostal recession",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23613077-cmt",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "34801009",
+    "display": "Ectopic pregnancy",
+    "matched_term": "Ectopic pregnancy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "298477006",
+     "display": "Cervical spine tender"
+    },
+    {
+     "concept_id": "102554000",
+     "display": "Tenderness of spinous process of cervical vertebra"
+    },
+    {
+     "concept_id": "47135001",
+     "display": "Somatic dysfunction"
+    }
+   ]
+  },
+  {
+   "id": "pmid23613077-adnexal-mass",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "34801009",
+    "display": "Ectopic pregnancy",
+    "matched_term": "Ectopic pregnancy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "445558005",
+     "display": "Polycystic mass of uterine adnexa"
+    },
+    {
+     "concept_id": "782781006",
+     "display": "High bone mass osteogenesis imperfecta"
+    },
+    {
+     "concept_id": "1187622004",
+     "display": "NUT (nuclear protein in testis) carcinoma"
+    },
+    {
+     "concept_id": "1255207005",
+     "display": "Immunoglobulin G4 related eosinophilic angiocentric fibrosis"
+    },
+    {
+     "concept_id": "827162007",
+     "display": "Malignant immature teratoma of ovary"
+    }
+   ]
+  },
+  {
+   "id": "pmid23613077-adnexal-tenderness",
+   "finding": {
+    "concept_id": "297123002",
+    "display": "Adnexal tenderness",
+    "matched_term": "Adnexal tenderness",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "34801009",
+    "display": "Ectopic pregnancy",
+    "matched_term": "Ectopic pregnancy",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23677315-cdr",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "77075001",
+    "display": "Primary open angle glaucoma",
+    "matched_term": "Primary open angle glaucoma",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1172692006",
+     "display": "X-linked keloid scarring, reduced joint mobility, increased optic cup-to-disc ratio syndrome"
+    },
+    {
+     "concept_id": "1351737005",
+     "display": "Asymmetric optic disc cupping"
+    }
+   ]
+  },
+  {
+   "id": "pmid23677315-disc-haem",
+   "finding": {
+    "concept_id": "247233000",
+    "display": "Optic disc haemorrhage",
+    "matched_term": "Optic disc haemorrhage",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "77075001",
+    "display": "Primary open angle glaucoma",
+    "matched_term": "Primary open angle glaucoma",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23677315-disc-haem-absent",
+   "finding": {
+    "concept_id": "247233000",
+    "display": "Optic disc haemorrhage",
+    "matched_term": "Optic disc haemorrhage",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "77075001",
+    "display": "Primary open angle glaucoma",
+    "matched_term": "Primary open angle glaucoma",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23677315-iop",
+   "finding": {
+    "concept_id": "112222000",
+    "display": "Raised intraocular pressure",
+    "matched_term": "Raised intraocular pressure",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "77075001",
+    "display": "Primary open angle glaucoma",
+    "matched_term": "Primary open angle glaucoma",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23677315-iop-absent",
+   "finding": {
+    "concept_id": "112222000",
+    "display": "Raised intraocular pressure",
+    "matched_term": "Raised intraocular pressure",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "77075001",
+    "display": "Primary open angle glaucoma",
+    "matched_term": "Primary open angle glaucoma",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid23982370-painful-arc",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "414033006",
+    "display": "Disorder of rotator cuff",
+    "matched_term": "Disorder of rotator cuff",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1259870009",
+     "display": "Pain due to retractile testis"
+    },
+    {
+     "concept_id": "298858000",
+     "display": "Shoulder joint - painful arc"
+    },
+    {
+     "concept_id": "716089008",
+     "display": "Harrod syndrome"
+    },
+    {
+     "concept_id": "1172606002",
+     "display": "Idiopathic pleuroparenchymal fibroelastosis"
+    }
+   ]
+  },
+  {
+   "id": "pmid23982370-painful-arc-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "414033006",
+    "display": "Disorder of rotator cuff",
+    "matched_term": "Disorder of rotator cuff",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1259870009",
+     "display": "Pain due to retractile testis"
+    },
+    {
+     "concept_id": "298858000",
+     "display": "Shoulder joint - painful arc"
+    },
+    {
+     "concept_id": "716089008",
+     "display": "Harrod syndrome"
+    },
+    {
+     "concept_id": "1172606002",
+     "display": "Idiopathic pleuroparenchymal fibroelastosis"
+    }
+   ]
+  },
+  {
+   "id": "pmid23982370-drop-arm",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "414033006",
+    "display": "Disorder of rotator cuff",
+    "matched_term": "Disorder of rotator cuff",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1231519003",
+     "display": "Hornblower sign"
+    },
+    {
+     "concept_id": "715736008",
+     "display": "Paternal uniparental disomy of chromosome 20"
+    },
+    {
+     "concept_id": "719510006",
+     "display": "Autosomal dominant Charcot-Marie-Tooth disease type 2F"
+    },
+    {
+     "concept_id": "764996009",
+     "display": "Non-distal trisomy 13q"
+    },
+    {
+     "concept_id": "763530000",
+     "display": "Distal monosomy 9p"
+    }
+   ]
+  },
+  {
+   "id": "pmid23982370-er-lag",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202843000",
+    "display": "Full thickness rotator cuff tear",
+    "matched_term": "Full thickness rotator cuff tear",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1231543000",
+     "display": "External rotation of shoulder lag sign"
+    },
+    {
+     "concept_id": "28128004",
+     "display": "External fetal rotation"
+    },
+    {
+     "concept_id": "298701009",
+     "display": "Simulated rotation test negative"
+    },
+    {
+     "concept_id": "298700005",
+     "display": "Simulated rotation test positive"
+    },
+    {
+     "concept_id": "1231550001",
+     "display": "Internal rotation of shoulder lag sign"
+    }
+   ]
+  },
+  {
+   "id": "pmid23982370-ir-lag",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202843000",
+    "display": "Full thickness rotator cuff tear",
+    "matched_term": "Full thickness rotator cuff tear",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1231550001",
+     "display": "Internal rotation of shoulder lag sign"
+    },
+    {
+     "concept_id": "32506008",
+     "display": "Internal fetal rotation"
+    },
+    {
+     "concept_id": "298701009",
+     "display": "Simulated rotation test negative"
+    },
+    {
+     "concept_id": "298700005",
+     "display": "Simulated rotation test positive"
+    },
+    {
+     "concept_id": "1231543000",
+     "display": "External rotation of shoulder lag sign"
+    }
+   ]
+  },
+  {
+   "id": "pmid23982370-ir-lag-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202843000",
+    "display": "Full thickness rotator cuff tear",
+    "matched_term": "Full thickness rotator cuff tear",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1231550001",
+     "display": "Internal rotation of shoulder lag sign"
+    },
+    {
+     "concept_id": "32506008",
+     "display": "Internal fetal rotation"
+    },
+    {
+     "concept_id": "298701009",
+     "display": "Simulated rotation test negative"
+    },
+    {
+     "concept_id": "298700005",
+     "display": "Simulated rotation test positive"
+    },
+    {
+     "concept_id": "1231543000",
+     "display": "External rotation of shoulder lag sign"
+    }
+   ]
+  },
+  {
+   "id": "pmid23989984-choking",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "78275009",
+    "display": "Obstructive sleep apnoea",
+    "matched_term": "Obstructive sleep apnoea syndrome",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "450844008",
+     "display": "Non-organic nocturnal enuresis"
+    },
+    {
+     "concept_id": "38841000087101",
+     "display": "Lactobacillus acidophilus or Lactobacillus gasseri"
+    },
+    {
+     "concept_id": "450842007",
+     "display": "Non-organic primary nocturnal enuresis"
+    },
+    {
+     "concept_id": "450843002",
+     "display": "Non-organic secondary nocturnal enuresis"
+    },
+    {
+     "concept_id": "102482005",
+     "display": "Growing pains"
+    }
+   ]
+  },
+  {
+   "id": "pmid23989984-snoring",
+   "finding": {
+    "concept_id": "72863001",
+    "display": "Snoring",
+    "matched_term": "Snoring",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "78275009",
+    "display": "Obstructive sleep apnoea",
+    "matched_term": "Obstructive sleep apnoea syndrome",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid25027143-genital-ulcers",
+   "finding": {
+    "concept_id": "1371402009",
+    "display": "Ulcer of genital organ",
+    "matched_term": "Genital ulcer",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25027143-weight-loss",
+   "finding": {
+    "concept_id": "262285001",
+    "display": "Weight loss",
+    "matched_term": "Weight loss",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25027143-vomiting",
+   "finding": {
+    "concept_id": "422400008",
+    "display": "Vomiting",
+    "matched_term": "Vomiting",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25027143-fever-absent",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25027143-lymphadenopathy",
+   "finding": {
+    "concept_id": "30746006",
+    "display": "Lymphadenopathy",
+    "matched_term": "Lymphadenopathy",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25027143-lymphadenopathy-absent",
+   "finding": {
+    "concept_id": "30746006",
+    "display": "Lymphadenopathy",
+    "matched_term": "Lymphadenopathy",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "111880001",
+    "display": "Acute HIV infection",
+    "matched_term": "Acute HIV infection",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25724195-mcmurray-present",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25724195-mcmurray-absent",
+   "finding": {
+    "concept_id": "299391009",
+    "display": "McMurray test positive",
+    "matched_term": "McMurray test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25724195-jlt-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid25724195-jlt-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299374005",
+     "display": "Tenderness on lateral joint line of knee"
+    },
+    {
+     "concept_id": "299373004",
+     "display": "Tenderness on medial joint line of knee"
+    }
+   ]
+  },
+  {
+   "id": "pmid25724195-thessaly-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid25724195-thessaly-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239720000",
+    "display": "Tear of meniscus of knee",
+    "matched_term": "Tear of meniscus of knee",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid25769269-fast-breathing-present",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-fast-breathing-absent",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-lower-chest-indrawing-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "230231000087103",
+     "display": "Laceration of lower chest wall"
+    }
+   ]
+  },
+  {
+   "id": "pmid25769269-lower-chest-indrawing-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "230231000087103",
+     "display": "Laceration of lower chest wall"
+    }
+   ]
+  },
+  {
+   "id": "pmid25769269-rr50",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid25769269-grunting",
+   "finding": {
+    "concept_id": "62085005",
+    "display": "Grunting respiration",
+    "matched_term": "Grunting respiration",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-nasal-flaring",
+   "finding": {
+    "concept_id": "21558008",
+    "display": "Flared nostrils",
+    "matched_term": "Flaring of alae nasi",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-cough-absent",
+   "finding": {
+    "concept_id": "49727002",
+    "display": "Cough",
+    "matched_term": "Cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-fever-hx-absent",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid25769269-rr40-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid26169885-anisocoria",
+   "finding": {
+    "concept_id": "13045009",
+    "display": "Anisocoria",
+    "matched_term": "Anisocoria",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "371405004",
+    "display": "Disorder of eye",
+    "matched_term": "Disorder of eye",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid26169885-photophobia",
+   "finding": {
+    "concept_id": "409668002",
+    "display": "Photophobia",
+    "matched_term": "Photophobia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "371405004",
+    "display": "Disorder of eye",
+    "matched_term": "Disorder of eye",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid26169885-complete-redness",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid26169885-purulent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "423243008",
+     "display": "Purulent conjunctival discharge"
+    },
+    {
+     "concept_id": "14310000",
+     "display": "Purulent nasal discharge"
+    },
+    {
+     "concept_id": "290111006",
+     "display": "Purulent nipple discharge"
+    },
+    {
+     "concept_id": "289550005",
+     "display": "Purulent vaginal discharge"
+    },
+    {
+     "concept_id": "225550006",
+     "display": "Purulent discharge from wound"
+    }
+   ]
+  },
+  {
+   "id": "pmid26169885-matting-both",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "15738601000119107",
+     "display": "Infection of bilateral eyes"
+    },
+    {
+     "concept_id": "1366519005",
+     "display": "Bilateral absence of foveal reflexes"
+    },
+    {
+     "concept_id": "346661000119106",
+     "display": "Bilateral conjunctival deposits"
+    },
+    {
+     "concept_id": "680561000119106",
+     "display": "Retained foreign body in bilateral eyes"
+    },
+    {
+     "concept_id": "1357797003",
+     "display": "Bilateral ocular trauma"
+    }
+   ]
+  },
+  {
+   "id": "pmid26169885-red-at-20ft-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "717008005",
+     "display": "Autosomal dominant Charcot-Marie-Tooth disease type 2B"
+    },
+    {
+     "concept_id": "1340176000",
+     "display": "Developmental delay, overweight, facial dysmorphism, behavioural abnormalities syndrome"
+    },
+    {
+     "concept_id": "770401007",
+     "display": "10q22.3q23.3 microdeletion syndrome"
+    },
+    {
+     "concept_id": "1208932005",
+     "display": "Toxic maculopathy of bilateral eyes caused by antimalarial drug"
+    },
+    {
+     "concept_id": "765047006",
+     "display": "SURF1, cytochrome c oxidase assembly factor related Charcot-Marie-Tooth disease type 4"
+    }
+   ]
+  },
+  {
+   "id": "pmid26169885-gluing-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "718393002",
+     "display": "Atypical Rett syndrome"
+    },
+    {
+     "concept_id": "719256004",
+     "display": "Pterygium colli with intellectual disability and digital anomaly syndrome"
+    },
+    {
+     "concept_id": "1332157006",
+     "display": "Self-limited infantile epilepsy"
+    }
+   ]
+  },
+  {
+   "id": "pmid26547467-prior-abnormal-stress",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "394659003",
+    "display": "Acute coronary syndrome",
+    "matched_term": "Acute coronary syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "439590007",
+     "display": "Cardiovascular stress test abnormal"
+    },
+    {
+     "concept_id": "441377000",
+     "display": "Thallium stress test abnormal"
+    },
+    {
+     "concept_id": "165669008",
+     "display": "Kleihauer test abnormal"
+    },
+    {
+     "concept_id": "164815001",
+     "display": "Postcoital test abnormal"
+    },
+    {
+     "concept_id": "168175004",
+     "display": "Sweat test abnormal"
+    }
+   ]
+  },
+  {
+   "id": "pmid26547467-pad",
+   "finding": {
+    "concept_id": "840580004",
+    "display": "Peripheral arterial disease",
+    "matched_term": "Peripheral arterial disease",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "394659003",
+    "display": "Acute coronary syndrome",
+    "matched_term": "Acute coronary syndrome",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid26547467-radiation-both-arms",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "394659003",
+    "display": "Acute coronary syndrome",
+    "matched_term": "Acute coronary syndrome",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "425839000",
+     "display": "Pain radiating to head"
+    },
+    {
+     "concept_id": "426555006",
+     "display": "Pain radiating to jaw"
+    },
+    {
+     "concept_id": "427310006",
+     "display": "Pain radiating to neck"
+    },
+    {
+     "concept_id": "426466001",
+     "display": "Pain radiating to left flank"
+    },
+    {
+     "concept_id": "426142001",
+     "display": "Pain radiating to right shoulder"
+    }
+   ]
+  },
+  {
+   "id": "pmid26717031-skull-fracture-signs",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "127296001",
+    "display": "Intracranial injury",
+    "matched_term": "Intracranial injury",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "52910006",
+     "display": "Anxiety disorder due to a general medical condition"
+    },
+    {
+     "concept_id": "778062008",
+     "display": "Diffuse palmoplantar keratoderma with painful fissures"
+    },
+    {
+     "concept_id": "726708009",
+     "display": "Familial isolated congenital asplenia"
+    }
+   ]
+  },
+  {
+   "id": "pmid26717031-gcs13",
+   "finding": {
+    "concept_id": "54185009",
+    "display": "Glasgow coma scale, 13",
+    "matched_term": "Glasgow coma scale 13",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "127296001",
+    "display": "Intracranial injury",
+    "matched_term": "Intracranial injury",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid26717031-vomiting-2",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "127296001",
+    "display": "Intracranial injury",
+    "matched_term": "Intracranial injury",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "82323002",
+     "display": "Late congenital syphilis (2 years or more)"
+    },
+    {
+     "concept_id": "70112005",
+     "display": "Stillbirth of mature female (2500 gms. or more)"
+    },
+    {
+     "concept_id": "7860005",
+     "display": "Stillbirth of mature male (2500 gms. or more)"
+    },
+    {
+     "concept_id": "827006",
+     "display": "Late congenital syphilis, latent (positive serology - CSF, 2 years or more)"
+    },
+    {
+     "concept_id": "445967004",
+     "display": "Clinically isolated syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid26875460-chest-pain-present",
+   "finding": {
+    "concept_id": "29857009",
+    "display": "Chest pain",
+    "matched_term": "Chest pain",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid26875460-chest-pain-absent",
+   "finding": {
+    "concept_id": "29857009",
+    "display": "Chest pain",
+    "matched_term": "Chest pain",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid26875460-rales-present",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Respiratory crackles",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid26875460-rales-absent",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Respiratory crackles",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid26875460-headache-present",
+   "finding": {
+    "concept_id": "25064002",
+    "display": "Headache",
+    "matched_term": "Headache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid26875460-headache-absent",
+   "finding": {
+    "concept_id": "25064002",
+    "display": "Headache",
+    "matched_term": "Headache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "46970008",
+    "display": "Pneumonia caused by Mycoplasmoides pneumoniae",
+    "matched_term": "Mycoplasma pneumonia",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid27115266-posterior-cervical",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "271558008",
+    "display": "Infectious mononucleosis",
+    "matched_term": "Infectious mononucleosis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "17300000",
+     "display": "Cervicocranial syndrome"
+    },
+    {
+     "concept_id": "202771000",
+     "display": "Cervical posterior longitudinal ligament ossification"
+    },
+    {
+     "concept_id": "207908005",
+     "display": "Closed fracture cervical vertebra, posterior arch"
+    },
+    {
+     "concept_id": "207934002",
+     "display": "Open fracture cervical vertebra, posterior arch"
+    },
+    {
+     "concept_id": "1343514001",
+     "display": "Posterior cord syndrome due to cervical spondylosis"
+    }
+   ]
+  },
+  {
+   "id": "pmid27115266-palatine-petechiae",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "271558008",
+    "display": "Infectious mononucleosis",
+    "matched_term": "Infectious mononucleosis",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid27325129-libido",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "48723006",
+    "display": "Male hypogonadism",
+    "matched_term": "Male hypogonadism",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1373752007",
+     "display": "Post 5-alpha-reductase inhibitor treatment syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid27325129-libido-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "48723006",
+    "display": "Male hypogonadism",
+    "matched_term": "Male hypogonadism",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1373752007",
+     "display": "Post 5-alpha-reductase inhibitor treatment syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid27325129-ed",
+   "finding": {
+    "concept_id": "860914002",
+    "display": "Erectile dysfunction",
+    "matched_term": "Erectile dysfunction",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48723006",
+    "display": "Male hypogonadism",
+    "matched_term": "Male hypogonadism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid27325129-ed-absent",
+   "finding": {
+    "concept_id": "860914002",
+    "display": "Erectile dysfunction",
+    "matched_term": "Erectile dysfunction",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48723006",
+    "display": "Male hypogonadism",
+    "matched_term": "Male hypogonadism",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid27458949-skin-exam-pcp-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-pcp-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-derm-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-derm-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid27693100-lachman",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid27693100-lachman-absent",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28122541-supraspinatus-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202843000",
+    "display": "Full thickness rotator cuff tear",
+    "matched_term": "Full thickness rotator cuff tear",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "249594003",
+     "display": "Inguinal canal empty"
+    },
+    {
+     "concept_id": "363449006",
+     "display": "Malignant neoplasm of testis"
+    },
+    {
+     "concept_id": "276405004",
+     "display": "Testicle in inguinal canal"
+    },
+    {
+     "concept_id": "315272007",
+     "display": "Malignant neoplasm of testis suspected"
+    },
+    {
+     "concept_id": "188219004",
+     "display": "Malignant neoplasm of undescended testis"
+    }
+   ]
+  },
+  {
+   "id": "pmid28122541-supraspinatus-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202843000",
+    "display": "Full thickness rotator cuff tear",
+    "matched_term": "Full thickness rotator cuff tear",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "249594003",
+     "display": "Inguinal canal empty"
+    },
+    {
+     "concept_id": "363449006",
+     "display": "Malignant neoplasm of testis"
+    },
+    {
+     "concept_id": "276405004",
+     "display": "Testicle in inguinal canal"
+    },
+    {
+     "concept_id": "315272007",
+     "display": "Malignant neoplasm of testis suspected"
+    },
+    {
+     "concept_id": "188219004",
+     "display": "Malignant neoplasm of undescended testis"
+    }
+   ]
+  },
+  {
+   "id": "pmid28122541-compression-rotation-present",
+   "finding": null,
+   "diagnosis": null,
+   "finding_candidates": [
+    {
+     "concept_id": "298699009",
+     "display": "Head compression test negative"
+    },
+    {
+     "concept_id": "298698001",
+     "display": "Head compression test positive"
+    },
+    {
+     "concept_id": "299399006",
+     "display": "Patellar compression test positive"
+    },
+    {
+     "concept_id": "298701009",
+     "display": "Simulated rotation test negative"
+    },
+    {
+     "concept_id": "298700005",
+     "display": "Simulated rotation test positive"
+    }
+   ],
+   "diagnosis_candidates": [
+    {
+     "concept_id": "1155718008",
+     "display": "Tear of frenulum of upper lip"
+    },
+    {
+     "concept_id": "11822401000119108",
+     "display": "Anterior to posterior tear of superior glenoid labrum of left shoulder"
+    },
+    {
+     "concept_id": "11822361000119104",
+     "display": "Anterior to posterior tear of superior glenoid labrum of right shoulder"
+    }
+   ]
+  },
+  {
+   "id": "pmid28122541-compression-rotation-absent",
+   "finding": null,
+   "diagnosis": null,
+   "finding_candidates": [
+    {
+     "concept_id": "298699009",
+     "display": "Head compression test negative"
+    },
+    {
+     "concept_id": "298698001",
+     "display": "Head compression test positive"
+    },
+    {
+     "concept_id": "299399006",
+     "display": "Patellar compression test positive"
+    },
+    {
+     "concept_id": "298701009",
+     "display": "Simulated rotation test negative"
+    },
+    {
+     "concept_id": "298700005",
+     "display": "Simulated rotation test positive"
+    }
+   ],
+   "diagnosis_candidates": [
+    {
+     "concept_id": "1155718008",
+     "display": "Tear of frenulum of upper lip"
+    },
+    {
+     "concept_id": "11822401000119108",
+     "display": "Anterior to posterior tear of superior glenoid labrum of left shoulder"
+    },
+    {
+     "concept_id": "11822361000119104",
+     "display": "Anterior to posterior tear of superior glenoid labrum of right shoulder"
+    }
+   ]
+  },
+  {
+   "id": "pmid28122541-hawkins-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid28122541-hawkins-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239960007",
+    "display": "Impingement syndrome of shoulder region",
+    "matched_term": "Impingement syndrome of shoulder region",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid28214369-migration",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "85189001",
+    "display": "Acute appendicitis",
+    "matched_term": "Acute appendicitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "301754002",
+     "display": "Right lower quadrant pain"
+    },
+    {
+     "concept_id": "12237231000119107",
+     "display": "Pain at rest of right lower limb due to atherosclerosis"
+    },
+    {
+     "concept_id": "16002791000119101",
+     "display": "Pain of right lower limb co-occurrent and due to ischaemia"
+    },
+    {
+     "concept_id": "733628001",
+     "display": "Thoraco-abdominal enteric duplication"
+    },
+    {
+     "concept_id": "1197204009",
+     "display": "Adult hepatocellular carcinoma"
+    }
+   ]
+  },
+  {
+   "id": "pmid28214369-cough-hop",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "85189001",
+    "display": "Acute appendicitis",
+    "matched_term": "Acute appendicitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "247410004",
+     "display": "Painful cough"
+    },
+    {
+     "concept_id": "102616008",
+     "display": "Pain in mouth"
+    },
+    {
+     "concept_id": "247422001",
+     "display": "Painful orgasm"
+    },
+    {
+     "concept_id": "1373822008",
+     "display": "Retro-orbital pain"
+    },
+    {
+     "concept_id": "762454002",
+     "display": "Chronic orofacial pain"
+    }
+   ]
+  },
+  {
+   "id": "pmid28214369-rovsing",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "85189001",
+    "display": "Acute appendicitis",
+    "matched_term": "Acute appendicitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "45086009",
+     "display": "Rovsing's sign"
+    }
+   ]
+  },
+  {
+   "id": "pmid28231784-sensory-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "74530003",
+     "display": "Uncompensated sensory deficit"
+    },
+    {
+     "concept_id": "247306001",
+     "display": "Inconsistent results on voice testing"
+    },
+    {
+     "concept_id": "247305002",
+     "display": "Loss of discrimination on voice testing"
+    },
+    {
+     "concept_id": "1281839006",
+     "display": "Focal onset sensory epileptic seizure"
+    },
+    {
+     "concept_id": "668001000005101",
+     "display": "Urine erythrocyte test = +"
+    }
+   ]
+  },
+  {
+   "id": "pmid28231784-sensory-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "74530003",
+     "display": "Uncompensated sensory deficit"
+    },
+    {
+     "concept_id": "247306001",
+     "display": "Inconsistent results on voice testing"
+    },
+    {
+     "concept_id": "247305002",
+     "display": "Loss of discrimination on voice testing"
+    },
+    {
+     "concept_id": "1281839006",
+     "display": "Focal onset sensory epileptic seizure"
+    },
+    {
+     "concept_id": "668001000005101",
+     "display": "Urine erythrocyte test = +"
+    }
+   ]
+  },
+  {
+   "id": "pmid28231784-fnst-present",
+   "finding": {
+    "concept_id": "298696002",
+    "display": "Femoral nerve stretch test positive",
+    "matched_term": "Femoral nerve stretch test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28231784-fnst-absent",
+   "finding": {
+    "concept_id": "298696002",
+    "display": "Femoral nerve stretch test positive",
+    "matched_term": "Femoral nerve stretch test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28231784-slr-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "366448008",
+     "display": "Straight leg raise - finding"
+    },
+    {
+     "concept_id": "246597009",
+     "display": "Ankle dorsiflexion limits straight leg raise"
+    },
+    {
+     "concept_id": "298688007",
+     "display": "Straight leg raising absent"
+    },
+    {
+     "concept_id": "298686006",
+     "display": "Straight leg raising normal"
+    },
+    {
+     "concept_id": "298687002",
+     "display": "Straight leg raising reduced"
+    }
+   ]
+  },
+  {
+   "id": "pmid28231784-slr-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "2415007",
+    "display": "Lumbosacral radiculopathy",
+    "matched_term": "Lumbosacral radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "366448008",
+     "display": "Straight leg raise - finding"
+    },
+    {
+     "concept_id": "246597009",
+     "display": "Ankle dorsiflexion limits straight leg raise"
+    },
+    {
+     "concept_id": "298688007",
+     "display": "Straight leg raising absent"
+    },
+    {
+     "concept_id": "298686006",
+     "display": "Straight leg raising normal"
+    },
+    {
+     "concept_id": "298687002",
+     "display": "Straight leg raising reduced"
+    }
+   ]
+  },
+  {
+   "id": "pmid28267861-vulvar-ulcer-present",
+   "finding": {
+    "concept_id": "68640004",
+    "display": "Ulcer of vulva",
+    "matched_term": "Ulcer of vulva",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "33839006",
+    "display": "Genital herpes simplex",
+    "matched_term": "Genital herpes simplex",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28267861-vulvar-ulcer-absent",
+   "finding": {
+    "concept_id": "68640004",
+    "display": "Ulcer of vulva",
+    "matched_term": "Ulcer of vulva",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "33839006",
+    "display": "Genital herpes simplex",
+    "matched_term": "Genital herpes simplex",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28484063-whoop",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "27836007",
+    "display": "Pertussis",
+    "matched_term": "Pertussis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "27836007",
+     "display": "Pertussis"
+    },
+    {
+     "concept_id": "772146005",
+     "display": "Suspected pertussis"
+    },
+    {
+     "concept_id": "271567008",
+     "display": "Whooping cough-like syndrome"
+    },
+    {
+     "concept_id": "161422003",
+     "display": "H/O: pertussis"
+    },
+    {
+     "concept_id": "59475000",
+     "display": "Pneumonia in pertussis"
+    }
+   ]
+  },
+  {
+   "id": "pmid28484063-post-tussive-vomiting",
+   "finding": {
+    "concept_id": "424580008",
+    "display": "Post-tussive vomiting",
+    "matched_term": "Post-tussive vomiting",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "27836007",
+    "display": "Pertussis",
+    "matched_term": "Pertussis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28484063-paroxysmal-absent",
+   "finding": {
+    "concept_id": "43025008",
+    "display": "Paroxysmal cough",
+    "matched_term": "Paroxysmal cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "27836007",
+    "display": "Pertussis",
+    "matched_term": "Pertussis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28484063-sputum-absent",
+   "finding": {
+    "concept_id": "28743005",
+    "display": "Productive cough",
+    "matched_term": "Productive cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "27836007",
+    "display": "Pertussis",
+    "matched_term": "Pertussis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28763554-tachypnoea40",
+   "finding": {
+    "concept_id": "271823003",
+    "display": "Tachypnoea",
+    "matched_term": "Tachypnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28763554-hypoxaemia",
+   "finding": {
+    "concept_id": "389087006",
+    "display": "Hypoxaemia",
+    "matched_term": "Hypoxaemia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28763554-work-of-breathing",
+   "finding": {
+    "concept_id": "271825005",
+    "display": "Respiratory distress",
+    "matched_term": "Respiratory distress",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid28763554-hypoxaemia-absent",
+   "finding": {
+    "concept_id": "389087006",
+    "display": "Hypoxaemia",
+    "matched_term": "Hypoxaemia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "233604007",
+    "display": "Pneumonia",
+    "matched_term": "Pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid29265487-neuro-deficit",
+   "finding": {
+    "concept_id": "264552009",
+    "display": "Neurological deficit",
+    "matched_term": "Neurological deficit",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "308546005",
+    "display": "Dissection of aorta",
+    "matched_term": "Dissection of aorta",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid29265487-hypotension",
+   "finding": {
+    "concept_id": "45007003",
+    "display": "Hypotension",
+    "matched_term": "Hypotension",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "308546005",
+    "display": "Dissection of aorta",
+    "matched_term": "Dissection of aorta",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid29668564-hoffmann",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202664003",
+    "display": "Cervical myelopathy",
+    "matched_term": "Cervical myelopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid29668564-hoffmann-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "202664003",
+    "display": "Cervical myelopathy",
+    "matched_term": "Cervical myelopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid30777025-wounds",
+   "finding": {
+    "concept_id": "416462003",
+    "display": "Wound",
+    "matched_term": "Wound",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128936008",
+    "display": "Bacterial infection of skin",
+    "matched_term": "Bacterial infection of skin",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid30777025-pressure-sores",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128936008",
+    "display": "Bacterial infection of skin",
+    "matched_term": "Bacterial infection of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "285304000",
+     "display": "At risk of pressure injury"
+    }
+   ]
+  },
+  {
+   "id": "pmid30777025-skin-ulcers",
+   "finding": {
+    "concept_id": "46742003",
+    "display": "Skin ulcer",
+    "matched_term": "Skin ulcer",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128936008",
+    "display": "Bacterial infection of skin",
+    "matched_term": "Bacterial infection of skin",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31237649-hx-af",
+   "finding": {
+    "concept_id": "312442005",
+    "display": "H/O: atrial fibrillation",
+    "matched_term": "History of atrial fibrillation",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31237649-mood-prodrome",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "770758009",
+     "display": "New-onset refractory status epilepticus"
+    }
+   ]
+  },
+  {
+   "id": "pmid31237649-feeling-cold",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "102997000",
+     "display": "Psychroalgia"
+    },
+    {
+     "concept_id": "724233009",
+     "display": "Sensation of being cold"
+    },
+    {
+     "concept_id": "103002009",
+     "display": "Sensation of hot and cold"
+    }
+   ]
+  },
+  {
+   "id": "pmid31237649-headache",
+   "finding": {
+    "concept_id": "25064002",
+    "display": "Headache",
+    "matched_term": "Headache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31237649-cyanosis",
+   "finding": {
+    "concept_id": "3415004",
+    "display": "Cyanosis",
+    "matched_term": "Cyanosis",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31237649-mood-after",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "18963009",
+     "display": "Mood swings"
+    },
+    {
+     "concept_id": "268729004",
+     "display": "Enduring personality change after catastrophic experience"
+    },
+    {
+     "concept_id": "192498004",
+     "display": "Enduring personality change after psychiatric illness"
+    },
+    {
+     "concept_id": "740215071000132100",
+     "display": "Post BCG intravesical immunotherapy changes"
+    },
+    {
+     "concept_id": "770903003",
+     "display": "Postorgasmic illness syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid31237649-amnesia-before",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "788877005",
+    "display": "Cardiac syncope",
+    "matched_term": "Cardiac syncope",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "247972009",
+     "display": "Inability to resist compulsive behaviours"
+    },
+    {
+     "concept_id": "1363573005",
+     "display": "Neurodevelopmental delay, intellectual disability, ataxia, feeding difficulty syndrome"
+    },
+    {
+     "concept_id": "230418006",
+     "display": "Lennox-Gastaut syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-fhx-oa",
+   "finding": {
+    "concept_id": "160414002",
+    "display": "FH: Osteoarthritis",
+    "matched_term": "FH: Osteoarthritis",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31846019-hx-knee-oa",
+   "finding": {
+    "concept_id": "239873007",
+    "display": "Osteoarthritis of knee",
+    "matched_term": "Osteoarthritis of knee",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid31846019-stairs-pain",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "370207001",
+     "display": "Asthma limits walking up hills or stairs"
+    },
+    {
+     "concept_id": "726614009",
+     "display": "Autosomal recessive limb girdle muscular dystrophy type 2P"
+    },
+    {
+     "concept_id": "764992006",
+     "display": "Muscle filaminopathy"
+    },
+    {
+     "concept_id": "732933009",
+     "display": "Autosomal recessive spastic paraplegia type 25"
+    },
+    {
+     "concept_id": "1230019002",
+     "display": "Radiation-induced plexopathy"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-squat-pain",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "430879002",
+     "display": "Posterior auricular pain"
+    },
+    {
+     "concept_id": "8799007",
+     "display": "Posterior heel pain"
+    },
+    {
+     "concept_id": "1346371000168105",
+     "display": "Vaginal mesh causing pain"
+    },
+    {
+     "concept_id": "314212008",
+     "display": "Abdominal pain - cause unknown"
+    },
+    {
+     "concept_id": "241869005",
+     "display": "Paint causing toxic effect"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-groin-pain-passive",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1230014007",
+     "display": "Duane retraction syndrome with congenital deafness"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-abductor-weakness",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "725043006",
+     "display": "Autosomal recessive limb girdle muscular dystrophy type 2O"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-adduction-decreased",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299282007",
+     "display": "Decreased passive range of hip adduction"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-ir-decreased",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299293009",
+     "display": "Decreased passive range of hip internal rotation"
+    },
+    {
+     "concept_id": "299359008",
+     "display": "Decreased passive range of knee internal rotation"
+    },
+    {
+     "concept_id": "298829003",
+     "display": "Decreased passive range of shoulder internal rotation"
+    }
+   ]
+  },
+  {
+   "id": "pmid31846019-adduction-decreased-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "239872002",
+    "display": "Osteoarthritis of hip",
+    "matched_term": "Osteoarthritis of hip",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "299282007",
+     "display": "Decreased passive range of hip adduction"
+    },
+    {
+     "concept_id": "299280004",
+     "display": "Normal passive range of hip adduction"
+    }
+   ]
+  },
+  {
+   "id": "pmid32329557-egophony",
+   "finding": {
+    "concept_id": "19977002",
+    "display": "Aegophony",
+    "matched_term": "Egophony",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid32329557-dullness",
+   "finding": {
+    "concept_id": "39180009",
+    "display": "Chest dull to percussion",
+    "matched_term": "Dull percussion note",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid32329557-fever",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "385093006",
+    "display": "Community acquired pneumonia",
+    "matched_term": "Community acquired pneumonia",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid33380476-joint-tenderness",
+   "finding": {
+    "concept_id": "110288007",
+    "display": "Tenderness of joint",
+    "matched_term": "Tenderness of joint",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "396234004",
+    "display": "Infective arthritis",
+    "matched_term": "Septic arthritis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid33380476-joint-tenderness-absent",
+   "finding": {
+    "concept_id": "110288007",
+    "display": "Tenderness of joint",
+    "matched_term": "Tenderness of joint",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "396234004",
+    "display": "Infective arthritis",
+    "matched_term": "Septic arthritis",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid35593186-cough",
+   "finding": {
+    "concept_id": "49727002",
+    "display": "Cough",
+    "matched_term": "Cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-cough-absent",
+   "finding": {
+    "concept_id": "49727002",
+    "display": "Cough",
+    "matched_term": "Cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-fever",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-fever-absent",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-dyspnoea",
+   "finding": {
+    "concept_id": "267036007",
+    "display": "Dyspnoea",
+    "matched_term": "Dyspnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-dyspnoea-absent",
+   "finding": {
+    "concept_id": "267036007",
+    "display": "Dyspnoea",
+    "matched_term": "Dyspnoea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-fatigue",
+   "finding": {
+    "concept_id": "84229001",
+    "display": "Fatigue",
+    "matched_term": "Fatigue",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-fatigue-absent",
+   "finding": {
+    "concept_id": "84229001",
+    "display": "Fatigue",
+    "matched_term": "Fatigue",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-anosmia",
+   "finding": {
+    "concept_id": "44169009",
+    "display": "Loss of sense of smell",
+    "matched_term": "Anosmia",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-anosmia-absent",
+   "finding": {
+    "concept_id": "44169009",
+    "display": "Loss of sense of smell",
+    "matched_term": "Anosmia",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-ageusia",
+   "finding": {
+    "concept_id": "36955009",
+    "display": "Loss of taste",
+    "matched_term": "Ageusia",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-ageusia-absent",
+   "finding": {
+    "concept_id": "36955009",
+    "display": "Loss of taste",
+    "matched_term": "Ageusia",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35593186-sore-throat",
+   "finding": {
+    "concept_id": "267102003",
+    "display": "Sore throat",
+    "matched_term": "Sore throat",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "840539006",
+    "display": "COVID-19",
+    "matched_term": "COVID-19",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid34286639-ankle-drawer-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "263133002",
+    "display": "Sprain of lateral ligament of ankle joint",
+    "matched_term": "Sprain of lateral ligament of ankle joint",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "366605006",
+     "display": "Anterior drawer test - finding"
+    },
+    {
+     "concept_id": "299396004",
+     "display": "Anterior drawer test negative"
+    },
+    {
+     "concept_id": "299395000",
+     "display": "Anterior drawer test positive"
+    },
+    {
+     "concept_id": "202884002",
+     "display": "Anterior ankle impingement"
+    },
+    {
+     "concept_id": "299397008",
+     "display": "Posterior drawer test positive"
+    }
+   ]
+  },
+  {
+   "id": "pmid34286639-ankle-drawer-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "263133002",
+    "display": "Sprain of lateral ligament of ankle joint",
+    "matched_term": "Sprain of lateral ligament of ankle joint",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "366605006",
+     "display": "Anterior drawer test - finding"
+    },
+    {
+     "concept_id": "299396004",
+     "display": "Anterior drawer test negative"
+    },
+    {
+     "concept_id": "299395000",
+     "display": "Anterior drawer test positive"
+    },
+    {
+     "concept_id": "202884002",
+     "display": "Anterior ankle impingement"
+    },
+    {
+     "concept_id": "299397008",
+     "display": "Posterior drawer test positive"
+    }
+   ]
+  },
+  {
+   "id": "pmid35150292-drawer-present",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35150292-drawer-absent",
+   "finding": {
+    "concept_id": "299395000",
+    "display": "Anterior drawer test positive",
+    "matched_term": "Anterior drawer test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35150292-lachman-complete-present",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35150292-lachman-complete-absent",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35150292-lachman-postacute-present",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35150292-lachman-postacute-absent",
+   "finding": {
+    "concept_id": "299393007",
+    "display": "Lachman test positive",
+    "matched_term": "Lachman test positive",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "239725005",
+    "display": "Rupture of anterior cruciate ligament",
+    "matched_term": "Rupture of anterior cruciate ligament",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35699701-contact-red-eye",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "45261009",
+    "display": "Viral conjunctivitis",
+    "matched_term": "Viral conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1177184008",
+     "display": "Transmission of Vaccinia virus from another person due to contact with smallpox vaccination site"
+    },
+    {
+     "concept_id": "1397796002",
+     "display": "Body-focused repetitive behaviour disorder"
+    },
+    {
+     "concept_id": "1300116006",
+     "display": "Oculocutaneous albinism type 8"
+    },
+    {
+     "concept_id": "764435003",
+     "display": "17q12 microduplication syndrome"
+    },
+    {
+     "concept_id": "1204418008",
+     "display": "Congenital trochlear nerve palsy"
+    }
+   ]
+  },
+  {
+   "id": "pmid35699701-mucopurulent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "423623006",
+     "display": "Mucopurulent conjunctival discharge"
+    },
+    {
+     "concept_id": "836475004",
+     "display": "Mucopurulent discharge from nose"
+    },
+    {
+     "concept_id": "722431007",
+     "display": "Double uterus, hemivagina, renal agenesis syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid35699701-otitis-media",
+   "finding": {
+    "concept_id": "65363002",
+    "display": "Otitis media",
+    "matched_term": "Otitis media",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "128350005",
+    "display": "Bacterial conjunctivitis",
+    "matched_term": "Bacterial conjunctivitis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid35709018-gp-judgement",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52448006",
+    "display": "Dementia",
+    "matched_term": "Dementia",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "185278000",
+     "display": "Seen by general practitioner"
+    },
+    {
+     "concept_id": "408550002",
+     "display": "Prescription by GP"
+    },
+    {
+     "concept_id": "169614002",
+     "display": "Antenatal care from general practitioner"
+    },
+    {
+     "concept_id": "170226006",
+     "display": "Child referred to general practitioner"
+    },
+    {
+     "concept_id": "169756008",
+     "display": "Postnatal care from general practitioner"
+    }
+   ]
+  },
+  {
+   "id": "pmid35709018-gp-judgement-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52448006",
+    "display": "Dementia",
+    "matched_term": "Dementia",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "185278000",
+     "display": "Seen by general practitioner"
+    },
+    {
+     "concept_id": "408550002",
+     "display": "Prescription by GP"
+    },
+    {
+     "concept_id": "169614002",
+     "display": "Antenatal care from general practitioner"
+    },
+    {
+     "concept_id": "170226006",
+     "display": "Child referred to general practitioner"
+    },
+    {
+     "concept_id": "169756008",
+     "display": "Postnatal care from general practitioner"
+    }
+   ]
+  },
+  {
+   "id": "pmid35709018-gp-judgement-ci",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "386806002",
+    "display": "Impaired cognition",
+    "matched_term": "Cognitive impairment",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "185278000",
+     "display": "Seen by general practitioner"
+    },
+    {
+     "concept_id": "408550002",
+     "display": "Prescription by GP"
+    },
+    {
+     "concept_id": "169614002",
+     "display": "Antenatal care from general practitioner"
+    },
+    {
+     "concept_id": "170226006",
+     "display": "Child referred to general practitioner"
+    },
+    {
+     "concept_id": "169756008",
+     "display": "Postnatal care from general practitioner"
+    }
+   ]
+  },
+  {
+   "id": "pmid35709018-gp-judgement-ci-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "386806002",
+    "display": "Impaired cognition",
+    "matched_term": "Cognitive impairment",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "185278000",
+     "display": "Seen by general practitioner"
+    },
+    {
+     "concept_id": "408550002",
+     "display": "Prescription by GP"
+    },
+    {
+     "concept_id": "169614002",
+     "display": "Antenatal care from general practitioner"
+    },
+    {
+     "concept_id": "170226006",
+     "display": "Child referred to general practitioner"
+    },
+    {
+     "concept_id": "169756008",
+     "display": "Postnatal care from general practitioner"
+    }
+   ]
+  },
+  {
+   "id": "pmid36976276-fhx-secondary",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "31992008",
+    "display": "Secondary hypertension",
+    "matched_term": "Secondary hypertension",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "160357008",
+     "display": "FH: Hypertension"
+    },
+    {
+     "concept_id": "160273004",
+     "display": "No FH: Hypertension"
+    },
+    {
+     "concept_id": "31992008",
+     "display": "Secondary hypertension"
+    },
+    {
+     "concept_id": "160265008",
+     "display": "Family history taken"
+    },
+    {
+     "concept_id": "1197664001",
+     "display": "Secondary portal hypertension"
+    }
+   ]
+  },
+  {
+   "id": "pmid36976276-low-weight",
+   "finding": {
+    "concept_id": "248342006",
+    "display": "Underweight",
+    "matched_term": "Underweight",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "31992008",
+    "display": "Secondary hypertension",
+    "matched_term": "Secondary hypertension",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid36976276-obesity",
+   "finding": {
+    "concept_id": "414916001",
+    "display": "Obesity",
+    "matched_term": "Obesity",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "31992008",
+    "display": "Secondary hypertension",
+    "matched_term": "Secondary hypertension",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid36976276-fhx-any-htn",
+   "finding": {
+    "concept_id": "160357008",
+    "display": "FH: Hypertension",
+    "matched_term": "Family history of hypertension",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "31992008",
+    "display": "Secondary hypertension",
+    "matched_term": "Secondary hypertension",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid37567752-gut-feeling-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "363346000",
+    "display": "Malignant neoplastic disease",
+    "matched_term": "Malignant neoplastic disease",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid37567752-gut-feeling-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "363346000",
+    "display": "Malignant neoplastic disease",
+    "matched_term": "Malignant neoplastic disease",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid37722950-pyloric-mass",
+   "finding": {
+    "concept_id": "276357003",
+    "display": "Pyloric mass",
+    "matched_term": "Pyloric mass",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48644003",
+    "display": "Congenital hypertrophic pyloric stenosis",
+    "matched_term": "Congenital hypertrophic pyloric stenosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid37722950-pyloric-mass-absent",
+   "finding": {
+    "concept_id": "276357003",
+    "display": "Pyloric mass",
+    "matched_term": "Pyloric mass",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48644003",
+    "display": "Congenital hypertrophic pyloric stenosis",
+    "matched_term": "Congenital hypertrophic pyloric stenosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid37722950-vomiting",
+   "finding": {
+    "concept_id": "422400008",
+    "display": "Vomiting",
+    "matched_term": "Vomiting",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48644003",
+    "display": "Congenital hypertrophic pyloric stenosis",
+    "matched_term": "Congenital hypertrophic pyloric stenosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid37722950-vomiting-absent",
+   "finding": {
+    "concept_id": "422400008",
+    "display": "Vomiting",
+    "matched_term": "Vomiting",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "48644003",
+    "display": "Congenital hypertrophic pyloric stenosis",
+    "matched_term": "Congenital hypertrophic pyloric stenosis",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid38619828-barlow-ortolani",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "703182002",
+     "display": "Headache due to reversible cerebral vasoconstriction syndrome"
+    },
+    {
+     "concept_id": "718362003",
+     "display": "Functional movement disorder"
+    }
+   ]
+  },
+  {
+   "id": "pmid38619828-barlow-ortolani-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "703182002",
+     "display": "Headache due to reversible cerebral vasoconstriction syndrome"
+    },
+    {
+     "concept_id": "718362003",
+     "display": "Functional movement disorder"
+    }
+   ]
+  },
+  {
+   "id": "pmid38619828-limited-abduction",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "773300008",
+     "display": "Spondyloepimetaphyseal dysplasia, hypotrichosis syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid38619828-limited-abduction-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "773300008",
+     "display": "Spondyloepimetaphyseal dysplasia, hypotrichosis syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid38619828-click",
+   "finding": {
+    "concept_id": "202606004",
+    "display": "Clicking hip",
+    "matched_term": "Clicking hip",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid38619828-click-absent",
+   "finding": {
+    "concept_id": "202606004",
+    "display": "Clicking hip",
+    "matched_term": "Clicking hip",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "52781008",
+    "display": "Developmental hip dysplasia",
+    "matched_term": "Developmental dysplasia of the hip",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid39535756-mel-pcp-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "719787003",
+     "display": "Shared care prescribing of drug for dementia"
+    }
+   ]
+  },
+  {
+   "id": "pmid39535756-mel-pcp-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "719787003",
+     "display": "Shared care prescribing of drug for dementia"
+    }
+   ]
+  },
+  {
+   "id": "pmid39535756-mel-derm-present",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid39535756-mel-derm-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "93655004",
+    "display": "Malignant melanoma of skin",
+    "matched_term": "Malignant melanoma of skin",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid39938056-spurling",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "54404000",
+    "display": "Cervical radiculopathy",
+    "matched_term": "Cervical radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "721095007",
+     "display": "Diaphragmatic defect, limb deficiency, skull defect syndrome"
+    },
+    {
+     "concept_id": "771510006",
+     "display": "X-linked central congenital hypothyroidism with late-onset testicular enlargement"
+    },
+    {
+     "concept_id": "1197592001",
+     "display": "Intrauterine growth restriction, short stature, early adult-onset diabetes syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid39938056-spurling-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "54404000",
+    "display": "Cervical radiculopathy",
+    "matched_term": "Cervical radiculopathy",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "721095007",
+     "display": "Diaphragmatic defect, limb deficiency, skull defect syndrome"
+    },
+    {
+     "concept_id": "771510006",
+     "display": "X-linked central congenital hypothyroidism with late-onset testicular enlargement"
+    },
+    {
+     "concept_id": "1197592001",
+     "display": "Intrauterine growth restriction, short stature, early adult-onset diabetes syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid40032401-cough-absent",
+   "finding": {
+    "concept_id": "49727002",
+    "display": "Cough",
+    "matched_term": "Cough",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid40032401-fever-absent",
+   "finding": {
+    "concept_id": "386661006",
+    "display": "Fever",
+    "matched_term": "Fever",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "6142004",
+    "display": "Influenza",
+    "matched_term": "Influenza",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid40257808-oral-injury",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "371779005",
+    "display": "Physical child abuse",
+    "matched_term": "Physical abuse of child",
+    "method": "exact_synonym"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "1163181000",
+     "display": "Chop wound"
+    },
+    {
+     "concept_id": "715656004",
+     "display": "Aplasia of lacrimal and salivary gland"
+    },
+    {
+     "concept_id": "771309000",
+     "display": "Autosomal recessive lymphoproliferative disease"
+    },
+    {
+     "concept_id": "609406000",
+     "display": "Non-allergic hypersensitivity reaction"
+    },
+    {
+     "concept_id": "774149004",
+     "display": "Severe intellectual disability, progressive postnatal microcephaly, midline stereotypic hand movements syndrome"
+    }
+   ]
+  },
+  {
+   "id": "pmid40257808-retinal-haem",
+   "finding": {
+    "concept_id": "28998008",
+    "display": "Retinal haemorrhage",
+    "matched_term": "Retinal haemorrhage",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "371779005",
+    "display": "Physical child abuse",
+    "matched_term": "Physical abuse of child",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid40257808-seizures",
+   "finding": {
+    "concept_id": "91175000",
+    "display": "Seizure",
+    "matched_term": "Seizure",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "371779005",
+    "display": "Physical child abuse",
+    "matched_term": "Physical abuse of child",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid41729549-jvd",
+   "finding": {
+    "concept_id": "22447003",
+    "display": "Jugular venous pressure above reference range",
+    "matched_term": "Raised jugular venous pressure",
+    "method": "exact_synonym"
+   },
+   "diagnosis": {
+    "concept_id": "21639008",
+    "display": "Hypervolaemia",
+    "matched_term": "Fluid overload",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid41729549-le-oedema",
+   "finding": {
+    "concept_id": "102572006",
+    "display": "Oedema of lower limb",
+    "matched_term": "Oedema of lower limb",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "21639008",
+    "display": "Hypervolaemia",
+    "matched_term": "Fluid overload",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid41729549-crackles",
+   "finding": {
+    "concept_id": "48409008",
+    "display": "Respiratory crackles",
+    "matched_term": "Respiratory crackles",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "21639008",
+    "display": "Hypervolaemia",
+    "matched_term": "Fluid overload",
+    "method": "exact_synonym"
+   }
+  },
+  {
+   "id": "pmid41941197-noise",
+   "finding": {
+    "concept_id": "313387002",
+    "display": "Phonophobia",
+    "matched_term": "Phonophobia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid41941197-nausea",
+   "finding": {
+    "concept_id": "422587007",
+    "display": "Nausea",
+    "matched_term": "Nausea",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid41941197-light",
+   "finding": {
+    "concept_id": "409668002",
+    "display": "Photophobia",
+    "matched_term": "Photophobia",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid41941197-headache-absent",
+   "finding": {
+    "concept_id": "25064002",
+    "display": "Headache",
+    "matched_term": "Headache",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid41941197-npc",
+   "finding": {
+    "concept_id": "194131002",
+    "display": "Convergence insufficiency",
+    "matched_term": "Convergence insufficiency",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid41941197-pursuits",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "34406007",
+     "display": "Deficiency of smooth pursuit movements"
+    },
+    {
+     "concept_id": "1217660000",
+     "display": "Directional deficiency of smooth pursuit movements"
+    },
+    {
+     "concept_id": "1231746006",
+     "display": "Isolated agenesis of cerebellar vermis"
+    },
+    {
+     "concept_id": "783060009",
+     "display": "Autosomal recessive cerebellar ataxia, psychomotor delay syndrome"
+    },
+    {
+     "concept_id": "763351003",
+     "display": "Spectrin-associated autosomal recessive cerebellar ataxia"
+    }
+   ]
+  },
+  {
+   "id": "pmid41941197-saccades",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "110030002",
+    "display": "Concussion injury of brain",
+    "matched_term": "Concussion injury of brain",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "763351003",
+     "display": "Spectrin-associated autosomal recessive cerebellar ataxia"
+    },
+    {
+     "concept_id": "1231746006",
+     "display": "Isolated agenesis of cerebellar vermis"
+    }
+   ]
+  },
+  {
+   "id": "pmid9786377-both-arms",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "425677008",
+     "display": "Pain radiating to left arm"
+    },
+    {
+     "concept_id": "426803004",
+     "display": "Pain radiating to right arm"
+    },
+    {
+     "concept_id": "427293006",
+     "display": "Pain radiating to left side of chest"
+    },
+    {
+     "concept_id": "427252003",
+     "display": "Pain radiating to right side of chest"
+    },
+    {
+     "concept_id": "768010007",
+     "display": "Bilateral posterior crossbite"
+    }
+   ]
+  },
+  {
+   "id": "pmid9786377-s3",
+   "finding": {
+    "concept_id": "277455002",
+    "display": "Third heart sound",
+    "matched_term": "Third heart sound",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid9786377-hypotension",
+   "finding": {
+    "concept_id": "45007003",
+    "display": "Hypotension",
+    "matched_term": "Hypotension",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid9786377-pleuritic",
+   "finding": {
+    "concept_id": "2237002",
+    "display": "Pleuritic pain",
+    "matched_term": "Pleuritic pain",
+    "method": "exact_display"
+   },
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   }
+  },
+  {
+   "id": "pmid9786377-sharp",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "30623001",
+     "display": "Catch"
+    },
+    {
+     "concept_id": "829972004",
+     "display": "Diffuse alveolar haemorrhage"
+    },
+    {
+     "concept_id": "1187194006",
+     "display": "Chronic enteropathy associated with SLCO2A1 gene"
+    },
+    {
+     "concept_id": "770432008",
+     "display": "Ectasia of left atrial appendage"
+    },
+    {
+     "concept_id": "1366399005",
+     "display": "Primary congenital aneurysm of superior vena cava"
+    }
+   ]
+  },
+  {
+   "id": "pmid9786377-positional",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "57054005",
+    "display": "Acute myocardial infarction",
+    "matched_term": "Acute myocardial infarction",
+    "method": "exact_display"
+   },
+   "finding_candidates": [
+    {
+     "concept_id": "29857009",
+     "display": "Chest pain"
+    },
+    {
+     "concept_id": "1264062004",
+     "display": "Burning chest pain"
+    },
+    {
+     "concept_id": "161972006",
+     "display": "Central chest pain"
+    },
+    {
+     "concept_id": "36859004",
+     "display": "Oesophageal chest pain"
+    },
+    {
+     "concept_id": "13057000",
+     "display": "Pleuropericardial chest pain"
+    }
+   ]
+  },
+  {
+   "id": "pmid9892455-palp3",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233985008",
+    "display": "Abdominal aortic aneurysm",
+    "matched_term": "Abdominal aortic aneurysm",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid9892455-palp3-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233985008",
+    "display": "Abdominal aortic aneurysm",
+    "matched_term": "Abdominal aortic aneurysm",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid9892455-palp4",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233985008",
+    "display": "Abdominal aortic aneurysm",
+    "matched_term": "Abdominal aortic aneurysm",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
+  },
+  {
+   "id": "pmid9892455-palp4-absent",
+   "finding": null,
+   "diagnosis": {
+    "concept_id": "233985008",
+    "display": "Abdominal aortic aneurysm",
+    "matched_term": "Abdominal aortic aneurysm",
+    "method": "exact_display"
+   },
+   "finding_candidates": []
   }
  ]
 }

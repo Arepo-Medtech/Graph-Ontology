@@ -295,12 +295,27 @@ def main() -> int:
         v = json.load(open(ver))
         k, n = v["verified"], v["records"]
         lo, _ = wilson(k, n)
-        con.execute("UPDATE edge SET tier = ? WHERE predicate LIKE 'finding_lr_if_%'", [tier(lo, n)])
+        # the edge is only as good as its weakest verified step: transcription (mechanical) and binding (read by hand)
+        br = v.get("binding_review") or {}
+        bn, bk = br.get("distinct_bindings_read", 0), br.get("distinct_bindings_read", 0) - br.get("read_as_wrong", 0)
+        blo, _ = wilson(bk, bn)
+        order = ["1", "2", "inadmissible", "ungraded"]
+        t_edge = max(tier(lo, n), tier(blo, bn), key=order.index)
+        con.execute("UPDATE edge SET tier = ? WHERE predicate LIKE 'finding_lr_if_%'", [t_edge])
         e, dx, fi, dv = con.execute("""SELECT count(*), count(DISTINCT o_code), count(DISTINCT s_code),
                 count(*) FILTER (WHERE json_extract(attrs, '$.derived')::BOOLEAN) FROM edge WHERE predicate LIKE 'finding_lr_if_%'""").fetchone()
         report["evidence:finding -> diagnosis likelihood ratios"] = {"records_transcribed": n, "numbers_verified_against_abstract": k,
-            "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n), "edges": e, "diagnoses": dx, "findings": fi, "derived_from_sens_spec": dv,
+            "transcription_wilson_lo": round(lo, 4), "transcription_tier": tier(lo, n),
+            "bindings_read": bn, "bindings_right_first_time": bk, "binding_wilson_lo": round(blo, 4), "binding_tier": tier(blo, bn),
+            "earned_tier": t_edge, "edges": e, "diagnoses": dx, "findings": fi, "derived_from_sens_spec": dv,
             "candidates_not_bound": n - e, "state": "corrected_pending_attestation (a person signs off each)",
+            # independent sources on the same finding, diagnosis and side: do they agree which way it moves the odds?
+            "parallel_sources": dict(zip(("pairs_with_2_or_more_sources", "same_direction", "direction_differs"), con.execute("""
+                WITH g AS (SELECT s_code, o_code, predicate, count(DISTINCT json_extract_string(attrs, '$.pmid')) n,
+                                  bool_and(json_extract(attrs, '$.lr')::DOUBLE > 1) up, bool_and(json_extract(attrs, '$.lr')::DOUBLE < 1) down
+                           FROM edge WHERE predicate LIKE 'finding_lr_if_%' GROUP BY 1, 2, 3)
+                SELECT count(*) FILTER (WHERE n > 1), count(*) FILTER (WHERE n > 1 AND (up OR down)),
+                       count(*) FILTER (WHERE n > 1 AND NOT (up OR down)) FROM g""").fetchone())),
             "edges_listed": [f"{fn} [{'present' if p.endswith('present') else 'absent'}] -> {dn}: LR {json.loads(a)['lr']}"
                              for p, fn, dn, a in con.execute("""SELECT e.predicate, nf.name, nd.name, e.attrs FROM edge e
                                  LEFT JOIN node nf ON nf.vocab = 'SCT' AND nf.code = e.s_code LEFT JOIN node nd ON nd.vocab = 'SCT' AND nd.code = e.o_code
