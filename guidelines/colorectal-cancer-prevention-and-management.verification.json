@@ -1,0 +1,105 @@
+{
+ "guideline": "guidelines/colorectal-cancer-prevention-and-management.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://app.magicapp.org/#/guideline/noPKwE"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "QUOTED UNDER A 200-WORD BUDGET (199 words used), from Cancer Council Australia 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer' v2.4 (published 2026-04-23), retrieved 2026-09-23 as MAGICapp JSON. Every pass claim is machine re-checkable. LICENCE: Free to read, NOT openly licensed. Cancer Council Australia's guideline FAQ: fair dealing needs only correct citation; reproducing 'more than 200 words or figures/tables' needs permission from guidelines@cancer.org.au. So quotes here are capped at 200 words per source guideline (enforced by the generator) and tables were stripped from the retrieved text before quoting, so none can be quoted. ",
+ "summary": {
+  "total": 12,
+  "pass": 12,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Cancer Council makes a strong recommendation to consider universal aspirin chemoprevention**, except where contraindicated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a strong recommendation to consider universal aspirin chemoprevention except where contraindicated",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Initial aspirin prescription for colorectal cancer prevention is limited to ages 50 to 70.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "limit the recommendation for the initial prescription of aspirin … to those aged 50 to 70 years of age",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Lynch syndrome: the recommended preventive dose is 100 mg daily**, and **regular colonoscopy must continue** while taking aspirin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the current dose recommended for prevention of Lynch Syndrome-associated cancers … is 100 mg daily … Regular colonoscopy must continue for patients taking aspirin.",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **No symptom strongly predicts colorectal cancer, and none rules it out.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "no symptoms are strongly predictive of colorectal cancer, nor are there any symptoms which rule out cancer",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**GPs should use simple investigations in primary care: full blood count, iron studies and iFOBT.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "GPs should apply this evidence to inform their use of simple investigations in primary care (full blood count, iron studies and iFOBT)",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Target a maximum of 120 days from first presentation to diagnosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A maximum diagnostic interval of 120 days from first presentation to healthcare … to diagnosis should be the target",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess for anaemia and iron deficiency as early as possible before surgery.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "should be assessed for anaemia and iron deficiency as early as possible prior to surgery",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stage III colon cancer: offer 6 months of adjuvant chemotherapy** unless medically unfit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "6 months of adjuvant chemotherapy should be offered to patients with stage III colon cancer, unless medically unfit",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Stage II: adjuvant chemotherapy is case-by-case, not a standard of care.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adjuvant chemotherapy for stage II cancers can be considered on a case-by-case basis but cannot be considered a standard of care.",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Metastatic disease: test the tumour for RAS mutations** when metastatic disease is diagnosed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "should have their tumour tested for RAS mutations at the time of diagnosis of their metastatic disease",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen people with advanced colorectal cancer regularly for psychosocial distress.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with advanced colorectal cancer should be regularly screened for psychosocial distress",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Follow-up: colonoscopy 12 months after surgery.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Colonoscopy should be performed 12 months after surgery",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection and management of colorectal cancer', v2.4, published 2026-04-23, MAGICapp https://app.magicapp.org/#/guideline/noPKwE, retrieved 2026-09-23"
+  }
+ ]
+}
