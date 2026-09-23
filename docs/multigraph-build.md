@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**954,396 nodes, 4,474,223 edges, 156 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings* and *How a drug works*.)
+**1,050,986 nodes, 4,601,958 edges, 156 edge types, 19 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Illnesses to ICD-10-CM* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -36,7 +36,7 @@ Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in unde
 | DrugCentral: indication 38,399 (all three kinds) · SNOMED 7,470 · ATC 5,148 · RxNorm 3,539 | DrugCentral 2023-11-01 | 54,556 |
 | HPO is-a | HPO 2026-09-02 | 24,436 |
 | substance → standard ingredient | review decisions, scored route, RxNav | 4,689 |
-| ICD-10-CM → SNOMED (for MONDO's codes; exists to score MONDO) | Athena 29-AUG-26 | 1,968 |
+| ICD-10-CM → SNOMED (for MONDO's codes; exists to score MONDO — now all codes, see *Illnesses to ICD-10-CM*) | Athena 29-AUG-26 | 1,968 |
 | corpus condition → SNOMED binding | `reference/snomed_bindings.json` | 265 |
 
 By the five-kind frame (`category` in the register): relation 1,013,035 · structure 1,008,455 · classification
@@ -236,6 +236,28 @@ testosterone* under *Testosterone*.
 **Together: 3,114 LOINC terms reach 869 findings they define** (from 1,110 and 418). The two witnesses make 13,801 of
 the same edges; for the 882 LOINC terms both reach, **826 (93.7%) get exactly the same findings**. The analyte join
 alone makes 2,111 edges, Athena alone 10,325.
+
+## Illnesses to ICD-10-CM: every code (built, Tier 2)
+
+The first build loaded OMOP's ICD-10-CM → SNOMED maps only for the 1,968 codes MONDO uses, to score MONDO. Now **all
+98,290 mapped codes** load — diseases, symptoms (R), injuries (S, T: 55% of the codes), external causes (V–Y), health
+factors (Z): **129,167 edges to 15,071 SNOMED concepts**, 11,555 of which had no string to any other vocabulary. A
+**combination code** maps to 2–4 concepts that *together* are its meaning (type 1 diabetes with proliferative
+retinopathy and retinal detachment → both), so each edge carries `targets_of_code` (26,851 codes have more than one) and
+no single target is read as the whole. OMOP's "Maps to value" pairs (*history of* style) mean something else and are
+not loaded.
+
+MONDO can witness only the disease chapters, so the tier comes from a hand check on two samples — 40 edges at random
+(dominated by injury and external-cause codes, as the maps are) and 40 spread evenly across the chapter letters:
+**75/80, Wilson lower bound 0.862 → Tier 2** (`reference/icd10cm_handcheck.json`). OMOP often maps *uphill* —
+*Metabolic syndrome* → *Metabolic disease* — which is lossy but not wrong, and was counted correct. The five errors are
+OMOP's own and stay as the source asserts them: a pedal cyclist in collision with a *non*-motor vehicle mapped to *Motor
+vehicle traffic accident*; non-pressure chronic ulcers (the whole L98.A class) mapped to *Open wound*; *Other renal
+tubulo-interstitial diseases* narrowed to nephritis; J05 (croup *and* epiglottitis) mapped to croup alone.
+
+**SNOMED clinical findings with a string to another vocabulary: 9.3% → 17.4%** (22,613 of 129,675); events 0.2% →
+14.4%. These are **US** codes: Australia's ICD-10-AM is licensed from IHACPA and is not held, so an Australian coded
+diagnosis still needs ICD-10-AM → SNOMED from its own source.
 
 ## How a drug works: drug → target → protein → gene → disease
 

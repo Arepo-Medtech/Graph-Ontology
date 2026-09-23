@@ -324,7 +324,7 @@
     },
     {
       "id": "icd10cm:maps_to",
-      "label": "ICD-10-CM code maps to SNOMED concept",
+      "label": "ICD-10-CM code maps to SNOMED concept (a combination code maps to several, which together are its meaning)",
       "subject": [
         "ICD10CM"
       ],
@@ -336,7 +336,7 @@
       "strength_kind": "exact",
       "source": "OMOP Athena v5.0 29-AUG-26",
       "status": "built",
-      "note": "Loaded for the MONDO codes only; it exists to score MONDO -> SNOMED by a second path"
+      "note": "All 98,290 mapped ICD-10-CM codes (the first build loaded MONDO's 1,968 only, to score MONDO). attrs.targets_of_code: 26,851 codes map to 2-4 concepts; attrs.icd_deprecated. OMOP often maps uphill to a broader concept (lossy, not wrong). Hand check 75/80 on two samples -- random, and even across chapters (reference/icd10cm_handcheck.json); the errors are OMOP's (a non-motor collision mapped to a motor-vehicle accident; non-pressure chronic ulcers mapped to 'Open wound'). MONDO is the second witness for the disease chapters. graph_report.py earns the tier. US codes: Australia's ICD-10-AM is licensed from IHACPA and not held."
     },
     {
       "id": "hp:is_a",
