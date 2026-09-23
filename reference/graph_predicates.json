@@ -16,6 +16,8 @@
   "_mechanisms": "The five meanings are carried by three different mechanisms, and conflating them is what would sink an implementation: GRAPH EDGES (this register); TYPED TABLES for quantities (DRUG_STRENGTH's 2,966,568 rows, the compendium's strength table -- joins, never traversed); FREE-TEXT FIELDS in sources (PBS severity on 192 of 653 indications, episodicity on 42, 'Severe' and 'severe' distinct strings) which ride as edge attributes until bound.",
   "vocabularies": {
     "SCT": "SNOMED CT, keyed by SCTID. One vocabulary for international and AU-extension concepts (AMT included): SCTIDs are globally unique, so an AMT substance and the same SNOMED substance are ONE node",
+    "ICDO": "ICD-O-3 (WHO International Classification of Diseases for Oncology), topography (C..) and morphology (..../.) codes. Named by code: the classification's labels are WHO's and are not loaded",
+    "ARTG": "Australian Register of Therapeutic Goods entry, keyed by ARTG id (TGA)",
     "RXN": "RxNorm, keyed by RxCUI",
     "RXE": "OMOP RxNorm Extension, keyed by its OMOP concept_code",
     "ATC": "WHO ATC, keyed by code",
@@ -407,6 +409,85 @@
       "source": "uberon.sssom.tsv (Uberon release v2026-06-23), skos:narrowMatch to SCTID",
       "status": "built",
       "note": "Uberon is species-neutral, SNOMED CT is human, so Uberon curates every SNOMED link as narrowMatch, never exactMatch: the edge says the SNOMED concept is the human instance of the class, not that the two are the same concept. Hand-checked; graph_report.py earns the tier."
+    },
+    {
+      "id": "sct:icdo_map",
+      "label": "SNOMED CT concept maps to this ICD-O-3 code",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ICDO"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 (Refset/Map, Refset/Content): ICD-O simple map reference set 446608001",
+      "status": "built",
+      "note": "SNOMED International's map, shipped in the AU release: body structures to ICD-O topography, morphologic abnormalities to ICD-O morphology (attrs.axis). Only active SNOMED CT-AU concepts load."
+    },
+    {
+      "id": "sct:artg_id",
+      "label": "AMT product is registered under this ARTG entry",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ARTG"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 (Refset/Map, Refset/Content): ARTG Id reference set 11000168105",
+      "status": "built",
+      "note": "The TGA registration a product is supplied under -- the Australian regulatory identity of a medicine, next to its PBS listing."
+    },
+    {
+      "id": "sct:anatomy_structure_entire",
+      "label": "SNOMED 'Structure of X' is paired with 'Entire X'",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 (Refset/Map, Refset/Content): Anatomy structure and entire association reference set 734138000",
+      "status": "built",
+      "note": "The S/E pairing SNOMED keeps for body structures; the RadLex witness counts through it (Uberon names the Entire concept, UMLS the Structure)."
+    },
+    {
+      "id": "sct:anatomy_structure_part",
+      "label": "SNOMED 'Structure of X' is paired with 'Part of X'",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 (Refset/Map, Refset/Content): Anatomy structure and part association reference set 734139008",
+      "status": "built"
+    },
+    {
+      "id": "sct:historical_association",
+      "label": "retired SNOMED CT id -> the active concept SNOMED CT-AU says succeeds it",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 20260831 (Refset/Map, Refset/Content): historical association reference sets (REPLACED BY, SAME AS, POSSIBLY EQUIVALENT TO, MOVED TO, WAS A, ALTERNATIVE, ...) and the Substance to SNOMED CT-AU mapping reference set 281000036105",
+      "status": "built",
+      "note": "Loaded only for SNOMED ids the graph holds that the release does not define as active (another source's stale code: an AMT product retired in August, an old AMT substance id in OMOP). method names the association; POSSIBLY EQUIVALENT TO and ALTERNATIVE are weaker than REPLACED BY and SAME AS and a query should say which it follows. Kept beside sct:au_nearest_ancestor (Athena), never instead of the original edge."
     },
     {
       "id": "radlex:is_a",

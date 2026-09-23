@@ -148,9 +148,16 @@ def main() -> int:
     report["coverage:LOINC terms bridged to SNOMED"] = dict(zip(("loinc_terms", "bridged"), con.execute("""
         SELECT (SELECT count(DISTINCT s_code) FROM edge WHERE predicate LIKE 'loinc:has_%'),
                (SELECT count(DISTINCT s_code) FROM edge WHERE predicate IN ('loinc:is_a_snomed', 'loinc:maps_to_snomed'))""").fetchone()))
-    report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"] = dict(zip(("foreign_ids", "lifted"), con.execute("""
+    report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"] = dict(zip(("foreign_ids", "nearest_ancestor_via_athena",
+            "successor_via_au_historical_association", "successor_by_association", "either"), con.execute("""
         SELECT (SELECT edges FROM build_log WHERE family LIKE 'foreign SNOMED ids%'),
-               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:au_nearest_ancestor')""").fetchone()))
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:au_nearest_ancestor'),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:historical_association'),
+               (SELECT json_group_object(m, n) FROM (SELECT method m, count(DISTINCT s_code) n FROM edge
+                  WHERE predicate = 'sct:historical_association' GROUP BY 1 ORDER BY 2 DESC)),
+               (SELECT count(DISTINCT s_code) FROM edge WHERE predicate IN ('sct:au_nearest_ancestor', 'sct:historical_association'))""").fetchone()))
+    fs = report["coverage:foreign SNOMED ids lifted to SNOMED CT-AU"]
+    fs["successor_by_association"] = json.loads(fs["successor_by_association"] or "{}")
 
     # --- route 4: HPO -> SNOMED via a shared UMLS CUI, checked by hierarchy preservation ----------------------------
     # Where HPO says child is-a parent and both cross to SNOMED, the child's SNOMED concept should be the parent's or

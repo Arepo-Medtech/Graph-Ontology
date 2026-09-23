@@ -69,6 +69,7 @@ DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
 UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path("reference/threshold_units.json")   # US <-> AU units
+AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
 UCUM_PREFIX = {"k": 1e3, "h": 1e2, "da": 1e1, "": 1.0, "d": 1e-1, "c": 1e-2, "m": 1e-3, "u": 1e-6, "n": 1e-9, "p": 1e-12, "f": 1e-15}
@@ -209,7 +210,8 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
-            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI}
+            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI,
+            "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset"}
 
 
 def main() -> int:
@@ -257,6 +259,28 @@ def main() -> int:
     # --- SNOMED CT-AU: the whole relationship snapshot ------------------------------------------------------------
     ins("SNOMED CT-AU relationships", f"""SELECT 'SCT', src, 'sct:' || typ, 'SCT', dst, 'SNOMED CT-AU RF2', 'compendium rel',
             'native', 'native', 'asserted', '{PIN['sct']}', json_object('group', grp) FROM cmp.rel""")
+    # --- SNOMED CT-AU's own maps and associations (the release's Refset/Map and Refset/Content) -----------------------
+    ref = lambda sub, name: f"read_csv('{AU_RF2 / 'Refset' / sub / name}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
+    rel_ = PIN["sct"].split()[-1]
+    if (AU_RF2 / "Refset").exists():
+        ins("SNOMED CT -> ICD-O-3 (ICD-O simple map)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:icdo_map', 'ICDO', mapTarget,
+                'SNOMED CT-AU RF2', 'ICD-O simple map reference set 446608001', 'simple map', 'native', 'asserted', '{PIN['sct']}',
+                json_object('axis', CASE WHEN mapTarget LIKE 'C%' THEN 'topography' ELSE 'morphology' END)
+            FROM {ref('Map', f'der2_sRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId = '446608001' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        ins("AMT product -> ARTG id (ARTG Id reference set)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:artg_id', 'ARTG', mapTarget,
+                'SNOMED CT-AU RF2', 'ARTG Id reference set 11000168105', 'simple map', 'native', 'asserted', '{PIN['sct']}', NULL
+            FROM {ref('Map', f'der2_iRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId = '11000168105' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        ins("SNOMED anatomy structure -> entire / part (association refsets)", f"""SELECT DISTINCT 'SCT', referencedComponentId,
+                CASE refsetId WHEN '734138000' THEN 'sct:anatomy_structure_entire' ELSE 'sct:anatomy_structure_part' END,
+                'SCT', targetComponentId, 'SNOMED CT-AU RF2', 'association reference set ' || refsetId, 'association', 'native', 'asserted',
+                '{PIN['sct']}', NULL
+            FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')}
+            WHERE active = '1' AND refsetId IN ('734138000', '734139008')""")
+        con.execute("INSERT INTO name_hint SELECT DISTINCT 'ICDO', o_code, 'ICD-O-3 ' || o_code FROM edge WHERE predicate = 'sct:icdo_map'")
+        con.execute("INSERT INTO name_hint SELECT DISTINCT 'ARTG', o_code, 'ARTG ' || o_code FROM edge WHERE predicate = 'sct:artg_id'")
+
 
     # --- OMOP product mappings (concept ids resolved to (vocabulary, code) once) -----------------------------------
     con.execute("""CREATE TEMP TABLE want AS SELECT DISTINCT CAST(id AS VARCHAR) AS id FROM (
@@ -979,6 +1003,25 @@ def main() -> int:
     con.execute(f"CREATE TEMP TABLE native_sct AS SELECT id FROM cmp.concept {ext_ids}")
     con.execute("""CREATE TEMP TABLE foreign_sct AS SELECT DISTINCT code FROM (SELECT s_code AS code FROM edge WHERE s_vocab = 'SCT'
                    UNION SELECT o_code FROM edge WHERE o_vocab = 'SCT') WHERE code NOT IN (SELECT id FROM native_sct)""")
+    if (AU_RF2 / "Refset").exists():
+        # a retired SCTID the AU release still describes: SNOMED's own historical association (REPLACED BY, SAME AS,
+        # POSSIBLY EQUIVALENT TO ...) and the AU substance map, to an active concept -- the release's answer, not a guess
+        ins("retired SNOMED -> current (historical association)", f"""SELECT DISTINCT 'SCT', a.referencedComponentId, 'sct:historical_association',
+                'SCT', a.targetComponentId, 'SNOMED CT-AU RF2', 'association reference set ' || a.refsetId, t.pt, 'native', 'asserted',
+                '{PIN['sct']}', json_object('association', t.pt)
+            FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')} a
+            JOIN cmp.concept t ON t.id = a.refsetId
+            WHERE a.active = '1' AND a.refsetId NOT IN ('734138000', '734139008')
+              AND a.referencedComponentId IN (SELECT code FROM foreign_sct) AND a.targetComponentId IN (SELECT id FROM native_sct)
+            UNION SELECT DISTINCT 'SCT', m.referencedComponentId, 'sct:historical_association', 'SCT', m.targetSnomedCtSubstance,
+                'SNOMED CT-AU RF2', 'Substance to SNOMED CT-AU mapping reference set 281000036105', 'Substance map: ' || t.pt, 'native',
+                'asserted', '{PIN['sct']}', json_object('association', 'substance map ' || lower(t.pt))
+            FROM {ref('Map', f'der2_csRefset_AttributeValueMapSnapshot_AU1000036_{rel_}.txt')} m JOIN cmp.concept t ON t.id = m.mapType
+            WHERE m.active = '1' AND m.referencedComponentId IN (SELECT code FROM foreign_sct)
+              AND m.targetSnomedCtSubstance IN (SELECT id FROM native_sct)""")
+        # the release still carries the retired concepts' descriptions: name them from it
+        con.execute(f"""INSERT INTO name_hint SELECT 'SCT', d.conceptId, any_value(d.term) FROM {ref('../Terminology', f'sct2_Description_Snapshot-en-au_AU1000036_{rel_}.txt')} d
+            WHERE d.active = '1' AND d.conceptId IN (SELECT code FROM foreign_sct) AND d.typeId = '900000000000003001' GROUP BY 2""")
     ins("foreign SNOMED -> nearest SNOMED CT-AU ancestor", f"""
         WITH anc AS (
             SELECT f.code, a.concept_code AS anc, CAST(ca.min_levels_of_separation AS INT) AS lvl
