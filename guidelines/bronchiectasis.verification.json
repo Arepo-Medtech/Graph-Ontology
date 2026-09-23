@@ -1,0 +1,104 @@
+{
+ "guideline": "guidelines/bronchiectasis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "OPEN AND QUOTED from Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary' (published 10 November 2023). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC10952737). ",
+ "summary": {
+  "total": 12,
+  "pass": 12,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Bronchiectasis means chronic cough and sputum, recurrent chest infections and CT evidence of bronchial dilatation.** It remains under-recognised and undertreated.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bronchiectasis is characterised by chronic cough and sputum production, recurrent respiratory infections, and computed tomography (CT) evidence of bronchial dilatation. … Nevertheless, bronchiectasis remains under‐recognised and undertreated.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Indigenous Australians carry the highest burden:** about 1470 per 100 000 children under 14 years in remote northern communities, and up to 23% of Indigenous adults having chest CT. They die about 20 years earlier than non-Indigenous adults with bronchiectasis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In Australia, bronchiectasis is most prevalent in Indigenous populations from remote northern communities, where an estimated 1470 per 100 000 children aged less than 14 years, and up to 23% of Indigenous adults undergoing chest CT scans have radiographic evidence of bronchiectasis. … Indigenous Australians with bronchiectasis die about 20 years earlier than non‐Indigenous adults with bronchiectasis, who, in turn, die ten years earlier than other Australians.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Diagnose it early in children, where mild disease can reverse.** Over 60% of referred adults had symptoms since childhood and a worse prognosis. Use paediatric radiographic criteria when reading a child's chest CT.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An Australian cohort study reported that over 60% of referred adults with bronchiectasis had symptoms dating from childhood and a worse prognosis than those with adult‐onset disease. In contrast, bronchiectasis in children is potentially reversible if diagnosed early and treated optimally. … The possibility of mild bronchiectasis being reversible in children if identified early and treated optimally reinforces the importance of recognising the clinical features of bronchiectasis and using paediatric radiographic diagnostic criteria when interpreting chest CT scans.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The diagnosis starts the work-up:** look for an underlying cause, comorbid conditions and treatable traits, and grade extent and severity. Baseline and extended investigations differ for children and adults.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, making the diagnosis is the beginning, and not the end, of the diagnostic journey. As bronchiectasis is a heterogenous disorder, a search for an underlying cause and comorbid conditions should be initiated. … while determining the extent and severity of the bronchiectasis remains important. … the baseline and extended investigations are split between these two age groups.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Offer eradication therapy for newly detected *P. aeruginosa*** (the 2023 statement changed \"consider\" to \"offer\"), since *P. aeruginosa* predicts worse outcomes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In bronchiectasis, P. aeruginosa is associated with worse clinical outcomes, and, consistent with other international guidelines, the 2023 Statement now states that eradication therapy for newly detected P. aeruginosa in respiratory secretions should be offered, rather than considered",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat an exacerbation with antibiotics for at least 14 days** (up from ten days in 2015). In children with non-severe exacerbations, oral amoxycillin–clavulanate beat placebo.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a single, double‐blind randomised controlled trial in children and adolescents with non‐severe (non‐hospitalised) exacerbations found that oral amoxycillin-clavulanate was superior to placebo at achieving symptom resolution and shortening symptom duration after a 14‐day treatment. Accordingly, the 2023 Statement has recommended antibiotics be continued for at least 14 days, rather than the ten days stated in the 2015 Guidelines.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Long-term antibiotics (> 2 months) aim to cut bacterial load and airway inflammation** when eradication is not possible.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The goal of long term antibiotics (> 2 months) is to reduce bacterial load and/or airway inflammation when eradication is not possible.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider a long-term oral macrolide in frequent exacerbators (≥ 3 exacerbations a year)**: a trial of at least six months, reviewed regularly for benefit, with monitoring for rare but severe adverse effects.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommendation for using long term oral macrolides has been simplified (considered in those with the frequent exacerbator phenotype [ie, ≥ 3 exacerbations per year], which predicts mortality, hospitalisation, and reduced quality of life), and should be prescribed for at least a six‐month trial with regular review for clinical benefit. … more advice is provided on risk factors and monitoring for rare but severe adverse effects from oral macrolides.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not prescribe inhaled antibiotics routinely.** Consider them in adults chronically infected with *P. aeruginosa* with frequent exacerbations when macrolides are contraindicated, not tolerated or fail.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the advice that inhaled antibiotics should not be prescribed routinely remains unchanged, although they can be considered in adults chronically infected with P. aeruginosa and frequent exacerbations when oral macrolides are either contraindicated, not tolerated or fail to reduce exacerbation frequency.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In children, long-term azithromycin reduced exacerbations most between 17 and 62 weeks after starting** (a newer report, after the statement).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "long term azithromycin use being most effective at reducing exacerbations between 17 and 62 weeks after its initiation in children with bronchiectasis",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Advise avoiding e-cigarettes** (now named among products to avoid). The statement also details surgery indications and pre-operative work-up, and equitable access to specialist care, including telehealth for rural and remote areas.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "electronic cigarettes are now included in products to be avoided, the indications for surgery, pre‐operative assessment and where this should be performed are presented in greater detail, as are statements concerning equity of access to specialist health services, which could mean telehealth for rural and remote regions.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Plan transition from paediatric to adult care:** documented, developmentally appropriate and involving both teams.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the last and newest statement recommends planned, clearly documented and developmentally appropriate transition from paediatric to adult services, involving interdisciplinary members of both health teams.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Medical Journal of Australia 2023;219(11):516, 'Chronic suppurative lung disease and bronchiectasis in children, adolescents and adults in Australia and New Zealand: TSANZ position statement summary', published 10 November 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952737/, retrieved 2026-09-23"
+  }
+ ]
+}

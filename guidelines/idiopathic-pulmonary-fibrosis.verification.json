@@ -1,0 +1,181 @@
+{
+ "guideline": "guidelines/idiopathic-pulmonary-fibrosis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "OPEN AND QUOTED from Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision' (published online 11 January 2024). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC10952210). ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Nintedanib and pirfenidone both slow lung-function decline in IPF**, roughly halving the rate of FVC decline, and are licensed in Australia for mild to moderate disease. Efficacy looks similar for the two.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Two medications, nintedanib and pirfenidone, are effective in slowing the decline in lung function in IPF and are recommended for IPF in multinational clinical practice guidelines. These medications are licensed for the treatment of mild to moderate IPF (according to lung function criteria) in both Australia and New Zealand (Table 1). Both medications have been shown in randomized, double blind placebo controlled studies to slow the rate of decline in forced vital capacity (FVC) by approximately 50%., Pooled trial data and post hoc analyses suggest both drugs reduce the incidence of acute exacerbation. Efficacy appears to be similar for both medications.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider an anti-fibrotic for every patient at IPF diagnosis.** The decision to start or stop is individual: disease stage, preferences, comorbidities, toxicity risk and funding rules. Australia has no upper FVC limit for mild disease (New Zealand does, at FVC above 90%).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Anti‐fibrotic therapy to slow IPF disease progression should be considered at IPF diagnosis in all patients. … The decision to start, and to stop, treatment with an anti‐fibrotic should be individualized, and is influenced by disease stage, patient preferences, consideration of comorbidities and risk of toxicity, plus local funding restrictions. … Funding is not currently available in New Zealand for mild disease with FVC greater than 90%, whereas no such limit applies in Australia.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Survival:** pooled trials showed pirfenidone cut all-cause death at 1 year by 48% (HR 0.52); for nintedanib the combined 12-month mortality HR was 0.69 (95%CI 0.44–1.07). Robust trial proof of long-term survival benefit is still lacking.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "pirfenidone reduced the risk of death from any cause at 1 year by 48% (hazard ratio [HR] 0.52; 95% confidence interval [CI] 0.31-0.87; p = 0.01) … Combined data for the impact of nintedanib on 12 month all‐cause mortality demonstrated a HR 0.69 (95%CI 0.44-1.07). … Unfortunately, robust clinical trial data to confirm a long‐term survival benefit of anti‐fibrotic therapy are lacking.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not withhold treatment on age alone.** Nintedanib slowed FVC decline similarly in patients over 75 years and with multiple comorbidities; discontinuation was more common, but most tolerated it.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A pooled analysis of five nintedanib clinical trials demonstrated similar slowing of FVC decline in IPF patients older than 75 years and in those with multiple co‐morbidities. Rates of AEs leading to treatment discontinuation were higher in those over 75 years and in those with multiple co‐morbidities, however, the majority of patients in these categories were able to tolerate nintedanib.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severe disease:** post hoc data show benefit irrespective of baseline severity (including FVC <50% and/or DLCO <35%). Subsidised access may not cover severe impairment at baseline; whether to continue should weigh expected benefit against side effects and quality of life.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "post hoc analyses of ASCEND and RECAP trial data indicate benefit with pirfenidone across multiple domains in patients with FVC <50% and/or DLCO <35% … while access to anti‐fibrotic therapy may not be subsidized for patients with severe lung function impairment at baseline, the decision to continue anti‐fibrotic therapy should balance any anticipated benefit against potential negative impacts of anti‐fibrotic therapy (e.g., side effects) on quality of life.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Switch for toxicity, not for progression.** Funding permits switching between agents for intolerance, and many tolerate the alternative; there is no evidence switching helps disease progression, and it costs time off therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Many patients tolerate the alternative drug in the event of initial treatment toxicity. In New Zealand and Australia, funding authorities permit treatment switch between anti‐fibrotic agents for toxicity. There is no evidence that switching to an alternative anti‐fibrotic favourably impacts disease progression. Significant disease progression in an individual otherwise tolerating their current anti‐fibrotic agent should not necessarily prompt conversion to the other agent. The current anti‐fibrotic agents slow but do not stop disease progression. Switching treatments often leads to time off therapy, and potentially exposes patients to new intolerances.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Combination nintedanib plus pirfenidone is not recommended** outside clinical trials and is not subsidised in Australia or New Zealand.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Combination anti‐fibrotic therapy is not currently recommended outside of clinical trials, nor is it subsidized in Australia or New Zealand.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pirfenidone:** nausea (37.6%), diarrhoea (28.1%), dyspepsia, vomiting and photosensitive rash (25%) are the common effects. Counsel every patient on avoiding direct sun: broad-brimmed hat, long sleeves and 50+ sunscreen.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Combined data from the pirfenidone studies report the most common AEs to be nausea (in 37.6% of patients), diarrhoea (28.1%), dyspepsia (18.4%), vomiting (15.9%) and photosensitive rash (25%) … All patients should be counselled regarding the avoidance of direct sunlight exposure and sun protection measures. … The risk of pirfenidone associated photosensitivity can be minimized by avoiding exposure to direct sunlight (including a broad brimmed hat and long‐sleeve shirts) and use of highly protective (50+) sunscreen.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Nintedanib:** diarrhoea is the main effect (about 60% vs 18% on placebo) but led to stopping in <5%. Manage with a low-fibre diet, avoiding spicy food, and loperamide. Take both drugs with meals.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the nintedanib studies, the most frequent AE was diarrhoea (with rates of approximately 60% compared to approximately 18% with placebo), which resulted in cessation of the drug in <5% of patients. … It is recommended that both pirfenidone and nintedanib are taken with meals to reduce the risk of gastrointestinal adverse effects. For nintedanib‐associated diarrhoea, dietary modification (including a low fibre diet and avoidance of spicy foods) coupled with the use of anti‐diarrhoeal medication (e.g., loperamide) can be helpful.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Monitor liver function after starting.** Serious ALT/AST rises occurred in 3.7% on pirfenidone (usually within 6 months) and 5% on nintedanib (mostly within 3 months), and reversed with dose reduction or interruption. Both are contraindicated in severe hepatic impairment; intolerance of one does not predict intolerance of the other.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "were observed in 3.7% of those taking pirfenidone in a pooled analysis of all trials. These abnormalities were typically observed within the first 6 months of treatment. Serious ALT/AST elevations occurred in 5% of nintedanib treated patients in the INPULSIS trials, with bilirubin elevations greater than two times the upper limit of normal in 0.5%, the majority of events occurring within the first 3 months of treatment. Reversal of the liver function derangement occurred with dose reduction/interruption of the anti‐fibrotic. Both anti‐fibrotics are contraindicated in severe hepatic impairment. Cautious monitoring of liver function is required after commencement of treatment as specified in the product information. If liver function derangement precludes continued use of one anti‐fibrotic, the other agent should be considered as intolerance of one does not predict intolerance to the other.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Check interactions:** pirfenidone is metabolised by CYP1A2, so avoid inhibitors such as ciprofloxacin and fluvoxamine (or reduce the dose substantially and monitor). Nintedanib levels can be affected by strong P-glycoprotein inducers or inhibitors.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pirfenidone is metabolized by CYP1A2, with inhibitors of this enzyme such as ciprofloxacin and fluvoxamine best avoided or otherwise associated with a substantial dose reduction and careful monitoring. Nintedanib is less prone to drug interactions, however, concentrations may be impacted by strong p‐glycoprotein inducers or inhibitors.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dose reductions or interruptions help manage side effects,** and lower doses still appear to slow FVC decline, though the minimal effective dose is unknown.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Temporary dose modifications, including dose reductions or interruptions, may also help in the management of AEs. In a pooled analysis from pirfenidone studies, a similar effect on FVC preservation was noted in patients who received either >90% or <90% of the expected pirfenidone treatment dose. Similar data have been reported for nintedanib. While these results suggest that a lower dose of pirfenidone or nintedanib remain effective in slowing FVC decline in IPF, the minimal effective dose is not clear.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**PPF is non-IPF ILD that progresses despite optimal treatment:** radiological fibrosis plus at least two of three over 12 months: worse symptoms, FVC decline ≥5% or DLCO ≥10%, or radiological progression. ⚠️ Australian PBS access to nintedanib also allows progression over 24 months (INBUILD criteria).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PPF refers to non‐IPF ILD which is progressive despite treatment with optimal therapy. … It is defined as a patient with ILD of known or unknown aetiology other than IPF with radiological evidence of pulmonary fibrosis and clinical evidence of progression over the preceding 12 months. At least two of three criteria are required: 1. Worsening respiratory symptoms not otherwise explained; 2. Physiological evidence of disease progression, (absolute decline in FVC ≥5% or DLCO ≥10% over 12 months); and 3. Radiological evidence of disease progression, (such as increased traction bronchiectasis, bronchiolectasis, ground glass change with traction bronchiectasis, fine reticulation, reticular abnormality, honeycombing and volume loss). Notably, these criteria differ to the requirements for subsidized access to nintedanib in Australia for PPF, which also allow for progression to have been observed over 24 months, having been adopted from the INBUILD trial eligibility criteria for progressive fibrosing ILD (PF‐ILD) (Table 2).",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Progression should prompt diagnostic reassessment.** Some progressive ILDs are still best treated with immunosuppression (e.g. CTD-ILD) or antigen avoidance (fibrotic hypersensitivity pneumonitis), possibly with nintedanib added.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Disease progression in non‐IPF ILDs should prompt reassessment of diagnostic classification and consideration of the role of other disease modifying therapies. … Despite demonstrating progressive disease behaviour, certain ILDs may still be best treated with immunosuppression such as CTD‐ILD, or antigen avoidance in fibrotic hypersensitivity pneumonitis, potentially alongside the addition of nintedanib",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Nintedanib should be considered in PPF.** In INBUILD (non-IPF fibrosis >10% of lung on CT, progressing within 24 months) FVC fell 80.8 mL/year on nintedanib vs 187.8 mL/year on placebo, consistently across subgroups; it is approved in Australia for PPF.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nintedanib should be considered in patients with PPF, with evidence for treatment benefit across a range of ILD subgroups. … Patients were required to have non‐IPF fibrosing lung disease affecting greater than 10% of lung volume on CT and evidence of progression despite management within the preceding 24 months. This study showed that nintedanib was beneficial, with patients on treatment declining in FVC by 80.8 mL/year compared with 187.8 mL/year in the placebo group … is now approved in Australia for use in patients with PPF",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Pirfenidone has no local approval or guideline recommendation for PPF;** only low-quality evidence suggests benefit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pirfenidone, on the other hand, has not received local approval or guideline recommendations for use in PPF, based on the current evidence. … Low quality evidence suggests a treatment benefit for pirfenidone in PPF.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Acute exacerbation of IPF has no proven therapy** and a poor prognosis: supportive care, oxygen, and cover for possible infection. High-dose corticosteroids are common but unproven, and anti-fibrotics have no proven role for starting in the acute setting.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There remain no proven therapies for AE‐IPF. Management consists of supportive care with a focus on palliation of symptoms, supplemental oxygen to correct hypoxaemia and consideration of broad spectrum antibiotics and/or antiviral agents to cover possible infection. … The prognosis of AE‐IPF is poor. … Corticosteroids, typically in high doses, are frequently utilized in the management of AE‐IPF, but data on efficacy are lacking. … have no proven role for initiation in the acute setting.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Reflux treatment does not improve IPF respiratory outcomes;** treat symptomatic reflux as for the general population.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There is insufficient evidence to support a beneficial role of anti‐acid pharmacotherapy or surgery for respiratory outcomes in patients with IPF. … Symptomatic gastro‐oesophageal reflux should be approached per clinical guidelines for the general population.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Ambrisentan, bosentan and riociguat are contraindicated in pulmonary hypertension with IPF.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Ambrisentan, bosentan and riociguat are contraindicated in PH associated with IPF.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Shortened telomeres raise the risk of harm from immunosuppression;** use it cautiously in these patients.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "IPF patients with shortened telomeres are at heightened risk of harm from immunosuppression. Caution should be exercised when considering immunosuppression in this patient group.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer every ILD patient early for pulmonary rehabilitation,** and consider repeating it if symptoms progress.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early referral for pulmonary rehabilitation is strongly encouraged for all patients with ILD, and consideration should be given to repeating pulmonary rehabilitation if symptoms progress.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer early for transplant assessment**, since the disease course is hard to predict. Continue the anti-fibrotic while waiting, if the transplant centre agrees.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Early referral for pre‐transplant assessment is essential, as it is difficult to accurately predict disease trajectory. … should be continued in most patients awaiting transplantation, so long as this is supported by the transplant centre.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Offer every patient with IPF or PPF the option of a clinical trial.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients with IPF and PPF should be presented with the option to participate in clinical trials.",
+   "locator": "Thoracic Society of Australia and New Zealand (TSANZ), Respirology 2024, 'Treatment of idiopathic pulmonary fibrosis and progressive pulmonary fibrosis: A position statement from the Thoracic Society of Australia and New Zealand 2023 revision', published online 11 January 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC10952210/, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "guideline": "guidelines/perioperative-dmard-management.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "OPEN AND QUOTED from Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery' (published 22 May 2023). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC10946831). ",
+ "summary": {
+  "total": 16,
+  "pass": 16,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Three conditional recommendations:** do not routinely stop csDMARDs; do not routinely stop bDMARDs, but consider a temporary pause when infection risk or its consequences are high; consider temporarily stopping tsDMARDs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "They conditionally recommended against routinely discontinuing csDMARDs in the perioperative period. They also conditionally recommended against routinely discontinuing bDMARDs in the perioperative period but to consider temporary discontinuation of bDMARDs in individuals with a high risk of infection or where the impact of infection would be severe. They conditionally recommended consideration of temporary discontinuation of tsDMARDs in the perioperative period.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**They apply to all inflammatory arthritis:** RA, PsA and axial SpA.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "These recommendations apply to all forms of inflammatory arthritis, including RA, PsA and AxSpA.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Individualise the decision.** Drugs within a class differ, and infection risk varies with the operation (e.g. urgent surgery, or opening the respiratory, alimentary or genitourinary tract).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are also likely to be differences between drugs within these broad groups, particularly those with different molecular targets and dosing schedules. This means that an individual assessment of the potential risks and benefits of DMARD modification should be made. In addition, the potential risks of infection and, therefore, the balance of potential benefit and harm are likely to differ by the type of surgery that is undertaken (e.g. urgent surgery or interventions that involve incision into the respiratory, alimentary or genitourinary tracts).",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Randomised evidence is thin:** three RCTs, all of methotrexate or leflunomide in RA before elective orthopaedic surgery. None covered PsA, axial SpA, bDMARDs or tsDMARDs.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There were three RCTs, all comparing perioperative discontinuation versus continuation of csDMARDs (methotrexate, and leflunomide) in adults with RA undergoing elective orthopaedic surgery. These data were presented to the panel in a single summary of findings table (summarised in Table 2). No trials were identified for perioperative discontinuation versus continuation of csDMARDs for PsA or AxSpA or perioperative discontinuation versus continuation of bDMARDs or tsDMARDs for any type of inflammatory arthritis. No RCTs investigated other types of elective surgery.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Stopping csDMARDs may increase flares** without reducing postoperative infection (low certainty); the trial methotrexate doses were low (about 10 mg/week).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Based on the RCT data in people with RA, perioperative discontinuation of csDMARDs compared to perioperative continuation of DMARDs may increase the risk of flare and may have little or no effect on the number of people with postoperative infections or the number of people reporting adverse or serious adverse events. The certainty of evidence was rated low due to serious risk of bias and serious imprecision. The panel noted that the participants in the two RCTs investigating methotrexate discontinuation were using lower doses (average 10 mg/week) than are currently used by most patients.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Eight observational studies agree:** stopping DMARDs may raise flare risk with no apparent fall in infection, including prosthetic joint infection.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There were eight eligible observational studies. … Evidence from these studies largely concurred with the findings from RCTs, indicating there may be an increased risk of flare if DMARDs are discontinued, with no apparent reduction in risk of postoperative infection. The observational data also suggest there may be no reduction in risk of prosthetic joint infection with discontinuation of DMARDs perioperatively.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Flares are not benign:** they are linked to long-term joint damage, disability and cardiovascular disease, and can derail rehabilitation or need extra glucocorticoids.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The panel noted that flares are known to be associated with an increased long‐term risk of joint damage, disability and cardiovascular disease. … The panel also noted that disease flares may be particularly important if they impair successful recovery or rehabilitation from surgery, or if they require additional use of glucocorticoids.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Continue csDMARDs in most patients.** If withholding: methotrexate for one dosing cycle (surgery 1–2 weeks after the last dose), leflunomide about 7 days before surgery. Sulfasalazine and hydroxychloroquine are rarely withheld.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients planning to withhold csDMARDS perioperatively, the panel suggested that methotrexate be withheld for one dosing cycle prior to surgery (i.e. plan surgery 1-2 weeks after the most recent dose) and leflunomide be withheld approximately 7 days before surgery. It is unlikely that clinicians or patients would choose to withhold other csDMARDs (sulfasalazine or hydroxychloroquine).",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Leflunomide and methotrexate act for a long time**, leflunomide especially, which limits what a short pause achieves.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the long duration of action of both drugs (particularly leflunomide) is noted.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Continue bDMARDs in most people;** withhold only where infection risk or its consequences are higher. Observational data do not show an important infection risk from continuing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the current body of observational evidence does not suggest that continuation of therapy is associated with an important risk of infection. … ultimately, they reached consensus in favour of a conditional recommendation to continue bDMARDs in most people other than those at higher risk of infection or its consequences.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If withholding a bDMARD:** skip one dosing cycle and operate around when the next dose is due (monthly injection: surgery in the fifth week). For rituximab, operate at least 3 months after the last dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If a decision is made to withhold bDMARDS perioperatively, for most bDMARDs, the panel recommended withholding medication for one dosing cycle prior to surgery, that is, plan surgery at approximately the time of the subsequent dose (e.g. for a monthly injection, aim for surgery in the fifth week after the last injection); for rituximab, aim for surgery at least 3 months after the most recent dose.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Temporarily stop tsDMARDs, from about 1 week before surgery.** Reasons: no evidence, infection risk, a blunted acute-phase response and a possible thrombosis risk.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Given the current lack of evidence regarding this class of medications, the potential impact on the risk of infection and other perioperative complications, including the possibility of blunting of the acute phase response in the setting of infection and a theoretical increase in the risk of thrombosis, the panel agreed on a conditional recommendation to temporarily discontinue tsDMARDs perioperatively. They acknowledged that the optimal timing is unknown but noted that withholding tsDMARDs from approximately 1 week before surgery is likely to be a reasonable approach to balancing the risk of infection versus disease flare.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **ACR/AAHKS 2022 cut the tsDMARD pause to 3 days**, after tofacitinib interruption caused a fast rise in disease activity, while allowing longer in high infection risk; it did not weigh thrombotic risk.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "However, the 2022 ACR/AAHKS Guideline, published subsequent to our panel meeting, updated the advice about how long tsDMARDs should be withheld prior to surgery from 1 week to only 3 days. This updated guidance was made based upon a substudy of a randomised trial comparing continuation versus temporary discontinuation of tofacitinib that demonstrated a rapid increase in disease activity in the latter group. However, the guideline also noted that a longer period might be considered in patients at higher risk of infection and that this recommendation did not take into account the thrombotic risk potentially associated with this class of drug.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Restart once sutures are out, the wound has healed and there is no sign of infection**, usually 1–2 weeks after surgery.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "the panel considered it reasonable to recommence therapy when surgical sutures have been removed, adequate wound healing has occurred and there are no other symptoms or signs of infection. For most people, this is likely to be 1-2 weeks following surgery.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Tocilizumab (IL-6) and possibly JAK inhibitors can suppress CRP**, so suspect infection even when inflammatory markers are normal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Finally, it was noted that some DMARDs, particularly those that target the IL‐6 pathway (e.g. tocilizumab), and possibly JAK inhibitors, may dampen the acute phase response, and therefore clinicians should remain vigilant to the possibility of infection even in the presence of normal inflammatory markers.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**ACR/AAHKS 2022 and BSR 2019 advise withholding bDMARDs**, balanced against flare risk. The US panel's consumers prioritised infection; UK patients in focus groups prioritised avoiding flares.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "While both the 2022 American College of Rheumatology (ACR)/American Association of Hip and Knee Surgeons (AAHKS) and 2019 British Society of Rheumatology guidelines (up to date as of 23 March 2022) recommend withholding bDMARDs prior to surgery, both indicate this should be balanced against the perioperative risk of flare, particularly in individuals whose disease has been difficult to control. Of note, the consumer panel participating in the 2017 ACR/AAHKS guidelines considered the risk of infection to be much more important than the risk of flare, and this was noted to be a strong driver of that guideline's cautious approach to the use of both bDMARDs and tsDMARDs in the perioperative period. On the other hand, a study performed in the United Kingdom that included focus groups with patients, rheumatologists and orthopaedic surgeons reported that patients prioritised avoidance of disease flare.",
+   "locator": "Australian Living Guideline panel (ANZMUSC, Australian Rheumatology Association, Cochrane Musculoskeletal), Internal Medicine Journal, 'Australian recommendations on perioperative use of disease-modifying anti-rheumatic drugs in people with inflammatory arthritis undergoing elective surgery', published 22 May 2023, https://pmc.ncbi.nlm.nih.gov/articles/PMC10946831/, retrieved 2026-09-23"
+  }
+ ]
+}

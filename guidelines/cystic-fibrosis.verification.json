@@ -1,0 +1,453 @@
+{
+ "guideline": "guidelines/cystic-fibrosis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Cystic Fibrosis Australia (endorsed by TSANZ) 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)' (2023 content; PDF refreshed 28 July 2026). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: © 2023 Cystic Fibrosis Australia (page footer 'Standard of Care for Cystic Fibrosis © 2023'; no reuse terms stated) (read at footer of every page of the PDF). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 24,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 24
+ },
+ "claims": [
+  {
+   "claim": "**A sweat chloride above 60 mmol/L makes CF most likely; an intermediate 30–59 mmol/L result still makes it likely,** and in a few people CF occurs even with a normal value. Always repeat the sweat test, in an accredited laboratory with experienced staff.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1d1fcc47cf0bfae8",
+     "n": 123,
+     "p": "Sweat te"
+    },
+    {
+     "h": "c99a208439da307f",
+     "n": 302,
+     "p": "The like"
+    },
+    {
+     "h": "812125d1698c25ea",
+     "n": 86,
+     "p": "In all i"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Diagnostic criteria:** CF-type organ damage or a family history, together with any one of: two disease-causing CFTR mutations, a sweat chloride above 60 mmol/L, or one such mutation with strongly suggestive features and a sweat chloride of at least 30–59 mmol/L.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e50fe0ca6ae8e924",
+     "n": 468,
+     "p": "The diag"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Newborn screen positive with one mutation:** a sweat chloride below 30 mmol/L means an unaffected carrier. An equivocal 30–59 mmol/L needs an urgent repeat test; if it stays equivocal, keep the child under a respiratory paediatrician and repeat the sweat test at 6–12 months and at 2, 5, 10 and 15 years.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "498dab79aafebbca",
+     "n": 503,
+     "p": "Infants "
+    },
+    {
+     "h": "71c0391a2bde35ab",
+     "n": 76,
+     "p": "disease "
+    },
+    {
+     "h": "d1cf94996c4211c8",
+     "n": 63,
+     "p": "Repeatsw"
+    },
+    {
+     "h": "5567e2456e59e014",
+     "n": 285,
+     "p": "Newborn "
+    },
+    {
+     "h": "3b28316e31a55536",
+     "n": 117,
+     "p": "Thus, al"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A formal CF diagnosis matters for access:** PBS-funded treatments such as dornase alfa and the modulators depend on it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fa0d76867a9b0a01",
+     "n": 178,
+     "p": "The abil"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Triple therapy (elexacaftor/tezacaftor/ivacaftor) has made a modulator available to roughly 90% of people with CF**, infants and children included. About 10% of children have a genotype with no modulator, and they depend on close surveillance and prompt treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1f5fcb3e61e0faca",
+     "n": 190,
+     "p": "The arri"
+    },
+    {
+     "h": "2fa21041a56ac010",
+     "n": 238,
+     "p": "approxim"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat modulator therapy as standard care for every eligible child with a suitable genotype,** in line with TGA approval and prescribing rules; give eligible patients of all ages access through the PBAC listings, and check adherence at every visit.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4ae0fff4cecb1067",
+     "n": 225,
+     "p": "CFTR mod"
+    },
+    {
+     "h": "e414799b44713be8",
+     "n": 202,
+     "p": "Access t"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Counsel before starting:** what to expect, known and unknown side effects, how to take it, interactions, and sticking with both the modulator and the rest of the regimen. Decide case by case, with the family, whether any existing treatment can be stopped.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "dc18d84a367e606d",
+     "n": 548,
+     "p": "Parents/"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Keep PBS eligibility: review at the CF specialist clinic every 6 months,** with a clinical assessment and FEV1 % predicted.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "601bd6741f5dea0c",
+     "n": 234,
+     "p": "In Austr"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Monitor for modulator harms:** in children starting a modulator, check liver function quarterly through the first year (drug-induced liver injury); watch for neuropsychiatric effects; consider yearly cataract screening; and check blood pressure and urine as indicated.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "107718f67966fd3f",
+     "n": 173,
+     "p": "Infants "
+    },
+    {
+     "h": "2568e88d10f43a52",
+     "n": 127,
+     "p": "Children"
+    },
+    {
+     "h": "eec912f860120652",
+     "n": 150,
+     "p": "Screenin"
+    },
+    {
+     "h": "c22296c228661629",
+     "n": 201,
+     "p": "Blood pr"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Visit frequency on modulators is not yet evidence-based.** The baseline is at least four routine reviews a year; any reduction should be tailored and agreed with the person and the team.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2377a93b58caab65",
+     "n": 138,
+     "p": "There is"
+    },
+    {
+     "h": "3ed4b0cd4cd8fad6",
+     "n": 329,
+     "p": "At the t"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fertility and pregnancy:** triple therapy may raise fertility, so discuss and provide contraception. Weigh stopping any CF medicine in pregnancy against the mother's health, and discuss continuing or stopping the modulator openly on current evidence.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ace88ed4e12d77b1",
+     "n": 128,
+     "p": "it does "
+    },
+    {
+     "h": "7091f5f6f5a3fb13",
+     "n": 78,
+     "p": "Contrace"
+    },
+    {
+     "h": "8036ed60354f2437",
+     "n": 193,
+     "p": "Disconti"
+    },
+    {
+     "h": "3b2c93906be3f9b1",
+     "n": 100,
+     "p": "Open dis"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Involve a physiotherapist from diagnosis** to teach airway clearance suited to age and development, nebulised medicines and sputum collection, and to build self-management as the child grows.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7401266299d7bfce",
+     "n": 253,
+     "p": "Physioth"
+    },
+    {
+     "h": "872d516f2a05b78f",
+     "n": 115,
+     "p": "Promotio"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In hospital, a physiotherapist should see the patient within 24 hours** and provide input every day, including evenings, weekends and public holidays; treatment covers inhalation therapy, airway clearance, exercise and musculoskeletal care.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "620caab1aa2613d1",
+     "n": 288,
+     "p": "Patients"
+    },
+    {
+     "h": "31a9939a1254f15b",
+     "n": 92,
+     "p": "Physioth"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Teach nebulised antibiotics and run a first-dose tolerability test during the admission.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "06be8257d071ae9a",
+     "n": 130,
+     "p": "Educatio"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Collect airway samples at least 4 times a year** and culture them on media selective for *P. aeruginosa*, *Burkholderia cepacia*, *S. aureus* and MRSA. Send sputum for nontuberculous mycobacteria at least once a year, and sooner with unexplained decline.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "95fabdbfca7321f2",
+     "n": 276,
+     "p": "Assessme"
+    },
+    {
+     "h": "d37b036f5bb86c02",
+     "n": 172,
+     "p": "Culture "
+    },
+    {
+     "h": "6f718f45f6fcd9ba",
+     "n": 166,
+     "p": "Sputum s"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do spirometry at every clinic visit from age 5** (it can be tried from about 3-4 years in experienced labs) and track the trend.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "67902159b6f92393",
+     "n": 177,
+     "p": "Spiromet"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat a pulmonary exacerbation promptly** with oral, inhaled or IV antibiotics by severity, guided by earlier cultures. Up to 20% of children do not regain baseline lung function within three months, so document recovery and review within 4-6 weeks.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fc38f202294b2d4e",
+     "n": 556,
+     "p": "Treatmen"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Chest imaging:** a yearly chest X-ray is recommended; in children and young people a chest CT at least every five years is typical, with protocols that keep radiation low.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "866c5e5f67ef2ce9",
+     "n": 33,
+     "p": "Annual c"
+    },
+    {
+     "h": "f2a74c2109ffcb5c",
+     "n": 105,
+     "p": "but it i"
+    },
+    {
+     "h": "08df90192861b91b",
+     "n": 45,
+     "p": "Protocol"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Dietitian review at every visit** follows the Australian CF nutrition guidelines: growth on charts (head circumference up to age 2), diet, glucose control, salt, pancreatic enzyme dosing and micronutrients.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f2d66095cc5fa118",
+     "n": 192,
+     "p": "Measurem"
+    },
+    {
+     "h": "a3a2864e10d84032",
+     "n": 337,
+     "p": "Dietitia"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Modulators bring a new risk of excess weight gain and obesity** in children; advice has shifted toward healthy, nutrient-dense eating tailored to the child.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f1551a26c95b4d16",
+     "n": 336,
+     "p": "modulato"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Annual bloods:** vitamin A, D, E and K levels (plus retinol binding protein to help interpret them), FBC, electrolytes, liver function and clotting, iron, calcium and glucose. Routine yearly selenium or zinc is not supported.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ab706a4812588212",
+     "n": 443,
+     "p": "Blood te"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Screen for CF-related diabetes with a yearly OGTT from age 10** (earlier with suggestive symptoms), done when stable. Refer diabetes to endocrinology, with HbA1c every 3 months.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d02ff77d9def8444",
+     "n": 341,
+     "p": "Presentl"
+    },
+    {
+     "h": "a99d97717e785b22",
+     "n": 235,
+     "p": "Patients"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Bone density by DEXA:** the outpatient chapter starts yearly scans at age 8, the children's chapter routine screening at age 10; later intervals depend on the result.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "013efbd050b13f90",
+     "n": 119,
+     "p": "Bone min"
+    },
+    {
+     "h": "6c7bcfbf51e6ef2e",
+     "n": 108,
+     "p": "Routine "
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen mental health yearly with PHQ-9 and GAD-7** in patients over 12 years and in parents or carers of all children.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f85ac6d3ebd630c2",
+     "n": 213,
+     "p": "Mental h"
+    }
+   ],
+   "locator": "Cystic Fibrosis Australia (endorsed by TSANZ), 'Standards of Care for Cystic Fibrosis, Australia 2023 (2026 design refresh)', 2023 content; PDF refreshed 28 July 2026, https://www.cysticfibrosis.org.au/wp-content/uploads/2026/07/CFA_Standard-of-Care_Design_Refresh_2026.07.28.pdf, retrieved 2026-09-23"
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+ "guideline": "guidelines/hidradenitis-suppurativa.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "OPEN AND QUOTED from Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89 'Australasian hidradenitis suppurativa management guidelines' (published online 22 November 2024). Every pass claim is machine re-checkable. LICENCE: CC BY 4.0 (read at Europe PMC fullTextXML <license> element for PMC11898165). ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Diagnose with the modified Dessau criteria:** typical lesions (nodules, abscesses, tunnels, pseudo-comedones) in typical sites (axillae, groin, sub-mammary, buttocks), in 2 discrete areas within 6 months.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This is defined as the presence of typical lesions (nodules, abscesses, tunnels, pseudo‐comedones) in typical areas (axillae, groin, sub‐mammary, buttocks), with 2 discrete areas involved within a 6‐month time period.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No blood or biopsy test confirms HS.** Consider mimics such as cutaneous tuberculosis, donovanosis and folliculitis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are currently no histological or serological diagnostic biomarkers to differentiate HS from other conditions. … The diagnosis of HS should be made whilst considering other potential conditions which can have similar manifestations including cutaneous tuberculosis, donovanosis and folliculitis.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Score severity with the modified Hurley stage or IHS4.** Original Hurley staging and the Sartorius score are no longer recommended for routine use.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recommended severity assessments include the modified Hurley staging and the International Hidradenitis Suppurativa Severity Score System (IHS4). Previously utilised measures such as original Hurley staging and the Sartorius score are no longer recommended for routine clinical use.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Judge response with HiSCR75 or HiSCR90** (lower placebo response than HiSCR50). Allow up to 24 weeks of therapy before stopping for non-response.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The HiSCR75 and HiSCR90 are preferred given the relatively lower rates of placebo response which are inherently elevated in the HiSCR50. … Whilst primary outcome measures in clinical trials are based at Week 12, guidelines recommend up to 24 weeks of therapy prior to treatment discontinuation due to lack of response.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen for comorbidities when signs suggest them**, including metabolic syndrome. Investigate suspected IBD endoscopically: faecal calprotectin and ASCA can be raised by HS itself.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Appropriate management of comorbidities contributing to disease activity is mandatory, and screening in the presence of suggestive signs and symptoms should be directed by the clinician. … Conditions such as inflammatory bowel disease are best assessed through gastroscopy/colonoscopy given the presence of elevated faecal calprotectin and ASCA antibodies may be present in HS, particularly in severe disease. … The strong association of HS with cardiovascular and metabolic comorbidities independent of BMI and smoking status is reflected in the recommendation to screen for metabolic syndrome",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Treat on four fronts:** general measures, medical therapy, surgery and adjuvant therapy. Raise smoking cessation and weight loss sensitively; both improve response to systemic therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The four major tenets upholding the overall management strategy in HS include general measures, medical therapy, surgical therapy, and adjuvant therapies. (Figure 1). These general measures including smoking cessation and weight loss. These factors should be approached with a degree of sensitivity given the historical blame placed on patients in regard to the activity of their disease., However, evidence suggests that weight loss and smoking cessation can increase the efficacy of systemic therapy as well as having overall health benefits.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Combine medical and surgical treatment**, and manage pain as a core part of care. Surgery targets persistent tunnels that medical therapy alone is unlikely to clear.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Surgical therapy combined with medical therapy has been shown to be safe and effective in multiple randomised controlled trials58.59 and provides benefit in targeting persistent tunnels and lesions less likely to respond to medical therapy alone. … Pain control is an essential component to overall management.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Mild–moderate disease (Hurley 1,2a/2b):** topical or oral antibiotics, the OCP or spironolactone, with laser hair removal, local surgery and intralesional botulinum toxin or corticosteroid as extra options.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Mild to Moderate Disease is defined as Hurley Stage 1,2a/2b. Therapeutic options include topical/oral antibiotics, OCP/Spironolactone, with laser hair removal, local surgical intervention and intralesional botox/corticosteroids as additional options.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Topical antibacterials and oral tetracyclines work about equally.** Clindamycin with rifampicin (or clindamycin alone) or other antibiotic regimens can help selected patients. An isolated recurrent lesion may be cured by simple excision with primary closure.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "RCT evidence suggests in mild to moderate disease relative equivalence of topical antibacterial and oral tetracycline therapy. Combination therapy with rifampicin clindamycin (or clindamycin monotherapy) or various antibiotic regimens (including amoxicillin/clauvaulinic acid, co‐trimoxazole, tetracyclines, pristinamycin, levofloxacin) as per the French guidelienes can be successful in selected cases. For isolated recurrently inflamed lesions-simple excision with primary closure may have a chance of long‐term disease remission.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The combined OCP and spironolactone reduce peri-menstrual flares;** spironolactone can help even without them.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The combined oral contraceptive pill (OCP) and Spironolactone are effective in minimising and preventing peri‐menstrual flaring, however spironolactone can be a useful therapeutic agent even in the absence of perimenstrual flaring.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Apremilast is not recommended:** placebo-controlled studies showed no meaningful benefit.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Previous studies have attempted to identify oral immunomodulating agents for use in mild-moderate disease sch as Apremilast, however no significant clinical or molecular alterations have been observed in placebo‐controlled studies.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Escalate promptly** to moderate–severe treatment when disease spreads or epithelialised tunnels develop.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Whenever mild to moderate disease begins to progress with wider body surface area involvement, or the development of epithelialised tunnels, progression to therapy for moderate to severe disease should be swiftly embraced",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Moderate–severe disease is Hurley 2B or above, or any tunnels.** Start a biologic and manage comorbidities such as PCOS and insulin resistance.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Moderate to severe disease is defined as Hurley stage 2B or above OR the presence of tunnels. Therapeutic options should include systemic biologic therapy, alongside management of inflammatory comorbidities including PCOS, Insulin Resistance etc.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **First-line biologics: adalimumab, secukinumab or bimekizumab.** Choose by comorbidity: IBD is a relative contraindication to IL-17 inhibitors; psoriasis or axial spondyloarthritis favours them.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Three biologic agents have been shown to be safe and efficacious in moderate‐to‐severe HS, these include Adalimumab, Secukinumab and Bimekizumab. (Table 2). Hence these three agents are listed as first line agents in the treatment of moderate‐to‐severe disease. The selection of which agent is at the clinician's discretion based upon comorbidities (eg the presence of inflammatory bowel disease would be a relative contraindication to IL‐17 inhibition, and the presence of psoriasis or axial spondyloarthropathy may be an indication for the use of IL‐17 inhibitors).",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Primary non-response after 24 weeks:** escalate the dose (adalimumab 80 mg weekly, secukinumab 300 mg fortnightly, bimekizumab 320 mg 4-weekly), add intralesional steroid or deroofing, and optimise comorbidities.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In the presence of a primary lack of clinical response after 24 weeks of therapy, options include dose escalation (80 mg weekly of Adalimumab, 300 mg fortnightly for secukinumab and 320 mg 4‐weekly for Bimekizumab) as well as the additional of adjuvant therapies such as ILCS, deroofing of persistently draining tunnels and optimising treatment of existing comorbidities (eg PCOS, insulin resistance etc).",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Second line (phase 2 evidence):** infliximab, upadacitinib, anakinra, and IL-23 inhibitors (risankizumab, guselkumab), though the IL-23 inhibitors missed their primary endpoint.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Second line therapies include agents which have completed Phase 2 clinical trials (or large replicated controlled clinical studies) demonstrating efficacy; but are yet to be validated in Phase 3 clinical studies. These include Infliximab, Janus Kinase inhibitors (Upadacitinib), Anakinra and IL‐23 inhibitors such as Risankizumab and Guselkumab. In the case of IL‐23 inhibitors, these agents did not achieve the primary outcome of efficacy compared with placebo response",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Third line (low-level evidence):** IV ertapenem as a bridge to wide excision, combined biologics, tacrolimus, ciclosporin, methotrexate or radiotherapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Third line agents include other agents reported in case series or uncontrolled studies including IV Ertapenum (as a bridge to wide surgical excision or wide regional laser ablative therapy), combination therapy with biologic agents, traditional immunosuppressive agents such as tacrolimus, cyclosporine, methotrexate, or radiotherapy. All of these third line agents have been described in cohort studies with low level of evidence.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Biosimilars are acceptable,** but avoid switching between originator and biosimilar, which may lose efficacy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The use of biosimilar medications is not opposed in the treatment of HS. Low level evidence exists suggesting a greater secondary loss of efficacy in biosimilar cohorts, with an increased risk of efficacy loss with switching between biosimilar and originators. Based upon this evidence, switching between agents is not recommended.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Plan flare treatment in advance:** incision and drainage, deroofing, intralesional steroid, oral antibiotics or oral prednisolone. Flares becoming more frequent suggest the base therapy is failing; consider changing it.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recommended options include incision and drainage, deroofing, ILCS, oral antibiotics or oral prednisolone. … Hence discussion of flare management is essential prior to the onset of flares. … Repeated flares of increasing frequency are often a suggestion of loss of clinical response to the base therapy, and consideration of altering the underlying base therapy should be considered.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**48% lose response to a biologic within 12 months.** First look for a reversible trigger: recent viral infection, rapid weight gain, medication changes or psychological stress.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "48% individuals with HS lose therapeutic response to biologic therapy within 12 months. … This can include recent viral infection, rapid weight gain, commencement or cessation of medications or temporary psychological stressors etc.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**On a failing first-line biologic, test for anti-drug antibodies** and new comorbidities. Escalate the dose if no antibodies are found; otherwise switch agent or move to second- or third-line therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In pre‐existing moderate‐to‐severe patients, loss of response to first line biologic therapy should trigger an assessment for anti‐drug antibodies, as well as the development of any new comorbidities which may contribute to disease activity (insulin resistance, diabetes etc). Adjuvant therapies such as ILCS and targeted surgical intervention may rescue the existing therapy, however dose escalation in the absence of antidrug antibodies (and ideally low serum drug levels) may be required. A table of suggested approaches to management of anti‐drug antibodies is presented in Data S1. Unsuccessful management using these methods may necessitate transition to an alternative agent or escalation to second‐line or third‐line therapies.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Optimise before conception.** In mild–moderate disease stop the OCP, metformin and spironolactone; erythromycin and cephalosporins can continue.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For mild to moderate disease, patients should be transitioned to medication that is safe during conception and pregnancy. This would include cessation of the contraceptive pill and other medications such as metformin and spironolactone. Antibiotics with pregnancy category A such as erythromycin and cephalosporins can be safely continued if needed.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Continuing a monoclonal antibody in the 1st and 2nd trimesters is a shared risk–benefit decision.** Certolizumab pegol does not cross the placenta and is an option in the third trimester.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Decision to continue monoclonal antibody therapies during the 1st and 2nd trimester are based upon a risk-benefit assessment. Certolizumab pegol does not cross the placenta and can be useful during the third trimester.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**HS does not preclude vaginal birth or breastfeeding.** Treat aggressively straight after delivery to prevent flares; biologics are not active in breast milk after day 3.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "HS is not a contraindication to vaginal birth or breastfeeding and mothers should be encouraged to pursue vaginal births or breastfeed according to their preference., Immediately post‐partum, aggressive disease management should be instituted in order to prevent post‐partum flares. Biologic therapy does not enter breastmilk in sufficient quantities after Day 3 post‐partum to be biologically active and the proteins are denatured in the infant gut.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **PBS applications still need a Hurley stage** even though the guideline no longer recommends it; the source lists only adalimumab and secukinumab as PBS-reimbursed (bimekizumab is now also listed). No Medicare item exists for deroofing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Despite Hurley staging not being recommended, it is still required for Pharmaceutical Benefit Scheme (PBS) application for Adalimumab and Secukinumab despite its limitations in clinical utility. No other biologic therapies are currently reimbursed under the PBS for Hidradenitis Suppurativa. … however no specific item code for de‐roofing currently exists.",
+   "locator": "Frew J, Smith A, Penas PF, et al. (Australasian College of Dermatologists), Australasian Journal of Dermatology 2025;66:75–89, 'Australasian hidradenitis suppurativa management guidelines', published online 22 November 2024, https://pmc.ncbi.nlm.nih.gov/articles/PMC11898165/, retrieved 2026-09-23"
+  }
+ ]
+}

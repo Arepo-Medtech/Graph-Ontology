@@ -1,0 +1,326 @@
+{
+ "guideline": "guidelines/juvenile-idiopathic-arthritis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://livingguidelines.org/jia/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)' (version 3.1 published 22 October 2025). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: © ANZMUSC; reproduction only unaltered, for personal or internal non-commercial use (PDF copyright notice) (read at copyright notice in https://s3.amazonaws.com/files.magicapp.org/guideline/7d97bcf1-d544-4b82-b4e3-8a97cd7bc715/published_guideline_10522-3_1.pdf). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 19,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 19
+ },
+ "claims": [
+  {
+   "claim": "**Methotrexate is the first DMARD to try** when a systemic DMARD is needed: 15 mg/m² once weekly, capped at 25 mg a week. Prefer it to leflunomide unless methotrexate is contraindicated.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "1cfc5e32c54db2f6",
+     "n": 111,
+     "p": "consider"
+    },
+    {
+     "h": "f3e5732a6a1cd8b9",
+     "n": 105,
+     "p": "Methotre"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Treat to target, with decisions shared with the family,** including the decision to step up to methotrexate.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4a5f5fab4ccafeb9",
+     "n": 255,
+     "p": "A treat-"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Blood monitoring:** full blood count, kidney and liver tests before starting, again one to two months in, then every three to four months.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7972575b5adb315b",
+     "n": 198,
+     "p": "A full b"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give folic acid with methotrexate** for tolerability. Common schedules: 1 mg daily except on methotrexate day, or 5 mg on the day before and/or after it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6fd13ef9eff2624b",
+     "n": 104,
+     "p": "Oral fol"
+    },
+    {
+     "h": "416d4204d7caa15e",
+     "n": 186,
+     "p": "Two comm"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Oral methotrexate is usually fine to start.** Switch to (or start) the subcutaneous route for extensive disease, or when oral intolerance has occurred or is likely; if parenteral, inject under the skin rather than into muscle.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7ee4932659a6c8f2",
+     "n": 191,
+     "p": "initial "
+    },
+    {
+     "h": "417b45eb9dd47f9c",
+     "n": 273,
+     "p": "Subcutan"
+    },
+    {
+     "h": "99949cb379a4aeca",
+     "n": 109,
+     "p": "Where pa"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Review and adjust early (3 monthly)** if methotrexate fails or is not tolerated, especially with a polyarticular course or disease in the wrist, ankle or cervical spine.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "615ed961cf9d67bf",
+     "n": 410,
+     "p": "Inadequa"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Uveitis not controlled by methotrexate: add a b/tsDMARD, preferably adalimumab.** Do not use etanercept.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "121207a389729756",
+     "n": 209,
+     "p": "In child"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Other TNF antibodies such as infliximab, non-TNF biologics or JAK-type drugs remain options** without trial support. Treatment belongs with paediatric rheumatology and ophthalmology teams experienced in this uveitis.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d7cc9150bbbcdda0",
+     "n": 191,
+     "p": "Other an"
+    },
+    {
+     "h": "248e558a22198c6a",
+     "n": 160,
+     "p": "b/tsDMAR"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**When starting a DMARD in non-systemic JIA, a short steroid course can help** those most likely to benefit, such as children with marked pain or widespread inflammation. Agree how it will be tapered and stopped at the outset.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "4a4aa3d36c9154ae",
+     "n": 399,
+     "p": "In child"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prefer joint injection to systemic steroid** where possible. In non-systemic JIA give systemic steroid only alongside a new DMARD, at the lowest dose for the shortest time, with a written taper.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "2645a8cf2ffda058",
+     "n": 792,
+     "p": "Intra-ar"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Severe disease:** an IV methylprednisolone pulse, up to 30 mg/kg (maximum 1,000 mg) daily for up to three days (sometimes five), can precede oral prednisolone.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "bc1b7b155c94ed81",
+     "n": 362,
+     "p": "In sever"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Watch for steroid harms:** weight gain, mood and sleep disturbance, and infection.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "390ed79b45a24741",
+     "n": 186,
+     "p": "Any use "
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**For joint injections use triamcinolone hexacetonide** in preference to other steroids, and agree with the child and carer on topical and/or injected local anaesthetic.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d4fd2ccb2b23499f",
+     "n": 128,
+     "p": "we condi"
+    },
+    {
+     "h": "698dc66da0071f92",
+     "n": 109,
+     "p": "use of t"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider reducing or stopping a conventional DMARD** after a sustained spell of low or no disease activity, when its harms outweigh the risk of a flare.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7be93c9beff3b408",
+     "n": 264,
+     "p": "who have"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider reducing or stopping a b/tsDMARD** only after sustained inactive disease, on the same harm-versus-flare judgement; take extra care after uveitis.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "db5f43caf6f462ac",
+     "n": 252,
+     "p": "who have"
+    },
+    {
+     "h": "64493cb9322481dc",
+     "n": 71,
+     "p": "Addition"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**In systemic JIA, stopping a biologic** may mean fewer children stay inactive and more have joint flares; the effect on systemic flares is uncertain.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f8a2052f3d727d7a",
+     "n": 472,
+     "p": "Systemic"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Wait at least 12 months of stable low activity** before tapering; 18 to 24 months may be better. Stopping immunosuppression after uveitis may be considered once the eye has been quiet for 24 months.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "3a99a80c34361765",
+     "n": 302,
+     "p": "a stable"
+    },
+    {
+     "h": "12ecb3a202f4b2f3",
+     "n": 193,
+     "p": "An Austr"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After tapering, review at least every 3 months with a validated composite score,** give the family a flare plan and a way to reach the team, and restart the previous regimen if control is lost.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fac8cbdc39db14df",
+     "n": 191,
+     "p": "Followin"
+    },
+    {
+     "h": "0142b857d46b525c",
+     "n": 197,
+     "p": "Families"
+    },
+    {
+     "h": "fc238644743c35b6",
+     "n": 228,
+     "p": "In the e"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Foot orthoses are not routinely recommended.** Offer an individually tailored exercise programme when symptoms or functional limits persist despite optimal medical treatment.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a8afe65806685cad",
+     "n": 73,
+     "p": "Do not r"
+    },
+    {
+     "h": "4cf8df98d1dc29b8",
+     "n": 205,
+     "p": "who have"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, with the Australian Rheumatology Association and Australian Paediatric Rheumatology Group, 'An Australian Living Guideline for the Management of Juvenile Idiopathic Arthritis (version 3.1)', version 3.1 published 22 October 2025, https://livingguidelines.org/jia/, retrieved 2026-09-23"
+  }
+ ]
+}

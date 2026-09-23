@@ -1,0 +1,298 @@
+{
+ "guideline": "guidelines/psoriatic-arthritis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://livingguidelines.org/adult/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)' (version 5.6 published 15 July 2026). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: © ANZMUSC; reproduction only unaltered, for personal or internal non-commercial use (PDF copyright notice) (read at copyright notice in https://s3.amazonaws.com/files.magicapp.org/guideline/e8baa263-0490-4726-bb20-4f0ba75a53c0/published_guideline_11208-5_6.pdf). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 17,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 17
+ },
+ "claims": [
+  {
+   "claim": "**Treat to target, and make every DMARD decision jointly with the patient** after discussing benefits and harms for their situation, including when reducing doses.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "03af80a19eb0a0c6",
+     "n": 117,
+     "p": "A treat-"
+    },
+    {
+     "h": "e2f09c22982b6cfd",
+     "n": 239,
+     "p": "All deci"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider a trial of a lower csDMARD dose** once low disease activity or remission has lasted at least 6 months, with the skin also well controlled.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "eefb8f67bb21b5e4",
+     "n": 217,
+     "p": "In peopl"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Six months is the minimum;** a deep remission, or holding the target for at least 12 months, is the better starting point. Weigh the effect on psoriasis before reducing.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d0c32a5d501723c6",
+     "n": 163,
+     "p": "Any disc"
+    },
+    {
+     "h": "14f5cdfcfa274737",
+     "n": 324,
+     "p": "a stable"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After reducing, review at least every 3 months with a validated composite measure (e.g. PASDAS)**, watch for new skin or nail disease, and confirm the target is held before any further change.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6a3ae8fdfa8195a4",
+     "n": 382,
+     "p": "Followin"
+    },
+    {
+     "h": "d85845b2243ce07c",
+     "n": 159,
+     "p": "Clinical"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Give a flare plan** with a way to contact the prescriber between visits; if control is lost, go back to the previous effective csDMARD dose.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "99bcd5ee3ca4e329",
+     "n": 199,
+     "p": "Patients"
+    },
+    {
+     "h": "6e0017d85ade7816",
+     "n": 231,
+     "p": "In the e"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Evidence:** reducing methotrexate (alone or in sequence with other DMARDs) after 6 months of remission or low activity may increase flares and slightly raise disease activity.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "893277c34e0902e2",
+     "n": 432,
+     "p": "Compared"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not routinely lower b/tsDMARD doses** in PsA that is in low activity or remission, and do not stop them abruptly.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "cef7f425072c20a5",
+     "n": 180,
+     "p": "Do not r"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Some patients may still prefer a lower dose.** Discuss the flare risk, the chance that remission is not regained on returning to full dose, and the lack of evidence; review 3 monthly and restore the full dose if the target slips.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c4be13203f6ec1c5",
+     "n": 318,
+     "p": "there ma"
+    },
+    {
+     "h": "a66be3b632166412",
+     "n": 363,
+     "p": "In patie"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Evidence:** there are no dose-reduction data. Stopping b/tsDMARDs after sustained minimal activity may mean fewer patients stay in remission and more flare; data cover only TNF inhibitors and ixekizumab.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f0318a806e5b2aea",
+     "n": 338,
+     "p": "There ar"
+    },
+    {
+     "h": "884ec4d3718445f2",
+     "n": 131,
+     "p": "Data on "
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Check bloods within a month** of starting or increasing a csDMARD, during acute illness, or when a relevant new drug is added.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "54169f2ec0512b61",
+     "n": 155,
+     "p": "Perform "
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Monitor every 1-3 months if higher risk** (kidney or liver disease, diabetes, metabolic syndrome, older age, polypharmacy, toxicity signs); on a stable dose without risk factors, 6-monthly or less often by shared decision.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7979cf79d036530e",
+     "n": 225,
+     "p": "Continue"
+    },
+    {
+     "h": "4d56a0968561a1e7",
+     "n": 184,
+     "p": "In peopl"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prescribe folic acid with methotrexate,** and tell patients to withhold methotrexate during acute illness unless told otherwise. Agree monitoring and result handling between GP and rheumatologist.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "50d125f1029200d9",
+     "n": 109,
+     "p": "Folic ac"
+    },
+    {
+     "h": "2fd349fef897750a",
+     "n": 123,
+     "p": "People t"
+    },
+    {
+     "h": "4f17dc72222d2130",
+     "n": 273,
+     "p": "Clear co"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Around elective surgery:** keep csDMARDs going; keep bDMARDs going too unless infection risk or its consequences are high; consider pausing tsDMARDs.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "daae5145c9ca7ac0",
+     "n": 338,
+     "p": "Do not r"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If withholding:** most bDMARDs miss one dosing cycle (operate around when the next dose is due); JAK inhibitors and leflunomide stop about 7 days before; methotrexate misses one cycle (surgery 1-2 weeks after the last dose). Restart once sutures are out, the wound has healed and there is no infection.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f7509f6a43ed80e0",
+     "n": 499,
+     "p": "For most"
+    },
+    {
+     "h": "1825e7e9b619ad12",
+     "n": 155,
+     "p": "Aim to r"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Do not give routine stress-dose steroids** to patients on regular glucocorticoids; continue the usual oral dose, including on the day of surgery.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "96db3dbe5879c890",
+     "n": 276,
+     "p": "Do not r"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Opioids are not routinely recommended for PsA pain;** no studies address their safety or benefit in PsA.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0891f8e446738a5f",
+     "n": 78,
+     "p": "Do not r"
+    },
+    {
+     "h": "a20491bc35774618",
+     "n": 153,
+     "p": "In peopl"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before any opioid, treat the inflammation properly** and look for fibromyalgia or nociplastic pain (where opioids are generally not advised) and missed pathology such as insufficiency fracture.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "12f68e0c3d1e1d67",
+     "n": 327,
+     "p": "Consider"
+    }
+   ],
+   "locator": "Australia & New Zealand Musculoskeletal (ANZMUSC) Clinical Trials Network, the Australian Rheumatology Association and Cochrane Musculoskeletal, 'An Australian Living Guideline for the Pharmacological Management of Inflammatory Arthritis (version 5.6)', version 5.6 published 15 July 2026, https://livingguidelines.org/adult/, retrieved 2026-09-23"
+  }
+ ]
+}

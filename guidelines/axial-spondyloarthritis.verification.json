@@ -1,0 +1,418 @@
+{
+ "guideline": "guidelines/axial-spondyloarthritis.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "source_origin": "AU",
+ "method": "PARAPHRASED AND HASH-ANCHORED from Australian expert panel, Rheumatology and Therapy (Springer) 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis' (published 28 December 2021). Every claim is a paraphrase backed by anchors (scripts/anchor.py): verify.py --source re-finds each anchored span in a fresh copy of the source, checks the claim's numbers against it and rejects copying. LICENCE: CC BY-NC 4.0 (read at Europe PMC fullTextXML <license> element for PMC8814294). The source's words are NOT reproduced here. ",
+ "summary": {
+  "total": 24,
+  "pass": 0,
+  "fail": 0,
+  "pass_paraphrase_anchored": 24
+ },
+ "claims": [
+  {
+   "claim": "**A rheumatologist makes the diagnosis.** MRI helps, but it is neither sensitive nor specific enough to diagnose axSpA by itself.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f0003204ba7257d0",
+     "n": 321,
+     "p": "Diagnosi"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take a full history and examine:** look for spondyloarthritis features, other causes of back pain, and common co-existing problems such as non-specific back pain and fibromyalgia.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "f7138432e598cf25",
+     "n": 276,
+     "p": "A compre"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Inflammatory back pain is the key symptom but is non-specific** (sensitivity 74%, specificity 40% in nr-axSpA). Clues: rest does not help, pain at night, and morning stiffness that eases with activity.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "20dd49949f3c8f74",
+     "n": 431,
+     "p": "A histor"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider fibromyalgia**, which can mimic, accompany or follow axSpA; about 23% of men and 21% of women with nr-axSpA have it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "de2db6ccee4a90cd",
+     "n": 159,
+     "p": "History "
+    },
+    {
+     "h": "2490cdfaedd1a875",
+     "n": 87,
+     "p": "Comorbid"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Test CRP and HLA-B27 in everyone being assessed.** A normal CRP can become raised later: 50% of placebo-arm patients with a normal baseline CRP had a high one within 16 weeks, so repeat it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "0c125f0169c45291",
+     "n": 66,
+     "p": "CRP shou"
+    },
+    {
+     "h": "4679cc577125f383",
+     "n": 262,
+     "p": "The pitf"
+    },
+    {
+     "h": "ef680550bc186f82",
+     "n": 79,
+     "p": "HLA-B27 "
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**HLA-B27 together with a positive ASAS MRI makes nr-axSpA very likely** (specificity 99%); with neither, only 2% turn out to have axSpA.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7dd735ddc0d069ff",
+     "n": 158,
+     "p": "Presence"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Start with an AP pelvic X-ray**, before any sacroiliac MRI; dedicated sacroiliac views seldom add anything. Read it in clinical context, and remember a normal film does not rule out nr-axSpA.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "d45f43622415e6b1",
+     "n": 298,
+     "p": "Plain pe"
+    },
+    {
+     "h": "59d236660aaaecc6",
+     "n": 207,
+     "p": "Sacroili"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not use CT to investigate suspected nr-axSpA.**",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "de23e11bf145bb06",
+     "n": 83,
+     "p": "Computed"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If suspicion remains, order sacroiliac MRI with T1 and STIR sequences**, no contrast needed.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "973d6ea8bc53c8b2",
+     "n": 154,
+     "p": "Sacroili"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Sacroiliac bone marrow oedema is not diagnostic on its own.** It appears in 23% of healthy controls and 40–64% of women after childbirth, as well as in athletes.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "7ad83c8d676fbd17",
+     "n": 270,
+     "p": "Sacroili"
+    },
+    {
+     "h": "9ee908b6e78930d7",
+     "n": 160,
+     "p": "It has b"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Repeating a negative MRI rarely helps if HLA-B27 is negative:** fewer than 5% convert to positive.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "73056824434056ca",
+     "n": 138,
+     "p": "Both stu"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Classification criteria (ASAS) are not a diagnostic checklist** for individual patients, though their components inform the overall judgement.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "13ffdf752f60f1ef",
+     "n": 162,
+     "p": "The comp"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Share decisions and educate.** The patient's goals and preferences drive care, and education is a core part of management.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "6a4548b9e9365ca9",
+     "n": 194,
+     "p": "The pati"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Build in lifelong regular exercise;** physiotherapy may also help.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "5df0d7362889efdc",
+     "n": 60,
+     "p": "Manageme"
+    },
+    {
+     "h": "3e34644e6cfffc43",
+     "n": 58,
+     "p": "Physioth"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**An NSAID is the first drug to use**, at the maximum tolerated dose in the studies; it can also help patients take part in exercise.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ed03e5667fa980e1",
+     "n": 121,
+     "p": "Non-ster"
+    },
+    {
+     "h": "b9dbe0df4fb7c8a2",
+     "n": 156,
+     "p": "We recom"
+    },
+    {
+     "h": "5cbd9dced2ae1ddf",
+     "n": 112,
+     "p": "Uncontro"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Conventional DMARDs do not treat axial disease.** Sulfasalazine is an option for peripheral arthritis.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "fec4c7ae55fd42b8",
+     "n": 105,
+     "p": "There is"
+    },
+    {
+     "h": "e5335eba6d4abd35",
+     "n": 85,
+     "p": "Sulfasal"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Corticosteroids:** sacroiliac injection has a limited, short-lived role; oral or other systemic steroids have no clear place.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "ea71e8c2ac50d7f5",
+     "n": 167,
+     "p": "Sacroili"
+    },
+    {
+     "h": "b923144f15514866",
+     "n": 163,
+     "p": "Sacroili"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider a biologic only when the diagnosis is secure** and disease stays active despite exercise and an NSAID.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "633032937d878653",
+     "n": 211,
+     "p": "Initial "
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**TNF inhibitors and IL-17 inhibitors both work for axial symptoms** (ASAS40 32 to 57% with TNF inhibitors, 35–42% with IL-17 inhibitors); they have not been compared head to head.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "243541b1a4a2178e",
+     "n": 70,
+     "p": "TNF and "
+    },
+    {
+     "h": "009eb7ec8e1f3153",
+     "n": 89,
+     "p": "Trials o"
+    },
+    {
+     "h": "7c4f9ccc0acf8b0e",
+     "n": 236,
+     "p": "The effi"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Let extra-articular disease guide the class.** TNF inhibitors suit uveitis (certolizumab cut flares by 87%; etanercept may be worse), IBD and psoriasis. IL-17 inhibitors suit psoriasis but do not help IBD and lack uveitis evidence.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "68df6aabd593301b",
+     "n": 529,
+     "p": "AxSpA-as"
+    },
+    {
+     "h": "13ed41f9620979ae",
+     "n": 187,
+     "p": "IL-17 bl"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Ustekinumab does not work** in nr-axSpA or AS.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "e085b60a41fddede",
+     "n": 104,
+     "p": "Large tr"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High ASDAS-CRP predicts response to a TNF inhibitor** better than BASDAI; MRI sacroiliitis alone does not clearly predict it.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "a4ad31a07c0631eb",
+     "n": 313,
+     "p": "High dis"
+    },
+    {
+     "h": "1864346f729827fd",
+     "n": 63,
+     "p": "MRI sacr"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Avoid stopping a TNF inhibitor in stable patients:** 70–87% flared within 48–68 weeks of stopping, whereas doubling the interval raised flares only from 16.3 to 21%.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "df187241ba92c196",
+     "n": 143,
+     "p": "TNF inhi"
+    },
+    {
+     "h": "fd80cebf9bd8fcbb",
+     "n": 201,
+     "p": "RCTs of "
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Function, work and quality of life suffer as much as in AS** and improve in responders; fibromyalgia, depression and fatigue make them worse.",
+   "source": "S1",
+   "verdict": "pass_paraphrase_anchored",
+   "anchors": [
+    {
+     "h": "c1032aedcc8e0fee",
+     "n": 191,
+     "p": "Function"
+    },
+    {
+     "h": "aefb2747117c37be",
+     "n": 151,
+     "p": "Disease "
+    },
+    {
+     "h": "061312a7b9f5e02f",
+     "n": 114,
+     "p": "Depressi"
+    }
+   ],
+   "locator": "Australian expert panel, Rheumatology and Therapy (Springer), 'Australian Consensus Statements for the Assessment and Management of Non-radiographic Axial Spondyloarthritis', published 28 December 2021, https://pmc.ncbi.nlm.nih.gov/articles/PMC8814294/, retrieved 2026-09-23"
+  }
+ ]
+}
