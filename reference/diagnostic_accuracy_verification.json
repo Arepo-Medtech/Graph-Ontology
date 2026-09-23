@@ -1,7 +1,26 @@
 {
  "_note": "Output of scripts/verify_diagnostic_accuracy.py: transcription fidelity, record by record.",
- "records": 49,
- "verified": 49,
+ "records": 398,
+ "verified": 398,
+ "binding_review": {
+  "distinct_bindings_read": 182,
+  "read_as_wrong": 12,
+  "reader": "the transcriber (not independent)",
+  "wrong": [
+   "calf diameter -> Swollen calf",
+   "vaginal discharge on examination -> Vaginal discharge",
+   "dry mucous membranes -> Aptyalism",
+   "furrowed tongue -> Plicated tongue",
+   "pulse differential -> Pulse deficit",
+   "tender anterior cervical nodes -> Cervical lymphadenitis",
+   "major trauma -> Multiple traumatic injuries",
+   "toxic or moribund -> Moribund",
+   "fever > 40 C -> Hyperpyrexia",
+   "lower chest wall indrawing -> Intercostal recession",
+   "sensory deficit -> Absence of sensation",
+   "Barlow and Ortolani -> Ortolani alone"
+  ]
+ },
  "rows": [
   {
    "id": "wang2005-hx-hf-present",
@@ -342,6 +361,2449 @@
   {
    "id": "cts2023-tinel-absent",
    "pmid": "37366626",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10086438-dry-axilla",
+   "pmid": "10086438",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10086438-dry-mucosa-absent",
+   "pmid": "10086438",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10086438-furrowed-tongue-absent",
+   "pmid": "10086438",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10376577-edm-absent",
+   "pmid": "10376577",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10376577-occlusion-present",
+   "pmid": "10376577",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10376577-occlusion-absent",
+   "pmid": "10376577",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10517431-cbe-present",
+   "pmid": "10517431",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10517431-cbe-absent",
+   "pmid": "10517431",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10865306-weak-abduction",
+   "pmid": "10865306",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid10865306-weak-abduction-absent",
+   "pmid": "10865306",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-tonsillar-exudate",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-pharyngeal-exudate",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-strep-exposure",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-tender-nodes-absent",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-tonsil-enlargement-absent",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11147989-exudate-absent",
+   "pmid": "11147989",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11368703-hx-present",
+   "pmid": "11368703",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11368703-hx-absent",
+   "pmid": "11368703",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11466101-clubbing-lung-ca",
+   "pmid": "11466101",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11466101-clubbing-crohn",
+   "pmid": "11466101",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11466101-clubbing-uc",
+   "pmid": "11466101",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-drawer-present",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-drawer-absent",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-lachman-present",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-lachman-absent",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-mcmurray-present",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-mcmurray-absent",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-jlt-present",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11585485-jlt-absent",
+   "pmid": "11585485",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11980527-sudden-onset-absent",
+   "pmid": "11980527",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11980527-diastolic-murmur",
+   "pmid": "11980527",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid11980527-pulse-differential",
+   "pmid": "11980527",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid12588275-night-sweats",
+   "pmid": "12588275",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15014046-rigors",
+   "pmid": "15014046",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15014046-sweating",
+   "pmid": "15014046",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15014046-systemic-absent",
+   "pmid": "15014046",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15014046-cough-absent",
+   "pmid": "15014046",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15014046-bedbound-absent",
+   "pmid": "15014046",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-phalen-present",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-phalen-absent",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-tinel-present",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-tinel-absent",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-compression-present",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid15162113-compression-absent",
+   "pmid": "15162113",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-claudication",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-femoral-bruit",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-pulse-abn-asym",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-cool-skin",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-bruit-any",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-pulse-abn-sym",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-bruit-absent",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid16449619-pulse-abn-absent",
+   "pmid": "16449619",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-neer-present",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-neer-absent",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-hawkins-present",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-hawkins-absent",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-speed-present",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid17720798-speed-absent",
+   "pmid": "17720798",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-syncope",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-shock",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-thrombophlebitis",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-current-dvt",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-leg-swelling",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-sudden-dyspnoea",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-active-cancer",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-recent-surgery",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-haemoptysis",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-leg-pain",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-sudden-dyspnoea-absent",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-dyspnoea-absent",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18089542-tachypnoea-absent",
+   "pmid": "18089542",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-suprapubic",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-uncircumcised",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-circumcised",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-abdo-pain",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-back-pain",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18159059-new-incontinence",
+   "pmid": "18159059",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-major-trauma-present",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-major-trauma-absent",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-pain-tenderness-present",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-pain-tenderness-absent",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-distracting-injury-present",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18177783-distracting-injury-absent",
+   "pmid": "18177783",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18307844-sweating",
+   "pmid": "18307844",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18842141-displaced-apex",
+   "pmid": "18842141",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18854541-mucus",
+   "pmid": "18854541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18854541-mucus-absent",
+   "pmid": "18854541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18854541-looser-stools",
+   "pmid": "18854541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid18854541-lower-abdo-pain-absent",
+   "pmid": "18854541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-dyspnoea-present",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-dyspnoea-absent",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-oedema-present",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-oedema-absent",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-added-sounds-present",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19586584-added-sounds-absent",
+   "pmid": "19586584",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-thessaly-present",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-thessaly-absent",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-mcmurray-present",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-mcmurray-absent",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-jlt-present",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-jlt-absent",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-apley-present",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-apley-absent",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-ege-present",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid19960176-ege-absent",
+   "pmid": "19960176",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20132979-parental-concern",
+   "pmid": "20132979",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20132979-clinician-instinct",
+   "pmid": "20132979",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-dysuria",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-frequency",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-haematuria",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-nocturia",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-urgency",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20969801-vaginal-discharge",
+   "pmid": "20969801",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-hx-seizures",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-hx-reduced-feeds",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-jaundice",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-toxic",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-meningeal-signs",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-neck-stiffness",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-bulging-fontanelle",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-kernig",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-tone-up",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-fever-40",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-brudzinski",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-meningeal-signs-absent",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid20974781-fever-absent",
+   "pmid": "20974781",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid21843213-joint-surgery",
+   "pmid": "21843213",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid21843213-skin-infection-prosthesis",
+   "pmid": "21843213",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22048053-scarlatiniform",
+   "pmid": "22048053",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22048053-petechiae",
+   "pmid": "22048053",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22048053-exudates",
+   "pmid": "22048053",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22048053-vomiting",
+   "pmid": "22048053",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22048053-tender-nodes",
+   "pmid": "22048053",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22496266-rebound",
+   "pmid": "22496266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22496266-hypotension",
+   "pmid": "22496266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22496266-distension",
+   "pmid": "22496266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22496266-guarding",
+   "pmid": "22496266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22496266-tenderness-absent",
+   "pmid": "22496266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-neer-present",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-neer-absent",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-hawkins-present",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-hawkins-absent",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-painful-arc-present",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid22773322-painful-arc-absent",
+   "pmid": "22773322",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23076954-wheeze",
+   "pmid": "23076954",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23076954-wheeze-absent",
+   "pmid": "23076954",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23076954-crepitations",
+   "pmid": "23076954",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23076954-crepitations-absent",
+   "pmid": "23076954",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23085794-tachypnoea",
+   "pmid": "23085794",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23085794-tachypnoea-absent",
+   "pmid": "23085794",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23085794-subcostal",
+   "pmid": "23085794",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23085794-subcostal-absent",
+   "pmid": "23085794",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23613077-cmt",
+   "pmid": "23613077",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23613077-adnexal-mass",
+   "pmid": "23613077",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23613077-adnexal-tenderness",
+   "pmid": "23613077",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23677315-cdr",
+   "pmid": "23677315",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23677315-disc-haem",
+   "pmid": "23677315",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23677315-disc-haem-absent",
+   "pmid": "23677315",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23677315-iop",
+   "pmid": "23677315",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23677315-iop-absent",
+   "pmid": "23677315",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-painful-arc",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-painful-arc-absent",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-drop-arm",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-er-lag",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-ir-lag",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23982370-ir-lag-absent",
+   "pmid": "23982370",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23989984-choking",
+   "pmid": "23989984",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid23989984-snoring",
+   "pmid": "23989984",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-genital-ulcers",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-weight-loss",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-vomiting",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-fever-absent",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-lymphadenopathy",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25027143-lymphadenopathy-absent",
+   "pmid": "25027143",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-mcmurray-present",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-mcmurray-absent",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-jlt-present",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-jlt-absent",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-thessaly-present",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25724195-thessaly-absent",
+   "pmid": "25724195",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-fast-breathing-present",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-fast-breathing-absent",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-lower-chest-indrawing-present",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-lower-chest-indrawing-absent",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-rr50",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-grunting",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-nasal-flaring",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-cough-absent",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-fever-hx-absent",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid25769269-rr40-absent",
+   "pmid": "25769269",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-anisocoria",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-photophobia",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-complete-redness",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-purulent",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-matting-both",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-red-at-20ft-absent",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26169885-gluing-absent",
+   "pmid": "26169885",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26547467-prior-abnormal-stress",
+   "pmid": "26547467",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26547467-pad",
+   "pmid": "26547467",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26547467-radiation-both-arms",
+   "pmid": "26547467",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26717031-skull-fracture-signs",
+   "pmid": "26717031",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26717031-gcs13",
+   "pmid": "26717031",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26717031-vomiting-2",
+   "pmid": "26717031",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-chest-pain-present",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-chest-pain-absent",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-rales-present",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-rales-absent",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-headache-present",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid26875460-headache-absent",
+   "pmid": "26875460",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27115266-posterior-cervical",
+   "pmid": "27115266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27115266-palatine-petechiae",
+   "pmid": "27115266",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27325129-libido",
+   "pmid": "27325129",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27325129-libido-absent",
+   "pmid": "27325129",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27325129-ed",
+   "pmid": "27325129",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27325129-ed-absent",
+   "pmid": "27325129",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-pcp-present",
+   "pmid": "27458949",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-pcp-absent",
+   "pmid": "27458949",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-derm-present",
+   "pmid": "27458949",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27458949-skin-exam-derm-absent",
+   "pmid": "27458949",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27693100-lachman",
+   "pmid": "27693100",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid27693100-lachman-absent",
+   "pmid": "27693100",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-supraspinatus-present",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-supraspinatus-absent",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-compression-rotation-present",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-compression-rotation-absent",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-hawkins-present",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28122541-hawkins-absent",
+   "pmid": "28122541",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28214369-migration",
+   "pmid": "28214369",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28214369-cough-hop",
+   "pmid": "28214369",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28214369-rovsing",
+   "pmid": "28214369",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-sensory-present",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-sensory-absent",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-fnst-present",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-fnst-absent",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-slr-present",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28231784-slr-absent",
+   "pmid": "28231784",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28267861-vulvar-ulcer-present",
+   "pmid": "28267861",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28267861-vulvar-ulcer-absent",
+   "pmid": "28267861",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28484063-whoop",
+   "pmid": "28484063",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28484063-post-tussive-vomiting",
+   "pmid": "28484063",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28484063-paroxysmal-absent",
+   "pmid": "28484063",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28484063-sputum-absent",
+   "pmid": "28484063",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28763554-tachypnoea40",
+   "pmid": "28763554",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28763554-hypoxaemia",
+   "pmid": "28763554",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28763554-work-of-breathing",
+   "pmid": "28763554",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid28763554-hypoxaemia-absent",
+   "pmid": "28763554",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid29265487-neuro-deficit",
+   "pmid": "29265487",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid29265487-hypotension",
+   "pmid": "29265487",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid29668564-hoffmann",
+   "pmid": "29668564",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid29668564-hoffmann-absent",
+   "pmid": "29668564",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid30777025-wounds",
+   "pmid": "30777025",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid30777025-pressure-sores",
+   "pmid": "30777025",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid30777025-skin-ulcers",
+   "pmid": "30777025",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-hx-af",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-mood-prodrome",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-feeling-cold",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-headache",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-cyanosis",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-mood-after",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31237649-amnesia-before",
+   "pmid": "31237649",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-fhx-oa",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-hx-knee-oa",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-stairs-pain",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-squat-pain",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-groin-pain-passive",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-abductor-weakness",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-adduction-decreased",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-ir-decreased",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid31846019-adduction-decreased-absent",
+   "pmid": "31846019",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid32329557-egophony",
+   "pmid": "32329557",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid32329557-dullness",
+   "pmid": "32329557",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid32329557-fever",
+   "pmid": "32329557",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid33380476-joint-tenderness",
+   "pmid": "33380476",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid33380476-joint-tenderness-absent",
+   "pmid": "33380476",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-cough",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-cough-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-fever",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-fever-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-dyspnoea",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-dyspnoea-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-fatigue",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-fatigue-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-anosmia",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-anosmia-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-ageusia",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-ageusia-absent",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35593186-sore-throat",
+   "pmid": "35593186",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid34286639-ankle-drawer-present",
+   "pmid": "34286639",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid34286639-ankle-drawer-absent",
+   "pmid": "34286639",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-drawer-present",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-drawer-absent",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-lachman-complete-present",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-lachman-complete-absent",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-lachman-postacute-present",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35150292-lachman-postacute-absent",
+   "pmid": "35150292",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35699701-contact-red-eye",
+   "pmid": "35699701",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35699701-mucopurulent",
+   "pmid": "35699701",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35699701-otitis-media",
+   "pmid": "35699701",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35709018-gp-judgement",
+   "pmid": "35709018",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35709018-gp-judgement-absent",
+   "pmid": "35709018",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35709018-gp-judgement-ci",
+   "pmid": "35709018",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid35709018-gp-judgement-ci-absent",
+   "pmid": "35709018",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid36976276-fhx-secondary",
+   "pmid": "36976276",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid36976276-low-weight",
+   "pmid": "36976276",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid36976276-obesity",
+   "pmid": "36976276",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid36976276-fhx-any-htn",
+   "pmid": "36976276",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37567752-gut-feeling-present",
+   "pmid": "37567752",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37567752-gut-feeling-absent",
+   "pmid": "37567752",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37722950-pyloric-mass",
+   "pmid": "37722950",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37722950-pyloric-mass-absent",
+   "pmid": "37722950",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37722950-vomiting",
+   "pmid": "37722950",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid37722950-vomiting-absent",
+   "pmid": "37722950",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-barlow-ortolani",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-barlow-ortolani-absent",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-limited-abduction",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-limited-abduction-absent",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-click",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid38619828-click-absent",
+   "pmid": "38619828",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39535756-mel-pcp-present",
+   "pmid": "39535756",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39535756-mel-pcp-absent",
+   "pmid": "39535756",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39535756-mel-derm-present",
+   "pmid": "39535756",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39535756-mel-derm-absent",
+   "pmid": "39535756",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39938056-spurling",
+   "pmid": "39938056",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid39938056-spurling-absent",
+   "pmid": "39938056",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid40032401-cough-absent",
+   "pmid": "40032401",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid40032401-fever-absent",
+   "pmid": "40032401",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid40257808-oral-injury",
+   "pmid": "40257808",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid40257808-retinal-haem",
+   "pmid": "40257808",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid40257808-seizures",
+   "pmid": "40257808",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41729549-jvd",
+   "pmid": "41729549",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41729549-le-oedema",
+   "pmid": "41729549",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41729549-crackles",
+   "pmid": "41729549",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-noise",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-nausea",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-light",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-headache-absent",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-npc",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-pursuits",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid41941197-saccades",
+   "pmid": "41941197",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-both-arms",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-s3",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-hypotension",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-pleuritic",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-sharp",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9786377-positional",
+   "pmid": "9786377",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9892455-palp3",
+   "pmid": "9892455",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9892455-palp3-absent",
+   "pmid": "9892455",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9892455-palp4",
+   "pmid": "9892455",
+   "verified": true,
+   "numbers_not_in_abstract": [],
+   "stored_values_not_written": []
+  },
+  {
+   "id": "pmid9892455-palp4-absent",
+   "pmid": "9892455",
    "verified": true,
    "numbers_not_in_abstract": [],
    "stored_values_not_written": []

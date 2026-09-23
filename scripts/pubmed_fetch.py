@@ -6,7 +6,7 @@ abstracts are read and kept for re-verification. Abstracts are the publishers' t
 (git-ignored) and are never committed -- the repository keeps only the numbers and the PMID
 (reference/diagnostic_accuracy.json), and scripts/verify_diagnostic_accuracy.py checks each number against the cache.
 
-    scripts/pubmed_fetch.py search "appendicitis[ti] AND (meta-analysis[pt] OR systematic review[pt]) AND sensitivity"
+    scripts/pubmed_fetch.py search "appendicitis[ti] AND (meta-analysis[pt] OR systematic review[pt]) AND sensitivity" [max, default 12]
     scripts/pubmed_fetch.py fetch 15286004 12345678
 """
 from __future__ import annotations
@@ -56,7 +56,8 @@ def main() -> int:
         print(__doc__)
         return 2
     if sys.argv[1] == "search":
-        ids = json.loads(call("esearch", term=sys.argv[2], retmax=12, sort="relevance", retmode="json"))["esearchresult"]["idlist"]
+        ids = json.loads(call("esearch", term=sys.argv[2], retmax=int(sys.argv[3]) if len(sys.argv) > 3 else 12, sort="relevance",
+                              retmode="json"))["esearchresult"]["idlist"]
     else:
         ids = sys.argv[2:]
     for r in fetch(ids):

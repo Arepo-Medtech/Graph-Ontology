@@ -16,6 +16,14 @@ import re
 import sys
 from pathlib import Path
 
+# The binding of a finding to a SNOMED concept is a gap step with its own error rate. Every distinct binding was read
+# against the source wording (23 Sep 2026); those read as wrong lost their fallback term and became candidates.
+BINDING_REVIEW = {"distinct_bindings_read": 182, "read_as_wrong": 12, "reader": "the transcriber (not independent)",
+                  "wrong": ["calf diameter -> Swollen calf", "vaginal discharge on examination -> Vaginal discharge",
+                            "dry mucous membranes -> Aptyalism", "furrowed tongue -> Plicated tongue", "pulse differential -> Pulse deficit",
+                            "tender anterior cervical nodes -> Cervical lymphadenitis", "major trauma -> Multiple traumatic injuries",
+                            "toxic or moribund -> Moribund", "fever > 40 C -> Hyperpyrexia", "lower chest wall indrawing -> Intercostal recession",
+                            "sensory deficit -> Absence of sensation", "Barlow and Ortolani -> Ortolani alone"]}
 SRC, CACHE, OUT = Path("reference/diagnostic_accuracy.json"), Path("cache/pubmed"), Path("reference/diagnostic_accuracy_verification.json")
 
 
@@ -27,7 +35,7 @@ def main() -> int:
         if not f.exists():
             rows.append({"id": r["id"], "verified": False, "why": "abstract not cached -- run scripts/pubmed_fetch.py fetch " + r["pmid"]})
             continue
-        nums = set(re.findall(r"\d+(?:\.\d+)?", json.load(open(f))["abstract"]))
+        nums = set(re.findall(r"\d+(?:\.\d+)?", json.load(open(f))["abstract"].replace("\u00b7", ".")))   # the Lancet writes 0·62
         missing = [w for w in r["as_written"] if w not in nums]
         written = [float(w) for w in r["as_written"]]
         stored = [v for v in [r.get("lr"), r.get("sens"), r.get("spec")] + (r.get("lr_ci") or []) + (r.get("sens_ci") or []) + (r.get("spec_ci") or [])
@@ -37,7 +45,7 @@ def main() -> int:
         ok += good
         rows.append({"id": r["id"], "pmid": r["pmid"], "verified": good, "numbers_not_in_abstract": missing, "stored_values_not_written": unmatched})
     json.dump({"_note": "Output of scripts/verify_diagnostic_accuracy.py: transcription fidelity, record by record.",
-               "records": len(recs), "verified": ok, "rows": rows}, open(OUT, "w"), indent=1)
+               "records": len(recs), "verified": ok, "binding_review": BINDING_REVIEW, "rows": rows}, open(OUT, "w"), indent=1)
     print(f"verified {ok}/{len(recs)}")
     for x in rows:
         if not x["verified"]:
