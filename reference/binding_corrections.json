@@ -7,6 +7,30 @@
   },
   "corrections": [
     {
+      "condition": "Differentiated thyroid cancer",
+      "state": "corrected_pending_attestation",
+      "concept_id": "1255086008",
+      "display": "Differentiated thyroid carcinoma",
+      "method": "restored_prior_binding",
+      "why": "Bound at SNOMED CT-AU 20260731 via exact_synonym; lost on the 20260831 re-run because the matching synonym 'Differentiated thyroid cancer' was dropped in 20260831; display was already 'carcinoma'. The concept did not change meaning. Prior binding is in git at 54bf981.",
+      "ncts_validated_utc": "2026-09-23",
+      "ncts_version": "20260831",
+      "corrected_by": "restored on instruction, 2026-09-23",
+      "corrected_utc": "2026-09-23"
+    },
+    {
+      "condition": "Non-small cell lung cancer",
+      "state": "corrected_pending_attestation",
+      "concept_id": "254637007",
+      "display": "Non-small cell lung carcinoma",
+      "method": "restored_prior_binding",
+      "why": "Bound at SNOMED CT-AU 20260731 via exact_display; lost on the 20260831 re-run because display renamed 'Non-small cell lung cancer' -> 'Non-small cell lung carcinoma' in SNOMED CT-AU 20260831. The concept did not change meaning. Prior binding is in git at 54bf981.",
+      "ncts_validated_utc": "2026-09-23",
+      "ncts_version": "20260831",
+      "corrected_by": "restored on instruction, 2026-09-23",
+      "corrected_utc": "2026-09-23"
+    },
+    {
       "condition": "Pre-exposure prophylaxis against human immunodeficiency virus infection",
       "state": "corrected_pending_attestation",
       "concept_id": "918591000168102",
@@ -19,6 +43,30 @@
         "why_wrong": "Inverts the clinical situation. PrEP is given to people WITHOUT HIV; this concept asserts established infection, in pregnancy."
       },
       "why": "PBS wording names an intervention. 918591000168102 is an Australian extension concept (namespace 1000168) under 897017002 Antiviral prophylaxis. The binder leaves it a candidate because the PBS phrasing 'against human immunodeficiency virus infection' is not an exact match for 'for HIV infection' — a judgement call, so it is recorded here rather than auto-bound."
+    },
+    {
+      "condition": "Triple negative breast cancer",
+      "state": "corrected_pending_attestation",
+      "concept_id": "706970001",
+      "display": "Triple negative malignant neoplasm of breast",
+      "method": "restored_prior_binding",
+      "why": "Bound at SNOMED CT-AU 20260731 via normalised_synonym; lost on the 20260831 re-run because the matching synonym was dropped in 20260831; display unchanged. The concept did not change meaning. Prior binding is in git at 54bf981.",
+      "ncts_validated_utc": "2026-09-23",
+      "ncts_version": "20260831",
+      "corrected_by": "restored on instruction, 2026-09-23",
+      "corrected_utc": "2026-09-23"
+    },
+    {
+      "condition": "Triple-negative breast cancer",
+      "state": "corrected_pending_attestation",
+      "concept_id": "706970001",
+      "display": "Triple negative malignant neoplasm of breast",
+      "method": "restored_prior_binding",
+      "why": "Bound at SNOMED CT-AU 20260731 via exact_synonym; lost on the 20260831 re-run because the matching synonym was dropped in 20260831; display unchanged. The concept did not change meaning. Prior binding is in git at 54bf981.",
+      "ncts_validated_utc": "2026-09-23",
+      "ncts_version": "20260831",
+      "corrected_by": "restored on instruction, 2026-09-23",
+      "corrected_utc": "2026-09-23"
     }
   ]
 }
