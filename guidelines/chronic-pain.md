@@ -221,7 +221,7 @@ for control causes unacceptable adverse effects at rest. **When predictable (bat
 | 7 | **Fibromyalgia, restless legs and other specific chronic pain syndromes are not covered** by either source. ⚠️ **An AJGP systematic review of low-dose naltrexone in fibromyalgia was found in searching and NOT used** — it is a single-syndrome review outside this topic's scope. | `out_of_scope` |
 | 8 | **AMH's "Pain types and analgesia" and "Opioid comparative information" tables were NOT retrieved.** | `input_unavailable` |
 | 9 | **Non-drug treatment is named as preferred [P1] and is not described** — no exercise prescription, no psychological therapy detail, in either source. | `input_unavailable` |
-| 10 | **Cancer pain content is AMH's summary and points to *Clinical guidelines for cancer pain management in adults* at cancer.org.au**, ⚠️ **which was not retrieved.** | `input_unavailable` |
+| 10 | **Cancer pain content is AMH's summary and points to *Clinical guidelines for cancer pain management in adults* at cancer.org.au.** That guideline was retrieved on 2026-09-23 as `cancer-pain-adults`, but only its non-table practice points could be quoted. ⚠️ **Its drug recommendations and doses are all in tables and remain unquoted** pending Cancer Council permission. | `input_unavailable` |
 
 ---
 

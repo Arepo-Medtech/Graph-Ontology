@@ -1,0 +1,89 @@
+{
+ "guideline": "guidelines/cancer-pain-adults.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://app.magicapp.org/#/guideline/jXXAdj"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "QUOTED UNDER A 200-WORD BUDGET (199 words used), from Cancer Council Australia 'Cancer pain management in adults' v2.4 (published 2026-05-13), retrieved 2026-09-23 as MAGICapp JSON. Every pass claim is machine re-checkable. LICENCE: Free to read, NOT openly licensed. Cancer Council Australia's guideline FAQ: fair dealing needs only correct citation; reproducing 'more than 200 words or figures/tables' needs permission from guidelines@cancer.org.au. So quotes here are capped at 200 words per source guideline (enforced by the generator) and tables were stripped from the retrieved text before quoting, so none can be quoted. ",
+ "summary": {
+  "total": 10,
+  "pass": 10,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Do a comprehensive assessment when a new patient scores pain 2 or more** on a zero-to-10 numerical rating scale, **or an existing patient reports a new pain or a sudden, unexpected change in intensity.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a new patient reports a pain score of 2 or more on self-reported numerical rating scale of zero to 10 … an existing patient reports a new pain or a sudden, unexpected change in intensity of pain",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**If cognitive impairment makes self-report difficult, use the Abbey Pain Scale.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If self-reporting of pain intensity is difficult due to cognitive impairment, use the Abbey Pain Scale",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Consider an oncological emergency** as the cause: fracture (or imminent fracture), brain, epidural or leptomeningeal metastasis, infection, or an obstructed or perforated abdominal organ.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider whether the pain is related to an oncological emergency, e.g: bone fracture (or high risk of imminent fracture) brain metastasis epidural metastasis leptomeningeal metastasis infection obstructed or perforated abdominal organ",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Exclude causes other than cancer before starting opioid therapy for pain.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Exclude causes other than cancer before commencing opioid therapy for pain",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Elderly or frail patients may need dose reduction and regular reassessment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dose reduction and regular re-assessment may be needed for elderly or frail patients",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Use the eviQ Opioid Conversion Calculator** for dose equivalents of opioid preparations available in Australia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use the eviQ Opioid Conversion Calculator for calculating dose equivalents for opioid preparations available in Australia",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Tell every patient starting opioids that constipation is very common**, and teach preventive bowel care.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Explain to patients starting opioids that constipation is a very common side effect, and provide education about preventative bowel care.",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer for specialist review** if opioid adverse effects persist after trialling more than one opioid, or opioid-induced hyperalgesia is suspected.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Refer for specialist review if: • opioid-related adverse effects persist despite opioid switching after trialing more than one opioid • opioid-induced hyperalgesia is suspected.",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A stable opioid dose may not affect driving**, provided the person takes no other medicines that impair driving.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "a stable dose of opioid may not affect driving performance, provided the person is not taking other medicines that impair driving",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prescribe bisphosphonates with caution in renal impairment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Bisphosphonates should be prescribed with caution in patients with renal impairment.",
+   "locator": "Cancer Council Australia, 'Cancer pain management in adults', v2.4, published 2026-05-13, MAGICapp https://app.magicapp.org/#/guideline/jXXAdj, retrieved 2026-09-23"
+  }
+ ]
+}

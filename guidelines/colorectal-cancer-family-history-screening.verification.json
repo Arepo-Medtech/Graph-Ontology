@@ -1,0 +1,76 @@
+{
+ "guideline": "guidelines/colorectal-cancer-family-history-screening.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://app.magicapp.org/#/guideline/jz5DdE"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "QUOTED UNDER A 200-WORD BUDGET (196 words used), from Cancer Council Australia 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history' v1.2 (published 2026-05-25), retrieved 2026-09-23 as MAGICapp JSON. Every pass claim is machine re-checkable. LICENCE: Free to read, NOT openly licensed. Cancer Council Australia's guideline FAQ: fair dealing needs only correct citation; reproducing 'more than 200 words or figures/tables' needs permission from guidelines@cancer.org.au. So quotes here are capped at 200 words per source guideline (enforced by the generator) and tables were stripped from the retrieved text before quoting, so none can be quoted. ",
+ "summary": {
+  "total": 8,
+  "pass": 8,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Include both sides of the family** when assigning a risk category.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Include both sides of the family when assessing an individual’s risk category",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider low-dose aspirin 100 mg daily from age 45 to 70** in every category below, in consultation with a health professional.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "low-dose (100 mg) aspirin daily should be considered from age 45 to 70",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Who:** near-average risk with **no family history**; **only one first-degree relative diagnosed at 60 or older** also falls here.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "near-average risk if they have no family history of colorectal cancer … only one first-degree relative with colorectal cancer diagnosed at age 60 or older",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screening: iFOBT in line with population screening.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "iFOBT screening should be performed in line with population screening",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Who:** only one first-degree relative diagnosed **before 60**; **or** one first-degree relative **and** one or more second-degree relatives, any age; **or** two first-degree relatives, any age.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "only one first-degree relative with colorectal cancer diagnosed before age 60 … one first-degree relative AND one or more second-degree relatives with colorectal cancer diagnosed at any age … two first-degree relatives with colorectal cancer diagnosed at any age",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Screening: colonoscopy every five years**, starting **10 years younger than the earliest first-degree relative's diagnosis, or at 50, whichever is earlier**, to age 74.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "colonoscopy should be offered every five years starting at 10 years younger than the earliest age of diagnosis of colorectal cancer in a first-degree relative … or age 50, whichever is earlier, to age 74",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Who:** two first-degree **and** one second-degree relative, at least one diagnosed **before 50**; **or** two first-degree **and** two or more second-degree relatives, any age; **or** three or more first-degree relatives, any age.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "two first-degree relatives AND one second-degree relative with colorectal cancer, with at least one diagnosed before age 50 … two first-degree relatives AND two or more second-degree relatives with colorectal cancer diagnosed at any age … three or more first-degree relatives with colorectal cancer diagnosed at any age",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Screening: the same five-yearly colonoscopy, but starting at 40 at the latest** (or 10 years before the earliest first-degree diagnosis, if earlier), to age 74 — **and consider referral to a culturally safe family cancer clinic.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "colonoscopy should be offered every five years starting at 10 years younger than the earliest age of diagnosis of colorectal cancer in a first-degree relative … or age 40, whichever is earlier, to age 74 … referral to a culturally safe family cancer clinic should be considered",
+   "locator": "Cancer Council Australia, 'Clinical practice guidelines for the prevention, early detection, and management of colorectal cancer: Risk and screening based on family history', v1.2, published 2026-05-25, MAGICapp https://app.magicapp.org/#/guideline/jz5DdE, retrieved 2026-09-23"
+  }
+ ]
+}

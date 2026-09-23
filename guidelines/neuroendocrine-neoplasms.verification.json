@@ -1,0 +1,106 @@
+{
+ "guideline": "guidelines/neuroendocrine-neoplasms.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://app.magicapp.org/#/guideline/jlAbxL"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "QUOTED UNDER A 200-WORD BUDGET (198 words used), from Cancer Council Australia 'COSA Neuroendocrine Neoplasms (NENs) Guidelines' v1.0 (published 2023-10-31), retrieved 2026-09-23 as MAGICapp JSON. Every pass claim is machine re-checkable. LICENCE: Free to read, NOT openly licensed. Cancer Council Australia's guideline FAQ: fair dealing needs only correct citation; reproducing 'more than 200 words or figures/tables' needs permission from guidelines@cancer.org.au. So quotes here are capped at 200 words per source guideline (enforced by the generator) and tables were stripped from the retrieved text before quoting, so none can be quoted. ",
+ "summary": {
+  "total": 12,
+  "pass": 12,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Make individualised treatment decisions for NENs routinely in a multidisciplinary setting.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Decisions regarding individualised treatment for neuroendocrine neoplasms (NENs) should routinely be made in a multidisciplinary setting.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Serum chromogranin A can be falsely elevated**, for example by proton pump inhibitors, **and assays differ, so use the same assay for the one patient.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serum Chromogranin A levels can be falsely elevated … for example proton pump inhibitors … the same assay should be used for the one patient",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Screen patients with functional NENs every 6-12 months for carcinoid heart disease, including an annual echocardiogram.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Patients with functional NENs should be screened every 6-12 months for carcinoid heart disease (including annual echocardiogram).",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Valvular abnormalities on echocardiogram should prompt early cardiology referral, even if the patient is asymptomatic.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Valvular abnormalities from carcinoid heart disease detected on echocardiogram should prompt an early cardiology referral, even if asymptomatic.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Surgical metastasectomy is not recommended for Grade 3 NET or neuroendocrine carcinoma.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Surgical metastasectomy is not recommended for Grade 3 NET or neuroendocrine carcinoma.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Recommended starting dose for an anti-proliferative effect: octreotide LAR 30 mg or lanreotide 120 mg every 4 weeks.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The recommended starting dose … when used for an anti-proliferative effect is Octreotide LAR 30mg or Lanreotide 120mg every 4 weeks",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Withhold long-acting SSA therapy at least four weeks before somatostatin scintigraphy.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Long-acting SSA therapy should be withheld at least four weeks prior to somatostatin scintigraphy.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider platinum/etoposide chemotherapy first-line for advanced Grade 3 poorly-differentiated neuroendocrine carcinomas.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Platinum/etoposide chemotherapy should be considered as first-line treatment for patients with advanced Grade 3, poorly-differentiated neuroendocrine carcinomas",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Offer routine MEN 1 surveillance screening to everyone diagnosed with MEN 1, starting by age 12 years.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Routine MEN 1 surveillance screening should be offered to all patients with a diagnosis of MEN 1 commencing by age 12 years.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Functioning phaeochromocytomas and paragangliomas require pre-operative alpha-blockade to control blood pressure.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Functioning tumours require pre-operative alpha-blockade to achieve blood pressure control.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Refer patients with unplanned weight loss or at risk of malnutrition immediately to an accredited practising dietitian.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "unplanned weight loss or ‘at risk’ of malnutrition should immediately be referred to an accredited practicing dietitian",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Prophylactic niacin 40-80 mg/day may be considered in carcinoid syndrome.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prophylactic niacin supplementation (40-80mg/day) may be considered in patients with carcinoid syndrome.",
+   "locator": "Cancer Council Australia, 'COSA Neuroendocrine Neoplasms (NENs) Guidelines', v1.0, published 2023-10-31, MAGICapp https://app.magicapp.org/#/guideline/jlAbxL, retrieved 2026-09-23",
+   "dose": true
+  }
+ ]
+}
