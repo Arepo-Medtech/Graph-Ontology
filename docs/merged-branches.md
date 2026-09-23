@@ -1,0 +1,70 @@
+# Merged branches — keep, do not delete
+
+**Policy: these branches are retained.** They are fully merged into `master` and hold no unique commits,
+but they are **not** to be deleted. This file is the single list of them.
+
+**Last verified:** 2026-09-23 · `master` at `25d5b24`
+
+| branch | tip | commits | PR | merged | merge commit | in `master`? |
+|---|---|---|---|---|---|---|
+| **`conditions-snomed-binding`** | `d083591` | 9 | [#1](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/1) | 2026-09-21 | `4c610db` | ✅ yes |
+| **`conditions-primary-care`** | `ee71e33` | 10 | [#2](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/2) | 2026-09-21 | `2e239bf` | ✅ yes |
+| **`monograph-foundry`** | `7b3ed46` | 13 | [#3](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/3) | 2026-09-21 | `9e78d5d` | ✅ yes |
+| ⚠️ **`attestation-loop`** | `e4114bc` | 1 | [#4](https://github.com/Arepo-Medtech/au-medicines-compendium/pull/4) | 2026-09-23 | `25d5b24` | ✅ yes | 
+
+> ### ⚠️ `attestation-loop` NO LONGER EXISTS — it was deleted on merge
+> It was merged with `gh pr merge --delete-branch` on **2026-09-23, before the retention policy was
+> given.** The branch ref is gone from `origin` and locally.
+>
+> **Nothing is lost.** Its single commit `e4114bc` is in `master`'s history and its merge commit is
+> `25d5b24`. **To restore the ref:**
+>
+> ```bash
+> git branch attestation-loop e4114bc && git push origin attestation-loop
+> ```
+>
+> Not done automatically — recreating a deleted remote branch is an outward-facing change.
+
+---
+
+## What each branch contributed
+
+### `conditions-snomed-binding` — PR #1, 6 files
+Condition families derived from PBS restrictions and bound to SNOMED CT-AU.
+
+`docs/conditions.md` · `reference/body_systems.json` · `scripts/bind_conditions.py` ·
+`scripts/bind_ontoserver.mjs` · `scripts/conditions_from_restrictions.py` · `scripts/pbs_pull.py`
+
+### `conditions-primary-care` — PR #2, 2 files
+Primary-care coverage derived from PBS items × ATC codes.
+
+`docs/conditions.md` · `scripts/conditions_from_atc.py`
+
+### `monograph-foundry` — PR #3, 17 files
+Tickets, ledger, citation gate, splitter and verification — the machinery the guideline corpus is built
+on. Also the origin of `reference/attestations.json`.
+
+`.gitignore` · `docs/monograph-foundry.md` · `reference/attestations.json` · `reference/conditions.json` ·
+`reference/conditions_split.json` · `reference/entail_verdicts.jsonl` · *(and 11 more)*
+
+### `attestation-loop` — PR #4, 6 files ⚠️ *(ref deleted, see above)*
+Closed the attestation loop: the dose queue became a committed record, and a rejected dose fails the
+build.
+
+`docs/attestation-loop.md` · `docs/attestation-queue.md` · `scripts/attestation.py` ·
+`scripts/corpus_stats.py` · `scripts/dose_queue.py` · `scripts/verify.py`
+
+---
+
+## Re-verify this list
+
+```bash
+git fetch --prune origin
+for b in conditions-snomed-binding conditions-primary-care monograph-foundry; do
+  printf "%-28s %s  in-master:%s\n" "$b" "$(git rev-parse --short origin/$b)" \
+    "$(git merge-base --is-ancestor origin/$b origin/master && echo YES || echo NO)"
+done
+```
+
+⚠️ **Do not pass `--delete-branch` to `gh pr merge` on this repository.** That flag is what removed
+`attestation-loop`.
