@@ -195,10 +195,37 @@ def obo_terms(path: Path) -> list[dict]:
     return [t for t in terms if "id" in t and not t.get("obsolete")]
 
 
+def sources(vocab_dir: str) -> dict[str, Path]:
+    """Every input a full build reads. The loaders below skip a source that is absent, so without this check a deleted
+    folder (24 Sep 2026: the unpacked LOINC, RadLex and SNOMED releases) would rebuild a smaller graph without failing."""
+    return {"compendium": CMP, "spine": SPINE, "Athena CONCEPT": Path(vocab_dir) / "CONCEPT.csv",
+            "Athena CONCEPT_RELATIONSHIP": Path(vocab_dir) / "CONCEPT_RELATIONSHIP.csv", "PBS cache": PBS,
+            "snomed bindings": BINDINGS, "MONDO obo": MONDO_OBO, "MONDO sssom": MONDO_SSSOM, "HPO obo": HP_OBO,
+            "HPO annotations": HPOA, "HPO genes": HP_GENES, "MBS XML": MBS_XML, "Uberon obo": UBERON_OBO,
+            "Uberon sssom": UBERON_SSSOM, "DrugCentral": DC, "PBS indication bindings": PBS_BIND,
+            "LOINC Extension": LOINC_EXT, "LOINC table": LOINC_TABLE, "LOINC part mapping": LOINC_PARTS,
+            "LOINC part links": LOINC_PARTLINK, "LOINC/RSNA playbook": LOINC_RSNA, "RSNA playbook": RSNA_PLAYBOOK,
+            "RadLex (scripts/radlex_prepare.py)": RADLEX_JSON, "RCPA units (scripts/rcpa_units.py)": RCPA_UNITS,
+            "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
+            "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
+            "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
+            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--vocab-dir", default=os.path.expanduser("~/code/spine/out/omop-vocab"))
+    ap.add_argument("--allow-missing", action="append", default=[], metavar="NAME",
+                    help="build without this source (repeatable; 'all' for any) -- the build log names each one skipped")
     a = ap.parse_args()
+    missing = {k: v for k, v in sources(a.vocab_dir).items() if not v.exists()}
+    refused = {k: v for k, v in missing.items() if "all" not in a.allow_missing and k not in a.allow_missing}
+    if refused:
+        print("REFUSED -- sources missing (restore them, or pass --allow-missing NAME to build without one on purpose):",
+              file=sys.stderr)
+        for k, v in refused.items():
+            print(f"  {k:<36} {v}", file=sys.stderr)
+        return 1
     opts = "delim='\t', header=true, quote='', escape='', all_varchar=true"
     if GRAPH.exists():
         GRAPH.unlink()
@@ -1010,6 +1037,8 @@ def main() -> int:
     con.execute("CREATE TABLE edge_final AS SELECT row_number() OVER () AS edge_id, * FROM edge")
     con.execute("DROP TABLE edge")
     con.execute("ALTER TABLE edge_final RENAME TO edge")
+    for k in missing:
+        log[f"SOURCE MISSING (built without it on purpose): {k}"] = 0
     con.execute("CREATE TABLE build_log (family VARCHAR, edges BIGINT)")
     con.executemany("INSERT INTO build_log VALUES (?, ?)", list(log.items()))
 
