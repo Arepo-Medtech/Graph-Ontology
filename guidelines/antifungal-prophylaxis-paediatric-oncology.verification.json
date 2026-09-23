@@ -1,0 +1,205 @@
+{
+ "guideline": "guidelines/antifungal-prophylaxis-paediatric-oncology.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Primary antifungal prophylaxis is recommended when the underlying IFI incidence exceeds 10%**, adjusted for institutional epidemiology. **High- and intermediate-risk patients should receive it.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Primary antifungal prophylaxis is recommended when the underlying incidence of IFI exceeds 10%. When implementing prophylaxis regimens, consideration must also be given to institutional epidemiology and relevant adjustments made. … Patients at high and intermediate risk for IFI should receive appropriate prophylaxis.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**High risk (≥10%), mould more than yeast:** high-risk/very-high-risk ALL in intensive phases · AML · relapsed acute leukaemia · allogeneic HSCT with acute grade II–IV or chronic extensive GvHD · severe aplastic anaemia. **Yeast more than mould:** allogeneic HSCT pre-engraftment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "High risk (≥10%) Mould > Yeast High-risk/very-high risk acute lymphoblastic leukaemia (ALL) in intensive treatment phases Acute myeloid leukaemia (AML) Relapsed acute leukaemia (ALL and AML) Allogeneic HSCT with acute Grade II-IV GvHD Allogeneic HSCT chronic extensive GvHD Severe aplastic anaemia Yeast > Mould Allogeneic HSCT (pre-engraftment phase)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Intermediate risk (yeast more than mould):** autologous HSCT or medulloblastoma, neutropenic phase. **Low risk (≤5%):** non-relapse ALL outside HR/VHR intensive phases, lymphoma and solid tumours (excluding autologous HSCT).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intermediate risk Yeast > Mould Autologous HSCT (neutropenic phase) Medulloblastoma (neutropenic phase) Low risk (≤5%) - Non-relapse ALL (excluding HR & VHR ALL in intensive phases) Lymphoma (excluding autologous HSCT) Solid tumours (excluding autologous HSCT)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**An azole is preferred where possible**, with TDM for posaconazole and voriconazole.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where possible, an azole agent is preferred and therapeutic drug monitoring should be done for posaconazole and voriconazole",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Secondary prophylaxis is required** for further chemotherapy after proven or probable IFI; the agent that treated it may be used if it was tolerated and effective. Discuss with infectious diseases.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In patients with a documented history of proven or probable IFI, secondary prophylaxis is required for further cycles of chemotherapy. The agent that was used to treat the initial infection may be used for prophylaxis, provided it was well tolerated and effective. Discuss with local infectious diseases unit.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Fluconazole 6–12 mg/kg (max 400 mg) oral or IV daily**; round oral doses to the nearest 50 mg capsule. Adjust in renal impairment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Fluconazole 6-12 mg/kg (max 400 mg) oral/IV daily oral: round to nearest 50 mg capsules … Adjust in renal impairment (speak to pharmacy)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Posaconazole tablets (preferred): 300 mg orally daily** at ≥13 years, or ≥10 years and ≥30 kg. **IV if oral is not tolerated or absorbed: 6 mg/kg (max 300 mg) daily, 2–18 years.** Trough target over 0.7 µg/mL, taken 7 days after starting or any dose or formulation change.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Posaconazole Oral tablets (preferred): ≥13 years OR ≥10 years and ≥30 kg: 300 mg oral daily … IV (if unable to tolerate/absorb oral tablets): 2–18 years: 6 mg/kg IV daily (max 300 mg) Trough level >0.7 µg/mL Take trough level 7 days after starting drug or changing dose or formulation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Posaconazole IV via central line only, over 90 minutes.** Under-10 tablet dosing and the oral suspension (poorly absorbed) only with CCC pharmacy and ID.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral tablet dosing for age <10 years is available. Discuss with CCC pharmacy and ID. … Oral suspension is available – however has poor absorption. Only use in consultation with CCC pharmacy and ID … Administer the IV solution via central line only over 90 minutes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Voriconazole oral: 9 mg/kg (max 350 mg) BD** for 2 to under 12 years, or 12–14 years under 50 kg; **200 mg BD** for ≥15 years, or 12–14 years ≥50 kg. **IV: 8 mg/kg BD (9 mg/kg on day 1)** or **4 mg/kg BD (6 mg/kg on day 1)** in the same bands. Trough target 1–2 µg/mL.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Voriconazole Oral tablets/suspension: 2 years to <12 years or 12–14 years and weighing <50 kg: 9 mg/kg (max 350 mg) oral BD ≥15 years or aged 12–14 years and weighing ≥50 kg: 200 mg oral BD Intravenous solution: 2 years to <12 years or 12–14 years and weighing <50 kg: 8 mg/kg (day 1, 9 mg/kg) IV BD ≥15 years or aged 12–14 years and weighing ≥50 kg: 4 mg/kg (day 1, 6 mg/kg) IV BD Trough level 1–2 µg/mL",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Voriconazole: take the trough 2–5 days after starting or changing;** give oral doses 1 hour before or after food; counsel sun avoidance (skin cancer reported with use over 1 year). A trough over 5–6 mg/L raises the probability of neurotoxicity (visual disturbance, hallucinations, encephalopathy).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Take trough level 2–5 days after starting drug or changing dose or formulation Oral: administer 1 h before or after food (absorption ↓ with high fat meals) Counsel on avoidance of sun exposure. Reports of skin cancer with prolonged (>1 yr) use … A voriconazole trough level >5–6 mg/L is associated with an increased probability of neurological toxicity, including visual disturbances, hallucinations and encephalopathy.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Itraconazole oral solution 2.5 mg/kg BD (max 200 mg daily)**, on an empty stomach at least 1 hour before food. Solution and capsules are not interchangeable. Trough target over 0.5 µg/mL, 10–15 days after starting or changing dose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Oral solution (Sporonox®): 2.5 mg/kg oral BD (max 200 mg daily) Oral solution and capsules are not interchangeable. … Trough level >0.5 µg/mL Take trough level 10–15 days after starting drug or changing dose Itraconazole liquid: administer on an empty stomach at least 1 h before food.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Liposomal amphotericin 2–3 mg/kg IV three times a week (max 100 mg daily)**, rounded to 50 mg vials but at least 2 mg/kg. Monitor renal function, potassium, magnesium and liver; consider 10 mL/kg normal saline pre/concurrent hydration.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Liposomal amphotericin (Ambisome®) 2–3 mg/kg IV three times per week (max 100 mg daily) Ambisome is available in 50 mg vials (max 100 mg). Where possible round dose to 50 mg ensuring dose is at least 2 mg/kg (max 100 mg). … Monitor for renal toxicity, electrolyte disturbances (esp hypokalaemia and hypomagnesaemia) and hepatotoxicity Consider pre/concurrent hydration with 10 mL/kg normal saline",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Caspofungin: 25 mg/m² (max 50 mg) IV daily at 1–3 months; 50 mg/m² (max 50 mg) IV daily from 3 months.** **Micafungin 1 mg/kg (max 50 mg) IV daily.** Both can cause histamine-type reactions.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Caspofungin 1–3 months: 25 mg/m² (max 50 mg) IV daily ≥3 months: 50 mg/m² (max 50 mg) IV daily Not required May cause histamine induced reaction (rash, facial swelling, pruritus and/or bronchospasm) Micafungin 1 mg/kg (max 50 mg) IV daily",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Every patient on itraconazole, voriconazole or posaconazole must have TDM**, plus one repeat level to confirm stability; after that, not routinely.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All patients commenced on itraconazole, voriconazole and posaconazole must have TDM. All patients should have one repeat TDM to confirm stability. Once target trough levels are confirmed, repeat TDM is not routinely required.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Repeat TDM for:** dose or formulation change (including IV/oral switch) · a new interacting drug · suspected toxicity (**take the level before withholding or adjusting**) · a proven, probable or possible IFI.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indications for repeat TDM include: dose or formulation adjustment (IV/oral switch) introduction of new drug with potential interactions suspected toxicity (always do level before withholding or adjusting dose) diagnosis of a proven, probable or possible IFI",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss dose adjustments with oncology pharmacy or infectious diseases**, and repeat the level first.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dose adjustments should be discussed with oncology pharmacy and/or local infectious diseases unit. Prior to any dose adjustment, repeat drug level",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Vinca alkaloids (vincristine, vinblastine): itraconazole is strictly contraindicated**; avoid posaconazole where possible. **Weekly IV vinca — use a non-azole.** **Monthly — withhold voriconazole the day before, of and after**; if posaconazole is used, withhold it 5 days before, the day of and the day after.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vinca alkaloids (vincristine and vinblastine) Vinca alkaloid metabolism reduced leading to excess vinca alkaloid exposure. … Concurrent use of itraconazole is strictly contraindicated. Avoid concurrent use of posaconazole where possible (unless advised by infectious diseases and oncology pharmacy) For weekly IV vinca alkaloid: non-azole agent is preferred For monthly IV vinca alkaloid: withhold voriconazole the day before, the day of and the day after vinca alkaloid dose. Monitor for toxicity If used, withhold posaconazole 5 days prior, the day of and day after vinca alkaloid dose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Bortezomib: stop all azoles 72 hours before and restart 72 hours after the last dose (24 hours for fluconazole)**, substituting a non-azole in between.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All azoles should be stopped 72 hours prior to bortezomib dosing and recommenced 72 hours (24 hours for fluconazole) after final dose in course. A non-azole agent should be substituted during this period",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Busulfan and thiotepa: avoid voriconazole, posaconazole and itraconazole for 7 days before HSCT conditioning** (fluconazole is exempt).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Busulfan, Thiotepa Metabolism reduced (CYP3A4), leading to significant increases in levels of these drugs. Avoid voriconazole, posaconazole or itraconazole 7 days prior to starting HSCT conditioning (not fluconazole)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Tyrosine kinase inhibitors:** itraconazole, voriconazole and posaconazole are not recommended in most protocols; fluconazole is usually usable, **except with sorafenib, which mandates a non-azole.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Tyrosine kinase inhibitors (TKI): (sorafenib, imatinib, dasatinib, nioltinib, ceritinib, carfizomib, ruxolitinib) TKI metabolism reduced, increasing risk of toxicity including QT prolongation and cardiac arrhythmias. … Concurrent use of itraconazole, voriconazole and posaconazole is not recommended in most protocols Fluconazole can be used in most instances except in combination with sorafenib. A non-azole agent is mandated for all patients receiving sorafenib",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Venetoclax: avoid the combination**; if unavoidable, involve cancer pharmacy and the oncology consultant (venetoclax dose reduction may be needed).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Venetoclax Venetoclax metabolism reduced increasing risk of toxicity. Avoid combination. If unavoidable speak to cancer pharmacy and oncology consultant (venetoclax dose reduction may be required)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Sirolimus, tacrolimus, ciclosporin, everolimus, temsirolimus:** levels rise significantly — monitor levels; dose reduction is usually required. Use itraconazole with extreme caution with sirolimus.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Sirolimus, Tacrolimus, Cyclosporin, Everolimus and Temsirolimus Metabolism reduced, leading to significant increases in levels of these drugs. … Monitor sirolimus, tacrolimus or cyclosporine levels. Dose reduction usually required Itraconazole should be used with extreme caution in patients on sirolimus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Rifampicin and rifabutin induce azole metabolism** — avoid where possible; a higher azole dose may be needed. **PPIs raise voriconazole levels** (monitor when starting or stopping) and reduce posaconazole liquid absorption.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rifampicin, rifabutin Induces azole metabolism. Avoid combination where possible. An increase in azole dose may be required … Proton pump inhibitors (omeprazole and esomeprazole) Reduced metabolism of voriconazole (CYP2C19), increasing voriconazole levels. Monitor voriconazole levels and signs of toxicity. In particular when starting or stopping the PPI … Liquid posaconazole: PPIs affect gastric pH and reduce posaconazole liquid absorption and thus levels (less effect on tablets).",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **QT-prolonging drugs** (gemtuzumab, macrolides, quinolones, conventional antipsychotics): ECG before starting and weekly. **Do not use azoles with additional cardiac risk factors** such as reduced ventricular function or electrolyte disturbance.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Gemtuzumab and macrolide & quinolone antibiotics, conventional antipsychotics Additive risk of QT prolongation in setting of azole prophylaxis. Use combination with caution. Obtain an ECG prior to starting treatment and weekly thereafter Azoles should not be used in patients with additional cardiac risk factors including reduced left ventricular fraction and electrolyte disturbances",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss every start, stop or tolerability problem with the primary treating team.** Discuss all suspected or confirmed fungal infections with them and consider transfer to a tertiary paediatric cancer centre.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All decisions to start and stop antifungal prophylaxis as well as issues with tolerability or side effects should be discussed with the patient's primary treating team … All suspected or confirmed fungal infections should be discussed with the child's primary treating team and consideration given to transfer to a tertiary paediatric cancer centre for investigation and management",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Antifungal prophylaxis for children with cancer or undergoing haematopoietic stem cell transplant' (Last updated December 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Antifungal_prophylaxis_for_children_with_cancer_or_undergoing_haematopoietic_stem_cell_transplant/, retrieved 2026-09-23"
+  }
+ ]
+}

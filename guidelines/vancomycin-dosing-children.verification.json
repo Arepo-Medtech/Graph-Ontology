@@ -1,0 +1,212 @@
+{
+ "guideline": "guidelines/vancomycin-dosing-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Vancomycin' (Last updated July 2024), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 25,
+  "pass": 25,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Infuse intermittent doses IV over at least 1 hour** — rapid infusion can cause a vancomycin infusion reaction.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Administer vancomycin intravenously (IV) over at least 1 hour for intermittent infusions. Rapid infusion may cause vancomycin infusion reaction",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **This guideline assumes normal renal function.** Seek pharmacist or specialist advice for impaired renal function, ECMO or renal replacement therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Seek pharmacist or specialist advice for infants and children with impaired renal function, receiving extracorporeal membrane oxygenation or renal replacement therapy This guideline is intended for infants and children with normal renal function",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Take every vancomycin level (trough or random) only at steady state — at least 24 hours after starting.** Earlier levels can lead to wrong dose adjustments.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For vancomycin, this occurs at least 24 hours after vancomycin treatment has commenced … All vancomycin concentrations (trough or random) should be taken once vancomycin exposure in the blood reaches steady-state. Measuring the concentration earlier may lead to incorrect dose adjustments",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Target exposure: AUC/MIC 400–650 mg/L.h.** Trough alone is not always an accurate correlate of AUC; AUC targeting has been shown to reduce nephrotoxicity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Pharmacodynamic target exposure for vancomycin: AUC/MIC of 400- 650 mg/L.h … however trough concentrations are not always an accurate correlate of AUC … Using the AUC target has been shown to reduce nephrotoxicity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**0–90 days: continuous infusion recommended**, target steady-state concentration 17–25 mg/L. If a continuous infusion cannot be used (e.g. limited IV access), dose intermittently with the online calculator, target AUC 400–650 mg/L.h.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "0-90 days Continuous infusion (recommended) Steady-state concentration 17-25 mg/L Intermittent dosing If a continuous infusion cannot be used (eg due to limited intravenous line availability), use intermittent dosing using the online dosing calculator Steady-state AUC 400-650 mg/L.h",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Over 90 days: intermittent dosing recommended**, target steady-state trough 8–15 mg/L. Consider continuous infusion (target 17–25 mg/L) in critically ill children or when targets cannot be reached — seek specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "˃90 days Intermittent dosing (recommended) Steady-state trough concentration 8-15 mg/L Continuous infusion Consider continuous infusion in critically ill patients or when unable to achieve therapeutic vancomycin concentrations with intermittent dosing. Seek specialist advice Steady-state concentration 17-25 mg/L",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Loading dose 15 mg/kg IV over 1 hour, then infuse by creatinine (micromol/L) and corrected gestational age:** creatinine <40 and CGA ≥40 weeks **50 mg/kg/day** · creatinine <40 and CGA <40 weeks **40 mg/kg/day** · creatinine 40–60 **30 mg/kg/day** · creatinine >60 **20 mg/kg/day**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continuous infusion in infants 0-90 days of age Dosing Loading dose 15 mg/kg/dose IV (over 1 hour) followed by continuous infusion: Serum creatinine (micromol/L) Corrected Gestational Age (CGA) Continuous infusion dose <40 ≥40 weeks 50 mg/kg/day <40 <40 weeks 40 mg/kg/day 40–60 All 30 mg/kg/day >60* All 20 mg/kg/day",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Switching from intermittent to continuous:** start at the previous 24-hour total daily dose, immediately after the last intermittent dose — **no loading dose.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Commence at dose equivalent to total daily dose administered in the previous 24-hour period Continuous infusion can be commenced immediately after last intermittent dose is given Do not give a loading dose when switching to a continuous infusion",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Level at 24–36 hours** after starting (target 17–25 mg/L), **from a different access point to the infusion**; if in range, repeat 24 hours later.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Target exposure: steady-state concentration (random) 17–25 mg/L Collect sample for steady-state concentration 24-36 hours after start of infusion (with routine bloods where possible) Take sample from a different access point to where the vancomycin is being infused … If steady-state concentration is within target range, continue vancomycin infusion and repeat steady-state concentration 24 hours after first concentration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Out of range: adjusted dose (mg/day) = last maintenance dose × (target ÷ last concentration).** Do not exceed **80 mg/kg/day** without specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Adjusted dose (mg/day) = last maintenance dose (mg/day) x (target concentration/last vancomycin concentration) The maximum total daily dose should not exceed 80 mg/kg/day without seeking specialist advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dose and monitor with the KidsCalc calculators** (intermittent-dosing target AUC 500 mg/L.h), using PMA, weight and creatinine. ⚠️ **No loading dose** — loading doses have been shown to increase the risk of renal impairment in this age group.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Individualised dosing using KidsCalc Vancomycin intermittent dosing calculator for infants 0-90 days (target AUC of 500 mg/L.h) is based on the infant’s Postmenstrual age (PMA)(weeks) (same as corrected gestational age) Weight (kg) Serum creatinine (micromol/L) Loading doses are not recommended for infants 0-90 days of age as they have been shown to increase the risk of renal impairment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not use KidsCalc — seek specialist advice — for** PMA under 25 weeks, weight under 500 g, renal impairment, ECMO or renal replacement therapy.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Seek specialist advice for dosing and TDM for the following infants, for whom the vancomycin KidsCalc calculators are not intended to be used: PMA <25 weeks Weight <500 grams Renal impairment Receiving extracorporeal membrane oxygenation or renal replacement therapy",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First steady-state trough by interval:** 6-hourly before the 5th dose · 8-hourly before the 4th · 12-hourly before the 3rd · 18- or 24-hourly before the 2nd. Take it about 30 minutes before the dose is due, and calculate the AUC each time.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dosing frequency Timing of initial steady-state trough concentration 6 hourly Before the 5th dose 8 hourly Before the 4th dose 12 hourly Before the 3rd dose 18 hourly Before the 2nd dose 24 hourly Before the 2nd dose Steady-state trough concentration samples are to be taken approximately 30 minutes before the dose is due … For intermittent dosing in infants 0-90 days, the AUC should be calculated each time a steady-state concentration is measured",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**With normal renal function, give the next dose on time** without waiting for the result.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For patients with normal renal function, the next dose of vancomycin should be given at the scheduled time before the concentration is known",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not use the AUC calculator** if doses were missed in the prior 24 hours or the level was taken before steady state (under 24 hours after starting or changing the dose) — ask a pharmacist or specialist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not use the AUC calculator if any of the following (Seek pharmacist or specialist advice) There have been missed doses in the 24 hours prior to the concentration being taken; OR The concentration was taken prior to reaching steady-state ie less than 24 hours after commencing vancomycin or adjusting the dose",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Worked example, AUC over 650:** cease the order and check creatinine, repeat the trough at the next due dose, and restart at a lower adjusted dose once it has fallen below 15 mg/L — **the dosing interval does not change.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Example AUC > 650 … Cease the current vancomycin order and check creatinine Repeat trough concentration at time of next due dose (32 hours) The concentration taken at 32 hours is 14 mg/L, which is <15 mg/L, therefore vancomycin can now be re-started at a lower adjusted dose … (the dose interval should not change)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Usual starting dose 15 mg/kg (max 750 mg) IV 6-hourly.** Keep the interval 6-hourly — the only interval where the trough accurately reflects AUC.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Intermittent dosing in children > 90 days of age Dosing Usual starting dose: 15 mg/kg/dose (maximum 750 mg) every 6 hours The dosing interval should be 6 hourly; this is the only dosing interval with evidence for the steady-state trough concentration being used as an accurate correlate for AUC",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dose on actual body weight, including in obesity, up to the maximum.** Seek specialist advice for initial dosing in moderate to severe renal impairment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Use actual body weight for dose calculations, including obese patients, up to the maximum recommended doses For children with moderate to severe renal impairment, seek specialist advice for initial dosing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Target steady-state trough 8–15 mg/L, first taken before the 5th dose** (24 hours into 6-hourly dosing), about 30 minutes before the dose is due. This correlates with AUC 400–650 mg/L.h.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Target exposure: steady-state trough concentration 8-15 mg/L Initial trough concentration should be taken prior to the 5th dose (ie 24 hours after commencing 6 hourly dosing) Steady-state trough concentration samples are to be taken approximately 30 minutes before the dose is due Steady-state trough concentration 8-15 mg/L correlates to vancomycin AUC 400-650 mg/L.h in children on 6 hourly dosing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Continuous infusion over 90 days (specialist advice):** loading dose 20 mg/kg over 1 hour, then usually **60 mg/kg/day**; level about 24 hours after starting, target 17–25 mg/L. Max 80 mg/kg/day without specialist advice.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Continuous infusion in children > 90 days of age Seek specialist advice Dosing Initiating vancomycin treatment with a continuous infusion: Give loading dose 20 mg/kg over 1 hour, followed by continuous infusion Usual starting dose for continuous infusion is 60 mg/kg/day … Collect sample for steady-state concentration approximately 24 hours after start of infusion (with routine bloods where possible) … Target exposure: steady-state concentration (random) 17–25 mg/L … The maximum total daily dose should not exceed 80 mg/kg/day without seeking specialist advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dilute to 5 mg/mL or weaker and infuse over at least 60 minutes (max 10 mg/minute).** Up to 10 mg/mL via a central line if needed, with a higher reaction risk.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dilute to 5 mg/mL or weaker and infuse over at least 60 minutes (maximum rate 10 mg/minute) Concentrations up to 10 mg/mL may be administered via a central line if necessary. The risk of infusion reactions is increased with higher concentrations",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Nephrotoxic and ototoxic**, especially with other nephrotoxic or ototoxic drugs (e.g. aminoglycosides) and in renal impairment.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vancomycin is potentially nephrotoxic and ototoxic, especially when used in combination with other nephrotoxic or ototoxic agents (eg aminoglycosides) and in renal impairment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Infusion reaction** (formerly 'red man syndrome'): upper-body and neck flushing or rash, chest and back muscle spasm, fever, hypotension, itch — usually settles within an hour.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rapid infusion may cause vancomycin infusion reaction (previously referred to as red man syndrome): flushing or rash on upper body and neck muscle spasm of chest and back fever hypotension itch These features develop quickly and usually subside within an hour",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If a reaction occurs: stop the infusion**, check dose and rate, wait for resolution, dilute further if possible and resume slower; document it. **Give later doses over 90–120 minutes** and consider an antihistamine beforehand.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If symptoms of vancomycin infusion reaction occur: Cease infusion Check dose and infusion rate Wait for symptoms to resolve Further dilute infusion if possible Resume infusion at a reduced rate Document adverse reaction in patient notes … Infuse subsequent doses over 90-120 minutes and consider administration of an antihistamine before future doses",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consult the paediatric team** for renal impairment, or when AUC or trough cannot be brought into range.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider consultation with local paediatric team when Child with renal impairment Unable to achieve steady-state AUC or trough concentration within the target range",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Vancomycin' (Last updated July 2024), at https://www.rch.org.au/clinicalguide/guideline_index/Vancomycin/, retrieved 2026-09-23"
+  }
+ ]
+}

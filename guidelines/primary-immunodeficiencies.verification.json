@@ -1,0 +1,173 @@
+{
+ "guideline": "guidelines/primary-immunodeficiencies.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Primary immunodeficiencies' (Last updated March 2021), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 22,
+  "pass": 22,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Most young children with recurrent minor infections do not have a PID.** Healthy toddlers may have 5–10 minor infections a year, often more in childcare.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most young children with recurrent minor infections do not have a PID … (eg healthy toddlers may have 5-10 minor infections per year, often more if attending childcare)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consider PID in any child with** severe infection, infection with unusual or opportunistic organisms, or more infections than expected for age.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "PIDs should be considered in all children with: severe infection infection with unusual or opportunistic organisms recurrent infection - more than expected for age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Recurrent infection at the same site may be anatomical** — e.g. recurrent meningitis with a blood–brain barrier defect.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "recurrent infection at the same site may also be due to an anatomical abnormality (eg meningitis and anatomical defects in the blood-brain-barrier)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **In severe PIDs, early diagnosis can prevent infective complications and allows curative treatment.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In severe PIDs, early diagnosis can prevent complications from infections and allows for curative treatment",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**History red flags:** poor growth (especially slow weight gain) · chronic diarrhoea · **four or more ear infections, or two or more serious sinus infections, in one year** · recurrent deep skin or organ abscesses · persistent thrush after 1 year of age · two or more months of antibiotics with little effect · repeated admissions for IV antibiotics · invasive pneumococcal or meningococcal disease · severe or prolonged common infections (e.g. adenovirus).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Poor growth (especially slow to gain weight) … Chronic diarrhoea Four or more middle ear infections within one year Two or more serious sinus infections within one year Recurrent deep skin or organ abscesses Persistent thrush in the mouth, skin or elsewhere after 1 yo Inadequate response to antibiotics (two or more months of antibiotics with little effect) Repeat hospital admission for intravenous antibiotics Invasive pneumococcal or meningococcal disease Recurrent, severe or prolonged infections with common pathogens, eg adenovirus",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Family history:** immunodeficiency, a previous sibling death (unexplained or from infection), or parental consanguinity.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Family history of immunodeficiency, previous sibling death (unexplained or due to infection), parental consanguinity",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examination:** persistent lymphadenopathy · oral candidiasis · gingivitis · severe or chronic otitis media or sinusitis · skin abscesses · clubbing · severe eczema or eczema-like rash · splenomegaly · poor muscle bulk, fat stores or nutrition.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Examination Persistent lymphadenopathy Oral candidiasis Gingivitis Severe or chronic otitis media or sinusitis Skin abscesses Digital clubbing Severe eczema or eczema-like rashes Splenomegaly Poor muscle bulk, fat stores or signs of nutritional deficiency",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Antibody deficiency** (e.g. XLA, CVID, specific antibody deficiency): poor growth, chronic diarrhoea or malabsorption, recurrent or severe sinusitis or otitis media, meningitis, sepsis.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Antibody deficiency X-linked agammaglobulinemia (XLA) Common variable immunodeficiency (CVID) Specific antibody deficiency Poor growth Chronic diarrhoea and/or malabsorption Recurrent/severe sinusitis or otitis media Meningitis Sepsis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Combined immunodeficiency** (e.g. SCID, 22q11 deletion/DiGeorge, X-linked hyper-IgM, Wiskott-Aldrich): poor growth, absent thymus, chronic diarrhoea, recurrent sinusitis or otitis, severe eczema or nappy rash, severe oral candidiasis, severe or chronic viral infection such as EBV.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Combined immunodeficiency Severe combined immunodeficiency (SCID) 22q11 deletion (DiGeorge syndrome) X-linked Hyper-IgM Wiskott-Aldrich syndrome Poor growth Absence of thymus Chronic diarrhoea Recurrent/severe sinusitis or otitis media Severe eczema or nappy rash Severe oral candidiasis Severe or chronic viral infections eg EBV",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Phagocytic cell deficiency** (e.g. CGD, LAD, Chediak-Higashi, cyclic neutropenia): recurrent skin or deep organ abscesses, gingivitis, osteomyelitis, severe or recurrent pneumonia.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Phagocytic cell deficiency Chronic granulomatous disease (CGD) Leukocyte adhesion defect (LAD) Chediak Higashi syndrome Cyclic neutropenia Recurrent skin or deep organ abscesses Gingivitis Osteomyelitis Severe or recurrent pneumonia",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Complement deficiency** (e.g. hereditary angioedema, specific complement deficiency): **meningitis or sepsis with encapsulated bacteria** (*N. meningitidis*, *S. pneumoniae*, Hib), recurrent angioedema.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complement deficiency Hereditary angioedema Specific complement deficiency Meningitis or sepsis due to encapsulated bacteria (Neisseria meningitidis, Streptococcus pneumoniae, Haemophilus influenzae type B) Recurrent angioedema",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Immune dysregulation** (e.g. ALPS, IPEX, APECED, familial HLH): endocrine disorders, chronic diarrhoea, lymphadenopathy. **Autoinflammatory disorders** (e.g. FMF, CRMO): recurrent fevers, inflammatory arthritis or peritonitis, rash, splenomegaly.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Immune dysregulation Autoimmune lymphoproliferative syndrome (ALPS) Immunodysregulation polyendocrinopathy enteropathy X-linked syndrome (IPEX) Autoimmune polyendocrinopathy candidiasis-ectodermal dystrophy (APECED) Familial hemophagocytic lymphohistiocytosis (FHL) syndromes Endocrine disorders Chronic diarrhoea Lymphadenopathy … Autoinflammatory disorders Familial Mediterranean Fever (FMF) Chronic Recurrent Multifocal Osteomyelitis (CRMO) … Recurrent fevers Inflammatory arthritis or peritonitis Rash Splenomegaly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First line: FBE and differential** (compare with previous results) **and a blood film** (for Howell-Jolly bodies).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First-line investigations include: FBE and differential (compare with previous results) Blood film (to assess for presence of Howell Jolly bodies)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**After specialist consultation:** total IgG/A/M (**not IgG subclasses routinely**) · lymphocyte subsets (CD3/CD4/CD8/CD19/CD16/56) · HIV antibody.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "After specialist consultation, consider: Total serum immunoglobulins G/A/M (IgG subclass should not be routinely measured) Lymphocyte subsets – CD3/CD4/CD8/CD19/CD16/56 … HIV antibody",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **If SCID is suspected, assess naïve T cells (CD45RA/RO)** — CD4/CD8 counts may be normal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If SCID is suspected assessment of naïve T cells (CD45RA/RO) is required as CD4/CD8 numbers may be in the normal range",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Invasive meningococcal or pneumococcal disease: abdominal ultrasound for a spleen and complement studies** (e.g. CH50).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "An abdominal ultrasound to confirm presence of a spleen and complement studies (eg CH50) in children with invasive meningococcal or pneumococcal disease",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Investigate for immunodeficiency:** any child over 2 years with invasive pneumococcal disease (sepsis, meningitis, complicated pneumonia, septic arthritis) and no clear predisposition, and **every child with recurrent IPD.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children aged >2 years presenting with invasive pneumococcal disease (sepsis, meningitis, complicated pneumonia or septic arthritis) with no clear predisposing condition, and all children with recurrent IPD should be investigated for immunodeficiency",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Normal first-line tests but high suspicion: refer to a paediatric immunologist** for second-line testing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child with normal first-line investigations but high suspicion of PID should be referred to a paediatric immunologist for evaluation and consideration of second-line testing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not give live vaccines to a child with suspected PID** — including varicella, MMR, rotavirus and BCG.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with suspected PID should not be administered live vaccines (this includes varicella, MMR, rotavirus and BCG vaccine)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Discuss any suspected SCID immediately with a paediatric immunologist.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child suspected of having SCID should be immediately discussed with a paediatric immunologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Consult the paediatric team for** severe infection or poor response to therapy, **fever in a child with known or suspected PID**, or uncertainty about whether investigation and follow-up are needed.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Any child with severe infection or poor response to therapy Any child with known or suspected primary immunodeficiency with fever Unclear whether investigation and follow-up for suspected PID is required",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when** the child is well, there is a clear management plan, and the family know when to return.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Consider discharge when Child is well, has clear management plan in place and family are aware when to return for review",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Primary immunodeficiencies' (Last updated March 2021), at https://www.rch.org.au/clinicalguide/guideline_index/Primary_immunodeficiencies/, retrieved 2026-09-23"
+  }
+ ]
+}
