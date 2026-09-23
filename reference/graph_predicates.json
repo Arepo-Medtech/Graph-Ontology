@@ -34,7 +34,12 @@
     "DC_TARGET": "DrugCentral target, keyed by target_id: one protein, or a complex of several (a GABA-A receptor), as DrugCentral curates it",
     "UNIPROT": "UniProtKB protein, keyed by accession (P35354)",
     "NCBIGENE": "NCBI Gene, keyed by Entrez gene id (5743); the id HPO and DrugCentral both use",
-    "UCUM": "A unit of measure, keyed by its UCUM code (mmol/L, g/L, 10*9/L); reached only by unit edges -- numbers are never nodes"
+    "UCUM": "A unit of measure, keyed by its UCUM code (mmol/L, g/L, 10*9/L); reached only by unit edges -- numbers are never nodes",
+    "UBERON": "Uberon multi-species anatomy ontology, keyed by UBERON id",
+    "NCBITAXON": "NCBI Taxonomy, keyed by taxon id (9606 = Homo sapiens)",
+    "MBS": "Medicare Benefits Schedule item, keyed by item number (Department of Health, MBS XML)",
+    "MBS_GROUP": "MBS group, keyed by category/group code (e.g. 5/I1)",
+    "MBS_CATEGORY": "MBS category, keyed by number (1 professional attendances ... 6 pathology)"
   },
   "predicates": [
     {
@@ -166,6 +171,37 @@
       "source": "scripts/bind_indications.py on the live Ontoserver, SNOMED CT-AU 20260831 -> reference/pbs_indication_bindings.json",
       "status": "built",
       "note": "Only EXACT matches are edges: the normalised text equals a SNOMED CT-AU preferred term or synonym, after removing parentheticals and leading severity / course words, which are kept as the edge's stripped_qualifier (the adjective and temporality ride on the edge, the condition is the noun). Everything else carries up to five candidates for a person in the same file -- a frame, not an edge."
+    },
+    {
+      "id": "mbs:in_group",
+      "label": "MBS item belongs to MBS group",
+      "subject": [
+        "MBS"
+      ],
+      "object": [
+        "MBS_GROUP"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MBS XML (MBS Online), release 20260801",
+      "status": "built",
+      "note": "attrs carry the schedule fee, the 100% benefit, the item and fee types and the start dates -- the commercial facts of the item. No MBS item carries a SNOMED CT code and no map exists; candidate SNOMED procedures for the procedural categories are frames for a person in reference/mbs_procedure_candidates.json, never edges."
+    },
+    {
+      "id": "mbs:group_in_category",
+      "label": "MBS group belongs to MBS category",
+      "subject": [
+        "MBS_GROUP"
+      ],
+      "object": [
+        "MBS_CATEGORY"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MBS XML (MBS Online), release 20260801",
+      "status": "built"
     },
     {
       "id": "corpus:binds_to",
@@ -322,6 +358,98 @@
       "source": "mondo.sssom.tsv (skos:exactMatch)",
       "status": "built",
       "note": "MONDO -> SCT scored against the independent path MONDO -> ICD10CM -> OMOP 'Maps to' -> SCT, over 1,769 diseases where both fire: same concept 81.1%; same concept or on one is-a line in SNOMED CT-AU 92.2% (Wilson lower bound 0.909) -> Tier 2; 138 contradicted. ICD-10-CM categories are broader than SNOMED concepts by design, so landing one level up is not an error; landing elsewhere is. Measured 23 Sep 2026. The tier is set on the edges by scripts/graph_report.py; the OMIM / Orphanet / ICD10CM targets are not yet scored."
+    },
+    {
+      "id": "uberon:is_a",
+      "label": "anatomical structure is a kind of anatomical structure",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "UBERON"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "uberon-basic.obo (Uberon release v2026-06-23)",
+      "status": "built"
+    },
+    {
+      "id": "uberon:part_of",
+      "label": "anatomical structure is part of anatomical structure",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "UBERON"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "uberon-basic.obo (Uberon release v2026-06-23)",
+      "status": "built"
+    },
+    {
+      "id": "uberon:sct_narrow_match",
+      "label": "this SNOMED CT body structure is the human-specific (narrower) form of the UBERON anatomical class",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "uberon.sssom.tsv (Uberon release v2026-06-23), skos:narrowMatch to SCTID",
+      "status": "built",
+      "note": "Uberon is species-neutral, SNOMED CT is human, so Uberon curates every SNOMED link as narrowMatch, never exactMatch: the edge says the SNOMED concept is the human instance of the class, not that the two are the same concept. Hand-checked; graph_report.py earns the tier."
+    },
+    {
+      "id": "mondo:disease_has_location",
+      "label": "disease is located in this anatomical structure",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "UBERON"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "mondo.obo releases/2026-09-01 (disease_has_location)",
+      "status": "built"
+    },
+    {
+      "id": "mondo:disease_has_infectious_agent",
+      "label": "disease is caused by this infectious agent",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "NCBITAXON"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "mondo.obo releases/2026-09-01 (disease_has_infectious_agent)",
+      "status": "built"
+    },
+    {
+      "id": "sct:ncbitaxon_equivalent",
+      "label": "SNOMED CT organism and NCBI Taxonomy taxon denote the same organism",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "NCBITAXON"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 PartRelatedCodeMapping (a part asserting both codes as equivalent) and the UMLS crosswalk SNOMEDCT_US -> NCBI (shared CUI) -- PARALLEL edges, told apart by method",
+      "status": "built",
+      "note": "No map between SNOMED CT organisms and NCBI Taxonomy is published. Two routes, kept apart: LOINC's part file asserts both codes for 116 organism parts (the witness); UMLS puts a SNOMED organism and an NCBI taxon under one CUI (the reach) -- admitted, as for HPO, only where the names agree, and tiered from a hand check and the LOINC route's agreement. UMLS-derived data is not redistributed."
     },
     {
       "id": "icd10cm:maps_to",
@@ -845,6 +973,22 @@
       "source": "SNOMED CT LOINC Extension 20260321, sct2_Identifier; class from LOINC 2.83",
       "status": "built",
       "note": "A separate predicate on purpose: the release notes say these groupers 'are not intended for and must not be used as result codes', so a traversal over results must not be able to reach them by accident."
+    },
+    {
+      "id": "loinc:part_maps_to_sct",
+      "label": "a LOINC term's component, system or method part is mapped by LOINC to this SNOMED CT concept",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 LoincPartLink_Primary (term -> part) joined to PartRelatedCodeMapping (part -> SNOMED CT)",
+      "status": "built",
+      "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed."
     },
     {
       "id": "loinc:unit_counterpart",

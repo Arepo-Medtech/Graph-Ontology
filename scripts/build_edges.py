@@ -55,6 +55,11 @@ PBS = Path("cache/pbs")
 MONDO_OBO, MONDO_SSSOM = Path("cache/mondo/mondo.obo"), Path("cache/mondo/mondo.sssom.tsv")
 HP_OBO, HPOA = Path("cache/hpo/hp.obo"), Path("cache/hpo/phenotype.hpoa")
 HP_GENES = Path("cache/hpo/genes_to_disease.txt")   # HPO release v2026-09-01, 1.5 MB
+MBS_XML = Path("cache/mbs/MBS-XML-20260801.XML")          # MBS Online, Department of Health
+UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/uberon/uberon.sssom.tsv")   # Uberon v2026-06-23
+UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
+LOINC_PARTS = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
+LOINC_PARTLINK = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
@@ -154,7 +159,7 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 
 PIN = {"sct": "SNOMED CT-AU 20260731", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83"}
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
               "SYSTEM": "loinc:has_system", "SCALE": "loinc:has_scale", "METHOD": "loinc:has_method"}
@@ -482,7 +487,9 @@ def main() -> int:
         ins_rows("MONDO is-a", [("MONDO", t["id"], "mondo:is_a", "MONDO", p, "MONDO", "mondo.obo", "native", "native",
                                  "asserted", PIN["mondo"], None) for t in mt if t["id"].startswith("MONDO:") for p in t["is_a"]
                                 if p.startswith("MONDO:")])
-        con.executemany("INSERT INTO name_hint VALUES ('MONDO', ?, ?)", [(t["id"], t.get("name")) for t in mt])
+        con.executemany("INSERT INTO name_hint VALUES ('MONDO', ?, ?)", [(t["id"], t.get("name")) for t in mt if t["id"].startswith("MONDO:")])
+        con.executemany("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)",      # the taxa MONDO cites carry their names in mondo.obo
+                        [(t["id"].split(":", 1)[1], t.get("name")) for t in mt if t["id"].startswith("NCBITaxon:")])
         prefix = {"SCTID": "SCT", "ICD10CM": "ICD10CM", "OMIM": "OMIM", "Orphanet": "ORPHA"}
         sssom = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
                  if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
@@ -610,6 +617,126 @@ def main() -> int:
             con.execute(f"""INSERT INTO name_hint SELECT 'UNIPROT', accession, any_value(name) FROM {dc('target_component')} GROUP BY 2""")
             con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', geneid, any_value(gene) FROM {dc('target_component')}
                             WHERE geneid IS NOT NULL AND geneid <> '' GROUP BY 2""")
+
+    # --- Medicare Benefits Schedule: items, groups, categories (no SNOMED map exists; candidates are not edges) ------
+    if MBS_XML.exists():
+        import xml.etree.ElementTree as ET
+        mbs = [{c.tag: (c.text or "").strip() for c in d} for d in ET.parse(MBS_XML).getroot().iter("Data")]
+        mbs = [m for m in mbs if not m.get("ItemEndDate")]
+        ins_rows("MBS item -> group -> category", [
+            ("MBS", m["ItemNum"], "mbs:in_group", "MBS_GROUP", f"{m['Category']}/{m['Group']}", "MBS XML", MBS_XML.name, "native", "native",
+             "asserted", PIN["mbs"], json.dumps({"schedule_fee": m.get("ScheduleFee") or None, "benefit_100": m.get("Benefit100") or None,
+                                               "item_type": m.get("ItemType"), "fee_type": m.get("FeeType"),
+                                               "item_start": m.get("ItemStartDate"), "fee_start": m.get("FeeStartDate")}))
+            for m in mbs] + sorted({("MBS_GROUP", f"{m['Category']}/{m['Group']}", "mbs:group_in_category", "MBS_CATEGORY", m["Category"],
+                                     "MBS XML", MBS_XML.name, "native", "native", "asserted", PIN["mbs"], None) for m in mbs}))
+        con.executemany("INSERT INTO name_hint VALUES ('MBS', ?, ?)",
+                        [(m["ItemNum"], re.sub(r"\s+", " ", m["Description"])[:160]) for m in mbs])
+        cat_names = {"1": "Professional attendances", "2": "Diagnostic procedures and investigations", "3": "Therapeutic procedures",
+                     "4": "Oral and maxillofacial services", "5": "Diagnostic imaging services", "6": "Pathology services",
+                     "7": "Cleft lip and cleft palate services", "8": "Miscellaneous services", "10": "Dental services"}
+        con.executemany("INSERT INTO name_hint VALUES ('MBS_CATEGORY', ?, ?)", list(cat_names.items()))
+        con.executemany("INSERT INTO name_hint VALUES ('MBS_GROUP', ?, ?)", sorted({(f"{m['Category']}/{m['Group']}", f"Group {m['Group']}") for m in mbs}))
+
+    # --- anatomy and organisms: Uberon, MONDO's locations and agents, SNOMED organism <-> NCBI Taxonomy ---------------
+    if UBERON_OBO.exists():
+        terms, cur = [], None
+        for line in open(UBERON_OBO, encoding="utf-8"):
+            line = line.rstrip("\n")
+            if line.startswith("["):
+                cur = {"is_a": [], "part_of": []} if line == "[Term]" else None
+                if cur is not None:
+                    terms.append(cur)
+            elif cur is not None and ": " in line:
+                k, v_ = line.split(": ", 1)
+                if k == "id":
+                    cur["id"] = v_
+                elif k == "name":
+                    cur["name"] = v_
+                elif k == "is_a":
+                    cur["is_a"].append(v_.split(" ")[0])
+                elif k == "relationship" and v_.startswith("part_of "):
+                    cur["part_of"].append(v_.split(" ")[1])
+                elif k == "is_obsolete" and v_.strip() == "true":
+                    cur["obsolete"] = True
+        ub = [t for t in terms if t.get("id", "").startswith("UBERON:") and not t.get("obsolete")]
+        ins_rows("Uberon is-a / part-of", [("UBERON", t["id"], pred, "UBERON", o, "Uberon", "uberon-basic.obo", "native", "native", "asserted",
+                                             PIN["uberon"], None)
+                                            for t in ub for pred, key in (("uberon:is_a", "is_a"), ("uberon:part_of", "part_of"))
+                                            for o in t[key] if o.startswith("UBERON:")])
+        con.executemany("INSERT INTO name_hint VALUES ('UBERON', ?, ?)", [(t["id"], t.get("name")) for t in ub])
+    if UBERON_SSSOM.exists():
+        ss = [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
+              if r["object_id"].startswith("SCTID:") and r["subject_id"].startswith("UBERON:")]
+        ins_rows("Uberon -> SNOMED body structure (narrowMatch)", [
+            ("UBERON", r["subject_id"], "uberon:sct_narrow_match", "SCT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
+             r["predicate_id"], "ungraded", "asserted", PIN["uberon"], json.dumps({"mapping_justification": r.get("mapping_justification")}))
+            for r in ss if r["predicate_id"] == "skos:narrowMatch"])
+    if MONDO_OBO.exists():
+        rows_m, cur = [], None
+        for line in open(MONDO_OBO, encoding="utf-8"):
+            line = line.rstrip("\n")
+            if line.startswith("id: "):
+                cur = line[4:]
+            elif line.startswith("relationship: ") and cur and cur.startswith("MONDO:"):
+                parts = line[14:].split(" ")
+                if parts[0] == "disease_has_location" and parts[1].startswith("UBERON:"):
+                    rows_m.append(("MONDO", cur, "mondo:disease_has_location", "UBERON", parts[1]))
+                elif parts[0] == "disease_has_infectious_agent" and parts[1].startswith("NCBITaxon:"):
+                    rows_m.append(("MONDO", cur, "mondo:disease_has_infectious_agent", "NCBITAXON", parts[1].split(":", 1)[1]))
+        ins_rows("MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)",
+                 [r + ("MONDO", "mondo.obo", "native", "native", "asserted", PIN["mondo"], None) for r in sorted(set(rows_m))])
+    if LOINC_PARTS.exists():
+        con.execute(f"CREATE TEMP VIEW lpm AS SELECT * FROM read_csv('{LOINC_PARTS}', header=true, all_varchar=true)")
+        ins("SNOMED organism <-> NCBI Taxonomy (LOINC part asserts both)", f"""SELECT DISTINCT 'SCT', s.ExtCodeId, 'sct:ncbitaxon_equivalent',
+                'NCBITAXON', t.ExtCodeId, 'LOINC 2.83 PartRelatedCodeMapping', 'part ' || s.PartNumber, 'LOINC part asserts both',
+                'ungraded', 'asserted', '{PIN['loinc_table']}', json_object('loinc_part', s.PartNumber, 'part_name', s.PartName)
+            FROM lpm s JOIN lpm t ON t.PartNumber = s.PartNumber AND t.ExtCodeSystem = 'https://www.ncbi.nlm.nih.gov/taxonomy'
+                 AND t.Equivalence = 'equivalent'
+            WHERE s.ExtCodeSystem = 'http://snomed.info/sct' AND s.Equivalence = 'equivalent'""")
+        con.execute("""INSERT INTO name_hint SELECT DISTINCT 'NCBITAXON', ExtCodeId, any_value(ExtCodeDisplayName) FROM lpm
+                       WHERE ExtCodeSystem = 'https://www.ncbi.nlm.nih.gov/taxonomy' GROUP BY 2""")
+    if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
+        ins("LOINC term -> SNOMED via its component / system / method part", f"""SELECT DISTINCT 'LOINC', pl.LoincNumber, 'loinc:part_maps_to_sct',
+                'SCT', pm.ExtCodeId, 'LOINC 2.83 part mapping', 'part ' || pl.PartNumber, pl.PartTypeName || ' ' || pm.Equivalence,
+                'native', 'asserted', '{PIN['loinc_table']}',
+                json_object('part_type', pl.PartTypeName, 'part', pl.PartNumber, 'part_name', pm.PartName, 'equivalence', pm.Equivalence)
+            FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true) pl
+            JOIN lpm pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
+            JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
+            WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""")
+    if UMLS_SCT_NCBI.exists():
+        # UMLS shared CUI, admitted where the NCBI name equals the SNOMED preferred term -- as written, or once rank words are
+        # set aside ("Salmonella species" = Salmonella, "Order Strigiformes" = Strigiformes). Truly different names (renamed
+        # taxa, and some errors: family Anatidae -> the genus Aythya) are candidates for a person, not edges.
+        ranks = re.compile(r"^(kingdom|subkingdom|phylum|subphylum|division|superclass|class|subclass|infraclass|superorder|order|"
+                           r"suborder|infraorder|superfamily|family|subfamily|tribe|genus|subgenus|section|species) ")
+        def tnorm(x):
+            x = re.sub(r"\s*\((organism)\)$", "", (x or "").lower().strip())
+            x = ranks.sub("", re.sub(r"\s+-\s+.*$", "", x))
+            x = re.sub(r"\s+(species|sp\.?|spp\.?)$", "", x).replace(" ss. ", " subsp. ").replace("[", "").replace("]", "")
+            return re.sub(r"\s+", " ", x).strip()
+        pts = dict(con.execute("SELECT id, pt FROM cmp.concept WHERE id IN (SELECT source_code FROM read_csv(?, delim='\t', header=true, all_varchar=true, quote=''))",
+                               [str(UMLS_SCT_NCBI)]).fetchall())
+        rows_o, cands = [], []
+        for r in csv.DictReader(open(UMLS_SCT_NCBI, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE):
+            sname = pts.get(r["source_code"]) or ""
+            if sname.lower().strip() == r["target_name"].lower().strip():
+                how = "UMLS shared CUI, same name"
+            elif tnorm(sname) == tnorm(r["target_name"]):
+                how = "UMLS shared CUI, same name after rank words"
+            else:
+                cands.append((r["source_code"], sname, r["target_code"], r["target_name"]))
+                continue
+            rows_o.append(("SCT", r["source_code"], "sct:ncbitaxon_equivalent", "NCBITAXON", r["target_code"], "UMLS",
+                           "UTS crosswalk SNOMEDCT_US -> NCBI", how, "ungraded", "asserted", PIN["umls"],
+                           json.dumps({"ncbi_name": r["target_name"]})))
+            con.execute("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)", [r["target_code"], r["target_name"]])
+        ins_rows("SNOMED organism <-> NCBI Taxonomy (UMLS, same name)", rows_o)
+        with open(UMLS_SCT_NCBI.with_name("sct_ncbi_candidates.tsv"), "w", encoding="utf-8") as fh:
+            fh.write("sct\tsct_name\tncbi_taxon\tncbi_name\n")
+            fh.writelines("\t".join(x) + "\n" for x in cands)
+        log["SNOMED organism <-> NCBI Taxonomy candidates (different names; cache/umls/)"] = len(cands)
 
     # --- genes -> diseases (HPO genes_to_disease, the release hp.obo came from) --------------------------------------
     if HP_GENES.exists():
@@ -761,6 +888,7 @@ def main() -> int:
         WHERE k.vocab IN ('RXN', 'RXE', 'ATC', 'ICD10CM')""")
     con.execute("""INSERT INTO name_hint SELECT 'SCT', k.code, any_value(c.concept_name) FROM keys k
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
+    con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("""CREATE TABLE node AS SELECT k.vocab, k.code, k.vocab || ':' || k.code AS key,
                           (SELECT any_value(h.name) FROM name_hint h WHERE h.vocab = k.vocab AND h.code = k.code
                            AND h.name IS NOT NULL AND trim(h.name) <> '') AS name

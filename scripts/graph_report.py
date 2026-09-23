@@ -347,6 +347,74 @@ def main() -> int:
                                  LEFT JOIN node nf ON nf.vocab = 'SCT' AND nf.code = e.s_code LEFT JOIN node nd ON nd.vocab = 'SCT' AND nd.code = e.o_code
                                  WHERE e.predicate IN ({LRP}) ORDER BY nd.name, json_extract(e.attrs, '$.lr')::DOUBLE DESC""").fetchall()]}
 
+    # --- anatomy and organisms -------------------------------------------------------------------------------------
+    hc = Path("reference/uberon_handcheck.json")
+    if hc.exists() and con.execute("SELECT count(*) FROM edge WHERE predicate = 'uberon:sct_narrow_match'").fetchone()[0]:
+        sc = json.load(open(hc))["scored"]
+        k, n = sum(r["verdict"] == "correct" for r in sc), len(sc)
+        lo, _ = wilson(k, n)
+        con.execute("UPDATE edge SET tier = ? WHERE predicate = 'uberon:sct_narrow_match'", [tier(lo, n)])
+        e, u, sct = con.execute("SELECT count(*), count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'uberon:sct_narrow_match'").fetchone()
+        report["route:uberon->snomed (narrowMatch; hand check)"] = {"edges": e, "uberon_classes": u, "snomed_structures": sct,
+            "hand_checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent'").fetchone()[0]:
+        by = dict(con.execute("SELECT method, count(*) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent' GROUP BY 1").fetchall())
+        # the LOINC route is the witness: where both give an answer for a SNOMED organism, is it the same taxon?
+        both, agree = con.execute("""WITH l AS (SELECT s_code, o_code FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent' AND method = 'LOINC part asserts both'),
+                u AS (SELECT s_code, o_code FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent' AND method LIKE 'UMLS%')
+            SELECT count(DISTINCT l.s_code), count(DISTINCT l.s_code) FILTER (WHERE EXISTS (SELECT 1 FROM u u2 WHERE u2.s_code = l.s_code AND u2.o_code = l.o_code))
+            FROM l JOIN u ON u.s_code = l.s_code""").fetchone()
+        ohc = Path("cache/umls/organism_handcheck.json")   # UMLS-derived pairs: git-ignored, not redistributed
+        # NCBI keeps a genus (Salmonella, 590) and a placeholder for its unidentified isolates ("Salmonella sp.", 599): LOINC's part
+        # "Salmonella sp" points at the placeholder, UMLS at the genus. That is a rank convention, not a disagreement about the organism.
+        placeholder = con.execute("""WITH l AS (SELECT e.s_code, e.o_code, n.name FROM edge e LEFT JOIN node n ON n.vocab = 'NCBITAXON' AND n.code = e.o_code
+                                     WHERE e.predicate = 'sct:ncbitaxon_equivalent' AND e.method = 'LOINC part asserts both'),
+                u AS (SELECT s_code, o_code, json_extract_string(attrs, '$.ncbi_name') nm FROM edge
+                      WHERE predicate = 'sct:ncbitaxon_equivalent' AND method LIKE 'UMLS%')
+            SELECT count(DISTINCT l.s_code) FROM l JOIN u ON u.s_code = l.s_code
+            WHERE NOT EXISTS (SELECT 1 FROM u u2 WHERE u2.s_code = l.s_code AND u2.o_code = l.o_code)
+              AND lower(l.name) = lower(u.nm) || ' sp.'""").fetchone()[0]
+        entry = {"edges_by_method": by, "loinc_witness": {"snomed_organisms_in_both": both, "same_taxon": agree,
+                 "genus_vs_unidentified_species_placeholder": placeholder, "other_differences": both - agree - placeholder}}
+        if ohc.exists():
+            sc = json.load(open(ohc))["scored"]
+            entry["umls_hand_check"] = {}
+            for m in sorted({r["method"] for r in sc}):
+                rs = [r for r in sc if r["method"] == m]
+                k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+                lo, _ = wilson(k, n)
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = 'sct:ncbitaxon_equivalent' AND method = ?", [tier(lo, n), m])
+                entry["umls_hand_check"][m] = {"checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+            entry["candidates_not_loaded"] = con.execute("""SELECT edges FROM build_log WHERE family LIKE 'SNOMED organism <-> NCBI Taxonomy candidates%'""").fetchone()
+        report["route:snomed organism <-> NCBI Taxonomy"] = entry
+        report["coverage:organisms and anatomy"] = dict(zip(("snomed_organisms_bridged", "ncbitaxa_reached", "mondo_diseases_with_agent",
+                "mondo_diseases_with_location", "uberon_classes"), con.execute("""SELECT
+            (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent'),
+            (SELECT count(DISTINCT o_code) FROM edge WHERE predicate = 'sct:ncbitaxon_equivalent'),
+            (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'mondo:disease_has_infectious_agent'),
+            (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'mondo:disease_has_location'),
+            (SELECT count(*) FROM node WHERE vocab = 'UBERON')""").fetchone()))
+
+    # --- LOINC reach by class, and MBS ------------------------------------------------------------------------------
+    lt_path = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv"))
+    if lt_path.exists():
+        rows = con.execute(f"""WITH b AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM')
+                                    UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'LOINC' AND s_vocab <> 'LOINC'),
+                 bp AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM')
+                          AND predicate <> 'loinc:part_maps_to_sct'
+                        UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'LOINC' AND s_vocab <> 'LOINC')
+            SELECT CLASSTYPE, count(*), count(*) FILTER (WHERE LOINC_NUM IN (SELECT c FROM bp)), count(*) FILTER (WHERE LOINC_NUM IN (SELECT c FROM b))
+            FROM read_csv('{lt_path}', header=true, all_varchar=true) WHERE STATUS = 'ACTIVE' GROUP BY 1 ORDER BY 1""").fetchall()
+        names = {"1": "laboratory", "2": "clinical", "3": "claims attachment", "4": "survey"}
+        report["coverage:LOINC active terms bridged, by class"] = {names.get(c, c): {"terms": n, "before_part_route": b0, "with_part_route": b1}
+                                                                  for c, n, b0, b1 in rows}
+    mc = Path("reference/mbs_procedure_candidates.json")
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0]:
+        m = {"items": con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0], "snomed_edges": 0}
+        if mc.exists():
+            m["candidate_frames"] = json.load(open(mc)).get("summary")
+        report["mbs:items and SNOMED candidates"] = m
+
     # --- US <-> Australian pathology units --------------------------------------------------------------------------
     if con.execute("SELECT count(*) FROM edge WHERE predicate IN ('loinc:au_preferred_unit', 'loinc:unit_counterpart')").fetchone()[0]:
         a = con.execute("""SELECT count(*), count(DISTINCT s_code),

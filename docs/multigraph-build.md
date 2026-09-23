@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,051,107 nodes, 4,605,462 edges, 160 edge types, 20 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units* and *How a drug works*.)
+**1,094,982 nodes, 4,830,267 edges, 169 edge types, 25 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS* and *How a drug works*.)
 Written to `out/graph.duckdb` (147 MB, git-ignored), rebuilt from source in under three minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -386,6 +386,68 @@ UCUM prefix), `mmHg` for `mm[Hg]` — and the 24 kind differences include clashe
 methaemoglobin *fraction* in g/L, mixed-venous base deficit in %, stone weight in g/L, hepatitis C core antigen in pg/mL
 on an arbitrary-unit code, "Non HDL cholesterol" in nmol/L.
 
+## Anatomy, organisms, non-laboratory LOINC and MBS
+
+Four blank areas left after the first bridges: SNOMED body structures (0.6% reached another vocabulary) and organisms
+(0%), the ~37,000 clinical and survey LOINC terms (147 bridged), and the Medicare Benefits Schedule (absent).
+
+**Anatomy — Uberon (built, Tier 2).** Uberon v2026-06-23 (CC BY 3.0): 14,975 classes, 28,834 is-a / part-of edges, and
+**4,119 links to SNOMED CT body structures** from Uberon's own SSSOM file. Uberon curates every SNOMED link as
+`skos:narrowMatch` — it is species-neutral, SNOMED is human — so the edge (`uberon:sct_narrow_match`) says the SNOMED
+concept is the human form of the class, not that the two are one concept. Hand check **76/80, lower bound 0.878 → Tier 2**
+(`reference/uberon_handcheck.json`); the four errors are Uberon's: a metatarsal epiphysis mapped to the *metacarpal* one,
+the dorsal horn mapped to SNOMED's "dorsal spinal cord" (which SNOMED files under *thoracic* cord), hemopoietic organ to
+*lymphoid* organ, and a branch of the abdominal aorta to the broader "artery of abdomen". MONDO's own
+**disease_has_location** (775 → Uberon) and **disease_has_infectious_agent** (691 → NCBI Taxonomy) are now loaded: 766
+diseases have a location, 652 an infectious agent.
+
+**Organisms — SNOMED CT ↔ NCBI Taxonomy (built).** No map is published. Two routes, parallel edges on
+`sct:ncbitaxon_equivalent`, told apart by method: LOINC's part file asserts **both** codes for 116 organism parts (the
+witness); the UMLS crosswalk SNOMEDCT_US → NCBI puts a SNOMED organism and a taxon under one CUI
+(`scripts/umls_crosswalk.py`, a generalisation of the HPO crosswalk; key in `.env`, never printed) — admitted, as for HPO,
+only where the NCBI name equals the SNOMED preferred term — as written (15,912), or once rank words are set aside
+("Salmonella species" = *Salmonella*, "Order Strigiformes" = *Strigiformes*; 4,189). Both classes hand-checked **40/40 →
+Tier 2** (`cache/umls/organism_handcheck.json` — UMLS-derived, so kept with the crosswalk and not committed). The crosswalk answered for 23,762 of 34,748 SNOMED CT-AU organisms;
+**20,127 organisms now reach NCBI Taxonomy** (from 0). The truly different names (3,958) are candidates in `cache/umls/`,
+not edges: a sample of them was right 37 times in 40, but the three errors are exactly the kind a shared CUI hides — the
+family Anatidae mapped to the genus *Aythya*, *Magnusiomyces ingens* to a different species, *Cookeolus boops* to a
+different fish — while most of the rest are real reclassifications (*Clostridium lavalense* → *Enterocloster lavalensis*)
+a person can confirm quickly.
+
+*The witness.* Where LOINC and UMLS both answer (78 organisms) they give the same taxon for 60. The other 18 are not
+disagreements about the organism: for 17, NCBI keeps a genus (*Salmonella*, 590) **and** a placeholder for its
+unidentified isolates ("*Salmonella* sp.", 599) — LOINC's part "Salmonella sp" points at the placeholder, UMLS at the
+genus, which is SNOMED's rank; the last is the mumps virus under an older and a newer NCBI id. Both edges stay, parallel.
+
+**Non-laboratory LOINC — through LOINC's parts (built, and thin).** The one code-to-code route LOINC offers for its
+clinical and survey terms: term → its COMPONENT, SYSTEM or METHOD part (`LoincPartLink_Primary`) → the SNOMED concept
+LOINC maps that part to (`PartRelatedCodeMapping`), with LOINC's own equivalence (a SYSTEM part "Heart" maps *narrower* to
+both "Heart structure" and "Specimen from heart"). TIME, SCALE and PROPERTY parts and the unspecified system "XXX" are not
+loaded — they name an axis value, not the thing observed. 164,022 edges (`loinc:part_maps_to_sct`):
+
+| active LOINC terms | terms | bridged before | with the part route |
+|---|---:|---:|---:|
+| laboratory | 62,148 | 42,325 | 58,867 |
+| clinical | 25,152 | 147 | **1,460** |
+| claims attachment | 503 | 0 | 17 |
+| survey | 11,934 | 0 | **13** |
+
+That is the honest ceiling of code-to-code bridging for non-laboratory LOINC today. Radiology (7,045 of the clinical terms)
+maps its anatomy parts to **RadLex**, which has no published SNOMED map; survey instruments (PHQ-9, AUDIT …) have no SNOMED
+map in LOINC, Athena or the LOINC Extension. Closing either is a gap-crossing, not a lookup.
+
+**MBS — structure built, SNOMED only as candidates.** The MBS XML (MBS Online, release 20260801): 6,046 items → 99
+groups → 9 categories (`mbs:in_group`, `mbs:group_in_category`), each item's schedule fee and benefit on its edge. **No MBS
+item carries a SNOMED code and no map exists** — the RCPA requesting set codes pathology requests to SNOMED but has no MBS
+numbers. An MBS item is a billing rule (a service plus eligibility conditions), so even an exact name match is not an
+equivalence: for the procedural categories (diagnostic, therapeutic, imaging, pathology) `scripts/mbs_candidates.py`
+proposes the nearest SNOMED procedures to each descriptor's head phrase from the live Ontoserver
+(`reference/mbs_procedure_candidates.json`) — **frames for a person, never edges.** Of 4,710 procedural items, 3,878 have candidates and 572 an exact head-phrase match —
+and the sample shows why exact is not enough: dozens of MRI items match only the bare word "MRI" → *Magnetic resonance
+imaging*, not the scan the item funds; "amputation of 4 digits of one foot" comes back as *Amputation of left fourth toe*,
+an imaging item headed "Hand" as *Hand closure*. The candidates are a work list, and MBS stays reachable only through its
+own structure until a person confirms them.
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -435,6 +497,9 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/rcpa_units.py            # RCPA SPIA preferred units, read in place (RCPA_DIR); derived data to cache/rcpa/
 .venv/bin/python scripts/unit_reconcile.py        # ~10-25 min first run (PubChem, cached): LOINC mass <-> molar pairs and factors
 .venv/bin/python scripts/threshold_units.py       # LR thresholds: as published + Australian value, primacy once RCPA confirms
+.venv/bin/python scripts/umls_crosswalk.py --source SNOMEDCT_US --target NCBI --ids cache/umls/sct_organisms.txt --out sct_ncbi   # ~1.7 h, resumable
+.venv/bin/python scripts/mbs_candidates.py       # ~25 min (Ontoserver): MBS -> SNOMED procedure candidate frames
+# sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~2.5 min: out/graph.duckdb, validated against the register
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
@@ -443,7 +508,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 
 ## Licences
 
-DrugCentral is CC BY-SA 4.0; ChEMBL (the witness answers in cache/chembl/) is CC BY-SA 3.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
+DrugCentral is CC BY-SA 4.0; Uberon is CC BY 3.0; the MBS XML is Commonwealth of Australia material from MBS Online; ChEMBL (the witness answers in cache/chembl/) is CC BY-SA 3.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
 CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC and the SNOMED CT LOINC Extension are
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not

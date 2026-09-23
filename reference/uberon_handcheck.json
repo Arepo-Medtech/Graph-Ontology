@@ -1,0 +1,649 @@
+{
+ "_note": "Hand check of uberon:sct_narrow_match (Uberon SSSOM, skos:narrowMatch to SCTID). CORRECT when the SNOMED CT concept is the human form of the Uberon class -- the same structure, or a human-specific narrowing of it; wrong when it is another structure, a sibling, or broader. 80 edges at random, graded 23 Sep 2026 against Uberon labels and SNOMED CT-AU preferred terms and parents.",
+ "scored": [
+  {
+   "n": 1,
+   "uberon": "UBERON:0011962",
+   "uberon_name": "transverse tarsal joint",
+   "sct": "182220000",
+   "sct_name": "Entire midtarsal joint",
+   "verdict": "correct"
+  },
+  {
+   "n": 2,
+   "uberon": "UBERON:0006571",
+   "uberon_name": "trabecula carnea of left ventricle",
+   "sct": "190344008",
+   "sct_name": "Entire trabecula carnea of left ventricle",
+   "verdict": "correct"
+  },
+  {
+   "n": 3,
+   "uberon": "UBERON:0005244",
+   "uberon_name": "lobar bronchus of right lung cranial lobe",
+   "sct": "181806003",
+   "sct_name": "Entire eparterial bronchus",
+   "verdict": "correct"
+  },
+  {
+   "n": 4,
+   "uberon": "UBERON:0006762",
+   "uberon_name": "suspensory ligament of lens",
+   "sct": "362524000",
+   "sct_name": "Entire suspensory ligament of lens",
+   "verdict": "correct"
+  },
+  {
+   "n": 5,
+   "uberon": "UBERON:0002098",
+   "uberon_name": "apex of heart",
+   "sct": "362009004",
+   "sct_name": "Entire apex of heart",
+   "verdict": "correct"
+  },
+  {
+   "n": 6,
+   "uberon": "UBERON:0004389",
+   "uberon_name": "epiphysis of metatarsal bone",
+   "sct": "313057002",
+   "sct_name": "Epiphysis of metacarpal",
+   "verdict": "wrong",
+   "why": "metatarsal epiphysis mapped to the METACARPAL epiphysis"
+  },
+  {
+   "n": 7,
+   "uberon": "UBERON:0004609",
+   "uberon_name": "rib 10",
+   "sct": "244665000",
+   "sct_name": "Entire tenth rib",
+   "verdict": "correct"
+  },
+  {
+   "n": 8,
+   "uberon": "UBERON:0019243",
+   "uberon_name": "skin crease",
+   "sct": "280385004",
+   "sct_name": "Structure of skin crease",
+   "verdict": "correct"
+  },
+  {
+   "n": 9,
+   "uberon": "UBERON:0014610",
+   "uberon_name": "thoracic spinal cord ventral horn",
+   "sct": "367876000",
+   "sct_name": "Entire thoracic spinal cord ventral horn",
+   "verdict": "correct"
+  },
+  {
+   "n": 10,
+   "uberon": "UBERON:0002262",
+   "uberon_name": "celiac ganglion",
+   "sct": "362492008",
+   "sct_name": "Entire coeliac ganglion",
+   "verdict": "correct"
+  },
+  {
+   "n": 11,
+   "uberon": "UBERON:0010250",
+   "uberon_name": "middle meningeal artery",
+   "sct": "278100005",
+   "sct_name": "Entire middle meningeal artery",
+   "verdict": "correct"
+  },
+  {
+   "n": 12,
+   "uberon": "UBERON:0001117",
+   "uberon_name": "caudate lobe of liver",
+   "sct": "362184009",
+   "sct_name": "Entire caudate lobe of liver",
+   "verdict": "correct"
+  },
+  {
+   "n": 13,
+   "uberon": "UBERON:0002077",
+   "uberon_name": "cortex of hair",
+   "sct": "318832008",
+   "sct_name": "Entire hair cortex",
+   "verdict": "correct"
+  },
+  {
+   "n": 14,
+   "uberon": "UBERON:0002069",
+   "uberon_name": "stratum granulosum of epidermis",
+   "sct": "418563001",
+   "sct_name": "Entire stratum granulosum",
+   "verdict": "correct"
+  },
+  {
+   "n": 15,
+   "uberon": "UBERON:0001905",
+   "uberon_name": "pineal body",
+   "sct": "181126002",
+   "sct_name": "Entire pineal gland",
+   "verdict": "correct"
+  },
+  {
+   "n": 16,
+   "uberon": "UBERON:0008266",
+   "uberon_name": "periodontal ligament",
+   "sct": "245775004",
+   "sct_name": "Periodontal ligament",
+   "verdict": "correct"
+  },
+  {
+   "n": 17,
+   "uberon": "UBERON:0002369",
+   "uberon_name": "adrenal gland",
+   "sct": "181127006",
+   "sct_name": "Entire adrenal gland",
+   "verdict": "correct"
+  },
+  {
+   "n": 18,
+   "uberon": "UBERON:0004673",
+   "uberon_name": "trigeminal nerve root",
+   "sct": "280185007",
+   "sct_name": "Structure of root of trigeminal nerve",
+   "verdict": "correct"
+  },
+  {
+   "n": 19,
+   "uberon": "UBERON:0002256",
+   "uberon_name": "dorsal horn of spinal cord",
+   "sct": "180961004",
+   "sct_name": "Entire dorsal spinal cord",
+   "verdict": "wrong",
+   "why": "Uberon's dorsal horn (posterior grey column) mapped to SNOMED 'Entire dorsal spinal cord', which SNOMED files under thoracic spinal cord"
+  },
+  {
+   "n": 20,
+   "uberon": "UBERON:0007153",
+   "uberon_name": "superior epigastric artery",
+   "sct": "244287004",
+   "sct_name": "Entire superior epigastric artery",
+   "verdict": "correct"
+  },
+  {
+   "n": 21,
+   "uberon": "UBERON:0004441",
+   "uberon_name": "proximal epiphysis of proximal phalanx of manual digit 3",
+   "sct": "263413006",
+   "sct_name": "Base of proximal phalanx of middle finger",
+   "verdict": "correct"
+  },
+  {
+   "n": 22,
+   "uberon": "UBERON:0000924",
+   "uberon_name": "ectoderm",
+   "sct": "362851007",
+   "sct_name": "Entire ectoderm",
+   "verdict": "correct"
+  },
+  {
+   "n": 23,
+   "uberon": "UBERON:0004293",
+   "uberon_name": "parasympathetic nerve",
+   "sct": "276146002",
+   "sct_name": "Entire parasympathetic nerve",
+   "verdict": "correct"
+  },
+  {
+   "n": 24,
+   "uberon": "UBERON:0003991",
+   "uberon_name": "fourth ventricle median aperture",
+   "sct": "279449001",
+   "sct_name": "Foramen of Magendie",
+   "verdict": "correct"
+  },
+  {
+   "n": 25,
+   "uberon": "UBERON:0002166",
+   "uberon_name": "endocardium of atrium",
+   "sct": "192001005",
+   "sct_name": "Entire endocardium of atrium",
+   "verdict": "correct"
+  },
+  {
+   "n": 26,
+   "uberon": "UBERON:0035444",
+   "uberon_name": "triangular ligament of liver",
+   "sct": "279968005",
+   "sct_name": "Entire triangular ligament",
+   "verdict": "correct"
+  },
+  {
+   "n": 27,
+   "uberon": "UBERON:0006679",
+   "uberon_name": "carina of trachea",
+   "sct": "181214003",
+   "sct_name": "Entire carina of trachea",
+   "verdict": "correct"
+  },
+  {
+   "n": 28,
+   "uberon": "UBERON:0003861",
+   "uberon_name": "neural arch",
+   "sct": "317373001",
+   "sct_name": "Entire arch of vertebra",
+   "verdict": "correct"
+  },
+  {
+   "n": 29,
+   "uberon": "UBERON:0002808",
+   "uberon_name": "left temporal lobe",
+   "sct": "314158000",
+   "sct_name": "Entire left temporal lobe",
+   "verdict": "correct"
+  },
+  {
+   "n": 30,
+   "uberon": "UBERON:0036263",
+   "uberon_name": "supraglottic part of larynx",
+   "sct": "361953009",
+   "sct_name": "Entire supraglottis",
+   "verdict": "correct"
+  },
+  {
+   "n": 31,
+   "uberon": "UBERON:0011958",
+   "uberon_name": "acetabular labrum",
+   "sct": "263366005",
+   "sct_name": "Lip of acetabulum",
+   "verdict": "correct"
+  },
+  {
+   "n": 32,
+   "uberon": "UBERON:0018608",
+   "uberon_name": "permanent molar tooth 1",
+   "sct": "304565009",
+   "sct_name": "Entire permanent first molar tooth",
+   "verdict": "correct"
+  },
+  {
+   "n": 33,
+   "uberon": "UBERON:0004177",
+   "uberon_name": "hemopoietic organ",
+   "sct": "361338006",
+   "sct_name": "Entire lymphoid organ",
+   "verdict": "wrong",
+   "why": "hemopoietic organ mapped to lymphoid organ -- a different class, not its human form"
+  },
+  {
+   "n": 34,
+   "uberon": "UBERON:0006691",
+   "uberon_name": "tentorium cerebelli",
+   "sct": "244428008",
+   "sct_name": "Entire tentorium cerebelli",
+   "verdict": "correct"
+  },
+  {
+   "n": 35,
+   "uberon": "UBERON:0002512",
+   "uberon_name": "corpus luteum",
+   "sct": "257943001",
+   "sct_name": "Entire corpus luteum of ovary",
+   "verdict": "correct"
+  },
+  {
+   "n": 36,
+   "uberon": "UBERON:0010936",
+   "uberon_name": "thyropharyngeus muscle",
+   "sct": "244805001",
+   "sct_name": "Entire thyropharyngeal part of inferior constrictor pharyngeus muscle",
+   "verdict": "correct"
+  },
+  {
+   "n": 37,
+   "uberon": "UBERON:0002359",
+   "uberon_name": "fibrous pericardium",
+   "sct": "243953008",
+   "sct_name": "Entire fibrous portion of pericardium",
+   "verdict": "correct"
+  },
+  {
+   "n": 38,
+   "uberon": "UBERON:0005777",
+   "uberon_name": "glomerular basement membrane",
+   "sct": "243897006",
+   "sct_name": "Entire glomerular capillary basement membrane",
+   "verdict": "correct"
+  },
+  {
+   "n": 39,
+   "uberon": "UBERON:0002902",
+   "uberon_name": "occipital pole",
+   "sct": "314160003",
+   "sct_name": "Entire occipital pole",
+   "verdict": "correct"
+  },
+  {
+   "n": 40,
+   "uberon": "UBERON:0004407",
+   "uberon_name": "distal epiphysis of radius",
+   "sct": "280013008",
+   "sct_name": "Entire distal epiphysis of radius",
+   "verdict": "correct"
+  },
+  {
+   "n": 41,
+   "uberon": "UBERON:0005176",
+   "uberon_name": "tooth enamel organ",
+   "sct": "362863002",
+   "sct_name": "Entire enamel organ",
+   "verdict": "correct"
+  },
+  {
+   "n": 42,
+   "uberon": "UBERON:0004754",
+   "uberon_name": "foramen ovale of heart",
+   "sct": "362015004",
+   "sct_name": "Entire foramen ovale of heart",
+   "verdict": "correct"
+  },
+  {
+   "n": 43,
+   "uberon": "UBERON:0001577",
+   "uberon_name": "facial muscle",
+   "sct": "25903009",
+   "sct_name": "Entire skeletal muscle of face",
+   "verdict": "correct"
+  },
+  {
+   "n": 44,
+   "uberon": "UBERON:0014608",
+   "uberon_name": "inferior occipital gyrus",
+   "sct": "279183001",
+   "sct_name": "Entire inferior occipital gyrus",
+   "verdict": "correct"
+  },
+  {
+   "n": 45,
+   "uberon": "UBERON:0005409",
+   "uberon_name": "alimentary part of gastrointestinal system",
+   "sct": "373871007",
+   "sct_name": "Entire gastrointestinal system",
+   "verdict": "correct"
+  },
+  {
+   "n": 46,
+   "uberon": "UBERON:0003268",
+   "uberon_name": "tooth of lower jaw",
+   "sct": "422032003",
+   "sct_name": "Entire mandibular tooth",
+   "verdict": "correct"
+  },
+  {
+   "n": 47,
+   "uberon": "UBERON:0012358",
+   "uberon_name": "manual digitopodium bone",
+   "sct": "265809008",
+   "sct_name": "Entire bone of hand",
+   "verdict": "correct"
+  },
+  {
+   "n": 48,
+   "uberon": "UBERON:0035295",
+   "uberon_name": "left ear",
+   "sct": "368592000",
+   "sct_name": "Entire left ear",
+   "verdict": "correct"
+  },
+  {
+   "n": 49,
+   "uberon": "UBERON:0004050",
+   "uberon_name": "subarachnoid cistern",
+   "sct": "314223007",
+   "sct_name": "Entire subarachnoid cistern",
+   "verdict": "correct"
+  },
+  {
+   "n": 50,
+   "uberon": "UBERON:0001309",
+   "uberon_name": "internal iliac artery",
+   "sct": "181346001",
+   "sct_name": "Entire internal iliac artery",
+   "verdict": "correct"
+  },
+  {
+   "n": 51,
+   "uberon": "UBERON:0018152",
+   "uberon_name": "pars flaccida of tympanic membrane",
+   "sct": "279594005",
+   "sct_name": "Entire pars flaccida of tympanic membrane",
+   "verdict": "correct"
+  },
+  {
+   "n": 52,
+   "uberon": "UBERON:0003962",
+   "uberon_name": "pterygopalatine ganglion",
+   "sct": "280364004",
+   "sct_name": "Entire pterygopalatine ganglion",
+   "verdict": "correct"
+  },
+  {
+   "n": 53,
+   "uberon": "UBERON:0001713",
+   "uberon_name": "lower eyelid",
+   "sct": "362528002",
+   "sct_name": "Entire lower eyelid",
+   "verdict": "correct"
+  },
+  {
+   "n": 54,
+   "uberon": "UBERON:0035766",
+   "uberon_name": "median lobe of prostate",
+   "sct": "245466000",
+   "sct_name": "Entire median lobe of prostate",
+   "verdict": "correct"
+  },
+  {
+   "n": 55,
+   "uberon": "UBERON:0009129",
+   "uberon_name": "right atrium endocardium",
+   "sct": "3194006",
+   "sct_name": "Endocardium of right atrium",
+   "verdict": "correct"
+  },
+  {
+   "n": 56,
+   "uberon": "UBERON:0001491",
+   "uberon_name": "wrist joint",
+   "sct": "182178002",
+   "sct_name": "Entire radiocarpal joint",
+   "verdict": "correct"
+  },
+  {
+   "n": 57,
+   "uberon": "UBERON:0001848",
+   "uberon_name": "auricular cartilage",
+   "sct": "279627003",
+   "sct_name": "Entire auricular cartilage",
+   "verdict": "correct"
+  },
+  {
+   "n": 58,
+   "uberon": "UBERON:0002939",
+   "uberon_name": "ventral posteroinferior nucleus",
+   "sct": "369173003",
+   "sct_name": "Entire ventral posterior inferior nucleus",
+   "verdict": "correct"
+  },
+  {
+   "n": 59,
+   "uberon": "UBERON:0001771",
+   "uberon_name": "pupil",
+   "sct": "35146001",
+   "sct_name": "Entire pupil",
+   "verdict": "correct"
+  },
+  {
+   "n": 60,
+   "uberon": "UBERON:0012254",
+   "uberon_name": "abdominal aorta artery",
+   "sct": "281470000",
+   "sct_name": "Entire artery of abdomen",
+   "verdict": "wrong",
+   "why": "'abdominal aorta artery' (a branch of the abdominal aorta) mapped to the broader 'artery of abdomen': the SNOMED concept is wider, not narrower"
+  },
+  {
+   "n": 61,
+   "uberon": "UBERON:0002685",
+   "uberon_name": "anteroventral nucleus of thalamus",
+   "sct": "279130009",
+   "sct_name": "Entire anteroventral nucleus of thalamus",
+   "verdict": "correct"
+  },
+  {
+   "n": 62,
+   "uberon": "UBERON:0006454",
+   "uberon_name": "T6 segment of thoracic spinal cord",
+   "sct": "278768007",
+   "sct_name": "Sixth thoracic spinal cord segment",
+   "verdict": "correct"
+  },
+  {
+   "n": 63,
+   "uberon": "UBERON:0006327",
+   "uberon_name": "laryngeal extrinsic muscle",
+   "sct": "244808004",
+   "sct_name": "Entire extrinsic muscle of larynx",
+   "verdict": "correct"
+  },
+  {
+   "n": 64,
+   "uberon": "UBERON:0008341",
+   "uberon_name": "columella nasi",
+   "sct": "361930008",
+   "sct_name": "Entire columella",
+   "verdict": "correct"
+  },
+  {
+   "n": 65,
+   "uberon": "UBERON:0008969",
+   "uberon_name": "dental follicle",
+   "sct": "110975002",
+   "sct_name": "Follicle of tooth",
+   "verdict": "correct"
+  },
+  {
+   "n": 66,
+   "uberon": "UBERON:0019320",
+   "uberon_name": "precordial region",
+   "sct": "279231003",
+   "sct_name": "Entire precordium",
+   "verdict": "correct"
+  },
+  {
+   "n": 67,
+   "uberon": "UBERON:0001678",
+   "uberon_name": "temporal bone",
+   "sct": "181795004",
+   "sct_name": "Entire temporal bone",
+   "verdict": "correct"
+  },
+  {
+   "n": 68,
+   "uberon": "UBERON:0001323",
+   "uberon_name": "tibial nerve",
+   "sct": "181078002",
+   "sct_name": "Entire tibial nerve",
+   "verdict": "correct"
+  },
+  {
+   "n": 69,
+   "uberon": "UBERON:0002898",
+   "uberon_name": "chiasmatic cistern",
+   "sct": "47947006",
+   "sct_name": "Entire cisterna chiasmatica",
+   "verdict": "correct"
+  },
+  {
+   "n": 70,
+   "uberon": "UBERON:0012199",
+   "uberon_name": "posterior intercostal vein",
+   "sct": "89209000",
+   "sct_name": "Entire posterior intercostal vein",
+   "verdict": "correct"
+  },
+  {
+   "n": 71,
+   "uberon": "UBERON:0001751",
+   "uberon_name": "dentine",
+   "sct": "362112004",
+   "sct_name": "Entire dentin",
+   "verdict": "correct"
+  },
+  {
+   "n": 72,
+   "uberon": "UBERON:0001814",
+   "uberon_name": "brachial nerve plexus",
+   "sct": "181002002",
+   "sct_name": "Entire brachial plexus",
+   "verdict": "correct"
+  },
+  {
+   "n": 73,
+   "uberon": "UBERON:0000442",
+   "uberon_name": "right testicular vein",
+   "sct": "53500001",
+   "sct_name": "Entire right testicular vein",
+   "verdict": "correct"
+  },
+  {
+   "n": 74,
+   "uberon": "UBERON:0001777",
+   "uberon_name": "substantia propria of cornea",
+   "sct": "362511000",
+   "sct_name": "Entire substantia propria of cornea",
+   "verdict": "correct"
+  },
+  {
+   "n": 75,
+   "uberon": "UBERON:0035441",
+   "uberon_name": "apex of prostate",
+   "sct": "279703006",
+   "sct_name": "Entire apex of prostate",
+   "verdict": "correct"
+  },
+  {
+   "n": 76,
+   "uberon": "UBERON:0014541",
+   "uberon_name": "thoracic division of spinal cord central canal",
+   "sct": "71118002",
+   "sct_name": "Thoracic spinal cord central canal",
+   "verdict": "correct"
+  },
+  {
+   "n": 77,
+   "uberon": "UBERON:0000332",
+   "uberon_name": "yellow bone marrow",
+   "sct": "5023006",
+   "sct_name": "Structure of yellow bone marrow",
+   "verdict": "correct"
+  },
+  {
+   "n": 78,
+   "uberon": "UBERON:0005906",
+   "uberon_name": "serous sac",
+   "sct": "362890006",
+   "sct_name": "Entire serous sac",
+   "verdict": "correct"
+  },
+  {
+   "n": 79,
+   "uberon": "UBERON:0003910",
+   "uberon_name": "splenic sinusoid",
+   "sct": "9081000",
+   "sct_name": "Splenic sinusoid",
+   "verdict": "correct"
+  },
+  {
+   "n": 80,
+   "uberon": "UBERON:0002048",
+   "uberon_name": "lung",
+   "sct": "181216001",
+   "sct_name": "Entire lung",
+   "verdict": "correct"
+  }
+ ]
+}
