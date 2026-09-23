@@ -291,35 +291,61 @@ def main() -> int:
 
     # --- finding -> diagnosis likelihood ratios: tier from transcription verification; every edge awaits a person -----
     ver = Path("reference/diagnostic_accuracy_verification.json")
-    if ver.exists() and con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'finding_lr_if_%'").fetchone()[0]:
+    LRP = "'finding_lr_if_present', 'finding_lr_if_absent', 'test_result_lr', 'score_result_lr', 'finding_lr_for_outcome'"
+    if ver.exists() and con.execute(f"SELECT count(*) FROM edge WHERE predicate IN ({LRP})").fetchone()[0]:
         v = json.load(open(ver))
         k, n = v["verified"], v["records"]
         lo, _ = wilson(k, n)
         # the edge is only as good as its weakest verified step: transcription (mechanical) and binding (read by hand)
         br = v.get("binding_review") or {}
-        bn, bk = br.get("distinct_bindings_read", 0), br.get("distinct_bindings_read", 0) - br.get("read_as_wrong", 0)
-        blo, _ = wilson(bk, bn)
+        fams = {f: (x["distinct_bindings_read"], x["distinct_bindings_read"] - x["read_as_wrong"]) for f, x in br.items() if isinstance(x, dict)}
         order = ["1", "2", "inadmissible", "ungraded"]
-        t_edge = max(tier(lo, n), tier(blo, bn), key=order.index)
-        con.execute("UPDATE edge SET tier = ? WHERE predicate LIKE 'finding_lr_if_%'", [t_edge])
-        e, dx, fi, dv = con.execute("""SELECT count(*), count(DISTINCT o_code), count(DISTINCT s_code),
-                count(*) FILTER (WHERE json_extract(attrs, '$.derived')::BOOLEAN) FROM edge WHERE predicate LIKE 'finding_lr_if_%'""").fetchone()
+        binding = {f: (bn, bk, wilson(bk, bn)[0], tier(wilson(bk, bn)[0], bn)) for f, (bn, bk) in fams.items()}
+        # the edge's tier: the weaker of transcription and its family's binding
+        for f, preds in (("finding", "'finding_lr_if_present', 'finding_lr_if_absent'"),
+                         ("test_score_prognosis", "'test_result_lr', 'score_result_lr', 'finding_lr_for_outcome'")):
+            if f in binding:
+                con.execute(f"UPDATE edge SET tier = ? WHERE predicate IN ({preds})", [max(tier(lo, n), binding[f][3], key=order.index)])
+        t_edge = max([tier(lo, n)] + [b[3] for f, b in binding.items() if f == "finding"], key=order.index)
+        bn = sum(b[0] for b in binding.values()); bk = sum(b[1] for b in binding.values()); blo = wilson(bk, bn)[0]
+        held = con.execute("SELECT coalesce(max(edges), 0) FROM build_log WHERE family LIKE 'likelihood-ratio records bound but held%'").fetchone()[0]
+        # the held tests are already matched to the graph's terminology: how many of their SNOMED procedures reach LOINC codes?
+        held_loinc = {}
+        bpath, apath = Path("reference/diagnostic_accuracy_bindings.json"), Path("reference/diagnostic_accuracy.json")
+        if bpath.exists() and apath.exists():
+            kinds = {r["id"]: r.get("kind", "finding") for r in json.load(open(apath))["records"]}
+            tests = sorted({x["finding"]["concept_id"] for x in json.load(open(bpath))["results"]
+                            if kinds.get(x["id"]) == "test" and x.get("finding") and x.get("diagnosis")})
+            if tests:
+                con.execute("CREATE OR REPLACE TEMP TABLE held_test AS SELECT unnest(?) AS c", [tests])
+                row = con.execute("""SELECT count(*), count(*) FILTER (WHERE EXISTS (SELECT 1 FROM edge l WHERE l.o_code = h.c AND l.s_vocab = 'LOINC')),
+                        (SELECT count(DISTINCT l.s_code) FROM edge l JOIN held_test h2 ON h2.c = l.o_code WHERE l.s_vocab = 'LOINC')
+                    FROM held_test h""").fetchone()
+                held_loinc = {"distinct_test_concepts": row[0], "with_loinc_codes_in_graph": row[1], "loinc_codes_reached": row[2]}
+        e, dx, fi, dv = con.execute(f"""SELECT count(*), count(DISTINCT o_code), count(DISTINCT s_code),
+                count(*) FILTER (WHERE json_extract(attrs, '$.derived')::BOOLEAN) FROM edge WHERE predicate IN ({LRP})""").fetchone()
         report["evidence:finding -> diagnosis likelihood ratios"] = {"records_transcribed": n, "numbers_verified_against_abstract": k,
             "transcription_wilson_lo": round(lo, 4), "transcription_tier": tier(lo, n),
-            "bindings_read": bn, "bindings_right_first_time": bk, "binding_wilson_lo": round(blo, 4), "binding_tier": tier(blo, bn),
+            "binding_by_family": {f: {"read": b[0], "right_first_time": b[1], "wilson_lo": round(b[2], 4), "tier": b[3]} for f, b in binding.items()},
+            "held_as_candidates": con.execute("SELECT edges FROM build_log WHERE family LIKE 'likelihood-ratio records bound but held%'").fetchone()[0],
             "earned_tier": t_edge, "edges": e, "diagnoses": dx, "findings": fi, "derived_from_sens_spec": dv,
-            "candidates_not_bound": n - e, "state": "corrected_pending_attestation (a person signs off each)",
+            "candidates": {"total": n - e, "bound_but_family_not_admitted": held, "not_bound_exactly": n - e - held},
+            "held_tests_reaching_loinc": held_loinc,
+            "state": "corrected_pending_attestation (a person signs off each)",
             # independent sources on the same finding, diagnosis and side: do they agree which way it moves the odds?
-            "parallel_sources": dict(zip(("pairs_with_2_or_more_sources", "same_direction", "direction_differs"), con.execute("""
+            "by_predicate_and_method": {f"{p} / {m}": c for p, m, c in con.execute(f"""SELECT predicate, method, count(*) FROM edge
+                WHERE predicate IN ({LRP}) GROUP BY 1, 2 ORDER BY 1, 2""").fetchall()},
+            "parallel_sources": dict(zip(("pairs_with_2_or_more_sources", "same_direction", "direction_differs"), con.execute(f"""
                 WITH g AS (SELECT s_code, o_code, predicate, count(DISTINCT json_extract_string(attrs, '$.pmid')) n,
                                   bool_and(json_extract(attrs, '$.lr')::DOUBLE > 1) up, bool_and(json_extract(attrs, '$.lr')::DOUBLE < 1) down
-                           FROM edge WHERE predicate LIKE 'finding_lr_if_%' GROUP BY 1, 2, 3)
+                           FROM edge WHERE predicate IN ({LRP}) AND json_extract(attrs, '$.lr') IS NOT NULL
+                             AND json_extract_string(attrs, '$.lr') <> 'null' GROUP BY 1, 2, 3)
                 SELECT count(*) FILTER (WHERE n > 1), count(*) FILTER (WHERE n > 1 AND (up OR down)),
                        count(*) FILTER (WHERE n > 1 AND NOT (up OR down)) FROM g""").fetchone())),
-            "edges_listed": [f"{fn} [{'present' if p.endswith('present') else 'absent'}] -> {dn}: LR {json.loads(a)['lr']}"
-                             for p, fn, dn, a in con.execute("""SELECT e.predicate, nf.name, nd.name, e.attrs FROM edge e
+            "edges_listed": [f"{fn} [{json.loads(a).get('result') or json.loads(a).get('when')}] -> {dn}: LR {json.loads(a)['lr'] if json.loads(a)['lr'] is not None else 'range ' + str(json.loads(a)['lr_range'])}"
+                             for p, fn, dn, a in con.execute(f"""SELECT e.predicate, nf.name, nd.name, e.attrs FROM edge e
                                  LEFT JOIN node nf ON nf.vocab = 'SCT' AND nf.code = e.s_code LEFT JOIN node nd ON nd.vocab = 'SCT' AND nd.code = e.o_code
-                                 WHERE e.predicate LIKE 'finding_lr_if_%' ORDER BY nd.name, json_extract(e.attrs, '$.lr')::DOUBLE DESC""").fetchall()]}
+                                 WHERE e.predicate IN ({LRP}) ORDER BY nd.name, json_extract(e.attrs, '$.lr')::DOUBLE DESC""").fetchall()]}
 
     # --- how a drug works: drug -> target -> protein -> gene -> disease ------------------------------------------
     # Native assertions (DrugCentral, HPO), so no earned tier; two independent witnesses are measured instead.

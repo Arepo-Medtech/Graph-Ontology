@@ -18,12 +18,23 @@ from pathlib import Path
 
 # The binding of a finding to a SNOMED concept is a gap step with its own error rate. Every distinct binding was read
 # against the source wording (23 Sep 2026); those read as wrong lost their fallback term and became candidates.
-BINDING_REVIEW = {"distinct_bindings_read": 182, "read_as_wrong": 12, "reader": "the transcriber (not independent)",
-                  "wrong": ["calf diameter -> Swollen calf", "vaginal discharge on examination -> Vaginal discharge",
-                            "dry mucous membranes -> Aptyalism", "furrowed tongue -> Plicated tongue", "pulse differential -> Pulse deficit",
-                            "tender anterior cervical nodes -> Cervical lymphadenitis", "major trauma -> Multiple traumatic injuries",
-                            "toxic or moribund -> Moribund", "fever > 40 C -> Hyperpyrexia", "lower chest wall indrawing -> Intercostal recession",
-                            "sensory deficit -> Absence of sensation", "Barlow and Ortolani -> Ortolani alone"]}
+BINDING_REVIEW = {
+    "reader": "the transcriber (not independent)",
+    "finding": {"distinct_bindings_read": 203, "read_as_wrong": 17,
+                "wrong": ["calf diameter -> Swollen calf", "vaginal discharge on examination -> Vaginal discharge",
+                          "dry mucous membranes -> Aptyalism", "furrowed tongue -> Plicated tongue", "pulse differential -> Pulse deficit",
+                          "tender anterior cervical nodes -> Cervical lymphadenitis", "major trauma -> Multiple traumatic injuries",
+                          "toxic or moribund -> Moribund", "fever > 40 C -> Hyperpyrexia", "lower chest wall indrawing -> Intercostal recession",
+                          "sensory deficit -> Absence of sensation", "Barlow and Ortolani -> Ortolani alone",
+                          "dysuria, frequency or both -> Dysuria", "inguinal or axillary adenopathy -> Inguinal lymphadenopathy",
+                          "severe snake envenomation -> Snake venom poisoning", "colorectal cancer -> Malignant neoplasm of colon (x2)"]},
+    "test_score_prognosis": {"distinct_bindings_read": 79, "read_as_wrong": 14,
+                "wrong": ["fever with presentation within 3 days -> Fever", "death or poor neurological outcome -> Death",
+                          "retrognathia -> Congenital retrognathism", "systolic BP 140 or more -> Systolic hypertension",
+                          "severe alcohol withdrawal -> Alcohol withdrawal delirium", "venom coagulopathy / thrombocytopenia -> Blood coagulation disorder (x2)",
+                          "potentially lethal cardiac disorder -> Heart disease", "peritonsillar ultrasound, not intraoral -> Ultrasound of oral cavity (x4)",
+                          "rheumatoid factor IgA -> Rheumatoid factor measurement", "inhibin B -> Inhibin measurement",
+                          "bone and joint infection -> Osteomyelitis"]}}
 SRC, CACHE, OUT = Path("reference/diagnostic_accuracy.json"), Path("cache/pubmed"), Path("reference/diagnostic_accuracy_verification.json")
 
 
@@ -38,7 +49,7 @@ def main() -> int:
         nums = set(re.findall(r"\d+(?:\.\d+)?", json.load(open(f))["abstract"].replace("\u00b7", ".")))   # the Lancet writes 0·62
         missing = [w for w in r["as_written"] if w not in nums]
         written = [float(w) for w in r["as_written"]]
-        stored = [v for v in [r.get("lr"), r.get("sens"), r.get("spec")] + (r.get("lr_ci") or []) + (r.get("sens_ci") or []) + (r.get("spec_ci") or [])
+        stored = [v for v in [r.get("lr"), r.get("sens"), r.get("spec")] + (r.get("lr_ci") or []) + (r.get("lr_range") or []) + (r.get("sens_ci") or []) + (r.get("spec_ci") or [])
                   if v is not None]
         unmatched = [v for v in stored if not any(abs(v - w) < 1e-9 or abs(v * 100 - w) < 1e-6 for w in written)]
         good = not missing and not unmatched

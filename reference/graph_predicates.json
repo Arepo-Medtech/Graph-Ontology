@@ -600,7 +600,7 @@
       "strength_kind": "likelihood_ratio",
       "source": "PubMed abstracts of diagnostic-accuracy reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
       "status": "built",
-      "note": "Values transcribed from the abstract's numbers only (the abstract itself is not stored), verified number by number against the cached abstract (scripts/verify_diagnostic_accuracy.py); attrs: lr, lr_ci (when published), sens / spec and their intervals, derived (LR computed from pooled sensitivity and specificity: no interval is invented), population, setting (calibrated_on), pmid. Finding and diagnosis bind to SNOMED CT-AU by exact term only. A clinical-safety edge: state corrected_pending_attestation until a person signs off. LRs may pool across Western primary care; priors never pool (prevalence_in)."
+      "note": "Values transcribed from the abstract's numbers only (the abstract itself is not stored), verified number by number against the cached abstract (scripts/verify_diagnostic_accuracy.py); attrs: lr, lr_ci (when published), sens / spec and their intervals, derived (LR computed from pooled sensitivity and specificity: no interval is invented), population, setting (calibrated_on), pmid. Finding and diagnosis bind to SNOMED CT-AU by exact term only. A clinical-safety edge: state corrected_pending_attestation until a person signs off. LRs may pool across Western primary care; priors never pool (prevalence_in). Where a source publishes only a RANGE of LRs across studies, the edge carries attrs.lr_range and no point estimate (method 'LR range across studies'): it may be displayed, never multiplied."
     },
     {
       "id": "finding_lr_if_absent",
@@ -616,7 +616,55 @@
       "strength_kind": "likelihood_ratio",
       "source": "PubMed abstracts of diagnostic-accuracy reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
       "status": "built",
-      "note": "A separate edge: LR- is not 1/LR+. Same record, verification and attestation as finding_lr_if_present."
+      "note": "A separate edge: LR- is not 1/LR+. Same record, verification and attestation as finding_lr_if_present. Where a source publishes only a RANGE of LRs across studies, the edge carries attrs.lr_range and no point estimate (method 'LR range across studies'): it may be displayed, never multiplied."
+    },
+    {
+      "id": "test_result_lr",
+      "label": "likelihood ratio for the diagnosis given this test result -- a laboratory, imaging or ECG result at a stated threshold",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "likelihood_ratio",
+      "source": "PubMed abstracts of diagnostic-accuracy and prognostic reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
+      "status": "built",
+      "note": "The subject is the test (a SNOMED procedure, observable or result finding -- through the graph's loinc:is_a_snomed and loinc:sct_concept edges it reaches the LOINC codes that report it); attrs.result says which result (comparator, threshold, unit: 'BNP < 100 pg/mL'), attrs.lr / lr_ci, or attrs.lr_range where only a range across studies is published. Same transcription, verification, binding and attestation as finding_lr_if_present."
+    },
+    {
+      "id": "score_result_lr",
+      "label": "likelihood ratio for the diagnosis given a score, questionnaire or decision-rule result in a stated band",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "likelihood_ratio",
+      "source": "PubMed abstracts of diagnostic-accuracy and prognostic reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
+      "status": "built",
+      "note": "The subject is the instrument (a SNOMED assessment scale or observable: AUDIT, CAM, Wells, HEART ...); attrs.result is the band ('score 8 or more', 'high-risk range 7-10'). A band's LR applies to that band only -- adjacent bands are separate edges."
+    },
+    {
+      "id": "finding_lr_for_outcome",
+      "label": "likelihood ratio for a LATER outcome given this finding (prognosis, not diagnosis)",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "likelihood_ratio",
+      "source": "PubMed abstracts of diagnostic-accuracy and prognostic reviews, transcribed to reference/diagnostic_accuracy.json (PMID per edge)",
+      "status": "built",
+      "note": "Kept apart from the diagnostic predicates: the object has not happened yet (death after cardiac arrest, severe alcohol withdrawal, a difficult intubation). attrs.when (present / absent), attrs.horizon where the source states one, attrs.lr / lr_range."
     },
     {
       "id": "sign_suggests",

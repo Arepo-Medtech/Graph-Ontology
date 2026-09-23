@@ -533,27 +533,49 @@ def main() -> int:
     if DX_ACC.exists() and DX_BIND.exists():
         recs = json.load(open(DX_ACC))["records"]
         bound = {x["id"]: x for x in json.load(open(DX_BIND))["results"]}
-        verified = ({x["id"] for x in json.load(open(DX_VER))["rows"] if x["verified"]} if DX_VER.exists() else set())
+        ver_doc = json.load(open(DX_VER)) if DX_VER.exists() else {"rows": [], "binding_review": {}}
+        verified = {x["id"] for x in ver_doc["rows"] if x["verified"]}
+        # a binding family (bedside findings; tests, scores and prognosis) enters the graph only once its first-pass binding
+        # precision has earned a tier: >= 30 read and a Wilson lower bound >= 0.80. Otherwise its records stay candidates.
+        def wilson_lo(k, n, z=1.96):
+            if not n:
+                return 0.0
+            p = k / n
+            return (p + z * z / (2 * n) - z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5)) / (1 + z * z / n)
+        admitted = {fam for fam, v in ver_doc.get("binding_review", {}).items() if isinstance(v, dict) and v.get("distinct_bindings_read", 0) >= 30
+                    and wilson_lo(v["distinct_bindings_read"] - v["read_as_wrong"], v["distinct_bindings_read"]) >= 0.80}
+        family = lambda r: "finding" if r.get("kind", "finding") == "finding" else "test_score_prognosis"
+        held = 0
         rows_lr = []
         for r in recs:
             b = bound.get(r["id"], {})
             if r["id"] not in verified or not b.get("finding") or not b.get("diagnosis"):
                 continue
-            derived = r.get("lr") is None
+            if family(r) not in admitted:       # bound, but its family's binding has not earned a tier: a candidate for a person
+                held += 1
+                continue
+            kind = r.get("kind", "finding")
+            ranged = r.get("lr_range") is not None and r.get("lr") is None
+            derived = r.get("lr") is None and not ranged
             if derived:
                 s_, p_ = r["sens"], r["spec"]
                 lr = s_ / (1 - p_) if r["when"] == "present" else (1 - s_) / p_
             else:
-                lr = r["lr"]
-            rows_lr.append(("SCT", b["finding"]["concept_id"], "finding_lr_if_" + r["when"], "SCT", b["diagnosis"]["concept_id"],
+                lr = r.get("lr")
+            pred = {"finding": "finding_lr_if_" + r["when"], "test": "test_result_lr", "score": "score_result_lr",
+                    "prognosis": "finding_lr_for_outcome"}[kind]
+            rows_lr.append(("SCT", b["finding"]["concept_id"], pred, "SCT", b["diagnosis"]["concept_id"],
                             "PubMed abstract (diagnostic-accuracy review)", f"PMID:{r['pmid']} record={r['id']}",
-                            "LR derived from pooled sensitivity and specificity" if derived else "LR as reported",
+                            "LR range across studies" if ranged else "LR derived from pooled sensitivity and specificity" if derived else "LR as reported",
                             "ungraded", "corrected_pending_attestation", "reference/diagnostic_accuracy.json",
-                            json.dumps({"lr": round(lr, 3), "lr_ci": None if derived else r.get("lr_ci"), "derived": derived,
+                            json.dumps({"lr": None if lr is None else round(lr, 3), "lr_ci": None if derived else r.get("lr_ci"),
+                                        "lr_range": r.get("lr_range"), "derived": derived, "kind": kind, "result": r.get("result"), "when": r["when"],
                                         "sens": r.get("sens"), "sens_ci": r.get("sens_ci"), "spec": r.get("spec"), "spec_ci": r.get("spec_ci"),
                                         "population": r["population"], "setting": r["setting"], "pmid": r["pmid"],
                                         "finding_text": r["finding_text"], "diagnosis_text": r["diagnosis_text"]})))
         ins_rows("finding -> diagnosis likelihood ratio (transcribed, verified)", rows_lr)
+        log["likelihood-ratio records bound but held as candidates (family not admitted)"] = held
+        print(f"  {'LR records held (binding family not admitted)':<44} {held:>10,}   admitted: {sorted(admitted)}", flush=True)
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
