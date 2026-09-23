@@ -1,0 +1,184 @@
+{
+ "guideline": "guidelines/preschool-asthma.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Preschool asthma (1-5 years)' (Last updated June 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 23,
+  "pass": 23,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Preschool asthma = age 1–5 with recurrent wheeze, cough or difficulty breathing/activity limitation, all responding to SABA.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This guideline defines preschool asthma as children between 1-5 years old who present with recurrent episodes of wheeze, cough or difficulty breathing/activity limitation, all of which respond to SABA",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Most preschool children have infrequent mild viral wheeze** (over 6 weeks between episodes) **and do not need a preventer.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Most preschool aged children have infrequent mild episodes of wheeze (>6 weeks between episodes) that are triggered by respiratory viruses and do not require a preventer",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Wheeze under 1 year is most likely bronchiolitis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Wheeze in children <1 year is most likely caused by bronchiolitis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Do not sub-type preschool wheeze** — 'viral-induced episodic' and 'multi-trigger' wheeze perform poorly and should not be used.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Currently there are no valid ways of sub-typing children with preschool wheeze/asthma. Previously used classification systems, such as viral induced episodic wheeze and multi-trigger wheeze have been shown to have poor clinical performance and should not be used",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Only half of children who wheeze in the preschool years will have asthma at school age.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A diagnosis of asthma in the preschool years does not mean the child will have asthma forever. Only half of children who wheeze during preschool years will have asthma at school age",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A therapeutic trial of SABA or ICS may be needed to diagnose it**; ideally a health professional observes and documents the response to SABA.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "A therapeutic trial of short-acting beta agonist (SABA) or inhaled corticosteroid (ICS) may be needed to help diagnose asthma in a preschool aged child … Preferably recurrent symptoms and signs of asthma AND response to SABA is observed and documented by a health professional",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**No routine investigations: no chest X-ray; lung function tests cannot be used at this age.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No investigations are routinely required Chest X-rays are not required Lung function tests cannot be used in preschool aged child",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**On ICS, measure height and weight at least annually, ideally every 3–6 months.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Measure height and weight at least annually in those on ICS, ideally measure every 3-6 months",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**MDI with spacer and facemask** until coordinated enough for the mouthpiece (often around 4 years).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Preschool age children should be prescribed MDI with a spacer and facemask until they are coordinated enough to use the mouthpiece (often around 4 years old)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Every child gets SABA with a spacer: salbutamol 100 mcg MDI, up to 6 puffs** via spacer ± mask.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "All children should be prescribed SABA with spacer and encouraged to always have spacer with them … Dose: salbutamol 100mcg MDI, up to 6 puffs (via spacer +/- mask)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Start a preventer for:** daytime symptoms 2 or more times a week · night-time symptoms 2 or more times a month · 2 or more hospital presentations in a year · 4 or more exacerbations a year.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Indications for commencing preventer treatment are Frequent daytime symptoms (2 or more times a week) Frequent night-time symptoms (2 or more times a month) Recurrent hospital presentations requiring asthma treatment (2 or more in one year) Frequent exacerbations (4 or more episodes per year)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**First line: low-dose ICS — fluticasone propionate 50 mcg, 1 puff twice daily.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "First line preventer treatment is low dose ICS Dose: fluticasone proprionate 50mcg 1 BD",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Montelukast is an alternative first line or an ICS add-on: 4 mg once daily (5 mg if over 5 years)** — useful when parents worry about steroids or MDI + spacer is very difficult.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Montelukast oral tablet can be used as an alternative first line preventer (or adjunct to ICS) in children requiring further control Dose: montelukast 4mg once daily (5mg if >5 years old) … Consider using as ICS alternative if significant parental concern regarding steroids or in children where use of MDI + spacer is particularly difficult",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **1 in 6 children on montelukast get agitation, sleep disturbance or mood change — stop it and see if they resolve.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "1 in 6 children may develop side effects with this medication including agitation, sleep disturbance and altered mood. If this occurs, cease medication to see if symptoms resolve",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Combination ICS/LABA is not recommended at this age** outside specialist use.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Combination ICS/LABA inhalers are not recommended in this age group outside of specialist use",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Review 8–12 weeks after starting.** If stable, trial off the preventer and reassess in 3 months; **stop it if the trial showed no benefit.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Diagnosis and treatment response should be reviewed and re-evaluated 8-12 weeks after initial prescription … If stable, trial off preventer treatment and reassess control in 3 months’ time … Stop the medication if there is no benefit after the trial",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Control:** good = all of daytime symptoms and reliever use ≤2 days a week, no activity limitation, no night symptoms; partial = one or two failing; poor = three or more. Pre-exercise reliever doses don't count.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Good control (All of) Partial control (One or two of) Poor control (Three or more of) Daytime symptoms ≤2 days per week >2 days per week >2 days per week Need for reliever* ≤2 days per week >2 days per week >2 days per week Limitation to activity none present present Night-time symptoms (or on waking) none present present … * Reliever frequency does not include doses taken prophylactically before exercise",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Review control in 6–12 weeks.** If poor, **check technique and adherence first**, consider other diagnoses, then step up.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Review asthma control in 6-12 weeks: If poorly controlled: Always check correct technique and adherence prior to stepping up Consider alternate diagnoses Consider step up if indicated",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**About 3 months of good control → consider stepping down.** Keep the lowest effective treatment; **cease only after 3 months symptom-free**, reviewing 4–6 weeks after each step down.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Good control for approximately 3 months suggests preventer treatment could be stepped down Continue the lowest treatment that controls symptoms Only cease treatment after a period of 3 months symptom-free and review 4-6 weeks after stepping down",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Not responding:** re-check the diagnosis, adherence and inhaler technique. **Refer** if control is inadequate at Step 4 or the diagnosis is uncertain.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Approach to asthma not responding to treatment Review if asthma is the correct diagnosis Review adherence Review inhaler technique … Consider consultation with local paediatric team, respiratory or specialist asthma service when Inadequate asthma control achieved at Step 4 Diagnosis of asthma uncertain",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Annual influenza vaccine; check adherence every visit; a written asthma action plan for home and childcare.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Recommend annual influenza vaccine Check adherence at every visit and address barriers Asthma Action Plan: all children should have a written action plan for at home and childcare",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not increase the ICS dose during an exacerbation** in a child already on daily ICS.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In children already taking daily ICS, there is no role for increasing the dose of ICS during an exacerbation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not prescribe prednisolone for preschool asthma outside ED or hospital** — unless a GP is managing an exacerbation while arranging transfer to emergency.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prednisolone should not be prescribed for preschool asthma outside of the Emergency Department or hospital setting (unless an exacerbation is being managed in a general practice and a transfer to emergency is being arranged)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Preschool asthma (1-5 years)' (Last updated June 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Preschool_asthma_(1-5_years)/, retrieved 2026-09-23"
+  }
+ ]
+}

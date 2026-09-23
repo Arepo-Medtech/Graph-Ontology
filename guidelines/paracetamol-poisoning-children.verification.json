@@ -1,0 +1,235 @@
+{
+ "guideline": "guidelines/paracetamol-poisoning-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Paracetamol poisoning' (Last updated July 2023), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 29,
+  "pass": 29,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Suspect paracetamol in every deliberate adolescent self-poisoning**, and consider co-ingestants.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Suspect paracetamol poisoning in all deliberate adolescent self-poisonings and consider other co-ingestants",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Time to acetylcysteine is crucial for protecting the liver**; delays beyond 8 hours after ingestion increase the risk of liver injury. The stated time and dose can be unreliable.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Time to acetylcysteine is crucial in protecting the liver from significant toxicity. Stated timing and dose of paracetamol ingestion can be unreliable … Increased risk of liver injury is associated with delays (>8 hours post ingestion) in acetylcysteine administration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Acetylcysteine is a safe and effective antidote.** Write it in full — \"NAC\" is not an approved abbreviation.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acetylcysteine is a safe and effective antidote. “NAC” is not an approved abbreviation and acetylcysteine should be written in full",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Assess:** any symptomatic child · all deliberate self-poisoning · any child whose developmental age doesn't fit accidental poisoning (consider non-accidental poisoning) · unknown quantity · **acute ingestion over 200 mg/kg or 10 g, whichever is less.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children requiring assessment Any symptomatic child All children with deliberate self-poisoning Any child whose developmental age is inconsistent with accidental poisoning as non-accidental poisoning should be considered Ingestion of unknown quantity Acute ingestion of >200 mg/kg or >10 g (whichever is less)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Repeated supratherapeutic ingestion needs assessment (paracetamol level and ALT) if:** over 200 mg/kg or 10 g in 24 hours · over 300 mg/kg or 12 g in 48 hours (whichever is less, each) · more than a daily therapeutic dose per day for over 48 hours with abdominal pain, nausea or vomiting.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serum paracetamol concentration and ALT should be sent if ingestion is: >200 mg/kg or >10 g (whichever is less) over a single 24-hour period >300 mg/kg or >12 g (whichever is less) over a single 48-hour period Greater than a daily therapeutic dose per day for more than 48 hours in patients who also have abdominal pain, nausea or vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Establish the formulation — immediate or modified release — because it dictates management.** Paracetamol is in many combination products; calculate the maximum possible dose per kg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Formulation: immediate or modified release tablet (important as this dictates management) … Paracetamol is in many combination products … Calculate the maximum possible dose per kg",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Significant toxicity may have no signs or symptoms.** Hepatotoxicity may take 48–72 hours to develop; fulminant hepatic failure and coagulopathy may appear after 72 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Many patients with significant paracetamol toxicity may not have signs or symptoms … The main signs of paracetamol poisoning are hepatotoxicity which may take 48-72 hours to develop … Signs of fulminant hepatic failure and coagulopathy (may occur >72 hours)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discuss complicated ingestions** — modified release (e.g. Panadol Osteo) or repeated supratherapeutic — **with the Poisons Information Centre or a clinical toxicologist.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Complicated ingestions eg longer-acting forms of paracetamol (modified release, eg Panadol Osteo) or repeated supratherapeutic ingestions should be discussed with Poisons Information Centre or a clinical toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**The nomogram decides acetylcysteine for acute immediate- and modified-release ingestions; it is not for repeated supratherapeutic ingestion.** Below the line: no treatment. Above the line: acetylcysteine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Determines the need for acetylcysteine administration in acute immediate release and modified release preparations Should not be used for repeated supra-therapeutic ingestions … If the measured concentration is below the line, no treatment is required If the measured concentration is above the line, acetylcysteine treatment is needed",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Check the lab result's units match the nomogram** (mg/L or micromol/L).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Check that the laboratory result matches the correct units on the nomogram (in mg/L or micromol/L)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Paracetamol level and LFT at 4 hours after tablets (or as soon as possible after), or 2 hours after liquid.** INR if more than 24 hours after ingestion or ALT is abnormal.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Serum paracetamol concentration and LFT taken at 4 hours (or as soon as possible after) post ingestion of tablets 2 hours post ingestion of a liquid preparation INR if more than 24 hours post ingestion or abnormal ALT",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Start acetylcysteine immediately if** the level won't be available within 8 hours of a potentially toxic ingestion, or the child has symptoms of hepatic injury.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Commence acetylcysteine immediately if Paracetamol concentration result is not likely to be available within 8 hours of a potentially toxic ingestion Child has symptoms of hepatic injury",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Activated charcoal has a very limited role and only with a toxicologist**: it may be offered up to 2 hours after ingestion if the dose is over 200 mg/kg or 10 g. It is unlikely to be needed under 6 years.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Activated charcoal has a very limited role in treatment and should only be used in consultation with a toxicologist may be offered up to 2 hours post ingestion, if dose >200 mg/kg or >10 g Unlikely to be required in children under 6 years old as significant paracetamol overdose and hepatic injury is uncommon",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Liquid, well child under 6 years, over 200 mg/kg:** level at 2–4 hours. **Under 150 mg/L (1000 micromol/L): no acetylcysteine.** 150 mg/L or more: repeat at 4 hours; **if still 150 mg/L or more, start acetylcysteine.** Over 4 hours or aged 6 or older: follow the acute ingestion pathway.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "In well children <6 years of age suspected of ingesting >200 mg/kg of liquid paracetamol, measure serum paracetamol concentration at 2-4 hours post-ingestion. … Paracetamol concentration <150 mg/L (1000 micromol/L): acetylcysteine is not required … Paracetamol concentration ≥150 mg/L: repeat concentration again at 4 hours post-ingestion. If the concentration is still ≥150 mg/L (1000 micromol/L), commence acetylcysteine infusion … For children presenting >4 hours post ingestion or ≥6 years of age, treat as per the acute ingestion management flowchart below.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Take the first level more than 4 hours after ingestion and repeat 4 hours later** to guide the acetylcysteine dose and further decontamination; baseline LFT with the first level.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Initial concentration >4 hours post-ingestion Repeat concentration 4 hours later to guide acetylcysteine dose and need for further decontamination Baseline LFT with initial paracetamol concentration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Charcoal (with a toxicologist) should be offered for modified release** over 200 mg/kg or 10 g up to 4 hours, over 500 mg/kg or 30 g up to 24 hours, or when serial levels are rising.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Activated charcoal has a very limited role in treatment and should only be used in consultation with a toxicologist Should be offered in modified release paracetamol ingestion >200 mg/kg or >10 g up to 4 hours post-ingestion >500 mg/kg or >30 g up to 24hrs post-ingestion Serial paracetamol concentrations are rising",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Do not use the nomogram.** **Start acetylcysteine if ALT is over 50 U/L or the paracetamol level is over 20 mg/L (132 micromol/L)**, and discuss with the Poisons Information Centre or a toxicologist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Do not use paracetamol nomogram to interpret paracetamol concentrations for repeated supra-therapeutic ingestions … Commence acetylcysteine if ALT >50 U/L OR Serum paracetamol concentration >20 mg/L (132 micromol/L) Discuss with Poisons Information Centre or a clinical toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Two-bag IV infusion, 300 mg/kg total: 200 mg/kg over 4 hours in 7 mL/kg crystalloid (up to 500 mL), then 100 mg/kg over the next 16 hours in 14 mL/kg (up to 1000 mL).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Acetylcysteine is administered as a 2-stage infusion giving a total dose of 300 mg/kg: 200 mg/kg over 4 hours in crystalloid solution 7 mL/kg (up to 500 mL) intravenously 100 mg/kg over the next 16 hours in crystalloid solution 14 mL/kg (up to 1000 mL) intravenously",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Massive exposure: double the second-bag dose if the level is over twice the nomogram line.** Dose on actual body weight, capped at 110 kg.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For massive paracetamol exposures: double the dose of acetylcysteine in the second acetylcysteine infusion if the paracetamol concentration is >2 times the nomogram … Dose calculated based on actual body weight. For patients >110 kg, calculate the dose based on 110 kg body weight",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Dilute in maintenance fluid** such as 0.9% sodium chloride in 5% glucose, and **count the acetylcysteine volume within the total** to avoid under-dosing.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Dilute with a maintenance fluid such as 0.9% sodium chloride in 5% glucose … Include the volume of acetylcysteine in the TOTAL volume of the infusion to avoid under-dosing",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Over 40 kg:** first bag 200 mg/kg in 500 mL total at 125 mL/hr for 4 hours; second bag 100 mg/kg in 1000 mL total at 62.5 mL/hr for 16 hours.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For children or adolescents >40 kg (recommended ceiling weight 110 kg): Infusion stage Acetylcysteine dose Dilute to Rate and duration First 200 mg/kg TOTAL volume 500 mL 125 mL/hr for 4 hours Infuse entire bag Second 100 mg/kg TOTAL volume 1000 mL 62.5 mL/hr for 16 hours Infuse entire bag",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**20–40 kg:** first bag 200 mg/kg in 250 mL total at 62.5 mL/hr for 4 hours; second bag 100 mg/kg in 500 mL total at 31.25 mL/hr for 16 hours. ⚠️ **The resulting 750 mL is inappropriate for smaller children.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For children 20-40 kg body weight: Infusion stage Acetylcysteine dose Dilute to Rate and duration First 200 mg/kg TOTAL volume 250 mL 62.5 mL/hr for 4 hours Infuse entire bag Second 100 mg/kg TOTAL volume 500 mL 31.25 mL/hr for 16 hours Infuse entire bag NOTE: this results in a total of 750 mL of fluid which is inappropriate for smaller children.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**20 kg or less:** first bag 200 mg/kg in 250 mL total at 62.5 mL/hr for 4 hours; second bag 100 mg/kg in 250 mL total at 15 mL/hr for 16 hours. **Infants may need smaller volumes** (e.g. 100 mL bags, still over the specified time); ask the hospital pharmacist.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "For children ≤20 kg body weight: Infusion stage Acetylcysteine dose Dilute to Rate and duration First 200 mg/kg TOTAL volume 250 mL** 62.5 mL/hr** for 4 hours Infuse entire bag Second 100 mg/kg TOTAL volume 250 mL** 15 mL/hr** for 16 hours Infuse entire bag … For infants, even smaller volumes may be required. Doses can be diluted in 100 mL bags if available (note: the entire dose must be administered over the specified time). For infants who require smaller total volumes, contact hospital pharmacist for advice.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Non-immunologic anaphylaxis** (flushing, rash, itch, wheeze, breathlessness, angioedema, hypotension): **stop the infusion and give promethazine; restart after 30 minutes at half the rate**, increasing to full rate over 30 minutes. A previous reaction does not preclude future use.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Nonimmunologic anaphylaxis (formerly known as anaphylactoid reaction) Symptoms may include flushing, rash, itch, wheeze, shortness of breath, angioedema, hypotension In these cases, cease the infusion, give promethazine. Recommence infusion after 30 minutes at half the previous rate. Slowly increase to the full rate over 30 minutes. … Previous non-IgE mediated anaphylactoid reaction does not preclude use in future presentation",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**At 18 hours (2 hours before the second bag ends), send paracetamol level and ALT**; if presentation was over 24 hours after ingestion, add INR, venous gas and urea, electrolytes and creatinine.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "18 hours after the initiation of the acetylcysteine infusion (2 hours before completion of the second bag), send bloods for: Paracetamol concentration ALT … If delayed presentation more than 24 hours post ingestion, also measure: INR Venous blood gas Urea, electrolytes, creatinine",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do not stop acetylcysteine early without Toxicology**, except for an anaphylactoid reaction. **Stop only after the 20-hour course if ALT is normal, the level is under 10 mg/L (66 micromol/L) and the child is clinically well**; discuss every other case.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "DO NOT cease acetylcysteine early without speaking to the Toxicology team, except in cases of anaphylactoid reactions (see above) … Acetylcysteine infusion should only be discontinued after completion of a 20-hour course if: ALT is normal Paracetamol concentration <10 mg/L (66 micromol/L) Patient is clinically well All other cases should be discussed with Poisons Information Centre or a clinical toxicologist",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Consider admission for every intentional overdose.** Poisons Information Centre: 13 11 26.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Admission should be considered for all children and young people with an intentional overdose Consult the Poisons Information Centre 13 11 26 for advice",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Discharge when no further acetylcysteine is needed and investigations are normal**; after deliberate ingestion, only once a risk assessment shows low risk of further self-harm.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "No further acetylcysteine requirement and investigations are within normal limits (see Monitoring section) For deliberate ingestions, a risk assessment should indicate that the patient is at low risk of further self-harm in the discharge setting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Before discharge after deliberate ingestion, assess self-harm risk and other drug and alcohol use**, and link identified mental health or drug and alcohol needs to services.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Prior to discharge, adolescents who present with deliberate ingestions need a risk assessment regarding the likelihood of further ingestions or other attempts to self-harm … Assessment of other drug and alcohol use should also be undertaken … If, after risk assessment, it is deemed safe to discharge a child or adolescent from hospital, but ongoing mental health or drug and alcohol needs are identified, they should be linked with appropriate services",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Paracetamol poisoning' (Last updated July 2023), at https://www.rch.org.au/clinicalguide/guideline_index/Paracetamol_poisoning/, retrieved 2026-09-23"
+  }
+ ]
+}
