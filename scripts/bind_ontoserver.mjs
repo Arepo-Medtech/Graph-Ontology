@@ -16,7 +16,7 @@
 // sct2_Description and sct2_Relationship from an RF2 release. Both SNOMED
 // releases available at time of writing ship neither, so there are no terms to
 // match against. This binds over the wire instead, against the same pinned
-// AU edition (20260731).
+// AU edition (20260831; bumped from 20260731 on 2026-09-23).
 // NCTS client path is configurable; it holds the OAuth flow and the release pin.
 // Credentials come from its .env via `node --env-file=`, never from this file.
 const CLIENT = process.env.NCTS_CLIENT_PATH
@@ -113,7 +113,7 @@ for (const [i, rec] of doc.conditions.entries()) {
 }
 
 writeFileSync(out, JSON.stringify({
-  source: "NCTS Ontoserver, SNOMED CT-AU 20260731 (pinned)",
+  source: "NCTS Ontoserver, SNOMED CT-AU 20260831 (pinned)",
   binding_policy: "exact or normalised display only; ranked hits are candidates, not bindings",
   binding_policy_v2: "exact/normalised match on display or designation, in <<404684003 OR <<71388002, "
     + "AND the concept must have a parent (orphan = retired = rejected)",
