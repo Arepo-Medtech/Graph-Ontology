@@ -1,0 +1,810 @@
+{
+ "_note": "Hand check of icd10cm:maps_to over ALL ICD-10-CM codes (OMOP Athena 'Maps to'). CORRECT when the SNOMED concept is the code's meaning, a correct broader concept (OMOP often maps uphill: metabolic syndrome -> 'Metabolic disease'; lossy, not wrong), or a correct part of a combination code (targets_of_code > 1: the code means all of its targets together). Two samples: 40 edges at random (dominated by injury and external-cause codes, as the maps are) and 40 spread evenly across the chapter letters. The errors are OMOP's, not a join of ours; they stay as the source asserts them and are recorded here. MONDO is a second, independent witness for the disease chapters (graph_report.py route mondo->snomed). Graded 23 Sep 2026.",
+ "scored": [
+  {
+   "sample": "random",
+   "n": 1,
+   "icd": "S82.242H",
+   "icd_name": "Displaced spiral fracture of shaft of left tibia, subsequent encounter for open fracture type I or II with delayed healing",
+   "sct": "134194006",
+   "sct_name": "Delayed union of fracture",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 2,
+   "icd": "H55.01",
+   "icd_name": "Congenital nystagmus",
+   "sct": "64635004",
+   "sct_name": "Congenital nystagmus",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 3,
+   "icd": "S14.129A",
+   "icd_name": "Central cord syndrome at unspecified level of cervical spinal cord, initial encounter",
+   "sct": "282787000",
+   "sct_name": "Central cord syndrome",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 4,
+   "icd": "T43.692S",
+   "icd_name": "Poisoning by other psychostimulants, intentional self-harm, sequela",
+   "sct": "363304009",
+   "sct_name": "Disorder due to and following poisoning",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 5,
+   "icd": "S82.112R",
+   "icd_name": "Displaced fracture of left tibial spine, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with malunion",
+   "sct": "208622009",
+   "sct_name": "Open fracture intercondylar spine of tibia",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 6,
+   "icd": "S72.041J",
+   "icd_name": "Displaced fracture of base of neck of right femur, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with delayed healing",
+   "sct": "263231005",
+   "sct_name": "Open fracture of base of neck of femur",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 7,
+   "icd": "S33.120S",
+   "icd_name": "Subluxation of L2/L3 lumbar vertebra, sequela",
+   "sct": "14817008",
+   "sct_name": "Late effect of injury",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 8,
+   "icd": "S42.014G",
+   "icd_name": "Posterior displaced fracture of sternal end of right clavicle, subsequent encounter for fracture with delayed healing",
+   "sct": "56642004",
+   "sct_name": "Fracture of sternal end of clavicle",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 9,
+   "icd": "S31.812D",
+   "icd_name": "Laceration with foreign body of right buttock, subsequent encounter",
+   "sct": "298093006",
+   "sct_name": "Foreign body in skin of buttock",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 10,
+   "icd": "S92.156G",
+   "icd_name": "Nondisplaced avulsion fracture (chip fracture) of unspecified talus, subsequent encounter for fracture with delayed healing",
+   "sct": "263246003",
+   "sct_name": "Fracture of talus",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 11,
+   "icd": "S60.511S",
+   "icd_name": "Abrasion of right hand, sequela",
+   "sct": "111727008",
+   "sct_name": "Late effect of superficial injury",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 12,
+   "icd": "O41.93X9",
+   "icd_name": "Disorder of amniotic fluid and membranes, unspecified, third trimester, other fetus",
+   "sct": "72860003",
+   "sct_name": "Disorder of amniotic cavity AND/OR membrane",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 13,
+   "icd": "S99.239K",
+   "icd_name": "Salter-Harris Type III physeal fracture of phalanx of unspecified toe, subsequent encounter for fracture with nonunion",
+   "sct": "21351003",
+   "sct_name": "Fracture of phalanx of foot",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 14,
+   "icd": "M67.831",
+   "icd_name": "Other specified disorders of synovium, right wrist",
+   "sct": "3519007",
+   "sct_name": "Disorder of synovial membrane",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 15,
+   "icd": "Z89.411",
+   "icd_name": "Acquired absence of right great toe",
+   "sct": "249820005",
+   "sct_name": "Absence of toe",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 16,
+   "icd": "T21.40XA",
+   "icd_name": "Corrosion of unspecified degree of trunk, unspecified site, initial encounter",
+   "sct": "52405000",
+   "sct_name": "Burn of trunk",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 17,
+   "icd": "S25.499",
+   "icd_name": "Other specified injury of unspecified pulmonary blood vessels",
+   "sct": "210790008",
+   "sct_name": "Pulmonary blood vessel injury",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 18,
+   "icd": "S94.92XS",
+   "icd_name": "Injury of unspecified nerve at ankle and foot level, left leg, sequela",
+   "sct": "784338005",
+   "sct_name": "Disorder due to and following injury of nerve of lower limb",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 19,
+   "icd": "V16.9XXD",
+   "icd_name": "Unspecified pedal cyclist injured in collision with other nonmotor vehicle in traffic accident, subsequent encounter",
+   "sct": "214031005",
+   "sct_name": "Motor vehicle traffic accident",
+   "targets_of_code": 3,
+   "verdict": "wrong",
+   "why": "V16: collision with a NONmotor vehicle mapped to 'Motor vehicle traffic accident'"
+  },
+  {
+   "sample": "random",
+   "n": 20,
+   "icd": "T36.4X2S",
+   "icd_name": "Poisoning by tetracyclines, intentional self-harm, sequela",
+   "sct": "219174008",
+   "sct_name": "Late effect of self inflicted injury",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 21,
+   "icd": "L98.A311",
+   "icd_name": "Non-pressure chronic ulcer of right hand limited to breakdown of skin",
+   "sct": "10958761000119103",
+   "sct_name": "Open wound of right hand",
+   "targets_of_code": 2,
+   "verdict": "wrong",
+   "why": "a non-pressure chronic ulcer is not an open wound (an injury); the whole L98.A class maps this way"
+  },
+  {
+   "sample": "random",
+   "n": 22,
+   "icd": "V46.2XXD",
+   "icd_name": "Person on outside of car injured in collision with other nonmotor vehicle in nontraffic accident, subsequent encounter",
+   "sct": "127348004",
+   "sct_name": "Motor vehicle accident victim",
+   "targets_of_code": 3,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 23,
+   "icd": "T38.3X5A",
+   "icd_name": "Adverse effect of insulin and oral hypoglycemic [antidiabetic] drugs, initial encounter",
+   "sct": "293177002",
+   "sct_name": "Insulin adverse reaction",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 24,
+   "icd": "W61.49XD",
+   "icd_name": "Other contact with turkey, subsequent encounter",
+   "sct": "242651001",
+   "sct_name": "Injury caused by animal",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 25,
+   "icd": "S32.613B",
+   "icd_name": "Displaced avulsion fracture of unspecified ischium, initial encounter for open fracture",
+   "sct": "284554003",
+   "sct_name": "Avulsion - injury",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 26,
+   "icd": "H33.303",
+   "icd_name": "Unspecified retinal break, bilateral",
+   "sct": "1279735004",
+   "sct_name": "Bilateral break of retina of eyes",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 27,
+   "icd": "S82.116A",
+   "icd_name": "Nondisplaced fracture of unspecified tibial spine, initial encounter for closed fracture",
+   "sct": "208613008",
+   "sct_name": "Closed fracture intercondylar spine of tibia",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 28,
+   "icd": "V70.0XXD",
+   "icd_name": "Driver of bus injured in collision with pedestrian or animal in nontraffic accident, subsequent encounter",
+   "sct": "127349007",
+   "sct_name": "Motor vehicle accident, driver",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 29,
+   "icd": "T61.04XS",
+   "icd_name": "Ciguatera fish poisoning, undetermined, sequela",
+   "sct": "363304009",
+   "sct_name": "Disorder due to and following poisoning",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 30,
+   "icd": "S72.032J",
+   "icd_name": "Displaced midcervical fracture of left femur, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with delayed healing",
+   "sct": "134194006",
+   "sct_name": "Delayed union of fracture",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 31,
+   "icd": "V35.3XXA",
+   "icd_name": "Unspecified occupant of three-wheeled motor vehicle injured in collision with railway train or railway vehicle in nontraffic accident, initial encounter",
+   "sct": "213770003",
+   "sct_name": "Railway accident",
+   "targets_of_code": 3,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 32,
+   "icd": "C95.9",
+   "icd_name": "Leukemia, unspecified",
+   "sct": "93143009",
+   "sct_name": "Leukemia",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 33,
+   "icd": "S99.099B",
+   "icd_name": "Other physeal fracture of unspecified calcaneus, initial encounter for open fracture",
+   "sct": "24948002",
+   "sct_name": "Open fracture of calcaneus",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 34,
+   "icd": "S62.236G",
+   "icd_name": "Other nondisplaced fracture of base of first metacarpal bone, unspecified hand, subsequent encounter for fracture with delayed healing",
+   "sct": "69916004",
+   "sct_name": "Fracture of base of thumb",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 35,
+   "icd": "L02.32",
+   "icd_name": "Furuncle of buttock",
+   "sct": "12430003",
+   "sct_name": "Furuncle of buttock",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 36,
+   "icd": "V62.5XXD",
+   "icd_name": "Driver of heavy transport vehicle injured in collision with two- or three-wheeled motor vehicle in traffic accident, subsequent encounter",
+   "sct": "274913009",
+   "sct_name": "Motor vehicle on road in collision with another motor vehicle",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 37,
+   "icd": "S72.114R",
+   "icd_name": "Nondisplaced fracture of greater trochanter of right femur, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with malunion",
+   "sct": "428112005",
+   "sct_name": "Malunion of fracture of proximal femur",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 38,
+   "icd": "Y93.A9",
+   "icd_name": "Activity, other involving cardiorespiratory exercise",
+   "sct": "14468000",
+   "sct_name": "Sports activity",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 39,
+   "icd": "S76.912D",
+   "icd_name": "Strain of unspecified muscles, fascia and tendons at thigh level, left thigh, subsequent encounter",
+   "sct": "442372009",
+   "sct_name": "Strain of muscle and/or tendon of thigh",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "random",
+   "n": 40,
+   "icd": "S52.371J",
+   "icd_name": "Galeazzi's fracture of right radius, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with delayed healing",
+   "sct": "208341002",
+   "sct_name": "Open Galeazzi fracture",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 1,
+   "icd": "A02.1",
+   "icd_name": "Salmonella sepsis",
+   "sct": "449083008",
+   "sct_name": "Sepsis caused by Salmonella",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 2,
+   "icd": "B74.1",
+   "icd_name": "Filariasis due to Brugia malayi",
+   "sct": "76999009",
+   "sct_name": "Infection by Brugia malayi",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 3,
+   "icd": "C69.90",
+   "icd_name": "Malignant neoplasm of unspecified site of unspecified eye",
+   "sct": "371986009",
+   "sct_name": "Primary malignant neoplasm of eye",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 4,
+   "icd": "D78.22",
+   "icd_name": "Postprocedural hemorrhage of the spleen following other procedure",
+   "sct": "116224001",
+   "sct_name": "Complication of procedure",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 5,
+   "icd": "E88.810",
+   "icd_name": "Metabolic syndrome",
+   "sct": "75934005",
+   "sct_name": "Metabolic disease",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 6,
+   "icd": "F01.A2",
+   "icd_name": "Vascular dementia, mild, with psychotic disturbance",
+   "sct": "191447007",
+   "sct_name": "Organic psychotic condition",
+   "targets_of_code": 3,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 7,
+   "icd": "G60.8",
+   "icd_name": "Other hereditary and idiopathic neuropathies",
+   "sct": "386033004",
+   "sct_name": "Neuropathy",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 8,
+   "icd": "H50.9",
+   "icd_name": "Unspecified strabismus",
+   "sct": "22066006",
+   "sct_name": "Strabismus",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 9,
+   "icd": "I07.1",
+   "icd_name": "Rheumatic tricuspid insufficiency",
+   "sct": "67696008",
+   "sct_name": "Rheumatic tricuspid valve regurgitation",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 10,
+   "icd": "J34.8202",
+   "icd_name": "Internal nasal valve collapse, dynamic",
+   "sct": "427778008",
+   "sct_name": "Collapse of nasal valve",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 11,
+   "icd": "K80.35",
+   "icd_name": "Calculus of bile duct with chronic cholangitis with obstruction",
+   "sct": "1084891000119101",
+   "sct_name": "Cholangitis due to bile duct calculus with obstruction",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 12,
+   "icd": "L40.51",
+   "icd_name": "Distal interphalangeal psoriatic arthropathy",
+   "sct": "239812005",
+   "sct_name": "Psoriatic arthritis with distal interphalangeal joint involvement",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 13,
+   "icd": "M84.675K",
+   "icd_name": "Pathological fracture in other disease, left foot, subsequent encounter for fracture with nonunion",
+   "sct": "302941001",
+   "sct_name": "Nonunion of fracture",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 14,
+   "icd": "N15",
+   "icd_name": "Other renal tubulo-interstitial diseases",
+   "sct": "428255004",
+   "sct_name": "Tubulointerstitial nephritis",
+   "targets_of_code": 1,
+   "verdict": "wrong",
+   "why": "narrowed: 'Other renal tubulo-interstitial diseases' includes abscess and Balkan nephropathy, not only nephritis"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 15,
+   "icd": "O36.5130",
+   "icd_name": "Maternal care for known or suspected placental insufficiency, third trimester, not applicable or unspecified",
+   "sct": "237292005",
+   "sct_name": "Placental insufficiency",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 16,
+   "icd": "P01.9",
+   "icd_name": "Newborn affected by maternal complication of pregnancy, unspecified",
+   "sct": "1269102002",
+   "sct_name": "Fetal disorder due to maternal disorder during pregnancy",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 17,
+   "icd": "Q72.43",
+   "icd_name": "Longitudinal reduction defect of femur, bilateral",
+   "sct": "52837007",
+   "sct_name": "Longitudinal deficiency of femur",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 18,
+   "icd": "R84.7",
+   "icd_name": "Abnormal histological findings in specimens from respiratory organs and thorax",
+   "sct": "309198006",
+   "sct_name": "Abnormal histology findings",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 19,
+   "icd": "S11.014A",
+   "icd_name": "Puncture wound with foreign body of larynx, initial encounter",
+   "sct": "210385007",
+   "sct_name": "Open wound of larynx",
+   "targets_of_code": 3,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 20,
+   "icd": "T40.5X3A",
+   "icd_name": "Poisoning by cocaine, assault, initial encounter",
+   "sct": "9982009",
+   "sct_name": "Poisoning by cocaine",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 21,
+   "icd": "U07.0",
+   "icd_name": "Emergency use of U07.0 | Vaping-related disorder",
+   "sct": "816135009",
+   "sct_name": "Disorder due to vaping",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 22,
+   "icd": "V24.4",
+   "icd_name": "Motorcycle driver injured in collision with heavy transport vehicle or bus in traffic accident",
+   "sct": "10298002",
+   "sct_name": "Victim, motorcycle rider in vehicular AND/OR traffic accident",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 23,
+   "icd": "W22.8XXS",
+   "icd_name": "Striking against or struck by other objects, sequela",
+   "sct": "218246003",
+   "sct_name": "Late effect of accidental injury",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 24,
+   "icd": "X37.2XXA",
+   "icd_name": "Blizzard (snow)(ice), initial encounter",
+   "sct": "217724009",
+   "sct_name": "Accident caused by blizzard",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 25,
+   "icd": "Y37.591S",
+   "icd_name": "Military operation involving other effects of nuclear weapons, civilian, sequela",
+   "sct": "219437004",
+   "sct_name": "Late effects of injury due to war operations",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 26,
+   "icd": "Z89.211",
+   "icd_name": "Acquired absence of right upper limb below elbow",
+   "sct": "737303004",
+   "sct_name": "Acquired absence of organ",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 27,
+   "icd": "A37.91",
+   "icd_name": "Whooping cough, unspecified species with pneumonia",
+   "sct": "233604007",
+   "sct_name": "Pneumonia",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 28,
+   "icd": "B97.81",
+   "icd_name": "Human metapneumovirus as the cause of diseases classified elsewhere",
+   "sct": "1087141000119106",
+   "sct_name": "Human metapneumovirus infection",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 29,
+   "icd": "C25.4",
+   "icd_name": "Malignant neoplasm of endocrine pancreas",
+   "sct": "93843007",
+   "sct_name": "Primary malignant neoplasm of islets of Langerhans",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 30,
+   "icd": "D16.31",
+   "icd_name": "Benign neoplasm of short bones of right lower limb",
+   "sct": "271476003",
+   "sct_name": "Benign neoplasm of short bones of lower limb",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 31,
+   "icd": "E10.3549",
+   "icd_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye",
+   "sct": "232012007",
+   "sct_name": "Combined traction and rhegmatogenous retinal detachment",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 32,
+   "icd": "F65.0",
+   "icd_name": "Fetishism",
+   "sct": "59174009",
+   "sct_name": "Fetishism",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 33,
+   "icd": "G57.12",
+   "icd_name": "Meralgia paresthetica, left lower limb",
+   "sct": "290251000119106",
+   "sct_name": "Meralgia paresthetica of left leg",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 34,
+   "icd": "H54.1213",
+   "icd_name": "Low vision right eye category 1, blindness left eye category 3",
+   "sct": "343051000119108",
+   "sct_name": "Blind left eye, low vision right eye",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 35,
+   "icd": "I83.028",
+   "icd_name": "Varicose veins of left lower extremity with ulcer other part of lower leg",
+   "sct": "304026004",
+   "sct_name": "Varicose ulcer of lower extremity",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 36,
+   "icd": "J05",
+   "icd_name": "Acute obstructive laryngitis [croup] and epiglottitis",
+   "sct": "71186008",
+   "sct_name": "Croup",
+   "targets_of_code": 1,
+   "verdict": "wrong",
+   "why": "J05 is croup AND epiglottitis; mapped to croup only"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 37,
+   "icd": "K06.012",
+   "icd_name": "Localized gingival recession, moderate",
+   "sct": "59898000",
+   "sct_name": "Localized gingival recession",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 38,
+   "icd": "L98.A316",
+   "icd_name": "Non-pressure chronic ulcer of right hand with bone involvement without evidence of necrosis",
+   "sct": "10958761000119103",
+   "sct_name": "Open wound of right hand",
+   "targets_of_code": 2,
+   "verdict": "wrong",
+   "why": "chronic ulcer -> open wound, as random 21"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 39,
+   "icd": "M11.171",
+   "icd_name": "Familial chondrocalcinosis, right ankle and foot",
+   "sct": "442941002",
+   "sct_name": "Chondrocalcinosis of joint of ankle AND/OR foot",
+   "targets_of_code": 2,
+   "verdict": "correct"
+  },
+  {
+   "sample": "by_chapter",
+   "n": 40,
+   "icd": "N64.89",
+   "icd_name": "Other specified disorders of breast",
+   "sct": "79604008",
+   "sct_name": "Disorder of breast",
+   "targets_of_code": 1,
+   "verdict": "correct"
+  }
+ ]
+}

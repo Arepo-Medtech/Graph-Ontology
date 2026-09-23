@@ -24,7 +24,8 @@ Families loaded (those the register marks `built`):
     PBS            AMT -> PBS item -> restriction -> indication (severity / episodicity as attrs)
     corpus         guideline condition -> SNOMED binding
     LOINC          term -> component / property / time / system / scale / method, question -> answer (spine.duckdb)
-    MONDO          is-a, and exactMatch to SNOMED / ICD-10-CM / OMIM / Orphanet (+ OMOP ICD-10-CM -> SNOMED, to score it)
+    MONDO          is-a, and exactMatch to SNOMED / ICD-10-CM / OMIM / Orphanet
+    ICD-10-CM      every code -> SNOMED (OMOP Maps to); also the second path that scores MONDO
     HPO            is-a, disease -> phenotype (present / absent) with frequency, onset, sex, and gene -> disease
     DrugCentral    drug -> RxNorm / SNOMED / ATC, indication / contraindication / off-label use, and
                    drug -> target (mechanism / measured activity) -> protein -> gene  (if extracted)
@@ -369,12 +370,22 @@ def main() -> int:
                  [("MONDO", r["subject_id"], "mondo:exact_match", prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1],
                    "MONDO SSSOM", "mondo.sssom.tsv", r.get("mapping_justification"), "ungraded", "asserted", PIN["mondo"], None)
                   for r in sssom])
-        ins("ICD-10-CM -> SNOMED (for MONDO's codes)", f"""SELECT DISTINCT 'ICD10CM', s.concept_code, 'icd10cm:maps_to', 'SCT', t.concept_code,
-                'OMOP Athena', 'CONCEPT_RELATIONSHIP', 'Maps to', 'ungraded', 'asserted', '{PIN['athena']}', NULL
-            FROM (SELECT DISTINCT o_code FROM edge WHERE predicate = 'mondo:exact_match' AND o_vocab = 'ICD10CM') m
-            JOIN C s ON s.vocabulary_id = 'ICD10CM' AND s.concept_code = m.o_code
-            JOIN CR r ON r.concept_id_1 = s.concept_id AND r.relationship_id = 'Maps to' AND (r.invalid_reason IS NULL OR r.invalid_reason = '')
-            JOIN C t ON t.concept_id = r.concept_id_2 AND t.vocabulary_id = 'SNOMED'""")
+
+    # --- ICD-10-CM -> SNOMED, every code (reference/icd10cm_handcheck.json) -----------------------------------------
+    # OMOP's 'Maps to' from all 98,290 mapped ICD-10-CM codes -- diseases, symptoms (R), injuries (S, T), external causes
+    # (V-Y), health factors (Z) -- where the first build loaded only MONDO's 1,968. A combination code maps to 2-4 concepts
+    # that TOGETHER are its meaning (diabetes with retinopathy -> both); `targets_of_code` says how many, so no single
+    # target is read as the whole. 'Maps to value' ("history of" style pairs) means something else and is not loaded.
+    ins("ICD-10-CM -> SNOMED (all codes)", f"""
+        WITH m AS (SELECT s.concept_code AS icd, coalesce(s.invalid_reason, '') AS icd_invalid, t.concept_code AS sct
+                   FROM C s JOIN CR r ON r.concept_id_1 = s.concept_id AND r.relationship_id = 'Maps to'
+                        AND (r.invalid_reason IS NULL OR r.invalid_reason = '')
+                   JOIN C t ON t.concept_id = r.concept_id_2 AND t.vocabulary_id = 'SNOMED'
+                   WHERE s.vocabulary_id = 'ICD10CM')
+        SELECT DISTINCT 'ICD10CM', icd, 'icd10cm:maps_to', 'SCT', sct, 'OMOP Athena', 'CONCEPT_RELATIONSHIP', 'Maps to',
+               'ungraded', 'asserted', '{PIN['athena']}',
+               json_object('targets_of_code', count(*) OVER (PARTITION BY icd), 'icd_deprecated', icd_invalid = 'D')
+        FROM m""")
 
     # --- HPO ---------------------------------------------------------------------------------------------------------
     if HP_OBO.exists():

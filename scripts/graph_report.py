@@ -272,6 +272,23 @@ def main() -> int:
             report["coverage:lab results reaching a finding they define"] = dict(zip(("loinc_terms", "findings"), con.execute("""
                 SELECT count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'loinc:interpreted_in_finding'""").fetchone()))
 
+    # --- ICD-10-CM -> SNOMED, every code: tier from the hand check; MONDO (route 1) is the second witness ---------------
+    hc = Path("reference/icd10cm_handcheck.json")
+    if hc.exists():
+        scored = json.load(open(hc))["scored"]
+        k, n = sum(r["verdict"] == "correct" for r in scored), len(scored)
+        lo, _ = wilson(k, n)
+        con.execute("UPDATE edge SET tier = ? WHERE predicate = 'icd10cm:maps_to'", [tier(lo, n)])
+        e, codes, sct, only = con.execute("""
+            WITH x AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT' AND predicate <> 'icd10cm:maps_to'
+                       UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'SCT' AND s_vocab <> 'SCT' AND predicate <> 'icd10cm:maps_to')
+            SELECT count(*), count(DISTINCT s_code), count(DISTINCT o_code),
+                   count(DISTINCT o_code) FILTER (WHERE o_code NOT IN (SELECT c FROM x))
+            FROM edge WHERE predicate = 'icd10cm:maps_to'""").fetchone()
+        report["route:icd10cm->snomed (all codes; hand check)"] = {"edges": e, "icd_codes": codes, "snomed_concepts": sct,
+            "snomed_concepts_with_no_other_cross_vocabulary_edge": only, "hand_checked": n, "correct": k,
+            "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+
     # --- how a drug works: drug -> target -> protein -> gene -> disease ------------------------------------------
     # Native assertions (DrugCentral, HPO), so no earned tier; two independent witnesses are measured instead.
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'drugcentral:mechanism_target'").fetchone()[0]:
