@@ -20,6 +20,19 @@ def guidelines_dir():
     return d
 
 
+def guidelines_repo():
+    """Root of the GUIDELINES checkout (the parent of its guidelines/ folder)."""
+    return os.path.dirname(guidelines_dir())
+
+
+def guidelines_file(rel):
+    """A file that moved to GUIDELINES with the guidelines (e.g. reference/attestations.json). Fails loudly if absent."""
+    p = os.path.join(guidelines_repo(), rel)
+    if not os.path.exists(p):
+        raise SystemExit(f"{rel} not found in the GUIDELINES checkout at {guidelines_repo()}")
+    return p
+
+
 def guideline_url(slug):
     return f"{REPO_URL}/blob/main/guidelines/{slug}.md"
 
@@ -34,4 +47,12 @@ if __name__ == "__main__":
     except SystemExit as e:
         assert "not found" in str(e)
     assert guideline_url("croup").endswith("/blob/main/guidelines/croup.md")
+    os.makedirs(os.path.join(t, "g", "guidelines")); os.makedirs(os.path.join(t, "g", "reference"))
+    open(os.path.join(t, "g", "reference", "x.json"), "w").write("{}")
+    os.environ["GUIDELINES_DIR"] = os.path.join(t, "g", "guidelines")
+    assert guidelines_file("reference/x.json").endswith("reference/x.json")
+    try:
+        guidelines_file("reference/absent.json"); raise AssertionError("absent file must exit")
+    except SystemExit as e:
+        assert "not found" in str(e)
     print("selftest ok")

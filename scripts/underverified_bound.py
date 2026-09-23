@@ -15,14 +15,14 @@ verify most of what we say about it. Those rows are listed first.
 """
 import json, glob, os, re, sys
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
-from guidelines_source import guidelines_dir, guideline_url
+from guidelines_source import guidelines_dir, guideline_url, guidelines_file
 G = guidelines_dir()
 def norm(s):
     s=s.lower().replace("’","'"); s=re.sub(r"'s\b","",s)
     return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",s)).strip()
 conds=json.load(open("reference/conditions.json"))["conditions"]
 binds={r["condition"]:r for r in json.load(open("reference/snomed_bindings.json"))["results"]}
-cover=json.load(open("reference/amh-topic-coverage.json"))
+cover=json.load(open(guidelines_file("reference/amh-topic-coverage.json")))
 slugs={os.path.basename(f)[:-3] for f in glob.glob(os.path.join(G, "*.md"))}
 names={}
 for s in slugs: names.setdefault(norm(s.replace("-"," ")),s)

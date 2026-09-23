@@ -7,8 +7,8 @@ exactly (255 links = 20 chapter links + 235 topic links), so the transcription i
 Files:
 
 - [`amh-therapeutic-topics.txt`](amh-therapeutic-topics.txt) — all 235, in AMH's own A–Z order and wording
-- [`amh-topics-not-yet-written.txt`](amh-topics-not-yet-written.txt) — the 162 with no guideline here
-- [`amh-topic-coverage.json`](amh-topic-coverage.json) — the 40 that map, topic → guideline
+- [`amh-topics-not-yet-written.txt`](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/reference/amh-topics-not-yet-written.txt) — the 162 with no guideline here
+- [`amh-topic-coverage.json`](https://github.com/Arepo-Medtech/GUIDELINES/blob/main/reference/amh-topic-coverage.json) — the 40 that map, topic → guideline
 
 ## What this list is
 
