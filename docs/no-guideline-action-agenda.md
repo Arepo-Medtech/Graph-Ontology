@@ -79,7 +79,7 @@ The licence still governs verbatim quoting: many are © or CC BY-NC-ND.
    footing, is the owner's call (and possibly legal advice), not an engineering one.
 1b. ⚠️ **RCH Melbourne terms (found 2026-09-23 during research; confirmed by reading the page):** clause 5.2 of
    https://www.rch.org.au/terms-and-conditions/ grants a personal-use licence only, and bars reproduction or republication
-   without RCH's prior written consent. **171 guidelines already on `master` quote RCH verbatim**, authored on a
+   without RCH's prior written consent. **216 guidelines on `master` quote RCH verbatim as their primary source**, authored on a
    "quote with attribution" footing that was set without reading these terms. That was an error. Nothing has been removed.
    A consent request is drafted in `docs/rch-permission-request.md` (**not sent**). Until decided, **no new RCH-sourced authoring.**
 2. **Non-commercial (NC) licences:** are CC BY-NC / NC-ND sources acceptable, given the project may be commercial?
