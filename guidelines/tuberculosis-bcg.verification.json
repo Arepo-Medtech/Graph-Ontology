@@ -1,0 +1,56 @@
+{
+ "guideline": "guidelines/tuberculosis-bcg.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Tuberculosis (BCG vaccination)' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 5,
+  "pass": 5,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**BCG is recommended for:** ⚠️ **Aboriginal and Torres Strait Islander children under 5 in some parts of Australia** · **healthcare workers at high risk of exposure** · **young children travelling to high-incidence settings** · **some children of parents from high-incidence countries** · **young children who are household contacts of a person with leprosy**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aboriginal and Torres Strait Islander children aged <5 years in some parts of Australia Healthcare workers with a high risk of exposure to tuberculosis Young children who will be travelling to settings with high tuberculosis incidence Some children born to parents from countries with high tuberculosis incidence Young children who are a household contact of a person with leprosy",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tuberculosis (BCG vaccination)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Aboriginal and Torres Strait Islander people in some states and territories experience a significant burden of tuberculosis.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Aboriginal and Torres Strait Islander people in some states and territories experience a significant burden of tuberculosis",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tuberculosis (BCG vaccination)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**BCG is recommended for those at highest risk of severe outcomes.** The WHO considers tuberculosis **a global emergency**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "The World Health Organization considers tuberculosis a global emergency. BCG vaccine is recommended for those at highest risk of severe outcomes of tuberculosis.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tuberculosis (BCG vaccination)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**A single dose by intradermal injection.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "BCG vaccine is given as a single dose by intradermal injection .",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tuberculosis (BCG vaccination)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **A tuberculin skin test before BCG is recommended for some people**, on a risk assessment of past exposure. **Health professionals must correctly administer and interpret the TST — consult state or territory TB guidelines.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "tuberculin skin test pre-vaccination is recommended for some people prior to BCG vaccination, based on a risk assessment of the likely exposure to tuberculosis in the past. … Health professionals must correctly administer and interpret the TST. Consult state or territory tuberculosis guidelines for advice.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Tuberculosis (BCG vaccination)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/tuberculosis, retrieved 2026-09-23"
+  }
+ ]
+}

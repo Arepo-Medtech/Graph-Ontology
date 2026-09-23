@@ -1,0 +1,50 @@
+{
+ "guideline": "guidelines/haemophilus-influenzae-type-b.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/haemophilus-influenzae-type-b-hib"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Haemophilus influenzae type b (Hib)' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 4,
+  "pass": 4,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Infants: 4 doses at 2, 4, 6 and 18 months.** The **first can be as early as 6 weeks**; if so, the next doses stay at **4 and 6 months**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hib-containing vaccine is recommended in a 4-dose schedule for infants at 2, 4, 6 and 18 months of age. Infants can have their 1st dose as early as 6 weeks of age. If the 1st dose is given at 6 weeks of age, infants should still receive their next scheduled doses at 4 months and 6 months of age.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Haemophilus influenzae type b (Hib)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/haemophilus-influenzae-type-b-hib, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Children under 5 who missed a dose** should catch up.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "infants and children <5 years of age who have missed a dose of Hib-containing vaccine",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Haemophilus influenzae type b (Hib)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/haemophilus-influenzae-type-b-hib, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "⚠️ **Asplenia (functional or anatomical): 1 dose of Hib.** ⚠️ **Haematopoietic stem cell transplant: 3 doses, starting 6 months after the transplant.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People who have functional or anatomical asplenia are recommended to receive 1 dose of Hib vaccine. People who have received a haematopoietic stem cell transplant are recommended to receive 3 doses of Hib vaccine commencing from 6 months after the transplant.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Haemophilus influenzae type b (Hib)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/haemophilus-influenzae-type-b-hib, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "Hib causes invasive disease including **epiglottitis, septic arthritis and cellulitis**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "epiglottitis, septic arthritis and cellulitis.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Haemophilus influenzae type b (Hib)', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/haemophilus-influenzae-type-b-hib, retrieved 2026-09-23"
+  }
+ ]
+}

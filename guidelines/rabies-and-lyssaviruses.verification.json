@@ -1,0 +1,99 @@
+{
+ "guideline": "guidelines/rabies-and-lyssaviruses.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the 'Rabies and other lyssaviruses' chapter of the Australian Immunisation Handbook, retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- health.gov.au states 'all other rights are reserved'. Quoted with attribution on the same footing as the Stroke Foundation, Kidney Health Australia and NHFA/CSANZ sources already in this compendium. ",
+ "summary": {
+  "total": 11,
+  "pass": 11,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "**Rabies is caused by exposure to saliva or neural tissue from an infected animal** — a bite or scratch that breaks the skin, or **direct contact with a mucosal surface such as the nose, eye or mouth**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Rabies is a zoonotic disease caused by exposure to saliva or neural tissue from an animal infected with rabies virus or other lyssaviruses. Human exposure can occur through an animal scratch or bite that has broken the skin, or by direct contact of the virus with the mucosal surface of a person, such as nose, eye or mouth.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Once symptomatic it is almost always fatal.** **Australia is not rabies-enzootic**, but **bats anywhere in the world are a potential source of lyssaviruses** — and **Australian bat lyssavirus is found in all 4 Australian fruit bat species and several insectivorous bat species**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "almost always fatal. Australia is not a rabies- enzootic country. … Bats anywhere in the world are a potential source of lyssaviruses and a potential risk for acquiring rabies, depending on how a person is exposed. Evidence of Australian bat lyssavirus infection has been identified in all 4 species of Australian fruit bats (flying foxes) and in several species of Australian insectivorous bats.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Immediately and thoroughly wash all bite wounds and scratches with soap and water, then apply a virucidal preparation such as povidone-iodine.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "immediately and thoroughly wash all bite wounds and scratches with soap and water apply a virucidal preparation such as povidone-iodine solution",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Do NOT suture a bite from a potentially rabid animal.** Clean, debride and **infiltrate the wound with rabies immunoglobulin**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Avoid suturing a bite from a potentially rabid animal. Instead, clean, debride and infiltrate the wound well with rabies immunoglobulin .",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Post-exposure prophylaxis = prompt wound management + rabies vaccine + in some cases human rabies immunoglobulin**, recommended for **anyone potentially exposed**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Post-exposure prophylaxis includes prompt wound management, and administration of rabies vaccine and, in some cases, human rabies immunoglobulin .",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Category I — no exposure:** touching or feeding animals, licks on intact skin, contact with blood, urine or faeces. **No prophylaxis if the contact history is reliable.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Category I: no exposure Touching or feeding animals Animal licks on intact skin Exposure to animal blood, urine or faeces No prophylaxis required if contact history is reliable",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Category II — exposure:** nibbling of uncovered skin; minor scratches or abrasions without bleeding.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Category II: exposure Nibbling of uncovered skin Minor scratches or abrasions without bleeding",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Category III — severe exposure:** single or multiple **transdermal bites or scratches**; **saliva on mucous membrane or broken skin**; and ⚠️ **ANY direct contact with bats**.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Category III: severe exposure Single or multiple transdermal bites or scratches Contamination of mucous membrane or broken skin with saliva from animal licks Exposures due to direct contact with bats",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Recommended for: people who have contact with bats · travellers to rabies-enzootic regions, on a risk assessment · laboratory workers with live lyssaviruses.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "people who have contact with bats people who travel to rabies- enzootic regions, based on a risk assessment laboratory workers who work with live lyssaviruses",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Four pre-exposure options exist, and there is no preference** among them — choose on circumstance and preference.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "There are 4 options for administering pre-exposure prophylaxis , varying by schedule length, number of doses and route of administration. There is no preferential recommendation for choosing a schedule and route of administration.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Travellers to enzootic areas need a risk assessment** of likely animal contact and **access to emergency care** at the destination.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "People who will be travelling to, or living in, rabies-enzootic areas should have a risk assessment by a health professional that considers their likelihood of interacting with animals and access to emergency medical attention in that location.",
+   "locator": "Australian Government Department of Health, Disability and Ageing, 'Rabies and other lyssaviruses', The Australian Immunisation Handbook, at https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/rabies-and-other-lyssaviruses, retrieved 2026-09-23"
+  }
+ ]
+}
