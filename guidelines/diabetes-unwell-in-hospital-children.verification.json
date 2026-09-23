@@ -1,0 +1,179 @@
+{
+ "guideline": "guidelines/diabetes-unwell-in-hospital-children.md",
+ "edition": "1.0",
+ "verified_utc": "2026-09-23",
+ "verifier": "claude-opus-5-5",
+ "verifier_class": "single_verifier_uncalibrated",
+ "retrieved_from": [
+  "https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/"
+ ],
+ "retrieved_utc": "2026-09-23",
+ "method": "OPEN AND QUOTED, from the RCH Melbourne Clinical Practice Guideline 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), retrieved 2026-09-23. Every pass claim is machine re-checkable. LICENCE: Free to read but NOT openly licensed -- each page carries '(c) 2026 The Royal Children's Hospital'. Quoted with attribution on the same footing as the 14 RCH guidelines and the Immunisation Handbook guidelines already in this compendium. ",
+ "summary": {
+  "total": 22,
+  "pass": 22,
+  "fail": 0
+ },
+ "claims": [
+  {
+   "claim": "⚠️ **Test blood ketones in every unwell child with established diabetes** — ketones can be raised even with normal glucose (e.g. starvation ketosis in gastroenteritis).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Test for blood ketones in all unwell children with established diabetes, as ketone levels may be raised even in normoglycaemia eg starvation ketosis in gastroenteritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Never omit long-acting (basal) insulin**, even when unwell, fasting or hypoglycaemic.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Long-acting (basal) insulin should never be omitted in children with diabetes, even when unwell, fasting or hypoglycaemic",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Treat vomiting as a sign of insulin deficiency/hyperglycaemia** in a child with known diabetes.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Vomiting should be considered a sign of insulin deficiency/hyperglycaemia in a child with known diabetes",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Interpreting BGL and ketones:** hypoglycaemia ≤3.9 mmol/L · normal pre-meal 4–7 and post-meal 4–10, ketones <0.6 · high >11, ketones ≥0.6 · very high >15 (check ketones), with ketones >1 meaning insulin is required.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "BGL Ketones Hypoglycaemia ≤3.9 mmol/L Normal pre-meals 4-7 mmol/L <0.6 mmol/L Normal post-meals 4-10 mmol/L <0.6 mmol/L High >11 mmol/L ≥0.6 mmol/L Very High >15 mmol/L (check ketones) >1 mmol/L (insulin required)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Insulin needs rise** with acute illness, after surgery and on corticosteroids; **they fall** with limited oral intake or increased fluid losses (e.g. gastroenteritis).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Insulin requirements may increase, leading to hyperglycaemia if doses are not adjusted in acute illnesses following surgical procedures during treatment with corticosteroids … Insulin requirements may decrease, leading to hypoglycaemia, if there is limited oral intake increased fluid losses eg gastroenteritis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Hyperglycaemia, fever, glycosuria and ketonuria all add to fluid losses** and the risk of dehydration.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Hyperglycaemia, fever, excessive glycosuria and ketonuria all contribute to increased fluid losses, leading to risk of dehydration",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Examine conscious state (AVPU/GCS) and breathing** — respiratory rate and increased work of breathing may be signs of DKA — plus hydration and the intercurrent illness.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Conscious state (AVPU/GCS) Respiratory signs: respiratory rate, increased work of breathing (may be signs of Diabetic ketoacidosis) Assess hydration Assess for intercurrent illness",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Investigations:** BGL; point-of-care blood ketones (urine ketones only where blood ketones are unavailable); **venous blood gas if BGL or ketones are elevated.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood glucose level Point of care blood ketones, urine ketones where blood ketones unavailable Venous blood gas if BGL or ketones are elevated",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Hyperglycaemic (BGL >11) with pH <7.3 or bicarbonate <18 mmol/L: treat as DKA.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If hyperglycaemic (BGL >11) and pH <7.3 or bicarbonate <18 mmol/L treat as per Diabetic ketoacidosis",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **Confused, unconscious or seizing: IM glucagon.** Reconstitute 1 mg with 1 mL water; **under 25 kg give 0.5 mg (half the vial); over 25 kg give 1 mg (full vial = 1 mL).**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If child confused, unconscious or having a seizure … Inject 1 mL of H2O into the vial containing glucagon 1 mg … <25 kg: give 0.5 mg … >25 kg: give 1 mg (full vial = 1 mL)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Subcutaneous minidose glucagon** is for BGL under 4 mmol/L when oral treatment has failed or cannot be tolerated, **but without CNS impairment**; it avoids the nausea and vomiting of larger doses.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Minidose glucagon is used to manage hypoglycaemia (BGL <4 mmol/L) in a child with diabetes, when usual oral treatments have been unsuccessful or cannot be tolerated, but the child does not have CNS impairment … Minidose glucagon avoids the side effects of larger doses of glucagon such as nausea and vomiting",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Minidose SC glucagon (1 mg in 1 mL; 1 insulin-syringe unit = 10 microg):** under 2 years **20 microg** (2-unit mark) · 2–15 years **10 microg per year of age** (1 unit per year) · over 15 years **150 microg** (15-unit mark).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "1 unit = 10 microg of reconstituted glucagon solution … Age (years) Dose of glucagon Mark on insulin syringe <2 20 microg (0.02 mg) 2 unit mark 2-15 10 microg per year of age 1 unit per year of age >15 150 microg (0.15 mg) 15 unit mark",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Low/normal BGL may need lower insulin doses, but insulin must not be omitted.** High ketones with low BGL is **starvation ketosis** and needs extra carbohydrate/glucose.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Unwell children with diabetes with low/normal blood glucose may need their insulin doses decreased, however insulin should not be omitted … Children with elevated ketones and low blood glucose are in 'starvation ketosis' and require additional carbohydrate/glucose to normalise their BGL and ketones",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**By blood ketone, for BGL <5 / 5–10 mmol/L:** <0.6 — reduce TDD by 20% / usual bolus (2-hourly checks) · 0.6–0.9 — reduce TDD by 15% / usual bolus · 1–1.4 — reduce TDD by 10% / usual bolus · 1.5–2.9 — **IV glucose-containing fluids and continue insulin** / add 5% of TDD to the bolus (1–2-hourly) · ≥3 — **IV glucose fluids and continue insulin, which may need reducing** / add 5% of TDD. BGL under 4: hypoglycaemia pathway.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood ketone (mmol/L) Urine ketone Blood glucose levels (mmol/L) Frequency of BGL/ketone monitoring <5 If BGL <4 see Hypoglycaemia flowchart (above) 5-10 … <0.6 Negative/trace Reduce TDD* insulin by 20% Give usual bolus insulin 2 hourly 0.6-0.9 Trace/small Reduce TDD insulin by 15% Give usual bolus insulin 2 hourly 1-1.4 Small/moderate Reduce TDD insulin by 10% Give usual bolus insulin 2 hourly 1.5-2.9 Moderate/large Give IV glucose-containing fluids and continue insulin Add additional 5% of TDD to ordinary bolus 1-2 hourly ≥3 Large Give IV glucose-containing fluids & continue insulin. Insulin may need to be reduced Add additional 5% of TDD to ordinary bolus 1-2 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Hyperglycaemia and ketosis with normal pH need extra subcutaneous insulin to clear ketones.** pH under 7.3: DKA pathway.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Children with established diabetes who present to hospital with hyperglycaemia and ketosis, but normal pH, need additional subcutaneous insulin to clear their ketones. … If pH <7.3 See DKA",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Correction bolus by blood ketone, for BGL 10–14 / 15–22 / >22 mmol/L:** <0.6 — usual dose / 5% TDD / 10% TDD · 0.6–0.9 — 5% (ensure oral intake) / 5% / 10% · 1–1.4 — 5% plus extra oral carbs / 10% / 10% · 1.5–2.9 — 5% plus extra carbs / 10% / **20%** · ≥3 — 10% plus extra carbs / **20% / 20%**, checked 1–2-hourly (2-hourly below 3).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Blood ketone (mmol/L) Urine ketone Blood glucose levels (mmol/L) Frequency of BGL/ketone monitoring 10-14 15-22 >22 … <0.6 Negative/trace Usual treatment dose insulin Bolus 5% of TDD* Bolus 10% TDD 2 hourly 0.6-0.9 Trace/small Bolus 5% TDD and ensure tolerating oral intake Bolus 5% of TDD Bolus 10% TDD 2 hourly 1-1.4 Small/moderate Bolus 5% TDD and give extra oral carbs Bolus 10% TDD Bolus 10% TDD 2 hourly 1.5-2.9 Moderate/large Bolus 5% TDD and give extra oral carbs Bolus 10% TDD Bolus 20% TDD 2 hourly ≥3 Large Bolus 10% TDD and give extra oral carbs Bolus 20% TDD Bolus 20% TDD 1-2 hourly",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**Repeat corrections every 2–4 hours as needed**; if eating, give the usual carbohydrate insulin plus the correction; **continue the usual long-acting insulin.**",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Repeat additional insulin correction doses as needed every 2-4 hours … If eating/drinking, give usual rapid-acting insulin for carbohydrate portions as well as the additional correction dose … Continue usual long-acting/background insulin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**TDD = all rapid- and long-acting insulin in a day.** If dosing is flexible or the family is unsure, **estimate 1 unit/kg** from the most recent weight.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "This is all the insulin (rapid and long-acting) that a child has in a day. … If the child uses flexible dosing strategies or family unaware/unsure of usual doses, estimate TDD using 1 unit/kg based on most recent weight",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23",
+   "dose": true
+  },
+  {
+   "claim": "**BGL >15 with ketones <0.6: continue basal insulin and give the correction bolus through the pump** (with the carbohydrate bolus if eating).",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If BGL >15 and ketones <0.6 Continue basal/background insulin Give correction bolus (as above) through child's pump.",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "⚠️ **BGL >15 with ketones ≥0.6: assume pump line failure and disconnect.** Give the correction (and any carbohydrate bolus) by subcutaneous injection, change the cannula, then resume basal insulin.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If BGL >15 and ketones ≥0.6 Assume pump line failure, disconnect Give correction bolus (as above) via subcutaneous injection. … Change pump cannula and resume basal/background insulin",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Any concern about pump delivery: change to subcutaneous injections**, with the usual diabetes team.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "If there are any concerns about insulin delivery via the pump, change to subcutaneous injections (in discussion with usual diabetes care team)",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  },
+  {
+   "claim": "**Where possible, consult the child's usual diabetes care team** about ongoing insulin adjustments.",
+   "source": "S1",
+   "verdict": "pass",
+   "source_text": "Where possible, consult the child's usual diabetes care team for advice regarding ongoing insulin adjustments",
+   "locator": "The Royal Children's Hospital Melbourne, Clinical Practice Guidelines: 'Diabetes mellitus: management of unwell children with established diabetes in hospital' (Last updated July 2025), at https://www.rch.org.au/clinicalguide/guideline_index/Diabetes_mellitus__management_of_unwell_children_with_established_diabetes_in_hospital/, retrieved 2026-09-23"
+  }
+ ]
+}
