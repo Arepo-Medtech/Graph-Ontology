@@ -1,6 +1,6 @@
 # SNOMED binding review queue
 
-**349 candidates at `snomed: null`.** Source `reference/snomed_candidates_review.json`. Nothing here is bound.
+**345 candidates at `snomed: null`.** Source `reference/snomed_candidates_review.json`. Nothing here is bound.
 
 > ### ⚠️ THE 'PLAUSIBLE' TIER IS NOT SAFE
 > The review file's own warning: *"Signals are LEXICAL triage, not verdicts. The 'plausible' tier
@@ -23,7 +23,7 @@
 **Order is by what evidence settles, cheapest first.** Tiers A–C were derived from the SNOMED
 hierarchy — parents sharing no concept with the condition — **not** from string similarity.
 
-**0 decided · 349 outstanding.**
+**0 decided · 345 outstanding.**
 
 ## Run order
 ```bash
@@ -198,7 +198,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 
 ## F. Hit is narrower than the condition
 
-*93 rows — check it is not a sub-type.*
+*90 rows — check it is not a sub-type.*
 
 | decision | condition | sha | top hit | its parents | flags | re-search | other hits |
 |---|---|---|---|---|---|---|---|
@@ -262,7 +262,6 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Myelodysplastic or myeloproliferative disorder | `c716493b` | `445738007` Myelodysplastic/myeloproliferative disease | Malignant haematopoietic neoplasm; Myeloproliferative disorder | narrower |  | 2 |
 |  | Myoclonic epilepsy | `90177632` | `6204001` Juvenile myoclonic epilepsy | Idiopathic generalised epilepsy | narrower |  | 2 |
 |  | Non-infectious uveitis | `b551484b` | `267619000` Non-infectious anterior uveitis | Anterior uveitis | narrower |  | 2 |
-|  | Non-small cell lung cancer | `3347f0f5` | `723301009` Squamous non-small cell lung cancer | Non-small cell lung carcinoma | narrower |  | 2 |
 |  | Opioid-induced constipation | `a8cd94fb` | `136801000119102` Therapeutic opioid induced constipation | Drug-induced constipation | narrower |  | 0 |
 |  | Oral herpes | `27c1581f` | `235058001` Oral mucosal herpes | Infection of skin and/or mucous membrane caused by Herpes simplex virus; Oral infection caused by herpes simplex virus | narrower |  | 2 |
 |  | Oral or labial herpes | `4a6b3b3c` | `235058001` Oral mucosal herpes | Infection of skin and/or mucous membrane caused by Herpes simplex virus; Oral infection caused by herpes simplex virus | narrower |  | 2 |
@@ -289,8 +288,6 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Terminal disease | `72c087c0` | `196977009` Crohn's disease of terminal ileum | Crohn's disease of ileum; Terminal ileitis | narrower |  | 2 |
 |  | Terminal malignant neoplasia | `5f6d3a30` | `94281000119101` Malignant multiple endocrine neoplasia type 2a | Multiple endocrine neoplasia, type 2 | narrower |  | 2 |
 |  | Transthyretin amyloid cardiomyopathy | `03a336dd` | `715655000` Transthyretin related familial amyloid cardiomyopathy | Cardiac familial non-neuropathic amyloidosis; Cardiovascular system hereditary disorder | narrower |  | 0 |
-|  | Triple negative breast cancer | `0d044a4e` | `706970001` Triple negative malignant neoplasm of breast | Hormone receptor negative malignant neoplasm of breast; Human epidermal growth factor 2 negative carcinoma of breast | narrower |  | 2 |
-|  | Triple-negative breast cancer | `461afe3d` | `706970001` Triple negative malignant neoplasm of breast | Hormone receptor negative malignant neoplasm of breast; Human epidermal growth factor 2 negative carcinoma of breast | narrower |  | 2 |
 |  | Uveal melanoma | `8698602f` | `1197334002` Malignant melanoma of uveal tract | Malignant melanoma of eye; Neoplasm of uveal tract | narrower |  | 1 |
 |  | Venous thromboembolism | `d0f013f9` | `1258883002` Thromboembolus of vein following surgical procedure | Postoperative complication; Thromboembolism of vein | narrower |  | 2 |
 |  | Venous ulcer | `94b0e26b` | `1332169003` Venous ulcer of ankle | Ankle ulcer; Venous ulcer of lower limb | narrower |  | 2 |
@@ -298,7 +295,7 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 
 ## G. ⚠️ 'Plausible' — THIS TIER IS NOT SAFE
 
-*128 rows — verify against the terminology.*
+*127 rows — verify against the terminology.*
 
 | decision | condition | sha | top hit | its parents | flags | re-search | other hits |
 |---|---|---|---|---|---|---|---|
@@ -350,7 +347,6 @@ python3 scripts/apply_corrections.py         # -> reference/snomed_bindings.json
 |  | Cows' milk protein enteropathy and intolerance to soy protein | `5e91a6bf` | `773579007` Congenital chronic diarrhoea with protein-losing enteropathy | Chronic diarrhoea of infants AND/OR young children; Congenital disease | — |  | 2 |
 |  | Cows' milk protein enteropathy with failure to thrive | `0cb55fe4` | `782555009` Cow's milk protein allergy | Allergy to cattle protein; Food allergy | — |  | 2 |
 |  | Cryopyrin associated periodic syndromes | `64cd72a5` | `430079001` Cryopyrin associated periodic syndrome | Hereditary periodic fever | — |  | 2 |
-|  | Differentiated thyroid cancer | `636b3e9b` | `786038001` Familial nonmedullary primary thyroid carcinoma | Familial neoplastic disease; Hereditary disorder of endocrine system | — |  | 0 |
 |  | Disorders of keratinisation | `111fd669` | `277905003` Disorder of keratinisation | Abnormal keratinisation; Disorder of body system | — |  | 2 |
 |  | Disseminated pulmonary histoplasmosis infection | `28226cd4` | `187054003` Pulmonary histoplasmosis | Fungal infection of lung; Histoplasmosis | — |  | 2 |
 |  | Drug interactions occurring with all of the base-priced drugs | `7f969307` | `404204005` Drug interaction with drug | Medicine interaction | — |  | 2 |

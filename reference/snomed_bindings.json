@@ -126,40 +126,18 @@
     },
     {
       "condition": "Non-small cell lung cancer",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "723301009",
-          "display": "Squamous non-small cell lung cancer",
-          "synonyms": [
-            "Squamous non-small cell lung cancer",
-            "Squamous non-small cell lung cancer (disorder)",
-            "Squamous NSCLC (non-small cell lung cancer)"
-          ]
-        },
-        {
-          "code": "1259754003",
-          "display": "Primary squamous non-small cell lung cancer",
-          "synonyms": [
-            "Primary squamous NSCLC (non-small cell lung cancer)",
-            "Primary squamous non-small cell lung cancer",
-            "Primary squamous non-small cell lung cancer (disorder)"
-          ]
-        },
-        {
-          "code": "427038005",
-          "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
-          "synonyms": [
-            "Non-small cell lung cancer, negative for epidermal growth factor receptor expression",
-            "Epidermal growth factor receptor negative non-small cell lung cancer",
-            "Non-small cell lung cancer, negative for epidermal growth factor receptor expression (disorder)",
-            "EGFR negative non-small cell lung cancer",
-            "EGF-R negative non-small cell lung cancer"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "254637007",
+        "display": "Non-small cell lung carcinoma",
+        "method": "restored_prior_binding",
+        "why": "Bound at SNOMED CT-AU 20260731 via exact_display; lost on the 20260831 re-run because display renamed 'Non-small cell lung cancer' -> 'Non-small cell lung carcinoma' in SNOMED CT-AU 20260831. The concept did not change meaning. Prior binding is in git at 54bf981.",
+        "ncts_validated_utc": "2026-09-23",
+        "ncts_version": "20260831",
+        "corrected_by": "restored on instruction, 2026-09-23",
+        "corrected_utc": "2026-09-23",
+        "state": "corrected_pending_attestation"
+      },
+      "query_tier": "full"
     },
     {
       "condition": "Multiple myeloma",
@@ -3466,22 +3444,18 @@
     },
     {
       "condition": "Differentiated thyroid cancer",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "786038001",
-          "display": "Familial nonmedullary primary thyroid carcinoma",
-          "synonyms": [
-            "Familial papillary or follicular thyroid carcinoma is a rare, hereditary nonmedullary thyroid carcinoma characterised by the presence of differentiated thyroid cancer of follicular cell origin in two or more first-degree relatives, in the absence of other familial tumour syndromes or radiation exposure. Frequent capsular invasion is observed. Biopsy reveals multicentric tumours with multiple adenomatous nodules with or without oxyphilia and follicular or papillary carcinoma histology.",
-            "Familial nonmedullary primary thyroid carcinoma",
-            "FNMTC - familial nonmedullary thyroid carcinoma",
-            "Familial nonmedullary primary thyroid carcinoma (disorder)",
-            "Familial papillary or follicular thyroid carcinoma is a rare, hereditary nonmedullary thyroid carcinoma characterized by the presence of differentiated thyroid cancer of follicular cell origin in two or more first-degree relatives, in the absence of other familial tumor syndromes or radiation exposure. Frequent capsular invasion is observed. Biopsy reveals multicentric tumors with multiple adenomatous nodules with or without oxyphilia and follicular or papillary carcinoma histology."
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "1255086008",
+        "display": "Differentiated thyroid carcinoma",
+        "method": "restored_prior_binding",
+        "why": "Bound at SNOMED CT-AU 20260731 via exact_synonym; lost on the 20260831 re-run because the matching synonym 'Differentiated thyroid cancer' was dropped in 20260831; display was already 'carcinoma'. The concept did not change meaning. Prior binding is in git at 54bf981.",
+        "ncts_validated_utc": "2026-09-23",
+        "ncts_version": "20260831",
+        "corrected_by": "restored on instruction, 2026-09-23",
+        "corrected_utc": "2026-09-23",
+        "state": "corrected_pending_attestation"
+      },
+      "query_tier": "full"
     },
     {
       "condition": "Chronic constipation",
@@ -6193,42 +6167,18 @@
     },
     {
       "condition": "Triple-negative breast cancer",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "706970001",
-          "display": "Triple negative malignant neoplasm of breast",
-          "synonyms": [
-            "Triple negative malignant neoplasm of breast",
-            "The absence of staining for oestrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-            "Hormone receptor negative and human epidermal growth factor receptor 2 negative malignant neoplasm of breast",
-            "The absence of staining for estrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-            "Triple negative malignant neoplasm of breast (disorder)"
-          ]
-        },
-        {
-          "code": "445180002",
-          "display": "Breast cancer genetic marker of susceptibility negative",
-          "synonyms": [
-            "Breast cancer genetic marker of susceptibility not detected",
-            "Breast cancer genetic marker of susceptibility negative",
-            "Breast cancer genetic marker of susceptibility not detected (finding)"
-          ]
-        },
-        {
-          "code": "254837009",
-          "display": "Malignant neoplasm of breast",
-          "synonyms": [
-            "Malignant neoplasm of breast (disorder)",
-            "Malignant tumour of breast",
-            "Breast cancer",
-            "Malignant neoplasm of breast",
-            "Malignant tumor of breast"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "706970001",
+        "display": "Triple negative malignant neoplasm of breast",
+        "method": "restored_prior_binding",
+        "why": "Bound at SNOMED CT-AU 20260731 via exact_synonym; lost on the 20260831 re-run because the matching synonym was dropped in 20260831; display unchanged. The concept did not change meaning. Prior binding is in git at 54bf981.",
+        "ncts_validated_utc": "2026-09-23",
+        "ncts_version": "20260831",
+        "corrected_by": "restored on instruction, 2026-09-23",
+        "corrected_utc": "2026-09-23",
+        "state": "corrected_pending_attestation"
+      },
+      "query_tier": "full"
     },
     {
       "condition": "Venous ulcer",
@@ -10279,42 +10229,18 @@
     },
     {
       "condition": "Triple negative breast cancer",
-      "snomed": null,
-      "method": "candidate_unconfirmed",
-      "query_tier": "full",
-      "candidates": [
-        {
-          "code": "706970001",
-          "display": "Triple negative malignant neoplasm of breast",
-          "synonyms": [
-            "Triple negative malignant neoplasm of breast",
-            "The absence of staining for oestrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-            "Hormone receptor negative and human epidermal growth factor receptor 2 negative malignant neoplasm of breast",
-            "The absence of staining for estrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-            "Triple negative malignant neoplasm of breast (disorder)"
-          ]
-        },
-        {
-          "code": "445180002",
-          "display": "Breast cancer genetic marker of susceptibility negative",
-          "synonyms": [
-            "Breast cancer genetic marker of susceptibility not detected",
-            "Breast cancer genetic marker of susceptibility negative",
-            "Breast cancer genetic marker of susceptibility not detected (finding)"
-          ]
-        },
-        {
-          "code": "254837009",
-          "display": "Malignant neoplasm of breast",
-          "synonyms": [
-            "Malignant neoplasm of breast (disorder)",
-            "Malignant tumour of breast",
-            "Breast cancer",
-            "Malignant neoplasm of breast",
-            "Malignant tumor of breast"
-          ]
-        }
-      ]
+      "snomed": {
+        "concept_id": "706970001",
+        "display": "Triple negative malignant neoplasm of breast",
+        "method": "restored_prior_binding",
+        "why": "Bound at SNOMED CT-AU 20260731 via normalised_synonym; lost on the 20260831 re-run because the matching synonym was dropped in 20260831; display unchanged. The concept did not change meaning. Prior binding is in git at 54bf981.",
+        "ncts_validated_utc": "2026-09-23",
+        "ncts_version": "20260831",
+        "corrected_by": "restored on instruction, 2026-09-23",
+        "corrected_utc": "2026-09-23",
+        "state": "corrected_pending_attestation"
+      },
+      "query_tier": "full"
     },
     {
       "condition": "Stage IIIB, Stage IIIC or Stage IIID malignant melanoma",
@@ -15151,5 +15077,5 @@
       ]
     }
   ],
-  "human_corrections_applied": 1
+  "human_corrections_applied": 5
 }

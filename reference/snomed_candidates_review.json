@@ -1,7 +1,7 @@
 {
   "note": "Review queue. Hierarchy-enriched, triaged, quarantined items first. Nothing auto-bound.",
   "warning": "Signals are LEXICAL triage, not verdicts. The 'plausible' tier is NOT safe: of 16 quarantined pregnancy candidates reviewed by hand, 6 carried no flag at all and every one was wrong.",
-  "count": 349,
+  "count": 345,
   "quarantined": 15,
   "wrong_hierarchy": 7,
   "candidates": [
@@ -10512,58 +10512,6 @@
       ]
     },
     {
-      "condition": "Non-small cell lung cancer",
-      "top_hit": {
-        "code": "723301009",
-        "display": "Squamous non-small cell lung cancer",
-        "synonyms": [
-          "Squamous non-small cell lung cancer",
-          "Squamous non-small cell lung cancer (disorder)",
-          "Squamous NSCLC (non-small cell lung cancer)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "254637007",
-          "display": "Non-small cell lung carcinoma"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "Squamous"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "1259754003",
-          "display": "Primary squamous non-small cell lung cancer",
-          "synonyms": [
-            "Primary squamous NSCLC (non-small cell lung cancer)",
-            "Primary squamous non-small cell lung cancer",
-            "Primary squamous non-small cell lung cancer (disorder)"
-          ]
-        },
-        {
-          "code": "427038005",
-          "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
-          "synonyms": [
-            "Non-small cell lung cancer, negative for epidermal growth factor receptor expression",
-            "Epidermal growth factor receptor negative non-small cell lung cancer",
-            "Non-small cell lung cancer, negative for epidermal growth factor receptor expression (disorder)",
-            "EGFR negative non-small cell lung cancer",
-            "EGF-R negative non-small cell lung cancer"
-          ]
-        }
-      ]
-    },
-    {
       "condition": "Opioid-induced constipation",
       "top_hit": {
         "code": "136801000119102",
@@ -11974,124 +11922,6 @@
       "pregnancy": false,
       "suggested_action": "hit is narrower — check it is not a sub-type",
       "other_hits": []
-    },
-    {
-      "condition": "Triple negative breast cancer",
-      "top_hit": {
-        "code": "706970001",
-        "display": "Triple negative malignant neoplasm of breast",
-        "synonyms": [
-          "Triple negative malignant neoplasm of breast",
-          "The absence of staining for oestrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-          "Hormone receptor negative and human epidermal growth factor receptor 2 negative malignant neoplasm of breast",
-          "The absence of staining for estrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-          "Triple negative malignant neoplasm of breast (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "1388692009",
-          "display": "Hormone receptor negative malignant neoplasm of breast"
-        },
-        {
-          "code": "431396003",
-          "display": "Human epidermal growth factor 2 negative carcinoma of breast"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "malignant",
-          "neoplasm"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "445180002",
-          "display": "Breast cancer genetic marker of susceptibility negative",
-          "synonyms": [
-            "Breast cancer genetic marker of susceptibility not detected",
-            "Breast cancer genetic marker of susceptibility negative",
-            "Breast cancer genetic marker of susceptibility not detected (finding)"
-          ]
-        },
-        {
-          "code": "254837009",
-          "display": "Malignant neoplasm of breast",
-          "synonyms": [
-            "Malignant neoplasm of breast (disorder)",
-            "Malignant tumour of breast",
-            "Breast cancer",
-            "Malignant neoplasm of breast",
-            "Malignant tumor of breast"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "Triple-negative breast cancer",
-      "top_hit": {
-        "code": "706970001",
-        "display": "Triple negative malignant neoplasm of breast",
-        "synonyms": [
-          "Triple negative malignant neoplasm of breast",
-          "The absence of staining for oestrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-          "Hormone receptor negative and human epidermal growth factor receptor 2 negative malignant neoplasm of breast",
-          "The absence of staining for estrogen receptor, progesterone receptor, and hormone epidermal growth factor receptor 2 (HER2/neu).",
-          "Triple negative malignant neoplasm of breast (disorder)"
-        ]
-      },
-      "parents": [
-        {
-          "code": "1388692009",
-          "display": "Hormone receptor negative malignant neoplasm of breast"
-        },
-        {
-          "code": "431396003",
-          "display": "Human epidermal growth factor 2 negative carcinoma of breast"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": true,
-        "adds_words": [
-          "malignant",
-          "neoplasm"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": false,
-      "suggested_action": "hit is narrower — check it is not a sub-type",
-      "other_hits": [
-        {
-          "code": "445180002",
-          "display": "Breast cancer genetic marker of susceptibility negative",
-          "synonyms": [
-            "Breast cancer genetic marker of susceptibility not detected",
-            "Breast cancer genetic marker of susceptibility negative",
-            "Breast cancer genetic marker of susceptibility not detected (finding)"
-          ]
-        },
-        {
-          "code": "254837009",
-          "display": "Malignant neoplasm of breast",
-          "synonyms": [
-            "Malignant neoplasm of breast (disorder)",
-            "Malignant tumour of breast",
-            "Breast cancer",
-            "Malignant neoplasm of breast",
-            "Malignant tumor of breast"
-          ]
-        }
-      ]
     },
     {
       "condition": "Uveal melanoma",
@@ -15059,58 +14889,6 @@
           ]
         }
       ]
-    },
-    {
-      "condition": "Differentiated thyroid cancer",
-      "top_hit": {
-        "code": "786038001",
-        "display": "Familial nonmedullary primary thyroid carcinoma",
-        "synonyms": [
-          "Familial papillary or follicular thyroid carcinoma is a rare, hereditary nonmedullary thyroid carcinoma characterised by the presence of differentiated thyroid cancer of follicular cell origin in two or more first-degree relatives, in the absence of other familial tumour syndromes or radiation exposure. Frequent capsular invasion is observed. Biopsy reveals multicentric tumours with multiple adenomatous nodules with or without oxyphilia and follicular or papillary carcinoma histology.",
-          "Familial nonmedullary primary thyroid carcinoma",
-          "FNMTC - familial nonmedullary thyroid carcinoma",
-          "Familial nonmedullary primary thyroid carcinoma (disorder)",
-          "Familial papillary or follicular thyroid carcinoma is a rare, hereditary nonmedullary thyroid carcinoma characterized by the presence of differentiated thyroid cancer of follicular cell origin in two or more first-degree relatives, in the absence of other familial tumor syndromes or radiation exposure. Frequent capsular invasion is observed. Biopsy reveals multicentric tumors with multiple adenomatous nodules with or without oxyphilia and follicular or papillary carcinoma histology."
-        ]
-      },
-      "parents": [
-        {
-          "code": "55352002",
-          "display": "Familial neoplastic disease"
-        },
-        {
-          "code": "363104002",
-          "display": "Hereditary disorder of endocrine system"
-        },
-        {
-          "code": "448216007",
-          "display": "Malignant epithelial neoplasm of thyroid"
-        },
-        {
-          "code": "724554001",
-          "display": "Primary malignant epithelial neoplasm of endocrine gland"
-        },
-        {
-          "code": "94098005",
-          "display": "Primary malignant neoplasm of thyroid gland"
-        }
-      ],
-      "signals": {
-        "off_domain": false,
-        "parents_unrelated": false,
-        "parent_better": false,
-        "narrower": false,
-        "adds_words": [
-          "Familial",
-          "nonmedullary",
-          "primary",
-          "carcinoma"
-        ]
-      },
-      "intervention": false,
-      "pregnancy": false,
-      "suggested_action": "plausible — confirm",
-      "other_hits": []
     },
     {
       "condition": "Disorders of keratinisation",
