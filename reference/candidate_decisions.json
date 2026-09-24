@@ -26,5 +26,787 @@
    "question": "the SNOMED CT body structure for this RadLex term"
   }
  },
- "decisions": []
+ "decisions": [
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "111794-4"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273256000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "112441-1"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "715816003"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "48542-5"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273481004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "48543-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273481004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "55757-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1359725005"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "58120-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1359725005"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "69724-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "865935003"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "69737-5"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "704501007"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "70221-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "481281000000100"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different version (PCL-C vs PCL-5)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71354-5"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273441006"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71935-1"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "3361000175104"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71936-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "3351000175101"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71939-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1287376009"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71941-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1184051000168106"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71942-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "736042002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71942-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "736043007"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different version (CRAFFT vs CRAFFT 2.0)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71944-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273608000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71947-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1137327001"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71950-0"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273510007"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "71952-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1037361000168104"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different instrument (Child Development Inventory vs MacArthur-Bates CDI)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "72088-8"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273367002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "72091-2"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "782845000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "72107-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273617000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "72110-0"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273265007"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "73790-8"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1287355004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "75842-5"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273364009"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different instrument (Clinical Disease Activity Index, rheumatoid, vs Crohn's Disease Activity Index)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "77582-5"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "82226-2"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1165611000168100"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "82664-4"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273426006"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "82813-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "715816003"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "82954-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "718646004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "85102-2"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "865932000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "86933-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "713863004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "86946-1"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "713863004"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88379-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88380-1"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88388-4"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88402-3"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88412-2"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "88434-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382098002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "89210-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273306008"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "89211-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273306008"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: narrower instrument (BDI Fast Screen vs the Beck Depression Inventory)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "89862-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "719128001"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "90982-0"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1259216002"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "91642-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273597006"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different instrument (MOS Social Support Survey vs MOS SF-36)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "91642-9"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "273598001"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: different instrument (MOS Social Support Survey vs MOS SF-20)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "98093-8"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1053531000168107"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "99574-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1182621000168102"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "44261-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "720433000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "55758-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1359723003"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "70272-0"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1359726006"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "70274-6"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "445455005"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "77565-0"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "443223005"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-24",
+   "note": "not the same: subscale (BPI pain interference score vs the BPI score)"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "77595-7"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "1382099005"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  },
+  {
+   "queue": "survey_instruments",
+   "subject": {
+    "vocab": "LOINC",
+    "code": "90981-2"
+   },
+   "object": {
+    "vocab": "SCT",
+    "code": "421030009"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-24"
+  }
+ ]
 }

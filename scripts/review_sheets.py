@@ -27,7 +27,7 @@ from pathlib import Path
 
 DECISIONS = Path("reference/candidate_decisions.json")
 SHEETS = Path("out/review")
-COLS = ["queue", "subject_vocab", "subject_code", "subject_name", "rank", "object_vocab", "object_code", "object_name", "first_reading",
+COLS = ["id", "queue", "subject_vocab", "subject_code", "subject_name", "rank", "object_vocab", "object_code", "object_name", "first_reading",
         "decision", "note"]
 # queue -> (predicate an accepted decision loads as, what the reviewer decides)
 QUEUES = {
@@ -114,7 +114,9 @@ def make(a) -> int:
             w = csv.writer(f)
             w.writerow(COLS)
             for r in rows:
-                w.writerow(list(r) + ["", ""])
+                # the id carries every code as text: a spreadsheet turns a long SNOMED CT id in a number column into
+                # 3.361E+12, so the harvest reads the codes from here
+                w.writerow(["|".join((r[0], r[1], r[2], r[5], r[6]))] + list(r) + ["", ""])
         print(f"  {q:<20} {len(rows):>6} rows, {len({r[2] for r in rows}):>5} subjects -> {SHEETS / (q + '.csv')}   ({QUEUES[q][1]})")
     return 0
 
@@ -126,15 +128,23 @@ def harvest(a) -> int:
     have = {key(d): i for i, d in enumerate(dec["decisions"])}
     added, changed = 0, 0
     for sheet in sorted(SHEETS.glob("*.csv")):
-        for r in csv.DictReader(open(sheet)):
+        for r in csv.DictReader(open(sheet, encoding="utf-8-sig")):
             v = (r.get("decision") or "").strip().lower()
             if not v:
                 continue
             if v not in ("y", "yes", "n", "no", "none"):
                 print(f"  skipped {sheet.name}: decision {v!r} for {r['subject_code']} (use y / n / none)", file=sys.stderr)
                 continue
-            d = {"queue": r["queue"], "subject": {"vocab": r["subject_vocab"], "code": r["subject_code"]},
-                 "object": None if v == "none" else {"vocab": r["object_vocab"], "code": r["object_code"]},
+            if r.get("id"):
+                q_, sv_, sc_, ov_, oc_ = r["id"].split("|")
+            else:                         # a sheet written before the id column: refuse codes a spreadsheet has reformatted
+                q_, sv_, sc_, ov_, oc_ = r["queue"], r["subject_vocab"], r["subject_code"], r["object_vocab"], r["object_code"]
+                if any("e+" in x.lower() for x in (sc_, oc_)):
+                    print(f"  skipped {sheet.name}: a code was reformatted by the spreadsheet ({sc_} / {oc_}); run `make` again",
+                          file=sys.stderr)
+                    continue
+            d = {"queue": q_, "subject": {"vocab": sv_, "code": sc_},
+                 "object": None if v == "none" else {"vocab": ov_, "code": oc_},
                  "decision": {"y": "accept", "yes": "accept", "n": "reject", "no": "reject", "none": "none"}[v],
                  "reviewer": a.reviewer, "date": date, **({"note": r["note"].strip()} if (r.get("note") or "").strip() else {})}
             k = key(d)
