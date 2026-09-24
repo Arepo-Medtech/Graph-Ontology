@@ -633,6 +633,35 @@ def main() -> int:
                       AND w.s_code = m.o_code WHERE m.predicate = 'mondo:exact_match' AND m.o_vocab = 'ICD11')""").fetchone()))
         report["who:ICD-10 <-> ICD-11 (WHO mapping tables 2026-01)"] = w
 
+    # --- UMLS Metathesaurus shared-CUI pairs: a tier per vocabulary pair ---------------------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:shared_cui'").fetchone()[0]:
+        uh = Path("cache/umls/umls_shared_cui_handcheck.json")       # UMLS-derived: git-ignored
+        sc = json.load(open(uh))["scored"] if uh.exists() else []
+        fam = {}
+        for m in sorted({r["method"] for r in sc}):
+            rs = [r for r in sc if r["method"] == m]
+            k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+            fam[m] = (k, n, "hand check")
+        # HGNC -> OMIM: HGNC's own cross-references are the witness
+        k, n = con.execute("""WITH u AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'umls:shared_cui' AND method = 'HGNC-OMIM same name'),
+                                   x AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
+                              SELECT count(*) FILTER (WHERE (h, o) IN (SELECT h, o FROM x)), count(*) FILTER (WHERE h IN (SELECT h FROM x)) FROM u""").fetchone()
+        if n:
+            fam["HGNC-OMIM same name"] = (k, n, "agreement with HGNC's own OMIM cross-reference")
+        by = {}
+        for m, e in con.execute("SELECT method, count(*) FROM edge WHERE predicate = 'umls:shared_cui' GROUP BY 1 ORDER BY 2 DESC").fetchall():
+            if m in fam:
+                k, n, how = fam[m]
+                lo, _ = wilson(k, n)
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = 'umls:shared_cui' AND method = ?", [tier(lo, n), m])
+                by[m] = {"edges": e, "checked": n, "correct": k, "how": how, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+            else:
+                by[m] = {"edges": e, "earned_tier": "ungraded (no hand check yet)"}
+        report["route:UMLS shared CUI (MRCONSO 2026AA), by vocabulary pair"] = {
+            "families": by,
+            "candidates_names_differ": con.execute("SELECT edges FROM build_log WHERE family LIKE 'UMLS shared CUI, names differ%'").fetchone(),
+            "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v)}
+
     # --- SNOMED CT-AU reference sets: how much of each set reaches beyond SNOMED ----------------------------------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:in_refset'").fetchone()[0]:
         con.execute("""CREATE TEMP TABLE sct_out AS SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT'

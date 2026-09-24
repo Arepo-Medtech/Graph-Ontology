@@ -60,6 +60,7 @@ MBS_XML = Path("cache/mbs/MBS-XML-20260801.XML")          # MBS Online, Departme
 UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/uberon/uberon.sssom.tsv")   # Uberon v2026-06-23
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
 RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
+UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
 LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
 RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
@@ -170,7 +171,7 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "umls_rel": "UMLS 2026AA MRCONSO", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
        "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
@@ -218,7 +219,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
-            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI,
+            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
             "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt"}
 
@@ -1177,6 +1178,25 @@ def main() -> int:
         log["likelihood-ratio records bound but held as candidates (family not admitted)"] = held
         print(f"  {'LR records held (binding family not admitted)':<44} {held:>10,}   admitted: {sorted(admitted)}", flush=True)
 
+    # --- UMLS Metathesaurus: codes of two graph vocabularies under one CUI (UMLS 2026AA, the licence holder's copy) ---
+    # Same-name pairs load (the HPO rule: the two sources share a name for the concept); pairs whose names differ are
+    # candidates, counted here and kept in the parquet. HPO -> SNOMED and SNOMED organism -> NCBI Taxonomy have their own
+    # UMLS loaders above and are not repeated. Each vocabulary pair is tiered by its own hand check (graph_report.py).
+    if UMLS_PAIRS.exists():
+        own = "('HP-SCT', 'NCBITAXON-SCT')"
+        # last of the loaders: a pair loads only if one of its codes is already a node, so nothing arrives detached
+        con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
+        con.execute(f"""CREATE TEMP TABLE up AS SELECT u.* FROM '{UMLS_PAIRS}' u
+                        WHERE (u.sv, u.sc) IN (SELECT v, c FROM present) OR (u.ov, u.oc) IN (SELECT v, c FROM present)""")
+        ins("UMLS shared CUI, same name (MRCONSO 2026AA)", f"""SELECT DISTINCT sv, sc, 'umls:shared_cui', ov, oc, 'UMLS', 'MRCONSO 2026AA CUI ' || cui,
+                sv || '-' || ov || ' same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
+                json_object('cui', cui, 'shared_name', shared_name)
+            FROM up WHERE same_name AND sv || '-' || ov NOT IN {own}""")
+        log["UMLS shared CUI, names differ (candidates in cache/umls/umls_shared_cui.parquet, not edges)"] = con.execute(
+            f"SELECT count(*) FROM up WHERE NOT same_name AND sv || '-' || ov NOT IN {own}").fetchone()[0]
+        umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
+                                    UNION ALL SELECT ov, oc, any_value(o_name) FROM up WHERE same_name GROUP BY 1, 2""").fetchall()
+
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
     # LOINC targets in other extensions). Only the nearest level is kept; ties keep all.
@@ -1257,6 +1277,12 @@ def main() -> int:
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
+    if UMLS_PAIRS.exists():      # a UMLS name only where no source of the node's own vocabulary names it
+        con.execute("CREATE TEMP TABLE umls_names (vocab VARCHAR, code VARCHAR, name VARCHAR)")
+        con.executemany("INSERT INTO umls_names VALUES (?, ?, ?)", umls_names)
+        con.execute("""INSERT INTO name_hint SELECT DISTINCT u.vocab, u.code, u.name FROM umls_names u
+                       WHERE (u.vocab, u.code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> ''
+                                                         AND name <> vocab || ':' || code)""")
     if HGNC_SET.exists():
         con.execute("CREATE TEMP TABLE hgnc_names (vocab VARCHAR, code VARCHAR, name VARCHAR)")
         con.executemany("INSERT INTO hgnc_names VALUES (?, ?, ?)", hgnc_names)
