@@ -862,6 +862,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 #   --allow-missing NAME builds without one on purpose and records it in build_log
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
 .venv/bin/python scripts/graph_report.py          # scores the linkage routes, sets their tiers, writes out/graph_report.json
+.venv/bin/python scripts/consistency.py           # ~10 s: equivalence clusters, one-to-one conflicts, bridge edges (docs/consistency.md)
 .venv/bin/python scripts/completeness.py          # ~1 min: completeness by group, absent members classed (docs/completeness.md);
 #   exits 1 if a cell's present share fell against reference/completeness_baseline.json (--set-baseline to accept)
 ```

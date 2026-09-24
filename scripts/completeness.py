@@ -159,15 +159,20 @@ def current_statements() -> list[tuple]:
     for path, own in ((MONDO_OBO, "MONDO"), (HP_OBO, "HP")):
         if not path.exists():
             continue
-        cur = None
+        cur, got, obsolete = None, [], set()      # an obsolete class's cross-references are not a current statement
         for line in open(path, encoding="utf-8"):
-            if line.startswith("id: "):
+            if line.startswith("[Term]"):
+                cur = None
+            elif line.startswith("id: "):
                 cur = line[4:].strip()
+            elif line.startswith("is_obsolete: true") and cur:
+                obsolete.add(cur)
             elif line.startswith("xref: ") and cur:
                 ref = line[6:].split(" ")[0]
                 pre, _, loc = ref.partition(":")
                 if pre in OBO_V and loc:
-                    out.append((own, cur, OBO_V[pre], ("MONDO:" + loc) if OBO_V[pre] == "MONDO" else loc))
+                    got.append((own, cur, OBO_V[pre], ("MONDO:" + loc) if OBO_V[pre] == "MONDO" else loc))
+        out += [r for r in got if r[1] not in obsolete]
     if ORPHA_XML.exists():
         import xml.etree.ElementTree as ET
         for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
@@ -344,6 +349,9 @@ def main() -> int:
         BASELINE.write_text(json.dumps({f"{c['group']} | {c['expectation']}": {"members": c["members"], "present": c["present"],
                                         "present_share": c["present_share"]} for c in cells}, indent=1) + "\n")
         print(f"baseline written: {BASELINE}")
+        if flagged:
+            print("accepted as the new baseline:\n  " + "\n  ".join(flagged))
+        return 0
     if flagged:
         print("GUARD -- present share dropped:\n  " + "\n  ".join(flagged), file=sys.stderr)
         return 1

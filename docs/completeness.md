@@ -87,7 +87,7 @@ Class counts are scaled from the sample to the cell's absent members; the interv
    `equivalentObsolete` cross-references (705 of 706 point at retired Orphanet entries) say exactly that — and the rest
    already reach MONDO in two exact steps (Orphanet ≡ OMIM entry ≡ MONDO disease) that the measure did not follow.
    Retired Orphanet entries are now *not applicable* (535), and Orphanet's narrower / broader alignments end a walk
-   unless they classify to an ICD code. Active Orphanet entries reaching MONDO: **97.0%**, no held gap left.
+   unless they classify to an ICD code. Active Orphanet entries reaching MONDO: 97.0%, no held gap left — then **93.5%** once obsolete MONDO classes stopped counting (docs/consistency.md): the rest are MONDO's links on retired classes, now unknown.
 5. **PBS ingredient → mechanism and → indication — witnesses added.** MED-RT's held-back families now have a second
    witness where DrugCentral agrees: *may treat* corroborated by DrugCentral's label indications (3,176 edges, 34/34,
    Tier 2) and *mechanism of action* corroborated by DrugCentral's MeSH pharmacological actions (249 edges, 33/34,

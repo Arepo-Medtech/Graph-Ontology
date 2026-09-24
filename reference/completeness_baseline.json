@@ -6,7 +6,7 @@
  },
  "Problem/Diagnosis | ICD-11": {
   "members": 133021,
-  "present": 112259,
+  "present": 112258,
   "present_share": 0.8439
  },
  "Problem/Diagnosis | ICD-10-CM": {
@@ -16,12 +16,12 @@
  },
  "Problem/Diagnosis disorders | MONDO": {
   "members": 92797,
-  "present": 12780,
-  "present_share": 0.1377
+  "present": 12668,
+  "present_share": 0.1365
  },
  "Problem/Diagnosis disorders | HPO phenotype": {
   "members": 92797,
-  "present": 5418,
+  "present": 5416,
   "present_share": 0.0584
  },
  "ED principal diagnosis | ICD-10 (WHO)": {
@@ -31,8 +31,8 @@
  },
  "ED principal diagnosis | ICD-11": {
   "members": 91551,
-  "present": 89157,
-  "present_share": 0.9739
+  "present": 89156,
+  "present_share": 0.9738
  },
  "ED principal diagnosis | CCSR category": {
   "members": 91551,
@@ -96,33 +96,33 @@
  },
  "HPO phenotypes in use | SNOMED CT": {
   "members": 11560,
-  "present": 3663,
-  "present_share": 0.3169
+  "present": 3620,
+  "present_share": 0.3131
  },
  "Orphanet disorders | ICD-10 (WHO)": {
-  "members": 9886,
+  "members": 9882,
   "present": 7621,
-  "present_share": 0.7709
+  "present_share": 0.7712
  },
  "Orphanet disorders | ICD-11": {
-  "members": 9886,
-  "present": 7998,
-  "present_share": 0.809
+  "members": 9882,
+  "present": 7997,
+  "present_share": 0.8092
  },
  "Orphanet disorders | OMIM": {
-  "members": 9886,
-  "present": 4982,
-  "present_share": 0.5039
+  "members": 9882,
+  "present": 4981,
+  "present_share": 0.504
  },
  "Orphanet disorders | MONDO": {
-  "members": 9886,
-  "present": 9592,
-  "present_share": 0.9703
+  "members": 9882,
+  "present": 9245,
+  "present_share": 0.9355
  },
  "Orphanet disorders | SNOMED CT": {
-  "members": 9886,
-  "present": 7055,
-  "present_share": 0.7136
+  "members": 9882,
+  "present": 7049,
+  "present_share": 0.7133
  },
  "Orphanet disorders (disorder or subtype level) | ICD-10 (WHO)": {
   "members": 7751,
@@ -130,14 +130,14 @@
   "present_share": 0.9667
  },
  "Orphanet disorders | gene": {
-  "members": 9886,
+  "members": 9882,
   "present": 4243,
-  "present_share": 0.4292
+  "present_share": 0.4294
  },
  "Orphanet disorders | HPO phenotype": {
-  "members": 9886,
+  "members": 9882,
   "present": 4355,
-  "present_share": 0.4405
+  "present_share": 0.4407
  },
  "MBS items | SNOMED CT procedure": {
   "members": 6046,

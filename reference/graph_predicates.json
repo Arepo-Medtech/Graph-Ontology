@@ -1689,12 +1689,12 @@
         "ORPHA",
         "ICD10WHO"
       ],
-      "category": "identity",
+      "category": "classification",
       "derivation": "lookup",
       "strength_kind": "exact",
       "source": "hp.obo (HPO 2026-09-02) xref",
       "status": "built",
-      "note": "HPO's own xrefs; few, and not all exact (an xref can be a close match). MedDRA left out (MSSO licence)."
+      "note": "HPO's own xrefs; few, and not all exact (an xref can be a close match). MedDRA left out (MSSO licence). Classed as classification, not identity, 24 Sep 2026: HPO's own cross-references are often to a broader concept (Testicular teratoma -> NCIt Teratoma, Cutaneous melanoma -> Melanoma, Neoplasm of the lung -> Neoplasm), and walked as identity they merged distinct phenotypes into one equivalence cluster (scripts/consistency.py). Walked forward only."
     },
     {
       "id": "loinc:sct_concept",
