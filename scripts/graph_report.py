@@ -861,6 +861,21 @@ def main() -> int:
                                                   "share": w2[0] and round(w2[1] / w2[0], 3)},
             "tier": "native: each map is its publisher's own assertion (SNOMED International; NLM)"}
 
+    # --- equivalence edges that bridge a one-to-one conflict, hand-checked (scripts/consistency.py) -------------------
+    bh = Path("cache/consistency/bridge_handcheck.json")          # licensed codes and names: git-ignored
+    if bh.exists():
+        bs = json.load(open(bh))["scored"]
+        bad = [(r["s"], r["o"], r["predicate"]) for r in bs if r["verdict"] != "correct"]
+        for s_, o_, p_ in bad:
+            con.execute("""UPDATE edge SET state = 'rejected' WHERE predicate = ? AND ((s_vocab || ':' || s_code = ? AND o_vocab || ':' || o_code = ?)
+                           OR (s_vocab || ':' || s_code = ? AND o_vocab || ':' || o_code = ?))""", [p_, s_, o_, o_, s_])
+        rnd = [r for r in bs if r["sample"].startswith("30 random")]
+        report["consistency:bridge hand check"] = {
+            "checked": len(bs), "wrong_rejected_by_name": len(bad),
+            "random_umls_bridges": {"checked": len(rnd), "correct": sum(r["verdict"] == "correct" for r in rnd),
+                                    "on_one_conflict_path": [sum(r["verdict"] == "correct" for r in rnd if r["paths"] == 1), sum(r["paths"] == 1 for r in rnd)],
+                                    "on_two_or_more": [sum(r["verdict"] == "correct" for r in rnd if r["paths"] > 1), sum(r["paths"] > 1 for r in rnd)]}}
+
     # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
     # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
     keys = [k for (k,) in con.execute("SELECT key FROM node").fetchall()]

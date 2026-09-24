@@ -643,8 +643,14 @@ def main() -> int:
                   # MONDO's other exact matches (MedDRA left out: MSSO-licensed)
                   "DOID": "DOID", "NCIT": "NCIT", "mesh": "MESH", "icd11.foundation": "ICD11", "EFO": "EFO", "UMLS": "UMLS",
                   "MEDGEN": "MEDGEN", "ICD10WHO": "ICD10WHO", "OMIMPS": "OMIMPS"}
-        sssom = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
-                 if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
+        # an obsolete MONDO class keeps its mappings in the SSSOM file (1,790 of them carried 2,168 exact matches), and as
+        # equivalences they joined a retired class to what replaced it -- found by scripts/consistency.py; only active
+        # classes load
+        live = {t["id"] for t in mt}
+        sssom_all = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
+                     if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
+        sssom = [r for r in sssom_all if r["subject_id"] in live]
+        log["MONDO exactMatch: not loaded, obsolete MONDO class"] = len(sssom_all) - len(sssom)
         con.executemany("INSERT INTO name_hint VALUES (?, ?, ?)",
                         [("MONDO", r["subject_id"], r.get("subject_label")) for r in sssom] +
                         [(prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1], r.get("object_label")) for r in sssom
@@ -1339,6 +1345,19 @@ def main() -> int:
         log["UMLS shared CUI: pairs dropped, SNOMED code not active in SNOMED CT-AU"] = con.execute("""SELECT count(*) FROM up
             WHERE (sv = 'SCT' AND sc NOT IN (SELECT id FROM cmp.concept)) OR (ov = 'SCT' AND oc NOT IN (SELECT id FROM cmp.concept))""").fetchone()[0]
         con.execute("""DELETE FROM up WHERE (sv = 'SCT' AND sc NOT IN (SELECT id FROM cmp.concept)) OR (ov = 'SCT' AND oc NOT IN (SELECT id FROM cmp.concept))""")
+        # Two more pair rules, from the equivalence-cluster check (scripts/consistency.py): an NCIt fusion gene
+        # ("ETV6/PDGFRB Fusion Gene") is neither partner, though OMIM's gene entries list fusion names as synonyms; and an
+        # OMIM susceptibility entry lists the phenotypes it predisposes to as synonyms ("Multiple system atrophy 1,
+        # susceptibility to" -> "Orthostatic hypotension"), so it pairs only with a concept that is itself a susceptibility.
+        log["UMLS shared CUI: pairs dropped, NCIt fusion gene with an OMIM gene entry"] = con.execute("""SELECT count(*) FROM up
+            WHERE ((sv = 'NCIT' AND s_name ILIKE '%fusion gene%' AND ov = 'OMIM') OR (ov = 'NCIT' AND o_name ILIKE '%fusion gene%' AND sv = 'OMIM'))""").fetchone()[0]
+        con.execute("""DELETE FROM up WHERE (sv = 'NCIT' AND s_name ILIKE '%fusion gene%' AND ov = 'OMIM')
+                                         OR (ov = 'NCIT' AND o_name ILIKE '%fusion gene%' AND sv = 'OMIM')""")
+        sus = """(sv = 'OMIM' AND s_name ILIKE '%susceptib%' AND o_name NOT ILIKE '%susceptib%')
+                 OR (ov = 'OMIM' AND o_name ILIKE '%susceptib%' AND s_name NOT ILIKE '%susceptib%')"""
+        log["UMLS shared CUI: pairs dropped, OMIM susceptibility entry with a non-susceptibility concept"] = con.execute(
+            f"SELECT count(*) FROM up WHERE {sus}").fetchone()[0]
+        con.execute(f"DELETE FROM up WHERE {sus}")
         ins("UMLS shared CUI, same name (MRCONSO 2026AA)", f"""SELECT DISTINCT sv, sc, 'umls:shared_cui', ov, oc, 'UMLS', 'MRCONSO 2026AA CUI ' || cui,
                 sv || '-' || ov || ' same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('cui', cui, 'shared_name', shared_name)
