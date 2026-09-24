@@ -1,0 +1,1804 @@
+{
+ "_note": "First reading of the PBS indication-text candidates (Claude, 24 Sep 2026), for the reviewer: per indication (indication_prescribing_txt_id) and candidate SNOMED CT concept. Readings: likely the match / the condition treated or prevented / one of the conditions named / closest but not exact / narrower / broader / a different condition / not a condition; '-- no candidate fits the whole indication' marks an indication to answer 'none'. A reading, not a decision.",
+ "summary": {
+  "a likely match": 111,
+  "no candidate fits": 164,
+  "closest only": 20
+ },
+ "readings": {
+  "7597": {
+   "254915003": "likely the match",
+   "734015000": "a different condition",
+   "1187285005": "narrower (a subtype)",
+   "764961009": "narrower (a subtype)",
+   "1260056000": "a different condition"
+  },
+  "7710": {
+   "735452003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1171357005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "717947009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1153353002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "267517008": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "7711": {
+   "191142007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "735452003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "52565000": "a different condition -- no candidate fits the whole indication",
+   "1171357005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "717947009": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "7754": {
+   "878807001": "a different condition",
+   "427685000": "likely the match",
+   "1259803007": "a different condition",
+   "445333001": "a different condition",
+   "254837009": "broader"
+  },
+  "7771": {
+   "314002005": "a different condition",
+   "236570004": "the condition treated or prevented: likely the match",
+   "86825002": "a different condition",
+   "420505005": "a different condition",
+   "421187003": "a different condition"
+  },
+  "7841": {
+   "718610008": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "763369007": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1373768001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1187614006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "719513008": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "7851": {
+   "783097004": "a different condition -- no candidate fits the whole indication",
+   "1237181009": "a different condition -- no candidate fits the whole indication",
+   "721148005": "a different condition -- no candidate fits the whole indication",
+   "785808002": "a different condition -- no candidate fits the whole indication"
+  },
+  "7876": {
+   "75971007": "broader",
+   "1231273008": "a different condition",
+   "1231255005": "a different condition",
+   "733124000": "a different condition",
+   "1231614004": "likely the match"
+  },
+  "7902": {
+   "1119239006": "closest, but not exact -- no candidate fits the whole indication",
+   "1258883002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "429098002": "closest, but not exact -- no candidate fits the whole indication",
+   "711328005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "699035003": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "7984": {
+   "14651005": "closest, but not exact -- no candidate fits the whole indication",
+   "404647000": "a different condition -- no candidate fits the whole indication",
+   "234426009": "a different condition -- no candidate fits the whole indication",
+   "403647006": "a different condition -- no candidate fits the whole indication",
+   "403651008": "a different condition -- no candidate fits the whole indication"
+  },
+  "8022": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "8031": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "427038005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "426964009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830060005": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "8072": {
+   "32369003": "closest, but not exact",
+   "15743005": "a different condition",
+   "102447009": "likely the match",
+   "203433000": "a different condition",
+   "203434006": "a different condition"
+  },
+  "8635": {
+   "68566005": "the condition treated or prevented: likely the match",
+   "431309003": "narrower (a subtype)",
+   "197928006": "narrower (a subtype)",
+   "301010001": "narrower (a subtype)",
+   "12301009": "narrower (a subtype)"
+  },
+  "8702": {
+   "699240001": "a different condition -- no candidate fits the whole indication",
+   "442478007": "a different condition -- no candidate fits the whole indication",
+   "237217000": "a different condition -- no candidate fits the whole indication",
+   "370383002": "a different condition -- no candidate fits the whole indication",
+   "609466002": "a different condition -- no candidate fits the whole indication"
+  },
+  "8764": {
+   "770687001": "a different condition -- no candidate fits the whole indication"
+  },
+  "9078": {
+   "13753008": "one of the conditions named",
+   "16907601000119106": "narrower (a subtype)",
+   "15630241000119104": "narrower (a subtype)",
+   "15630201000119101": "narrower (a subtype)",
+   "59026006": "one of the conditions named"
+  },
+  "9087": {
+   "37718006": "closest, but not exact",
+   "249807007": "broader",
+   "229844004": "broader",
+   "299484005": "broader",
+   "27253007": "a different condition"
+  },
+  "9102": {
+   "783764008": "a different condition -- no candidate fits the whole indication",
+   "1172590009": "a different condition -- no candidate fits the whole indication",
+   "770720005": "a different condition -- no candidate fits the whole indication",
+   "763348005": "a different condition -- no candidate fits the whole indication",
+   "1187278006": "a different condition -- no candidate fits the whole indication"
+  },
+  "9115": {
+   "427794001": "broader",
+   "10677551000119108": "likely the match",
+   "10677591000119103": "a different condition",
+   "10677631000119103": "a different condition",
+   "10677671000119100": "a different condition"
+  },
+  "9259": {
+   "13920009": "the condition treated or prevented: likely the match",
+   "1396821004": "narrower (a subtype)",
+   "232534061000119102": "narrower (a subtype)",
+   "449901005": "narrower (a subtype)",
+   "716379000": "a different condition"
+  },
+  "9334": {
+   "112222000": "likely the match",
+   "445004006": "a different condition",
+   "15747041000119100": "narrower (a subtype)",
+   "24184005": "a different condition",
+   "39846008": "a different condition"
+  },
+  "9373": {
+   "7199000": "likely the match",
+   "233718008": "narrower (a subtype)",
+   "36025004": "a different condition",
+   "254243001": "a different condition",
+   "417001009": "not a condition (a finding, status, procedure or diet)"
+  },
+  "9390": {
+   "1288045008": "closest, but not exact -- no candidate fits the whole indication",
+   "1287661008": "a different condition -- no candidate fits the whole indication",
+   "1290060007": "a different condition -- no candidate fits the whole indication",
+   "1287564005": "a different condition -- no candidate fits the whole indication",
+   "1287196009": "a different condition -- no candidate fits the whole indication"
+  },
+  "9410": {
+   "141001000119104": "likely the match",
+   "782555009": "broader",
+   "226199006": "not a condition (a finding, status, procedure or diet)",
+   "241936009": "a different condition",
+   "66972006": "a different condition"
+  },
+  "9424": {
+   "773579007": "a different condition -- no candidate fits the whole indication",
+   "715669000": "a different condition -- no candidate fits the whole indication",
+   "722067005": "a different condition -- no candidate fits the whole indication",
+   "718107000": "a different condition -- no candidate fits the whole indication",
+   "765145001": "a different condition -- no candidate fits the whole indication"
+  },
+  "9427": {
+   "241936009": "likely the match"
+  },
+  "9429": {
+   "1197205005": "a different condition -- no candidate fits the whole indication"
+  },
+  "9584": {
+   "1258883002": "narrower (a subtype)",
+   "429098002": "the condition treated or prevented: likely the match",
+   "711328005": "not a condition (a finding, status, procedure or diet)",
+   "699035003": "not a condition (a finding, status, procedure or diet)",
+   "711293008": "not a condition (a finding, status, procedure or diet)"
+  },
+  "9658": {
+   "11218009": "likely the match",
+   "402932005": "narrower (a subtype)",
+   "1179406007": "narrower (a subtype)",
+   "206370004": "narrower (a subtype)",
+   "63398001": "broader"
+  },
+  "9724": {
+   "719657001": "a different condition -- no candidate fits the whole indication",
+   "719161008": "a different condition -- no candidate fits the whole indication",
+   "715201005": "closest, but not exact -- no candidate fits the whole indication",
+   "1229943004": "a different condition -- no candidate fits the whole indication",
+   "809482891000119103": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "9729": {
+   "715657008": "a different condition -- no candidate fits the whole indication"
+  },
+  "9790": {
+   "773579007": "a different condition -- no candidate fits the whole indication",
+   "1231141008": "a different condition -- no candidate fits the whole indication",
+   "720977000": "a different condition -- no candidate fits the whole indication"
+  },
+  "9805": {
+   "2053831000122108": "a different condition -- no candidate fits the whole indication",
+   "44553005": "a different condition -- no candidate fits the whole indication",
+   "774207004": "a different condition -- no candidate fits the whole indication",
+   "717053007": "a different condition -- no candidate fits the whole indication",
+   "15781000119107": "a different condition -- no candidate fits the whole indication"
+  },
+  "9807": {
+   "124498007": "likely the match",
+   "56661000": "likely the match (a second SNOMED CT concept for the same condition)"
+  },
+  "9808": {
+   "197494007": "likely the match",
+   "303062005": "a different condition",
+   "717047007": "a different condition",
+   "723360007": "a different condition",
+   "238033007": "a different condition"
+  },
+  "9809": {
+   "429715006": "a different condition -- no candidate fits the whole indication",
+   "313180007": "a different condition -- no candidate fits the whole indication",
+   "1391851000168106": "a different condition -- no candidate fits the whole indication",
+   "765188009": "a different condition -- no candidate fits the whole indication"
+  },
+  "9828": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830055006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259822003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "9926": {
+   "200975007": "closest, but not exact",
+   "200965009": "likely the match",
+   "54515008": "a different condition",
+   "402311006": "narrower (a subtype)",
+   "402307000": "narrower (a subtype)"
+  },
+  "9946": {
+   "1388801008": "a different condition -- no candidate fits the whole indication",
+   "1388802001": "a different condition -- no candidate fits the whole indication",
+   "1388795004": "a different condition -- no candidate fits the whole indication",
+   "1197429000": "a different condition -- no candidate fits the whole indication"
+  },
+  "9952": {
+   "36444000": "likely the match",
+   "8481000": "a different condition",
+   "737203001": "a different condition",
+   "124510004": "a different condition",
+   "238734009": "a different condition"
+  },
+  "9978": {
+   "1220629002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "174251000112102": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "22438006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "10138007": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "417089009": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "9994": {
+   "742876007": "likely the match",
+   "238067002": "a different condition",
+   "238059005": "broader",
+   "238068007": "a different condition",
+   "1187527003": "narrower (a subtype)"
+  },
+  "10054": {
+   "86095007": "broader -- no candidate fits the whole indication",
+   "72262000": "a different condition -- no candidate fits the whole indication",
+   "43465001": "a different condition -- no candidate fits the whole indication",
+   "53210006": "a different condition -- no candidate fits the whole indication",
+   "42930003": "closest, but not exact -- no candidate fits the whole indication"
+  },
+  "10078": {
+   "2089002": "likely the match",
+   "726622002": "a different condition",
+   "703544004": "a different condition",
+   "770792007": "a different condition",
+   "715529009": "a different condition"
+  },
+  "10215": {
+   "424952003": "likely the match",
+   "447951009": "narrower (a subtype)",
+   "49291000119105": "not a condition (a finding, status, procedure or diet)",
+   "188029000": "narrower (a subtype)",
+   "1268534007": "narrower (a subtype)"
+  },
+  "10306": {
+   "169551000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "102955006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "243816001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1376571000168103": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "13197004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "10608": {
+   "702785000": "closest, but not exact",
+   "738770003": "narrower (a subtype)",
+   "404134006": "likely the match",
+   "351131000119104": "narrower (a subtype)",
+   "715950008": "a different condition"
+  },
+  "10706": {
+   "370143000": "likely the match",
+   "66344007": "narrower (a subtype)",
+   "268621008": "narrower (a subtype)",
+   "87512008": "narrower (a subtype)",
+   "720455008": "narrower (a subtype)"
+  },
+  "10755": {
+   "1287573002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "254627002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "397485004": "a different condition -- no candidate fits the whole indication",
+   "1288046009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "35868009": "closest, but not exact -- no candidate fits the whole indication"
+  },
+  "10956": {
+   "786038001": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "11283": {
+   "430079001": "likely the match",
+   "783146009": "a different condition",
+   "403833009": "a different condition",
+   "717231003": "a different condition",
+   "783701002": "a different condition"
+  },
+  "11376": {
+   "277573001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "277571004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "277574007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "277575008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "425688002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "11394": {
+   "1362129009": "a different condition -- no candidate fits the whole indication"
+  },
+  "11469": {
+   "275598004": "likely the match"
+  },
+  "11470": {
+   "426387005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "124699005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1156591005": "closest, but not exact -- no candidate fits the whole indication",
+   "39929009": "broader -- no candidate fits the whole indication",
+   "238114000": "a different condition -- no candidate fits the whole indication"
+  },
+  "11471": {
+   "700423003": "likely the match",
+   "1651000119109": "narrower (a subtype)",
+   "792907004": "narrower (a subtype)",
+   "1148551007": "narrower (a subtype)",
+   "1141626005": "narrower (a subtype)"
+  },
+  "11581": {
+   "1335927007": "a different condition -- no candidate fits the whole indication",
+   "782751003": "a different condition -- no candidate fits the whole indication",
+   "722288007": "a different condition -- no candidate fits the whole indication",
+   "778024005": "a different condition -- no candidate fits the whole indication",
+   "1186719000": "a different condition -- no candidate fits the whole indication"
+  },
+  "11585": {
+   "763713000": "a different condition -- no candidate fits the whole indication",
+   "1172892009": "a different condition -- no candidate fits the whole indication"
+  },
+  "11591": {
+   "1360080002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "11609": {
+   "187054003": "closest, but not exact -- no candidate fits the whole indication",
+   "240743004": "a different condition -- no candidate fits the whole indication",
+   "240746007": "a different condition -- no candidate fits the whole indication",
+   "58524006": "a different condition -- no candidate fits the whole indication",
+   "26427008": "a different condition -- no candidate fits the whole indication"
+  },
+  "11613": {
+   "187054003": "likely the match",
+   "58524006": "narrower (a subtype)",
+   "26427008": "narrower (a subtype)",
+   "187052004": "narrower (a subtype)",
+   "128601007": "broader"
+  },
+  "11851": {
+   "410056006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "415764005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "271847005": "closest, but not exact -- no candidate fits the whole indication",
+   "4887000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "75387001": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "12008": {
+   "278904002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "331000124109": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "702635003": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "251869004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "15859004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "12087": {
+   "267064002": "broader -- no candidate fits the whole indication",
+   "236648008": "a different condition -- no candidate fits the whole indication",
+   "398064005": "closest, but not exact -- no candidate fits the whole indication",
+   "445387007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "427482006": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "12130": {
+   "16636051000119105": "narrower (a subtype) -- no candidate fits the whole indication",
+   "16823941000119108": "narrower (a subtype) -- no candidate fits the whole indication",
+   "16636101000119105": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "12168": {
+   "285769009": "narrower (a subtype)",
+   "110004001": "likely the match",
+   "425869007": "not a condition (a finding, status, procedure or diet)",
+   "773537001": "a different condition"
+  },
+  "12176": {
+   "423464009": "one of the conditions named",
+   "1254801006": "narrower (a subtype)",
+   "707529004": "narrower (a subtype)",
+   "1254803009": "narrower (a subtype)",
+   "707585008": "narrower (a subtype)"
+  },
+  "12286": {
+   "237813007": "likely the match",
+   "123526007": "broader",
+   "715988005": "a different condition",
+   "719660008": "a different condition",
+   "770941005": "a different condition"
+  },
+  "12320": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "12427": {
+   "1208744003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "12547": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "12647": {
+   "86133004": "likely the match",
+   "187151009": "narrower (a subtype)",
+   "36334003": "narrower (a subtype)",
+   "9444005": "narrower (a subtype)",
+   "105684008": "narrower (a subtype)"
+  },
+  "12667": {
+   "3752003": "likely the match"
+  },
+  "12669": {
+   "105694003": "likely the match"
+  },
+  "12707": {
+   "768934004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "12727": {
+   "414256007": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "12759": {
+   "772165002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "12761": {
+   "68266006": "likely the match",
+   "238664008": "narrower (a subtype)",
+   "721171007": "narrower (a subtype)"
+  },
+  "12920": {
+   "723544007": "a different condition -- no candidate fits the whole indication",
+   "723830005": "a different condition -- no candidate fits the whole indication",
+   "1231281009": "a different condition -- no candidate fits the whole indication",
+   "1186721005": "a different condition -- no candidate fits the whole indication",
+   "1172688004": "a different condition -- no candidate fits the whole indication"
+  },
+  "12934": {
+   "838377003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "735451005": "a different condition -- no candidate fits the whole indication",
+   "235865005": "a different condition -- no candidate fits the whole indication",
+   "1197150002": "a different condition -- no candidate fits the whole indication",
+   "1162828001": "a different condition -- no candidate fits the whole indication"
+  },
+  "13014": {
+   "231440006": "a different condition",
+   "192362008": "one of the conditions named",
+   "105521000119109": "a different condition",
+   "767633005": "one of the conditions named",
+   "16506000": "one of the conditions named"
+  },
+  "13030": {
+   "1303415000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1237341006": "a different condition -- no candidate fits the whole indication"
+  },
+  "13031": {
+   "609585002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "782743001": "a different condition -- no candidate fits the whole indication",
+   "719811001": "a different condition -- no candidate fits the whole indication",
+   "1373777008": "a different condition -- no candidate fits the whole indication",
+   "774149004": "a different condition -- no candidate fits the whole indication"
+  },
+  "13047": {
+   "609585002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "782743001": "a different condition -- no candidate fits the whole indication",
+   "719811001": "a different condition -- no candidate fits the whole indication",
+   "1373777008": "a different condition -- no candidate fits the whole indication",
+   "774149004": "a different condition -- no candidate fits the whole indication"
+  },
+  "13075": {
+   "763532008": "a different condition -- no candidate fits the whole indication",
+   "771479000": "a different condition -- no candidate fits the whole indication",
+   "771443008": "a different condition -- no candidate fits the whole indication",
+   "1173999006": "a different condition -- no candidate fits the whole indication"
+  },
+  "13076": {
+   "6204001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "230422001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "267581004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "717225001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "192990004": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "13101": {
+   "277905003": "likely the match",
+   "399937000": "narrower (a subtype)",
+   "254214009": "narrower (a subtype)",
+   "722203001": "narrower (a subtype)"
+  },
+  "13198": {
+   "33839006": "likely the match",
+   "402894005": "narrower (a subtype)",
+   "423391007": "narrower (a subtype)",
+   "427578006": "narrower (a subtype)",
+   "1137693003": "narrower (a subtype)"
+  },
+  "13211": {
+   "33839006": "likely the match",
+   "402894005": "narrower (a subtype)",
+   "423391007": "narrower (a subtype)",
+   "427578006": "narrower (a subtype)",
+   "1137693003": "narrower (a subtype)"
+  },
+  "13407": {
+   "721730009": "the condition treated or prevented: likely the match",
+   "401041004": "not a condition (a finding, status, procedure or diet)",
+   "89662003": "narrower (a subtype)",
+   "1396575000": "narrower (a subtype)",
+   "724525007": "narrower (a subtype)"
+  },
+  "13414": {
+   "397696004": "broader -- no candidate fits the whole indication",
+   "301469002": "a different condition -- no candidate fits the whole indication",
+   "423590009": "closest, but not exact -- no candidate fits the whole indication",
+   "78128001": "a different condition -- no candidate fits the whole indication",
+   "1197477000": "a different condition -- no candidate fits the whole indication"
+  },
+  "13427": {
+   "719823007": "a different condition -- no candidate fits the whole indication",
+   "771272007": "a different condition -- no candidate fits the whole indication",
+   "719430008": "a different condition -- no candidate fits the whole indication",
+   "721010003": "a different condition -- no candidate fits the whole indication",
+   "766883006": "a different condition -- no candidate fits the whole indication"
+  },
+  "13548": {
+   "186342000": "narrower (a subtype)",
+   "1010256005": "narrower (a subtype)",
+   "371686006": "likely the match"
+  },
+  "13563": {
+   "196977009": "a different condition -- no candidate fits the whole indication",
+   "82385007": "a different condition -- no candidate fits the whole indication",
+   "763311001": "a different condition -- no candidate fits the whole indication",
+   "1217213004": "a different condition -- no candidate fits the whole indication",
+   "1156407001": "a different condition -- no candidate fits the whole indication"
+  },
+  "13567": {
+   "386808001": "one of the conditions named"
+  },
+  "13571": {
+   "1220657009": "a different condition -- no candidate fits the whole indication",
+   "702642003": "a different condition -- no candidate fits the whole indication",
+   "1360080002": "a different condition -- no candidate fits the whole indication",
+   "722458000": "a different condition -- no candidate fits the whole indication",
+   "1217227009": "a different condition -- no candidate fits the whole indication"
+  },
+  "13661": {
+   "444387000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "93417001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "192650000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "737589003": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1237030002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "13663": {
+   "94281000119101": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1367660004": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "13664": {
+   "276654001": "broader -- no candidate fits the whole indication",
+   "47583008": "a different condition -- no candidate fits the whole indication",
+   "37849005": "a different condition -- no candidate fits the whole indication",
+   "234456000": "a different condition -- no candidate fits the whole indication",
+   "788533006": "a different condition -- no candidate fits the whole indication"
+  },
+  "13666": {
+   "136801000119102": "likely the match"
+  },
+  "13689": {
+   "237889002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "82236004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "726081005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "237888005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "90505000": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "13694": {
+   "191260004": "a different condition -- no candidate fits the whole indication",
+   "25443007": "a different condition -- no candidate fits the whole indication",
+   "717961004": "a different condition -- no candidate fits the whole indication",
+   "360373000": "a different condition -- no candidate fits the whole indication",
+   "717050005": "a different condition -- no candidate fits the whole indication"
+  },
+  "13700": {
+   "1279842008": "a different condition -- no candidate fits the whole indication"
+  },
+  "13725": {
+   "386808001": "likely the match"
+  },
+  "13729": {
+   "4557003": "the condition treated or prevented: likely the match",
+   "169948004": "not a condition (a finding, status, procedure or diet)",
+   "47200007": "not a condition (a finding, status, procedure or diet)",
+   "711365007": "not a condition (a finding, status, procedure or diet)",
+   "394685004": "not a condition (a finding, status, procedure or diet)"
+  },
+  "13786": {
+   "725286002": "a different condition -- no candidate fits the whole indication"
+  },
+  "13790": {
+   "91861009": "likely the match",
+   "359640008": "narrower (a subtype)",
+   "764940002": "narrower (a subtype)",
+   "12291000132102": "narrower (a subtype)",
+   "12281000132104": "narrower (a subtype)"
+  },
+  "13794": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "13803": {
+   "315267003": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "13807": {
+   "715657008": "a different condition -- no candidate fits the whole indication"
+  },
+  "13816": {
+   "1230015008": "closest, but not exact"
+  },
+  "13848": {
+   "766883006": "a different condition -- no candidate fits the whole indication"
+  },
+  "13870": {
+   "719823007": "a different condition -- no candidate fits the whole indication",
+   "766883006": "a different condition -- no candidate fits the whole indication",
+   "1264003007": "a different condition -- no candidate fits the whole indication"
+  },
+  "13918": {
+   "56038003": "likely the match",
+   "1142101002": "narrower (a subtype)",
+   "95884007": "narrower (a subtype)",
+   "266077001": "narrower (a subtype)",
+   "402938009": "narrower (a subtype)"
+  },
+  "13948": {
+   "38850007": "likely the match",
+   "84801008": "narrower (a subtype)",
+   "50661000087103": "a different condition"
+  },
+  "13954": {
+   "240453002": "a different condition -- no candidate fits the whole indication",
+   "4733001": "a different condition -- no candidate fits the whole indication",
+   "25582006": "a different condition -- no candidate fits the whole indication",
+   "72880002": "a different condition -- no candidate fits the whole indication",
+   "240520005": "a different condition -- no candidate fits the whole indication"
+  },
+  "14054": {
+   "419076005": "broader -- no candidate fits the whole indication",
+   "35001004": "a different condition -- no candidate fits the whole indication",
+   "402395003": "a different condition -- no candidate fits the whole indication",
+   "241929008": "broader -- no candidate fits the whole indication",
+   "361098001": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14088": {
+   "197494007": "likely the match",
+   "303062005": "a different condition",
+   "717047007": "a different condition",
+   "723360007": "a different condition",
+   "238033007": "a different condition"
+  },
+  "14140": {
+   "1156927006": "not a condition (a finding, status, procedure or diet)",
+   "709410003": "the condition treated or prevented: likely the match",
+   "1255673003": "not a condition (a finding, status, procedure or diet)",
+   "722722006": "narrower (a subtype)",
+   "1156928001": "not a condition (a finding, status, procedure or diet)"
+  },
+  "14148": {
+   "1366368009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1366370000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1366429001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1366366008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1366430006": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14167": {
+   "1300124001": "a different condition -- no candidate fits the whole indication",
+   "1186715006": "a different condition -- no candidate fits the whole indication",
+   "1360083000": "a different condition -- no candidate fits the whole indication",
+   "770758009": "a different condition -- no candidate fits the whole indication"
+  },
+  "14190": {
+   "314467007": "likely the match",
+   "247103004": "not a condition (a finding, status, procedure or diet)",
+   "768932000": "a different condition",
+   "1142274000": "a different condition",
+   "1142275004": "a different condition"
+  },
+  "14208": {
+   "773331001": "a different condition -- no candidate fits the whole indication"
+  },
+  "14229": {
+   "230414008": "closest, but not exact",
+   "36803009": "broader",
+   "763534009": "a different condition",
+   "1260407007": "broader",
+   "230422001": "a different condition"
+  },
+  "14253": {
+   "230418006": "likely the match",
+   "1187250005": "a different condition",
+   "770750002": "a different condition",
+   "785303004": "a different condition",
+   "789063000": "a different condition"
+  },
+  "14339": {
+   "73442001": "a different condition -- no candidate fits the whole indication"
+  },
+  "14340": {
+   "404204005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "448178009": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1367520006": "a different condition -- no candidate fits the whole indication",
+   "73442001": "a different condition -- no candidate fits the whole indication",
+   "1367519000": "a different condition -- no candidate fits the whole indication"
+  },
+  "14341": {
+   "1367520006": "a different condition -- no candidate fits the whole indication",
+   "700467001": "a different condition -- no candidate fits the whole indication",
+   "73442001": "a different condition -- no candidate fits the whole indication",
+   "770643005": "a different condition -- no candidate fits the whole indication"
+  },
+  "14342": {
+   "783177006": "a different condition -- no candidate fits the whole indication"
+  },
+  "14370": {
+   "407621003": "a different condition -- no candidate fits the whole indication",
+   "1366362005": "a different condition -- no candidate fits the whole indication",
+   "191714002": "a different condition -- no candidate fits the whole indication",
+   "1366365007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1366429001": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14437": {
+   "713835001": "a different condition -- no candidate fits the whole indication"
+  },
+  "14497": {
+   "95324001": "broader -- no candidate fits the whole indication",
+   "1145367001": "a different condition -- no candidate fits the whole indication",
+   "274949005": "a different condition -- no candidate fits the whole indication",
+   "371049006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1145370002": "a different condition -- no candidate fits the whole indication"
+  },
+  "14513": {
+   "284752001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "34541000087107": "narrower (a subtype) -- no candidate fits the whole indication",
+   "285347000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "440306002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "210368005": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14539": {
+   "10231000132102": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "443633009": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "213202009": "a different condition -- no candidate fits the whole indication",
+   "1172637002": "a different condition -- no candidate fits the whole indication",
+   "717255008": "a different condition -- no candidate fits the whole indication"
+  },
+  "14556": {
+   "11218009": "likely the match",
+   "402932005": "narrower (a subtype)",
+   "1179406007": "narrower (a subtype)",
+   "206370004": "narrower (a subtype)",
+   "1098281000000102": "narrower (a subtype)"
+  },
+  "14563": {
+   "6738008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "2904007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "236803007": "a different condition -- no candidate fits the whole indication",
+   "297106006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "297121000": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14589": {
+   "22063003": "a different condition -- no candidate fits the whole indication",
+   "724176001": "a different condition -- no candidate fits the whole indication",
+   "848784381000119105": "a different condition -- no candidate fits the whole indication",
+   "423238741000119103": "a different condition -- no candidate fits the whole indication",
+   "706970001": "a different condition -- no candidate fits the whole indication"
+  },
+  "14593": {
+   "770941005": "a different condition -- no candidate fits the whole indication",
+   "715984007": "a different condition -- no candidate fits the whole indication",
+   "783717008": "a different condition -- no candidate fits the whole indication",
+   "716090004": "a different condition -- no candidate fits the whole indication"
+  },
+  "14632": {
+   "385342005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "707218004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "449781000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "720833006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "391031004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "14646": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "14661": {
+   "878807001": "a different condition",
+   "427685000": "likely the match",
+   "1259803007": "a different condition",
+   "445333001": "a different condition",
+   "254837009": "broader"
+  },
+  "14662": {
+   "50866000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "230388003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "44145005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "230384001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "230387008": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "14682": {
+   "56823000": "closest, but not exact",
+   "268302006": "a different condition",
+   "247206004": "a different condition",
+   "717899005": "a different condition",
+   "247208003": "a different condition"
+  },
+  "14718": {
+   "235058001": "one of the conditions named",
+   "235055003": "one of the conditions named",
+   "235056002": "narrower (a subtype)",
+   "235057006": "narrower (a subtype)",
+   "235059009": "a different condition"
+  },
+  "14757": {
+   "314552006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "314551004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "314760005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "422185008": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "314553001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "14761": {
+   "425231005": "likely the match",
+   "1208461001": "a different condition",
+   "1208460000": "a different condition",
+   "1259712001": "a different condition",
+   "1259705005": "a different condition"
+  },
+  "14765": {
+   "878807001": "a different condition",
+   "427685000": "likely the match",
+   "1259803007": "a different condition",
+   "445333001": "a different condition",
+   "254837009": "broader"
+  },
+  "14796": {
+   "167740005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "167741009": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "167739008": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "365815007": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "230752005": "a different condition -- no candidate fits the whole indication"
+  },
+  "14818": {
+   "213148006": "likely the match",
+   "233933006": "narrower (a subtype)",
+   "235911006": "narrower (a subtype)",
+   "312603000": "narrower (a subtype)",
+   "236570004": "narrower (a subtype)"
+  },
+  "14907": {
+   "472326004": "a different condition -- no candidate fits the whole indication",
+   "363287001": "a different condition -- no candidate fits the whole indication",
+   "420543008": "a different condition -- no candidate fits the whole indication",
+   "111212009": "a different condition -- no candidate fits the whole indication",
+   "111213004": "a different condition -- no candidate fits the whole indication"
+  },
+  "14908": {
+   "406506008": "a different condition -- no candidate fits the whole indication",
+   "76349003": "broader -- no candidate fits the whole indication",
+   "229638001": "a different condition -- no candidate fits the whole indication",
+   "229635003": "a different condition -- no candidate fits the whole indication",
+   "192132008": "a different condition -- no candidate fits the whole indication"
+  },
+  "15093": {
+   "233933006": "likely the match",
+   "314002005": "a different condition",
+   "86825002": "a different condition",
+   "420505005": "a different condition",
+   "421187003": "a different condition"
+  },
+  "15106": {
+   "314002005": "a different condition",
+   "236570004": "likely the match",
+   "86825002": "a different condition",
+   "420505005": "a different condition",
+   "421187003": "a different condition"
+  },
+  "15176": {
+   "53165003": "likely the match",
+   "82430007": "narrower (a subtype)",
+   "360495000": "narrower (a subtype)",
+   "31206006": "narrower (a subtype)",
+   "49284006": "narrower (a subtype)"
+  },
+  "15316": {
+   "1332169003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1332170002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1332165009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1332166005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1332167001": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "15330": {
+   "721015008": "a different condition -- no candidate fits the whole indication"
+  },
+  "15425": {
+   "3218000": "likely the match",
+   "275393007": "a different condition",
+   "312150008": "narrower (a subtype)",
+   "312148000": "narrower (a subtype)",
+   "312153005": "narrower (a subtype)"
+  },
+  "15458": {
+   "713734009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1186719000": "a different condition -- no candidate fits the whole indication"
+  },
+  "15465": {
+   "1231176005": "a different condition -- no candidate fits the whole indication",
+   "725028009": "a different condition -- no candidate fits the whole indication",
+   "768962006": "a different condition -- no candidate fits the whole indication",
+   "780844005": "a different condition -- no candidate fits the whole indication",
+   "725910009": "a different condition -- no candidate fits the whole indication"
+  },
+  "15466": {
+   "1231176005": "a different condition -- no candidate fits the whole indication",
+   "725028009": "a different condition -- no candidate fits the whole indication",
+   "780844005": "a different condition -- no candidate fits the whole indication",
+   "725910009": "a different condition -- no candidate fits the whole indication"
+  },
+  "15477": {
+   "1296950006": "a different condition -- no candidate fits the whole indication",
+   "1363252009": "a different condition -- no candidate fits the whole indication",
+   "1365925009": "a different condition -- no candidate fits the whole indication",
+   "719814009": "a different condition -- no candidate fits the whole indication",
+   "721121000124104": "a different condition -- no candidate fits the whole indication"
+  },
+  "15479": {
+   "61164006": "a different condition -- no candidate fits the whole indication",
+   "7772007": "a different condition -- no candidate fits the whole indication",
+   "67312003": "a different condition -- no candidate fits the whole indication",
+   "51022005": "a different condition -- no candidate fits the whole indication",
+   "22935002": "a different condition -- no candidate fits the whole indication"
+  },
+  "15483": {
+   "194394004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "733051000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "404511008": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1231430002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "18504008": "a different condition -- no candidate fits the whole indication"
+  },
+  "15605": {
+   "402878003": "likely the match",
+   "1156452003": "narrower (a subtype)",
+   "277508009": "narrower (a subtype)",
+   "277456001": "narrower (a subtype)",
+   "429565004": "narrower (a subtype)"
+  },
+  "15606": {
+   "118617000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "308121000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "276811008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "449072004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "109976000": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "15608": {
+   "705039004": "a different condition -- no candidate fits the whole indication",
+   "1389007002": "a different condition -- no candidate fits the whole indication",
+   "409737006": "a different condition -- no candidate fits the whole indication",
+   "1360080002": "a different condition -- no candidate fits the whole indication",
+   "609372001": "a different condition -- no candidate fits the whole indication"
+  },
+  "15683": {
+   "726081005": "a different condition -- no candidate fits the whole indication",
+   "765187004": "a different condition -- no candidate fits the whole indication"
+  },
+  "15684": {
+   "1372931000168108": "closest, but not exact"
+  },
+  "15745": {
+   "234533006": "a different condition -- no candidate fits the whole indication",
+   "766817004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "783098009": "a different condition -- no candidate fits the whole indication",
+   "7990002": "a different condition -- no candidate fits the whole indication",
+   "205808005": "a different condition -- no candidate fits the whole indication"
+  },
+  "15761": {
+   "763630007": "a different condition -- no candidate fits the whole indication",
+   "403661001": "a different condition -- no candidate fits the whole indication",
+   "232049001": "a different condition -- no candidate fits the whole indication",
+   "763387005": "a different condition -- no candidate fits the whole indication",
+   "715983001": "a different condition -- no candidate fits the whole indication"
+  },
+  "15789": {
+   "1231283007": "a different condition -- no candidate fits the whole indication",
+   "783098009": "a different condition -- no candidate fits the whole indication",
+   "1340175001": "a different condition -- no candidate fits the whole indication",
+   "766817004": "a different condition -- no candidate fits the whole indication",
+   "721074002": "a different condition -- no candidate fits the whole indication"
+  },
+  "15799": {
+   "770941005": "a different condition -- no candidate fits the whole indication",
+   "1231283007": "a different condition -- no candidate fits the whole indication",
+   "725295005": "a different condition -- no candidate fits the whole indication",
+   "88154004": "a different condition -- no candidate fits the whole indication",
+   "1340175001": "a different condition -- no candidate fits the whole indication"
+  },
+  "15824": {
+   "1255269005": "a different condition -- no candidate fits the whole indication"
+  },
+  "15835": {
+   "1197494003": "a different condition -- no candidate fits the whole indication"
+  },
+  "15844": {
+   "34129005": "likely the match",
+   "45855004": "narrower (a subtype)",
+   "45431004": "narrower (a subtype)"
+  },
+  "15846": {
+   "205808005": "a different condition -- no candidate fits the whole indication",
+   "429362002": "a different condition -- no candidate fits the whole indication",
+   "718717004": "a different condition -- no candidate fits the whole indication",
+   "719685004": "a different condition -- no candidate fits the whole indication",
+   "715428003": "a different condition -- no candidate fits the whole indication"
+  },
+  "15858": {
+   "763868006": "likely the match",
+   "1153392009": "a different condition",
+   "431038007": "a different condition",
+   "368331000119100": "a different condition",
+   "1187195007": "a different condition"
+  },
+  "15865": {
+   "264575002": "narrower (a subtype)",
+   "423451008": "likely the match",
+   "1264220002": "narrower (a subtype)",
+   "1264219008": "narrower (a subtype)",
+   "443491001": "narrower (a subtype)"
+  },
+  "15870": {
+   "205808005": "a different condition -- no candidate fits the whole indication",
+   "429362002": "a different condition -- no candidate fits the whole indication",
+   "1260142000": "a different condition -- no candidate fits the whole indication",
+   "719665003": "a different condition -- no candidate fits the whole indication",
+   "726081005": "a different condition -- no candidate fits the whole indication"
+  },
+  "15879": {
+   "1229943004": "a different condition -- no candidate fits the whole indication",
+   "718717004": "a different condition -- no candidate fits the whole indication",
+   "721841001": "a different condition -- no candidate fits the whole indication",
+   "770542008": "a different condition -- no candidate fits the whole indication",
+   "716334004": "a different condition -- no candidate fits the whole indication"
+  },
+  "16253": {
+   "276628009": "a different condition",
+   "236814005": "a different condition",
+   "1177084005": "broader",
+   "47318007": "closest, but not exact",
+   "430328004": "a different condition"
+  },
+  "17194": {
+   "106001000119101": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1751000119100": "narrower (a subtype) -- no candidate fits the whole indication",
+   "196001008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "697913004": "a different condition -- no candidate fits the whole indication",
+   "723829000": "a different condition -- no candidate fits the whole indication"
+  },
+  "17704": {
+   "109972003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "109970006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "448666006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "109969005": "a different condition -- no candidate fits the whole indication",
+   "277625002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "17770": {
+   "92814006": "one of the conditions named"
+  },
+  "18082": {
+   "713835001": "a different condition -- no candidate fits the whole indication",
+   "370921009": "a different condition -- no candidate fits the whole indication",
+   "370908002": "a different condition -- no candidate fits the whole indication",
+   "768962006": "a different condition -- no candidate fits the whole indication",
+   "720975008": "a different condition -- no candidate fits the whole indication"
+  },
+  "18415": {
+   "402524007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "402525008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "402526009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "402527000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "402528005": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "18443": {
+   "235675006": "one of the conditions named",
+   "353821005": "narrower (a subtype)",
+   "235676007": "narrower (a subtype)",
+   "11672007": "a different condition",
+   "78104003": "a different condition"
+  },
+  "18627": {
+   "866242004": "likely the match",
+   "254837009": "the condition treated or prevented: likely the match",
+   "429740004": "not a condition (a finding, status, procedure or diet)",
+   "134405005": "not a condition (a finding, status, procedure or diet)",
+   "12275351000119103": "not a condition (a finding, status, procedure or diet)"
+  },
+  "18774": {
+   "443201006": "narrower (a subtype)",
+   "414256007": "not a condition (a finding, status, procedure or diet)",
+   "414171001": "narrower (a subtype)",
+   "1177059007": "narrower (a subtype)",
+   "75549005": "closest, but not exact"
+  },
+  "19044": {
+   "762690000": "narrower (a subtype)",
+   "118601006": "a different condition",
+   "118599009": "likely the match",
+   "473068004": "not a condition (a finding, status, procedure or diet)",
+   "830057003": "narrower (a subtype)"
+  },
+  "19308": {
+   "16636051000119105": "narrower (a subtype) -- no candidate fits the whole indication",
+   "16823941000119108": "narrower (a subtype) -- no candidate fits the whole indication",
+   "16636101000119105": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "19326": {
+   "188733003": "one of the conditions named",
+   "277549009": "a different condition",
+   "425919003": "a different condition",
+   "1237617004": "narrower (a subtype)",
+   "774204006": "a different condition"
+  },
+  "19339": {
+   "445738007": "closest, but not exact",
+   "447596005": "narrower (a subtype)",
+   "277589003": "narrower (a subtype)",
+   "425333006": "one of the conditions named",
+   "74050005": "a different condition"
+  },
+  "19354": {
+   "397008008": "a different condition -- no candidate fits the whole indication",
+   "397016004": "broader -- no candidate fits the whole indication",
+   "716655008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "70910003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1231732006": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "19558": {
+   "1220629002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "127062003": "a different condition -- no candidate fits the whole indication",
+   "1197478005": "a different condition -- no candidate fits the whole indication",
+   "1157157006": "a different condition -- no candidate fits the whole indication",
+   "109991003": "a different condition -- no candidate fits the whole indication"
+  },
+  "19584": {
+   "234520000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "737300001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "234519006": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "429450002": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "129771000119107": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "19751": {
+   "440295211000119108": "likely the match",
+   "716665002": "narrower (a subtype)",
+   "1396769007": "narrower (a subtype)",
+   "1396770008": "narrower (a subtype)",
+   "1389007002": "a different condition"
+  },
+  "20845": {
+   "686976671000119100": "not a condition (a finding, status, procedure or diet)",
+   "86406008": "the condition treated or prevented: likely the match",
+   "17651000146109": "not a condition (a finding, status, procedure or diet)",
+   "81000119104": "narrower (a subtype)",
+   "186706006": "narrower (a subtype)"
+  },
+  "21155": {
+   "238079002": "likely the match",
+   "767133009": "a different condition",
+   "698600006": "not a condition (a finding, status, procedure or diet)",
+   "109271000119105": "not a condition (a finding, status, procedure or diet)",
+   "403829002": "narrower (a subtype)"
+  },
+  "21156": {
+   "129573006": "closest, but not exact -- no candidate fits the whole indication",
+   "724441006": "a different condition -- no candidate fits the whole indication",
+   "55382008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "10664071000119107": "narrower (a subtype) -- no candidate fits the whole indication",
+   "10654871000119108": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "21171": {
+   "315271000": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "21264": {
+   "342291000119102": "a different condition -- no candidate fits the whole indication",
+   "770438007": "a different condition -- no candidate fits the whole indication",
+   "95418008": "a different condition -- no candidate fits the whole indication",
+   "782886007": "a different condition -- no candidate fits the whole indication",
+   "442511009": "a different condition -- no candidate fits the whole indication"
+  },
+  "21331": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830055006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259822003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "21413": {
+   "237788002": "the condition treated or prevented: likely the match",
+   "717910009": "narrower (a subtype)",
+   "721176002": "narrower (a subtype)",
+   "722114007": "a different condition",
+   "111550004": "broader"
+  },
+  "21757": {
+   "870199008": "likely the match"
+  },
+  "22322": {
+   "128875000": "closest, but not exact"
+  },
+  "22327": {
+   "34000006": "broader -- no candidate fits the whole indication",
+   "1197732001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1197733006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "397172008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "235796008": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "22531": {
+   "1237422007": "a different condition",
+   "427492003": "closest, but not exact",
+   "1264500002": "a different condition",
+   "1240353009": "a different condition",
+   "1240359008": "a different condition"
+  },
+  "22542": {
+   "134424008": "a different condition -- no candidate fits the whole indication",
+   "23123006": "a different condition -- no candidate fits the whole indication",
+   "285236005": "a different condition -- no candidate fits the whole indication",
+   "291121000119103": "a different condition -- no candidate fits the whole indication",
+   "15708401000119100": "a different condition -- no candidate fits the whole indication"
+  },
+  "22543": {
+   "132111000119107": "a different condition -- no candidate fits the whole indication",
+   "290931000119108": "a different condition -- no candidate fits the whole indication",
+   "15711401000119105": "a different condition -- no candidate fits the whole indication",
+   "15711241000119106": "a different condition -- no candidate fits the whole indication",
+   "15711321000119106": "a different condition -- no candidate fits the whole indication"
+  },
+  "22684": {
+   "118601006": "broader -- no candidate fits the whole indication",
+   "109962001": "a different condition -- no candidate fits the whole indication",
+   "308121000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1237578005": "a different condition -- no candidate fits the whole indication",
+   "428046009": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "22859": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "427038005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "426964009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "23005": {
+   "782670003": "a different condition -- no candidate fits the whole indication",
+   "785726009": "a different condition -- no candidate fits the whole indication",
+   "764961009": "a different condition -- no candidate fits the whole indication",
+   "720519003": "a different condition -- no candidate fits the whole indication",
+   "763349002": "a different condition -- no candidate fits the whole indication"
+  },
+  "24247": {
+   "723301009": "a different condition -- no candidate fits the whole indication",
+   "1259754003": "a different condition -- no candidate fits the whole indication",
+   "427038005": "a different condition -- no candidate fits the whole indication",
+   "426964009": "a different condition -- no candidate fits the whole indication",
+   "830060005": "a different condition -- no candidate fits the whole indication"
+  },
+  "24367": {
+   "68724006": "closest, but not exact"
+  },
+  "24550": {
+   "715201005": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "25070": {
+   "1296528004": "likely the match",
+   "441520002": "not a condition (a finding, status, procedure or diet)",
+   "1296527009": "a different condition",
+   "766721001": "a different condition",
+   "733447005": "a different condition"
+  },
+  "25271": {
+   "1231722004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "788946007": "a different condition -- no candidate fits the whole indication",
+   "484371000087105": "narrower (a subtype) -- no candidate fits the whole indication",
+   "484381000087107": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1401666009": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "25505": {
+   "187734007": "closest, but not exact -- no candidate fits the whole indication",
+   "771474005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1197754004": "a different condition -- no candidate fits the whole indication",
+   "1187041000": "a different condition -- no candidate fits the whole indication",
+   "230314007": "a different condition -- no candidate fits the whole indication"
+  },
+  "25628": {
+   "879973007": "narrower (a subtype)",
+   "788891004": "a different condition",
+   "735935009": "closest, but not exact",
+   "762594002": "a different condition",
+   "764737005": "a different condition"
+  },
+  "25657": {
+   "398036000": "a different condition -- no candidate fits the whole indication",
+   "238078005": "a different condition -- no candidate fits the whole indication",
+   "238079002": "a different condition -- no candidate fits the whole indication",
+   "473145005": "a different condition -- no candidate fits the whole indication",
+   "66481000119109": "a different condition -- no candidate fits the whole indication"
+  },
+  "26040": {
+   "715655000": "closest, but not exact"
+  },
+  "26238": {
+   "15845006": "likely the match"
+  },
+  "26350": {
+   "773691007": "a different condition -- no candidate fits the whole indication",
+   "1340042007": "a different condition -- no candidate fits the whole indication",
+   "715430001": "a different condition -- no candidate fits the whole indication"
+  },
+  "26510": {
+   "716649003": "one of the conditions named",
+   "783138008": "a different condition",
+   "763683004": "a different condition"
+  },
+  "26523": {
+   "716649003": "one of the conditions named",
+   "783138008": "a different condition",
+   "763683004": "a different condition"
+  },
+  "26646": {
+   "786710002": "likely the match",
+   "1259808003": "narrower (a subtype)"
+  },
+  "26810": {
+   "277613000": "a different condition -- no candidate fits the whole indication",
+   "128875000": "a different condition -- no candidate fits the whole indication",
+   "733627006": "a different condition -- no candidate fits the whole indication",
+   "404126000": "a different condition -- no candidate fits the whole indication",
+   "896745008": "a different condition -- no candidate fits the whole indication"
+  },
+  "27257": {
+   "1156805003": "broader -- no candidate fits the whole indication",
+   "866098005": "a different condition -- no candidate fits the whole indication"
+  },
+  "27759": {
+   "785298001": "a different condition -- no candidate fits the whole indication",
+   "1285540008": "a different condition -- no candidate fits the whole indication",
+   "719302009": "a different condition -- no candidate fits the whole indication",
+   "773992003": "a different condition -- no candidate fits the whole indication",
+   "716775009": "a different condition -- no candidate fits the whole indication"
+  },
+  "28047": {
+   "234619000": "one of the conditions named",
+   "234620006": "one of the conditions named",
+   "69525003": "a different condition",
+   "90093009": "a different condition",
+   "427167008": "a different condition"
+  },
+  "28624": {
+   "1217296006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "880529761000119102": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1240541000000107": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1119303003": "a different condition -- no candidate fits the whole indication"
+  },
+  "29012": {
+   "786710002": "likely the match",
+   "1259808003": "narrower (a subtype)"
+  },
+  "29152": {
+   "190818004": "likely the match",
+   "1251448003": "a different condition",
+   "1255270006": "a different condition"
+  },
+  "29352": {
+   "724385009": "likely the match",
+   "724176001": "a different condition",
+   "715625007": "a different condition",
+   "237643007": "a different condition",
+   "721074002": "a different condition"
+  },
+  "29499": {
+   "784391002": "a different condition",
+   "5262007": "broader",
+   "128212001": "a different condition",
+   "54280009": "closest, but not exact",
+   "64383006": "a different condition"
+  },
+  "29559": {
+   "237655001": "a different condition -- no candidate fits the whole indication",
+   "237683004": "a different condition -- no candidate fits the whole indication",
+   "65880007": "a different condition -- no candidate fits the whole indication",
+   "1003390009": "a different condition -- no candidate fits the whole indication",
+   "1003388008": "a different condition -- no candidate fits the whole indication"
+  },
+  "29568": {
+   "737560000": "closest, but not exact",
+   "123791008": "a different condition",
+   "407151008": "a different condition",
+   "707724006": "a different condition",
+   "166751004": "broader"
+  },
+  "29613": {
+   "23132008": "likely the match",
+   "89449005": "broader",
+   "402456003": "a different condition",
+   "402453006": "narrower (a subtype)",
+   "858580008": "a different condition"
+  },
+  "29819": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830055006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259822003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "30319": {
+   "1153570009": "a different condition -- no candidate fits the whole indication",
+   "773726000": "a different condition -- no candidate fits the whole indication",
+   "778064009": "a different condition -- no candidate fits the whole indication",
+   "1373752007": "a different condition -- no candidate fits the whole indication",
+   "1197429000": "a different condition -- no candidate fits the whole indication"
+  },
+  "30334": {
+   "1285576009": "likely the match"
+  },
+  "30409": {
+   "230314007": "a different condition -- no candidate fits the whole indication"
+  },
+  "30542": {
+   "254900004": "likely the match",
+   "1259388006": "narrower (a subtype)",
+   "278060005": "narrower (a subtype)",
+   "1237422007": "a different condition",
+   "823017009": "narrower (a subtype)"
+  },
+  "30739": {
+   "771000119108": "likely the match",
+   "751000119104": "narrower (a subtype)",
+   "90731000119103": "a different condition",
+   "741000119101": "narrower (a subtype)",
+   "731000119105": "narrower (a subtype)"
+  },
+  "30879": {
+   "699355007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "254993006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "721578007": "narrower (a subtype) -- no candidate fits the whole indication",
+   "716651004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "763771009": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "31024": {
+   "254837009": "likely the match",
+   "429740004": "not a condition (a finding, status, procedure or diet)",
+   "134405005": "not a condition (a finding, status, procedure or diet)",
+   "12275351000119103": "not a condition (a finding, status, procedure or diet)",
+   "254843006": "narrower (a subtype)"
+  },
+  "31311": {
+   "706970001": "likely the match",
+   "445180002": "not a condition (a finding, status, procedure or diet)",
+   "254837009": "broader",
+   "412736006": "not a condition (a finding, status, procedure or diet)",
+   "412739004": "not a condition (a finding, status, procedure or diet)"
+  },
+  "31359": {
+   "765741003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1162855005": "closest, but not exact -- no candidate fits the whole indication",
+   "1251490009": "a different condition -- no candidate fits the whole indication",
+   "1268544009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "766978002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "31394": {
+   "1197334002": "likely the match",
+   "765057007": "a different condition"
+  },
+  "31742": {
+   "45227007": "likely the match",
+   "195020003": "a different condition",
+   "233873004": "broader",
+   "1204194004": "a different condition",
+   "233871002": "a different condition"
+  },
+  "31817": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "427038005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "426964009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830060005": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "31937": {
+   "722150000": "a different condition -- no candidate fits the whole indication",
+   "1295482007": "a different condition -- no candidate fits the whole indication",
+   "324121000000109": "a different condition -- no candidate fits the whole indication",
+   "324181000000105": "a different condition -- no candidate fits the whole indication",
+   "324251000000105": "a different condition -- no candidate fits the whole indication"
+  },
+  "32168": {
+   "1208459005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259709004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1217020002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1208461001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259707002": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "32349": {
+   "1354544003": "likely the match",
+   "715655000": "narrower (a subtype)"
+  },
+  "32397": {
+   "267619000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "870199008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "773991005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1269223003": "a different condition -- no candidate fits the whole indication"
+  },
+  "32469": {
+   "723301009": "narrower (a subtype)",
+   "1255725002": "narrower (a subtype)",
+   "1259754003": "narrower (a subtype)",
+   "254637007": "closest, but not exact",
+   "830055006": "narrower (a subtype)"
+  },
+  "32582": {
+   "1381317004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "254837009": "broader -- no candidate fits the whole indication",
+   "429740004": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "134405005": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "12275351000119103": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "32605": {
+   "765328000": "closest, but not exact"
+  },
+  "32704": {
+   "722191003": "likely the match",
+   "866047004": "narrower (a subtype)",
+   "101711000119105": "narrower (a subtype)",
+   "1222679006": "a different condition"
+  },
+  "32740": {
+   "1156813002": "a different condition -- no candidate fits the whole indication",
+   "1373754008": "a different condition -- no candidate fits the whole indication",
+   "1279844009": "a different condition -- no candidate fits the whole indication",
+   "723579009": "a different condition -- no candidate fits the whole indication",
+   "1220596009": "a different condition -- no candidate fits the whole indication"
+  },
+  "32844": {
+   "719787003": "a different condition -- no candidate fits the whole indication",
+   "130631000119108": "a different condition -- no candidate fits the whole indication",
+   "1197482007": "a different condition -- no candidate fits the whole indication",
+   "1231142001": "a different condition -- no candidate fits the whole indication",
+   "1290541007": "a different condition -- no candidate fits the whole indication"
+  },
+  "32907": {
+   "46659004": "likely the match",
+   "783766005": "a different condition",
+   "770407006": "a different condition",
+   "66681000119107": "not a condition (a finding, status, procedure or diet)",
+   "64971000119106": "not a condition (a finding, status, procedure or diet)"
+  },
+  "32955": {
+   "1217704000": "closest, but not exact"
+  },
+  "33078": {
+   "47270006": "broader -- no candidate fits the whole indication",
+   "23697004": "a different condition -- no candidate fits the whole indication",
+   "60146005": "narrower (a subtype) -- no candidate fits the whole indication",
+   "237735008": "narrower (a subtype) -- no candidate fits the whole indication",
+   "237736009": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "33091": {
+   "429408002": "closest, but not exact",
+   "428960009": "narrower (a subtype)",
+   "428753007": "narrower (a subtype)",
+   "428964000": "narrower (a subtype)",
+   "428965004": "narrower (a subtype)"
+  },
+  "33092": {
+   "369767007": "a different condition -- no candidate fits the whole indication",
+   "399611001": "a different condition -- no candidate fits the whole indication",
+   "1379928000": "a different condition -- no candidate fits the whole indication",
+   "1290869007": "a different condition -- no candidate fits the whole indication",
+   "27885002": "a different condition -- no candidate fits the whole indication"
+  },
+  "33315": {
+   "1290690001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "865951006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "73711000119107": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "1354521001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1260050006": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "33430": {
+   "25044007": "closest, but not exact"
+  },
+  "33519": {
+   "363402007": "one of the conditions named",
+   "301007008": "a different condition",
+   "235595009": "a different condition",
+   "717847008": "a different condition",
+   "35265002": "a different condition"
+  },
+  "33845": {
+   "734990008": "a different condition -- no candidate fits the whole indication"
+  },
+  "34090": {
+   "109989006": "likely the match",
+   "440422002": "narrower (a subtype)",
+   "441313008": "narrower (a subtype)",
+   "413587002": "narrower (a subtype)",
+   "120481000119109": "not a condition (a finding, status, procedure or diet)"
+  },
+  "34141": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830055006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259822003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "34196": {
+   "399874002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "399875001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "399862001": "narrower (a subtype) -- no candidate fits the whole indication",
+   "399870006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "771235001": "a different condition -- no candidate fits the whole indication"
+  },
+  "34246": {
+   "370915005": "a different condition -- no candidate fits the whole indication",
+   "782915004": "a different condition -- no candidate fits the whole indication",
+   "1362026000": "a different condition -- no candidate fits the whole indication"
+  },
+  "34348": {
+   "1260117009": "a different condition",
+   "230381009": "closest, but not exact",
+   "784345005": "narrower (a subtype)",
+   "1231737000": "a different condition",
+   "763534009": "a different condition"
+  },
+  "34355": {
+   "770431001": "a different condition -- no candidate fits the whole indication"
+  },
+  "34450": {
+   "768937006": "a different condition -- no candidate fits the whole indication"
+  },
+  "34523": {
+   "275266006": "a different condition -- no candidate fits the whole indication",
+   "94348003": "a different condition -- no candidate fits the whole indication",
+   "94298004": "a different condition -- no candidate fits the whole indication",
+   "94402006": "a different condition -- no candidate fits the whole indication",
+   "716859000": "a different condition -- no candidate fits the whole indication"
+  },
+  "34569": {
+   "723301009": "a different condition -- no candidate fits the whole indication",
+   "1259754003": "a different condition -- no candidate fits the whole indication",
+   "427038005": "a different condition -- no candidate fits the whole indication",
+   "426964009": "a different condition -- no candidate fits the whole indication",
+   "830060005": "a different condition -- no candidate fits the whole indication"
+  },
+  "34575": {
+   "410801005": "likely the match",
+   "410502007": "broader",
+   "410798004": "a different condition",
+   "16043231000119108": "a different condition",
+   "16044751000119106": "a different condition"
+  },
+  "34661": {
+   "254915003": "likely the match",
+   "734015000": "a different condition",
+   "1187285005": "narrower (a subtype)",
+   "764961009": "narrower (a subtype)",
+   "1260056000": "a different condition"
+  },
+  "34667": {
+   "773775004": "narrower (a subtype) -- no candidate fits the whole indication",
+   "716005004": "a different condition -- no candidate fits the whole indication"
+  },
+  "34761": {
+   "718065008": "a different condition -- no candidate fits the whole indication",
+   "770596007": "a different condition -- no candidate fits the whole indication",
+   "773702002": "a different condition -- no candidate fits the whole indication",
+   "783743009": "a different condition -- no candidate fits the whole indication"
+  },
+  "34847": {
+   "770596007": "a different condition -- no candidate fits the whole indication",
+   "1179293006": "a different condition -- no candidate fits the whole indication",
+   "763349002": "a different condition -- no candidate fits the whole indication"
+  },
+  "34918": {
+   "64081000": "narrower (a subtype) -- no candidate fits the whole indication",
+   "734347001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication",
+   "774154008": "a different condition -- no candidate fits the whole indication",
+   "84229001": "not a condition (a finding, status, procedure or diet) -- no candidate fits the whole indication"
+  },
+  "34958": {
+   "733343005": "one of the conditions named",
+   "698182002": "a different condition",
+   "419842002": "one of the conditions named",
+   "255069008": "broader",
+   "1251493006": "a different condition"
+  },
+  "35021": {
+   "723301009": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1255725002": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259754003": "narrower (a subtype) -- no candidate fits the whole indication",
+   "830055006": "narrower (a subtype) -- no candidate fits the whole indication",
+   "1259822003": "narrower (a subtype) -- no candidate fits the whole indication"
+  },
+  "35667": {
+   "410056006": "likely the match",
+   "234619000": "a different condition",
+   "836343001": "a different condition",
+   "69525003": "a different condition",
+   "15927301000119109": "a different condition"
+  },
+  "35682": {
+   "722103009": "likely the match",
+   "254900004": "broader",
+   "1259388006": "broader",
+   "278060005": "a different condition",
+   "427492003": "a different condition"
+  },
+  "35781": {
+   "363478007": "broader",
+   "255032005": "likely the match",
+   "1288003006": "narrower (a subtype)",
+   "94634005": "a different condition",
+   "1367660004": "narrower (a subtype)"
+  },
+  "35788": {
+   "771474005": "a different condition -- no candidate fits the whole indication",
+   "773397000": "a different condition -- no candidate fits the whole indication",
+   "1264340007": "a different condition -- no candidate fits the whole indication"
+  },
+  "35952": {
+   "13645005": "likely the match",
+   "1388297006": "a different condition",
+   "195951007": "narrower (a subtype)",
+   "10692761000119107": "a different condition",
+   "1396400008": "narrower (a subtype)"
+  },
+  "36031": {
+   "771474005": "a different condition -- no candidate fits the whole indication",
+   "773397000": "a different condition -- no candidate fits the whole indication",
+   "1264340007": "a different condition -- no candidate fits the whole indication"
+  }
+ }
+}
