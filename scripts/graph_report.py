@@ -638,10 +638,15 @@ def main() -> int:
         uh = Path("cache/umls/umls_shared_cui_handcheck.json")       # UMLS-derived: git-ignored
         sc = json.load(open(uh))["scored"] if uh.exists() else []
         fam = {}
-        for m in sorted({r["method"] for r in sc}):
-            rs = [r for r in sc if r["method"] == m]
+        for m in sorted({r["method"] for r in sc if not r.get("pool")}):
+            rs = [r for r in sc if r["method"] == m and not r.get("pool")]
             k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
             fam[m] = (k, n, "hand check")
+        for pool in sorted({r["pool"] for r in sc if r.get("pool")}):   # small families checked as one stratified sample
+            rs = [r for r in sc if r.get("pool") == pool]
+            k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+            for m in {r["method"] for r in rs}:
+                fam[m] = (k, n, f"pooled hand check ({pool})")
         # HGNC -> OMIM: HGNC's own cross-references are the witness
         k, n = con.execute("""WITH u AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'umls:shared_cui' AND method = 'HGNC-OMIM same name'),
                                    x AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
@@ -657,25 +662,48 @@ def main() -> int:
                 by[m] = {"edges": e, "checked": n, "correct": k, "how": how, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
             else:
                 by[m] = {"edges": e, "earned_tier": "ungraded (no hand check yet)"}
+        con.execute("CREATE TEMP TABLE uhc (m VARCHAR, s VARCHAR, o VARCHAR)")
+        con.executemany("INSERT INTO uhc VALUES (?, ?, ?)", [(r["method"], r["s"], r["o"]) for r in sc if r["verdict"] != "correct"])
+        con.execute("""UPDATE edge SET state = 'rejected' WHERE predicate = 'umls:shared_cui' AND (method, s_code, o_code) IN (SELECT m, s, o FROM uhc)""")
         report["route:UMLS shared CUI (MRCONSO 2026AA), by vocabulary pair"] = {
             "families": by,
             "candidates_names_differ": con.execute("SELECT edges FROM build_log WHERE family LIKE 'UMLS shared CUI, names differ%'").fetchone(),
-            "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v)}
+            "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v),
+            "rejected_by_hand_check": con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:shared_cui' AND state = 'rejected'").fetchone()[0]}
+
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'ccsr:category'").fetchone()[0]:
+        report["classification:ICD-10-CM -> AHRQ CCSR categories"] = dict(zip(("edges", "icd10cm_codes_classified", "of_icd10cm_codes_in_graph",
+                "categories", "body_systems", "codes_in_more_than_one_category"), con.execute("""
+            WITH c AS (SELECT * FROM edge WHERE predicate = 'ccsr:category')
+            SELECT count(*), count(DISTINCT s_code), (SELECT count(*) FROM node WHERE vocab = 'ICD10CM'), count(DISTINCT o_code),
+                   count(DISTINCT left(o_code, 3)),
+                   (SELECT count(*) FROM (SELECT s_code FROM c WHERE method = 'classified_as' GROUP BY 1 HAVING count(DISTINCT o_code) > 1))
+            FROM c""").fetchone()))
 
     # --- UMLS relationships: sources' own hierarchies (native) and MED-RT (hand check + DrugCentral witness) ---------
     if con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'medrt:%' OR predicate = 'umls:source_parent'").fetchone()[0]:
         mh = Path("cache/umls/umls_medrt_handcheck.json")        # UMLS-derived: git-ignored
         sc = json.load(open(mh))["scored"] if mh.exists() else []
+        con.execute("CREATE TEMP TABLE mhc (predicate VARCHAR, s VARCHAR, ov VARCHAR, o VARCHAR, correct BOOLEAN)")
+        con.executemany("INSERT INTO mhc VALUES (?, ?, ?, ?, ?)", [(r["predicate"], r["rxn"], r["o_vocab"], r["o_code"], r["verdict"] == "correct") for r in sc])
+        checked = {(p_, m_): (k, n) for p_, m_, k, n in con.execute("""SELECT e.predicate, e.method, count(*) FILTER (WHERE h.correct), count(*)
+            FROM mhc h JOIN edge e ON e.predicate = h.predicate AND e.s_code = h.s AND e.o_vocab = h.ov AND e.o_code = h.o GROUP BY 1, 2""").fetchall()}
         med = {}
-        for pred, e in con.execute("SELECT predicate, count(*) FROM edge WHERE predicate LIKE 'medrt:%' GROUP BY 1 ORDER BY 2 DESC").fetchall():
-            rs = [r for r in sc if r["predicate"] == pred]
-            if rs:
-                k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+        for pred, m_, e in con.execute("SELECT predicate, method, count(*) FROM edge WHERE predicate LIKE 'medrt:%' GROUP BY 1, 2 ORDER BY 1, 3 DESC").fetchall():
+            key = pred + (" [corroborated by FDA SPL]" if "corroborated" in m_ else "")
+            if (pred, m_) in checked:
+                k, n = checked[(pred, m_)]
                 lo, _ = wilson(k, n)
-                con.execute("UPDATE edge SET tier = ? WHERE predicate = ?", [tier(lo, n), pred])
-                med[pred] = {"edges": e, "checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = ? AND method = ?", [tier(lo, n), pred, m_])
+                med[key] = {"edges": e, "checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
             else:
-                med[pred] = {"edges": e, "earned_tier": "ungraded (no hand check yet)"}
+                med[key] = {"edges": e, "earned_tier": "ungraded (no hand check yet)"}
+        # every edge a hand check found wrong is rejected by name: kept, never followed
+        con.execute("""UPDATE edge SET state = 'rejected' WHERE predicate LIKE 'medrt:%'
+                       AND (predicate, s_code, o_vocab, o_code) IN (SELECT predicate, s, ov, o FROM mhc WHERE NOT correct)""")
+        med["rejected_by_hand_check"] = con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'medrt:%' AND state = 'rejected'").fetchone()[0]
+        fda = con.execute("SELECT method, count(*), count(DISTINCT s_code), count(DISTINCT o_code) FROM edge WHERE predicate = 'fda:pharmacologic_class' GROUP BY 1").fetchall()
+        med["fda_route (native)"] = {m_: {"edges": e, "drugs": d, "classes": c} for m_, e, d, c in fda}
         wit = {}
         for m_, d_ in (("medrt:may_treat", "drugcentral:indication"), ("medrt:contraindicated_with", "drugcentral:contraindication")):
             wit[m_ + " vs " + d_] = dict(zip(("drugs_in_both", "medrt_edges_for_them", "same_snomed_concept", "is_a_related"), con.execute(f"""

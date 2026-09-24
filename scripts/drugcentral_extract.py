@@ -17,6 +17,7 @@ Kept, as TSV under cache/drugcentral/ (git-ignored):
     target_component   protein: UniProt accession, gene symbol, NCBI gene id, organism
     td2tc              target -> its protein components
     reference          id, PMID, DOI, URL, title -- what act_ref_id / moa_ref_id point at, for the source trace
+    pharma_class       struct_id -> pharmacologic class: FDA SPL indexing (EPC, MoA, PE, CS -- MED-RT codes), MeSH PA, ChEBI role
 
     scripts/drugcentral_extract.py [--dump cache/drugcentral/drugcentral.dump.11012023.sql.gz]
 """
@@ -31,7 +32,7 @@ from pathlib import Path
 OUT = Path("cache/drugcentral")
 KEEP = {"identifier": None, "struct2atc": None, "omop_relationship": None, "structures": ["id", "name"],
         "act_table_full": None, "target_dictionary": None, "target_component": None, "td2tc": None,
-        "reference": ["id", "pmid", "doi", "url", "title"]}
+        "reference": ["id", "pmid", "doi", "url", "title"], "pharma_class": None}
 COPY = re.compile(r"^COPY (?:public\.)?(\w+) \(([^)]*)\) FROM stdin;$")
 
 

@@ -61,7 +61,8 @@ UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/ub
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
 RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
 UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
-UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
+UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
+UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
 LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
 RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
@@ -173,7 +174,7 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
        "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "umls_rel": "UMLS 2026AA MRCONSO", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
-       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables",
+       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables", "ccsr": "AHRQ CCSR for ICD-10-CM 2026 (UMLS 2026AA)",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
@@ -221,7 +222,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS,
-            "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL,
+            "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL, "UMLS 2026AA MRMAP (CCSR)": UMLS_MRMAP,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
             "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt"}
 
@@ -661,6 +662,15 @@ def main() -> int:
                 'drugcentral:xref', CASE id_type {dcase} END, replace(identifier, 'CHEBI:', ''), 'DrugCentral', 'identifier', id_type,
                 'native', 'asserted', '{PIN['dc']}', NULL
             FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""")
+        if (DC / "pharma_class.tsv").exists():
+            # the FDA's own pharmacologic class indexing of approved labels (SPL), relayed by DrugCentral; its classes
+            # are MED-RT concepts (N-codes), so this is a label-grade route to the same class nodes MED-RT reaches
+            ins("DrugCentral drug -> FDA pharmacologic class (EPC, MoA, PE; MED-RT codes)", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
+                    'fda:pharmacologic_class', 'MEDRT', class_code, 'FDA SPL pharmacologic class indexing (via DrugCentral)', 'pharma_class',
+                    type, 'native', 'asserted', '{PIN['dc']}', json_object('class_type', type, 'class_name', name)
+                FROM {dc('pharma_class')} WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') AND class_code LIKE 'N%'""")
+            con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', class_code, any_value(name) FROM {dc('pharma_class')}
+                            WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') GROUP BY 2""")
         if (DC / "struct2atc.tsv").exists():
             ins("DrugCentral -> ATC", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:in_atc_class', 'ATC', atc_code, 'DrugCentral',
                     'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""")
@@ -1180,6 +1190,16 @@ def main() -> int:
         log["likelihood-ratio records bound but held as candidates (family not admitted)"] = held
         print(f"  {'LR records held (binding family not admitted)':<44} {held:>10,}   admitted: {sorted(admitted)}", flush=True)
 
+    # --- AHRQ CCSR: ICD-10-CM codes into clinical categories (UMLS relays AHRQ's map verbatim; Level 0, public domain) --
+    if UMLS_MRMAP.exists():      # MRMAP's FROMID / TOID are its own row ids; the codes are FROMEXPR / TOEXPR
+        ins("ICD-10-CM -> CCSR clinical category (AHRQ)", f"""SELECT DISTINCT 'ICD10CM', m.FROMEXPR, 'ccsr:category', 'CCSR', m.TOEXPR, 'AHRQ CCSR (via UMLS)',
+                'MRMAP 2026AA CCSR_ICD10CM', m.RELA, 'native', 'asserted', '{PIN['ccsr']}',
+                json_object('body_system', left(m.TOEXPR, 3))
+            FROM '{UMLS_MRMAP}' m WHERE m.MAPSETSAB = 'CCSR_ICD10CM' AND m.FROMEXPR IS NOT NULL AND m.TOEXPR IS NOT NULL
+              AND m.FROMEXPR IN (SELECT o_code FROM edge WHERE o_vocab = 'ICD10CM' UNION SELECT s_code FROM edge WHERE s_vocab = 'ICD10CM')""")
+        con.execute(f"""INSERT INTO name_hint SELECT 'CCSR', CODE, any_value(STR) FROM '{UMLS_AUI}' WHERE SAB = 'CCSR_ICD10CM'
+                        AND CODE IN (SELECT o_code FROM edge WHERE predicate = 'ccsr:category') GROUP BY 2""")
+
     # --- UMLS Metathesaurus: codes of two graph vocabularies under one CUI (UMLS 2026AA, the licence holder's copy) ---
     # Same-name pairs load (the HPO rule: the two sources share a name for the concept); pairs whose names differ are
     # candidates, counted here and kept in the parquet. HPO -> SNOMED and SNOMED organism -> NCBI Taxonomy have their own
@@ -1190,6 +1210,12 @@ def main() -> int:
         con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
         con.execute(f"""CREATE TEMP TABLE up AS SELECT u.* FROM '{UMLS_PAIRS}' u
                         WHERE (u.sv, u.sc) IN (SELECT v, c FROM present) OR (u.ov, u.oc) IN (SELECT v, c FROM present)""")
+        # an OMIM GENE entry carries its diseases' names as synonyms, so a shared name pairs a disease with a gene
+        # (Bardet-Biedl syndrome 1 -> the BBS1 gene entry). HGNC names the gene entries; they pair only with a gene.
+        con.execute("""DELETE FROM up WHERE (('OMIM' = sv AND sc IN (SELECT o_code FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
+                                               AND NOT (ov = 'HGNC' OR (ov = 'NCIT' AND o_name ILIKE '% Gene')))
+                                          OR ('OMIM' = ov AND oc IN (SELECT o_code FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
+                                               AND NOT (sv = 'HGNC' OR (sv = 'NCIT' AND s_name ILIKE '% Gene'))))""")
         ins("UMLS shared CUI, same name (MRCONSO 2026AA)", f"""SELECT DISTINCT sv, sc, 'umls:shared_cui', ov, oc, 'UMLS', 'MRCONSO 2026AA CUI ' || cui,
                 sv || '-' || ov || ' same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('cui', cui, 'shared_name', shared_name)
@@ -1228,6 +1254,12 @@ def main() -> int:
                 json_object('medrt_rela', rela, 'drug_cui', cui_s)
             FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT' AND (s_vocab, s_code) IN (SELECT v, c FROM present)""")
         con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', o_code, any_value(o_name) FROM '{UMLS_REL}' WHERE o_vocab = 'MEDRT' GROUP BY 2""")
+        # a MED-RT mechanism / effect the FDA's label indexing also asserts for the same drug: two independent sources on one
+        # fact. The method says so, and graph_report.py tiers corroborated and uncorroborated edges apart.
+        con.execute("""UPDATE edge SET method = method || '; corroborated by FDA SPL'
+            WHERE predicate IN ('medrt:has_mechanism_of_action', 'medrt:has_physiologic_effect')
+              AND (s_code, o_code) IN (SELECT r.o_code, f.o_code FROM edge f JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = f.s_code
+                                       WHERE f.predicate = 'fda:pharmacologic_class' AND f.method IN ('MoA', 'PE'))""")
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
@@ -1309,6 +1341,14 @@ def main() -> int:
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
+    conso = Path("cache/umls/2026AA/mrconso.parquet")
+    if conso.exists():           # any still-unnamed node of a UMLS source vocabulary: that source's preferred atom (level 0 / SNOMED)
+        con.execute(f"""INSERT INTO name_hint SELECT k.vocab, k.code, arg_min(m.STR, CASE WHEN m.TTY IN ('MH', 'NM', 'PT', 'PN', 'SCN', 'IN', 'LN', 'LPN', 'LA')
+                            THEN 0 ELSE 1 END) FROM keys k
+            JOIN '{conso}' m ON m.CODE = k.code AND m.SUPPRESS = 'N' AND m.SRL IN (0, 9) AND m.SAB = CASE k.vocab WHEN 'MESH' THEN 'MSH' WHEN 'NCIT' THEN 'NCI'
+                 WHEN 'OMIM' THEN 'OMIM' WHEN 'FMA' THEN 'FMA' WHEN 'LOINC' THEN 'LNC' WHEN 'HGNC' THEN 'HGNC' WHEN 'RXN' THEN 'RXNORM' ELSE NULL END
+            WHERE (k.vocab, k.code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> '' AND name <> vocab || ':' || code)
+            GROUP BY 1, 2""")
     if UMLS_PAIRS.exists():      # a UMLS name only where no source of the node's own vocabulary names it
         con.execute("CREATE TEMP TABLE umls_names (vocab VARCHAR, code VARCHAR, name VARCHAR)")
         con.executemany("INSERT INTO umls_names VALUES (?, ?, ?)", umls_names)
