@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,335,431 nodes, 6,563,829 edges, 187 edge types, 48 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets* and *How a drug works*.)
-Written to `out/graph.duckdb` (240 MB, git-ignored), rebuilt from source in under four minutes.
+**1,393,396 nodes, 6,708,774 edges, 191 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways* and *How a drug works*.)
+Written to `out/graph.duckdb` (246 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -564,6 +564,31 @@ national ED sets 22%, Problem/Diagnosis 17%; foundation procedures 6%; **RACS MA
 procedures 0.8% — procedures are the least-bridged part of SNOMED, the same gap MBS sits in, and the MALT set (the
 surgical audit list) is the natural target for the MBS candidate frames.
 
+## Genes, rare diseases and pathways: HGNC, Orphanet, Reactome (built)
+
+Three free downloads (24 Sep 2026, cache/, 115 MB), each a source's own assertions.
+
+**HGNC** (complete set, CC0) — the authority for human gene symbols: `hgnc:xref` from each approved gene to its NCBI Gene id,
+UniProt proteins and OMIM **gene** entry (37,746 edges). Only genes that share an id with something else in the graph load
+(a disease gene, a drug target, a genotype test, a Reactome participant); the other 32,173 — mostly non-coding RNAs and
+pseudogenes — would each be a detached cluster of their own ids, and are counted in `build_log`, not loaded. *Witness:* on the
+gene ↔ protein pairs DrugCentral's target components gave (`uniprot:encoded_by`), HGNC agrees for **1,854 of 1,890**; the 2
+that differ are duplicated genes (P0DMV8 is made by both HSPA1A and HSPA1B; DrugCentral puts P36544 on the CHRFAM7A fusion
+gene where HGNC says CHRNA7), 34 are silent.
+
+**Orphanet** (Orphadata product 1, 2026-06-23, CC BY 4.0) — Orphanet's *own* alignments, not MONDO's: `orpha:xref` from 11,645
+rare disorders to ICD-10, ICD-11 (MMS codes, a vocabulary separate from MONDO's ICD-11 foundation ids), OMIM, UMLS, MeSH,
+MONDO and GARD (49,601 edges; MedDRA left out). The relation is Orphanet's and it matters: to ICD-10 the ORPHAcode is
+mostly **narrower** than the code (NTBT 7,034, exact 605) — ICD-10 has no room for most rare diseases — and to OMIM often
+**broader** (BTNT 4,138, exact 3,781). Only E is an equivalence. *Witness:* of Orphanet's 8,918 ORPHA → MONDO links, MONDO
+asserts the same pair back for **8,789** (98.6%). Orphanet writes MONDO ids without MONDO's leading zeros; they are padded.
+
+**Reactome** (v97, CC0) — `reactome:participates_in` from 12,155 human proteins to their lowest-level pathways (54,699,
+curated TAS or inferred IEA) and `reactome:part_of` for the pathway hierarchy (2,899; 2,344 pathways). The chain drug →
+target → protein → **pathway** now closes: **2,549 DrugCentral drugs and 1,807 Australian medicine ingredients reach a
+pathway through a target**, and **9,135 diseases reach one through a gene** (HPO genes_to_disease → NCBI Gene → HGNC →
+UniProt → Reactome).
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -619,6 +644,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
 #   read in place: ~/Documents/ONTOLOGIES/PunRadLex_Owl4.3/RadLex.owl (RadLex 4.3) and complete-playbook-dev.csv (RSNA_PLAYBOOK)
+# sources added 24 Sep: cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register
@@ -630,7 +656,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 
 ## Licences
 
-DrugCentral is CC BY-SA 4.0; Uberon is CC BY 3.0; the MBS XML is Commonwealth of Australia material from MBS Online; ChEMBL (the witness answers in cache/chembl/) is CC BY-SA 3.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
+DrugCentral is CC BY-SA 4.0; HGNC and Reactome are CC0; Orphadata is CC BY 4.0; Uberon is CC BY 3.0; the MBS XML is Commonwealth of Australia material from MBS Online; ChEMBL (the witness answers in cache/chembl/) is CC BY-SA 3.0; MONDO is CC BY 4.0; HPO is free to use with attribution under its own licence; SNOMED
 CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC and the SNOMED CT LOINC Extension are
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not

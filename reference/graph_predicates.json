@@ -62,7 +62,10 @@
     "KEGG": "KEGG DRUG entry (D.....)",
     "INN": "WHO International Nonproprietary Name id",
     "HGNC": "HGNC gene, keyed as HGNC:n",
-    "CLINVAR": "ClinVar variation id"
+    "CLINVAR": "ClinVar variation id",
+    "ICD11MMS": "WHO ICD-11 for Mortality and Morbidity Statistics, keyed by MMS code (e.g. LD24.61). Distinct from ICD11 (foundation ids, as MONDO cites them). Codes only",
+    "GARD": "NIH Genetic and Rare Diseases Information Center disease id",
+    "REACTOME": "Reactome pathway, keyed by stable id (R-HSA-...)"
   },
   "predicates": [
     {
@@ -986,6 +989,77 @@
       "source": "DrugCentral target_component (accession -> geneid)",
       "status": "built",
       "note": "Only the proteins DrugCentral carries, and only where it gives an NCBI gene id (nearly all human; rarely other species)."
+    },
+    {
+      "id": "hgnc:xref",
+      "label": "HGNC gene is identified by this NCBI Gene id / UniProt protein / OMIM gene entry",
+      "subject": [
+        "HGNC"
+      ],
+      "object": [
+        "NCBIGENE",
+        "UNIPROT",
+        "OMIM"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "HGNC complete set (downloaded 2026-09-24), Approved genes: entrez_id, uniprot_ids, omim_id",
+      "status": "built",
+      "note": "HGNC is the authority for human gene symbols. Its OMIM ids are GENE entries (*), not the phenotype entries (#) HPO and MONDO cite -- both sit in the OMIM vocabulary. method names the HGNC column."
+    },
+    {
+      "id": "orpha:xref",
+      "label": "Orphanet aligns this rare disease to this code",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "ICD10WHO",
+        "ICD11MMS",
+        "OMIM",
+        "UMLS",
+        "MESH",
+        "MONDO",
+        "GARD"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "Orphadata product 1 (en_product1.xml, 2026-06-23): ExternalReference",
+      "status": "built",
+      "note": "Orphanet's own alignment, not MONDO's. method is Orphanet's relation: E (exact), NTBT (the ORPHAcode is narrower than the target -- the usual case for ICD-10), BTNT (broader), ND (undecided); attrs.validation and attrs.icd_relation as Orphanet states them. Only E is an equivalence. MedDRA left out (MSSO licence)."
+    },
+    {
+      "id": "reactome:participates_in",
+      "label": "human protein takes part in this Reactome pathway (lowest level)",
+      "subject": [
+        "UNIPROT"
+      ],
+      "object": [
+        "REACTOME"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Reactome v97 UniProt2Reactome.txt, Homo sapiens",
+      "status": "built",
+      "note": "attrs.evidence: TAS (traceable author statement, curated) or IEA (inferred electronically). The pathway's ancestors come through reactome:part_of."
+    },
+    {
+      "id": "reactome:part_of",
+      "label": "Reactome pathway is part of this larger pathway",
+      "subject": [
+        "REACTOME"
+      ],
+      "object": [
+        "REACTOME"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Reactome v97 ReactomePathwaysRelation.txt, Homo sapiens",
+      "status": "built"
     },
     {
       "id": "hpo:gene_disease",
