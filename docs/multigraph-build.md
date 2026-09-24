@@ -2,7 +2,7 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,393,396 nodes, 6,708,774 edges, 191 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways* and *How a drug works*.)
+**1,410,187 nodes, 6,738,996 edges, 194 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11* and *How a drug works*.)
 Written to `out/graph.duckdb` (246 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
@@ -589,6 +589,23 @@ target → protein → **pathway** now closes: **2,549 DrugCentral drugs and 1,8
 pathway through a target**, and **9,135 diseases reach one through a gene** (HPO genes_to_disease → NCBI Gene → HGNC →
 UniProt → Reactome).
 
+## ICD-10 ↔ ICD-11: WHO's mapping tables (built)
+
+WHO's tables from the ICD-11 2026-01 release (`cache/who-icd11/`, 6.8 MB, CC BY-ND 3.0 IGO; codes only, no titles):
+`who:icd10_to_icd11` (ICD-10 → ICD-11 MMS: WHO's single best category, and the other categories an ICD-10 code's content
+moved to), `who:icd11_to_icd10` (the backward table, from MMS codes and from foundation entities — not the inverse: many
+ICD-11 codes fold into one ICD-10 code), and `who:icd11_mms_foundation`, which **joins the graph's two ICD-11
+identifiers** — the foundation ids MONDO cites and the MMS codes Orphanet cites. As with HGNC, only rows touching a code
+another source already names load (30,222); the rest of the two classifications would be detached clusters.
+4,155 of 4,545 ICD-10 codes in the graph reach ICD-11, and 4,558 MONDO diseases reach ICD-10 through their ICD-11 entity.
+
+*Two witnesses, both readable only through Orphanet's relation.* Where Orphanet calls its ICD-11 link **exact**, MONDO's
+foundation id is the entity that MMS code linearises for **1,216 of 1,252** diseases (97.1%); where Orphanet's ICD-11 code
+is *broader* than the disease (NTBT), it agrees 20 of 1,617 times — as it should, since the code then stands for a larger
+entity. Where both Orphanet ICD links are exact, WHO's backward table gives Orphanet's ICD-10 code for **346 of 388**
+(89%) and the same 3-character category for 365 (94%); the NTBT/NTBT majority agrees on the category 60% of the time. The
+disagreement lives where Orphanet itself says the codes are approximations.
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -644,7 +661,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
 #   read in place: ~/Documents/ONTOLOGIES/PunRadLex_Owl4.3/RadLex.owl (RadLex 4.3) and complete-playbook-dev.csv (RSNA_PLAYBOOK)
-# sources added 24 Sep: cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
+# sources added 24 Sep: cache/who-icd11/ (WHO mapping.zip, ICD-11 2026-01, 6.8 MB), cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register

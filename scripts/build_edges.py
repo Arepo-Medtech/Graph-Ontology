@@ -73,6 +73,7 @@ UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path(
 AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
 HGNC_SET = Path("cache/hgnc/hgnc_complete_set.txt")           # HGNC complete set, downloaded 24 Sep 2026 (CC0)
 ORPHA_XML = Path("cache/orphanet/en_product1.xml")            # Orphadata product 1, 2026-06-23 (CC BY 4.0)
+WHO_MAP = Path("cache/who-icd11")                             # WHO ICD-10 <-> ICD-11 mapping tables, release 2026-01 (CC BY-ND 3.0 IGO)
 REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
@@ -170,7 +171,7 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
        "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
-       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97",
+       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
@@ -219,7 +220,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
-            "Reactome": REACTOME / "UniProt2Reactome.txt"}
+            "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt"}
 
 
 def main() -> int:
@@ -1031,6 +1032,54 @@ def main() -> int:
                                            "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None)})))
         ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)))
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
+
+    # --- WHO's ICD-10 <-> ICD-11 mapping tables, and ICD-11's two identifiers ---------------------------------------
+    # MMS codes (what is coded: Orphanet cites them) and foundation ids (what the entity is: MONDO cites them) are two
+    # vocabularies here; WHO's tables carry both, so they also join them. Codes only -- WHO titles are not loaded.
+    if (WHO_MAP / "10To11MapToOneCategory.txt").exists():
+        # only rows touching an ICD code something else in the graph already names (Orphanet, MONDO, HPO): the rest of the
+        # two classifications would be detached clusters joining nothing (counted in build_log, not loaded)
+        seen = {(v, c) for v, c in con.execute("""SELECT DISTINCT o_vocab, o_code FROM edge WHERE o_vocab IN ('ICD10WHO', 'ICD11MMS', 'ICD11')""").fetchall()}
+        touch = lambda *ks: any(k in seen for k in ks)
+        wt = lambda f: [dict(zip([h.strip() for h in rows[0]], r)) for rows in [[l.rstrip("\n").split("\t") for l in open(WHO_MAP / f, encoding="utf-8-sig")]]
+                        for r in rows[1:]]
+        fid = lambda u: (u or "").rstrip("/").split("/entity/")[-1] if "/entity/" in (u or "") else None
+        mid = lambda u: (u or "").split("/mms/")[-1].split("/")[0] if "/mms/" in (u or "") else None
+        one = wt("10To11MapToOneCategory.txt")
+        multi = wt("10To11MapToMultipleCategories.txt") if (WHO_MAP / "10To11MapToMultipleCategories.txt").exists() else []
+        loc = lambda f: f"{f} (WHO release 2026-01)"
+        rows_w = {}
+        for f, rs, how in (("10To11MapToOneCategory.txt", one, "one category"), ("10To11MapToMultipleCategories.txt", multi, "multiple categories")):
+            for r in rs:
+                c10, c11 = (r.get("icd10Code") or "").strip(), (r.get("icd11Code") or "").strip()
+                f11 = fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))
+                if c10 and c11 and touch(("ICD10WHO", c10), ("ICD11MMS", c11), ("ICD11", f11)):
+                    rows_w.setdefault((c10, c11), ("ICD10WHO", c10, "who:icd10_to_icd11", "ICD11MMS", c11, "WHO", loc(f), how, "native", "asserted",
+                                               PIN["who"], json.dumps({"icd11_foundation": fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))})))
+        ins_rows("WHO ICD-10 -> ICD-11 (MMS) mapping table", sorted(rows_w.values()))
+        back = wt("11To10MapToOneCategory.txt")
+        ins_rows("WHO ICD-11 (MMS) -> ICD-10 mapping table", sorted({("ICD11MMS", r["icd11Code"].strip(), "who:icd11_to_icd10", "ICD10WHO",
+                  r["icd10Code"].strip(), "WHO", loc("11To10MapToOneCategory.txt"), "one category", "native", "asserted", PIN["who"], None)
+                  for r in back if (r.get("icd11Code") or "").strip() and (r.get("icd10Code") or "").strip()
+                  and touch(("ICD11MMS", r["icd11Code"].strip()), ("ICD10WHO", r["icd10Code"].strip()))}))
+        fnd = wt("foundation_11To10MapToOneCategory.txt") if (WHO_MAP / "foundation_11To10MapToOneCategory.txt").exists() else []
+        ins_rows("WHO ICD-11 foundation entity -> ICD-10 mapping table", sorted({("ICD11", fid(r["Foundation URI"]), "who:icd11_to_icd10",
+                  "ICD10WHO", r["icd10Code"].strip(), "WHO", loc("foundation_11To10MapToOneCategory.txt"), "foundation, one category", "native",
+                  "asserted", PIN["who"], None) for r in fnd if fid(r.get("Foundation URI")) and (r.get("icd10Code") or "").strip()
+                  and touch(("ICD11", fid(r["Foundation URI"])), ("ICD10WHO", r["icd10Code"].strip()))}))
+        # an MMS code and the foundation entity it linearises (WHO states both on every row that has a code)
+        mf = {(r["icd11Code"].strip(), fid(r["Foundation URI"])) for r in fnd if (r.get("icd11Code") or "").strip() and fid(r.get("Foundation URI"))}
+        mf |= {(r["icd11Code"].strip(), fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))) for r in one + multi
+               if (r.get("icd11Code") or "").strip() and fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))
+               and mid(r.get("Linearization (releaseURI)") or r.get("Linearization (release) URI")) == fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))}
+        now = {(v, c) for v, c in con.execute("""SELECT DISTINCT o_vocab, o_code FROM edge WHERE o_vocab IN ('ICD10WHO', 'ICD11MMS', 'ICD11')
+                                                 UNION SELECT DISTINCT s_vocab, s_code FROM edge WHERE s_vocab IN ('ICD10WHO', 'ICD11MMS', 'ICD11')""").fetchall()}
+        ins_rows("ICD-11 MMS code -> its foundation entity", sorted({("ICD11MMS", m_, "who:icd11_mms_foundation", "ICD11", f_, "WHO",
+                  "mapping tables: icd11Code + Foundation URI", "stated on the same row", "native", "asserted", PIN["who"], None) for m_, f_ in mf
+                  if ("ICD11MMS", m_) in now or ("ICD11", f_) in now}))
+        log["WHO mapping rows not loaded (no code shared with the rest of the graph)"] = (
+            len({(r.get("icd10Code"), r.get("icd11Code")) for r in one + multi}) + len(back) + len(fnd) + len(mf)
+            - sum(con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'who:%'").fetchone()))
 
     # --- Reactome: human protein -> pathway, and the pathway hierarchy ----------------------------------------------
     if (REACTOME / "UniProt2Reactome.txt").exists():

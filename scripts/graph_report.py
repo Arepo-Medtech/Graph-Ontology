@@ -599,6 +599,37 @@ def main() -> int:
                    (SELECT count(DISTINCT o_vocab || o_code) FROM edge WHERE predicate = 'hpo:gene_disease' AND s_code IN (SELECT gene FROM gp))""").fetchone()))
         report["genes, rare diseases, pathways (HGNC, Orphanet, Reactome)"] = e
 
+    # --- WHO ICD-10 <-> ICD-11 ----------------------------------------------------------------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'who:%'").fetchone()[0]:
+        w = {"edges": dict(con.execute("SELECT predicate || ' / ' || method, count(*) FROM edge WHERE predicate LIKE 'who:%' GROUP BY 1 ORDER BY 1").fetchall())}
+        # witness 1: a rare disease Orphanet codes in both ICD-10 and ICD-11 -- does WHO's table carry its ICD-11 code to
+        # the same ICD-10 code (or to the 3-character category above it)?
+        # witness 1: a rare disease Orphanet codes in both ICD-10 and ICD-11 -- does WHO's table carry its ICD-11 code to the
+        # same ICD-10 code (or the 3-character category above it)? Split by Orphanet's relations: only E/E should agree.
+        w["orphanet_icd10_vs_who_map_by_relation (icd11 / icd10)"] = {f"{m11}/{m10}": dict(zip(("orpha_codes", "who_same_code",
+                "who_same_3_character_category"), (n, k, c))) for m11, m10, n, k, c in con.execute("""
+            WITH o10 AS (SELECT s_code o, o_code c10, method m10 FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD10WHO'),
+                 o11 AS (SELECT s_code o, o_code c11, method m11 FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD11MMS'),
+                 w AS (SELECT s_code c11, o_code c10 FROM edge WHERE predicate = 'who:icd11_to_icd10' AND s_vocab = 'ICD11MMS'),
+                 j AS (SELECT o11.o, m11, m10, bool_or(w.c10 = o10.c10) same, bool_or(left(w.c10, 3) = left(o10.c10, 3)) cat
+                       FROM o11 JOIN o10 USING (o) JOIN w USING (c11) GROUP BY 1, 2, 3)
+            SELECT m11, m10, count(*), count(*) FILTER (WHERE same), count(*) FILTER (WHERE cat) FROM j GROUP BY 1, 2 ORDER BY 3 DESC""").fetchall()}
+        # witness 2: MONDO's ICD-11 foundation id and Orphanet's MMS code for the same disease, by Orphanet's relation --
+        # an NTBT code linearises a broader entity by definition, so only E should agree
+        w["mondo_foundation_vs_orphanet_mms_by_relation"] = {m: {"diseases": n, "mms_code_linearises_mondos_entity": k} for m, n, k in con.execute("""
+            WITH p AS (SELECT s_code mondo, o_code orpha FROM edge WHERE predicate = 'mondo:exact_match' AND o_vocab = 'ORPHA'),
+                 mf AS (SELECT s_code mondo, o_code f FROM edge WHERE predicate = 'mondo:exact_match' AND o_vocab = 'ICD11'),
+                 om AS (SELECT s_code orpha, o_code m, method FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD11MMS'),
+                 lin AS (SELECT s_code m, o_code f FROM edge WHERE predicate = 'who:icd11_mms_foundation')
+            SELECT om.method, count(DISTINCT p.mondo), count(DISTINCT p.mondo) FILTER (WHERE (om.m, mf.f) IN (SELECT m, f FROM lin))
+            FROM p JOIN mf USING (mondo) JOIN om USING (orpha) GROUP BY 1 ORDER BY 2 DESC""").fetchall()}
+        w["reach"] = dict(zip(("icd10_codes_in_graph", "reaching_icd11", "mondo_diseases_reaching_icd10_through_icd11"), con.execute("""
+            SELECT (SELECT count(*) FROM node WHERE vocab = 'ICD10WHO'),
+                   (SELECT count(DISTINCT s_code) FROM edge WHERE predicate = 'who:icd10_to_icd11'),
+                   (SELECT count(DISTINCT m.s_code) FROM edge m JOIN edge w ON w.predicate = 'who:icd11_to_icd10' AND w.s_vocab = 'ICD11'
+                      AND w.s_code = m.o_code WHERE m.predicate = 'mondo:exact_match' AND m.o_vocab = 'ICD11')""").fetchone()))
+        report["who:ICD-10 <-> ICD-11 (WHO mapping tables 2026-01)"] = w
+
     # --- SNOMED CT-AU reference sets: how much of each set reaches beyond SNOMED ----------------------------------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:in_refset'").fetchone()[0]:
         con.execute("""CREATE TEMP TABLE sct_out AS SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT'
