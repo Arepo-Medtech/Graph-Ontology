@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,469,315 nodes, 6,919,004 edges, 195 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11*, *UMLS Metathesaurus* and *How a drug works*.)
-Written to `out/graph.duckdb` (265 MB, git-ignored), rebuilt from source in under four minutes.
+**1,507,970 nodes, 7,258,358 edges, 202 edge types, 52 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11*, *UMLS Metathesaurus* and *How a drug works*.)
+Written to `out/graph.duckdb` (278 MB, git-ignored), rebuilt from source in about seven minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -641,6 +641,38 @@ link outside SNOMED: **41.9% → 45.5%**; 33,785 MeSH descriptors now sit in the
 the pairs, the hand check (`cache/umls/umls_shared_cui_handcheck.json`) and the parquet stay git-ignored, and a graph built
 with them is for UMLS licensees.
 
+### UMLS relationships (MRREL, Level 0 subset 2026AA)
+
+The Level 0 subset (2.0 GB; exactly the unrestricted sources — SNOMED's own relationships already come from the AU release)
+gives 23.9 M relationships (`scripts/umls_mrrel.py`). UMLS writes each as *the second atom to the first*: a row
+(disease, may_treat, drug) says the drug may treat the disease; a PAR row names the parent second. Two kinds, loaded
+apart because they rest on different evidence:
+
+**Sources' own hierarchies — native** (`umls:source_parent`, 273,627 edges): the LOINC part hierarchy (158,159), NCI
+Thesaurus is-a (50,927), FMA is-a (42,243) and the MeSH tree (22,298; headings only). The only UMLS step is atom → the
+source's own code, so each is that source's assertion. They are **climbed upward** from nodes the graph already holds —
+parents, then theirs — and never pulled downward, so a broad concept does not bring thousands of children nothing
+names; nodes outside the main component fell 18,507 → 13,313.
+
+**MED-RT** (the VA's medication reference terminology, public domain), projected onto the graph's RxNorm ingredients and
+SNOMED CT / MeSH diseases through a shared CUI on each side, both ends already nodes:
+
+| predicate | edges | hand check | tier |
+|---|---:|---|---:|
+| `medrt:contraindicated_with` | 21,441 | 56/60 (lower bound 0.841) | 2 |
+| `medrt:may_treat` | 26,143 | 24/30 | inadmissible |
+| `medrt:has_mechanism_of_action` (→ MED-RT class) | 6,000 | 23/30 | inadmissible |
+| `medrt:has_physiologic_effect` (→ MED-RT class) | 7,787 | — | ungraded |
+| `medrt:may_prevent` / `may_diagnose` | 4,091 / 265 | — | ungraded |
+
+MED-RT is generous where labels are strict: its "may treat" includes cannabidiol → pain and chloroquine → systemic
+scleroderma, its mechanisms dexmedetomidine as an *alpha-1* agonist and megestrol as an oestrogen antagonist — so those
+edges stay, held inadmissible, never displayed. Its contraindications are sound; the four errors in 60 are MED-RT's coarse
+concepts ("Acute Disease" for acute bronchospasm). *The witness is a lower bound, not a disagreement:* for the 1,706 drugs
+both carry, 42% of MED-RT's SNOMED indications match DrugCentral's exactly or through is-a, and 32% of its
+contraindications — DrugCentral follows current labels, and its silence is *unknown*, not "no". Verdicts:
+`cache/umls/umls_medrt_handcheck.json` (UMLS-derived, git-ignored).
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -693,6 +725,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/umls_crosswalk.py --source SNOMEDCT_US --target NCBI --ids cache/umls/sct_organisms.txt --out sct_ncbi   # ~1.7 h, resumable
 .venv/bin/python scripts/mbs_candidates.py       # ~25 min (Ontoserver): MBS -> SNOMED procedure candidate frames
 .venv/bin/python scripts/umls_mrconso.py         # UMLS 2026AA MRCONSO (key in .env; --download first time, 513 MB) -> shared-CUI pairs, ~20 s
+.venv/bin/python scripts/umls_mrrel.py           # UMLS 2026AA Level 0 subset (--download first time, 2.0 GB) -> hierarchies + MED-RT edges, ~1 min
 .venv/bin/python scripts/radlex_prepare.py       # ~20 s: RadLex.owl (RADLEX_OWL) -> cache/radlex/, and the ids UMLS needs
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s

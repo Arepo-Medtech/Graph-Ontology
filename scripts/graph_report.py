@@ -662,6 +662,38 @@ def main() -> int:
             "candidates_names_differ": con.execute("SELECT edges FROM build_log WHERE family LIKE 'UMLS shared CUI, names differ%'").fetchone(),
             "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v)}
 
+    # --- UMLS relationships: sources' own hierarchies (native) and MED-RT (hand check + DrugCentral witness) ---------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'medrt:%' OR predicate = 'umls:source_parent'").fetchone()[0]:
+        mh = Path("cache/umls/umls_medrt_handcheck.json")        # UMLS-derived: git-ignored
+        sc = json.load(open(mh))["scored"] if mh.exists() else []
+        med = {}
+        for pred, e in con.execute("SELECT predicate, count(*) FROM edge WHERE predicate LIKE 'medrt:%' GROUP BY 1 ORDER BY 2 DESC").fetchall():
+            rs = [r for r in sc if r["predicate"] == pred]
+            if rs:
+                k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+                lo, _ = wilson(k, n)
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = ?", [tier(lo, n), pred])
+                med[pred] = {"edges": e, "checked": n, "correct": k, "wilson_lo": round(lo, 4), "earned_tier": tier(lo, n)}
+            else:
+                med[pred] = {"edges": e, "earned_tier": "ungraded (no hand check yet)"}
+        wit = {}
+        for m_, d_ in (("medrt:may_treat", "drugcentral:indication"), ("medrt:contraindicated_with", "drugcentral:contraindication")):
+            wit[m_ + " vs " + d_] = dict(zip(("drugs_in_both", "medrt_edges_for_them", "same_snomed_concept", "is_a_related"), con.execute(f"""
+                WITH m AS (SELECT DISTINCT s_code rxn, o_code sct FROM edge WHERE predicate = '{m_}' AND o_vocab = 'SCT'),
+                     d AS (SELECT DISTINCT r.o_code rxn, i.o_code sct FROM edge i JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = i.s_code
+                           WHERE i.predicate = '{d_}'),
+                     mm AS (SELECT * FROM m WHERE rxn IN (SELECT rxn FROM d)),
+                     isa AS (SELECT s_code c, o_code p FROM edge WHERE predicate = 'sct:116680003')
+                SELECT (SELECT count(DISTINCT rxn) FROM mm), count(*), count(*) FILTER (WHERE (rxn, sct) IN (SELECT rxn, sct FROM d)),
+                       count(*) FILTER (WHERE (rxn, sct) NOT IN (SELECT rxn, sct FROM d) AND EXISTS (SELECT 1 FROM d JOIN isa
+                           ON (isa.c = d.sct AND isa.p = mm.sct) OR (isa.p = d.sct AND isa.c = mm.sct) WHERE d.rxn = mm.rxn))
+                FROM mm""").fetchone()))
+        report["route:UMLS relationships (MRREL 2026AA Level 0)"] = {
+            "source_hierarchies (native)": dict(con.execute("""SELECT method, count(*) FROM edge WHERE predicate = 'umls:source_parent'
+                                                                GROUP BY 1 ORDER BY 2 DESC""").fetchall()),
+            "medrt": med, "medrt_witness_drugcentral": wit,
+            "note": "DrugCentral is label-based and narrower than MED-RT; its silence is not disagreement (unknown, not 'no')"}
+
     # --- SNOMED CT-AU reference sets: how much of each set reaches beyond SNOMED ----------------------------------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:in_refset'").fetchone()[0]:
         con.execute("""CREATE TEMP TABLE sct_out AS SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT'

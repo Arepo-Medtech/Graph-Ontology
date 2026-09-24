@@ -65,7 +65,8 @@
     "CLINVAR": "ClinVar variation id",
     "ICD11MMS": "WHO ICD-11 for Mortality and Morbidity Statistics, keyed by MMS code (e.g. LD24.61). Distinct from ICD11 (foundation ids, as MONDO cites them). Codes only",
     "GARD": "NIH Genetic and Rare Diseases Information Center disease id",
-    "REACTOME": "Reactome pathway, keyed by stable id (R-HSA-...)"
+    "REACTOME": "Reactome pathway, keyed by stable id (R-HSA-...)",
+    "MEDRT": "MED-RT (VA Medication Reference Terminology) concept, keyed by its N-code: here the mechanism-of-action and physiologic-effect classes"
   },
   "predicates": [
     {
@@ -1390,6 +1391,128 @@
       "source": "UMLS Metathesaurus 2026AA MRCONSO (scripts/umls_mrconso.py): sources at restriction level 0 and SNOMED CT (level 9); suppressible atoms excluded",
       "status": "built",
       "note": "A shared CUI is synonymy judged by UMLS editors, not a map maintained by either source. Loaded only where the two codes share a name in the CUI (case, punctuation, word order and SNOMED's semantic tag set aside) -- the rule that held 40/40 for HPO -> SNOMED; pairs whose names differ are candidates. method names the vocabulary pair, and each pair is tiered by its own hand check. Restriction levels 1-4 (ICD-10-CM, ICD-10, ICD-10-AM, MedDRA, CPT, MEDCIN, ICPC-2 PLUS, ORPHANET) are not used. UMLS-derived: never committed, and a graph built with it is for UMLS licensees."
+    },
+    {
+      "id": "umls:source_parent",
+      "label": "a source's own parent for this code, as that source states it",
+      "subject": [
+        "MESH",
+        "NCIT",
+        "FMA",
+        "LOINC"
+      ],
+      "object": [
+        "MESH",
+        "NCIT",
+        "FMA",
+        "LOINC"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): REL PAR for MSH, NCI, FMA, LNC",
+      "status": "built",
+      "note": "The MeSH tree (descriptor to descriptor, MH/NM only), NCI Thesaurus is-a, FMA is-a and LOINC's part hierarchy -- vocabularies the graph holds without their hierarchy. The only UMLS step is atom -> the source's own code, so these are that source's assertions. Climbed upward from nodes the graph already holds."
+    },
+    {
+      "id": "medrt:may_treat",
+      "label": "MED-RT: the drug may treat the disease",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "SCT",
+        "MESH"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain)."
+    },
+    {
+      "id": "medrt:may_prevent",
+      "label": "MED-RT: the drug may prevent the disease",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "SCT",
+        "MESH"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain)."
+    },
+    {
+      "id": "medrt:may_diagnose",
+      "label": "MED-RT: the drug may be used to diagnose the disease",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "SCT",
+        "MESH"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain)."
+    },
+    {
+      "id": "medrt:contraindicated_with",
+      "label": "MED-RT: the drug is contraindicated with the disease",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "SCT",
+        "MESH"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain)."
+    },
+    {
+      "id": "medrt:has_mechanism_of_action",
+      "label": "MED-RT: the drug has this mechanism of action (MED-RT class)",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "MEDRT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI."
+    },
+    {
+      "id": "medrt:has_physiologic_effect",
+      "label": "MED-RT: the drug has this physiologic effect (MED-RT class)",
+      "subject": [
+        "RXN"
+      ],
+      "object": [
+        "MEDRT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
+      "status": "built",
+      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI."
     },
     {
       "id": "hp:xref",
