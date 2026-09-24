@@ -320,6 +320,37 @@ def main() -> int:
     # --- SNOMED CT-AU: the whole relationship snapshot ------------------------------------------------------------
     ins("SNOMED CT-AU relationships", f"""SELECT 'SCT', src, 'sct:' || typ, 'SCT', dst, 'SNOMED CT-AU RF2', 'compendium rel',
             'native', 'native', 'asserted', '{PIN['sct']}', json_object('group', grp) FROM cmp.rel""", src="cmp.rel")
+    # --- SNOMED CT concrete values: the numbers and strings a concept carries (AMT strengths, pack sizes, counts) ------
+    # RF2's RelationshipConcreteValues give an attribute a literal ('#500', '"text"'), not a concept. A value is a property
+    # of its concept, not a node -- "500" as a node would join every product that happens to share it -- so they go to
+    # their own table, concrete_value, traced like an edge (the RF2 row id is the locator). graph_register.py registers
+    # the attribute types (snomed_concrete_attributes), and the build refuses an unregistered one as it does for edges.
+    con.execute("""CREATE TABLE concrete_value (s_vocab VARCHAR, s_code VARCHAR, predicate VARCHAR, datatype VARCHAR, value_num DOUBLE,
+                   value_str VARCHAR, value_raw VARCHAR, grp INTEGER, source VARCHAR, source_locator VARCHAR, pin VARCHAR)""")
+    lx_concepts = LOINC_EXT / "Terminology" / "sct2_Concept_Snapshot_LO1010000_20260321.txt"
+    for lbl, f, sname, pin, cond in (
+            ("SNOMED CT-AU concrete values (strengths, pack sizes, counts)",
+             AU_RF2 / "Terminology" / f"sct2_RelationshipConcreteValues_Snapshot_AU1000036_{PIN['sct'].split()[-1]}.txt",
+             "SNOMED CT-AU RF2", PIN["sct"], "sourceId IN (SELECT id FROM cmp.concept)"),
+            ("SNOMED CT LOINC Extension concrete values", LOINC_EXT / "Terminology" / "sct2_RelationshipConcreteValues_Snapshot_LO1010000_20260321.txt",
+             "SNOMED CT LOINC Extension", PIN["loinc_ext"],
+             "sourceId IN (SELECT id FROM cmp.concept)" + (f" OR sourceId IN (SELECT id FROM read_csv('{lx_concepts}', delim='\t', header=true, "
+                                                           "quote='', escape='', all_varchar=true) WHERE active = '1')" if lx_concepts.exists() else ""))):
+        if not f.exists():
+            continue
+        rv = f"read_csv('{f}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
+        n0, exc = waterfall(rv, [("inactive row", "active = '1'"), ("concept not active in the release", cond)])
+        before = con.execute("SELECT count(*) FROM concrete_value").fetchone()[0]
+        con.execute(f"""INSERT INTO concrete_value SELECT 'SCT', sourceId, 'sct:' || typeId,
+                CASE WHEN value LIKE '"%' THEN 'string' WHEN value LIKE '#%.%' THEN 'decimal' ELSE 'integer' END,
+                CASE WHEN value LIKE '#%' THEN TRY_CAST(substr(value, 2) AS DOUBLE) END,
+                CASE WHEN value LIKE '"%' THEN trim(value, '"') END, value, CAST(relationshipGroup AS INT), '{sname}',
+                'sct2_RelationshipConcreteValues_Snapshot id ' || id, '{pin}'
+            FROM {rv} WHERE active = '1' AND ({cond})""")
+        log[lbl] = con.execute("SELECT count(*) FROM concrete_value").fetchone()[0] - before
+        loaders.append(lbl)
+        account(lbl, n0, exc, unit="concrete-value rows (to the concrete_value table, not edges)")
+        print(f"  {lbl:<44} {log[lbl]:>10,}", flush=True)
     # --- SNOMED CT-AU's own maps and associations (the release's Refset/Map and Refset/Content) -----------------------
     ref = lambda sub, name: f"read_csv('{AU_RF2 / 'Refset' / sub / name}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
     rel_ = PIN["sct"].split()[-1]
@@ -1781,6 +1812,18 @@ def main() -> int:
         UNION ALL SELECT 'no source (rule zero)', e.predicate, count(*) FROM edge e WHERE e.source IS NULL OR e.source = '' GROUP BY 2
         UNION ALL SELECT 'empty subject or object code', e.predicate, count(*) FROM edge e
           WHERE e.s_code IS NULL OR e.o_code IS NULL OR e.s_code = '' OR e.o_code = '' GROUP BY 2""").fetchall()
+    # concrete values answer to the register too: their attribute types are snomed_concrete_attributes
+    con.execute("CREATE TEMP TABLE cpred (id VARCHAR, status VARCHAR)")
+    con.executemany("INSERT INTO cpred VALUES (?, ?)", [(p["id"], p["status"]) for p in reg.get("snomed_concrete_attributes", [])])
+    bad += con.execute("""
+        SELECT 'unregistered concrete attribute', v.predicate, count(*) FROM concrete_value v LEFT JOIN cpred p ON p.id = v.predicate
+          WHERE p.id IS NULL GROUP BY 2
+        UNION ALL SELECT 'concrete attribute not loadable (' || p.status || ')', v.predicate, count(*) FROM concrete_value v
+          JOIN cpred p ON p.id = v.predicate WHERE p.status <> 'built' GROUP BY 1, 2
+        UNION ALL SELECT 'concrete value unreadable', predicate, count(*) FROM concrete_value
+          WHERE (datatype <> 'string' AND value_num IS NULL) OR (datatype = 'string' AND value_str IS NULL) GROUP BY 2
+        UNION ALL SELECT 'concrete value with no source (rule zero)', predicate, count(*) FROM concrete_value
+          WHERE source IS NULL OR source = '' GROUP BY 2""").fetchall()
     if bad:
         print("\nREFUSED -- the build does not write a graph that breaks the register:", file=sys.stderr)
         for why, pred, n in bad:
@@ -1864,8 +1907,9 @@ def main() -> int:
     n_edges = con.execute("SELECT count(*) FROM edge").fetchone()[0]
     n_nodes = con.execute("SELECT count(*) FROM node").fetchone()[0]
     unnamed = con.execute("SELECT vocab, count(*) FROM node WHERE name IS NULL GROUP BY 1 ORDER BY 2 DESC").fetchall()
+    n_vals = con.execute("SELECT count(*) FROM concrete_value").fetchone()[0]
     con.close()
-    print(f"\ngraph: {n_nodes:,} nodes, {n_edges:,} edges -> {GRAPH}   (all edges validated against the register)")
+    print(f"\ngraph: {n_nodes:,} nodes, {n_edges:,} edges, {n_vals:,} concrete values -> {GRAPH}   (all validated against the register)")
     print("nodes without a name, by vocabulary:", unnamed)
     return 0
 
