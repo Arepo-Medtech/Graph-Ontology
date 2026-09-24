@@ -649,6 +649,18 @@ map uses to its parent, kept only when the parent is in WHO's tables; 6 mapped c
 U06.9 …). With that step, ICD-11 reach equals ICD-10 reach: **84.3%** of Problem/Diagnosis, **95.6%** and **93.6%** of
 the two ED diagnosis sets.
 
+### Orphanet → ICD-10 through SNOMED CT's map: the first chain rule (built, Tier 2)
+
+`orpha:icd10_via_snomed` (derivation `chain`): an Orphanet disorder- or subtype-level entry with no ICD-10 code of its
+own, exactly aligned by Orphanet to a UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10 code
+SNOMED International's map classifies that concept to — only through maps with a single unconditional group. **75
+edges, 63 disorders.** Two rules came from the check: Orphanet *groups* are left out (27 of the first 30 new chains were
+groups, and each of the 6 errors was one — a group handed one member's code: *Primary cutaneous lymphoma* → the T-cell
+code), and two-group maps are left out (*Maternally inherited diabetes and deafness* needs both its codes). Census of
+every remaining pair 60/65 (Tier 2; the 5 wrong, rejected by name, come from the identity step or from SNOMED's own map
+choice). Witness: where Orphanet has its own exact ICD-10 code, the chain gives it for 424 of 474 disorders and its
+three-character category for 459. `source_locator` names the three steps; the census is in `cache/orphanet/`.
+
 ## UMLS Metathesaurus: every shared concept, locally (built)
 
 The licence holder's UMLS 2026AA concepts file (MRCONSO, 18.1 M names for 3.5 M concepts from 195 sources; 513 MB,

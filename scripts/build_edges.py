@@ -1092,12 +1092,13 @@ def main() -> int:
     if ORPHA_XML.exists():
         import xml.etree.ElementTree as ET
         ov = {"ICD-10": "ICD10WHO", "ICD-11": "ICD11MMS", "OMIM": "OMIM", "UMLS": "UMLS", "MeSH": "MESH", "MONDO": "MONDO", "GARD": "GARD"}
-        rows_o, names_o = [], []
+        rows_o, names_o, level_o = [], [], []
         for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
             oc = d.findtext("OrphaCode")
             if not oc:
                 continue
             names_o.append((oc, d.findtext("Name")))
+            level_o.append((oc, d.findtext("DisorderGroup/Name")))     # Disorder / Group of disorders / Subtype of disorder
             for x in d.iter("ExternalReference"):
                 src, ref_ = x.findtext("Source"), (x.findtext("Reference") or "").strip()
                 if src not in ov or not ref_:
@@ -1109,6 +1110,8 @@ def main() -> int:
                                            "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None)})))
         ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)))
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
+        con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR)")
+        con.executemany("INSERT INTO orpha_level VALUES (?, ?)", sorted(set(level_o)))
 
     # --- WHO's ICD-10 <-> ICD-11 mapping tables, and ICD-11's two identifiers ---------------------------------------
     # MMS codes (what is coded: Orphanet cites them) and foundation ids (what the entity is: MONDO cites them) are two
@@ -1305,6 +1308,29 @@ def main() -> int:
                 FROM '{UMLS_CONSO}' m JOIN cmp.concept c ON c.id = m.CODE
                 WHERE m.SAB = 'SNOMEDCT_US' AND m.SUPPRESS = 'N' AND c.tag IN ('disorder', 'finding')
                   AND m.CUI IN (SELECT c FROM present WHERE v = 'UMLS') GROUP BY m.CUI, m.CODE""")
+        # A chain rule (workstream 3): an Orphanet disorder with no ICD-10 code of its own, exactly aligned by Orphanet to a
+        # UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10 code SNOMED International's map
+        # classifies that concept to. Only where it can be right: Orphanet's disorder and subtype levels (a group given one
+        # member's code was wrong 6 times in 27), and SNOMED maps with a single unconditional group (a concept needing two
+        # codes together is misclassified by either alone). The two witnesses and the census are in graph_report.py.
+        if UMLS_CONSO.exists() and SCT_US_XMAP.exists() and ORPHA_XML.exists():
+            ins("Orphanet disorder -> ICD-10 via SNOMED CT's map (chain)", f"""WITH o2s AS (
+                    SELECT DISTINCT x.s_code orpha, m.o_code sct, 'via SNOMED CT (UMLS concept)' via, x.o_code mid FROM edge x
+                        JOIN edge m ON m.predicate = 'umls:concept_member' AND m.s_code = x.o_code
+                        WHERE x.predicate = 'orpha:xref' AND x.o_vocab = 'UMLS' AND x.method = 'E'
+                    UNION SELECT DISTINCT x.s_code, e.o_code, 'via SNOMED CT (MONDO)', x.o_code FROM edge x
+                        JOIN edge e ON e.predicate = 'mondo:exact_match' AND e.s_code = x.o_code AND e.o_vocab = 'SCT'
+                        WHERE x.predicate = 'orpha:xref' AND x.o_vocab = 'MONDO' AND x.method = 'E'),
+                  single AS (SELECT s_code FROM edge WHERE predicate = 'sct:icd10_map' GROUP BY 1
+                             HAVING max(CAST(attrs->>'group' AS INT)) = 1 AND bool_and(method = 'unconditional'))
+                SELECT 'ORPHA', o.orpha, 'orpha:icd10_via_snomed', 'ICD10WHO', i.o_code, 'derived (Orphanet, UMLS / MONDO, SNOMED CT ICD-10 map)',
+                       'orpha:xref E -> ' || CASE WHEN o.via LIKE '%UMLS%' THEN 'umls:concept_member' ELSE 'mondo:exact_match' END || ' -> sct:icd10_map',
+                       o.via, 'ungraded', 'asserted', '{PIN['orphanet']}; {PIN['umls_rel']}; {PIN['sct_us']}',
+                       json_object('intermediate', list(DISTINCT o.mid), 'snomed', list(DISTINCT o.sct))
+                FROM o2s o JOIN edge i ON i.predicate = 'sct:icd10_map' AND i.s_code = o.sct AND i.s_code IN (SELECT s_code FROM single)
+                JOIN orpha_level l ON l.code = o.orpha AND l.level IN ('Disorder', 'Subtype of disorder')
+                WHERE o.orpha NOT IN (SELECT s_code FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD10WHO')
+                GROUP BY o.orpha, i.o_code, o.via""")
         umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
                                     UNION ALL SELECT ov, oc, any_value(o_name) FROM up WHERE same_name GROUP BY 1, 2""").fetchall()
 

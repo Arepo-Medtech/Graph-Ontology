@@ -42,6 +42,14 @@ OUT, BASELINE = Path("out/completeness.json"), Path("reference/completeness_base
 EVID = Path("cache/completeness/evidence.parquet")
 SEMRA = Path("cache/semra/m.parquet")
 UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
+MONDO_OBO, HP_OBO, ORPHA_XML = Path("cache/mondo/mondo.obo"), Path("cache/hpo/hp.obo"), Path("cache/orphanet/en_product1.xml")
+# SeMRA re-publishes older releases of sources we hold in current form; a row from one of these counts as stated only if
+# the current release still states it -- otherwise it is superseded (the source now covers the member and says nothing)
+CURRENT = {"Mondo Disease Ontology": "MONDO", "Orphanet Rare Disease Ontology": "ORPHA", "Human Phenotype Ontology": "HP"}
+OBO_V = {"ICD10WHO": "ICD10WHO", "ICD10CM": "ICD10CM", "Orphanet": "ORPHA", "OMIM": "OMIM", "DOID": "DOID", "NCIT": "NCIT",
+         "MESH": "MESH", "MSH": "MESH", "UMLS": "UMLS", "SCTID": "SCT", "SNOMEDCT_US": "SCT", "EFO": "EFO", "GARD": "GARD",
+         "icd11.foundation": "ICD11", "ICD-10": "ICD10WHO", "ORPHA": "ORPHA"}
+ORPHA_V = {"ICD-10": "ICD10WHO", "ICD-11": "ICD11MMS", "OMIM": "OMIM", "UMLS": "UMLS", "MeSH": "MESH", "MONDO": "MONDO", "GARD": "GARD"}
 XMAP = Path("cache/snomed-us/extended_map_20260901.parquet")
 LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))
 SAMPLE, DROP = 50, 0.005
@@ -76,6 +84,8 @@ GROUPS = {
     "Common laboratory LOINC (top 2,000)": ("LOINC", "SELECT code FROM lab_top"),
     "HPO phenotypes in use": ("HP", "SELECT DISTINCT o_code FROM edge WHERE predicate = 'hpo:has_phenotype'"),
     "Orphanet disorders": ("ORPHA", "SELECT code FROM node WHERE vocab = 'ORPHA'"),
+    "Orphanet disorders (disorder or subtype level)": ("ORPHA", """SELECT code FROM node WHERE vocab = 'ORPHA'
+                                                                AND code IN (SELECT code FROM orpha_level WHERE level IN ('Disorder', 'Subtype of disorder'))"""),
     "MBS items": ("MBS", "SELECT code FROM node WHERE vocab = 'MBS'"),
 }
 DECLINE_ICD10 = f"SELECT DISTINCT referencedComponentId FROM '{XMAP}' WHERE refsetId = '447562003' AND coalesce(mapTarget, '') = ''"
@@ -117,6 +127,8 @@ CELLS = [
     ("Orphanet disorders", "OMIM", {"target": ["OMIM"], "hops": 1, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
     ("Orphanet disorders", "MONDO", {"target": ["MONDO"], "hops": 1}),
     ("Orphanet disorders", "SNOMED CT", {"target": ["SCT"], "hops": 2}),
+    ("Orphanet disorders (disorder or subtype level)", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 1, "covers": ("ORPHA",),
+        "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
     ("Orphanet disorders", "gene", {"final": ["hpo:gene_disease"], "dir": "in", "hops": 0, "not_held": "Orphadata product6 (genes)"}),
     ("Orphanet disorders", "HPO phenotype", {"final": ["hpo:has_phenotype"], "dir": "out", "hops": 0,
                                              "not_held": "Orphadata product4 (phenotypes)"}),
@@ -134,6 +146,35 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     return (round(max(0.0, c - m), 3), round(min(1.0, c + m), 3))
 
 
+def current_statements() -> list[tuple]:
+    """What the current MONDO, HPO and Orphanet releases we hold state, as (vocab, code, vocab, code)."""
+    out = []
+    for path, own in ((MONDO_OBO, "MONDO"), (HP_OBO, "HP")):
+        if not path.exists():
+            continue
+        cur = None
+        for line in open(path, encoding="utf-8"):
+            if line.startswith("id: "):
+                cur = line[4:].strip()
+            elif line.startswith("xref: ") and cur:
+                ref = line[6:].split(" ")[0]
+                pre, _, loc = ref.partition(":")
+                if pre in OBO_V and loc:
+                    out.append((own, cur, OBO_V[pre], ("MONDO:" + loc) if OBO_V[pre] == "MONDO" else loc))
+    if ORPHA_XML.exists():
+        import xml.etree.ElementTree as ET
+        for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
+            oc = d.findtext("OrphaCode")
+            for x in d.iter("ExternalReference"):
+                src, ref = x.findtext("Source"), (x.findtext("Reference") or "").strip()
+                if oc and src in ORPHA_V and ref:
+                    v = ORPHA_V[src]
+                    out.append(("ORPHA", oc, v, ("MONDO:" + ref.zfill(7)) if v == "MONDO" else ref))
+                    if v == "ICD11MMS":
+                        out.append(("ORPHA", oc, "ICD11", ref))
+    return out
+
+
 def build_evidence(con) -> None:
     """Pairs a source we hold states, both directions: SeMRA (43.9 M aggregated mappings) and every UMLS shared-concept
     pair, including the ones not loaded because the names differ."""
@@ -146,10 +187,18 @@ def build_evidence(con) -> None:
                'SeMRA: ' || m.ms src, m.p rel,
                m.j IN ('semapv:UnspecifiedMatching', 'semapv:ManualMappingCuration') AND m.ms NOT LIKE '%cbms2019%' stated
         FROM '{SEMRA}' m JOIN pv a ON a.p = m.sp JOIN pv b ON b.p = m.op WHERE a.v <> b.v""")
+    # superseded: a row from an older release of a source we hold, which the current release no longer states
+    con.execute("CREATE TEMP TABLE cur (v1 VARCHAR, c1 VARCHAR, v2 VARCHAR, c2 VARCHAR)")
+    con.executemany("INSERT INTO cur VALUES (?, ?, ?, ?)", current_statements())
+    con.execute("CREATE TEMP TABLE curb AS SELECT * FROM cur UNION SELECT v2, c2, v1, c1 FROM cur")
+    con.execute("ALTER TABLE ev ADD COLUMN superseded BOOLEAN DEFAULT false")
+    cs = " OR ".join(f"(src = 'SeMRA: {k}' AND (v1 = '{v}' OR v2 = '{v}'))" for k, v in CURRENT.items())
+    con.execute(f"""UPDATE ev SET superseded = true, stated = false WHERE stated AND ({cs})
+                    AND (v1, c1, v2, c2) NOT IN (SELECT v1, c1, v2, c2 FROM curb)""")
     if UMLS_PAIRS.exists():
         con.execute(f"""INSERT INTO ev SELECT sv, sc, ov, oc, CASE WHEN same_name THEN 'UMLS shared concept (same name)'
-                        ELSE 'UMLS shared concept (names differ)' END, 'shared CUI', true FROM '{UMLS_PAIRS}'""")
-    con.execute(f"""COPY (SELECT DISTINCT * FROM (SELECT v1, c1, v2, c2, src, rel, stated FROM ev UNION ALL SELECT v2, c2, v1, c1, src, rel, stated FROM ev))
+                        ELSE 'UMLS shared concept (names differ)' END, 'shared CUI', true, false FROM '{UMLS_PAIRS}'""")
+    con.execute(f"""COPY (SELECT DISTINCT * FROM (SELECT v1, c1, v2, c2, src, rel, stated, superseded FROM ev UNION ALL SELECT v2, c2, v1, c1, src, rel, stated, superseded FROM ev))
                     TO '{EVID}' (FORMAT parquet)""")
 
 
@@ -187,6 +236,11 @@ def main() -> int:
             ORDER BY TRY_CAST(COMMON_TEST_RANK AS INT) LIMIT 2000""")
     else:
         con.execute("CREATE TEMP TABLE lab_top (code VARCHAR)")
+    con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR)")
+    if ORPHA_XML.exists():
+        import xml.etree.ElementTree as ET
+        con.executemany("INSERT INTO orpha_level VALUES (?, ?)", [(d.findtext("OrphaCode"), d.findtext("DisorderGroup/Name"))
+                        for d in ET.parse(ORPHA_XML).getroot().iter("Disorder") if d.findtext("OrphaCode")])
     cells, flagged = [], []
     base = json.load(open(BASELINE)) if BASELINE.exists() else {}
     for group, exp, spec in CELLS:
@@ -233,10 +287,14 @@ def main() -> int:
                                                         [k]).fetchone()[0]:
                     cls_, why = "unknown", [f"covered by a source for {', '.join(spec['covers'])}, which states nothing of this kind"]
             else:
-                ev = con.execute(f"""SELECT DISTINCT src, stated FROM evidence WHERE v1 || ':' || c1 IN (SELECT unnest(?::VARCHAR[]))
-                                     AND v2 IN ({q(spec['target'])})""", [near]).fetchall()
+                ev3 = con.execute(f"""SELECT DISTINCT src, stated, superseded FROM evidence WHERE v1 || ':' || c1 IN (SELECT unnest(?::VARCHAR[]))
+                                      AND v2 IN ({q(spec['target'])})""", [near]).fetchall()
+                ev = [(s_, st) for s_, st, sup in ev3 if not sup]
+                sup = sorted(s_ for s_, _, sp in ev3 if sp)
                 if any(st for _, st in ev):
                     cls_, why = "our_gap", sorted(s for s, st in ev if st)
+                elif sup:
+                    cls_, why = "unknown", [f"superseded: stated by an older release ({', '.join(sup)}); the current release we hold does not"]
                 elif spec.get("covers") and con.execute(f"""SELECT count(*) FROM vis WHERE m = ? AND split_part(node, ':', 1) IN ({q(spec['covers'])})""",
                                                         [k]).fetchone()[0]:
                     cls_, why = "unknown", [spec.get("covers_why", f"covered by {', '.join(spec['covers'])}, which states nothing of this kind")]
