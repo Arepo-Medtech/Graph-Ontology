@@ -14,7 +14,7 @@ a decision in yet.*
 | **SNOMED organism ↔ NCBI taxon**, names differ | 3,889 | `cache/umls/sct_ncbi_candidates.tsv` *(UMLS-derived)* | same organism (most are reclassifications: *Clostridium lavalense* → *Enterocloster lavalensis*) | ✅ sheet `organism_ncbi` |
 | **RadLex anatomy** with no code route | 99 terms, 180 pairs | `cache/radlex/radlex_sct_candidates.tsv` *(RadLex labels, not committed)* | the SNOMED body structure for head, neck, hand, foot … | ✅ sheet `radlex_anatomy` |
 | **MBS items → SNOMED procedure** | 3,878 items with candidates (572 exact head-phrase) | `reference/mbs_procedure_candidates.json` | the procedure the item funds — a billing rule is not an equivalence | ✅ sheet `mbs_procedures` (loads as `person:funds_procedure`, not an identity) |
-| **Survey instruments** | 55 pairs, 53 LOINC panels | `reference/survey_instrument_candidates.json` | same instrument (a first reading is on each pair: 40 likely same) | ✅ sheet `survey_instruments` |
+| **Survey instruments** | 55 pairs, 53 LOINC panels — **reviewed 24 Sep by Ken: 44 accepted, 11 rejected; 9 panels left with no match** | `reference/survey_instrument_candidates.json` | same instrument (a first reading is on each pair: 40 likely same) | ✅ sheet `survey_instruments` |
 
 **Where a person's time buys most.** The survey list is short and pre-read — an hour closes the PHQ, GAD, AUDIT, EPDS, MMSE
 family. The 130 held LR bindings need only enough confirmations to lift the family's lower bound past 0.80. MBS is the one
@@ -35,5 +35,6 @@ Decisions go into one file, `reference/candidate_decisions.json` — codes and v
 `build_edges.py` loads every accepted one as an edge: `person:same_as` (or `person:funds_procedure` for MBS), method
 *confirmed by ⟨reviewer⟩ ⟨date⟩*, tier `decision`. A rejection or *none* is recorded but not loaded; it keeps the subject
 out of the next sheet, as does any pair the graph has since found by another route. The sheets carry licensed names, so
-they stay in `out/review/` (git-ignored). The corpus-condition queue keeps its own loop (above); the likelihood-ratio
+they stay in `out/review/` (git-ignored). **Spreadsheets reformat long numbers** (a SNOMED CT id becomes `3.361E+12`), so every row
+carries an `id` column with its codes as text, and the harvest reads the codes from there. The corpus-condition queue keeps its own loop (above); the likelihood-ratio
 bindings load as a family once their binding earns its tier.
