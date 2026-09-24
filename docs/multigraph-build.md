@@ -689,6 +689,16 @@ link outside SNOMED: **41.9% → 45.5%**; 33,785 MeSH descriptors now sit in the
 the pairs, the hand check (`cache/umls/umls_shared_cui_handcheck.json`) and the parquet stay git-ignored, and a graph built
 with them is for UMLS licensees.
 
+**Two gaps the completeness measure found (docs/completeness.md), closed 24 Sep.** *HPO → SNOMED*: the loader had left
+that pair to the older per-code crosswalk (`hp:umls_snomed`, 2,754); it now loads the concepts file's **4,885** same-name
+pairs as `umls:shared_cui` HP-SCT (hand check 29/30, Tier 2; the one error, *Cystic medial necrosis* → *Cystic
+adventitial disease*, is a UMLS merge of two arterial diseases, rejected by name). *UMLS concept → SNOMED*: the graph's
+29,234 CUI nodes — named by Orphanet's, MONDO's and DrugCentral's own cross-references — were joined to nothing;
+`umls:concept_member` joins each to the SNOMED CT-AU disorders and findings inside it (**12,489 edges**, hand check
+30/30, Tier 2), so 6,783 Orphanet disorders reach SNOMED that had no other route. Drugs are left out: UMLS files a
+substance and SNOMED's *Product containing* it under one CUI. A SNOMED code now joins through UMLS only as an active
+SNOMED CT-AU concept (227 pairs dropped that would have added US-only or retired codes).
+
 ### UMLS relationships (MRREL, Level 0 subset 2026AA)
 
 The Level 0 subset (2.0 GB; exactly the unrestricted sources — SNOMED's own relationships already come from the AU release)

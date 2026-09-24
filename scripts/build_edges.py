@@ -61,6 +61,7 @@ UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/ub
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
 RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
 UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
+UMLS_CONSO = Path("cache/umls/2026AA/mrconso.parquet")   # scripts/umls_mrconso.py (licensed; not redistributed)
 UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
 UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
@@ -223,7 +224,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "unit pairs": UNIT_PAIRS, "threshold units": THRESH_UNITS, "diagnostic accuracy": DX_ACC,
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
-            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS,
+            "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS, "UMLS 2026AA MRCONSO": UMLS_CONSO,
             "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL, "UMLS 2026AA MRMAP (CCSR)": UMLS_MRMAP,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
             "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt",
@@ -1265,10 +1266,12 @@ def main() -> int:
 
     # --- UMLS Metathesaurus: codes of two graph vocabularies under one CUI (UMLS 2026AA, the licence holder's copy) ---
     # Same-name pairs load (the HPO rule: the two sources share a name for the concept); pairs whose names differ are
-    # candidates, counted here and kept in the parquet. HPO -> SNOMED and SNOMED organism -> NCBI Taxonomy have their own
-    # UMLS loaders above and are not repeated. Each vocabulary pair is tiered by its own hand check (graph_report.py).
+    # candidates, counted here and kept in the parquet. SNOMED organism -> NCBI Taxonomy has its own UMLS loader above
+    # and is not repeated. HPO -> SNOMED loads here too: the older per-code crosswalk (hp:umls_snomed) found 2,754
+    # same-name pairs, the 2026AA concepts file 4,885 -- the completeness measure's largest held gap (docs/completeness.md).
+    # Each vocabulary pair is tiered by its own hand check (graph_report.py).
     if UMLS_PAIRS.exists():
-        own = "('HP-SCT', 'NCBITAXON-SCT')"
+        own = "('NCBITAXON-SCT')"
         # last of the loaders: a pair loads only if one of its codes is already a node, so nothing arrives detached
         con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
         con.execute(f"""CREATE TEMP TABLE up AS SELECT u.* FROM '{UMLS_PAIRS}' u
@@ -1279,12 +1282,29 @@ def main() -> int:
                                                AND NOT (ov = 'HGNC' OR (ov = 'NCIT' AND o_name ILIKE '% Gene')))
                                           OR ('OMIM' = ov AND oc IN (SELECT o_code FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
                                                AND NOT (sv = 'HGNC' OR (sv = 'NCIT' AND s_name ILIKE '% Gene'))))""")
+        # a SNOMED code joins only as an active SNOMED CT-AU concept (a US-only or retired code would be a node the AU
+        # release does not have)
+        log["UMLS shared CUI: pairs dropped, SNOMED code not active in SNOMED CT-AU"] = con.execute("""SELECT count(*) FROM up
+            WHERE (sv = 'SCT' AND sc NOT IN (SELECT id FROM cmp.concept)) OR (ov = 'SCT' AND oc NOT IN (SELECT id FROM cmp.concept))""").fetchone()[0]
+        con.execute("""DELETE FROM up WHERE (sv = 'SCT' AND sc NOT IN (SELECT id FROM cmp.concept)) OR (ov = 'SCT' AND oc NOT IN (SELECT id FROM cmp.concept))""")
         ins("UMLS shared CUI, same name (MRCONSO 2026AA)", f"""SELECT DISTINCT sv, sc, 'umls:shared_cui', ov, oc, 'UMLS', 'MRCONSO 2026AA CUI ' || cui,
                 sv || '-' || ov || ' same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('cui', cui, 'shared_name', shared_name)
             FROM up WHERE same_name AND sv || '-' || ov NOT IN {own}""")
         log["UMLS shared CUI, names differ (candidates in cache/umls/umls_shared_cui.parquet, not edges)"] = con.execute(
             f"SELECT count(*) FROM up WHERE NOT same_name AND sv || '-' || ov NOT IN {own}").fetchone()[0]
+        # The graph holds 29,234 UMLS concepts as nodes -- Orphanet's, MONDO's and DrugCentral's own cross-references
+        # name them -- but nothing joined a CUI to the codes inside it, so Orphanet -> CUI stopped there (the measure's
+        # second-largest held gap). Each CUI node now reaches its SNOMED CT-AU disorders and findings. Drugs are left
+        # out: UMLS files a substance and SNOMED's "Product containing" it under one CUI, and DrugCentral links drugs to
+        # SNOMED directly.
+        if UMLS_CONSO.exists():
+            ins("UMLS concept -> SNOMED CT disorder / finding in it (MRCONSO 2026AA)", f"""SELECT DISTINCT 'UMLS', m.CUI, 'umls:concept_member',
+                    'SCT', m.CODE, 'UMLS', 'MRCONSO 2026AA SNOMEDCT_US atom', 'SNOMED CT atom in the concept', 'ungraded', 'asserted',
+                    '{PIN['umls_rel']}', json_object('tty', any_value(m.TTY))
+                FROM '{UMLS_CONSO}' m JOIN cmp.concept c ON c.id = m.CODE
+                WHERE m.SAB = 'SNOMEDCT_US' AND m.SUPPRESS = 'N' AND c.tag IN ('disorder', 'finding')
+                  AND m.CUI IN (SELECT c FROM present WHERE v = 'UMLS') GROUP BY m.CUI, m.CODE""")
         umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
                                     UNION ALL SELECT ov, oc, any_value(o_name) FROM up WHERE same_name GROUP BY 1, 2""").fetchall()
 

@@ -1,6 +1,6 @@
 # Completeness, measured from the source side
 
-*Workstream 1 of the operating plan, 24 Sep 2026. `scripts/completeness.py`, output `out/completeness.json`, guard
+*Workstream 1 of the operating plan, 24 Sep 2026; gaps 1 and 2 closed the same day. `scripts/completeness.py`, output `out/completeness.json`, guard
 baseline `reference/completeness_baseline.json`.*
 
 Precision — every hand-checked tier in the graph — cannot see an edge that ought to exist and does not. This measures
@@ -25,17 +25,17 @@ that. For each group that matters in Australia and each edge its members should 
 Class counts are scaled from the sample to the cell's absent members; the interval is the Wilson 95% interval of the
 *our gap* share of the absent. Nothing here writes an edge.
 
-## The table (graph 1,545,053 nodes / 7,922,701 edges)
+## The table (graph 1,544,958 nodes / 7,939,796 edges)
 
 | group | expectation | members | present | absent: our gap | unknown | no source held | our gap, share of absent (95%) |
 |---|---|---:|---:|---:|---:|---:|---|
 | Problem/Diagnosis | ICD-10 (WHO) | 133,021 (+6 n/a) | **84.3%** | 0 | 19,587 | 1,250 | 0–7% |
-| Problem/Diagnosis | ICD-11 | 133,021 (+6 n/a) | **84.4%** | 0 | 20,784 | 0 | 0–7% |
+| Problem/Diagnosis | ICD-11 | 133,021 (+6 n/a) | **84.4%** | 0 | 20,762 | 0 | 0–7% |
 | Problem/Diagnosis | ICD-10-CM | 133,021 (+6 n/a) | **93.3%** | 0 | 7,676 | 1,250 | 0–7% |
-| Problem/Diagnosis disorders | MONDO | 92,797 | **11.3%** | 0 | 0 | 82,283 | 0–7% |
-| Problem/Diagnosis disorders | HPO phenotype | 92,797 | **4.7%** | 0 | 5,306 | 83,129 | 0–7% |
+| Problem/Diagnosis disorders | MONDO | 92,797 | **13.8%** | 0 | 0 | 80,017 | 0–7% |
+| Problem/Diagnosis disorders | HPO phenotype | 92,797 | **5.8%** | 0 | 6,990 | 80,389 | 0–7% |
 | ED principal diagnosis | ICD-10 (WHO) | 91,551 (+1,620 n/a) | **97.4%** | 0 | 2,227 | 194 | 0–7% |
-| ED principal diagnosis | ICD-11 | 91,551 (+1,620 n/a) | **97.4%** | 0 | 2,262 | 144 | 0–7% |
+| ED principal diagnosis | ICD-11 | 91,551 (+1,620 n/a) | **97.4%** | 0 | 2,250 | 144 | 0–7% |
 | ED principal diagnosis | CCSR category | 91,551 (+1,620 n/a) | **85.3%** | 0 | 13,465 | 0 | 0–7% |
 | PBS-listed products | ATC | 11,244 (+665 n/a) | **98.5%** | 0 | 0 | 171 | 0–7% |
 | PBS-listed products | OMOP standard drug (RxNorm / RxNorm Extension) | 11,244 (+665 n/a) | **59.0%** | 0 | 0 | 4,612 | 0–7% |
@@ -48,12 +48,12 @@ Class counts are scaled from the sample to the cell's absent members; the interv
 | Common laboratory LOINC (top 2,000) | AU preferred unit | 2,000 | **17.2%** | 0 | 0 | 1,657 | 0–7% |
 | Common laboratory LOINC (top 2,000) | analyte code (ChEBI, RxNorm, gene ...) | 2,000 | **27.8%** | 0 | 0 | 1,444 | 0–7% |
 | Common laboratory LOINC (top 2,000) | finding it is interpreted in | 2,000 | **11.1%** | 0 | 0 | 1,778 | 0–7% |
-| HPO phenotypes in use | SNOMED CT | 11,560 | **24.3%** | 2,274 | 0 | 6,472 | 16–40% |
+| HPO phenotypes in use | SNOMED CT | 11,560 | **31.7%** | 1,106 | 0 | 6,791 | 7–26% |
 | Orphanet disorders | ICD-10 (WHO) | 10,421 | **73.6%** | 934 | 1,814 | 0 | 22–48% |
 | Orphanet disorders | ICD-11 | 10,421 | **77.8%** | 0 | 2,312 | 0 | 0–7% |
 | Orphanet disorders | OMIM | 10,421 | **48.7%** | 107 | 5,240 | 0 | 0–10% |
 | Orphanet disorders | MONDO | 10,421 | **94.2%** | 456 | 0 | 144 | 63–86% |
-| Orphanet disorders | SNOMED CT | 10,421 | **51.1%** | 2,139 | 0 | 2,954 | 29–56% |
+| Orphanet disorders | SNOMED CT | 10,421 | **70.2%** | 124 | 0 | 2,978 | 1–14% |
 | Orphanet disorders | gene | 10,421 | **40.5%** | 0 | 0 | 6,202 | 0–7% |
 | Orphanet disorders | HPO phenotype | 10,421 | **41.8%** | 0 | 0 | 6,066 | 0–7% |
 | MBS items | SNOMED CT procedure | 6,046 | **0.0%** | 0 | 0 | 6,046 | 0–7% |
@@ -62,14 +62,16 @@ Class counts are scaled from the sample to the cell's absent members; the interv
 
 **Where the gap is ours — a source we hold states the edge.**
 
-1. **HPO phenotype → SNOMED CT (~2,300 phenotypes).** The UMLS 2026AA concepts file pairs **4,891** HPO terms with a
-   same-named SNOMED concept; the graph carries 2,754, from the earlier per-code UMLS crosswalk, because the MRCONSO
-   loader leaves the HPO–SNOMED pair to that older route. *Renal tubular atrophy* → *Atrophy of renal tubule* is in the
-   concepts file and not in the graph. Fix: take the HPO–SNOMED same-name pairs from MRCONSO (and hand-check the family).
-2. **Orphanet disorder → SNOMED CT (~2,100 disorders).** Orphanet's own file links a disorder to a UMLS concept
-   (`orpha:xref`, loaded), and that concept holds an active SNOMED CT-AU code — for 19 of the 21 sampled gaps. The graph's
-   29,234 UMLS concept nodes are never joined to the codes inside them; 15,809 of them hold an Australian SNOMED code.
-   Fix: join each CUI node to its member codes (SRL 0 sources and SNOMED CT), tiered by hand check as a family.
+1. **HPO phenotype → SNOMED CT — fixed.** The UMLS 2026AA concepts file pairs **4,885** HPO terms with a same-named
+   SNOMED CT-AU concept; the graph carried 2,754, from the earlier per-code crosswalk, because the MRCONSO loader left
+   the HPO–SNOMED pair to that older route. It now loads them (`umls:shared_cui`, HP-SCT, hand check 29/30, Tier 2):
+   phenotypes in use reaching SNOMED **24.3% → 31.7%**.
+2. **Orphanet disorder → SNOMED CT — fixed.** Orphanet's own file links a disorder to a UMLS concept, and that concept
+   held an active SNOMED CT-AU code for 19 of 21 sampled gaps — but the graph's 29,234 UMLS concept nodes were never
+   joined to the codes inside them. `umls:concept_member` now joins each to its SNOMED disorders and findings (12,489
+   edges, hand check 30/30, Tier 2; drugs left out, since UMLS files a substance and SNOMED's "Product containing" it
+   under one concept): Orphanet disorders reaching SNOMED **51.1% → 70.2%**, and — through the UMLS concepts MONDO
+   names — Problem/Diagnosis disorders reaching MONDO 11.3% → 13.8%.
 3. **Orphanet disorder → ICD-10 (~900) and → MONDO (~460 of 600 absent).** SeMRA carries MONDO's own cross-references,
    which the graph loads only from MONDO's exact-match file. For MONDO, half the sampled gaps rest on xrefs MONDO
    annotates `equivalentObsolete` — to be read before anything loads.
