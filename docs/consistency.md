@@ -59,16 +59,17 @@ A UMLS-derived equivalence lying on two or more shortest paths between two codes
 disease type 2M* ↔ *type 2*, *Turner syndrome* filed under *Gonadal dysgenesis*, *Alopecia areata 1* ↔ *Alopecia
 universalis* — a subtype with its parent, a numbered locus with the disease. On one path the same families were right 13
 of 13. So `graph_report.py`, after every tier and rejection is set, runs the bridge trace once and holds back the UMLS
-edges on two or more paths as their own inadmissible family (**665 edges**, `attrs.held`, kept and not followed); the 7
-wrong in the new draw are rejected by name as well (33 in all).
+edges on two or more paths as their own inadmissible family (**706 edges**, `attrs.held`, kept and not followed); the 7
+wrong in the new draw are rejected by name as well (33 in all). The trace runs over rows in a fixed order, so the
+seeded sample of conflict pairs -- and the held family -- is the same every run (it was not at first: 665 on one run).
 
 | clusters with two codes of … | before | after |
 |---|---:|---:|
-| MONDO | 1,207 | 1,072 |
-| DOID | 481 | 375 |
-| Orphanet | 331 | 243 |
-| HPO | 122 | 94 |
-| OMIM | 90 | 61 |
+| MONDO | 1,207 | 1,075 |
+| DOID | 481 | 379 |
+| Orphanet | 331 | 249 |
+| HPO | 122 | 96 |
+| OMIM | 90 | 62 |
 | HGNC | 40 | 35 |
 | NCBI Gene | 3 | 1 |
 

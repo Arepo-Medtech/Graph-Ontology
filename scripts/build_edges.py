@@ -67,6 +67,7 @@ UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/ub
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
 RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
 UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
+DECISIONS = Path("reference/candidate_decisions.json")      # scripts/review_sheets.py: a person's decisions on the review queues
 UMLS_CONSO = Path("cache/umls/2026AA/mrconso.parquet")   # scripts/umls_mrconso.py (licensed; not redistributed)
 UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
 UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
@@ -1511,6 +1512,24 @@ def main() -> int:
     log["foreign SNOMED ids (not in the AU release)"] = con.execute("SELECT count(*) FROM foreign_sct").fetchone()[0]
 
     # --- the contract ------------------------------------------------------------------------------------------------
+    # --- decisions a person made on the review queues (reference/candidate_decisions.json, scripts/review_sheets.py) --
+    # An accepted candidate is an edge a person vouches for: tier 'decision', method naming the reviewer and date. A
+    # rejection or "none of these" is counted, not loaded -- it only keeps the subject out of the next review sheet.
+    if DECISIONS.exists():
+        dq = json.load(open(DECISIONS))
+        qp = {q: v["predicate"] for q, v in dq.get("queues", {}).items()}
+        acc = [d for d in dq.get("decisions", []) if d["decision"] == "accept" and d.get("object")]
+        rows_d = [(d["subject"]["vocab"], d["subject"]["code"], qp[d["queue"]], d["object"]["vocab"], d["object"]["code"], "reviewer",
+                   "reference/candidate_decisions.json", f"confirmed by {d['reviewer']} {d['date']}", "decision", "asserted",
+                   "reference/candidate_decisions.json", json.dumps({"queue": d["queue"], **({"note": d["note"]} if d.get("note") else {})}))
+                  for d in acc]
+        active_sct = {c for (c,) in con.execute("SELECT id FROM cmp.concept").fetchall()} if rows_d else set()
+        keep_d = [r for r in rows_d if r[3] != "SCT" or r[4] in active_sct]
+        ins_rows("Decisions by a person on the review queues (accepted)", keep_d)
+        log["Decisions by a person: not loaded, SNOMED CT concept no longer active"] = len(rows_d) - len(keep_d)
+        for k_ in ("reject", "none"):
+            log[f"Decisions by a person: {k_} (recorded, not an edge)"] = sum(d["decision"] == k_ for d in dq.get("decisions", []))
+
     reg = json.load(open(REGISTER))
     preds = [(p["id"], p["subject"], p["object"], p["status"], p["category"], p.get("derivation"))
              for p in reg["predicates"] + reg["snomed_attributes"]]

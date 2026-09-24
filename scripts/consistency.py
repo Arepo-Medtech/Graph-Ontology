@@ -41,7 +41,8 @@ def compute(con):
     rows = con.execute(f"""SELECT s_vocab || ':' || s_code, o_vocab || ':' || o_code, predicate, method FROM edge
         WHERE state <> 'rejected' AND tier <> 'inadmissible'
           AND ((predicate IN {EQUIV} AND NOT (predicate = 'hgnc:xref' AND o_vocab = 'UNIPROT'))
-               OR (predicate = 'orpha:xref' AND method = 'E'))""").fetchall()
+               OR (predicate = 'orpha:xref' AND method = 'E'))
+        ORDER BY 1, 2, 3, 4""").fetchall()               # a fixed order: the seeded sample of pairs must be the same every run
     adj, par = collections.defaultdict(list), {}
 
     def root(x):
@@ -78,7 +79,7 @@ def compute(con):
 
     rng = random.Random(24)
     bridges, conflicts, traced = collections.Counter(), collections.Counter(), 0
-    for mem in clusters.values():
+    for mem in sorted((sorted(m) for m in clusters.values()), key=lambda m: m[0]):
         byv = collections.defaultdict(list)
         for x in mem:
             byv[x.split(":", 1)[0]].append(x)

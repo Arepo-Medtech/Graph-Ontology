@@ -1,13 +1,13 @@
 {
  "consistency": {
   "conflicts": {
-   "DOID": 375,
+   "DOID": 379,
    "HGNC": 35,
-   "HP": 94,
-   "MONDO": 1072,
+   "HP": 96,
+   "MONDO": 1075,
    "NCBIGENE": 1,
-   "OMIM": 61,
-   "ORPHA": 243
+   "OMIM": 62,
+   "ORPHA": 249
   },
   "largest_cluster": 86
  },
@@ -217,8 +217,8 @@
   "uberon:ncit_narrow_match": 2578,
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
-  "umls:concept_member": 12336,
-  "umls:shared_cui": 179343,
+  "umls:concept_member": 12352,
+  "umls:shared_cui": 179286,
   "umls:source_parent": 273357,
   "uniprot:encoded_by": 1890,
   "who:icd10_to_icd11": 12645,
@@ -287,6 +287,6 @@
  "totals": {
   "edges": 8061681,
   "nodes": 1543185,
-  "usable_edges": 8021494
+  "usable_edges": 8021453
  }
 }
