@@ -1,0 +1,5428 @@
+{
+ "_note": "Second-search candidates for PBS indication texts whose first candidates did not fit (scripts/pbs_candidates_more.py): the condition queried without the listing's framing, parts of 'A or B' searched apart, SNOMED CT wording tried; live Ontoserver, SNOMED CT-AU 20260831. Frames for a person, never edges.",
+ "edition": "http://snomed.info/sct/32506021000036107/version/20260831",
+ "indications": 184,
+ "with_an_exact_name": 65,
+ "results": {
+  "7710": {
+   "text": "Proven vitamin B12 deficiencies other than pernicious anaemia",
+   "candidates": [
+    {
+     "concept_id": "190634004",
+     "display": "Vitamin B12 deficiency",
+     "query": "vitamin b12 deficiency (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "234363001",
+     "display": "Selective malabsorption of cyanocobalamin",
+     "query": "vitamin b12 deficiencies other than pernicious anaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "60576007",
+     "display": "Subacute combined degeneration of spinal cord",
+     "query": "vitamin b12 deficiencies",
+     "exact_name": false
+    },
+    {
+     "concept_id": "85670002",
+     "display": "Vitamin deficiency",
+     "query": "vitamin b12 deficiencies",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403453004",
+     "display": "Vitamin B12 deficiency glossitis",
+     "query": "vitamin b12 deficiencies",
+     "exact_name": false
+    }
+   ]
+  },
+  "7711": {
+   "text": "Anaemias associated with vitamin B12 deficiency",
+   "candidates": [
+    {
+     "concept_id": "271737000",
+     "display": "Anaemia",
+     "query": "anaemia (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "190634004",
+     "display": "Vitamin B12 deficiency",
+     "query": "anaemias associated with vitamin b12 deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "420543008",
+     "display": "Anaemia associated with AIDS",
+     "query": "anaemias associated with vitamin b12 deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "402482007",
+     "display": "Dermatosis associated with biotin deficiency",
+     "query": "anaemias associated with vitamin b12 deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "413566007",
+     "display": "Aplastic anaemia associated with pancreatitis",
+     "query": "anaemias associated with vitamin b12 deficiency",
+     "exact_name": false
+    }
+   ]
+  },
+  "7841": {
+   "text": "For a patient who is unable to take a solid dose form of atenolol.",
+   "candidates": [
+    {
+     "concept_id": "766246000",
+     "display": "Marburg acute multiple sclerosis",
+     "query": "for a patient who is unable to take a solid dose form of atenolol",
+     "exact_name": false
+    },
+    {
+     "concept_id": "763370008",
+     "display": "X-linked spastic paraplegia type 34",
+     "query": "for a patient who is unable to take a solid dose form of atenolol",
+     "exact_name": false
+    },
+    {
+     "concept_id": "721219005",
+     "display": "Familial Alzheimer-like prion disease",
+     "query": "for a patient who is unable to take a solid dose form of atenolol",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1237341006",
+     "display": "Intraductal tubulopapillary malignant neoplasm of pancreas",
+     "query": "for a patient who is unable to take a solid dose form of atenolol",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1234822009",
+     "display": "Idiopathic ductopenia",
+     "query": "for a patient who is unable to take a solid dose form of atenolol",
+     "exact_name": false
+    }
+   ]
+  },
+  "7851": {
+   "text": "arthropathies (including osteoarthritis)",
+   "candidates": [
+    {
+     "concept_id": "399269003",
+     "display": "Arthropathy",
+     "query": "arthropathy (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "25616007",
+     "display": "Acute arthropathy",
+     "query": "arthropathies",
+     "exact_name": false
+    },
+    {
+     "concept_id": "359554008",
+     "display": "Charcot's arthropathy",
+     "query": "arthropathies",
+     "exact_name": false
+    },
+    {
+     "concept_id": "38850007",
+     "display": "Chronic arthropathy",
+     "query": "arthropathies",
+     "exact_name": false
+    },
+    {
+     "concept_id": "18834007",
+     "display": "Crystal arthropathy",
+     "query": "arthropathies",
+     "exact_name": false
+    }
+   ]
+  },
+  "7902": {
+   "text": "Prevention of recurrent venous thromboembolism",
+   "candidates": [
+    {
+     "concept_id": "410016009",
+     "display": "Lipodermatosclerosis",
+     "query": "recurrent venous thromboembolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427631000",
+     "display": "At risk of venous thromboembolus",
+     "query": "recurrent venous thromboembolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "428904003",
+     "display": "H/O: thromboembolism of vein",
+     "query": "recurrent venous thromboembolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "711293008",
+     "display": "At moderate risk of venous thromboembolism",
+     "query": "recurrent venous thromboembolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208865003",
+     "display": "Venous thromboembolism originating from vena cava",
+     "query": "recurrent venous thromboembolism",
+     "exact_name": false
+    }
+   ]
+  },
+  "7984": {
+   "text": "Corticosteroid-induced osteoporosis",
+   "candidates": [
+    {
+     "concept_id": "1654001",
+     "display": "Corticosteroid-induced open angle glaucoma",
+     "query": "corticosteroid-induced osteoporosis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403657007",
+     "display": "Panniculitis due to corticosteroid therapy",
+     "query": "corticosteroid-induced osteoporosis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "390833005",
+     "display": "Osteoporosis caused by corticosteroid",
+     "query": "corticosteroid-induced osteoporosis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "337601000119109",
+     "display": "Cataract of left eye caused by corticosteroid",
+     "query": "corticosteroid-induced osteoporosis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "331981000119104",
+     "display": "Cataract of right eye caused by corticosteroid",
+     "query": "corticosteroid-induced osteoporosis",
+     "exact_name": false
+    }
+   ]
+  },
+  "8031": {
+   "text": "non-small cell lung cancer",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "429226001",
+     "display": "H/O: non-small cell malignant neoplasm of lung",
+     "query": "non-small cell lung malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16848221000119100",
+     "display": "H/O: bilateral lung non-small cell carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "8702": {
+   "text": "Termination of an intra-uterine pregnancy",
+   "candidates": [
+    {
+     "concept_id": "44992005",
+     "display": "Failed attempted termination of pregnancy with intravascular haemolysis",
+     "query": "termination of an intra-uterine pregnancy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "76889003",
+     "display": "Failed attempted termination of pregnancy with cerebral anoxia",
+     "query": "termination of an intra-uterine pregnancy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "609461007",
+     "display": "Induced termination of pregnancy complicated by cerebral anoxia",
+     "query": "termination of an intra-uterine pregnancy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1220652003",
+     "display": "Complete induced termination of pregnancy complicated by embolism",
+     "query": "termination of an intra-uterine pregnancy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1220645000",
+     "display": "Complete induced termination of pregnancy complicated by shock",
+     "query": "termination of an intra-uterine pregnancy",
+     "exact_name": false
+    }
+   ]
+  },
+  "8764": {
+   "text": "Prevention of stroke or systemic embolism",
+   "candidates": [
+    {
+     "concept_id": "230690007",
+     "display": "Stroke",
+     "query": "stroke (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "722929005",
+     "display": "Fetal and/or neonatal perinatal arterial ischaemic stroke",
+     "query": "stroke or systemic embolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "52072009",
+     "display": "Heat stroke",
+     "query": "stroke",
+     "exact_name": false
+    },
+    {
+     "concept_id": "707271004",
+     "display": "Sepsis due to oral infection",
+     "query": "stroke or systemic embolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "413758000",
+     "display": "Cardioembolic stroke",
+     "query": "stroke",
+     "exact_name": false
+    }
+   ]
+  },
+  "9087": {
+   "text": "Dynamic equinus foot deformity",
+   "candidates": [
+    {
+     "concept_id": "249803006",
+     "display": "Abduction deformity of foot",
+     "query": "dynamic equinus foot deformity",
+     "exact_name": false
+    },
+    {
+     "concept_id": "295051000119105",
+     "display": "Acquired deformity of foot",
+     "query": "dynamic equinus foot deformity",
+     "exact_name": false
+    },
+    {
+     "concept_id": "249809005",
+     "display": "Adductus deformity of foot",
+     "query": "dynamic equinus foot deformity",
+     "exact_name": false
+    },
+    {
+     "concept_id": "299466008",
+     "display": "Calcaneovalgus deformity of foot",
+     "query": "dynamic equinus foot deformity",
+     "exact_name": false
+    },
+    {
+     "concept_id": "302295001",
+     "display": "Cavovarus deformity of foot",
+     "query": "dynamic equinus foot deformity",
+     "exact_name": false
+    }
+   ]
+  },
+  "9102": {
+   "text": "spasticity of the upper limb",
+   "candidates": [
+    {
+     "concept_id": "723822009",
+     "display": "Autosomal recessive spastic paraplegia type 46",
+     "query": "spasticity of the upper limb",
+     "exact_name": false
+    }
+   ]
+  },
+  "9390": {
+   "text": "well-differentiated malignant pancreatic neuroendocrine tumour (pNET)",
+   "candidates": [
+    {
+     "concept_id": "1290076003",
+     "display": "H/O: well-differentiated neuroendocrine tumour",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1290274008",
+     "display": "Well-differentiated neuroendocrine tumour of colon",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287711008",
+     "display": "Well-differentiated neuroendocrine tumour of gallbladder",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15863491000119102",
+     "display": "Well-differentiated neuroendocrine tumour of hindgut",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1290065002",
+     "display": "Well-differentiated neuroendocrine tumour of ileum",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    }
+   ]
+  },
+  "9424": {
+   "text": "Severe cows' milk protein enteropathy with failure to thrive",
+   "candidates": [
+    {
+     "concept_id": "782555009",
+     "display": "Cow's milk protein allergy",
+     "query": "cows' milk protein enteropathy with failure to thrive",
+     "exact_name": false
+    },
+    {
+     "concept_id": "717185008",
+     "display": "Deficiency of leukotriene C4 synthase",
+     "query": "cows' milk protein enteropathy with failure to thrive",
+     "exact_name": false
+    },
+    {
+     "concept_id": "771445001",
+     "display": "Autosomal recessive infantile hypercalcaemia",
+     "query": "cows' milk protein enteropathy with failure to thrive",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1231141008",
+     "display": "Mannosephosphate isomerase congenital disorder of glycosylation",
+     "query": "cows' milk protein enteropathy with failure to thrive",
+     "exact_name": false
+    },
+    {
+     "concept_id": "765435009",
+     "display": "OTU deubiquitinase with linear linkage specificity related autoinflammatory syndrome",
+     "query": "cows' milk protein enteropathy with failure to thrive",
+     "exact_name": false
+    }
+   ]
+  },
+  "9429": {
+   "text": "Proven combined immunoglobulin E (IgE) mediated allergy to cows' milk protein and soy protein",
+   "candidates": [
+    {
+     "concept_id": "770758009",
+     "display": "New-onset refractory status epilepticus",
+     "query": "immunoglobulin e mediated allergy to cows' milk protein and soy protein",
+     "exact_name": false
+    },
+    {
+     "concept_id": "782555009",
+     "display": "Cow's milk protein allergy",
+     "query": "immunoglobulin e mediated allergy to cows' milk protein",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208813000",
+     "display": "Allergy to cattle protein",
+     "query": "immunoglobulin e mediated allergy to cows' milk protein",
+     "exact_name": false
+    },
+    {
+     "concept_id": "213020009",
+     "display": "Allergy to egg protein",
+     "query": "immunoglobulin e mediated allergy to cows' milk protein",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208811003",
+     "display": "Allergy to horse protein",
+     "query": "immunoglobulin e mediated allergy to cows' milk protein",
+     "exact_name": false
+    }
+   ]
+  },
+  "9724": {
+   "text": "Severe intestinal malabsorption including short bowel syndrome",
+   "candidates": [
+    {
+     "concept_id": "197476001",
+     "display": "Intestinal malabsorption",
+     "query": "intestinal malabsorption (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "26629001",
+     "display": "Short bowel syndrome",
+     "query": "intestinal malabsorption including short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "235724004",
+     "display": "Acquired short bowel syndrome",
+     "query": "intestinal malabsorption including short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1217373008",
+     "display": "Diaphragmatic hernia, short bowel, asplenia syndrome",
+     "query": "intestinal malabsorption including short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16013009",
+     "display": "Hyperalimentation formula for short bowel syndrome",
+     "query": "intestinal malabsorption including short bowel syndrome",
+     "exact_name": false
+    }
+   ]
+  },
+  "9729": {
+   "text": "disabling pain",
+   "candidates": [
+    {
+     "concept_id": "22253000",
+     "display": "Pain",
+     "query": "pain (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "12584003",
+     "display": "Bone pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15803009",
+     "display": "Bladder pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "162503007",
+     "display": "Cutting pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "162138001",
+     "display": "Genitourinary pain",
+     "query": "pain",
+     "exact_name": false
+    }
+   ]
+  },
+  "9790": {
+   "text": "Cows' milk protein enteropathy and intolerance to soy protein",
+   "candidates": [
+    {
+     "concept_id": "141001000119104",
+     "display": "Milk protein enteropathy",
+     "query": "cows' milk protein enteropathy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "66972006",
+     "display": "Protein-losing enteropathy",
+     "query": "cows' milk protein enteropathy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "738069006",
+     "display": "Cow milk intolerance",
+     "query": "cows' milk protein enteropathy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "63275006",
+     "display": "Neonatal cow milk hypocalcaemia",
+     "query": "cows' milk protein enteropathy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208813000",
+     "display": "Allergy to cattle protein",
+     "query": "cows' milk protein enteropathy",
+     "exact_name": false
+    }
+   ]
+  },
+  "9805": {
+   "text": "Chronic liver failure with fat malabsorption",
+   "candidates": [
+    {
+     "concept_id": "722866000",
+     "display": "Metabolic dysfunction-associated steatotic liver",
+     "query": "chronic liver failure with fat malabsorption",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197428008",
+     "display": "Combined immunodeficiency, enteropathy spectrum",
+     "query": "chronic liver failure with fat malabsorption",
+     "exact_name": false
+    },
+    {
+     "concept_id": "11244009",
+     "display": "Polyglandular autoimmune syndrome, type 1",
+     "query": "chronic liver failure with fat malabsorption",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1220596009",
+     "display": "Microcephalic primordial dwarfism, insulin resistance syndrome",
+     "query": "chronic liver failure with fat malabsorption",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773649005",
+     "display": "Transient infantile hypertriglyceridaemia and hepatosteatosis",
+     "query": "chronic liver failure with fat malabsorption",
+     "exact_name": false
+    }
+   ]
+  },
+  "9809": {
+   "text": "Severe diarrhoea of greater than 2 weeks duration",
+   "candidates": [
+    {
+     "concept_id": "62315008",
+     "display": "Diarrhoea",
+     "query": "diarrhoea (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "428566005",
+     "display": "Gestation less than 20 weeks",
+     "query": "diarrhoea of greater than 2 weeks duration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "313178001",
+     "display": "Gestation less than 24 weeks",
+     "query": "diarrhoea of greater than 2 weeks duration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "890097003",
+     "display": "Premature baby less than 26 weeks",
+     "query": "diarrhoea of greater than 2 weeks duration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1392441000168102",
+     "display": "H/O: fetal loss before 20 weeks",
+     "query": "diarrhoea of greater than 2 weeks duration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "236071009",
+     "display": "Chronic diarrhoea",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "9828": {
+   "text": "non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "9946": {
+   "text": "Migraine attack",
+   "candidates": [
+    {
+     "concept_id": "37796009",
+     "display": "Migraine",
+     "query": "migraine (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "75879005",
+     "display": "Abdominal migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "145611000119107",
+     "display": "Allergic migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "193039006",
+     "display": "Complicated migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "471651000124106",
+     "display": "Episodic migraine",
+     "query": "migraine",
+     "exact_name": false
+    }
+   ]
+  },
+  "9978": {
+   "text": "Mobilisation of haematopoietic stem cells",
+   "candidates": [
+    {
+     "concept_id": "746913791000119104",
+     "display": "Bilateral limbal stem cell deficiency",
+     "query": "mobilisation of haematopoietic stem cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "796522451000119103",
+     "display": "Left limbal stem cell deficiency",
+     "query": "mobilisation of haematopoietic stem cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "414825006",
+     "display": "Neoplasm of haematopoietic cell type",
+     "query": "mobilisation of haematopoietic stem cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "889967811000119101",
+     "display": "Right limbal stem cell deficiency",
+     "query": "mobilisation of haematopoietic stem cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "414026006",
+     "display": "Disorder of haematopoietic morphology",
+     "query": "mobilisation of haematopoietic stem cells",
+     "exact_name": false
+    }
+   ]
+  },
+  "10054": {
+   "text": "Proven inborn errors of protein metabolism",
+   "candidates": [
+    {
+     "concept_id": "34925000",
+     "display": "Megaloblastic anaemia due to inborn errors of metabolism",
+     "query": "inborn errors of protein metabolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "363090004",
+     "display": "Disorder of protein metabolism",
+     "query": "inborn errors of protein metabolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "147211000119101",
+     "display": "Disorder of plasma protein metabolism",
+     "query": "inborn errors of protein metabolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "4887000",
+     "display": "Hypertyrosinaemia, Richner-Hanhart type",
+     "query": "inborn errors of protein metabolism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "235915002",
+     "display": "Synthetic defect of bile acids",
+     "query": "inborn errors of protein metabolism",
+     "exact_name": false
+    }
+   ]
+  },
+  "10306": {
+   "text": "Contraception",
+   "candidates": [
+    {
+     "concept_id": "169445007",
+     "display": "Contraception not needed",
+     "query": "contraception",
+     "exact_name": false
+    },
+    {
+     "concept_id": "169463007",
+     "display": "Oral contraception - problem",
+     "query": "contraception",
+     "exact_name": false
+    },
+    {
+     "concept_id": "243817005",
+     "display": "Oral contraception status",
+     "query": "contraception",
+     "exact_name": false
+    },
+    {
+     "concept_id": "243825007",
+     "display": "Postcoital contraception status",
+     "query": "contraception",
+     "exact_name": false
+    },
+    {
+     "concept_id": "243824006",
+     "display": "Symptothermal contraception status",
+     "query": "contraception",
+     "exact_name": false
+    }
+   ]
+  },
+  "10755": {
+   "text": "Functional carcinoid tumour",
+   "candidates": [
+    {
+     "concept_id": "1290021005",
+     "display": "Primary well-differentiated neuroendocrine tumour of lung",
+     "query": "functional carcinoid tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287197000",
+     "display": "Primary well-differentiated neuroendocrine tumour of thymus",
+     "query": "functional carcinoid tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "226446911000119100",
+     "display": "Well-differentiated neuroendocrine tumour grade 1 of bronchus",
+     "query": "functional carcinoid tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287173009",
+     "display": "Well-differentiated neuroendocrine tumour grade 1 of lung",
+     "query": "functional carcinoid tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287175002",
+     "display": "Well-differentiated neuroendocrine tumour grade 2 of lung",
+     "query": "functional carcinoid tumour",
+     "exact_name": false
+    }
+   ]
+  },
+  "10956": {
+   "text": "differentiated thyroid cancer",
+   "candidates": [
+    {
+     "concept_id": "1255086008",
+     "display": "Differentiated thyroid carcinoma",
+     "query": "differentiated thyroid carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1386128005",
+     "display": "High-grade differentiated thyroid carcinoma",
+     "query": "differentiated thyroid carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "772992009",
+     "display": "Primary differentiated carcinoma of thyroid gland",
+     "query": "differentiated thyroid carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1382244009",
+     "display": "Well-differentiated neoplasm of uncertain malignant potential of thyroid",
+     "query": "differentiated thyroid malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "724552002",
+     "display": "Primary poorly differentiated carcinoma of thyroid gland",
+     "query": "differentiated thyroid carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "11376": {
+   "text": "Acute lymphoblastic leukaemia",
+   "candidates": [
+    {
+     "concept_id": "91857003",
+     "display": "Acute lymphoid leukaemia",
+     "query": "acute lymphoblastic leukaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427642009",
+     "display": "T-cell acute lymphoblastic leukaemia in remission",
+     "query": "acute lymphoblastic leukaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "277572006",
+     "display": "Precursor B-cell acute lymphoblastic leukaemia",
+     "query": "acute lymphoblastic leukaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "371012000",
+     "display": "Acute lymphoblastic leukaemia, transitional pre-B-cell",
+     "query": "acute lymphoblastic leukaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "738527001",
+     "display": "Myeloid and/or lymphoid neoplasm associated with platelet derived growth factor receptor alpha rearrangement",
+     "query": "acute lymphoblastic leukaemia",
+     "exact_name": false
+    }
+   ]
+  },
+  "11394": {
+   "text": "Dietary management of conditions requiring a highly restrictive therapeutic diet",
+   "candidates": []
+  },
+  "11470": {
+   "text": "Long chain fatty acid oxidation disorders",
+   "candidates": [
+    {
+     "concept_id": "702419001",
+     "display": "Fatty acid hydroxylase associated neurodegeneration",
+     "query": "long chain fatty acid oxidation disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "420179005",
+     "display": "Adverse reaction to fatty acid",
+     "query": "long chain fatty acid oxidation disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208936008",
+     "display": "Congenital ichthyosis, intellectual disability, spastic quadriplegia syndrome",
+     "query": "long chain fatty acid oxidation disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "116020001",
+     "display": "Disorder of branched-chain amino acid metabolism",
+     "query": "long chain fatty acid oxidation disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "237996001",
+     "display": "Long chain acyl-CoA dehydrogenase deficiency",
+     "query": "long chain fatty acid oxidation disorders",
+     "exact_name": false
+    }
+   ]
+  },
+  "11581": {
+   "text": "fungal infections",
+   "candidates": [
+    {
+     "concept_id": "3218000",
+     "display": "Mycosis",
+     "query": "fungal infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "12391000132109",
+     "display": "Invasive fungal infection",
+     "query": "fungal infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1466101000168102",
+     "display": "Suspected fungal infection",
+     "query": "fungal infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "31194008",
+     "display": "Fungal infection of eye",
+     "query": "fungal infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "236377000",
+     "display": "Fungal infection of kidney",
+     "query": "fungal infection",
+     "exact_name": false
+    }
+   ]
+  },
+  "11585": {
+   "text": "Candida infections",
+   "candidates": [
+    {
+     "concept_id": "78048006",
+     "display": "Candidiasis",
+     "query": "candida infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "240707005",
+     "display": "Anogenital candidiasis",
+     "query": "candida infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "414821002",
+     "display": "Neonatal candidiasis",
+     "query": "candida infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "79740000",
+     "display": "Candidiasis of mouth",
+     "query": "candida infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "860888005",
+     "display": "Fungal infection of stomach caused by Candida",
+     "query": "candida infection",
+     "exact_name": false
+    }
+   ]
+  },
+  "11591": {
+   "text": "invasive mycosis infections",
+   "candidates": [
+    {
+     "concept_id": "12391000132109",
+     "display": "Invasive fungal infection",
+     "query": "invasive mycosis (exact, local release)",
+     "exact_name": true
+    }
+   ]
+  },
+  "11609": {
+   "text": "Disseminated pulmonary histoplasmosis infection",
+   "candidates": [
+    {
+     "concept_id": "187052004",
+     "display": "Pulmonary African histoplasmosis",
+     "query": "disseminated pulmonary histoplasmosis infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "240730004",
+     "display": "Acute disseminated classical histoplasmosis",
+     "query": "disseminated pulmonary histoplasmosis infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "240732007",
+     "display": "Chronic disseminated classical histoplasmosis",
+     "query": "disseminated pulmonary histoplasmosis infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "240731000",
+     "display": "Subacute disseminated classical histoplasmosis",
+     "query": "disseminated pulmonary histoplasmosis infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "127601000119103",
+     "display": "Disseminated Acanthamoeba infection",
+     "query": "disseminated pulmonary histoplasmosis infection",
+     "exact_name": false
+    }
+   ]
+  },
+  "11851": {
+   "text": "Tyrosinaemia",
+   "candidates": [
+    {
+     "concept_id": "52452006",
+     "display": "Fumarylacetoacetase deficiency, chronic type",
+     "query": "tyrosinaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "40751003",
+     "display": "Persistent hyperphenylalaninaemia AND tyrosinaemia",
+     "query": "tyrosinaemia",
+     "exact_name": false
+    }
+   ]
+  },
+  "12008": {
+   "text": "Haemodialysis",
+   "candidates": [
+    {
+     "concept_id": "85223007",
+     "display": "Complication of haemodialysis",
+     "query": "haemodialysis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "443143006",
+     "display": "Dependence on haemodialysis",
+     "query": "haemodialysis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "152421000119107",
+     "display": "Haemodialysis procedure done",
+     "query": "haemodialysis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "439516000",
+     "display": "Haemodialysis therapy discontinued",
+     "query": "haemodialysis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "32599008",
+     "display": "Haemodialysis-associated amyloidosis",
+     "query": "haemodialysis",
+     "exact_name": false
+    }
+   ]
+  },
+  "12087": {
+   "text": "Neurogenic urinary retention",
+   "candidates": [
+    {
+     "concept_id": "425596001",
+     "display": "Spastic neurogenic bladder",
+     "query": "neurogenic urinary retention",
+     "exact_name": false
+    },
+    {
+     "concept_id": "102832009",
+     "display": "Uninhibited neurogenic bladder",
+     "query": "neurogenic urinary retention",
+     "exact_name": false
+    },
+    {
+     "concept_id": "429233001",
+     "display": "Nonneurogenic neurogenic bladder dysfunction",
+     "query": "neurogenic urinary retention",
+     "exact_name": false
+    },
+    {
+     "concept_id": "12245681000119103",
+     "display": "Postprocedural retention of urine",
+     "query": "neurogenic urinary retention",
+     "exact_name": false
+    },
+    {
+     "concept_id": "97391000119102",
+     "display": "Paraplegia with neurogenic bladder",
+     "query": "neurogenic urinary retention",
+     "exact_name": false
+    }
+   ]
+  },
+  "12130": {
+   "text": "malignant gastrointestinal stromal tumour",
+   "candidates": [
+    {
+     "concept_id": "420120006",
+     "display": "Gastrointestinal stromal tumour",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "12427": {
+   "text": "pancreatic neuroendocrine tumour (pNET)",
+   "candidates": [
+    {
+     "concept_id": "1228875006",
+     "display": "GCGR-related hyperglucagonaemia",
+     "query": "pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1186735007",
+     "display": "Mixed neuroendocrine-non neuroendocrine neoplasm of pancreas",
+     "query": "pancreatic neuroendocrine neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "12707": {
+   "text": "Local intra-articular or peri-articular infiltration",
+   "candidates": [
+    {
+     "concept_id": "173300003",
+     "display": "Disorder of pregnancy",
+     "query": "intra-articular or peri-articular infiltration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "897278005",
+     "display": "Fetal epignathus",
+     "query": "intra-articular or peri-articular infiltration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "59283008",
+     "display": "Maternal death",
+     "query": "intra-articular or peri-articular infiltration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770602005",
+     "display": "Squamous cell carcinoma of exocrine pancreas",
+     "query": "intra-articular or peri-articular infiltration",
+     "exact_name": false
+    },
+    {
+     "concept_id": "724067006",
+     "display": "Permanent neonatal diabetes with cerebellar agenesis syndrome",
+     "query": "intra-articular or peri-articular infiltration",
+     "exact_name": false
+    }
+   ]
+  },
+  "12727": {
+   "text": "Pneumocystis carinii pneumonia",
+   "candidates": [
+    {
+     "concept_id": "415125002",
+     "display": "Pneumocystosis jirovecii pneumonia",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "12759": {
+   "text": "Septicaemia, suspected",
+   "candidates": [
+    {
+     "concept_id": "137701000119106",
+     "display": "Antepartum septicaemia",
+     "query": "septicaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10001005",
+     "display": "Bacterial sepsis",
+     "query": "septicaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "2858002",
+     "display": "Puerperal sepsis",
+     "query": "septicaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "380721000087109",
+     "display": "Amoebiasis suspected",
+     "query": "suspected",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1269220000",
+     "display": "Anaemia suspected",
+     "query": "suspected",
+     "exact_name": false
+    }
+   ]
+  },
+  "12920": {
+   "text": "Stimulation of follicular development",
+   "candidates": [
+    {
+     "concept_id": "1335933003",
+     "display": "Photosensitive occipital lobe epilepsy",
+     "query": "stimulation of follicular development",
+     "exact_name": false
+    }
+   ]
+  },
+  "12934": {
+   "text": "Chronic hepatitis C infection",
+   "candidates": [
+    {
+     "concept_id": "128302006",
+     "display": "Chronic hepatitis C",
+     "query": "chronic hepatitis c (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "76783007",
+     "display": "Chronic hepatitis",
+     "query": "chronic hepatitis c",
+     "exact_name": false
+    },
+    {
+     "concept_id": "197284004",
+     "display": "Chronic active hepatitis",
+     "query": "chronic hepatitis c",
+     "exact_name": false
+    },
+    {
+     "concept_id": "307757001",
+     "display": "Chronic alcoholic hepatitis",
+     "query": "chronic hepatitis c",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16098491000119109",
+     "display": "Chronic autoimmune hepatitis",
+     "query": "chronic hepatitis c",
+     "exact_name": false
+    }
+   ]
+  },
+  "13030": {
+   "text": "Patients unable to take a solid dose form of an ACE inhibitor.",
+   "candidates": []
+  },
+  "13031": {
+   "text": "behavioural disturbances",
+   "candidates": [
+    {
+     "concept_id": "782723007",
+     "display": "Severe intellectual disability, progressive spastic diplegia syndrome",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1304277005",
+     "display": "Autosomal dominant intellectual disability, craniofacial dysmorphism, macrocephaly, hypotonia syndrome due to H1-4 mutation",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    },
+    {
+     "concept_id": "231520001",
+     "display": "Behavioural syndrome associated with physiological disturbance and physical factors",
+     "query": "behavioural disturbance",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1401998001",
+     "display": "Emergence delirium",
+     "query": "behavioural disturbance",
+     "exact_name": false
+    },
+    {
+     "concept_id": "726607007",
+     "display": "Autosomal recessive spastic paraplegia type 26",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    }
+   ]
+  },
+  "13047": {
+   "text": "Behavioural disturbances",
+   "candidates": [
+    {
+     "concept_id": "782723007",
+     "display": "Severe intellectual disability, progressive spastic diplegia syndrome",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1304277005",
+     "display": "Autosomal dominant intellectual disability, craniofacial dysmorphism, macrocephaly, hypotonia syndrome due to H1-4 mutation",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    },
+    {
+     "concept_id": "231520001",
+     "display": "Behavioural syndrome associated with physiological disturbance and physical factors",
+     "query": "behavioural disturbance",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1401998001",
+     "display": "Emergence delirium",
+     "query": "behavioural disturbance",
+     "exact_name": false
+    },
+    {
+     "concept_id": "726607007",
+     "display": "Autosomal recessive spastic paraplegia type 26",
+     "query": "behavioural disturbances",
+     "exact_name": false
+    }
+   ]
+  },
+  "13075": {
+   "text": "Upper and lower respiratory tract infections",
+   "candidates": [
+    {
+     "concept_id": "50417007",
+     "display": "Lower respiratory tract infection",
+     "query": "lower respiratory tract infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1366399005",
+     "display": "Primary congenital aneurysm of superior vena cava",
+     "query": "upper and lower respiratory tract infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "298746005",
+     "display": "Long upper limb",
+     "query": "upper",
+     "exact_name": false
+    },
+    {
+     "concept_id": "298743002",
+     "display": "Small upper limb",
+     "query": "upper",
+     "exact_name": false
+    },
+    {
+     "concept_id": "233959009",
+     "display": "Upper limb ischaemia",
+     "query": "upper",
+     "exact_name": false
+    }
+   ]
+  },
+  "13076": {
+   "text": "Myoclonic epilepsy",
+   "candidates": [
+    {
+     "concept_id": "230421008",
+     "display": "Epilepsy with myoclonic-atonic seizures",
+     "query": "myoclonic epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "230426003",
+     "display": "Myoclonic epilepsy with ragged red fibres",
+     "query": "myoclonic epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "699328003",
+     "display": "Myoclonic epilepsy myopathy sensory ataxia",
+     "query": "myoclonic epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783064000",
+     "display": "Progressive myoclonic epilepsy type 3",
+     "query": "myoclonic epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783055005",
+     "display": "Progressive myoclonic epilepsy type 5",
+     "query": "myoclonic epilepsy",
+     "exact_name": false
+    }
+   ]
+  },
+  "13414": {
+   "text": "Antibiotic associated pseudomembranous colitis",
+   "candidates": [
+    {
+     "concept_id": "1197479002",
+     "display": "DOCK2 deficiency",
+     "query": "antibiotic associated pseudomembranous colitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "702617007",
+     "display": "Acute generalised exanthematous pustulosis",
+     "query": "antibiotic associated pseudomembranous colitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "423590009",
+     "display": "Pseudomembranous colitis",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "13427": {
+   "text": "cardiac arrhythmias",
+   "candidates": [
+    {
+     "concept_id": "698247007",
+     "display": "Cardiac arrhythmia",
+     "query": "cardiac arrhythmia (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "253336000",
+     "display": "Isomerism of right atrial appendage",
+     "query": "cardiac arrhythmias",
+     "exact_name": false
+    },
+    {
+     "concept_id": "771442003",
+     "display": "Ogden syndrome",
+     "query": "cardiac arrhythmia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1230406008",
+     "display": "Postoperative cardiac arrhythmia",
+     "query": "cardiac arrhythmia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "764457005",
+     "display": "Ankyrin-B syndrome",
+     "query": "cardiac arrhythmia",
+     "exact_name": false
+    }
+   ]
+  },
+  "13563": {
+   "text": "Terminal disease",
+   "candidates": [
+    {
+     "concept_id": "721221000",
+     "display": "Hirschsprung disease with deafness and polydactyly syndrome",
+     "query": "terminal disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1373747002",
+     "display": "Neonatal isolated spontaneous perforation of intestine",
+     "query": "terminal disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "13571": {
+   "text": "Management of rejection in patients following organ or tissue transplantation",
+   "candidates": [
+    {
+     "concept_id": "213148006",
+     "display": "Transplanted organ rejection",
+     "query": "rejection in patients following organ or tissue transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1153358006",
+     "display": "Lymphocyte passenger syndrome following organ transplantation",
+     "query": "rejection in patients following organ or tissue transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "66276000",
+     "display": "Organ or tissue vascular perfusion increased",
+     "query": "rejection in patients following organ or tissue transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "445260006",
+     "display": "Posttransplant diabetes",
+     "query": "rejection in patients following organ or tissue transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1396201009",
+     "display": "Early posttransplant hyperglycaemia",
+     "query": "rejection in patients following organ or tissue transplantation",
+     "exact_name": false
+    }
+   ]
+  },
+  "13661": {
+   "text": "Bordetella pertussis",
+   "candidates": [
+    {
+     "concept_id": "27836007",
+     "display": "Pertussis",
+     "query": "bordetella pertussis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "294651001",
+     "display": "Pertussis vaccine allergy",
+     "query": "bordetella pertussis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "192712001",
+     "display": "Encephalitis caused by pertussis vaccine",
+     "query": "bordetella pertussis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "698581000",
+     "display": "Fever caused by pertussis vaccine",
+     "query": "bordetella pertussis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "293115003",
+     "display": "Pertussis vaccine adverse reaction",
+     "query": "bordetella pertussis",
+     "exact_name": false
+    }
+   ]
+  },
+  "13663": {
+   "text": "malignant neoplasia",
+   "candidates": [
+    {
+     "concept_id": "363346000",
+     "display": "Malignant neoplastic disease",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "13664": {
+   "text": "Anorectal congenital abnormalities",
+   "candidates": [
+    {
+     "concept_id": "73573004",
+     "display": "Congenital anomaly of musculoskeletal system",
+     "query": "anorectal congenital abnormalities",
+     "exact_name": false
+    },
+    {
+     "concept_id": "399982001",
+     "display": "Congenital vascular disorder",
+     "query": "anorectal congenital abnormalities",
+     "exact_name": false
+    },
+    {
+     "concept_id": "13806003",
+     "display": "Congenital anomaly of urethra",
+     "query": "anorectal congenital abnormality",
+     "exact_name": false
+    },
+    {
+     "concept_id": "92864004",
+     "display": "Congenital abnormal fusion of liver lobes",
+     "query": "anorectal congenital abnormalities",
+     "exact_name": false
+    },
+    {
+     "concept_id": "251038002",
+     "display": "Aortic root congenital abnormality",
+     "query": "anorectal congenital abnormalities",
+     "exact_name": false
+    }
+   ]
+  },
+  "13689": {
+   "text": "Hypophosphataemic rickets",
+   "candidates": []
+  },
+  "13694": {
+   "text": "Pyridoxine non-responsive homocystinuria",
+   "candidates": [
+    {
+     "concept_id": "720465002",
+     "display": "Adult-onset autosomal recessive sideroblastic anaemia",
+     "query": "pyridoxine non-responsive homocystinuria",
+     "exact_name": false
+    }
+   ]
+  },
+  "13700": {
+   "text": "Atypical mycobacterial infections",
+   "candidates": [
+    {
+     "concept_id": "111812000",
+     "display": "Atypical mycobacterial infection",
+     "query": "atypical mycobacterial infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "240413000",
+     "display": "Disseminated atypical mycobacterial infection",
+     "query": "atypical mycobacterial infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1731000119106",
+     "display": "Atypical mycobacterial infection of lung",
+     "query": "atypical mycobacterial infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "234091000",
+     "display": "Atypical mycobacterial lymphadenitis",
+     "query": "atypical mycobacterial",
+     "exact_name": false
+    },
+    {
+     "concept_id": "423892009",
+     "display": "Atypical mycobacterial infection of hand",
+     "query": "atypical mycobacterial infection",
+     "exact_name": false
+    }
+   ]
+  },
+  "13786": {
+   "text": "Patients requiring doses greater than 20 mg per week",
+   "candidates": []
+  },
+  "13803": {
+   "text": "Endometrial cancer",
+   "candidates": [
+    {
+     "concept_id": "254878006",
+     "display": "Endometrial carcinoma",
+     "query": "endometrial carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "363346000",
+     "display": "Malignant neoplastic disease",
+     "query": "endometrial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "443961001",
+     "display": "Malignant adenomatous neoplasm",
+     "query": "endometrial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "722688002",
+     "display": "Malignant epithelial neoplasm",
+     "query": "endometrial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "443250000",
+     "display": "Malignant fibromatous neoplasm",
+     "query": "endometrial malignant neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "13807": {
+   "text": "disabling pain",
+   "candidates": [
+    {
+     "concept_id": "22253000",
+     "display": "Pain",
+     "query": "pain (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "12584003",
+     "display": "Bone pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15803009",
+     "display": "Bladder pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "162503007",
+     "display": "Cutting pain",
+     "query": "pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "162138001",
+     "display": "Genitourinary pain",
+     "query": "pain",
+     "exact_name": false
+    }
+   ]
+  },
+  "13816": {
+   "text": "Anticipated emergency treatment of an acute attack of hereditary angioedema",
+   "candidates": []
+  },
+  "13848": {
+   "text": "supra-ventricular cardiac arrhythmias",
+   "candidates": []
+  },
+  "13870": {
+   "text": "ventricular cardiac arrhythmias",
+   "candidates": [
+    {
+     "concept_id": "764457005",
+     "display": "Ankyrin-B syndrome",
+     "query": "ventricular cardiac arrhythmia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1388909009",
+     "display": "Calcium release deficiency syndrome",
+     "query": "ventricular cardiac arrhythmia",
+     "exact_name": false
+    }
+   ]
+  },
+  "13954": {
+   "text": "Analgesia or fever",
+   "candidates": [
+    {
+     "concept_id": "38433004",
+     "display": "No sensitivity to pain",
+     "query": "analgesia (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "386661006",
+     "display": "Fever",
+     "query": "fever (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "7520000",
+     "display": "Pyrexia of unknown origin",
+     "query": "analgesia or fever",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1187615007",
+     "display": "TAFRO syndrome",
+     "query": "analgesia or fever",
+     "exact_name": false
+    },
+    {
+     "concept_id": "431193003",
+     "display": "Infection of bloodstream",
+     "query": "analgesia or fever",
+     "exact_name": false
+    }
+   ]
+  },
+  "14054": {
+   "text": "allergic reaction with anaphylaxis",
+   "candidates": [
+    {
+     "concept_id": "416093006",
+     "display": "Allergic reaction to drug",
+     "query": "allergic reaction with anaphylaxis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "609406000",
+     "display": "Non-allergic hypersensitivity reaction",
+     "query": "allergic reaction with anaphylaxis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "192056005",
+     "display": "Adjustment reaction with aggression",
+     "query": "allergic reaction with anaphylaxis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "192058006",
+     "display": "Adjustment reaction with destructiveness",
+     "query": "allergic reaction with anaphylaxis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "419515007",
+     "display": "Allergic reaction to detergent",
+     "query": "allergic reaction with anaphylaxis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "39579001",
+     "display": "Anaphylaxis",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "14148": {
+   "text": "Epileptic seizures",
+   "candidates": [
+    {
+     "concept_id": "313307000",
+     "display": "Epileptic seizure",
+     "query": "epileptic seizure (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1366365007",
+     "display": "Epileptic seizures induced by hot water",
+     "query": "epileptic seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "192981006",
+     "display": "Atonic epileptic seizure",
+     "query": "epileptic seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "192991000",
+     "display": "Clonic epileptic seizure",
+     "query": "epileptic seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208960007",
+     "display": "Motor epileptic seizure",
+     "query": "epileptic seizure",
+     "exact_name": false
+    }
+   ]
+  },
+  "14167": {
+   "text": "streptococcal infections (including rheumatic fever)",
+   "candidates": [
+    {
+     "concept_id": "85769006",
+     "display": "Streptococcal infection",
+     "query": "streptococcal infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1078255005",
+     "display": "Recurrent infection caused by Streptococcus",
+     "query": "streptococcal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "110267003",
+     "display": "Streptococcal infection of mouth",
+     "query": "streptococcal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "405632004",
+     "display": "Infantile streptococcal infection",
+     "query": "streptococcal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403842002",
+     "display": "Neonatal streptococcal infection",
+     "query": "streptococcal infections",
+     "exact_name": false
+    }
+   ]
+  },
+  "14208": {
+   "text": "facial lipoatrophy",
+   "candidates": []
+  },
+  "14229": {
+   "text": "Idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+   "candidates": [
+    {
+     "concept_id": "1365926005",
+     "display": "Tonic-clonic epileptic seizure of unknown onset",
+     "query": "idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716278005",
+     "display": "Jeavons syndrome",
+     "query": "idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "6204001",
+     "display": "Juvenile myoclonic epilepsy",
+     "query": "idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208973006",
+     "display": "Generalised onset myoclonic-tonic-clonic epileptic seizure",
+     "query": "idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "230421008",
+     "display": "Epilepsy with myoclonic-atonic seizures",
+     "query": "idiopathic generalised epilepsy with primary generalised tonic-clonic seizures",
+     "exact_name": false
+    }
+   ]
+  },
+  "14339": {
+   "text": "Adverse effects occurring with all of the base-priced drugs",
+   "candidates": [
+    {
+     "concept_id": "1303408008",
+     "display": "Hallucinogen persisting perception disorder",
+     "query": "adverse effects occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1371011003",
+     "display": "Hazardous gaming",
+     "query": "adverse effects occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1306691007",
+     "display": "Substance use disorder",
+     "query": "adverse effects occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "715430001",
+     "display": "Indomethacin embryofetopathy",
+     "query": "adverse effects occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1373527007",
+     "display": "Etomidate use disorder",
+     "query": "adverse effects occurring",
+     "exact_name": false
+    }
+   ]
+  },
+  "14340": {
+   "text": "Drug interactions occurring with all of the base-priced drugs",
+   "candidates": [
+    {
+     "concept_id": "700467001",
+     "display": "Reversible cerebral vasoconstriction syndrome",
+     "query": "drug interactions occurring with all of the base-priced drugs",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770643005",
+     "display": "Mesial temporal lobe epilepsy with hippocampal sclerosis",
+     "query": "drug interactions occurring with all of the base-priced drugs",
+     "exact_name": false
+    },
+    {
+     "concept_id": "79899007",
+     "display": "Medicine interaction",
+     "query": "drug interactions occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "448177004",
+     "display": "Adverse drug interaction",
+     "query": "drug interactions occurring",
+     "exact_name": false
+    },
+    {
+     "concept_id": "95904006",
+     "display": "Medicine interaction potentiation",
+     "query": "drug interactions occurring",
+     "exact_name": false
+    }
+   ]
+  },
+  "14341": {
+   "text": "Drug interactions expected to occur with all of the base-priced drugs",
+   "candidates": [
+    {
+     "concept_id": "408374000",
+     "display": "Medicine changed to generic brand",
+     "query": "drug interactions expected to occur",
+     "exact_name": false
+    },
+    {
+     "concept_id": "370569000",
+     "display": "Myelosuppression",
+     "query": "drug interactions expected to occur",
+     "exact_name": false
+    },
+    {
+     "concept_id": "59037007",
+     "display": "Drug intolerance",
+     "query": "drug interactions expected to occur",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1359825002",
+     "display": "Low perceived stress",
+     "query": "drug interactions expected to occur",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1303408008",
+     "display": "Hallucinogen persisting perception disorder",
+     "query": "drug interactions expected to occur",
+     "exact_name": false
+    }
+   ]
+  },
+  "14342": {
+   "text": "Transfer to a base-priced drug would cause patient confusion resulting in problems with compliance",
+   "candidates": []
+  },
+  "14370": {
+   "text": "Seizures",
+   "candidates": [
+    {
+     "concept_id": "91175000",
+     "display": "Seizure",
+     "query": "seizure (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "79631006",
+     "display": "Absence seizure",
+     "query": "seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "41510006",
+     "display": "Anoxic seizure",
+     "query": "seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "313307000",
+     "display": "Epileptic seizure",
+     "query": "seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "89525009",
+     "display": "Gelastic seizure",
+     "query": "seizure",
+     "exact_name": false
+    }
+   ]
+  },
+  "14437": {
+   "text": "For use in a hospital",
+   "candidates": []
+  },
+  "14497": {
+   "text": "traumatic skin lesions",
+   "candidates": [
+    {
+     "concept_id": "1145366005",
+     "display": "Localised skin lesion",
+     "query": "traumatic skin lesions",
+     "exact_name": false
+    },
+    {
+     "concept_id": "201340008",
+     "display": "Pigmented skin lesion",
+     "query": "traumatic skin lesions",
+     "exact_name": false
+    },
+    {
+     "concept_id": "420369001",
+     "display": "Cratered ulcer",
+     "query": "traumatic skin lesions",
+     "exact_name": false
+    },
+    {
+     "concept_id": "240583009",
+     "display": "Cutaneous gonorrhoea",
+     "query": "traumatic skin lesions",
+     "exact_name": false
+    },
+    {
+     "concept_id": "82074004",
+     "display": "Achromic skin lesions of pinta",
+     "query": "traumatic skin lesions",
+     "exact_name": false
+    }
+   ]
+  },
+  "14513": {
+   "text": "Wounds",
+   "candidates": [
+    {
+     "concept_id": "416462003",
+     "display": "Wound",
+     "query": "wound (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "283396008",
+     "display": "Incised wound",
+     "query": "wound",
+     "exact_name": false
+    },
+    {
+     "concept_id": "283682007",
+     "display": "Bite - wound",
+     "query": "wound",
+     "exact_name": false
+    },
+    {
+     "concept_id": "262574004",
+     "display": "Bullet wound",
+     "query": "wound",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1163181000",
+     "display": "Chop wound",
+     "query": "wound",
+     "exact_name": false
+    }
+   ]
+  },
+  "14539": {
+   "text": "Patients undergoing in-vitro fertilisation",
+   "candidates": [
+    {
+     "concept_id": "1332509007",
+     "display": "Fragile X associated primary ovarian insufficiency",
+     "query": "patients undergoing in-vitro fertilisation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1230290005",
+     "display": "Cytokine release syndrome due to chimeric antigen receptor T-cell immunotherapy",
+     "query": "patients undergoing in-vitro fertilisation",
+     "exact_name": false
+    }
+   ]
+  },
+  "14563": {
+   "text": "Infertility",
+   "candidates": [
+    {
+     "concept_id": "237145004",
+     "display": "Unexplained infertility",
+     "query": "infertility",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1186859008",
+     "display": "Autoimmune male infertility",
+     "query": "infertility",
+     "exact_name": false
+    },
+    {
+     "concept_id": "160391007",
+     "display": "FH: Female infertility",
+     "query": "infertility",
+     "exact_name": false
+    },
+    {
+     "concept_id": "160390008",
+     "display": "FH: Male infertility",
+     "query": "infertility",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1148927006",
+     "display": "Idiopathic female infertility",
+     "query": "infertility",
+     "exact_name": false
+    }
+   ]
+  },
+  "14589": {
+   "text": "Combined deficiency of human growth hormone and gonadotrophins",
+   "candidates": [
+    {
+     "concept_id": "397827003",
+     "display": "Growth hormone deficiency",
+     "query": "deficiency of human growth hormone and gonadotrophins",
+     "exact_name": false
+    },
+    {
+     "concept_id": "131004002",
+     "display": "Abnormal human growth hormone",
+     "query": "deficiency of human growth hormone and gonadotrophins",
+     "exact_name": false
+    },
+    {
+     "concept_id": "421684006",
+     "display": "Adult growth hormone deficiency",
+     "query": "deficiency of human growth hormone and gonadotrophins",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1186807002",
+     "display": "Hereditary growth hormone deficiency",
+     "query": "deficiency of human growth hormone and gonadotrophins",
+     "exact_name": false
+    },
+    {
+     "concept_id": "237688008",
+     "display": "Idiopathic growth hormone deficiency",
+     "query": "deficiency of human growth hormone and gonadotrophins",
+     "exact_name": false
+    }
+   ]
+  },
+  "14593": {
+   "text": "Hypogonadism or delayed puberty",
+   "candidates": [
+    {
+     "concept_id": "48130008",
+     "display": "Hypogonadism",
+     "query": "hypogonadism (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "400003000",
+     "display": "Delayed puberty",
+     "query": "delayed puberty (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "48723006",
+     "display": "Male hypogonadism",
+     "query": "hypogonadism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "33927004",
+     "display": "Hypogonadotropic hypogonadism",
+     "query": "hypogonadism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1381305001",
+     "display": "Normogonadotropic hypogonadism",
+     "query": "hypogonadism",
+     "exact_name": false
+    }
+   ]
+  },
+  "14632": {
+   "text": "Preservation of bone mineral density",
+   "candidates": [
+    {
+     "concept_id": "4591000175100",
+     "display": "Bone density screening not done",
+     "query": "preservation of bone mineral density",
+     "exact_name": false
+    },
+    {
+     "concept_id": "254104009",
+     "display": "Dysplasia with decreased bone density",
+     "query": "preservation of bone mineral density",
+     "exact_name": false
+    },
+    {
+     "concept_id": "254120004",
+     "display": "Dysplasia with increased bone density",
+     "query": "preservation of bone mineral density",
+     "exact_name": false
+    },
+    {
+     "concept_id": "312894000",
+     "display": "Osteopenia",
+     "query": "preservation of bone mineral density",
+     "exact_name": false
+    },
+    {
+     "concept_id": "64859006",
+     "display": "Osteoporosis",
+     "query": "preservation of bone mineral density",
+     "exact_name": false
+    }
+   ]
+  },
+  "14662": {
+   "text": "Intractable childhood epilepsy",
+   "candidates": [
+    {
+     "concept_id": "36803009",
+     "display": "Idiopathic generalised epilepsy",
+     "query": "childhood epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "23686004",
+     "display": "Ring chromosome 20 syndrome",
+     "query": "childhood epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "717338006",
+     "display": "Koolen De Vries syndrome",
+     "query": "childhood epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783064000",
+     "display": "Progressive myoclonic epilepsy type 3",
+     "query": "childhood epilepsy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "765093009",
+     "display": "Rolandic epilepsy, speech dyspraxia syndrome",
+     "query": "childhood epilepsy",
+     "exact_name": false
+    }
+   ]
+  },
+  "14682": {
+   "text": "Ablation of thyroid remnant tissue",
+   "candidates": [
+    {
+     "concept_id": "87232008",
+     "display": "Hyperthyroidism due to ectopic thyroid nodule",
+     "query": "ablation of thyroid remnant tissue",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197416000",
+     "display": "Euthyroid Graves orbitopathy",
+     "query": "ablation of thyroid remnant tissue",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1260241001",
+     "display": "Resistance to thyroid hormone due to mutation in thyroid hormone receptor beta",
+     "query": "ablation of thyroid remnant tissue",
+     "exact_name": false
+    },
+    {
+     "concept_id": "238867003",
+     "display": "Infantile systemic hyalinosis",
+     "query": "ablation of thyroid remnant tissue",
+     "exact_name": false
+    },
+    {
+     "concept_id": "782949007",
+     "display": "Facial dysmorphism, anorexia, cachexia, eye and skin anomalies syndrome",
+     "query": "ablation of thyroid remnant tissue",
+     "exact_name": false
+    }
+   ]
+  },
+  "14757": {
+   "text": "Corneal grafts",
+   "candidates": [
+    {
+     "concept_id": "314554007",
+     "display": "Corneal graft neovascularisation",
+     "query": "corneal grafts",
+     "exact_name": false
+    },
+    {
+     "concept_id": "95742008",
+     "display": "Corneal graft rejection",
+     "query": "corneal grafts",
+     "exact_name": false
+    },
+    {
+     "concept_id": "314556009",
+     "display": "Healthy corneal graft",
+     "query": "corneal grafts",
+     "exact_name": false
+    },
+    {
+     "concept_id": "420505005",
+     "display": "Corneal endothelial allograft rejection",
+     "query": "corneal grafts",
+     "exact_name": false
+    },
+    {
+     "concept_id": "421187003",
+     "display": "Corneal epithelial allograft rejection",
+     "query": "corneal grafts",
+     "exact_name": false
+    }
+   ]
+  },
+  "14796": {
+   "text": "Cerebrospinal fluid glucose transporter defect",
+   "candidates": [
+    {
+     "concept_id": "203994003",
+     "display": "Myelocystocele",
+     "query": "cerebrospinal fluid glucose transporter defect",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197212001",
+     "display": "Posterior meningocele",
+     "query": "cerebrospinal fluid glucose transporter defect",
+     "exact_name": false
+    }
+   ]
+  },
+  "14907": {
+   "text": "Anaemia associated with intrinsic renal disease",
+   "candidates": [
+    {
+     "concept_id": "271737000",
+     "display": "Anaemia",
+     "query": "anaemia (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "413566007",
+     "display": "Aplastic anaemia associated with pancreatitis",
+     "query": "anaemia associated with intrinsic renal disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "413567003",
+     "display": "Aplastic anaemia associated with pregnancy",
+     "query": "anaemia associated with intrinsic renal disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "91291006",
+     "display": "Arthropathy associated with systemic disease",
+     "query": "anaemia associated with intrinsic renal disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "191519005",
+     "display": "Dementia associated with another disease",
+     "query": "anaemia associated with intrinsic renal disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "707323002",
+     "display": "Anaemia in chronic kidney disease",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "14908": {
+   "text": "Hyperkinetic extrapyramidal disorders",
+   "candidates": [
+    {
+     "concept_id": "27012009",
+     "display": "Hyperkinetic heart disease",
+     "query": "hyperkinetic extrapyramidal disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1217371005",
+     "display": "Infantile hypotonia, oculomotor anomalies, hyperkinetic movements, developmental delay syndrome",
+     "query": "hyperkinetic extrapyramidal disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "816067005",
+     "display": "Woodhouse Sakati syndrome",
+     "query": "hyperkinetic extrapyramidal disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "75046006",
+     "display": "Combined pyramidal-extrapyramidal syndrome",
+     "query": "hyperkinetic extrapyramidal disorders",
+     "exact_name": false
+    },
+    {
+     "concept_id": "46745001",
+     "display": "Hyperkinetic syndrome with developmental delay",
+     "query": "hyperkinetic extrapyramidal disorders",
+     "exact_name": false
+    }
+   ]
+  },
+  "15316": {
+   "text": "Venous ulcer",
+   "candidates": [
+    {
+     "concept_id": "1332168006",
+     "display": "Venous ulcer of thigh",
+     "query": "venous ulcer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1332171003",
+     "display": "Venous ulcer of toe",
+     "query": "venous ulcer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "286174791000119107",
+     "display": "Venous ulcer of left calf",
+     "query": "venous ulcer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "338117701000119103",
+     "display": "Venous ulcer of left foot",
+     "query": "venous ulcer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "168649391000119103",
+     "display": "Venous ulcer of left midfoot",
+     "query": "venous ulcer",
+     "exact_name": false
+    }
+   ]
+  },
+  "15330": {
+   "text": "Cytomegalovirus infection and disease",
+   "candidates": [
+    {
+     "concept_id": "28944009",
+     "display": "Cytomegalovirus infection",
+     "query": "cytomegalovirus infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "64572001",
+     "display": "Disease",
+     "query": "disease (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "41679006",
+     "display": "TORCH syndrome",
+     "query": "cytomegalovirus infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "765757003",
+     "display": "Bilateral polymicrogyria",
+     "query": "cytomegalovirus infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "197679002",
+     "display": "Glomerular disease",
+     "query": "disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "15458": {
+   "text": "Dermatophyte infection",
+   "candidates": [
+    {
+     "concept_id": "402134005",
+     "display": "Onychomycosis caused by dermatophyte",
+     "query": "dermatophyte",
+     "exact_name": false
+    },
+    {
+     "concept_id": "231771000087102",
+     "display": "Finding of presence of fungus, not dermatophyte",
+     "query": "dermatophyte",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403114001",
+     "display": "Mycetoma caused by dermatophyte",
+     "query": "dermatophyte",
+     "exact_name": false
+    },
+    {
+     "concept_id": "768590001",
+     "display": "Finding of presence of dermatophyte hyphae and spores inside of hair shaft",
+     "query": "dermatophyte",
+     "exact_name": false
+    },
+    {
+     "concept_id": "768591002",
+     "display": "Finding of presence of dermatophyte hyphae and spores outside of hair shaft",
+     "query": "dermatophyte",
+     "exact_name": false
+    }
+   ]
+  },
+  "15465": {
+   "text": "Infection where resistance to amoxicillin is suspected",
+   "candidates": [
+    {
+     "concept_id": "768667002",
+     "display": "Nucleotide binding oligomerization domain containing 2-associated autoinflammatory disease",
+     "query": "infection where resistance to amoxicillin is suspected",
+     "exact_name": false
+    }
+   ]
+  },
+  "15466": {
+   "text": "Infections where resistance to amoxicillin is proven",
+   "candidates": []
+  },
+  "15477": {
+   "text": "Infection suspected or proven to be due to a susceptible organism",
+   "candidates": [
+    {
+     "concept_id": "721877008",
+     "display": "Mendelian susceptibility to mycobacterial disease due to complete interleukin 12 subunit beta deficiency",
+     "query": "infection suspected or proven to be due to a susceptible organism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716869006",
+     "display": "Mendelian susceptibility to mycobacterial disease due to complete interleukin 12 receptor beta 1 deficiency",
+     "query": "infection suspected or proven to be due to a susceptible organism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "128115005",
+     "display": "Pseudo von Willebrand disease",
+     "query": "infection suspected or proven to be due to a susceptible organism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "766982000",
+     "display": "Haemolytic anaemia due to adenylate kinase deficiency",
+     "query": "infection suspected or proven to be due to a susceptible organism",
+     "exact_name": false
+    },
+    {
+     "concept_id": "725462002",
+     "display": "Resistance to thyrotropin-releasing hormone syndrome",
+     "query": "infection suspected or proven to be due to a susceptible organism",
+     "exact_name": false
+    }
+   ]
+  },
+  "15479": {
+   "text": "Disorders of erythropoiesis",
+   "candidates": [
+    {
+     "concept_id": "238053006",
+     "display": "Homozygous erythropoietic protoporphyria",
+     "query": "disorders of erythropoiesis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197360001",
+     "display": "X-linked dominant erythropoietic protoporphyria",
+     "query": "disorders of erythropoiesis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "860859009",
+     "display": "Erythropoietic protoporphyria due to ferrochelatase deficiency",
+     "query": "disorders of erythropoiesis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783615009",
+     "display": "Erythropoietic uroporphyria associated with myeloid malignancy",
+     "query": "disorders of erythropoiesis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "713910008",
+     "display": "Antibody mediated acquired pure red cell aplasia caused by erythropoiesis stimulating agent",
+     "query": "disorders of erythropoiesis",
+     "exact_name": false
+    }
+   ]
+  },
+  "15483": {
+   "text": "Gram-positive coccal infections",
+   "candidates": [
+    {
+     "concept_id": "1231429007",
+     "display": "Beaded Gram-positive bacilli present",
+     "query": "gram-positive coccal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "734445005",
+     "display": "Gram-positive bacilli in chains",
+     "query": "gram-positive coccal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "734446006",
+     "display": "Gram-positive bacilli in palisades",
+     "query": "gram-positive coccal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "61609004",
+     "display": "Gram-positive cocci in chains",
+     "query": "gram-positive coccal infections",
+     "exact_name": false
+    },
+    {
+     "concept_id": "70003006",
+     "display": "Gram-positive cocci in clusters",
+     "query": "gram-positive coccal infections",
+     "exact_name": false
+    }
+   ]
+  },
+  "15606": {
+   "text": "Lymphoma",
+   "candidates": [
+    {
+     "concept_id": "399600009",
+     "display": "Lymphoma finding",
+     "query": "lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "118600007",
+     "display": "Malignant lymphoma",
+     "query": "lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "269476000",
+     "display": "Nodular lymphoma",
+     "query": "lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "13048006",
+     "display": "Orbital lymphoma",
+     "query": "lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "724648008",
+     "display": "Plasmablastic lymphoma",
+     "query": "lymphoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "15608": {
+   "text": "Patients receiving treatment with a high dose regimen",
+   "candidates": [
+    {
+     "concept_id": "770602005",
+     "display": "Squamous cell carcinoma of exocrine pancreas",
+     "query": "patients receiving treatment with a high dose regimen",
+     "exact_name": false
+    },
+    {
+     "concept_id": "26445008",
+     "display": "Cat eye syndrome",
+     "query": "patients receiving treatment with a high dose regimen",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1373509009",
+     "display": "Carnosinase deficiency disorder",
+     "query": "patients receiving treatment with a high dose regimen",
+     "exact_name": false
+    },
+    {
+     "concept_id": "782781006",
+     "display": "High bone mass osteogenesis imperfecta",
+     "query": "patients receiving treatment with a high dose regimen",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1222679006",
+     "display": "Autoimmune interstitial lung disease, arthritis syndrome",
+     "query": "patients receiving treatment with a high dose regimen",
+     "exact_name": false
+    }
+   ]
+  },
+  "15683": {
+   "text": "Short stature and slow growth",
+   "candidates": [
+    {
+     "concept_id": "277266007",
+     "display": "Short stature",
+     "query": "short stature (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "422065006",
+     "display": "Constitutional short stature",
+     "query": "short stature",
+     "exact_name": false
+    },
+    {
+     "concept_id": "29352008",
+     "display": "Thanatophoric dysplasia",
+     "query": "short stature",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1157159009",
+     "display": "Myopericytoma",
+     "query": "slow growth",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719045009",
+     "display": "Orbital leiomyoma",
+     "query": "slow growth",
+     "exact_name": false
+    }
+   ]
+  },
+  "15684": {
+   "text": "Assisted Reproductive Technology",
+   "candidates": []
+  },
+  "15745": {
+   "text": "Short stature associated with biochemical growth hormone deficiency",
+   "candidates": [
+    {
+     "concept_id": "277266007",
+     "display": "Short stature",
+     "query": "short stature (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "429362002",
+     "display": "Short stature associated with bone marrow transplant",
+     "query": "short stature associated with biochemical growth hormone deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716024001",
+     "display": "GMS syndrome",
+     "query": "short stature associated with biochemical growth hormone deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "421931005",
+     "display": "Adult growth hormone deficiency with onset in childhood",
+     "query": "short stature associated with biochemical growth hormone deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "723444009",
+     "display": "Noonan syndrome-like disorder with loose anagen hair",
+     "query": "short stature associated with biochemical growth hormone deficiency",
+     "exact_name": false
+    }
+   ]
+  },
+  "15761": {
+   "text": "Growth retardation secondary to an intracranial lesion, or cranial irradiation",
+   "candidates": [
+    {
+     "concept_id": "444896005",
+     "display": "Growth retardation",
+     "query": "growth retardation (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "770404004",
+     "display": "Autosomal recessive chorioretinopathy and microcephaly syndrome",
+     "query": "growth retardation secondary to an intracranial lesion, or cranial irradiation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "720565000",
+     "display": "Bohring Opitz syndrome",
+     "query": "growth retardation secondary to an intracranial lesion, or cranial irradiation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1396402000",
+     "display": "Congenital scalp aplasia cutis, enamel hypoplasia, developmental delay, intellectual disability syndrome",
+     "query": "growth retardation secondary to an intracranial lesion, or cranial irradiation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770751003",
+     "display": "Severe motor and intellectual disabilities, sensorineural deafness, dystonia syndrome",
+     "query": "growth retardation secondary to an intracranial lesion, or cranial irradiation",
+     "exact_name": false
+    }
+   ]
+  },
+  "15789": {
+   "text": "Risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+   "candidates": [
+    {
+     "concept_id": "722053001",
+     "display": "Obesity due to prohormone convertase I deficiency",
+     "query": "risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403661001",
+     "display": "Lipoatrophy caused by injected drug",
+     "query": "risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770941005",
+     "display": "Alopecia, progressive neurological defect, endocrinopathy syndrome",
+     "query": "risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+     "exact_name": false
+    },
+    {
+     "concept_id": "723552005",
+     "display": "Transient neonatal multiple acyl-CoA dehydrogenase deficiency",
+     "query": "risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773989002",
+     "display": "Late-onset isolated adrenocorticotropic hormone deficiency",
+     "query": "risk of hypoglycaemia secondary to growth hormone deficiency in neonates/infants",
+     "exact_name": false
+    }
+   ]
+  },
+  "15799": {
+   "text": "Biochemical growth hormone deficiency and precocious puberty",
+   "candidates": [
+    {
+     "concept_id": "400179000",
+     "display": "Precocious puberty",
+     "query": "precocious puberty (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "771510006",
+     "display": "X-linked central congenital hypothyroidism with late-onset testicular enlargement",
+     "query": "biochemical growth hormone deficiency and precocious puberty",
+     "exact_name": false
+    },
+    {
+     "concept_id": "715668008",
+     "display": "Pituitary deficiency due to empty sella turcica syndrome",
+     "query": "biochemical growth hormone deficiency and precocious puberty",
+     "exact_name": false
+    },
+    {
+     "concept_id": "723444009",
+     "display": "Noonan syndrome-like disorder with loose anagen hair",
+     "query": "biochemical growth hormone deficiency and precocious puberty",
+     "exact_name": false
+    },
+    {
+     "concept_id": "722053001",
+     "display": "Obesity due to prohormone convertase I deficiency",
+     "query": "biochemical growth hormone deficiency and precocious puberty",
+     "exact_name": false
+    }
+   ]
+  },
+  "15824": {
+   "text": "Hypothalamic-pituitary disease secondary to a structural lesion, with hypothalamic obesity driven growth",
+   "candidates": [
+    {
+     "concept_id": "194043004",
+     "display": "Optic atrophy secondary to retinal disease",
+     "query": "hypothalamic-pituitary disease secondary to a structural lesion",
+     "exact_name": false
+    },
+    {
+     "concept_id": "191261000",
+     "display": "Secondary sideroblastic anaemia due to disease",
+     "query": "hypothalamic-pituitary disease secondary to a structural lesion",
+     "exact_name": false
+    },
+    {
+     "concept_id": "201517005",
+     "display": "Seronegative arthritis secondary to Whipple's disease",
+     "query": "hypothalamic-pituitary disease secondary to a structural lesion",
+     "exact_name": false
+    },
+    {
+     "concept_id": "11104006",
+     "display": "Dilated cardiomyopathy due to phytanic acid storage disease",
+     "query": "hypothalamic-pituitary disease secondary to a structural lesion",
+     "exact_name": false
+    },
+    {
+     "concept_id": "732962005",
+     "display": "Secondary autoimmune haemolytic anaemia due to chronic inflammatory disease",
+     "query": "hypothalamic-pituitary disease secondary to a structural lesion",
+     "exact_name": false
+    }
+   ]
+  },
+  "15835": {
+   "text": "Bone or joint infection",
+   "candidates": [
+    {
+     "concept_id": "363162000",
+     "display": "Infectious disorder of joint",
+     "query": "joint infection (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "12584003",
+     "display": "Bone pain",
+     "query": "bone",
+     "exact_name": false
+    },
+    {
+     "concept_id": "125605004",
+     "display": "Fracture of bone",
+     "query": "bone",
+     "exact_name": false
+    },
+    {
+     "concept_id": "213121005",
+     "display": "Prosthetic joint infection",
+     "query": "joint infection",
+     "exact_name": false
+    },
+    {
+     "concept_id": "44743006",
+     "display": "Gonococcal infection of joint",
+     "query": "joint infection",
+     "exact_name": false
+    }
+   ]
+  },
+  "15846": {
+   "text": "Short stature associated with Turner syndrome",
+   "candidates": [
+    {
+     "concept_id": "277266007",
+     "display": "Short stature",
+     "query": "short stature (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "716238003",
+     "display": "Chitty Hall Baraitser syndrome",
+     "query": "short stature associated with turner syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716024001",
+     "display": "GMS syndrome",
+     "query": "short stature associated with turner syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719665003",
+     "display": "5q35 microduplication syndrome",
+     "query": "short stature associated with turner syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719046005",
+     "display": "12q14 microdeletion syndrome",
+     "query": "short stature associated with turner syndrome",
+     "exact_name": false
+    }
+   ]
+  },
+  "15870": {
+   "text": "Short stature associated with chronic renal insufficiency",
+   "candidates": [
+    {
+     "concept_id": "277266007",
+     "display": "Short stature",
+     "query": "short stature (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "719843001",
+     "display": "Ulna fibula ray defect and brachydactyly syndrome",
+     "query": "short stature associated with chronic renal insufficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "733605002",
+     "display": "XY type gonadal dysgenesis with associated anomalies syndrome",
+     "query": "short stature associated with chronic renal insufficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719013004",
+     "display": "X-linked intellectual disability Cilliers type",
+     "query": "short stature associated with chronic renal insufficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716195006",
+     "display": "Verloes Bourguignon syndrome",
+     "query": "short stature associated with chronic renal insufficiency",
+     "exact_name": false
+    }
+   ]
+  },
+  "15879": {
+   "text": "Short stature and poor body composition due to Prader-Willi syndrome",
+   "candidates": [
+    {
+     "concept_id": "277266007",
+     "display": "Short stature",
+     "query": "short stature (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "763631006",
+     "display": "Short stature, wormian bones, dextrocardia syndrome",
+     "query": "short stature and poor body composition due to prader-willi syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1340175001",
+     "display": "CPE-related Prader-Willi-like syndrome",
+     "query": "short stature and poor body composition due to prader-willi syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "720568003",
+     "display": "Brachydactyly and arterial hypertension syndrome",
+     "query": "short stature and poor body composition due to prader-willi syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1351843001",
+     "display": "Lysine demethylase 3B-related intellectual disability, facial dysmorphism, short stature syndrome",
+     "query": "short stature and poor body composition due to prader-willi syndrome",
+     "exact_name": false
+    }
+   ]
+  },
+  "16253": {
+   "text": "Chemotherapy-induced neutropenia",
+   "candidates": [
+    {
+     "concept_id": "3902000",
+     "display": "Non dose-related drug-induced neutropenia",
+     "query": "chemotherapy-induced neutropenia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "18846006",
+     "display": "Chemotherapy-induced nausea and vomiting",
+     "query": "chemotherapy-induced neutropenia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "56918001",
+     "display": "Dose-related drug-induced neutropenia",
+     "query": "chemotherapy-induced neutropenia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "762595001",
+     "display": "Chronic painful polyneuropathy following chemotherapy",
+     "query": "chemotherapy-induced neutropenia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "767659008",
+     "display": "Peripheral neuropathy due to and following chemotherapy",
+     "query": "chemotherapy-induced neutropenia",
+     "exact_name": false
+    }
+   ]
+  },
+  "17194": {
+   "text": "Bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+   "candidates": [
+    {
+     "concept_id": "4386001",
+     "display": "Bronchospasm",
+     "query": "bronchospasm (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1208602000",
+     "display": "Pneumonia caused by Pseudomonas aeruginosa",
+     "query": "bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "778027003",
+     "display": "Primary CD59 deficiency",
+     "query": "bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "774154008",
+     "display": "Periodic paralysis with later-onset distal motor neuropathy",
+     "query": "bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1222678003",
+     "display": "Interstitial lung disease due to ABCA3 deficiency",
+     "query": "bronchospasm and dyspnoea associated with chronic obstructive pulmonary disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "17704": {
+   "text": "follicular B-cell non-Hodgkin's lymphoma",
+   "candidates": [
+    {
+     "concept_id": "449419008",
+     "display": "Follicular non-Hodgkin's lymphoma of intestine",
+     "query": "follicular b-cell non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "308121000",
+     "display": "Follicular lymphoma",
+     "query": "follicular b-cell non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "109971005",
+     "display": "Follicular non-Hodgkin's lymphoma, mixed small cleaved cell and large cell",
+     "query": "follicular b-cell non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "277618009",
+     "display": "Follicular low grade B-cell lymphoma",
+     "query": "follicular b-cell non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "355001000119105",
+     "display": "Follicular non-Hodgkin lymphoma of spleen",
+     "query": "follicular b-cell non-hodgkin's lymphoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "18082": {
+   "text": "For use in patients receiving palliative care",
+   "candidates": [
+    {
+     "concept_id": "1208602000",
+     "display": "Pneumonia caused by Pseudomonas aeruginosa",
+     "query": "for use in patients receiving palliative care",
+     "exact_name": false
+    },
+    {
+     "concept_id": "707858008",
+     "display": "At high risk for Ebola virus disease",
+     "query": "for use in patients receiving palliative care",
+     "exact_name": false
+    },
+    {
+     "concept_id": "722004001",
+     "display": "Agenesis of internal carotid artery",
+     "query": "for use in patients receiving palliative care",
+     "exact_name": false
+    }
+   ]
+  },
+  "18415": {
+   "text": "basal cell carcinoma (BCC)",
+   "candidates": [
+    {
+     "concept_id": "402529002",
+     "display": "Basal cell carcinoma - micronodular",
+     "query": "basal cell carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "402536001",
+     "display": "Basal cell carcinoma - primary",
+     "query": "basal cell carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "403912001",
+     "display": "Cystic basal cell carcinoma",
+     "query": "basal cell carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "402537005",
+     "display": "Metastatic basal cell carcinoma",
+     "query": "basal cell carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716274007",
+     "display": "Nodular basal cell carcinoma",
+     "query": "basal cell carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "254701007",
+     "display": "Basal cell carcinoma of skin",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "18774": {
+   "text": "Prophylaxis of Pneumocystis jiroveci pneumonia",
+   "candidates": [
+    {
+     "concept_id": "415125002",
+     "display": "Pneumocystosis jirovecii pneumonia",
+     "query": "pneumocystis jiroveci pneumonia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1388561001",
+     "display": "Disseminated infection caused by Pneumocystis jirovecii",
+     "query": "pneumocystis jiroveci pneumonia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1388560000",
+     "display": "Infection of lung caused by Pneumocystis jirovecii",
+     "query": "pneumocystis jiroveci pneumonia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1388563003",
+     "display": "Infection caused by Pneumocystis jirovecii with acquired immunodeficiency syndrome",
+     "query": "pneumocystis jiroveci pneumonia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1388559005",
+     "display": "Nodule of lung caused by Pneumocystis jirovecii",
+     "query": "pneumocystis jiroveci pneumonia",
+     "exact_name": false
+    }
+   ]
+  },
+  "19308": {
+   "text": "Malignant gastrointestinal stromal tumour",
+   "candidates": [
+    {
+     "concept_id": "420120006",
+     "display": "Gastrointestinal stromal tumour",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "19354": {
+   "text": "systemic mastocytosis with eosinophilia",
+   "candidates": [
+    {
+     "concept_id": "702809001",
+     "display": "Drug reaction with eosinophilia and systemic symptoms",
+     "query": "systemic mastocytosis with eosinophilia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "125574005",
+     "display": "Angiolymphoid hyperplasia with eosinophilia",
+     "query": "systemic mastocytosis with eosinophilia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "402404006",
+     "display": "Episodic angioedema with eosinophilia",
+     "query": "systemic mastocytosis with eosinophilia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "24129002",
+     "display": "Fasciitis with eosinophilia syndrome",
+     "query": "systemic mastocytosis with eosinophilia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "367542003",
+     "display": "Pulmonary eosinophilia",
+     "query": "systemic mastocytosis with eosinophilia",
+     "exact_name": false
+    }
+   ]
+  },
+  "19558": {
+   "text": "Mobilisation of peripheral blood progenitor cells",
+   "candidates": [
+    {
+     "concept_id": "763864008",
+     "display": "Persistent polyclonal B-cell lymphocytosis",
+     "query": "mobilisation of peripheral blood progenitor cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "726721002",
+     "display": "Nodal marginal zone B-cell lymphoma",
+     "query": "mobilisation of peripheral blood progenitor cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "722020006",
+     "display": "Juvenile temporal arteritis",
+     "query": "mobilisation of peripheral blood progenitor cells",
+     "exact_name": false
+    },
+    {
+     "concept_id": "763884007",
+     "display": "Splenic diffuse red pulp small B-cell lymphoma",
+     "query": "mobilisation of peripheral blood progenitor cells",
+     "exact_name": false
+    }
+   ]
+  },
+  "19584": {
+   "text": "Assisting bone marrow transplantation",
+   "candidates": [
+    {
+     "concept_id": "2631000119108",
+     "display": "H/O: bone marrow transplant",
+     "query": "assisting bone marrow transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "428103008",
+     "display": "Disorder of transplanted bone marrow",
+     "query": "assisting bone marrow transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "430781009",
+     "display": "Family history of transplantation of bone marrow",
+     "query": "assisting bone marrow transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "122491000119108",
+     "display": "Lymphoproliferative disorder after transplantation of bone marrow",
+     "query": "assisting bone marrow transplantation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "431456004",
+     "display": "Accelerated rejection of bone marrow transplant",
+     "query": "assisting bone marrow transplantation",
+     "exact_name": false
+    }
+   ]
+  },
+  "21156": {
+   "text": "atherosclerotic disease",
+   "candidates": [
+    {
+     "concept_id": "10665871000119100",
+     "display": "Ischaemic ulcer of left ankle due to atherosclerotic disease",
+     "query": "atherosclerotic disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10655071000119103",
+     "display": "Ischaemic ulcer of left heel due to atherosclerotic disease",
+     "query": "atherosclerotic disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10665791000119109",
+     "display": "Ischaemic ulcer of left thigh due to atherosclerotic disease",
+     "query": "atherosclerotic disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10664951000119102",
+     "display": "Ischaemic ulcer of right ankle due to atherosclerotic disease",
+     "query": "atherosclerotic disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10664231000119100",
+     "display": "Ischaemic ulcer of right calf due to atherosclerotic disease",
+     "query": "atherosclerotic disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "21171": {
+   "text": "urothelial cancer",
+   "candidates": [
+    {
+     "concept_id": "363346000",
+     "display": "Malignant neoplastic disease",
+     "query": "urothelial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "443961001",
+     "display": "Malignant adenomatous neoplasm",
+     "query": "urothelial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "722688002",
+     "display": "Malignant epithelial neoplasm",
+     "query": "urothelial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "443250000",
+     "display": "Malignant fibromatous neoplasm",
+     "query": "urothelial malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "127221002",
+     "display": "Malignant haematopoietic neoplasm",
+     "query": "urothelial malignant neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "21264": {
+   "text": "Hypsarrhythmia and/or infantile spasms",
+   "candidates": [
+    {
+     "concept_id": "778063003",
+     "display": "Cryptogenic late-onset epileptic spasms",
+     "query": "hypsarrhythmia and/or infantile spasms",
+     "exact_name": false
+    },
+    {
+     "concept_id": "109478007",
+     "display": "Amelocerebrohypohidrotic syndrome",
+     "query": "hypsarrhythmia and/or infantile spasms",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1269359007",
+     "display": "Focal onset epileptic spasms",
+     "query": "hypsarrhythmia and/or infantile spasms",
+     "exact_name": false
+    },
+    {
+     "concept_id": "240084007",
+     "display": "Congenital myopathy with fibre type disproportion",
+     "query": "hypsarrhythmia and/or infantile spasms",
+     "exact_name": false
+    },
+    {
+     "concept_id": "897592003",
+     "display": "Congenital disorder of glycosylation type 1i",
+     "query": "infantile spasms",
+     "exact_name": false
+    }
+   ]
+  },
+  "21331": {
+   "text": "non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "22322": {
+   "text": "CD30 positive cutaneous T-cell lymphoma",
+   "candidates": []
+  },
+  "22327": {
+   "text": "Fistulising Crohn disease",
+   "candidates": [
+    {
+     "concept_id": "50440006",
+     "display": "Crohn's disease of colon",
+     "query": "fistulising crohn disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "160386006",
+     "display": "FH: Crohn's disease",
+     "query": "fistulising crohn disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "196578009",
+     "display": "Crohn's disease of oral soft tissues",
+     "query": "fistulising crohn disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197727002",
+     "display": "Crohn's disease of parastomal skin",
+     "query": "fistulising crohn disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "402376005",
+     "display": "Crohn's disease of penis",
+     "query": "fistulising crohn disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "22531": {
+   "text": "Castration resistant non-metastatic carcinoma of the prostate",
+   "candidates": []
+  },
+  "22542": {
+   "text": "spasticity of the upper limb following an acute event",
+   "candidates": [
+    {
+     "concept_id": "15708321000119104",
+     "display": "Acute deep vein thrombosis of bilateral upper limbs following procedure",
+     "query": "spasticity of the upper limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "674161000119102",
+     "display": "Monoplegia of upper limb due to and following ischaemic stroke",
+     "query": "spasticity of the upper limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "771449007",
+     "display": "Tissue necrosis of upper limb due to and following frostbite",
+     "query": "spasticity of the upper limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "784383006",
+     "display": "Disorder due to and following injury of nerve of upper limb",
+     "query": "spasticity of the upper limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "11993451000119102",
+     "display": "Tissue necrosis of left upper limb due to and following frostbite",
+     "query": "spasticity of the upper limb following an acute event",
+     "exact_name": false
+    }
+   ]
+  },
+  "22543": {
+   "text": "spasticity of the lower limb following an acute event",
+   "candidates": [
+    {
+     "concept_id": "1366341009",
+     "display": "Tissue necrosis of lower limb due to and following frostbite",
+     "query": "spasticity of the lower limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "784338005",
+     "display": "Disorder due to and following injury of nerve of lower limb",
+     "query": "spasticity of the lower limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "723870003",
+     "display": "Acute occlusion of artery of lower limb co-occurrent and due to thromboembolus",
+     "query": "spasticity of the lower limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "784380009",
+     "display": "Autosomal dominant spastic ataxia type 1",
+     "query": "spasticity of the lower limb following an acute event",
+     "exact_name": false
+    },
+    {
+     "concept_id": "782725000",
+     "display": "Autosomal recessive spastic paraplegia type 69",
+     "query": "spasticity of the lower limb following an acute event",
+     "exact_name": false
+    }
+   ]
+  },
+  "22684": {
+   "text": "indolent non-Hodgkin's lymphoma",
+   "candidates": [
+    {
+     "concept_id": "352881000119101",
+     "display": "Non-Hodgkins lymphoma of spleen",
+     "query": "indolent non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "109966003",
+     "display": "Diffuse non-Hodgkin's lymphoma, immunoblastic",
+     "query": "indolent non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "109964000",
+     "display": "Diffuse non-Hodgkin's lymphoma, undifferentiated",
+     "query": "indolent non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "143291000119104",
+     "display": "Non-Hodgkin's lymphoma in remission",
+     "query": "indolent non-hodgkin's lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "448220006",
+     "display": "Non-Hodgkin's lymphoma of bone",
+     "query": "indolent non-hodgkin's lymphoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "22859": {
+   "text": "Stage III non-small cell lung cancer",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "429226001",
+     "display": "H/O: non-small cell malignant neoplasm of lung",
+     "query": "non-small cell lung malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16848221000119100",
+     "display": "H/O: bilateral lung non-small cell carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "422968005",
+     "display": "Non-small cell carcinoma of lung, TNM stage 3",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "23005": {
+   "text": "Refractory seizures associated with tuberous sclerosis complex",
+   "candidates": [
+    {
+     "concept_id": "91175000",
+     "display": "Seizure",
+     "query": "seizure (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "698626001",
+     "display": "Dementia associated with multiple sclerosis",
+     "query": "seizures associated with tuberous sclerosis complex",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1231232007",
+     "display": "Multiple sclerosis associated intermediate uveitis",
+     "query": "seizures associated with tuberous sclerosis complex",
+     "exact_name": false
+    },
+    {
+     "concept_id": "440663004",
+     "display": "Encapsulating peritoneal sclerosis due to peritoneal dialysis",
+     "query": "seizures associated with tuberous sclerosis complex",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719580004",
+     "display": "16q24.3 microdeletion syndrome",
+     "query": "seizures associated with tuberous sclerosis complex",
+     "exact_name": false
+    }
+   ]
+  },
+  "24247": {
+   "text": "small cell lung cancer",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "254632001",
+     "display": "Small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1363557004",
+     "display": "Combined small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1268348008",
+     "display": "Primary small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "24367": {
+   "text": "Hyperphenylalaninaemia (HPA) due to tetrahydrobiopterin (BH4) deficiency",
+   "candidates": [
+    {
+     "concept_id": "1251399006",
+     "display": "Alopecia due to iron deficiency",
+     "query": "hyperphenylalaninaemia due to tetrahydrobiopterin deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "111574001",
+     "display": "Anaemia due to copper deficiency",
+     "query": "hyperphenylalaninaemia due to tetrahydrobiopterin deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "111577008",
+     "display": "Anaemia due to enzyme deficiency",
+     "query": "hyperphenylalaninaemia due to tetrahydrobiopterin deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "11491000",
+     "display": "Anaemia due to niacin deficiency",
+     "query": "hyperphenylalaninaemia due to tetrahydrobiopterin deficiency",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1186880002",
+     "display": "Dementia due to cobalamin deficiency",
+     "query": "hyperphenylalaninaemia due to tetrahydrobiopterin deficiency",
+     "exact_name": false
+    }
+   ]
+  },
+  "24550": {
+   "text": "Short bowel syndrome with intestinal failure",
+   "candidates": [
+    {
+     "concept_id": "26629001",
+     "display": "Short bowel syndrome",
+     "query": "short bowel syndrome (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "716665002",
+     "display": "Chronic failure of small intestine",
+     "query": "short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "235724004",
+     "display": "Acquired short bowel syndrome",
+     "query": "short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1217373008",
+     "display": "Diaphragmatic hernia, short bowel, asplenia syndrome",
+     "query": "short bowel syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16013009",
+     "display": "Hyperalimentation formula for short bowel syndrome",
+     "query": "short bowel syndrome",
+     "exact_name": false
+    }
+   ]
+  },
+  "25271": {
+   "text": "eye inflammation",
+   "candidates": [
+    {
+     "concept_id": "78370002",
+     "display": "Scleritis",
+     "query": "eye inflammation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15630811000119104",
+     "display": "Uveitis of left eye",
+     "query": "eye inflammation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15630771000119104",
+     "display": "Uveitis of right eye",
+     "query": "eye inflammation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "15630851000119103",
+     "display": "Bilateral uveitis of eyes",
+     "query": "eye inflammation",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1237435003",
+     "display": "Seborrhoeic inflammation of anterior margin of lower eyelid",
+     "query": "eye inflammation",
+     "exact_name": false
+    }
+   ]
+  },
+  "25505": {
+   "text": "adenocarcinoma of the stomach or gastro-oesophageal junction",
+   "candidates": [
+    {
+     "concept_id": "720612000",
+     "display": "Cardiospondylocarpofacial syndrome",
+     "query": "adenocarcinoma of the stomach or gastro-oesophageal junction",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1363574004",
+     "display": "Monomorphic epitheliotropic intestinal T-cell lymphoma",
+     "query": "adenocarcinoma of the stomach or gastro-oesophageal junction",
+     "exact_name": false
+    }
+   ]
+  },
+  "25628": {
+   "text": "Cancer pain",
+   "candidates": [
+    {
+     "concept_id": "1269223003",
+     "display": "Paraneoplastic uveitis",
+     "query": "cancer pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783056006",
+     "display": "Paratesticular adenocarcinoma",
+     "query": "malignant neoplasm pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770683002",
+     "display": "Secondary syringomyelia",
+     "query": "carcinoma pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "717329009",
+     "display": "Inflammatory pseudotumour of liver",
+     "query": "malignant neoplasm pain",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1381500005",
+     "display": "Congenital arteriovenous malformation of gallbladder",
+     "query": "carcinoma pain",
+     "exact_name": false
+    }
+   ]
+  },
+  "25657": {
+   "text": "Non-familial hypercholesterolaemia",
+   "candidates": [
+    {
+     "concept_id": "237868006",
+     "display": "Familial non-neuropathic amyloidosis",
+     "query": "non-familial hypercholesterolaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "398796005",
+     "display": "Familial type 3 hyperlipoproteinaemia",
+     "query": "non-familial hypercholesterolaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "230464001",
+     "display": "Sporadic hemiplegic migraine",
+     "query": "non-familial hypercholesterolaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "27503000",
+     "display": "Gilbert's syndrome",
+     "query": "non-familial hypercholesterolaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "767133009",
+     "display": "Double heterozygous familial hypercholesterolaemia",
+     "query": "non-familial hypercholesterolaemia",
+     "exact_name": false
+    }
+   ]
+  },
+  "26040": {
+   "text": "Transthyretin amyloid cardiomyopathy",
+   "candidates": []
+  },
+  "26350": {
+   "text": "preterm birth",
+   "candidates": []
+  },
+  "26810": {
+   "text": "CD30 positive peripheral T-cell lymphoma, non-cutaneous type",
+   "candidates": [
+    {
+     "concept_id": "765136002",
+     "display": "Primary cutaneous CD8 positive aggressive epidermotropic cytotoxic T-cell lymphoma",
+     "query": "cd30 positive peripheral t-cell lymphoma, non-cutaneous type",
+     "exact_name": false
+    },
+    {
+     "concept_id": "765328000",
+     "display": "Classic mycosis fungoides",
+     "query": "cd30 positive peripheral t-cell lymphoma, non-cutaneous type",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770785002",
+     "display": "T-cell immunodeficiency with epidermodysplasia verruciformis",
+     "query": "cd30 positive peripheral t-cell lymphoma, non-cutaneous type",
+     "exact_name": false
+    },
+    {
+     "concept_id": "763884007",
+     "display": "Splenic diffuse red pulp small B-cell lymphoma",
+     "query": "cd30 positive peripheral t-cell lymphoma, non-cutaneous type",
+     "exact_name": false
+    },
+    {
+     "concept_id": "726721002",
+     "display": "Nodal marginal zone B-cell lymphoma",
+     "query": "cd30 positive peripheral t-cell lymphoma, non-cutaneous type",
+     "exact_name": false
+    }
+   ]
+  },
+  "27257": {
+   "text": "Idiopathic multicentric Castleman disease (iMCD)",
+   "candidates": [
+    {
+     "concept_id": "41969006",
+     "display": "Idiopathic disease",
+     "query": "idiopathic multicentric castleman disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "207036003",
+     "display": "Angiofollicular lymph node hyperplasia",
+     "query": "idiopathic multicentric castleman disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "721175003",
+     "display": "Idiopathic glomerular disease",
+     "query": "idiopathic multicentric castleman disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "278834008",
+     "display": "Idiopathic multicentric osteolysis",
+     "query": "idiopathic multicentric castleman disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1156784009",
+     "display": "Localised Castleman disease",
+     "query": "idiopathic multicentric castleman disease",
+     "exact_name": false
+    }
+   ]
+  },
+  "27759": {
+   "text": "dry eye disease with keratitis",
+   "candidates": [
+    {
+     "concept_id": "771232003",
+     "display": "Epithelial keratitis caused by infection",
+     "query": "dry eye disease with keratitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "725146001",
+     "display": "Atypical juvenile parkinsonism",
+     "query": "dry eye disease with keratitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773993008",
+     "display": "Idiopathic macular telangiectasia type 1",
+     "query": "dry eye disease with keratitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "768667002",
+     "display": "Nucleotide binding oligomerization domain containing 2-associated autoinflammatory disease",
+     "query": "dry eye disease with keratitis",
+     "exact_name": false
+    },
+    {
+     "concept_id": "723544007",
+     "display": "Trichodysplasia spinulosa caused by Polyomavirus",
+     "query": "dry eye disease with keratitis",
+     "exact_name": false
+    }
+   ]
+  },
+  "28624": {
+   "text": "SARS-CoV-2 infection",
+   "candidates": [
+    {
+     "concept_id": "189486241000119100",
+     "display": "Asymptomatic SARS-CoV-2",
+     "query": "sars-cov-2",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1017214008",
+     "display": "SARS-CoV-2 viraemia",
+     "query": "sars-cov-2",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1156270003",
+     "display": "SARS-CoV-2 vaccination declined",
+     "query": "sars-cov-2",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1156265005",
+     "display": "SARS-CoV-2 vaccine contraindicated",
+     "query": "sars-cov-2",
+     "exact_name": false
+    },
+    {
+     "concept_id": "119981000146107",
+     "display": "Dyspnoea caused by SARS-CoV-2",
+     "query": "sars-cov-2",
+     "exact_name": false
+    },
+    {
+     "concept_id": "840539006",
+     "display": "COVID-19",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "29499": {
+   "text": "type IIIB/IIIC spinal muscular atrophy (SMA)",
+   "candidates": [
+    {
+     "concept_id": "770430000",
+     "display": "Autosomal recessive distal spinal muscular atrophy type 3",
+     "query": "type iiib/iiic spinal muscular atrophy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "771302009",
+     "display": "Autosomal recessive lower motor neuron disease with childhood onset",
+     "query": "type iiib/iiic spinal muscular atrophy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197152005",
+     "display": "Distal hereditary motor neuropathy type 5",
+     "query": "type iiib/iiic spinal muscular atrophy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "711483003",
+     "display": "Spinal muscular atrophy with respiratory distress type 1",
+     "query": "type iiib/iiic spinal muscular atrophy",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770727008",
+     "display": "Spinal muscular atrophy with respiratory distress type 2",
+     "query": "type iiib/iiic spinal muscular atrophy",
+     "exact_name": false
+    }
+   ]
+  },
+  "29559": {
+   "text": "X-linked hypophosphataemia",
+   "candidates": [
+    {
+     "concept_id": "65389002",
+     "display": "Adrenoleucodystrophy",
+     "query": "x-linked hypophosphataemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "713388002",
+     "display": "GATA binding protein 1 related thrombocytopenia with dyserythropoiesis",
+     "query": "x-linked hypophosphataemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "86923008",
+     "display": "Juvenile retinoschisis",
+     "query": "x-linked hypophosphataemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10406007",
+     "display": "Lesch-Nyhan syndrome",
+     "query": "x-linked hypophosphataemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "71779008",
+     "display": "X-linked hydrocephalus syndrome",
+     "query": "x-linked hypophosphataemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "82236004",
+     "display": "X-linked hypophosphataemic rickets",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "29568": {
+   "text": "Chelation of elevated copper levels",
+   "candidates": [
+    {
+     "concept_id": "166750003",
+     "display": "Serum copper level normal",
+     "query": "chelation of elevated copper levels",
+     "exact_name": false
+    },
+    {
+     "concept_id": "56595005",
+     "display": "Hypertyrosinaemia",
+     "query": "chelation of elevated copper levels",
+     "exact_name": false
+    },
+    {
+     "concept_id": "160931000119108",
+     "display": "Increased aspartate transaminase level",
+     "query": "chelation of elevated copper levels",
+     "exact_name": false
+    },
+    {
+     "concept_id": "407152001",
+     "display": "Increased blood lead level",
+     "query": "chelation of elevated copper levels",
+     "exact_name": false
+    },
+    {
+     "concept_id": "432352001",
+     "display": "Increased creatine kinase level",
+     "query": "chelation of elevated copper levels",
+     "exact_name": false
+    }
+   ]
+  },
+  "29819": {
+   "text": "non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "30319": {
+   "text": "Treatment-resistant migraine",
+   "candidates": [
+    {
+     "concept_id": "37796009",
+     "display": "Migraine",
+     "query": "migraine (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "75879005",
+     "display": "Abdominal migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "145611000119107",
+     "display": "Allergic migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "193039006",
+     "display": "Complicated migraine",
+     "query": "migraine",
+     "exact_name": false
+    },
+    {
+     "concept_id": "471651000124106",
+     "display": "Episodic migraine",
+     "query": "migraine",
+     "exact_name": false
+    }
+   ]
+  },
+  "30409": {
+   "text": "oesophageal cancer or gastro-oesophageal junction cancer",
+   "candidates": [
+    {
+     "concept_id": "363402007",
+     "display": "Malignant neoplasm of oesophagus",
+     "query": "oesophageal cancer (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "187734007",
+     "display": "Malignant neoplasm of cardio-oesophageal junction of stomach",
+     "query": "oesophageal malignant neoplasm or gastro-oesophageal junction malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "111030006",
+     "display": "Palmoplantar keratoderma oesophageal carcinoma syndrome",
+     "query": "gastro-oesophageal junction carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "783704005",
+     "display": "Undifferentiated carcinoma of oesophagus",
+     "query": "gastro-oesophageal junction carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "301007008",
+     "display": "Gastro-oesophageal erosion",
+     "query": "gastro-oesophageal junction cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "30879": {
+   "text": "leiomyosarcoma or liposarcoma",
+   "candidates": [
+    {
+     "concept_id": "443719001",
+     "display": "Leiomyosarcoma",
+     "query": "leiomyosarcoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "254829001",
+     "display": "Liposarcoma",
+     "query": "liposarcoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "715403006",
+     "display": "Adult heart neoplasm",
+     "query": "leiomyosarcoma or liposarcoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "719045009",
+     "display": "Orbital leiomyoma",
+     "query": "leiomyosarcoma or liposarcoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770559003",
+     "display": "Leiomyosarcoma of corpus uteri",
+     "query": "leiomyosarcoma or liposarcoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "31359": {
+   "text": "biliary tract cancer (intrahepatic cholangiocarcinoma, extrahepatic cholangiocarcinoma, and gallbladder cancer)",
+   "candidates": [
+    {
+     "concept_id": "363415003",
+     "display": "Malignant neoplasm of biliary tract",
+     "query": "biliary tract malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "112851000112103",
+     "display": "Malignant neoplasm of biliary tract suspected",
+     "query": "biliary tract malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "94185003",
+     "display": "Metastatic malignant neoplasm to biliary tract",
+     "query": "biliary tract malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "109847004",
+     "display": "Overlapping malignant neoplasm of biliary tract",
+     "query": "biliary tract malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "371970002",
+     "display": "Primary malignant neoplasm of biliary tract",
+     "query": "biliary tract malignant neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "31817": {
+   "text": "non-small cell lung cancer",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "429226001",
+     "display": "H/O: non-small cell malignant neoplasm of lung",
+     "query": "non-small cell lung malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "16848221000119100",
+     "display": "H/O: bilateral lung non-small cell carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "31937": {
+   "text": "pruritus (itching) associated with chronic kidney disease",
+   "candidates": [
+    {
+     "concept_id": "418363000",
+     "display": "Itching of skin",
+     "query": "pruritus (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "714153000",
+     "display": "Chronic kidney disease stage 5 with transplant",
+     "query": "pruritus associated with chronic kidney disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "709044004",
+     "display": "Chronic kidney disease",
+     "query": "pruritus associated with chronic kidney disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "111212009",
+     "display": "Arthropathy associated with bacterial disease",
+     "query": "pruritus associated with chronic kidney disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "111213004",
+     "display": "Arthropathy associated with viral disease",
+     "query": "pruritus associated with chronic kidney disease",
+     "exact_name": false
+    },
+    {
+     "concept_id": "707151000",
+     "display": "Uraemic pruritus",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "32168": {
+   "text": "Urothelial carcinoma",
+   "candidates": [
+    {
+     "concept_id": "733135005",
+     "display": "Primary urothelial carcinoma of paraurethral gland",
+     "query": "urothelial carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1208460000",
+     "display": "Sarcomatoid urothelial carcinoma of urinary bladder",
+     "query": "urothelial carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1231381006",
+     "display": "Clear cell urothelial carcinoma of urinary system",
+     "query": "urothelial carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1222581000",
+     "display": "Lipid-rich urothelial carcinoma of urinary system",
+     "query": "urothelial carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259712001",
+     "display": "Primary plasmacytoid urothelial carcinoma of urinary bladder",
+     "query": "urothelial carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "32397": {
+   "text": "non-infectious uveitis",
+   "candidates": []
+  },
+  "32469": {
+   "text": "Resectable non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "429226001",
+     "display": "H/O: non-small cell malignant neoplasm of lung",
+     "query": "non-small cell lung malignant neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "32582": {
+   "text": "HER2-low breast cancer",
+   "candidates": [
+    {
+     "concept_id": "254843006",
+     "display": "Familial cancer of breast",
+     "query": "her2-low breast cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "724451007",
+     "display": "Fear of breast cancer",
+     "query": "her2-low breast cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "878807001",
+     "display": "HER2-positive gastric cancer",
+     "query": "her2-low breast cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1082701000112100",
+     "display": "Locally advanced breast cancer",
+     "query": "her2-low breast cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "45061000087102",
+     "display": "Malignant neoplasm of breast in remission",
+     "query": "her2-low breast cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "32605": {
+   "text": "Mycosis fungoides cutaneous T-cell lymphoma",
+   "candidates": []
+  },
+  "32740": {
+   "text": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+   "candidates": [
+    {
+     "concept_id": "773649005",
+     "display": "Transient infantile hypertriglyceridaemia and hepatosteatosis",
+     "query": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "774206008",
+     "display": "Fatal post-viral neurodegenerative disorder",
+     "query": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1197745002",
+     "display": "PPARG-related familial partial lipodystrophy",
+     "query": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773406003",
+     "display": "Mandibular hypoplasia, deafness, progeroid syndrome",
+     "query": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773426004",
+     "display": "LMNA-related cardiocutaneous progeria syndrome",
+     "query": "atherosclerotic cardiovascular disease with hypertriglyceridaemia",
+     "exact_name": false
+    }
+   ]
+  },
+  "32844": {
+   "text": "For prescribing by certain health practitioners",
+   "candidates": [
+    {
+     "concept_id": "1230097004",
+     "display": "Atypical Timothy syndrome",
+     "query": "for prescribing by certain health practitioners",
+     "exact_name": false
+    },
+    {
+     "concept_id": "716860005",
+     "display": "Infection of intestine caused by cyclospora cayetanensis",
+     "query": "for prescribing by certain health practitioners",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1230096008",
+     "display": "Timothy syndrome",
+     "query": "for prescribing by certain health practitioners",
+     "exact_name": false
+    },
+    {
+     "concept_id": "733115009",
+     "display": "SSR4-CDG - signal sequence receptor subunit 4 congenital disorder of glycosylation",
+     "query": "for prescribing by certain health practitioners",
+     "exact_name": false
+    },
+    {
+     "concept_id": "734029004",
+     "display": "Distal 22q11.2 microdeletion syndrome",
+     "query": "for prescribing by certain health practitioners",
+     "exact_name": false
+    }
+   ]
+  },
+  "32955": {
+   "text": "chronic pouchitis",
+   "candidates": []
+  },
+  "33078": {
+   "text": "Endogenous Cushing's syndrome",
+   "candidates": [
+    {
+     "concept_id": "190501008",
+     "display": "Idiopathic Cushing's syndrome",
+     "query": "endogenous cushing's syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1396488004",
+     "display": "Mild autonomous cortisol secretion",
+     "query": "endogenous cushing's syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "190502001",
+     "display": "Pituitary dependent hypercortisolism",
+     "query": "endogenous cushing's syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "237737000",
+     "display": "Pseudo-Cushing's syndrome",
+     "query": "endogenous cushing's syndrome",
+     "exact_name": false
+    },
+    {
+     "concept_id": "10277002",
+     "display": "Cerebellopontine angle syndrome",
+     "query": "endogenous cushing's syndrome",
+     "exact_name": false
+    }
+   ]
+  },
+  "33091": {
+   "text": "Paediatric low grade glioma",
+   "candidates": [
+    {
+     "concept_id": "763865009",
+     "display": "Pilocytic astrocytoma",
+     "query": "low grade glioma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "90811000119100",
+     "display": "Low grade malignant glioma of brain",
+     "query": "low grade glioma",
+     "exact_name": false
+    }
+   ]
+  },
+  "33092": {
+   "text": "Paediatric high grade glioma",
+   "candidates": [
+    {
+     "concept_id": "109966003",
+     "display": "Diffuse non-Hodgkin's lymphoma, immunoblastic",
+     "query": "high grade glioma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "428753007",
+     "display": "Low grade glioma of cerebellum",
+     "query": "high grade glioma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "428964000",
+     "display": "Low grade glioma of cerebrum",
+     "query": "high grade glioma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "428965004",
+     "display": "Low grade glioma of thalamus",
+     "query": "high grade glioma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "100721000119109",
+     "display": "High grade astrocytoma of brain",
+     "query": "high grade glioma",
+     "exact_name": false
+    }
+   ]
+  },
+  "33315": {
+   "text": "cholangiocarcinoma",
+   "candidates": [
+    {
+     "concept_id": "274902006",
+     "display": "Combined hepatocellular carcinoma and cholangiocarcinoma",
+     "query": "cholangiocarcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1186631005",
+     "display": "Primary combined hepatocellular carcinoma and cholangiocarcinoma",
+     "query": "cholangiocarcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1237346001",
+     "display": "Caroli syndrome",
+     "query": "cholangiocarcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1234821002",
+     "display": "Primary intrahepatic lithiasis",
+     "query": "cholangiocarcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "721716004",
+     "display": "Primary cholangiocarcinoma of intrahepatic biliary tract",
+     "query": "cholangiocarcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "33430": {
+   "text": "Neuromyelitis optica spectrum disorder (NMOSD)",
+   "candidates": [
+    {
+     "concept_id": "1197758001",
+     "display": "Chronic bilirubin encephalopathy",
+     "query": "neuromyelitis optica spectrum disorder",
+     "exact_name": false
+    },
+    {
+     "concept_id": "711159002",
+     "display": "Histiocytosis-lymphadenopathy plus syndrome",
+     "query": "neuromyelitis optica spectrum disorder",
+     "exact_name": false
+    },
+    {
+     "concept_id": "35919005",
+     "display": "Pervasive developmental disorder",
+     "query": "neuromyelitis optica spectrum disorder",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1237365009",
+     "display": "Aprosencephaly/atelencephaly spectrum",
+     "query": "neuromyelitis optica spectrum disorder",
+     "exact_name": false
+    },
+    {
+     "concept_id": "702366001",
+     "display": "Childhood myocerebrohepatopathy spectrum",
+     "query": "neuromyelitis optica spectrum disorder",
+     "exact_name": false
+    }
+   ]
+  },
+  "33845": {
+   "text": "Primary hyperoxaluria type 1",
+   "candidates": [
+    {
+     "concept_id": "65520001",
+     "display": "Primary hyperoxaluria type I",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "34141": {
+   "text": "non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "34196": {
+   "text": "Proliferative diabetic retinopathy (PDR) and/or Diabetic macular oedema (DMO)",
+   "candidates": [
+    {
+     "concept_id": "59276001",
+     "display": "Proliferative retinopathy due to diabetes",
+     "query": "proliferative diabetic retinopathy (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "312912001",
+     "display": "Macular oedema due to diabetes",
+     "query": "diabetic macular oedema (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "399873008",
+     "display": "Severe nonproliferative retinopathy without macular oedema due to diabetes",
+     "query": "proliferative diabetic retinopathy and/or diabetic macular oedema",
+     "exact_name": false
+    },
+    {
+     "concept_id": "773991005",
+     "display": "Idiopathic posterior uveitis",
+     "query": "proliferative diabetic retinopathy and/or diabetic macular oedema",
+     "exact_name": false
+    },
+    {
+     "concept_id": "770791000",
+     "display": "Autosomal dominant neovascular inflammatory vitreoretinopathy",
+     "query": "proliferative diabetic retinopathy and/or diabetic macular oedema",
+     "exact_name": false
+    }
+   ]
+  },
+  "34246": {
+   "text": "Stage III or IV CD30 positive Hodgkin lymphoma",
+   "candidates": [
+    {
+     "concept_id": "118599009",
+     "display": "Hodgkin's disease",
+     "query": "cd30 positive hodgkin lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "762690000",
+     "display": "Classical Hodgkin lymphoma",
+     "query": "cd30 positive hodgkin lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "118601006",
+     "display": "Non-Hodgkin's lymphoma",
+     "query": "cd30 positive hodgkin lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "473068004",
+     "display": "H/O: Hodgkin lymphoma",
+     "query": "cd30 positive hodgkin lymphoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "830057003",
+     "display": "Relapsing classical Hodgkin lymphoma",
+     "query": "cd30 positive hodgkin lymphoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "34348": {
+   "text": "Focal onset seizures",
+   "candidates": [
+    {
+     "concept_id": "1366187006",
+     "display": "Postinfectious cerebellitis",
+     "query": "focal onset seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1269366008",
+     "display": "Focal onset atonic epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1264275009",
+     "display": "Focal onset automatism epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1281835000",
+     "display": "Focal onset autonomic epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "117891000119100",
+     "display": "Focal onset aware epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    }
+   ]
+  },
+  "34355": {
+   "text": "Intractable focal onset seizures",
+   "candidates": [
+    {
+     "concept_id": "230381009",
+     "display": "Localisation-related epilepsy",
+     "query": "focal onset seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1366187006",
+     "display": "Postinfectious cerebellitis",
+     "query": "focal onset seizures",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1269366008",
+     "display": "Focal onset atonic epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1264275009",
+     "display": "Focal onset automatism epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1281835000",
+     "display": "Focal onset autonomic epileptic seizure",
+     "query": "focal onset seizure",
+     "exact_name": false
+    }
+   ]
+  },
+  "34450": {
+   "text": "well-differentiated malignant pancreatic neuroendocrine tumour (pNET) or extra-pancreatic neuroendocrine tumour (epNET)",
+   "candidates": [
+    {
+     "concept_id": "1208745002",
+     "display": "Serotonin-producing neuroendocrine neoplasm of pancreas",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour or extra-pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1288045008",
+     "display": "Well-differentiated neuroendocrine tumour",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287661008",
+     "display": "Primary malignant well-differentiated neuroendocrine tumour of appendix",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1290060007",
+     "display": "Metastatic well-differentiated neuroendocrine tumour",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1287564005",
+     "display": "Well-differentiated neuroendocrine tumour of thymus",
+     "query": "well-differentiated malignant pancreatic neuroendocrine tumour",
+     "exact_name": false
+    }
+   ]
+  },
+  "34523": {
+   "text": "Immunotherapy sensitive advanced or metastatic cancer",
+   "candidates": [
+    {
+     "concept_id": "128462008",
+     "display": "Metastatic malignant neoplasm",
+     "query": "metastatic malignant neoplasm (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "94453007",
+     "display": "Metastatic malignant neoplasm to orbit",
+     "query": "immunotherapy sensitive advanced or metastatic malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "94454001",
+     "display": "Metastatic malignant neoplasm to oropharynx",
+     "query": "immunotherapy sensitive advanced or metastatic malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "145511000119106",
+     "display": "Metastatic malignant neoplasm to genital organ",
+     "query": "immunotherapy sensitive advanced or metastatic malignant neoplasm",
+     "exact_name": false
+    },
+    {
+     "concept_id": "94352003",
+     "display": "Metastatic malignant neoplasm to intrathoracic organs",
+     "query": "immunotherapy sensitive advanced or metastatic malignant neoplasm",
+     "exact_name": false
+    }
+   ]
+  },
+  "34569": {
+   "text": "small cell lung cancer",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "254632001",
+     "display": "Small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1363557004",
+     "display": "Combined small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1268348008",
+     "display": "Primary small cell carcinoma of lung",
+     "query": "small cell lung carcinoma",
+     "exact_name": false
+    }
+   ]
+  },
+  "34667": {
+   "text": "carcinoma of the cervix",
+   "candidates": [
+    {
+     "concept_id": "285432005",
+     "display": "Carcinoma of cervix",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "34761": {
+   "text": "Acute severe generalised myasthenia gravis (gMG)",
+   "candidates": [
+    {
+     "concept_id": "91637004",
+     "display": "Myasthenia gravis",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "34847": {
+   "text": "Treatment refractory generalised myasthenia gravis (gMG)",
+   "candidates": [
+    {
+     "concept_id": "91637004",
+     "display": "Myasthenia gravis",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "34918": {
+   "text": "Chronic treatment of Acute Hepatic Porphyria (AHP)",
+   "candidates": [
+    {
+     "concept_id": "64081000",
+     "display": "Acute hepatic porphyria",
+     "query": "added by hand from the local release (exact description)",
+     "exact_name": true
+    }
+   ]
+  },
+  "35021": {
+   "text": "Non-small cell lung cancer (NSCLC)",
+   "candidates": [
+    {
+     "concept_id": "254637007",
+     "display": "Non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma (exact, local release)",
+     "exact_name": true
+    },
+    {
+     "concept_id": "1259727001",
+     "display": "Primary non-small cell lung carcinoma",
+     "query": "non-small cell lung carcinoma",
+     "exact_name": false
+    },
+    {
+     "concept_id": "427038005",
+     "display": "Epidermal growth factor receptor negative non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "426964009",
+     "display": "Epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1259776007",
+     "display": "Primary epidermal growth factor receptor positive non-small cell lung cancer",
+     "query": "non-small cell lung cancer",
+     "exact_name": false
+    }
+   ]
+  },
+  "35788": {
+   "text": "Resected gastric and gastroesophageal junction adenocarcinoma",
+   "candidates": [
+    {
+     "concept_id": "28828001",
+     "display": "Gastric atresia",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "196753007",
+     "display": "Gastric atonia",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1399444005",
+     "display": "Gastric belching",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "206335051000132108",
+     "display": "Gastric cyst",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "20915006",
+     "display": "Gastric dysplasia",
+     "query": "gastric",
+     "exact_name": false
+    }
+   ]
+  },
+  "36031": {
+   "text": "Resectable gastric and gastroesophageal junction adenocarcinoma",
+   "candidates": [
+    {
+     "concept_id": "28828001",
+     "display": "Gastric atresia",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "196753007",
+     "display": "Gastric atonia",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "1399444005",
+     "display": "Gastric belching",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "206335051000132108",
+     "display": "Gastric cyst",
+     "query": "gastric",
+     "exact_name": false
+    },
+    {
+     "concept_id": "20915006",
+     "display": "Gastric dysplasia",
+     "query": "gastric",
+     "exact_name": false
+    }
+   ]
+  }
+ }
+}

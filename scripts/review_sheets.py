@@ -67,6 +67,16 @@ def candidates():
                 out.append(("pbs_indications", "PBS_INDICATION", str(r["indication_prescribing_txt_id"]), r["text"], k, "SCT",
                             c["concept_id"], c["display"],
                             pbs_read.get(str(r["indication_prescribing_txt_id"]), {}).get(c["concept_id"], "")))
+    extra = Path("reference/pbs_indication_candidates_more.json")      # the second search, after the first candidates
+    if extra.exists():
+        first_n = {}
+        for row in out:
+            if row[0] == "pbs_indications":
+                first_n[row[2]] = max(first_n.get(row[2], 0), row[4])
+        for sid, v in json.load(open(extra))["results"].items():
+            for k, c in enumerate(v["candidates"], first_n.get(sid, 0) + 1):
+                out.append(("pbs_indications", "PBS_INDICATION", sid, v["text"], k, "SCT", c["concept_id"], c["display"],
+                            pbs_read.get(sid, {}).get(c["concept_id"], "")))
     p = Path("reference/mbs_procedure_candidates.json")
     if p.exists():
         for r in json.load(open(p))["results"]:
