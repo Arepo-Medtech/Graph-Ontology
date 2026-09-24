@@ -649,17 +649,25 @@ map uses to its parent, kept only when the parent is in WHO's tables; 6 mapped c
 U06.9 …). With that step, ICD-11 reach equals ICD-10 reach: **84.3%** of Problem/Diagnosis, **95.6%** and **93.6%** of
 the two ED diagnosis sets.
 
-### Orphanet → ICD-10 through SNOMED CT's map: the first chain rule (built, Tier 2)
+### Orphanet → ICD-10 through SNOMED CT's map: the first chain rule (built, ungraded)
 
-`orpha:icd10_via_snomed` (derivation `chain`): an Orphanet disorder- or subtype-level entry with no ICD-10 code of its
-own, exactly aligned by Orphanet to a UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10 code
-SNOMED International's map classifies that concept to — only through maps with a single unconditional group. **75
-edges, 63 disorders.** Two rules came from the check: Orphanet *groups* are left out (27 of the first 30 new chains were
-groups, and each of the 6 errors was one — a group handed one member's code: *Primary cutaneous lymphoma* → the T-cell
-code), and two-group maps are left out (*Maternally inherited diabetes and deafness* needs both its codes). Census of
-every remaining pair 60/65 (Tier 2; the 5 wrong, rejected by name, come from the identity step or from SNOMED's own map
-choice). Witness: where Orphanet has its own exact ICD-10 code, the chain gives it for 424 of 474 disorders and its
-three-character category for 459. `source_locator` names the three steps; the census is in `cache/orphanet/`.
+`orpha:icd10_via_snomed` (derivation `chain`): an **active** Orphanet disorder- or subtype-level entry with no ICD-10 code
+of its own, exactly aligned by Orphanet to a UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10
+code SNOMED International's map classifies that concept to — only through maps with a single unconditional group. Three
+rules came from the checks: Orphanet *groups* are left out (27 of the first 30 new chains were groups, and each of the 6
+errors was one — a group handed one member's code), two-group maps are left out (*Maternally inherited diabetes and
+deafness* needs both codes), and entries Orphanet has retired are left out — **most entries without an ICD-10 code of
+their own are retired ones** (Orphanet strips a deprecated entry of its codes), which is what the first version (PR #39,
+63 disorders) was mostly filling. What remains is 6 edges, 5 pairs, all right in the census — too few to earn a tier, so
+ungraded. The rule stands for later releases; the witness is unchanged (where Orphanet has its own exact code, the chain
+gives it for 424 of 474, its category for 459). Orphanet's `orpha:xref` rows for retired entries carry `attrs.entry`.
+
+**MED-RT: two more witnesses (24 Sep).** *may treat* corroborated by DrugCentral's label indication (same drug, same
+SNOMED concept, a MeSH disease through its same-name SNOMED concept): 3,176 edges, 34/34, Tier 2. *Mechanism of action*
+corroborated by DrugCentral's MeSH pharmacological action (same drug, same class once wording is set aside — "Adrenergic
+alpha2-Antagonists" = "Adrenergic alpha-2 Receptor Antagonists"): 249 edges, 33/34 (the error, *isosorbide* → nitric
+oxide donor, is shared by both sources and rejected by name), Tier 2. The uncorroborated families stay inadmissible
+(23/30 each; their samples were topped back up to 30 after the split).
 
 ## UMLS Metathesaurus: every shared concept, locally (built)
 

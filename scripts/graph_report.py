@@ -745,7 +745,7 @@ def main() -> int:
             FROM mhc h JOIN edge e ON e.predicate = h.predicate AND e.s_code = h.s AND e.o_vocab = h.ov AND e.o_code = h.o GROUP BY 1, 2""").fetchall()}
         med = {}
         for pred, m_, e in con.execute("SELECT predicate, method, count(*) FROM edge WHERE predicate LIKE 'medrt:%' GROUP BY 1, 2 ORDER BY 1, 3 DESC").fetchall():
-            key = pred + (" [corroborated by FDA SPL]" if "corroborated" in m_ else "")
+            key = pred + (" [" + m_.split('; ', 1)[1] + "]" if '; ' in m_ else "")
             if (pred, m_) in checked:
                 k, n = checked[(pred, m_)]
                 lo, _ = wilson(k, n)

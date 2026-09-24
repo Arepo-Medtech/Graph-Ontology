@@ -1098,7 +1098,9 @@ def main() -> int:
             if not oc:
                 continue
             names_o.append((oc, d.findtext("Name")))
-            level_o.append((oc, d.findtext("DisorderGroup/Name")))     # Disorder / Group of disorders / Subtype of disorder
+            flags = [f.findtext("Label") for f in d.findall("DisorderFlagList/DisorderFlag")]
+            active = "Inactive" not in flags                              # Orphanet retires an entry (deprecated, non-rare ...)
+            level_o.append((oc, d.findtext("DisorderGroup/Name"), active))  # Disorder / Group of disorders / Subtype of disorder
             for x in d.iter("ExternalReference"):
                 src, ref_ = x.findtext("Source"), (x.findtext("Reference") or "").strip()
                 if src not in ov or not ref_:
@@ -1107,11 +1109,12 @@ def main() -> int:
                 rows_o.append(("ORPHA", oc, "orpha:xref", ov[src], ("MONDO:" + ref_.zfill(7)) if src == "MONDO" else ref_, "Orphanet",
                                "en_product1.xml ExternalReference", relx or "unqualified", "native", "asserted", PIN["orphanet"],
                                json.dumps({"relation": relx, "validation": x.findtext("DisorderMappingValidationStatus/Name"),
-                                           "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None)})))
+                                           "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None),
+                                           **({} if active else {"entry": "inactive: " + "; ".join(f for f in flags if f and f != "Inactive")})})))
         ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)))
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
-        con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR)")
-        con.executemany("INSERT INTO orpha_level VALUES (?, ?)", sorted(set(level_o)))
+        con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
+        con.executemany("INSERT INTO orpha_level VALUES (?, ?, ?)", sorted(set(level_o)))
 
     # --- WHO's ICD-10 <-> ICD-11 mapping tables, and ICD-11's two identifiers ---------------------------------------
     # MMS codes (what is coded: Orphanet cites them) and foundation ids (what the entity is: MONDO cites them) are two
@@ -1328,7 +1331,7 @@ def main() -> int:
                        o.via, 'ungraded', 'asserted', '{PIN['orphanet']}; {PIN['umls_rel']}; {PIN['sct_us']}',
                        json_object('intermediate', list(DISTINCT o.mid), 'snomed', list(DISTINCT o.sct))
                 FROM o2s o JOIN edge i ON i.predicate = 'sct:icd10_map' AND i.s_code = o.sct AND i.s_code IN (SELECT s_code FROM single)
-                JOIN orpha_level l ON l.code = o.orpha AND l.level IN ('Disorder', 'Subtype of disorder')
+                JOIN orpha_level l ON l.code = o.orpha AND l.level IN ('Disorder', 'Subtype of disorder') AND l.active
                 WHERE o.orpha NOT IN (SELECT s_code FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD10WHO')
                 GROUP BY o.orpha, i.o_code, o.via""")
         umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
@@ -1369,6 +1372,31 @@ def main() -> int:
             WHERE predicate IN ('medrt:has_mechanism_of_action', 'medrt:has_physiologic_effect')
               AND (s_code, o_code) IN (SELECT r.o_code, f.o_code FROM edge f JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = f.s_code
                                        WHERE f.predicate = 'fda:pharmacologic_class' AND f.method IN ('MoA', 'PE'))""")
+        # Two more witnesses from DrugCentral, curated apart from MED-RT: its label indications (for may_treat, same drug
+        # and the same SNOMED concept -- a MeSH disease through its same-name SNOMED concept) and its MeSH pharmacological
+        # actions (for mechanism of action, same drug and the same class once wording is set aside: "Adrenergic
+        # alpha2-Antagonists" = "Adrenergic alpha-2 Receptor Antagonists"). Corroborated edges are tiered apart.
+        con.execute("""UPDATE edge SET method = method || '; corroborated by DrugCentral indication'
+            WHERE predicate = 'medrt:may_treat' AND (s_code, o_vocab, o_code) IN (
+                SELECT m.s_code, m.o_vocab, m.o_code FROM edge m
+                JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.o_code = m.s_code
+                JOIN edge i ON i.predicate = 'drugcentral:indication' AND i.s_code = r.s_code
+                LEFT JOIN edge x ON m.o_vocab = 'MESH' AND x.predicate = 'umls:shared_cui' AND x.s_vocab = 'MESH' AND x.s_code = m.o_code AND x.o_vocab = 'SCT'
+                WHERE m.predicate = 'medrt:may_treat' AND i.o_code = CASE WHEN m.o_vocab = 'SCT' THEN m.o_code ELSE x.o_code END)""")
+        if (DC / "pharma_class.tsv").exists():
+            stop = {"receptor", "receptors", "agents", "agent", "drugs", "drug", "of", "the", "and"}
+            def class_key(v):
+                v = re.sub(r"\s*\[(moa|pe|epc|cs)\]\s*$", "", (v or "").lower())
+                v = re.sub(r"([a-z])(\d)", r"\1 \2", v)
+                return " ".join(sorted({w[:-1] if w.endswith("s") and len(w) > 3 else w for w in re.findall(r"[a-z0-9]+", v)} - stop))
+            con.create_function("class_key", class_key, ["VARCHAR"], "VARCHAR")
+            con.execute(f"""CREATE TEMP TABLE mesh_pa AS SELECT DISTINCT struct_id dc, class_key(name) k FROM {dc('pharma_class')}
+                            WHERE source = 'MeSH' AND type = 'PA'""")
+            con.execute("""CREATE TEMP TABLE medrt_cls AS SELECT code, class_key(name) k FROM name_hint WHERE vocab = 'MEDRT' AND name IS NOT NULL""")
+            con.execute("""UPDATE edge SET method = method || '; corroborated by MeSH pharmacological action (DrugCentral)'
+                WHERE predicate = 'medrt:has_mechanism_of_action' AND method NOT LIKE '%corroborated%' AND (s_code, o_code) IN (
+                    SELECT r.o_code, c.code FROM edge r JOIN mesh_pa p ON p.dc = r.s_code JOIN medrt_cls c ON c.k = p.k
+                    WHERE r.predicate = 'drugcentral:rxnorm')""")
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
