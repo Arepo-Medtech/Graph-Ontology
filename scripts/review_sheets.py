@@ -106,6 +106,20 @@ def candidates():
             for k, c in enumerate(r["candidates"], first_n.get(r["item"], 0) + 1):
                 out.append(("mbs_procedures", "MBS", r["item"], c["query"], k, "SCT", c["concept_id"], c["display"],
                             reads["mbs_procedures"].get(r["item"], {}).get(c["concept_id"], "")))
+    ip = Path("reference/mbs_inherits_from.json")      # a receiving laboratory's item: the candidates of the test it renders
+    if ip.exists():
+        inh = json.load(open(ip))["inherits_from"]
+        by_item = {}
+        for r in out:
+            if r[0] == "mbs_procedures":
+                by_item.setdefault(r[2], []).append(r)
+        out = [r for r in out if not (r[0] == "mbs_procedures" and r[2] in inh)]
+        for i, srcs in inh.items():
+            if i in mbs_skip:
+                continue
+            got = [r for j in srcs for r in by_item.get(j, [])]
+            for k, r in enumerate(got, 1):
+                out.append(("mbs_procedures", "MBS", i, r[3], k, r[5], r[6], r[7], reads["mbs_procedures"].get(i, {}).get(r[6], "")))
     for q, f, sv, so, ov, oc, on_ in (("hpo_snomed", "cache/umls/hpo_snomed_candidates.tsv", "HP", "hpo_id", "SCT", "snomed_code", "au_name"),
                                       ("organism_ncbi", "cache/umls/sct_ncbi_candidates.tsv", "SCT", "sct", "NCBITAXON", "ncbi_taxon", "ncbi_name"),
                                       ("radlex_anatomy", "cache/radlex/radlex_sct_candidates.tsv", "RADLEX", "rid", "SCT", "sct", "sct_name")):

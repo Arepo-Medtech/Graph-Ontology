@@ -1,15 +1,15 @@
 {
  "_note": "First reading of the mbs_procedures review queue (scripts/review_first_reading.py; Claude, 24 Sep 2026): per subject and candidate. Rows whose names agree once synonyms are compared were settled by rule; the rest were read. '-- no candidate fits' marks a subject to answer 'none'. A reading, not a decision.",
- "rows": 28914,
+ "rows": 28780,
  "unread": 0,
- "subjects": 3950,
- "subjects_with_a_likely_match": 1649,
+ "subjects": 3937,
+ "subjects_with_a_likely_match": 1676,
  "summary": {
-  "a different procedure": 14552,
-  "part of the service, or related only": 7097,
-  "a more general form of the procedure": 2722,
-  "likely the procedure the item funds": 2375,
-  "narrower (a technique or site the item does not require)": 2168
+  "a different procedure": 14272,
+  "part of the service, or related only": 7144,
+  "a more general form of the procedure": 2729,
+  "likely the procedure the item funds": 2443,
+  "narrower (a technique or site the item does not require)": 2192
  },
  "readings": {
   "11000": {
@@ -8439,10 +8439,6 @@
    "174298006": "a different procedure",
    "243702000": "likely the procedure the item funds",
    "53185004": "a more general form of the procedure"
-  },
-  "35501": {
-   "77465005": "a different procedure -- item is bulk-billing rule -- no candidate fits",
-   "119561005": "a different procedure -- item is bulk-billing rule -- no candidate fits"
   },
   "35506": {
    "1263415006": "likely the procedure the item funds",
@@ -29792,66 +29788,6 @@
    "1381225000": "likely the procedure the item funds",
    "719348000": "narrower (a technique or site the item does not require) -- adds contrast"
   },
-  "64990": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "64991": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "64992": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "64993": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "64994": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "64995": {
-   "306208006": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "306209003": "a different procedure -- no candidate fits",
-   "306210008": "a different procedure -- no candidate fits",
-   "444441005": "a different procedure -- no candidate fits",
-   "444399007": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "1331996002": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "240968008": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
   "65060": {
    "104145007": "part of the service, or related only",
    "250221001": "part of the service, or related only",
@@ -30082,14 +30018,16 @@
    "417171005": "a different procedure -- no candidate fits"
   },
   "65157": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "397617007": "likely the procedure the item funds -- inherited from item 65150",
+   "408275002": "likely the procedure the item funds -- inherited from item 65150",
+   "933434791000036106": "likely the procedure the item funds -- non-Bethesda inhibitor assay -- inherited from item 65150",
+   "63351009": "likely the procedure the item funds -- inherited from item 65150",
+   "54207009": "likely the procedure the item funds -- inherited from item 65150",
+   "408278000": "narrower (a technique or site the item does not require) -- one VWF assay method -- inherited from item 65150",
+   "401129008": "likely the procedure the item funds -- inherited from item 65150",
+   "49151003": "likely the procedure the item funds -- inherited from item 65150",
+   "29861003": "likely the procedure the item funds -- inherited from item 65150",
+   "444225007": "a different procedure -- inherited from item 65150"
   },
   "65162": {
    "243793001": "a different procedure -- no candidate fits",
@@ -30114,13 +30052,16 @@
    "103957008": "a different procedure -- no candidate fits"
   },
   "65166": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "89754000": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "88211002": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "82655008": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "20688004": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "51949007": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "20099001": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "442065001": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "103899008": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "3955006": "a different procedure -- inherited from item 65165 -- no candidate fits",
+   "103957008": "a different procedure -- inherited from item 65165 -- no candidate fits"
   },
   "65171": {
    "1119522008": "a different procedure",
@@ -30161,24 +30102,28 @@
    "1255828007": "a different procedure -- no candidate fits"
   },
   "65180": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1119522008": "a different procedure -- inherited from item 65175",
+   "118144006": "a different procedure -- inherited from item 65175",
+   "127796002": "a different procedure -- inherited from item 65175",
+   "721101008": "a different procedure -- inherited from item 65175",
+   "1231451004": "a different procedure -- inherited from item 65175",
+   "36288005": "likely the procedure the item funds -- inherited from item 65175",
+   "933507021000036103": "a different procedure -- inherited from item 65175",
+   "933507031000036101": "a different procedure -- inherited from item 65175",
+   "41489001": "a different procedure -- inherited from item 65175",
+   "48627002": "likely the procedure the item funds -- inherited from item 65175"
   },
   "65181": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1119522008": "a different procedure -- inherited from item 65175",
+   "118144006": "a different procedure -- inherited from item 65175",
+   "127796002": "a different procedure -- inherited from item 65175",
+   "721101008": "a different procedure -- inherited from item 65175",
+   "1231451004": "a different procedure -- inherited from item 65175",
+   "36288005": "likely the procedure the item funds -- inherited from item 65175",
+   "933507021000036103": "a different procedure -- inherited from item 65175",
+   "933507031000036101": "a different procedure -- inherited from item 65175",
+   "41489001": "a different procedure -- inherited from item 65175",
+   "48627002": "likely the procedure the item funds -- inherited from item 65175"
   },
   "66500": {
    "412807000": "a different procedure -- no candidate fits",
@@ -30447,13 +30392,15 @@
    "27709003": "likely the procedure the item funds"
   },
   "66606": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "171062007": "a different procedure -- inherited from item 66605",
+   "435601000124107": "a different procedure -- inherited from item 66605",
+   "435631000124104": "a different procedure -- inherited from item 66605",
+   "435611000124105": "a different procedure -- inherited from item 66605",
+   "76609004": "part of the service, or related only -- vitamin A is sibling 66607 -- inherited from item 66605",
+   "11829003": "likely the procedure the item funds -- inherited from item 66605",
+   "7557006": "part of the service, or related only -- vitamin E is sibling 66607 -- inherited from item 66605",
+   "105030006": "a different procedure -- inherited from item 66605",
+   "27709003": "likely the procedure the item funds -- inherited from item 66605"
   },
   "66607": {
    "171062007": "a different procedure",
@@ -30467,13 +30414,15 @@
    "27709003": "part of the service, or related only -- vitamin C is sibling 66605"
   },
   "66610": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "171062007": "a different procedure -- inherited from item 66607",
+   "435601000124107": "a different procedure -- inherited from item 66607",
+   "435631000124104": "a different procedure -- inherited from item 66607",
+   "435611000124105": "a different procedure -- inherited from item 66607",
+   "76609004": "likely the procedure the item funds -- inherited from item 66607",
+   "11829003": "part of the service, or related only -- B6 is sibling 66605 -- inherited from item 66607",
+   "7557006": "likely the procedure the item funds -- inherited from item 66607",
+   "105030006": "a different procedure -- inherited from item 66607",
+   "27709003": "part of the service, or related only -- vitamin C is sibling 66605 -- inherited from item 66607"
   },
   "66623": {
    "9336009": "a more general form of the procedure -- no candidate fits",
@@ -30521,13 +30470,7 @@
    "313956009": "a different procedure"
   },
   "66639": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "443342006": "part of the service, or related only -- genotype, not phenotype -- inherited from item 66638 -- no candidate fits"
   },
   "66641": {
    "59108006": "a different procedure -- no candidate fits",
@@ -30539,13 +30482,13 @@
    "269925008": "a different procedure -- no candidate fits"
   },
   "66642": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "59108006": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "416269009": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "4903000": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "59388001": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "117027007": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "269929002": "a different procedure -- inherited from item 66641 -- no candidate fits",
+   "269925008": "a different procedure -- inherited from item 66641 -- no candidate fits"
   },
   "66644": {
    "37209005": "likely the procedure the item funds -- C1 esterase inhibitor (typo C1q)",
@@ -30576,22 +30519,28 @@
    "60267001": "likely the procedure the item funds"
   },
   "66651": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "169188005": "narrower (a technique or site the item does not require) -- RIA method -- inherited from item 66650",
+   "80152001": "likely the procedure the item funds -- inherited from item 66650",
+   "268468007": "likely the procedure the item funds -- inherited from item 66650",
+   "275833003": "part of the service, or related only -- antenatal AFP, other item -- inherited from item 66650",
+   "391516001": "part of the service, or related only -- maternal serum AFP -- inherited from item 66650",
+   "104404005": "likely the procedure the item funds -- inherited from item 66650",
+   "27220002": "part of the service, or related only -- prenatal amniotic AFP, not tumour marker -- inherited from item 66650",
+   "391290009": "likely the procedure the item funds -- inherited from item 66650",
+   "441825001": "likely the procedure the item funds -- inherited from item 66650",
+   "60267001": "likely the procedure the item funds -- inherited from item 66650"
   },
   "66652": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "169188005": "narrower (a technique or site the item does not require) -- RIA method -- inherited from item 66650",
+   "80152001": "likely the procedure the item funds -- inherited from item 66650",
+   "268468007": "likely the procedure the item funds -- inherited from item 66650",
+   "275833003": "part of the service, or related only -- antenatal AFP, other item -- inherited from item 66650",
+   "391516001": "part of the service, or related only -- maternal serum AFP -- inherited from item 66650",
+   "104404005": "likely the procedure the item funds -- inherited from item 66650",
+   "27220002": "part of the service, or related only -- prenatal amniotic AFP, not tumour marker -- inherited from item 66650",
+   "391290009": "likely the procedure the item funds -- inherited from item 66650",
+   "441825001": "likely the procedure the item funds -- inherited from item 66650",
+   "60267001": "likely the procedure the item funds -- inherited from item 66650"
   },
   "66653": {
    "175978000": "a different procedure -- no candidate fits",
@@ -30640,13 +30589,7 @@
    "127796002": "a different procedure"
   },
   "66663": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "54495009": "a different procedure -- inherited from item 66662 -- no candidate fits"
   },
   "66665": {
    "442138005": "a different procedure",
@@ -30661,13 +30604,16 @@
    "14830009": "a different procedure"
   },
   "66666": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "442138005": "a different procedure -- inherited from item 66665",
+   "442065001": "a different procedure -- inherited from item 66665",
+   "5447007": "a different procedure -- inherited from item 66665",
+   "1277281000168105": "a different procedure -- inherited from item 66665",
+   "444281001": "a different procedure -- inherited from item 66665",
+   "113076002": "a different procedure -- inherited from item 66665",
+   "8655006": "likely the procedure the item funds -- inherited from item 66665",
+   "1663331000168101": "a different procedure -- inherited from item 66665",
+   "14663000": "a different procedure -- inherited from item 66665",
+   "14830009": "a different procedure -- inherited from item 66665"
   },
   "66671": {
    "876171000168109": "a different procedure",
@@ -30716,14 +30662,14 @@
    "250660006": "likely the procedure the item funds"
   },
   "66696": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "113076002": "a different procedure -- inherited from item 66695",
+   "714749008": "a different procedure -- inherited from item 66695",
+   "77465005": "a different procedure -- inherited from item 66695",
+   "119561005": "a different procedure -- inherited from item 66695",
+   "1663331000168101": "a different procedure -- inherited from item 66695",
+   "252200005": "part of the service, or related only -- stimulation test, related -- inherited from item 66695",
+   "166585000": "likely the procedure the item funds -- inherited from item 66695",
+   "250660006": "likely the procedure the item funds -- inherited from item 66695"
   },
   "66698": {
    "252371005": "a different procedure -- no candidate fits",
@@ -30743,14 +30689,7 @@
    "1371517005": "likely the procedure the item funds"
   },
   "66714": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1371517005": "likely the procedure the item funds -- inherited from item 66711"
   },
   "66719": {
    "35650009": "likely the procedure the item funds",
@@ -30844,13 +30783,13 @@
    "82552000": "likely the procedure the item funds"
   },
   "66780": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "64722001": "likely the procedure the item funds -- inherited from item 66779",
+   "32196008": "narrower (a technique or site the item does not require) -- standing -- inherited from item 66779",
+   "313191000": "a different procedure -- inherited from item 66779",
+   "313620009": "likely the procedure the item funds -- inherited from item 66779",
+   "313483002": "likely the procedure the item funds -- inherited from item 66779",
+   "313968000": "likely the procedure the item funds -- inherited from item 66779",
+   "82552000": "likely the procedure the item funds -- inherited from item 66779"
   },
   "66782": {
    "104885003": "narrower (a technique or site the item does not require) -- faecal specimen -- no candidate fits",
@@ -30861,13 +30800,12 @@
    "103957008": "a different procedure -- no candidate fits"
   },
   "66783": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104885003": "narrower (a technique or site the item does not require) -- faecal specimen -- inherited from item 66782 -- no candidate fits",
+   "313789002": "part of the service, or related only -- quantitation, sibling 66785 -- inherited from item 66782 -- no candidate fits",
+   "444307003": "a different procedure -- inherited from item 66782 -- no candidate fits",
+   "310884001": "a different procedure -- inherited from item 66782 -- no candidate fits",
+   "3955006": "a different procedure -- inherited from item 66782 -- no candidate fits",
+   "103957008": "a different procedure -- inherited from item 66782 -- no candidate fits"
   },
   "66785": {
    "104885003": "part of the service, or related only -- qualitative, item is quantitation",
@@ -30886,32 +30824,27 @@
    "442065001": "a different procedure"
   },
   "66789": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104885003": "part of the service, or related only -- qualitative, item is quantitation -- inherited from item 66785",
+   "313789002": "likely the procedure the item funds -- inherited from item 66785",
+   "310884001": "a different procedure -- inherited from item 66785",
+   "3955006": "a different procedure -- inherited from item 66785",
+   "103957008": "a different procedure -- inherited from item 66785",
+   "442065001": "a different procedure -- inherited from item 66785"
   },
   "66790": {
-   "1259967009": "a different procedure -- no candidate fits",
-   "1255828007": "a different procedure -- no candidate fits",
-   "721101008": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104885003": "part of the service, or related only -- qualitative, item is quantitation -- inherited from item 66785",
+   "313789002": "likely the procedure the item funds -- inherited from item 66785",
+   "310884001": "a different procedure -- inherited from item 66785",
+   "3955006": "a different procedure -- inherited from item 66785",
+   "103957008": "a different procedure -- inherited from item 66785",
+   "442065001": "a different procedure -- inherited from item 66785"
   },
   "66792": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1753881000168109": "a different procedure -- inherited from item 66791 -- no candidate fits",
+   "933506191000036103": "a different procedure -- inherited from item 66791 -- no candidate fits",
+   "313584005": "part of the service, or related only -- porphyrins, not enzymes -- inherited from item 66791 -- no candidate fits",
+   "313789002": "part of the service, or related only -- porphyrins, not enzymes -- inherited from item 66791 -- no candidate fits",
+   "414630008": "a different procedure -- inherited from item 66791 -- no candidate fits"
   },
   "66800": {
    "250560003": "a different procedure -- no candidate fits",
@@ -30932,23 +30865,28 @@
    "417171005": "a different procedure -- no candidate fits"
   },
   "66804": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "250560003": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "182752001": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "64836000": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "301842006": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "233568002": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "441883005": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "1663331000168101": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933451441000036105": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933451561000036105": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933505941000036100": "a different procedure -- inherited from item 66800 -- no candidate fits"
   },
   "66805": {
-   "1259967009": "a different procedure -- no candidate fits",
-   "1255828007": "a different procedure -- no candidate fits",
-   "721101008": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "250560003": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "182752001": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "64836000": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "301842006": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "233568002": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "441883005": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "1663331000168101": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933451441000036105": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933451561000036105": "a different procedure -- inherited from item 66800 -- no candidate fits",
+   "933505941000036100": "a different procedure -- inherited from item 66800 -- no candidate fits"
   },
   "66806": {
    "719801008": "a different procedure -- no candidate fits",
@@ -30970,70 +30908,42 @@
    "417171005": "a different procedure -- no candidate fits"
   },
   "66816": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "252317000": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "117695009": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "122068006": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "372302002": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "1663321000168104": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "1663331000168101": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "47758006": "a different procedure -- inherited from item 66812 -- no candidate fits"
   },
   "66817": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "252317000": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "117695009": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "122068006": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "372302002": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "1663321000168104": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "1663331000168101": "a different procedure -- inherited from item 66812 -- no candidate fits",
+   "47758006": "a different procedure -- inherited from item 66812 -- no candidate fits"
   },
   "66820": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1296391000168109": "likely the procedure the item funds -- inherited from item 66819",
+   "312479008": "likely the procedure the item funds -- inherited from item 66819",
+   "273975003": "likely the procedure the item funds -- inherited from item 66819",
+   "933506561000036104": "part of the service, or related only -- tissue not in item's specimens -- inherited from item 66819",
+   "12652004": "likely the procedure the item funds -- inherited from item 66819"
   },
   "66821": {
-   "1259967009": "a different procedure -- no candidate fits",
-   "1255828007": "a different procedure -- no candidate fits",
-   "721101008": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1296391000168109": "likely the procedure the item funds -- inherited from item 66819",
+   "312479008": "likely the procedure the item funds -- inherited from item 66819",
+   "273975003": "likely the procedure the item funds -- inherited from item 66819",
+   "933506561000036104": "part of the service, or related only -- tissue not in item's specimens -- inherited from item 66819",
+   "12652004": "likely the procedure the item funds -- inherited from item 66819"
   },
-  "66826": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
-  },
-  "66827": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
-  },
+  "66826": {},
+  "66827": {},
   "66832": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "30673003": "likely the procedure the item funds -- inherited from item 66831",
+   "59557004": "likely the procedure the item funds -- inherited from item 66831"
   },
   "66833": {
    "313756002": "narrower (a technique or site the item does not require) -- D3 only",
@@ -31044,13 +30954,12 @@
    "117616006": "a different procedure"
   },
   "66834": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "313756002": "narrower (a technique or site the item does not require) -- D3 only -- inherited from item 66833",
+   "447678008": "narrower (a technique or site the item does not require) -- D2 only -- inherited from item 66833",
+   "447680002": "narrower (a technique or site the item does not require) -- D2 only -- inherited from item 66833",
+   "12199005": "likely the procedure the item funds -- inherited from item 66833",
+   "1402151000168100": "a different procedure -- inherited from item 66833",
+   "117616006": "a different procedure -- inherited from item 66833"
   },
   "66835": {
    "121356007": "a different procedure -- no candidate fits",
@@ -31077,11 +30986,16 @@
    "390953005": "a different procedure -- no candidate fits"
   },
   "66837": {
-   "108249004": "a different procedure -- no candidate fits",
-   "121276004": "a different procedure -- no candidate fits",
-   "1303376009": "a different procedure -- no candidate fits",
-   "417171005": "a different procedure -- no candidate fits",
-   "1259967009": "a different procedure -- no candidate fits"
+   "121356007": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "121361009": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "118019001": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "1363523007": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "122143007": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "446987006": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "88884005": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "1662101000168101": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "936861000168104": "a different procedure -- inherited from item 66836 -- no candidate fits",
+   "390953005": "a different procedure -- inherited from item 66836 -- no candidate fits"
   },
   "66840": {
    "275711006": "a more general form of the procedure",
@@ -31195,13 +31109,16 @@
    "168132005": "a more general form of the procedure -- mycobacteria not specified -- no candidate fits"
   },
   "69325": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "117259009": "part of the service, or related only -- microscopy component only -- inherited from item 69324 -- no candidate fits",
+   "164839006": "part of the service, or related only -- inherited from item 69324 -- no candidate fits",
+   "168127009": "part of the service, or related only -- inherited from item 69324 -- no candidate fits",
+   "167995008": "part of the service, or related only -- inherited from item 69324 -- no candidate fits",
+   "164840008": "a different procedure -- inherited from item 69324 -- no candidate fits",
+   "252393000": "a different procedure -- inherited from item 69324 -- no candidate fits",
+   "391245000": "a different procedure -- inherited from item 69324 -- no candidate fits",
+   "127800008": "a different procedure -- inherited from item 69324 -- no candidate fits",
+   "391483001": "part of the service, or related only -- microscopy component only -- inherited from item 69324 -- no candidate fits",
+   "168132005": "a more general form of the procedure -- mycobacteria not specified -- inherited from item 69324 -- no candidate fits"
   },
   "69327": {
    "117259009": "part of the service, or related only -- microscopy component only -- no candidate fits",
@@ -31216,13 +31133,16 @@
    "168132005": "a more general form of the procedure -- mycobacteria not specified -- no candidate fits"
   },
   "69328": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "117259009": "part of the service, or related only -- microscopy component only -- inherited from item 69327 -- no candidate fits",
+   "164839006": "part of the service, or related only -- inherited from item 69327 -- no candidate fits",
+   "168127009": "part of the service, or related only -- inherited from item 69327 -- no candidate fits",
+   "167995008": "part of the service, or related only -- inherited from item 69327 -- no candidate fits",
+   "164840008": "a different procedure -- inherited from item 69327 -- no candidate fits",
+   "252393000": "a different procedure -- inherited from item 69327 -- no candidate fits",
+   "391245000": "a different procedure -- inherited from item 69327 -- no candidate fits",
+   "127800008": "a different procedure -- inherited from item 69327 -- no candidate fits",
+   "391483001": "part of the service, or related only -- microscopy component only -- inherited from item 69327 -- no candidate fits",
+   "168132005": "a more general form of the procedure -- mycobacteria not specified -- inherited from item 69327 -- no candidate fits"
   },
   "69330": {
    "117259009": "part of the service, or related only -- microscopy component only -- no candidate fits",
@@ -31237,13 +31157,16 @@
    "168132005": "a more general form of the procedure -- mycobacteria not specified -- no candidate fits"
   },
   "69331": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "117259009": "part of the service, or related only -- microscopy component only -- inherited from item 69330 -- no candidate fits",
+   "164839006": "part of the service, or related only -- inherited from item 69330 -- no candidate fits",
+   "168127009": "part of the service, or related only -- inherited from item 69330 -- no candidate fits",
+   "167995008": "part of the service, or related only -- inherited from item 69330 -- no candidate fits",
+   "164840008": "a different procedure -- inherited from item 69330 -- no candidate fits",
+   "252393000": "a different procedure -- inherited from item 69330 -- no candidate fits",
+   "391245000": "a different procedure -- inherited from item 69330 -- no candidate fits",
+   "127800008": "a different procedure -- inherited from item 69330 -- no candidate fits",
+   "391483001": "part of the service, or related only -- microscopy component only -- inherited from item 69330 -- no candidate fits",
+   "168132005": "a more general form of the procedure -- mycobacteria not specified -- inherited from item 69330 -- no candidate fits"
   },
   "69333": {
    "167217005": "likely the procedure the item funds",
@@ -31306,13 +31229,11 @@
    "117963005": "narrower (a technique or site the item does not require) -- one method"
   },
   "69379": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "315124004": "likely the procedure the item funds -- inherited from item 69378",
+   "113075003": "a different procedure -- inherited from item 69378",
+   "1393151000168101": "a different procedure -- inherited from item 69378",
+   "166971003": "a different procedure -- inherited from item 69378",
+   "166580005": "a different procedure -- inherited from item 69378"
   },
   "69380": {
    "918591000168102": "a different procedure",
@@ -31326,13 +31247,11 @@
    "446987006": "likely the procedure the item funds"
   },
   "69383": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "315124004": "likely the procedure the item funds -- inherited from item 69381",
+   "113075003": "a different procedure -- inherited from item 69381",
+   "1393151000168101": "a different procedure -- inherited from item 69381",
+   "166971003": "a different procedure -- inherited from item 69381",
+   "166580005": "a different procedure -- inherited from item 69381"
   },
   "69384": {
    "104050004": "a different procedure -- no candidate fits",
@@ -31357,24 +31276,20 @@
    "1255828007": "a different procedure -- no candidate fits"
   },
   "69400": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104050004": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "252317000": "a more general form of the procedure -- uninformative root concept -- inherited from item 69384 -- no candidate fits",
+   "46215003": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "47758006": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "412877001": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "933451231000036101": "a different procedure -- inherited from item 69384 -- no candidate fits"
   },
   "69401": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104050004": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "252317000": "a more general form of the procedure -- uninformative root concept -- inherited from item 69384 -- no candidate fits",
+   "46215003": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "47758006": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "412877001": "a different procedure -- inherited from item 69384 -- no candidate fits",
+   "933451231000036101": "a different procedure -- inherited from item 69384 -- no candidate fits"
   },
   "69405": {
    "439816006": "a different procedure -- no candidate fits",
@@ -31446,13 +31361,16 @@
    "398468003": "a different procedure"
   },
   "69451": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "122366001": "likely the procedure the item funds -- inherited from item 69445",
+   "398513000": "likely the procedure the item funds -- inherited from item 69445",
+   "772835009": "a different procedure -- inherited from item 69445",
+   "445403009": "a different procedure -- inherited from item 69445",
+   "438892003": "a different procedure -- inherited from item 69445",
+   "1743791000168100": "a different procedure -- inherited from item 69445",
+   "395197008": "part of the service, or related only -- quantitation, sibling 69488 -- inherited from item 69445",
+   "401063008": "a different procedure -- inherited from item 69445",
+   "933451321000036106": "a different procedure -- inherited from item 69445",
+   "398468003": "a different procedure -- inherited from item 69445"
   },
   "69471": {
    "442554004": "a different procedure -- no candidate fits",
@@ -31522,13 +31440,11 @@
    "398513000": "a different procedure"
   },
   "69489": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "113075003": "a different procedure -- inherited from item 69488 -- no candidate fits",
+   "1393151000168101": "a different procedure -- inherited from item 69488 -- no candidate fits",
+   "166971003": "a different procedure -- inherited from item 69488 -- no candidate fits",
+   "166580005": "a different procedure -- inherited from item 69488 -- no candidate fits",
+   "1384591000168103": "a different procedure -- inherited from item 69488 -- no candidate fits"
   },
   "69491": {
    "398513000": "part of the service, or related only -- no genotyping",
@@ -31543,13 +31459,16 @@
    "398378004": "a different procedure"
   },
   "69492": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "398513000": "part of the service, or related only -- no genotyping -- inherited from item 69491",
+   "933451311000036104": "a different procedure -- inherited from item 69491",
+   "1497981000168109": "a different procedure -- inherited from item 69491",
+   "1403141000168105": "a different procedure -- inherited from item 69491",
+   "1403451000168104": "a different procedure -- inherited from item 69491",
+   "1333391000168101": "a different procedure -- inherited from item 69491",
+   "397662006": "likely the procedure the item funds -- inherited from item 69491",
+   "766041000168105": "a different procedure -- inherited from item 69491",
+   "1499301000168105": "a different procedure -- inherited from item 69491",
+   "398378004": "a different procedure -- inherited from item 69491"
   },
   "69494": {
    "444090000": "a different procedure -- no candidate fits",
@@ -31569,24 +31488,28 @@
    "417171005": "a different procedure -- no candidate fits"
   },
   "69497": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "444090000": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "127796002": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "38598009": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "571591000119106": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "444335004": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "1761401000168106": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "766041000168105": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "398560008": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "444181009": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "1020781000168108": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits"
   },
   "69498": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "444090000": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "127796002": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "38598009": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "571591000119106": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "444335004": "a different procedure -- inherited from item 69494 -- no candidate fits",
+   "1761401000168106": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "766041000168105": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "398560008": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "444181009": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits",
+   "1020781000168108": "narrower (a technique or site the item does not require) -- one specific pathogen -- inherited from item 69494 -- no candidate fits"
   },
   "69499": {
    "395197008": "narrower (a technique or site the item does not require) -- quantitative viral load",
@@ -31599,13 +31522,14 @@
    "767561000168102": "a different procedure"
   },
   "69500": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "395197008": "narrower (a technique or site the item does not require) -- quantitative viral load -- inherited from item 69499",
+   "122366001": "likely the procedure the item funds -- inherited from item 69499",
+   "398513000": "likely the procedure the item funds -- inherited from item 69499",
+   "1743791000168100": "a different procedure -- inherited from item 69499",
+   "401063008": "a different procedure -- inherited from item 69499",
+   "933451321000036106": "a different procedure -- inherited from item 69499",
+   "398468003": "a different procedure -- inherited from item 69499",
+   "767561000168102": "a different procedure -- inherited from item 69499"
   },
   "71057": {
    "814007": "a more general form of the procedure",
@@ -31698,13 +31622,16 @@
    "388478002": "a different procedure -- specific, not total IgE"
   },
   "71076": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "27083005": "likely the procedure the item funds -- inherited from item 71073",
+   "79627000": "part of the service, or related only -- single subclass -- inherited from item 71073",
+   "56091006": "part of the service, or related only -- inherited from item 71073",
+   "63414002": "part of the service, or related only -- inherited from item 71073",
+   "16948004": "part of the service, or related only -- inherited from item 71073",
+   "933316691000036108": "a different procedure -- inherited from item 71073",
+   "933316701000036108": "a different procedure -- inherited from item 71073",
+   "1663321000168104": "a different procedure -- inherited from item 71073",
+   "388489009": "a different procedure -- inherited from item 71073",
+   "388487006": "a different procedure -- inherited from item 71073"
   },
   "71077": {
    "41960005": "likely the procedure the item funds",
@@ -31751,14 +31678,11 @@
    "417171005": "a different procedure -- no candidate fits"
   },
   "71090": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "54582002": "narrower (a technique or site the item does not require) -- one specific component -- inherited from item 71089 -- no candidate fits",
+   "33189000": "narrower (a technique or site the item does not require) -- one specific component -- inherited from item 71089 -- no candidate fits",
+   "18706007": "narrower (a technique or site the item does not require) -- one specific component -- inherited from item 71089 -- no candidate fits",
+   "55283000": "narrower (a technique or site the item does not require) -- one specific component -- inherited from item 71089 -- no candidate fits",
+   "70389001": "narrower (a technique or site the item does not require) -- one specific component -- inherited from item 71089 -- no candidate fits"
   },
   "71091": {
    "252371005": "a different procedure -- no candidate fits",
@@ -31771,13 +31695,8 @@
    "166776003": "a more general form of the procedure"
   },
   "71096": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "876301000168101": "likely the procedure the item funds -- inherited from item 71095",
+   "166776003": "a more general form of the procedure -- inherited from item 71095"
   },
   "71097": {
    "359788000": "likely the procedure the item funds",
@@ -31888,13 +31807,16 @@
    "1660881000168102": "a different procedure"
   },
   "71148": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "417429003": "likely the procedure the item funds -- inherited from item 71147",
+   "168474008": "a more general form of the procedure -- inherited from item 71147",
+   "417622004": "a different procedure -- inherited from item 71147",
+   "117599006": "a different procedure -- inherited from item 71147",
+   "1308111000168106": "likely the procedure the item funds -- inherited from item 71147",
+   "44608003": "a different procedure -- inherited from item 71147",
+   "315165004": "a different procedure -- inherited from item 71147",
+   "401093002": "a different procedure -- inherited from item 71147",
+   "122339001": "a different procedure -- inherited from item 71147",
+   "1660881000168102": "a different procedure -- inherited from item 71147"
   },
   "71149": {
    "115406008": "a different procedure -- no candidate fits",
@@ -31923,14 +31845,11 @@
    "438701000124109": "a different procedure -- no candidate fits"
   },
   "71154": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "713912000": "a different procedure -- inherited from item 71153 -- no candidate fits",
+   "1303376009": "a different procedure -- inherited from item 71153 -- no candidate fits",
+   "438991000124100": "a different procedure -- inherited from item 71153 -- no candidate fits",
+   "439001000124100": "a different procedure -- inherited from item 71153 -- no candidate fits",
+   "438701000124109": "a different procedure -- inherited from item 71153 -- no candidate fits"
   },
   "71155": {
    "6225001": "a different procedure -- no candidate fits",
@@ -31967,14 +31886,16 @@
    "79623001": "part of the service, or related only -- one of two antibodies -- no candidate fits"
   },
   "71169": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "359812000": "likely the procedure the item funds -- inherited from item 71165",
+   "40824007": "likely the procedure the item funds -- heart antibody (listed) -- inherited from item 71165",
+   "33303007": "likely the procedure the item funds -- adrenal cortex (listed) -- inherited from item 71165",
+   "90665009": "likely the procedure the item funds -- skin intercellular substance (listed) -- inherited from item 71165",
+   "359808006": "likely the procedure the item funds -- inherited from item 71165",
+   "46215003": "part of the service, or related only -- ENA, sibling 71101 -- inherited from item 71165",
+   "66408003": "part of the service, or related only -- nuclear antigen, not in list -- inherited from item 71165",
+   "43872009": "a different procedure -- not in item's list -- inherited from item 71165",
+   "90952003": "likely the procedure the item funds -- inherited from item 71165",
+   "87459003": "part of the service, or related only -- ENA, sibling 71101 -- inherited from item 71165"
   },
   "71175": {
    "47566004": "a different procedure -- no candidate fits",
@@ -32267,14 +32188,12 @@
    "165606004": "likely the procedure the item funds"
   },
   "73309": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "185406000": "a different procedure -- inherited from item 73308",
+   "370770001": "a different procedure -- inherited from item 73308",
+   "61801003": "a different procedure -- inherited from item 73308",
+   "698745000": "a different procedure -- inherited from item 73308",
+   "27217005": "a different procedure -- inherited from item 73308",
+   "165606004": "likely the procedure the item funds -- inherited from item 73308"
   },
   "73311": {
    "59011000087104": "a different procedure -- no candidate fits",
@@ -32282,27 +32201,18 @@
    "1230132009": "a different procedure -- no candidate fits"
   },
   "73312": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "59011000087104": "a different procedure -- inherited from item 73311 -- no candidate fits",
+   "170497006": "a different procedure -- inherited from item 73311 -- no candidate fits",
+   "1230132009": "a different procedure -- inherited from item 73311 -- no candidate fits"
   },
   "73313": {
    "1230132009": "a different procedure -- no candidate fits"
   },
   "73315": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "35389006": "part of the service, or related only -- clonality assay, related -- inherited from item 73314 -- no candidate fits",
+   "69132002": "part of the service, or related only -- clonality assay, related -- inherited from item 73314 -- no candidate fits",
+   "933434821000036100": "a different procedure -- inherited from item 73314 -- no candidate fits",
+   "933434841000036108": "part of the service, or related only -- FIP1L1-PDGFRA, sibling 73326 -- inherited from item 73314 -- no candidate fits"
   },
   "73317": {
    "1782731000168101": "a different procedure -- no candidate fits",
@@ -32317,14 +32227,16 @@
    "1407661000168109": "a different procedure -- no candidate fits"
   },
   "73318": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1782731000168101": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "933398471000036105": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "933450861000036103": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "1390981000168102": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "3981005": "part of the service, or related only -- carrier testing -- inherited from item 73317 -- no candidate fits",
+   "933450251000036102": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "1407671000168103": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "444225007": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "933450231000036105": "a different procedure -- inherited from item 73317 -- no candidate fits",
+   "1407661000168109": "a different procedure -- inherited from item 73317 -- no candidate fits"
   },
   "73319": {
    "1390981000168102": "a different procedure -- no candidate fits",
@@ -32343,14 +32255,12 @@
    "398352008": "a different procedure -- no candidate fits"
   },
   "73321": {
-   "17424007": "a different procedure -- no candidate fits",
-   "252175007": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "2885009": "a different procedure -- no candidate fits",
-   "2731000": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "104170007": "a different procedure -- inherited from item 73320 -- no candidate fits",
+   "398468003": "a different procedure -- inherited from item 73320 -- no candidate fits",
+   "118146008": "a different procedure -- inherited from item 73320 -- no candidate fits",
+   "1472741000168108": "a different procedure -- inherited from item 73320 -- no candidate fits",
+   "398585004": "a different procedure -- inherited from item 73320 -- no candidate fits",
+   "398352008": "a different procedure -- inherited from item 73320 -- no candidate fits"
   },
   "73322": {
    "48051000087105": "a different procedure -- no candidate fits",
@@ -32364,13 +32274,7 @@
    "35389006": "a different procedure -- no candidate fits"
   },
   "73324": {
-   "1231598005": "a different procedure -- no candidate fits",
-   "1231552009": "a different procedure -- no candidate fits",
-   "1231451004": "a different procedure -- no candidate fits",
-   "16742006": "a different procedure -- no candidate fits",
-   "1676771000168100": "a different procedure -- no candidate fits",
-   "870951000168100": "a different procedure -- no candidate fits",
-   "1472741000168108": "a different procedure -- no candidate fits"
+   "1407681000168100": "a different procedure -- inherited from item 73323 -- no candidate fits"
   },
   "73326": {
    "1334541000168104": "narrower (a technique or site the item does not require) -- bone marrow specimen -- no candidate fits",
@@ -33456,72 +33360,6 @@
    "726007": "a different procedure -- no candidate fits",
    "23864003": "a different procedure -- no candidate fits",
    "113041004": "a different procedure -- no candidate fits"
-  },
-  "74990": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "74991": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "75861": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "75862": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "75863": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
-  },
-  "75864": {
-   "304455001": "a different procedure -- no candidate fits",
-   "306105003": "a different procedure -- no candidate fits",
-   "363687006": "a different procedure -- no candidate fits",
-   "108259003": "a different procedure -- no candidate fits",
-   "306133003": "a different procedure -- no candidate fits",
-   "315184001": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "828431000168100": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "933507281000036105": "a different procedure -- billing incentive, not a procedure -- no candidate fits",
-   "113076002": "a different procedure -- billing incentive, not a procedure -- no candidate fits"
   },
   "11012": {
    "42803009": "likely the procedure the item funds",

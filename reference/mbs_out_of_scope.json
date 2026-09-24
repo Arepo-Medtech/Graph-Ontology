@@ -1,10 +1,11 @@
 {
  "_note": "MBS items out of scope for a procedure link: they fund anaesthesia time, its initiation or a modifier, not a procedure (Ken, 24 Sep 2026). scripts/mbs_candidates.py out_of_scope().",
  "mbs_release": "MBS-XML-20260801.XML",
- "items": 465,
+ "items": 478,
  "by_reason": {
   "anaesthesia modifier": 11,
   "anaesthesia time band": 140,
+  "bulk-billing incentive": 13,
   "initiation of anaesthesia": 314
  },
  "out_of_scope": {
@@ -472,6 +473,19 @@
   "25030": "anaesthesia modifier",
   "25050": "anaesthesia modifier",
   "25200": "anaesthesia modifier",
-  "25205": "anaesthesia modifier"
+  "25205": "anaesthesia modifier",
+  "35501": "bulk-billing incentive",
+  "64990": "bulk-billing incentive",
+  "64991": "bulk-billing incentive",
+  "64992": "bulk-billing incentive",
+  "64993": "bulk-billing incentive",
+  "64994": "bulk-billing incentive",
+  "64995": "bulk-billing incentive",
+  "74990": "bulk-billing incentive",
+  "74991": "bulk-billing incentive",
+  "75861": "bulk-billing incentive",
+  "75862": "bulk-billing incentive",
+  "75863": "bulk-billing incentive",
+  "75864": "bulk-billing incentive"
  }
 }

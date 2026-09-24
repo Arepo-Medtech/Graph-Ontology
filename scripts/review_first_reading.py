@@ -211,6 +211,14 @@ def merge(a) -> int:
         for k, (c, note) in codes.items():
             _, _, sc, _, oc = k.split("|")
             readings[sc][oc] = CODES[q][c] + (f" -- {note}" if note else "")
+        ip = Path("reference/mbs_inherits_from.json")     # a receiving laboratory's item reads as the test it renders
+        if q == "mbs_procedures" and ip.exists():
+            for i, srcs in json.load(open(ip))["inherits_from"].items():
+                readings[i] = {oc: t.split(" -- no candidate fits")[0] + f" -- inherited from item {j}"
+                               for j in srcs for oc, t in readings.get(j, {}).items()}
+                for j in srcs:
+                    codes.update({f"{q}|MBS|{i}|SCT|{k.split('|')[4]}": v for k, v in codes.items() if k.split("|")[2] == j})
+                codes = {k: v for k, v in codes.items() if not (k.split("|")[2] == i and k.split("|")[4] not in readings[i])}
         fits = {sc for k, (c, _) in codes.items() for sc in [k.split("|")[2]] if c in ACCEPT[q]}
         for sc, r in readings.items():
             if sc not in fits:

@@ -13,7 +13,7 @@ a decision in yet.*
 | **HPO → SNOMED**, names differ | 2,071 phenotypes, 2,430 pairs — **first reading 24 Sep: 1,550 phenotypes with a likely match**; the rest read as narrower (289 pairs), broader (174), related (272) or different (41) | `cache/umls/hpo_snomed_candidates.tsv` *(UMLS-derived, not committed)*; reading in `cache/review/hpo_snomed_first_reading.json` | same phenotype or not (a sample was right 34 of 40; errors are narrowings) | ✅ sheet `hpo_snomed` |
 | **SNOMED organism ↔ NCBI taxon**, names differ | 3,889 — **first reading 24 Sep: 3,689 with a likely match** (3,484 pairs the same organism, 235 renamed or moved genus); 124 another rank, 107 another organism | `cache/umls/sct_ncbi_candidates.tsv` *(UMLS-derived)*; reading in `cache/review/organism_ncbi_first_reading.json` | same organism (most are reclassifications: *Clostridium lavalense* → *Enterocloster lavalensis*) | ✅ sheet `organism_ncbi` |
 | **RadLex anatomy** with no code route | 99 terms, 180 pairs — **reviewed 24 Sep by Ken: 84 terms matched (one SNOMED structure each), 70 pairs rejected, 15 terms left** | `cache/radlex/radlex_sct_candidates.tsv` *(RadLex labels, not committed)* | the SNOMED body structure for head, neck, hand, foot … | ✅ sheet `radlex_anatomy` |
-| **MBS items → SNOMED procedure** | 3,950 items, 28,914 candidates (first search + a second search inside the category's reference set) — **first reading 24 Sep: 1,649 items with a likely procedure**, 885 more with only a general form; 465 anaesthesia items out of scope | `reference/mbs_procedure_candidates.json`, `reference/mbs_procedure_candidates_malt.json`; reading in `reference/mbs_procedure_first_reading.json`; out of scope in `reference/mbs_out_of_scope.json` | the procedure the item funds — a billing rule is not an equivalence | ✅ sheet `mbs_procedures` (loads as `person:funds_procedure`, not an identity) |
+| **MBS items → SNOMED procedure** | 3,937 items, 28,790 candidates (first search + a second search inside the category's reference set) — **first reading 24 Sep: 1,676 items with a likely procedure**; 478 items out of scope (anaesthesia, bulk-billing incentives); 55 receiving-laboratory items inherit the test they render | `reference/mbs_procedure_candidates.json`, `reference/mbs_procedure_candidates_malt.json`; reading in `reference/mbs_procedure_first_reading.json`; out of scope in `reference/mbs_out_of_scope.json` | the procedure the item funds — a billing rule is not an equivalence | ✅ sheet `mbs_procedures` (loads as `person:funds_procedure`, not an identity) |
 | **Survey instruments** | 55 pairs, 53 LOINC panels — **reviewed 24 Sep by Ken: 44 accepted, 11 rejected; 9 panels left with no match** | `reference/survey_instrument_candidates.json` | same instrument (a first reading is on each pair: 40 likely same) | ✅ sheet `survey_instruments` |
 
 **Where a person's time buys most.** The survey list is short and pre-read — an hour closes the PHQ, GAD, AUDIT, EPDS, MMSE
@@ -44,8 +44,12 @@ can accept the likely rows and read only the doubtful ones. It is a reading, not
   Each item is searched with its head phrase, its first clause, and each part of an "A or B" clause cut to its content
   words. This gave 15,451 new candidates and raised the items with a likely procedure from 1,098 to 1,649.
 
-  465 anaesthesia items fund anaesthesia time, its initiation or a modifier, not a procedure. They are listed with the
-  reason in `reference/mbs_out_of_scope.json` and are kept out of the search and the sheet.
+  478 items fund no procedure of their own: 465 anaesthesia items (anaesthesia time, its initiation or a modifier) and
+  13 bulk-billing incentives. They are listed with the reason in `reference/mbs_out_of_scope.json` and kept out of the
+  search and the sheet (Ken, 24 Sep).
+- **MBS: receiving laboratories inherit.** 55 pathology items fund "a test described in item X, if rendered by a
+  receiving APP". Their descriptor names no test, so each takes the candidates and first reading of the item it names
+  (`reference/mbs_inherits_from.json`), marked *inherited from item X*.
 - **Conventions the MBS readers shared.** Fee tiers and eligibility are set aside. A left/right concept is narrower
   unless the item names one side. A sibling item's variant is *related*. A surgeon's share of a combined operation reads
   as the whole operation.

@@ -29,13 +29,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import bind_indications as bi
-from mbs_candidates import XML, head, out_of_scope
+from mbs_candidates import XML, head, out_of_scope, refers_to
 
 MALT = "1061861000168107"
 REFSET = {"2": MALT, "3": MALT, "5": "32570361000036108", "6": "1072351000168102"}
 FIRST = Path("reference/mbs_procedure_candidates.json")
 OUT = Path("reference/mbs_procedure_candidates_malt.json")
 SCOPE = Path("reference/mbs_out_of_scope.json")
+INHERITS = Path("reference/mbs_inherits_from.json")
 FILLER = set("""of the a an for by any surgical approach method with without or and to in on at from per each
     including other than service item items patient procedure procedures one more not being where if""".split())
 CUT = re.compile(r",? (?:other than|not being|not associated with|being a service|including|where|if|for a patient)\b|\(|;|:", re.I)
@@ -93,6 +94,12 @@ def write_scope(items: list[dict]) -> set[str]:
                                  "mbs_release": XML.name, "items": len(scope), "by_reason": dict(sorted(
                                      {w: sum(v == w for v in scope.values()) for w in set(scope.values())}.items())),
                                  "out_of_scope": dict(sorted(scope.items(), key=lambda kv: int(kv[0])))}, indent=1) + "\n")
+    inh = {i["ItemNum"]: r for i in items if (r := refers_to(i))}
+    INHERITS.write_text(json.dumps({"_note": "MBS items a receiving laboratory renders ('A test described in item X, if rendered by a "
+                                             "receiving APP'): each takes the candidates and first reading of the item(s) it names "
+                                             "(Ken, 24 Sep 2026). scripts/mbs_candidates.py refers_to().",
+                                    "mbs_release": XML.name, "items": len(inh),
+                                    "inherits_from": dict(sorted(inh.items(), key=lambda kv: int(kv[0])))}, indent=1) + "\n")
     return set(scope)
 
 
