@@ -60,7 +60,8 @@ MBS_XML = Path("cache/mbs/MBS-XML-20260801.XML")          # MBS Online, Departme
 UBERON_OBO, UBERON_SSSOM = Path("cache/uberon/uberon-basic.obo"), Path("cache/uberon/uberon.sssom.tsv")   # Uberon v2026-06-23
 UMLS_SCT_NCBI = Path("cache/umls/sct_ncbi.tsv")          # scripts/umls_crosswalk.py SNOMEDCT_US -> NCBI (licensed; not redistributed)
 RADLEX_JSON = Path("cache/radlex/radlex_classes.json")   # scripts/radlex_prepare.py, from RadLex 4.3 (RSNA; read in place)
-UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
+UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
+UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
 LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
 RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
@@ -220,6 +221,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS,
+            "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
             "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt"}
 
@@ -1196,6 +1198,36 @@ def main() -> int:
             f"SELECT count(*) FROM up WHERE NOT same_name AND sv || '-' || ov NOT IN {own}").fetchone()[0]
         umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
                                     UNION ALL SELECT ov, oc, any_value(o_name) FROM up WHERE same_name GROUP BY 1, 2""").fetchall()
+
+    # --- UMLS relationships (MRREL Level 0): sources' own hierarchies, and MED-RT's drug knowledge ------------------
+    if UMLS_REL.exists():
+        con.execute("DROP TABLE IF EXISTS present")
+        con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
+        # a hierarchy is climbed upward from the nodes the graph already holds (their parents, the parents' parents ...);
+        # children are not pulled in, so a broad concept does not bring thousands of nodes nothing else names
+        con.execute(f"CREATE TEMP TABLE sp AS SELECT * FROM '{UMLS_REL}' WHERE predicate = 'umls:source_parent'")
+        con.execute("CREATE TEMP TABLE reach AS SELECT v, c FROM present WHERE v IN ('MESH', 'NCIT', 'FMA', 'LOINC')")
+        con.execute("CREATE TEMP TABLE sp_keep (s_vocab VARCHAR, s_code VARCHAR, o_vocab VARCHAR, o_code VARCHAR, sab VARCHAR, rela VARCHAR)")
+        while True:
+            n = con.execute("""INSERT INTO sp_keep SELECT DISTINCT s.s_vocab, s.s_code, s.o_vocab, s.o_code, s.sab, s.rela FROM sp s
+                               JOIN reach r ON r.v = s.s_vocab AND r.c = s.s_code
+                               WHERE (s.s_vocab, s.s_code, s.o_code) NOT IN (SELECT s_vocab, s_code, o_code FROM sp_keep)""").fetchone()[0]
+            if not n:
+                break
+            con.execute("""INSERT INTO reach SELECT DISTINCT o_vocab, o_code FROM sp_keep WHERE (o_vocab, o_code) NOT IN (SELECT v, c FROM reach)""")
+        ins("UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)", f"""SELECT s_vocab, s_code, 'umls:source_parent', o_vocab,
+                o_code, 'UMLS (' || sab || ')', 'MRREL 2026AA Level 0 PAR', sab || ' ' || rela, 'native', 'asserted', '{PIN['umls_rel']}', NULL FROM sp_keep""")
+        # MED-RT: the drug must already be a node; for treat / prevent / diagnose / contraindication the disease as well
+        ins("UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)", f"""SELECT DISTINCT s_vocab, s_code, predicate, o_vocab,
+                o_code, 'UMLS (MED-RT)', 'MRREL 2026AA Level 0 ' || rela, how, 'ungraded', 'asserted', '{PIN['umls_rel']}',
+                json_object('medrt_rela', rela, 'drug_cui', cui_s, 'other_cui', cui_o)
+            FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab <> 'MEDRT'
+              AND (s_vocab, s_code) IN (SELECT v, c FROM present) AND (o_vocab, o_code) IN (SELECT v, c FROM present)""")
+        ins("UMLS: MED-RT drug -> mechanism of action / physiologic effect class", f"""SELECT DISTINCT s_vocab, s_code, predicate, o_vocab,
+                o_code, 'UMLS (MED-RT)', 'MRREL 2026AA Level 0 ' || rela, how, 'ungraded', 'asserted', '{PIN['umls_rel']}',
+                json_object('medrt_rela', rela, 'drug_cui', cui_s)
+            FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT' AND (s_vocab, s_code) IN (SELECT v, c FROM present)""")
+        con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', o_code, any_value(o_name) FROM '{UMLS_REL}' WHERE o_vocab = 'MEDRT' GROUP BY 2""")
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
