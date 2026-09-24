@@ -1031,6 +1031,55 @@
       "note": "Orphanet's own alignment, not MONDO's. method is Orphanet's relation: E (exact), NTBT (the ORPHAcode is narrower than the target -- the usual case for ICD-10), BTNT (broader), ND (undecided); attrs.validation and attrs.icd_relation as Orphanet states them. Only E is an equivalence. MedDRA left out (MSSO licence)."
     },
     {
+      "id": "who:icd10_to_icd11",
+      "label": "WHO maps this ICD-10 code to this ICD-11 (MMS) code",
+      "subject": [
+        "ICD10WHO"
+      ],
+      "object": [
+        "ICD11MMS"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "WHO ICD-11 release 2026-01 mapping tables: 10To11MapToOneCategory, 10To11MapToMultipleCategories",
+      "status": "built",
+      "note": "method 'one category' is WHO's single best target; 'multiple categories' adds the other ICD-11 categories an ICD-10 code's content moved to (ICD-11 splits many ICD-10 codes). Categories with codes on both sides only; chapters and blocks are not loaded. attrs.icd11_foundation is the entity the target linearises."
+    },
+    {
+      "id": "who:icd11_to_icd10",
+      "label": "WHO maps this ICD-11 code or foundation entity back to this ICD-10 code",
+      "subject": [
+        "ICD11MMS",
+        "ICD11"
+      ],
+      "object": [
+        "ICD10WHO"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "WHO ICD-11 release 2026-01 mapping tables: 11To10MapToOneCategory, foundation_11To10MapToOneCategory",
+      "status": "built",
+      "note": "The backward table, one ICD-10 category per ICD-11 code (or foundation entity). Many ICD-11 codes fold into one ICD-10 code, so it is not the inverse of who:icd10_to_icd11."
+    },
+    {
+      "id": "who:icd11_mms_foundation",
+      "label": "ICD-11 MMS code linearises this ICD-11 foundation entity",
+      "subject": [
+        "ICD11MMS"
+      ],
+      "object": [
+        "ICD11"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "WHO ICD-11 release 2026-01 mapping tables (icd11Code and Foundation URI on the same row)",
+      "status": "built",
+      "note": "Joins the two ICD-11 identifiers the graph holds: foundation ids (MONDO) and MMS codes (Orphanet). Residual codes (…/unspecified, …/other) linearise their parent's entity and are left out."
+    },
+    {
       "id": "reactome:participates_in",
       "label": "human protein takes part in this Reactome pathway (lowest level)",
       "subject": [
