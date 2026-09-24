@@ -10,15 +10,49 @@ a decision in yet.*
 | **PBS indication texts** not bound | 341 (295 with candidates) — **decided 24 Sep by Ken on Claude's first reading, after a second search: 200 accepted (169 likely matches, 19 closest), 107 none; credited "Ken (on Claude's first reading)"** | `reference/pbs_indication_bindings.json` (`results`) | the SNOMED condition the listing means | ✅ sheet `pbs_indications` |
 | **Likelihood ratios**: bound, family held | 130 | `reference/diagnostic_accuracy_bindings.json` | confirm the test / score / prognosis binding | ✅ automatic: the family loads once its binding earns Tier 2 (right 65 of 79 now; needs a lower bound ≥ 0.80) |
 | **Likelihood ratios**: not bound exactly | 455 | same | bind the finding or test to a SNOMED concept | ⚠️ edit the bindings file, re-run `verify_diagnostic_accuracy.py` |
-| **HPO → SNOMED**, names differ | 2,073 phenotypes (2,434 pairs; the rest now reached by the 2026AA same-name load) | `cache/umls/hpo_snomed_candidates.tsv` *(UMLS-derived, not committed)* | same phenotype or not (a sample was right 34 of 40; errors are narrowings) | ✅ sheet `hpo_snomed` |
-| **SNOMED organism ↔ NCBI taxon**, names differ | 3,889 | `cache/umls/sct_ncbi_candidates.tsv` *(UMLS-derived)* | same organism (most are reclassifications: *Clostridium lavalense* → *Enterocloster lavalensis*) | ✅ sheet `organism_ncbi` |
+| **HPO → SNOMED**, names differ | 2,071 phenotypes, 2,430 pairs — **first reading 24 Sep: 1,550 phenotypes with a likely match**; the rest read as narrower (289 pairs), broader (174), related (272) or different (41) | `cache/umls/hpo_snomed_candidates.tsv` *(UMLS-derived, not committed)*; reading in `cache/review/hpo_snomed_first_reading.json` | same phenotype or not (a sample was right 34 of 40; errors are narrowings) | ✅ sheet `hpo_snomed` |
+| **SNOMED organism ↔ NCBI taxon**, names differ | 3,889 — **first reading 24 Sep: 3,689 with a likely match** (3,484 pairs the same organism, 235 renamed or moved genus); 124 another rank, 107 another organism | `cache/umls/sct_ncbi_candidates.tsv` *(UMLS-derived)*; reading in `cache/review/organism_ncbi_first_reading.json` | same organism (most are reclassifications: *Clostridium lavalense* → *Enterocloster lavalensis*) | ✅ sheet `organism_ncbi` |
 | **RadLex anatomy** with no code route | 99 terms, 180 pairs — **reviewed 24 Sep by Ken: 84 terms matched (one SNOMED structure each), 70 pairs rejected, 15 terms left** | `cache/radlex/radlex_sct_candidates.tsv` *(RadLex labels, not committed)* | the SNOMED body structure for head, neck, hand, foot … | ✅ sheet `radlex_anatomy` |
-| **MBS items → SNOMED procedure** | 3,878 items with candidates (572 exact head-phrase) | `reference/mbs_procedure_candidates.json` | the procedure the item funds — a billing rule is not an equivalence | ✅ sheet `mbs_procedures` (loads as `person:funds_procedure`, not an identity) |
+| **MBS items → SNOMED procedure** | 3,937 items, 28,790 candidates (first search + a second search inside the category's reference set) — **first reading 24 Sep: 1,676 items with a likely procedure**; 478 items out of scope (anaesthesia, bulk-billing incentives); 55 receiving-laboratory items inherit the test they render | `reference/mbs_procedure_candidates.json`, `reference/mbs_procedure_candidates_malt.json`; reading in `reference/mbs_procedure_first_reading.json`; out of scope in `reference/mbs_out_of_scope.json` | the procedure the item funds — a billing rule is not an equivalence | ✅ sheet `mbs_procedures` (loads as `person:funds_procedure`, not an identity) |
 | **Survey instruments** | 55 pairs, 53 LOINC panels — **reviewed 24 Sep by Ken: 44 accepted, 11 rejected; 9 panels left with no match** | `reference/survey_instrument_candidates.json` | same instrument (a first reading is on each pair: 40 likely same) | ✅ sheet `survey_instruments` |
 
 **Where a person's time buys most.** The survey list is short and pre-read — an hour closes the PHQ, GAD, AUDIT, EPDS, MMSE
 family. The 130 held LR bindings need only enough confirmations to lift the family's lower bound past 0.80. MBS is the one
 true island in the graph (`graph_report.py` → islands): confirming even a few hundred procedures joins its 6,046 items.
+
+## First readings of the three large queues (24 Sep)
+
+`scripts/review_first_reading.py` puts a first reading on every row of the HPO, organism and MBS sheets, so a reviewer
+can accept the likely rows and read only the doubtful ones. It is a reading, not a decision.
+
+- **Rule pass.** A pair whose names agree once synonyms, word order, plurals and *of / the* are set aside is read as
+  likely by rule: 795 HPO pairs and 3,077 organism pairs (NCBI's own synonyms and former names, or the same species
+  epithet in another genus). HPO's *exact* synonyms can be loose, so the 401 HPO pairs that agree only through a synonym
+  were read afterwards and 68 overridden. Two examples: "Neoplasm of the liver" matched to *malignant* neoplasm of liver
+  is narrower; "Hyperactivity" matched to ADHD is related, not the same.
+- **Read.** Every other row was read from its names and synonyms (MBS: the item descriptor) and given one code:
+  HPO S/N/B/R/D (same, narrower, broader, related, different), organisms S/M/K/D (same, renamed or moved, another
+  rank, another organism), MBS P/G/N/A/D (the procedure, a more general form, narrower, part of or related, different).
+  A subject where no candidate reads as likely is marked *no candidate fits* (answer `none`).
+- **MBS: a second search, and what is out of scope.** The first search took the descriptor's head phrase across all
+  procedures and often found only a neighbour. A second search (`scripts/mbs_candidates_malt.py`, Ken's pointer) looks
+  inside the SNOMED CT-AU reference set suited to the item's category:
+  - diagnostic and therapeutic procedures: the **RACS MALT surgical procedure set** (1061861000168107, the procedures surgeons log);
+  - imaging: the **Imaging procedure set**;
+  - pathology: the **RCPA requesting set**.
+
+  Each item is searched with its head phrase, its first clause, and each part of an "A or B" clause cut to its content
+  words. This gave 15,451 new candidates and raised the items with a likely procedure from 1,098 to 1,649.
+
+  478 items fund no procedure of their own: 465 anaesthesia items (anaesthesia time, its initiation or a modifier) and
+  13 bulk-billing incentives. They are listed with the reason in `reference/mbs_out_of_scope.json` and kept out of the
+  search and the sheet (Ken, 24 Sep).
+- **MBS: receiving laboratories inherit.** 55 pathology items fund "a test described in item X, if rendered by a
+  receiving APP". Their descriptor names no test, so each takes the candidates and first reading of the item it names
+  (`reference/mbs_inherits_from.json`), marked *inherited from item X*.
+- **Conventions the MBS readers shared.** Fee tiers and eligibility are set aside. A left/right concept is narrower
+  unless the item names one side. A sibling item's variant is *related*. A surgeon's share of a combined operation reads
+  as the whole operation.
 
 ## How to review (built 24 Sep)
 

@@ -30,6 +30,40 @@ SITE_FIRST = re.compile(r"^([^,(:;]{2,50}),\s*(?:[a-z]+\s*\([^)]*\),\s*)?(?!exam
 IMAGING = re.compile(r"^(.+?),\s*(ultrasound|CT|computed tomography|MRI|magnetic resonance imaging|radiography|x-ray)\s+(scan\s+)?of\b", re.I)
 
 
+# Anaesthesia items that fund anaesthesia time or its initiation, not a procedure: out of scope for a procedure link
+# (Ken, 24 Sep 2026). The procedures group T10 also holds (intubation, central lines, nerve blocks, TOE) stay in.
+ANAESTHESIA = [
+    ("anaesthesia time band", re.compile(r"^\(?\s*\d+(?::\d+)?\s+(?:HOURS?|MINUTES)\s+TO\s|service time is not more than", re.I)),
+    ("initiation of anaesthesia", re.compile(r"^INITIATION OF (?:THE )?MANAGEMENT (?:BY A MEDICAL PRACTITIONER )?OF ANAESTHESIA", re.I)),
+    ("anaesthesia modifier", re.compile(r"^(?:Anaesthesia,|Assistance in the management of|Perfusion,) ", re.I)),
+]
+
+
+# a bulk-billing incentive pays a loading on another item's service; it funds no procedure of its own (Ken, 24 Sep 2026)
+BULK = re.compile(r"^An? (?:medical|diagnostic imaging|pathology) service to which .*bulk.?bill", re.I)
+# a receiving laboratory's item funds a test another item describes ("A test described in item 65150, if rendered by a
+# receiving APP"): it takes that item's candidates and reading, marked as inherited (Ken, 24 Sep 2026)
+REFERS = re.compile(r"^A test described in items? (\d+(?:\s*(?:,|or|and)\s*\d+)*)", re.I)
+
+
+def out_of_scope(item: dict) -> str | None:
+    """Why an MBS item has no procedure to link, or None."""
+    d = re.sub(r"\s+", " ", item.get("Description", "")).strip()
+    if item.get("Group") == "T10":
+        for why, rx in ANAESTHESIA:
+            if rx.search(d):
+                return why
+    if BULK.search(d):
+        return "bulk-billing incentive"
+    return None
+
+
+def refers_to(item: dict) -> list[str]:
+    """The items whose test this item funds when a receiving laboratory renders it, or []."""
+    m = REFERS.match(re.sub(r"\s+", " ", item.get("Description", "")).strip())
+    return re.findall(r"\d+", m.group(1)) if m else []
+
+
 def head(desc: str, cat: str) -> str:
     d = re.sub(r"\s+", " ", desc.replace("‑", "-")).strip()
     m = IMAGING.match(d) if cat == "5" else None
