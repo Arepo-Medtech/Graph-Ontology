@@ -52,9 +52,30 @@ its parent); 6 are MONDO holding two classes for one disease (typically one buil
 alignments that are broader or narrower; 2 were obsolete MONDO classes (now fixed). The MONDO duplicates are MONDO's to
 resolve; the rest are the precision queue.
 
+## UMLS bridges on two or more conflict paths: held back (24 Sep)
+
+A UMLS-derived equivalence lying on two or more shortest paths between two codes of a one-to-one vocabulary was right
+**15 of 30** at random (Wilson lower bound 0.33): *Alpha heavy chain disease* ↔ *Heavy chain disease*, *von Willebrand
+disease type 2M* ↔ *type 2*, *Turner syndrome* filed under *Gonadal dysgenesis*, *Alopecia areata 1* ↔ *Alopecia
+universalis* — a subtype with its parent, a numbered locus with the disease. On one path the same families were right 13
+of 13. So `graph_report.py`, after every tier and rejection is set, runs the bridge trace once and holds back the UMLS
+edges on two or more paths as their own inadmissible family (**665 edges**, `attrs.held`, kept and not followed); the 7
+wrong in the new draw are rejected by name as well (33 in all).
+
+| clusters with two codes of … | before | after |
+|---|---:|---:|
+| MONDO | 1,207 | 1,072 |
+| DOID | 481 | 375 |
+| Orphanet | 331 | 243 |
+| HPO | 122 | 94 |
+| OMIM | 90 | 61 |
+| HGNC | 40 | 35 |
+| NCBI Gene | 3 | 1 |
+
+No completeness cell fell; the release guard's baseline was reset for the one family that shrank by design
+(`umls:concept_member`, −1.2%). The pass is not repeated to a fixed point: the hand check measured one pass.
+
 ## Next
 
-**Bridge position predicts error.** Among random UMLS bridges, those on one conflict path were right 13 of 13, those on
-two or more 9 of 17. With a full 30-edge sample of the second group, "a UMLS pair on two or more conflict paths" can be
-tiered as its own family and, if it fails, held back (about 1,460 UMLS edges are bridges today). Then the chain rules
-(exact ∘ exact, exact ∘ narrower) with their own hand checks.
+The chain rules (exact ∘ exact, exact ∘ narrower) with their own hand checks, over this cleaner graph; and the MONDO
+duplicates (one disease, two classes) to report to MONDO.

@@ -35,9 +35,9 @@ ANCHOR = ("MONDO", "ORPHA", "OMIM", "HGNC", "NCBIGENE", "HP", "DOID")
 PAIRS_PER_CLUSTER = 20
 
 
-def main() -> int:
-    t0 = time.time()
-    con = duckdb.connect(str(GRAPH), read_only=True)
+def compute(con):
+    """Equivalence clusters and their bridges over `con` (a connection to the graph): -> (rows, clusters, bridges, conflicts,
+    traced). Shared with graph_report.py, which holds back the UMLS bridges on two or more conflict paths."""
     rows = con.execute(f"""SELECT s_vocab || ':' || s_code, o_vocab || ':' || o_code, predicate, method FROM edge
         WHERE state <> 'rejected' AND tier <> 'inadmissible'
           AND ((predicate IN {EQUIV} AND NOT (predicate = 'hgnc:xref' AND o_vocab = 'UNIPROT'))
@@ -76,7 +76,7 @@ def main() -> int:
             x = a
         return out
 
-    random.seed(24)
+    rng = random.Random(24)
     bridges, conflicts, traced = collections.Counter(), collections.Counter(), 0
     for mem in clusters.values():
         byv = collections.defaultdict(list)
@@ -88,10 +88,17 @@ def main() -> int:
                 continue
             conflicts[v] += 1
             prs = list(itertools.combinations(sorted(codes), 2))
-            for s, t in (random.sample(prs, PAIRS_PER_CLUSTER) if len(prs) > PAIRS_PER_CLUSTER else prs):
+            for s, t in (rng.sample(prs, PAIRS_PER_CLUSTER) if len(prs) > PAIRS_PER_CLUSTER else prs):
                 traced += 1
                 for a, b, p, m in path(s, t):
                     bridges[(min(a, b), max(a, b), p, m)] += 1
+    return rows, clusters, bridges, conflicts, traced
+
+
+def main() -> int:
+    t0 = time.time()
+    con = duckdb.connect(str(GRAPH), read_only=True)
+    rows, clusters, bridges, conflicts, traced = compute(con)
     size = dict(((p, m), n) for p, m, n in con.execute("SELECT predicate, method, count(*) FROM edge GROUP BY 1, 2").fetchall())
     fam = collections.Counter((p, m) for (_, _, p, m) in bridges)
     name = lambda k: (con.execute("SELECT name FROM node WHERE key = ?", [k]).fetchone() or [None])[0]
