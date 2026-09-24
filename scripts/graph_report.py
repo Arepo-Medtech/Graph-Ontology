@@ -741,6 +741,44 @@ def main() -> int:
             "members_reaching_another_vocabulary": {m: {"members": n, "reach_outside_snomed": k, "share": round(k / n, 3)} for m, n, k in rs},
             "medicines_regulation_on_pbs": {m: {"concepts": n, "pbs_listed": k} for m, n, k in reg}}
 
+    # --- SNOMED CT -> ICD-10 / ICD-10-CM maps (US Edition): what they add, and two witnesses -------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate IN ('sct:icd10_map', 'sct:icd10cm_map')").fetchone()[0]:
+        by = con.execute("""SELECT predicate, method, count(*), count(DISTINCT s_code), count(DISTINCT o_code) FROM edge
+                            WHERE predicate IN ('sct:icd10_map', 'sct:icd10cm_map') GROUP BY 1, 2 ORDER BY 1, 3 DESC""").fetchall()
+        # diagnosis reference sets: members reaching WHO ICD-10 by this map, by any other route, and on to ICD-11
+        sets = ("Problem/Diagnosis reference set", "Australian emergency department principal diagnosis reference set for ED funding",
+                "Emergency department diagnosis reference set")
+        reach = {}
+        for s_ in sets:
+            n, via_map, other, icd11 = con.execute(f"""WITH m AS (SELECT DISTINCT s_code c FROM edge WHERE predicate = 'sct:in_refset' AND method = ?),
+                    mp AS (SELECT DISTINCT s_code c, o_code icd FROM edge WHERE predicate = 'sct:icd10_map'),
+                    oth AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab = 'ICD10WHO' AND predicate <> 'sct:icd10_map'
+                            UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'SCT' AND s_vocab = 'ICD10WHO'),
+                    w AS (SELECT DISTINCT s_code icd FROM edge WHERE predicate = 'who:icd10_to_icd11')
+                SELECT count(*), count(*) FILTER (WHERE c IN (SELECT c FROM mp)), count(*) FILTER (WHERE c IN (SELECT c FROM oth)),
+                       count(*) FILTER (WHERE c IN (SELECT mp.c FROM mp JOIN w ON w.icd = mp.icd)) FROM m""", [s_]).fetchone()
+            reach[s_] = {"members": n, "reach_icd10_by_map": n and round(via_map / n, 3), "reach_icd10_by_other_routes": n and round(other / n, 3),
+                         "reach_icd11_via_map_then_who": n and round(icd11 / n, 3)}
+        # witness 1: NLM's ICD-10-CM map against OMOP's ICD-10-CM -> SNOMED (reverse direction, separate source)
+        w1 = con.execute("""WITH nlm AS (SELECT DISTINCT s_code sct, o_code icd FROM edge WHERE predicate = 'sct:icd10cm_map' AND method = 'unconditional'),
+                omop AS (SELECT DISTINCT o_code sct, s_code icd FROM edge WHERE predicate = 'icd10cm:maps_to')
+            SELECT count(*), count(*) FILTER (WHERE icd IN (SELECT icd FROM omop)),
+                   count(*) FILTER (WHERE (sct, icd) IN (SELECT (sct, icd) FROM omop)) FROM nlm""").fetchone()
+        # witness 2: ICD-10-CM extends WHO ICD-10, so a concept's two maps should share the three-character category
+        w2 = con.execute("""WITH a AS (SELECT DISTINCT s_code c, left(o_code, 3) k FROM edge WHERE predicate = 'sct:icd10_map' AND method = 'unconditional'),
+                b AS (SELECT DISTINCT s_code c, left(o_code, 3) k FROM edge WHERE predicate = 'sct:icd10cm_map' AND method = 'unconditional'),
+                both_ AS (SELECT DISTINCT c FROM a WHERE c IN (SELECT c FROM b))
+            SELECT count(*), count(*) FILTER (WHERE EXISTS (SELECT 1 FROM a JOIN b ON b.c = a.c AND b.k = a.k WHERE a.c = both_.c)) FROM both_""").fetchone()
+        report["maps:SNOMED CT -> ICD-10 / ICD-10-CM (US Edition 20260901)"] = {
+            "edges": {f"{p} | {m}": {"edges": e, "snomed_concepts": s, "icd_codes": o} for p, m, e, s, o in by},
+            "not_loaded": {k: v for k, v in con.execute("""SELECT family, edges FROM build_log WHERE family LIKE 'SNOMED CT -> ICD-10%rows not loaded%'""").fetchall()},
+            "diagnosis_refsets": reach,
+            "witness_omop_icd10cm": {"nlm_unconditional_pairs": w1[0], "icd_code_mapped_by_omop": w1[1], "same_pair_in_omop": w1[2],
+                                     "note": "OMOP maps ICD-10-CM up to one concept; NLM maps each concept to its code -- a pair OMOP lacks is unknown, not wrong"},
+            "witness_icd10_vs_icd10cm_category": {"concepts_with_both": w2[0], "share_a_3_character_category": w2[1],
+                                                  "share": w2[0] and round(w2[1] / w2[0], 3)},
+            "tier": "native: each map is its publisher's own assertion (SNOMED International; NLM)"}
+
     # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
     # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
     keys = [k for (k,) in con.execute("SELECT key FROM node").fetchall()]
