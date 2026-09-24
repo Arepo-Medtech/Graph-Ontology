@@ -608,6 +608,41 @@ entity. Where both Orphanet ICD links are exact, WHO's backward table gives Orph
 (89%) and the same 3-character category for 365 (94%); the NTBT/NTBT majority agrees on the category 60% of the time. The
 disagreement lives where Orphanet itself says the codes are approximations.
 
+## SNOMED CT → ICD-10 and ICD-10-CM: the publishers' own maps (built, native)
+
+The **SNOMED CT to ICD-10 map** (extended map reference set 447562003, SNOMED International) is released with the
+International Edition, which the AU release is built on but does not carry, and which otherwise comes only through MLDS.
+NLM's **SNOMED CT US Edition 20260901** ships it unchanged (SNOMED International's mapping module 449080006, the July 2026
+map) beside NLM's own **SNOMED CT to ICD-10-CM map** (6011000124106), and NLM gives the US Edition to UMLS licence
+holders at once (661 MB, fetched with the UTS key; `scripts/snomed_us_maps.py` keeps the two refsets' active rows in
+`cache/snomed-us/`). Both are loaded as their publishers' assertions — **native**, like the ICD-O map — as
+`sct:icd10_map` (**129,729 edges**, 112,426 concepts → 10,692 ICD-10 codes) and `sct:icd10cm_map` (**200,311**, 106,256 concepts → 16,947 ICD-10-CM codes).
+
+**Complex maps, kept whole.** A concept can need several codes together (`attrs.group`); within a group the first rule
+that holds wins (`attrs.priority`). `method` names the rule kind so a traversal that cannot evaluate a condition can leave
+it out: *unconditional* (rule TRUE; ICD-10 129,583, ICD-10-CM 91,812), *conditional* (IFA the patient's sex, age or
+another concept; 132 and 84,180 — ICD-10-CM's specificity is mostly context-dependent) and *default, when no condition
+holds* (14 and 24,319). The rule text, advice and map category ride in `attrs`. Not edges: rows with no target
+("cannot be classified with available data": 25,050 and 28,085), ICD-10-CM targets ending `?` (a character still to be
+specified: 58,689), and US-extension concepts not in SNOMED CT-AU (46 and 10,264).
+
+**What it closes.** WHO ICD-10 was reached by **none** of the AU diagnosis reference sets before; now **84.3%** of the
+Problem/Diagnosis set (133,027 members), **95.7%** of the ED principal-diagnosis set and **93.6%** of the ED diagnosis set
+reach ICD-10, and **77.3% / 88.3% / 81.2%** go on to ICD-11 through WHO's tables. WHO's tables themselves now load
+55,840 rows (30,222 before), since a row loads when it touches a code the graph holds and the map brought 7,118 more ICD-10 codes (4,545 → 11,663).
+
+*Witnesses, both structural.* ICD-10-CM extends ICD-10, so a concept's two maps should share the three-character
+category: they do for **55,634 of 69,420** concepts (80.1%) — the rest are where ICD-10-CM re-sorted a chapter (diabetes
+E08–E13, injuries, the clinical-modification additions). OMOP's ICD-10-CM → SNOMED map, a separate source in the reverse
+direction, maps each code up to one concept: NLM's concept is that concept or below it for **45,962 of 88,849** pairs;
+the rest are mostly residual codes ("Other specified …"), which OMOP maps to a same-named concept beside the specific
+diagnoses rather than above them — a difference of method, not an error. A read of 30 random rows from each map found
+every one as published (one questionable choice is NLM's: *Patient denies drug use* → F19.90).
+
+**Open.** 5-character ICD-10 codes (M41.15, S36.00 — WHO's optional fifth characters) are not in WHO's ICD-11 tables,
+so those concepts stop at ICD-10; a lift to the 4-character parent would carry them on. The 58,689 `?` rows could load
+against their parent ICD-10-CM subcategory as a separate method.
+
 ## UMLS Metathesaurus: every shared concept, locally (built)
 
 The licence holder's UMLS 2026AA concepts file (MRCONSO, 18.1 M names for 3.5 M concepts from 195 sources; 513 MB,
@@ -756,6 +791,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/mbs_candidates.py       # ~25 min (Ontoserver): MBS -> SNOMED procedure candidate frames
 .venv/bin/python scripts/umls_mrconso.py         # UMLS 2026AA MRCONSO (key in .env; --download first time, 513 MB) -> shared-CUI pairs, ~20 s
 .venv/bin/python scripts/umls_mrrel.py           # UMLS 2026AA Level 0 subset (--download first time, 2.0 GB) -> hierarchies + MED-RT edges, ~1 min
+.venv/bin/python scripts/snomed_us_maps.py       # SNOMED CT US Edition 20260901 (cache/snomed-us/, 661 MB via UTS) -> the ICD-10 and ICD-10-CM maps, seconds
 .venv/bin/python scripts/radlex_prepare.py       # ~20 s: RadLex.owl (RADLEX_OWL) -> cache/radlex/, and the ids UMLS needs
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
@@ -777,4 +813,4 @@ CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC an
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not
 imported. The RCPA SPIA reference sets are RCPA copyright (NCTS terms of use): read in place, derived data in cache/rcpa/
-only, and a graph built with them is not for redistribution. ICD-O-3, ICD-11 and WHO ICD-10 are WHO's: only codes are loaded, never labels. MeSH is NLM's (public domain). UMLS is used under the licence holder's UMLS licence: level 0 sources and SNOMED CT only, UMLS-derived data in cache/umls/ only, and a graph built with it is for UMLS licensees. ARTG ids are TGA identifiers shipped in SNOMED CT-AU. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*
+only, and a graph built with them is not for redistribution. ICD-O-3, ICD-11 and WHO ICD-10 are WHO's: only codes are loaded, never labels. MeSH is NLM's (public domain). UMLS is used under the licence holder's UMLS licence: level 0 sources and SNOMED CT only, UMLS-derived data in cache/umls/ only, and a graph built with it is for UMLS licensees. ARTG ids are TGA identifiers shipped in SNOMED CT-AU. The SNOMED CT US Edition (for the ICD-10 and ICD-10-CM maps) is used under the UMLS licence and the SNOMED affiliate licence Australia's membership covers: kept in cache/snomed-us/, never committed. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*

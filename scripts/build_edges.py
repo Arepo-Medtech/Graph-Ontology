@@ -76,6 +76,7 @@ UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path(
 AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
 HGNC_SET = Path("cache/hgnc/hgnc_complete_set.txt")           # HGNC complete set, downloaded 24 Sep 2026 (CC0)
 ORPHA_XML = Path("cache/orphanet/en_product1.xml")            # Orphadata product 1, 2026-06-23 (CC BY 4.0)
+SCT_US_XMAP = Path("cache/snomed-us/extended_map_20260901.parquet")   # scripts/snomed_us_maps.py: SNOMED -> ICD-10 / ICD-10-CM maps (licensed)
 WHO_MAP = Path("cache/who-icd11")                             # WHO ICD-10 <-> ICD-11 mapping tables, release 2026-01 (CC BY-ND 3.0 IGO)
 REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
@@ -175,6 +176,7 @@ PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs":
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
        "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "umls_rel": "UMLS 2026AA MRCONSO", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
        "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables", "ccsr": "AHRQ CCSR for ICD-10-CM 2026 (UMLS 2026AA)",
+       "sct_us": "SNOMED CT US Edition 20260901 (International 20260701 ICD-10 map)",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
@@ -224,7 +226,8 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS,
             "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL, "UMLS 2026AA MRMAP (CCSR)": UMLS_MRMAP,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
-            "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt"}
+            "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt",
+            "SNOMED -> ICD-10 / ICD-10-CM maps (scripts/snomed_us_maps.py)": SCT_US_XMAP}
 
 
 def main() -> int:
@@ -305,6 +308,32 @@ def main() -> int:
               AND referencedComponentId NOT IN (SELECT id FROM cmp.concept)""").fetchone()[0]
         con.execute("INSERT INTO name_hint SELECT DISTINCT 'ICDO', o_code, 'ICD-O-3 ' || o_code FROM edge WHERE predicate = 'sct:icdo_map'")
         con.execute("INSERT INTO name_hint SELECT DISTINCT 'ARTG', o_code, 'ARTG ' || o_code FROM edge WHERE predicate = 'sct:artg_id'")
+
+    # --- SNOMED CT's maps to ICD-10 (SNOMED International) and ICD-10-CM (NLM), as the US Edition ships them ----------
+    # Complex maps: a concept can need several codes together (mapGroup), and within a group the first rule that holds
+    # wins (mapPriority) -- TRUE, IFA <condition> (the patient's sex, age, or another SNOMED concept), OTHERWISE TRUE.
+    # method names the rule kind, so a traversal that cannot evaluate a condition can leave conditional edges out; the
+    # rule text, group, priority, advice and category ride in attrs. A row with no target (SNOMED: "cannot be classified
+    # with available data") or a partial code (ICD-10-CM targets ending '?', still to be specified) is not an edge.
+    # Source concepts must be active in SNOMED CT-AU; the US-extension concepts in the file are not.
+    if SCT_US_XMAP.exists():
+        for refset, pred, vocab, what in (("447562003", "sct:icd10_map", "ICD10WHO", "SNOMED CT -> ICD-10 (SNOMED International map)"),
+                                          ("6011000124106", "sct:icd10cm_map", "ICD10CM", "SNOMED CT -> ICD-10-CM (NLM map)")):
+            ins(what, f"""SELECT 'SCT', m.referencedComponentId, '{pred}', '{vocab}', m.mapTarget, 'SNOMED CT US Edition (NLM)',
+                    'extended map reference set {refset}',
+                    CASE WHEN m.mapRule = 'TRUE' THEN 'unconditional' WHEN m.mapRule = 'OTHERWISE TRUE' THEN 'default, when no condition holds'
+                         ELSE 'conditional' END, 'native', 'asserted', '{PIN['sct_us']}',
+                    json_object('group', CAST(m.mapGroup AS INT), 'priority', CAST(m.mapPriority AS INT),
+                                'rule', CASE WHEN m.mapRule NOT IN ('TRUE', 'OTHERWISE TRUE') THEN m.mapRule END,
+                                'advice', m.mapAdvice, 'category', coalesce(n.pt, m.mapCategoryId))
+                FROM '{SCT_US_XMAP}' m LEFT JOIN cmp.concept n ON n.id = m.mapCategoryId
+                WHERE m.refsetId = '{refset}' AND coalesce(m.mapTarget, '') <> '' AND m.mapTarget NOT LIKE '%?%'
+                  AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+            for why, cond in (("no target: cannot be classified", "coalesce(mapTarget, '') = ''"),
+                              ("partial target code ('?')", "mapTarget LIKE '%?%'"),
+                              ("source concept not active in SNOMED CT-AU", "referencedComponentId NOT IN (SELECT id FROM cmp.concept)")):
+                log[f"{what}: rows not loaded, {why}"] = con.execute(f"""SELECT count(*) FROM '{SCT_US_XMAP}'
+                    WHERE refsetId = '{refset}' AND {cond}""").fetchone()[0]
 
 
     # --- OMOP product mappings (concept ids resolved to (vocabulary, code) once) -----------------------------------

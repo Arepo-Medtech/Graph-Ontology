@@ -474,6 +474,38 @@
       "note": "SNOMED International's map, shipped in the AU release: body structures to ICD-O topography, morphologic abnormalities to ICD-O morphology (attrs.axis). Only active SNOMED CT-AU concepts load."
     },
     {
+      "id": "sct:icd10_map",
+      "label": "SNOMED CT concept is classified to this WHO ICD-10 code",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ICD10WHO"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT to ICD-10 map, extended map reference set 447562003 (SNOMED International, with the International Edition 20260701), as shipped in the SNOMED CT US Edition 20260901 (NLM, under the UMLS licence)",
+      "status": "built",
+      "note": "SNOMED International's own map, loaded as native. A classification, not an equivalence: a concept goes to the ICD-10 code that classifies it, usually broader. Source domain: clinical findings, events, situations. A concept may need several codes together (attrs.group); within a group the first rule that holds wins (attrs.priority). method: unconditional (rule TRUE), conditional (IFA sex / age / another concept; attrs.rule), or 'default, when no condition holds' (OTHERWISE TRUE). attrs.advice and attrs.category are the map's. Rows with no target (cannot be classified with available data) are not edges. Only active SNOMED CT-AU source concepts; ICD-10 codes only, WHO labels not loaded. The file is licensed: cache/snomed-us/, not committed (scripts/snomed_us_maps.py)."
+    },
+    {
+      "id": "sct:icd10cm_map",
+      "label": "SNOMED CT concept is classified to this ICD-10-CM code",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ICD10CM"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT to ICD-10-CM map, extended map reference set 6011000124106 (NLM), SNOMED CT US Edition 20260901",
+      "status": "built",
+      "note": "NLM's map for US reporting, loaded as native; same structure and methods as sct:icd10_map, with many more conditional rules (context-dependent ICD-10-CM specificity). Targets ending '?' (a character still to be specified) are not edges. The reverse direction already in the graph, icd10cm:maps_to (OMOP), is a separate source and serves as its witness in graph_report.py."
+    },
+    {
       "id": "sct:artg_id",
       "label": "AMT product is registered under this ARTG entry",
       "subject": [
