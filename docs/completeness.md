@@ -45,10 +45,10 @@ Class counts are scaled from the sample to the cell's absent members; the interv
 | PBS medicine ingredients | indication | 1,502 | **64.5%** | 64 | 11 | 459 | 6–24% |
 | PBS medicine ingredients | mechanism / target | 1,502 | **61.4%** | 151 | 23 | 406 | 16–40% |
 | PBS medicine ingredients | drug-level laboratory test (LOINC) | 1,502 | **30.1%** | 0 | 0 | 1,050 | 0–7% |
-| Common laboratory LOINC (top 2,000) | SNOMED CT | 2,000 | **87.6%** | 0 | 0 | 248 | 0–7% |
-| Common laboratory LOINC (top 2,000) | AU preferred unit | 2,000 | **17.2%** | 0 | 0 | 1,657 | 0–7% |
-| Common laboratory LOINC (top 2,000) | analyte code (ChEBI, RxNorm, gene ...) | 2,000 | **27.8%** | 0 | 0 | 1,444 | 0–7% |
-| Common laboratory LOINC (top 2,000) | finding it is interpreted in | 2,000 | **11.1%** | 0 | 0 | 1,778 | 0–7% |
+| Common laboratory LOINC (top 2,000) | SNOMED CT | 2,000 | **87.6%** | 0 | 248 | 0 | 0–7% |
+| Common laboratory LOINC (top 2,000) | AU preferred unit | 1,162 (+838 n/a) | **28.4%** | 0 | 0 | 832 | 0–7% |
+| Common laboratory LOINC (top 2,000) | analyte code (ChEBI, RxNorm, gene ...) | 2,000 | **27.8%** | 0 | 1,444 | 0 | 0–7% |
+| Common laboratory LOINC (top 2,000) | finding it is interpreted in | 2,000 | **11.1%** | 0 | 1,422 | 356 | 0–7% |
 | HPO phenotypes in use | SNOMED CT | 11,560 | **31.7%** | 1,106 | 0 | 6,791 | 7–26% |
 | Orphanet disorders | ICD-10 (WHO) | 9,886 (+535 n/a) | **77.1%** | 91 | 2,174 | 0 | 1–14% |
 | Orphanet disorders | ICD-11 | 9,886 (+535 n/a) | **80.9%** | 0 | 1,888 | 0 | 0–7% |
@@ -112,8 +112,21 @@ OMIM: Orphanet's own alignments name none.
   (24 Sep). HPO had relayed nearly all of it (99.7% of phenotype pairs, 99.4% of gene pairs), so coverage barely moves
   (genes 42.7% → 42.9%), but every disorder without a gene or phenotype is now *unknown — Orphanet's own file states
   none*, where before it was *no source held*.
-- **Laboratory LOINC**: the AU preferred unit (RCPA's sets cover a subset of analytes), the analyte code, the finding.
-  Coverage rules for LOINC are not yet written, so its unknown and no-source cases are not yet told apart.
+- **Laboratory LOINC — the silence is the sources', not ours (coverage rules, 24 Sep).** Every LOINC cell now says which
+  held source *states* the link (absent from the graph: our gap) and which *covers* the term without stating it (unknown):
+
+  | cell | states (→ our gap) | covers, says nothing (→ unknown) | neither (→ no source) |
+  |---|---|---|---|
+  | → SNOMED CT | LOINC Extension identifier; Athena *Is a* / *Maps to* SNOMED | LOINC maps only the component part to SNOMED; Athena holds the term under no SNOMED concept | in neither Athena nor the Extension |
+  | → AU preferred unit (quantitative terms only, `SCALE_TYP = Qn`) | RCPA SPIA states a unit | RCPA lists the term with no unit | not in the RCPA reporting sets |
+  | → analyte code | LOINC's part mapping gives the component an analyte code | LOINC decomposes the term; its component carries no code | LOINC links no component |
+  | → finding interpreted in | — (a derived rule) | the LOINC Extension models the term; no SNOMED finding interprets it at this specimen | not in the Extension, the rule's input |
+  | PBS ingredient → drug-level test | LOINC's part mapping names the substance | — | no LOINC part names it by the codes it reaches |
+
+  The rules read the releases themselves, not the graph, so a loader that drops rows a source states would show as our
+  gap. None does: every LOINC cell has 0 of 50 our-gap. The 248 terms without SNOMED are all Athena-held and
+  Extension-absent (surgical pathology studies, ova and parasites); the unit cell is now measured on the 1,162
+  quantitative terms (a presence or ordinal test has no unit to find), and its 832 absent are not in RCPA's sets.
 - **PBS products → OMOP (4,600)**: AMT products Athena has no mapping for (the known post-2021 gap).
 - **MBS (6,046)**: no published map anywhere; candidate frames for a person.
 
@@ -122,8 +135,8 @@ OMIM: Orphanet's own alignments name none.
 A 50-member sample gives wide intervals (0–7% when none of 50 is a gap). The coverage rules are stated in the script per
 cell and are approximations: Orphanet's disorders include its groupings, which no ICD or OMIM code is expected for; HPO's
 silence on a disease is read as unknown only when the disease is in a vocabulary HPO annotates. SeMRA's evidence
-includes UMLS-derived mappings. The loader ledger (rows available / loaded / excluded, and why) exists only for the
-loaders that already log their exclusions in `build_log`; completing it for every loader is the next step here.
+includes UMLS-derived mappings. The loader ledger (`out/loader_ledger.json`, docs/multigraph-build.md → *The loader
+ledger*) says, for every one of the 84 loaders, how many source rows it saw and where each one not loaded went.
 
 ## The guard
 

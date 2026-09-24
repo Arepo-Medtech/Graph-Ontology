@@ -56,6 +56,7 @@ _first = lambda *ps: next((p for p in ps if p.exists()), ps[0])
 SPINE = _first(Path(os.path.expanduser("~/code/spine/out/spine.duckdb")), Path("out/spine.duckdb"))
 VOCAB_DIR = _first(Path(os.path.expanduser("~/code/spine/out/omop-vocab/CONCEPT.csv")), Path("out/omop-vocab/CONCEPT.csv")).parent
 GRAPH = Path("out/graph.duckdb")
+LEDGER = Path("out/loader_ledger.json")                     # per-loader: rows available, excluded (why), loaded
 REGISTER = Path("reference/graph_predicates.json")
 BINDINGS = Path("reference/snomed_bindings.json")
 PBS = Path("cache/pbs")
@@ -266,25 +267,59 @@ def main() -> int:
                    source VARCHAR, source_locator VARCHAR, method VARCHAR, tier VARCHAR, state VARCHAR, pin VARCHAR, attrs JSON)""")
     con.execute("CREATE TEMP TABLE name_hint (vocab VARCHAR, code VARCHAR, name VARCHAR)")
     log = {}
+    # The loader ledger (workstream 1): for every loader, the rows its source offers, each filter in turn with its reason
+    # and the rows it took out, and what loaded -- so a member the graph lacks can be told apart as never in the source,
+    # or in it and excluded (and why). A loader is one of: 'source' (rows available -> exclusions -> loaded), 'derived'
+    # (a rule over edges already loaded; it names the rule), or 'undeclared' (listed as such -- the ledger hides nothing).
+    # Whatever is left between the rows kept and the edges loaded is named, never absorbed: rows collapsing into fewer
+    # edges (duplicates, several rows naming one edge), or one row giving several edges.
+    ledger, loaders = {}, []
 
-    def ins(label: str, sql: str, params=None) -> None:
+    def account(label: str, available=None, excluded=(), derived: str | None = None, unit: str = "rows") -> None:
+        e = ledger.setdefault(label, {"kind": "undeclared", "available": None, "excluded": [], "unit": unit})
+        if derived:
+            e.update(kind="derived", rule=derived)
+        if available is not None:
+            e.update(kind="source", available=int(available), unit=unit)
+        e["excluded"] += [{"reason": r, "rows": int(n)} for r, n in excluded]
+
+    def waterfall(src: str, keep, params=None) -> tuple[int, list]:
+        """One pass over the source: its rows, then how many each filter (cumulatively, in order) keeps."""
+        conds, cols = [], ["count(*)"]
+        for _, c in keep:
+            conds.append(f"({c})")
+            cols.append(f"count(*) FILTER (WHERE {' AND '.join(conds)})")
+        got = con.execute(f"SELECT {', '.join(cols)} FROM {src}", params or []).fetchone()
+        return got[0], [(r, got[i] - got[i + 1]) for i, (r, _) in enumerate(keep)]
+
+    def ins(label: str, sql: str, params=None, src: str | None = None, keep=(), derived: str | None = None, unit: str = "rows") -> None:
+        if src:              # counted before the insert: a filter that asks "is this code in the graph yet" must not see its own edges
+            n0, exc = waterfall(src, keep)
         before = con.execute("SELECT count(*) FROM edge").fetchone()[0]
         con.execute(f"INSERT INTO edge ({EDGE_COLS}) " + sql, params or [])
         log[label] = con.execute("SELECT count(*) FROM edge").fetchone()[0] - before
+        loaders.append(label)
+        if src:
+            account(label, n0, exc, unit=unit)
+        elif derived:
+            account(label, derived=derived)
         print(f"  {label:<44} {log[label]:>10,}", flush=True)
 
-    def ins_rows(label: str, rows: list[tuple]) -> None:
+    def ins_rows(label: str, rows: list[tuple], available=None, excluded=(), derived: str | None = None, unit: str = "rows") -> None:
         before = con.execute("SELECT count(*) FROM edge").fetchone()[0]
         if rows:
             con.executemany(f"INSERT INTO edge ({EDGE_COLS}) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", rows)
         log[label] = con.execute("SELECT count(*) FROM edge").fetchone()[0] - before
+        loaders.append(label)
+        if available is not None or excluded or derived:
+            account(label, available, excluded, derived, unit)
         print(f"  {label:<44} {log[label]:>10,}", flush=True)
 
     vmap = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in OMOP_VOCAB.items())
     print("loading edges:")
     # --- SNOMED CT-AU: the whole relationship snapshot ------------------------------------------------------------
     ins("SNOMED CT-AU relationships", f"""SELECT 'SCT', src, 'sct:' || typ, 'SCT', dst, 'SNOMED CT-AU RF2', 'compendium rel',
-            'native', 'native', 'asserted', '{PIN['sct']}', json_object('group', grp) FROM cmp.rel""")
+            'native', 'native', 'asserted', '{PIN['sct']}', json_object('group', grp) FROM cmp.rel""", src="cmp.rel")
     # --- SNOMED CT-AU's own maps and associations (the release's Refset/Map and Refset/Content) -----------------------
     ref = lambda sub, name: f"read_csv('{AU_RF2 / 'Refset' / sub / name}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
     rel_ = PIN["sct"].split()[-1]
@@ -293,17 +328,23 @@ def main() -> int:
                 'SNOMED CT-AU RF2', 'ICD-O simple map reference set 446608001', 'simple map', 'native', 'asserted', '{PIN['sct']}',
                 json_object('axis', CASE WHEN mapTarget LIKE 'C%' THEN 'topography' ELSE 'morphology' END)
             FROM {ref('Map', f'der2_sRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
-            WHERE active = '1' AND refsetId = '446608001' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+            WHERE active = '1' AND refsetId = '446608001' AND referencedComponentId IN (SELECT id FROM cmp.concept)""",
+            src=f"{ref('Map', f'der2_sRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')} WHERE refsetId = '446608001'",
+            keep=[("inactive member", "active = '1'"), ("concept not active in SNOMED CT-AU", "referencedComponentId IN (SELECT id FROM cmp.concept)")])
         ins("AMT product -> ARTG id (ARTG Id reference set)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:artg_id', 'ARTG', mapTarget,
                 'SNOMED CT-AU RF2', 'ARTG Id reference set 11000168105', 'simple map', 'native', 'asserted', '{PIN['sct']}', NULL
             FROM {ref('Map', f'der2_iRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')}
-            WHERE active = '1' AND refsetId = '11000168105' AND referencedComponentId IN (SELECT id FROM cmp.concept)""")
+            WHERE active = '1' AND refsetId = '11000168105' AND referencedComponentId IN (SELECT id FROM cmp.concept)""",
+            src=f"{ref('Map', f'der2_iRefset_SimpleMapSnapshot_AU1000036_{rel_}.txt')} WHERE refsetId = '11000168105'",
+            keep=[("inactive member", "active = '1'"), ("concept not active in SNOMED CT-AU", "referencedComponentId IN (SELECT id FROM cmp.concept)")])
         ins("SNOMED anatomy structure -> entire / part (association refsets)", f"""SELECT DISTINCT 'SCT', referencedComponentId,
                 CASE refsetId WHEN '734138000' THEN 'sct:anatomy_structure_entire' ELSE 'sct:anatomy_structure_part' END,
                 'SCT', targetComponentId, 'SNOMED CT-AU RF2', 'association reference set ' || refsetId, 'association', 'native', 'asserted',
                 '{PIN['sct']}', NULL
             FROM {ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')}
-            WHERE active = '1' AND refsetId IN ('734138000', '734139008')""")
+            WHERE active = '1' AND refsetId IN ('734138000', '734139008')""",
+            src=f"{ref('Content', f'der2_cRefset_AssociationSnapshot_AU1000036_{rel_}.txt')} WHERE refsetId IN ('734138000', '734139008')",
+            keep=[("inactive member", "active = '1'")])
         # membership of the AU release's simple reference sets: clinical subsets (Problem/Diagnosis, the emergency
         # department sets, RACS MALT procedures, allied health), foundation sets by hierarchy, AMT structure, the
         # medicines-regulation lists (each state's monitored Schedule 4 list, Schedule 8, Black Triangle, brand
@@ -312,7 +353,9 @@ def main() -> int:
         ins("SNOMED CT-AU reference set membership", f"""SELECT 'SCT', r.referencedComponentId, 'sct:in_refset', 'SCT', r.refsetId,
                 'SNOMED CT-AU RF2', 'simple reference set ' || r.refsetId, coalesce(n.pt, r.refsetId), 'native', 'asserted', '{PIN['sct']}', NULL
             FROM {ref('Content', f'der2_Refset_SimpleSnapshot_AU1000036_{rel_}.txt')} r LEFT JOIN cmp.concept n ON n.id = r.refsetId
-            WHERE r.active = '1' AND r.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+            WHERE r.active = '1' AND r.referencedComponentId IN (SELECT id FROM cmp.concept)""",
+            src=f"{ref('Content', f'der2_Refset_SimpleSnapshot_AU1000036_{rel_}.txt')} r",
+            keep=[("inactive member", "r.active = '1'"), ("member not an active concept", "r.referencedComponentId IN (SELECT id FROM cmp.concept)")])
         log["SNOMED CT-AU reference set members not loaded (member not an active concept)"] = con.execute(f"""SELECT count(*)
             FROM {ref('Content', f'der2_Refset_SimpleSnapshot_AU1000036_{rel_}.txt')} WHERE active = '1'
               AND referencedComponentId NOT IN (SELECT id FROM cmp.concept)""").fetchone()[0]
@@ -338,7 +381,11 @@ def main() -> int:
                                 'advice', m.mapAdvice, 'category', coalesce(n.pt, m.mapCategoryId))
                 FROM '{SCT_US_XMAP}' m LEFT JOIN cmp.concept n ON n.id = m.mapCategoryId
                 WHERE m.refsetId = '{refset}' AND coalesce(m.mapTarget, '') <> '' AND m.mapTarget NOT LIKE '%?%'
-                  AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+                  AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""",
+                src=f"'{SCT_US_XMAP}' m WHERE m.refsetId = '{refset}'",
+                keep=[("no target: cannot be classified with available data", "coalesce(m.mapTarget, '') <> ''"),
+                      ("partial code (loaded apart, as its subcategory)", "m.mapTarget NOT LIKE '%?%'"),
+                      ("source concept not active in SNOMED CT-AU", "m.referencedComponentId IN (SELECT id FROM cmp.concept)")])
             for why, cond in (("no target: cannot be classified", "coalesce(mapTarget, '') = ''"),
                               ("source concept not active in SNOMED CT-AU", "referencedComponentId NOT IN (SELECT id FROM cmp.concept)")):
                 log[f"{what}: rows not loaded, {why}"] = con.execute(f"""SELECT count(*) FROM '{SCT_US_XMAP}'
@@ -358,7 +405,9 @@ def main() -> int:
                             'rule', CASE WHEN m.mapRule NOT IN ('TRUE', 'OTHERWISE TRUE') THEN m.mapRule END,
                             'advice', m.mapAdvice, 'category', coalesce(n.pt, m.mapCategoryId), 'target_as_published', m.mapTarget)
             FROM xmap_partial m LEFT JOIN cmp.concept n ON n.id = m.mapCategoryId
-            WHERE m.sub IN (SELECT c FROM icd10cm_code) AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+            WHERE m.sub IN (SELECT c FROM icd10cm_code) AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""",
+            src="xmap_partial m", keep=[("subcategory not an ICD-10-CM code", "m.sub IN (SELECT c FROM icd10cm_code)"),
+                                        ("source concept not active in SNOMED CT-AU", "m.referencedComponentId IN (SELECT id FROM cmp.concept)")])
         log["SNOMED CT -> ICD-10-CM (NLM map): partial codes not loaded, subcategory not an ICD-10-CM code"] = con.execute(
             "SELECT count(*) FROM xmap_partial WHERE sub NOT IN (SELECT c FROM icd10cm_code)").fetchone()[0]
         # ICD-10's optional fifth characters (WHO Volume 1: site in chapter XIII, open / closed in XIX -- M41.15, S36.00)
@@ -376,7 +425,9 @@ def main() -> int:
             lift = [(c, parent(c)) for c in mapped if c not in who10]
             ins_rows("ICD-10 fifth-character code -> its WHO parent", sorted(
                 ("ICD10WHO", c, "icd10:subdivision_of", "ICD10WHO", p_, "WHO ICD-10 code structure", "10To11MapToOneCategory.txt (parent present)",
-                 "fifth-character subdivision", "native", "asserted", PIN["who"], None) for c, p_ in lift if p_ and p_ in who10))
+                 "fifth-character subdivision", "native", "asserted", PIN["who"], None) for c, p_ in lift if p_ and p_ in who10),
+                available=len(lift), excluded=[("no parent in WHO's tables", sum(1 for c, p_ in lift if not (p_ and p_ in who10)))],
+                unit="mapped ICD-10 codes absent from WHO's tables")
             log["ICD-10 mapped codes absent from WHO's tables, no parent there"] = sum(1 for c, p_ in lift if not (p_ and p_ in who10))
 
 
@@ -391,15 +442,21 @@ def main() -> int:
             m.concept_code, 'OMOP Athena', 'omop_drug', 'Maps to', 'ungraded', 'asserted', '{PIN['athena']}',
             json_object('level', o.level, 'witness', chk.verdict)
         FROM cmp.omop_drug o JOIN cmap m ON m.concept_id = CAST(o.standard_concept_id AS VARCHAR)
-        LEFT JOIN cmp.omop_drug_check chk ON chk.product_id = o.product_id AND chk.source = 'omop_drug'""")
+        LEFT JOIN cmp.omop_drug_check chk ON chk.product_id = o.product_id AND chk.source = 'omop_drug'""",
+        src="cmp.omop_drug o WHERE o.standard_concept_id IS NOT NULL",
+        keep=[("standard concept not in the Athena bundle", "CAST(o.standard_concept_id AS VARCHAR) IN (SELECT concept_id FROM cmap)")])
     ins("OMOP product -> standard drug (rejected)", f"""SELECT 'SCT', o.product_id, 'omop:maps_to', CASE m.vocabulary_id {vmap} END,
             m.concept_code, 'OMOP Athena', 'omop_drug.refused_standard_concept_id', 'Maps to', 'ungraded', 'rejected',
             '{PIN['athena']}', json_object('level', o.level, 'review', o.review_status)
-        FROM cmp.omop_drug o JOIN cmap m ON m.concept_id = CAST(o.refused_standard_concept_id AS VARCHAR)""")
+        FROM cmp.omop_drug o JOIN cmap m ON m.concept_id = CAST(o.refused_standard_concept_id AS VARCHAR)""",
+        src="cmp.omop_drug o WHERE o.refused_standard_concept_id IS NOT NULL",
+        keep=[("refused concept not in the Athena bundle", "CAST(o.refused_standard_concept_id AS VARCHAR) IN (SELECT concept_id FROM cmap)")])
     ins("OMOP product -> standard drug (indirect)", f"""SELECT 'SCT', x.product_id, 'omop:maps_to_indirect', CASE m.vocabulary_id {vmap} END,
             m.concept_code, 'scripts/amt_indirect.py', 'omop_drug_indirect', x.route, 'ungraded', 'asserted', '{PIN['athena']}',
             json_object('level', x.level, 'via', x.via_product_id)
-        FROM cmp.omop_drug_indirect x JOIN cmap m ON m.concept_id = CAST(x.standard_concept_id AS VARCHAR)""")
+        FROM cmp.omop_drug_indirect x JOIN cmap m ON m.concept_id = CAST(x.standard_concept_id AS VARCHAR)""",
+        src="cmp.omop_drug_indirect x WHERE x.standard_concept_id IS NOT NULL",
+        keep=[("standard concept not in the Athena bundle", "CAST(x.standard_concept_id AS VARCHAR) IN (SELECT concept_id FROM cmap)")])
 
     # --- substance -> standard ingredient ---------------------------------------------------------------------------
     ins("substance -> standard ingredient", """SELECT 'SCT', substance_id, 'std_ingredient',
@@ -407,7 +464,7 @@ def main() -> int:
             split_part(source, ':', 1), CASE WHEN source LIKE 'route:%' THEN tier WHEN source = 'decision' THEN 'decision'
                                               ELSE 'ungraded' END,
             CASE WHEN state = 'asserted' THEN 'asserted' ELSE state END, '', json_object('check', "check")
-        FROM cmp.substance_standard_ingredient""")
+        FROM cmp.substance_standard_ingredient""", src="cmp.substance_standard_ingredient")
     con.execute(f"UPDATE edge SET pin = '{PIN['athena']}' WHERE predicate = 'std_ingredient'")
 
     # --- ATC: PBS and OMOP as parallel edges -------------------------------------------------------------------------
@@ -415,23 +472,28 @@ def main() -> int:
             CASE source WHEN 'pbs' THEN 'PBS item-atc' ELSE 'OMOP CONCEPT_ANCESTOR' END, 'product_atc',
             CASE source WHEN 'pbs' THEN 'native' ELSE 'omop ancestry' END, CASE source WHEN 'pbs' THEN 'native' ELSE 'ungraded' END,
             'asserted', CASE source WHEN 'pbs' THEN '{PIN['pbs']}' ELSE '{PIN['athena']}' END, json_object('atc_level', atc_level)
-        FROM cmp.product_atc""")
+        FROM cmp.product_atc""", src="cmp.product_atc")
 
     # --- PBS: AMT -> item -> restriction -> indication ---------------------------------------------------------------
     rows = lambda f: f"(SELECT unnest(rows, recursive := true) FROM read_json_auto('{PBS}/{f}.json', maximum_object_size=300000000))"
     ins("AMT -> PBS item", f"""SELECT DISTINCT 'SCT', CAST(amt_code AS VARCHAR), 'pbs:lists', 'PBS_ITEM', split_part(li_item_id, '_', 1),
             'PBS API v3 amt-items', 'cache/pbs/amt-items.json', 'native', 'native', 'asserted', '{PIN['pbs']}',
-            json_object('amt_level', concept_type_code) FROM {rows('amt-items')} WHERE amt_code IS NOT NULL""")
+            json_object('amt_level', concept_type_code) FROM {rows('amt-items')} WHERE amt_code IS NOT NULL""",
+        src=rows('amt-items'), keep=[("no AMT code", "amt_code IS NOT NULL")])
     ins("PBS item -> restriction", f"""SELECT DISTINCT 'PBS_ITEM', pbs_code, 'pbs:has_restriction', 'PBS_RESTRICTION', res_code,
             'PBS API v3 item-restriction-relationships', 'cache/pbs/item-restriction-relationships.json', 'native', 'native',
-            'asserted', '{PIN['pbs']}', json_object('benefit_type', benefit_type_code) FROM {rows('item-restriction-relationships')}""")
+            'asserted', '{PIN['pbs']}', json_object('benefit_type', benefit_type_code) FROM {rows('item-restriction-relationships')}""",
+        src=rows('item-restriction-relationships'))
     con.execute(f"CREATE TEMP TABLE ind AS SELECT * FROM {rows('indications')}")
     ins("PBS restriction -> indication", f"""SELECT DISTINCT 'PBS_RESTRICTION', r.res_code, 'pbs:restricted_to', 'PBS_INDICATION',
             CAST(i.indication_prescribing_txt_id AS VARCHAR), 'PBS API v3 restriction-prescribing-text-relationships + indications',
             'cache/pbs/indications.json', 'native', 'native', 'asserted', '{PIN['pbs']}',
             json_object('severity', i.severity, 'episodicity', i.episodicity)
         FROM {rows('restriction-prescribing-text-relationships')} r
-        JOIN ind i ON CAST(i.indication_prescribing_txt_id AS VARCHAR) = CAST(r.prescribing_text_id AS VARCHAR)""")
+        JOIN ind i ON CAST(i.indication_prescribing_txt_id AS VARCHAR) = CAST(r.prescribing_text_id AS VARCHAR)""",
+        src=f"{rows('restriction-prescribing-text-relationships')} r",
+        keep=[("prescribing text is not an indication (a criterion, a note)",
+               "CAST(r.prescribing_text_id AS VARCHAR) IN (SELECT CAST(indication_prescribing_txt_id AS VARCHAR) FROM ind)")])
     con.execute("INSERT INTO name_hint SELECT 'PBS_INDICATION', CAST(indication_prescribing_txt_id AS VARCHAR), condition FROM ind")
     con.execute(f"""INSERT INTO name_hint SELECT 'PBS_ITEM', pbs_code, any_value(li_drug_name || coalesce(' (' || brand_name || ')', ''))
                     FROM {rows('items')} GROUP BY pbs_code""")
@@ -445,22 +507,26 @@ def main() -> int:
              "SNOMED CT-AU 20260831 (live Ontoserver)",
              json.dumps({k: v for k, v in (("stripped_qualifier", r["bound"].get("stripped_qualifier")),
                                            ("pbs_severity", r.get("pbs_severity")), ("pbs_episodicity", r.get("pbs_episodicity"))) if v}))
-            for r in pb if r.get("bound")])
+            for r in pb if r.get("bound")],
+            available=len(pb), excluded=[("not bound exactly: a candidate for a person (review queue pbs_indications)",
+                                          sum(1 for r in pb if not r.get("bound")))], unit="indication texts")
 
     # --- corpus condition bindings ----------------------------------------------------------------------------------
     b = json.load(open(BINDINGS))["results"]
     ins_rows("corpus condition -> SNOMED", [("CORPUS", r["condition"], "corpus:binds_to", "SCT", r["snomed"]["concept_id"],
              "reference/snomed_bindings.json", r["condition"], r["snomed"].get("method"), "ungraded",
              "asserted", PIN["corpus"], json.dumps({"parent_verified": r["snomed"].get("parent_verified")}))
-             for r in b if r.get("snomed")])
+             for r in b if r.get("snomed")],
+             available=len(b), excluded=[("not bound: a candidate (the binding review loop)", sum(1 for r in b if not r.get("snomed")))],
+             unit="corpus conditions")
     con.executemany("INSERT INTO name_hint VALUES ('CORPUS', ?, ?)", [(r["condition"], r["condition"]) for r in b])
 
     # --- LOINC -------------------------------------------------------------------------------------------------------
     axis = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in LOINC_AXIS.items())
     ins("LOINC term -> axis part", f"""SELECT 'LOINC', code, CASE axis {axis} END, 'LOINC', part_code, 'LOINC via Athena',
-            'spine.duckdb loinc_axis', 'native', 'native', 'asserted', '{PIN['loinc']}', NULL FROM sp.loinc_axis""")
+            'spine.duckdb loinc_axis', 'native', 'native', 'asserted', '{PIN['loinc']}', NULL FROM sp.loinc_axis""", src="sp.loinc_axis")
     ins("LOINC question -> answer", f"""SELECT DISTINCT 'LOINC', question_code, 'loinc:has_answer', 'LOINC', answer_code, 'LOINC via Athena',
-            'spine.duckdb loinc_answer', 'native', 'native', 'asserted', '{PIN['loinc']}', NULL FROM sp.loinc_answer""")
+            'spine.duckdb loinc_answer', 'native', 'native', 'asserted', '{PIN['loinc']}', NULL FROM sp.loinc_answer""", src="sp.loinc_answer")
     con.execute("INSERT INTO name_hint SELECT 'LOINC', code, concept_name FROM sp.loinc_omop")
     con.execute("INSERT INTO name_hint SELECT 'LOINC', part_code, any_value(part_name) FROM sp.loinc_axis GROUP BY part_code")
     con.execute("INSERT INTO name_hint SELECT 'LOINC', answer_code, any_value(answer_name) FROM sp.loinc_answer GROUP BY answer_code")
@@ -471,7 +537,12 @@ def main() -> int:
             'OMOP Athena', 'CONCEPT_RELATIONSHIP', r.relationship_id, 'ungraded', 'asserted', '{PIN['athena']}', NULL
         FROM CR r JOIN C l ON l.concept_id = r.concept_id_1 AND l.vocabulary_id = 'LOINC'
         JOIN C s ON s.concept_id = r.concept_id_2 AND s.vocabulary_id = 'SNOMED'
-        WHERE r.relationship_id IN ('Is a', 'Maps to', 'Maps to value') AND (r.invalid_reason IS NULL OR r.invalid_reason = '')""")
+        WHERE r.relationship_id IN ('Is a', 'Maps to', 'Maps to value') AND (r.invalid_reason IS NULL OR r.invalid_reason = '')""",
+        src="CR r JOIN C l ON l.concept_id = r.concept_id_1 AND l.vocabulary_id = 'LOINC'",
+        keep=[("another relationship (not Is a / Maps to / Maps to value)", "r.relationship_id IN ('Is a', 'Maps to', 'Maps to value')"),
+              ("relationship retired (invalid_reason)", "r.invalid_reason IS NULL OR r.invalid_reason = ''"),
+              ("target not a SNOMED concept", "r.concept_id_2 IN (SELECT concept_id FROM C WHERE vocabulary_id = 'SNOMED')")],
+        unit="Athena relationships from a LOINC concept")
 
     # --- LOINC Ontology: LOINC lab terms as SNOMED CT observable entities (the extension, read in place) ------------
     # Its observables are where SNOMED's Interprets points, so lab result -> finding becomes a lookup chain. The
@@ -483,7 +554,8 @@ def main() -> int:
         ins("LOINC Extension relationships", f"""SELECT 'SCT', sourceId, 'sct:' || typeId, 'SCT', destinationId,
                 'SNOMED CT LOINC Extension', 'sct2_Relationship_Snapshot', 'native', 'native', 'asserted', '{PIN['loinc_ext']}',
                 json_object('group', relationshipGroup)
-            FROM {ext(T / 'sct2_Relationship_Snapshot_LO1010000_20260321.txt')} WHERE active = '1'""")
+            FROM {ext(T / 'sct2_Relationship_Snapshot_LO1010000_20260321.txt')} WHERE active = '1'""",
+            src=ext(T / 'sct2_Relationship_Snapshot_LO1010000_20260321.txt'), keep=[("inactive relationship", "active = '1'")])
         con.execute(f"""CREATE TEMP TABLE lx_role AS SELECT referencedComponentId AS sct,
                 bool_or(refsetId = '635121010000106') AS observation, bool_or(refsetId = '635111010000100') AS orderable
             FROM {ext(R / 'Content' / 'der2_Refset_SimpleSnapshot_LO1010000_20260321.txt')} WHERE active = '1' GROUP BY 1""")
@@ -502,7 +574,9 @@ def main() -> int:
             FROM {ext(T / 'sct2_Identifier_Snapshot_LO1010000_20260321.txt')} i
             LEFT JOIN lx_role r ON r.sct = i.referencedComponentId LEFT JOIN lx_disc d ON d.sct = i.referencedComponentId
             LEFT JOIN lx_loinc l ON l.LOINC_NUM = i.alternateIdentifier
-            WHERE i.active = '1' AND i.identifierSchemeId = '30051010000102'""")
+            WHERE i.active = '1' AND i.identifierSchemeId = '30051010000102'""",
+            src=f"{ext(T / 'sct2_Identifier_Snapshot_LO1010000_20260321.txt')} i WHERE i.identifierSchemeId = '30051010000102'",
+            keep=[("inactive identifier", "i.active = '1'")])
         # names: the extension's preferred synonym (language refset 'preferred'), else its FSN; LOINC 2.83 names for LOINC codes
         con.execute(f"""INSERT INTO name_hint
             SELECT 'SCT', d.conceptId, any_value(d.term) FROM {ext(T / 'sct2_Description_Snapshot-en_LO1010000_20260321.txt')} d
@@ -519,9 +593,14 @@ def main() -> int:
         if RCPA_UNITS.exists():
             ex = dict(con.execute("SELECT LOINC_NUM, EXAMPLE_UCUM_UNITS FROM read_csv(?, header=true, all_varchar=true)", [str(LOINC_TABLE)]).fetchall())
             seen, rows_u = set(), []
-            for x in json.load(open(RCPA_UNITS))["rows"]:
+            rcpa_rows, skip_u = json.load(open(RCPA_UNITS))["rows"], collections.Counter()
+            for x in rcpa_rows:
                 ucum = (x["ucum"] or "").strip()
-                if not ucum or ucum.lower() == "no unit" or (x["loinc"], ucum) in seen:
+                if not ucum or ucum.lower() == "no unit":
+                    skip_u["RCPA states no unit"] += 1
+                    continue
+                if (x["loinc"], ucum) in seen:
+                    skip_u["the same code and unit in another RCPA set"] += 1
                     continue
                 seen.add((x["loinc"], ucum))
                 rcpa_codes.add(x["loinc"])
@@ -533,7 +612,8 @@ def main() -> int:
                                            "rcpa_ucum_malformed": ucum_malformed(ucum) or None,
                                            "differs_from_us_example": diff in ("scale", "kind"),
                                            "factor_us_example_to_au": f, "rcpa_property": x["property"]})))
-            ins_rows("LOINC -> Australian preferred unit (RCPA SPIA)", rows_u)
+            ins_rows("LOINC -> Australian preferred unit (RCPA SPIA)", rows_u, available=len(rcpa_rows), excluded=sorted(skip_u.items()),
+                     unit="RCPA SPIA rows")
         if UNIT_PAIRS.exists():
             def au_side(c):
                 a, b = c["mass_loinc"] in rcpa_codes, c["molar_loinc"] in rcpa_codes
@@ -543,7 +623,8 @@ def main() -> int:
                  "reference/loinc_unit_counterparts.json", "same axes, MCnc / SCnc", "native", "asserted", f"{PIN['loinc_table']}",
                  json.dumps({**{k: c[k] for k in ("factor_mg_per_dL_to_mmol_per_L", "molecular_weight", "pubchem_cid", "analyte_code",
                                                   "mass_unit_example", "molar_unit_example")}, "au_preferred": au_side(c)}))
-                for c in json.load(open(UNIT_PAIRS))["counterparts"]])
+                for c in json.load(open(UNIT_PAIRS))["counterparts"]], available=len(json.load(open(UNIT_PAIRS))["counterparts"]),
+                unit="counterpart pairs (scripts/unit_reconcile.py)")
 
         # --- lab result -> finding, through the analyte (reference/interprets_handcheck.json) -------------------------
         # SNOMED findings interpret measurement PROCEDURES; the LOINC Ontology puts LOINC terms under OBSERVABLES, so
@@ -587,7 +668,8 @@ def main() -> int:
                 json_object('interpretation', t.interp, 'interprets', t.tgt, 'component', t.comp,
                             'finding_specimen', t.spec, 'loinc_specimen', lo.site, 'loinc_observable', lo.obs)
             FROM ix_lo lo JOIN ix_tgt t ON t.comp = lo.comp JOIN ix_site_up su ON su.s = lo.site AND su.n = t.spec
-            WHERE t.tgt NOT IN (SELECT tgt FROM ix_refined)""")
+            WHERE t.tgt NOT IN (SELECT tgt FROM ix_refined)""",
+            derived="LOINC observable (LOINC Extension) and a SNOMED finding's Interprets target share a Component; specimen at or below")
 
         # --- the same, through Athena's placement: parallel edges, a second witness ------------------------------------
         # Athena files a LOINC term under a SNOMED measurement procedure; a finding that interprets that procedure is
@@ -634,14 +716,18 @@ def main() -> int:
             FROM kept k
             WHERE (k.spec IS NOT NULL AND EXISTS (SELECT 1 FROM edge sp JOIN ax_site_up su ON su.s = k.site AND su.n = sp.o_code
                                                    WHERE sp.s_code = k.proc AND sp.predicate = '{SPEC}'))
-               OR (k.spec IS NULL AND EXISTS (SELECT 1 FROM ax_site_up su WHERE su.s = k.site AND su.n = '119297000'))""")
+               OR (k.spec IS NULL AND EXISTS (SELECT 1 FROM ax_site_up su WHERE su.s = k.site AND su.n = '119297000'))""",
+            derived="Athena's placement of a LOINC term under a SNOMED procedure that a finding Interprets; specimen agreeing")
 
     # --- MONDO -------------------------------------------------------------------------------------------------------
     if MONDO_OBO.exists():
         mt = obo_terms(MONDO_OBO)
         ins_rows("MONDO is-a", [("MONDO", t["id"], "mondo:is_a", "MONDO", p, "MONDO", "mondo.obo", "native", "native",
                                  "asserted", PIN["mondo"], None) for t in mt if t["id"].startswith("MONDO:") for p in t["is_a"]
-                                if p.startswith("MONDO:")])
+                                if p.startswith("MONDO:")],
+                 available=sum(len(t["is_a"]) for t in mt if t["id"].startswith("MONDO:")),
+                 excluded=[("parent outside MONDO", sum(1 for t in mt if t["id"].startswith("MONDO:") for p in t["is_a"] if not p.startswith("MONDO:")))],
+                 unit="is_a statements of MONDO classes")
         con.executemany("INSERT INTO name_hint VALUES ('MONDO', ?, ?)", [(t["id"], t.get("name")) for t in mt if t["id"].startswith("MONDO:")])
         con.executemany("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)",      # the taxa MONDO cites carry their names in mondo.obo
                         [(t["id"].split(":", 1)[1], t.get("name")) for t in mt if t["id"].startswith("NCBITaxon:")])
@@ -653,8 +739,11 @@ def main() -> int:
         # equivalences they joined a retired class to what replaced it -- found by scripts/consistency.py; only active
         # classes load
         live = {t["id"] for t in mt}
-        sssom_all = [r for r in csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t")
-                     if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
+        ss_rows = list(csv.DictReader((l for l in open(MONDO_SSSOM) if not l.startswith("#")), delimiter="\t"))
+        sssom_all = [r for r in ss_rows if r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] in prefix]
+        ss_exc = [("not an exactMatch (broad, narrow, close, related)", sum(r["predicate_id"] != "skos:exactMatch" for r in ss_rows)),
+                  ("exactMatch to a vocabulary not loaded (MedDRA: MSSO-licensed; others)",
+                   sum(r["predicate_id"] == "skos:exactMatch" and r["object_id"].split(":")[0] not in prefix for r in ss_rows))]
         sssom = [r for r in sssom_all if r["subject_id"] in live]
         log["MONDO exactMatch: not loaded, obsolete MONDO class"] = len(sssom_all) - len(sssom)
         con.executemany("INSERT INTO name_hint VALUES (?, ?, ?)",
@@ -664,7 +753,8 @@ def main() -> int:
         ins_rows("MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet / DOID / NCIT / MeSH / ICD-11 / EFO / UMLS / MedGen / ICD-10",
                  [("MONDO", r["subject_id"], "mondo:exact_match", prefix[r["object_id"].split(":")[0]], r["object_id"].split(":", 1)[1],
                    "MONDO SSSOM", "mondo.sssom.tsv", r.get("mapping_justification"), "ungraded", "asserted", PIN["mondo"], None)
-                  for r in sssom])
+                  for r in sssom], available=len(ss_rows), excluded=ss_exc + [("obsolete MONDO class", len(sssom_all) - len(sssom))],
+                 unit="MONDO SSSOM rows")
 
     # --- ICD-10-CM -> SNOMED, every code (reference/icd10cm_handcheck.json) -----------------------------------------
     # OMOP's 'Maps to' from all 98,290 mapped ICD-10-CM codes -- diseases, symptoms (R), injuries (S, T), external causes
@@ -680,33 +770,48 @@ def main() -> int:
         SELECT DISTINCT 'ICD10CM', icd, 'icd10cm:maps_to', 'SCT', sct, 'OMOP Athena', 'CONCEPT_RELATIONSHIP', 'Maps to',
                'ungraded', 'asserted', '{PIN['athena']}',
                json_object('targets_of_code', count(*) OVER (PARTITION BY icd), 'icd_deprecated', icd_invalid = 'D')
-        FROM m""")
+        FROM m""", src="C s JOIN CR r ON r.concept_id_1 = s.concept_id WHERE s.vocabulary_id = 'ICD10CM'",
+        keep=[("another relationship (not Maps to; 'Maps to value' means something else)", "r.relationship_id = 'Maps to'"),
+              ("relationship retired (invalid_reason)", "r.invalid_reason IS NULL OR r.invalid_reason = ''"),
+              ("target not a SNOMED concept", "r.concept_id_2 IN (SELECT concept_id FROM C WHERE vocabulary_id = 'SNOMED')")],
+        unit="Athena relationships from an ICD-10-CM code")
 
     # --- HPO ---------------------------------------------------------------------------------------------------------
     if HP_OBO.exists():
         ht = obo_terms(HP_OBO)
         ins_rows("HPO is-a", [("HP", t["id"], "hp:is_a", "HP", p, "HPO", "hp.obo", "native", "native", "asserted", PIN["hpo"], None)
-                              for t in ht if t["id"].startswith("HP:") for p in t["is_a"] if p.startswith("HP:")])
+                              for t in ht if t["id"].startswith("HP:") for p in t["is_a"] if p.startswith("HP:")],
+                 available=sum(len(t["is_a"]) for t in ht if t["id"].startswith("HP:")),
+                 excluded=[("parent outside HPO", sum(1 for t in ht if t["id"].startswith("HP:") for p in t["is_a"] if not p.startswith("HP:")))],
+                 unit="is_a statements of HPO terms")
         con.executemany("INSERT INTO name_hint VALUES ('HP', ?, ?)", [(t["id"], t.get("name")) for t in ht])
         hx = {"NCIT": "NCIT", "ORPHA": "ORPHA", "ICD-10": "ICD10WHO"}      # HPO's own xrefs (MedDRA left out: MSSO-licensed)
         ins_rows("HPO xref -> NCIT / Orphanet / ICD-10", sorted({("HP", t["id"], "hp:xref", hx[x.split(":")[0]], x.split(":", 1)[1], "HPO",
                                                                   "hp.obo xref", x.split(":")[0], "native", "asserted", PIN["hpo"], None)
                                                                  for t in ht if t["id"].startswith("HP:") for x in t["xref"]
-                                                                 if x.split(":")[0] in hx}))
+                                                                 if x.split(":")[0] in hx}),
+                 available=sum(len(t["xref"]) for t in ht if t["id"].startswith("HP:")),
+                 excluded=[("xref to a vocabulary not loaded (MedDRA: MSSO-licensed; UMLS, SNOMED CT US, MeSH ... by other routes)",
+                            sum(1 for t in ht if t["id"].startswith("HP:") for x in t["xref"] if x.split(":")[0] not in hx))],
+                 unit="xref statements of HPO terms")
     if HPOA.exists():
         dbv = {"OMIM": "OMIM", "ORPHA": "ORPHA", "DECIPHER": "DECIPHER"}
-        rows_h, names = [], {}
+        rows_h, names, n_h, skip_h = [], {}, 0, collections.Counter()
         for r in csv.DictReader((l for l in open(HPOA, encoding="utf-8") if not l.startswith("#")), delimiter="\t"):
+            n_h += 1
             if r["aspect"] != "P":
+                skip_h["not a phenotype annotation (inheritance, onset, clinical course)"] += 1
                 continue
             v, code = r["database_id"].split(":", 1)
             if v not in dbv:
+                skip_h[f"disease vocabulary not loaded"] += 1
                 continue
             names[(dbv[v], code)] = r["disease_name"]
             rows_h.append((dbv[v], code, "hpo:lacks_phenotype" if r["qualifier"] == "NOT" else "hpo:has_phenotype", "HP", r["hpo_id"],
                            "HPO annotations", r["reference"], r["evidence"], "native", "asserted", PIN["hpo"],
                            json.dumps({k: r[k] for k in ("frequency", "onset", "sex", "modifier") if r[k]})))
-        ins_rows("HPO disease -> phenotype (present / absent)", rows_h)
+        ins_rows("HPO disease -> phenotype (present / absent)", rows_h, available=n_h, excluded=sorted(skip_h.items()),
+                 unit="phenotype.hpoa annotations")
         con.executemany("INSERT INTO name_hint VALUES (?, ?, ?)", [(k[0], k[1], n) for k, n in names.items()])
 
     # --- DrugCentral (extracted by scripts/drugcentral_extract.py) --------------------------------------------------
@@ -731,28 +836,36 @@ def main() -> int:
                      AND t.standard_concept = 'S'""")
         ins("DrugCentral -> RxNorm ingredient (lifted)", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:rxnorm', 'RXN', ing,
                 'DrugCentral', 'identifier', 'RXNORM ' || via, 'ungraded', 'asserted', '{PIN['dc']}',
-                json_object('id_rxcui', identifier, 'id_class', id_class, 'lifted_via', via) FROM dc_rx""")
+                json_object('id_rxcui', identifier, 'id_class', id_class, 'lifted_via', via) FROM dc_rx""",
+            src=f"(SELECT DISTINCT struct_id, identifier FROM {dc('identifier')} WHERE id_type = 'RXNORM') i",
+            keep=[("RxNorm id not in the Athena bundle, or not liftable to a standard ingredient",
+                   "(struct_id, identifier) IN (SELECT struct_id, identifier FROM dc_rx)")], unit="DrugCentral RXNORM identifiers")
         ins("DrugCentral -> SNOMED", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:snomed', 'SCT', identifier, 'DrugCentral',
-                'identifier', 'SNOMEDCT_US', 'ungraded', 'asserted', '{PIN['dc']}', NULL FROM {dc('identifier')} WHERE id_type = 'SNOMEDCT_US'""")
+                'identifier', 'SNOMEDCT_US', 'ungraded', 'asserted', '{PIN['dc']}', NULL FROM {dc('identifier')} WHERE id_type = 'SNOMEDCT_US'""",
+            src=f"{dc('identifier')} WHERE id_type = 'SNOMEDCT_US'")
         dx = {"CHEBI": "CHEBI", "UNII": "UNII", "PUBCHEM_CID": "PUBCHEM", "ChEMBL_ID": "CHEMBL", "MESH_DESCRIPTOR_UI": "MESH",
               "MESH_SUPPLEMENTAL_RECORD_UI": "MESH", "UMLSCUI": "UMLS", "IUPHAR_LIGAND_ID": "IUPHAR", "KEGG_DRUG": "KEGG", "INN_ID": "INN"}
         dcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in dx.items())
         ins("DrugCentral -> ChEBI / UNII / PubChem / ChEMBL / MeSH / UMLS / IUPHAR / KEGG / INN", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
                 'drugcentral:xref', CASE id_type {dcase} END, replace(identifier, 'CHEBI:', ''), 'DrugCentral', 'identifier', id_type,
                 'native', 'asserted', '{PIN['dc']}', NULL
-            FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""")
+            FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""",
+            src=f"{dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)})",
+            keep=[("empty identifier", "trim(coalesce(identifier, '')) <> ''")])
         if (DC / "pharma_class.tsv").exists():
             # the FDA's own pharmacologic class indexing of approved labels (SPL), relayed by DrugCentral; its classes
             # are MED-RT concepts (N-codes), so this is a label-grade route to the same class nodes MED-RT reaches
             ins("DrugCentral drug -> FDA pharmacologic class (EPC, MoA, PE; MED-RT codes)", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
                     'fda:pharmacologic_class', 'MEDRT', class_code, 'FDA SPL pharmacologic class indexing (via DrugCentral)', 'pharma_class',
                     type, 'native', 'asserted', '{PIN['dc']}', json_object('class_type', type, 'class_name', name)
-                FROM {dc('pharma_class')} WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') AND class_code LIKE 'N%'""")
+                FROM {dc('pharma_class')} WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') AND class_code LIKE 'N%'""",
+                src=f"{dc('pharma_class')} WHERE source = 'FDA'",
+                keep=[("another class type (not EPC, MoA, PE)", "type IN ('EPC', 'MoA', 'PE')"), ("class code not a MED-RT N-code", "class_code LIKE 'N%'")])
             con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', class_code, any_value(name) FROM {dc('pharma_class')}
                             WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') GROUP BY 2""")
         if (DC / "struct2atc.tsv").exists():
             ins("DrugCentral -> ATC", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:in_atc_class', 'ATC', atc_code, 'DrugCentral',
-                    'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""")
+                    'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""", src=dc('struct2atc'))
         if (DC / "omop_relationship.tsv").exists():
             rel = {"indication": "drugcentral:indication", "contraindication": "drugcentral:contraindication",
                    "off-label use": "drugcentral:off_label_use"}
@@ -761,7 +874,9 @@ def main() -> int:
                     snomed_conceptid, 'DrugCentral', 'omop_relationship', relationship_name, 'native', 'asserted', '{PIN['dc']}',
                     json_object('umls_cui', umls_cui, 'concept_name', concept_name)
                 FROM {dc('omop_relationship')} WHERE snomed_conceptid IS NOT NULL AND snomed_conceptid <> ''
-                  AND relationship_name IN ({','.join(repr(k) for k in rel)})""")
+                  AND relationship_name IN ({','.join(repr(k) for k in rel)})""", src=dc('omop_relationship'),
+                keep=[("another relationship (not indication, contraindication, off-label use)", f"relationship_name IN ({','.join(repr(k) for k in rel)})"),
+                      ("no SNOMED concept", "snomed_conceptid IS NOT NULL AND snomed_conceptid <> ''")])
         if (DC / "structures.tsv").exists():
             con.execute(f"INSERT INTO name_hint SELECT 'DRUGCENTRAL', id, name FROM {dc('structures')}")
         # --- how a drug works: drug -> target -> protein -> gene (DrugCentral's activity tables) -------------------
@@ -787,17 +902,21 @@ def main() -> int:
                                 'act_pmid', ra.pmid, 'act_doi', ra.doi, 'moa_pmid', rm.pmid, 'moa_doi', rm.doi,
                                 'first_in_class', a.first_in_class, 'tdl', a.tdl, 'chembl_witness', w.verdict)
                 FROM {dc('act_table_full')} a LEFT JOIN dc_ref ra ON ra.id = a.act_ref_id LEFT JOIN dc_ref rm ON rm.id = a.moa_ref_id
-                LEFT JOIN dc_wit w ON w.act_id = a.act_id AND a.moa = '1'""")
+                LEFT JOIN dc_wit w ON w.act_id = a.act_id AND a.moa = '1'""", src=dc('act_table_full'))
             ins("DrugCentral target -> protein component", f"""SELECT DISTINCT 'DC_TARGET', t.target_id, 'drugcentral:target_component',
                     'UNIPROT', c.accession, 'DrugCentral', 'td2tc + target_component', 'native', 'native', 'asserted', '{PIN['dc']}',
                     json_object('organism', c.organism, 'swissprot', c.swissprot)
                 FROM {dc('td2tc')} t JOIN {dc('target_component')} c ON c.id = t.component_id
-                WHERE c.accession IS NOT NULL AND c.accession <> ''""")
+                WHERE c.accession IS NOT NULL AND c.accession <> ''""",
+                src=f"{dc('td2tc')} t JOIN {dc('target_component')} c ON c.id = t.component_id",
+                keep=[("no UniProt accession", "c.accession IS NOT NULL AND c.accession <> ''")])
             ins("protein -> gene (DrugCentral)", f"""SELECT DISTINCT 'UNIPROT', accession, 'uniprot:encoded_by', 'NCBIGENE', geneid,
                     'DrugCentral', 'target_component', 'native', 'native', 'asserted', '{PIN['dc']}',
                     json_object('gene_symbol', gene, 'organism', organism)
                 FROM {dc('target_component')} WHERE geneid IS NOT NULL AND geneid <> '' AND accession IS NOT NULL AND accession <> ''
-                  AND id IN (SELECT component_id FROM {dc('td2tc')})""")   # target proteins only, not DrugCentral's whole protein list
+                  AND id IN (SELECT component_id FROM {dc('td2tc')})""",   # target proteins only, not DrugCentral's whole protein list
+                src=f"{dc('target_component')} WHERE id IN (SELECT component_id FROM {dc('td2tc')})",
+                keep=[("no NCBI Gene id", "geneid IS NOT NULL AND geneid <> ''"), ("no UniProt accession", "accession IS NOT NULL AND accession <> ''")])
             con.execute(f"""INSERT INTO name_hint SELECT 'DC_TARGET', id, name FROM {dc('target_dictionary')}""")
             con.execute(f"""INSERT INTO name_hint SELECT 'UNIPROT', accession, any_value(name) FROM {dc('target_component')} GROUP BY 2""")
             con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', geneid, any_value(gene) FROM {dc('target_component')}
@@ -806,15 +925,17 @@ def main() -> int:
     # --- Medicare Benefits Schedule: items, groups, categories (no SNOMED map exists; candidates are not edges) ------
     if MBS_XML.exists():
         import xml.etree.ElementTree as ET
-        mbs = [{c.tag: (c.text or "").strip() for c in d} for d in ET.parse(MBS_XML).getroot().iter("Data")]
-        mbs = [m for m in mbs if not m.get("ItemEndDate")]
+        mbs_all = [{c.tag: (c.text or "").strip() for c in d} for d in ET.parse(MBS_XML).getroot().iter("Data")]
+        mbs = [m for m in mbs_all if not m.get("ItemEndDate")]
         ins_rows("MBS item -> group -> category", [
             ("MBS", m["ItemNum"], "mbs:in_group", "MBS_GROUP", f"{m['Category']}/{m['Group']}", "MBS XML", MBS_XML.name, "native", "native",
              "asserted", PIN["mbs"], json.dumps({"schedule_fee": m.get("ScheduleFee") or None, "benefit_100": m.get("Benefit100") or None,
                                                "item_type": m.get("ItemType"), "fee_type": m.get("FeeType"),
                                                "item_start": m.get("ItemStartDate"), "fee_start": m.get("FeeStartDate")}))
             for m in mbs] + sorted({("MBS_GROUP", f"{m['Category']}/{m['Group']}", "mbs:group_in_category", "MBS_CATEGORY", m["Category"],
-                                     "MBS XML", MBS_XML.name, "native", "native", "asserted", PIN["mbs"], None) for m in mbs}))
+                                     "MBS XML", MBS_XML.name, "native", "native", "asserted", PIN["mbs"], None) for m in mbs}),
+                 available=len(mbs_all), excluded=[("item ended (ItemEndDate)", len(mbs_all) - len(mbs))],
+                 unit="MBS items (the group -> category edges show as fanned out)")
         con.executemany("INSERT INTO name_hint VALUES ('MBS', ?, ?)",
                         [(m["ItemNum"], re.sub(r"\s+", " ", m["Description"])[:160]) for m in mbs])
         cat_names = {"1": "Professional attendances", "2": "Diagnostic procedures and investigations", "3": "Therapeutic procedures",
@@ -845,10 +966,15 @@ def main() -> int:
                 elif k == "is_obsolete" and v_.strip() == "true":
                     cur["obsolete"] = True
         ub = [t for t in terms if t.get("id", "").startswith("UBERON:") and not t.get("obsolete")]
+        ub_all = [t for t in terms if t.get("id", "").startswith("UBERON:")]
+        ub_n = lambda ts, f=lambda o: True: sum(1 for t in ts for k in ("is_a", "part_of") for o in t[k] if f(o))
         ins_rows("Uberon is-a / part-of", [("UBERON", t["id"], pred, "UBERON", o, "Uberon", "uberon-basic.obo", "native", "native", "asserted",
                                              PIN["uberon"], None)
                                             for t in ub for pred, key in (("uberon:is_a", "is_a"), ("uberon:part_of", "part_of"))
-                                            for o in t[key] if o.startswith("UBERON:")])
+                                            for o in t[key] if o.startswith("UBERON:")],
+                 available=ub_n(ub_all), excluded=[("obsolete Uberon class", ub_n([t for t in ub_all if t.get("obsolete")])),
+                                                   ("target outside Uberon (a CL cell type, a GO process ...)", ub_n(ub, lambda o: not o.startswith("UBERON:")))],
+                 unit="is_a / part_of statements of Uberon classes")
         con.executemany("INSERT INTO name_hint VALUES ('UBERON', ?, ?)", [(t["id"], t.get("name")) for t in ub])
     if UBERON_SSSOM.exists():
         ss = [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
@@ -856,12 +982,17 @@ def main() -> int:
         ins_rows("Uberon -> SNOMED body structure (narrowMatch)", [
             ("UBERON", r["subject_id"], "uberon:sct_narrow_match", "SCT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
              r["predicate_id"], "ungraded", "asserted", PIN["uberon"], json.dumps({"mapping_justification": r.get("mapping_justification")}))
-            for r in ss if r["predicate_id"] == "skos:narrowMatch"])
+            for r in ss if r["predicate_id"] == "skos:narrowMatch"],
+            available=len(ss), excluded=[("not a narrowMatch", sum(r["predicate_id"] != "skos:narrowMatch" for r in ss))],
+            unit="Uberon SSSOM rows to SNOMED CT")
         ins_rows("Uberon -> NCI Thesaurus anatomy (narrowMatch)", [
             ("UBERON", r["subject_id"], "uberon:ncit_narrow_match", "NCIT", r["object_id"].split(":", 1)[1], "Uberon SSSOM", "uberon.sssom.tsv",
              r["predicate_id"], "native", "asserted", PIN["uberon"], None)
             for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
-            if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:") and r["predicate_id"] == "skos:narrowMatch"])
+            if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:") and r["predicate_id"] == "skos:narrowMatch"],
+            available=len(un := [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
+                                 if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:")]),
+            excluded=[("not a narrowMatch", sum(r["predicate_id"] != "skos:narrowMatch" for r in un))], unit="Uberon SSSOM rows to NCIt")
     if MONDO_OBO.exists():
         rows_m, cur = [], None
         for line in open(MONDO_OBO, encoding="utf-8"):
@@ -875,7 +1006,8 @@ def main() -> int:
                 elif parts[0] == "disease_has_infectious_agent" and parts[1].startswith("NCBITaxon:"):
                     rows_m.append(("MONDO", cur, "mondo:disease_has_infectious_agent", "NCBITAXON", parts[1].split(":", 1)[1]))
         ins_rows("MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)",
-                 [r + ("MONDO", "mondo.obo", "native", "native", "asserted", PIN["mondo"], None) for r in sorted(set(rows_m))])
+                 [r + ("MONDO", "mondo.obo", "native", "native", "asserted", PIN["mondo"], None) for r in sorted(set(rows_m))],
+                 available=len(rows_m), unit="disease_has_location / disease_has_infectious_agent statements")
     if LOINC_PARTS.exists():
         con.execute(f"CREATE TEMP VIEW lpm AS SELECT * FROM read_csv('{LOINC_PARTS}', header=true, all_varchar=true)")
         ins("SNOMED organism <-> NCBI Taxonomy (LOINC part asserts both)", f"""SELECT DISTINCT 'SCT', s.ExtCodeId, 'sct:ncbitaxon_equivalent',
@@ -883,7 +1015,10 @@ def main() -> int:
                 'ungraded', 'asserted', '{PIN['loinc_table']}', json_object('loinc_part', s.PartNumber, 'part_name', s.PartName)
             FROM lpm s JOIN lpm t ON t.PartNumber = s.PartNumber AND t.ExtCodeSystem = 'https://www.ncbi.nlm.nih.gov/taxonomy'
                  AND t.Equivalence = 'equivalent'
-            WHERE s.ExtCodeSystem = 'http://snomed.info/sct' AND s.Equivalence = 'equivalent'""")
+            WHERE s.ExtCodeSystem = 'http://snomed.info/sct' AND s.Equivalence = 'equivalent'""",
+            src="lpm s WHERE s.ExtCodeSystem = 'http://snomed.info/sct' AND s.Equivalence = 'equivalent'",
+            keep=[("the part has no equivalent NCBI taxon", "s.PartNumber IN (SELECT PartNumber FROM lpm WHERE ExtCodeSystem = "
+                   "'https://www.ncbi.nlm.nih.gov/taxonomy' AND Equivalence = 'equivalent')")], unit="LOINC parts equivalent to a SNOMED concept")
         con.execute("""INSERT INTO name_hint SELECT DISTINCT 'NCBITAXON', ExtCodeId, any_value(ExtCodeDisplayName) FROM lpm
                        WHERE ExtCodeSystem = 'https://www.ncbi.nlm.nih.gov/taxonomy' GROUP BY 2""")
     if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
@@ -894,7 +1029,11 @@ def main() -> int:
             FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true) pl
             JOIN lpm pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
-            WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""")
+            WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""",
+            src=f"read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true) pl WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD')",
+            keep=[("the part has no SNOMED CT mapping", "pl.PartNumber IN (SELECT PartNumber FROM lpm WHERE ExtCodeSystem = 'http://snomed.info/sct' AND PartName <> 'XXX')"),
+                  ("LOINC term not active", "pl.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")],
+            unit="LOINC term -> component / system / method part links")
     if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
         # what a lab test measures, in the analyte's own vocabularies: LOINC maps its component parts to ChEBI, RxNorm,
         # PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC and ClinVar. RxNorm and NCBI Gene are vocabularies the drug and gene
@@ -918,7 +1057,11 @@ def main() -> int:
                             'equivalence', pm.Equivalence, 'ext_name', pm.ExtCodeDisplayName)
             FROM ({links}) pl JOIN lpm pm ON pm.PartNumber = pl.PartNumber
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
-            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')""")
+            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')""",
+            src=f"({links}) pl WHERE pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')",
+            keep=[("the part has no code in an analyte vocabulary", f"pl.PartNumber IN (SELECT PartNumber FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs)}))"),
+                  ("LOINC term not active", "pl.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")],
+            unit="LOINC term -> component / divisor / gene / challenge part links")
         con.execute(f"""INSERT INTO name_hint SELECT DISTINCT CASE ExtCodeSystem {xcase} END,
                 CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
                 any_value(ExtCodeDisplayName) FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs if xs[k] not in ('RXN', 'NCBITAXON', 'NCBIGENE'))})
@@ -950,7 +1093,8 @@ def main() -> int:
                            "UTS crosswalk SNOMEDCT_US -> NCBI", how, "ungraded", "asserted", PIN["umls"],
                            json.dumps({"ncbi_name": r["target_name"]})))
             con.execute("INSERT INTO name_hint VALUES ('NCBITAXON', ?, ?)", [r["target_code"], r["target_name"]])
-        ins_rows("SNOMED organism <-> NCBI Taxonomy (UMLS, same name)", rows_o)
+        ins_rows("SNOMED organism <-> NCBI Taxonomy (UMLS, same name)", rows_o, available=len(rows_o) + len(cands),
+                 excluded=[("names differ: a candidate for a person (review queue organism_ncbi)", len(cands))], unit="UTS crosswalk rows")
         with open(UMLS_SCT_NCBI.with_name("sct_ncbi_candidates.tsv"), "w", encoding="utf-8") as fh:
             fh.write("sct\tsct_name\tncbi_taxon\tncbi_name\n")
             fh.writelines("\t".join(x) + "\n" for x in cands)
@@ -967,26 +1111,38 @@ def main() -> int:
         con.executemany("INSERT INTO name_hint VALUES ('RADLEX', ?, ?)", [(r, d.get("name")) for r, d in rl.items()])
         rsrc = lambda pred, o_vocab, key: [("RADLEX", r, pred, o_vocab, o, "RadLex", "RadLex.owl", "native", "native", "asserted",
                                             PIN["radlex"], None) for r, d in rl.items() for o in d[key] if o.startswith("RID")]
-        ins_rows("RadLex is-a", rsrc("radlex:is_a", "RADLEX", "is_a"))
-        ins_rows("RadLex part-of", rsrc("radlex:part_of", "RADLEX", "part_of"))
+        for lbl, pred, key in (("RadLex is-a", "radlex:is_a", "is_a"), ("RadLex part-of", "radlex:part_of", "part_of")):
+            ins_rows(lbl, rsrc(pred, "RADLEX", key), available=sum(len(d[key]) for d in rl.values()),
+                     excluded=[("target not a RadLex id", sum(1 for d in rl.values() for o in d[key] if not o.startswith("RID")))],
+                     unit=f"RadLex {key} statements")
         ins_rows("RadLex -> FMA (ExternalRefID)", [("RADLEX", r, "radlex:fma_xref", "FMA", e[4:], "RadLex", "RadLex.owl ExternalRefID",
                                                     "native", "native", "asserted", PIN["radlex"], None)
-                                                   for r, d in rl.items() for e in d["ext"] if e.startswith("FMA:")])
+                                                   for r, d in rl.items() for e in d["ext"] if e.startswith("FMA:")],
+                 available=sum(len(d["ext"]) for d in rl.values()),
+                 excluded=[("not an FMA id (UMLS CUIs feed the RadLex -> SNOMED routes below)",
+                            sum(1 for d in rl.values() for e in d["ext"] if not e.startswith("FMA:")))], unit="RadLex ExternalRefIDs")
         ub_fma = [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
                   if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("FMA:")] if UBERON_SSSOM.exists() else []
         ins_rows("Uberon <-> FMA (cross-species exact match)", [
             ("UBERON", r["subject_id"], "uberon:fma_match", "FMA", r["object_id"][4:], "Uberon SSSOM", "uberon.sssom.tsv",
-             r["predicate_id"], "native", "asserted", PIN["uberon"], None) for r in ub_fma])
+             r["predicate_id"], "native", "asserted", PIN["uberon"], None) for r in ub_fma], available=len(ub_fma),
+            unit="Uberon SSSOM rows to FMA")
         ins("LOINC radiology term -> RadLex part (LOINC/RSNA playbook)", f"""SELECT DISTINCT 'LOINC', p.LoincNumber, 'loinc:radlex_part',
                 'RADLEX', p.RID, 'LOINC 2.83 LoincRsnaRadiologyPlaybook', 'part ' || p.PartNumber, p.PartTypeName, 'native', 'asserted',
                 '{PIN['loinc_table']}', json_object('part_type', p.PartTypeName, 'part', p.PartNumber, 'part_name', p.PartName)
             FROM read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p
-            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RID IS NOT NULL AND p.RID <> ''""")
+            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RID IS NOT NULL AND p.RID <> ''""",
+            src=f"read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p",
+            keep=[("no RadLex id", "p.RID IS NOT NULL AND p.RID <> ''"),
+                  ("LOINC term not active", "p.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")])
         ins("LOINC radiology term -> RSNA playbook procedure (RPID)", f"""SELECT DISTINCT 'LOINC', p.LoincNumber, 'loinc:rsna_rpid',
                 'RPID', p.RPID, 'LOINC 2.83 LoincRsnaRadiologyPlaybook', 'RPID column', 'LOINC/RSNA harmonised', 'native', 'asserted',
                 '{PIN['loinc_table']}', NULL
             FROM read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p
-            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RPID IS NOT NULL AND p.RPID <> ''""")
+            JOIN lx_loinc st ON st.LOINC_NUM = p.LoincNumber AND st.STATUS = 'ACTIVE' WHERE p.RPID IS NOT NULL AND p.RPID <> ''""",
+            src=f"read_csv('{LOINC_RSNA}', header=true, all_varchar=true) p",
+            keep=[("no RSNA playbook id", "p.RPID IS NOT NULL AND p.RPID <> ''"),
+                  ("LOINC term not active", "p.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")])
         if RSNA_PLAYBOOK.exists():
             pb = list(csv.DictReader(open(RSNA_PLAYBOOK, encoding="utf-8")))
             cols = list(pb[0].keys())
@@ -997,7 +1153,9 @@ def main() -> int:
             ins_rows("RSNA playbook procedure -> RadLex part", sorted({
                 ("RPID", r["RPID"], "rsna:radlex_part", "RADLEX", rid, "RSNA Radiology Playbook", RSNA_PLAYBOOK.name + " RIDS", c,
                  "native", "asserted", PIN["rsna"], json.dumps({"field": c, "status": r["STATUS"]}))
-                for r in live for c, rid in zip(cols[i0:], r["RIDS"].split("|")) if rid.startswith("RID") and c}))
+                for r in live for c, rid in zip(cols[i0:], r["RIDS"].split("|")) if rid.startswith("RID") and c}),
+                available=len(pb), excluded=[("playbook status neither ACTIVE nor TRIAL", len(pb) - len(live))],
+                unit="playbook procedures (one edge per RadLex field: fanned out)")
         act = dict(con.execute("SELECT id, tag FROM cmp.concept").fetchall())
         fma_ub = collections.defaultdict(set)
         for r in ub_fma:
@@ -1033,7 +1191,8 @@ def main() -> int:
                     for sct in sorted(cui_sct.get(e[5:], ())):
                         add(rid, sct, "RadLex CUI -> UMLS atoms", "RadLex + UMLS", "ExternalRefID; UTS CUI atoms SNOMEDCT_US",
                             PIN["umls"], {"cui": e[5:]})
-        ins_rows("RadLex -> SNOMED CT body structure (three code routes)", sorted(rows_a.values()))
+        ins_rows("RadLex -> SNOMED CT body structure (three code routes)", sorted(rows_a.values()), excluded=sorted(dropped.items()),
+                 derived="RadLex FMA / CUI -> Uberon or UMLS -> SNOMED CT; the SNOMED end must be an active body structure")
         for k, v in sorted(dropped.items()):
             log[f"RadLex -> SNOMED CT not loaded ({k})"] = v
         ins("LOINC radiology term -> SNOMED via its RadLex anatomy part", """SELECT DISTINCT 'LOINC', p.s_code, 'loinc:part_maps_to_sct',
@@ -1043,7 +1202,8 @@ def main() -> int:
                             'part_name', json_extract_string(p.attrs, '$.part_name'), 'rid', p.o_code, 'route', a.method)
             FROM edge p JOIN edge a ON a.predicate = 'radlex:anatomy_sct' AND a.s_code = p.o_code
             WHERE p.predicate = 'loinc:radlex_part' AND json_extract_string(p.attrs, '$.part_type') LIKE 'Rad.Anatomic Location.%'
-              AND json_extract_string(p.attrs, '$.part_type') NOT LIKE '%Laterality%'""")
+              AND json_extract_string(p.attrs, '$.part_type') NOT LIKE '%Laterality%'""",
+            derived="loinc:radlex_part (anatomic location, not laterality) -> radlex:anatomy_sct")
         # playbook anatomy with no code route at all (head, neck, hand...): name-matched SNOMED body structures are
         # candidates for a person, never edges -- a gap-crossing by name. RadLex- and SNOMED-derived: cache/, not committed.
         bridged = {r for (r, _, _) in rows_a}
@@ -1070,13 +1230,16 @@ def main() -> int:
                 association_type, 'native', 'asserted', '{PIN['hpo']}',
                 json_object('association_type', association_type, 'gene_symbol', gene_symbol, 'upstream', source)
             FROM read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='')
-            WHERE split_part(disease_id, ':', 1) IN ('OMIM', 'ORPHA')""")
+            WHERE split_part(disease_id, ':', 1) IN ('OMIM', 'ORPHA')""",
+            src=f"read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='')",
+            keep=[("disease vocabulary not loaded (not OMIM, Orphanet)", "split_part(disease_id, ':', 1) IN ('OMIM', 'ORPHA')")])
         con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', split_part(ncbi_gene_id, ':', 2), any_value(gene_symbol)
             FROM read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='') GROUP BY 2""")
 
     # --- HGNC: the human gene's official identity, joining NCBI Gene, UniProt and OMIM ------------------------------
     if HGNC_SET.exists():
-        hg = [r for r in csv.DictReader(open(HGNC_SET, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE) if r["status"] == "Approved"]
+        hg_all = list(csv.DictReader(open(HGNC_SET, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE))
+        hg = [r for r in hg_all if r["status"] == "Approved"]
         # only genes something else in the graph already names (a disease gene, a drug target, a LOINC genotype test, a
         # Reactome participant): the other ~31,000 HGNC genes -- mostly non-coding RNAs and pseudogenes -- would each be a
         # detached cluster of their own ids, joining nothing
@@ -1095,7 +1258,10 @@ def main() -> int:
                 for v in filter(None, (r.get(col) or "").split("|")):
                     rows_g.append(("HGNC", r["hgnc_id"], "hgnc:xref", vocab, v.strip(), "HGNC", "hgnc_complete_set.txt " + col, col,
                                    "native", "asserted", PIN["hgnc"], None))
-        ins_rows("HGNC gene -> NCBI Gene / UniProt / OMIM gene entry", sorted(set(rows_g)))
+        ins_rows("HGNC gene -> NCBI Gene / UniProt / OMIM gene entry", sorted(set(rows_g)), available=len(hg_all),
+                 excluded=[("not an approved symbol (entry withdrawn)", len(hg_all) - n_all),
+                           ("no id shared with the rest of the graph", n_all - len(hg))],
+                 unit="HGNC entries (one edge per NCBI Gene / UniProt / OMIM id: fanned out)")
         con.executemany("INSERT INTO name_hint VALUES ('HGNC', ?, ?)", [(r["hgnc_id"], r["symbol"]) for r in hg])
         con.executemany("INSERT INTO name_hint VALUES ('NCBIGENE', ?, ?)", [(r["entrez_id"], r["symbol"]) for r in hg if r.get("entrez_id")])
         # an HGNC gene names its OMIM gene entry and its proteins, where nothing else does (fallbacks: see the node stage)
@@ -1107,7 +1273,7 @@ def main() -> int:
     if ORPHA_XML.exists():
         import xml.etree.ElementTree as ET
         ov = {"ICD-10": "ICD10WHO", "ICD-11": "ICD11MMS", "OMIM": "OMIM", "UMLS": "UMLS", "MeSH": "MESH", "MONDO": "MONDO", "GARD": "GARD"}
-        rows_o, names_o, level_o = [], [], []
+        rows_o, names_o, level_o, n_x, skip_x = [], [], [], 0, collections.Counter()
         for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
             oc = d.findtext("OrphaCode")
             if not oc:
@@ -1118,7 +1284,9 @@ def main() -> int:
             level_o.append((oc, d.findtext("DisorderGroup/Name"), active))  # Disorder / Group of disorders / Subtype of disorder
             for x in d.iter("ExternalReference"):
                 src, ref_ = x.findtext("Source"), (x.findtext("Reference") or "").strip()
+                n_x += 1
                 if src not in ov or not ref_:
+                    skip_x["no reference" if src in ov else "a vocabulary not loaded (MedDRA: MSSO-licensed)"] += 1
                     continue
                 relx = (x.findtext("DisorderMappingRelation/Name") or "").split(" ")[0]
                 rows_o.append(("ORPHA", oc, "orpha:xref", ov[src], ("MONDO:" + ref_.zfill(7)) if src == "MONDO" else ref_, "Orphanet",
@@ -1126,7 +1294,8 @@ def main() -> int:
                                json.dumps({"relation": relx, "validation": x.findtext("DisorderMappingValidationStatus/Name"),
                                            "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None),
                                            **({} if active else {"entry": "inactive: " + "; ".join(f for f in flags if f and f != "Inactive")})})))
-        ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)))
+        ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)),
+                 available=n_x, excluded=sorted(skip_x.items()), unit="Orphanet ExternalReferences")
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
         con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
         con.executemany("INSERT INTO orpha_level VALUES (?, ?, ?)", sorted(set(level_o)))
@@ -1156,23 +1325,27 @@ def main() -> int:
                 rows_g.append(("HGNC", "HGNC:" + hg, "orpha:gene_disease", "ORPHA", oc, "Orphanet", "en_product6.xml DisorderGeneAssociation",
                                a_.findtext("DisorderGeneAssociationType/Name"), "native", "asserted", PIN["orphanet"],
                                json.dumps({"symbol": g_.findtext("Symbol"), "status": status, "validation": a_.findtext("SourceOfValidation")})))
-        ins_rows("Orphanet gene -> disorder (product 6, with the kind of involvement)", sorted(set(rows_g)))
+        ins_rows("Orphanet gene -> disorder (product 6, with the kind of involvement)", sorted(set(rows_g)),
+                 available=len(rows_g) + sum(skipped.values()), excluded=sorted(skipped.items()), unit="Orphanet gene associations")
         for k_, v_ in skipped.items():
             log[f"Orphanet gene -> disorder: not loaded, {k_}"] = v_
         con.executemany("INSERT INTO name_hint VALUES ('HGNC', ?, ?)", sorted(set(names_g)))
     if ORPHA_PHENO.exists():
         import xml.etree.ElementTree as ET
-        rows_p = []
+        rows_p, n_p, skip_p = [], 0, 0
         for st_ in ET.parse(ORPHA_PHENO).getroot().iter("HPODisorderSetStatus"):
             oc = st_.findtext("Disorder/OrphaCode")
             for a_ in st_.iter("HPODisorderAssociation"):
                 hp_, fq = a_.findtext("HPO/HPOId"), a_.findtext("HPOFrequency/Name")
+                n_p += 1
                 if not (oc and hp_):
+                    skip_p += 1
                     continue
                 rows_p.append(("ORPHA", oc, "orpha:lacks_phenotype" if fq and fq.startswith("Excluded") else "orpha:has_phenotype", "HP", hp_,
                                "Orphanet", "en_product4.xml HPODisorderAssociation", fq or "frequency not stated", "native", "asserted",
                                PIN["orphanet"], json.dumps({"frequency": fq, "diagnostic_criteria": a_.findtext("DiagnosticCriteria/Name")})))
-        ins_rows("Orphanet disorder -> HPO phenotype, with frequency (product 4)", sorted(set(rows_p)))
+        ins_rows("Orphanet disorder -> HPO phenotype, with frequency (product 4)", sorted(set(rows_p)), available=n_p,
+                 excluded=[("no ORPHAcode or HPO id", skip_p)], unit="Orphanet phenotype associations")
 
     # --- WHO's ICD-10 <-> ICD-11 mapping tables, and ICD-11's two identifiers ---------------------------------------
     # MMS codes (what is coded: Orphanet cites them) and foundation ids (what the entity is: MONDO cites them) are two
@@ -1189,25 +1362,39 @@ def main() -> int:
         one = wt("10To11MapToOneCategory.txt")
         multi = wt("10To11MapToMultipleCategories.txt") if (WHO_MAP / "10To11MapToMultipleCategories.txt").exists() else []
         loc = lambda f: f"{f} (WHO release 2026-01)"
-        rows_w = {}
+        rows_w, w_code, w_touch = {}, 0, 0
         for f, rs, how in (("10To11MapToOneCategory.txt", one, "one category"), ("10To11MapToMultipleCategories.txt", multi, "multiple categories")):
             for r in rs:
                 c10, c11 = (r.get("icd10Code") or "").strip(), (r.get("icd11Code") or "").strip()
                 f11 = fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))
+                w_code += bool(c10 and c11)
                 if c10 and c11 and touch(("ICD10WHO", c10), ("ICD11MMS", c11), ("ICD11", f11)):
+                    w_touch += 1
                     rows_w.setdefault((c10, c11), ("ICD10WHO", c10, "who:icd10_to_icd11", "ICD11MMS", c11, "WHO", loc(f), how, "native", "asserted",
                                                PIN["who"], json.dumps({"icd11_foundation": fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))})))
-        ins_rows("WHO ICD-10 -> ICD-11 (MMS) mapping table", sorted(rows_w.values()))
+        ins_rows("WHO ICD-10 -> ICD-11 (MMS) mapping table", sorted(rows_w.values()), available=len(one) + len(multi),
+                 excluded=[("no ICD-10 or no ICD-11 code on the row", len(one) + len(multi) - w_code),
+                           ("no code shared with the rest of the graph", w_code - w_touch)], unit="WHO 10To11 rows")
         back = wt("11To10MapToOneCategory.txt")
         ins_rows("WHO ICD-11 (MMS) -> ICD-10 mapping table", sorted({("ICD11MMS", r["icd11Code"].strip(), "who:icd11_to_icd10", "ICD10WHO",
                   r["icd10Code"].strip(), "WHO", loc("11To10MapToOneCategory.txt"), "one category", "native", "asserted", PIN["who"], None)
                   for r in back if (r.get("icd11Code") or "").strip() and (r.get("icd10Code") or "").strip()
-                  and touch(("ICD11MMS", r["icd11Code"].strip()), ("ICD10WHO", r["icd10Code"].strip()))}))
+                  and touch(("ICD11MMS", r["icd11Code"].strip()), ("ICD10WHO", r["icd10Code"].strip()))}),
+                 available=len(back), excluded=[("no ICD-11 or no ICD-10 code on the row",
+                                                 sum(not ((r.get("icd11Code") or "").strip() and (r.get("icd10Code") or "").strip()) for r in back)),
+                                                ("no code shared with the rest of the graph", sum(bool((r.get("icd11Code") or "").strip() and (r.get("icd10Code") or "").strip())
+                                                  and not touch(("ICD11MMS", r["icd11Code"].strip()), ("ICD10WHO", r["icd10Code"].strip())) for r in back))],
+                 unit="WHO 11To10 rows")
         fnd = wt("foundation_11To10MapToOneCategory.txt") if (WHO_MAP / "foundation_11To10MapToOneCategory.txt").exists() else []
         ins_rows("WHO ICD-11 foundation entity -> ICD-10 mapping table", sorted({("ICD11", fid(r["Foundation URI"]), "who:icd11_to_icd10",
                   "ICD10WHO", r["icd10Code"].strip(), "WHO", loc("foundation_11To10MapToOneCategory.txt"), "foundation, one category", "native",
                   "asserted", PIN["who"], None) for r in fnd if fid(r.get("Foundation URI")) and (r.get("icd10Code") or "").strip()
-                  and touch(("ICD11", fid(r["Foundation URI"])), ("ICD10WHO", r["icd10Code"].strip()))}))
+                  and touch(("ICD11", fid(r["Foundation URI"])), ("ICD10WHO", r["icd10Code"].strip()))}),
+                 available=len(fnd), excluded=[("no foundation id or no ICD-10 code on the row",
+                                                sum(not (fid(r.get("Foundation URI")) and (r.get("icd10Code") or "").strip()) for r in fnd)),
+                                               ("no code shared with the rest of the graph", sum(bool(fid(r.get("Foundation URI")) and (r.get("icd10Code") or "").strip())
+                                                 and not touch(("ICD11", fid(r["Foundation URI"])), ("ICD10WHO", r["icd10Code"].strip())) for r in fnd))],
+                 unit="WHO foundation 11To10 rows")
         # an MMS code and the foundation entity it linearises (WHO states both on every row that has a code)
         mf = {(r["icd11Code"].strip(), fid(r["Foundation URI"])) for r in fnd if (r.get("icd11Code") or "").strip() and fid(r.get("Foundation URI"))}
         mf |= {(r["icd11Code"].strip(), fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))) for r in one + multi
@@ -1217,25 +1404,29 @@ def main() -> int:
                                                  UNION SELECT DISTINCT s_vocab, s_code FROM edge WHERE s_vocab IN ('ICD10WHO', 'ICD11MMS', 'ICD11')""").fetchall()}
         ins_rows("ICD-11 MMS code -> its foundation entity", sorted({("ICD11MMS", m_, "who:icd11_mms_foundation", "ICD11", f_, "WHO",
                   "mapping tables: icd11Code + Foundation URI", "stated on the same row", "native", "asserted", PIN["who"], None) for m_, f_ in mf
-                  if ("ICD11MMS", m_) in now or ("ICD11", f_) in now}))
+                  if ("ICD11MMS", m_) in now or ("ICD11", f_) in now}), available=len(mf),
+                 excluded=[("neither code elsewhere in the graph", sum(1 for m_, f_ in mf if not (("ICD11MMS", m_) in now or ("ICD11", f_) in now)))],
+                 unit="MMS code / foundation id pairs stated on the mapping rows")
         log["WHO mapping rows not loaded (no code shared with the rest of the graph)"] = (
             len({(r.get("icd10Code"), r.get("icd11Code")) for r in one + multi}) + len(back) + len(fnd) + len(mf)
             - sum(con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'who:%'").fetchone()))
 
     # --- Reactome: human protein -> pathway, and the pathway hierarchy ----------------------------------------------
     if (REACTOME / "UniProt2Reactome.txt").exists():
-        hs = [l.rstrip("\n").split("\t") for l in open(REACTOME / "UniProt2Reactome.txt", encoding="utf-8")]
-        hs = [r for r in hs if len(r) >= 6 and r[5] == "Homo sapiens"]
+        hs_all = [l.rstrip("\n").split("\t") for l in open(REACTOME / "UniProt2Reactome.txt", encoding="utf-8")]
+        hs = [r for r in hs_all if len(r) >= 6 and r[5] == "Homo sapiens"]
         ins_rows("UniProt protein -> Reactome pathway (human, lowest level)", sorted({
             ("UNIPROT", r[0], "reactome:participates_in", "REACTOME", r[1], "Reactome", "UniProt2Reactome.txt", r[4], "native", "asserted",
-             PIN["reactome"], json.dumps({"evidence": r[4]})) for r in hs}))
+             PIN["reactome"], json.dumps({"evidence": r[4]})) for r in hs}), available=len(hs_all),
+            excluded=[("not a human pathway", len(hs_all) - len(hs))], unit="UniProt2Reactome rows")
         pw = {r[0]: r[1] for r in (l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathways.txt", encoding="utf-8"))
               if len(r) >= 3 and r[2] == "Homo sapiens"}
         ins_rows("Reactome pathway -> parent pathway (human)", sorted({
             ("REACTOME", c_, "reactome:part_of", "REACTOME", p_, "Reactome", "ReactomePathwaysRelation.txt", "native", "native", "asserted",
              PIN["reactome"], None)
             for p_, c_ in (l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathwaysRelation.txt", encoding="utf-8"))
-            if p_ in pw and c_ in pw}))
+            if p_ in pw and c_ in pw}), available=len(rr := [l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathwaysRelation.txt", encoding="utf-8")]),
+            excluded=[("not a pair of human pathways", sum(1 for p_, c_ in rr if not (p_ in pw and c_ in pw)))], unit="pathway relation rows")
         con.executemany("INSERT INTO name_hint VALUES ('REACTOME', ?, ?)", list(pw.items()))
 
     # --- UMLS: HPO phenotype -> SNOMED, the bridge from signs and symptoms to SNOMED findings --------------------
@@ -1258,7 +1449,12 @@ def main() -> int:
         ins("HPO phenotype -> SNOMED (UMLS, same name only)", f"""SELECT DISTINCT 'HP', hpo_id, 'hp:umls_snomed', 'SCT', snomed_code, 'UMLS',
                 'UTS crosswalk HPO -> SNOMEDCT_US', 'shared CUI + same name', '2', 'asserted', '{PIN['umls']}',
                 json_object('calibrated_on', 'hand check 40/40 same-name edges, 23 Sep 2026')
-            FROM umls_hp WHERE same_name""")
+            FROM umls_hp WHERE same_name""", src=f"read_csv('{UMLS_HPO}', delim='\t', header=true, all_varchar=true, quote='') u",
+            keep=[("no SNOMED code", "u.snomed_code IS NOT NULL AND u.snomed_code <> ''"),
+                  ("SNOMED code not active in SNOMED CT-AU", "u.snomed_code IN (SELECT id FROM cmp.concept)"),
+                  ("HPO term not in hp.obo", "u.hpo_id IN (SELECT code FROM name_hint WHERE vocab = 'HP')"),
+                  ("names differ: a candidate for a person (review queue hpo_snomed)",
+                   "(u.hpo_id, u.snomed_code) IN (SELECT hpo_id, snomed_code FROM umls_hp WHERE same_name)")], unit="UTS crosswalk rows")
         con.execute(f"""COPY (SELECT hpo_id, hp_name, snomed_code, au_name, snomed_name FROM umls_hp WHERE NOT same_name ORDER BY 1)
                         TO '{UMLS_HPO.parent / "hpo_snomed_candidates.tsv"}' (DELIMITER '\t', HEADER)""")
         log["HPO -> SNOMED candidates for a person (not edges)"] = con.execute("SELECT count(*) FROM umls_hp WHERE NOT same_name").fetchone()[0]
@@ -1286,10 +1482,14 @@ def main() -> int:
         units = ({x["id"]: {k: v for k, v in x.items() if k not in ("id", "pmid")} for x in json.load(open(THRESH_UNITS))["thresholds"]}
                  if THRESH_UNITS.exists() else {})
         held = 0
-        rows_lr = []
+        rows_lr, skip_lr = [], collections.Counter()
         for r in recs:
             b = bound.get(r["id"], {})
-            if r["id"] not in verified or not b.get("finding") or not b.get("diagnosis"):
+            if r["id"] not in verified:
+                skip_lr["number not verified against the abstract"] += 1
+                continue
+            if not b.get("finding") or not b.get("diagnosis"):
+                skip_lr["finding or diagnosis not bound to SNOMED CT exactly"] += 1
                 continue
             if family(r) not in admitted:       # bound, but its family's binding has not earned a tier: a candidate for a person
                 held += 1
@@ -1314,7 +1514,9 @@ def main() -> int:
                                         "population": r["population"], "setting": r["setting"], "pmid": r["pmid"],
                                         "finding_text": r["finding_text"], "diagnosis_text": r["diagnosis_text"],
                                         "units": units.get(r["id"])})))
-        ins_rows("finding -> diagnosis likelihood ratio (transcribed, verified)", rows_lr)
+        ins_rows("finding -> diagnosis likelihood ratio (transcribed, verified)", rows_lr, available=len(recs),
+                 excluded=sorted(skip_lr.items()) + [("bound, but the binding family has not earned a tier (held as candidates)", held)],
+                 unit="transcribed likelihood-ratio records")
         log["likelihood-ratio records bound but held as candidates (family not admitted)"] = held
         print(f"  {'LR records held (binding family not admitted)':<44} {held:>10,}   admitted: {sorted(admitted)}", flush=True)
 
@@ -1324,7 +1526,11 @@ def main() -> int:
                 'MRMAP 2026AA CCSR_ICD10CM', m.RELA, 'native', 'asserted', '{PIN['ccsr']}',
                 json_object('body_system', left(m.TOEXPR, 3))
             FROM '{UMLS_MRMAP}' m WHERE m.MAPSETSAB = 'CCSR_ICD10CM' AND m.FROMEXPR IS NOT NULL AND m.TOEXPR IS NOT NULL
-              AND m.FROMEXPR IN (SELECT o_code FROM edge WHERE o_vocab = 'ICD10CM' UNION SELECT s_code FROM edge WHERE s_vocab = 'ICD10CM')""")
+              AND m.FROMEXPR IN (SELECT o_code FROM edge WHERE o_vocab = 'ICD10CM' UNION SELECT s_code FROM edge WHERE s_vocab = 'ICD10CM')""",
+            src=f"'{UMLS_MRMAP}' m WHERE m.MAPSETSAB = 'CCSR_ICD10CM'",
+            keep=[("no code on the row", "m.FROMEXPR IS NOT NULL AND m.TOEXPR IS NOT NULL"),
+                  ("ICD-10-CM code not elsewhere in the graph", "m.FROMEXPR IN (SELECT o_code FROM edge WHERE o_vocab = 'ICD10CM' "
+                                                               "UNION SELECT s_code FROM edge WHERE s_vocab = 'ICD10CM')")])
         con.execute(f"""INSERT INTO name_hint SELECT 'CCSR', CODE, any_value(STR) FROM '{UMLS_AUI}' WHERE SAB = 'CCSR_ICD10CM'
                         AND CODE IN (SELECT o_code FROM edge WHERE predicate = 'ccsr:category') GROUP BY 2""")
 
@@ -1340,12 +1546,17 @@ def main() -> int:
         con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
         con.execute(f"""CREATE TEMP TABLE up AS SELECT u.* FROM '{UMLS_PAIRS}' u
                         WHERE (u.sv, u.sc) IN (SELECT v, c FROM present) OR (u.ov, u.oc) IN (SELECT v, c FROM present)""")
+        n_up = lambda: con.execute("SELECT count(*) FROM up").fetchone()[0]
+        up_all, up_steps = con.execute(f"SELECT count(*) FROM '{UMLS_PAIRS}'").fetchone()[0], []
+        up_steps.append(("neither code a node the graph already holds", up_all - n_up()))
+        up_n = n_up()
         # an OMIM GENE entry carries its diseases' names as synonyms, so a shared name pairs a disease with a gene
         # (Bardet-Biedl syndrome 1 -> the BBS1 gene entry). HGNC names the gene entries; they pair only with a gene.
         con.execute("""DELETE FROM up WHERE (('OMIM' = sv AND sc IN (SELECT o_code FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
                                                AND NOT (ov = 'HGNC' OR (ov = 'NCIT' AND o_name ILIKE '% Gene')))
                                           OR ('OMIM' = ov AND oc IN (SELECT o_code FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
                                                AND NOT (sv = 'HGNC' OR (sv = 'NCIT' AND s_name ILIKE '% Gene'))))""")
+        up_steps.append(("an OMIM gene entry paired with a non-gene (it carries its diseases' names)", up_n - n_up()))
         # a SNOMED code joins only as an active SNOMED CT-AU concept (a US-only or retired code would be a node the AU
         # release does not have)
         log["UMLS shared CUI: pairs dropped, SNOMED code not active in SNOMED CT-AU"] = con.execute("""SELECT count(*) FROM up
@@ -1364,10 +1575,16 @@ def main() -> int:
         log["UMLS shared CUI: pairs dropped, OMIM susceptibility entry with a non-susceptibility concept"] = con.execute(
             f"SELECT count(*) FROM up WHERE {sus}").fetchone()[0]
         con.execute(f"DELETE FROM up WHERE {sus}")
+        up_steps += [(k.split(", ", 1)[1], log[k]) for k in ("UMLS shared CUI: pairs dropped, SNOMED code not active in SNOMED CT-AU",
+                                                             "UMLS shared CUI: pairs dropped, NCIt fusion gene with an OMIM gene entry",
+                                                             "UMLS shared CUI: pairs dropped, OMIM susceptibility entry with a non-susceptibility concept")]
         ins("UMLS shared CUI, same name (MRCONSO 2026AA)", f"""SELECT DISTINCT sv, sc, 'umls:shared_cui', ov, oc, 'UMLS', 'MRCONSO 2026AA CUI ' || cui,
                 sv || '-' || ov || ' same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('cui', cui, 'shared_name', shared_name)
-            FROM up WHERE same_name AND sv || '-' || ov NOT IN {own}""")
+            FROM up WHERE same_name AND sv || '-' || ov NOT IN {own}""", src="up",
+            keep=[("SNOMED organism <-> NCBI Taxonomy: its own loader", f"sv || '-' || ov NOT IN {own}"),
+                  ("names differ: candidates in cache/umls/umls_shared_cui.parquet", "same_name")], unit="UMLS shared-CUI pairs")
+        account("UMLS shared CUI, same name (MRCONSO 2026AA)", available=up_all, excluded=up_steps, unit="UMLS shared-CUI pairs")
         log["UMLS shared CUI, names differ (candidates in cache/umls/umls_shared_cui.parquet, not edges)"] = con.execute(
             f"SELECT count(*) FROM up WHERE NOT same_name AND sv || '-' || ov NOT IN {own}").fetchone()[0]
         # The graph holds 29,234 UMLS concepts as nodes -- Orphanet's, MONDO's and DrugCentral's own cross-references
@@ -1381,7 +1598,11 @@ def main() -> int:
                     '{PIN['umls_rel']}', json_object('tty', any_value(m.TTY))
                 FROM '{UMLS_CONSO}' m JOIN cmp.concept c ON c.id = m.CODE
                 WHERE m.SAB = 'SNOMEDCT_US' AND m.SUPPRESS = 'N' AND c.tag IN ('disorder', 'finding')
-                  AND m.CUI IN (SELECT c FROM present WHERE v = 'UMLS') GROUP BY m.CUI, m.CODE""")
+                  AND m.CUI IN (SELECT c FROM present WHERE v = 'UMLS') GROUP BY m.CUI, m.CODE""",
+                src=f"'{UMLS_CONSO}' m WHERE m.SAB = 'SNOMEDCT_US'",
+                keep=[("suppressed atom", "m.SUPPRESS = 'N'"), ("CUI not a node the graph holds", "m.CUI IN (SELECT c FROM present WHERE v = 'UMLS')"),
+                      ("not an active SNOMED CT-AU disorder or finding", "m.CODE IN (SELECT id FROM cmp.concept WHERE tag IN ('disorder', 'finding'))")],
+                unit="MRCONSO SNOMEDCT_US atoms")
         # A chain rule (workstream 3): an Orphanet disorder with no ICD-10 code of its own, exactly aligned by Orphanet to a
         # UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10 code SNOMED International's map
         # classifies that concept to. Only where it can be right: Orphanet's disorder and subtype levels (a group given one
@@ -1404,7 +1625,9 @@ def main() -> int:
                 FROM o2s o JOIN edge i ON i.predicate = 'sct:icd10_map' AND i.s_code = o.sct AND i.s_code IN (SELECT s_code FROM single)
                 JOIN orpha_level l ON l.code = o.orpha AND l.level IN ('Disorder', 'Subtype of disorder') AND l.active
                 WHERE o.orpha NOT IN (SELECT s_code FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD10WHO')
-                GROUP BY o.orpha, i.o_code, o.via""")
+                GROUP BY o.orpha, i.o_code, o.via""",
+                derived="orpha:xref E -> umls:concept_member / mondo:exact_match -> sct:icd10_map (single unconditional group); "
+                        "active Orphanet disorders and subtypes with no ICD-10 of their own")
         umls_names = con.execute("""SELECT sv, sc, any_value(s_name) FROM up WHERE same_name GROUP BY 1, 2
                                     UNION ALL SELECT ov, oc, any_value(o_name) FROM up WHERE same_name GROUP BY 1, 2""").fetchall()
 
@@ -1425,17 +1648,24 @@ def main() -> int:
                 break
             con.execute("""INSERT INTO reach SELECT DISTINCT o_vocab, o_code FROM sp_keep WHERE (o_vocab, o_code) NOT IN (SELECT v, c FROM reach)""")
         ins("UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)", f"""SELECT s_vocab, s_code, 'umls:source_parent', o_vocab,
-                o_code, 'UMLS (' || sab || ')', 'MRREL 2026AA Level 0 PAR', sab || ' ' || rela, 'native', 'asserted', '{PIN['umls_rel']}', NULL FROM sp_keep""")
+                o_code, 'UMLS (' || sab || ')', 'MRREL 2026AA Level 0 PAR', sab || ' ' || rela, 'native', 'asserted', '{PIN['umls_rel']}', NULL FROM sp_keep""",
+            src="sp", keep=[("not above a node the graph holds (a hierarchy is climbed up, never down)",
+                             "(s_vocab, s_code, o_vocab, o_code, sab, rela) IN (SELECT * FROM sp_keep)")], unit="MRREL PAR rows")
         # MED-RT: the drug must already be a node; for treat / prevent / diagnose / contraindication the disease as well
         ins("UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)", f"""SELECT DISTINCT s_vocab, s_code, predicate, o_vocab,
                 o_code, 'UMLS (MED-RT)', 'MRREL 2026AA Level 0 ' || rela, how, 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('medrt_rela', rela, 'drug_cui', cui_s, 'other_cui', cui_o)
             FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab <> 'MEDRT'
-              AND (s_vocab, s_code) IN (SELECT v, c FROM present) AND (o_vocab, o_code) IN (SELECT v, c FROM present)""")
+              AND (s_vocab, s_code) IN (SELECT v, c FROM present) AND (o_vocab, o_code) IN (SELECT v, c FROM present)""",
+            src=f"'{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab <> 'MEDRT'",
+            keep=[("drug not a node the graph holds", "(s_vocab, s_code) IN (SELECT v, c FROM present)"),
+                  ("disease not a node the graph holds", "(o_vocab, o_code) IN (SELECT v, c FROM present)")], unit="MRREL MED-RT rows")
         ins("UMLS: MED-RT drug -> mechanism of action / physiologic effect class", f"""SELECT DISTINCT s_vocab, s_code, predicate, o_vocab,
                 o_code, 'UMLS (MED-RT)', 'MRREL 2026AA Level 0 ' || rela, how, 'ungraded', 'asserted', '{PIN['umls_rel']}',
                 json_object('medrt_rela', rela, 'drug_cui', cui_s)
-            FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT' AND (s_vocab, s_code) IN (SELECT v, c FROM present)""")
+            FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT' AND (s_vocab, s_code) IN (SELECT v, c FROM present)""",
+            src=f"'{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT'",
+            keep=[("drug not a node the graph holds", "(s_vocab, s_code) IN (SELECT v, c FROM present)")], unit="MRREL MED-RT rows")
         con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', o_code, any_value(o_name) FROM '{UMLS_REL}' WHERE o_vocab = 'MEDRT' GROUP BY 2""")
         # a MED-RT mechanism / effect the FDA's label indexing also asserts for the same drug: two independent sources on one
         # fact. The method says so, and graph_report.py tiers corroborated and uncorroborated edges apart.
@@ -1494,7 +1724,9 @@ def main() -> int:
                 'asserted', '{PIN['sct']}', json_object('association', 'substance map ' || lower(t.pt))
             FROM {ref('Map', f'der2_csRefset_AttributeValueMapSnapshot_AU1000036_{rel_}.txt')} m JOIN cmp.concept t ON t.id = m.mapType
             WHERE m.active = '1' AND m.referencedComponentId IN (SELECT code FROM foreign_sct)
-              AND m.targetSnomedCtSubstance IN (SELECT id FROM native_sct)""")
+              AND m.targetSnomedCtSubstance IN (SELECT id FROM native_sct)""",
+            derived="SNOMED ids any loader brought that the AU release does not carry, resolved by its historical associations "
+                    "and the substance map")
         # the release still carries the retired concepts' descriptions: name them from it
         con.execute(f"""INSERT INTO name_hint SELECT 'SCT', d.conceptId, any_value(d.term) FROM {ref('../Terminology', f'sct2_Description_Snapshot-en-au_AU1000036_{rel_}.txt')} d
             WHERE d.active = '1' AND d.conceptId IN (SELECT code FROM foreign_sct) AND d.typeId = '900000000000003001' GROUP BY 2""")
@@ -1508,7 +1740,7 @@ def main() -> int:
         best AS (SELECT code, min(lvl) AS lvl FROM anc GROUP BY 1)
         SELECT DISTINCT 'SCT', anc.code, 'sct:au_nearest_ancestor', 'SCT', anc.anc, 'OMOP Athena', 'CONCEPT_ANCESTOR',
                'nearest ancestor in SNOMED CT-AU', 'native', 'asserted', '{PIN['athena']}', json_object('levels_up', anc.lvl)
-        FROM anc JOIN best USING (code, lvl)""")
+        FROM anc JOIN best USING (code, lvl)""", derived="foreign SNOMED ids -> their nearest ancestor in SNOMED CT-AU (Athena CONCEPT_ANCESTOR)")
     log["foreign SNOMED ids (not in the AU release)"] = con.execute("SELECT count(*) FROM foreign_sct").fetchone()[0]
 
     # --- the contract ------------------------------------------------------------------------------------------------
@@ -1525,7 +1757,9 @@ def main() -> int:
                   for d in acc]
         active_sct = {c for (c,) in con.execute("SELECT id FROM cmp.concept").fetchall()} if rows_d else set()
         keep_d = [r for r in rows_d if r[3] != "SCT" or r[4] in active_sct]
-        ins_rows("Decisions by a person on the review queues (accepted)", keep_d)
+        ins_rows("Decisions by a person on the review queues (accepted)", keep_d, available=len(dq.get("decisions", [])),
+                 excluded=[(f"{k_} (recorded, not an edge)", sum(d["decision"] == k_ for d in dq.get("decisions", []))) for k_ in ("reject", "none")]
+                          + [("SNOMED CT concept no longer active", len(rows_d) - len(keep_d))], unit="decisions")
         log["Decisions by a person: not loaded, SNOMED CT concept no longer active"] = len(rows_d) - len(keep_d)
         for k_ in ("reject", "none"):
             log[f"Decisions by a person: {k_} (recorded, not an edge)"] = sum(d["decision"] == k_ for d in dq.get("decisions", []))
@@ -1601,6 +1835,31 @@ def main() -> int:
         log[f"SOURCE MISSING (built without it on purpose): {k}"] = 0
     con.execute("CREATE TABLE build_log (family VARCHAR, edges BIGINT)")
     con.executemany("INSERT INTO build_log VALUES (?, ?)", list(log.items()))
+    # the ledger, balanced: the rows the filters kept against the edges loaded, and any difference named
+    out_l = []
+    for label in dict.fromkeys(loaders):
+        e = dict(ledger.get(label, {"kind": "undeclared", "available": None, "excluded": [], "unit": "rows"}))
+        e["loaded"], e["excluded"] = log.get(label, 0), [x for x in e["excluded"] if x["rows"]]
+        if e["kind"] == "source":
+            kept = e["available"] - sum(x["rows"] for x in e["excluded"])
+            if kept > e["loaded"]:
+                e["excluded"].append({"reason": "collapsed into fewer edges (duplicate rows, or several rows naming one edge)",
+                                      "rows": kept - e["loaded"]})
+            elif kept < e["loaded"]:
+                e["fanned_out"] = e["loaded"] - kept          # one source row gives several edges (a row's several targets)
+        out_l.append({"loader": label, **e})
+    con.execute("""CREATE TABLE loader_ledger (loader VARCHAR, kind VARCHAR, unit VARCHAR, available BIGINT, loaded BIGINT,
+                   fanned_out BIGINT, reason VARCHAR, rows BIGINT)""")
+    con.executemany("INSERT INTO loader_ledger VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                    [(e["loader"], e["kind"], e["unit"], e["available"], e["loaded"], e.get("fanned_out"), x["reason"], x["rows"])
+                     for e in out_l for x in (e["excluded"] or [{"reason": None, "rows": None}])])
+    kinds = collections.Counter(e["kind"] for e in out_l)
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(json.dumps({"_note": "Per-loader ledger (scripts/build_edges.py): source rows available, each exclusion with its "
+                                           "reason, edges loaded. 'derived' loaders are rules over edges already loaded.",
+                                  "loaders": len(out_l), "by_kind": dict(kinds), "ledger": out_l}, indent=1) + "\n")
+    print(f"\nledger: {len(out_l)} loaders -- {kinds['source']} with source rows, {kinds['derived']} derived, "
+          f"{kinds['undeclared']} undeclared -> {LEDGER}")
 
     n_edges = con.execute("SELECT count(*) FROM edge").fetchone()[0]
     n_nodes = con.execute("SELECT count(*) FROM node").fetchone()[0]

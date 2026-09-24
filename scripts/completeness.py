@@ -123,12 +123,29 @@ CELLS = [
                                                 "covers": ("DRUGCENTRAL",)}),
     ("PBS medicine ingredients", "mechanism / target", {"final": ["drugcentral:mechanism_target", "medrt:has_mechanism_of_action",
                                                                   "fda:pharmacologic_class"], "dir": "out", "hops": 2, "covers": ("DRUGCENTRAL",)}),
-    ("PBS medicine ingredients", "drug-level laboratory test (LOINC)", {"final": ["loinc:part_xref"], "dir": "in", "hops": 2}),
-    ("Common laboratory LOINC (top 2,000)", "SNOMED CT", {"target": ["SCT"], "hops": 2}),
+    # the LOINC cells carry coverage rules (loinc_sources): which source we hold states the link, and which covers the
+    # member without stating it -- so an absent member is our gap, unknown, or no source, never a silent "no"
+    ("PBS medicine ingredients", "drug-level laboratory test (LOINC)", {"final": ["loinc:part_xref"], "dir": "in", "hops": 2,
+        "sources": [("LOINC part mapping names this substance (a LOINC test measures it)", "states", "pl_analyte_ext")],
+        "not_held": "no LOINC part names this substance by the codes it reaches (RxNorm, ChEBI, UNII, PubChem)"}),
+    ("Common laboratory LOINC (top 2,000)", "SNOMED CT", {"target": ["SCT"], "hops": 2,
+        "sources": [("LOINC Extension: the term's official SNOMED CT identifier", "states", "lx_ident"),
+                    ("Athena: LOINC -> SNOMED (Is a / Maps to)", "states", "ath_ls"),
+                    ("LOINC maps only the term's component part to SNOMED CT, not the term", "covers", "part_sct"),
+                    ("Athena holds the term and places it under no SNOMED concept; the LOINC Extension does not model it", "covers", "ath_loinc")],
+        "not_held": "in neither Athena's LOINC nor the LOINC Extension"}),
     ("Common laboratory LOINC (top 2,000)", "AU preferred unit", {"final": ["loinc:au_preferred_unit"], "dir": "out", "hops": 0,
-                                                                  "not_held": "RCPA SPIA rows for this analyte and specimen"}),
-    ("Common laboratory LOINC (top 2,000)", "analyte code (ChEBI, RxNorm, gene ...)", {"final": ["loinc:part_xref"], "dir": "out", "hops": 0}),
-    ("Common laboratory LOINC (top 2,000)", "finding it is interpreted in", {"final": ["loinc:interpreted_in_finding"], "dir": "out", "hops": 0}),
+        "applies": f"SELECT LOINC_NUM FROM read_csv('{LOINC_TABLE}', header=true, all_varchar=true) WHERE SCALE_TYP = 'Qn'",   # a unit is a quantity's
+        "sources": [("RCPA SPIA states the Australian preferred unit", "states", "rcpa_unit"),
+                    ("RCPA SPIA lists the term with no unit", "covers", "rcpa_nounit")],
+        "not_held": "not in the RCPA SPIA reporting sets"}),
+    ("Common laboratory LOINC (top 2,000)", "analyte code (ChEBI, RxNorm, gene ...)", {"final": ["loinc:part_xref"], "dir": "out", "hops": 0,
+        "sources": [("LOINC part mapping: the component part carries an analyte code", "states", "pl_analyte"),
+                    ("LOINC decomposes the term, but its component part carries no analyte code", "covers", "pl_component")],
+        "not_held": "LOINC links no component part for this term"}),
+    ("Common laboratory LOINC (top 2,000)", "finding it is interpreted in", {"final": ["loinc:interpreted_in_finding"], "dir": "out", "hops": 0,
+        "sources": [("the LOINC Extension models the term, but no SNOMED CT finding interprets its component at this specimen", "covers", "lx_ident")],
+        "not_held": "not modelled in the LOINC Extension, the rule's input"}),
     ("HPO phenotypes in use", "SNOMED CT", {"target": ["SCT"], "hops": 2}),
     ("Orphanet disorders", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 1, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
     ("Orphanet disorders", "ICD-11", {"target": ["ICD11", "ICD11MMS"], "hops": 2, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
@@ -187,6 +204,51 @@ def current_statements() -> list[tuple]:
                     if v == "ICD11MMS":
                         out.append(("ORPHA", oc, "ICD11", ref))
     return out
+
+
+def loinc_sources(con) -> None:
+    """The tables the LOINC coverage rules read: node keys ('VOCAB:code') for which a source we hold STATES the expected
+    link (absent from the graph: our gap) or COVERS the member without stating it (unknown -- never 'no link'). Read from
+    the releases themselves, not from the graph, so a loader that drops rows shows up as our gap."""
+    sys.path.insert(0, str(Path(__file__).parent))
+    import build_edges as be
+    rd = lambda p, tab=False: (f"read_csv('{p}', delim='\t', header=true, all_varchar=true, quote='')" if tab
+                               else f"read_csv('{p}', header=true, all_varchar=true)")
+    xs = {"https://www.ebi.ac.uk/chebi": "CHEBI", "http://www.nlm.nih.gov/research/umls/rxnorm": "RXN", "http://pubchem.ncbi.nlm.nih.gov": "PUBCHEM",
+          "http://fdasis.nlm.nih.gov": "UNII", "https://www.ncbi.nlm.nih.gov/taxonomy": "NCBITAXON", "https://www.ncbi.nlm.nih.gov/gene": "NCBIGENE",
+          "http://www.genenames.org": "HGNC", "https://www.ncbi.nlm.nih.gov/clinvar": "CLINVAR"}      # as build_edges.py loads them
+    xcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in xs.items())
+    xlist = ",".join(repr(k) for k in xs)
+    T = be.LOINC_EXT / "Terminology"
+    links = f"SELECT LoincNumber, PartNumber, PartTypeName FROM {rd(be.LOINC_PARTLINK)}" + (
+        f" UNION SELECT LoincNumber, PartNumber, PartTypeName FROM {rd(be.LOINC_PARTLINK_SUPP)} WHERE LinkTypeName = 'DetailedModel'"
+        if be.LOINC_PARTLINK_SUPP.exists() else "")
+    analyte = f"""SELECT pl.LoincNumber, pm.ExtCodeSystem, pm.ExtCodeId FROM ({links}) pl JOIN {rd(be.LOINC_PARTS)} pm ON pm.PartNumber = pl.PartNumber
+                  WHERE pm.ExtCodeSystem IN ({xlist}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')"""
+    tables = {
+        "lx_ident": ([T], f"""SELECT 'LOINC:' || alternateIdentifier FROM {rd(T / 'sct2_Identifier_Snapshot_LO1010000_20260321.txt', True)}
+                             WHERE active = '1' AND identifierSchemeId = '30051010000102'"""),
+        "ath_loinc": ([be.VOCAB_DIR / "CONCEPT.csv"], f"SELECT 'LOINC:' || concept_code FROM {rd(be.VOCAB_DIR / 'CONCEPT.csv', True)} WHERE vocabulary_id = 'LOINC'"),
+        "ath_ls": ([be.VOCAB_DIR / "CONCEPT_RELATIONSHIP.csv"], f"""SELECT 'LOINC:' || l.concept_code FROM {rd(be.VOCAB_DIR / 'CONCEPT_RELATIONSHIP.csv', True)} r
+                   JOIN {rd(be.VOCAB_DIR / 'CONCEPT.csv', True)} l ON l.concept_id = r.concept_id_1 AND l.vocabulary_id = 'LOINC'
+                   JOIN {rd(be.VOCAB_DIR / 'CONCEPT.csv', True)} s ON s.concept_id = r.concept_id_2 AND s.vocabulary_id = 'SNOMED'
+                   WHERE r.relationship_id IN ('Is a', 'Maps to', 'Maps to value') AND coalesce(r.invalid_reason, '') = ''"""),
+        "part_sct": ([be.LOINC_PARTLINK, be.LOINC_PARTS], f"""SELECT 'LOINC:' || pl.LoincNumber FROM {rd(be.LOINC_PARTLINK)} pl
+                     JOIN {rd(be.LOINC_PARTS)} pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
+                     WHERE pl.PartTypeName = 'COMPONENT'"""),
+        "pl_analyte": ([be.LOINC_PARTLINK, be.LOINC_PARTS], f"SELECT 'LOINC:' || LoincNumber FROM ({analyte})"),
+        "pl_analyte_ext": ([be.LOINC_PARTLINK, be.LOINC_PARTS], f"""SELECT CASE ExtCodeSystem {xcase} END || ':' ||
+                           CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END FROM ({analyte})"""),
+        "pl_component": ([be.LOINC_PARTLINK], f"SELECT 'LOINC:' || LoincNumber FROM {rd(be.LOINC_PARTLINK)} WHERE PartTypeName = 'COMPONENT'"),
+    }
+    for name, (need, sql) in tables.items():
+        con.execute(f"CREATE OR REPLACE TEMP TABLE {name} AS SELECT DISTINCT k FROM ("
+                    + (sql if all(p.exists() for p in need) else "SELECT NULL::VARCHAR WHERE false") + ") t(k)")
+    rows = json.load(open(be.RCPA_UNITS))["rows"] if be.RCPA_UNITS.exists() else []
+    unit = lambda x: (x.get("ucum") or "").strip() and (x.get("ucum") or "").strip().lower() != "no unit"
+    for name, keep in (("rcpa_unit", True), ("rcpa_nounit", False)):
+        con.execute(f"CREATE OR REPLACE TEMP TABLE {name} (k VARCHAR)")
+        con.executemany(f"INSERT INTO {name} VALUES (?)", sorted({("LOINC:" + x["loinc"],) for x in rows if x.get("loinc") and bool(unit(x)) == keep}))
 
 
 def build_evidence(con) -> None:
@@ -251,6 +313,7 @@ def main() -> int:
             ORDER BY TRY_CAST(COMMON_TEST_RANK AS INT) LIMIT 2000""")
     else:
         con.execute("CREATE TEMP TABLE lab_top (code VARCHAR)")
+    loinc_sources(con)
     # Orphanet's own status: an entry it has retired (deprecated, or non-rare in Europe) is not a member
     con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
     if ORPHA_XML.exists():
@@ -318,6 +381,14 @@ def main() -> int:
                     cls_, why = "unknown", [spec.get("covers_why", f"covered by {', '.join(spec['covers'])}, which states nothing of this kind")]
                 elif spec.get("decline") and con.execute(f"SELECT count(*) FROM ({spec['decline']}) d(c) WHERE c = ?", [code]).fetchone()[0]:
                     cls_, why = "unknown", ["the map's publisher declines: cannot be classified with available data"]
+            if cls_ is None and spec.get("sources"):
+                # coverage rules (the LOINC cells): the first source that states the link makes it our gap; one that covers
+                # the member without stating it makes it unknown. Matched on the member and what identity reaches from it.
+                nodes = [x for (x,) in con.execute("SELECT DISTINCT node FROM vis WHERE m = ? AND st = 0", [k]).fetchall()]
+                for name, kind, table in spec["sources"]:
+                    if con.execute(f"SELECT count(*) FROM {table} WHERE k IN (SELECT unnest(?::VARCHAR[]))", [nodes]).fetchone()[0]:
+                        cls_, why = ("our_gap" if kind == "states" else "unknown"), [name]
+                        break
             if cls_ is None:
                 pred = sorted(s for s, st in ev if not st) if not final else []
                 au = gv == "SCT" and group != "PBS-listed products" and con.execute("SELECT au_authored FROM cmp.concept WHERE id = ?", [code]).fetchone()
