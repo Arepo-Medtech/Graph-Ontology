@@ -7,7 +7,7 @@ a decision in yet.*
 | queue | size | file | the decision | intake today |
 |---|---:|---|---|---|
 | **Corpus conditions** not bound to SNOMED | 374 (14 newly exact-bound) | `reference/corpus_condition_candidates.json` | bind to one of the candidates, or none | ✅ `binding_review.py --harvest` → `binding_corrections.json` → `apply_corrections.py` (docs/binding-review-loop.md) |
-| **PBS indication texts** not bound | 341 (295 with candidates) | `reference/pbs_indication_bindings.json` (`results`) | the SNOMED condition the listing means | ✅ sheet `pbs_indications` |
+| **PBS indication texts** not bound | 341 (295 with candidates) — **decided 24 Sep by Ken on Claude's first reading, after a second search: 200 accepted (169 likely matches, 19 closest), 107 none; credited "Ken (on Claude's first reading)"** | `reference/pbs_indication_bindings.json` (`results`) | the SNOMED condition the listing means | ✅ sheet `pbs_indications` |
 | **Likelihood ratios**: bound, family held | 130 | `reference/diagnostic_accuracy_bindings.json` | confirm the test / score / prognosis binding | ✅ automatic: the family loads once its binding earns Tier 2 (right 65 of 79 now; needs a lower bound ≥ 0.80) |
 | **Likelihood ratios**: not bound exactly | 455 | same | bind the finding or test to a SNOMED concept | ⚠️ edit the bindings file, re-run `verify_diagnostic_accuracy.py` |
 | **HPO → SNOMED**, names differ | 2,073 phenotypes (2,434 pairs; the rest now reached by the 2026AA same-name load) | `cache/umls/hpo_snomed_candidates.tsv` *(UMLS-derived, not committed)* | same phenotype or not (a sample was right 34 of 40; errors are narrowings) | ✅ sheet `hpo_snomed` |

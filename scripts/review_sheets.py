@@ -162,6 +162,9 @@ def harvest(a) -> int:
                  "reviewer": a.reviewer, "date": date, **({"note": r["note"].strip()} if (r.get("note") or "").strip() else {})}
             k = key(d)
             if k in have:
+                prev = dec["decisions"][have[k]]
+                if prev["decision"] == d["decision"] and prev.get("note", "") == d.get("note", ""):
+                    continue              # unchanged: an old sheet read again must not re-credit a decision
                 dec["decisions"][have[k]] = d
                 changed += 1
             else:
