@@ -1,0 +1,30 @@
+{
+ "_note": "Decisions a person has made on the review queues (scripts/review_sheets.py). Codes and verdicts only. decision: accept (this candidate is right) | reject (it is not) | none (no candidate on this subject is). build_edges.py loads every accept as an edge, tier 'decision'.",
+ "queues": {
+  "survey_instruments": {
+   "predicate": "person:same_as",
+   "question": "same instrument?"
+  },
+  "pbs_indications": {
+   "predicate": "person:same_as",
+   "question": "the SNOMED CT condition the PBS listing means"
+  },
+  "mbs_procedures": {
+   "predicate": "person:funds_procedure",
+   "question": "the SNOMED CT procedure the MBS item funds (a billing rule is not an equivalence)"
+  },
+  "hpo_snomed": {
+   "predicate": "person:same_as",
+   "question": "same phenotype? (a sample was right 34 of 40; errors are narrowings)"
+  },
+  "organism_ncbi": {
+   "predicate": "person:same_as",
+   "question": "same organism? (most are reclassifications)"
+  },
+  "radlex_anatomy": {
+   "predicate": "person:same_as",
+   "question": "the SNOMED CT body structure for this RadLex term"
+  }
+ },
+ "decisions": []
+}

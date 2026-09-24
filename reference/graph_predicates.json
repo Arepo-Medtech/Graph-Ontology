@@ -1814,6 +1814,43 @@
       "source": "SNOMED CT-AU 20260731 Interprets (363714003) + Has interpretation (363713009), reached two ways -- PARALLEL edges, told apart by method: the SNOMED CT LOINC Extension 20260321 observable on Component and specimen; and OMOP Athena v5.0 29-AUG-26's placement of the LOINC term under the interpreted procedure, restricted by the LOINC Extension's specimen",
       "status": "built",
       "note": "Lab result -> finding. SNOMED's is-a does NOT close this chain: lab findings interpret measurement PROCEDURES ('Random blood sugar low' interprets 'Random blood glucose measurement'), and the LOINC Ontology places LOINC terms under OBSERVABLES, so subsumption reaches 14 findings. The bridge is the analyte: the LOINC observable and the Interprets target share a Component and a compatible specimen. Each route (the edge's method) earns its own tier from reference/interprets_handcheck.json: the analyte join 79/80; Athena with the target's specimen 39/40; Athena with a specimen-less target and a blood-family LOINC specimen 40/40 (an assumption that route supplies, so it is scored alone). Unrestricted, Athena's new edges were right 27 times in 53, and are not built; attrs carry the interpretation, the Interprets target, the component and both specimens. Definitional, not diagnostic: DKA is defined partly by a raised glucose, not diagnosed by one."
+    },
+    {
+      "id": "person:same_as",
+      "label": "a person confirmed these two codes denote the same thing",
+      "subject": [
+        "LOINC",
+        "PBS_INDICATION",
+        "HP",
+        "SCT",
+        "RADLEX"
+      ],
+      "object": [
+        "SCT",
+        "NCBITAXON"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "reference/candidate_decisions.json (scripts/review_sheets.py): a reviewer's decision on a review-queue candidate",
+      "status": "built",
+      "note": "Tier 'decision'. method names the reviewer and the date; attrs.queue the queue (survey instruments, PBS indication texts, HPO -> SNOMED and SNOMED organism -> NCBI Taxonomy pairs whose names differ, RadLex anatomy). Rejections are recorded in the file, not loaded."
+    },
+    {
+      "id": "person:funds_procedure",
+      "label": "a person confirmed this MBS item funds this SNOMED CT procedure",
+      "subject": [
+        "MBS"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "reference/candidate_decisions.json (scripts/review_sheets.py), queue mbs_procedures",
+      "status": "built",
+      "note": "Not an equivalence: a billing item funds a procedure (it may fund several, and set conditions). Tier 'decision'; method names the reviewer and the date."
     }
   ],
   "not_imported": {

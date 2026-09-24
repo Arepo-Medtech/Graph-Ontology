@@ -889,6 +889,8 @@ def main() -> int:
     # inadmissible -- kept, marked in attrs.held, not followed.
     if bh.exists():
         import consistency
+        # a re-run of the report starts from the families' own tiers (reset above): clear last run's marks first
+        con.execute("""UPDATE edge SET attrs = json_merge_patch(attrs, '{"held": null}') WHERE (attrs->>'held') IS NOT NULL""")
         _, _, br, _, _ = consistency.compute(con)
         held = [(a_, b_, p_) for (a_, b_, p_, m_), n_ in br.items() if n_ >= 2 and p_ in ("umls:shared_cui", "umls:concept_member")]
         con.execute("CREATE TEMP TABLE umls_bridge (a VARCHAR, b VARCHAR, p VARCHAR)")
@@ -902,6 +904,18 @@ def main() -> int:
         report["consistency:bridge hand check"]["umls_bridges_on_two_or_more_paths"] = {
             "held_back_edges": con.execute("SELECT count(*) FROM edge WHERE (attrs->>'held') IS NOT NULL").fetchone()[0],
             "checked": n_, "correct": k_, "wilson_lo": round(wilson(k_, n_)[0], 4), "earned_tier": tier(wilson(k_, n_)[0], n_)}
+
+    # --- decisions a person made on the review queues (reference/candidate_decisions.json) ----------------------------
+    dfile = Path("reference/candidate_decisions.json")
+    if dfile.exists():
+        ds = json.load(open(dfile)).get("decisions", [])
+        byq = {}
+        for d in ds:
+            q = byq.setdefault(d["queue"], {"accept": 0, "reject": 0, "none": 0})
+            q[d["decision"]] += 1
+        report["decisions:by a person (review queues)"] = {
+            "by_queue": byq, "reviewers": sorted({d["reviewer"] for d in ds}),
+            "edges_loaded": con.execute("SELECT count(*) FROM edge WHERE tier = 'decision' AND source = 'reviewer'").fetchone()[0]}
 
     # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
     # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
