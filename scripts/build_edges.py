@@ -77,6 +77,8 @@ UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path(
 AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
 HGNC_SET = Path("cache/hgnc/hgnc_complete_set.txt")           # HGNC complete set, downloaded 24 Sep 2026 (CC0)
 ORPHA_XML = Path("cache/orphanet/en_product1.xml")            # Orphadata product 1, 2026-06-23 (CC BY 4.0)
+ORPHA_GENES = Path("cache/orphanet/en_product6.xml")          # Orphadata product 6 (genes), 2026-06-23, 22.6 MB (CC BY 4.0)
+ORPHA_PHENO = Path("cache/orphanet/en_product4.xml")          # Orphadata product 4 (HPO phenotypes), 2026-06-23, 47.9 MB (CC BY 4.0)
 SCT_US_XMAP = Path("cache/snomed-us/extended_map_20260901.parquet")   # scripts/snomed_us_maps.py: SNOMED -> ICD-10 / ICD-10-CM maps (licensed)
 WHO_MAP = Path("cache/who-icd11")                             # WHO ICD-10 <-> ICD-11 mapping tables, release 2026-01 (CC BY-ND 3.0 IGO)
 REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
@@ -227,6 +229,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI, "UMLS 2026AA shared-CUI pairs (scripts/umls_mrconso.py)": UMLS_PAIRS, "UMLS 2026AA MRCONSO": UMLS_CONSO,
             "UMLS 2026AA relationships (scripts/umls_mrrel.py)": UMLS_REL, "UMLS 2026AA MRMAP (CCSR)": UMLS_MRMAP,
             "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
+            "Orphanet genes (product 6)": ORPHA_GENES, "Orphanet phenotypes (product 4)": ORPHA_PHENO,
             "Reactome": REACTOME / "UniProt2Reactome.txt", "WHO ICD-10 <-> ICD-11 tables": WHO_MAP / "10To11MapToOneCategory.txt",
             "SNOMED -> ICD-10 / ICD-10-CM maps (scripts/snomed_us_maps.py)": SCT_US_XMAP}
 
@@ -1115,6 +1118,49 @@ def main() -> int:
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
         con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
         con.executemany("INSERT INTO orpha_level VALUES (?, ?, ?)", sorted(set(level_o)))
+
+    # --- Orphanet's own gene and phenotype files (products 6 and 4) ------------------------------------------------
+    # HPO relays both, but without Orphanet's detail: the gene file says HOW a gene is involved (disease-causing germline
+    # mutation, loss or gain of function, susceptibility factor, candidate gene tested, part of a fusion gene ...), with
+    # Orphanet's validation status and sources; the phenotype file carries the frequency band, whether the sign is a
+    # diagnostic criterion or pathognomonic, and exclusions ("Excluded (0%)": a stated absence, loaded as lacks_phenotype).
+    # Gene links Orphanet has not yet assessed are counted, not loaded.
+    if ORPHA_GENES.exists():
+        import xml.etree.ElementTree as ET
+        rows_g, names_g, skipped = [], [], {"not yet assessed": 0, "no HGNC id": 0}
+        for d in ET.parse(ORPHA_GENES).getroot().iter("Disorder"):
+            oc = d.findtext("OrphaCode")
+            for a_ in d.iter("DisorderGeneAssociation"):
+                g_ = a_.find("Gene")
+                hg = next((x.findtext("Reference") for x in g_.iter("ExternalReference") if x.findtext("Source") == "HGNC"), None) if g_ is not None else None
+                status = a_.findtext("DisorderGeneAssociationStatus/Name")
+                if status != "Assessed":
+                    skipped["not yet assessed"] += 1
+                    continue
+                if not hg:
+                    skipped["no HGNC id"] += 1
+                    continue
+                names_g.append(("HGNC:" + hg, g_.findtext("Symbol")))
+                rows_g.append(("HGNC", "HGNC:" + hg, "orpha:gene_disease", "ORPHA", oc, "Orphanet", "en_product6.xml DisorderGeneAssociation",
+                               a_.findtext("DisorderGeneAssociationType/Name"), "native", "asserted", PIN["orphanet"],
+                               json.dumps({"symbol": g_.findtext("Symbol"), "status": status, "validation": a_.findtext("SourceOfValidation")})))
+        ins_rows("Orphanet gene -> disorder (product 6, with the kind of involvement)", sorted(set(rows_g)))
+        for k_, v_ in skipped.items():
+            log[f"Orphanet gene -> disorder: not loaded, {k_}"] = v_
+        con.executemany("INSERT INTO name_hint VALUES ('HGNC', ?, ?)", sorted(set(names_g)))
+    if ORPHA_PHENO.exists():
+        import xml.etree.ElementTree as ET
+        rows_p = []
+        for st_ in ET.parse(ORPHA_PHENO).getroot().iter("HPODisorderSetStatus"):
+            oc = st_.findtext("Disorder/OrphaCode")
+            for a_ in st_.iter("HPODisorderAssociation"):
+                hp_, fq = a_.findtext("HPO/HPOId"), a_.findtext("HPOFrequency/Name")
+                if not (oc and hp_):
+                    continue
+                rows_p.append(("ORPHA", oc, "orpha:lacks_phenotype" if fq and fq.startswith("Excluded") else "orpha:has_phenotype", "HP", hp_,
+                               "Orphanet", "en_product4.xml HPODisorderAssociation", fq or "frequency not stated", "native", "asserted",
+                               PIN["orphanet"], json.dumps({"frequency": fq, "diagnostic_criteria": a_.findtext("DiagnosticCriteria/Name")})))
+        ins_rows("Orphanet disorder -> HPO phenotype, with frequency (product 4)", sorted(set(rows_p)))
 
     # --- WHO's ICD-10 <-> ICD-11 mapping tables, and ICD-11's two identifiers ---------------------------------------
     # MMS codes (what is coded: Orphanet cites them) and foundation ids (what the entity is: MONDO cites them) are two

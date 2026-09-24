@@ -591,6 +591,16 @@ target → protein → **pathway** now closes: **2,549 DrugCentral drugs and 1,8
 pathway through a target**, and **9,135 diseases reach one through a gene** (HPO genes_to_disease → NCBI Gene → HGNC →
 UniProt → Reactome).
 
+**Orphanet's gene and phenotype files (built, 24 Sep).** Orphadata product 6 (`cache/orphanet/en_product6.xml`, 22.6 MB)
+and product 4 (`en_product4.xml`, 47.9 MB), release 2026-06-23, CC BY 4.0. HPO relays both — 99.4% of the gene pairs and
+99.7% of the phenotype pairs are already in `hpo:gene_disease` / `hpo:has_phenotype` — but drops Orphanet's detail, which
+is what these add. `orpha:gene_disease` (8,133, HGNC → Orphanet) carries **how** the gene is involved as its method:
+disease-causing germline mutation 5,408, loss of function 1,222, gain of function 214, susceptibility factor 393, fusion
+gene 261, somatic 243, role in the phenotype 277, modifier 56, biomarker 47, candidate gene tested 12 (HPO relays all as
+UNKNOWN); the 367 Orphanet has not yet assessed are counted, not loaded. `orpha:has_phenotype` (115,908) carries the
+frequency band as its method and marks **1,096 diagnostic criteria and 19 pathognomonic signs**; `orpha:lacks_phenotype`
+(733, "Excluded (0%)") is a stated absence — HPO's NOT annotations carry 726 of them.
+
 ## ICD-10 ↔ ICD-11: WHO's mapping tables (built)
 
 WHO's tables from the ICD-11 2026-01 release (`cache/who-icd11/`, 6.8 MB, CC BY-ND 3.0 IGO; codes only, no titles):
@@ -844,7 +854,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
 #   read in place: ~/Documents/ONTOLOGIES/PunRadLex_Owl4.3/RadLex.owl (RadLex 4.3) and complete-playbook-dev.csv (RSNA_PLAYBOOK)
-# sources added 24 Sep: cache/who-icd11/ (WHO mapping.zip, ICD-11 2026-01, 6.8 MB), cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
+# sources added 24 Sep: cache/orphanet/en_product6.xml 22.6 MB + en_product4.xml 47.9 MB (Orphadata genes, phenotypes), cache/who-icd11/ (WHO mapping.zip, ICD-11 2026-01, 6.8 MB), cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
 .venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register

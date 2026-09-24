@@ -26,7 +26,7 @@ that. For each group that matters in Australia and each edge its members should 
 Class counts are scaled from the sample to the cell's absent members; the interval is the Wilson 95% interval of the
 *our gap* share of the absent. Nothing here writes an edge.
 
-## The table (graph 1,544,958 nodes / 7,939,802 edges)
+## The table (graph 1,545,027 nodes / 8,064,578 edges)
 
 | group | expectation | members | present | absent: our gap | unknown | no source held | our gap, share of absent (95%) |
 |---|---|---:|---:|---:|---:|---:|---|
@@ -56,8 +56,8 @@ Class counts are scaled from the sample to the cell's absent members; the interv
 | Orphanet disorders | MONDO | 9,886 (+535 n/a) | **97.0%** | 0 | 18 | 276 | 0–7% |
 | Orphanet disorders | SNOMED CT | 9,886 (+535 n/a) | **71.4%** | 113 | 0 | 2,718 | 1–14% |
 | Orphanet disorders (disorder or subtype level) | ICD-10 (WHO) | 7,751 (+372 n/a) | **96.7%** | 0 | 258 | 0 | 0–7% |
-| Orphanet disorders | gene | 9,886 (+535 n/a) | **42.7%** | 0 | 0 | 5,667 | 0–7% |
-| Orphanet disorders | HPO phenotype | 9,886 (+535 n/a) | **44.0%** | 0 | 0 | 5,531 | 0–7% |
+| Orphanet disorders | gene | 9,886 (+535 n/a) | **42.9%** | 0 | 5,643 | 0 | 0–7% |
+| Orphanet disorders | HPO phenotype | 9,886 (+535 n/a) | **44.0%** | 0 | 5,531 | 0 | 0–7% |
 | MBS items | SNOMED CT procedure | 6,046 | **0.0%** | 0 | 0 | 6,046 | 0–7% |
 
 ## What it says
@@ -108,7 +108,10 @@ OMIM: Orphanet's own alignments name none.
 - **Disorders → MONDO (82,000) and → HPO phenotypes (83,000).** MONDO and the HPO annotations cover diseases — largely
   genetic and rare — not injuries, poisonings or common findings. Much of this is out of the sources' scope, which only a
   person can confirm; it is not evidence of absence.
-- **Orphanet genes (6,200) and phenotypes (6,100)**: Orphadata product6 and product4, not yet held (workstream 2).
+- **Orphanet genes and phenotypes — now held, and the silence is Orphanet's.** Orphadata products 6 and 4 are loaded
+  (24 Sep). HPO had relayed nearly all of it (99.7% of phenotype pairs, 99.4% of gene pairs), so coverage barely moves
+  (genes 42.7% → 42.9%), but every disorder without a gene or phenotype is now *unknown — Orphanet's own file states
+  none*, where before it was *no source held*.
 - **Laboratory LOINC**: the AU preferred unit (RCPA's sets cover a subset of analytes), the analyte code, the finding.
   Coverage rules for LOINC are not yet written, so its unknown and no-source cases are not yet told apart.
 - **PBS products → OMOP (4,600)**: AMT products Athena has no mapping for (the known post-2021 gap).

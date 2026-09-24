@@ -1129,6 +1129,57 @@
       "note": "A chain rule (workstream 3): only for ACTIVE Orphanet disorder- and subtype-level entries (most entries without an ICD-10 code of their own are ones Orphanet has retired, which it strips of codes) with no ICD-10 code of Orphanet's own, and only through SNOMED maps with a single unconditional group. source_locator names the three steps; attrs carry the intermediate and SNOMED ids. Tier from a census (cache/orphanet/orpha_icd10_chain_census.json) with Orphanet's own exact ICD-10 codes as the witness (graph_report.py); wrong rows rejected by name."
     },
     {
+      "id": "orpha:gene_disease",
+      "label": "gene is involved in this Orphanet disorder (Orphanet says how)",
+      "subject": [
+        "HGNC"
+      ],
+      "object": [
+        "ORPHA"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Orphadata product 6 (en_product6.xml), 2026-06-23, CC BY 4.0",
+      "status": "built",
+      "primekg_relation": "disease_protein",
+      "note": "method is Orphanet's association type (Disease-causing germline mutation(s) in, ... (loss of function) in, Major susceptibility factor in, Candidate gene tested in, Part of a fusion gene in, Role in the phenotype of ...) -- the detail HPO's genes_to_disease drops (it relays these rows as UNKNOWN). Only associations Orphanet has assessed; attrs carry the gene symbol and Orphanet's sources of validation (PMIDs). The gene is keyed by HGNC id."
+    },
+    {
+      "id": "orpha:has_phenotype",
+      "label": "Orphanet disorder presents with this HPO phenotype",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "ordinal",
+      "source": "Orphadata product 4 (en_product4.xml), 2026-06-23, CC BY 4.0",
+      "status": "built",
+      "primekg_relation": "disease_phenotype_positive",
+      "note": "method is Orphanet's frequency band (Obligate (100%), Very frequent (99-80%), Frequent (79-30%), Occasional (29-5%), Very rare (<4-1%)); attrs.diagnostic_criteria marks a diagnostic criterion or a pathognomonic sign. HPO's phenotype.hpoa relays the same annotations (hpo:has_phenotype, ORPHA rows); this is Orphanet's own file, loaded beside it."
+    },
+    {
+      "id": "orpha:lacks_phenotype",
+      "label": "Orphanet disorder is stated NOT to present with this HPO phenotype",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "ordinal",
+      "source": "Orphadata product 4 (frequency 'Excluded (0%)')",
+      "status": "built",
+      "primekg_relation": "disease_phenotype_negative",
+      "note": "A negative the source states outright: one of the graph's few recorded absences."
+    },
+    {
       "id": "who:icd10_to_icd11",
       "label": "WHO maps this ICD-10 code to this ICD-11 (MMS) code",
       "subject": [
