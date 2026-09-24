@@ -107,8 +107,8 @@ CELLS = [
     ("Problem/Diagnosis", "ICD-11", {"target": ["ICD11", "ICD11MMS"], "hops": 4, "decline": DECLINE_ICD10, "applies": ICD_SCOPE}),
     ("Problem/Diagnosis", "ICD-10-CM", {"target": ["ICD10CM"], "hops": 2, "decline": DECLINE_ICD10CM, "applies": ICD_SCOPE}),
     ("Problem/Diagnosis disorders", "MONDO", {"target": ["MONDO"], "hops": 2}),
-    ("Problem/Diagnosis disorders", "HPO phenotype", {"final": ["hpo:has_phenotype"], "dir": "out", "hops": 2, "covers": DISEASE_V,
-                                                     "not_held": "Orphadata product4 (phenotypes of rare diseases)"}),
+    ("Problem/Diagnosis disorders", "HPO phenotype", {"final": ["hpo:has_phenotype", "orpha:has_phenotype"], "dir": "out", "hops": 2,
+                                                     "covers": DISEASE_V}),
     ("ED principal diagnosis", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 2, "decline": DECLINE_ICD10, "applies": ICD_SCOPE}),
     ("ED principal diagnosis", "ICD-11", {"target": ["ICD11", "ICD11MMS"], "hops": 4, "decline": DECLINE_ICD10, "applies": ICD_SCOPE}),
     ("ED principal diagnosis", "CCSR category", {"target": ["CCSR"], "hops": 2, "decline": DECLINE_ICD10CM, "applies": ICD_SCOPE,
@@ -135,9 +135,10 @@ CELLS = [
     ("Orphanet disorders", "SNOMED CT", {"target": ["SCT"], "hops": 2}),
     ("Orphanet disorders (disorder or subtype level)", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 1, "covers": ("ORPHA",),
         "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
-    ("Orphanet disorders", "gene", {"final": ["hpo:gene_disease"], "dir": "in", "hops": 0, "not_held": "Orphadata product6 (genes)"}),
-    ("Orphanet disorders", "HPO phenotype", {"final": ["hpo:has_phenotype"], "dir": "out", "hops": 0,
-                                             "not_held": "Orphadata product4 (phenotypes)"}),
+    ("Orphanet disorders", "gene", {"final": ["hpo:gene_disease", "orpha:gene_disease"], "dir": "in", "hops": 0, "covers": ("ORPHA",),
+                                    "covers_why": "Orphanet's gene file (product 6) states no gene for this disorder"}),
+    ("Orphanet disorders", "HPO phenotype", {"final": ["hpo:has_phenotype", "orpha:has_phenotype"], "dir": "out", "hops": 0,
+                                             "covers": ("ORPHA",), "covers_why": "Orphanet's phenotype file (product 4) states none for this disorder"}),
     ("MBS items", "SNOMED CT procedure", {"target": ["SCT"], "hops": 2,
                                           "not_held": "none published: candidate frames in reference/mbs_procedure_candidates.json"}),
 ]
@@ -295,7 +296,7 @@ def main() -> int:
                     cls_, why = "our_gap", ["held back by a hand check (inadmissible family)"]
                 elif spec.get("covers") and con.execute(f"""SELECT count(*) FROM vis WHERE m = ? AND split_part(node, ':', 1) IN ({q(spec['covers'])})""",
                                                         [k]).fetchone()[0]:
-                    cls_, why = "unknown", [f"covered by a source for {', '.join(spec['covers'])}, which states nothing of this kind"]
+                    cls_, why = "unknown", [spec.get("covers_why", f"covered by a source for {', '.join(spec['covers'])}, which states nothing of this kind")]
             else:
                 ev3 = con.execute(f"""SELECT DISTINCT src, stated, superseded FROM evidence WHERE v1 || ':' || c1 IN (SELECT unnest(?::VARCHAR[]))
                                       AND v2 IN ({q(spec['target'])})""", [near]).fetchall()

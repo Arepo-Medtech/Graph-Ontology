@@ -726,6 +726,29 @@ def main() -> int:
             FROM own WHERE own.orpha IN (SELECT orpha FROM via)""").fetchone()))
         report["chain:Orphanet -> ICD-10 via SNOMED CT's map"] = ch
 
+    # --- Orphanet's own gene and phenotype files beside HPO's relay of them --------------------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate IN ('orpha:gene_disease', 'orpha:has_phenotype')").fetchone()[0]:
+        og = {}
+        og["genes_by_involvement"] = dict(con.execute("""SELECT method, count(*) FROM edge WHERE predicate = 'orpha:gene_disease'
+                                                         GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+        og["phenotypes_by_frequency"] = dict(con.execute("""SELECT method, count(*) FROM edge WHERE predicate IN ('orpha:has_phenotype', 'orpha:lacks_phenotype')
+                                                           GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+        og["diagnostic_criteria"] = dict(con.execute("""SELECT attrs->>'diagnostic_criteria', count(*) FROM edge WHERE predicate = 'orpha:has_phenotype'
+                                                       AND (attrs->>'diagnostic_criteria') IS NOT NULL GROUP BY 1""").fetchall())
+        og["witness_hpo_relay_phenotypes"] = dict(zip(("orphanet_pairs", "also_in_hpo_annotations", "hpo_orpha_pairs", "also_in_orphanet"), con.execute("""
+            WITH o AS (SELECT DISTINCT s_code d, o_code h FROM edge WHERE predicate = 'orpha:has_phenotype'),
+                 h AS (SELECT DISTINCT s_code d, o_code h FROM edge WHERE predicate = 'hpo:has_phenotype' AND s_vocab = 'ORPHA')
+            SELECT (SELECT count(*) FROM o), (SELECT count(*) FROM o WHERE (d, h) IN (SELECT d, h FROM h)),
+                   (SELECT count(*) FROM h), (SELECT count(*) FROM h WHERE (d, h) IN (SELECT d, h FROM o))""").fetchone()))
+        og["witness_hpo_relay_genes"] = dict(zip(("orphanet_pairs", "also_in_hpo_genes_to_disease"), con.execute("""
+            WITH o AS (SELECT DISTINCT x.o_code gene, e.o_code d FROM edge e JOIN edge x ON x.predicate = 'hgnc:xref' AND x.s_code = e.s_code AND x.o_vocab = 'NCBIGENE'
+                       WHERE e.predicate = 'orpha:gene_disease'),
+                 h AS (SELECT DISTINCT s_code gene, o_code d FROM edge WHERE predicate = 'hpo:gene_disease' AND o_vocab = 'ORPHA')
+            SELECT (SELECT count(*) FROM (SELECT DISTINCT s_code, o_code FROM edge WHERE predicate = 'orpha:gene_disease')),
+                   (SELECT count(*) FROM o WHERE (gene, d) IN (SELECT gene, d FROM h))""").fetchone()))
+        og["stated_absences"] = con.execute("SELECT count(*) FROM edge WHERE predicate = 'orpha:lacks_phenotype'").fetchone()[0]
+        report["orphanet:genes and phenotypes (products 6 and 4)"] = og
+
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'ccsr:category'").fetchone()[0]:
         report["classification:ICD-10-CM -> AHRQ CCSR categories"] = dict(zip(("edges", "icd10cm_codes_classified", "of_icd10cm_codes_in_graph",
                 "categories", "body_systems", "codes_in_more_than_one_category"), con.execute("""
