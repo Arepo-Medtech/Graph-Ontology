@@ -692,6 +692,40 @@ def main() -> int:
                                                      UNION SELECT o_code FROM edge WHERE o_vocab = 'ORPHA' AND s_vocab = 'SCT')""").fetchone()[0]
         report["route:UMLS concept -> SNOMED CT (MRCONSO 2026AA)"] = cm
 
+    # --- Orphanet -> ICD-10 through SNOMED CT's map: a chain family, tiered by census, witnessed by Orphanet itself ------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'orpha:icd10_via_snomed'").fetchone()[0]:
+        cf = Path("cache/orphanet/orpha_icd10_chain_census.json")      # SNOMED / UMLS-derived names: git-ignored
+        cs = json.load(open(cf))["census"] if cf.exists() else []
+        con.execute("CREATE TEMP TABLE och (o VARCHAR, i VARCHAR, ok BOOLEAN)")
+        con.executemany("INSERT INTO och VALUES (?, ?, ?)", sorted({(r["orpha"], r["icd10"], r["verdict"] == "correct") for r in cs}))
+        pairs = con.execute("SELECT DISTINCT s_code, o_code FROM edge WHERE predicate = 'orpha:icd10_via_snomed'").fetchall()
+        k, n = con.execute("""SELECT count(*) FILTER (WHERE h.ok), count(*) FROM (SELECT DISTINCT s_code, o_code FROM edge
+                              WHERE predicate = 'orpha:icd10_via_snomed') e JOIN och h ON h.o = e.s_code AND h.i = e.o_code""").fetchone()
+        ch = {"edges": con.execute("SELECT count(*) FROM edge WHERE predicate = 'orpha:icd10_via_snomed'").fetchone()[0],
+              "orphanet_disorders": len({p_ for p_, _ in pairs}), "pairs": len(pairs), "census_pairs_checked": n, "correct": k}
+        if n:
+            lo, _ = wilson(k, n)
+            t_ = tier(lo, n) if n >= len(pairs) or n >= 30 else "ungraded"
+            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'orpha:icd10_via_snomed'", [t_])
+            con.execute("""UPDATE edge SET state = 'rejected' WHERE predicate = 'orpha:icd10_via_snomed'
+                           AND (s_code, o_code) IN (SELECT o, i FROM och WHERE NOT ok)""")
+            ch.update(wilson_lo=round(lo, 4), earned_tier=t_, unchecked_pairs=len(pairs) - n)
+        # witness: where Orphanet has its own exact ICD-10 code, what the same chain (without the gap filter) gives
+        ch["witness_orphanet_exact_codes"] = dict(zip(("disorders", "same_code", "same_3_character_category"), con.execute("""
+            WITH o2s AS (SELECT DISTINCT x.s_code orpha, m.o_code sct FROM edge x JOIN edge m ON m.predicate = 'umls:concept_member'
+                             AND m.s_code = x.o_code AND m.state <> 'rejected' WHERE x.predicate = 'orpha:xref' AND x.o_vocab = 'UMLS' AND x.method = 'E'
+                         UNION SELECT DISTINCT x.s_code, e.o_code FROM edge x JOIN edge e ON e.predicate = 'mondo:exact_match' AND e.s_code = x.o_code
+                             AND e.o_vocab = 'SCT' WHERE x.predicate = 'orpha:xref' AND x.o_vocab = 'MONDO' AND x.method = 'E'),
+                 single AS (SELECT s_code FROM edge WHERE predicate = 'sct:icd10_map' GROUP BY 1
+                            HAVING max(CAST(attrs->>'group' AS INT)) = 1 AND bool_and(method = 'unconditional')),
+                 via AS (SELECT DISTINCT o.orpha, i.o_code icd FROM o2s o JOIN edge i ON i.predicate = 'sct:icd10_map' AND i.s_code = o.sct
+                         WHERE i.s_code IN (SELECT s_code FROM single)),
+                 own AS (SELECT DISTINCT s_code orpha, o_code icd FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'ICD10WHO' AND method = 'E')
+            SELECT count(DISTINCT own.orpha), count(DISTINCT own.orpha) FILTER (WHERE (own.orpha, own.icd) IN (SELECT orpha, icd FROM via)),
+                   count(DISTINCT own.orpha) FILTER (WHERE EXISTS (SELECT 1 FROM via v WHERE v.orpha = own.orpha AND left(v.icd, 3) = left(own.icd, 3)))
+            FROM own WHERE own.orpha IN (SELECT orpha FROM via)""").fetchone()))
+        report["chain:Orphanet -> ICD-10 via SNOMED CT's map"] = ch
+
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'ccsr:category'").fetchone()[0]:
         report["classification:ICD-10-CM -> AHRQ CCSR categories"] = dict(zip(("edges", "icd10cm_codes_classified", "of_icd10cm_codes_in_graph",
                 "categories", "body_systems", "codes_in_more_than_one_category"), con.execute("""

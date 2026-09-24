@@ -1113,6 +1113,22 @@
       "note": "Orphanet's own alignment, not MONDO's. method is Orphanet's relation: E (exact), NTBT (the ORPHAcode is narrower than the target -- the usual case for ICD-10), BTNT (broader), ND (undecided); attrs.validation and attrs.icd_relation as Orphanet states them. Only E is an equivalence. MedDRA left out (MSSO licence)."
     },
     {
+      "id": "orpha:icd10_via_snomed",
+      "label": "Orphanet disorder is classified to this ICD-10 code, through SNOMED CT's map",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "ICD10WHO"
+      ],
+      "category": "classification",
+      "derivation": "chain",
+      "strength_kind": "exact",
+      "source": "derived: Orphanet's exact alignment (orpha:xref E) to a UMLS concept or MONDO disease -> its SNOMED CT concept (umls:concept_member / mondo:exact_match) -> SNOMED International's ICD-10 map (sct:icd10_map)",
+      "status": "built",
+      "note": "A chain rule (workstream 3): only for Orphanet disorder- and subtype-level entries with no ICD-10 code of Orphanet's own, and only through SNOMED maps with a single unconditional group. source_locator names the three steps; attrs carry the intermediate and SNOMED ids. Tier from a census (cache/orphanet/orpha_icd10_chain_census.json) with Orphanet's own exact ICD-10 codes as the witness (graph_report.py); wrong rows rejected by name."
+    },
+    {
       "id": "who:icd10_to_icd11",
       "label": "WHO maps this ICD-10 code to this ICD-11 (MMS) code",
       "subject": [

@@ -12,7 +12,8 @@ that. For each group that matters in Australia and each edge its members should 
 - **absent**: 50 members per cell, drawn by a seeded hash so every run sees the same ones, each classed:
   - **our gap** — a source we hold states it and the graph does not carry it: SeMRA's aggregated mappings (only the
     ones a source states — its lexical predictions, its own chaining and the 2019 predicted MeSH/ICD set count as
-    *predicted*, not stated), a UMLS shared concept (including pairs held back because the names differ), or an edge
+    *predicted*, not stated; a row from an older release of MONDO, Orphanet or HPO that the current release we hold no
+    longer states counts as *superseded*, which is unknown), a UMLS shared concept (including pairs held back because the names differ), or an edge
     held back by a hand check. The fix is a load or a check.
   - **unknown** — a source that covers the member for this kind of edge says nothing, or declines outright (SNOMED's
     ICD-10 map: *cannot be classified with available data*; Orphanet's own alignments naming no ICD-10 code). Recorded as
@@ -25,7 +26,7 @@ that. For each group that matters in Australia and each edge its members should 
 Class counts are scaled from the sample to the cell's absent members; the interval is the Wilson 95% interval of the
 *our gap* share of the absent. Nothing here writes an edge.
 
-## The table (graph 1,544,958 nodes / 7,939,796 edges)
+## The table (graph 1,544,958 nodes / 7,939,871 edges)
 
 | group | expectation | members | present | absent: our gap | unknown | no source held | our gap, share of absent (95%) |
 |---|---|---:|---:|---:|---:|---:|---|
@@ -49,11 +50,12 @@ Class counts are scaled from the sample to the cell's absent members; the interv
 | Common laboratory LOINC (top 2,000) | analyte code (ChEBI, RxNorm, gene ...) | 2,000 | **27.8%** | 0 | 0 | 1,444 | 0–7% |
 | Common laboratory LOINC (top 2,000) | finding it is interpreted in | 2,000 | **11.1%** | 0 | 0 | 1,778 | 0–7% |
 | HPO phenotypes in use | SNOMED CT | 11,560 | **31.7%** | 1,106 | 0 | 6,791 | 7–26% |
-| Orphanet disorders | ICD-10 (WHO) | 10,421 | **73.6%** | 934 | 1,814 | 0 | 22–48% |
-| Orphanet disorders | ICD-11 | 10,421 | **77.8%** | 0 | 2,312 | 0 | 0–7% |
+| Orphanet disorders | ICD-10 (WHO) | 10,421 | **74.2%** | 108 | 2,581 | 0 | 1–14% |
+| Orphanet disorders | ICD-11 | 10,421 | **78.3%** | 0 | 2,264 | 0 | 0–7% |
 | Orphanet disorders | OMIM | 10,421 | **48.7%** | 107 | 5,240 | 0 | 0–10% |
-| Orphanet disorders | MONDO | 10,421 | **94.2%** | 456 | 0 | 144 | 63–86% |
+| Orphanet disorders | MONDO | 10,421 | **94.2%** | 300 | 156 | 144 | 37–63% |
 | Orphanet disorders | SNOMED CT | 10,421 | **70.2%** | 124 | 0 | 2,978 | 1–14% |
+| Orphanet disorders (disorder or subtype level) | ICD-10 (WHO) | 8,123 | **93.6%** | 0 | 519 | 0 | 0–7% |
 | Orphanet disorders | gene | 10,421 | **40.5%** | 0 | 0 | 6,202 | 0–7% |
 | Orphanet disorders | HPO phenotype | 10,421 | **41.8%** | 0 | 0 | 6,066 | 0–7% |
 | MBS items | SNOMED CT procedure | 6,046 | **0.0%** | 0 | 0 | 6,046 | 0–7% |
@@ -72,9 +74,17 @@ Class counts are scaled from the sample to the cell's absent members; the interv
    edges, hand check 30/30, Tier 2; drugs left out, since UMLS files a substance and SNOMED's "Product containing" it
    under one concept): Orphanet disorders reaching SNOMED **51.1% → 70.2%**, and — through the UMLS concepts MONDO
    names — Problem/Diagnosis disorders reaching MONDO 11.3% → 13.8%.
-3. **Orphanet disorder → ICD-10 (~900) and → MONDO (~460 of 600 absent).** SeMRA carries MONDO's own cross-references,
-   which the graph loads only from MONDO's exact-match file. For MONDO, half the sampled gaps rest on xrefs MONDO
-   annotates `equivalentObsolete` — to be read before anything loads.
+3. **Orphanet disorder → ICD-10 — mostly not a gap; the rest closed by a chain rule.** The ~900 first counted came from
+   SeMRA's copies of *older* MONDO and Orphanet releases: MONDO has since retired all but 209 of its ICD-10
+   cross-references, and Orphanet's current file gives, say, *Northern epilepsy* an ICD-11 code and no ICD-10 one. The
+   measure now marks such rows **superseded** (the current release we hold covers the disorder and no longer states
+   it: unknown, not our gap), which takes the held gap to ~110. Most of the remaining absences are Orphanet *groups*,
+   which Orphanet deliberately leaves without an ICD-10 code. For disorders and subtypes a chain rule now carries
+   SNOMED International's classification across: `orpha:icd10_via_snomed` (Orphanet's exact UMLS / MONDO alignment →
+   its SNOMED concept → SNOMED's single-group ICD-10 map), 63 disorders, census 60/65 (Tier 2); where Orphanet has its
+   own exact code the same chain gives that code for 424 of 474 and its category for 459. **93.6%** of Orphanet's
+   disorder- and subtype-level entries now reach ICD-10, and every sampled absence is Orphanet stating none.
+   MONDO's remaining held evidence for Orphanet → MONDO is in its current file, annotated `equivalentObsolete`.
 4. **PBS ingredient → mechanism (~160) and → indication (~60).** Held back by a hand check: MED-RT's uncorroborated
    mechanism and may-treat families. A second witness (as the FDA classes did for mechanism) would lift them.
 
