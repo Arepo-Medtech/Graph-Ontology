@@ -57,13 +57,16 @@ def candidates():
         for i, r in enumerate(json.load(open(p))["candidates"]):
             out.append(("survey_instruments", "LOINC", r["loinc"], r["loinc_name"], 1, "SCT", r["sct"], r["sct_name"], r.get("my_read", "")))
     p = Path("reference/pbs_indication_bindings.json")
+    fr = Path("reference/pbs_indication_first_reading.json")
+    pbs_read = json.load(open(fr))["readings"] if fr.exists() else {}
     if p.exists():
         for r in json.load(open(p))["results"]:
             if r.get("bound"):
                 continue
             for k, c in enumerate(r.get("candidates") or [], 1):
                 out.append(("pbs_indications", "PBS_INDICATION", str(r["indication_prescribing_txt_id"]), r["text"], k, "SCT",
-                            c["concept_id"], c["display"], ""))
+                            c["concept_id"], c["display"],
+                            pbs_read.get(str(r["indication_prescribing_txt_id"]), {}).get(c["concept_id"], "")))
     p = Path("reference/mbs_procedure_candidates.json")
     if p.exists():
         for r in json.load(open(p))["results"]:
