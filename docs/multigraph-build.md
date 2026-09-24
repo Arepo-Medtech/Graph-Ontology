@@ -857,15 +857,31 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 # sources added 24 Sep: cache/orphanet/en_product6.xml 22.6 MB + en_product4.xml 47.9 MB (Orphadata genes, phenotypes), cache/who-icd11/ (WHO mapping.zip, ICD-11 2026-01, 6.8 MB), cache/hgnc/hgnc_complete_set.txt 17 MB, cache/orphanet/en_product1.xml 54 MB (Orphadata), cache/reactome/{UniProt2Reactome,ReactomePathways,ReactomePathwaysRelation}.txt 45 MB (Reactome v97)
 # sources added: uberon-basic.obo 12.1 MB + uberon.sssom.tsv 3.9 MB (Uberon v2026-06-23), MBS-XML-20260801.XML 8.3 MB (MBS Online)
 .venv/bin/python scripts/graph_register.py        # only when the SNOMED CT-AU pin moves
-.venv/bin/python scripts/build_edges.py           # ~3.5 min: out/graph.duckdb, validated against the register
+scripts/rebuild.sh                                # the build and every guard below, in order, stopping at the first failure
+.venv/bin/python scripts/build_edges.py           # ~7 min: out/graph.duckdb, validated against the register
 #   refuses to run if any source is missing (a deleted folder used to rebuild a smaller graph silently);
 #   --allow-missing NAME builds without one on purpose and records it in build_log
 #   reads in place: LOINC_EXTENSION (the LOINC Extension Snapshot dir) and LOINC_TABLE (Loinc.csv); defaults under ~/Documents/ONTOLOGIES
 .venv/bin/python scripts/graph_report.py          # scores the linkage routes, sets their tiers, writes out/graph_report.json
 .venv/bin/python scripts/consistency.py           # ~10 s: equivalence clusters, one-to-one conflicts, bridge edges (docs/consistency.md)
+.venv/bin/python scripts/release_guard.py         # seconds: per-release limits on edge / node / conflict / island counts (Guards)
 .venv/bin/python scripts/completeness.py          # ~1 min: completeness by group, absent members classed (docs/completeness.md);
 #   exits 1 if a cell's present share fell against reference/completeness_baseline.json (--set-baseline to accept)
 ```
+
+## Guards
+
+A rebuild can shrink the graph without failing, so four checks run after it, each against a committed baseline of counts
+(`scripts/rebuild.sh` runs the build and all four, stopping at the first failure):
+
+| guard | fails when | baseline |
+|---|---|---|
+| sources (`build_edges.py`) | a source file is missing, unless `--allow-missing NAME` | — |
+| register (`build_edges.py`) | an edge's predicate or vocabularies are not the registered ones | `reference/graph_predicates.json` |
+| completeness (`completeness.py`) | a cell's present share falls by more than half a point | `reference/completeness_baseline.json` |
+| release (`release_guard.py`) | an edge family (usable edges) or a vocabulary vanishes or loses more than 1% (and ≥ 10); clusters with two codes of a one-to-one vocabulary rise more than 5% (and ≥ 5); the largest equivalence cluster more than doubles; islands grow more than 5% (and ≥ 50). An edge family growing more than 25% (and ≥ 1,000) is a warning — a new source, or a load run twice | `reference/release_guard_baseline.json` |
+
+A deliberate change is accepted with `--set-baseline` on the guard that flagged it, and says why in the commit.
 
 ## Licences
 
