@@ -563,6 +563,42 @@ def main() -> int:
         SELECT count(*), count(*) FILTER (WHERE n > 1) FROM (SELECT s_code, count(*) n FROM edge
         WHERE predicate = 'sct:116680003' GROUP BY 1)""").fetchone()))
 
+    # --- genes, rare diseases, pathways: HGNC, Orphanet, Reactome ----------------------------------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate IN ('hgnc:xref', 'orpha:xref', 'reactome:participates_in')").fetchone()[0]:
+        e = {}
+        # HGNC witnesses the gene <-> protein step DrugCentral's target components gave (uniprot:encoded_by)
+        e["hgnc_witness_on_uniprot_encoded_by"] = dict(zip(("protein_gene_pairs", "hgnc_agrees", "hgnc_names_another_gene", "hgnc_silent"), con.execute("""
+            WITH u AS (SELECT DISTINCT s_code up, o_code gene FROM edge WHERE predicate = 'uniprot:encoded_by'),
+                 h AS (SELECT DISTINCT a.o_code up, b.o_code gene FROM edge a JOIN edge b ON b.predicate = 'hgnc:xref' AND b.s_code = a.s_code
+                       AND b.o_vocab = 'NCBIGENE' WHERE a.predicate = 'hgnc:xref' AND a.o_vocab = 'UNIPROT')
+            SELECT count(*), count(*) FILTER (WHERE (up, gene) IN (SELECT up, gene FROM h)),
+                   count(*) FILTER (WHERE (up, gene) NOT IN (SELECT up, gene FROM h) AND up IN (SELECT up FROM h)),
+                   count(*) FILTER (WHERE up NOT IN (SELECT up FROM h)) FROM u""").fetchone()))
+        # Orphanet's alignment against MONDO's, both directions of one claim
+        e["orphanet_vs_mondo"] = dict(zip(("orpha_mondo_pairs_by_orphanet", "also_asserted_by_mondo", "orpha_codes_mondo_maps", "orphanet_agrees_exactly"), con.execute("""
+            WITH o AS (SELECT DISTINCT s_code orpha, o_code mondo, method FROM edge WHERE predicate = 'orpha:xref' AND o_vocab = 'MONDO'),
+                 m AS (SELECT DISTINCT s_code mondo, o_code orpha FROM edge WHERE predicate = 'mondo:exact_match' AND o_vocab = 'ORPHA')
+            SELECT count(*), count(*) FILTER (WHERE (orpha, mondo) IN (SELECT orpha, mondo FROM m)),
+                   (SELECT count(DISTINCT orpha) FROM m),
+                   (SELECT count(DISTINCT m.orpha) FROM m JOIN o USING (orpha, mondo) WHERE o.method = 'E') FROM o""").fetchone()))
+        e["orphanet_alignments_by_target_and_relation"] = [dict(zip(("target", "relation", "edges"), r)) for r in con.execute("""
+            SELECT o_vocab, method, count(*) FROM edge WHERE predicate = 'orpha:xref' GROUP BY 1, 2 ORDER BY 1, 3 DESC""").fetchall()]
+        # pathways: which medicines and diseases now reach one
+        e["pathway_reach"] = dict(zip(("human_proteins_with_a_pathway", "pathways", "drugcentral_drugs_reaching_a_pathway",
+                                       "au_rxnorm_ingredients_reaching_a_pathway", "diseases_reaching_a_pathway_through_a_gene"), con.execute("""
+            WITH pp AS (SELECT DISTINCT s_code up FROM edge WHERE predicate = 'reactome:participates_in'),
+                 dt AS (SELECT DISTINCT m.s_code dc FROM edge m JOIN edge c ON c.predicate = 'drugcentral:target_component' AND c.s_code = m.o_code
+                        WHERE m.predicate IN ('drugcentral:mechanism_target', 'drugcentral:bioactivity') AND c.o_code IN (SELECT up FROM pp)),
+                 au AS (SELECT DISTINCT o_code rxn FROM edge WHERE predicate = 'std_ingredient' AND o_vocab = 'RXN' AND state <> 'rejected'),
+                 gp AS (SELECT DISTINCT g.o_code gene FROM edge h JOIN edge g ON g.predicate = 'hgnc:xref' AND g.s_code = h.s_code AND g.o_vocab = 'NCBIGENE'
+                        WHERE h.predicate = 'hgnc:xref' AND h.o_vocab = 'UNIPROT' AND h.o_code IN (SELECT up FROM pp))
+            SELECT (SELECT count(*) FROM pp), (SELECT count(DISTINCT o_code) FROM edge WHERE predicate = 'reactome:participates_in'),
+                   (SELECT count(*) FROM dt),
+                   (SELECT count(DISTINCT r.o_code) FROM edge r WHERE r.predicate = 'drugcentral:rxnorm' AND r.s_code IN (SELECT dc FROM dt)
+                      AND r.o_code IN (SELECT rxn FROM au)),
+                   (SELECT count(DISTINCT o_vocab || o_code) FROM edge WHERE predicate = 'hpo:gene_disease' AND s_code IN (SELECT gene FROM gp))""").fetchone()))
+        report["genes, rare diseases, pathways (HGNC, Orphanet, Reactome)"] = e
+
     # --- SNOMED CT-AU reference sets: how much of each set reaches beyond SNOMED ----------------------------------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'sct:in_refset'").fetchone()[0]:
         con.execute("""CREATE TEMP TABLE sct_out AS SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab <> 'SCT'

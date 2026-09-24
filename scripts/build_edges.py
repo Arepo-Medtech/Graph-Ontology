@@ -71,6 +71,9 @@ UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
 UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path("reference/threshold_units.json")   # US <-> AU units
 AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
+HGNC_SET = Path("cache/hgnc/hgnc_complete_set.txt")           # HGNC complete set, downloaded 24 Sep 2026 (CC0)
+ORPHA_XML = Path("cache/orphanet/en_product1.xml")            # Orphadata product 1, 2026-06-23 (CC BY 4.0)
+REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
 UCUM_PREFIX = {"k": 1e3, "h": 1e2, "da": 1e1, "": 1.0, "d": 1e-1, "c": 1e-2, "m": 1e-3, "u": 1e-6, "n": 1e-9, "p": 1e-12, "f": 1e-15}
@@ -166,7 +169,8 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents
 
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
-       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801",
+       "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
+       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
 LOINC_AXIS = {"COMPONENT": "loinc:has_component", "PROPERTY": "loinc:has_property", "TIME": "loinc:has_time_aspect",
@@ -214,7 +218,8 @@ def sources(vocab_dir: str) -> dict[str, Path]:
             "diagnostic accuracy bindings": DX_BIND, "diagnostic accuracy verification": DX_VER,
             "UMLS HPO -> SNOMED": UMLS_HPO, "UMLS SNOMED -> NCBI": UMLS_SCT_NCBI, "UMLS FMA -> SNOMED": UMLS_FMA_SCT,
             "UMLS RadLex CUI -> SNOMED": UMLS_RADLEX_CUI,
-            "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset"}
+            "SNOMED CT-AU RF2 refsets": AU_RF2 / "Refset", "HGNC": HGNC_SET, "Orphanet": ORPHA_XML,
+            "Reactome": REACTOME / "UniProt2Reactome.txt"}
 
 
 def main() -> int:
@@ -976,6 +981,73 @@ def main() -> int:
         con.execute(f"""INSERT INTO name_hint SELECT 'NCBIGENE', split_part(ncbi_gene_id, ':', 2), any_value(gene_symbol)
             FROM read_csv('{HP_GENES}', delim='\t', header=true, all_varchar=true, quote='') GROUP BY 2""")
 
+    # --- HGNC: the human gene's official identity, joining NCBI Gene, UniProt and OMIM ------------------------------
+    if HGNC_SET.exists():
+        hg = [r for r in csv.DictReader(open(HGNC_SET, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE) if r["status"] == "Approved"]
+        # only genes something else in the graph already names (a disease gene, a drug target, a LOINC genotype test, a
+        # Reactome participant): the other ~31,000 HGNC genes -- mostly non-coding RNAs and pseudogenes -- would each be a
+        # detached cluster of their own ids, joining nothing
+        present = {(v, c) for v, c in con.execute("""SELECT DISTINCT o_vocab, o_code FROM edge WHERE o_vocab IN ('NCBIGENE', 'UNIPROT', 'OMIM', 'HGNC')
+                                                     UNION SELECT DISTINCT s_vocab, s_code FROM edge WHERE s_vocab IN ('NCBIGENE', 'UNIPROT', 'OMIM', 'HGNC')""").fetchall()}
+        if (REACTOME / "UniProt2Reactome.txt").exists():
+            present |= {("UNIPROT", l.split("\t", 1)[0]) for l in open(REACTOME / "UniProt2Reactome.txt", encoding="utf-8") if "\tHomo sapiens" in l}
+        ids_of = lambda r: [("HGNC", r["hgnc_id"])] + [(vv, x.strip()) for col, vv in (("entrez_id", "NCBIGENE"), ("uniprot_ids", "UNIPROT"),
+                                                                                    ("omim_id", "OMIM")) for x in filter(None, (r.get(col) or "").split("|"))]
+        n_all = len(hg)
+        hg = [r for r in hg if any(k in present for k in ids_of(r))]
+        log["HGNC genes not loaded (no id shared with the rest of the graph)"] = n_all - len(hg)
+        rows_g = []
+        for r in hg:
+            for col, vocab in (("entrez_id", "NCBIGENE"), ("uniprot_ids", "UNIPROT"), ("omim_id", "OMIM")):
+                for v in filter(None, (r.get(col) or "").split("|")):
+                    rows_g.append(("HGNC", r["hgnc_id"], "hgnc:xref", vocab, v.strip(), "HGNC", "hgnc_complete_set.txt " + col, col,
+                                   "native", "asserted", PIN["hgnc"], None))
+        ins_rows("HGNC gene -> NCBI Gene / UniProt / OMIM gene entry", sorted(set(rows_g)))
+        con.executemany("INSERT INTO name_hint VALUES ('HGNC', ?, ?)", [(r["hgnc_id"], r["symbol"]) for r in hg])
+        con.executemany("INSERT INTO name_hint VALUES ('NCBIGENE', ?, ?)", [(r["entrez_id"], r["symbol"]) for r in hg if r.get("entrez_id")])
+        # an HGNC gene names its OMIM gene entry and its proteins, where nothing else does (fallbacks: see the node stage)
+        hgnc_names = [("OMIM", v.strip(), r["symbol"] + " (gene)") for r in hg for v in filter(None, (r.get("omim_id") or "").split("|"))] + \
+                     [("UNIPROT", v.strip(), r["symbol"]) for r in hg for v in filter(None, (r.get("uniprot_ids") or "").split("|"))]
+
+    # --- Orphanet's own alignments: each rare disease to ICD-10, ICD-11, OMIM, UMLS, MeSH, MONDO, GARD -------------
+    # with Orphanet's relation (E exact, NTBT the ORPHAcode is narrower, BTNT broader, ND undecided) and validation.
+    if ORPHA_XML.exists():
+        import xml.etree.ElementTree as ET
+        ov = {"ICD-10": "ICD10WHO", "ICD-11": "ICD11MMS", "OMIM": "OMIM", "UMLS": "UMLS", "MeSH": "MESH", "MONDO": "MONDO", "GARD": "GARD"}
+        rows_o, names_o = [], []
+        for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
+            oc = d.findtext("OrphaCode")
+            if not oc:
+                continue
+            names_o.append((oc, d.findtext("Name")))
+            for x in d.iter("ExternalReference"):
+                src, ref_ = x.findtext("Source"), (x.findtext("Reference") or "").strip()
+                if src not in ov or not ref_:
+                    continue
+                relx = (x.findtext("DisorderMappingRelation/Name") or "").split(" ")[0]
+                rows_o.append(("ORPHA", oc, "orpha:xref", ov[src], ("MONDO:" + ref_.zfill(7)) if src == "MONDO" else ref_, "Orphanet",
+                               "en_product1.xml ExternalReference", relx or "unqualified", "native", "asserted", PIN["orphanet"],
+                               json.dumps({"relation": relx, "validation": x.findtext("DisorderMappingValidationStatus/Name"),
+                                           "icd_relation": (x.findtext("DisorderMappingICDRelation/Name") or None)})))
+        ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)))
+        con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
+
+    # --- Reactome: human protein -> pathway, and the pathway hierarchy ----------------------------------------------
+    if (REACTOME / "UniProt2Reactome.txt").exists():
+        hs = [l.rstrip("\n").split("\t") for l in open(REACTOME / "UniProt2Reactome.txt", encoding="utf-8")]
+        hs = [r for r in hs if len(r) >= 6 and r[5] == "Homo sapiens"]
+        ins_rows("UniProt protein -> Reactome pathway (human, lowest level)", sorted({
+            ("UNIPROT", r[0], "reactome:participates_in", "REACTOME", r[1], "Reactome", "UniProt2Reactome.txt", r[4], "native", "asserted",
+             PIN["reactome"], json.dumps({"evidence": r[4]})) for r in hs}))
+        pw = {r[0]: r[1] for r in (l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathways.txt", encoding="utf-8"))
+              if len(r) >= 3 and r[2] == "Homo sapiens"}
+        ins_rows("Reactome pathway -> parent pathway (human)", sorted({
+            ("REACTOME", c_, "reactome:part_of", "REACTOME", p_, "Reactome", "ReactomePathwaysRelation.txt", "native", "native", "asserted",
+             PIN["reactome"], None)
+            for p_, c_ in (l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathwaysRelation.txt", encoding="utf-8"))
+            if p_ in pw and c_ in pw}))
+        con.executemany("INSERT INTO name_hint VALUES ('REACTOME', ?, ?)", list(pw.items()))
+
     # --- UMLS: HPO phenotype -> SNOMED, the bridge from signs and symptoms to SNOMED findings --------------------
     # A shared UMLS CUI groups synonyms, and also near-synonyms: hand-checked 23 Sep 2026, links whose SNOMED name
     # differs from the HPO label were right 34 of 40 (85%, Wilson lower bound ~0.71 -- inadmissible) and wrong by
@@ -1136,9 +1208,14 @@ def main() -> int:
         JOIN C c ON c.concept_code = k.code AND c.vocabulary_id = 'SNOMED' WHERE k.vocab = 'SCT' GROUP BY 1, 2""")
     con.execute("INSERT INTO name_hint SELECT vocab, code, code FROM keys WHERE vocab = 'UCUM'")   # a unit is named by its UCUM code
     con.execute("INSERT INTO name_hint SELECT vocab, code, 'FMA:' || code FROM keys WHERE vocab = 'FMA'")   # FMA itself is not loaded
+    if HGNC_SET.exists():
+        con.execute("CREATE TEMP TABLE hgnc_names (vocab VARCHAR, code VARCHAR, name VARCHAR)")
+        con.executemany("INSERT INTO hgnc_names VALUES (?, ?, ?)", hgnc_names)
+        con.execute("""INSERT INTO name_hint SELECT DISTINCT h.vocab, h.code, h.name FROM hgnc_names h
+                       WHERE (h.vocab, h.code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> '')""")
     con.execute("""INSERT INTO name_hint SELECT vocab, code, vocab || ':' || code FROM keys
                    WHERE vocab IN ('CHEBI', 'UNII', 'PUBCHEM', 'CHEMBL', 'MESH', 'UMLS', 'IUPHAR', 'KEGG', 'INN', 'HGNC', 'CLINVAR', 'MEDGEN',
-                                   'ICD11', 'ICD10WHO', 'OMIMPS', 'EFO', 'DOID', 'NCIT')
+                                   'ICD11', 'ICD10WHO', 'OMIMPS', 'EFO', 'DOID', 'NCIT', 'ICD11MMS', 'GARD', 'UNIPROT')
                      AND (vocab, code) NOT IN (SELECT vocab, code FROM name_hint WHERE name IS NOT NULL AND trim(name) <> '')""")   # an identifier with no loaded label is named by itself
     con.execute("""CREATE TABLE node AS SELECT k.vocab, k.code, k.vocab || ':' || k.code AS key,
                           (SELECT any_value(h.name) FROM name_hint h WHERE h.vocab = k.vocab AND h.code = k.code
