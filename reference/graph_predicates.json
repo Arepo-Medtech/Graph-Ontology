@@ -503,7 +503,23 @@
       "strength_kind": "exact",
       "source": "SNOMED CT to ICD-10-CM map, extended map reference set 6011000124106 (NLM), SNOMED CT US Edition 20260901",
       "status": "built",
-      "note": "NLM's map for US reporting, loaded as native; same structure and methods as sct:icd10_map, with many more conditional rules (context-dependent ICD-10-CM specificity). Targets ending '?' (a character still to be specified) are not edges. The reverse direction already in the graph, icd10cm:maps_to (OMOP), is a separate source and serves as its witness in graph_report.py."
+      "note": "NLM's map for US reporting, loaded as native; same structure and methods as sct:icd10_map, with many more conditional rules (context-dependent ICD-10-CM specificity). A target ending '?' names a code whose last character (for injuries, the episode of care) is still to be chosen; it loads against the subcategory its published characters spell (placeholder X's dropped: 'O32.4XX?' -> O32.4), when that is an ICD-10-CM code, with method '<rule kind>, partial code (subcategory)' and attrs.target_as_published. The reverse direction already in the graph, icd10cm:maps_to (OMOP), is a separate source and serves as its witness in graph_report.py."
+    },
+    {
+      "id": "icd10:subdivision_of",
+      "label": "ICD-10 fifth-character code subdivides this WHO ICD-10 code",
+      "subject": [
+        "ICD10WHO"
+      ],
+      "object": [
+        "ICD10WHO"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "WHO ICD-10 code structure (optional fifth characters, Volume 1); the parent must be a code of WHO's ICD-10 -> ICD-11 mapping tables 2026-01",
+      "status": "built",
+      "note": "Only for codes SNOMED's ICD-10 map uses that WHO's tables do not list: M41.15 -> M41.1, S36.00 -> S36.0, T08.X0 -> T08. It is the step that carries those concepts on to ICD-11, since WHO maps only the parent. Codes only."
     },
     {
       "id": "sct:artg_id",

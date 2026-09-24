@@ -314,8 +314,8 @@ def main() -> int:
     # wins (mapPriority) -- TRUE, IFA <condition> (the patient's sex, age, or another SNOMED concept), OTHERWISE TRUE.
     # method names the rule kind, so a traversal that cannot evaluate a condition can leave conditional edges out; the
     # rule text, group, priority, advice and category ride in attrs. A row with no target (SNOMED: "cannot be classified
-    # with available data") or a partial code (ICD-10-CM targets ending '?', still to be specified) is not an edge.
-    # Source concepts must be active in SNOMED CT-AU; the US-extension concepts in the file are not.
+    # with available data") is not an edge. Source concepts must be active in SNOMED CT-AU; the US-extension concepts in
+    # the file are not.
     if SCT_US_XMAP.exists():
         for refset, pred, vocab, what in (("447562003", "sct:icd10_map", "ICD10WHO", "SNOMED CT -> ICD-10 (SNOMED International map)"),
                                           ("6011000124106", "sct:icd10cm_map", "ICD10CM", "SNOMED CT -> ICD-10-CM (NLM map)")):
@@ -330,10 +330,44 @@ def main() -> int:
                 WHERE m.refsetId = '{refset}' AND coalesce(m.mapTarget, '') <> '' AND m.mapTarget NOT LIKE '%?%'
                   AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""")
             for why, cond in (("no target: cannot be classified", "coalesce(mapTarget, '') = ''"),
-                              ("partial target code ('?')", "mapTarget LIKE '%?%'"),
                               ("source concept not active in SNOMED CT-AU", "referencedComponentId NOT IN (SELECT id FROM cmp.concept)")):
                 log[f"{what}: rows not loaded, {why}"] = con.execute(f"""SELECT count(*) FROM '{SCT_US_XMAP}'
                     WHERE refsetId = '{refset}' AND {cond}""").fetchone()[0]
+        # NLM's partial targets: 'S08.129?' names a code whose last character (for injuries, the episode of care) the
+        # coder still has to choose. The concept certainly falls in the subcategory the published characters spell --
+        # 'S08.129', or 'O32.4' for 'O32.4XX?' once the placeholder X's are dropped -- so it loads against that code, when
+        # it is an ICD-10-CM code, as its own method; attrs.target_as_published keeps NLM's string.
+        con.execute(f"""CREATE TEMP TABLE icd10cm_code AS SELECT DISTINCT concept_code c FROM C WHERE vocabulary_id = 'ICD10CM'""")
+        con.execute(f"""CREATE TEMP TABLE xmap_partial AS SELECT m.*, rtrim(regexp_replace(rtrim(m.mapTarget, '?'), 'X+$', ''), '.') sub
+            FROM '{SCT_US_XMAP}' m WHERE m.refsetId = '6011000124106' AND m.mapTarget LIKE '%?'""")
+        ins("SNOMED CT -> ICD-10-CM subcategory (NLM map, partial code)", f"""SELECT 'SCT', m.referencedComponentId, 'sct:icd10cm_map', 'ICD10CM',
+                m.sub, 'SNOMED CT US Edition (NLM)', 'extended map reference set 6011000124106',
+                CASE WHEN m.mapRule = 'TRUE' THEN 'unconditional' WHEN m.mapRule = 'OTHERWISE TRUE' THEN 'default, when no condition holds'
+                     ELSE 'conditional' END || ', partial code (subcategory)', 'native', 'asserted', '{PIN['sct_us']}',
+                json_object('group', CAST(m.mapGroup AS INT), 'priority', CAST(m.mapPriority AS INT),
+                            'rule', CASE WHEN m.mapRule NOT IN ('TRUE', 'OTHERWISE TRUE') THEN m.mapRule END,
+                            'advice', m.mapAdvice, 'category', coalesce(n.pt, m.mapCategoryId), 'target_as_published', m.mapTarget)
+            FROM xmap_partial m LEFT JOIN cmp.concept n ON n.id = m.mapCategoryId
+            WHERE m.sub IN (SELECT c FROM icd10cm_code) AND m.referencedComponentId IN (SELECT id FROM cmp.concept)""")
+        log["SNOMED CT -> ICD-10-CM (NLM map): partial codes not loaded, subcategory not an ICD-10-CM code"] = con.execute(
+            "SELECT count(*) FROM xmap_partial WHERE sub NOT IN (SELECT c FROM icd10cm_code)").fetchone()[0]
+        # ICD-10's optional fifth characters (WHO Volume 1: site in chapter XIII, open / closed in XIX -- M41.15, S36.00)
+        # subdivide a four-character subcategory; T08.X0-style codes subdivide a three-character category. WHO's ICD-11
+        # tables list only the parent, so each mapped fifth-character code gets an edge to its parent, kept only when the
+        # parent is a code of WHO's own tables -- the step that carries these concepts on to ICD-11.
+        if (WHO_MAP / "10To11MapToOneCategory.txt").exists():
+            who10 = set()
+            for f in ("10To11MapToOneCategory.txt", "10To11MapToMultipleCategories.txt"):
+                rows_ = [l.rstrip("\r\n").split("\t") for l in open(WHO_MAP / f, encoding="utf-8-sig")]
+                ic = [h.strip() for h in rows_[0]].index("icd10Code")
+                who10 |= {r[ic].strip() for r in rows_[1:] if len(r) > ic}
+            parent = lambda c: (re.match(r"^([A-Z]\d\d\.\d)\d$", c) or re.match(r"^([A-Z]\d\d)\.X\d$", c) or [None, None])[1]
+            mapped = [c for (c,) in con.execute("SELECT DISTINCT o_code FROM edge WHERE predicate = 'sct:icd10_map'").fetchall()]
+            lift = [(c, parent(c)) for c in mapped if c not in who10]
+            ins_rows("ICD-10 fifth-character code -> its WHO parent", sorted(
+                ("ICD10WHO", c, "icd10:subdivision_of", "ICD10WHO", p_, "WHO ICD-10 code structure", "10To11MapToOneCategory.txt (parent present)",
+                 "fifth-character subdivision", "native", "asserted", PIN["who"], None) for c, p_ in lift if p_ and p_ in who10))
+            log["ICD-10 mapped codes absent from WHO's tables, no parent there"] = sum(1 for c, p_ in lift if not (p_ and p_ in who10))
 
 
     # --- OMOP product mappings (concept ids resolved to (vocabulary, code) once) -----------------------------------
