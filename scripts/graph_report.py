@@ -31,6 +31,8 @@ from pathlib import Path
 
 import duckdb
 
+sys.path.insert(0, str(Path(__file__).parent))     # scripts/ (consistency.compute)
+
 
 ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
 GRAPH = Path("out/graph.duckdb")
@@ -879,6 +881,27 @@ def main() -> int:
             "random_umls_bridges": {"checked": len(rnd), "correct": sum(r["verdict"] == "correct" for r in rnd),
                                     "on_one_conflict_path": [sum(r["verdict"] == "correct" for r in rnd if r["paths"] == 1), sum(r["paths"] == 1 for r in rnd)],
                                     "on_two_or_more": [sum(r["verdict"] == "correct" for r in rnd if r["paths"] > 1), sum(r["paths"] > 1 for r in rnd)]}}
+
+    # --- hold back the UMLS pairs that bridge a one-to-one conflict on two or more paths --------------------------------
+    # One pass over the finished tiers and rejections (the population the hand check was drawn from): a UMLS-derived
+    # equivalence on two or more shortest paths between two codes of a one-to-one vocabulary was right 15 of 30 (a
+    # subtype paired with its parent, a numbered locus with the disease); on one path, 13 of 13. The first family is
+    # inadmissible -- kept, marked in attrs.held, not followed.
+    if bh.exists():
+        import consistency
+        _, _, br, _, _ = consistency.compute(con)
+        held = [(a_, b_, p_) for (a_, b_, p_, m_), n_ in br.items() if n_ >= 2 and p_ in ("umls:shared_cui", "umls:concept_member")]
+        con.execute("CREATE TEMP TABLE umls_bridge (a VARCHAR, b VARCHAR, p VARCHAR)")
+        con.executemany("INSERT INTO umls_bridge VALUES (?, ?, ?)", held)
+        con.execute("""UPDATE edge SET tier = 'inadmissible',
+                           attrs = json_merge_patch(coalesce(attrs, '{}'), '{"held": "bridges a one-to-one conflict on 2+ paths (15/30)"}')
+                       WHERE state <> 'rejected' AND (predicate, s_vocab || ':' || s_code, o_vocab || ':' || o_code) IN (
+                             SELECT p, a, b FROM umls_bridge UNION SELECT p, b, a FROM umls_bridge)""")
+        fam = [r for r in json.load(open(bh))["scored"] if r["predicate"].startswith("umls") and r.get("paths", 0) >= 2 and r["sample"] != "top 30 bridges"]
+        k_, n_ = sum(r["verdict"] == "correct" for r in fam), len(fam)
+        report["consistency:bridge hand check"]["umls_bridges_on_two_or_more_paths"] = {
+            "held_back_edges": con.execute("SELECT count(*) FROM edge WHERE (attrs->>'held') IS NOT NULL").fetchone()[0],
+            "checked": n_, "correct": k_, "wilson_lo": round(wilson(k_, n_)[0], 4), "earned_tier": tier(wilson(k_, n_)[0], n_)}
 
     # --- islands: weakly connected components, and each vocabulary's reach outside itself --------------------------
     # An island is a piece of the graph no path joins to the rest. Rejected and inadmissible edges are not followed.
