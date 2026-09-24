@@ -1,0 +1,1499 @@
+{
+ "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
+ "written": "2026-09-24 15:37",
+ "repo_commit": "7faed21",
+ "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
+ "not_needed_to_build": {
+  ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
+  "cache/semra (1 GB)": "only to rebuild cache/completeness/evidence.parquet (Zenodo 15208251)",
+  "DrugCentral SQL dump (1.4 GB)": "only to re-extract cache/drugcentral/*.tsv",
+  "UMLS and SNOMED US zips (3.1 GB)": "only to re-derive cache/umls and cache/snomed-us"
+ },
+ "totals": {
+  "stored": 1507561498,
+  "in place": 5355276980
+ },
+ "entries": [
+  {
+   "id": "compendium",
+   "kind": "stored",
+   "path": "out/compendium.duckdb",
+   "is_dir": false,
+   "keep": null,
+   "source": "scripts/build_compendium.py (SNOMED CT-AU, AMT, PBS, RxNav, OMOPHub)",
+   "version": "built 24 Sep 2026",
+   "licence": "derived",
+   "files": [
+    {
+     "file": "compendium.duckdb",
+     "bytes": 236204032,
+     "sha256": "a435ed2333f2edaed41c844a8a4da3e538f3b05456bcee591ff3e2ff7116a013"
+    }
+   ],
+   "bytes": 236204032
+  },
+  {
+   "id": "spine",
+   "kind": "stored",
+   "path": "spine/spine.duckdb",
+   "is_dir": false,
+   "keep": null,
+   "source": "~/code/spine (spine ingest; Athena)",
+   "version": "spine main",
+   "licence": "derived",
+   "files": [
+    {
+     "file": "spine.duckdb",
+     "bytes": 139472896,
+     "sha256": "92c55c32a8c3c079ba52a755f713a6afbb0e67a9706a39b37638b0b6c62cad35"
+    }
+   ],
+   "bytes": 139472896
+  },
+  {
+   "id": "pbs",
+   "kind": "stored",
+   "path": "cache/pbs",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://data-api.health.gov.au/pbs/api/v3",
+   "version": "PBS schedule 4333",
+   "licence": "Commonwealth of Australia",
+   "files": [
+    {
+     "file": "amt-items.json",
+     "bytes": 17631433,
+     "sha256": "a8370fb83d9356e6d9d9ce08f9fee84a8fe35c9d925cef983c22628206424edf"
+    },
+    {
+     "file": "atc-codes.json",
+     "bytes": 971471,
+     "sha256": "ed904671c518ae18f5e6b2a09d6cfae019ef89c59925bf8f4aed8b5ebb997d91"
+    },
+    {
+     "file": "indications.json",
+     "bytes": 96057,
+     "sha256": "41cba5bab4f12286879a800fa0dd2a35887480db0b48eec92e616d9366c788b1"
+    },
+    {
+     "file": "item-atc-relationships.json",
+     "bytes": 592047,
+     "sha256": "16f7739b7f94ae2751936387ed45ee8c8a1b7a7471e8bf44d457a5af58925c5f"
+    },
+    {
+     "file": "item-restriction-relationships.json",
+     "bytes": 3219341,
+     "sha256": "d3d10b67669c037d67bfdcb6894f7ed6e4af7c8dfe02616d8fc8fc8e11ae12e0"
+    },
+    {
+     "file": "items.json",
+     "bytes": 33276615,
+     "sha256": "039e8035b1a459c90efb8be93db1f9a999073dd9db6826b4a12943d26e74dcaf"
+    },
+    {
+     "file": "restriction-prescribing-text-relationships.json",
+     "bytes": 2060990,
+     "sha256": "6496dfb3533cb1dafff43593568e9cedba879d3b44efce1592a69b953c09e396"
+    },
+    {
+     "file": "restrictions.json",
+     "bytes": 12599874,
+     "sha256": "48e641b2e7865b612a51b10009c5bd4aa4ac78e7bc750a38ab986460368d2d3d"
+    }
+   ],
+   "bytes": 70447828
+  },
+  {
+   "id": "mondo",
+   "kind": "stored",
+   "path": "cache/mondo",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://github.com/monarch-initiative/mondo/releases (mondo.obo, mondo.sssom.tsv)",
+   "version": "v2026-09-01",
+   "licence": "CC BY 4.0",
+   "files": [
+    {
+     "file": "mondo.obo",
+     "bytes": 53134854,
+     "sha256": "50c8367f9bd9978321eedf84d4e2e79cb757efbed514c81effb00b9ad2e49994"
+    },
+    {
+     "file": "mondo.sssom.tsv",
+     "bytes": 13113756,
+     "sha256": "317ac4bf93be1deff4406b4d7d18bb730ead3c4f5c7c814f75d24be7f6ef302f"
+    }
+   ],
+   "bytes": 66248610
+  },
+  {
+   "id": "hpo",
+   "kind": "stored",
+   "path": "cache/hpo",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://github.com/obophenotype/human-phenotype-ontology/releases (hp.obo, phenotype.hpoa, genes_to_disease.txt)",
+   "version": "v2026-09-01 / 2026-09-02",
+   "licence": "HPO licence (free with attribution)",
+   "files": [
+    {
+     "file": "genes_to_disease.txt",
+     "bytes": 1492039,
+     "sha256": "7937a1b92779dc8614e39ace623b443c7c71dd15e4de11d5e52b14e331ab5978"
+    },
+    {
+     "file": "hp.obo",
+     "bytes": 10863613,
+     "sha256": "93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22"
+    },
+    {
+     "file": "phenotype.hpoa",
+     "bytes": 35816037,
+     "sha256": "e89aa39c8f97bf5a52c5d160f9250a603681d630ade8ec2679d84ac5aece1f72"
+    }
+   ],
+   "bytes": 48171689
+  },
+  {
+   "id": "mbs",
+   "kind": "stored",
+   "path": "cache/mbs",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://www.mbsonline.gov.au (MBS-XML-20260801.XML)",
+   "version": "20260801",
+   "licence": "Commonwealth of Australia",
+   "files": [
+    {
+     "file": "MBS-XML-20260801.XML",
+     "bytes": 8293331,
+     "sha256": "c5c04792cbdc7017589b4453aa4506f26b6cfcbfeaee3b0d6c866a8050b06565"
+    }
+   ],
+   "bytes": 8293331
+  },
+  {
+   "id": "uberon",
+   "kind": "stored",
+   "path": "cache/uberon",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://github.com/obophenotype/uberon/releases (uberon-basic.obo, uberon.sssom.tsv)",
+   "version": "v2026-06-23",
+   "licence": "CC BY 3.0",
+   "files": [
+    {
+     "file": "uberon-basic.obo",
+     "bytes": 12078648,
+     "sha256": "b27618d347df171d0dbbfc6178217487b98b96424641b8c8b4ece77256e67a14"
+    },
+    {
+     "file": "uberon.sssom.tsv",
+     "bytes": 3943031,
+     "sha256": "77dd063720d03f773165b2f9fdcbddd544c8cc03b5d087a6160ba8ef13dd5b50"
+    }
+   ],
+   "bytes": 16021679
+  },
+  {
+   "id": "drugcentral",
+   "kind": "stored",
+   "path": "cache/drugcentral",
+   "is_dir": true,
+   "keep": "*.tsv",
+   "source": "https://drugcentral.org/download (drugcentral.dump.11012023.sql.gz, 1.40 GB -- not stored; scripts/drugcentral_extract.py makes the .tsv tables)",
+   "version": "2023-11-01",
+   "licence": "CC BY-SA 4.0",
+   "files": [
+    {
+     "file": "act_table_full.tsv",
+     "bytes": 4796061,
+     "sha256": "40f7fb985785f655d9f06ec7ba70956576ec68b9e09076e1a9e348e858cab59f"
+    },
+    {
+     "file": "identifier.tsv",
+     "bytes": 2610265,
+     "sha256": "3332f08fe93afbc7df1ae3e1eaba731b1a3e3717433f89a35cb14120d55ab18e"
+    },
+    {
+     "file": "omop_relationship.tsv",
+     "bytes": 4208973,
+     "sha256": "5838f2b3263cfd78ab1831630d954441184773fb69e521dbb91ff827021f599b"
+    },
+    {
+     "file": "pharma_class.tsv",
+     "bytes": 1399940,
+     "sha256": "e3f49376db9e5692ecec8e84373bd6b7e9e59f52b83769ebd6c052e2095dd627"
+    },
+    {
+     "file": "reference.tsv",
+     "bytes": 139290,
+     "sha256": "31080381f46b967dd84fa00e89107b07eac373f39eb3e5d8a5f2e05c53f1028b"
+    },
+    {
+     "file": "struct2atc.tsv",
+     "bytes": 90374,
+     "sha256": "51e08e01a314db0379ea540c82d6b529499a8946ec0a2f5e9dcc91e5edd4052e"
+    },
+    {
+     "file": "structures.tsv",
+     "bytes": 89955,
+     "sha256": "3bd0ba894076542a23e346d26a75a7f2995caa72f4ebb31c3ff33da2e597bc54"
+    },
+    {
+     "file": "target_component.tsv",
+     "bytes": 2016575,
+     "sha256": "974e3209efd7aacbdab4fbe85a30a62a2a4a09240b089515f9e07d143d794a22"
+    },
+    {
+     "file": "target_dictionary.tsv",
+     "bytes": 236346,
+     "sha256": "330e4cdef0b5ed03cebe3a614505921d8003a52a2fe0e0e21c431b448abc81c0"
+    },
+    {
+     "file": "td2tc.tsv",
+     "bytes": 40345,
+     "sha256": "61177f1b38304ae1acb7e2b13eb316780d992898a131f61598d6c9f04f1c4208"
+    }
+   ],
+   "bytes": 15628124
+  },
+  {
+   "id": "chembl_witness",
+   "kind": "stored",
+   "path": "cache/chembl",
+   "is_dir": true,
+   "keep": null,
+   "source": "scripts/chembl_moa_witness.py (ChEMBL API)",
+   "version": "ChEMBL, 23 Sep 2026",
+   "licence": "CC BY-SA 3.0",
+   "files": [
+    {
+     "file": "moa_chembl_raw.json",
+     "bytes": 1216284,
+     "sha256": "6f8e11c10b996f856ee1270aaebc33aea79cddbe5226b0d76f58e462857f138d"
+    },
+    {
+     "file": "moa_witness.tsv",
+     "bytes": 109669,
+     "sha256": "2c3d296e7a42480d568b6aa1df71610d5e92f44fa5edf71c4e652e463b7ae551"
+    }
+   ],
+   "bytes": 1325953
+  },
+  {
+   "id": "radlex_derived",
+   "kind": "stored",
+   "path": "cache/radlex",
+   "is_dir": true,
+   "keep": null,
+   "source": "scripts/radlex_prepare.py from RadLex.owl",
+   "version": "RadLex 4.3",
+   "licence": "RadLex licence: labels only",
+   "files": [
+    {
+     "file": "anatomy_cui.txt",
+     "bytes": 1116,
+     "sha256": "3054fb8a8d66609ba4ffbd513152a40fb34a2b90b08d7fb06842a279f1407a1e"
+    },
+    {
+     "file": "anatomy_fma.txt",
+     "bytes": 798,
+     "sha256": "0c8fc0d30a96fe5c334c00f192d2f62e1761b3021561c020340ee7f1a43a003a"
+    },
+    {
+     "file": "radlex_classes.json",
+     "bytes": 6848975,
+     "sha256": "f604564e9729d99711f94805b13990b997f90aa4bbc677c1d689f9a7ee8058d6"
+    },
+    {
+     "file": "radlex_sct_candidates.tsv",
+     "bytes": 10450,
+     "sha256": "4bc1b033027096c7f784da580b68864e385afb76df7f661e6a283f0ab8768690"
+    },
+    {
+     "file": "route_sets.json",
+     "bytes": 14942,
+     "sha256": "ceca7467b8af40aab53538b54d79786089fd05440bf4dadf2d3ca9cdb9b2e185"
+    }
+   ],
+   "bytes": 6876281
+  },
+  {
+   "id": "rcpa_derived",
+   "kind": "stored",
+   "path": "cache/rcpa",
+   "is_dir": true,
+   "keep": null,
+   "source": "scripts/rcpa_units.py from RCPA_v20260831",
+   "version": "v20260831",
+   "licence": "RCPA copyright: derived data",
+   "files": [
+    {
+     "file": "reporting_units.json",
+     "bytes": 656368,
+     "sha256": "42ff278d1ac8054a80f9e68a92b75f184589928408ae537020193bfb24d68daf"
+    }
+   ],
+   "bytes": 656368
+  },
+  {
+   "id": "umls_derived",
+   "kind": "stored",
+   "path": "cache/umls",
+   "is_dir": true,
+   "keep": "!2026AA/*.zip",
+   "source": "UMLS 2026AA via UTS with the licence holder's key (.env UMLS_API_KEY): scripts/umls_mrconso.py, umls_mrrel.py, umls_crosswalk.py; the raw zips (2.4 GB) are not stored -- re-download with the key",
+   "version": "UMLS 2026AA",
+   "licence": "UMLS licence: the licence holder's own use",
+   "files": [
+    {
+     "file": "2026AA/aui_l0.parquet",
+     "bytes": 121532667,
+     "sha256": "fed864854ab33462c3617bb03c8c4ce9c593798144a9fe222f2b3e5d85d60e10"
+    },
+    {
+     "file": "2026AA/mrconso.parquet",
+     "bytes": 213883422,
+     "sha256": "472fdc7b3af2a0607151a76bb424e5b46ff976e969f6af165a4d06761ab62fcd"
+    },
+    {
+     "file": "2026AA/mrcui.parquet",
+     "bytes": 22970659,
+     "sha256": "31fa72c6325422a7aee682d9eb297defa9f0b63fcfeb707c18fabba96c1375b7"
+    },
+    {
+     "file": "2026AA/mrmap_l0.parquet",
+     "bytes": 3451555,
+     "sha256": "07a0101de08968f7674478ba61218c014e5573c6976258d98f9f8da1f64714f6"
+    },
+    {
+     "file": "2026AA/mrrel_l0.parquet",
+     "bytes": 171830969,
+     "sha256": "0c694ff7253b00f4e1d0862b2fb0306661ff90eb239af463e6a4961455c0f69d"
+    },
+    {
+     "file": "2026AA/mrsab_l0.parquet",
+     "bytes": 9490,
+     "sha256": "53b7917e8123a9f2155c597919f15f9beabbeedeaac635fdcd3fcb437478f393"
+    },
+    {
+     "file": "fma_sct.tsv",
+     "bytes": 6436,
+     "sha256": "dbcd36bbf2ddb9129ab8558822079f2899af2b9aa28adf5fc6715b2889064953"
+    },
+    {
+     "file": "fma_sct_misses.txt",
+     "bytes": 87,
+     "sha256": "3c41307da2977c9426899463cd48162f62b6019a1b2e3a1004618115ae2f06c7"
+    },
+    {
+     "file": "hpo_snomed.tsv",
+     "bytes": 737567,
+     "sha256": "a0e3e52c113e0a9e9cfbf3b1bc89e4505ab27e42d35b2736ccdab5adf1de2cf4"
+    },
+    {
+     "file": "hpo_snomed_candidates.tsv",
+     "bytes": 443070,
+     "sha256": "6f234f9a2b5a6152f12ea8e0fefbc0f7fd423c32a6d428fc59384d7b813a40ab"
+    },
+    {
+     "file": "organism_handcheck.json",
+     "bytes": 27635,
+     "sha256": "4e3578009ca1575e7396b832aa35bfda833f3bf7d3d6625e383a887a2c6d28ad"
+    },
+    {
+     "file": "radlex_cui_sct.tsv",
+     "bytes": 20848,
+     "sha256": "9b2c1c46fb5c1b12dc9174d4b3dfc6ef0e479dbb764c585968359407dfaffe1b"
+    },
+    {
+     "file": "radlex_cui_sct_misses.txt",
+     "bytes": 45,
+     "sha256": "10aa4f5210620331f29cb37514e9cbd270c064ea45f54977182d446e716b1849"
+    },
+    {
+     "file": "radlex_handcheck.json",
+     "bytes": 34011,
+     "sha256": "8aa875fa90d171a0f8c8358b1c6113916de56f8f3a18538ed3472b04a88e759c"
+    },
+    {
+     "file": "sct_ncbi.tsv",
+     "bytes": 861420,
+     "sha256": "c11eedb21ec49a9f30a4f5f351e4aa829e2e9307a6251bdd011b538ebf5d5249"
+    },
+    {
+     "file": "sct_ncbi_candidates.tsv",
+     "bytes": 232248,
+     "sha256": "5b9c4aa9aecefa9b0f641d6a89ad38dffd38dd2c2abb262b0869519e30134810"
+    },
+    {
+     "file": "sct_ncbi_misses.txt",
+     "bytes": 108499,
+     "sha256": "6ad6fc2a0b7647ffbac794acf16b487a8bc494c00d4921548a1ea82f27f462c3"
+    },
+    {
+     "file": "sct_organisms.txt",
+     "bytes": 347826,
+     "sha256": "9aaadbe862c217776a7338286133aecfb85454c0ec60a18718646ef784896593"
+    },
+    {
+     "file": "umls_concept_member_handcheck.json",
+     "bytes": 6634,
+     "sha256": "9be0f6dcc2e732c8fa739003c8765fd483ad7f8cb39ee66bbcef30fb90749bca"
+    },
+    {
+     "file": "umls_medrt_handcheck.json",
+     "bytes": 83260,
+     "sha256": "6c2786edff6ecf485ff56f62e72ca32ecb348727843619169dad63baf66943ca"
+    },
+    {
+     "file": "umls_rel_edges.parquet",
+     "bytes": 13381085,
+     "sha256": "36af5d25ac2460b3103e512716799cb7e45f55a1a84a90f8504b236b0b2db487"
+    },
+    {
+     "file": "umls_shared_cui.parquet",
+     "bytes": 22522510,
+     "sha256": "91738928666cf36c8a8f63f9da4ced1a66d19e7366606ec61cd646c836662cbb"
+    },
+    {
+     "file": "umls_shared_cui_handcheck.json",
+     "bytes": 193465,
+     "sha256": "f57430dc739d2d9d0c76d0fa6bebf05a9f0d02f2e61b1b512594f38b33348bf5"
+    }
+   ],
+   "bytes": 572685408
+  },
+  {
+   "id": "hgnc",
+   "kind": "stored",
+   "path": "cache/hgnc",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://www.genenames.org/download/archive/ (hgnc_complete_set.txt)",
+   "version": "2026-09-24",
+   "licence": "CC0",
+   "files": [
+    {
+     "file": "hgnc_complete_set.txt",
+     "bytes": 16940274,
+     "sha256": "69bb5722d5a42bb355580deb2c9f197ce3d7f7d13807173b9674a7db65e52191"
+    }
+   ],
+   "bytes": 16940274
+  },
+  {
+   "id": "orphanet",
+   "kind": "stored",
+   "path": "cache/orphanet",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://www.orphadata.com/data/xml/ (en_product1.xml, en_product4.xml, en_product6.xml)",
+   "version": "2026-06-23",
+   "licence": "CC BY 4.0",
+   "files": [
+    {
+     "file": "disorder_group.json",
+     "bytes": 502162,
+     "sha256": "0da6fe907c2fd384a1b4de1ace36c99fcbc40e2698e48df7e74e86eaad835d70"
+    },
+    {
+     "file": "en_product1.xml",
+     "bytes": 54026799,
+     "sha256": "df8d562a0c6011af36a74eb4000ce81ca7d723e8031010819fb71727c0962bbb"
+    },
+    {
+     "file": "en_product4.xml",
+     "bytes": 47893357,
+     "sha256": "4f44e8a61201399911aa1ba44a293c0ccaa5ce11272c47d40862255cb72f6b32"
+    },
+    {
+     "file": "en_product6.xml",
+     "bytes": 22612034,
+     "sha256": "f1c039f78683beea7ca5b34d1c01c4ec98f80e8ca488eee69770074db1020e39"
+    },
+    {
+     "file": "orpha_icd10_chain_census.json",
+     "bytes": 17737,
+     "sha256": "0a8bbb7a30db59e716eb84e557dbcd736ab6fbda17c3877f426f7ac2a9a6ca13"
+    }
+   ],
+   "bytes": 125052089
+  },
+  {
+   "id": "reactome",
+   "kind": "stored",
+   "path": "cache/reactome",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://reactome.org/download-data (UniProt2Reactome, ReactomePathways, ReactomePathwaysRelation)",
+   "version": "v97",
+   "licence": "CC0",
+   "files": [
+    {
+     "file": "ReactomePathways.txt",
+     "bytes": 1592393,
+     "sha256": "f6d7a2bf89b5bcfe0250a0bc7f51bff94641447911712b8ff129f5b55e52df3a"
+    },
+    {
+     "file": "ReactomePathwaysRelation.txt",
+     "bytes": 634259,
+     "sha256": "fd49a624d80c14eb37ae57a02e141d574d5ede3f60022bb99edbd909448a3f1e"
+    },
+    {
+     "file": "UniProt2Reactome.txt",
+     "bytes": 43041375,
+     "sha256": "e34fe56a5129d88d8cd67300c279d7e81fa1d3bf86fa0577cf91032c326eaecc"
+    }
+   ],
+   "bytes": 45268027
+  },
+  {
+   "id": "who_icd11",
+   "kind": "stored",
+   "path": "cache/who-icd11",
+   "is_dir": true,
+   "keep": null,
+   "source": "WHO ICD-11 2026-01 release: mapping tables (mapping.zip)",
+   "version": "2026-01",
+   "licence": "CC BY-ND 3.0 IGO",
+   "files": [
+    {
+     "file": "10To11MapToMultipleCategories.txt",
+     "bytes": 3787273,
+     "sha256": "c722d8fe04a87970ad21f2214640394228f292cdf0ad111132aa5b078efccc85"
+    },
+    {
+     "file": "10To11MapToOneCategory.txt",
+     "bytes": 3084414,
+     "sha256": "00795cfe802deea63ef9c7018e4d6e55c67a50b7246197a6243657096cf9c911"
+    },
+    {
+     "file": "11To10MapToOneCategory.txt",
+     "bytes": 2921802,
+     "sha256": "626272bfae71a4952693c24080e8f5b5cc176c29746985fb3bfd149e3f18a922"
+    },
+    {
+     "file": "foundation_10To11MapToOneCategory.txt",
+     "bytes": 2098236,
+     "sha256": "6c6ee06cac759d6d9569502bfe674951638017f9a7be6261ca01d830531c84c8"
+    },
+    {
+     "file": "foundation_11To10MapToOneCategory.txt",
+     "bytes": 6710819,
+     "sha256": "2a7a14f4ee3065b4e659c021995bb93dad941bcc5deb3b83a20c33c5bfed0967"
+    },
+    {
+     "file": "mapping-2026-01.zip",
+     "bytes": 6809366,
+     "sha256": "2eb158cf2a0d53690d6e9baf0956f7617e1315e4f2a44dfc3db3be8f49193a1d"
+    },
+    {
+     "file": "readme.txt",
+     "bytes": 1944,
+     "sha256": "2c82968062cf0c673eb728ba90793118c6244f482033a4a9062b157a41aa357e"
+    }
+   ],
+   "bytes": 25413854
+  },
+  {
+   "id": "snomed_us_maps",
+   "kind": "stored",
+   "path": "cache/snomed-us",
+   "is_dir": true,
+   "keep": "*.parquet",
+   "source": "https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20260901T120000Z.zip (661 MB, UTS key; not stored) -> scripts/snomed_us_maps.py",
+   "version": "US Edition 20260901",
+   "licence": "UMLS + SNOMED affiliate licence",
+   "files": [
+    {
+     "file": "extended_map_20260901.parquet",
+     "bytes": 33655875,
+     "sha256": "7b9508e8c753f50046c5ee7a67f055288e28998644473c3681a440e9cf00fdd9"
+    }
+   ],
+   "bytes": 33655875
+  },
+  {
+   "id": "completeness_evidence",
+   "kind": "stored",
+   "path": "cache/completeness",
+   "is_dir": true,
+   "keep": null,
+   "source": "scripts/completeness.py --refresh-evidence (from SeMRA Zenodo 15208251 + UMLS pairs)",
+   "version": "24 Sep 2026",
+   "licence": "derived (UMLS licence)",
+   "files": [
+    {
+     "file": "bridge_edges.json",
+     "bytes": 31488,
+     "sha256": "c134bc72c7ee8f272303e2a3cbaca1e3cc98beeb06824c1a0c3297d5c39d02e4"
+    },
+    {
+     "file": "evidence.parquet",
+     "bytes": 79152475,
+     "sha256": "39982e0704c37854cbab69dc7efc1eb68dfed8fc18416508400919d5b93b222b"
+    }
+   ],
+   "bytes": 79183963
+  },
+  {
+   "id": "consistency_handcheck",
+   "kind": "stored",
+   "path": "cache/consistency",
+   "is_dir": true,
+   "keep": null,
+   "source": "hand checks, 24 Sep 2026",
+   "version": "-",
+   "licence": "derived",
+   "files": [
+    {
+     "file": "bridge_handcheck.json",
+     "bytes": 15217,
+     "sha256": "dc2d2490e7aa41e6527ad87f2664454fd2b2c9436550841011cfd837b21cb704"
+    }
+   ],
+   "bytes": 15217
+  },
+  {
+   "id": "snomed_ct_au",
+   "kind": "in place",
+   "path": "SnomedCT_Release_AU1000036_20260831/Snapshot",
+   "is_dir": true,
+   "source": "NCTS (healthterminologies.gov.au): NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
+   "version": "SNOMED CT-AU 20260831",
+   "licence": "SNOMED CT Affiliate + Australian National Terminology licence",
+   "files": [
+    {
+     "file": "Refset/Content/der2_Refset_SimpleSnapshot_AU1000036_20260831.txt",
+     "bytes": 132340216,
+     "sha256": "4d3f645b347b2a85f7338263b9f1f3d8caec44c76876b75461c85344de4db09f"
+    },
+    {
+     "file": "Refset/Content/der2_cRefset_AssociationSnapshot_AU1000036_20260831.txt",
+     "bytes": 39228841,
+     "sha256": "2a6055c1bfbcc7f89eb4dea9fc9fb43c407ba52ad931d86a41a8e06075da4ebd"
+    },
+    {
+     "file": "Refset/Content/der2_cRefset_AttributeValueSnapshot_AU1000036_20260831.txt",
+     "bytes": 104079522,
+     "sha256": "f5cbb297f48056eef80883c15663edcb9f0821bc35cf925ce7d495b42b684c3b"
+    },
+    {
+     "file": "Refset/Content/der2_ccRefset_ExtendedAssociationSnapshot_AU1000036_20260831.txt",
+     "bytes": 213661,
+     "sha256": "571c77bd8141c2eb7af39b9ed3df6f88c3f2bcc32d926e1a38e85cf5aa4bafa5"
+    },
+    {
+     "file": "Refset/Content/der2_sRefset_QuerySnapshot_AU1000036_20260831.txt",
+     "bytes": 18453,
+     "sha256": "4b58cae38452e9da85c64a0dd5b0c1cc94cb8d8d1392bb372d9e045e83a45727"
+    },
+    {
+     "file": "Refset/Language/der2_cRefset_LanguageSnapshot-en-au_AU1000036_20260831.txt",
+     "bytes": 719511569,
+     "sha256": "9b937fb4b9f8e7bb75df609b104e6b7b7c5c48954ac804bbc96b7428b69a6451"
+    },
+    {
+     "file": "Refset/Map/der2_csRefset_AttributeValueMapSnapshot_AU1000036_20260831.txt",
+     "bytes": 425049,
+     "sha256": "20422ec08ffdd74c880bbaa2b5e5f5d4d517a91ff2d2725b1a6720627971c362"
+    },
+    {
+     "file": "Refset/Map/der2_iRefset_SimpleMapSnapshot_AU1000036_20260831.txt",
+     "bytes": 5652352,
+     "sha256": "180d791825f1c5eb6f201a9e134eef096157f0f5ffc083b4f9c1134031a8eb00"
+    },
+    {
+     "file": "Refset/Map/der2_sRefset_SimpleMapSnapshot_AU1000036_20260831.txt",
+     "bytes": 5329212,
+     "sha256": "b9912ad3914fe728f6407e7fadafbfbf9bab6c59b99c7aee81dc3c885f564358"
+    },
+    {
+     "file": "Refset/Metadata/der2_cRefset_MRCMModuleScopeSnapshot_AU1000036_20260831.txt",
+     "bytes": 718,
+     "sha256": "2bccf13a3a8ebeb3c1dce0b63cbf9cb725a346810dd1b91007b063c6ca1474a1"
+    },
+    {
+     "file": "Refset/Metadata/der2_cciRefset_RefsetDescriptorSnapshot_AU1000036_20260831.txt",
+     "bytes": 62908,
+     "sha256": "4bd6a82cc36d52f97fb783fce5c7459c2bca43dc9bfca8b3c0be19a4dc1efa3a"
+    },
+    {
+     "file": "Refset/Metadata/der2_ciRefset_DescriptionTypeSnapshot_AU1000036_20260831.txt",
+     "bytes": 490,
+     "sha256": "f984de637d4ff5217b194d24f42d3d859589bd8b1fa290d385986491797c323b"
+    },
+    {
+     "file": "Refset/Metadata/der2_cissccRefset_MRCMAttributeDomainSnapshot_AU1000036_20260831.txt",
+     "bytes": 28780,
+     "sha256": "e2c20922c46738e848226a4dbe0b5c8f28082564b26b93ab53ab20795aa4fd9a"
+    },
+    {
+     "file": "Refset/Metadata/der2_scsRefset_ComponentAnnotationStringValueSnapshot_AU1000036_20260831.txt",
+     "bytes": 868185,
+     "sha256": "03a1fb871a44658a858271309252a36c3aa4426b644b8c7c9ec8e386545c0864"
+    },
+    {
+     "file": "Refset/Metadata/der2_ssRefset_ModuleDependencySnapshot_AU1000036_20260831.txt",
+     "bytes": 3202,
+     "sha256": "f823ae96444ef9a0446bb8c0873521bd7d6c4d3d15ef462d85e72fd1dd9a47ab"
+    },
+    {
+     "file": "Refset/Metadata/der2_ssccRefset_MRCMAttributeRangeSnapshot_AU1000036_20260831.txt",
+     "bytes": 65503,
+     "sha256": "6f6ebbcbb8a9581a8b3d7d05e44647136b7b8857a5b93d48edea369d94e6c6e6"
+    },
+    {
+     "file": "Refset/Metadata/der2_sscsRefset_MemberAnnotationStringValueSnapshot_AU1000036_20260831.txt",
+     "bytes": 117,
+     "sha256": "248765c3035da04e5f1351c4e8224e12f30f5c66f3702d4cf4dfe015a36a8a74"
+    },
+    {
+     "file": "Refset/Metadata/der2_sssssssRefset_MRCMDomainSnapshot_AU1000036_20260831.txt",
+     "bytes": 129557,
+     "sha256": "4e9de3fc645a86cdb490330e414679a817b6cbd2897751ff3d2209bf3566273d"
+    },
+    {
+     "file": "Terminology/sct2_Concept_Snapshot_AU1000036_20260831.txt",
+     "bytes": 44652083,
+     "sha256": "3917df5da3fb2da3c0d62999c15a8f2e4a19e8fdca0655b581133e8aaeea6481"
+    },
+    {
+     "file": "Terminology/sct2_Description_Snapshot-en-au_AU1000036_20260831.txt",
+     "bytes": 327608200,
+     "sha256": "8db13d05bd6fbbc7844e0657a6e3026caf59ff653ef29460903c614e4d5ac4bf"
+    },
+    {
+     "file": "Terminology/sct2_Identifier_Snapshot_AU1000036_20260831.txt",
+     "bytes": 92,
+     "sha256": "4ba4e6562a3a51bd9f7a77ea86810abee3b6ce7c9ab803779fb2a0d0c146d44c"
+    },
+    {
+     "file": "Terminology/sct2_RelationshipConcreteValues_Snapshot_AU1000036_20260831.txt",
+     "bytes": 63681680,
+     "sha256": "0d2a8fd730bf515fa18a9a668d27306aff49d8d7db6fa4e20edb47b4e8c7988e"
+    },
+    {
+     "file": "Terminology/sct2_Relationship_Snapshot_AU1000036_20260831.txt",
+     "bytes": 599699342,
+     "sha256": "24bd907940820f8bb92aa135aa16b7f5b88fa142fe43d8cf6501431ca56b8d23"
+    },
+    {
+     "file": "Terminology/sct2_TextDefinition_Snapshot-en-au_AU1000036_20260831.txt",
+     "bytes": 8610293,
+     "sha256": "31e05438a642c7ec65a89262cb9c78d248c2d4fb46c4b557ce7880cbfd36d8a8"
+    },
+    {
+     "file": "Terminology/sct2_sRefset_OWLExpressionSnapshot_AU1000036_20260831.txt",
+     "bytes": 199210644,
+     "sha256": "e109caba4c8815b977af911822dd7f61286c5c8da8c19eeda8a18c769d55dffa"
+    }
+   ],
+   "bytes": 2251420669
+  },
+  {
+   "id": "snomed_ct_au_zip",
+   "kind": "in place",
+   "path": "NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
+   "is_dir": false,
+   "source": "NCTS",
+   "version": "20260831",
+   "licence": "as above",
+   "files": [
+    {
+     "file": "NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
+     "bytes": 891196159,
+     "sha256": "9c2a841aefbd1318680680594ff8e8ffebdaad199b7a205ebce6f39bf052752e"
+    }
+   ],
+   "bytes": 891196159
+  },
+  {
+   "id": "loinc",
+   "kind": "in place",
+   "path": "Loinc_2.83",
+   "is_dir": true,
+   "source": "https://loinc.org/downloads/ (account)",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "AccessoryFiles/AnswerFile/AnswerFileReadMe.txt",
+     "bytes": 5561,
+     "sha256": "c8582152962379cfff44f0af38ed38553e3439de249a29934cf540481eaaf9f7"
+    },
+    {
+     "file": "AccessoryFiles/AnswerFile/AnswerList.csv",
+     "bytes": 8323077,
+     "sha256": "9ae792e331b8e45184188c82196d74643abbdef83ddbb912bae2e1e803f1f6a0"
+    },
+    {
+     "file": "AccessoryFiles/AnswerFile/LoincAnswerListLink.csv",
+     "bytes": 3946140,
+     "sha256": "7edbc7808e795313362cea5e0c32e782122a845ce7d5bd9cfb183297de568abc"
+    },
+    {
+     "file": "AccessoryFiles/ChangeSnapshot/ChangeSnapshotReadMe.txt",
+     "bytes": 2303,
+     "sha256": "1864a04dcc0578ccb8c6da12f04665cb6c2d0261a5ac819f5b1f81d0b766a2a3"
+    },
+    {
+     "file": "AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.csv",
+     "bytes": 1458275,
+     "sha256": "1b64f6975f4adbc967768e492c7edf4eca8402a08566c79012bb3f81cf4b2b13"
+    },
+    {
+     "file": "AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.csv",
+     "bytes": 13533,
+     "sha256": "93125f9928fa5bde92fd87d10cf476ee183d14db203bcf8917fce0f457701979"
+    },
+    {
+     "file": "AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.csv",
+     "bytes": 24046592,
+     "sha256": "ee4ea05969b3fa84f25d9800bd66210b8078fa87f5f25849955414c3949a687a"
+    },
+    {
+     "file": "AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystemReadMe.txt",
+     "bytes": 3620,
+     "sha256": "8f8ae90dea55c0f67012e9c584f71102b0b6d30c7a039c0a08b893cec8bea261"
+    },
+    {
+     "file": "AccessoryFiles/ConsumerName/ConsumerName.csv",
+     "bytes": 3378803,
+     "sha256": "81392f1797472edd5dcc8d69a0191f0460fb835a457382e7458c9b847c97c79f"
+    },
+    {
+     "file": "AccessoryFiles/ConsumerName/ConsumerNameReadMe.txt",
+     "bytes": 1979,
+     "sha256": "7d4dd4f92a69d4d035a66cc2dca18af92a5f0004239d2a7d61710fa6952c2e8b"
+    },
+    {
+     "file": "AccessoryFiles/DocumentOntology/DocumentOntology.csv",
+     "bytes": 889704,
+     "sha256": "1e554133596283b1203b9da3ab9e021b0afbdc5f3845a42721b03762b97815bf"
+    },
+    {
+     "file": "AccessoryFiles/DocumentOntology/DocumentOntologyReadMe.txt",
+     "bytes": 1675,
+     "sha256": "f9b0230777be4f2dfe7ac3b51c156c2a94c5a5b69d7510f566e321dccdd841b9"
+    },
+    {
+     "file": "AccessoryFiles/DocumentOntologyOwl/DocumentOntology.owl",
+     "bytes": 2259466,
+     "sha256": "e5fccb15bb17204dac882509b42c463e112638e90aff0a4fac5877f6e55b45ee"
+    },
+    {
+     "file": "AccessoryFiles/DocumentOntologyOwl/DocumentOntologyOwlReadme.txt",
+     "bytes": 2216,
+     "sha256": "e698c0744f5c4f9c020c7b03deb089e303717520feb092d78ffd3dce2d7885ed"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/Group.csv",
+     "bytes": 674019,
+     "sha256": "6e8d93ca5788da88f8c4c7902a1dd05b04abef5f0812a722b50b769920d448be"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/GroupAttributes.csv",
+     "bytes": 97357,
+     "sha256": "46c0bfee76e1a62dcd12b90ffe0690376dcdcf90faf8036c4f0a8461973fe3fa"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/GroupFileReadMe.txt",
+     "bytes": 8606,
+     "sha256": "5feb26993d426aea5230db5c6bfa92f33dee0091a214b45ee665592a4827b351"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/GroupLoincTerms.csv",
+     "bytes": 4501269,
+     "sha256": "fd9788db62aeace77b4a752d22b84168cf1b1714f0e350fa621bdbbfab83fcbb"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/ParentGroup.csv",
+     "bytes": 4130,
+     "sha256": "5b9d7d2f11bb510c991e5440ed8c403e91251b3d6a7539bcaccf075a3754ea4e"
+    },
+    {
+     "file": "AccessoryFiles/GroupFile/ParentGroupAttributes.csv",
+     "bytes": 17785,
+     "sha256": "7effb880b5a17daee77e8da84c5f8f5ba46bd7e60926055d929d2143e11417aa"
+    },
+    {
+     "file": "AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.csv",
+     "bytes": 372231,
+     "sha256": "f2122e3e487c8322b236d0f6b4827e28724284ae9e6f2d446afc2792ce385fc4"
+    },
+    {
+     "file": "AccessoryFiles/ImagingDocuments/ImagingDocumentCodesReadMe.txt",
+     "bytes": 1750,
+     "sha256": "bf6cbd6ca1eaa9c01b8f859147f14a34757119dde9448879e10e73f843d40ca5"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/LinguisticVariants.csv",
+     "bytes": 2352,
+     "sha256": "d531712faf330fc53a877995029167e68da9645176388f3afc3aeb9233a02bc9"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/LinguisticVariantsReadMe.txt",
+     "bytes": 4127,
+     "sha256": "f374d34b81b4aa841b0d18b1d43c7ce07c4216bf64b51b0a378758f4b0feaae1"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/arJO32LinguisticVariant.csv",
+     "bytes": 275678,
+     "sha256": "922ad792cab13caf396969d811cd7a87d589fa5869509e033e126986f9fae013"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/csCZ33LinguisticVariant.csv",
+     "bytes": 14052884,
+     "sha256": "66ee56977c7d7d0e958971a683951268592deeab722ddfce8fb6daf6e8737f5b"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.csv",
+     "bytes": 692929,
+     "sha256": "95e3faa25ec921b7de22c865ba091a62cd127416d315b71bf64cefbbde25271e"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.csv",
+     "bytes": 4308800,
+     "sha256": "b11b93439c49c7bc8bd48c85d7210d8152de2a17430b212ea1741de89e9abe9b"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.csv",
+     "bytes": 29624467,
+     "sha256": "9da10097d243cb178ffa0928535e93bd7780e44b0d8de7ef82056ebb88d8155e"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.csv",
+     "bytes": 10590617,
+     "sha256": "7e80b0c7bc45b863d3e06fa12728ed3c2a00e2228cc55f8c83be7db5e47dd898"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.csv",
+     "bytes": 11597755,
+     "sha256": "9fcb96736537c9bcce682fc338244a2f6fb803c7c2ba9e8db3de2cedcf8142ff"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/esMX28LinguisticVariant.csv",
+     "bytes": 19433774,
+     "sha256": "3bb349842aabfe4b539af3d187828d1e102b6e9254e556e4175e6d1d4030a04b"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.csv",
+     "bytes": 3977776,
+     "sha256": "a3312535a4ebede2606fb99793c50d81dc43990a3bd9a2f22c166790e575b0da"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.csv",
+     "bytes": 6638491,
+     "sha256": "99660094a584b2c5c455f0711181fac6d51f3c6052a2b5deea1dc1efa54cf55f"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.csv",
+     "bytes": 7432798,
+     "sha256": "b6e6d939b1c9c88821981df26c099a3485f3c11cf1043957a0bc3e791f67d90e"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.csv",
+     "bytes": 13252598,
+     "sha256": "9f47a8648f40915d1f99f0cd711f648501e76cb95ac3604d5dc9cbe264651ee7"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.csv",
+     "bytes": 22081590,
+     "sha256": "e22edecbc75051a99f022f9fce68d530ee6150b4c6cb3fea4f90a9075aab9855"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.csv",
+     "bytes": 3245548,
+     "sha256": "612138435c593f815d22328319cf73dad7038866a6224d5605c37bbacc324a3f"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.csv",
+     "bytes": 14499798,
+     "sha256": "fcb77a764d72fcaa3f6311ca22a5adeb2f6f27c72e7bdef6d6890f50e3bca79a"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/plPL29LinguisticVariant.csv",
+     "bytes": 10294621,
+     "sha256": "971b739be343c9d0a791e21b575ba38327b7181dc82d98f23f2949c730e44b77"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.csv",
+     "bytes": 19669349,
+     "sha256": "18b93900990d3b1edf76c37ddb697e5a2018241d54a07906e512af90ce066120"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.csv",
+     "bytes": 17215872,
+     "sha256": "f14fb011654ed6b789bbd1a692cbce212262e903a3f20266567ae46dc699eb26"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.csv",
+     "bytes": 5592460,
+     "sha256": "0ab5707355094d1fb5c385b137707d028adceb26363fe6e70cfaa9a21a56197b"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/ukUA30LinguisticVariant.csv",
+     "bytes": 2380028,
+     "sha256": "e7bcfc34cb016f0d03bab22f70e80397564ff51d04cb4f45e675a2d19e550d32"
+    },
+    {
+     "file": "AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.csv",
+     "bytes": 96195744,
+     "sha256": "94527f0d89c455c427ac75e2ae6f5f9b19a92534e2b206768375819734a186e5"
+    },
+    {
+     "file": "AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.csv",
+     "bytes": 67712,
+     "sha256": "793063f9a15c912ffef00bf614aba912528f51283f36542108504d7e42a964a8"
+    },
+    {
+     "file": "AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTableReadMe.txt",
+     "bytes": 1330,
+     "sha256": "5fa8f1d59467663f354383a49cc70738da5dddafae1118d183f4e1b577b88636"
+    },
+    {
+     "file": "AccessoryFiles/LoincNamesEffectiveDateHistory/LoincNamesEffectiveDateHistory.csv",
+     "bytes": 57164091,
+     "sha256": "561472861ee61cb34360288722e651c530cf186b064d53c8cd7f3900d42cd28f"
+    },
+    {
+     "file": "AccessoryFiles/LoincNamesEffectiveDateHistory/LoincNamesEffectiveDateHistoryReadMe.txt",
+     "bytes": 2347,
+     "sha256": "a1419954935626f3b15a89487fcd51af9641acaddd32547a35c2bbc618057929"
+    },
+    {
+     "file": "AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv",
+     "bytes": 7591687,
+     "sha256": "853b9fb245628ff701c11f627bff146064e0f7c01c0b9cb5bea8eddeaf5c7251"
+    },
+    {
+     "file": "AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybookReadMe.txt",
+     "bytes": 8278,
+     "sha256": "3a95b31d0844714cc9e6d4abef815dc36636e33c22e9b6bee5cc911ba16ce23d"
+    },
+    {
+     "file": "AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.csv",
+     "bytes": 112130,
+     "sha256": "7603365bdfe678ee09000a005e218ca76c41ccceb0ab1ff5b85131d1b798d262"
+    },
+    {
+     "file": "AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSetReadMe.txt",
+     "bytes": 2038,
+     "sha256": "cba6a5e783a8f08d08441ee1ed8ef093f6f37fd5bd4a79b034511f6f0497a94e"
+    },
+    {
+     "file": "AccessoryFiles/Loinc_2.83_DifferenceReport.pdf",
+     "bytes": 296598,
+     "sha256": "e28ee3767d58d753bc83ba14f2e59117446cd5748d52d21ff9785ed667005bf4"
+    },
+    {
+     "file": "AccessoryFiles/PanelsAndForms/AnswerList.csv",
+     "bytes": 8323077,
+     "sha256": "9ae792e331b8e45184188c82196d74643abbdef83ddbb912bae2e1e803f1f6a0"
+    },
+    {
+     "file": "AccessoryFiles/PanelsAndForms/Loinc.csv",
+     "bytes": 84205426,
+     "sha256": "5de1463f0fe65d6c97867153b43151a07ce3f8c8a86de681f98e110008032aba"
+    },
+    {
+     "file": "AccessoryFiles/PanelsAndForms/LoincAnswerListLink.csv",
+     "bytes": 3946140,
+     "sha256": "7edbc7808e795313362cea5e0c32e782122a845ce7d5bd9cfb183297de568abc"
+    },
+    {
+     "file": "AccessoryFiles/PanelsAndForms/PanelsAndForms.csv",
+     "bytes": 34791992,
+     "sha256": "54451baebd4e6f116edfc44024fc5ea2a005e32a56ad72514c31278cff9ce7d4"
+    },
+    {
+     "file": "AccessoryFiles/PanelsAndForms/PanelsAndFormsReadMe.txt",
+     "bytes": 8851,
+     "sha256": "0575234997e984e6df0e363ee473ff6c7887e971f0f79a279182b7e117f28b33"
+    },
+    {
+     "file": "AccessoryFiles/PartFile/LoincPartLink_Primary.csv",
+     "bytes": 118680671,
+     "sha256": "31e2db4ad083c56829951464d521956fb3bbd6ab9f207b5e9f39423363617578"
+    },
+    {
+     "file": "AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv",
+     "bytes": 246622108,
+     "sha256": "10e794d92523c426b141be744d2613a5b7ea9f172ac97b48517fe7648f0272e4"
+    },
+    {
+     "file": "AccessoryFiles/PartFile/Part.csv",
+     "bytes": 8038858,
+     "sha256": "743dff07ad47bc5eeb4854864ebb2a5ed883112df8d49e21b0fad9bf60ad6c77"
+    },
+    {
+     "file": "AccessoryFiles/PartFile/PartFileReadMe.txt",
+     "bytes": 10813,
+     "sha256": "3c44b7a7867bdb81ae539842e103e651283e9547f0a3c7e98807a42f44153519"
+    },
+    {
+     "file": "AccessoryFiles/PartFile/PartRelatedCodeMapping.csv",
+     "bytes": 9760306,
+     "sha256": "c7847f11f9e05091381181c5e5665e351d15a07143d13eeb69246e0f436c6beb"
+    },
+    {
+     "file": "AccessoryFiles/Updates/Updates.csv",
+     "bytes": 401484,
+     "sha256": "5c4720487cc3931c3f56272ef080206632c1705a0ed5d508383a0ade96539e5b"
+    },
+    {
+     "file": "AccessoryFiles/Updates/UpdatesAdditionalFields.csv",
+     "bytes": 9291249,
+     "sha256": "5d854a03f374d44da2da7658d872266062a1c6484f97fa05754396acb9e528e2"
+    },
+    {
+     "file": "AccessoryFiles/Updates/UpdatesReadMe.txt",
+     "bytes": 3909,
+     "sha256": "30e6531cb095ac3251d0e172add7abdfcb4f97379d94ea7eae853034b35976fe"
+    },
+    {
+     "file": "LoincLicense_5.8.txt",
+     "bytes": 25709,
+     "sha256": "05eb5069f8352b0513fe8c911d8a432e8ddc2d09f999b6f153617f2afd16ad85"
+    },
+    {
+     "file": "LoincReadMe.txt",
+     "bytes": 376,
+     "sha256": "d63b126278803507cdbc35a67609a51dd0fcaded10e95a8522db526008692dd1"
+    },
+    {
+     "file": "LoincTable/Loinc.csv",
+     "bytes": 84205426,
+     "sha256": "5de1463f0fe65d6c97867153b43151a07ce3f8c8a86de681f98e110008032aba"
+    },
+    {
+     "file": "LoincTable/MapTo.csv",
+     "bytes": 122901,
+     "sha256": "775bab444c9c617edc7e6cf4e5f775a500f0391956552f40b2635ef7209ceeb0"
+    },
+    {
+     "file": "LoincTable/SourceOrganization.csv",
+     "bytes": 36722,
+     "sha256": "da06b0eabfcfea1600d850efa6941852bcc89cc375d0841585270cc51d6cdab3"
+    },
+    {
+     "file": "LoincTableCore/LoincTableCore.csv",
+     "bytes": 26631514,
+     "sha256": "7d267bad9820cf439964b1ac59ec19bb9e0e801977236d653c7799da860f5c3e"
+    },
+    {
+     "file": "LoincTableCore/LoincTableCoreReadMe.txt",
+     "bytes": 1605,
+     "sha256": "301fc887999ada96cfcf8347b4106522c09c72ff8730a3b883e1562d21c1fd20"
+    },
+    {
+     "file": "LoincTableCore/MapTo.csv",
+     "bytes": 122901,
+     "sha256": "775bab444c9c617edc7e6cf4e5f775a500f0391956552f40b2635ef7209ceeb0"
+    },
+    {
+     "file": "loinc.xml",
+     "bytes": 34254,
+     "sha256": "7365fba162ec1f1bc78a3f5abd758a9fb3d5efba496c762d252be775d6bc6e52"
+    }
+   ],
+   "bytes": 1063582650
+  },
+  {
+   "id": "loinc_extension",
+   "kind": "in place",
+   "path": "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot",
+   "is_dir": true,
+   "source": "SNOMED International / NCTS",
+   "version": "LOINC Extension 20260321",
+   "licence": "SNOMED CT + LOINC licences",
+   "files": [
+    {
+     "file": "Refset/Content/der2_Refset_SimpleSnapshot_LO1010000_20260321.txt",
+     "bytes": 6832206,
+     "sha256": "e557936690dc7a3dbe4643e9feb23617e614a83a8472e6a3610c9837ecb7457c"
+    },
+    {
+     "file": "Refset/Content/der2_cRefset_AssociationSnapshot_LO1010000_20260321.txt",
+     "bytes": 485,
+     "sha256": "ef56e3d1afd771d69f472b525b61760fd614974deca8c490f6aee9bc00c61117"
+    },
+    {
+     "file": "Refset/Content/der2_cRefset_AttributeValueSnapshot_LO1010000_20260321.txt",
+     "bytes": 20211,
+     "sha256": "5110d083e5f53082c006b9a54a8a9a15ba15f7a70bb0463c023a70a4591c5a48"
+    },
+    {
+     "file": "Refset/Language/der2_cRefset_LanguageSnapshot-en_LO1010000_20260321.txt",
+     "bytes": 31750859,
+     "sha256": "45ce85a7ea943b25df1346c1e850a399bc569c423d5af9fdcc4a2fc9f994c947"
+    },
+    {
+     "file": "Refset/Metadata/der2_cciRefset_RefsetDescriptorSnapshot_LO1010000_20260321.txt",
+     "bytes": 369,
+     "sha256": "56ab6afe322a10a38d9533bf29b5d95210d7cae6cc2e7a47f527819f628a00b0"
+    },
+    {
+     "file": "Refset/Metadata/der2_ciRefset_DescriptionTypeSnapshot_LO1010000_20260321.txt",
+     "bytes": 101,
+     "sha256": "2845ff268d2d56b8ae73ebd4d90ac080a2b49d053d8a4bba55f573063963d047"
+    },
+    {
+     "file": "Refset/Metadata/der2_scsRefset_ComponentAnnotationStringValueSnapshot_LO1010000_20260321.txt",
+     "bytes": 94108,
+     "sha256": "e760e3499c054f480a9c346d1ec02ecd491d0a1e701c3df9d4f07d90ea88af3b"
+    },
+    {
+     "file": "Refset/Metadata/der2_ssRefset_ModuleDependencySnapshot_LO1010000_20260321.txt",
+     "bytes": 339,
+     "sha256": "eedd1401609a618f74e11edc3cbcb9db3c7c66d470d5e436c5aed139ad0cdd49"
+    },
+    {
+     "file": "Refset/Metadata/der2_sscsRefset_MemberAnnotationStringValueSnapshot_LO1010000_20260321.txt",
+     "bytes": 117,
+     "sha256": "248765c3035da04e5f1351c4e8224e12f30f5c66f3702d4cf4dfe015a36a8a74"
+    },
+    {
+     "file": "Terminology/sct2_Concept_Snapshot_LO1010000_20260321.txt",
+     "bytes": 2710797,
+     "sha256": "3f4cd2fef949ba9616f0289ef3e6223268c0ce104134a353a5c8c0a8a134e26f"
+    },
+    {
+     "file": "Terminology/sct2_Description_Snapshot-en_LO1010000_20260321.txt",
+     "bytes": 42579347,
+     "sha256": "7d1a9cfb6b313994c6d9503f3ac3a09dd26fa12e0a0e56c30fe4f778ff3f46a3"
+    },
+    {
+     "file": "Terminology/sct2_Identifier_Snapshot_LO1010000_20260321.txt",
+     "bytes": 2826651,
+     "sha256": "a7e8d316bd63fac0934ab8c2c615646a517513dc5e43ed3da457a4a4fd5f6470"
+    },
+    {
+     "file": "Terminology/sct2_RelationshipConcreteValues_Snapshot_LO1010000_20260321.txt",
+     "bytes": 106,
+     "sha256": "5f6b2c2e444b13debe1b7f90c22bddc7e208cb98629848da09b2fd07733a65e6"
+    },
+    {
+     "file": "Terminology/sct2_Relationship_Snapshot_LO1010000_20260321.txt",
+     "bytes": 34525530,
+     "sha256": "d13e33d62bb8ec02ca4cb5dc42febd896fa41779941d8977e20195d0d3f6d028"
+    },
+    {
+     "file": "Terminology/sct2_TextDefinition_Snapshot-en_LO1010000_20260321.txt",
+     "bytes": 883,
+     "sha256": "2bd817bf7576950ee0530909231bd03ea4e385fd641ab337f82e51bc3ed210da"
+    },
+    {
+     "file": "Terminology/sct2_sRefset_OWLExpressionSnapshot_LO1010000_20260321.txt",
+     "bytes": 19717244,
+     "sha256": "f2a7c04b6f370ce9e93904bb5837c9abf1cb61ed3adff48a55ebba1bdcac79a5"
+    }
+   ],
+   "bytes": 141059353
+  },
+  {
+   "id": "radlex",
+   "kind": "in place",
+   "path": "PunRadLex_Owl4.3/RadLex.owl",
+   "is_dir": false,
+   "source": "https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon",
+   "version": "RadLex 4.3",
+   "licence": "RadLex licence (RSNA)",
+   "files": [
+    {
+     "file": "RadLex.owl",
+     "bytes": 64938742,
+     "sha256": "b13aac45f6f9bd74428c976cb018b86aeb7a248683917cfd9ffea253b63b29b1"
+    }
+   ],
+   "bytes": 64938742
+  },
+  {
+   "id": "rsna_playbook",
+   "kind": "in place",
+   "path": "complete-playbook-dev.csv",
+   "is_dir": false,
+   "source": "RSNA Radiology Playbook",
+   "version": "downloaded 24 Sep 2026",
+   "licence": "RSNA",
+   "files": [
+    {
+     "file": "complete-playbook-dev.csv",
+     "bytes": 2348169,
+     "sha256": "9d83635e3de360353cb3b2e984e99c6f330ff3dd6bc9067a442e9bbd067a9179"
+    }
+   ],
+   "bytes": 2348169
+  },
+  {
+   "id": "rcpa_spia",
+   "kind": "in place",
+   "path": "RCPA_v20260831",
+   "is_dir": true,
+   "source": "NCTS: RCPA SPIA reference sets",
+   "version": "v20260831",
+   "licence": "RCPA copyright (NCTS terms)",
+   "files": [
+    {
+     "file": "RCPA SPIA Anatomical Pathology Cervical Cancer FHIR mapping December 2024.xlsx",
+     "bytes": 70981,
+     "sha256": "c0115cb8bb26c30d719d9232d299496c1dd53173ba3483da37a6f9fcfe9fa24d"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Colorectal Cancer FHIR mapping December 2024.xlsx",
+     "bytes": 77937,
+     "sha256": "47557eea61557706f8957f60dd673264a9b567d8892d4ea24cb90e97296747cd"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Endometrial Cancer FHIR mapping December 2024.xlsx",
+     "bytes": 69961,
+     "sha256": "0d2b5ea04091687808ca46b47bd2c361af0795c45e1f1d3cf72ec40a5c251021"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Gastric Cancer Report Information Model Terminology December 2025.xlsx",
+     "bytes": 41223,
+     "sha256": "b99d4cb9ff488bdfc29a3b9f9bbfa561acacf6ccc46be2a14532d66b6608f118"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Generic Surgical Pathology Report Information Model Terminology December 2024.xlsx",
+     "bytes": 31994,
+     "sha256": "3db3ca703ad647536bd31af694dcf7fea58f91ad1a7d7962785f2007736e7639"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Ovary Fallopian Tube Cancer FHIR mapping December 2024.xlsx",
+     "bytes": 83280,
+     "sha256": "c1492bdc0085dfbcc78cf6b9c8dc6e8bd9d94da96b6e021c611bb30f05a99529"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Polypectomy FHIR mapping December 2024.xlsx",
+     "bytes": 65249,
+     "sha256": "ac0feec5b447fef66dde614e7ef0f195e86223230cef78f9a97c42c97fbbc0c5"
+    },
+    {
+     "file": "RCPA SPIA Anatomical Pathology Prostate Cancer Radical Information Model Terminology December 2025.xlsx",
+     "bytes": 40250,
+     "sha256": "4050f1fcb58fe5a728d2311c155ac1fb3a6627a349aaef144a5d41e8a820416f"
+    },
+    {
+     "file": "RCPA SPIA Andrology Information Model December 2025.xlsx",
+     "bytes": 211773,
+     "sha256": "371169e0ff726a9e3a08d7e007f6302bea6bd88db36eaa634398ff4760e289ae"
+    },
+    {
+     "file": "RCPA SPIA Chemical Pathology Blood Gases Terminology Reference Set December 2025.xlsx",
+     "bytes": 154970,
+     "sha256": "ca51b72afcdccaab05eb6d2e6fcdc7aedee07a7a7a6edbbc6d94616c1afd1da8"
+    },
+    {
+     "file": "RCPA SPIA Chemical Pathology Harmonised Reference Intervals tables July 2026.xlsx",
+     "bytes": 31955,
+     "sha256": "dcdca4b14edab4a9c09955e2c13855d06b52a5e432f0c9f8c28403a63261684a"
+    },
+    {
+     "file": "RCPA SPIA Chemical Pathology Reporting Terminology Reference Set June 2026.xlsx",
+     "bytes": 140631,
+     "sha256": "0ca571fe7d5973efdaa72be3597589af16bf2ebc77efdda4797025303a8e6328"
+    },
+    {
+     "file": "RCPA SPIA Cytopathology Information Model Terminology December 2025.xlsx",
+     "bytes": 53436,
+     "sha256": "3e9a8258cfd3c02b955c3b5102adf558eec68e437bb978818e637797de58d49a"
+    },
+    {
+     "file": "RCPA SPIA Genetic Pathology Information Model Terminology December 2025.xlsx",
+     "bytes": 37085,
+     "sha256": "4180e16c6fc2b7128450035cfab3e9238250aed4297cb936f0b29f23d79ad7e8"
+    },
+    {
+     "file": "RCPA SPIA Haematology Transfusion Reporting Terminology Reference Set June 2026.xlsx",
+     "bytes": 62501,
+     "sha256": "c265abbd2c906690067f1627f2e9cab227a8faee86d571d063b309144d2a7a34"
+    },
+    {
+     "file": "RCPA SPIA Immunopathology Reporting Terminology Reference Set December 2025.xlsx",
+     "bytes": 460925,
+     "sha256": "3b537a2a7675f02a82c8f8a6dc5276668cd9a2154602b478aa2f03a587fc0baa"
+    },
+    {
+     "file": "RCPA SPIA Microbiology Serology Molecular Reporting Terminology Reference Set August 2026.xlsx",
+     "bytes": 438737,
+     "sha256": "10d94278e63dbe47591a514c21e700b91e3b78d91e1e0492b85da35e5d89db16"
+    },
+    {
+     "file": "RCPA SPIA Microbiology Subset of Organisms May 2026.xlsx",
+     "bytes": 218945,
+     "sha256": "46c36f0d8cbbb7107e9e37dd6ca939ed491b6f748ff0164808378559b998c129"
+    },
+    {
+     "file": "RCPA SPIA Preferred Units Table December 2025.xlsx",
+     "bytes": 27012,
+     "sha256": "db39997f00bb4e30847623dc37a0ee18c1f768ef5f680f857183aecb5a0735b3"
+    },
+    {
+     "file": "RCPA SPIA Requesting Allergens Terminology Reference Set February 2026.xlsx",
+     "bytes": 50707,
+     "sha256": "499d3338ead3f3cc803d9c9fd50dfa25ad21d088172ce25c6f10a59f8062c0a9"
+    },
+    {
+     "file": "RCPA SPIA Requesting Pathology Terminology June 2026.xlsx",
+     "bytes": 348605,
+     "sha256": "9c77dc69dfdfd67099b435e84463c2dad632ae91f5566576471a1879ea64eaae"
+    },
+    {
+     "file": "RCPA SPIA Urine Microbiology Information Model Terminology and Salmonella Information Model Terminology December 2025.xlsx",
+     "bytes": 46480,
+     "sha256": "caafa534a3319680f5c59a5968c3080d82a2c68ab476e65c9c09cb6edd089d1f"
+    },
+    {
+     "file": "RCPA Top 50 Priority Tests for SPIA adoption May 2026.xlsx",
+     "bytes": 20410,
+     "sha256": "edea897863ed2dc89d774c9459d59f0f56a06d90c614b7b66fea7f81fd850981"
+    }
+   ],
+   "bytes": 2785047
+  },
+  {
+   "id": "athena_zip",
+   "kind": "in place",
+   "path": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
+   "is_dir": false,
+   "source": "https://athena.ohdsi.org (bundle requested 22 Sep 2026)",
+   "version": "Athena v5.0 29-AUG-26",
+   "licence": "per vocabulary (OHDSI Athena)",
+   "files": [
+    {
+     "file": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
+     "bytes": 937946191,
+     "sha256": "577f1ca277e6b0f407ac3768992b4023edda7ff38c8b27a187c3f03bbbdb3c8e"
+    }
+   ],
+   "bytes": 937946191
+  },
+  {
+   "id": "athena_vocabulary",
+   "kind": "unzipped",
+   "path": "~/code/spine/out/omop-vocab (or out/omop-vocab)",
+   "from": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
+   "files": [
+    {
+     "file": "CONCEPT.csv",
+     "bytes": 746899316
+    },
+    {
+     "file": "CONCEPT_RELATIONSHIP.csv",
+     "bytes": 1885292974
+    },
+    {
+     "file": "CONCEPT_ANCESTOR.csv",
+     "bytes": 1649046272
+    }
+   ],
+   "source": "the Athena zip above",
+   "version": "Athena v5.0 29-AUG-26",
+   "licence": "per vocabulary"
+  }
+ ]
+}

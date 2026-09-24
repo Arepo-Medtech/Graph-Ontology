@@ -47,8 +47,14 @@ from pathlib import Path
 
 import duckdb
 
+
+ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
 CMP = Path("out/compendium.duckdb")
-SPINE = Path(os.path.expanduser("~/code/spine/out/spine.duckdb"))
+# the spine project's database and Athena vocabulary; on a machine without ~/code/spine, scripts/graph_inputs.py restore
+# puts them under this repository's out/ (from ~/Documents/ONTOLOGIES/graph-inputs and the Athena zip)
+_first = lambda *ps: next((p for p in ps if p.exists()), ps[0])
+SPINE = _first(Path(os.path.expanduser("~/code/spine/out/spine.duckdb")), Path("out/spine.duckdb"))
+VOCAB_DIR = _first(Path(os.path.expanduser("~/code/spine/out/omop-vocab/CONCEPT.csv")), Path("out/omop-vocab/CONCEPT.csv")).parent
 GRAPH = Path("out/graph.duckdb")
 REGISTER = Path("reference/graph_predicates.json")
 BINDINGS = Path("reference/snomed_bindings.json")
@@ -65,16 +71,16 @@ UMLS_CONSO = Path("cache/umls/2026AA/mrconso.parquet")   # scripts/umls_mrconso.
 UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
 UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
-LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
-RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
-LOINC_PARTS = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
-LOINC_PARTLINK = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
+LOINC_RSNA = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
+RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.join(ONT_ROOT, "complete-playbook-dev.csv")))
+LOINC_PARTS = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
+LOINC_PARTLINK = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
 LOINC_PARTLINK_SUPP = LOINC_PARTLINK.with_name("LoincPartLink_Supplementary.csv")
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
 UNIT_PAIRS, THRESH_UNITS = Path("reference/loinc_unit_counterparts.json"), Path("reference/threshold_units.json")   # US <-> AU units
-AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser("~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot")))
+AU_RF2 = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.join(ONT_ROOT, "SnomedCT_Release_AU1000036_20260831/Snapshot")))
 HGNC_SET = Path("cache/hgnc/hgnc_complete_set.txt")           # HGNC complete set, downloaded 24 Sep 2026 (CC0)
 ORPHA_XML = Path("cache/orphanet/en_product1.xml")            # Orphadata product 1, 2026-06-23 (CC BY 4.0)
 ORPHA_GENES = Path("cache/orphanet/en_product6.xml")          # Orphadata product 6 (genes), 2026-06-23, 22.6 MB (CC BY 4.0)
@@ -171,9 +177,8 @@ def unit_difference(us_examples: str | None, au: str):
     return "kind", None
 DX_ACC, DX_BIND, DX_VER = (Path("reference/diagnostic_accuracy.json"), Path("reference/diagnostic_accuracy_bindings.json"),
                            Path("reference/diagnostic_accuracy_verification.json"))   # finding -> diagnosis LRs
-LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.expanduser(
-    "~/Documents/ONTOLOGIES/SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
-LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
+LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.join(ONT_ROOT, "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
+LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.join(ONT_ROOT, "Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
 
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
@@ -236,7 +241,7 @@ def sources(vocab_dir: str) -> dict[str, Path]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--vocab-dir", default=os.path.expanduser("~/code/spine/out/omop-vocab"))
+    ap.add_argument("--vocab-dir", default=str(VOCAB_DIR))
     ap.add_argument("--allow-missing", action="append", default=[], metavar="NAME",
                     help="build without this source (repeatable; 'all' for any) -- the build log names each one skipped")
     a = ap.parse_args()

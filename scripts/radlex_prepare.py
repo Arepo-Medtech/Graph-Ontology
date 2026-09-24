@@ -22,9 +22,11 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-RADLEX_OWL = Path(os.environ.get("RADLEX_OWL", os.path.expanduser("~/Documents/ONTOLOGIES/PunRadLex_Owl4.3/RadLex.owl")))
-LOINC_RSNA = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
-RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.expanduser("~/Documents/ONTOLOGIES/complete-playbook-dev.csv")))
+
+ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
+RADLEX_OWL = Path(os.environ.get("RADLEX_OWL", os.path.join(ONT_ROOT, "PunRadLex_Owl4.3/RadLex.owl")))
+LOINC_RSNA = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
+RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.join(ONT_ROOT, "complete-playbook-dev.csv")))
 OUT = Path("cache/radlex")
 
 NS = {"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", "owl": "http://www.w3.org/2002/07/owl#"}
