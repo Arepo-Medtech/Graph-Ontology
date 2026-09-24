@@ -65,7 +65,12 @@ KEEP_PREFIX = {"MONDO": "MONDO:", "HP": "HP:", "HGNC": "HGNC:"}
 # predicates walked as classification (forward only) although the register files some of them as identity: they
 # cross between classifications, and a walk that has classified must be able to take them
 CLS_EXTRA = ("who:icd10_to_icd11", "who:icd11_to_icd10", "who:icd11_mms_foundation", "icd10:subdivision_of")
-NOT_WALKED = ("sct:in_refset",)                     # a membership, not a meaning: every member would reach every other
+NOT_WALKED = ("sct:in_refset",)
+# Orphanet's loose alignments: "narrower than" an ICD code is a classification (walked on by classification, e.g. through
+# WHO's ICD-10 -> ICD-11 table); otherwise a narrower / broader / undecided alignment reaches a code but is not an identity
+# to walk on from
+ORPHA_CLS = "(predicate = 'orpha:xref' AND method = 'NTBT' AND o_vocab IN ('ICD10WHO', 'ICD11MMS'))"
+LOOSE = f"(predicate = 'orpha:xref' AND method IN ('NTBT', 'BTNT', 'ND') AND NOT {ORPHA_CLS})"                     # a membership, not a meaning: every member would reach every other
 
 PD = "Problem/Diagnosis reference set"
 EDP = "Australian emergency department principal diagnosis reference set for ED funding"
@@ -93,6 +98,7 @@ DECLINE_ICD10CM = f"SELECT DISTINCT referencedComponentId FROM '{XMAP}' WHERE re
 DISEASE_V = ("OMIM", "ORPHA")
 # the ICD maps' source domain: clinical findings (and disorders), events, situations -- a procedure in an ED set is out of scope
 ICD_SCOPE = "SELECT id FROM cmp.concept WHERE tag IN ('disorder', 'finding', 'event', 'situation')"
+ORPHA_ACTIVE = "SELECT code FROM orpha_level WHERE active"          # an entry Orphanet has retired is not a member
 MEDICINE = "SELECT id FROM cmp.concept WHERE tag NOT LIKE '%physical object%'"      # dressings and devices carry no ATC      # the vocabularies HPO annotates with phenotypes and genes
 # (group, expectation, spec). target: reach a code of these vocabularies within `hops`. final: from a node reached
 # through identity edges within `hops`, an edge with one of these predicates (dir out: the node is its subject).
@@ -125,7 +131,7 @@ CELLS = [
     ("Orphanet disorders", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 1, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
     ("Orphanet disorders", "ICD-11", {"target": ["ICD11", "ICD11MMS"], "hops": 2, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
     ("Orphanet disorders", "OMIM", {"target": ["OMIM"], "hops": 1, "covers": ("ORPHA",), "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
-    ("Orphanet disorders", "MONDO", {"target": ["MONDO"], "hops": 1}),
+    ("Orphanet disorders", "MONDO", {"target": ["MONDO"], "hops": 2}),
     ("Orphanet disorders", "SNOMED CT", {"target": ["SCT"], "hops": 2}),
     ("Orphanet disorders (disorder or subtype level)", "ICD-10 (WHO)", {"target": ["ICD10WHO"], "hops": 1, "covers": ("ORPHA",),
         "covers_why": "Orphanet's own alignments (product1) state none for this disorder"}),
@@ -223,10 +229,11 @@ def main() -> int:
     q = lambda xs: ",".join(repr(x) for x in xs)
     # the walk: admissible edges only, keyed 'VOCAB:code'
     con.execute(f"""CREATE TEMP TABLE walk AS
-        SELECT s_vocab || ':' || s_code src, o_vocab || ':' || o_code dst, o_vocab dv, 'id' kind FROM edge
+        SELECT s_vocab || ':' || s_code src, o_vocab || ':' || o_code dst, o_vocab dv,
+               CASE WHEN {ORPHA_CLS} THEN 'cls' WHEN {LOOSE} THEN 'end' ELSE 'id' END kind FROM edge
             WHERE predicate IN ({q(ident)}) AND state <> 'rejected' AND tier <> 'inadmissible'
-        UNION SELECT o_vocab || ':' || o_code, s_vocab || ':' || s_code, s_vocab, 'id' FROM edge
-            WHERE predicate IN ({q(ident)}) AND state <> 'rejected' AND tier <> 'inadmissible'
+        UNION SELECT o_vocab || ':' || o_code, s_vocab || ':' || s_code, s_vocab, CASE WHEN {LOOSE} THEN 'end' ELSE 'id' END FROM edge
+            WHERE predicate IN ({q(ident)}) AND state <> 'rejected' AND tier <> 'inadmissible' AND NOT {ORPHA_CLS}
         UNION SELECT s_vocab || ':' || s_code, o_vocab || ':' || o_code, o_vocab, 'cls' FROM edge
             WHERE predicate IN ({q(cls)}) AND state <> 'rejected' AND tier <> 'inadmissible'""")
     if LOINC_TABLE.exists():
@@ -236,10 +243,12 @@ def main() -> int:
             ORDER BY TRY_CAST(COMMON_TEST_RANK AS INT) LIMIT 2000""")
     else:
         con.execute("CREATE TEMP TABLE lab_top (code VARCHAR)")
-    con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR)")
+    # Orphanet's own status: an entry it has retired (deprecated, or non-rare in Europe) is not a member
+    con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
     if ORPHA_XML.exists():
         import xml.etree.ElementTree as ET
-        con.executemany("INSERT INTO orpha_level VALUES (?, ?)", [(d.findtext("OrphaCode"), d.findtext("DisorderGroup/Name"))
+        con.executemany("INSERT INTO orpha_level VALUES (?, ?, ?)", [(d.findtext("OrphaCode"), d.findtext("DisorderGroup/Name"),
+                        "Inactive" not in [f.findtext("Label") for f in d.findall("DisorderFlagList/DisorderFlag")])
                         for d in ET.parse(ORPHA_XML).getroot().iter("Disorder") if d.findtext("OrphaCode")])
     cells, flagged = [], []
     base = json.load(open(BASELINE)) if BASELINE.exists() else {}
@@ -247,17 +256,18 @@ def main() -> int:
         gv, gsql = GROUPS[group]
         con.execute(f"CREATE OR REPLACE TEMP TABLE m AS SELECT DISTINCT '{gv}:' || s_code AS k, s_code AS code FROM ({gsql}) t(s_code)")
         n_all = con.execute("SELECT count(*) FROM m").fetchone()[0]
-        if spec.get("applies"):
-            con.execute(f"DELETE FROM m WHERE code NOT IN ({spec['applies']})")
+        applies = spec.get("applies") or (ORPHA_ACTIVE if gv == "ORPHA" else None)
+        if applies:
+            con.execute(f"DELETE FROM m WHERE code NOT IN ({applies})")
         n = con.execute("SELECT count(*) FROM m").fetchone()[0]
         # breadth-first walk; st 0 = only identity so far, 1 = has classified
-        con.execute("CREATE OR REPLACE TEMP TABLE vis AS SELECT k m, k node, 0 st, 0 hop FROM m")
+        con.execute("CREATE OR REPLACE TEMP TABLE vis AS SELECT k m, k node, 0 st, 0 hop FROM m")  # st 2: reached by a loose alignment
         con.execute("CREATE OR REPLACE TEMP TABLE fr AS SELECT * FROM vis")
         final = "final" in spec
         for h in range(1, spec["hops"] + 1):
-            allowed = "w.kind = 'id' AND fr.st = 0" if final else "(w.kind = 'cls' OR fr.st = 0)"
+            allowed = "w.kind IN ('id', 'end') AND fr.st = 0" if final else "(w.kind = 'cls' AND fr.st IN (0, 1) OR w.kind IN ('id', 'end') AND fr.st = 0)"
             con.execute(f"""CREATE OR REPLACE TEMP TABLE fr AS SELECT DISTINCT fr.m, w.dst node,
-                    CASE WHEN w.kind = 'cls' OR fr.st = 1 THEN 1 ELSE 0 END st, {h} hop
+                    CASE WHEN w.kind = 'end' THEN 2 WHEN w.kind = 'cls' OR fr.st = 1 THEN 1 ELSE 0 END st, {h} hop
                 FROM fr JOIN walk w ON w.src = fr.node WHERE {allowed}
                   AND NOT EXISTS (SELECT 1 FROM vis v WHERE v.m = fr.m AND v.node = w.dst)""")
             con.execute("INSERT INTO vis SELECT * FROM fr")

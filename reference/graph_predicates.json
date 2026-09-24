@@ -1126,7 +1126,7 @@
       "strength_kind": "exact",
       "source": "derived: Orphanet's exact alignment (orpha:xref E) to a UMLS concept or MONDO disease -> its SNOMED CT concept (umls:concept_member / mondo:exact_match) -> SNOMED International's ICD-10 map (sct:icd10_map)",
       "status": "built",
-      "note": "A chain rule (workstream 3): only for Orphanet disorder- and subtype-level entries with no ICD-10 code of Orphanet's own, and only through SNOMED maps with a single unconditional group. source_locator names the three steps; attrs carry the intermediate and SNOMED ids. Tier from a census (cache/orphanet/orpha_icd10_chain_census.json) with Orphanet's own exact ICD-10 codes as the witness (graph_report.py); wrong rows rejected by name."
+      "note": "A chain rule (workstream 3): only for ACTIVE Orphanet disorder- and subtype-level entries (most entries without an ICD-10 code of their own are ones Orphanet has retired, which it strips of codes) with no ICD-10 code of Orphanet's own, and only through SNOMED maps with a single unconditional group. source_locator names the three steps; attrs carry the intermediate and SNOMED ids. Tier from a census (cache/orphanet/orpha_icd10_chain_census.json) with Orphanet's own exact ICD-10 codes as the witness (graph_report.py); wrong rows rejected by name."
     },
     {
       "id": "who:icd10_to_icd11",
@@ -1542,7 +1542,7 @@
       "strength_kind": "graded",
       "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
       "status": "built",
-      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain)."
+      "note": "MED-RT asserts it between its own concepts; the drug reaches the graph's RxNorm ingredient, and the disease its SNOMED CT or MeSH code, through a shared CUI on each side. Tiered by hand check and witnessed against DrugCentral. UMLS-derived (MED-RT itself is public domain). Corroborated by DrugCentral's label indication (same drug, same SNOMED concept; a MeSH disease through its same-name SNOMED concept): method suffix '; corroborated by DrugCentral indication', tiered apart (34/34, Tier 2); uncorroborated 23/30, inadmissible."
     },
     {
       "id": "medrt:may_prevent",
@@ -1609,7 +1609,7 @@
       "strength_kind": "graded",
       "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
       "status": "built",
-      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI. Where the FDA's label indexing (fda:pharmacologic_class) asserts the same class for the drug, the method carries '; corroborated by FDA SPL' and is tiered on its own."
+      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI. Where the FDA's label indexing (fda:pharmacologic_class) asserts the same class for the drug, the method carries '; corroborated by FDA SPL' and is tiered on its own. Also corroborated by DrugCentral's MeSH pharmacological action (same drug, same class once wording is set aside): '; corroborated by MeSH pharmacological action (DrugCentral)', 33/34, Tier 2; uncorroborated 23/30, inadmissible."
     },
     {
       "id": "medrt:has_physiologic_effect",
