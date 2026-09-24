@@ -1356,6 +1356,42 @@
       "note": "Signs and symptoms to SNOMED findings through a shared UMLS CUI. Only edges whose SNOMED name equals the HPO label load (hand check 40/40, Wilson lower bound 0.912 -> Tier 2), edge by edge. Differently named links were right 34/40 (85%, lower bound ~0.71 -> inadmissible) and wrong by narrowing (Polycythemia -> Polycythemia vera; Retinal hole -> Retinal round hole; Tardive dyskinesia -> Neuroleptic-induced tardive dyskinesia), so they are candidates for a person in cache/umls/hpo_snomed_candidates.tsv, not edges. Hierarchy preservation (64% on active Australian targets) is a diagnostic: it measures two ontologies' structures agreeing, not whether a mapping is right. Measured 23 Sep 2026."
     },
     {
+      "id": "umls:shared_cui",
+      "label": "two codes sit under one UMLS concept (CUI) and share a name there",
+      "subject": [
+        "SCT",
+        "LOINC",
+        "RXN",
+        "MESH",
+        "NCIT",
+        "HGNC",
+        "OMIM",
+        "FMA",
+        "HP",
+        "NCBITAXON",
+        "ATC"
+      ],
+      "object": [
+        "SCT",
+        "LOINC",
+        "RXN",
+        "MESH",
+        "NCIT",
+        "HGNC",
+        "OMIM",
+        "FMA",
+        "HP",
+        "NCBITAXON",
+        "ATC"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS Metathesaurus 2026AA MRCONSO (scripts/umls_mrconso.py): sources at restriction level 0 and SNOMED CT (level 9); suppressible atoms excluded",
+      "status": "built",
+      "note": "A shared CUI is synonymy judged by UMLS editors, not a map maintained by either source. Loaded only where the two codes share a name in the CUI (case, punctuation, word order and SNOMED's semantic tag set aside) -- the rule that held 40/40 for HPO -> SNOMED; pairs whose names differ are candidates. method names the vocabulary pair, and each pair is tiered by its own hand check. Restriction levels 1-4 (ICD-10-CM, ICD-10, ICD-10-AM, MedDRA, CPT, MEDCIN, ICPC-2 PLUS, ORPHANET) are not used. UMLS-derived: never committed, and a graph built with it is for UMLS licensees."
+    },
+    {
       "id": "hp:xref",
       "label": "HPO phenotype is cross-referenced by HPO to this concept",
       "subject": [

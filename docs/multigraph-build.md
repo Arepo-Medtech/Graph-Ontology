@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,410,187 nodes, 6,738,996 edges, 194 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11* and *How a drug works*.)
-Written to `out/graph.duckdb` (246 MB, git-ignored), rebuilt from source in under four minutes.
+**1,469,315 nodes, 6,919,004 edges, 195 edge types, 51 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11*, *UMLS Metathesaurus* and *How a drug works*.)
+Written to `out/graph.duckdb` (265 MB, git-ignored), rebuilt from source in under four minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -608,6 +608,39 @@ entity. Where both Orphanet ICD links are exact, WHO's backward table gives Orph
 (89%) and the same 3-character category for 365 (94%); the NTBT/NTBT majority agrees on the category 60% of the time. The
 disagreement lives where Orphanet itself says the codes are approximations.
 
+## UMLS Metathesaurus: every shared concept, locally (built)
+
+The licence holder's UMLS 2026AA concepts file (MRCONSO, 18.1 M names for 3.5 M concepts from 195 sources; 513 MB,
+downloaded with the UTS key, kept as `cache/umls/2026AA/mrconso.parquet`) replaces per-code API calls: every pair of graph
+codes that share a CUI, in seconds (`scripts/umls_mrconso.py`). Loaded as `umls:shared_cui`, **179,878 edges**, last of the
+loaders so a pair loads only if one code is already a node.
+
+**Rules.** Sources at UMLS restriction level 0 and SNOMED CT (level 9, under the affiliate licence Australia's
+membership covers); levels 1–4 — ICD-10-CM (4), WHO ICD-10 and ICD-10-AM (3), MedDRA, CPT, MEDCIN, ICPC-2 PLUS (3),
+ORPHANET (1) — need their own agreements and are not used. Suppressible atoms are out. A pair loads when the two codes
+**share a name** in the CUI (case, punctuation, word order and SNOMED's semantic tag set aside); the 66,660 whose names
+differ are candidates. **MeSH pairs only through its own headings** (MH, NM): UMLS files many MeSH entry terms as concepts
+of their own, and the first hand check caught a broad descriptor paired with a narrow concept through them
+(Leukoencephalopathies → Vanishing white matter disease, Nodaviridae → Alphanodavirus, Malus → *Malus domestica*,
+terodiline → terodiline hydrochloride): 25/30 before the rule, 30/30 after.
+
+| vocabulary pair | edges | check | tier |
+|---|---:|---|---:|
+| NCIT–SNOMED | 25,807 | 30/30 | 2 |
+| MeSH–SNOMED | 25,396 | 30/30 | 2 |
+| LOINC–SNOMED (parts and answers) | 12,120 | 30/30 | 2 |
+| HGNC–OMIM | 12,004 | 11,920 of 11,933 agree with HGNC's own cross-reference | 1 |
+| MeSH–NCBI Taxonomy | 9,236 | 30/30 | 2 |
+| FMA–SNOMED | 8,964 | 30/30 | 2 |
+| RxNorm–SNOMED | 8,410 | 30/30 | 2 |
+| MeSH–NCIT | 6,982 | 30/30 | 2 |
+| 32 smaller pairs | 70,959 | not yet | ungraded |
+
+HPO → SNOMED and SNOMED organism → NCBI Taxonomy keep their own UMLS loaders and are not repeated. SNOMED concepts with a
+link outside SNOMED: **41.9% → 45.5%**; 33,785 MeSH descriptors now sit in the graph, the index PubMed uses. UMLS-derived:
+the pairs, the hand check (`cache/umls/umls_shared_cui_handcheck.json`) and the parquet stay git-ignored, and a graph built
+with them is for UMLS licensees.
+
 ## How a drug works: drug → target → protein → gene → disease
 
 Until now the graph knew *what* a medicine treats (PBS, DrugCentral's labels) but not *how*. DrugCentral's activity
@@ -659,6 +692,7 @@ and where repurposing is looked for; the indication edges are still `drugcentral
 .venv/bin/python scripts/threshold_units.py       # LR thresholds: as published + Australian value, primacy once RCPA confirms
 .venv/bin/python scripts/umls_crosswalk.py --source SNOMEDCT_US --target NCBI --ids cache/umls/sct_organisms.txt --out sct_ncbi   # ~1.7 h, resumable
 .venv/bin/python scripts/mbs_candidates.py       # ~25 min (Ontoserver): MBS -> SNOMED procedure candidate frames
+.venv/bin/python scripts/umls_mrconso.py         # UMLS 2026AA MRCONSO (key in .env; --download first time, 513 MB) -> shared-CUI pairs, ~20 s
 .venv/bin/python scripts/radlex_prepare.py       # ~20 s: RadLex.owl (RADLEX_OWL) -> cache/radlex/, and the ids UMLS needs
 .venv/bin/python scripts/umls_crosswalk.py --source FMA --target SNOMEDCT_US --ids cache/radlex/anatomy_fma.txt --out fma_sct            # ~30 s
 .venv/bin/python scripts/umls_crosswalk.py --source CUI --target SNOMEDCT_US --ids cache/radlex/anatomy_cui.txt --out radlex_cui_sct     # ~30 s
@@ -680,4 +714,4 @@ CT-AU, AMT and PBS data are used under the compendium's existing terms. LOINC an
 licensed releases read in place and never committed; the hand-check file carries LOINC codes and names under the LOINC
 licence's notice terms. DrugBank and SIDER (non-commercial) are not
 imported. The RCPA SPIA reference sets are RCPA copyright (NCTS terms of use): read in place, derived data in cache/rcpa/
-only, and a graph built with them is not for redistribution. ICD-O-3, ICD-11 and WHO ICD-10 are WHO's: only codes are loaded, never labels. MeSH is NLM's (public domain); UMLS CUIs are loaded as identifiers only. ARTG ids are TGA identifiers shipped in SNOMED CT-AU. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*
+only, and a graph built with them is not for redistribution. ICD-O-3, ICD-11 and WHO ICD-10 are WHO's: only codes are loaded, never labels. MeSH is NLM's (public domain). UMLS is used under the licence holder's UMLS licence: level 0 sources and SNOMED CT only, UMLS-derived data in cache/umls/ only, and a graph built with it is for UMLS licensees. ARTG ids are TGA identifiers shipped in SNOMED CT-AU. RadLex and the RSNA Radiology Playbook are RSNA's, used under the RadLex licence: read in place, derived data in cache/radlex/, and only RadLex codes (no labels) in committed files. *These were stated from memory while designing and should be confirmed before any commercial use.*
