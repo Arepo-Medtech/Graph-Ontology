@@ -879,6 +879,22 @@
       "note": "DrugCentral's own cross-references. DRUGBANK_ID is not loaded (the graph excludes DrugBank), nor the US formulary ids (MMSL, NDDF, VANDF, VUID, NUI)."
     },
     {
+      "id": "fda:pharmacologic_class",
+      "label": "the FDA indexes this drug's label under this pharmacologic class (EPC, mechanism of action or physiologic effect)",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "MEDRT"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "FDA Structured Product Labeling pharmacologic class indexing, as carried in DrugCentral 2023-11-01 pharma_class (source FDA)",
+      "status": "built",
+      "note": "method is the FDA class type: EPC (Established Pharmacologic Class, e.g. 'Proton Pump Inhibitor'), MoA or PE. The classes are MED-RT concepts, so this is a label-grade second route to the classes MED-RT's own relationships reach; where both assert a drug's mechanism or effect, the MED-RT edge's method is marked 'corroborated by FDA SPL'. Chemical-structure (CS) classes are not loaded."
+    },
+    {
       "id": "drugcentral:in_atc_class",
       "label": "DrugCentral drug is in ATC class",
       "subject": [
@@ -1513,7 +1529,7 @@
       "strength_kind": "graded",
       "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
       "status": "built",
-      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI."
+      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI. Where the FDA's label indexing (fda:pharmacologic_class) asserts the same class for the drug, the method carries '; corroborated by FDA SPL' and is tiered on its own."
     },
     {
       "id": "medrt:has_physiologic_effect",
@@ -1529,7 +1545,7 @@
       "strength_kind": "graded",
       "source": "UMLS Metathesaurus 2026AA MRREL, Level 0 subset (scripts/umls_mrrel.py): SAB MED-RT",
       "status": "built",
-      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI."
+      "note": "MED-RT's own class code; the drug side reaches RxNorm through a shared CUI. Where the FDA's label indexing (fda:pharmacologic_class) asserts the same class for the drug, the method carries '; corroborated by FDA SPL' and is tiered on its own."
     },
     {
       "id": "hp:xref",

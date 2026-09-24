@@ -662,6 +662,15 @@ def main() -> int:
                 'drugcentral:xref', CASE id_type {dcase} END, replace(identifier, 'CHEBI:', ''), 'DrugCentral', 'identifier', id_type,
                 'native', 'asserted', '{PIN['dc']}', NULL
             FROM {dc('identifier')} WHERE id_type IN ({','.join(repr(k) for k in dx)}) AND trim(coalesce(identifier, '')) <> ''""")
+        if (DC / "pharma_class.tsv").exists():
+            # the FDA's own pharmacologic class indexing of approved labels (SPL), relayed by DrugCentral; its classes
+            # are MED-RT concepts (N-codes), so this is a label-grade route to the same class nodes MED-RT reaches
+            ins("DrugCentral drug -> FDA pharmacologic class (EPC, MoA, PE; MED-RT codes)", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id,
+                    'fda:pharmacologic_class', 'MEDRT', class_code, 'FDA SPL pharmacologic class indexing (via DrugCentral)', 'pharma_class',
+                    type, 'native', 'asserted', '{PIN['dc']}', json_object('class_type', type, 'class_name', name)
+                FROM {dc('pharma_class')} WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') AND class_code LIKE 'N%'""")
+            con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', class_code, any_value(name) FROM {dc('pharma_class')}
+                            WHERE source = 'FDA' AND type IN ('EPC', 'MoA', 'PE') GROUP BY 2""")
         if (DC / "struct2atc.tsv").exists():
             ins("DrugCentral -> ATC", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:in_atc_class', 'ATC', atc_code, 'DrugCentral',
                     'struct2atc', 'native', 'native', 'asserted', '{PIN['dc']}', NULL FROM {dc('struct2atc')}""")
@@ -1245,6 +1254,12 @@ def main() -> int:
                 json_object('medrt_rela', rela, 'drug_cui', cui_s)
             FROM '{UMLS_REL}' WHERE sab = 'MED-RT' AND o_vocab = 'MEDRT' AND (s_vocab, s_code) IN (SELECT v, c FROM present)""")
         con.execute(f"""INSERT INTO name_hint SELECT 'MEDRT', o_code, any_value(o_name) FROM '{UMLS_REL}' WHERE o_vocab = 'MEDRT' GROUP BY 2""")
+        # a MED-RT mechanism / effect the FDA's label indexing also asserts for the same drug: two independent sources on one
+        # fact. The method says so, and graph_report.py tiers corroborated and uncorroborated edges apart.
+        con.execute("""UPDATE edge SET method = method || '; corroborated by FDA SPL'
+            WHERE predicate IN ('medrt:has_mechanism_of_action', 'medrt:has_physiologic_effect')
+              AND (s_code, o_code) IN (SELECT r.o_code, f.o_code FROM edge f JOIN edge r ON r.predicate = 'drugcentral:rxnorm' AND r.s_code = f.s_code
+                                       WHERE f.predicate = 'fda:pharmacologic_class' AND f.method IN ('MoA', 'PE'))""")
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
