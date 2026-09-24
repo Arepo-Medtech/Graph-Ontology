@@ -15,7 +15,7 @@ verify most of what we say about it. Those rows are listed first.
 """
 import json, glob, os, re, sys
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
-from guidelines_source import guidelines_dir, guideline_url, guidelines_file
+from guidelines_source import guidelines_dir, guideline_url, guidelines_file, verification_dir
 G = guidelines_dir()
 def norm(s):
     s=s.lower().replace("’","'"); s=re.sub(r"'s\b","",s)
@@ -30,7 +30,7 @@ for t,sl in cover.items():
     if sl in slugs:
         for p in re.split(r" = | / ",t): names.setdefault(norm(p),sl)
 prof={}
-for f in glob.glob(os.path.join(G, "*.verification.json")):
+for f in glob.glob(os.path.join(verification_dir(), "*.verification.json")):
     d=json.load(open(f)); sl=os.path.basename(f).replace(".verification.json","")
     cl=d["claims"]; prof[sl]=(sum(1 for c in cl if c["verdict"] in ("pass","pass_image_transcription")),len(cl))
 def match(cond):

@@ -20,6 +20,13 @@ def guidelines_dir():
     return d
 
 
+def verification_dir():
+    """The <slug>.verification.json files. Split into their own folder beside guidelines/ on 2026-09-25 (GitHub lists at most
+    1,000 files per folder); an older checkout that still keeps them in guidelines/ works too."""
+    v = os.path.join(os.path.dirname(guidelines_dir()), "verification")
+    return v if os.path.isdir(v) else guidelines_dir()
+
+
 def guidelines_repo():
     """Root of the GUIDELINES checkout (the parent of its guidelines/ folder)."""
     return os.path.dirname(guidelines_dir())
@@ -51,6 +58,9 @@ if __name__ == "__main__":
     open(os.path.join(t, "g", "reference", "x.json"), "w").write("{}")
     os.environ["GUIDELINES_DIR"] = os.path.join(t, "g", "guidelines")
     assert guidelines_file("reference/x.json").endswith("reference/x.json")
+    assert verification_dir() == guidelines_dir()                       # old layout: JSON beside the .md files
+    os.makedirs(os.path.join(t, "g", "verification"))
+    assert verification_dir().endswith(os.path.join("g", "verification"))  # new layout
     try:
         guidelines_file("reference/absent.json"); raise AssertionError("absent file must exit")
     except SystemExit as e:
