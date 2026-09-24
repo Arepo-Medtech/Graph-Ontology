@@ -754,7 +754,9 @@ def main() -> int:
                     mp AS (SELECT DISTINCT s_code c, o_code icd FROM edge WHERE predicate = 'sct:icd10_map'),
                     oth AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'SCT' AND o_vocab = 'ICD10WHO' AND predicate <> 'sct:icd10_map'
                             UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'SCT' AND s_vocab = 'ICD10WHO'),
-                    w AS (SELECT DISTINCT s_code icd FROM edge WHERE predicate = 'who:icd10_to_icd11')
+                    w AS (SELECT DISTINCT s_code icd FROM edge WHERE predicate = 'who:icd10_to_icd11'
+                          UNION SELECT DISTINCT d.s_code FROM edge d JOIN edge x ON x.predicate = 'who:icd10_to_icd11' AND x.s_code = d.o_code
+                          WHERE d.predicate = 'icd10:subdivision_of')
                 SELECT count(*), count(*) FILTER (WHERE c IN (SELECT c FROM mp)), count(*) FILTER (WHERE c IN (SELECT c FROM oth)),
                        count(*) FILTER (WHERE c IN (SELECT mp.c FROM mp JOIN w ON w.icd = mp.icd)) FROM m""", [s_]).fetchone()
             reach[s_] = {"members": n, "reach_icd10_by_map": n and round(via_map / n, 3), "reach_icd10_by_other_routes": n and round(other / n, 3),
@@ -771,7 +773,9 @@ def main() -> int:
             SELECT count(*), count(*) FILTER (WHERE EXISTS (SELECT 1 FROM a JOIN b ON b.c = a.c AND b.k = a.k WHERE a.c = both_.c)) FROM both_""").fetchone()
         report["maps:SNOMED CT -> ICD-10 / ICD-10-CM (US Edition 20260901)"] = {
             "edges": {f"{p} | {m}": {"edges": e, "snomed_concepts": s, "icd_codes": o} for p, m, e, s, o in by},
-            "not_loaded": {k: v for k, v in con.execute("""SELECT family, edges FROM build_log WHERE family LIKE 'SNOMED CT -> ICD-10%rows not loaded%'""").fetchall()},
+            "not_loaded": {k: v for k, v in con.execute("""SELECT family, edges FROM build_log WHERE family LIKE 'SNOMED CT -> ICD-10%not loaded%'
+                                                            OR family LIKE 'ICD-10 mapped codes absent%'""").fetchall()},
+            "icd10_fifth_character_parents": con.execute("SELECT count(*) FROM edge WHERE predicate = 'icd10:subdivision_of'").fetchone()[0],
             "diagnosis_refsets": reach,
             "witness_omop_icd10cm": {"nlm_unconditional_pairs": w1[0], "icd_code_mapped_by_omop": w1[1], "same_pair_in_omop": w1[2],
                                      "note": "OMOP maps ICD-10-CM up to one concept; NLM maps each concept to its code -- a pair OMOP lacks is unknown, not wrong"},

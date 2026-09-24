@@ -616,20 +616,20 @@ NLM's **SNOMED CT US Edition 20260901** ships it unchanged (SNOMED International
 map) beside NLM's own **SNOMED CT to ICD-10-CM map** (6011000124106), and NLM gives the US Edition to UMLS licence
 holders at once (661 MB, fetched with the UTS key; `scripts/snomed_us_maps.py` keeps the two refsets' active rows in
 `cache/snomed-us/`). Both are loaded as their publishers' assertions — **native**, like the ICD-O map — as
-`sct:icd10_map` (**129,729 edges**, 112,426 concepts → 10,692 ICD-10 codes) and `sct:icd10cm_map` (**200,311**, 106,256 concepts → 16,947 ICD-10-CM codes).
+`sct:icd10_map` (**129,729 edges**, 112,426 concepts → 10,692 ICD-10 codes) and `sct:icd10cm_map` (**200,311** full codes, 106,256 concepts → 16,947 ICD-10-CM codes, plus 56,263 partial — below).
 
 **Complex maps, kept whole.** A concept can need several codes together (`attrs.group`); within a group the first rule
 that holds wins (`attrs.priority`). `method` names the rule kind so a traversal that cannot evaluate a condition can leave
 it out: *unconditional* (rule TRUE; ICD-10 129,583, ICD-10-CM 91,812), *conditional* (IFA the patient's sex, age or
 another concept; 132 and 84,180 — ICD-10-CM's specificity is mostly context-dependent) and *default, when no condition
 holds* (14 and 24,319). The rule text, advice and map category ride in `attrs`. Not edges: rows with no target
-("cannot be classified with available data": 25,050 and 28,085), ICD-10-CM targets ending `?` (a character still to be
-specified: 58,689), and US-extension concepts not in SNOMED CT-AU (46 and 10,264).
+("cannot be classified with available data": 25,050 and 28,085) and US-extension concepts not in SNOMED CT-AU (46 and
+10,264). ICD-10-CM targets ending `?` load against their subcategory (below).
 
 **What it closes.** WHO ICD-10 was reached by **none** of the AU diagnosis reference sets before; now **84.3%** of the
 Problem/Diagnosis set (133,027 members), **95.7%** of the ED principal-diagnosis set and **93.6%** of the ED diagnosis set
-reach ICD-10, and **77.3% / 88.3% / 81.2%** go on to ICD-11 through WHO's tables. WHO's tables themselves now load
-55,840 rows (30,222 before), since a row loads when it touches a code the graph holds and the map brought 7,118 more ICD-10 codes (4,545 → 11,663).
+reach ICD-10, and — with the fifth-character step below — the same shares go on to ICD-11 through WHO's tables. WHO's
+tables themselves now load 59,591 rows (30,222 before), since a row loads when it touches a code the graph holds and the map brought 7,118 more ICD-10 codes (4,545 → 11,663).
 
 *Witnesses, both structural.* ICD-10-CM extends ICD-10, so a concept's two maps should share the three-character
 category: they do for **55,634 of 69,420** concepts (80.1%) — the rest are where ICD-10-CM re-sorted a chapter (diabetes
@@ -639,9 +639,15 @@ the rest are mostly residual codes ("Other specified …"), which OMOP maps to a
 diagnoses rather than above them — a difference of method, not an error. A read of 30 random rows from each map found
 every one as published (one questionable choice is NLM's: *Patient denies drug use* → F19.90).
 
-**Open.** 5-character ICD-10 codes (M41.15, S36.00 — WHO's optional fifth characters) are not in WHO's ICD-11 tables,
-so those concepts stop at ICD-10; a lift to the 4-character parent would carry them on. The 58,689 `?` rows could load
-against their parent ICD-10-CM subcategory as a separate method.
+**Partial ICD-10-CM targets and ICD-10's fifth characters (built).** A target ending `?` names a code whose last
+character — for injuries, the episode of care — the coder still has to choose; the concept certainly falls in the
+subcategory the published characters spell, so it loads against that code (placeholder X's dropped: `O32.4XX?` → O32.4,
+`S08.129?` → S08.129) with method *⟨rule kind⟩, partial code (subcategory)* and `attrs.target_as_published`: **56,263
+edges**, every subcategory an ICD-10-CM code. WHO's ICD-11 tables list no fifth-character codes (M41.15, S36.00, T08.X0 —
+WHO's optional site, open/closed and similar subdivisions), so `icd10:subdivision_of` joins each of the **1,855** the
+map uses to its parent, kept only when the parent is in WHO's tables; 6 mapped codes have none there (K58.0, K58.9,
+U06.9 …). With that step, ICD-11 reach equals ICD-10 reach: **84.3%** of Problem/Diagnosis, **95.6%** and **93.6%** of
+the two ED diagnosis sets.
 
 ## UMLS Metathesaurus: every shared concept, locally (built)
 
@@ -729,6 +735,18 @@ concepts ("Acute Disease" for acute bronchospasm). *The witness is a lower bound
 both carry, 42% of MED-RT's SNOMED indications match DrugCentral's exactly or through is-a, and 32% of its
 contraindications — DrugCentral follows current labels, and its silence is *unknown*, not "no". Verdicts:
 `cache/umls/umls_medrt_handcheck.json` (UMLS-derived, git-ignored).
+
+### MedCAT on PBS indication texts (tried, not adopted)
+
+The UMLS self-trained MedCAT pack (2023; `cache/medcat/`, licensed) was tried as a candidate generator for the 341
+unbound PBS indication texts. Its concept database (3.9 GB) cannot be loaded on this 8 GB Mac, so
+`scripts/medcat_subset.py` streams it and keeps only the names the texts can reach, their concepts and context vectors —
+faithful on those texts (checked against the original) — and `scripts/medcat_pbs.py` runs MedCAT 2, carries each 2023
+CUI to 2026AA (MRCUI merges only) and to active SNOMED CT-AU codes. **On the 312 texts already bound by exact name it
+recovers 142 (lower bound ~0.40).** The pack has trained context vectors for 62,796 of 4.55 M concepts (1.4%) —
+osteoporosis, schizophrenia and migraine have none, so their names are never linked — and a two-word indication gives it
+no context to weigh. 16 of the 341 got a whole-text proposal (7 not among the Ontoserver candidates). No edges;
+candidates stay in `cache/medcat/pbs_medcat_candidates.json`. The tool fits running clinical notes, which the graph has not.
 
 ### AHRQ CCSR: ICD-10-CM into clinical categories (built)
 
