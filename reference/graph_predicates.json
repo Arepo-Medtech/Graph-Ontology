@@ -66,7 +66,8 @@
     "ICD11MMS": "WHO ICD-11 for Mortality and Morbidity Statistics, keyed by MMS code (e.g. LD24.61). Distinct from ICD11 (foundation ids, as MONDO cites them). Codes only",
     "GARD": "NIH Genetic and Rare Diseases Information Center disease id",
     "REACTOME": "Reactome pathway, keyed by stable id (R-HSA-...)",
-    "MEDRT": "MED-RT (VA Medication Reference Terminology) concept, keyed by its N-code: here the mechanism-of-action and physiologic-effect classes"
+    "MEDRT": "MED-RT (VA Medication Reference Terminology) concept, keyed by its N-code: here the mechanism-of-action and physiologic-effect classes",
+    "CCSR": "AHRQ Clinical Classifications Software Refined category for ICD-10-CM diagnoses (e.g. CIR017 Cardiac dysrhythmias); the first three letters are the body system"
   },
   "predicates": [
     {
@@ -736,6 +737,22 @@
       "source": "OMOP Athena v5.0 29-AUG-26",
       "status": "built",
       "note": "All 98,290 mapped ICD-10-CM codes (the first build loaded MONDO's 1,968 only, to score MONDO). attrs.targets_of_code: 26,851 codes map to 2-4 concepts; attrs.icd_deprecated. OMOP often maps uphill to a broader concept (lossy, not wrong). Hand check 75/80 on two samples -- random, and even across chapters (reference/icd10cm_handcheck.json); the errors are OMOP's (a non-motor collision mapped to a motor-vehicle accident; non-pressure chronic ulcers mapped to 'Open wound'). MONDO is the second witness for the disease chapters. graph_report.py earns the tier. US codes: Australia's ICD-10-AM is licensed from IHACPA and not held."
+    },
+    {
+      "id": "ccsr:category",
+      "label": "ICD-10-CM code falls in this AHRQ CCSR clinical category",
+      "subject": [
+        "ICD10CM"
+      ],
+      "object": [
+        "CCSR"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "AHRQ CCSR for ICD-10-CM 2026, as relayed verbatim in UMLS 2026AA MRMAP (Level 0, public domain)",
+      "status": "built",
+      "note": "method is AHRQ's: classified_as (every category a code falls in -- a code can fall in several), has_default_inpatient_classification and has_default_outpatient_classification (the one category AHRQ assigns when the code is the principal diagnosis). attrs.body_system is the category's three-letter prefix. Only codes the graph already holds."
     },
     {
       "id": "hp:is_a",

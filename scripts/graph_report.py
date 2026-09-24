@@ -638,10 +638,15 @@ def main() -> int:
         uh = Path("cache/umls/umls_shared_cui_handcheck.json")       # UMLS-derived: git-ignored
         sc = json.load(open(uh))["scored"] if uh.exists() else []
         fam = {}
-        for m in sorted({r["method"] for r in sc}):
-            rs = [r for r in sc if r["method"] == m]
+        for m in sorted({r["method"] for r in sc if not r.get("pool")}):
+            rs = [r for r in sc if r["method"] == m and not r.get("pool")]
             k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
             fam[m] = (k, n, "hand check")
+        for pool in sorted({r["pool"] for r in sc if r.get("pool")}):   # small families checked as one stratified sample
+            rs = [r for r in sc if r.get("pool") == pool]
+            k, n = sum(r["verdict"] == "correct" for r in rs), len(rs)
+            for m in {r["method"] for r in rs}:
+                fam[m] = (k, n, f"pooled hand check ({pool})")
         # HGNC -> OMIM: HGNC's own cross-references are the witness
         k, n = con.execute("""WITH u AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'umls:shared_cui' AND method = 'HGNC-OMIM same name'),
                                    x AS (SELECT s_code h, o_code o FROM edge WHERE predicate = 'hgnc:xref' AND o_vocab = 'OMIM')
@@ -661,6 +666,15 @@ def main() -> int:
             "families": by,
             "candidates_names_differ": con.execute("SELECT edges FROM build_log WHERE family LIKE 'UMLS shared CUI, names differ%'").fetchone(),
             "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v)}
+
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'ccsr:category'").fetchone()[0]:
+        report["classification:ICD-10-CM -> AHRQ CCSR categories"] = dict(zip(("edges", "icd10cm_codes_classified", "of_icd10cm_codes_in_graph",
+                "categories", "body_systems", "codes_in_more_than_one_category"), con.execute("""
+            WITH c AS (SELECT * FROM edge WHERE predicate = 'ccsr:category')
+            SELECT count(*), count(DISTINCT s_code), (SELECT count(*) FROM node WHERE vocab = 'ICD10CM'), count(DISTINCT o_code),
+                   count(DISTINCT left(o_code, 3)),
+                   (SELECT count(*) FROM (SELECT s_code FROM c WHERE method = 'classified_as' GROUP BY 1 HAVING count(DISTINCT o_code) > 1))
+            FROM c""").fetchone()))
 
     # --- UMLS relationships: sources' own hierarchies (native) and MED-RT (hand check + DrugCentral witness) ---------
     if con.execute("SELECT count(*) FROM edge WHERE predicate LIKE 'medrt:%' OR predicate = 'umls:source_parent'").fetchone()[0]:

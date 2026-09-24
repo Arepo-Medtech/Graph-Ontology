@@ -2,8 +2,8 @@
 
 *23 September 2026. Design: `docs/weighted-graph-design.md`. Register (the contract): `reference/graph_predicates.json`.*
 
-**1,507,970 nodes, 7,258,358 edges, 202 edge types, 52 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11*, *UMLS Metathesaurus* and *How a drug works*.)
-Written to `out/graph.duckdb` (278 MB, git-ignored), rebuilt from source in about seven minutes.
+**1,508,488 nodes, 7,489,424 edges, 203 edge types, 53 vocabularies — every edge validated against the register.** (The family table below is the first build; the bridges are listed in *Non-pharmacological bridges*, *Lab results → findings*, *Signs → diagnoses*, *Illnesses to ICD-10-CM*, *Pathology units*, *Anatomy, organisms, non-laboratory LOINC and MBS*, *Radiology*, *Cross-references*, *Reference sets*, *Genes, rare diseases and pathways*, *ICD-10 ↔ ICD-11*, *UMLS Metathesaurus* and *How a drug works*.)
+Written to `out/graph.duckdb` (287 MB, git-ignored), rebuilt from source in about seven minutes.
 
 ## What makes it a graph rather than a pile of tables
 
@@ -624,17 +624,19 @@ of their own, and the first hand check caught a broad descriptor paired with a n
 (Leukoencephalopathies → Vanishing white matter disease, Nodaviridae → Alphanodavirus, Malus → *Malus domestica*,
 terodiline → terodiline hydrochloride): 25/30 before the rule, 30/30 after.
 
-| vocabulary pair | edges | check | tier |
+| vocabulary pairs | edges | check | tier |
 |---|---:|---|---:|
-| NCIT–SNOMED | 25,807 | 30/30 | 2 |
-| MeSH–SNOMED | 25,396 | 30/30 | 2 |
-| LOINC–SNOMED (parts and answers) | 12,120 | 30/30 | 2 |
+| 32 pairs — among them NCIT–SNOMED (25,807), MeSH–SNOMED (25,396), LOINC–SNOMED (12,120), MeSH–NCBI Taxonomy, FMA–SNOMED, RxNorm–SNOMED, NCIT–OMIM, LOINC–NCIT, MeSH–OMIM, HGNC–NCIT, the four ATC pairs, HP–NCIT, HP–MeSH and six small pairs as one pool | 162,000+ | 30/30 each, or 29/30, 56/60 where the first 30 sat on the boundary | 2 |
 | HGNC–OMIM | 12,004 | 11,920 of 11,933 agree with HGNC's own cross-reference | 1 |
-| MeSH–NCBI Taxonomy | 9,236 | 30/30 | 2 |
-| FMA–SNOMED | 8,964 | 30/30 | 2 |
-| RxNorm–SNOMED | 8,410 | 30/30 | 2 |
-| MeSH–NCIT | 6,982 | 30/30 | 2 |
-| 32 smaller pairs | 70,959 | not yet | ungraded |
+| HP–OMIM | 465 | 20/34 | inadmissible |
+| LOINC–OMIM | 125 | 29/31 | inadmissible |
+| six pairs under 40 edges each | 63 | not sampled | ungraded |
+
+**OMIM gene entries pair only with genes.** An OMIM *gene* entry carries its diseases' names as synonyms, so a shared name
+paired a disease with a gene — Bardet-Biedl syndrome 1 → the BBS1 entry, beta-thalassaemia → HBB, Leydig cell agenesis →
+LHCGR (OMIM–SNOMED 23/30 before the rule, 30/30 after). HGNC names the gene entries; they now pair only with an HGNC gene
+or an NCIt "… Gene" concept. What still fails is HPO and LOINC *features* paired with a specific OMIM disease (restless
+legs → RLS susceptibility 1, mandibulofacial dysostosis → Treacher Collins 1): those two pairs stay inadmissible.
 
 HPO → SNOMED and SNOMED organism → NCBI Taxonomy keep their own UMLS loaders and are not repeated. SNOMED concepts with a
 link outside SNOMED: **41.9% → 45.5%**; 33,785 MeSH descriptors now sit in the graph, the index PubMed uses. UMLS-derived:
@@ -660,18 +662,29 @@ SNOMED CT / MeSH diseases through a shared CUI on each side, both ends already n
 | predicate | edges | hand check | tier |
 |---|---:|---|---:|
 | `medrt:contraindicated_with` | 21,441 | 56/60 (lower bound 0.841) | 2 |
+| `medrt:may_diagnose` | 265 | 30/30 | 2 |
 | `medrt:may_treat` | 26,143 | 24/30 | inadmissible |
+| `medrt:may_prevent` | 4,091 | 24/30 | inadmissible |
+| `medrt:has_physiologic_effect` (→ MED-RT class) | 7,787 | 26/30 | inadmissible |
 | `medrt:has_mechanism_of_action` (→ MED-RT class) | 6,000 | 23/30 | inadmissible |
-| `medrt:has_physiologic_effect` (→ MED-RT class) | 7,787 | — | ungraded |
-| `medrt:may_prevent` / `may_diagnose` | 4,091 / 265 | — | ungraded |
 
 MED-RT is generous where labels are strict: its "may treat" includes cannabidiol → pain and chloroquine → systemic
-scleroderma, its mechanisms dexmedetomidine as an *alpha-1* agonist and megestrol as an oestrogen antagonist — so those
-edges stay, held inadmissible, never displayed. Its contraindications are sound; the four errors in 60 are MED-RT's coarse
+scleroderma, "may prevent" warfarin → atrial fibrillation (it prevents the stroke), its effects clomipramine as
+*decreasing serotonin degradation* (that is MAO inhibition), its mechanisms dexmedetomidine as an *alpha-1* agonist — so
+those edges stay, held inadmissible, never displayed (and never followed: MED-RT's 1,173 effect and mechanism classes now
+sit outside the main component, which is the tiering working). Its contraindications are sound; the four errors in 60 are MED-RT's coarse
 concepts ("Acute Disease" for acute bronchospasm). *The witness is a lower bound, not a disagreement:* for the 1,706 drugs
 both carry, 42% of MED-RT's SNOMED indications match DrugCentral's exactly or through is-a, and 32% of its
 contraindications — DrugCentral follows current labels, and its silence is *unknown*, not "no". Verdicts:
 `cache/umls/umls_medrt_handcheck.json` (UMLS-derived, git-ignored).
+
+### AHRQ CCSR: ICD-10-CM into clinical categories (built)
+
+AHRQ's Clinical Classifications Software Refined for ICD-10-CM (2026, public domain), relayed verbatim in UMLS's MRMAP:
+`ccsr:category`, **235,027 edges** — 74,415 of the graph's 98,366 ICD-10-CM codes into 553 categories in 23 body systems
+(`CIR017` Cardiac dysrhythmias; the prefix is the body system). method is AHRQ's: *classified_as* (a code can fall in
+several — 8,780 do) and the *default inpatient* / *default outpatient* category for a principal diagnosis. Native: AHRQ's
+assertion, not a UMLS judgement. (MRMAP's FROMID/TOID are its own row ids; the codes are FROMEXPR/TOEXPR.)
 
 ## How a drug works: drug → target → protein → gene → disease
 
