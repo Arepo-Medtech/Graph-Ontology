@@ -66,6 +66,18 @@ def parse(ecl: str):
     return out
 
 
+def concrete(ecl: str):
+    """A concrete range -- dec(>#0..), int(#1..#10), str("*") -- as (type, low, low exclusive, high, high exclusive), or None."""
+    m = re.match(r'^(dec|int|str)\((.*)\)$', strip(ecl))
+    if not m:
+        return None
+    if m.group(1) == "str":
+        return ("str", None, False, None, False)
+    lo, _, hi = m.group(2).partition("..")
+    num = lambda x: float(x.lstrip("<>=#")) if x.strip("<>=#") else None
+    return (m.group(1), num(lo), lo.startswith(">") and not lo.startswith(">="), num(hi), hi.startswith("<") and not hi.startswith("<="))
+
+
 def card(s: str) -> tuple[int, int | None]:
     lo, hi = s.split("..")
     return int(lo), None if hi == "*" else int(hi)
@@ -103,17 +115,28 @@ def main() -> int:
                     coalesce(TRY_CAST(attrs->>'group' AS INT), 0) grp, source
                     FROM g.edge WHERE predicate LIKE 'sct:%' AND predicate <> 'sct:{IS_A}' AND regexp_matches(predicate, '^sct:[0-9]+$')
                       AND source IN ('SNOMED CT-AU RF2', 'SNOMED CT LOINC Extension')""")
+    # and the concrete values (strengths, pack sizes, counts): the same attribute rules, a typed range
+    has_cv = "concrete_value" in {t for (t,) in con.execute("SELECT table_name FROM information_schema.tables WHERE table_catalog = 'g'").fetchall()}
+    if has_cv:
+        con.execute("""INSERT INTO e SELECT s_code, substr(predicate, 5), value_raw, grp, source FROM g.concrete_value""")
+        con.execute("""CREATE TEMP TABLE cv AS SELECT s_code s, substr(predicate, 5) a, value_raw o, datatype, value_num FROM g.concrete_value""")
     # ECL terms, one table: (rule kind, key, op, focus)
     terms = []
     for d, v in R["domains"].items():
         terms += [("domain", d, op, f) for op, f in (v["terms"] or [])]
     unchecked = collections.Counter()
+    cranges = []
     for a, v in R["attributes"].items():
         rs = [r for r in v["ranges"] if r["applies"]]
         for r in rs:
-            if r["terms"] is None:
-                unchecked["range is a concrete value or a refinement (not evaluated)"] += 1
+            c = concrete(r["constraint"]) if r["terms"] is None else None
+            if c and has_cv:
+                cranges.append((a, *c))
+            elif r["terms"] is None:
+                unchecked["range is a concrete value (the graph holds no concrete values)" if c else "range is a refinement (not evaluated)"] += 1
             terms += [("range", a, op, f) for op, f in (r["terms"] or [])]
+    con.execute("CREATE TEMP TABLE crange (a VARCHAR, typ VARCHAR, lo DOUBLE, lo_x BOOLEAN, hi DOUBLE, hi_x BOOLEAN)")
+    con.executemany("INSERT INTO crange VALUES (?, ?, ?, ?, ?, ?)", cranges)
     con.execute("CREATE TEMP TABLE t (kind VARCHAR, k VARCHAR, op VARCHAR, focus VARCHAR)")
     con.executemany("INSERT INTO t VALUES (?, ?, ?, ?)", terms)
     # descendants of every focus concept a '<<' or '<' term names, over the graph's is-a edges
@@ -142,10 +165,16 @@ def main() -> int:
     # per edge: domain and range verdicts
     con.execute(f"""CREATE TEMP TABLE rng_ok AS SELECT DISTINCT e.s, e.a, e.o FROM e JOIN t ON t.kind = 'range' AND t.k = e.a
                     WHERE {match('e.o')}""")
+    if has_cv:                  # a concrete value: the right type (an integer is a decimal too), inside the bounds
+        con.execute("""INSERT INTO rng_ok SELECT DISTINCT v.s, v.a, v.o FROM cv v JOIN crange r ON r.a = v.a
+            WHERE CASE r.typ WHEN 'str' THEN v.datatype = 'string' WHEN 'int' THEN v.datatype = 'integer'
+                             ELSE v.datatype IN ('integer', 'decimal') END
+              AND (r.lo IS NULL OR (CASE WHEN r.lo_x THEN v.value_num > r.lo ELSE v.value_num >= r.lo END))
+              AND (r.hi IS NULL OR (CASE WHEN r.hi_x THEN v.value_num < r.hi ELSE v.value_num <= r.hi END))""")
     con.execute("""CREATE TEMP TABLE ev AS SELECT e.*,
             EXISTS (SELECT 1 FROM ad WHERE ad.a = e.a) AS known,
             EXISTS (SELECT 1 FROM ad JOIN in_dom i ON i.dom = ad.dom WHERE ad.a = e.a AND i.c = e.s) AS dom_ok,
-            EXISTS (SELECT 1 FROM t WHERE t.kind = 'range' AND t.k = e.a) AS has_range,
+            EXISTS (SELECT 1 FROM t WHERE t.kind = 'range' AND t.k = e.a) OR EXISTS (SELECT 1 FROM crange r WHERE r.a = e.a) AS has_range,
             EXISTS (SELECT 1 FROM rng_ok r WHERE r.s = e.s AND r.a = e.a AND r.o = e.o) AS rng_ok FROM e""")
     # the rules that govern an edge: the attribute's rules in every domain its source is in. A concept can be in several
     # (an AMT product is in the product domain and an AU sub-domain), so a grouping or cardinality rule is broken only
@@ -181,12 +210,12 @@ def main() -> int:
     # mandatory attributes: a concept in the domain (and in no narrower domain that relaxes it) lacking the attribute
     mand = con.execute("""SELECT ad.a, ad.dom, ad.card FROM ad WHERE ad.strength = 'mandatory'
                           AND TRY_CAST(split_part(ad.card, '..', 1) AS INT) >= 1""").fetchall()
-    concrete = {a for a, v in R["attributes"].items() if v["ranges"] and all(r["terms"] is None for r in v["ranges"] if r["applies"])}
+    concrete_ = {a for a, v in R["attributes"].items() if v["ranges"] and all(r["terms"] is None for r in v["ranges"] if r["applies"])}
     for a, d, c in mand:
         missing = [s for (s,) in con.execute("""SELECT i.c FROM in_dom i WHERE i.dom = ?
                    AND i.c NOT IN (SELECT s FROM e WHERE a = ?) AND i.c <> ?""",
                    [d, a, next((f for k, op, f in [(x[1], x[2], x[3]) for x in terms if x[0] == 'domain'] if k == d), "")]).fetchall()]
-        if a in concrete:           # a concrete-valued attribute (a count, a strength): RF2's concrete values are not in the graph
+        if a in concrete_ and not has_cv:     # a concrete-valued attribute, and a graph built without the concrete values
             unchecked[f"mandatory concrete-valued attribute {a} (not loaded): {len(missing):,} concepts not checked"] += 1
             continue
         viol += [("mandatory attribute missing", a, "SNOMED CT-AU RF2 or LOINC Extension", s, None, f"domain {d} requires {c}")

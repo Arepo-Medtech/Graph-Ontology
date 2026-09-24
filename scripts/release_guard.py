@@ -15,6 +15,8 @@ drops rows. completeness.py guards the shares that matter clinically; this guard
   concept model         (scripts/mrcm_check.py) SNOMED attribute edges breaking the MRCM, by class (domain, range,
                         grouping, cardinality, mandatory attribute missing): a class rising by more than 5% (and at
                         least 5 edges) FAILS -- a new release or loader brought edges SNOMED's own rules forbid.
+  concrete values       (build_edges.py concrete_value: SNOMED strengths, pack sizes, counts) per attribute, the same
+                        limits as an edge family.
   loader ledger         (build_edges.py loader_ledger) more loaders with no declared ledger than the baseline FAILS -- a
                         new loader states its source rows and exclusions; a loader whose excluded share of its source
                         rises by more than 5 points (and at least 100 rows) is a WARNING: a filter now takes more.
@@ -52,6 +54,8 @@ def current() -> dict:
     if "loader_ledger" in {t for (t,) in con.execute("SELECT table_name FROM information_schema.tables").fetchall()}:
         cur["ledger"] = {l: {"available": a, "excluded": int(x or 0), "kind": k} for l, k, a, x in con.execute(
             "SELECT loader, any_value(kind), any_value(available), sum(rows) FROM loader_ledger GROUP BY 1 ORDER BY 1").fetchall()}
+    if "concrete_value" in {t for (t,) in con.execute("SELECT table_name FROM information_schema.tables").fetchall()}:
+        cur["values"] = dict(con.execute("SELECT predicate, count(*) FROM concrete_value GROUP BY 1 ORDER BY 1").fetchall())
     if MRCM.exists():
         cur["mrcm"] = json.load(open(MRCM))["violations"]
     if REPORT.exists():
@@ -62,9 +66,9 @@ def current() -> dict:
 
 def compare(base: dict, cur: dict) -> tuple[list[str], list[str]]:
     fail, warn = [], []
-    for kind, lose_pct, lose_min in (("edges", 0.01, 10), ("nodes", 0.01, 10)):
+    for kind, lose_pct, lose_min in (("edges", 0.01, 10), ("nodes", 0.01, 10), ("values", 0.01, 10)):
         for k, b in base.get(kind, {}).items():
-            c = cur[kind].get(k)
+            c = cur.get(kind, {}).get(k)
             if c is None or (c == 0 and b > 0):
                 fail.append(f"{kind[:-1]} family vanished: {k} (was {b:,})")
             elif b - c > max(lose_min, lose_pct * b):

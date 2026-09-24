@@ -841,8 +841,9 @@ SNOMED CT ships its modelling rules as three reference sets in the release (Refs
 - **MRCM Attribute Domain:** which attributes a domain may carry, whether grouped, and how many times.
 - **MRCM Attribute Range:** what each attribute may point at.
 
-`scripts/mrcm_check.py` checks every SNOMED attribute edge in the graph against them: 1,585,842 edges from SNOMED
-CT-AU and the LOINC Extension, over 23 domains and 149 attributes. It runs in about 10 s and is part of `rebuild.sh`.
+`scripts/mrcm_check.py` checks every SNOMED attribute in the graph against them: 1,585,842 attribute edges and
+511,961 concrete values (2,097,803 in all) from SNOMED CT-AU and the LOINC Extension, over 23 domains and 149
+attributes. It runs in about 10 s and is part of `rebuild.sh`.
 
 The rules are ECL, and the AU release uses only a small subset of it:
 - `<<` (self or descendant) and `<` (descendant);
@@ -850,24 +851,30 @@ The rules are ECL, and the AU release uses only a small subset of it:
 - a bare concept id;
 - `OR`.
 
-That subset is evaluated over the graph's own is-a edges and reference-set memberships. Rules for postcoordinated
-content, and the 16 ranges that are concrete values, are reported as *not checkable*. The concrete ranges are
-`dec(>#0..)` and `int(>#0..)`: strengths and counts.
+That subset is evaluated over the graph's own is-a edges and reference-set memberships. The 16 concrete ranges
+(`dec(>#0..)`, `int(>#0..)`, `str("*")`) are checked as typed bounds on the values: a decimal accepts an integer, an
+integer does not accept a decimal. Rules for postcoordinated content are not applied to released concepts.
 
 | class | edges | what they are |
 |---|---:|---|
-| mandatory attribute missing | 1,654 | AMT packs with no *Contains clinical drug* — dressings and devices modelled as packaged drugs ("Duoderm Gel … tubes") |
+| mandatory attribute missing | 3,308 | 1,654 AMT **multi-packs** (packs of packs: "Gaviscon Peppermint oral liquid, 2 x 200 mL"), each lacking both *Contains clinical drug* and *Count of clinical drug type*. All 1,654 carry the AU extension's own *Contains packaged clinical drug* and *Count of contained package types* instead: the Australian multi-pack pattern, which the international pack rule does not allow for |
 | domain: source outside every allowed domain | 159 | AU concepts carrying *finding context* / *associated finding* / *procedure context* that sit outside the situation hierarchy ("Parents deceased", "Nitrate contraindicated") |
-| range: target outside the range | 69 | all LOINC Extension: *Process output* → a calculation procedure, *Component* → an HLA allele, *Inheres in* → a substance |
+| range: target outside the range | 71 | 69 LOINC Extension (*Process output* → a calculation procedure, *Component* → an HLA allele, *Inheres in* → a substance); 2 AMT total quantities of **0** against `dec(>#0..)` — the empty capsule of the mannitol bronchial challenge kit ("Mannitol 0 mg powder for inhalation") |
 | more of an attribute in one role group than allowed | 24 | observables, mostly LOINC Extension, with two *Property* or *Direct site* values in group 1 |
 | attribute not in the MRCM; grouping | 0 | — |
 
-So 1,906 of 1.59 million edges break a rule (0.12%), and each is a modelling question for the release's authors, not
-a load error.
+So 3,562 of 2.1 million attributes break a rule (0.17%); 3,308 of them are one Australian modelling pattern, and each
+of the rest is a modelling question for the release's authors, not a load error.
 
-**Not checkable:** *Count of clinical drug type* is mandatory on 117,583 packs, but its value is concrete, and **the
-graph does not load RF2's concrete-value relationships** (`sct2_RelationshipConcreteValues`: AMT strengths, pack
-counts). That is a gap in the graph itself, noted for the medicines work.
+**Concrete values (loaded 24 Sep).** RF2's `sct2_RelationshipConcreteValues` — AMT strengths (presentation and
+concentration, numerator and denominator), pack sizes, total quantities, and the counts of active ingredients, bases,
+clinical drug types, component ingredients, contained package types and devices; and one string, *Has other identifying
+information* — are 511,961 rows (517,253 in the file, 5,292 inactive). A value is a property of its concept, not a
+node ("500" as a node would join every product that happens to share it), so they are the graph's `concrete_value`
+table: concept, attribute, datatype, the number or string, role group, and the source with the RF2 row id. The 14
+attribute types are `snomed_concrete_attributes` in the register (with their MRCM ranges); the build refuses an
+unregistered type or an unreadable value, the loader has its ledger, and the release guard limits each attribute as
+it does an edge family. The LOINC Extension's concrete-value file is empty in this release.
 
 The rules also sit in the register: `graph_register.py` writes each SNOMED attribute's MRCM domains (with grouping,
 cardinality and rule strength) and its range, as ids only, into `reference/graph_predicates.json`. 115 of 116 attributes

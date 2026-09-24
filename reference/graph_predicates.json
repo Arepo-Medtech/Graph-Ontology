@@ -2954,37 +2954,6 @@
       }
     },
     {
-      "id": "sct:732947008",
-      "type_id": "732947008",
-      "label": "Has presentation strength denominator unit",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "rationality",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 6724,
-      "object_tag": "unit of presentation",
-      "object_tag_share": 0.991,
-      "mrcm": {
-        "domains": [
-          {
-            "domain": "<< 373873005",
-            "grouped": true,
-            "cardinality": "0..*",
-            "in_group_cardinality": "0..1",
-            "strength": "mandatory"
-          }
-        ],
-        "range": "< 767524001"
-      }
-    },
-    {
       "id": "sct:732945000",
       "type_id": "732945000",
       "label": "Has presentation strength numerator unit",
@@ -3002,6 +2971,37 @@
       "count": 6724,
       "object_tag": "qualifier value",
       "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
+    },
+    {
+      "id": "sct:732947008",
+      "type_id": "732947008",
+      "label": "Has presentation strength denominator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 6724,
+      "object_tag": "unit of presentation",
+      "object_tag_share": 0.991,
       "mrcm": {
         "domains": [
           {
@@ -3457,9 +3457,9 @@
       }
     },
     {
-      "id": "sct:733725009",
-      "type_id": "733725009",
-      "label": "Has concentration strength numerator unit",
+      "id": "sct:733722007",
+      "type_id": "733722007",
+      "label": "Has concentration strength denominator unit",
       "subject": [
         "SCT"
       ],
@@ -3488,9 +3488,9 @@
       }
     },
     {
-      "id": "sct:733722007",
-      "type_id": "733722007",
-      "label": "Has concentration strength denominator unit",
+      "id": "sct:733725009",
+      "type_id": "733725009",
+      "label": "Has concentration strength numerator unit",
       "subject": [
         "SCT"
       ],
@@ -4849,37 +4849,6 @@
       }
     },
     {
-      "id": "sct:118168003",
-      "type_id": "118168003",
-      "label": "Specimen source morphology",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "relation",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 176,
-      "object_tag": "morphologic abnormality",
-      "object_tag_share": 1.0,
-      "mrcm": {
-        "domains": [
-          {
-            "domain": "<< 123038009",
-            "grouped": true,
-            "cardinality": "0..*",
-            "in_group_cardinality": "0..1",
-            "strength": "mandatory"
-          }
-        ],
-        "range": "<< 49755003"
-      }
-    },
-    {
       "id": "sct:1148969005",
       "type_id": "1148969005",
       "label": "Has absorbability",
@@ -4908,6 +4877,37 @@
           }
         ],
         "range": "860574003 OR 863965006 OR 863968008"
+      }
+    },
+    {
+      "id": "sct:118168003",
+      "type_id": "118168003",
+      "label": "Specimen source morphology",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 176,
+      "object_tag": "morphologic abnormality",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
       }
     },
     {
@@ -5445,37 +5445,6 @@
       }
     },
     {
-      "id": "sct:827081001",
-      "type_id": "827081001",
-      "label": "Has filling",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "relation",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 7,
-      "object_tag": "substance",
-      "object_tag_share": 1.0,
-      "mrcm": {
-        "domains": [
-          {
-            "domain": "<< 260787004",
-            "grouped": false,
-            "cardinality": "0..*",
-            "in_group_cardinality": "0..0",
-            "strength": "mandatory"
-          }
-        ],
-        "range": "<< 105590001"
-      }
-    },
-    {
       "id": "sct:1149366004",
       "type_id": "1149366004",
       "label": "Has ingredient qualitative strength",
@@ -5504,6 +5473,37 @@
           }
         ],
         "range": "< 1149484003"
+      }
+    },
+    {
+      "id": "sct:827081001",
+      "type_id": "827081001",
+      "label": "Has filling",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 7,
+      "object_tag": "substance",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
       }
     },
     {
@@ -5604,6 +5604,459 @@
           }
         ],
         "range": "<< 71388002"
+      }
+    }
+  ],
+  "snomed_concrete_attributes": [
+    {
+      "id": "sct:1142142004",
+      "type_id": "1142142004",
+      "label": "Has pack size value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "decimal",
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 129915,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 260787004",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 781405001",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000131000168101",
+      "type_id": "999000131000168101",
+      "label": "Count of contained component ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 118576,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142143009",
+      "type_id": "1142143009",
+      "label": "Count of clinical drug type",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 115929,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": false,
+            "cardinality": "1..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000041000168106",
+      "type_id": "999000041000168106",
+      "label": "Has total quantity value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "decimal"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 38765,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000001000168109",
+      "type_id": "999000001000168109",
+      "label": "Has other identifying information",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "string"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 25442,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "str(\"*\")"
+      }
+    },
+    {
+      "id": "sct:1142140007",
+      "type_id": "1142140007",
+      "label": "Count of active ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 25120,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000021000168100",
+      "type_id": "999000021000168100",
+      "label": "Has concentration strength value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "decimal"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 19027,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142139005",
+      "type_id": "1142139005",
+      "label": "Count of base of active ingredient",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 16613,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142135004",
+      "type_id": "1142135004",
+      "label": "Has presentation strength numerator value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "decimal",
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 6724,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142136003",
+      "type_id": "1142136003",
+      "label": "Has presentation strength denominator value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 6724,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142137007",
+      "type_id": "1142137007",
+      "label": "Has concentration strength denominator value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 3180,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:1142138002",
+      "type_id": "1142138002",
+      "label": "Has concentration strength numerator value",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "decimal",
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 3180,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "dec(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000091000168103",
+      "type_id": "999000091000168103",
+      "label": "Count of contained package types",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 1654,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<999000071000168104",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
+      }
+    },
+    {
+      "id": "sct:999000101000168108",
+      "type_id": "999000101000168108",
+      "label": "Count of device type",
+      "subject": [
+        "SCT"
+      ],
+      "object": "literal",
+      "datatypes": [
+        "integer"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+      "status": "built",
+      "count": 1112,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<999000071000168104",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "int(>#0..)"
       }
     }
   ]

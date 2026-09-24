@@ -65,7 +65,7 @@ def main() -> int:
              top AS (SELECT typ, arg_max(tag, n) AS top_tag, max(n) AS top_n FROM t GROUP BY 1)
         SELECT tot.typ, coalesce(lbl.pt, '?'), tot.total, top.top_tag, top.top_n
         FROM tot JOIN top USING (typ) LEFT JOIN concept lbl ON lbl.id = tot.typ
-        ORDER BY tot.total DESC""").fetchall()
+        ORDER BY tot.total DESC, tot.typ""").fetchall()     # ties by id: the register must not reorder itself
     con.close()
     # the concept model's own rules for each attribute (the MRCM in the release's Refset/Metadata; ids only, no terms):
     # where it may be used and how often, and what it may point at. scripts/mrcm_check.py checks the graph against them.
@@ -91,15 +91,35 @@ def main() -> int:
               "count": int(total), "object_tag": top_tag, "object_tag_share": round(top_n / total, 3),
               "mrcm": mrcm(typ)}
              for typ, label, total, top_tag, top_n in rows]
+    # attributes whose value is a literal (RF2 RelationshipConcreteValues: strengths, pack sizes, counts): build_edges.py
+    # loads them to the concrete_value table and refuses a type not listed here
+    au_cv = Path(os.environ.get("AU_RF2_SNAPSHOT", os.path.expanduser(
+        "~/Documents/ONTOLOGIES/SnomedCT_Release_AU1000036_20260831/Snapshot"))) / "Terminology" / "sct2_RelationshipConcreteValues_Snapshot_AU1000036_20260831.txt"
+    lx_cv = LOINC_EXT / "Terminology" / "sct2_RelationshipConcreteValues_Snapshot_LO1010000_20260321.txt"
+    con = duckdb.connect(str(DB), read_only=True)
+    parts = [f"""SELECT typeId, value, '{k}' src FROM read_csv('{f}', delim='\t', header=true, quote='', escape='', all_varchar=true)
+                 WHERE active = '1'""" for k, f in (("au", au_cv), ("loinc", lx_cv)) if f.exists()]
+    crows = con.execute(f"""SELECT v.typeId, coalesce(any_value(c.pt), '?'), count(*),
+            list(DISTINCT CASE WHEN v.value LIKE '"%' THEN 'string' WHEN v.value LIKE '#%.%' THEN 'decimal' ELSE 'integer' END ORDER BY 1),
+            string_agg(DISTINCT v.src, '+' ORDER BY v.src)
+        FROM ({' UNION ALL '.join(parts)}) v LEFT JOIN concept c ON c.id = v.typeId GROUP BY 1 ORDER BY 3 DESC, 1""").fetchall() if parts else []
+    con.close()
+    cattrs = [{"id": f"sct:{typ}", "type_id": typ, "label": label, "subject": ["SCT"], "object": "literal",
+               "datatypes": sorted(dts), "category": category(typ, label, None), "derivation": "lookup", "strength_kind": "exact",
+               "source": {"au": "SNOMED CT-AU RF2 RelationshipConcreteValues, REL 20260831",
+                          "loinc": "SNOMED CT LOINC Extension RelationshipConcreteValues 20260321",
+                          "au+loinc": "SNOMED CT-AU RF2 20260831 and SNOMED CT LOINC Extension 20260321 (RelationshipConcreteValues)"}[src],
+               "status": "built", "count": int(n), "mrcm": mrcm(typ)} for typ, label, n, dts, src in crows]
     reg = json.load(open(REGISTER))
     reg["snomed_attributes"] = attrs
+    reg["snomed_concrete_attributes"] = cattrs
     REGISTER.write_text(json.dumps(reg, indent=2, ensure_ascii=False) + "\n")
     by = {}
     for a in attrs:
         by.setdefault(a["category"], [0, 0])
         by[a["category"]][0] += 1
         by[a["category"]][1] += a["count"]
-    print(json.dumps({"attribute_types": len(attrs), "by_category": {k: {"types": v[0], "edges": v[1]}
+    print(json.dumps({"attribute_types": len(attrs), "concrete_attribute_types": len(cattrs), "by_category": {k: {"types": v[0], "edges": v[1]}
                       for k, v in sorted(by.items(), key=lambda x: -x[1][1])}}, indent=1))
     return 0
 

@@ -526,6 +526,16 @@
    "excluded": 3656,
    "kind": "source"
   },
+  "SNOMED CT LOINC Extension concrete values": {
+   "available": 0,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "SNOMED CT-AU concrete values (strengths, pack sizes, counts)": {
+   "available": 517253,
+   "excluded": 5292,
+   "kind": "source"
+  },
   "SNOMED CT-AU reference set membership": {
    "available": 1378050,
    "excluded": 125370,
@@ -655,8 +665,8 @@
  "mrcm": {
   "cardinality: more in one role group than the rule allows": 24,
   "domain: source outside every domain the attribute is allowed in": 159,
-  "mandatory attribute missing": 1654,
-  "range: target outside the attribute's range": 69
+  "mandatory attribute missing": 3308,
+  "range: target outside the attribute's range": 71
  },
  "nodes": {
   "ARTG": 25069,
@@ -717,5 +727,21 @@
   "edges": 8062009,
   "nodes": 1543185,
   "usable_edges": 8021781
+ },
+ "values": {
+  "sct:1142135004": 6724,
+  "sct:1142136003": 6724,
+  "sct:1142137007": 3180,
+  "sct:1142138002": 3180,
+  "sct:1142139005": 16613,
+  "sct:1142140007": 25120,
+  "sct:1142142004": 129915,
+  "sct:1142143009": 115929,
+  "sct:999000001000168109": 25442,
+  "sct:999000021000168100": 19027,
+  "sct:999000041000168106": 38765,
+  "sct:999000091000168103": 1654,
+  "sct:999000101000168108": 1112,
+  "sct:999000131000168101": 118576
  }
 }
