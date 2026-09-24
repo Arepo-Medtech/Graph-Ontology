@@ -6,6 +6,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PY=.venv/bin/python
+$PY scripts/graph_inputs.py check   # every input present where the build reads it (reference/graph_inputs_manifest.json)
 $PY scripts/build_edges.py "$@"      # refuses if a source is missing; validates every edge against the register
 $PY scripts/graph_report.py         # earns the tiers, applies hand-check rejections, writes out/graph_report.json
 $PY scripts/consistency.py          # equivalence clusters and one-to-one conflicts -> out/consistency.json

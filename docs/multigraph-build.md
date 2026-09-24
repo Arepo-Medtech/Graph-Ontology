@@ -869,6 +869,29 @@ scripts/rebuild.sh                                # the build and every guard be
 #   exits 1 if a cell's present share fell against reference/completeness_baseline.json (--set-baseline to accept)
 ```
 
+## Inputs, and rebuilding on another machine
+
+`reference/graph_inputs_manifest.json` lists every input the build reads — 27 entries, with source, version, licence,
+and each file's size and sha256 — and `scripts/graph_inputs.py` keeps a copy of everything outside the licensed
+releases in **`~/Documents/ONTOLOGIES/graph-inputs/`** (1.5 GB: the build's `cache/` inputs including every hand-check
+verdict file, `out/compendium.duckdb`, the spine database; `MANIFEST.json` and a `README.md` beside them). With the
+ONTOLOGIES folder and this repository, the graph rebuilds anywhere:
+
+```bash
+.venv/bin/python scripts/graph_inputs.py restore   # link (or --copy) the stored inputs into cache/ and out/; unzip Athena's
+                                                   # CONCEPT / CONCEPT_RELATIONSHIP / CONCEPT_ANCESTOR from its zip
+scripts/rebuild.sh                                 # checks the inputs first, then the build and every guard
+```
+
+The licensed releases (5.4 GB: SNOMED CT-AU, LOINC, the LOINC Extension, RadLex, RCPA, the RSNA playbook, the Athena
+bundle) are read in place; set `ONTOLOGIES=/path` if the folder is elsewhere. Without `~/code/spine`, the build reads the
+spine database and Athena files from `out/`. Not needed to build, so not stored: the UMLS and SNOMED US zips (3.1 GB —
+re-download with the UTS key), SeMRA (1 GB) and the DrugCentral SQL dump (1.4 GB), each only for re-deriving a stored
+file. After an input changes (a new hand check, a new download), `graph_inputs.py export` refreshes the ONTOLOGIES copy
+and the manifest; `graph_inputs.py check` (first step of `rebuild.sh`) fails if an input is missing and lists what has
+changed since the manifest. Tested 24 Sep on a fresh clone with an empty home directory: restore, then a full rebuild
+reproducing the graph and passing every guard.
+
 ## Guards
 
 A rebuild can shrink the graph without failing, so four checks run after it, each against a committed baseline of counts

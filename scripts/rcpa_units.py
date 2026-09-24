@@ -20,7 +20,9 @@ from pathlib import Path
 
 import openpyxl
 
-SRC = Path(os.environ.get("RCPA_DIR", sorted(d for d in glob.glob(os.path.expanduser("~/Documents/ONTOLOGIES/RCPA_v*")) if os.path.isdir(d))[-1]))
+
+ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
+SRC = Path(os.environ.get("RCPA_DIR", sorted(d for d in glob.glob(os.path.join(ONT_ROOT, "RCPA_v*")) if os.path.isdir(d))[-1]))
 OUT = Path("cache/rcpa/reporting_units.json")
 SETS = ("Reporting Terminology Reference Set", "Blood Gases Terminology Reference Set")
 

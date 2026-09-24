@@ -31,6 +31,8 @@ from pathlib import Path
 
 import duckdb
 
+
+ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
 GRAPH = Path("out/graph.duckdb")
 TIER1, TIER2, MIN_FIRED = 0.99, 0.80, 30
 
@@ -51,7 +53,9 @@ def tier(lo: float, n: int) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--vocab-dir", default=os.path.expanduser("~/code/spine/out/omop-vocab"))
+    vocab = next((d for d in (Path(os.path.expanduser("~/code/spine/out/omop-vocab")), Path("out/omop-vocab")) if (d / "CONCEPT.csv").exists()),
+                 Path(os.path.expanduser("~/code/spine/out/omop-vocab")))   # out/ on a machine restored by scripts/graph_inputs.py
+    ap.add_argument("--vocab-dir", default=str(vocab))
     a = ap.parse_args()
     opts = "delim='\t', header=true, quote='', escape='', all_varchar=true"
     con = duckdb.connect(str(GRAPH))
@@ -451,7 +455,7 @@ def main() -> int:
             (SELECT count(*) FROM node WHERE vocab = 'UBERON')""").fetchone()))
 
     # --- LOINC reach by class, and MBS ------------------------------------------------------------------------------
-    lt_path = Path(os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv"))
+    lt_path = Path(os.path.join(ONT_ROOT, "Loinc_2.83/LoincTable/Loinc.csv"))
     if lt_path.exists():
         rows = con.execute(f"""WITH b AS (SELECT DISTINCT s_code c FROM edge WHERE s_vocab = 'LOINC' AND o_vocab NOT IN ('LOINC', 'UCUM', 'RADLEX', 'RPID')
                                     UNION SELECT DISTINCT o_code FROM edge WHERE o_vocab = 'LOINC' AND s_vocab <> 'LOINC'),

@@ -36,6 +36,8 @@ from pathlib import Path
 
 import duckdb
 
+
+ONT_ROOT = os.environ.get("ONTOLOGIES", os.path.expanduser("~/Documents/ONTOLOGIES"))   # the licensed releases, read in place
 GRAPH, CMP = Path("out/graph.duckdb"), Path("out/compendium.duckdb")
 REGISTER = Path("reference/graph_predicates.json")
 OUT, BASELINE = Path("out/completeness.json"), Path("reference/completeness_baseline.json")
@@ -51,7 +53,7 @@ OBO_V = {"ICD10WHO": "ICD10WHO", "ICD10CM": "ICD10CM", "Orphanet": "ORPHA", "OMI
          "icd11.foundation": "ICD11", "ICD-10": "ICD10WHO", "ORPHA": "ORPHA"}
 ORPHA_V = {"ICD-10": "ICD10WHO", "ICD-11": "ICD11MMS", "OMIM": "OMIM", "UMLS": "UMLS", "MeSH": "MESH", "MONDO": "MONDO", "GARD": "GARD"}
 XMAP = Path("cache/snomed-us/extended_map_20260901.parquet")
-LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.expanduser("~/Documents/ONTOLOGIES/Loinc_2.83/LoincTable/Loinc.csv")))
+LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.join(ONT_ROOT, "Loinc_2.83/LoincTable/Loinc.csv")))
 SAMPLE, DROP = 50, 0.005
 
 # SeMRA prefix -> (graph vocabulary, how the graph writes the local id)
