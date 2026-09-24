@@ -1877,7 +1877,8 @@
       "status": "built",
       "count": 877420,
       "object_tag": "disorder",
-      "object_tag_share": 0.235
+      "object_tag_share": 0.235,
+      "mrcm": null
     },
     {
       "id": "sct:774163005",
@@ -1896,7 +1897,33 @@
       "status": "built",
       "count": 129915,
       "object_tag": "unit of presentation",
-      "object_tag_share": 0.847
+      "object_tag_share": 0.847,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 260787004",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 781405001",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<767524001"
+      }
     },
     {
       "id": "sct:774158006",
@@ -1915,7 +1942,33 @@
       "status": "built",
       "count": 126579,
       "object_tag": "product name",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<774167006"
+      }
     },
     {
       "id": "sct:774160008",
@@ -1934,7 +1987,19 @@
       "status": "built",
       "count": 118576,
       "object_tag": "branded clinical drug",
-      "object_tag_share": 0.843
+      "object_tag_share": 0.843,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": true,
+            "cardinality": "1..*",
+            "in_group_cardinality": "1..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 763158003"
+      }
     },
     {
       "id": "sct:363698007",
@@ -1953,7 +2018,19 @@
       "status": "built",
       "count": 110161,
       "object_tag": "body structure",
-      "object_tag_share": 0.981
+      "object_tag_share": 0.981,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 442083009"
+      }
     },
     {
       "id": "sct:116676008",
@@ -1972,7 +2049,19 @@
       "status": "built",
       "count": 82425,
       "object_tag": "morphologic abnormality",
-      "object_tag_share": 0.999
+      "object_tag_share": 0.999,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
+      }
     },
     {
       "id": "sct:260686004",
@@ -1991,7 +2080,19 @@
       "status": "built",
       "count": 74507,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 129264002"
+      }
     },
     {
       "id": "sct:127489000",
@@ -2010,7 +2111,19 @@
       "status": "built",
       "count": 63844,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
     },
     {
       "id": "sct:30465011000036106",
@@ -2029,7 +2142,33 @@
       "status": "built",
       "count": 62174,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<999000071000168104",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<49062001"
+      }
     },
     {
       "id": "sct:732943007",
@@ -2048,7 +2187,19 @@
       "status": "built",
       "count": 55810,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 105590001"
+      }
     },
     {
       "id": "sct:411116001",
@@ -2067,7 +2218,19 @@
       "status": "built",
       "count": 48570,
       "object_tag": "dose form",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 736542009"
+      }
     },
     {
       "id": "sct:246093002",
@@ -2086,7 +2249,26 @@
       "status": "built",
       "count": 48516,
       "object_tag": "substance",
-      "object_tag_share": 0.912
+      "object_tag_share": 0.912,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008 OR << 540091010000105"
+      }
     },
     {
       "id": "sct:370130000",
@@ -2105,7 +2287,26 @@
       "status": "built",
       "count": 46565,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.954
+      "object_tag_share": 0.954,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 118598001"
+      }
     },
     {
       "id": "sct:405813007",
@@ -2124,7 +2325,19 @@
       "status": "built",
       "count": 43376,
       "object_tag": "body structure",
-      "object_tag_share": 0.999
+      "object_tag_share": 0.999,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 442083009"
+      }
     },
     {
       "id": "sct:370132008",
@@ -2143,7 +2356,26 @@
       "status": "built",
       "count": 42812,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 117364006 OR << 117444000 OR << 26716007 OR < 398195001"
+      }
     },
     {
       "id": "sct:363714003",
@@ -2162,7 +2394,19 @@
       "status": "built",
       "count": 42151,
       "object_tag": "observable entity",
-      "object_tag_share": 0.801
+      "object_tag_share": 0.801,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 108252007 OR << 363787002 OR << 386053000"
+      }
     },
     {
       "id": "sct:704327008",
@@ -2181,7 +2425,19 @@
       "status": "built",
       "count": 41858,
       "object_tag": "specimen",
-      "object_tag_share": 0.996
+      "object_tag_share": 0.996,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:370134009",
@@ -2200,7 +2456,26 @@
       "status": "built",
       "count": 41502,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 7389001"
+      }
     },
     {
       "id": "sct:999000051000168108",
@@ -2219,7 +2494,19 @@
       "status": "built",
       "count": 38765,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<767524001"
+      }
     },
     {
       "id": "sct:370135005",
@@ -2238,7 +2525,19 @@
       "status": "built",
       "count": 29359,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 1495041000004108 OR << 308490002 OR << 441862004 OR << 472963003 OR << 769247005"
+      }
     },
     {
       "id": "sct:272741003",
@@ -2257,7 +2556,26 @@
       "status": "built",
       "count": 25997,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "^ 723264001",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "optional"
+          },
+          {
+            "domain": "<< 91723000",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 182353008"
+      }
     },
     {
       "id": "sct:246454002",
@@ -2276,7 +2594,33 @@
       "status": "built",
       "count": 23535,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 282032007"
+      }
     },
     {
       "id": "sct:363713009",
@@ -2295,7 +2639,19 @@
       "status": "built",
       "count": 20852,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 260245000 OR << 263714004 OR << 308916002"
+      }
     },
     {
       "id": "sct:42752001",
@@ -2314,7 +2670,26 @@
       "status": "built",
       "count": 20202,
       "object_tag": "event",
-      "object_tag_share": 0.639
+      "object_tag_share": 0.639,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272379006 OR << 404684003 OR << 71388002"
+      }
     },
     {
       "id": "sct:762949000",
@@ -2333,7 +2708,19 @@
       "status": "built",
       "count": 19431,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
     },
     {
       "id": "sct:999000031000168102",
@@ -2352,7 +2739,19 @@
       "status": "built",
       "count": 19027,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<767524001"
+      }
     },
     {
       "id": "sct:246075003",
@@ -2371,7 +2770,26 @@
       "status": "built",
       "count": 18864,
       "object_tag": "substance",
-      "object_tag_share": 0.516
+      "object_tag_share": 0.516,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 260787004 OR << 373873005 OR << 410607006 OR << 78621006"
+      }
     },
     {
       "id": "sct:246501002",
@@ -2390,7 +2808,19 @@
       "status": "built",
       "count": 13839,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.952
+      "object_tag_share": 0.952,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 254291000 OR << 272394005"
+      }
     },
     {
       "id": "sct:363700003",
@@ -2409,7 +2839,19 @@
       "status": "built",
       "count": 10560,
       "object_tag": "morphologic abnormality",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
+      }
     },
     {
       "id": "sct:726542003",
@@ -2428,7 +2870,19 @@
       "status": "built",
       "count": 9984,
       "object_tag": "disposition",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 105590001",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 726711005"
+      }
     },
     {
       "id": "sct:405814001",
@@ -2447,7 +2901,19 @@
       "status": "built",
       "count": 9160,
       "object_tag": "body structure",
-      "object_tag_share": 0.998
+      "object_tag_share": 0.998,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 442083009"
+      }
     },
     {
       "id": "sct:424226004",
@@ -2466,26 +2932,26 @@
       "status": "built",
       "count": 8913,
       "object_tag": "physical object",
-      "object_tag_share": 0.991
-    },
-    {
-      "id": "sct:732945000",
-      "type_id": "732945000",
-      "label": "Has presentation strength numerator unit",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "rationality",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 6724,
-      "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 0.991,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49062001"
+      }
     },
     {
       "id": "sct:732947008",
@@ -2504,7 +2970,50 @@
       "status": "built",
       "count": 6724,
       "object_tag": "unit of presentation",
-      "object_tag_share": 0.991
+      "object_tag_share": 0.991,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
+    },
+    {
+      "id": "sct:732945000",
+      "type_id": "732945000",
+      "label": "Has presentation strength numerator unit",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 6724,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
     },
     {
       "id": "sct:263502005",
@@ -2523,7 +3032,19 @@
       "status": "built",
       "count": 6431,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 288524001"
+      }
     },
     {
       "id": "sct:363699004",
@@ -2542,7 +3063,19 @@
       "status": "built",
       "count": 5998,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49062001"
+      }
     },
     {
       "id": "sct:763032000",
@@ -2561,7 +3094,19 @@
       "status": "built",
       "count": 5615,
       "object_tag": "unit of presentation",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 732935002"
+      }
     },
     {
       "id": "sct:363702006",
@@ -2580,7 +3125,19 @@
       "status": "built",
       "count": 5593,
       "object_tag": "disorder",
-      "object_tag_share": 0.417
+      "object_tag_share": 0.417,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 404684003 OR << 71388002"
+      }
     },
     {
       "id": "sct:408732007",
@@ -2599,7 +3156,19 @@
       "status": "built",
       "count": 5174,
       "object_tag": "person",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 243796009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 125676002"
+      }
     },
     {
       "id": "sct:408731000",
@@ -2618,7 +3187,19 @@
       "status": "built",
       "count": 5159,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 243796009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 410510008"
+      }
     },
     {
       "id": "sct:363701004",
@@ -2637,7 +3218,19 @@
       "status": "built",
       "count": 4743,
       "object_tag": "substance",
-      "object_tag_share": 0.938
+      "object_tag_share": 0.938,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 373873005"
+      }
     },
     {
       "id": "sct:704319004",
@@ -2656,7 +3249,19 @@
       "status": "built",
       "count": 4621,
       "object_tag": "organism",
-      "object_tag_share": 0.46
+      "object_tag_share": 0.46,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 125676002 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:424361007",
@@ -2675,7 +3280,19 @@
       "status": "built",
       "count": 4450,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
     },
     {
       "id": "sct:363703001",
@@ -2694,7 +3311,19 @@
       "status": "built",
       "count": 4251,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 363675004"
+      }
     },
     {
       "id": "sct:704325000",
@@ -2713,7 +3342,19 @@
       "status": "built",
       "count": 4136,
       "object_tag": "substance",
-      "object_tag_share": 0.591
+      "object_tag_share": 0.591,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:255234002",
@@ -2732,7 +3373,26 @@
       "status": "built",
       "count": 3722,
       "object_tag": "procedure",
-      "object_tag_share": 0.609
+      "object_tag_share": 0.609,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272379006 OR << 404684003 OR << 71388002"
+      }
     },
     {
       "id": "sct:116686009",
@@ -2751,7 +3411,19 @@
       "status": "built",
       "count": 3586,
       "object_tag": "specimen",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 123038009"
+      }
     },
     {
       "id": "sct:363704007",
@@ -2770,7 +3442,19 @@
       "status": "built",
       "count": 3182,
       "object_tag": "body structure",
-      "object_tag_share": 0.999
+      "object_tag_share": 0.999,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 442083009"
+      }
     },
     {
       "id": "sct:733725009",
@@ -2789,7 +3473,19 @@
       "status": "built",
       "count": 3180,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
     },
     {
       "id": "sct:733722007",
@@ -2808,7 +3504,19 @@
       "status": "built",
       "count": 3180,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
     },
     {
       "id": "sct:738774007",
@@ -2827,7 +3535,19 @@
       "status": "built",
       "count": 2764,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 105590001",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
     },
     {
       "id": "sct:408729009",
@@ -2846,7 +3566,19 @@
       "status": "built",
       "count": 2652,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 413350009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 410514004"
+      }
     },
     {
       "id": "sct:704321009",
@@ -2865,7 +3597,19 @@
       "status": "built",
       "count": 2651,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.812
+      "object_tag_share": 0.812,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002 OR << 719982003"
+      }
     },
     {
       "id": "sct:246090004",
@@ -2884,7 +3628,19 @@
       "status": "built",
       "count": 2643,
       "object_tag": "disorder",
-      "object_tag_share": 0.662
+      "object_tag_share": 0.662,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 413350009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272379006 OR << 404684003"
+      }
     },
     {
       "id": "sct:260507000",
@@ -2903,7 +3659,19 @@
       "status": "built",
       "count": 2602,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 309795001"
+      }
     },
     {
       "id": "sct:363589002",
@@ -2922,7 +3690,19 @@
       "status": "built",
       "count": 2581,
       "object_tag": "procedure",
-      "object_tag_share": 0.968
+      "object_tag_share": 0.968,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 129125009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002"
+      }
     },
     {
       "id": "sct:408730004",
@@ -2941,7 +3721,19 @@
       "status": "built",
       "count": 2482,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 129125009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 288532009"
+      }
     },
     {
       "id": "sct:418775008",
@@ -2960,7 +3752,19 @@
       "status": "built",
       "count": 2468,
       "object_tag": "procedure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002"
+      }
     },
     {
       "id": "sct:116688005",
@@ -2979,7 +3783,19 @@
       "status": "built",
       "count": 2459,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 103379005"
+      }
     },
     {
       "id": "sct:999000011000168107",
@@ -2998,7 +3814,19 @@
       "status": "built",
       "count": 2182,
       "object_tag": "containerized branded clinical drug package",
-      "object_tag_share": 0.375
+      "object_tag_share": 0.375,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 781405001",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<373873005"
+      }
     },
     {
       "id": "sct:47429007",
@@ -3017,7 +3845,26 @@
       "status": "built",
       "count": 1714,
       "object_tag": "physical object",
-      "object_tag_share": 0.613
+      "object_tag_share": 0.613,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 260787004 OR << 272379006 OR << 404684003 OR << 410607006 OR << 71388002 OR << 78621006"
+      }
     },
     {
       "id": "sct:719722006",
@@ -3036,7 +3883,26 @@
       "status": "built",
       "count": 1701,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.814
+      "object_tag_share": 0.814,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272379006 OR << 404684003 OR << 71388002 OR << 719982003"
+      }
     },
     {
       "id": "sct:425391005",
@@ -3055,7 +3921,19 @@
       "status": "built",
       "count": 1603,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49062001"
+      }
     },
     {
       "id": "sct:118169006",
@@ -3074,7 +3952,19 @@
       "status": "built",
       "count": 1463,
       "object_tag": "body structure",
-      "object_tag_share": 0.985
+      "object_tag_share": 0.985,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 442083009"
+      }
     },
     {
       "id": "sct:704320005",
@@ -3093,7 +3983,19 @@
       "status": "built",
       "count": 1346,
       "object_tag": "substance",
-      "object_tag_share": 0.996
+      "object_tag_share": 0.996,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:246513007",
@@ -3112,7 +4014,19 @@
       "status": "built",
       "count": 1262,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 255231005 OR << 257958009 OR << 261424001"
+      }
     },
     {
       "id": "sct:704323007",
@@ -3131,7 +4045,19 @@
       "status": "built",
       "count": 1184,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 7389001"
+      }
     },
     {
       "id": "sct:999000081000168101",
@@ -3150,7 +4076,19 @@
       "status": "built",
       "count": 1115,
       "object_tag": "branded physical object",
-      "object_tag_share": 0.746
+      "object_tag_share": 0.746,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<999000071000168104",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<49062001"
+      }
     },
     {
       "id": "sct:370133003",
@@ -3169,7 +4107,19 @@
       "status": "built",
       "count": 1078,
       "object_tag": "substance",
-      "object_tag_share": 0.903
+      "object_tag_share": 0.903,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 260787004 OR << 373873005"
+      }
     },
     {
       "id": "sct:118171006",
@@ -3188,7 +4138,19 @@
       "status": "built",
       "count": 1034,
       "object_tag": "procedure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002"
+      }
     },
     {
       "id": "sct:424244007",
@@ -3207,7 +4169,19 @@
       "status": "built",
       "count": 1014,
       "object_tag": "physical force",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 78621006"
+      }
     },
     {
       "id": "sct:836358009",
@@ -3226,7 +4200,19 @@
       "status": "built",
       "count": 926,
       "object_tag": "body structure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 123037004"
+      }
     },
     {
       "id": "sct:704324001",
@@ -3245,7 +4231,19 @@
       "status": "built",
       "count": 898,
       "object_tag": "substance",
-      "object_tag_share": 0.939
+      "object_tag_share": 0.939,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 719982003"
+      }
     },
     {
       "id": "sct:718497002",
@@ -3264,7 +4262,19 @@
       "status": "built",
       "count": 822,
       "object_tag": "body structure",
-      "object_tag_share": 0.993
+      "object_tag_share": 0.993,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:704322002",
@@ -3283,7 +4293,19 @@
       "status": "built",
       "count": 764,
       "object_tag": "body structure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 260787004 OR << 373873005 OR << 410607006"
+      }
     },
     {
       "id": "sct:363709002",
@@ -3302,7 +4324,19 @@
       "status": "built",
       "count": 670,
       "object_tag": "morphologic abnormality",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
+      }
     },
     {
       "id": "sct:736474004",
@@ -3321,7 +4355,19 @@
       "status": "built",
       "count": 493,
       "object_tag": "intended site",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736542009",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736479009"
+      }
     },
     {
       "id": "sct:1003735000",
@@ -3340,7 +4386,19 @@
       "status": "built",
       "count": 485,
       "object_tag": "substance",
-      "object_tag_share": 0.998
+      "object_tag_share": 0.998,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 373873005"
+      }
     },
     {
       "id": "sct:704326004",
@@ -3359,7 +4417,19 @@
       "status": "built",
       "count": 481,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.861
+      "object_tag_share": 0.861,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 404684003 OR << 703763000 OR << 71388002"
+      }
     },
     {
       "id": "sct:736475003",
@@ -3378,26 +4448,19 @@
       "status": "built",
       "count": 429,
       "object_tag": "release characteristic",
-      "object_tag_share": 1.0
-    },
-    {
-      "id": "sct:736472000",
-      "type_id": "736472000",
-      "label": "Has dose form administration method",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "relation",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 420,
-      "object_tag": "administration method",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736542009",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736480007"
+      }
     },
     {
       "id": "sct:371881003",
@@ -3416,7 +4479,57 @@
       "status": "built",
       "count": 420,
       "object_tag": "procedure",
-      "object_tag_share": 0.955
+      "object_tag_share": 0.955,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002"
+      }
+    },
+    {
+      "id": "sct:736472000",
+      "type_id": "736472000",
+      "label": "Has dose form administration method",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 420,
+      "object_tag": "administration method",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736542009",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736665006"
+      }
     },
     {
       "id": "sct:736476002",
@@ -3435,7 +4548,19 @@
       "status": "built",
       "count": 412,
       "object_tag": "basic dose form",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736542009",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736478001"
+      }
     },
     {
       "id": "sct:736473005",
@@ -3454,7 +4579,19 @@
       "status": "built",
       "count": 408,
       "object_tag": "transformation",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736542009",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736477006"
+      }
     },
     {
       "id": "sct:840560000",
@@ -3473,7 +4610,19 @@
       "status": "built",
       "count": 374,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
     },
     {
       "id": "sct:999000061000168105",
@@ -3492,7 +4641,19 @@
       "status": "built",
       "count": 360,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<411115002",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<49062001"
+      }
     },
     {
       "id": "sct:410675002",
@@ -3511,7 +4672,19 @@
       "status": "built",
       "count": 308,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 284009009"
+      }
     },
     {
       "id": "sct:260870009",
@@ -3530,7 +4703,19 @@
       "status": "built",
       "count": 269,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272125009"
+      }
     },
     {
       "id": "sct:1148965004",
@@ -3549,26 +4734,19 @@
       "status": "built",
       "count": 254,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
-    },
-    {
-      "id": "sct:766939001",
-      "type_id": "766939001",
-      "label": "Plays role",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "relation",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 244,
-      "object_tag": "role",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "31874001 OR 64100000"
+      }
     },
     {
       "id": "sct:405815000",
@@ -3587,7 +4765,57 @@
       "status": "built",
       "count": 244,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49062001"
+      }
+    },
+    {
+      "id": "sct:766939001",
+      "type_id": "766939001",
+      "label": "Plays role",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 244,
+      "object_tag": "role",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 766940004"
+      }
     },
     {
       "id": "sct:405816004",
@@ -3606,26 +4834,19 @@
       "status": "built",
       "count": 189,
       "object_tag": "morphologic abnormality",
-      "object_tag_share": 1.0
-    },
-    {
-      "id": "sct:1148969005",
-      "type_id": "1148969005",
-      "label": "Has absorbability",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "adjective",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 176,
-      "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
+      }
     },
     {
       "id": "sct:118168003",
@@ -3644,7 +4865,50 @@
       "status": "built",
       "count": 176,
       "object_tag": "morphologic abnormality",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49755003"
+      }
+    },
+    {
+      "id": "sct:1148969005",
+      "type_id": "1148969005",
+      "label": "Has absorbability",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "adjective",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 176,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "860574003 OR 863965006 OR 863968008"
+      }
     },
     {
       "id": "sct:1445121000168107",
@@ -3663,7 +4927,19 @@
       "status": "built",
       "count": 137,
       "object_tag": "foundation metadata concept",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<900000000000455006",
+            "grouped": true,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<1445171000168108"
+      }
     },
     {
       "id": "sct:1003703000",
@@ -3682,7 +4958,19 @@
       "status": "built",
       "count": 135,
       "object_tag": "body structure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 123037004"
+      }
     },
     {
       "id": "sct:419066007",
@@ -3701,7 +4989,19 @@
       "status": "built",
       "count": 134,
       "object_tag": "person",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 419358007 OR << 420158005 OR << 444018008"
+      }
     },
     {
       "id": "sct:370131001",
@@ -3720,7 +5020,19 @@
       "status": "built",
       "count": 122,
       "object_tag": "social concept",
-      "object_tag_share": 0.615
+      "object_tag_share": 0.615,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 125676002 OR << 133928008 OR << 35359004 OR << 389109008"
+      }
     },
     {
       "id": "sct:363710007",
@@ -3739,7 +5051,19 @@
       "status": "built",
       "count": 120,
       "object_tag": "physical object",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 71388002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 49062001"
+      }
     },
     {
       "id": "sct:1445111000168100",
@@ -3758,7 +5082,19 @@
       "status": "built",
       "count": 116,
       "object_tag": "foundation metadata concept",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<900000000000455006",
+            "grouped": true,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<1445141000168101"
+      }
     },
     {
       "id": "sct:726633004",
@@ -3777,7 +5113,26 @@
       "status": "built",
       "count": 82,
       "object_tag": "procedure",
-      "object_tag_share": 0.512
+      "object_tag_share": 0.512,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..*",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 404684003 OR << 71388002"
+      }
     },
     {
       "id": "sct:700000071000036103",
@@ -3796,7 +5151,19 @@
       "status": "built",
       "count": 71,
       "object_tag": "qualifier value",
-      "object_tag_share": 0.549
+      "object_tag_share": 0.549,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<767524001",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<767524001"
+      }
     },
     {
       "id": "sct:700000091000036104",
@@ -3815,7 +5182,19 @@
       "status": "built",
       "count": 71,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<767524001",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<767524001"
+      }
     },
     {
       "id": "sct:736518005",
@@ -3834,7 +5213,19 @@
       "status": "built",
       "count": 70,
       "object_tag": "state of matter",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 736478001",
+            "grouped": false,
+            "cardinality": "1..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 736471007"
+      }
     },
     {
       "id": "sct:733930001",
@@ -3853,7 +5244,19 @@
       "status": "built",
       "count": 53,
       "object_tag": "cell structure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123037004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 123037004"
+      }
     },
     {
       "id": "sct:118170007",
@@ -3872,7 +5275,19 @@
       "status": "built",
       "count": 52,
       "object_tag": "physical object",
-      "object_tag_share": 0.692
+      "object_tag_share": 0.692,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 123038009",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 125676002 OR << 133928008 OR << 260787004 OR << 276339004 OR << 35359004"
+      }
     },
     {
       "id": "sct:246514001",
@@ -3891,7 +5306,19 @@
       "status": "built",
       "count": 51,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 767524001"
+      }
     },
     {
       "id": "sct:1148967007",
@@ -3910,7 +5337,19 @@
       "status": "built",
       "count": 35,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 105590001"
+      }
     },
     {
       "id": "sct:1149367008",
@@ -3929,7 +5368,19 @@
       "status": "built",
       "count": 19,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": false,
+            "cardinality": "0..1",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 27821000087106"
+      }
     },
     {
       "id": "sct:246112005",
@@ -3948,7 +5399,19 @@
       "status": "built",
       "count": 18,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 272141005"
+      }
     },
     {
       "id": "sct:370129005",
@@ -3967,26 +5430,19 @@
       "status": "built",
       "count": 17,
       "object_tag": "procedure",
-      "object_tag_share": 1.0
-    },
-    {
-      "id": "sct:1149366004",
-      "type_id": "1149366004",
-      "label": "Has ingredient qualitative strength",
-      "subject": [
-        "SCT"
-      ],
-      "object": [
-        "SCT"
-      ],
-      "category": "rationality",
-      "derivation": "lookup",
-      "strength_kind": "exact",
-      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
-      "status": "built",
-      "count": 7,
-      "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 386053000",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 127789004"
+      }
     },
     {
       "id": "sct:827081001",
@@ -4005,7 +5461,50 @@
       "status": "built",
       "count": 7,
       "object_tag": "substance",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001"
+      }
+    },
+    {
+      "id": "sct:1149366004",
+      "type_id": "1149366004",
+      "label": "Has ingredient qualitative strength",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT-AU RF2 snapshot, REL 20260831 (compendium `rel`)",
+      "status": "built",
+      "count": 7,
+      "object_tag": "qualifier value",
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 373873005",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "< 1149484003"
+      }
     },
     {
       "id": "sct:1148968002",
@@ -4024,7 +5523,19 @@
       "status": "built",
       "count": 4,
       "object_tag": "qualifier value",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 260787004",
+            "grouped": false,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..0",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "82280004 OR 860647008"
+      }
     },
     {
       "id": "sct:719715003",
@@ -4043,7 +5554,19 @@
       "status": "built",
       "count": 2,
       "object_tag": "body structure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 363787002",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 105590001 OR << 123037004 OR << 123038009 OR << 260787004 OR << 373873005 OR << 410607006 OR << 419891008"
+      }
     },
     {
       "id": "sct:288556008",
@@ -4062,7 +5585,26 @@
       "status": "built",
       "count": 1,
       "object_tag": "procedure",
-      "object_tag_share": 1.0
+      "object_tag_share": 1.0,
+      "mrcm": {
+        "domains": [
+          {
+            "domain": "<< 404684003",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          },
+          {
+            "domain": "<< 272379006",
+            "grouped": true,
+            "cardinality": "0..*",
+            "in_group_cardinality": "0..1",
+            "strength": "mandatory"
+          }
+        ],
+        "range": "<< 71388002"
+      }
     }
   ]
 }

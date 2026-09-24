@@ -67,6 +67,19 @@ def main() -> int:
         FROM tot JOIN top USING (typ) LEFT JOIN concept lbl ON lbl.id = tot.typ
         ORDER BY tot.total DESC""").fetchall()
     con.close()
+    # the concept model's own rules for each attribute (the MRCM in the release's Refset/Metadata; ids only, no terms):
+    # where it may be used and how often, and what it may point at. scripts/mrcm_check.py checks the graph against them.
+    sys.path.insert(0, str(Path(__file__).parent))
+    import mrcm_check
+    mr = mrcm_check.rules() if (mrcm_check.META / mrcm_check.FILES["domain"]).exists() else {"domains": {}, "attributes": {}}
+    def mrcm(typ):
+        v = mr["attributes"].get(typ)
+        if not v:
+            return None
+        return {"domains": [{"domain": mrcm_check.strip(mr["domains"].get(x["domain"], {}).get("constraint", x["domain"])),
+                             "grouped": x["grouped"], "cardinality": x["cardinality"], "in_group_cardinality": x["in_group_cardinality"],
+                             "strength": x["strength"]} for x in v["domains"] if x["applies"]],
+                "range": " OR ".join(mrcm_check.strip(r["constraint"]) for r in v["ranges"] if r["applies"]) or None}
     attrs = [{"id": f"sct:{typ}", "type_id": typ, "label": label,
               "subject": ["SCT"], "object": ["SCT"],
               "category": category(typ, label, top_tag),
@@ -75,7 +88,8 @@ def main() -> int:
                          "loinc": "SNOMED CT LOINC Extension 20260321 (module 11010000107)",
                          "au+loinc": "SNOMED CT-AU RF2 20260831 and SNOMED CT LOINC Extension 20260321"}[srcs.get(typ, "au")],
               "status": "built",
-              "count": int(total), "object_tag": top_tag, "object_tag_share": round(top_n / total, 3)}
+              "count": int(total), "object_tag": top_tag, "object_tag_share": round(top_n / total, 3),
+              "mrcm": mrcm(typ)}
              for typ, label, total, top_tag, top_n in rows]
     reg = json.load(open(REGISTER))
     reg["snomed_attributes"] = attrs

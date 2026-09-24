@@ -834,6 +834,46 @@ leukaemia, mastocytosis and hypereosinophilic syndrome — its indications, reac
 disease is one a mutation in that gene causes. It is where a drug's effects and side effects can be reasoned about,
 and where repurposing is looked for; the indication edges are still `drugcentral:indication` and the PBS chain.
 
+## SNOMED's own rules: the concept model (MRCM) check (built 24 Sep 2026)
+
+SNOMED CT ships its modelling rules as three reference sets in the release (Refset/Metadata):
+- **MRCM Domain:** which concepts form a domain, e.g. clinical findings, procedures, products.
+- **MRCM Attribute Domain:** which attributes a domain may carry, whether grouped, and how many times.
+- **MRCM Attribute Range:** what each attribute may point at.
+
+`scripts/mrcm_check.py` checks every SNOMED attribute edge in the graph against them: 1,585,842 edges from SNOMED
+CT-AU and the LOINC Extension, over 23 domains and 149 attributes. It runs in about 10 s and is part of `rebuild.sh`.
+
+The rules are ECL, and the AU release uses only a small subset of it:
+- `<<` (self or descendant) and `<` (descendant);
+- `^` (member of a reference set: the lateralisable body structures);
+- a bare concept id;
+- `OR`.
+
+That subset is evaluated over the graph's own is-a edges and reference-set memberships. Rules for postcoordinated
+content, and the 16 ranges that are concrete values, are reported as *not checkable*. The concrete ranges are
+`dec(>#0..)` and `int(>#0..)`: strengths and counts.
+
+| class | edges | what they are |
+|---|---:|---|
+| mandatory attribute missing | 1,654 | AMT packs with no *Contains clinical drug* — dressings and devices modelled as packaged drugs ("Duoderm Gel … tubes") |
+| domain: source outside every allowed domain | 159 | AU concepts carrying *finding context* / *associated finding* / *procedure context* that sit outside the situation hierarchy ("Parents deceased", "Nitrate contraindicated") |
+| range: target outside the range | 69 | all LOINC Extension: *Process output* → a calculation procedure, *Component* → an HLA allele, *Inheres in* → a substance |
+| more of an attribute in one role group than allowed | 24 | observables, mostly LOINC Extension, with two *Property* or *Direct site* values in group 1 |
+| attribute not in the MRCM; grouping | 0 | — |
+
+So 1,906 of 1.59 million edges break a rule (0.12%), and each is a modelling question for the release's authors, not
+a load error.
+
+**Not checkable:** *Count of clinical drug type* is mandatory on 117,583 packs, but its value is concrete, and **the
+graph does not load RF2's concrete-value relationships** (`sct2_RelationshipConcreteValues`: AMT strengths, pack
+counts). That is a gap in the graph itself, noted for the medicines work.
+
+The rules also sit in the register: `graph_register.py` writes each SNOMED attribute's MRCM domains (with grouping,
+cardinality and rule strength) and its range, as ids only, into `reference/graph_predicates.json`. 115 of 116 attributes
+have rules; *Is a* is not an MRCM attribute. `release_guard.py` fails if any class of violation rises by more than 5%
+(and at least 5 edges).
+
 ## The loader ledger (built 24 Sep 2026)
 
 Every loader in `scripts/build_edges.py` states what its source offered and where each row it did not load went, so a

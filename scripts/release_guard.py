@@ -12,6 +12,9 @@ drops rows. completeness.py guards the shares that matter clinically; this guard
                         than 5% (and at least 5 clusters) FAILS; the largest cluster more than doubling FAILS.
   islands               (graph_report.py) components or nodes outside the main one rising more than 5% (and at least
                         50) FAILS.
+  concept model         (scripts/mrcm_check.py) SNOMED attribute edges breaking the MRCM, by class (domain, range,
+                        grouping, cardinality, mandatory attribute missing): a class rising by more than 5% (and at
+                        least 5 edges) FAILS -- a new release or loader brought edges SNOMED's own rules forbid.
   loader ledger         (build_edges.py loader_ledger) more loaders with no declared ledger than the baseline FAILS -- a
                         new loader states its source rows and exclusions; a loader whose excluded share of its source
                         rises by more than 5 points (and at least 100 rows) is a WARNING: a filter now takes more.
@@ -31,6 +34,7 @@ from pathlib import Path
 import duckdb
 
 GRAPH, REPORT, CONSIST = Path("out/graph.duckdb"), Path("out/graph_report.json"), Path("out/consistency.json")
+MRCM = Path("out/mrcm_check.json")
 BASELINE = Path("reference/release_guard_baseline.json")
 
 
@@ -48,6 +52,8 @@ def current() -> dict:
     if "loader_ledger" in {t for (t,) in con.execute("SELECT table_name FROM information_schema.tables").fetchall()}:
         cur["ledger"] = {l: {"available": a, "excluded": int(x or 0), "kind": k} for l, k, a, x in con.execute(
             "SELECT loader, any_value(kind), any_value(available), sum(rows) FROM loader_ledger GROUP BY 1 ORDER BY 1").fetchall()}
+    if MRCM.exists():
+        cur["mrcm"] = json.load(open(MRCM))["violations"]
     if REPORT.exists():
         i = json.load(open(REPORT)).get("islands", {})
         cur["islands"] = {"components": i.get("components"), "nodes_outside_main": i.get("nodes_outside_it")}
@@ -80,6 +86,14 @@ def compare(base: dict, cur: dict) -> tuple[list[str], list[str]]:
             fail.append(f"largest equivalence cluster {bc['largest_cluster']} -> {cc['largest_cluster']}")
     elif bc and not cc:
         warn.append("out/consistency.json missing: run scripts/consistency.py before the guard")
+    bm, cm = base.get("mrcm"), cur.get("mrcm")
+    if bm is not None and cm is not None:
+        for k in sorted(set(bm) | set(cm)):
+            b, c = bm.get(k, 0), cm.get(k, 0)
+            if c - b > max(5, 0.05 * b):
+                fail.append(f"concept-model violations rose: {k} {b:,} -> {c:,}")
+    elif bm is not None:
+        warn.append("out/mrcm_check.json missing: run scripts/mrcm_check.py before the guard")
     bl, cl = base.get("ledger"), cur.get("ledger")
     if bl and cl:
         und = lambda d: sum(v["kind"] == "undeclared" for v in d.values())

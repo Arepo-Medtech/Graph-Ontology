@@ -652,6 +652,12 @@
    "kind": "source"
   }
  },
+ "mrcm": {
+  "cardinality: more in one role group than the rule allows": 24,
+  "domain: source outside every domain the attribute is allowed in": 159,
+  "mandatory attribute missing": 1654,
+  "range: target outside the attribute's range": 69
+ },
  "nodes": {
   "ARTG": 25069,
   "ATC": 6056,
