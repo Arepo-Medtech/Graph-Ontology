@@ -671,6 +671,27 @@ def main() -> int:
             "edges_graded": sum(v["edges"] for v in by.values() if "checked" in v), "edges_ungraded": sum(v["edges"] for v in by.values() if "checked" not in v),
             "rejected_by_hand_check": con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:shared_cui' AND state = 'rejected'").fetchone()[0]}
 
+    # --- UMLS concept -> its SNOMED CT disorders and findings: one family, one hand check ---------------------------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:concept_member'").fetchone()[0]:
+        ch = Path("cache/umls/umls_concept_member_handcheck.json")    # UMLS-derived: git-ignored
+        hc = json.load(open(ch)) if ch.exists() else {"scored": [], "rejected_by_name": []}
+        k, n = sum(r["verdict"] == "correct" for r in hc["scored"]), len(hc["scored"])
+        cm = {"edges": con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:concept_member'").fetchone()[0], "checked": n, "correct": k}
+        if n:
+            lo, _ = wilson(k, n)
+            con.execute("UPDATE edge SET tier = ? WHERE predicate = 'umls:concept_member'", [tier(lo, n)])
+            cm.update(wilson_lo=round(lo, 4), earned_tier=tier(lo, n))
+        bad = [(r["cui"], r["sct"]) for r in hc["scored"] if r["verdict"] != "correct"] + [(r["cui"], r["sct"]) for r in hc.get("rejected_by_name", [])]
+        for c_, s_ in bad:
+            con.execute("UPDATE edge SET state = 'rejected' WHERE predicate = 'umls:concept_member' AND s_code = ? AND o_code = ?", [c_, s_])
+        cm["rejected_by_name"] = len(bad)
+        cm["orphanet_disorders_reaching_snomed_only_this_way"] = con.execute("""WITH via AS (SELECT DISTINCT x.s_code o FROM edge x
+                JOIN edge m ON m.predicate = 'umls:concept_member' AND m.s_code = x.o_code AND m.state <> 'rejected'
+                WHERE x.predicate = 'orpha:xref' AND x.o_vocab = 'UMLS')
+            SELECT count(*) FROM via WHERE o NOT IN (SELECT s_code FROM edge WHERE s_vocab = 'ORPHA' AND o_vocab = 'SCT'
+                                                     UNION SELECT o_code FROM edge WHERE o_vocab = 'ORPHA' AND s_vocab = 'SCT')""").fetchone()[0]
+        report["route:UMLS concept -> SNOMED CT (MRCONSO 2026AA)"] = cm
+
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'ccsr:category'").fetchone()[0]:
         report["classification:ICD-10-CM -> AHRQ CCSR categories"] = dict(zip(("edges", "icd10cm_codes_classified", "of_icd10cm_codes_in_graph",
                 "categories", "body_systems", "codes_in_more_than_one_category"), con.execute("""
