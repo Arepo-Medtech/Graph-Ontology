@@ -834,6 +834,39 @@ leukaemia, mastocytosis and hypereosinophilic syndrome — its indications, reac
 disease is one a mutation in that gene causes. It is where a drug's effects and side effects can be reasoned about,
 and where repurposing is looked for; the indication edges are still `drugcentral:indication` and the PBS chain.
 
+## The loader ledger (built 24 Sep 2026)
+
+Every loader in `scripts/build_edges.py` states what its source offered and where each row it did not load went, so a
+member the graph lacks can be traced to *never in the source* or *in it, and excluded for this reason*. The build writes
+`out/loader_ledger.json` and a `loader_ledger` table in the graph; the release guard fails if a loader appears with no
+ledger, and warns if a loader's excluded share rises by more than 5 points.
+
+- **source** (77 loaders): rows available → each filter in turn, with its reason and the rows it took out → loaded. The
+  filters are counted in one pass over the source (`count(*) FILTER`), before the insert, so a filter that asks "is this
+  code in the graph yet" never counts the loader's own edges. What remains between the rows kept and the edges loaded is
+  named, not absorbed: *collapsed into fewer edges* (duplicate rows, several rows naming one edge) or *fanned out* (one
+  row, several edges: a LOINC part mapped to two SNOMED concepts, an HGNC entry's several ids).
+- **derived** (7): rules over edges already loaded (lab result → finding, the RadLex anatomy routes, the Orphanet chain,
+  foreign SNOMED ids resolved) — each names its rule.
+- **undeclared**: none.
+
+Every source ledger balances (available − excluded + fanned out = loaded). What it shows first:
+
+| loader | available | loaded | the largest exclusions |
+|---|---:|---:|---|
+| SNOMED CT → ICD-10-CM (NLM map) | 294,007 | 200,311 | 58,689 partial codes (loaded apart as subcategories: 56,263), 28,085 no target, 6,922 US-only concepts |
+| HPO → SNOMED (UTS crosswalk, same name) | 14,854 | 2,756 | **7,566 SNOMED codes not active in SNOMED CT-AU**, 4,532 names differ (the review queue) |
+| UMLS shared CUI, same name | 376,257 | 180,371 | 98,640 neither code a graph node, 65,379 names differ, 24,027 organism pairs (own loader), 7,330 OMIM gene entries paired with a disease |
+| UMLS concept → SNOMED disorder / finding | 1,728,196 | 12,489 | 975,038 CUI not a graph node, 691,296 suppressed atoms |
+| LOINC term → analyte code | 220,072 | 53,683 | 183,635 part with no analyte code, 4,036 inactive terms (21,282 fanned out) |
+| Reactome protein → pathway | 324,818 | 54,699 | 270,119 not human |
+| HGNC gene → NCBI Gene / UniProt / OMIM | 45,083 | 37,736 | 32,178 no id shared with the graph (24,831 fanned out) |
+| Decisions by a person | 516 | 328 | 107 none, 81 rejected |
+
+The HPO crosswalk's inactive half is the one new finding: the older per-code UTS crosswalk carries many US-only or
+retired SNOMED codes. The 2026AA concepts file (`umls:shared_cui`) reaches most of those phenotypes through current codes,
+so it is not a coverage loss, but it is why that loader's yield is 19%.
+
 ## Rebuild
 
 ```bash

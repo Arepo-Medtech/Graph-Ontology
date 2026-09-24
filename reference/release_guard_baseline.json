@@ -230,6 +230,428 @@
   "components": 2241,
   "nodes_outside_main": 12123
  },
+ "ledger": {
+  "AMT -> PBS item": {
+   "available": 60335,
+   "excluded": 25691,
+   "kind": "source"
+  },
+  "AMT product -> ARTG id (ARTG Id reference set)": {
+   "available": 54861,
+   "excluded": 2880,
+   "kind": "source"
+  },
+  "Decisions by a person on the review queues (accepted)": {
+   "available": 516,
+   "excluded": 188,
+   "kind": "source"
+  },
+  "DrugCentral -> ATC": {
+   "available": 5148,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "DrugCentral -> ChEBI / UNII / PubChem / ChEMBL / MeSH / UMLS / IUPHAR / KEGG / INN": {
+   "available": 42185,
+   "excluded": 22,
+   "kind": "source"
+  },
+  "DrugCentral -> RxNorm ingredient (lifted)": {
+   "available": 3525,
+   "excluded": 3,
+   "kind": "source"
+  },
+  "DrugCentral -> SNOMED": {
+   "available": 7470,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "DrugCentral drug -> FDA pharmacologic class (EPC, MoA, PE; MED-RT codes)": {
+   "available": 4028,
+   "excluded": 569,
+   "kind": "source"
+  },
+  "DrugCentral drug -> condition (label)": {
+   "available": 42307,
+   "excluded": 3908,
+   "kind": "source"
+  },
+  "DrugCentral drug -> target (mechanism / activity)": {
+   "available": 20978,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "DrugCentral target -> protein component": {
+   "available": 4167,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "HGNC gene -> NCBI Gene / UniProt / OMIM gene entry": {
+   "available": 45083,
+   "excluded": 32178,
+   "kind": "source"
+  },
+  "HPO disease -> phenotype (present / absent)": {
+   "available": 286651,
+   "excluded": 17745,
+   "kind": "source"
+  },
+  "HPO gene -> disease (OMIM, Orphanet)": {
+   "available": 16099,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "HPO is-a": {
+   "available": 24436,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "HPO phenotype -> SNOMED (UMLS, same name only)": {
+   "available": 14854,
+   "excluded": 12098,
+   "kind": "source"
+  },
+  "HPO xref -> NCIT / Orphanet / ICD-10": {
+   "available": 651,
+   "excluded": 386,
+   "kind": "source"
+  },
+  "ICD-10 fifth-character code -> its WHO parent": {
+   "available": 1861,
+   "excluded": 6,
+   "kind": "source"
+  },
+  "ICD-10-CM -> CCSR clinical category (AHRQ)": {
+   "available": 237140,
+   "excluded": 1085,
+   "kind": "source"
+  },
+  "ICD-10-CM -> SNOMED (all codes)": {
+   "available": 713383,
+   "excluded": 584216,
+   "kind": "source"
+  },
+  "ICD-11 MMS code -> its foundation entity": {
+   "available": 14499,
+   "excluded": 3238,
+   "kind": "source"
+  },
+  "LOINC -> Australian preferred unit (RCPA SPIA)": {
+   "available": 2053,
+   "excluded": 846,
+   "kind": "source"
+  },
+  "LOINC -> SNOMED (Is a / Maps to)": {
+   "available": 2464119,
+   "excluded": 2441447,
+   "kind": "source"
+  },
+  "LOINC -> SNOMED observable (LOINC Ontology identifier)": {
+   "available": 45014,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC Extension relationships": {
+   "available": 293488,
+   "excluded": 5735,
+   "kind": "source"
+  },
+  "LOINC mass <-> molar unit counterpart": {
+   "available": 2045,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC question -> answer": {
+   "available": 114448,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC radiology term -> RSNA playbook procedure (RPID)": {
+   "available": 49621,
+   "excluded": 48613,
+   "kind": "source"
+  },
+  "LOINC radiology term -> RadLex part (LOINC/RSNA playbook)": {
+   "available": 49621,
+   "excluded": 1394,
+   "kind": "source"
+  },
+  "LOINC radiology term -> SNOMED via its RadLex anatomy part": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "LOINC result -> finding it defines (Interprets, by analyte)": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "LOINC result -> finding it defines (Interprets, via Athena)": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "LOINC term -> SNOMED via its component / system / method part": {
+   "available": 286329,
+   "excluded": 190311,
+   "kind": "source"
+  },
+  "LOINC term -> analyte code (ChEBI / RxNorm / PubChem / UNII / taxon / gene / ClinVar)": {
+   "available": 220072,
+   "excluded": 187671,
+   "kind": "source"
+  },
+  "LOINC term -> axis part": {
+   "available": 572986,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "MBS item -> group -> category": {
+   "available": 6046,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)": {
+   "available": 1466,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "MONDO exactMatch -> SNOMED / ICD-10-CM / OMIM / Orphanet / DOID / NCIT / MeSH / ICD-11 / EFO / UMLS / MedGen / ICD-10": {
+   "available": 109715,
+   "excluded": 2262,
+   "kind": "source"
+  },
+  "MONDO is-a": {
+   "available": 46586,
+   "excluded": 4,
+   "kind": "source"
+  },
+  "OMOP product -> standard drug": {
+   "available": 102656,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "OMOP product -> standard drug (indirect)": {
+   "available": 6063,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "OMOP product -> standard drug (rejected)": {
+   "available": 110,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "Orphanet disorder -> HPO phenotype, with frequency (product 4)": {
+   "available": 116664,
+   "excluded": 23,
+   "kind": "source"
+  },
+  "Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)": {
+   "available": 52456,
+   "excluded": 2855,
+   "kind": "source"
+  },
+  "Orphanet disorder -> ICD-10 via SNOMED CT's map (chain)": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "Orphanet gene -> disorder (product 6, with the kind of involvement)": {
+   "available": 8503,
+   "excluded": 370,
+   "kind": "source"
+  },
+  "PBS indication -> SNOMED (exact matches only)": {
+   "available": 653,
+   "excluded": 341,
+   "kind": "source"
+  },
+  "PBS item -> restriction": {
+   "available": 23550,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "PBS restriction -> indication": {
+   "available": 21978,
+   "excluded": 18935,
+   "kind": "source"
+  },
+  "RSNA playbook procedure -> RadLex part": {
+   "available": 4772,
+   "excluded": 369,
+   "kind": "source"
+  },
+  "RadLex -> FMA (ExternalRefID)": {
+   "available": 36500,
+   "excluded": 3096,
+   "kind": "source"
+  },
+  "RadLex -> SNOMED CT body structure (three code routes)": {
+   "available": null,
+   "excluded": 107,
+   "kind": "derived"
+  },
+  "RadLex is-a": {
+   "available": 46898,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "RadLex part-of": {
+   "available": 24764,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "Reactome pathway -> parent pathway (human)": {
+   "available": 23717,
+   "excluded": 20818,
+   "kind": "source"
+  },
+  "SNOMED CT -> ICD-10 (SNOMED International map)": {
+   "available": 154822,
+   "excluded": 25093,
+   "kind": "source"
+  },
+  "SNOMED CT -> ICD-10-CM (NLM map)": {
+   "available": 294007,
+   "excluded": 93696,
+   "kind": "source"
+  },
+  "SNOMED CT -> ICD-10-CM subcategory (NLM map, partial code)": {
+   "available": 58689,
+   "excluded": 2426,
+   "kind": "source"
+  },
+  "SNOMED CT -> ICD-O-3 (ICD-O simple map)": {
+   "available": 27170,
+   "excluded": 3656,
+   "kind": "source"
+  },
+  "SNOMED CT-AU reference set membership": {
+   "available": 1378050,
+   "excluded": 125370,
+   "kind": "source"
+  },
+  "SNOMED CT-AU relationships": {
+   "available": 2175509,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "SNOMED anatomy structure -> entire / part (association refsets)": {
+   "available": 16768,
+   "excluded": 597,
+   "kind": "source"
+  },
+  "SNOMED organism <-> NCBI Taxonomy (LOINC part asserts both)": {
+   "available": 5818,
+   "excluded": 5702,
+   "kind": "source"
+  },
+  "SNOMED organism <-> NCBI Taxonomy (UMLS, same name)": {
+   "available": 24059,
+   "excluded": 3956,
+   "kind": "source"
+  },
+  "UMLS concept -> SNOMED CT disorder / finding in it (MRCONSO 2026AA)": {
+   "available": 1728196,
+   "excluded": 1715707,
+   "kind": "source"
+  },
+  "UMLS shared CUI, same name (MRCONSO 2026AA)": {
+   "available": 376257,
+   "excluded": 195886,
+   "kind": "source"
+  },
+  "UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)": {
+   "available": 63606,
+   "excluded": 11786,
+   "kind": "source"
+  },
+  "UMLS: MED-RT drug -> mechanism of action / physiologic effect class": {
+   "available": 19035,
+   "excluded": 5248,
+   "kind": "source"
+  },
+  "UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)": {
+   "available": 558328,
+   "excluded": 284971,
+   "kind": "source"
+  },
+  "Uberon -> NCI Thesaurus anatomy (narrowMatch)": {
+   "available": 2578,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "Uberon -> SNOMED body structure (narrowMatch)": {
+   "available": 4119,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "Uberon <-> FMA (cross-species exact match)": {
+   "available": 6051,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "Uberon is-a / part-of": {
+   "available": 28834,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "UniProt protein -> Reactome pathway (human, lowest level)": {
+   "available": 324818,
+   "excluded": 270119,
+   "kind": "source"
+  },
+  "WHO ICD-10 -> ICD-11 (MMS) mapping table": {
+   "available": 28227,
+   "excluded": 15582,
+   "kind": "source"
+  },
+  "WHO ICD-11 (MMS) -> ICD-10 mapping table": {
+   "available": 17943,
+   "excluded": 6200,
+   "kind": "source"
+  },
+  "WHO ICD-11 foundation entity -> ICD-10 mapping table": {
+   "available": 48746,
+   "excluded": 13569,
+   "kind": "source"
+  },
+  "corpus condition -> SNOMED": {
+   "available": 639,
+   "excluded": 374,
+   "kind": "source"
+  },
+  "finding -> diagnosis likelihood ratio (transcribed, verified)": {
+   "available": 837,
+   "excluded": 585,
+   "kind": "source"
+  },
+  "foreign SNOMED -> nearest SNOMED CT-AU ancestor": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "product -> ATC (PBS and OMOP, parallel)": {
+   "available": 573555,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "protein -> gene (DrugCentral)": {
+   "available": 3406,
+   "excluded": 1516,
+   "kind": "source"
+  },
+  "retired SNOMED -> current (historical association)": {
+   "available": null,
+   "excluded": 0,
+   "kind": "derived"
+  },
+  "substance -> standard ingredient": {
+   "available": 4689,
+   "excluded": 0,
+   "kind": "source"
+  }
+ },
  "nodes": {
   "ARTG": 25069,
   "ATC": 6056,

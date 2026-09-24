@@ -12,6 +12,9 @@ drops rows. completeness.py guards the shares that matter clinically; this guard
                         than 5% (and at least 5 clusters) FAILS; the largest cluster more than doubling FAILS.
   islands               (graph_report.py) components or nodes outside the main one rising more than 5% (and at least
                         50) FAILS.
+  loader ledger         (build_edges.py loader_ledger) more loaders with no declared ledger than the baseline FAILS -- a
+                        new loader states its source rows and exclusions; a loader whose excluded share of its source
+                        rises by more than 5 points (and at least 100 rows) is a WARNING: a filter now takes more.
 
     .venv/bin/python scripts/release_guard.py                 # after graph_report.py and consistency.py; seconds
     .venv/bin/python scripts/release_guard.py --set-baseline  # accept this release (a deliberate change)
@@ -42,6 +45,9 @@ def current() -> dict:
         c = json.load(open(CONSIST))
         cur["consistency"] = {"conflicts": c["clusters_with_two_codes_of_a_one_to_one_vocabulary"],
                               "largest_cluster": c["largest_clusters"][0] if c["largest_clusters"] else 0}
+    if "loader_ledger" in {t for (t,) in con.execute("SELECT table_name FROM information_schema.tables").fetchall()}:
+        cur["ledger"] = {l: {"available": a, "excluded": int(x or 0), "kind": k} for l, k, a, x in con.execute(
+            "SELECT loader, any_value(kind), any_value(available), sum(rows) FROM loader_ledger GROUP BY 1 ORDER BY 1").fetchall()}
     if REPORT.exists():
         i = json.load(open(REPORT)).get("islands", {})
         cur["islands"] = {"components": i.get("components"), "nodes_outside_main": i.get("nodes_outside_it")}
@@ -74,6 +80,17 @@ def compare(base: dict, cur: dict) -> tuple[list[str], list[str]]:
             fail.append(f"largest equivalence cluster {bc['largest_cluster']} -> {cc['largest_cluster']}")
     elif bc and not cc:
         warn.append("out/consistency.json missing: run scripts/consistency.py before the guard")
+    bl, cl = base.get("ledger"), cur.get("ledger")
+    if bl and cl:
+        und = lambda d: sum(v["kind"] == "undeclared" for v in d.values())
+        if und(cl) > und(bl):
+            fail.append(f"loaders with no declared ledger {und(bl)} -> {und(cl)}: "
+                        + ", ".join(k for k, v in cl.items() if v["kind"] == "undeclared" and bl.get(k, {}).get("kind") != "undeclared"))
+        for k, v in cl.items():
+            b = bl.get(k)
+            if b and v["available"] and b["available"] and v["excluded"] - b["excluded"] >= 100 \
+                    and v["excluded"] / v["available"] - b["excluded"] / b["available"] > 0.05:
+                warn.append(f"loader excludes more: {k} {b['excluded'] / b['available']:.1%} -> {v['excluded'] / v['available']:.1%} of its source rows")
     bi, ci = base.get("islands"), cur.get("islands")
     if bi and ci:
         for k in ("components", "nodes_outside_main"):
