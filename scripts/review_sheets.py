@@ -77,13 +77,35 @@ def candidates():
             for k, c in enumerate(v["candidates"], first_n.get(sid, 0) + 1):
                 out.append(("pbs_indications", "PBS_INDICATION", sid, v["text"], k, "SCT", c["concept_id"], c["display"],
                             pbs_read.get(sid, {}).get(c["concept_id"], "")))
+    # first readings of the three large queues (scripts/review_first_reading.py); the UMLS-derived two stay in cache/
+    reads = {q: json.load(open(f))["readings"] if Path(f).exists() else {} for q, f in (
+        ("mbs_procedures", "reference/mbs_procedure_first_reading.json"), ("hpo_snomed", "cache/review/hpo_snomed_first_reading.json"),
+        ("organism_ncbi", "cache/review/organism_ncbi_first_reading.json"))}
+    sp = Path("reference/mbs_out_of_scope.json")          # anaesthesia time / initiation: no procedure to link
+    mbs_skip = set(json.load(open(sp))["out_of_scope"]) if sp.exists() else set()
     p = Path("reference/mbs_procedure_candidates.json")
     if p.exists():
         for r in json.load(open(p))["results"]:
+            if r["item"] in mbs_skip:
+                continue
             head = (r.get("exact_head_match") or {}).get("concept_id")
             for k, c in enumerate(r.get("candidates") or [], 1):
-                out.append(("mbs_procedures", "MBS", r["item"], r.get("query", ""), k, "SCT", c["concept_id"], c["display"],
-                            "exact head phrase" if c["concept_id"] == head else ""))
+                fr_ = reads["mbs_procedures"].get(r["item"], {}).get(c["concept_id"], "")
+                if c["concept_id"] == head:
+                    fr_ = "exact head phrase" + (f"; {fr_}" if fr_ else "")
+                out.append(("mbs_procedures", "MBS", r["item"], r.get("query", ""), k, "SCT", c["concept_id"], c["display"], fr_))
+    p = Path("reference/mbs_procedure_candidates_malt.json")     # the refset search (MALT, imaging, RCPA), after the first ones
+    if p.exists():
+        first_n = {}
+        for row in out:
+            if row[0] == "mbs_procedures":
+                first_n[row[2]] = max(first_n.get(row[2], 0), row[4])
+        for r in json.load(open(p))["results"]:
+            if r["item"] in mbs_skip:
+                continue
+            for k, c in enumerate(r["candidates"], first_n.get(r["item"], 0) + 1):
+                out.append(("mbs_procedures", "MBS", r["item"], c["query"], k, "SCT", c["concept_id"], c["display"],
+                            reads["mbs_procedures"].get(r["item"], {}).get(c["concept_id"], "")))
     for q, f, sv, so, ov, oc, on_ in (("hpo_snomed", "cache/umls/hpo_snomed_candidates.tsv", "HP", "hpo_id", "SCT", "snomed_code", "au_name"),
                                       ("organism_ncbi", "cache/umls/sct_ncbi_candidates.tsv", "SCT", "sct", "NCBITAXON", "ncbi_taxon", "ncbi_name"),
                                       ("radlex_anatomy", "cache/radlex/radlex_sct_candidates.tsv", "RADLEX", "rid", "SCT", "sct", "sct_name")):
@@ -92,7 +114,7 @@ def candidates():
             rank = {}
             for r in csv.DictReader(open(f), delimiter="\t"):
                 rank[r[so]] = rank.get(r[so], 0) + 1
-                out.append((q, sv, r[so], r[sname], rank[r[so]], ov, r[oc], r[on_], ""))
+                out.append((q, sv, r[so], r[sname], rank[r[so]], ov, r[oc], r[on_], reads.get(q, {}).get(r[so], {}).get(r[oc], "")))
     return out
 
 

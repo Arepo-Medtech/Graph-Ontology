@@ -30,6 +30,24 @@ SITE_FIRST = re.compile(r"^([^,(:;]{2,50}),\s*(?:[a-z]+\s*\([^)]*\),\s*)?(?!exam
 IMAGING = re.compile(r"^(.+?),\s*(ultrasound|CT|computed tomography|MRI|magnetic resonance imaging|radiography|x-ray)\s+(scan\s+)?of\b", re.I)
 
 
+# Anaesthesia items that fund anaesthesia time or its initiation, not a procedure: out of scope for a procedure link
+# (Ken, 24 Sep 2026). The procedures group T10 also holds (intubation, central lines, nerve blocks, TOE) stay in.
+ANAESTHESIA = [
+    ("anaesthesia time band", re.compile(r"^\(?\s*\d+(?::\d+)?\s+(?:HOURS?|MINUTES)\s+TO\s|service time is not more than", re.I)),
+    ("initiation of anaesthesia", re.compile(r"^INITIATION OF (?:THE )?MANAGEMENT (?:BY A MEDICAL PRACTITIONER )?OF ANAESTHESIA", re.I)),
+    ("anaesthesia modifier", re.compile(r"^(?:Anaesthesia,|Assistance in the management of|Perfusion,) ", re.I)),
+]
+
+
+def out_of_scope(item: dict) -> str | None:
+    """Why an MBS item has no procedure to link, or None."""
+    if item.get("Group") == "T10":
+        for why, rx in ANAESTHESIA:
+            if rx.search(re.sub(r"\s+", " ", item.get("Description", "")).strip()):
+                return why
+    return None
+
+
 def head(desc: str, cat: str) -> str:
     d = re.sub(r"\s+", " ", desc.replace("‑", "-")).strip()
     m = IMAGING.match(d) if cat == "5" else None
