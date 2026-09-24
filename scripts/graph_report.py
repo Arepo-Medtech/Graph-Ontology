@@ -490,6 +490,9 @@ def main() -> int:
             "note": "the component is the drug for drug-level tests (DRUG/TOX) and also for susceptibility tests (ABXBACT: the organism against the drug); filter by class for levels"}
         report["coverage:analyte codes LOINC gives its terms"] = dict(con.execute("""SELECT o_vocab, count(DISTINCT s_code) FROM edge
             WHERE predicate = 'loinc:part_xref' GROUP BY 1 ORDER BY 2 DESC""").fetchall())
+    sv = Path("reference/survey_instrument_candidates.json")
+    if sv.exists():
+        report["survey instruments: LOINC <-> SNOMED candidate frames (no edges)"] = json.load(open(sv))["summary"]
     mc = Path("reference/mbs_procedure_candidates.json")
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0]:
         m = {"items": con.execute("SELECT count(*) FROM edge WHERE predicate = 'mbs:in_group'").fetchone()[0], "snomed_edges": 0}

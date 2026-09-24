@@ -1,0 +1,515 @@
+{
+ "_note": "CANDIDATES, not edges: LOINC survey panels and total scores against SNOMED CT-AU assessment scales and score observables, keyed by the instrument's acronym (scripts/survey_candidates.py). No published map exists. my_read is a first reading from the names, for a reviewer to confirm. LOINC names under the LOINC licence notice; SNOMED CT-AU 20260831.",
+ "summary": {
+  "pairs": 55,
+  "loinc_terms": 53,
+  "snomed_concepts": 44,
+  "instruments": 37,
+  "my_read": {
+   "likely same": 40,
+   "SNOMED concept is broader": 4,
+   "different version": 2,
+   "different instrument": 4,
+   "part of the instrument": 3,
+   "narrower instrument": 1,
+   "subscale": 1
+  }
+ },
+ "candidates": [
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "111794-4",
+   "loinc_name": "Abnormal Involuntary Movement Scale Original 14-Item Version [AIMS]",
+   "acronym": "AIMS",
+   "sct": "273256000",
+   "sct_name": "Abnormal involuntary movement scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "112441-1",
+   "loinc_name": "Adverse Childhood Experience Questionnaire for Adults [ACE Questionnaire for Adults]",
+   "acronym": "ACE",
+   "sct": "715816003",
+   "sct_name": "Adverse Childhood Experience questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "48542-5",
+   "loinc_name": "Geriatric depression scale (GDS) panel",
+   "acronym": "GDS",
+   "sct": "273481004",
+   "sct_name": "Geriatric depression scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "48543-3",
+   "loinc_name": "Geriatric depression scale (GDS).short version panel",
+   "acronym": "GDS",
+   "sct": "273481004",
+   "sct_name": "Geriatric depression scale",
+   "my_read": "SNOMED concept is broader (GDS short version vs GDS)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "55757-9",
+   "loinc_name": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]",
+   "acronym": "PHQ2",
+   "sct": "1359725005",
+   "sct_name": "Patient Health Questionnaire-2",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "58120-7",
+   "loinc_name": "Patient Health Questionnaire 2 item (PHQ-2) [PHQ.CMS]",
+   "acronym": "PHQ2",
+   "sct": "1359725005",
+   "sct_name": "Patient Health Questionnaire-2",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "69724-3",
+   "loinc_name": "Patient Health Questionnaire 4 item (PHQ-4) [Reported]",
+   "acronym": "PHQ4",
+   "sct": "865935003",
+   "sct_name": "Patient Health Questionnaire-4",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "69737-5",
+   "loinc_name": "Generalized anxiety disorder 7 item (GAD-7)",
+   "acronym": "GAD7",
+   "sct": "704501007",
+   "sct_name": "Generalized Anxiety Disorder 7 item scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "70221-7",
+   "loinc_name": "Post traumatic stress disorder (PTSD) checklist - civilian version [PCL-C]",
+   "acronym": "PTSD",
+   "sct": "481281000000100",
+   "sct_name": "PCL-5 - post-traumatic stress disorder checklist for DSM-5 (Diagnostic and Statistical Manual of Mental Disorders - Fifth edition)",
+   "my_read": "different version (PCL-C vs PCL-5)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71354-5",
+   "loinc_name": "Edinburgh Postnatal Depression Scale [EPDS]",
+   "acronym": "EPDS",
+   "sct": "273441006",
+   "sct_name": "Edinburgh postnatal depression scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71935-1",
+   "loinc_name": "Parents' evaluation of developmental status - developmental milestones (PEDS_DM) [P.E.D.S.-DM]",
+   "acronym": "PEDSDM",
+   "sct": "3361000175104",
+   "sct_name": "Parent's Evaluation of Developmental Status - Developmental Milestones",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71936-9",
+   "loinc_name": "Parents' Evaluation of Developmental Status (PEDS) [P.E.D.S.]",
+   "acronym": "PEDS",
+   "sct": "3351000175101",
+   "sct_name": "Parent's Evaluation of Developmental Status",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71939-3",
+   "loinc_name": "Minnesota Living with Heart Failure Questionnaire [MLHFQ]",
+   "acronym": "MLHFQ",
+   "sct": "1287376009",
+   "sct_name": "Minnesota Living with Heart Failure Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71941-9",
+   "loinc_name": "Kansas City Cardiomyopathy Questionnaire [KCCQ]",
+   "acronym": "KCCQ",
+   "sct": "1184051000168106",
+   "sct_name": "Kansas City Cardiomyopathy Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71942-7",
+   "loinc_name": "Car, Relax, Alone, Forget, Friends, Trouble Screening Test [CRAFFT]",
+   "acronym": "CRAFFT",
+   "sct": "736042002",
+   "sct_name": "CRAFFT Screening Test",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71942-7",
+   "loinc_name": "Car, Relax, Alone, Forget, Friends, Trouble Screening Test [CRAFFT]",
+   "acronym": "CRAFFT",
+   "sct": "736043007",
+   "sct_name": "CRAFFT Screening Test version 2.0",
+   "my_read": "different version (CRAFFT vs CRAFFT 2.0)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71944-3",
+   "loinc_name": "Michigan Alcoholism Screening Test [MAST]",
+   "acronym": "MAST",
+   "sct": "273608000",
+   "sct_name": "Michigan alcoholism screening test",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71947-6",
+   "loinc_name": "St. Louis University Mental Status (SLUMS) Examination [SLUMS]",
+   "acronym": "SLUMS",
+   "sct": "1137327001",
+   "sct_name": "Saint Louis University Mental Status examination",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71950-0",
+   "loinc_name": "Health Assessment Questionnaire [HAQ]",
+   "acronym": "HAQ",
+   "sct": "273510007",
+   "sct_name": "Health assessment questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "71952-6",
+   "loinc_name": "Child Development Inventory [CDI]",
+   "acronym": "CDI",
+   "sct": "1037361000168104",
+   "sct_name": "MacArthur-Bates Communicative Development Inventories",
+   "my_read": "different instrument (Child Development Inventory vs MacArthur-Bates CDI)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "72088-8",
+   "loinc_name": "Clinical Dementia Rating scale [CDR]",
+   "acronym": "CDR",
+   "sct": "273367002",
+   "sct_name": "Clinical dementia rating scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "72091-2",
+   "loinc_name": "Knee injury and Osteoarthritis Outcome Score [KOOS]",
+   "acronym": "KOOS",
+   "sct": "782845000",
+   "sct_name": "Knee Injury and Osteoarthritis Outcome Score",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "72107-6",
+   "loinc_name": "Mini-Mental State Examination [MMSE]",
+   "acronym": "MMSE",
+   "sct": "273617000",
+   "sct_name": "Mini-mental state examination",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "72110-0",
+   "loinc_name": "Alcohol Use Disorder Identification Test [AUDIT]",
+   "acronym": "AUDIT",
+   "sct": "273265007",
+   "sct_name": "Alcohol use disorders identification test",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "73790-8",
+   "loinc_name": "Neonatal skin risk assessment scale panel [NSRAS]",
+   "acronym": "NSRAS",
+   "sct": "1287355004",
+   "sct_name": "Neonatal Skin Risk Assessment Scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "75842-5",
+   "loinc_name": "Clinical disease activity index [CDAI]",
+   "acronym": "CDAI",
+   "sct": "273364009",
+   "sct_name": "Crohn's Disease Activity Index",
+   "my_read": "different instrument (Clinical Disease Activity Index, rheumatoid, vs Crohn's Disease Activity Index)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "77582-5",
+   "loinc_name": "International Physical Activity Questionnaire Self-Administered Short Form [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "82226-2",
+   "loinc_name": "Neck Disability Index [NDI]",
+   "acronym": "NDI",
+   "sct": "1165611000168100",
+   "sct_name": "Neck Disability Index",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "82664-4",
+   "loinc_name": "Drug Abuse Screening Test [DAST]",
+   "acronym": "DAST",
+   "sct": "273426006",
+   "sct_name": "Drug abuse screening test",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "82813-7",
+   "loinc_name": "Adverse Childhood Experiences [ACE]",
+   "acronym": "ACE",
+   "sct": "715816003",
+   "sct_name": "Adverse Childhood Experience questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "82954-9",
+   "loinc_name": "Amyotrophic lateral sclerosis functional rating scale - revised [ALSFRS-R]",
+   "acronym": "ALSFRSR",
+   "sct": "718646004",
+   "sct_name": "Amyotrophic Lateral Sclerosis Functional Rating Scale Revised",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "85102-2",
+   "loinc_name": "Mood Disorder Questionnaire [MDQ]",
+   "acronym": "MDQ",
+   "sct": "865932000",
+   "sct_name": "Mood Disorder Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "86933-9",
+   "loinc_name": "Patient Activation Measure - 13 [PAM]",
+   "acronym": "PAM",
+   "sct": "713863004",
+   "sct_name": "Patient Activation Measure",
+   "my_read": "SNOMED concept is broader (PAM-13 vs the Patient Activation Measure)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "86946-1",
+   "loinc_name": "Patient Activation Measure - 10 [PAM]",
+   "acronym": "PAM",
+   "sct": "713863004",
+   "sct_name": "Patient Activation Measure",
+   "my_read": "SNOMED concept is broader (PAM-10 vs the Patient Activation Measure)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88379-3",
+   "loinc_name": "International Physical Activity Questionnaire self-administered long form [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88380-1",
+   "loinc_name": "Job-related physical activity panel [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88388-4",
+   "loinc_name": "Transportation physical activity panel [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88402-3",
+   "loinc_name": "Recreation, sport, and leisure-time physical activity panel [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "part of the instrument (a sub-panel), not the instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88412-2",
+   "loinc_name": "International Physical Activity Questionnaire telephone short form [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "88434-6",
+   "loinc_name": "International Physical Activity Questionnaire telephone long form [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382098002",
+   "sct_name": "International Physical Activity Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "89210-9",
+   "loinc_name": "Beck Depression Inventory II [BDI]",
+   "acronym": "BDI",
+   "sct": "273306008",
+   "sct_name": "Beck depression inventory",
+   "my_read": "SNOMED concept is broader (BDI-II vs the Beck Depression Inventory)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "89211-7",
+   "loinc_name": "Beck Depression Inventory Fast Screen [BDI]",
+   "acronym": "BDI",
+   "sct": "273306008",
+   "sct_name": "Beck depression inventory",
+   "my_read": "narrower instrument (BDI Fast Screen vs the Beck Depression Inventory)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "89862-7",
+   "loinc_name": "Patient-Oriented Eczema Measure [POEM]",
+   "acronym": "POEM",
+   "sct": "719128001",
+   "sct_name": "Patient-Oriented Eczema Measure",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "90982-0",
+   "loinc_name": "Pressure Injury Scale for Healing Tool 3.0 [PUSH]",
+   "acronym": "PUSH",
+   "sct": "1259216002",
+   "sct_name": "Pressure Ulcer Scale for Healing",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "91642-9",
+   "loinc_name": "Medical Outcomes Study Social Support Survey panel [MOS Social Support Survey]",
+   "acronym": "MOS",
+   "sct": "273597006",
+   "sct_name": "Medical outcomes study short form general health survey - 36",
+   "my_read": "different instrument (MOS Social Support Survey vs MOS SF-36)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "91642-9",
+   "loinc_name": "Medical Outcomes Study Social Support Survey panel [MOS Social Support Survey]",
+   "acronym": "MOS",
+   "sct": "273598001",
+   "sct_name": "Medical outcomes study short form general health survey - 20",
+   "my_read": "different instrument (MOS Social Support Survey vs MOS SF-20)"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "98093-8",
+   "loinc_name": "Rowland Universal Dementia Assessment Scale [RUDAS]",
+   "acronym": "RUDAS",
+   "sct": "1053531000168107",
+   "sct_name": "Rowland Universal Dementia Assessment Scale",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "panel -> assessment scale",
+   "loinc": "99574-6",
+   "loinc_name": "Roland Morris Disability Questionnaire panel [RMDQ]",
+   "acronym": "RMDQ",
+   "sct": "1182621000168102",
+   "sct_name": "Roland Morris Disability Questionnaire",
+   "my_read": "likely the same instrument"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "44261-6",
+   "loinc_name": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+   "acronym": "PHQ9",
+   "sct": "720433000",
+   "sct_name": "Patient Health Questionnaire-9 score",
+   "my_read": "likely the same total score"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "55758-7",
+   "loinc_name": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+   "acronym": "PHQ2",
+   "sct": "1359723003",
+   "sct_name": "PHQ-2 (Patient Health Questionnaire-2) score",
+   "my_read": "likely the same total score"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "70272-0",
+   "loinc_name": "Patient Health Questionnaire 4 item (PHQ-4) total score [Reported]",
+   "acronym": "PHQ4",
+   "sct": "1359726006",
+   "sct_name": "PHQ-4 (Patient Health Questionnaire-4) score",
+   "my_read": "likely the same total score"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "70274-6",
+   "loinc_name": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+   "acronym": "GAD7",
+   "sct": "445455005",
+   "sct_name": "Generalized Anxiety Disorder 7 item score",
+   "my_read": "likely the same total score"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "77565-0",
+   "loinc_name": "Pain interference score [BPI Short Form]",
+   "acronym": "BPI",
+   "sct": "443223005",
+   "sct_name": "Brief pain inventory score",
+   "my_read": "subscale (BPI pain interference score vs the BPI score)"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "77595-7",
+   "loinc_name": "Total physical activity score [IPAQ]",
+   "acronym": "IPAQ",
+   "sct": "1382099005",
+   "sct_name": "International Physical Activity Questionnaire score",
+   "my_read": "likely the same total score"
+  },
+  {
+   "kind": "total score -> score observable",
+   "loinc": "90981-2",
+   "loinc_name": "Pressure Injury Scale for Healing Tool 3.0 total score [PUSH]",
+   "acronym": "PUSH",
+   "sct": "421030009",
+   "sct_name": "Pressure Ulcer Scale for Healing score",
+   "my_read": "likely the same total score"
+  }
+ ]
+}

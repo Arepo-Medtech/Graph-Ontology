@@ -432,7 +432,9 @@ loaded — they name an axis value, not the thing observed. 164,022 edges (`loin
 | claims attachment | 503 | 0 | 17 |
 | survey | 11,934 | 0 | **13** |
 
-That is the honest ceiling of code-to-code bridging for non-laboratory LOINC today. Radiology (7,045 of the clinical terms)
+That is the honest ceiling of code-to-code bridging for non-laboratory LOINC today. *(24 Sep: survey instruments now have
+candidate frames — 55 pairs, 37 instruments, `reference/survey_instrument_candidates.json`, `scripts/survey_candidates.py`,
+keyed by the instrument's acronym held to SNOMED's own initials; frames, never edges. All queues: `docs/review-queues.md`.)* Radiology (7,045 of the clinical terms)
 maps its anatomy parts to **RadLex**, which has no published SNOMED map; survey instruments (PHQ-9, AUDIT …) have no SNOMED
 map in LOINC, Athena or the LOINC Extension. Closing either is a gap-crossing, not a lookup. *(24 Sep: radiology is now
 bridged by codes after all, through RadLex's own FMA and UMLS cross-references — see* Radiology *below; clinical reach
