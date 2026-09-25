@@ -122,6 +122,12 @@ export AU_RF2_SNAPSHOT="/path/to/SnomedCT_Release_AU1000036_20260831/Snapshot"
 .venv/bin/python scripts/build_edges.py              # nodes + edges from every source, validated against reference/graph_predicates.json
 .venv/bin/python scripts/graph_report.py             # score the linkage routes, set their tiers, report health and coverage
 .venv/bin/python scripts/rxnorm_review_queue.py      # rank the unresolved substances by what they actually block
+
+# every SNOMED CT-AU edition, offline (docs/snomed-editions.md): the six competition editions in out/snomed_editions.duckdb
+.venv/bin/python scripts/snomed_editions.py extract   # the RF2 Full files out of the NCTS zip in ONTOLOGIES
+.venv/bin/python scripts/snomed_editions.py build     # one snapshot per edition, each on the International release it depended on (~3 min)
+.venv/bin/python scripts/snomed_editions.py check ~/code/data-golf-2026/cache   # replay every expansion cached from the live server: exact or fail
+.venv/bin/python scripts/snomed_editions.py ecl 20230131 '<<248982007 MINUS <<118185001' --names
 ```
 
 To refresh only selected schedule tables, pass their names explicitly. For records that need
