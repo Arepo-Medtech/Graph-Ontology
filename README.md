@@ -1,4 +1,4 @@
-# AU medicines transcode compendium
+# Graph-Ontology
 
 > **Guidelines have moved** to their own repository, [Arepo-Medtech/GUIDELINES](https://github.com/Arepo-Medtech/GUIDELINES)
 > (2026-09-23, with full history). Scripts here that read them (`condition_guideline_tally.py`, `underverified_bound.py`,
