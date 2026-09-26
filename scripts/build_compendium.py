@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build the AU medicines transcode compendium from local sources with DuckDB.
+"""Build Graph-Ontology from local sources with DuckDB.
 
 Sources
   RF2   SNOMED CT-AU snapshot (licensed NCTS content, READ only, never committed): descriptions,
