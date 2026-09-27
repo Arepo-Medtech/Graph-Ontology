@@ -537,6 +537,15 @@ restrictions cite by number (`pbs:cites_mbs_item`, 52). Those 52 citations join 
 **MBS items outside the main component 6,046 -> 1,952**, all nodes outside it 12,123 -> 7,982. LOINC nodes with a link
 outside LOINC 86,764 -> 100,388 (39.6% -> 45.5%) with the enriched linkages above.
 
+**Wave 1, medicines (27 Sep).** The drug vocabularies had arrived as leaves joined to other vocabularies, with no
+structure of their own. Now: the ATC tree (`atc:is_a`, 15,016: the PBS schedule's 7,877 and Athena's 7,139 as parallel
+edges; they give different parents for 24 classes, a query rather than a choice), OHDSI's ATC -> RxNorm assignment
+(`atc:rxnorm_primary` 12,700, `atc:rxnorm_secondary` 23,236, kept apart), what each RxNorm Extension product is in
+RxNorm's terms (`rxe:*`, 23,970: marketed form 15,371, tradename 4,364, box 3,858 ...), MeSH supplementary records under
+their headings (`mesh:mapped_to`, 28,620) and MED-RT's class hierarchy (`medrt:is_a`, 4,117). Athena's links are loaded
+only between nodes the graph already holds. RxNorm Extension products linked to RxNorm 0 -> 23,851; RxNorm drugs with an
+ATC class 2,724 -> 3,796; nodes outside the main component 7,982 -> 6,434 (ATC 51 -> 0, MED-RT 698 -> 156, MeSH 115 -> 12).
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /

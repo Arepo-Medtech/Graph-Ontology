@@ -1940,6 +1940,200 @@
       "source": "reference/candidate_decisions.json (scripts/review_sheets.py), queue mbs_procedures",
       "status": "built",
       "note": "Not an equivalence: a billing item funds a procedure (it may fund several, and set conditions). Tier 'decision'; method names the reviewer and the date."
+    },
+    {
+      "id": "atc:is_a",
+      "label": "ATC class is a subclass of this ATC class",
+      "subject": [
+        "ATC"
+      ],
+      "object": [
+        "ATC"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "PBS Public API v3 atc-codes.json atc_parent_code; OMOP Athena ATC 'Is a' as a parallel edge",
+      "status": "built",
+      "note": "The WHO ATC tree as the PBS schedule lists it and as Athena holds it: two sources, parallel edges, so a disagreement is a query. Gives the ATC classes the graph already used a hierarchy, and names them from the PBS description."
+    },
+    {
+      "id": "atc:rxnorm_primary",
+      "label": "ATC class is the primary class of this RxNorm drug (or a class above it)",
+      "subject": [
+        "ATC"
+      ],
+      "object": [
+        "RXN",
+        "RXE"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP: ATC - RxNorm, pr lat, pr up, Drug class of drug, Maps to",
+      "status": "built",
+      "note": "OHDSI's curated ATC assignment, loaded only between nodes the graph already holds. method keeps Athena's relationship id ('pr lat' = the drug's own class, 'pr up' = a class above it)."
+    },
+    {
+      "id": "atc:rxnorm_secondary",
+      "label": "ATC class is a secondary class of this RxNorm drug",
+      "subject": [
+        "ATC"
+      ],
+      "object": [
+        "RXN",
+        "RXE"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP: ATC - RxNorm sec lat, sec up",
+      "status": "built",
+      "note": "A class the drug belongs to as one part of a combination product or through another use; kept apart from the primary class so a walk does not read it as the drug's own."
+    },
+    {
+      "id": "rxe:marketed_form_of",
+      "label": "RxNorm Extension product is the marketed form of this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:tradename_of",
+      "label": "RxNorm Extension product is a branded (tradename) form of this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:box_of",
+      "label": "RxNorm Extension product is a box (pack) of this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:has_ingredient",
+      "label": "RxNorm Extension product has ingredient this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:quantified_form_of",
+      "label": "RxNorm Extension product is the quantified form of this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:consists_of",
+      "label": "RxNorm Extension product consists of this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "rxe:is_a",
+      "label": "RxNorm Extension product is a this RxNorm concept",
+      "subject": [
+        "RXE"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "OMOP Athena CONCEPT_RELATIONSHIP RxNorm Extension -> RxNorm",
+      "status": "built",
+      "note": "What an RxNorm Extension product (the OHDSI extension that holds non-US products, the Australian ones among them) is in RxNorm's own terms. Loaded only between nodes the graph already holds; method keeps Athena's relationship id."
+    },
+    {
+      "id": "mesh:mapped_to",
+      "label": "MeSH supplementary concept record is indexed under this MeSH heading",
+      "subject": [
+        "MESH"
+      ],
+      "object": [
+        "MESH"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS 2026AA MRREL Level 0, SAB MSH, RELA mapped_to",
+      "status": "built",
+      "note": "How NLM indexes a substance or rare disease that has only a supplementary record (C...) under the descriptor tree (D...). Loaded for supplementary records the graph already holds."
+    },
+    {
+      "id": "medrt:is_a",
+      "label": "MED-RT class is a subclass of this MED-RT class",
+      "subject": [
+        "MEDRT"
+      ],
+      "object": [
+        "MEDRT"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS 2026AA MRREL Level 0, SAB MED-RT, REL PAR between class codes (N...)",
+      "status": "built",
+      "note": "MED-RT's own class hierarchy (mechanisms of action, physiologic effects, established pharmacologic classes). The drug-to-class edges stay as they were, with their tiers."
     }
   ],
   "not_imported": {
