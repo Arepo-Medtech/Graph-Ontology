@@ -1,8 +1,8 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-26 17:27",
- "repo_commit": "6805c62",
- "ontologies": "/Users/ken-lee-arepo/Documents/Graph-Ontology-Kit/sources-trim",
+ "written": "2026-09-27 09:28",
+ "repo_commit": "3128450",
+ "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
   "cache/semra (1 GB)": "only to rebuild cache/completeness/evidence.parquet (Zenodo 15208251)",
@@ -11,7 +11,7 @@
  },
  "totals": {
   "stored": 1507565293,
-  "in place": 2861688389
+  "in place": 2870011466
  },
  "entries": [
   {
@@ -395,7 +395,7 @@
     {
      "file": "hpo_snomed_candidates.tsv",
      "bytes": 443070,
-     "sha256": "6f234f9a2b5a6152f12ea8e0fefbc0f7fd423c32a6d428fc59384d7b813a40ab"
+     "sha256": "95553c3ebfb1b0d2dc03968a21e66931a677fd2dca686738a6ce1d5b34737615"
     },
     {
      "file": "organism_handcheck.json",
@@ -877,6 +877,23 @@
     }
    ],
    "bytes": 7591687
+  },
+  {
+   "id": "loinc_answer_list",
+   "kind": "in place",
+   "path": "Loinc_2.83/AccessoryFiles/AnswerFile/AnswerList.csv",
+   "is_dir": false,
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "AnswerList.csv",
+     "bytes": 8323077,
+     "sha256": "9ae792e331b8e45184188c82196d74643abbdef83ddbb912bae2e1e803f1f6a0"
+    }
+   ],
+   "bytes": 8323077
   },
   {
    "id": "loinc_extension",

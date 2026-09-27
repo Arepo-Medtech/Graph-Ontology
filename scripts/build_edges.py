@@ -78,6 +78,7 @@ RSNA_PLAYBOOK = Path(os.environ.get("RSNA_PLAYBOOK", os.path.join(ONT_ROOT, "com
 LOINC_PARTS = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv"))
 LOINC_PARTLINK = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv"))
 LOINC_PARTLINK_SUPP = LOINC_PARTLINK.with_name("LoincPartLink_Supplementary.csv")
+LOINC_ANSWERS = LOINC_PARTLINK.parent.parent / "AnswerFile" / "AnswerList.csv"   # answers with their SNOMED CT code
 DC = Path("cache/drugcentral")
 UMLS_HPO = Path("cache/umls/hpo_snomed.tsv")
 PBS_BIND = Path("reference/pbs_indication_bindings.json")   # scripts/bind_indications.py
@@ -656,6 +657,19 @@ def main() -> int:
                                                   "mass_unit_example", "molar_unit_example")}, "au_preferred": au_side(c)}))
                 for c in json.load(open(UNIT_PAIRS))["counterparts"]], available=len(json.load(open(UNIT_PAIRS))["counterparts"]),
                 unit="counterpart pairs (scripts/unit_reconcile.py)")
+        if LOINC_TABLE.exists():
+            # LOINC's own example unit (US convention) for every active term that states one -- the unit edge for the tens of
+            # thousands of terms no RCPA set covers, clinical and survey terms among them. An example, not a rule: the
+            # Australian preferred unit stays loinc:au_preferred_unit. "mg/dL;mg/L" is two example units, split.
+            lt_ = f"read_csv('{LOINC_TABLE}', header=true, all_varchar=true)"
+            ins("LOINC term -> example UCUM unit (LOINC)", f"""SELECT DISTINCT 'LOINC', LOINC_NUM, 'loinc:example_unit', 'UCUM', trim(u),
+                    'LOINC 2.83', 'Loinc.csv EXAMPLE_UCUM_UNITS',
+                    CASE WHEN contains(EXAMPLE_UCUM_UNITS, ';') THEN 'one of several example units' ELSE 'example unit' END,
+                    'native', 'asserted', '{PIN['loinc_table']}', json_object('as_written', EXAMPLE_UCUM_UNITS)
+                FROM (SELECT LOINC_NUM, STATUS, EXAMPLE_UCUM_UNITS, unnest(string_split(EXAMPLE_UCUM_UNITS, ';')) AS u FROM {lt_}
+                      WHERE EXAMPLE_UCUM_UNITS IS NOT NULL) WHERE STATUS = 'ACTIVE' AND trim(u) <> ''""",
+                src=f"{lt_} WHERE EXAMPLE_UCUM_UNITS IS NOT NULL", keep=[("LOINC term not active", "STATUS = 'ACTIVE'")],
+                unit="LOINC terms that state an example unit")
 
         # --- lab result -> finding, through the analyte (reference/interprets_handcheck.json) -------------------------
         # SNOMED findings interpret measurement PROCEDURES; the LOINC Ontology puts LOINC terms under OBSERVABLES, so
@@ -974,6 +988,25 @@ def main() -> int:
                      "7": "Cleft lip and cleft palate services", "8": "Miscellaneous services", "10": "Dental services"}
         con.executemany("INSERT INTO name_hint VALUES ('MBS_CATEGORY', ?, ?)", list(cat_names.items()))
         con.executemany("INSERT INTO name_hint VALUES ('MBS_GROUP', ?, ?)", sorted({(f"{m['Category']}/{m['Group']}", f"Group {m['Group']}") for m in mbs}))
+        # PBS restrictions that require an MBS service say so by item number ("... the medical service as described in item
+        # 14249 of the Medicare Benefits Schedule"): the only code-to-code link MBS has outside itself.
+        res_path = PBS / "restrictions.json"
+        if res_path.exists():
+            live = {m["ItemNum"] for m in mbs}
+            cite = re.compile(r"\bitems?\s+((?:\d{2,6}(?:\s*,\s*|\s+(?:and|or|to)\s+|\s*)?)+?)\s*of the Medicare Benefits Schedule", re.I)
+            rows_c, n_cited, dead = [], 0, 0
+            for r in json.load(open(res_path))["rows"]:
+                text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", (r.get("li_html_text") or "") + " " + (r.get("schedule_html_text") or "")))
+                for item in sorted({n for mt in cite.finditer(text) for n in re.findall(r"\d+", mt.group(1))}):
+                    n_cited += 1
+                    if item not in live:
+                        dead += 1
+                        continue
+                    rows_c.append(("PBS_RESTRICTION", r["res_code"], "pbs:cites_mbs_item", "MBS", item, "PBS Public API v3",
+                                   "restrictions.json " + r["res_code"], "restriction text: item N of the Medicare Benefits Schedule",
+                                   "native", "asserted", PIN["pbs"], None))
+            ins_rows("PBS restriction -> MBS item it cites", rows_c, available=n_cited,
+                     excluded=[("item number not an active MBS item", dead)], unit="MBS item numbers cited in PBS restriction text")
 
     # --- anatomy and organisms: Uberon, MONDO's locations and agents, SNOMED organism <-> NCBI Taxonomy ---------------
     if UBERON_OBO.exists():
@@ -981,7 +1014,7 @@ def main() -> int:
         for line in open(UBERON_OBO, encoding="utf-8"):
             line = line.rstrip("\n")
             if line.startswith("["):
-                cur = {"is_a": [], "part_of": []} if line == "[Term]" else None
+                cur = {"is_a": [], "part_of": [], "mesh": []} if line == "[Term]" else None
                 if cur is not None:
                     terms.append(cur)
             elif cur is not None and ": " in line:
@@ -996,6 +1029,8 @@ def main() -> int:
                     cur["part_of"].append(v_.split(" ")[1])
                 elif k == "is_obsolete" and v_.strip() == "true":
                     cur["obsolete"] = True
+                elif k == "xref" and v_.startswith("MESH:"):
+                    cur["mesh"].append(v_.split(" ")[0][5:])
         ub = [t for t in terms if t.get("id", "").startswith("UBERON:") and not t.get("obsolete")]
         ub_all = [t for t in terms if t.get("id", "").startswith("UBERON:")]
         ub_n = lambda ts, f=lambda o: True: sum(1 for t in ts for k in ("is_a", "part_of") for o in t[k] if f(o))
@@ -1007,6 +1042,15 @@ def main() -> int:
                                                    ("target outside Uberon (a CL cell type, a GO process ...)", ub_n(ub, lambda o: not o.startswith("UBERON:")))],
                  unit="is_a / part_of statements of Uberon classes")
         con.executemany("INSERT INTO name_hint VALUES ('UBERON', ?, ?)", [(t["id"], t.get("name")) for t in ub])
+        # Uberon's own cross-references to MeSH descriptors: a database xref, which Uberon does not grade as an exact match.
+        mesh_ok = lambda m: re.fullmatch(r"[DC]\d+", m) is not None
+        n_mesh = sum(len(t["mesh"]) for t in ub_all)
+        ins_rows("Uberon -> MeSH (xref)", [("UBERON", t["id"], "uberon:mesh_xref", "MESH", m, "Uberon", "uberon-basic.obo xref",
+                                            "database cross-reference", "native", "asserted", PIN["uberon"], None)
+                                           for t in ub for m in sorted(set(t["mesh"])) if mesh_ok(m)],
+                 available=n_mesh, excluded=[("obsolete Uberon class", sum(len(t["mesh"]) for t in ub_all if t.get("obsolete"))),
+                                             ("not a MeSH descriptor id", sum(1 for t in ub for m in t["mesh"] if not mesh_ok(m)))],
+                 unit="MESH xrefs of Uberon classes")
     if UBERON_SSSOM.exists():
         ss = [r for r in csv.DictReader((l for l in open(UBERON_SSSOM, encoding="utf-8") if not l.startswith("#")), delimiter="\t")
               if r["object_id"].startswith("SCTID:") and r["subject_id"].startswith("UBERON:")]
@@ -1121,6 +1165,33 @@ def main() -> int:
                 CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
                 any_value(ExtCodeDisplayName) FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs if xs[k] not in ('RXN', 'NCBITAXON', 'NCBIGENE'))})
             GROUP BY 1, 2""")
+        # the same mappings at the part itself: the part links above reach a code only through a term, so a part whose
+        # terms are all inactive, and every part as a concept in its own right, stayed unlinked. Equivalence as LOINC states
+        # it rides in method and attrs; relation, not identity: 'narrower' and 'wider' rows are not the same concept.
+        pc = {**xs, "http://snomed.info/sct": "SCT", "http://www.radlex.org": "RADLEX"}
+        pcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in pc.items())
+        ins("LOINC part -> its code in another vocabulary", f"""SELECT DISTINCT 'LOINC', PartNumber, 'loinc:part_code', CASE ExtCodeSystem {pcase} END,
+                CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
+                'LOINC 2.83 part mapping', 'PartRelatedCodeMapping', PartTypeName || ' ' || Equivalence, 'native', 'asserted', '{PIN['loinc_table']}',
+                json_object('part_type', PartTypeName, 'part_name', PartName, 'equivalence', Equivalence, 'ext_name', ExtCodeDisplayName)
+            FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in pc)}) AND PartName <> 'XXX'""",
+            src="lpm", keep=[("target is not a graph vocabulary (a LOINC-to-LOINC row)", f"ExtCodeSystem IN ({','.join(repr(k) for k in pc)})"),
+                             ("the unspecified part XXX", "PartName <> 'XXX'")],
+            unit="PartRelatedCodeMapping rows")
+        con.execute("INSERT INTO name_hint SELECT 'LOINC', PartNumber, any_value(PartName) FROM lpm GROUP BY 2")
+    if LOINC_ANSWERS.exists():
+        # LOINC's answer list gives some answers the SNOMED CT concept they are ("Small" LA8983-4 = 255507004 Small);
+        # kept where that concept is active in SNOMED CT-AU.
+        ans = f"read_csv('{LOINC_ANSWERS}', header=true, all_varchar=true)"
+        ins("LOINC answer -> SNOMED CT (answer list external code)", f"""SELECT 'LOINC', AnswerStringId, 'loinc:answer_sct', 'SCT', ExtCodeId,
+                'LOINC 2.83 AnswerList', 'AnswerList.csv', 'LOINC answer external code', 'native', 'asserted', '{PIN['loinc_table']}',
+                json_object('answer', any_value(DisplayText), 'sct_name', any_value(ExtCodeDisplayName), 'answer_lists', count(DISTINCT AnswerListId))
+            FROM {ans} WHERE ExtCodeSystem = 'http://snomed.info/sct' AND AnswerStringId IS NOT NULL
+              AND ExtCodeId IN (SELECT id FROM cmp.concept) GROUP BY AnswerStringId, ExtCodeId""",
+            src=f"(SELECT DISTINCT AnswerStringId, ExtCodeId, ExtCodeSystem FROM {ans} WHERE ExtCodeId IS NOT NULL)",
+            keep=[("external code is not SNOMED CT", "ExtCodeSystem = 'http://snomed.info/sct'"),
+                  ("SNOMED code not active in SNOMED CT-AU", "ExtCodeId IN (SELECT id FROM cmp.concept)")],
+            unit="distinct answer -> external code pairs")
     if UMLS_SCT_NCBI.exists():
         # UMLS shared CUI, admitted where the NCBI name equals the SNOMED preferred term -- as written, or once rank words are
         # set aside ("Salmonella species" = Salmonella, "Order Strigiformes" = Strigiformes). Truly different names (renamed

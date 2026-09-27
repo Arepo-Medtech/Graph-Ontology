@@ -528,6 +528,15 @@ already link that part; suffix parts name no analyte and are not loaded. Result:
 link outside LOINC (71,327 -> 72,366), 243 of them recent molecular tests new to the graph. Search and Metadata links
 stay unloaded: they are for finding terms, not for what a term measures.
 
+**Wave 1, labs (27 Sep).** Five more links LOINC, PBS and Uberon already state, none matched: every active LOINC
+term's example UCUM unit (`loinc:example_unit`, 42,983; UCUM 88 -> 648 units; the Australian unit stays
+`loinc:au_preferred_unit`), LOINC's part mappings at the part itself (`loinc:part_code`, 15,403: SNOMED 6,661, ChEBI
+2,339, RadLex 1,114, HGNC and NCBI Gene 1,074 each, ...; LOINC's grade in method), LOINC answers with their SNOMED CT
+concept (`loinc:answer_sct`, 499), Uberon's MeSH cross-references (`uberon:mesh_xref`, 1,105), and the MBS items PBS
+restrictions cite by number (`pbs:cites_mbs_item`, 52). Those 52 citations join MBS categories 1 and 3 to the graph:
+**MBS items outside the main component 6,046 -> 1,952**, all nodes outside it 12,123 -> 7,982. LOINC nodes with a link
+outside LOINC 86,764 -> 100,388 (39.6% -> 45.5%) with the enriched linkages above.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /
