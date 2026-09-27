@@ -2374,6 +2374,24 @@
       "source": "ChEBI chebi.obo relationship RO:0000087",
       "status": "built",
       "note": "Biological, chemical and application roles ('antibacterial drug', 'EC 3.4.21.* inhibitor') for the ChEBI entities the graph holds."
+    },
+    {
+      "id": "umls:disease_member",
+      "label": "UMLS disease concept holds this HPO / MeSH / NCIt code of the same name",
+      "subject": [
+        "UMLS"
+      ],
+      "object": [
+        "HP",
+        "MESH",
+        "NCIT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS 2026AA MRCONSO atoms of the CUIs MONDO and Orphanet name, via scripts/wave2_candidates.py (Wave 2)",
+      "status": "built",
+      "note": "Only pairs whose names agree (the shared-name gate) and that the graph did not already reach. Tier earned per target vocabulary from cache/wave2/umls_disease_member_handcheck.json (HPO 30/30, MeSH 43/43, NCIt 51/56; Tier 2), confirmed by Ken on 27 Sep 2026 on Claude's first reading; pairs read wrong or unsure are loaded as rejected. OMIM is held back: its alternative titles let gene entries through."
     }
   ],
   "not_imported": {

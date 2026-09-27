@@ -1,7 +1,7 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-27 12:08",
- "repo_commit": "1529e91",
+ "written": "2026-09-27 13:03",
+ "repo_commit": "5fc9df1",
  "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
@@ -10,7 +10,7 @@
   "UMLS and SNOMED US zips (3.1 GB)": "only to re-derive cache/umls and cache/snomed-us"
  },
  "totals": {
-  "stored": 1601681404,
+  "stored": 1604852424,
   "in place": 2870011466
  },
  "entries": [
@@ -400,7 +400,7 @@
     {
      "file": "hpo_snomed_candidates.tsv",
      "bytes": 443070,
-     "sha256": "082a5d51ba3fef5edcbbd2619302879a2177fc2d58fde05604981d3e4124cc80"
+     "sha256": "5312c9485be94bddfdb574f59f260631acf4babf8bdde147a3b896a10f599d96"
     },
     {
      "file": "organism_handcheck.json",
@@ -594,6 +594,29 @@
     }
    ],
    "bytes": 5887879
+  },
+  {
+   "id": "wave2_members",
+   "kind": "stored",
+   "path": "cache/wave2",
+   "is_dir": true,
+   "keep": "umls_disease_member_*",
+   "source": "scripts/wave2_candidates.py (UMLS 2026AA MRCONSO; hand check confirmed by Ken 27 Sep 2026)",
+   "version": "27 Sep 2026",
+   "licence": "UMLS licence: derived data",
+   "files": [
+    {
+     "file": "umls_disease_member_candidates.parquet",
+     "bytes": 3054816,
+     "sha256": "1be450ab5dc9ac396b1515b55d053989e1f383bc9fb39aac15850632c64086d6"
+    },
+    {
+     "file": "umls_disease_member_handcheck.json",
+     "bytes": 116204,
+     "sha256": "d641373d0e7628b75b95f566797e0eedd993840308728d7239a53a521b8541c5"
+    }
+   ],
+   "bytes": 3171020
   },
   {
    "id": "chebi",

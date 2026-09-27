@@ -67,14 +67,14 @@
   "mbs:group_in_category": 99,
   "mbs:in_group": 6046,
   "medgen:xref": 78204,
-  "medrt:contraindicated_with": 21398,
+  "medrt:contraindicated_with": 21399,
   "medrt:has_mechanism_of_action": 1600,
   "medrt:has_physiologic_effect": 279,
   "medrt:is_a": 4117,
   "medrt:may_diagnose": 265,
   "medrt:may_prevent": 0,
   "medrt:may_treat": 3176,
-  "mesh:mapped_to": 28624,
+  "mesh:mapped_to": 28642,
   "mondo:disease_has_infectious_agent": 691,
   "mondo:disease_has_location": 775,
   "mondo:exact_match": 107452,
@@ -249,16 +249,17 @@
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
   "umls:concept_member": 12352,
+  "umls:disease_member": 2459,
   "umls:shared_cui": 181147,
-  "umls:source_parent": 273809,
+  "umls:source_parent": 273916,
   "uniprot:encoded_by": 1890,
   "who:icd10_to_icd11": 22249,
   "who:icd11_mms_foundation": 11745,
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 1118,
-  "nodes_outside_main": 5278
+  "components": 1115,
+  "nodes_outside_main": 5270
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -533,7 +534,7 @@
   },
   "MeSH supplementary record -> heading it is mapped to (UMLS)": {
    "available": 436613,
-   "excluded": 407989,
+   "excluded": 407971,
    "kind": "source"
   },
   "MedGen concept -> its codes in HPO, OMIM, Orphanet, MONDO, SNOMED, MeSH, GARD": {
@@ -696,6 +697,11 @@
    "excluded": 1715707,
    "kind": "source"
   },
+  "UMLS disease concept -> its HPO / MeSH / NCIt code (Wave 2, same name)": {
+   "available": 18435,
+   "excluded": 15971,
+   "kind": "source"
+  },
   "UMLS shared CUI, same name (MRCONSO 2026AA)": {
    "available": 376257,
    "excluded": 194024,
@@ -703,7 +709,7 @@
   },
   "UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)": {
    "available": 63606,
-   "excluded": 11781,
+   "excluded": 11778,
    "kind": "source"
   },
   "UMLS: MED-RT drug -> mechanism of action / physiologic effect class": {
@@ -713,7 +719,7 @@
   },
   "UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)": {
    "available": 558328,
-   "excluded": 284519,
+   "excluded": 284412,
    "kind": "source"
   },
   "Uberon -> MeSH (xref)": {
@@ -839,11 +845,11 @@
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 3652,
-  "MESH": 37835,
+  "MESH": 37837,
   "MONDO": 33137,
   "NCBIGENE": 12964,
   "NCBITAXON": 20838,
-  "NCIT": 41751,
+  "NCIT": 41823,
   "OMIM": 22170,
   "OMIMPS": 608,
   "ORPHA": 11358,
@@ -864,9 +870,9 @@
   "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8464538,
-  "nodes": 1573887,
-  "usable_edges": 8424303
+  "edges": 8467130,
+  "nodes": 1573961,
+  "usable_edges": 8426888
  },
  "values": {
   "sct:1142135004": 6724,
