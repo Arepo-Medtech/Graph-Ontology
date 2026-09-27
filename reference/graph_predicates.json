@@ -1213,17 +1213,18 @@
     },
     {
       "id": "who:icd10_to_icd11",
-      "label": "WHO maps this ICD-10 code to this ICD-11 (MMS) code",
+      "label": "WHO maps this ICD-10 code to this ICD-11 (MMS) code or foundation entity",
       "subject": [
         "ICD10WHO"
       ],
       "object": [
-        "ICD11MMS"
+        "ICD11MMS",
+        "ICD11"
       ],
       "category": "identity",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "WHO ICD-11 release 2026-01 mapping tables: 10To11MapToOneCategory, 10To11MapToMultipleCategories",
+      "source": "WHO ICD-11 release 2026-01 mapping tables: 10To11MapToOneCategory, 10To11MapToMultipleCategories; foundation_10To11MapToOneCategory.txt (to a foundation entity)",
       "status": "built",
       "note": "method 'one category' is WHO's single best target; 'multiple categories' adds the other ICD-11 categories an ICD-10 code's content moved to (ICD-11 splits many ICD-10 codes). Categories with codes on both sides only; chapters and blocks are not loaded. attrs.icd11_foundation is the entity the target linearises."
     },
@@ -2134,6 +2135,158 @@
       "source": "UMLS 2026AA MRREL Level 0, SAB MED-RT, REL PAR between class codes (N...)",
       "status": "built",
       "note": "MED-RT's own class hierarchy (mechanisms of action, physiologic effects, established pharmacologic classes). The drug-to-class edges stay as they were, with their tiers."
+    },
+    {
+      "id": "mondo:germline_gene",
+      "label": "disease has its material basis in a germline mutation in this gene",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "HGNC"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo relationship has_material_basis_in_germline_mutation_in",
+      "status": "built",
+      "note": "MONDO's own disease -> gene axiom (most carry the OMIM entry they came from). The first direct MONDO -> gene edges; genes had reached MONDO only through OMIM and Orphanet. MONDO's NCBI Gene targets are the genes of its veterinary (OMIA) diseases and are not loaded."
+    },
+    {
+      "id": "mondo:has_feature",
+      "label": "disease has this HPO phenotype as a feature",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo relationship disease_has_feature / disease_has_major_feature / has_characteristic (HP targets)",
+      "status": "built",
+      "note": "method keeps MONDO's relation; 'major' features are marked so."
+    },
+    {
+      "id": "mondo:gard_xref",
+      "label": "MONDO disease is cross-referenced to this GARD entry",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "GARD"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo xref GARD:, annotated source MONDO:GARD",
+      "status": "built",
+      "note": "MONDO pads GARD numbers to seven digits (GARD:0009526); the graph keys GARD without leading zeros, as Orphanet writes them. A cross-reference, not graded as an exact match."
+    },
+    {
+      "id": "mondo:other_hierarchy",
+      "label": "MONDO disease is represented in HPO's hierarchy as this phenotype",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "HP"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo xref HP:, annotated MONDO:otherHierarchy",
+      "status": "built",
+      "note": "The same condition modelled as a disease in MONDO and as a phenotype in HPO. Not identity: a disease and a phenotype are different kinds of thing."
+    },
+    {
+      "id": "mondo:obsolete_equivalent",
+      "label": "MONDO disease was equivalent to this code, which its source has since retired",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "ORPHA",
+        "OMIM",
+        "DOID",
+        "NCIT",
+        "MESH",
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo xref annotated MONDO:equivalentObsolete",
+      "status": "built",
+      "note": "Kept so an old code still leads to the disease; a relation, not identity, so the retired code never joins an equivalence cluster."
+    },
+    {
+      "id": "mondo:related_xref",
+      "label": "MONDO disease is related to, narrower than or broader than this concept",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "SCT",
+        "ICD10CM",
+        "NCIT",
+        "MESH"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo xref annotated MONDO:relatedTo / mondoIsNarrowerThanSource / mondoIsBroaderThanSource",
+      "status": "built",
+      "note": "method carries which of the three; never an exact match (those are mondo:exact_match)."
+    },
+    {
+      "id": "mondo:icdo_xref",
+      "label": "MONDO disease (a neoplasm) is cross-referenced to this ICD-O code",
+      "subject": [
+        "MONDO"
+      ],
+      "object": [
+        "ICDO"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "MONDO mondo.obo xref ICDO: (no annotation)",
+      "status": "built",
+      "note": "ICD-O morphology codes MONDO carries for its neoplasms, most from NCIt. No grade is stated, so a cross-reference."
+    },
+    {
+      "id": "orpha:moved_to",
+      "label": "retired Orphanet entry has moved to this Orphanet entry",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "ORPHA"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Orphadata en_product1.xml DisorderDisorderAssociation 'Moved to'",
+      "status": "built",
+      "note": "The same disorder now under another code, like SNOMED's REPLACED BY."
+    },
+    {
+      "id": "orpha:referred_to",
+      "label": "Orphanet entry refers the reader to this Orphanet entry",
+      "subject": [
+        "ORPHA"
+      ],
+      "object": [
+        "ORPHA"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Orphadata en_product1.xml DisorderDisorderAssociation 'Referred to'",
+      "status": "built",
+      "note": "A pointer to the related entry that holds the content; not an equivalence."
     }
   ],
   "not_imported": {

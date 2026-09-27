@@ -546,6 +546,17 @@ their headings (`mesh:mapped_to`, 28,620) and MED-RT's class hierarchy (`medrt:i
 only between nodes the graph already holds. RxNorm Extension products linked to RxNorm 0 -> 23,851; RxNorm drugs with an
 ATC class 2,724 -> 3,796; nodes outside the main component 7,982 -> 6,434 (ATC 51 -> 0, MED-RT 698 -> 156, MeSH 115 -> 12).
 
+**Wave 1, disease (27 Sep).** What MONDO, Orphanet and WHO state and the build had not read: MONDO's disease ->
+causal gene axiom (`mondo:germline_gene`, 6,203 to HGNC: 6,195 diseases get their first direct gene edge; its NCBI Gene
+targets are the genes of veterinary OMIA diseases and are left out), disease -> HPO feature (`mondo:has_feature`, 1,065),
+MONDO's annotated xrefs kept apart by the annotation (`mondo:gard_xref` 15,930, GARD's leading zeros stripped;
+`mondo:other_hierarchy` 556, the same condition as an HPO phenotype; `mondo:obsolete_equivalent` 1,078, a relation so a
+retired code never joins an equivalence cluster; `mondo:related_xref` 182; `mondo:icdo_xref` 769), WHO's ICD-10 ->
+ICD-11 foundation table (`who:icd10_to_icd11`, +9,604) and Orphanet's moved-to / referred-to links (`orpha:moved_to` 337,
+`orpha:referred_to` 977). MONDO nodes linked outside MONDO 72.6% -> 74.9%; GARD codes 3,825 -> 16,094; nodes outside the
+main component 6,434 -> 6,388. Orphanet nodes outside it rise 1,078 -> 1,146: retired entries that now appear through
+moved-to chains among themselves.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /
