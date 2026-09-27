@@ -2384,14 +2384,47 @@
       "object": [
         "HP",
         "MESH",
-        "NCIT"
+        "NCIT",
+        "OMIM"
       ],
       "category": "identity",
       "derivation": "lookup",
       "strength_kind": "exact",
       "source": "UMLS 2026AA MRCONSO atoms of the CUIs MONDO and Orphanet name, via scripts/wave2_candidates.py (Wave 2)",
       "status": "built",
-      "note": "Only pairs whose names agree (the shared-name gate) and that the graph did not already reach. Tier earned per target vocabulary from cache/wave2/umls_disease_member_handcheck.json (HPO 30/30, MeSH 43/43, NCIt 51/56; Tier 2), confirmed by Ken on 27 Sep 2026 on Claude's first reading; pairs read wrong or unsure are loaded as rejected. OMIM is held back: its alternative titles let gene entries through."
+      "note": "Only pairs whose names agree (the shared-name gate) and that the graph did not already reach. Tier earned per target vocabulary from cache/wave2/umls_disease_member_handcheck.json (HPO 30/30, MeSH 43/43, NCIt 51/56; Tier 2), confirmed by Ken on 27 Sep 2026 on Claude's first reading; pairs read wrong or unsure are loaded as rejected. OMIM is held back: its alternative titles let gene entries through. OMIM: only the 24 main-title pairs Ken accepted one by one (reference/candidate_decisions.json, queue umls_omim_title; tier 'decision'); the rest of UMLS -> OMIM is not loaded."
+    },
+    {
+      "id": "umls:unii_rxnorm",
+      "label": "UNII substance is this RxNorm ingredient (a shared UMLS concept and name)",
+      "subject": [
+        "UNII"
+      ],
+      "object": [
+        "RXN"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "UMLS 2026AA MRCONSO: MTHSPL substance (SU) atoms and RXNORM IN / PIN / MIN atoms in one CUI, via scripts/wave2_candidates.py (Wave 2)",
+      "status": "built",
+      "note": "Pairs with one end already in the graph that it did not already reach. Ken's rule (27 Sep 2026): an RxNorm 'X extract' is the same ingredient as the UNII for X. Tier from cache/wave2/unii_rxnorm_handcheck.json (102/105, Tier 2); pairs read wrong or unsure are loaded as rejected."
+    },
+    {
+      "id": "drugcentral:mesh_pharmacological_action",
+      "label": "drug has this MeSH pharmacological action",
+      "subject": [
+        "DRUGCENTRAL"
+      ],
+      "object": [
+        "MESH"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "DrugCentral pharma_class.tsv, source MeSH, type PA",
+      "status": "built",
+      "note": "How NLM indexes what a drug does or is used for; classes can be broad ('Enzyme Inhibitors'). Tier from the MeSH stratum of cache/wave2/drug_pharma_role_handcheck.json (80/90 with Ken's call on levofloxacin, Tier 2); pairs read wrong or unsure are loaded as rejected."
     }
   ],
   "not_imported": {

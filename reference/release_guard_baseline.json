@@ -24,6 +24,7 @@
   "drugcentral:in_atc_class": 5148,
   "drugcentral:indication": 9534,
   "drugcentral:mechanism_target": 2866,
+  "drugcentral:mesh_pharmacological_action": 14264,
   "drugcentral:off_label_use": 1987,
   "drugcentral:rxnorm": 3539,
   "drugcentral:snomed": 7470,
@@ -249,17 +250,18 @@
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
   "umls:concept_member": 12352,
-  "umls:disease_member": 2459,
+  "umls:disease_member": 2483,
   "umls:shared_cui": 181147,
   "umls:source_parent": 273916,
+  "umls:unii_rxnorm": 2975,
   "uniprot:encoded_by": 1890,
   "who:icd10_to_icd11": 22249,
   "who:icd11_mms_foundation": 11745,
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 1115,
-  "nodes_outside_main": 5270
+  "components": 1116,
+  "nodes_outside_main": 5272
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -303,8 +305,8 @@
    "kind": "source"
   },
   "Decisions by a person on the review queues (accepted)": {
-   "available": 516,
-   "excluded": 188,
+   "available": 546,
+   "excluded": 194,
    "kind": "source"
   },
   "DrugCentral -> ATC": {
@@ -330,6 +332,11 @@
   "DrugCentral drug -> FDA pharmacologic class (EPC, MoA, PE; MED-RT codes)": {
    "available": 4028,
    "excluded": 569,
+   "kind": "source"
+  },
+  "DrugCentral drug -> MeSH pharmacological action (Wave 2)": {
+   "available": 14274,
+   "excluded": 0,
    "kind": "source"
   },
   "DrugCentral drug -> condition (label)": {
@@ -722,6 +729,11 @@
    "excluded": 284412,
    "kind": "source"
   },
+  "UNII substance <-> RxNorm ingredient (UMLS shared concept, same name; Wave 2)": {
+   "available": 13870,
+   "excluded": 10892,
+   "kind": "source"
+  },
   "Uberon -> MeSH (xref)": {
    "available": 1105,
    "excluded": 0,
@@ -845,7 +857,7 @@
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 3652,
-  "MESH": 37837,
+  "MESH": 38218,
   "MONDO": 33137,
   "NCBIGENE": 12964,
   "NCBITAXON": 20838,
@@ -861,18 +873,18 @@
   "REACTOME": 2883,
   "RPID": 4411,
   "RXE": 46660,
-  "RXN": 12932,
+  "RXN": 13359,
   "SCT": 604244,
   "UBERON": 14975,
   "UCUM": 648,
   "UMLS": 29234,
-  "UNII": 5788,
+  "UNII": 7957,
   "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8467130,
-  "nodes": 1573961,
-  "usable_edges": 8426888
+  "edges": 8484406,
+  "nodes": 1576938,
+  "usable_edges": 8444151
  },
  "values": {
   "sct:1142135004": 6724,

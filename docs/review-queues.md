@@ -223,3 +223,11 @@ own-titles rule and a new sample), HPO via retired SNOMED codes, ChEMBL targets 
 targets). MeSH pharmacological action needs ~60 more rows read; the ChEBI-role half is dropped. Open question for Ken:
 does an RxNorm 'X extract' count as the same ingredient as the UNII for X (UNII <-> RxNorm)?
 
+### Decisions, 27 Sep (later)
+
+Ken accepted the 24 correct OMIM main-title pairs (census of all 30; `cache/wave2/omim_title_census_handcheck.json`)
+and dropped the rest of UMLS -> OMIM; confirmed levofloxacin -> CYP1A2 inhibitors, which lifts MeSH pharmacological action
+to 80/90 (Tier 2); and ruled that an RxNorm 'X extract' counts as the same ingredient as the UNII for X, which lifts UNII
+<-> RxNorm to 102/105 (Tier 2). All three are loaded. Still held: HPO via retired SNOMED codes, ChEMBL targets (policy for
+complex and family targets).
+

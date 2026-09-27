@@ -1,7 +1,7 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-27 13:03",
- "repo_commit": "5fc9df1",
+ "written": "2026-09-27 14:43",
+ "repo_commit": "99e21ac",
  "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
@@ -10,7 +10,7 @@
   "UMLS and SNOMED US zips (3.1 GB)": "only to re-derive cache/umls and cache/snomed-us"
  },
  "totals": {
-  "stored": 1604852424,
+  "stored": 1607050533,
   "in place": 2870011466
  },
  "entries": [
@@ -600,11 +600,56 @@
    "kind": "stored",
    "path": "cache/wave2",
    "is_dir": true,
-   "keep": "umls_disease_member_*",
+   "keep": "!*.html",
    "source": "scripts/wave2_candidates.py (UMLS 2026AA MRCONSO; hand check confirmed by Ken 27 Sep 2026)",
    "version": "27 Sep 2026",
    "licence": "UMLS licence: derived data",
    "files": [
+    {
+     "file": "chembl_moa_target_candidates.parquet",
+     "bytes": 106548,
+     "sha256": "61e46feee256748858827f2d9c9b0aab6edf917766da9ac12bd7158f22765448"
+    },
+    {
+     "file": "chembl_moa_target_handcheck.json",
+     "bytes": 139420,
+     "sha256": "73e88a0edecc027b829904b50ffc9af75cf3d0b2ce36184e26491f2fcf41f46d"
+    },
+    {
+     "file": "drug_pharma_role_candidates.parquet",
+     "bytes": 354255,
+     "sha256": "3aa20c2f6b0516f555ebb1b4f3d8fa6b217b4be9b9cf4cbeedb17b9a0da2b9f5"
+    },
+    {
+     "file": "drug_pharma_role_handcheck.json",
+     "bytes": 329219,
+     "sha256": "e9233a5494a5720e6360317a60a5a464713c261e1f341aeb55677d925aaa074e"
+    },
+    {
+     "file": "hpo_snomed_lifted_candidates.parquet",
+     "bytes": 187469,
+     "sha256": "8a0960f27db1004ea30cbea2f532c636a4a87520e98034cd0ab8e76ed68d8456"
+    },
+    {
+     "file": "hpo_snomed_lifted_handcheck.json",
+     "bytes": 34117,
+     "sha256": "edd8db4724780c56fc8e02e2e1c0056efc5d6cb5da301d556d12a55360ea1aac"
+    },
+    {
+     "file": "mesh_extra_sample.parquet",
+     "bytes": 8766,
+     "sha256": "c9489fd11889f4772435c9da2eac1f5d456d43ba5613fa2bfc960e9c8712a349"
+    },
+    {
+     "file": "omim_title_census_handcheck.json",
+     "bytes": 17443,
+     "sha256": "0c3368a8d64ab4f5fe4933b8ae2aa787fb0d1cea39ab607e425703bab95b3a71"
+    },
+    {
+     "file": "summary.json",
+     "bytes": 10553,
+     "sha256": "e28c4f5d4bba6835a85b18078e184fee53499ea43b124ab16885703beeb21b27"
+    },
     {
      "file": "umls_disease_member_candidates.parquet",
      "bytes": 3054816,
@@ -614,9 +659,24 @@
      "file": "umls_disease_member_handcheck.json",
      "bytes": 116204,
      "sha256": "d641373d0e7628b75b95f566797e0eedd993840308728d7239a53a521b8541c5"
+    },
+    {
+     "file": "unii_rxnorm_candidates.parquet",
+     "bytes": 854206,
+     "sha256": "5143ca7a8ae4ec74d9afd5bf7b320e33798426ae1efd1c05a209d23a65972e54"
+    },
+    {
+     "file": "unii_rxnorm_handcheck.json",
+     "bytes": 65995,
+     "sha256": "f7a6ac12407b7f524f7d64bdd701963cd5f85db5a2adcfc9feab2e258294108a"
+    },
+    {
+     "file": "wave2_decisions.json",
+     "bytes": 90118,
+     "sha256": "3fdb5122615c71b14c786829deb1ef9d7db86c160c5a30af7c6bca527e2357dc"
     }
    ],
-   "bytes": 3171020
+   "bytes": 5369129
   },
   {
    "id": "chebi",
