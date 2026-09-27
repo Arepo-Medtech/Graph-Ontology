@@ -1825,6 +1825,82 @@ def main() -> int:
                     SELECT r.o_code, c.code FROM edge r JOIN mesh_pa p ON p.dc = r.s_code JOIN medrt_cls c ON c.k = p.k
                     WHERE r.predicate = 'drugcentral:rxnorm')""")
 
+    # --- medicines: the hierarchies and cross-links the drug vocabularies already state ------------------------------
+    # ATC, RxNorm, RxNorm Extension and MED-RT arrived as leaves joined to other vocabularies, with no structure of their
+    # own. Each link below is asserted by the source named; Athena's are loaded only between nodes the graph already
+    # holds, so its millions of rows add structure, not a second drug dictionary.
+    con.execute("DROP TABLE IF EXISTS present")
+    con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
+    atc_json = PBS / "atc-codes.json"
+    if atc_json.exists():
+        atc_rows = json.load(open(atc_json))["rows"]
+        ins_rows("ATC class -> parent class (PBS)", [("ATC", r["atc_code"], "atc:is_a", "ATC", r["atc_parent_code"], "PBS Public API v3",
+                                                    "atc-codes.json", "PBS ATC level " + str(r["atc_level"]), "native", "asserted", PIN["pbs"], None)
+                                                   for r in atc_rows if r.get("atc_parent_code")],
+                 available=len(atc_rows), excluded=[("top level: no parent", sum(1 for r in atc_rows if not r.get("atc_parent_code")))],
+                 unit="PBS ATC codes")
+        con.executemany("INSERT INTO name_hint VALUES ('ATC', ?, ?)", [(r["atc_code"], r["atc_description"]) for r in atc_rows])
+    ins("ATC class -> parent class (Athena)", """SELECT DISTINCT 'ATC', a.concept_code, 'atc:is_a', 'ATC', b.concept_code, 'OMOP Athena',
+            'CONCEPT_RELATIONSHIP Is a', 'Athena ATC Is a', 'native', 'asserted', '""" + PIN["athena"] + """', NULL
+        FROM CR r JOIN C a ON a.concept_id = r.concept_id_1 AND a.vocabulary_id = 'ATC' JOIN C b ON b.concept_id = r.concept_id_2 AND b.vocabulary_id = 'ATC'
+        WHERE r.relationship_id = 'Is a' AND r.invalid_reason IS NULL""",
+        src="CR r JOIN C a ON a.concept_id = r.concept_id_1 AND a.vocabulary_id = 'ATC' WHERE r.relationship_id = 'Is a'",
+        keep=[("relationship retired", "r.invalid_reason IS NULL")], unit="Athena ATC Is a rows")
+    # ATC -> RxNorm / RxNorm Extension: OHDSI's curated class assignment. Primary (the drug's own class, and the classes
+    # above it) and secondary (a class the drug belongs to as one part of a combination, or through another indication)
+    # are kept apart.
+    atc_rel = {"ATC - RxNorm": "primary", "ATC - RxNorm pr lat": "primary", "ATC - RxNorm pr up": "primary",
+               "Drug class of drug": "primary", "Maps to": "primary", "ATC - RxNorm sec lat": "secondary", "ATC - RxNorm sec up": "secondary"}
+    rcase = " ".join(f"WHEN '{k}' THEN 'atc:rxnorm_{v}'" for k, v in atc_rel.items())
+    atc_src = ("CR r JOIN C a ON a.concept_id = r.concept_id_1 AND a.vocabulary_id = 'ATC' JOIN C b ON b.concept_id = r.concept_id_2 "
+               "AND b.vocabulary_id IN ('RxNorm', 'RxNorm Extension') WHERE r.relationship_id IN (" + ",".join(repr(k) for k in atc_rel) + ")")
+    ins("ATC class -> RxNorm drug (Athena, primary / secondary)", f"""SELECT DISTINCT 'ATC', a.concept_code, CASE r.relationship_id {rcase} END,
+            CASE b.vocabulary_id WHEN 'RxNorm' THEN 'RXN' ELSE 'RXE' END, b.concept_code, 'OMOP Athena', 'CONCEPT_RELATIONSHIP ' || r.relationship_id,
+            r.relationship_id, 'native', 'asserted', '{PIN['athena']}', NULL
+        FROM {atc_src} AND r.invalid_reason IS NULL
+          AND ('ATC', a.concept_code) IN (SELECT v, c FROM present)
+          AND (CASE b.vocabulary_id WHEN 'RxNorm' THEN 'RXN' ELSE 'RXE' END, b.concept_code) IN (SELECT v, c FROM present)""",
+        src=atc_src, keep=[("relationship retired", "r.invalid_reason IS NULL"),
+                           ("ATC class not a node the graph holds", "('ATC', a.concept_code) IN (SELECT v, c FROM present)"),
+                           ("drug not a node the graph holds", "(CASE b.vocabulary_id WHEN 'RxNorm' THEN 'RXN' ELSE 'RXE' END, b.concept_code) IN (SELECT v, c FROM present)")],
+        unit="Athena ATC -> RxNorm rows")
+    # RxNorm Extension -> RxNorm: what an extension product is in RxNorm's own terms. One predicate per relationship.
+    rxe_rel = {"Marketed form of": "rxe:marketed_form_of", "Tradename of": "rxe:tradename_of", "Box of": "rxe:box_of",
+               "RxNorm has ing": "rxe:has_ingredient", "Quantified form of": "rxe:quantified_form_of", "Consists of": "rxe:consists_of",
+               "RxNorm is a": "rxe:is_a"}
+    xcase_ = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in rxe_rel.items())
+    rxe_src = ("CR r JOIN C a ON a.concept_id = r.concept_id_1 AND a.vocabulary_id = 'RxNorm Extension' JOIN C b ON b.concept_id = r.concept_id_2 "
+               "AND b.vocabulary_id = 'RxNorm' WHERE r.relationship_id IN (" + ",".join(repr(k) for k in rxe_rel) + ")")
+    ins("RxNorm Extension -> RxNorm (Athena)", f"""SELECT DISTINCT 'RXE', a.concept_code, CASE r.relationship_id {xcase_} END, 'RXN', b.concept_code,
+            'OMOP Athena', 'CONCEPT_RELATIONSHIP ' || r.relationship_id, r.relationship_id, 'native', 'asserted', '{PIN['athena']}', NULL
+        FROM {rxe_src} AND r.invalid_reason IS NULL AND ('RXE', a.concept_code) IN (SELECT v, c FROM present)
+          AND ('RXN', b.concept_code) IN (SELECT v, c FROM present)""",
+        src=rxe_src, keep=[("relationship retired", "r.invalid_reason IS NULL"),
+                           ("RxNorm Extension product not a node the graph holds", "('RXE', a.concept_code) IN (SELECT v, c FROM present)"),
+                           ("RxNorm concept not a node the graph holds", "('RXN', b.concept_code) IN (SELECT v, c FROM present)")],
+        unit="Athena RxNorm Extension -> RxNorm rows")
+    # MeSH supplementary record -> the heading(s) it is indexed under, and MED-RT's class hierarchy: both are in UMLS
+    # MRREL (Level 0, held), never in the derived relationship file. REL is the second atom's relation to the first.
+    U2 = Path("cache/umls/2026AA")
+    if (U2 / "mrrel_l0.parquet").exists() and (U2 / "aui_l0.parquet").exists():
+        con.execute(f"CREATE TEMP VIEW ur AS SELECT * FROM '{U2 / 'mrrel_l0.parquet'}'")
+        con.execute(f"CREATE TEMP VIEW ua AS SELECT * FROM '{U2 / 'aui_l0.parquet'}'")
+        msh_src = "ur r JOIN ua d ON d.AUI = r.AUI1 JOIN ua s ON s.AUI = r.AUI2 WHERE r.SAB = 'MSH' AND r.RELA = 'mapped_to'"
+        ins("MeSH supplementary record -> heading it is mapped to (UMLS)", f"""SELECT DISTINCT 'MESH', s.CODE, 'mesh:mapped_to', 'MESH', d.CODE,
+                'UMLS (MSH)', 'MRREL 2026AA Level 0 mapped_to', 'MeSH heading mapped to', 'native', 'asserted', '{PIN['umls_rel']}', NULL
+            FROM {msh_src} AND ('MESH', s.CODE) IN (SELECT v, c FROM present)""",
+            src=msh_src, keep=[("supplementary record not a node the graph holds", "('MESH', s.CODE) IN (SELECT v, c FROM present)")],
+            unit="MRREL MSH mapped_to rows")
+        con.execute("""INSERT INTO name_hint SELECT 'MESH', d.CODE, any_value(d.STR) FROM ur r JOIN ua d ON d.AUI = r.AUI1
+                       WHERE r.SAB = 'MSH' AND r.RELA = 'mapped_to' GROUP BY 2""")
+        mrt_src = ("ur r JOIN ua c ON c.AUI = r.AUI1 JOIN ua p ON p.AUI = r.AUI2 WHERE r.SAB = 'MED-RT' AND r.REL = 'PAR' "
+                   "AND c.CODE LIKE 'N%' AND p.CODE LIKE 'N%'")
+        ins("MED-RT class -> parent class (UMLS)", f"""SELECT DISTINCT 'MEDRT', c.CODE, 'medrt:is_a', 'MEDRT', p.CODE, 'UMLS (MED-RT)',
+                'MRREL 2026AA Level 0 PAR', 'MED-RT class hierarchy', 'native', 'asserted', '{PIN['umls_rel']}', NULL FROM {mrt_src}""",
+            src="ur r JOIN ua c ON c.AUI = r.AUI1 JOIN ua p ON p.AUI = r.AUI2 WHERE r.SAB = 'MED-RT' AND r.REL = 'PAR' AND p.CODE LIKE 'N%'",
+            keep=[("child is a MED-RT drug (an RxNorm code), not a class", "c.CODE LIKE 'N%'")], unit="MRREL MED-RT PAR rows")
+        con.execute("""INSERT INTO name_hint SELECT 'MEDRT', CODE, any_value(STR) FROM ua WHERE SAB = 'MED-RT' AND CODE LIKE 'N%' GROUP BY 2""")
+
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
     # LOINC targets in other extensions). Only the nearest level is kept; ties keep all.

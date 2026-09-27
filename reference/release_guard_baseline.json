@@ -12,6 +12,9 @@
   "largest_cluster": 86
  },
  "edges": {
+  "atc:is_a": 15016,
+  "atc:rxnorm_primary": 12700,
+  "atc:rxnorm_secondary": 23236,
   "ccsr:category": 236055,
   "corpus:binds_to": 265,
   "drugcentral:bioactivity": 18112,
@@ -63,9 +66,11 @@
   "medrt:contraindicated_with": 21398,
   "medrt:has_mechanism_of_action": 1600,
   "medrt:has_physiologic_effect": 279,
+  "medrt:is_a": 4117,
   "medrt:may_diagnose": 265,
   "medrt:may_prevent": 0,
   "medrt:may_treat": 3176,
+  "mesh:mapped_to": 28620,
   "mondo:disease_has_infectious_agent": 691,
   "mondo:disease_has_location": 775,
   "mondo:exact_match": 107452,
@@ -90,6 +95,12 @@
   "reactome:part_of": 2899,
   "reactome:participates_in": 54699,
   "rsna:radlex_part": 23666,
+  "rxe:box_of": 3858,
+  "rxe:has_ingredient": 23,
+  "rxe:is_a": 3,
+  "rxe:marketed_form_of": 15371,
+  "rxe:quantified_form_of": 351,
+  "rxe:tradename_of": 4364,
   "sct:1003703000": 135,
   "sct:1003735000": 485,
   "sct:1148965004": 254,
@@ -232,8 +243,8 @@
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 2239,
-  "nodes_outside_main": 7982
+  "components": 1368,
+  "nodes_outside_main": 6434
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -244,6 +255,21 @@
   "AMT product -> ARTG id (ARTG Id reference set)": {
    "available": 54861,
    "excluded": 2880,
+   "kind": "source"
+  },
+  "ATC class -> RxNorm drug (Athena, primary / secondary)": {
+   "available": 198048,
+   "excluded": 162112,
+   "kind": "source"
+  },
+  "ATC class -> parent class (Athena)": {
+   "available": 7139,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "ATC class -> parent class (PBS)": {
+   "available": 7891,
+   "excluded": 14,
    "kind": "source"
   },
   "Decisions by a person on the review queues (accepted)": {
@@ -431,6 +457,11 @@
    "excluded": 0,
    "kind": "source"
   },
+  "MED-RT class -> parent class (UMLS)": {
+   "available": 24919,
+   "excluded": 20802,
+   "kind": "source"
+  },
   "MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)": {
    "available": 1466,
    "excluded": 0,
@@ -444,6 +475,11 @@
   "MONDO is-a": {
    "available": 46586,
    "excluded": 4,
+   "kind": "source"
+  },
+  "MeSH supplementary record -> heading it is mapped to (UMLS)": {
+   "available": 436613,
+   "excluded": 407993,
    "kind": "source"
   },
   "OMOP product -> standard drug": {
@@ -529,6 +565,11 @@
   "Reactome pathway -> parent pathway (human)": {
    "available": 23717,
    "excluded": 20818,
+   "kind": "source"
+  },
+  "RxNorm Extension -> RxNorm (Athena)": {
+   "available": 947829,
+   "excluded": 923859,
    "kind": "source"
   },
   "SNOMED CT -> ICD-10 (SNOMED International map)": {
@@ -700,7 +741,7 @@
  },
  "nodes": {
   "ARTG": 25069,
-  "ATC": 6056,
+  "ATC": 7892,
   "CCSR": 555,
   "CHEBI": 5386,
   "CHEMBL": 7019,
@@ -728,8 +769,8 @@
   "MBS_CATEGORY": 9,
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
-  "MEDRT": 1718,
-  "MESH": 37096,
+  "MEDRT": 3652,
+  "MESH": 37687,
   "MONDO": 32974,
   "NCBIGENE": 12955,
   "NCBITAXON": 20838,
@@ -754,9 +795,9 @@
   "UNIPROT": 15154
  },
  "totals": {
-  "edges": 8160454,
-  "nodes": 1546957,
-  "usable_edges": 8120219
+  "edges": 8268113,
+  "nodes": 1551318,
+  "usable_edges": 8227878
  },
  "values": {
   "sct:1142135004": 6724,
