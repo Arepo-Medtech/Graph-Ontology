@@ -1,8 +1,8 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-24 16:01",
- "repo_commit": "d218c32",
- "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
+ "written": "2026-09-26 17:27",
+ "repo_commit": "6805c62",
+ "ontologies": "/Users/ken-lee-arepo/Documents/Graph-Ontology-Kit/sources-trim",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
   "cache/semra (1 GB)": "only to rebuild cache/completeness/evidence.parquet (Zenodo 15208251)",
@@ -11,7 +11,7 @@
  },
  "totals": {
   "stored": 1507565293,
-  "in place": 5355276980
+  "in place": 2861688389
  },
  "entries": [
   {
@@ -794,413 +794,89 @@
    "bytes": 2251420669
   },
   {
-   "id": "snomed_ct_au_zip",
+   "id": "loinc_table",
    "kind": "in place",
-   "path": "NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
+   "path": "Loinc_2.83/LoincTable/Loinc.csv",
    "is_dir": false,
-   "source": "NCTS",
-   "version": "20260831",
-   "licence": "as above",
-   "files": [
-    {
-     "file": "NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
-     "bytes": 891196159,
-     "sha256": "9c2a841aefbd1318680680594ff8e8ffebdaad199b7a205ebce6f39bf052752e"
-    }
-   ],
-   "bytes": 891196159
-  },
-  {
-   "id": "loinc",
-   "kind": "in place",
-   "path": "Loinc_2.83",
-   "is_dir": true,
-   "source": "https://loinc.org/downloads/ (account)",
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
    "version": "LOINC 2.83",
    "licence": "LOINC licence",
    "files": [
     {
-     "file": "AccessoryFiles/AnswerFile/AnswerFileReadMe.txt",
-     "bytes": 5561,
-     "sha256": "c8582152962379cfff44f0af38ed38553e3439de249a29934cf540481eaaf9f7"
-    },
-    {
-     "file": "AccessoryFiles/AnswerFile/AnswerList.csv",
-     "bytes": 8323077,
-     "sha256": "9ae792e331b8e45184188c82196d74643abbdef83ddbb912bae2e1e803f1f6a0"
-    },
-    {
-     "file": "AccessoryFiles/AnswerFile/LoincAnswerListLink.csv",
-     "bytes": 3946140,
-     "sha256": "7edbc7808e795313362cea5e0c32e782122a845ce7d5bd9cfb183297de568abc"
-    },
-    {
-     "file": "AccessoryFiles/ChangeSnapshot/ChangeSnapshotReadMe.txt",
-     "bytes": 2303,
-     "sha256": "1864a04dcc0578ccb8c6da12f04665cb6c2d0261a5ac819f5b1f81d0b766a2a3"
-    },
-    {
-     "file": "AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.csv",
-     "bytes": 1458275,
-     "sha256": "1b64f6975f4adbc967768e492c7edf4eca8402a08566c79012bb3f81cf4b2b13"
-    },
-    {
-     "file": "AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.csv",
-     "bytes": 13533,
-     "sha256": "93125f9928fa5bde92fd87d10cf476ee183d14db203bcf8917fce0f457701979"
-    },
-    {
-     "file": "AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.csv",
-     "bytes": 24046592,
-     "sha256": "ee4ea05969b3fa84f25d9800bd66210b8078fa87f5f25849955414c3949a687a"
-    },
-    {
-     "file": "AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystemReadMe.txt",
-     "bytes": 3620,
-     "sha256": "8f8ae90dea55c0f67012e9c584f71102b0b6d30c7a039c0a08b893cec8bea261"
-    },
-    {
-     "file": "AccessoryFiles/ConsumerName/ConsumerName.csv",
-     "bytes": 3378803,
-     "sha256": "81392f1797472edd5dcc8d69a0191f0460fb835a457382e7458c9b847c97c79f"
-    },
-    {
-     "file": "AccessoryFiles/ConsumerName/ConsumerNameReadMe.txt",
-     "bytes": 1979,
-     "sha256": "7d4dd4f92a69d4d035a66cc2dca18af92a5f0004239d2a7d61710fa6952c2e8b"
-    },
-    {
-     "file": "AccessoryFiles/DocumentOntology/DocumentOntology.csv",
-     "bytes": 889704,
-     "sha256": "1e554133596283b1203b9da3ab9e021b0afbdc5f3845a42721b03762b97815bf"
-    },
-    {
-     "file": "AccessoryFiles/DocumentOntology/DocumentOntologyReadMe.txt",
-     "bytes": 1675,
-     "sha256": "f9b0230777be4f2dfe7ac3b51c156c2a94c5a5b69d7510f566e321dccdd841b9"
-    },
-    {
-     "file": "AccessoryFiles/DocumentOntologyOwl/DocumentOntology.owl",
-     "bytes": 2259466,
-     "sha256": "e5fccb15bb17204dac882509b42c463e112638e90aff0a4fac5877f6e55b45ee"
-    },
-    {
-     "file": "AccessoryFiles/DocumentOntologyOwl/DocumentOntologyOwlReadme.txt",
-     "bytes": 2216,
-     "sha256": "e698c0744f5c4f9c020c7b03deb089e303717520feb092d78ffd3dce2d7885ed"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/Group.csv",
-     "bytes": 674019,
-     "sha256": "6e8d93ca5788da88f8c4c7902a1dd05b04abef5f0812a722b50b769920d448be"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/GroupAttributes.csv",
-     "bytes": 97357,
-     "sha256": "46c0bfee76e1a62dcd12b90ffe0690376dcdcf90faf8036c4f0a8461973fe3fa"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/GroupFileReadMe.txt",
-     "bytes": 8606,
-     "sha256": "5feb26993d426aea5230db5c6bfa92f33dee0091a214b45ee665592a4827b351"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/GroupLoincTerms.csv",
-     "bytes": 4501269,
-     "sha256": "fd9788db62aeace77b4a752d22b84168cf1b1714f0e350fa621bdbbfab83fcbb"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/ParentGroup.csv",
-     "bytes": 4130,
-     "sha256": "5b9d7d2f11bb510c991e5440ed8c403e91251b3d6a7539bcaccf075a3754ea4e"
-    },
-    {
-     "file": "AccessoryFiles/GroupFile/ParentGroupAttributes.csv",
-     "bytes": 17785,
-     "sha256": "7effb880b5a17daee77e8da84c5f8f5ba46bd7e60926055d929d2143e11417aa"
-    },
-    {
-     "file": "AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.csv",
-     "bytes": 372231,
-     "sha256": "f2122e3e487c8322b236d0f6b4827e28724284ae9e6f2d446afc2792ce385fc4"
-    },
-    {
-     "file": "AccessoryFiles/ImagingDocuments/ImagingDocumentCodesReadMe.txt",
-     "bytes": 1750,
-     "sha256": "bf6cbd6ca1eaa9c01b8f859147f14a34757119dde9448879e10e73f843d40ca5"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/LinguisticVariants.csv",
-     "bytes": 2352,
-     "sha256": "d531712faf330fc53a877995029167e68da9645176388f3afc3aeb9233a02bc9"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/LinguisticVariantsReadMe.txt",
-     "bytes": 4127,
-     "sha256": "f374d34b81b4aa841b0d18b1d43c7ce07c4216bf64b51b0a378758f4b0feaae1"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/arJO32LinguisticVariant.csv",
-     "bytes": 275678,
-     "sha256": "922ad792cab13caf396969d811cd7a87d589fa5869509e033e126986f9fae013"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/csCZ33LinguisticVariant.csv",
-     "bytes": 14052884,
-     "sha256": "66ee56977c7d7d0e958971a683951268592deeab722ddfce8fb6daf6e8737f5b"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.csv",
-     "bytes": 692929,
-     "sha256": "95e3faa25ec921b7de22c865ba091a62cd127416d315b71bf64cefbbde25271e"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.csv",
-     "bytes": 4308800,
-     "sha256": "b11b93439c49c7bc8bd48c85d7210d8152de2a17430b212ea1741de89e9abe9b"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.csv",
-     "bytes": 29624467,
-     "sha256": "9da10097d243cb178ffa0928535e93bd7780e44b0d8de7ef82056ebb88d8155e"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.csv",
-     "bytes": 10590617,
-     "sha256": "7e80b0c7bc45b863d3e06fa12728ed3c2a00e2228cc55f8c83be7db5e47dd898"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.csv",
-     "bytes": 11597755,
-     "sha256": "9fcb96736537c9bcce682fc338244a2f6fb803c7c2ba9e8db3de2cedcf8142ff"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/esMX28LinguisticVariant.csv",
-     "bytes": 19433774,
-     "sha256": "3bb349842aabfe4b539af3d187828d1e102b6e9254e556e4175e6d1d4030a04b"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.csv",
-     "bytes": 3977776,
-     "sha256": "a3312535a4ebede2606fb99793c50d81dc43990a3bd9a2f22c166790e575b0da"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.csv",
-     "bytes": 6638491,
-     "sha256": "99660094a584b2c5c455f0711181fac6d51f3c6052a2b5deea1dc1efa54cf55f"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.csv",
-     "bytes": 7432798,
-     "sha256": "b6e6d939b1c9c88821981df26c099a3485f3c11cf1043957a0bc3e791f67d90e"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.csv",
-     "bytes": 13252598,
-     "sha256": "9f47a8648f40915d1f99f0cd711f648501e76cb95ac3604d5dc9cbe264651ee7"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.csv",
-     "bytes": 22081590,
-     "sha256": "e22edecbc75051a99f022f9fce68d530ee6150b4c6cb3fea4f90a9075aab9855"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.csv",
-     "bytes": 3245548,
-     "sha256": "612138435c593f815d22328319cf73dad7038866a6224d5605c37bbacc324a3f"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.csv",
-     "bytes": 14499798,
-     "sha256": "fcb77a764d72fcaa3f6311ca22a5adeb2f6f27c72e7bdef6d6890f50e3bca79a"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/plPL29LinguisticVariant.csv",
-     "bytes": 10294621,
-     "sha256": "971b739be343c9d0a791e21b575ba38327b7181dc82d98f23f2949c730e44b77"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.csv",
-     "bytes": 19669349,
-     "sha256": "18b93900990d3b1edf76c37ddb697e5a2018241d54a07906e512af90ce066120"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.csv",
-     "bytes": 17215872,
-     "sha256": "f14fb011654ed6b789bbd1a692cbce212262e903a3f20266567ae46dc699eb26"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.csv",
-     "bytes": 5592460,
-     "sha256": "0ab5707355094d1fb5c385b137707d028adceb26363fe6e70cfaa9a21a56197b"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/ukUA30LinguisticVariant.csv",
-     "bytes": 2380028,
-     "sha256": "e7bcfc34cb016f0d03bab22f70e80397564ff51d04cb4f45e675a2d19e550d32"
-    },
-    {
-     "file": "AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.csv",
-     "bytes": 96195744,
-     "sha256": "94527f0d89c455c427ac75e2ae6f5f9b19a92534e2b206768375819734a186e5"
-    },
-    {
-     "file": "AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.csv",
-     "bytes": 67712,
-     "sha256": "793063f9a15c912ffef00bf614aba912528f51283f36542108504d7e42a964a8"
-    },
-    {
-     "file": "AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTableReadMe.txt",
-     "bytes": 1330,
-     "sha256": "5fa8f1d59467663f354383a49cc70738da5dddafae1118d183f4e1b577b88636"
-    },
-    {
-     "file": "AccessoryFiles/LoincNamesEffectiveDateHistory/LoincNamesEffectiveDateHistory.csv",
-     "bytes": 57164091,
-     "sha256": "561472861ee61cb34360288722e651c530cf186b064d53c8cd7f3900d42cd28f"
-    },
-    {
-     "file": "AccessoryFiles/LoincNamesEffectiveDateHistory/LoincNamesEffectiveDateHistoryReadMe.txt",
-     "bytes": 2347,
-     "sha256": "a1419954935626f3b15a89487fcd51af9641acaddd32547a35c2bbc618057929"
-    },
-    {
-     "file": "AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv",
-     "bytes": 7591687,
-     "sha256": "853b9fb245628ff701c11f627bff146064e0f7c01c0b9cb5bea8eddeaf5c7251"
-    },
-    {
-     "file": "AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybookReadMe.txt",
-     "bytes": 8278,
-     "sha256": "3a95b31d0844714cc9e6d4abef815dc36636e33c22e9b6bee5cc911ba16ce23d"
-    },
-    {
-     "file": "AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.csv",
-     "bytes": 112130,
-     "sha256": "7603365bdfe678ee09000a005e218ca76c41ccceb0ab1ff5b85131d1b798d262"
-    },
-    {
-     "file": "AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSetReadMe.txt",
-     "bytes": 2038,
-     "sha256": "cba6a5e783a8f08d08441ee1ed8ef093f6f37fd5bd4a79b034511f6f0497a94e"
-    },
-    {
-     "file": "AccessoryFiles/Loinc_2.83_DifferenceReport.pdf",
-     "bytes": 296598,
-     "sha256": "e28ee3767d58d753bc83ba14f2e59117446cd5748d52d21ff9785ed667005bf4"
-    },
-    {
-     "file": "AccessoryFiles/PanelsAndForms/AnswerList.csv",
-     "bytes": 8323077,
-     "sha256": "9ae792e331b8e45184188c82196d74643abbdef83ddbb912bae2e1e803f1f6a0"
-    },
-    {
-     "file": "AccessoryFiles/PanelsAndForms/Loinc.csv",
+     "file": "Loinc.csv",
      "bytes": 84205426,
      "sha256": "5de1463f0fe65d6c97867153b43151a07ce3f8c8a86de681f98e110008032aba"
-    },
-    {
-     "file": "AccessoryFiles/PanelsAndForms/LoincAnswerListLink.csv",
-     "bytes": 3946140,
-     "sha256": "7edbc7808e795313362cea5e0c32e782122a845ce7d5bd9cfb183297de568abc"
-    },
-    {
-     "file": "AccessoryFiles/PanelsAndForms/PanelsAndForms.csv",
-     "bytes": 34791992,
-     "sha256": "54451baebd4e6f116edfc44024fc5ea2a005e32a56ad72514c31278cff9ce7d4"
-    },
-    {
-     "file": "AccessoryFiles/PanelsAndForms/PanelsAndFormsReadMe.txt",
-     "bytes": 8851,
-     "sha256": "0575234997e984e6df0e363ee473ff6c7887e971f0f79a279182b7e117f28b33"
-    },
-    {
-     "file": "AccessoryFiles/PartFile/LoincPartLink_Primary.csv",
-     "bytes": 118680671,
-     "sha256": "31e2db4ad083c56829951464d521956fb3bbd6ab9f207b5e9f39423363617578"
-    },
-    {
-     "file": "AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv",
-     "bytes": 246622108,
-     "sha256": "10e794d92523c426b141be744d2613a5b7ea9f172ac97b48517fe7648f0272e4"
-    },
-    {
-     "file": "AccessoryFiles/PartFile/Part.csv",
-     "bytes": 8038858,
-     "sha256": "743dff07ad47bc5eeb4854864ebb2a5ed883112df8d49e21b0fad9bf60ad6c77"
-    },
-    {
-     "file": "AccessoryFiles/PartFile/PartFileReadMe.txt",
-     "bytes": 10813,
-     "sha256": "3c44b7a7867bdb81ae539842e103e651283e9547f0a3c7e98807a42f44153519"
-    },
-    {
-     "file": "AccessoryFiles/PartFile/PartRelatedCodeMapping.csv",
-     "bytes": 9760306,
-     "sha256": "c7847f11f9e05091381181c5e5665e351d15a07143d13eeb69246e0f436c6beb"
-    },
-    {
-     "file": "AccessoryFiles/Updates/Updates.csv",
-     "bytes": 401484,
-     "sha256": "5c4720487cc3931c3f56272ef080206632c1705a0ed5d508383a0ade96539e5b"
-    },
-    {
-     "file": "AccessoryFiles/Updates/UpdatesAdditionalFields.csv",
-     "bytes": 9291249,
-     "sha256": "5d854a03f374d44da2da7658d872266062a1c6484f97fa05754396acb9e528e2"
-    },
-    {
-     "file": "AccessoryFiles/Updates/UpdatesReadMe.txt",
-     "bytes": 3909,
-     "sha256": "30e6531cb095ac3251d0e172add7abdfcb4f97379d94ea7eae853034b35976fe"
-    },
-    {
-     "file": "LoincLicense_5.8.txt",
-     "bytes": 25709,
-     "sha256": "05eb5069f8352b0513fe8c911d8a432e8ddc2d09f999b6f153617f2afd16ad85"
-    },
-    {
-     "file": "LoincReadMe.txt",
-     "bytes": 376,
-     "sha256": "d63b126278803507cdbc35a67609a51dd0fcaded10e95a8522db526008692dd1"
-    },
-    {
-     "file": "LoincTable/Loinc.csv",
-     "bytes": 84205426,
-     "sha256": "5de1463f0fe65d6c97867153b43151a07ce3f8c8a86de681f98e110008032aba"
-    },
-    {
-     "file": "LoincTable/MapTo.csv",
-     "bytes": 122901,
-     "sha256": "775bab444c9c617edc7e6cf4e5f775a500f0391956552f40b2635ef7209ceeb0"
-    },
-    {
-     "file": "LoincTable/SourceOrganization.csv",
-     "bytes": 36722,
-     "sha256": "da06b0eabfcfea1600d850efa6941852bcc89cc375d0841585270cc51d6cdab3"
-    },
-    {
-     "file": "LoincTableCore/LoincTableCore.csv",
-     "bytes": 26631514,
-     "sha256": "7d267bad9820cf439964b1ac59ec19bb9e0e801977236d653c7799da860f5c3e"
-    },
-    {
-     "file": "LoincTableCore/LoincTableCoreReadMe.txt",
-     "bytes": 1605,
-     "sha256": "301fc887999ada96cfcf8347b4106522c09c72ff8730a3b883e1562d21c1fd20"
-    },
-    {
-     "file": "LoincTableCore/MapTo.csv",
-     "bytes": 122901,
-     "sha256": "775bab444c9c617edc7e6cf4e5f775a500f0391956552f40b2635ef7209ceeb0"
-    },
-    {
-     "file": "loinc.xml",
-     "bytes": 34254,
-     "sha256": "7365fba162ec1f1bc78a3f5abd758a9fb3d5efba496c762d252be775d6bc6e52"
     }
    ],
-   "bytes": 1063582650
+   "bytes": 84205426
+  },
+  {
+   "id": "loinc_part_mapping",
+   "kind": "in place",
+   "path": "Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv",
+   "is_dir": false,
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "PartRelatedCodeMapping.csv",
+     "bytes": 9760306,
+     "sha256": "c7847f11f9e05091381181c5e5665e351d15a07143d13eeb69246e0f436c6beb"
+    }
+   ],
+   "bytes": 9760306
+  },
+  {
+   "id": "loinc_part_links",
+   "kind": "in place",
+   "path": "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv",
+   "is_dir": false,
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "LoincPartLink_Primary.csv",
+     "bytes": 118680671,
+     "sha256": "31e2db4ad083c56829951464d521956fb3bbd6ab9f207b5e9f39423363617578"
+    }
+   ],
+   "bytes": 118680671
+  },
+  {
+   "id": "loinc_part_links_supp",
+   "kind": "in place",
+   "path": "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv",
+   "is_dir": false,
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "LoincPartLink_Supplementary.csv",
+     "bytes": 246622108,
+     "sha256": "10e794d92523c426b141be744d2613a5b7ea9f172ac97b48517fe7648f0272e4"
+    }
+   ],
+   "bytes": 246622108
+  },
+  {
+   "id": "loinc_rsna_playbook",
+   "kind": "in place",
+   "path": "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv",
+   "is_dir": false,
+   "source": "https://loinc.org/downloads/ (account): Loinc_2.83.zip",
+   "version": "LOINC 2.83",
+   "licence": "LOINC licence",
+   "files": [
+    {
+     "file": "LoincRsnaRadiologyPlaybook.csv",
+     "bytes": 7591687,
+     "sha256": "853b9fb245628ff701c11f627bff146064e0f7c01c0b9cb5bea8eddeaf5c7251"
+    }
+   ],
+   "bytes": 7591687
   },
   {
    "id": "loinc_extension",
@@ -1295,23 +971,6 @@
    "bytes": 141059353
   },
   {
-   "id": "radlex",
-   "kind": "in place",
-   "path": "PunRadLex_Owl4.3/RadLex.owl",
-   "is_dir": false,
-   "source": "https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon",
-   "version": "RadLex 4.3",
-   "licence": "RadLex licence (RSNA)",
-   "files": [
-    {
-     "file": "RadLex.owl",
-     "bytes": 64938742,
-     "sha256": "b13aac45f6f9bd74428c976cb018b86aeb7a248683917cfd9ffea253b63b29b1"
-    }
-   ],
-   "bytes": 64938742
-  },
-  {
    "id": "rsna_playbook",
    "kind": "in place",
    "path": "complete-playbook-dev.csv",
@@ -1329,154 +988,10 @@
    "bytes": 2348169
   },
   {
-   "id": "rcpa_spia",
-   "kind": "in place",
-   "path": "RCPA_v20260831",
-   "is_dir": true,
-   "source": "NCTS: RCPA SPIA reference sets",
-   "version": "v20260831",
-   "licence": "RCPA copyright (NCTS terms)",
-   "files": [
-    {
-     "file": "RCPA SPIA Anatomical Pathology Cervical Cancer FHIR mapping December 2024.xlsx",
-     "bytes": 70981,
-     "sha256": "c0115cb8bb26c30d719d9232d299496c1dd53173ba3483da37a6f9fcfe9fa24d"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Colorectal Cancer FHIR mapping December 2024.xlsx",
-     "bytes": 77937,
-     "sha256": "47557eea61557706f8957f60dd673264a9b567d8892d4ea24cb90e97296747cd"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Endometrial Cancer FHIR mapping December 2024.xlsx",
-     "bytes": 69961,
-     "sha256": "0d2b5ea04091687808ca46b47bd2c361af0795c45e1f1d3cf72ec40a5c251021"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Gastric Cancer Report Information Model Terminology December 2025.xlsx",
-     "bytes": 41223,
-     "sha256": "b99d4cb9ff488bdfc29a3b9f9bbfa561acacf6ccc46be2a14532d66b6608f118"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Generic Surgical Pathology Report Information Model Terminology December 2024.xlsx",
-     "bytes": 31994,
-     "sha256": "3db3ca703ad647536bd31af694dcf7fea58f91ad1a7d7962785f2007736e7639"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Ovary Fallopian Tube Cancer FHIR mapping December 2024.xlsx",
-     "bytes": 83280,
-     "sha256": "c1492bdc0085dfbcc78cf6b9c8dc6e8bd9d94da96b6e021c611bb30f05a99529"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Polypectomy FHIR mapping December 2024.xlsx",
-     "bytes": 65249,
-     "sha256": "ac0feec5b447fef66dde614e7ef0f195e86223230cef78f9a97c42c97fbbc0c5"
-    },
-    {
-     "file": "RCPA SPIA Anatomical Pathology Prostate Cancer Radical Information Model Terminology December 2025.xlsx",
-     "bytes": 40250,
-     "sha256": "4050f1fcb58fe5a728d2311c155ac1fb3a6627a349aaef144a5d41e8a820416f"
-    },
-    {
-     "file": "RCPA SPIA Andrology Information Model December 2025.xlsx",
-     "bytes": 211773,
-     "sha256": "371169e0ff726a9e3a08d7e007f6302bea6bd88db36eaa634398ff4760e289ae"
-    },
-    {
-     "file": "RCPA SPIA Chemical Pathology Blood Gases Terminology Reference Set December 2025.xlsx",
-     "bytes": 154970,
-     "sha256": "ca51b72afcdccaab05eb6d2e6fcdc7aedee07a7a7a6edbbc6d94616c1afd1da8"
-    },
-    {
-     "file": "RCPA SPIA Chemical Pathology Harmonised Reference Intervals tables July 2026.xlsx",
-     "bytes": 31955,
-     "sha256": "dcdca4b14edab4a9c09955e2c13855d06b52a5e432f0c9f8c28403a63261684a"
-    },
-    {
-     "file": "RCPA SPIA Chemical Pathology Reporting Terminology Reference Set June 2026.xlsx",
-     "bytes": 140631,
-     "sha256": "0ca571fe7d5973efdaa72be3597589af16bf2ebc77efdda4797025303a8e6328"
-    },
-    {
-     "file": "RCPA SPIA Cytopathology Information Model Terminology December 2025.xlsx",
-     "bytes": 53436,
-     "sha256": "3e9a8258cfd3c02b955c3b5102adf558eec68e437bb978818e637797de58d49a"
-    },
-    {
-     "file": "RCPA SPIA Genetic Pathology Information Model Terminology December 2025.xlsx",
-     "bytes": 37085,
-     "sha256": "4180e16c6fc2b7128450035cfab3e9238250aed4297cb936f0b29f23d79ad7e8"
-    },
-    {
-     "file": "RCPA SPIA Haematology Transfusion Reporting Terminology Reference Set June 2026.xlsx",
-     "bytes": 62501,
-     "sha256": "c265abbd2c906690067f1627f2e9cab227a8faee86d571d063b309144d2a7a34"
-    },
-    {
-     "file": "RCPA SPIA Immunopathology Reporting Terminology Reference Set December 2025.xlsx",
-     "bytes": 460925,
-     "sha256": "3b537a2a7675f02a82c8f8a6dc5276668cd9a2154602b478aa2f03a587fc0baa"
-    },
-    {
-     "file": "RCPA SPIA Microbiology Serology Molecular Reporting Terminology Reference Set August 2026.xlsx",
-     "bytes": 438737,
-     "sha256": "10d94278e63dbe47591a514c21e700b91e3b78d91e1e0492b85da35e5d89db16"
-    },
-    {
-     "file": "RCPA SPIA Microbiology Subset of Organisms May 2026.xlsx",
-     "bytes": 218945,
-     "sha256": "46c36f0d8cbbb7107e9e37dd6ca939ed491b6f748ff0164808378559b998c129"
-    },
-    {
-     "file": "RCPA SPIA Preferred Units Table December 2025.xlsx",
-     "bytes": 27012,
-     "sha256": "db39997f00bb4e30847623dc37a0ee18c1f768ef5f680f857183aecb5a0735b3"
-    },
-    {
-     "file": "RCPA SPIA Requesting Allergens Terminology Reference Set February 2026.xlsx",
-     "bytes": 50707,
-     "sha256": "499d3338ead3f3cc803d9c9fd50dfa25ad21d088172ce25c6f10a59f8062c0a9"
-    },
-    {
-     "file": "RCPA SPIA Requesting Pathology Terminology June 2026.xlsx",
-     "bytes": 348605,
-     "sha256": "9c77dc69dfdfd67099b435e84463c2dad632ae91f5566576471a1879ea64eaae"
-    },
-    {
-     "file": "RCPA SPIA Urine Microbiology Information Model Terminology and Salmonella Information Model Terminology December 2025.xlsx",
-     "bytes": 46480,
-     "sha256": "caafa534a3319680f5c59a5968c3080d82a2c68ab476e65c9c09cb6edd089d1f"
-    },
-    {
-     "file": "RCPA Top 50 Priority Tests for SPIA adoption May 2026.xlsx",
-     "bytes": 20410,
-     "sha256": "edea897863ed2dc89d774c9459d59f0f56a06d90c614b7b66fea7f81fd850981"
-    }
-   ],
-   "bytes": 2785047
-  },
-  {
-   "id": "athena_zip",
-   "kind": "in place",
-   "path": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
-   "is_dir": false,
-   "source": "https://athena.ohdsi.org (bundle requested 22 Sep 2026)",
-   "version": "Athena v5.0 29-AUG-26",
-   "licence": "per vocabulary (OHDSI Athena)",
-   "files": [
-    {
-     "file": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
-     "bytes": 937946191,
-     "sha256": "577f1ca277e6b0f407ac3768992b4023edda7ff38c8b27a187c3f03bbbdb3c8e"
-    }
-   ],
-   "bytes": 937946191
-  },
-  {
    "id": "athena_vocabulary",
    "kind": "unzipped",
    "path": "~/code/spine/out/omop-vocab (or out/omop-vocab)",
-   "from": "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip",
+   "from": "Athena_v5_20260829/ (or vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip)",
    "files": [
     {
      "file": "CONCEPT.csv",
@@ -1491,9 +1006,9 @@
      "bytes": 1649046272
     }
    ],
-   "source": "the Athena zip above",
+   "source": "https://athena.ohdsi.org (bundle requested 22 Sep 2026)",
    "version": "Athena v5.0 29-AUG-26",
-   "licence": "per vocabulary"
+   "licence": "per vocabulary (OHDSI Athena)"
   }
  ]
 }

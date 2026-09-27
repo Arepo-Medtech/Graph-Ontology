@@ -3,18 +3,20 @@
 the ONTOLOGIES folder plus this repository are enough to rebuild the graph on another machine.
 
 Three kinds of input:
-  in place   licensed releases read where they sit in ONTOLOGIES (SNOMED CT-AU, LOINC, the LOINC Extension, RadLex,
-             RCPA, the RSNA playbook, the Athena bundle)
+  in place   the files of the licensed releases the build reads, where they sit in ONTOLOGIES (SNOMED CT-AU and LOINC
+             Extension snapshots, five LOINC 2.83 files, the RSNA playbook). Only what the build opens is listed: RadLex
+             and RCPA are read by the scripts that make cache/radlex and cache/rcpa, not by the build.
   stored     everything the build reads from this repo's git-ignored cache/ and out/, and from the spine project: copied
              into ONTOLOGIES/graph-inputs/ under the same relative path. It includes the hand-check verdict files the
              tiers are earned from, which are irreplaceable.
-  unzipped   Athena's CONCEPT / CONCEPT_RELATIONSHIP / CONCEPT_ANCESTOR, identical to the Athena zip in ONTOLOGIES
-             (byte for byte), so they are unzipped on restore rather than stored twice.
+  unzipped   Athena's CONCEPT / CONCEPT_RELATIONSHIP / CONCEPT_ANCESTOR, read from ONTOLOGIES/Athena_v5_20260829/ when
+             that folder is there (linked into out/omop-vocab on restore), else unzipped from the Athena zip.
 
     .venv/bin/python scripts/graph_inputs.py export    # copy the stored inputs into ONTOLOGIES/graph-inputs, hash everything,
                                                        # write the manifest there and to reference/graph_inputs_manifest.json
     .venv/bin/python scripts/graph_inputs.py restore   # on a fresh checkout: link every missing stored input from
-                                                       # ONTOLOGIES/graph-inputs (--copy to copy), unzip the Athena files
+                                                       # ONTOLOGIES/graph-inputs (--copy to copy), and the Athena files;
+                                                       # links left broken by a moved ONTOLOGIES folder are remade
     .venv/bin/python scripts/graph_inputs.py check     # every input present where the build reads it? exits 1 if not
                                                        # (--full: also sha256 against the manifest; --store: check the
                                                        # ONTOLOGIES copy instead)
@@ -42,19 +44,21 @@ SPINE_HOME = Path(os.path.expanduser("~/code/spine/out"))
 MANIFEST_REPO = REPO / "reference" / "graph_inputs_manifest.json"
 ATHENA_ZIP = "vocabulary_download_v5_{484ac870-6e27-4b26-9d34-58594255a4f1}_1790035954856.zip"
 ATHENA_FILES = ("CONCEPT.csv", "CONCEPT_RELATIONSHIP.csv", "CONCEPT_ANCESTOR.csv")
+ATHENA_DIR = "Athena_v5_20260829"   # the three tables above, unzipped from ATHENA_ZIP; preferred over the zip when present
+LOINC = ("https://loinc.org/downloads/ (account): Loinc_2.83.zip", "LOINC 2.83", "LOINC licence")
 
 # id, kind, path (repo-relative for stored; ONTOLOGIES-relative for in place), source, version, licence, keep (glob for dirs)
 IN_PLACE = [
     ("snomed_ct_au", "SnomedCT_Release_AU1000036_20260831/Snapshot", "NCTS (healthterminologies.gov.au): NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip",
      "SNOMED CT-AU 20260831", "SNOMED CT Affiliate + Australian National Terminology licence"),
-    ("snomed_ct_au_zip", "NCTS_SCT_RF2_DISTRIBUTION_32506021000036107-20260831-ALL.zip", "NCTS", "20260831", "as above"),
-    ("loinc", "Loinc_2.83", "https://loinc.org/downloads/ (account)", "LOINC 2.83", "LOINC licence"),
+    ("loinc_table", "Loinc_2.83/LoincTable/Loinc.csv", *LOINC),
+    ("loinc_part_mapping", "Loinc_2.83/AccessoryFiles/PartFile/PartRelatedCodeMapping.csv", *LOINC),
+    ("loinc_part_links", "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv", *LOINC),
+    ("loinc_part_links_supp", "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv", *LOINC),
+    ("loinc_rsna_playbook", "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv", *LOINC),
     ("loinc_extension", "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot", "SNOMED International / NCTS",
      "LOINC Extension 20260321", "SNOMED CT + LOINC licences"),
-    ("radlex", "PunRadLex_Owl4.3/RadLex.owl", "https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon", "RadLex 4.3", "RadLex licence (RSNA)"),
     ("rsna_playbook", "complete-playbook-dev.csv", "RSNA Radiology Playbook", "downloaded 24 Sep 2026", "RSNA"),
-    ("rcpa_spia", "RCPA_v20260831", "NCTS: RCPA SPIA reference sets", "v20260831", "RCPA copyright (NCTS terms)"),
-    ("athena_zip", ATHENA_ZIP, "https://athena.ohdsi.org (bundle requested 22 Sep 2026)", "Athena v5.0 29-AUG-26", "per vocabulary (OHDSI Athena)"),
 ]
 STORED = [
     ("compendium", "out/compendium.duckdb", "scripts/build_compendium.py (SNOMED CT-AU, AMT, PBS, RxNav, OMOPHub)", "built 24 Sep 2026", "derived"),
@@ -143,11 +147,15 @@ def export(a) -> int:
         entries.append({"id": eid, "kind": "in place", "path": rel, "is_dir": base.is_dir(), "source": src, "version": ver, "licence": lic,
                         "files": rows, "bytes": sum(r["bytes"] for r in rows)})
         print(f"  in place {eid:<24} {len(rows):>4} files {sum(r['bytes'] for r in rows) / 1e6:>9.1f} MB", flush=True)
-    with zipfile.ZipFile(ONT / ATHENA_ZIP) as z:
-        info = {i.filename: i.file_size for i in z.infolist()}
+    if (ONT / ATHENA_DIR).is_dir():
+        info = {f: (ONT / ATHENA_DIR / f).stat().st_size for f in ATHENA_FILES if (ONT / ATHENA_DIR / f).exists()}
+    else:
+        with zipfile.ZipFile(ONT / ATHENA_ZIP) as z:
+            info = {i.filename: i.file_size for i in z.infolist()}
     entries.append({"id": "athena_vocabulary", "kind": "unzipped", "path": "~/code/spine/out/omop-vocab (or out/omop-vocab)",
-                    "from": ATHENA_ZIP, "files": [{"file": f, "bytes": info.get(f)} for f in ATHENA_FILES],
-                    "source": "the Athena zip above", "version": "Athena v5.0 29-AUG-26", "licence": "per vocabulary"})
+                    "from": f"{ATHENA_DIR}/ (or {ATHENA_ZIP})", "files": [{"file": f, "bytes": info.get(f)} for f in ATHENA_FILES],
+                    "source": "https://athena.ohdsi.org (bundle requested 22 Sep 2026)", "version": "Athena v5.0 29-AUG-26",
+                    "licence": "per vocabulary (OHDSI Athena)"})
     commit = subprocess.run(["git", "-C", str(REPO), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
     man = {"_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) "
                     "and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
@@ -178,7 +186,9 @@ def restore(a) -> int:
         for r in e["files"]:
             src = STORE / e["path"] / r["file"] if e["is_dir"] else STORE / e["path"]
             dst = target / r["file"] if e["is_dir"] else target
-            if dst.exists() or dst.is_symlink():
+            if dst.is_symlink() and not dst.exists():
+                dst.unlink()   # a link into an ONTOLOGIES folder that has since moved
+            if dst.exists():
                 continue
             dst.parent.mkdir(parents=True, exist_ok=True)
             if a.copy:
@@ -187,10 +197,21 @@ def restore(a) -> int:
                 dst.symlink_to(src)
             n += 1
     vocab = SPINE_HOME / "omop-vocab" if (SPINE_HOME / "omop-vocab" / "CONCEPT.csv").exists() else REPO / "out" / "omop-vocab"
-    with zipfile.ZipFile(ONT / ATHENA_ZIP) as z:
-        for f in ATHENA_FILES:
-            if not (vocab / f).exists():
-                vocab.mkdir(parents=True, exist_ok=True)
+    todo = []
+    for f in ATHENA_FILES:
+        if (vocab / f).is_symlink() and not (vocab / f).exists():
+            (vocab / f).unlink()
+        if not (vocab / f).exists():
+            todo.append(f)
+    if todo:
+        vocab.mkdir(parents=True, exist_ok=True)
+    if todo and (ONT / ATHENA_DIR).is_dir():
+        for f in todo:   # linked even with --copy: 4.3 GB of read-only tables, identical to the zip
+            print(f"  linking {f} -> {ONT / ATHENA_DIR}", flush=True)
+            (vocab / f).symlink_to(ONT / ATHENA_DIR / f)
+    elif todo:
+        with zipfile.ZipFile(ONT / ATHENA_ZIP) as z:
+            for f in todo:
                 print(f"  unzipping {f} -> {vocab}", flush=True)
                 z.extract(f, vocab)
     print(f"restore: {n} file(s) {'copied' if a.copy else 'linked'} from {STORE}; Athena vocabulary at {vocab}")
@@ -206,7 +227,7 @@ def check(a) -> int:
             for r in e["files"]:
                 p = vocab / r["file"]
                 if not p.exists():
-                    missing.append(f"athena_vocabulary: {p} (graph_inputs.py restore unzips it from ONTOLOGIES)")
+                    missing.append(f"athena_vocabulary: {p} (graph_inputs.py restore links or unzips it from ONTOLOGIES)")
                 elif r["bytes"] and p.stat().st_size != r["bytes"]:
                     differ.append(f"athena_vocabulary: {p} size differs from the Athena zip")
             continue
