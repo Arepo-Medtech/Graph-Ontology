@@ -101,6 +101,7 @@
   "radlex:fma_xref": 33404,
   "radlex:is_a": 46898,
   "radlex:part_of": 24764,
+  "rcpa:same_data_element": 228,
   "reactome:part_of": 2899,
   "reactome:participates_in": 54699,
   "rsna:radlex_part": 23666,
@@ -389,6 +390,11 @@
   "LOINC -> SNOMED observable (LOINC Ontology identifier)": {
    "available": 45014,
    "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC <-> SNOMED CT bound to the same RCPA report element": {
+   "available": 386,
+   "excluded": 158,
    "kind": "source"
   },
   "LOINC Extension relationships": {
@@ -798,7 +804,7 @@
   "INN": 4078,
   "IUPHAR": 2105,
   "KEGG": 4026,
-  "LOINC": 220573,
+  "LOINC": 220574,
   "MBS": 6046,
   "MBS_CATEGORY": 9,
   "MBS_GROUP": 99,
@@ -829,9 +835,9 @@
   "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8305387,
-  "nodes": 1565878,
-  "usable_edges": 8265152
+  "edges": 8305615,
+  "nodes": 1565879,
+  "usable_edges": 8265380
  },
  "values": {
   "sct:1142135004": 6724,

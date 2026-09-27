@@ -93,6 +93,7 @@ WHO_MAP = Path("cache/who-icd11")                             # WHO ICD-10 <-> I
 REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
+RCPA_ELEMENTS = Path("cache/rcpa/element_bindings.json")   # scripts/rcpa_elements.py: SNOMED + LOINC per report element
 UCUM_PREFIX = {"k": 1e3, "h": 1e2, "da": 1e1, "": 1.0, "d": 1e-1, "c": 1e-2, "m": 1e-3, "u": 1e-6, "n": 1e-9, "p": 1e-12, "f": 1e-15}
 
 
@@ -670,6 +671,23 @@ def main() -> int:
                       WHERE EXAMPLE_UCUM_UNITS IS NOT NULL) WHERE STATUS = 'ACTIVE' AND trim(u) <> ''""",
                 src=f"{lt_} WHERE EXAMPLE_UCUM_UNITS IS NOT NULL", keep=[("LOINC term not active", "STATUS = 'ACTIVE'")],
                 unit="LOINC terms that state an example unit")
+        if RCPA_ELEMENTS.exists():
+            # the SNOMED CT and LOINC codes the RCPA binds to the same data element of a structured cancer report
+            # (scripts/rcpa_elements.py): the same report element, not the same concept -- a relation. One edge per pair,
+            # the elements it binds in attrs; kept where the SNOMED code is active in SNOMED CT-AU.
+            el = collections.defaultdict(list)
+            el_rows = json.load(open(RCPA_ELEMENTS))["rows"]
+            for x in el_rows:
+                el[(x["loinc"], x["sct"])].append(x["element"])
+            active = {r[0] for r in con.execute("SELECT id FROM cmp.concept WHERE id IN (SELECT unnest(?))", [[k[1] for k in el]]).fetchall()}
+            ins_rows("LOINC <-> SNOMED CT bound to the same RCPA report element", [
+                ("LOINC", l_, "rcpa:same_data_element", "SCT", s_, "RCPA SPIA", "anatomical pathology FHIR mappings", "same report data element",
+                 "native", "asserted", RCPA_UNITS_PIN, json.dumps({"elements": sorted(set(v))}))
+                for (l_, s_), v in sorted(el.items()) if s_ in active],
+                available=len(el_rows), excluded=[("SNOMED code not active in SNOMED CT-AU", sum(len(v) for k, v in el.items() if k[1] not in active)),
+                                                  ("the same pair on another report element (one edge, elements listed)",
+                                                   sum(len(v) - 1 for k, v in el.items() if k[1] in active))],
+                unit="RCPA element bindings (scripts/rcpa_elements.py)")
 
         # --- lab result -> finding, through the analyte (reference/interprets_handcheck.json) -------------------------
         # SNOMED findings interpret measurement PROCEDURES; the LOINC Ontology puts LOINC terms under OBSERVABLES, so

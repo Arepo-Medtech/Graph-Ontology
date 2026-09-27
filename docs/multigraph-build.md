@@ -557,6 +557,12 @@ ICD-11 foundation table (`who:icd10_to_icd11`, +9,604) and Orphanet's moved-to /
 main component 6,434 -> 6,388. Orphanet nodes outside it rise 1,078 -> 1,146: retired entries that now appear through
 moved-to chains among themselves.
 
+**Wave 1, RCPA (27 Sep).** The RCPA's structured cancer-report mappings (cervical, colorectal, endometrial, ovary,
+polypectomy) bind a SNOMED CT code and a LOINC code to the same report data element: `rcpa:same_data_element`, 228
+pairs (386 bindings; 20 with a SNOMED code not active in SNOMED CT-AU, 138 the same pair on another element). The same
+element, not the same concept, so a relation. `scripts/rcpa_elements.py` reads the workbooks in place (openpyxl, like
+`rcpa_units.py`) and writes `cache/rcpa/element_bindings.json`, stored with the graph inputs.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /
