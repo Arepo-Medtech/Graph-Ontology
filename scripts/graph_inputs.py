@@ -85,7 +85,7 @@ STORED = [
     ("gencc", "cache/gencc", "https://search.thegencc.org/download (submissions-export-tsv; includes ClinGen and PanelApp Australia)", "2026-09-13", "CC0"),
     ("medgen", "cache/medgen", "https://ftp.ncbi.nlm.nih.gov/pub/medgen/MedGenIDMappings.txt.gz", "2026-09-26", "NCBI: public domain"),
     ("wave2_members", "cache/wave2", "scripts/wave2_candidates.py (UMLS 2026AA MRCONSO; hand check confirmed by Ken 27 Sep 2026)", "27 Sep 2026",
-     "UMLS licence: derived data", "umls_disease_member_*"),
+     "UMLS licence: derived data", "!*.html"),
     ("chebi", "cache/chebi", "https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo.gz", "ChEBI 255 (2026-09-09)", "CC BY 4.0"),
     ("who_icd11", "cache/who-icd11", "WHO ICD-11 2026-01 release: mapping tables (mapping.zip)", "2026-01", "CC BY-ND 3.0 IGO"),
     ("snomed_us_maps", "cache/snomed-us", "https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20260901T120000Z.zip "

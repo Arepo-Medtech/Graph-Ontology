@@ -720,6 +720,28 @@ def main() -> int:
             dm[v] = d
         report["route:UMLS disease concept -> HPO / MeSH / NCIt (Wave 2)"] = dm
 
+    # --- the other Wave 2 families Ken decided on 27 Sep: each earns its tier from its own sheet ------------------------
+    def sheet_tier(pred, sheet, rows_of, key_of, label, where="1 = 1"):
+        if not con.execute(f"SELECT count(*) FROM edge WHERE predicate = ? AND {where}", [pred]).fetchone()[0]:
+            return
+        p_ = Path(sheet)
+        rows = rows_of(json.load(open(p_))["scored"]) if p_.exists() else []
+        k, n = sum(r["verdict"] == "correct" for r in rows), len(rows)
+        d = {"edges": con.execute(f"SELECT count(*) FROM edge WHERE predicate = ? AND {where}", [pred]).fetchone()[0], "checked": n, "correct": k}
+        if n:
+            lo, _ = wilson(k, n)
+            con.execute(f"UPDATE edge SET tier = ? WHERE predicate = ? AND {where}", [tier(lo, n), pred])
+            d.update(wilson_lo=round(lo, 4), earned_tier=tier(lo, n))
+        bad = [key_of(r) for r in rows if r["verdict"] != "correct"]
+        for s_, o_ in bad:
+            con.execute("UPDATE edge SET state = 'rejected' WHERE predicate = ? AND s_code = ? AND o_code = ?", [pred, s_, o_])
+        d["rejected_by_hand_check"] = len(bad)
+        report[label] = d
+    sheet_tier("umls:unii_rxnorm", "cache/wave2/unii_rxnorm_handcheck.json", lambda rs: rs, lambda r: (r["unii"], r["rxcui"]),
+               "route:UNII <-> RxNorm ingredient (Wave 2)")
+    sheet_tier("drugcentral:mesh_pharmacological_action", "cache/wave2/drug_pharma_role_handcheck.json",
+               lambda rs: [r for r in rs if r.get("v") == "MESH"], lambda r: (r["drug"], r["code"]), "route:DrugCentral drug -> MeSH pharmacological action (Wave 2)")
+
     # --- Orphanet -> ICD-10 through SNOMED CT's map: a chain family, tiered by census, witnessed by Orphanet itself ------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'orpha:icd10_via_snomed'").fetchone()[0]:
         cf = Path("cache/orphanet/orpha_icd10_chain_census.json")      # SNOMED / UMLS-derived names: git-ignored

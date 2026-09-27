@@ -582,6 +582,15 @@ the HPO terms were already linked elsewhere -- chiefly direct disease-to-phenoty
 alternative titles let gene entries through). `scripts/wave2_review_page.py` writes a local review page for the sheets
 and takes a saved decisions file back into them.
 
+**Wave 2, Ken's decisions (27 Sep).** Three more families, each tiered from its own sheet: DrugCentral's MeSH
+pharmacological actions (`drugcentral:mesh_pharmacological_action`, 14,274; 60 more rows read, levofloxacin -> CYP1A2
+inhibitors confirmed by Ken, 80/90, Wilson 0.807, Tier 2), UNII <-> RxNorm ingredient through a shared UMLS concept and
+name (`umls:unii_rxnorm`, 2,978, loaded in the late section so 'one end already in the graph' sees the drug loaders'
+nodes; Ken's rule: an RxNorm 'X extract' is the same ingredient as the UNII for X; 102/105, Tier 2; 2,861 RxNorm
+ingredients now reach a UNII), and the 24 UMLS -> OMIM pairs sharing OMIM's main title that Ken accepted one by one
+(`reference/candidate_decisions.json`, queue `umls_omim_title`, tier 'decision'). The rest of UMLS -> OMIM
+(alternative titles, phenotype atoms) is not loaded: a general condition meets OMIM's entry for one inherited form.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /

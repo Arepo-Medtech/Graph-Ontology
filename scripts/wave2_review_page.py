@@ -33,6 +33,16 @@ FAMILIES = {
         "target": lambda r: (r.get("target", ""), r.get("target_name") or r.get("target_pt") or ""),
         "context": lambda r: f"UMLS {r.get('cui', '')}; matched through {r.get('match_ttys') or '-'}; second path {r.get('second_path') or 'none'}",
     },
+    "omim_title_census": {
+        "title": "UMLS disease concept → OMIM, main-title matches (census of all 30)",
+        "ask": "Correct when the OMIM entry is the same disease, not one inherited form of it. Proposal: accept the correct ones as "
+               "individual decisions and drop the rest of UMLS → OMIM (alternative titles and phenotype atoms).",
+        "key": lambda r: f"{r['cui']}|{r['target']}",
+        "stratum": lambda r: None,
+        "subject": lambda r: (r.get("src", ""), r.get("src_name", "")),
+        "target": lambda r: (f"OMIM {r.get('target', '')}", r.get("target_pt") or ""),
+        "context": lambda r: f"UMLS {r.get('cui', '')}; MONDO's own OMIM match {r.get('second_path') or 'none'}",
+    },
     "unii_rxnorm": {
         "title": "UNII ↔ RxNorm ingredient",
         "ask": "Correct when the UNII substance and the RxNorm ingredient are the same substance. Family question: does an RxNorm "

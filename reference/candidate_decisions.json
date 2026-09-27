@@ -24,6 +24,10 @@
   "radlex_anatomy": {
    "predicate": "person:same_as",
    "question": "the SNOMED CT body structure for this RadLex term"
+  },
+  "umls_omim_title": {
+   "predicate": "umls:disease_member",
+   "note": "UMLS disease concept -> OMIM entry of the same main title (Wave 2 census, cache/wave2/omim_title_census_handcheck.json)"
   }
  },
  "decisions": [
@@ -7136,6 +7140,426 @@
    "decision": "accept",
    "reviewer": "Ken (on Claude's first reading)",
    "date": "2026-09-24"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C4225239"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "616708"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0018213"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "275000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0431648"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "277000"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0155300"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "177800"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0000889"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "100600"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C2607914"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "607154"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C1263846"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "143465"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0005283"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "613985"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0006142"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "114480"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C3531771"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "608808"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0085580"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "145500"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0206368"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "177650"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C3665358"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "230300"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0020514"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "615555"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0079584"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "146700"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0024215"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "152800"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0948008"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "601367"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0024421"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "153630"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C2939175"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "614665"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C5574682"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "309300"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C1868685"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "126200"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0026987"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "254450"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C1535893"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "604715"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0280131"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "166950"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0162566"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "176100"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0751778"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "310370"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0376358"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "176807"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0266313"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "267430"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0751335"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "271220"
+   },
+   "decision": "reject",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
+  },
+  {
+   "queue": "umls_omim_title",
+   "subject": {
+    "vocab": "UMLS",
+    "code": "C0342739"
+   },
+   "object": {
+    "vocab": "OMIM",
+    "code": "602079"
+   },
+   "decision": "accept",
+   "reviewer": "Ken",
+   "date": "2026-09-27"
   }
  ]
 }

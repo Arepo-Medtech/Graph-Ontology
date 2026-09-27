@@ -72,6 +72,7 @@ DECISIONS = Path("reference/candidate_decisions.json")      # scripts/review_she
 UMLS_CONSO = Path("cache/umls/2026AA/mrconso.parquet")   # scripts/umls_mrconso.py (licensed; not redistributed)
 UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
 WAVE2_MEMBERS = Path("cache/wave2/umls_disease_member_candidates.parquet")   # scripts/wave2_candidates.py (UMLS-derived: git-ignored)
+WAVE2_UNII = Path("cache/wave2/unii_rxnorm_candidates.parquet")               # scripts/wave2_candidates.py (UMLS-derived: git-ignored)
 UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
 LOINC_RSNA = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
@@ -2021,6 +2022,29 @@ def main() -> int:
     # --- open sources joined in Wave 3: MedGen's concept mappings, GenCC gene-disease validity, ChEBI's own tree ------
     con.execute("DROP TABLE IF EXISTS present")
     con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
+    if (DC / "pharma_class.tsv").exists():
+        # DrugCentral's MeSH pharmacological actions (Wave 2 family 3): what NLM indexes each drug as doing or being used for
+        # ('Anti-Bacterial Agents', 'Cholinesterase Inhibitors'). graph_report.py earns the tier from the MeSH stratum of
+        # cache/wave2/drug_pharma_role_handcheck.json. DrugCentral's ChEBI roles are not loaded (ChEBI's own roles are).
+        ins("DrugCentral drug -> MeSH pharmacological action (Wave 2)", f"""SELECT DISTINCT 'DRUGCENTRAL', struct_id, 'drugcentral:mesh_pharmacological_action',
+                'MESH', class_code, 'DrugCentral', 'pharma_class.tsv MeSH PA', 'MeSH pharmacological action', 'ungraded', 'asserted', '{PIN['dc']}',
+                json_object('class_name', name)
+            FROM {dc('pharma_class')} WHERE source = 'MeSH' AND type = 'PA' AND class_code IS NOT NULL""",
+            src=f"{dc('pharma_class')} WHERE source = 'MeSH'", keep=[("not a pharmacological action (PA) row", "type = 'PA'")],
+            unit="DrugCentral pharma_class MeSH rows")
+        con.execute(f"INSERT INTO name_hint SELECT 'MESH', class_code, any_value(name) FROM {dc('pharma_class')} WHERE source = 'MeSH' GROUP BY 2")
+    # UNII substance <-> RxNorm ingredient sharing a UMLS concept and a name (Wave 2 family 2), for pairs with one end
+    # already in the graph and not already reached. Ken's rule, 27 Sep: an RxNorm "X extract" is the same ingredient as
+    # the UNII for X. graph_report.py earns the tier from cache/wave2/unii_rxnorm_handcheck.json.
+    if WAVE2_UNII.exists():
+        un_keep = "(('UNII', unii) IN (SELECT v, c FROM present) OR ('RXN', rxcui) IN (SELECT v, c FROM present))"
+        ins("UNII substance <-> RxNorm ingredient (UMLS shared concept, same name; Wave 2)", f"""SELECT DISTINCT 'UNII', unii, 'umls:unii_rxnorm', 'RXN', rxcui,
+                'UMLS', 'MRCONSO 2026AA MTHSPL SU + RXNORM ' || tty, 'shared CUI, same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
+                json_object('cui', cui, 'rxnorm_tty', tty)
+            FROM '{WAVE2_UNII}' WHERE gate AND NOT present AND {un_keep}""",
+            src=f"'{WAVE2_UNII}'", keep=[("names differ (the shared-name gate)", "gate"), ("the graph already reaches the pair", "NOT present"),
+                                         ("neither the UNII nor the RxNorm ingredient is a node the graph holds", un_keep)],
+            unit="Wave 2 UNII <-> RxNorm candidate pairs")
     if MEDGEN_MAP.exists():
         # MedGen groups each condition's codes from the sources it integrates. Loaded for the MedGen concepts the graph already
         # holds (MONDO's exact matches); MedGen's own UID is the node key, the UMLS CUI (or CN id) only joins the rows.
