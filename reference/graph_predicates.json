@@ -232,6 +232,22 @@
       "status": "built"
     },
     {
+      "id": "pbs:cites_mbs_item",
+      "label": "PBS restriction requires the medical service of this MBS item",
+      "subject": [
+        "PBS_RESTRICTION"
+      ],
+      "object": [
+        "MBS"
+      ],
+      "category": "commercial",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "PBS Public API v3 restrictions.json: 'item N of the Medicare Benefits Schedule' in the restriction text",
+      "status": "built",
+      "note": "The restriction names the item by number, so this is a citation read from the text, not a match. Item numbers that are not active in MBS XML 20260801 are counted in the ledger and not loaded."
+    },
+    {
       "id": "corpus:binds_to",
       "label": "corpus condition is bound to SNOMED concept",
       "subject": [
@@ -660,6 +676,22 @@
       "strength_kind": "exact",
       "source": "uberon.sssom.tsv (Uberon release v2026-06-23), semapv:crossSpeciesExactMatch to FMA",
       "status": "built"
+    },
+    {
+      "id": "uberon:mesh_xref",
+      "label": "Uberon class cross-references this MeSH descriptor",
+      "subject": [
+        "UBERON"
+      ],
+      "object": [
+        "MESH"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "Uberon uberon-basic.obo xref MESH:",
+      "status": "built",
+      "note": "A database cross-reference: Uberon does not grade it as an exact match (its SSSOM file, loaded separately, does that for SNOMED, NCIt and FMA), so it is a relation, not identity."
     },
     {
       "id": "loinc:radlex_part",
@@ -1768,6 +1800,47 @@
       "note": "What the test measures, in the analyte's own vocabulary. RxNorm and NCBI Gene are vocabularies the drug and gene sides already hold, so a drug-level test meets its drug and a genotype test its gene with no matching. attrs.link_type (Primary / DetailedModel / SyntaxEnhancement / SemanticEnhancement), part_type, equivalence (equivalent / relatedto) as LOINC states it. Search links are not loaded."
     },
     {
+      "id": "loinc:part_code",
+      "label": "a LOINC part is coded by LOINC to this concept in another vocabulary",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT",
+        "CHEBI",
+        "RXN",
+        "PUBCHEM",
+        "UNII",
+        "NCBITAXON",
+        "NCBIGENE",
+        "HGNC",
+        "CLINVAR",
+        "RADLEX"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 PartRelatedCodeMapping (part -> code), every row whose target is a graph vocabulary",
+      "status": "built",
+      "note": "The part itself, as a concept: loinc:part_xref and loinc:part_maps_to_sct reach the same codes only through a term. Relation, not identity: method and attrs.equivalence carry LOINC's grade (equivalent / narrower / wider / relatedto), so a narrower row is never read as the same concept. The unspecified part 'XXX' is not loaded."
+    },
+    {
+      "id": "loinc:answer_sct",
+      "label": "a LOINC answer is this SNOMED CT concept",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 AnswerFile/AnswerList.csv, ExtCodeSystem http://snomed.info/sct",
+      "status": "built",
+      "note": "LOINC's own external code for an answer (LA8983-4 'Small' = 255507004). Kept where the SNOMED concept is active in SNOMED CT-AU; attrs.answer_lists counts the lists the answer appears in."
+    },
+    {
       "id": "loinc:unit_counterpart",
       "label": "LOINC mass-concentration term (US convention, mg/dL) and its substance-concentration counterpart (SI, mmol/L) -- the same measurement in the other unit",
       "subject": [
@@ -1798,6 +1871,22 @@
       "source": "RCPA SPIA Reporting Terminology Reference Sets (chemical pathology, haematology, immunopathology, microbiology serology, blood gases), NCTS release RCPA_v20260831 -- read in place, RCPA copyright",
       "status": "built",
       "note": "attrs: the RCPA display unit, LOINC's example (US-convention) UCUM unit for the same code, and factor_us_example_to_au where the two differ only in scale (haemoglobin g/dL -> g/L, x10); null where they differ in kind. Which of a mass / molar pair Australia reports is read off these edges (loinc:unit_counterpart attrs.au_preferred is filled from them at build time). The graph built from this is not for redistribution, as the RCPA content it carries is licensed."
+    },
+    {
+      "id": "loinc:example_unit",
+      "label": "LOINC gives this UCUM unit as an example unit for the term",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "UCUM"
+      ],
+      "category": "rationality",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "LOINC 2.83 Loinc.csv EXAMPLE_UCUM_UNITS, active terms",
+      "status": "built",
+      "note": "An example in the US convention, not a rule: where Australian laboratories report a term, loinc:au_preferred_unit (RCPA SPIA) is the unit to use. A value listing several units ('mg/dL;mg/L') gives one edge each, method 'one of several example units', attrs.as_written."
     },
     {
       "id": "loinc:interpreted_in_finding",

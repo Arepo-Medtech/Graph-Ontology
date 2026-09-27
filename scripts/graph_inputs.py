@@ -4,7 +4,7 @@ the ONTOLOGIES folder plus this repository are enough to rebuild the graph on an
 
 Three kinds of input:
   in place   the files of the licensed releases the build reads, where they sit in ONTOLOGIES (SNOMED CT-AU and LOINC
-             Extension snapshots, five LOINC 2.83 files, the RSNA playbook). Only what the build opens is listed: RadLex
+             Extension snapshots, six LOINC 2.83 files, the RSNA playbook). Only what the build opens is listed: RadLex
              and RCPA are read by the scripts that make cache/radlex and cache/rcpa, not by the build.
   stored     everything the build reads from this repo's git-ignored cache/ and out/, and from the spine project: copied
              into ONTOLOGIES/graph-inputs/ under the same relative path. It includes the hand-check verdict files the
@@ -56,6 +56,7 @@ IN_PLACE = [
     ("loinc_part_links", "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Primary.csv", *LOINC),
     ("loinc_part_links_supp", "Loinc_2.83/AccessoryFiles/PartFile/LoincPartLink_Supplementary.csv", *LOINC),
     ("loinc_rsna_playbook", "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv", *LOINC),
+    ("loinc_answer_list", "Loinc_2.83/AccessoryFiles/AnswerFile/AnswerList.csv", *LOINC),
     ("loinc_extension", "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot", "SNOMED International / NCTS",
      "LOINC Extension 20260321", "SNOMED CT + LOINC licences"),
     ("rsna_playbook", "complete-playbook-dev.csv", "RSNA Radiology Playbook", "downloaded 24 Sep 2026", "RSNA"),

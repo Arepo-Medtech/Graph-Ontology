@@ -37,7 +37,9 @@
   "icd10:subdivision_of": 1855,
   "icd10cm:maps_to": 129167,
   "in_atc_class": 573555,
+  "loinc:answer_sct": 499,
   "loinc:au_preferred_unit": 1207,
+  "loinc:example_unit": 42983,
   "loinc:has_answer": 114448,
   "loinc:has_component": 103225,
   "loinc:has_method": 56861,
@@ -49,6 +51,7 @@
   "loinc:is_a_snomed": 22003,
   "loinc:maps_to_snomed": 669,
   "loinc:order_grouper_concept": 2133,
+  "loinc:part_code": 15403,
   "loinc:part_maps_to_sct": 193555,
   "loinc:part_xref": 77978,
   "loinc:radlex_part": 48227,
@@ -57,7 +60,7 @@
   "loinc:unit_counterpart": 2045,
   "mbs:group_in_category": 99,
   "mbs:in_group": 6046,
-  "medrt:contraindicated_with": 21395,
+  "medrt:contraindicated_with": 21398,
   "medrt:has_mechanism_of_action": 1600,
   "medrt:has_physiologic_effect": 279,
   "medrt:may_diagnose": 265,
@@ -74,6 +77,7 @@
   "orpha:icd10_via_snomed": 6,
   "orpha:lacks_phenotype": 733,
   "orpha:xref": 49598,
+  "pbs:cites_mbs_item": 52,
   "pbs:has_restriction": 23550,
   "pbs:indication_is": 312,
   "pbs:lists": 34644,
@@ -206,7 +210,7 @@
   "sct:anatomy_structure_part": 352,
   "sct:artg_id": 51981,
   "sct:au_nearest_ancestor": 1232,
-  "sct:historical_association": 1275,
+  "sct:historical_association": 1280,
   "sct:icd10_map": 129729,
   "sct:icd10cm_map": 256574,
   "sct:icdo_map": 23514,
@@ -215,20 +219,21 @@
   "std_ingredient": 4689,
   "uberon:fma_match": 6051,
   "uberon:is_a": 19387,
+  "uberon:mesh_xref": 1105,
   "uberon:ncit_narrow_match": 2578,
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
   "umls:concept_member": 12352,
-  "umls:shared_cui": 179338,
-  "umls:source_parent": 273359,
+  "umls:shared_cui": 181138,
+  "umls:source_parent": 273771,
   "uniprot:encoded_by": 1890,
   "who:icd10_to_icd11": 12645,
   "who:icd11_mms_foundation": 11261,
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 2241,
-  "nodes_outside_main": 12123
+  "components": 2239,
+  "nodes_outside_main": 7982
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -356,9 +361,19 @@
    "excluded": 5735,
    "kind": "source"
   },
+  "LOINC answer -> SNOMED CT (answer list external code)": {
+   "available": 658,
+   "excluded": 159,
+   "kind": "source"
+  },
   "LOINC mass <-> molar unit counterpart": {
    "available": 2045,
    "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC part -> its code in another vocabulary": {
+   "available": 15407,
+   "excluded": 4,
    "kind": "source"
   },
   "LOINC question -> answer": {
@@ -404,6 +419,11 @@
   "LOINC term -> axis part": {
    "available": 572986,
    "excluded": 0,
+   "kind": "source"
+  },
+  "LOINC term -> example UCUM unit (LOINC)": {
+   "available": 44521,
+   "excluded": 2165,
    "kind": "source"
   },
   "MBS item -> group -> category": {
@@ -468,6 +488,11 @@
   },
   "PBS item -> restriction": {
    "available": 23550,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "PBS restriction -> MBS item it cites": {
+   "available": 52,
    "excluded": 0,
    "kind": "source"
   },
@@ -568,22 +593,27 @@
   },
   "UMLS shared CUI, same name (MRCONSO 2026AA)": {
    "available": 376257,
-   "excluded": 195833,
+   "excluded": 194033,
    "kind": "source"
   },
   "UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)": {
    "available": 63606,
-   "excluded": 11786,
+   "excluded": 11781,
    "kind": "source"
   },
   "UMLS: MED-RT drug -> mechanism of action / physiologic effect class": {
    "available": 19035,
-   "excluded": 5248,
+   "excluded": 5244,
    "kind": "source"
   },
   "UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)": {
    "available": 558328,
-   "excluded": 284969,
+   "excluded": 284557,
+   "kind": "source"
+  },
+  "Uberon -> MeSH (xref)": {
+   "available": 1105,
+   "excluded": 0,
    "kind": "source"
   },
   "Uberon -> NCI Thesaurus anatomy (narrowMatch)": {
@@ -672,16 +702,16 @@
   "ARTG": 25069,
   "ATC": 6056,
   "CCSR": 555,
-  "CHEBI": 5375,
+  "CHEBI": 5386,
   "CHEMBL": 7019,
-  "CLINVAR": 80,
+  "CLINVAR": 81,
   "CORPUS": 265,
   "DC_TARGET": 3418,
   "DECIPHER": 47,
   "DOID": 11818,
   "DRUGCENTRAL": 4994,
   "EFO": 2387,
-  "FMA": 42388,
+  "FMA": 42421,
   "GARD": 3825,
   "HGNC": 12988,
   "HP": 19940,
@@ -693,40 +723,40 @@
   "INN": 4078,
   "IUPHAR": 2105,
   "KEGG": 4026,
-  "LOINC": 219096,
+  "LOINC": 220573,
   "MBS": 6046,
   "MBS_CATEGORY": 9,
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 1718,
-  "MESH": 36873,
+  "MESH": 37096,
   "MONDO": 32974,
   "NCBIGENE": 12955,
-  "NCBITAXON": 20791,
-  "NCIT": 41572,
+  "NCBITAXON": 20838,
+  "NCIT": 41643,
   "OMIM": 22034,
   "OMIMPS": 608,
   "ORPHA": 10230,
   "PBS_INDICATION": 653,
   "PBS_ITEM": 6795,
   "PBS_RESTRICTION": 3581,
-  "PUBCHEM": 5054,
+  "PUBCHEM": 5060,
   "RADLEX": 46901,
   "REACTOME": 2883,
   "RPID": 4411,
   "RXE": 46660,
-  "RXN": 12925,
-  "SCT": 604227,
+  "RXN": 12932,
+  "SCT": 604232,
   "UBERON": 14975,
-  "UCUM": 88,
+  "UCUM": 648,
   "UMLS": 29234,
-  "UNII": 5785,
+  "UNII": 5788,
   "UNIPROT": 15154
  },
  "totals": {
-  "edges": 8098186,
-  "nodes": 1544513,
-  "usable_edges": 8057957
+  "edges": 8160454,
+  "nodes": 1546957,
+  "usable_edges": 8120219
  },
  "values": {
   "sct:1142135004": 6724,
