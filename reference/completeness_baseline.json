@@ -6,8 +6,8 @@
  },
  "Problem/Diagnosis | ICD-11": {
   "members": 133021,
-  "present": 112259,
-  "present_share": 0.8439
+  "present": 112318,
+  "present_share": 0.8444
  },
  "Problem/Diagnosis | ICD-10-CM": {
   "members": 133021,
@@ -31,8 +31,8 @@
  },
  "ED principal diagnosis | ICD-11": {
   "members": 91551,
-  "present": 89156,
-  "present_share": 0.9738
+  "present": 89199,
+  "present_share": 0.9743
  },
  "ED principal diagnosis | CCSR category": {
   "members": 91551,
@@ -100,44 +100,44 @@
   "present_share": 0.3119
  },
  "Orphanet disorders | ICD-10 (WHO)": {
-  "members": 9882,
+  "members": 9890,
   "present": 7621,
-  "present_share": 0.7712
+  "present_share": 0.7706
  },
  "Orphanet disorders | ICD-11": {
-  "members": 9882,
-  "present": 7997,
-  "present_share": 0.8092
+  "members": 9890,
+  "present": 7998,
+  "present_share": 0.8087
  },
  "Orphanet disorders | OMIM": {
-  "members": 9882,
+  "members": 9890,
   "present": 4981,
-  "present_share": 0.504
+  "present_share": 0.5036
  },
  "Orphanet disorders | MONDO": {
-  "members": 9882,
-  "present": 9245,
-  "present_share": 0.9355
+  "members": 9890,
+  "present": 9248,
+  "present_share": 0.9351
  },
  "Orphanet disorders | SNOMED CT": {
-  "members": 9882,
+  "members": 9890,
   "present": 7011,
-  "present_share": 0.7095
+  "present_share": 0.7089
  },
  "Orphanet disorders (disorder or subtype level) | ICD-10 (WHO)": {
-  "members": 7751,
+  "members": 7753,
   "present": 7493,
-  "present_share": 0.9667
+  "present_share": 0.9665
  },
  "Orphanet disorders | gene": {
-  "members": 9882,
+  "members": 9890,
   "present": 4243,
-  "present_share": 0.4294
+  "present_share": 0.429
  },
  "Orphanet disorders | HPO phenotype": {
-  "members": 9882,
+  "members": 9890,
   "present": 4355,
-  "present_share": 0.4407
+  "present_share": 0.4403
  },
  "MBS items | SNOMED CT procedure": {
   "members": 6046,

@@ -30,7 +30,7 @@
   "fda:pharmacologic_class": 3459,
   "finding_lr_if_absent": 76,
   "finding_lr_if_present": 176,
-  "hgnc:xref": 37740,
+  "hgnc:xref": 37765,
   "hp:is_a": 24436,
   "hp:umls_snomed": 2756,
   "hp:xref": 265,
@@ -70,17 +70,26 @@
   "medrt:may_diagnose": 265,
   "medrt:may_prevent": 0,
   "medrt:may_treat": 3176,
-  "mesh:mapped_to": 28620,
+  "mesh:mapped_to": 28624,
   "mondo:disease_has_infectious_agent": 691,
   "mondo:disease_has_location": 775,
   "mondo:exact_match": 107452,
+  "mondo:gard_xref": 15930,
+  "mondo:germline_gene": 6203,
+  "mondo:has_feature": 1065,
+  "mondo:icdo_xref": 769,
   "mondo:is_a": 46582,
+  "mondo:obsolete_equivalent": 1078,
+  "mondo:other_hierarchy": 556,
+  "mondo:related_xref": 182,
   "omop:maps_to": 102656,
   "omop:maps_to_indirect": 6063,
   "orpha:gene_disease": 8133,
   "orpha:has_phenotype": 115908,
   "orpha:icd10_via_snomed": 6,
   "orpha:lacks_phenotype": 733,
+  "orpha:moved_to": 337,
+  "orpha:referred_to": 977,
   "orpha:xref": 49598,
   "pbs:cites_mbs_item": 52,
   "pbs:has_restriction": 23550,
@@ -221,7 +230,7 @@
   "sct:anatomy_structure_part": 352,
   "sct:artg_id": 51981,
   "sct:au_nearest_ancestor": 1232,
-  "sct:historical_association": 1280,
+  "sct:historical_association": 1293,
   "sct:icd10_map": 129729,
   "sct:icd10cm_map": 256574,
   "sct:icdo_map": 23514,
@@ -235,16 +244,16 @@
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
   "umls:concept_member": 12352,
-  "umls:shared_cui": 181138,
-  "umls:source_parent": 273771,
+  "umls:shared_cui": 181147,
+  "umls:source_parent": 273809,
   "uniprot:encoded_by": 1890,
-  "who:icd10_to_icd11": 12645,
-  "who:icd11_mms_foundation": 11261,
+  "who:icd10_to_icd11": 22249,
+  "who:icd11_mms_foundation": 11745,
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 1368,
-  "nodes_outside_main": 6434
+  "components": 1290,
+  "nodes_outside_main": 6388
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -319,7 +328,7 @@
   },
   "HGNC gene -> NCBI Gene / UniProt / OMIM gene entry": {
    "available": 45083,
-   "excluded": 32174,
+   "excluded": 32165,
    "kind": "source"
   },
   "HPO disease -> phenotype (present / absent)": {
@@ -364,7 +373,7 @@
   },
   "ICD-11 MMS code -> its foundation entity": {
    "available": 14499,
-   "excluded": 3238,
+   "excluded": 2754,
    "kind": "source"
   },
   "LOINC -> Australian preferred unit (RCPA SPIA)": {
@@ -462,6 +471,21 @@
    "excluded": 20802,
    "kind": "source"
   },
+  "MONDO disease -> GARD / HPO / related / obsolete / ICD-O (annotated xrefs)": {
+   "available": 77004,
+   "excluded": 58489,
+   "kind": "source"
+  },
+  "MONDO disease -> HPO feature": {
+   "available": 1065,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "MONDO disease -> causal gene (germline)": {
+   "available": 6992,
+   "excluded": 789,
+   "kind": "source"
+  },
   "MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)": {
    "available": 1466,
    "excluded": 0,
@@ -479,7 +503,7 @@
   },
   "MeSH supplementary record -> heading it is mapped to (UMLS)": {
    "available": 436613,
-   "excluded": 407993,
+   "excluded": 407989,
    "kind": "source"
   },
   "OMOP product -> standard drug": {
@@ -511,6 +535,11 @@
    "available": null,
    "excluded": 0,
    "kind": "derived"
+  },
+  "Orphanet entry -> where it moved / is referred to": {
+   "available": 2629,
+   "excluded": 1315,
+   "kind": "source"
   },
   "Orphanet gene -> disorder (product 6, with the kind of involvement)": {
    "available": 8503,
@@ -634,7 +663,7 @@
   },
   "UMLS shared CUI, same name (MRCONSO 2026AA)": {
    "available": 376257,
-   "excluded": 194033,
+   "excluded": 194024,
    "kind": "source"
   },
   "UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)": {
@@ -649,7 +678,7 @@
   },
   "UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)": {
    "available": 558328,
-   "excluded": 284557,
+   "excluded": 284519,
    "kind": "source"
   },
   "Uberon -> MeSH (xref)": {
@@ -685,6 +714,11 @@
   "WHO ICD-10 -> ICD-11 (MMS) mapping table": {
    "available": 28227,
    "excluded": 15582,
+   "kind": "source"
+  },
+  "WHO ICD-10 -> ICD-11 foundation entity mapping table": {
+   "available": 12597,
+   "excluded": 2993,
    "kind": "source"
   },
   "WHO ICD-11 (MMS) -> ICD-10 mapping table": {
@@ -749,18 +783,18 @@
   "CORPUS": 265,
   "DC_TARGET": 3418,
   "DECIPHER": 47,
-  "DOID": 11818,
+  "DOID": 11944,
   "DRUGCENTRAL": 4994,
   "EFO": 2387,
   "FMA": 42421,
-  "GARD": 3825,
-  "HGNC": 12988,
-  "HP": 19940,
-  "ICD10CM": 98704,
+  "GARD": 16094,
+  "HGNC": 12997,
+  "HP": 19943,
+  "ICD10CM": 98716,
   "ICD10WHO": 11937,
-  "ICD11": 36478,
-  "ICD11MMS": 13656,
-  "ICDO": 1313,
+  "ICD11": 36641,
+  "ICD11MMS": 14140,
+  "ICDO": 1369,
   "INN": 4078,
   "IUPHAR": 2105,
   "KEGG": 4026,
@@ -770,14 +804,14 @@
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 3652,
-  "MESH": 37687,
-  "MONDO": 32974,
-  "NCBIGENE": 12955,
+  "MESH": 37705,
+  "MONDO": 32994,
+  "NCBIGENE": 12964,
   "NCBITAXON": 20838,
-  "NCIT": 41643,
-  "OMIM": 22034,
+  "NCIT": 41751,
+  "OMIM": 22169,
   "OMIMPS": 608,
-  "ORPHA": 10230,
+  "ORPHA": 11358,
   "PBS_INDICATION": 653,
   "PBS_ITEM": 6795,
   "PBS_RESTRICTION": 3581,
@@ -787,17 +821,17 @@
   "RPID": 4411,
   "RXE": 46660,
   "RXN": 12932,
-  "SCT": 604232,
+  "SCT": 604244,
   "UBERON": 14975,
   "UCUM": 648,
   "UMLS": 29234,
   "UNII": 5788,
-  "UNIPROT": 15154
+  "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8268113,
-  "nodes": 1551318,
-  "usable_edges": 8227878
+  "edges": 8305387,
+  "nodes": 1565878,
+  "usable_edges": 8265152
  },
  "values": {
   "sct:1142135004": 6724,

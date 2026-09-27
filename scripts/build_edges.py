@@ -1069,20 +1069,70 @@ def main() -> int:
                                  if r["subject_id"].startswith("UBERON:") and r["object_id"].startswith("NCIT:")]),
             excluded=[("not a narrowMatch", sum(r["predicate_id"] != "skos:narrowMatch" for r in un))], unit="Uberon SSSOM rows to NCIt")
     if MONDO_OBO.exists():
-        rows_m, cur = [], None
+        rows_m, cur, obs = [], None, False
+        rows_g, rows_f, rows_x = [], [], []        # causal gene; phenotype feature; annotated xrefs beyond the exact matches
+        skip_x, skip_g = collections.Counter(), collections.Counter()
+        # MONDO says how each xref relates in its source annotation; the exact ones are the SSSOM file's (loaded apart)
+        xmap = {"GARD": "GARD", "HP": "HP", "SCTID": "SCT", "ICD10CM": "ICD10CM", "NCIT": "NCIT", "MESH": "MESH", "Orphanet": "ORPHA",
+                "OMIM": "OMIM", "DOID": "DOID", "ICDO": "ICDO"}
         for line in open(MONDO_OBO, encoding="utf-8"):
             line = line.rstrip("\n")
-            if line.startswith("id: "):
+            if line == "[Term]" or (line.startswith("[") and line.endswith("]")):
+                cur, obs = None, False
+            elif line.startswith("id: "):
                 cur = line[4:]
-            elif line.startswith("relationship: ") and cur and cur.startswith("MONDO:"):
+            elif line == "is_obsolete: true":
+                obs = True
+            elif line.startswith("relationship: ") and cur and cur.startswith("MONDO:") and not obs:
                 parts = line[14:].split(" ")
                 if parts[0] == "disease_has_location" and parts[1].startswith("UBERON:"):
                     rows_m.append(("MONDO", cur, "mondo:disease_has_location", "UBERON", parts[1]))
                 elif parts[0] == "disease_has_infectious_agent" and parts[1].startswith("NCBITaxon:"):
                     rows_m.append(("MONDO", cur, "mondo:disease_has_infectious_agent", "NCBITAXON", parts[1].split(":", 1)[1]))
+                elif parts[0] == "has_material_basis_in_germline_mutation_in":
+                    g = parts[1]
+                    if "/hgnc/" in g:
+                        rows_g.append(("MONDO", cur, "mondo:germline_gene", "HGNC", "HGNC:" + g.rsplit("/", 1)[1], parts[0]))
+                    elif "/ncbigene/" in g:          # MONDO's veterinary diseases (OMIA): a dog's KIT, not a human gene
+                        skip_g["an NCBI Gene id: a non-human gene (OMIA veterinary disease); human genes are HGNC"] += 1
+                elif parts[0] in ("disease_has_feature", "disease_has_major_feature", "has_characteristic") and parts[1].startswith("HP:"):
+                    rows_f.append(("MONDO", cur, "mondo:has_feature", "HP", parts[1], parts[0]))
+            elif line.startswith("xref: ") and cur and cur.startswith("MONDO:") and not obs:
+                m_ = re.match(r"xref: ([A-Za-z0-9_.]+):(\S+)(?: \{(.*)\})?$", line)
+                if not m_ or m_.group(1) not in xmap:
+                    continue
+                pre, code, how = m_.group(1), m_.group(2), set(re.findall(r'source="MONDO:([A-Za-z]+)', m_.group(3) or ""))
+                v = xmap[pre]
+                code = str(int(code)) if pre == "GARD" and code.isdigit() else ("HP:" + code) if pre == "HP" else code
+                if how & {"equivalentTo", "obsoleteEquivalent", "obsoleteEquivalentObsolete", "ObsoleteEquivalent", "obsolete", "Obsolete"}:
+                    skip_x["an exact match (SSSOM, loaded apart) or on a class MONDO is retiring"] += 1
+                elif pre == "GARD" and "GARD" in how:
+                    rows_x.append(("MONDO", cur, "mondo:gard_xref", v, code, "MONDO:GARD"))
+                elif pre == "HP" and "otherHierarchy" in how:
+                    rows_x.append(("MONDO", cur, "mondo:other_hierarchy", v, code, "MONDO:otherHierarchy"))
+                elif "equivalentObsolete" in how:
+                    rows_x.append(("MONDO", cur, "mondo:obsolete_equivalent", v, code, "MONDO:equivalentObsolete"))
+                elif how & {"relatedTo", "mondoIsNarrowerThanSource", "mondoIsBroaderThanSource"} and v in ("SCT", "ICD10CM", "NCIT", "MESH"):
+                    rows_x.append(("MONDO", cur, "mondo:related_xref", v, code, "MONDO:" + sorted(how & {"relatedTo", "mondoIsNarrowerThanSource",
+                                                                                                          "mondoIsBroaderThanSource"})[0]))
+                elif pre == "ICDO" and not how:
+                    rows_x.append(("MONDO", cur, "mondo:icdo_xref", v, code, "unannotated ICD-O xref"))
+                else:
+                    skip_x["another annotation (a sibling, a finding, an alternative hierarchy)"] += 1
         ins_rows("MONDO disease -> location (Uberon) / infectious agent (NCBI Taxonomy)",
                  [r + ("MONDO", "mondo.obo", "native", "native", "asserted", PIN["mondo"], None) for r in sorted(set(rows_m))],
                  available=len(rows_m), unit="disease_has_location / disease_has_infectious_agent statements")
+        ins_rows("MONDO disease -> causal gene (germline)", [r[:4] + (r[4], "MONDO", "mondo.obo relationship", r[5], "native", "asserted",
+                                                                     PIN["mondo"], None) for r in sorted(set(rows_g))],
+                 available=len(rows_g) + sum(skip_g.values()), excluded=sorted(skip_g.items()),
+                 unit="has_material_basis_in_germline_mutation_in statements")
+        ins_rows("MONDO disease -> HPO feature", [r[:5] + ("MONDO", "mondo.obo relationship", r[5], "native", "asserted", PIN["mondo"], None)
+                                                  for r in sorted(set(rows_f))],
+                 available=len(rows_f), unit="disease_has_feature / disease_has_major_feature / has_characteristic HP statements")
+        ins_rows("MONDO disease -> GARD / HPO / related / obsolete / ICD-O (annotated xrefs)",
+                 [r[:5] + ("MONDO", "mondo.obo xref", r[5], "native", "asserted", PIN["mondo"], None) for r in sorted(set(rows_x))],
+                 available=len(rows_x) + sum(skip_x.values()), excluded=sorted(skip_x.items()),
+                 unit="xrefs of live MONDO classes to GARD, HP, SNOMED, ICD-10-CM, NCIt, MeSH, Orphanet, OMIM, DOID, ICD-O")
     if LOINC_PARTS.exists():
         con.execute(f"CREATE TEMP VIEW lpm AS SELECT * FROM read_csv('{LOINC_PARTS}', header=true, all_varchar=true)")
         ins("SNOMED organism <-> NCBI Taxonomy (LOINC part asserts both)", f"""SELECT DISTINCT 'SCT', s.ExtCodeId, 'sct:ncbitaxon_equivalent',
@@ -1422,6 +1472,20 @@ def main() -> int:
                                            **({} if active else {"entry": "inactive: " + "; ".join(f for f in flags if f and f != "Inactive")})})))
         ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)),
                  available=n_x, excluded=sorted(skip_x.items()), unit="Orphanet ExternalReferences")
+        # an entry Orphanet has retired or folded into another says where it went: "Moved to" (the same disorder, now under
+        # another code) is identity, like SNOMED's REPLACED BY; "Referred to" points the reader to a related entry.
+        rows_s, n_s = [], 0
+        for d in ET.parse(ORPHA_XML).getroot().iter("Disorder"):
+            oc = d.findtext("OrphaCode")
+            for a_ in d.findall("DisorderDisorderAssociationList/DisorderDisorderAssociation"):
+                n_s += 1
+                kind, tgt = a_.findtext("DisorderDisorderAssociationType/Name"), a_.findtext("TargetDisorder/OrphaCode")
+                pred = {"Moved to": "orpha:moved_to", "Referred to": "orpha:referred_to"}.get(kind)
+                if oc and tgt and pred:
+                    rows_s.append(("ORPHA", oc, pred, "ORPHA", tgt, "Orphanet", "en_product1.xml DisorderDisorderAssociation", kind,
+                                   "native", "asserted", PIN["orphanet"], None))
+        ins_rows("Orphanet entry -> where it moved / is referred to", sorted(set(rows_s)), available=n_s,
+                 excluded=[("another association type", n_s - len(rows_s))], unit="Orphanet DisorderDisorderAssociations")
         con.executemany("INSERT INTO name_hint VALUES ('ORPHA', ?, ?)", names_o)
         con.execute("CREATE TEMP TABLE orpha_level (code VARCHAR, level VARCHAR, active BOOLEAN)")
         con.executemany("INSERT INTO orpha_level VALUES (?, ?, ?)", sorted(set(level_o)))
@@ -1521,6 +1585,16 @@ def main() -> int:
                                                ("no code shared with the rest of the graph", sum(bool(fid(r.get("Foundation URI")) and (r.get("icd10Code") or "").strip())
                                                  and not touch(("ICD11", fid(r["Foundation URI"])), ("ICD10WHO", r["icd10Code"].strip())) for r in fnd))],
                  unit="WHO foundation 11To10 rows")
+        # and the forward table, ICD-10 -> foundation entity, which the build had not read: the same test for a shared code
+        fwd = wt("foundation_10To11MapToOneCategory.txt") if (WHO_MAP / "foundation_10To11MapToOneCategory.txt").exists() else []
+        fk = lambda r: ((r.get("icd10Code") or "").strip(), fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI")))
+        ins_rows("WHO ICD-10 -> ICD-11 foundation entity mapping table", sorted({("ICD10WHO", fk(r)[0], "who:icd10_to_icd11", "ICD11", fk(r)[1],
+                  "WHO", loc("foundation_10To11MapToOneCategory.txt"), "foundation, one category", "native", "asserted", PIN["who"], None)
+                  for r in fwd if all(fk(r)) and touch(("ICD10WHO", fk(r)[0]), ("ICD11", fk(r)[1]))}),
+                 available=len(fwd), excluded=[("no ICD-10 code or no foundation id on the row", sum(not all(fk(r)) for r in fwd)),
+                                               ("no code shared with the rest of the graph",
+                                                sum(bool(all(fk(r))) and not touch(("ICD10WHO", fk(r)[0]), ("ICD11", fk(r)[1])) for r in fwd))],
+                 unit="WHO foundation 10To11 rows")
         # an MMS code and the foundation entity it linearises (WHO states both on every row that has a code)
         mf = {(r["icd11Code"].strip(), fid(r["Foundation URI"])) for r in fnd if (r.get("icd11Code") or "").strip() and fid(r.get("Foundation URI"))}
         mf |= {(r["icd11Code"].strip(), fid(r.get("ICD-11 FoundationURI") or r.get("ICD-11 Foundation URI"))) for r in one + multi
