@@ -1,7 +1,7 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-27 10:28",
- "repo_commit": "4477e6d",
+ "written": "2026-09-27 12:08",
+ "repo_commit": "1529e91",
  "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
@@ -10,7 +10,7 @@
   "UMLS and SNOMED US zips (3.1 GB)": "only to re-derive cache/umls and cache/snomed-us"
  },
  "totals": {
-  "stored": 1507709265,
+  "stored": 1601681404,
   "in place": 2870011466
  },
  "entries": [
@@ -400,7 +400,7 @@
     {
      "file": "hpo_snomed_candidates.tsv",
      "bytes": 443070,
-     "sha256": "62348a7c703280ca895b4b61e17e58803b25c2e75fa9f52a643b71ac6e1f4825"
+     "sha256": "082a5d51ba3fef5edcbbd2619302879a2177fc2d58fde05604981d3e4124cc80"
     },
     {
      "file": "organism_handcheck.json",
@@ -531,11 +531,16 @@
    "kind": "stored",
    "path": "cache/reactome",
    "is_dir": true,
-   "keep": null,
-   "source": "https://reactome.org/download-data (UniProt2Reactome, ReactomePathways, ReactomePathwaysRelation)",
+   "keep": "!*All_Levels*",
+   "source": "https://reactome.org/download-data (UniProt2Reactome, ChEBI2Reactome, ReactomePathways, ReactomePathwaysRelation)",
    "version": "v97",
    "licence": "CC0",
    "files": [
+    {
+     "file": "ChEBI2Reactome.txt",
+     "bytes": 14459535,
+     "sha256": "bbbe081d0a7edc548093f37760a967d5a439c7f63b13ceae89aab5914305c913"
+    },
     {
      "file": "ReactomePathways.txt",
      "bytes": 1592393,
@@ -552,7 +557,61 @@
      "sha256": "e34fe56a5129d88d8cd67300c279d7e81fa1d3bf86fa0577cf91032c326eaecc"
     }
    ],
-   "bytes": 45268027
+   "bytes": 59727562
+  },
+  {
+   "id": "gencc",
+   "kind": "stored",
+   "path": "cache/gencc",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://search.thegencc.org/download (submissions-export-tsv; includes ClinGen and PanelApp Australia)",
+   "version": "2026-09-13",
+   "licence": "CC0",
+   "files": [
+    {
+     "file": "gencc-submissions.tsv",
+     "bytes": 26461983,
+     "sha256": "6dfd4f17df80363a323c4798a7263aa34689ab8565886635abff879892a08559"
+    }
+   ],
+   "bytes": 26461983
+  },
+  {
+   "id": "medgen",
+   "kind": "stored",
+   "path": "cache/medgen",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://ftp.ncbi.nlm.nih.gov/pub/medgen/MedGenIDMappings.txt.gz",
+   "version": "2026-09-26",
+   "licence": "NCBI: public domain",
+   "files": [
+    {
+     "file": "MedGenIDMappings.txt.gz",
+     "bytes": 5887879,
+     "sha256": "57cff3d5f0710d8eec3a2339257d932d0cbbeaca53ed53fa03793e74fdf67152"
+    }
+   ],
+   "bytes": 5887879
+  },
+  {
+   "id": "chebi",
+   "kind": "stored",
+   "path": "cache/chebi",
+   "is_dir": true,
+   "keep": null,
+   "source": "https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo.gz",
+   "version": "ChEBI 255 (2026-09-09)",
+   "licence": "CC BY 4.0",
+   "files": [
+    {
+     "file": "chebi.obo.gz",
+     "bytes": 47162742,
+     "sha256": "c2765eb4599fbcbb265385f5280a241c83ef3cecb302f92afdc2879f9c7e7d6c"
+    }
+   ],
+   "bytes": 47162742
   },
   {
    "id": "who_icd11",

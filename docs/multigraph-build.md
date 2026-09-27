@@ -563,6 +563,16 @@ pairs (386 bindings; 20 with a SNOMED code not active in SNOMED CT-AU, 138 the s
 element, not the same concept, so a relation. `scripts/rcpa_elements.py` reads the workbooks in place (openpyxl, like
 `rcpa_units.py`) and writes `cache/rcpa/element_bindings.json`, stored with the graph inputs.
 
+**Wave 3, open sources (27 Sep).** Four downloads, each free to use (`scripts/graph_inputs.py` stores them): NCBI
+MedGen's concept mappings (`medgen:xref`, 78,204: all 21,661 MedGen concepts the graph holds now reach HPO, OMIM,
+Orphanet, SNOMED, MeSH or GARD, not only MONDO), GenCC's gene-disease validity calls (`gencc:gene_disease`, 29,098, one
+edge per gene, disease and submitter -- PanelApp Australia 5,345, Labcorp 5,237, Orphanet 5,065, Ambry 3,982, G2P 3,478,
+ClinGen 3,324; disputed, refuted and no-known-relationship calls are not loaded; the ClinGen download duplicates its GenCC
+submissions and is not read), ChEBI's own tree and roles climbed up from the graph's chemicals (`chebi:is_a` 20,603,
+`chebi:has_role` 15,286) and Reactome's chemicals in pathways (`reactome:participates_in` +15,732). MONDO diseases with a
+gene edge 6,195 -> 8,817; ChEBI nodes outside the main component 155 -> 0; all nodes outside it 6,388 -> 5,278. ChEBI's
+share linked outside ChEBI falls to 63%: the ~6,700 parent classes now in the graph link only within its tree.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /

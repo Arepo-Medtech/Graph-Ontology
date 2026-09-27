@@ -16,6 +16,8 @@
   "atc:rxnorm_primary": 12700,
   "atc:rxnorm_secondary": 23236,
   "ccsr:category": 236055,
+  "chebi:has_role": 15286,
+  "chebi:is_a": 20603,
   "corpus:binds_to": 265,
   "drugcentral:bioactivity": 18112,
   "drugcentral:contraindication": 26878,
@@ -30,6 +32,7 @@
   "fda:pharmacologic_class": 3459,
   "finding_lr_if_absent": 76,
   "finding_lr_if_present": 176,
+  "gencc:gene_disease": 29098,
   "hgnc:xref": 37765,
   "hp:is_a": 24436,
   "hp:umls_snomed": 2756,
@@ -63,6 +66,7 @@
   "loinc:unit_counterpart": 2045,
   "mbs:group_in_category": 99,
   "mbs:in_group": 6046,
+  "medgen:xref": 78204,
   "medrt:contraindicated_with": 21398,
   "medrt:has_mechanism_of_action": 1600,
   "medrt:has_physiologic_effect": 279,
@@ -103,7 +107,7 @@
   "radlex:part_of": 24764,
   "rcpa:same_data_element": 228,
   "reactome:part_of": 2899,
-  "reactome:participates_in": 54699,
+  "reactome:participates_in": 70431,
   "rsna:radlex_part": 23666,
   "rxe:box_of": 3858,
   "rxe:has_ingredient": 23,
@@ -253,8 +257,8 @@
   "who:icd11_to_icd10": 46920
  },
  "islands": {
-  "components": 1290,
-  "nodes_outside_main": 6388
+  "components": 1118,
+  "nodes_outside_main": 5278
  },
  "ledger": {
   "AMT -> PBS item": {
@@ -280,6 +284,21 @@
   "ATC class -> parent class (PBS)": {
    "available": 7891,
    "excluded": 14,
+   "kind": "source"
+  },
+  "ChEBI chemical -> Reactome pathway (human, lowest level)": {
+   "available": 113779,
+   "excluded": 98047,
+   "kind": "source"
+  },
+  "ChEBI entity -> parent (is a), upward from the graph's entities": {
+   "available": 20603,
+   "excluded": 0,
+   "kind": "source"
+  },
+  "ChEBI entity -> role (has role)": {
+   "available": 15286,
+   "excluded": 0,
    "kind": "source"
   },
   "Decisions by a person on the review queues (accepted)": {
@@ -325,6 +344,11 @@
   "DrugCentral target -> protein component": {
    "available": 4167,
    "excluded": 0,
+   "kind": "source"
+  },
+  "GenCC gene -> disease validity (per submitter)": {
+   "available": 30321,
+   "excluded": 1223,
    "kind": "source"
   },
   "HGNC gene -> NCBI Gene / UniProt / OMIM gene entry": {
@@ -510,6 +534,11 @@
   "MeSH supplementary record -> heading it is mapped to (UMLS)": {
    "available": 436613,
    "excluded": 407989,
+   "kind": "source"
+  },
+  "MedGen concept -> its codes in HPO, OMIM, Orphanet, MONDO, SNOMED, MeSH, GARD": {
+   "available": 220883,
+   "excluded": 142679,
    "kind": "source"
   },
   "OMOP product -> standard drug": {
@@ -783,7 +812,7 @@
   "ARTG": 25069,
   "ATC": 7892,
   "CCSR": 555,
-  "CHEBI": 5386,
+  "CHEBI": 12085,
   "CHEMBL": 7019,
   "CLINVAR": 81,
   "CORPUS": 265,
@@ -793,8 +822,8 @@
   "DRUGCENTRAL": 4994,
   "EFO": 2387,
   "FMA": 42421,
-  "GARD": 16094,
-  "HGNC": 12997,
+  "GARD": 16831,
+  "HGNC": 13295,
   "HP": 19943,
   "ICD10CM": 98716,
   "ICD10WHO": 11937,
@@ -810,12 +839,12 @@
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 3652,
-  "MESH": 37705,
-  "MONDO": 32994,
+  "MESH": 37835,
+  "MONDO": 33137,
   "NCBIGENE": 12964,
   "NCBITAXON": 20838,
   "NCIT": 41751,
-  "OMIM": 22169,
+  "OMIM": 22170,
   "OMIMPS": 608,
   "ORPHA": 11358,
   "PBS_INDICATION": 653,
@@ -835,9 +864,9 @@
   "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8305615,
-  "nodes": 1565879,
-  "usable_edges": 8265380
+  "edges": 8464538,
+  "nodes": 1573887,
+  "usable_edges": 8424303
  },
  "values": {
   "sct:1142135004": 6724,

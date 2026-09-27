@@ -1263,9 +1263,10 @@
     },
     {
       "id": "reactome:participates_in",
-      "label": "human protein takes part in this Reactome pathway (lowest level)",
+      "label": "protein or chemical participates in this Reactome pathway",
       "subject": [
-        "UNIPROT"
+        "UNIPROT",
+        "CHEBI"
       ],
       "object": [
         "REACTOME"
@@ -1273,7 +1274,7 @@
       "category": "relation",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "Reactome v97 UniProt2Reactome.txt, Homo sapiens",
+      "source": "Reactome v97 UniProt2Reactome.txt, Homo sapiens; ChEBI2Reactome (chemicals)",
       "status": "built",
       "note": "attrs.evidence: TAS (traceable author statement, curated) or IEA (inferred electronically). The pathway's ancestors come through reactome:part_of."
     },
@@ -2303,6 +2304,76 @@
       "source": "RCPA SPIA anatomical pathology FHIR mapping workbooks (cervical, colorectal, endometrial, ovary, polypectomy), via scripts/rcpa_elements.py -> cache/rcpa/element_bindings.json",
       "status": "built",
       "note": "The same report element, not the same concept: an element's SNOMED code is often a finding or observable and its LOINC code a question or panel. attrs.elements lists the RCPA elements the pair binds. Placeholder codes (xxxxx-x) are left out by the derivation."
+    },
+    {
+      "id": "medgen:xref",
+      "label": "MedGen concept groups this code of a source it integrates",
+      "subject": [
+        "MEDGEN"
+      ],
+      "object": [
+        "HP",
+        "OMIM",
+        "ORPHA",
+        "MONDO",
+        "SCT",
+        "MESH",
+        "GARD"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "NCBI MedGen MedGenIDMappings.txt",
+      "status": "built",
+      "note": "MedGen's own grouping of each condition's codes. Loaded for the MedGen concepts the graph already holds (through MONDO); SNOMED codes kept where active in SNOMED CT-AU. A cross-reference, not graded as an exact match."
+    },
+    {
+      "id": "gencc:gene_disease",
+      "label": "gene is associated with this disease, at the validity a GenCC submitter gives",
+      "subject": [
+        "HGNC"
+      ],
+      "object": [
+        "MONDO"
+      ],
+      "category": "evidence",
+      "derivation": "lookup",
+      "strength_kind": "graded",
+      "source": "GenCC submissions export (ClinGen, PanelApp Australia, Orphanet, G2P, laboratories)",
+      "status": "built",
+      "note": "One edge per gene, disease and submitter; method is the classification (Definitive / Strong / Moderate / Supportive / Limited), attrs the submitter and mode of inheritance. Disputed, refuted and no-known-relationship calls are claims against the link and are not loaded."
+    },
+    {
+      "id": "chebi:is_a",
+      "label": "ChEBI entity is a subclass of this ChEBI entity",
+      "subject": [
+        "CHEBI"
+      ],
+      "object": [
+        "CHEBI"
+      ],
+      "category": "structure",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "ChEBI chebi.obo is_a",
+      "status": "built",
+      "note": "Climbed upward from the ChEBI entities the graph already holds, and from their roles; never down."
+    },
+    {
+      "id": "chebi:has_role",
+      "label": "ChEBI entity has this role",
+      "subject": [
+        "CHEBI"
+      ],
+      "object": [
+        "CHEBI"
+      ],
+      "category": "classification",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "ChEBI chebi.obo relationship RO:0000087",
+      "status": "built",
+      "note": "Biological, chemical and application roles ('antibacterial drug', 'EC 3.4.21.* inhibitor') for the ChEBI entities the graph holds."
     }
   ],
   "not_imported": {
