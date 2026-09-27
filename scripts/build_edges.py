@@ -1053,32 +1053,56 @@ def main() -> int:
         con.execute("""INSERT INTO name_hint SELECT DISTINCT 'NCBITAXON', ExtCodeId, any_value(ExtCodeDisplayName) FROM lpm
                        WHERE ExtCodeSystem = 'https://www.ncbi.nlm.nih.gov/taxonomy' GROUP BY 2""")
     if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
+        # term -> part links. lpl_primary: LoincPartLink_Primary (the six axes, plus the radiology and document-ontology
+        # properties). lpl_enh: the analyte pieces LOINC's enriched linkages name beyond the axes -- SyntaxEnhancement's
+        # analyte-core / numerator / divisor ("Urea nitrogen/Creatinine" -> urea nitrogen, creatinine) and
+        # SemanticEnhancement's genes -- kept only where the term does not already link that part, so a simple term whose
+        # core is its whole component gains nothing twice. Suffixes ("targeted mutation analysis") name no analyte.
+        con.execute(f"""CREATE TEMP VIEW lpl_primary AS SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName, 'primary' AS f
+            FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true)""")
+        con.execute(f"""CREATE TEMP VIEW lpl_supp AS SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName, 'supplementary' AS f
+            FROM read_csv('{LOINC_PARTLINK_SUPP}', header=true, all_varchar=true)
+            WHERE LinkTypeName IN ('DetailedModel', 'SyntaxEnhancement', 'SemanticEnhancement') AND PartTypeName <> 'SUFFIX'"""
+            if LOINC_PARTLINK_SUPP.exists() else
+            "CREATE TEMP VIEW lpl_supp AS SELECT * FROM (SELECT ''::VARCHAR, ''::VARCHAR, ''::VARCHAR, ''::VARCHAR, ''::VARCHAR) "
+            "t(LoincNumber, PartNumber, PartTypeName, LinkTypeName, f) WHERE false")
+        con.execute("""CREATE TEMP VIEW lpl_enh AS SELECT e.* FROM lpl_supp e
+            WHERE e.LinkTypeName IN ('SyntaxEnhancement', 'SemanticEnhancement')
+              AND NOT EXISTS (SELECT 1 FROM lpl_primary p WHERE p.LoincNumber = e.LoincNumber AND p.PartNumber = e.PartNumber)
+              AND NOT EXISTS (SELECT 1 FROM lpl_supp d WHERE d.LinkTypeName = 'DetailedModel' AND d.LoincNumber = e.LoincNumber
+                              AND d.PartNumber = e.PartNumber)""")
+        sct_links = ("(SELECT * FROM lpl_primary UNION ALL SELECT * FROM lpl_enh WHERE LinkTypeName = 'SyntaxEnhancement' "
+                     "AND PartTypeName IN ('COMPONENT', 'DIVISOR', 'NUMERATOR'))")
         ins("LOINC term -> SNOMED via its component / system / method part", f"""SELECT DISTINCT 'LOINC', pl.LoincNumber, 'loinc:part_maps_to_sct',
-                'SCT', pm.ExtCodeId, 'LOINC 2.83 part mapping', 'part ' || pl.PartNumber, pl.PartTypeName || ' ' || pm.Equivalence,
+                'SCT', pm.ExtCodeId, 'LOINC 2.83 part mapping', 'part ' || pl.PartNumber,
+                CASE WHEN pl.f = 'primary' THEN pl.PartTypeName ELSE pl.LinkTypeName || ' ' || pl.PartTypeName END || ' ' || pm.Equivalence,
                 'native', 'asserted', '{PIN['loinc_table']}',
-                json_object('part_type', pl.PartTypeName, 'part', pl.PartNumber, 'part_name', pm.PartName, 'equivalence', pm.Equivalence)
-            FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true) pl
+                json_object('part_type', pl.PartTypeName, 'link_type', pl.LinkTypeName, 'part', pl.PartNumber, 'part_name', pm.PartName,
+                            'equivalence', pm.Equivalence)
+            FROM {sct_links} pl
             JOIN lpm pm ON pm.PartNumber = pl.PartNumber AND pm.ExtCodeSystem = 'http://snomed.info/sct'
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
-            WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD') AND pm.PartName <> 'XXX'""",
-            src=f"read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true) pl WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD')",
+            WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD', 'DIVISOR', 'NUMERATOR') AND pm.PartName <> 'XXX'""",
+            src=f"{sct_links} pl WHERE pl.PartTypeName IN ('COMPONENT', 'SYSTEM', 'METHOD', 'DIVISOR', 'NUMERATOR')",
             keep=[("the part has no SNOMED CT mapping", "pl.PartNumber IN (SELECT PartNumber FROM lpm WHERE ExtCodeSystem = 'http://snomed.info/sct' AND PartName <> 'XXX')"),
                   ("LOINC term not active", "pl.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")],
-            unit="LOINC term -> component / system / method part links")
+            unit="LOINC term -> component / system / method part links, and analyte-core / numerator / divisor links")
     if LOINC_PARTS.exists() and LOINC_PARTLINK.exists():
         # what a lab test measures, in the analyte's own vocabularies: LOINC maps its component parts to ChEBI, RxNorm,
         # PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC and ClinVar. RxNorm and NCBI Gene are vocabularies the drug and gene
         # sides already hold, so "serum vancomycin" meets vancomycin, and a genotype test its gene, with no matching at all.
-        # Primary links (the term's own axis) and DetailedModel links (the component decomposed); Search links are for
-        # finding terms, not for what a term measures, and are not loaded.
+        # Primary links (the term's own axis), DetailedModel links (the component decomposed), and the enriched analyte
+        # links in lpl_enh: SyntaxEnhancement's analyte-core / numerator / divisor and SemanticEnhancement's genes, the only
+        # route by which LOINC ties a genetic test to its gene parts. Search links are for finding terms, not for what a
+        # term measures, and are not loaded.
         xs = {"https://www.ebi.ac.uk/chebi": "CHEBI", "http://www.nlm.nih.gov/research/umls/rxnorm": "RXN",
               "http://pubchem.ncbi.nlm.nih.gov": "PUBCHEM", "http://fdasis.nlm.nih.gov": "UNII",
               "https://www.ncbi.nlm.nih.gov/taxonomy": "NCBITAXON", "https://www.ncbi.nlm.nih.gov/gene": "NCBIGENE",
               "http://www.genenames.org": "HGNC", "https://www.ncbi.nlm.nih.gov/clinvar": "CLINVAR"}
         xcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in xs.items())
-        links = (f"SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK}', header=true, all_varchar=true)"
-                 + (f" UNION SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM read_csv('{LOINC_PARTLINK_SUPP}', header=true, "
-                    "all_varchar=true) WHERE LinkTypeName = 'DetailedModel'" if LOINC_PARTLINK_SUPP.exists() else ""))
+        links = ("SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM lpl_primary"
+                 " UNION SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM lpl_supp WHERE LinkTypeName = 'DetailedModel'"
+                 " UNION SELECT LoincNumber, PartNumber, PartTypeName, LinkTypeName FROM lpl_enh")
         ins("LOINC term -> analyte code (ChEBI / RxNorm / PubChem / UNII / taxon / gene / ClinVar)", f"""SELECT DISTINCT 'LOINC', pl.LoincNumber,
                 'loinc:part_xref', CASE pm.ExtCodeSystem {xcase} END,
                 CASE WHEN pm.ExtCodeSystem = 'http://www.genenames.org' THEN pm.ExtCodeId ELSE replace(pm.ExtCodeId, 'CHEBI:', '') END,
@@ -1088,11 +1112,11 @@ def main() -> int:
                             'equivalence', pm.Equivalence, 'ext_name', pm.ExtCodeDisplayName)
             FROM ({links}) pl JOIN lpm pm ON pm.PartNumber = pl.PartNumber
             JOIN lx_loinc st ON st.LOINC_NUM = pl.LoincNumber AND st.STATUS = 'ACTIVE'
-            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')""",
-            src=f"({links}) pl WHERE pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'GENE', 'CHALLENGE')",
+            WHERE pm.ExtCodeSystem IN ({','.join(repr(k) for k in xs)}) AND pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'DIVISOR', 'NUMERATOR', 'GENE', 'CHALLENGE')""",
+            src=f"({links}) pl WHERE pl.PartTypeName IN ('COMPONENT', 'DIVISORS', 'DIVISOR', 'NUMERATOR', 'GENE', 'CHALLENGE')",
             keep=[("the part has no code in an analyte vocabulary", f"pl.PartNumber IN (SELECT PartNumber FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs)}))"),
                   ("LOINC term not active", "pl.LoincNumber IN (SELECT LOINC_NUM FROM lx_loinc WHERE STATUS = 'ACTIVE')")],
-            unit="LOINC term -> component / divisor / gene / challenge part links")
+            unit="LOINC term -> component / divisor / numerator / gene / challenge part links")
         con.execute(f"""INSERT INTO name_hint SELECT DISTINCT CASE ExtCodeSystem {xcase} END,
                 CASE WHEN ExtCodeSystem = 'http://www.genenames.org' THEN ExtCodeId ELSE replace(ExtCodeId, 'CHEBI:', '') END,
                 any_value(ExtCodeDisplayName) FROM lpm WHERE ExtCodeSystem IN ({','.join(repr(k) for k in xs if xs[k] not in ('RXN', 'NCBITAXON', 'NCBIGENE'))})

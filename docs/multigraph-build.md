@@ -514,9 +514,19 @@ not loaded. Every one below is a code a publisher asserts — no matching.
 | retired SNOMED id in the graph (Refset/Content, Map) | its active successor | 1,288 | `sct:historical_association` |
 | MONDO (SSSOM exactMatch) | DOID, NCIT, MeSH, ICD-11, EFO, UMLS, MedGen, WHO ICD-10, OMIM PS | +78,635 (109,623 in all) | `mondo:exact_match` |
 | DrugCentral (identifier table) | ChEMBL, UNII, PubChem, ChEBI, MeSH, UMLS, INN, KEGG, IUPHAR | 42,163 | `drugcentral:xref` |
-| LOINC term's analyte part | ChEBI, RxNorm, PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC, ClinVar | 53,683 | `loinc:part_xref` |
+| LOINC term's analyte part | ChEBI, RxNorm, PubChem, UNII, NCBI Taxonomy, NCBI Gene, HGNC, ClinVar | 77,978 | `loinc:part_xref` |
 | Uberon (SSSOM narrowMatch) | NCI Thesaurus anatomy | 2,578 | `uberon:ncit_narrow_match` |
 | HPO (hp.obo xref) | NCIT, Orphanet, WHO ICD-10 | 265 | `hp:xref` |
+
+**LOINC's enriched linkages (27 Sep).** LOINC links a term to its parts in eight kinds of link; the build had read two
+(Primary, DetailedModel). It now also reads SemanticEnhancement, the only route by which LOINC ties a genetic test to
+its gene parts, and SyntaxEnhancement's analyte-core, numerator and divisor, which split a compound component
+("Urea nitrogen/Creatinine" [3097-3] -> urea nitrogen, narrower; creatinine, equivalent). Both feed the existing
+`loinc:part_xref` and `loinc:part_maps_to_sct`, with `attrs.link_type` naming the link, and only where the term does not
+already link that part; suffix parts name no analyte and are not loaded. Result: +36,177 edges (part_xref 53,683 ->
+77,978; part_maps_to_sct 181,735 -> 193,555), **tests linked to a gene 50 -> 1,715**, and 1,039 more LOINC tests with a
+link outside LOINC (71,327 -> 72,366), 243 of them recent molecular tests new to the graph. Search and Metadata links
+stay unloaded: they are for finding terms, not for what a term measures.
 
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
@@ -905,7 +915,7 @@ Every source ledger balances (available − excluded + fanned out = loaded). Wha
 | HPO → SNOMED (UTS crosswalk, same name) | 14,854 | 2,756 | **7,566 SNOMED codes not active in SNOMED CT-AU**, 4,532 names differ (the review queue) |
 | UMLS shared CUI, same name | 376,257 | 180,371 | 98,640 neither code a graph node, 65,379 names differ, 24,027 organism pairs (own loader), 7,330 OMIM gene entries paired with a disease |
 | UMLS concept → SNOMED disorder / finding | 1,728,196 | 12,489 | 975,038 CUI not a graph node, 691,296 suppressed atoms |
-| LOINC term → analyte code | 220,072 | 53,683 | 183,635 part with no analyte code, 4,036 inactive terms (21,282 fanned out) |
+| LOINC term → analyte code | 264,420 | 77,978 | 205,938 part with no analyte code, 6,627 inactive terms (26,123 fanned out) |
 | Reactome protein → pathway | 324,818 | 54,699 | 270,119 not human |
 | HGNC gene → NCBI Gene / UniProt / OMIM | 45,083 | 37,736 | 32,178 no id shared with the graph (24,831 fanned out) |
 | Decisions by a person | 516 | 328 | 107 none, 81 rejected |

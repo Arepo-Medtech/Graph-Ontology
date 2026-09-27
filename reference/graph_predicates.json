@@ -1730,7 +1730,7 @@
     },
     {
       "id": "loinc:part_maps_to_sct",
-      "label": "a LOINC term's component, system or method part -- or, for a radiology term, its RadLex anatomy part -- maps to this SNOMED CT concept",
+      "label": "a LOINC term's component, system or method part, or an analyte-core / numerator / divisor piece of its component -- or, for a radiology term, its RadLex anatomy part -- maps to this SNOMED CT concept",
       "subject": [
         "LOINC"
       ],
@@ -1740,13 +1740,13 @@
       "category": "relation",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "LOINC 2.83 LoincPartLink_Primary (term -> part) joined to PartRelatedCodeMapping (part -> SNOMED CT); for radiology terms, LoincRsnaRadiologyPlaybook (term -> RadLex) joined to radlex:anatomy_sct",
+      "source": "LOINC 2.83 LoincPartLink_Primary, and LoincPartLink_Supplementary SyntaxEnhancement links (term -> part), joined to PartRelatedCodeMapping (part -> SNOMED CT); for radiology terms, LoincRsnaRadiologyPlaybook (term -> RadLex) joined to radlex:anatomy_sct",
       "status": "built",
-      "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed. Radiology terms have no SNOMED part map; their region-imaged and imaging-focus parts reach SNOMED through radlex:anatomy_sct instead, method 'RadLex anatomy: <route>', attrs.rid and attrs.route, and the tier of that route."
+      "note": "The one code-to-code route LOINC offers for its clinical and survey terms, which Athena and the LOINC Extension leave unbridged. attrs.part_type (COMPONENT: what is observed; SYSTEM: the body site or specimen; METHOD: the technique or modality), attrs.equivalence as LOINC states it (equivalent / narrower / wider -- a SYSTEM part 'Heart' maps narrower to both 'Heart structure' and 'Specimen from heart'). attrs.link_type: SyntaxEnhancement rows name the analyte-core, numerator or divisor of a compound component ('Urea nitrogen/Creatinine' -> urea nitrogen, creatinine), loaded only where the term does not already link that part; SUFFIX parts name no analyte and are not loaded. TIME, SCALE and PROPERTY parts, and the unspecified system 'XXX', are not loaded: they name an axis value, not a concept of the thing observed. Radiology terms have no SNOMED part map; their region-imaged and imaging-focus parts reach SNOMED through radlex:anatomy_sct instead, method 'RadLex anatomy: <route>', attrs.rid and attrs.route, and the tier of that route."
     },
     {
       "id": "loinc:part_xref",
-      "label": "a LOINC term's analyte part (component, divisor, gene, challenge) is coded by LOINC to this concept",
+      "label": "a LOINC term's analyte part (component, analyte-core, numerator, divisor, gene, challenge) is coded by LOINC to this concept",
       "subject": [
         "LOINC"
       ],
@@ -1763,9 +1763,9 @@
       "category": "relation",
       "derivation": "lookup",
       "strength_kind": "exact",
-      "source": "LOINC 2.83 LoincPartLink_Primary and LoincPartLink_Supplementary (DetailedModel links) joined to PartRelatedCodeMapping",
+      "source": "LOINC 2.83 LoincPartLink_Primary and LoincPartLink_Supplementary (DetailedModel, SyntaxEnhancement and SemanticEnhancement links) joined to PartRelatedCodeMapping",
       "status": "built",
-      "note": "What the test measures, in the analyte's own vocabulary. RxNorm and NCBI Gene are vocabularies the drug and gene sides already hold, so a drug-level test meets its drug and a genotype test its gene with no matching. attrs.link_type (Primary / DetailedModel), part_type, equivalence (equivalent / relatedto) as LOINC states it. Search links are not loaded."
+      "note": "What the test measures, in the analyte's own vocabulary. RxNorm and NCBI Gene are vocabularies the drug and gene sides already hold, so a drug-level test meets its drug and a genotype test its gene with no matching. attrs.link_type (Primary / DetailedModel / SyntaxEnhancement / SemanticEnhancement), part_type, equivalence (equivalent / relatedto) as LOINC states it. Search links are not loaded."
     },
     {
       "id": "loinc:unit_counterpart",
