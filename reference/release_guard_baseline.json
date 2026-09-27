@@ -2,7 +2,7 @@
  "consistency": {
   "conflicts": {
    "DOID": 379,
-   "HGNC": 35,
+   "HGNC": 34,
    "HP": 96,
    "MONDO": 1075,
    "NCBIGENE": 1,
@@ -27,7 +27,7 @@
   "fda:pharmacologic_class": 3459,
   "finding_lr_if_absent": 76,
   "finding_lr_if_present": 176,
-  "hgnc:xref": 37736,
+  "hgnc:xref": 37740,
   "hp:is_a": 24436,
   "hp:umls_snomed": 2756,
   "hp:xref": 265,
@@ -49,8 +49,8 @@
   "loinc:is_a_snomed": 22003,
   "loinc:maps_to_snomed": 669,
   "loinc:order_grouper_concept": 2133,
-  "loinc:part_maps_to_sct": 181735,
-  "loinc:part_xref": 53683,
+  "loinc:part_maps_to_sct": 193555,
+  "loinc:part_xref": 77978,
   "loinc:radlex_part": 48227,
   "loinc:rsna_rpid": 1008,
   "loinc:sct_concept": 42881,
@@ -205,8 +205,8 @@
   "sct:anatomy_structure_entire": 15819,
   "sct:anatomy_structure_part": 352,
   "sct:artg_id": 51981,
-  "sct:au_nearest_ancestor": 1231,
-  "sct:historical_association": 1273,
+  "sct:au_nearest_ancestor": 1232,
+  "sct:historical_association": 1275,
   "sct:icd10_map": 129729,
   "sct:icd10cm_map": 256574,
   "sct:icdo_map": 23514,
@@ -219,8 +219,8 @@
   "uberon:part_of": 9447,
   "uberon:sct_narrow_match": 4119,
   "umls:concept_member": 12352,
-  "umls:shared_cui": 179286,
-  "umls:source_parent": 273357,
+  "umls:shared_cui": 179338,
+  "umls:source_parent": 273359,
   "uniprot:encoded_by": 1890,
   "who:icd10_to_icd11": 12645,
   "who:icd11_mms_foundation": 11261,
@@ -288,7 +288,7 @@
   },
   "HGNC gene -> NCBI Gene / UniProt / OMIM gene entry": {
    "available": 45083,
-   "excluded": 32178,
+   "excluded": 32174,
    "kind": "source"
   },
   "HPO disease -> phenotype (present / absent)": {
@@ -392,13 +392,13 @@
    "kind": "derived"
   },
   "LOINC term -> SNOMED via its component / system / method part": {
-   "available": 286329,
-   "excluded": 190311,
+   "available": 328899,
+   "excluded": 221404,
    "kind": "source"
   },
   "LOINC term -> analyte code (ChEBI / RxNorm / PubChem / UNII / taxon / gene / ClinVar)": {
-   "available": 220072,
-   "excluded": 187671,
+   "available": 264420,
+   "excluded": 212565,
    "kind": "source"
   },
   "LOINC term -> axis part": {
@@ -568,7 +568,7 @@
   },
   "UMLS shared CUI, same name (MRCONSO 2026AA)": {
    "available": 376257,
-   "excluded": 195886,
+   "excluded": 195833,
    "kind": "source"
   },
   "UMLS: MED-RT drug -> disease (may treat, prevent, diagnose; contraindicated)": {
@@ -583,7 +583,7 @@
   },
   "UMLS: a source's own hierarchy (MeSH tree, NCIt, FMA, LOINC parts)": {
    "available": 558328,
-   "excluded": 284971,
+   "excluded": 284969,
    "kind": "source"
   },
   "Uberon -> NCI Thesaurus anatomy (narrowMatch)": {
@@ -672,7 +672,7 @@
   "ARTG": 25069,
   "ATC": 6056,
   "CCSR": 555,
-  "CHEBI": 5328,
+  "CHEBI": 5375,
   "CHEMBL": 7019,
   "CLINVAR": 80,
   "CORPUS": 265,
@@ -683,7 +683,7 @@
   "EFO": 2387,
   "FMA": 42388,
   "GARD": 3825,
-  "HGNC": 12981,
+  "HGNC": 12988,
   "HP": 19940,
   "ICD10CM": 98704,
   "ICD10WHO": 11937,
@@ -693,40 +693,40 @@
   "INN": 4078,
   "IUPHAR": 2105,
   "KEGG": 4026,
-  "LOINC": 218851,
+  "LOINC": 219096,
   "MBS": 6046,
   "MBS_CATEGORY": 9,
   "MBS_GROUP": 99,
   "MEDGEN": 21661,
   "MEDRT": 1718,
-  "MESH": 36866,
+  "MESH": 36873,
   "MONDO": 32974,
-  "NCBIGENE": 12942,
-  "NCBITAXON": 20417,
-  "NCIT": 41571,
+  "NCBIGENE": 12955,
+  "NCBITAXON": 20791,
+  "NCIT": 41572,
   "OMIM": 22034,
   "OMIMPS": 608,
   "ORPHA": 10230,
   "PBS_INDICATION": 653,
   "PBS_ITEM": 6795,
   "PBS_RESTRICTION": 3581,
-  "PUBCHEM": 5027,
+  "PUBCHEM": 5054,
   "RADLEX": 46901,
   "REACTOME": 2883,
   "RPID": 4411,
   "RXE": 46660,
   "RXN": 12925,
-  "SCT": 604225,
+  "SCT": 604227,
   "UBERON": 14975,
   "UCUM": 88,
   "UMLS": 29234,
-  "UNII": 5180,
+  "UNII": 5785,
   "UNIPROT": 15154
  },
  "totals": {
-  "edges": 8062009,
-  "nodes": 1543185,
-  "usable_edges": 8021781
+  "edges": 8098186,
+  "nodes": 1544513,
+  "usable_edges": 8057957
  },
  "values": {
   "sct:1142135004": 6724,
