@@ -80,7 +80,11 @@ STORED = [
      "UMLS licence: the licence holder's own use", "!2026AA/*.zip"),
     ("hgnc", "cache/hgnc", "https://www.genenames.org/download/archive/ (hgnc_complete_set.txt)", "2026-09-24", "CC0"),
     ("orphanet", "cache/orphanet", "https://www.orphadata.com/data/xml/ (en_product1.xml, en_product4.xml, en_product6.xml)", "2026-06-23", "CC BY 4.0"),
-    ("reactome", "cache/reactome", "https://reactome.org/download-data (UniProt2Reactome, ReactomePathways, ReactomePathwaysRelation)", "v97", "CC0"),
+    ("reactome", "cache/reactome", "https://reactome.org/download-data (UniProt2Reactome, ChEBI2Reactome, ReactomePathways, ReactomePathwaysRelation)",
+     "v97", "CC0", "!*All_Levels*"),
+    ("gencc", "cache/gencc", "https://search.thegencc.org/download (submissions-export-tsv; includes ClinGen and PanelApp Australia)", "2026-09-13", "CC0"),
+    ("medgen", "cache/medgen", "https://ftp.ncbi.nlm.nih.gov/pub/medgen/MedGenIDMappings.txt.gz", "2026-09-26", "NCBI: public domain"),
+    ("chebi", "cache/chebi", "https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo.gz", "ChEBI 255 (2026-09-09)", "CC BY 4.0"),
     ("who_icd11", "cache/who-icd11", "WHO ICD-11 2026-01 release: mapping tables (mapping.zip)", "2026-01", "CC BY-ND 3.0 IGO"),
     ("snomed_us_maps", "cache/snomed-us", "https://download.nlm.nih.gov/mlb/utsauth/USExt/SnomedCT_ManagedServiceUS_PRODUCTION_US1000124_20260901T120000Z.zip "
      "(661 MB, UTS key; not stored) -> scripts/snomed_us_maps.py", "US Edition 20260901", "UMLS + SNOMED affiliate licence", "*.parquet"),

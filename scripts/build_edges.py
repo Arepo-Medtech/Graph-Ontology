@@ -90,6 +90,9 @@ ORPHA_GENES = Path("cache/orphanet/en_product6.xml")          # Orphadata produc
 ORPHA_PHENO = Path("cache/orphanet/en_product4.xml")          # Orphadata product 4 (HPO phenotypes), 2026-06-23, 47.9 MB (CC BY 4.0)
 SCT_US_XMAP = Path("cache/snomed-us/extended_map_20260901.parquet")   # scripts/snomed_us_maps.py: SNOMED -> ICD-10 / ICD-10-CM maps (licensed)
 WHO_MAP = Path("cache/who-icd11")                             # WHO ICD-10 <-> ICD-11 mapping tables, release 2026-01 (CC BY-ND 3.0 IGO)
+GENCC = Path("cache/gencc/gencc-submissions.tsv")                # GenCC gene-disease validity, all submitters (CC0)
+MEDGEN_MAP = Path("cache/medgen/MedGenIDMappings.txt.gz")        # NCBI MedGen: concept -> source codes (public domain)
+CHEBI_OBO = Path("cache/chebi/chebi.obo.gz")                     # ChEBI ontology release 255 (CC BY 4.0)
 REACTOME = Path("cache/reactome")                             # Reactome v97: UniProt2Reactome, pathways, hierarchy (CC0)
 RCPA_UNITS = Path("cache/rcpa/reporting_units.json")          # scripts/rcpa_units.py -- RCPA copyright, git-ignored
 RCPA_UNITS_PIN = "RCPA SPIA RCPA_v20260831"
@@ -187,7 +190,7 @@ LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.join(ONT_ROOT, "Loinc_2
 PIN = {"sct": "SNOMED CT-AU 20260831", "athena": "Athena v5.0 29-AUG-26", "pbs": "PBS schedule 4333",
        "loinc": "LOINC 2.82 (Athena)", "mondo": "MONDO releases/2026-09-01", "hpo": "HPO 2026-09-02",
        "dc": "DrugCentral 2023-11-01", "corpus": "reference/snomed_bindings.json", "umls": "UMLS current (UTS crosswalk)", "umls_rel": "UMLS 2026AA MRCONSO", "loinc_ext": "LOINC Extension 20260321", "loinc_table": "LOINC 2.83", "uberon": "Uberon v2026-06-23", "mbs": "MBS XML 20260801", "hgnc": "HGNC complete set 2026-09-24",
-       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "who": "WHO ICD-11 2026-01 mapping tables", "ccsr": "AHRQ CCSR for ICD-10-CM 2026 (UMLS 2026AA)",
+       "orphanet": "Orphadata product1 2026-06-23", "reactome": "Reactome v97", "gencc": "GenCC submissions 2026-09-13", "medgen": "MedGen ID mappings 2026-09-26", "chebi": "ChEBI 255 (2026-09-09)", "who": "WHO ICD-11 2026-01 mapping tables", "ccsr": "AHRQ CCSR for ICD-10-CM 2026 (UMLS 2026AA)",
        "sct_us": "SNOMED CT US Edition 20260901 (International 20260701 ICD-10 map)",
        "radlex": "RadLex 4.3", "rsna": "RSNA Radiology Playbook (complete-playbook-dev.csv, downloaded 24 Sep 2026)"}
 OMOP_VOCAB = {"RxNorm": "RXN", "RxNorm Extension": "RXE", "AMT": "SCT", "SNOMED": "SCT", "ATC": "ATC", "ICD10CM": "ICD10CM"}
@@ -1637,6 +1640,14 @@ def main() -> int:
             ("UNIPROT", r[0], "reactome:participates_in", "REACTOME", r[1], "Reactome", "UniProt2Reactome.txt", r[4], "native", "asserted",
              PIN["reactome"], json.dumps({"evidence": r[4]})) for r in hs}), available=len(hs_all),
             excluded=[("not a human pathway", len(hs_all) - len(hs))], unit="UniProt2Reactome rows")
+        if (REACTOME / "ChEBI2Reactome.txt").exists():
+            # the small molecules Reactome places in its pathways (drugs among them): ChEBI -> pathway, human, lowest level
+            ch_all = [l.rstrip("\n").split("\t") for l in open(REACTOME / "ChEBI2Reactome.txt", encoding="utf-8")]
+            ch = [r for r in ch_all if len(r) >= 6 and r[5] == "Homo sapiens"]
+            ins_rows("ChEBI chemical -> Reactome pathway (human, lowest level)", sorted({
+                ("CHEBI", r[0], "reactome:participates_in", "REACTOME", r[1], "Reactome", "ChEBI2Reactome.txt", r[4], "native", "asserted",
+                 PIN["reactome"], json.dumps({"evidence": r[4]})) for r in ch}), available=len(ch_all),
+                excluded=[("not a human pathway", len(ch_all) - len(ch))], unit="ChEBI2Reactome rows")
         pw = {r[0]: r[1] for r in (l.rstrip("\n").split("\t") for l in open(REACTOME / "ReactomePathways.txt", encoding="utf-8"))
               if len(r) >= 3 and r[2] == "Homo sapiens"}
         ins_rows("Reactome pathway -> parent pathway (human)", sorted({
@@ -1992,6 +2003,88 @@ def main() -> int:
             src="ur r JOIN ua c ON c.AUI = r.AUI1 JOIN ua p ON p.AUI = r.AUI2 WHERE r.SAB = 'MED-RT' AND r.REL = 'PAR' AND p.CODE LIKE 'N%'",
             keep=[("child is a MED-RT drug (an RxNorm code), not a class", "c.CODE LIKE 'N%'")], unit="MRREL MED-RT PAR rows")
         con.execute("""INSERT INTO name_hint SELECT 'MEDRT', CODE, any_value(STR) FROM ua WHERE SAB = 'MED-RT' AND CODE LIKE 'N%' GROUP BY 2""")
+
+    # --- open sources joined in Wave 3: MedGen's concept mappings, GenCC gene-disease validity, ChEBI's own tree ------
+    con.execute("DROP TABLE IF EXISTS present")
+    con.execute("""CREATE TEMP TABLE present AS SELECT DISTINCT s_vocab v, s_code c FROM edge UNION SELECT DISTINCT o_vocab, o_code FROM edge""")
+    if MEDGEN_MAP.exists():
+        # MedGen groups each condition's codes from the sources it integrates. Loaded for the MedGen concepts the graph already
+        # holds (MONDO's exact matches); MedGen's own UID is the node key, the UMLS CUI (or CN id) only joins the rows.
+        mg = f"read_csv('{MEDGEN_MAP}', delim='|', header=false, skip=1, all_varchar=true, quote='')"
+        con.execute(f"CREATE TEMP TABLE mg_uid AS SELECT column0 cui, column2 uid FROM {mg} WHERE column3 = 'MedGen'")
+        mv = {"HPO": "HP", "OMIM": "OMIM", "Orphanet": "ORPHA", "MONDO": "MONDO", "SNOMEDCT_US": "SCT", "MeSH": "MESH", "GARD": "GARD"}
+        mcase = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in mv.items())
+        mg_src = f"{mg} m JOIN mg_uid u ON u.cui = m.column0 WHERE m.column3 <> 'MedGen'"
+        ins("MedGen concept -> its codes in HPO, OMIM, Orphanet, MONDO, SNOMED, MeSH, GARD", f"""SELECT DISTINCT 'MEDGEN', u.uid, 'medgen:xref',
+                CASE m.column3 {mcase} END, CASE WHEN m.column3 = 'Orphanet' THEN replace(m.column2, 'Orphanet_', '') ELSE m.column2 END,
+                'NCBI MedGen', 'MedGenIDMappings.txt', 'MedGen concept groups ' || m.column3, 'native', 'asserted', '{PIN['medgen']}', NULL
+            FROM {mg_src} AND m.column3 IN ({','.join(repr(k) for k in mv)}) AND ('MEDGEN', u.uid) IN (SELECT v, c FROM present)
+              AND (m.column3 <> 'SNOMEDCT_US' OR m.column2 IN (SELECT id FROM cmp.concept))""",
+            src=mg_src, keep=[("a source the graph does not hold (OMIM allelic variants, included entries, phenotypic series)",
+                               f"m.column3 IN ({','.join(repr(k) for k in mv)})"),
+                              ("MedGen concept not a node the graph holds", "('MEDGEN', u.uid) IN (SELECT v, c FROM present)"),
+                              ("SNOMED code not active in SNOMED CT-AU", "m.column3 <> 'SNOMEDCT_US' OR m.column2 IN (SELECT id FROM cmp.concept)")],
+            unit="MedGenIDMappings rows")
+    if GENCC.exists():
+        # GenCC: each submitter's gene-disease validity call (ClinGen, PanelApp Australia, Orphanet, G2P, laboratories ...), one
+        # edge per gene, disease and submitter; the classification is the method. Disputed, refuted and "no known disease
+        # relationship" calls are claims AGAINST the link and are not loaded as links.
+        gc = f"read_csv('{GENCC}', delim='\t', header=true, all_varchar=true, quote='\"')"
+        neg = "('Disputed Evidence', 'Refuted Evidence', 'No Known Disease Relationship')"
+        ins("GenCC gene -> disease validity (per submitter)", f"""SELECT 'HGNC', gene_curie, 'gencc:gene_disease', 'MONDO', disease_curie, 'GenCC',
+                'gencc-submissions.tsv ' || any_value(submitter_title), any_value(classification_title), 'native', 'asserted', '{PIN['gencc']}',
+                json_object('submitter', any_value(submitter_title), 'classification', any_value(classification_title),
+                            'mode_of_inheritance', any_value(moi_title), 'submitted_as', any_value(submitted_as_disease_id),
+                            'submissions', count(*))
+            FROM {gc} WHERE classification_title NOT IN {neg} AND gene_curie LIKE 'HGNC:%' AND disease_curie LIKE 'MONDO:%'
+            GROUP BY gene_curie, disease_curie, submitter_curie""",
+            src=f"{gc}", keep=[("a claim against the link (disputed, refuted, no known relationship)", f"classification_title NOT IN {neg}"),
+                               ("gene or disease not HGNC / MONDO", "gene_curie LIKE 'HGNC:%' AND disease_curie LIKE 'MONDO:%'")],
+            unit="GenCC submissions")
+        con.execute(f"INSERT INTO name_hint SELECT 'HGNC', gene_curie, any_value(gene_symbol) FROM {gc} GROUP BY 2")
+        con.execute(f"INSERT INTO name_hint SELECT 'MONDO', disease_curie, any_value(disease_title) FROM {gc} GROUP BY 2")
+    if CHEBI_OBO.exists():
+        # ChEBI's own is-a tree, climbed upward from the ChEBI entities the graph already holds (never down: a class does not
+        # pull in the thousands of chemicals under it), and each entity's roles (RO:0000087 has role: 'antibacterial drug').
+        import gzip
+        terms, cur = {}, None
+        for line in gzip.open(CHEBI_OBO, "rt", encoding="utf-8"):
+            line = line.rstrip("\n")
+            if line == "[Term]":
+                cur = {"is_a": [], "role": []}
+            elif line.startswith("["):
+                cur = None
+            elif cur is not None and line.startswith("id: CHEBI:"):
+                cur["id"] = line[10:]
+                terms[cur["id"]] = cur
+            elif cur is not None and line.startswith("name: "):
+                cur["name"] = line[6:]
+            elif cur is not None and line.startswith("is_a: CHEBI:"):
+                cur["is_a"].append(line[12:].split(" ")[0])
+            elif cur is not None and line.startswith("relationship: RO:0000087 CHEBI:"):
+                cur["role"].append(line.split("CHEBI:", 1)[1].split(" ")[0])
+            elif cur is not None and line == "is_obsolete: true":
+                cur["obsolete"] = True
+        live = {k for k, t in terms.items() if not t.get("obsolete")}
+        held = {c for (v, c) in con.execute("SELECT v, c FROM present WHERE v = 'CHEBI'").fetchall()} & live
+        role_rows = sorted({(c, r) for c in held for r in terms[c]["role"] if r in live})
+        seen, todo, isa = set(), set(held) | {r for _, r in role_rows}, set()
+        while todo:
+            c = todo.pop()
+            if c in seen:
+                continue
+            seen.add(c)
+            for p_ in terms[c]["is_a"]:
+                if p_ in live:
+                    isa.add((c, p_))
+                    todo.add(p_)
+        ins_rows("ChEBI entity -> role (has role)", [("CHEBI", c, "chebi:has_role", "CHEBI", r, "ChEBI", "chebi.obo RO:0000087", "has role",
+                                                       "native", "asserted", PIN["chebi"], None) for c, r in role_rows],
+                 available=len(role_rows), unit="has-role statements of ChEBI entities the graph holds")
+        ins_rows("ChEBI entity -> parent (is a), upward from the graph's entities", [("CHEBI", c, "chebi:is_a", "CHEBI", p_, "ChEBI", "chebi.obo is_a",
+                                                       "native", "native", "asserted", PIN["chebi"], None) for c, p_ in sorted(isa)],
+                 available=len(isa), unit="is_a statements above the graph's ChEBI entities")
+        con.executemany("INSERT INTO name_hint VALUES ('CHEBI', ?, ?)", [(c, terms[c].get("name")) for c in seen if terms[c].get("name")])
 
     # --- foreign SNOMED ids -> nearest ancestor the Australian release carries ------------------------------------
     # Runs after every family, so it catches foreign SCTIDs from any source (DrugCentral's US conditions, Athena's
