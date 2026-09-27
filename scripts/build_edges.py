@@ -71,6 +71,7 @@ UMLS_PAIRS = Path("cache/umls/umls_shared_cui.parquet")
 DECISIONS = Path("reference/candidate_decisions.json")      # scripts/review_sheets.py: a person's decisions on the review queues
 UMLS_CONSO = Path("cache/umls/2026AA/mrconso.parquet")   # scripts/umls_mrconso.py (licensed; not redistributed)
 UMLS_REL = Path("cache/umls/umls_rel_edges.parquet")
+WAVE2_MEMBERS = Path("cache/wave2/umls_disease_member_candidates.parquet")   # scripts/wave2_candidates.py (UMLS-derived: git-ignored)
 UMLS_MRMAP, UMLS_AUI = Path("cache/umls/2026AA/mrmap_l0.parquet"), Path("cache/umls/2026AA/aui_l0.parquet")   # CCSR via UMLS Level 0          # scripts/umls_mrrel.py, UMLS 2026AA MRREL Level 0 (licensed)   # scripts/umls_mrconso.py, UMLS 2026AA MRCONSO (licensed; not redistributed)
 UMLS_FMA_SCT, UMLS_RADLEX_CUI = Path("cache/umls/fma_sct.tsv"), Path("cache/umls/radlex_cui_sct.tsv")   # scripts/umls_crosswalk.py
 LOINC_RSNA = Path(os.path.join(ONT_ROOT, "Loinc_2.83/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.csv"))
@@ -1832,6 +1833,19 @@ def main() -> int:
                 keep=[("suppressed atom", "m.SUPPRESS = 'N'"), ("CUI not a node the graph holds", "m.CUI IN (SELECT c FROM present WHERE v = 'UMLS')"),
                       ("not an active SNOMED CT-AU disorder or finding", "m.CODE IN (SELECT id FROM cmp.concept WHERE tag IN ('disorder', 'finding'))")],
                 unit="MRCONSO SNOMEDCT_US atoms")
+        # The same concepts' HPO, MeSH and NCIt atoms (Wave 2, scripts/wave2_candidates.py): pairs that pass the shared-name
+        # gate and the graph does not already reach, for the families Ken confirmed on 27 Sep. OMIM stays held back (its
+        # alternative titles let gene entries through: 7 of 30). graph_report.py earns each family's tier from its sheet.
+        if WAVE2_MEMBERS.exists():
+            ins("UMLS disease concept -> its HPO / MeSH / NCIt code (Wave 2, same name)", f"""SELECT DISTINCT 'UMLS', cui, 'umls:disease_member', v, code,
+                    'UMLS', 'MRCONSO 2026AA ' || v || ' atom', 'atom in the concept, same name', 'ungraded', 'asserted', '{PIN['umls_rel']}',
+                    json_object('matched_through', match_ttys, 'named_by', src)
+                FROM '{WAVE2_MEMBERS}' WHERE gate AND NOT present AND v IN ('HP', 'MESH', 'NCIT')
+                  AND cui IN (SELECT c FROM present WHERE v = 'UMLS')""",
+                src=f"'{WAVE2_MEMBERS}' WHERE v IN ('HP', 'MESH', 'NCIT')",
+                keep=[("names differ (the shared-name gate)", "gate"), ("the graph already reaches the pair", "NOT present"),
+                      ("CUI not a node the graph holds", "cui IN (SELECT c FROM present WHERE v = 'UMLS')")],
+                unit="Wave 2 candidate pairs (HPO, MeSH, NCIt)")
         # A chain rule (workstream 3): an Orphanet disorder with no ICD-10 code of its own, exactly aligned by Orphanet to a
         # UMLS concept or MONDO disease that holds a SNOMED CT concept, gets the ICD-10 code SNOMED International's map
         # classifies that concept to. Only where it can be right: Orphanet's disorder and subtype levels (a group given one

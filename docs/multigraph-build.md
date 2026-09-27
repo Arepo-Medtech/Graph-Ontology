@@ -573,6 +573,15 @@ submissions and is not read), ChEBI's own tree and roles climbed up from the gra
 gene edge 6,195 -> 8,817; ChEBI nodes outside the main component 155 -> 0; all nodes outside it 6,388 -> 5,278. ChEBI's
 share linked outside ChEBI falls to 63%: the ~6,700 parent classes now in the graph link only within its tree.
 
+**Wave 2, first family (27 Sep).** The UMLS concepts MONDO and Orphanet name now reach their HPO, MeSH and NCIt codes
+of the same name (`umls:disease_member`, 2,464: HPO 1,518, MeSH 188, NCIt 758), only pairs the graph did not already
+reach (`scripts/wave2_candidates.py`). Each target vocabulary earns its own tier from the hand-check sheet
+(`cache/wave2/umls_disease_member_handcheck.json`, confirmed by Ken on Claude's first reading): HPO 30/30, MeSH 43/43,
+NCIt 51/56, all Tier 2; the 5 NCIt pairs read wrong or unsure are loaded as rejected. They add routes more than reach --
+the HPO terms were already linked elsewhere -- chiefly direct disease-to-phenotype bridges. OMIM is held back (7/30: its
+alternative titles let gene entries through). `scripts/wave2_review_page.py` writes a local review page for the sheets
+and takes a saved decisions file back into them.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /

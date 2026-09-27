@@ -698,6 +698,28 @@ def main() -> int:
                                                      UNION SELECT o_code FROM edge WHERE o_vocab = 'ORPHA' AND s_vocab = 'SCT')""").fetchone()[0]
         report["route:UMLS concept -> SNOMED CT (MRCONSO 2026AA)"] = cm
 
+    # --- UMLS disease concept -> HPO / MeSH / NCIt (Wave 2): one hand-check sheet, a tier per target vocabulary ---------
+    if con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:disease_member'").fetchone()[0]:
+        wh = Path("cache/wave2/umls_disease_member_handcheck.json")   # UMLS-derived: git-ignored
+        rows = json.load(open(wh))["scored"] if wh.exists() else []
+        dm = {}
+        for v in ("HP", "MESH", "NCIT"):
+            rv = [r for r in rows if r["v"] == v]
+            k, n = sum(r["verdict"] == "correct" for r in rv), len(rv)
+            d = {"edges": con.execute("SELECT count(*) FROM edge WHERE predicate = 'umls:disease_member' AND o_vocab = ?", [v]).fetchone()[0],
+                 "checked": n, "correct": k}
+            if n:
+                lo, _ = wilson(k, n)
+                con.execute("UPDATE edge SET tier = ? WHERE predicate = 'umls:disease_member' AND o_vocab = ?", [tier(lo, n), v])
+                d.update(wilson_lo=round(lo, 4), earned_tier=tier(lo, n))
+            for r in rv:
+                if r["verdict"] != "correct":
+                    con.execute("UPDATE edge SET state = 'rejected' WHERE predicate = 'umls:disease_member' AND s_code = ? AND o_code = ?",
+                                [r["cui"], r["target"]])
+            d["rejected_by_hand_check"] = sum(r["verdict"] != "correct" for r in rv)
+            dm[v] = d
+        report["route:UMLS disease concept -> HPO / MeSH / NCIt (Wave 2)"] = dm
+
     # --- Orphanet -> ICD-10 through SNOMED CT's map: a chain family, tiered by census, witnessed by Orphanet itself ------
     if con.execute("SELECT count(*) FROM edge WHERE predicate = 'orpha:icd10_via_snomed'").fetchone()[0]:
         cf = Path("cache/orphanet/orpha_icd10_chain_census.json")      # SNOMED / UMLS-derived names: git-ignored

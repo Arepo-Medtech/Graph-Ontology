@@ -214,3 +214,12 @@ ChEMBL errors (eptinezumab → integrins).
 
 Re-run: `cp -c out/graph.duckdb $TMPDIR/graph.duckdb; .venv/bin/python scripts/wave2_candidates.py --graph $TMPDIR/graph.duckdb`.
 A re-run keeps the verdicts already written on a sheet.
+
+### Decisions, 27 Sep
+
+Ken agreed with Claude's first readings on all five sheets (939 rows; `cache/wave2/*_handcheck.json`, reviewer
+recorded per row). Loaded: HPO, MeSH and NCIt members of family 1 (`umls:disease_member`, Tier 2). Held: OMIM (needs the
+own-titles rule and a new sample), HPO via retired SNOMED codes, ChEMBL targets (needs a policy for complex and family
+targets). MeSH pharmacological action needs ~60 more rows read; the ChEBI-role half is dropped. Open question for Ken:
+does an RxNorm 'X extract' count as the same ingredient as the UNII for X (UNII <-> RxNorm)?
+
