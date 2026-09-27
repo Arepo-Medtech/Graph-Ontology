@@ -1,7 +1,7 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-27 09:28",
- "repo_commit": "3128450",
+ "written": "2026-09-27 10:28",
+ "repo_commit": "4477e6d",
  "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
@@ -10,7 +10,7 @@
   "UMLS and SNOMED US zips (3.1 GB)": "only to re-derive cache/umls and cache/snomed-us"
  },
  "totals": {
-  "stored": 1507565293,
+  "stored": 1507709265,
   "in place": 2870011466
  },
  "entries": [
@@ -330,12 +330,17 @@
    "licence": "RCPA copyright: derived data",
    "files": [
     {
+     "file": "element_bindings.json",
+     "bytes": 143972,
+     "sha256": "5b137b5180354670b9e73ad553a9e1b8512d4c58b903611c19ab268f2ce96032"
+    },
+    {
      "file": "reporting_units.json",
      "bytes": 656368,
      "sha256": "42ff278d1ac8054a80f9e68a92b75f184589928408ae537020193bfb24d68daf"
     }
    ],
-   "bytes": 656368
+   "bytes": 800340
   },
   {
    "id": "umls_derived",
@@ -395,7 +400,7 @@
     {
      "file": "hpo_snomed_candidates.tsv",
      "bytes": 443070,
-     "sha256": "95553c3ebfb1b0d2dc03968a21e66931a677fd2dca686738a6ce1d5b34737615"
+     "sha256": "62348a7c703280ca895b4b61e17e58803b25c2e75fa9f52a643b71ac6e1f4825"
     },
     {
      "file": "organism_handcheck.json",

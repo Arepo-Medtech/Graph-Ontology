@@ -2287,6 +2287,22 @@
       "source": "Orphadata en_product1.xml DisorderDisorderAssociation 'Referred to'",
       "status": "built",
       "note": "A pointer to the related entry that holds the content; not an equivalence."
+    },
+    {
+      "id": "rcpa:same_data_element",
+      "label": "LOINC code and SNOMED CT concept the RCPA binds to the same structured-report data element",
+      "subject": [
+        "LOINC"
+      ],
+      "object": [
+        "SCT"
+      ],
+      "category": "relation",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "RCPA SPIA anatomical pathology FHIR mapping workbooks (cervical, colorectal, endometrial, ovary, polypectomy), via scripts/rcpa_elements.py -> cache/rcpa/element_bindings.json",
+      "status": "built",
+      "note": "The same report element, not the same concept: an element's SNOMED code is often a finding or observable and its LOINC code a question or panel. attrs.elements lists the RCPA elements the pair binds. Placeholder codes (xxxxx-x) are left out by the derivation."
     }
   ],
   "not_imported": {
