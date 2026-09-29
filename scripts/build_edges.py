@@ -186,6 +186,8 @@ def unit_difference(us_examples: str | None, au: str):
     return "kind", None
 DX_ACC, DX_BIND, DX_VER = (Path("reference/diagnostic_accuracy.json"), Path("reference/diagnostic_accuracy_bindings.json"),
                            Path("reference/diagnostic_accuracy_verification.json"))   # finding -> diagnosis LRs
+ORPHA_SCT_MAP = Path(os.path.join(ONT_ROOT, "SnomedCT_SNOMEDOrphanetMapPackage_PRODUCTION_20260930T120000Z/Snapshot/Refset/Map/"
+                                  "der2_sRefset_OrphanetSimpleMapSnapshot_INT_20260701.txt"))   # SNOMED International + Inserm, via NCTS
 LOINC_EXT = Path(os.environ.get("LOINC_EXTENSION", os.path.join(ONT_ROOT, "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot")))   # licensed; read in place
 LOINC_TABLE = Path(os.environ.get("LOINC_TABLE", os.path.join(ONT_ROOT, "Loinc_2.83/LoincTable/Loinc.csv")))     # written by scripts/umls_hpo_crosswalk.py (licensed; not redistributed)
 
@@ -1495,6 +1497,18 @@ def main() -> int:
                                            **({} if active else {"entry": "inactive: " + "; ".join(f for f in flags if f and f != "Inactive")})})))
         ins_rows("Orphanet disorder -> ICD-10 / ICD-11 / OMIM / UMLS / MeSH / MONDO / GARD (Orphanet's alignments)", sorted(set(rows_o)),
                  available=n_x, excluded=sorted(skip_x.items()), unit="Orphanet ExternalReferences")
+        if ORPHA_SCT_MAP.exists():
+            # SNOMED International and Inserm's own SNOMED CT to Orphanet map (refset 784008009): the authoritative
+            # disease-to-disease link the Australian release defines but ships empty, delivered by NCTS on 30 Sep 2026.
+            # One-to-one; kept where the concept is active in SNOMED CT-AU.
+            osm = f"read_csv('{ORPHA_SCT_MAP}', delim='\t', header=true, quote='', escape='', all_varchar=true)"
+            ins("SNOMED CT -> Orphanet (SNOMED International / Inserm map)", f"""SELECT DISTINCT 'SCT', referencedComponentId, 'sct:orphanet_map',
+                    'ORPHA', mapTarget, 'SNOMED International / Inserm', 'Orphanet map package 20260930, refset 784008009',
+                    'SNOMED CT to Orphanet simple map', 'native', 'asserted', 'SNOMED CT Orphanet map 20260930 (INT 20260701)', NULL
+                FROM {osm} WHERE active = '1' AND refsetId = '784008009' AND referencedComponentId IN (SELECT id FROM cmp.concept)""",
+                src=f"{osm} WHERE refsetId = '784008009'",
+                keep=[("inactive map row", "active = '1'"), ("SNOMED concept not active in SNOMED CT-AU", "referencedComponentId IN (SELECT id FROM cmp.concept)")],
+                unit="Orphanet map rows")
         # an entry Orphanet has retired or folded into another says where it went: "Moved to" (the same disorder, now under
         # another code) is identity, like SNOMED's REPLACED BY; "Referred to" points the reader to a related entry.
         rows_s, n_s = [], 0

@@ -2425,6 +2425,22 @@
       "source": "DrugCentral pharma_class.tsv, source MeSH, type PA",
       "status": "built",
       "note": "How NLM indexes what a drug does or is used for; classes can be broad ('Enzyme Inhibitors'). Tier from the MeSH stratum of cache/wave2/drug_pharma_role_handcheck.json (80/90 with Ken's call on levofloxacin, Tier 2); pairs read wrong or unsure are loaded as rejected."
+    },
+    {
+      "id": "sct:orphanet_map",
+      "label": "SNOMED CT concept is this Orphanet rare disease (SNOMED International / Inserm map)",
+      "subject": [
+        "SCT"
+      ],
+      "object": [
+        "ORPHA"
+      ],
+      "category": "identity",
+      "derivation": "lookup",
+      "strength_kind": "exact",
+      "source": "SNOMED CT Orphanet map package, production 20260930 (refset 784008009), delivered by NCTS",
+      "status": "built",
+      "note": "The authoritative SNOMED <-> Orphanet link: one-to-one, curated by SNOMED International with Inserm. The Australian release defines the refset but ships it empty; NCTS delivered the package on 30 Sep 2026. Before it, Orphanet reached SNOMED only indirectly (MONDO, UMLS, ICD); the map agrees with those routes for 94.4% of the pairs where both exist."
     }
   ],
   "not_imported": {
