@@ -1,7 +1,7 @@
 {
  "_note": "Every input the graph build reads (scripts/graph_inputs.py). With ~/Documents/ONTOLOGIES (including graph-inputs/) and the repository, the graph rebuilds: graph_inputs.py restore, then scripts/rebuild.sh.",
- "written": "2026-09-27 14:43",
- "repo_commit": "99e21ac",
+ "written": "2026-09-30 07:19",
+ "repo_commit": "69e8a24",
  "ontologies": "/Users/ken-lee-arepo/Documents/ONTOLOGIES",
  "not_needed_to_build": {
   ".env UMLS_API_KEY": "only to re-download UMLS or the SNOMED US Edition",
@@ -11,7 +11,7 @@
  },
  "totals": {
   "stored": 1607050533,
-  "in place": 2870011466
+  "in place": 2870625879
  },
  "entries": [
   {
@@ -400,7 +400,7 @@
     {
      "file": "hpo_snomed_candidates.tsv",
      "bytes": 443070,
-     "sha256": "5312c9485be94bddfdb574f59f260631acf4babf8bdde147a3b896a10f599d96"
+     "sha256": "9120b631360f7b7e4f756bd9790efe1abb2482526b1ad426e3f245efa00548aa"
     },
     {
      "file": "organism_handcheck.json",
@@ -1150,6 +1150,23 @@
     }
    ],
    "bytes": 2348169
+  },
+  {
+   "id": "snomed_orphanet_map",
+   "kind": "in place",
+   "path": "SnomedCT_SNOMEDOrphanetMapPackage_PRODUCTION_20260930T120000Z/Snapshot/Refset/Map/der2_sRefset_OrphanetSimpleMapSnapshot_INT_20260701.txt",
+   "is_dir": false,
+   "source": "SNOMED International / Inserm, SNOMED CT Orphanet map package (delivered by NCTS, 30 Sep 2026)",
+   "version": "20260930 (depends on INT 20260701)",
+   "licence": "SNOMED CT Affiliate licence",
+   "files": [
+    {
+     "file": "der2_sRefset_OrphanetSimpleMapSnapshot_INT_20260701.txt",
+     "bytes": 614413,
+     "sha256": "3f384fc44a1d891a1c6cd2494e388506eda2ee0b84f0bc99568d2a1833ff6d71"
+    }
+   ],
+   "bytes": 614413
   },
   {
    "id": "athena_vocabulary",

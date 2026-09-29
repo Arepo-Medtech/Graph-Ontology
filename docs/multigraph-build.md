@@ -591,6 +591,14 @@ ingredients now reach a UNII), and the 24 UMLS -> OMIM pairs sharing OMIM's main
 (`reference/candidate_decisions.json`, queue `umls_omim_title`, tier 'decision'). The rest of UMLS -> OMIM
 (alternative titles, phenotype atoms) is not loaded: a general condition meets OMIM's entry for one inherited form.
 
+**SNOMED CT to Orphanet, the official map (30 Sep).** NCTS delivered SNOMED International and Inserm's map package
+(production 20260930, refset 784008009 -- defined but empty in the AU release). `sct:orphanet_map` loads all 6,545 active
+pairs (one-to-one; every concept active in SNOMED CT-AU, every Orphanet code already a node). Where Orphanet already
+reached SNOMED indirectly (MONDO, UMLS, ICD), the map names the same concept for 94.4% (6,012 of 6,366). Orphanet disorders
+reaching SNOMED 7,011 -> 7,392 of 9,890; SNOMED disorders reaching MONDO 12,644 -> 13,599 and an HPO phenotype 5,371 ->
+6,291. The same delivery's International Edition (20260701) carries the ICD-10 map the graph already loads from the US
+Edition, row for row (154,822), and no ICD-11 or ICD-10-AM map.
+
 **Medicines meet the tests that measure them.** LOINC codes the analyte of a drug-level test to RxNorm — the vocabulary
 the compendium's ingredients already use — so **964 Australian medicine ingredients now reach a LOINC test** (9,158
 tests; 752 ingredients and 4,429 tests in class DRUG/TOX, i.e. drug levels). The witness is independent: LOINC's ChEBI /

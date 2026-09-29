@@ -60,6 +60,9 @@ IN_PLACE = [
     ("loinc_extension", "SnomedCT_LOINCExtension_PRODUCTION_LO1010000_20260321T120000Z/Snapshot", "SNOMED International / NCTS",
      "LOINC Extension 20260321", "SNOMED CT + LOINC licences"),
     ("rsna_playbook", "complete-playbook-dev.csv", "RSNA Radiology Playbook", "downloaded 24 Sep 2026", "RSNA"),
+    ("snomed_orphanet_map", "SnomedCT_SNOMEDOrphanetMapPackage_PRODUCTION_20260930T120000Z/Snapshot/Refset/Map/der2_sRefset_OrphanetSimpleMapSnapshot_INT_20260701.txt",
+     "SNOMED International / Inserm, SNOMED CT Orphanet map package (delivered by NCTS, 30 Sep 2026)", "20260930 (depends on INT 20260701)",
+     "SNOMED CT Affiliate licence"),
 ]
 STORED = [
     ("compendium", "out/compendium.duckdb", "scripts/build_compendium.py (SNOMED CT-AU, AMT, PBS, RxNav, OMOPHub)", "built 24 Sep 2026", "derived"),

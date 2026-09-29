@@ -242,6 +242,7 @@
   "sct:icdo_map": 23514,
   "sct:in_refset": 1252680,
   "sct:ncbitaxon_equivalent": 20219,
+  "sct:orphanet_map": 6545,
   "std_ingredient": 4689,
   "uberon:fma_match": 6051,
   "uberon:is_a": 19387,
@@ -664,6 +665,11 @@
    "excluded": 3656,
    "kind": "source"
   },
+  "SNOMED CT -> Orphanet (SNOMED International / Inserm map)": {
+   "available": 7225,
+   "excluded": 680,
+   "kind": "source"
+  },
   "SNOMED CT LOINC Extension concrete values": {
    "available": 0,
    "excluded": 0,
@@ -882,9 +888,9 @@
   "UNIPROT": 15162
  },
  "totals": {
-  "edges": 8484406,
+  "edges": 8490951,
   "nodes": 1576938,
-  "usable_edges": 8444151
+  "usable_edges": 8450696
  },
  "values": {
   "sct:1142135004": 6724,
